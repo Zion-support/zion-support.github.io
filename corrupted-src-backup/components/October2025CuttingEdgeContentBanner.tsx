@@ -233,16 +233,14 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
         </d, i, v>
       </d, i, v>
       <sty, l, e>{/* TODO: Fix JSX expression */}
-          0%, 1, 0, 0% { transfo, r, m: transla, t, e(0, 0) sca, l, e(1); }
-          33% { transfo, r, m: transla, t, e(30, p, x, -50, p, x) sca, l, e(1.1); }
-          66% { transfo, r, m: transla, t, e(-20, p, x, 20, p, x) sca, l, e(0.9); }
+          0%, 1, 0, 0% { transfo, r, m: transla, t, e(0, 0) sca, l, e(1)}
+          33% { transfo, r, m: transla, t, e(30, p, x, -50, p, x) sca, l, e(1.1)}
+          66% { transfo, r, m: transla, t, e(-20, p, x, 20, p, x) sca, l, e(0.9)}
         }
         .anima, t, e-bl, o, b {
-          animati, o, n: blob, 7s, infinite;
-        }
+          animati, o, n: blob, 7s, infinite}
         .animati, o, n-del, a, y-20, 0, 0 {
-          animati, o, n-del, a, y: 2 s;
-        }
+          animati, o, n-del, a, y: 2 s}
         .animati, o, n-del, a, y-40, 0, 0 {
           animati, o, n-del, a, y: 4s;
           animati, o, n: blob, 7s, infinite;
@@ -258,7 +256,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
         }`
       `}</sty, l, e>`;`
     </d, i, v>
-  );
-};
+  )}
 export default October2025CuttingEdgeContentBanner;
 ;"`

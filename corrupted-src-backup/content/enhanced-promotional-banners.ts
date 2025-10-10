@@ -1,7 +1,7 @@
 export interface EnhancedPromotionalBanner {/* TODO: Fix JSX expression */}
 }
 
-export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
+export const enhancedPromotionalBanners: EnhancedPromotionalBannerService Feature = [,
   {,
     id: 'oct-01-autonomous-business-ops-2025',
     title:,
@@ -29,8 +29,4 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
     category: 'AI Governance',
     tags: ['AI Governance', 'Enterprise', 'Safety', 'Compliance'],
 export const,
-  enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  }];
+  enhancedPromotionalBanners: EnhancedPromotionalBannerService Feature;

@@ -8,8 +8,7 @@ const Breadcrumb: React.FC = () => {
   
   // Don't show breadcrumb on home page
   if (location.pathname === '/') {
-    return null;
-  }
+    return null}
 
   const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
   
@@ -20,8 +19,7 @@ const Breadcrumb: React.FC = () => {
   pathSegments.forEach((segment, index) => {
     const path = '/' + pathSegments.slice(0, index + 1).join('/');
     const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
-    breadcrumbItems.push({ name, path, icon: null });
-  });
+    breadcrumbItems.push({ name, path, icon: null })});
 
   return (
     <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
@@ -48,7 +46,6 @@ const Breadcrumb: React.FC = () => {
         </ol>
       </div>
     </nav>
-  );
-};
+  )}
 
 export default Breadcrumb;

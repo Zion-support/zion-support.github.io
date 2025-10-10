@@ -28,9 +28,9 @@ function processFile(filePath) {
       // Find the last closing div or main tag and add </> before it;
       for (let i = lines.length - 1; i >= 0; i--) {
         if (
-          lines[i].trim().startsWith('</') &&
-          !lines[i].includes('') &&
-          !lines[i].includes('</Helmet>')
+          linesService Feature.trim().startsWith('</') &&
+          !linesService Feature.includes('') &&
+          !linesService Feature.includes('</Helmet>')
         ) {
           lastClosingTagIndex = i;
           break;
@@ -50,13 +50,12 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Add proper export at the end;
     if (!content.includes('export default') && content.includes('const ')) {,
-      //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,
+      //       const componentName = content.match(/const (\w+): React\.FC/)?.Service Feature;,
       if (componentName) {,
     content = content.replace()
       /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
-        content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
-        modified = true;
-      }
+        content = content.replace(/^\s*}\s*$/, `  );\n}\n\nexport default ${componentName}`);
+        modified = true}
     }
 
     // Fix any remaining syntax issues;
@@ -70,16 +69,14 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
 // Process all files;
 filesToFix.forEach(file => {)
   if (processFile(file)) {
-    fixedCount++;
-  }
+    fixedCount++}
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
   })
 });

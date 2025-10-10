@@ -26,11 +26,11 @@ const CognitiveComputingTransformatio, n: React.FC = () => { ,
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
         <Head, e, r / > {/* Hero, Sect, i, o, n */ }
         <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'>
-          <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)]' />
+          <div, className='absolute, inse, t-0, b, g-Service Feature' />
           <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8'>,
             {/* Breadc, r, u, m, b */}
         <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'></div>
-          <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)]' /></div>
+          <div, className='absolute, inse, t-0, b, g-Service Feature' /></div>
           <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
             {/* Breadc, r, u, m, b */}</div>
             <nav, classNam, e = 'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8'>
@@ -40,7 +40,7 @@ const CognitiveComputingTransformatio, n: React.FC = () => { ,
 const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX expression */}
         <Head, e, r / > {/* Hero, Sect, i, o, n */ }
         <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'></div>
-          <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)]' /></div>
+          <div, className='absolute, inse, t-0, b, g-Service Feature' /></div>
           <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'></div>
             {/* Breadc, r, u, m, b */}
             <nav, classNam, e = 'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8'></nav>
@@ -176,7 +176,7 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                         <Award, className='w-8 h-8, tex, t-yell, o, w-4, 0, 0' /></Award>
                       </div>
                       <div, className='grid, gri, d-co, l, s-2, ga, p-3'>
-                        { Obje, c, t.entri, e, s(a, p, p.imp, a, c, t).m, a, p(([k, e, y, val, u, e], i) = > (</div>
+                        { Obje, c, t.entri, e, s(a, p, p.imp, a, c, t).m, a, p((Service Feature, i) = > (</div>
                           <div, ke, y = { , i  }, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20, border, border-gre, e, n-5, 0, 0/30, rounde, d-l, g, p-3'
                           ></div>
                             <div, className='te, x, t-xs, tex, t-purp, l, e-300, m, b-1, capitaliz, e'>

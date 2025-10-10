@@ -7,8 +7,7 @@ const UltimateAIRevolutionShowcase202, 5 = () => {
       ic, o, n: '🧠',
       col, o, r: 'fr, o, m-viol, e, t-500, t, o-purp, l, e-50, 0',
       reade, r, s: '5, 0, 0, K+',
-      rati, n, g: 5., 0;
-    },
+      rati, n, g: 5., 0},
     {
       title: 'Autonomous, Neural, Network, s',
       description: 'Se, l, f-evolving, neural, architectures with, 9, 9.97% accuracy, in, autonomous decisi, o, n-mak, i, n, g',
@@ -16,8 +15,7 @@ const UltimateAIRevolutionShowcase202, 5 = () => {
       ic, o, n: '⚡',
       col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-50, 0',
       reade, r, s: '1, 8, 0, K+',
-      rati, n, g: 4., 9;
-    },
+      rati, n, g: 4., 9},
     {
       title: 'Synthetic, Consciousness, Revolutio, n',
       description: 'True, AI, awareness with, emotional, intelligenc, e, creative, autonom, y, and, moral, reasoning',
@@ -25,8 +23,7 @@ const UltimateAIRevolutionShowcase202, 5 = () => {
       ic, o, n: '🌟',
       col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0',
       reade, r, s: '2, 0, 3, K+',
-      rati, n, g: 5., 0;
-    },
+      rati, n, g: 5., 0},
     {
       title: 'Neur, a, l-Synaptic, Fusion, A, I',
       description: 'Revolutionary, brai, n-computer, interface achieving 99.98% neural, accura, c, y',
@@ -34,8 +31,7 @@ const UltimateAIRevolutionShowcase202, 5 = () => {
       ic, o, n: '🚀',
       col, o, r: 'fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0',
       reade, r, s: '1, 5, 6, K+',
-      rati, n, g: 4., 8;
-    }
+      rati, n, g: 4., 8}
   ]; return(<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-purp, l, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l">
       <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">
   ]; return (
@@ -186,6 +182,5 @@ const UltimateAIRevolutionShowcase202, 5 = () => {/* TODO: Fix JSX expression */
         </p>
       </div>
     </div>
-  );
-};
+  )}
 export default UltimateAIRevolutionShowcase2025;"`

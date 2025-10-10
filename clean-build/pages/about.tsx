@@ -431,6 +431,5 @@ export default function About() {/* TODO: Fix JSX expression */}
     </React.Fragment>,
       </div>
     </React.Fragment>)
-  );
-}
+  )}
 "

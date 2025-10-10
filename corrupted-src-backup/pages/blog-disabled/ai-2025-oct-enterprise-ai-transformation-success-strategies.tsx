@@ -256,23 +256,9 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                 <div>Chief AI Strategy Officer, Zion Tech Group</div>
   </div>
   </div>
-            {/* Key Metrics */};
+            {/* Key Metrics */}
             <div>
-              {[
-              {[
-                { value="$2.9 T", label="AI Business Value 2025" },"
-                { value="10 x", label="Average ROI" },"
-                { value="40%", label="Cost Reduction" },"
-                { value="73%", label="Initiatives That Fail" }"
-              ].map((metric, index) => (</div>
-                <div>{metric.value}</div>
-            <div></div>
-              {/* TODO: Fix JSX expression */}"
-                { value="$2.9T", label="AI Business Value 2025" },""
-                { value="10x", label="Average ROI" },""
-                { value="40%", label="Cost Reduction" },""
-                { value="73%", label="Initiatives That Fail" }")
-              ].map((metric, index) => (<div>{metric.value}</div>
+              {Service Feature.map((metric, index) => (<div>{metric.value}</div>
                   <div></div>
                   <div>{metric.label}</div>
   </div>)
@@ -460,86 +446,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
               <section ></section>"
                 <h2 className="text-3xl font-bold text-white mb-6">💡 Real-World Success Stories</h2>
                 <div>
-                  {[
-                    {
-                      company="Global Retail Chain;
-                      industry: "Fortune 100 Retailer;
-:src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx;
-                      investment="$45M;
-                      value="$680M annual value;
-                      roi="15x ROI;
-                      investment: "$45M;
-                      value="$680M annual value",
-                      roi: "15x ROI;
-                      highlights: [,,
-                        "28% increase in customer lifetime value"
-                      company="Global Retail Chain",,"
-                      industry="Fortune 100 Retailer",,"
-                      investment="$45 M",,"
-                      value="$680 M annual value",,"
-                      roi="15 x ROI",,"
-                      highlights: [,,
-                        "40% reduction in inventory costs;
-                        "28% increase in customer lifetime value;
-                        "18% revenue growth attributed to AI"
-                      ]
-                    },
-                    {
-                      company="Healthcare Provider;
-                      industry: "Multi-hospital system;
-:src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx;
-                      investment="$28M;
-                      value="$420M annual savings;
-                      roi="15x ROI;
-                      investment: "$28M;
-                      value="$420M annual savings",
-                      roi: "15x ROI;
-                      highlights: [,,
-                        "19% improvement in patient outcomes"
-                      company="Healthcare Provider",,"
-                      industry="Multi-hospital system",,"
-                      investment="$28 M",,"
-                      value="$420 M annual savings",,"
-                      roi="15 x ROI",,"
-                      highlights: [,,
-                        "23% reduction in readmissions;
-                        "19% improvement in patient outcomes;
-                        "$127M in operational efficiencies"
-                      ]
-                    },
-                    {
-                      company="Manufacturing Enterprise;
-                      industry: "Global manufacturer;
-:src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx;
-                      investment="$38M;
-                      value="$580M annual value;
-                      roi="15.3x ROI;
-                      investment: "$38M;
-                      value="$580M annual value",
-                      roi: "15.3x ROI;
-                      highlights: [,,
-                        "34% improvement in first-pass quality"
-                      company="Manufacturing Enterprise",,"
-                      industry="Global manufacturer",,"
-                      investment="$38 M",,"
-                      value="$580 M annual value",,"
-                      roi="15.3 x ROI",,"
-                      highlights: [,,
-                        "47% reduction in unplanned downtime;
-                        "34% improvement in first-pass quality;
-                        "$180M in inventory optimization"
-                      ]
-                    }
-                  ].map((story, index) => (
-  </section>
-                <div></div>
-                  {/* TODO: Fix JSX expression */}
-                    },
-                    {/* TODO: Fix JSX expression */}
-                    },
-                    {/* TODO: Fix JSX expression */}
-                    }
-                  ].map((story, index) => (</div>
+                  {Service Feature.map((story, index) => (</div>
                         <div>{story.value}</div>
                           <div></div>
                           <div>Return on Investment</div>
@@ -682,9 +589,8 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                   </Link>"
                   <Link to="/services"></Link>"
   className= " />
-  );
-};
-export default EnterpriseAITransformationSuccessStrategies;;
+  )}
+export default EnterpriseAITransformationSuccessStrategies;
   </div>
   </div>
   </div>

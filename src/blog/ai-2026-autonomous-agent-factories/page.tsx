@@ -19,7 +19,6 @@ const Ai2026AutonomousAgentFactoriesPage: React.FC = () => {
       </div>
       <Footer />
     </div>
-  );
-};
+  )}
 export default Ai2026AutonomousAgentFactoriesPage;
   </Link>

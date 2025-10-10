@@ -13,11 +13,9 @@ function execGitCommand(command, description) {
       cwd: process.cwd(),
       stdio: 'pipe'});
     console.log(`✅ ${description} completed`);
-    return result;
-  } catch (error) {
+    return result} catch (error) {
     console.log(`❌ ${description} failed: ${error.message}`);
-    return null;
-  }
+    return null}
 }
 
 // List of important branches to merge;
@@ -53,27 +51,21 @@ async function main() {
         const mergeResult = execGitCommand(`git merge origin/${branch} --no-edit`, `Merging ${branch}`);
         
         if (mergeResult) {
-          console.log(`✅ Successfully merged ${branch}`);
-        } else {
-          console.log(`⚠️  ${branch} had conflicts or issues`);
-        }
+          console.log(`✅ Successfully merged ${branch}`)} else {
+          console.log(`⚠️  ${branch} had conflicts or issues`)}
       } else {
-        console.log(`⚠️  Branch ${branch} does not exist, skipping...`);
-      }
+        console.log(`⚠️  Branch ${branch} does not exist, skipping...`)}
     } catch (error) {
-      console.log(`❌ Error with ${branch}: ${error.message}`);
-    }
+      console.log(`❌ Error with ${branch}: ${error.message}`)}
     
     // Small delay between merges;
-    await new Promise(resolve => setTimeout(resolve, 500));
-  }
+    await new Promise(resolve => setTimeout(resolve, 500))}
   
   // Final status;
   console.log('\n📊 Final Status: ');
   execGitCommand('git status', 'Final git status');
   execGitCommand('git log --oneline -5', 'Recent commits');
   
-  console.log('\n🎉 Manual merge handling completed!');
-}
+  console.log('\n🎉 Manual merge handling completed!')}
 
 main().catch(console.error);

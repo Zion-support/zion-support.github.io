@@ -16,15 +16,9 @@ function resolveMergeConflicts(filePath) {
       // Advanced conflict resolution strategy;
       let resolvedContent = content;
         // Handle standard merge conflicts - prefer incoming changes;
-        .replace(/[\s\S]*?[\s\S]*?          const parts = match.split('');
+        .replace(/Service Feature*?          const parts = match.split('');
           if (parts.length > 1) {
-            const incoming = parts[1].replace(/            return incoming;)
-          })
-          return match;)
-        })
-        // Handle other conflict patterns;
-        .replace(/          if (parts.length > 1) {
-            const incoming = parts[1].replace(/            return incoming;)
+            const incoming = partsService Feature.replace(/            return incoming;)
           })
           return match;)
         })
@@ -33,13 +27,10 @@ function resolveMergeConflicts(filePath) {
         .replace(/      )
       fs.writeFileSync(filePath, resolvedContent);
       console.log(`✅ Resolved merge conflicts in ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
+      return true}
+    return false} catch (error) {
     console.log(`❌ Error resolving conflicts in ${filePath}: ${error.message}`);
-    return false;
-  }
+    return false}
 }
 
 // List of files with conflicts;
@@ -59,8 +50,7 @@ async function main() {
   let resolvedCount = 0;
   for (const file of conflictedFiles) {
     if (resolveMergeConflicts(file)) {
-      resolvedCount++;
-    }
+      resolvedCount++}
   }
   
   console.log(`\n✅ Resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`);
@@ -70,31 +60,24 @@ async function main() {
     console.log('\n📝 Adding resolved files...');
     try {
       execSync('git add .', { encoding: 'utf8', cwd: process.cwd() });
-      console.log('✅ Files added successfully');
-    } catch (error) {
-      console.log('❌ Error adding files:', error.message);
-    }
+      console.log('✅ Files added successfully')} catch (error) {
+      console.log('❌ Error adding files:', error.message)}
     
     // Commit the resolution;
     console.log('\n📝 Committing merge resolution...');
     try {
       execSync('git commit -m "Resolve remaining merge conflicts and integrate all changes"', { encoding: 'utf8', cwd: process.cwd() });
-      console.log('✅ Merge resolution committed successfully');
-    } catch (error) {
-      console.log('❌ Error committing:', error.message);
-    }
+      console.log('✅ Merge resolution committed successfully')} catch (error) {
+      console.log('❌ Error committing:', error.message)}
   }
   
   // Final status;
   console.log('\n📊 Final Status: ');
   try {,
     const status = execSync('git status', { encoding: 'utf8', cwd: process.cwd() });
-    console.log(status);
-  } catch (error) {
-    console.log('❌ Error checking status:', error.message);
-  }
+    console.log(status)} catch (error) {
+    console.log('❌ Error checking status:', error.message)}
   
-  console.log('\n🎉 Remaining merge conflicts resolution completed!');
-}
+  console.log('\n🎉 Remaining merge conflicts resolution completed!')}
 
 main().catch(console.error);

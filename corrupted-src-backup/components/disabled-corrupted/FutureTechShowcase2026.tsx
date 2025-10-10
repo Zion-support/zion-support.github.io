@@ -222,7 +222,6 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
         </div>
       </div>
     </div>
-  );
-};
+  )}
 export default FutureTechShowcase2026;
 `

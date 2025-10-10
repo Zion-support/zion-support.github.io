@@ -8,8 +8,7 @@ function removeConsoleLogs(filePath) {
     let _modified = false;
     
     // Remove console.log statements (but keep console.error and console.warn for debugging)
-    const _consoleLogRegex = /^\s*console\.log\([^)]*\);\s*$/gm;
-    const _consoleLogMultiLineRegex = /^\s*console\.log\(\s*[^)]*\s*\);\s*$/gm;
+    const _consoleLogRegex = /^\s*console\.log\(Service Feature*\s*\);\s*$/gm;
     
 //     const originalContent = content;
     content = content.replace(consoleLogRegex, '');
@@ -21,8 +20,7 @@ function removeConsoleLogs(filePath) {
 function removeConsoleLogs(filePath) {/* TODO: Fix JSX expression */}
 //       }
     
-    return modified;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return modified} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -52,15 +50,13 @@ async function processFiles() {/* TODO: Fix JSX expression */}
     files.forEach(file => {)
       totalFiles++;)
       if (removeConsoleLogs(file)) {
-        modifiedFiles++;
-      }
+        modifiedFiles++}
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
     });
     
     files.forEach(file => {/* TODO: Fix JSX expression */}
       })
-    });
-  });
+    })});
   
 //   //   //   }
 

@@ -14,8 +14,7 @@ const __dirname = path.dirname(__filename);
 class BuildOptimizer {
   constructor() {
     this.distPath = path.join(process.cwd(), 'dist');
-    this.optimizations = [];
-  }
+    this.optimizations = Service Feature}
 
   async optimize() {
     console.log('🚀 Starting build optimization...');
@@ -32,25 +31,21 @@ class BuildOptimizer {
       await this.generateServiceWorker();
       
       console.log('✅ Build optimization completed successfully!');
-      this.printSummary();
-    } catch (error) {
+      this.printSummary()} catch (error) {
       console.error('❌ Build optimization failed:', error.message);
-      process.exit(1);
-    }
+      process.exit(1)}
   }
 
   async analyzeBundle() {
     console.log('📊 Analyzing bundle...');
     
     if (!fs.existsSync(this.distPath)) {
-      throw new Error('Dist folder not found. Please run build first.');
-    }
+      throw new Error('Dist folder not found. Please run build first.')}
 
     const files = this.getFilesRecursively(this.distPath);
     const totalSize = files.reduce((total, file) => {
       const stats = fs.statSync(file);
-      return total + stats.size;
-    }, 0);
+      return total + stats.size}, 0);
 
     this.optimizations.push({)
       name: 'Bundle Analysis'),
@@ -61,16 +56,13 @@ class BuildOptimizer {
     // Check for large files;
     const largeFiles = files.filter(file => {)
       const stats = fs.statSync(file);
-      return stats.size > 100 * 1024; // 100KB;
-    });
+      return stats.size > 100 * 1024; // 100KB});
 
     if (largeFiles.length > 0) {
       console.log('⚠️  Large files detected: ');
       largeFiles.forEach(file => {)
         const stats = fs.statSync(file);
-        console.log(`   ${file}: ${(stats.size / 1024).toFixed(2)} KB`);
-      });
-    }
+        console.log(`   ${file}: ${(stats.size / 1024).toFixed(2)} KB`)})}
   }
 
   async optimizeImages() {
@@ -86,8 +78,7 @@ class BuildOptimizer {
         name: 'Image Optimization'),
         status: 'skipped'),
         details: 'No images found'});
-      return;
-    }
+      return}
 
     // Add image optimization metadata;
     images.forEach(image => {)
@@ -97,17 +88,15 @@ class BuildOptimizer {
       // Add loading="lazy" to HTML if it contains images;
       if (image.endsWith('.html')) {
         let content = fs.readFileSync(image, 'utf8');
-        content = content.replace(/<img(?![^>]*loading=)/g, '<img loading="lazy"');
-        fs.writeFileSync(image, content);
-      }
+        content = content.replace(/<img(?!Service Feature*loading=)/g, '<img loading="lazy"');
+        fs.writeFileSync(image, content)}
     });
 
     this.optimizations.push({)
       name: 'Image Optimization'),
       status: 'completed'),
       details: `Optimized ${images.length} images`
-    });
-  }
+    })}
 
   async optimizeCSS() {
     console.log('🎨 Optimizing CSS...');
@@ -120,7 +109,7 @@ class BuildOptimizer {
       let content = fs.readFileSync(cssFile, 'utf8');
       
       // Remove comments;
-      content = content.replace(/\/\*[\s\S]*?\*\//g, '');
+      content = content.replace(/\/\*Service Feature*?\*\//g, '');
       
       // Remove unnecessary whitespace;
       content = content.replace(/\s+/g, ' ');
@@ -128,15 +117,13 @@ class BuildOptimizer {
       content = content.replace(/{\s*/g, '{');
       content = content.replace(/;\s*/g, ';');
       
-      fs.writeFileSync(cssFile, content);
-    });
+      fs.writeFileSync(cssFile, content)});
 
     this.optimizations.push({)
       name: 'CSS Optimization'),
       status: 'completed'),
       details: `Optimized ${cssFiles.length} CSS files`
-    });
-  }
+    })}
 
   async optimizeJS() {
     console.log('⚡ Optimizing JavaScript...');
@@ -150,21 +137,18 @@ class BuildOptimizer {
       
       // Remove console.log statements in production;
       if (process.env.NODE_ENV === 'production') {
-        content = content.replace(/console\.(log|info|debug|warn)\([^)]*\);?/g, '');
-      }
+        content = content.replace(/console\.(log|info|debug|warn)\(Service Feature*\);?/g, '')}
       
       // Remove unnecessary whitespace;
       content = content.replace(/\s+/g, ' ');
       
-      fs.writeFileSync(jsFile, content);
-    });
+      fs.writeFileSync(jsFile, content)});
 
     this.optimizations.push({)
       name: 'JavaScript Optimization'),
       status: 'completed'),
       details: `Optimized ${jsFiles.length} JS files`
-    });
-  }
+    })}
 
   async addSecurityHeaders() {
     console.log('🔒 Adding security headers...');
@@ -190,15 +174,13 @@ class BuildOptimizer {
       // Add security headers before closing head tag;
       content = content.replace('</head>', `${securityHeaders}</head>`);
       
-      fs.writeFileSync(htmlFile, content);
-    });
+      fs.writeFileSync(htmlFile, content)});
 
     this.optimizations.push({)
       name: 'Security Headers'),
       status: 'completed'),
       details: `Added to ${htmlFiles.length} HTML files`
-    });
-  }
+    })}
 
   async generateSitemap() {
     console.log('🗺️  Generating sitemap...');
@@ -242,8 +224,7 @@ class BuildOptimizer {
     this.optimizations.push({)
       name: 'Sitemap Generation'),
       status: 'completed'),
-      details: 'Generated sitemap.xml'});
-  }
+      details: 'Generated sitemap.xml'})}
 
   async generateRobotsTxt() {
     console.log('🤖 Generating robots.txt...');
@@ -265,8 +246,7 @@ Disallow: /private/`;
     this.optimizations.push({)
       name: 'Robots.txt Generation'),
       status: 'completed'),
-      details: 'Generated robots.txt'});
-  }
+      details: 'Generated robots.txt'})}
 
   async optimizeManifest() {
     console.log('📱 Optimizing manifest...');
@@ -284,14 +264,12 @@ Disallow: /private/`;
       manifest.theme_color = manifest.theme_color || '#4 f46 e5';
       manifest.background_color = manifest.background_color || '#0 f172 a';
       
-      fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-    }
+      fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2))}
 
     this.optimizations.push({)
       name: 'Manifest Optimization'),
       status: 'completed'),
-      details: 'Optimized manifest.json'});
-  }
+      details: 'Optimized manifest.json'})}
 
   async generateServiceWorker() {
     console.log('⚙️  Generating service worker...');
@@ -301,21 +279,18 @@ Disallow: /private/`;
     const swDest = path.join(this.distPath, 'sw.js');
     
     if (fs.existsSync(swSource)) {
-      fs.copyFileSync(swSource, swDest);
-    }
+      fs.copyFileSync(swSource, swDest)}
 
     this.optimizations.push({)
       name: 'Service Worker'),
       status: 'completed'),
-      details: 'Service worker ready'});
-  }
+      details: 'Service worker ready'})}
 
   getFilesRecursively(dir) {
-    const files = [];
+    const files = Service Feature;
     
     if (!fs.existsSync(dir)) {
-      return files;
-    }
+      return files}
     
     const items = fs.readdirSync(dir);
     
@@ -324,14 +299,11 @@ Disallow: /private/`;
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        files.push(...this.getFilesRecursively(fullPath));
-      } else {
-        files.push(fullPath);
-      }
+        files.push(...this.getFilesRecursively(fullPath))} else {
+        files.push(fullPath)}
     });
     
-    return files;
-  }
+    return files}
 
   printSummary() {
     console.log('\n📋 Optimization Summary: ');
@@ -340,17 +312,14 @@ Disallow: /private/`;
     this.optimizations.forEach(opt => {)
       const status = opt.status === 'completed' ? '✅' : ),
                     opt.status === 'skipped' ? '⏭️ ' : '❌';),
-      console.log(`${status} ${opt.name}: ${opt.details}`);
-    });
+      console.log(`${status} ${opt.name}: ${opt.details}`)});
     
-    console.log('\n🎉 Build optimization completed successfully!');
-  }
+    console.log('\n🎉 Build optimization completed successfully!')}
 }
 
 // Run optimization if called directly;
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file://${process.argvService Feature}`) {
   const optimizer = new BuildOptimizer();
-  optimizer.optimize().catch(console.error);
-}
+  optimizer.optimize().catch(console.error)}
 
 export default BuildOptimizer;

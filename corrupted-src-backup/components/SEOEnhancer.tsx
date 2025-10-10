@@ -32,9 +32,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
 const,
   SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-      };
+      }
     }
-  }, [structuredData]);
+  }, Service Feature);
   // Default structured data for organization;
   const defaultStructuredData = {
     '@context': 'https: //schema.org',
@@ -57,7 +57,7 @@ const,
   s://twitter.com/ziontechgroup'],
     contactPoin,
   t: {/* TODO: Fix JSX expression */}
-    }};
+    }}
   //   const finalStructuredData = structuredData || defaultStructuredData;
   return(<React.Fragment>)
       <Helmet>)
@@ -176,8 +176,7 @@ const,
         <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
       </Helmet>
       {children}
-  );
-};
+  )}
 export default SEOEnhancer;
 "`
   </SEOEnhancerProps>

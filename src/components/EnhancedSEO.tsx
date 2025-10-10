@@ -1,26 +1,11 @@
 import React from 'react';
-interface SEOProps {// TODO: Add content;}
+interface SEOProps {// TODO: Add content}
 }
   title?: string;
   description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterSite?: string;
-  structuredData?: unknown;
-  noindex?: boolean;
-  nofollow?: boolean;
-  lang?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-}
+  keywords?: stringService Feature}
 const EnhancedSEO: React.FC;
-          <SEOProps> = ({// TODO: Add content;}
+          <SEOProps> = ({// TODO: Add content}
 }
 const EnhancedSEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -39,11 +24,11 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 //   publishedTime,
 //   modifiedTime,
 //   section,
-  tags = []}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;}
+  tags = Service Feature}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description}
   const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
   return (
     // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
+    let metaDescription = document.querySelector('metaService Feature');
     if (!metaDescription) {/* TODO: Fix JSX expression */}
     }
     metaDescription.setAttribute('content', description);
@@ -88,8 +73,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
           <link rel="dns-prefetch" href="// www.google-analytics.com" /></link>"
           <link rel="dns-prefetch" href="// www.googletagmanager.com" /></link>
           </Helmet>
-  );
-};
+  )}
 export default EnhancedSEO;"`
   </SEOProps>
   </SEOProps>

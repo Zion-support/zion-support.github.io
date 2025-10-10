@@ -9,33 +9,27 @@ export default function handler(req, res) {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
-  }
+    return}
 
-  const { destination, weight, dimensions } = req.body || {};
+  const { destination, weight, dimensions } = req.body || {}
 
   if (!destination || !weight) {
-    return res.status(400).json({ error: 'Destination and weight are required' });
-  }
+    return res.status(400).json({ error: 'Destination and weight are required' })}
 
   if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
+    fs.mkdirSync(dir, { recursive: true })}
 
-  let existing = [];
+  let existing = Service Feature;
   try {
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = [];
-    }
+      if (!Array.isArray(existing)) existing = Service Feature}
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error reading existing rates:', error);
-    }
-    existing = [];
-  }
+      console.error('Error reading existing rates:', error)}
+    existing = Service Feature}
 
   // Calculate shipping rates based on destination and weight
   const baseRate = 10;
@@ -50,7 +44,7 @@ export default function handler(req, res) {
     dimensions,
     rate: totalRate,
     timestamp: new Date().toISOString()
-  };
+  }
 
   existing.push(newRate);
 
@@ -62,14 +56,11 @@ export default function handler(req, res) {
       success: true, 
       rate: totalRate,
       id: newRate.id
-    }));
-  } catch (error) {
+    }))} catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error saving shipping rate:', error);
-    }
+      console.error('Error saving shipping rate:', error)}
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save rate' }));
-  }
+    res.end(JSON.stringify({ error: 'Failed to save rate' }))}
 }

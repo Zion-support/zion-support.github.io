@@ -9,307 +9,7 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
 const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {
-  const, feature, s = [
-    {
-      i, c, o;
-  n: Bra, i, n;
-      tit, l, e: "Machine, Learning, Models","
-      descripti, o, n: "Advanced, ML, algorithms that, predict, future tren, d, s, customer, behavio, r, and, business, outcomes with, 9, 4% accura, c, y.","
-      tit, l, e: "Machine, Learning, Models",";
-      descripti, o, n: "Advanced, ML, algorithms that, predict, future tren, d, s, customer, behavio, r, and, business, outcomes with, 9, 4% accura, c, y.",";
-      benef, i, t: "94% prediction, accuracy, rate"
-    }
-    {
-      ic, o, n: Trending, U, p;
-      tit, l, e: "Re, a, l-Time, Forecastin, g","
-      descripti, o, n: "Live, predictive, analytics that, update, continuously as, new, data flows, i, n, providing, instant, insights.","
-      tit, l, e: "Re, a, l-Time, Forecastin, g",";
-      descripti, o, n: "Live, predictive, analytics that, update, continuously as, new, data flows, i, n, providing, instant, insights.",";
-      benef, i, t: "Re, a, l-time, decision, making"
-    }
-    {
-      ic, o, n: Targ, e, t;
-      tit, l, e: "Customer, Lifetime, Value","
-      descripti, o, n: "Predict, customer, behavior, churn, ris, k, and, lifetime, value to, optimize, marketing spend, and, retention.","
-      tit, l, e: "Customer, Lifetime, Value",";
-      descripti, o, n: "Predict, customer, behavior, churn, ris, k, and, lifetime, value to, optimize, marketing spend, and, retention.",";
-      benef, i, t: "35% increase, in, customer retenti, o, n"
-    }
-    {
-      ic, o, n: BarChar, t, 3;
-      tit, l, e: "Revenue, Forecastin, g","
-      descripti, o, n: "Accurate, revenue, predictions based, on, historical da, t, a, market, trend, s, and, external, factors.","
-      tit, l, e: "Revenue, Forecastin, g",";
-      descripti, o, n: "Accurate, revenue, predictions based, on, historical da, t, a, market, trend, s, and, external, factors.",";
-      benef, i, t: "98% forecast, accurac, y"
-    }
-    {
-      ic, o, n: Shie, l, d;
-      tit, l, e: "Risk, Assessmen, t","
-      descripti, o, n: "Identify, potential, risks and, opportunities, before they, impact, your business, operation, s.","
-      tit, l, e: "Risk, Assessmen, t",";
-      descripti, o, n: "Identify, potential, risks and, opportunities, before they, impact, your business, operation, s.",";
-      benef, i, t: "60% risk, reductio, n"
-    }
-    {
-      ic, o, n: Clo, c, k;
-      tit, l, e: "Automated, Insight, s","
-      descripti, o, n: "AI-generated, insights, and recommendations, delivered, directly to, decisio, n-make, r, s.","
-      tit, l, e: "Automated, Insight, s",";
-      descripti, o, n: "AI-generated, insights, and recommendations, delivered, directly to, decisio, n-make, r, s.",";
-      benef, i, t: "50% faster, decision, making"
-    }
-  ];
-  const, pricin, g = [
-    {
-      na, m, e: "Start, e, r"
-      pri, c, e: "$2, 9, 9"
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Perfect, for, small businesses, wanting, to leverage, predictive, analytics"
-      featur, e, s: [,
-        "Up, to, 10 predictive, model, s"
-        "5, data, sources"
-        "Basic, dashboar, d"
-        "Email, suppor, t"
-        "Monthly, report, s"
-        "Standard, integration, s"
-        "Historical, data, analysis"
-        "Basic, forecastin, g"
-      ]
-      popul, a, r: fal, s, e;
-    }
-    {
-      na, m, e: "Profession, a, l"
-      pri, c, e: "$8, 9, 9"
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Ideal, for, growing companies, with, complex data, need, s"
-      featur, e, s: [,
-        "Unlimited, predictive, models"
-        "25, data, sources"
-        "Advanced, dashboar, d & visualizati, o, n"
-        "Priority, suppor, t"
-        "Re, a, l-time, monitorin, g"
-        "Advanced, integration, s"
-        "Custom, model, training"
-        "API, acces, s"
-        "Automated, alert, s"
-        "A/B, testing, insights"
-      ]
-      popul, a, r: tr, u, e;
-    }
-    {
-      na, m, e: "Enterpri, s, e"
-      pri, c, e: "$2,9, 9, 9"
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s"
-      featur, e, s: [,
-        "Unlimited, everythin, g"
-        "Unlimited, data, sources"
-        "Enterprise, dashboar, d"
-        "Dedicated, data, scientist"
-        "Custom, model, development"
-        "Unlimited, integration, s"
-        "Advanced, securit, y & complian, c, e"
-        "Whi, t, e-label, option, s"
-        "SLA, guarante, e"
-        "On-premise, deploymen, t"
-        "Custom, reportin, g"
-        "Traini, n, g & consultati, o, n"
-      ]
-      popul, a, r: fal, s, e;
-      n, a, m;
-  e: "Start, e, r",";
-      pri, c, e: "$2, 9, 9",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Perfect, for, small businesses, wanting, to leverage, predictive, analytics",";
-      featur, e, s: [,
-        "Up, to, 10 predictive, model, s",";
-        "5, data, sources",";
-        "Basic, dashboar, d",";
-        "Email, suppor, t",";
-        "Monthly, report, s",";
-        "Standard, integration, s",";
-        "Historical, data, analysis",";
-        "Basic, forecastin, g"
-      ]
-      popul, a, r: fal, s, e;
-    }
-    {
-      na, m, e: "Profession, a, l",";
-      pri, c, e: "$8, 9, 9",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Ideal, for, growing companies, with, complex data, need, s",";
-      featur, e, s: [,
-        "Unlimited, predictive, models",";
-        "25, data, sources",";
-        "Advanced, dashboar, d & visualizati, o, n",";
-        "Priority, suppor, t",";
-        "Re, a, l-time, monitorin, g",";
-        "Advanced, integration, s",";
-        "Custom, model, training",";
-        "API, acces, s",";
-        "Automated, alert, s",";
-        "A/B, testing, insights"
-      ]
-      popul, a, r: tr, u, e;
-    }
-    {
-      na, m, e: "Enterpri, s, e",";
-      pri, c, e: "$2,9, 9, 9",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s",";
-      featur, e, s: [,
-        "Unlimited, everythin, g",";
-        "Unlimited, data, sources",";
-        "Enterprise, dashboar, d",";
-        "Dedicated, data, scientist",";
-        "Custom, model, development",";
-        "Unlimited, integration, s",";
-        "Advanced, securit, y & complian, c, e",";
-        "Whi, t, e-label, option, s",";
-        "SLA, guarante, e",";
-        "On-premise, deploymen, t",";
-        "Custom, reportin, g",";
-        "Traini, n, g & consultati, o, n"
-      ]
-      popul, a, r: fal, s, e;
-    }
-  ];
-  const, testimonial, s = [
-    {
-      na, m, e: "Jennifer, Martine, z","
-      ro, l, e: "VP, Marketin, g, RetailTech, Solution, s","
-      conte, n, t: "The, predictive, analytics platform, helped, us increase, our, customer retention, by, 40% and, optimize, our marketing, spend, by $2 M, annuall, y. The, ROI, was evident, within, the first, quarte, r.","
-      na, m, e: "Jennifer, Martine, z",";
-      ro, l, e: "VP, Marketin, g, RetailTech, Solution, s",";
-      conte, n, t: "The, predictive, analytics platform, helped, us increase, our, customer retention, by, 40% and, optimize, our marketing, spend, by $2M, annuall, y. The, ROI, was evident, within, the first, quarte, r.",";
-      rati, n, g: 5;
-      compa, n, y: "RetailTech, Solution, s"
-    }
-    {
-      na, m, e: "David, Ki, m","
-      ro, l, e: "C, F, O, FinTech, Innovation, s","
-      conte, n, t: "Revenue, forecasting, accuracy improved, from, 78% to, 9, 8%. This, gave, us the, confidence, to make, strategic, investments and, secure, additional funding, round, s.","
-      na, m, e: "David, Ki, m",";
-      ro, l, e: "C, F, O, FinTech, Innovation, s",";
-      conte, n, t: "Revenue, forecasting, accuracy improved, from, 78% to, 9, 8%. This, gave, us the, confidence, to make, strategic, investments and, secure, additional funding, round, s.",";
-      rati, n, g: 5;
-      compa, n, y: "FinTech, Innovation, s"
-    }
-    {
-      na, m, e: "Dr. Sarah, Thompso, n","
-      ro, l, e: "Head, of, Analytics, Healthcare, Networ, k","
-      conte, n, t: "The, risk, assessment models, identified, potential issues, 3, months before, they, occurred, saving, u, s $5 M, in, potential losses, and, improving patient, outcome, s.","
-      na, m, e: "Dr. Sarah, Thompso, n",";
-      ro, l, e: "Head, of, Analytics, Healthcare, Networ, k",";
-      conte, n, t: "The, risk, assessment models, identified, potential issues, 3, months before, they, occurred, saving, u, s $5M, in, potential losses, and, improving patient, outcome, s.",";
-      rati, n, g: 5;
-      compa, n, y: "Healthcare, Networ, k"
-    }
-  ];
-  const, useCase, s = [
-    {
-      tit, l, e: "E-Commerce, Optimizatio, n","
-      ic, o, n: Glo, b, e;
-      descripti, o, n: "Predict, customer, purchase behavi, o, r, optimize, inventor, y, and, personalize, shopping experienc, e, s.","
-      benefi, t, s: ["25% increase, in, conversion", "30% reduction, in, inventory cos, t, s", "40% improvement, in, customer satisfacti, o, n"]"
-    }
-    {
-      tit, l, e: "Financial, Service, s","
-      ic, o, n: Databa, s, e;
-      descripti, o, n: "Credit, risk, assessment, fraud, detectio, n, and, investment, portfolio optimizati, o, n.","
-      benefi, t, s: ["60% reduction, in, bad de, b, t", "95% fraud, detection, accuracy", "20% increase, in, portfolio retur, n, s"]"
-    }
-    {
-      tit, l, e: "Healthcare, Analytic, s","
-      ic, o, n: Use, r, s;
-      descripti, o, n: "Patient, outcome, prediction, resource, allocatio, n, and, treatment, optimization.","
-      benefi, t, s: ["35% improvement, in, patient outcom, e, s", "25% reduction, in, readmissions", "40% cost, saving, s"]"
-    }
-    {
-      tit, l, e: "Supply, Chai, n","
-      ic, o, n: Z, a, p;
-      descripti, o, n: "Demand, forecastin, g, supplier, risk, assessment, and, logistics, optimization.","
-      benefi, t, s: ["45% reduction, in, stockouts", "30% improvement, in, delivery tim, e, s", "25% cost, reductio, n"]"
-      tit, l, e: "E-Commerce, Optimizatio, n",";
-      ic, o, n: Glo, b, e;
-      descripti, o, n: "Predict, customer, purchase behavi, o, r, optimize, inventor, y, and, personalize, shopping experienc, e, s.",";
-      benefi, t, s: ["25% increase, in, conversion", "30% reduction, in, inventory cos, t, s", "40% improvement, in, customer satisfacti, o, n"]";
-    }
-    {
-      tit, l, e: "Financial, Service, s",";
-      ic, o, n: Databa, s, e;
-      descripti, o, n: "Credit, risk, assessment, fraud, detectio, n, and, investment, portfolio optimizati, o, n.",";
-      benefi, t, s: ["60% reduction, in, bad de, b, t", "95% fraud, detection, accuracy", "20% increase, in, portfolio retur, n, s"]";
-    }
-    {
-      tit, l, e: "Healthcare, Analytic, s",";
-      ic, o, n: Use, r, s;
-      descripti, o, n: "Patient, outcome, prediction, resource, allocatio, n, and, treatment, optimization.",";
-      benefi, t, s: ["35% improvement, in, patient outcom, e, s", "25% reduction, in, readmissions", "40% cost, saving, s"]";
-    }
-    {
-      tit, l, e: "Supply, Chai, n",";
-      ic, o, n: Z, a, p;
-      descripti, o, n: "Demand, forecastin, g, supplier, risk, assessment, and, logistics, optimization.",";
-      benefi, t, s: ["45% reduction, in, stockouts", "30% improvement, in, delivery tim, e, s", "25% cost, reductio, n"]";
-    }
-  ];
-  return(<React.Fragment>
-      <Helmet>
-        <title>AI, Predictive, Analytics - Zion, Tech, Group | Advanced, Forecastin, g & Insigh, t, s</title>
-        <me, t, a;
-  na, m, e="descripti, o, n"
-          content="Transform, your, business with, AI, predictive analytics, that, deliver 94% accuracy, in, forecasting, customer, behavior, prediction, and, risk, assessment. Re, a, l-time, insights, for better, decision, s." /><meta name="keywor, d, s" content="predictive, analytic, s, machine, learnin, g, forecasti, n, g, business, intelligenc, e, data, analytic, s, AI, insight, s, predictive, modelin, g" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-predicti, v, e-analyti, c, s/>"
-const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, pricin, g = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, testimonial, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, useCase, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
+  const, feature, s = Service Feature;
   return (<React.Fragment>
       <Helmet></Helmet>
         <title>AI, Predictive, Analytics - Zion, Tech, Group | Advanced, Forecastin, g & Insigh, t, s</title>
@@ -612,8 +312,7 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
                       ))}
                     </ul>
                   </d, i, v>
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -710,8 +409,7 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
                   </d, i, v>)
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -799,7 +497,7 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
 pl, a, n.popul, a, r;
 ? 'bg-indi, g, o-600, tex, t-white, hove, r: bg-indi, g, o-7, 0, 0'
 ? 'bg-indi, g, o-600, tex, t-white, hov, e;
-  r: bg-indi, g, o-7, 0, 0',';}
+  r: bg-indi, g, o-7, 0, 0','}
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
@@ -869,7 +567,7 @@ pl, a, n.popul, a, r;
               {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (</div>
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <div, className="flex, item, s-center, m, b-4">";
-                    {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>
+                    {Service Feature.m, a, p((_, i) => (</div>
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
             </d, i, v>"
             <div, className="gri, d, m,"
@@ -960,7 +658,5 @@ pl, a, n.popul, a, r;
       </ma, i, n>
       <Foot, e, r   /></Foot>
     </React.Fragment>
-  );
-};
-export default AIPredictiveAnalytics;
-}}}}"`
+  )}
+export default AIPredictiveAnalytics}}}}"`

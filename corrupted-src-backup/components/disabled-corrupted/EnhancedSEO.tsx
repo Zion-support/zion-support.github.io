@@ -13,7 +13,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
   publishedTime,
   modifiedTime,
   section,
-  tags = [],
+  tags = Service Feature,
   noindex = false,
   nofollow = false,
   canonical}) => {
@@ -58,7 +58,7 @@ const,
       addressCountry: 'US',
     addres,
   s: {/* TODO: Fix JSX expression */}
-    }};
+    }}
   // Add article structured data if type is article;
   if (type === 'article') {
     const articleData = {
@@ -69,8 +69,7 @@ const,
       image: image;
       author: {,
         '@type': 'Organization',
-        name: author;
-      },
+        name: author},
       publisher: {,
         '@type': 'Organization',
         name: 'Zion Tech Group',
@@ -93,13 +92,12 @@ const,
   d: modifiedTime || currentTime,
       mainEntityOfPag,
   e: {/* TODO: Fix JSX expression */}
-      }};
+      }}
     if (section) {/* TODO: Fix JSX expression */}
     }
     if (tags.length > 0) {/* TODO: Fix JSX expression */}
     }
-    (structuredData as any)['@graph'] = [structuredData, articleData];
-  }
+    (structuredData as any)['@graph'] = Service Feature}
   // Track page view;
   useEffect(() => {
     // Google Analytics tracking;
@@ -108,8 +106,7 @@ const,
         page_title: title),
         page_location: currentUrl),
   useEffect(() => {/* TODO: Fix JSX expression */}
-      });
-    }
+      })}
     // Custom analytics tracking;
     if (typeof window !== 'undefined' && (window as any).analytics) {
       (window as any).analytics.track('Page Viewed', {)
@@ -117,9 +114,8 @@ const,
         url: currentUrl),
         type),
     if (typeof window !== 'undefined' && (window as any).analytics) {/* TODO: Fix JSX expression */}
-      });
-    }
-  }, [title, currentUrl, type]);
+      })}
+  }, Service Feature);
   return(<Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -193,8 +189,7 @@ const,
                 '@type': 'ListItem'
                 position: 1;
                 name: 'Home',
-                item: window.location.origin;
-              },
+                item: window.location.origin},
               {
                 '@type': 'ListItem')
                 position: 2;)
@@ -284,8 +279,7 @@ const,
         </script>
       )}
     </Helmet>
-  );
-};
+  )}
 export default EnhancedSEO;
 "`
   </SEOProps>

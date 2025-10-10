@@ -573,8 +573,7 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
     period: '/month',
     description: unknown;
       'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.',
-    features: [;
-    ]
+    features: Service Feature
     category: 'Security & Identity'
     link: '/api - security - scanner'
     real_service: true;
@@ -607,8 +606,7 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
   n: unknown,
       'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.',
     feature,
-  s: [;
-    ],
+  s: Service Feature,
     categor,
   y: 'Security & Identity'
     lin,
@@ -627,7 +625,7 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
   e: true;
     ro,
   i: 'Improve deliverability and block spoofing/phishing attempts.'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.'}
     feature,
@@ -648,7 +646,6 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
   i: 'Prevent high-severity API incidents and cut MTTR.'
   }
 ];
-;
 export const real2027Q3Additions = [
   {/* TODO: Fix JSX expression */}
   n: 'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.'}
@@ -668,7 +665,7 @@ export const real2027Q3Additions = [
   e: true;
     ro,
   i: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Turnkey HA architecture with PITR backups, automatic failover, and expert tuning backed by SRE playbooks.'}
     feature,
@@ -687,7 +684,7 @@ export const real2027Q3Additions = [
   e: true;
     ro,
   i: 'Eliminate 2–4 on-call incidents/month and improve p99 latency by 20–40%.'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Deploy a proven RAG baseline with embeddings, chunking, evaluation harness, and observability for fast iteration.'}
     feature,
@@ -706,7 +703,7 @@ export const real2027Q3Additions = [
   e: true;
     ro,
   i: 'Cut RAG prototyping time from weeks to days while improving answer quality.'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Schedule and run serverless jobs at scale with observability, concurrency controls, and guaranteed delivery semantics.'}
     feature,
@@ -725,7 +722,7 @@ export const real2027Q3Additions = [
   e: true;
     ro,
   i: 'Reduce failed job incidents by 70% and engineering toil by 50%.'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Monitor WHOIS, DNS records, TLS health, and name server changes with instant alerts and audit trails.'}
     feature,
@@ -744,7 +741,7 @@ export const real2027Q3Additions = [
   e: true;
     ro,
   i: 'Avoid costly outages from expired domains and misconfigured DNS.'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Track service uptime with user-centric SLOs, burn rates, and multi-location synthetic checks.'}
     feature,
@@ -763,7 +760,7 @@ export const real2027Q3Additions = [
   e: true;
     ro,
   i: 'Cut false alerts by 60% and align reliability to user impact.'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Automate SCIM provisioning, offboarding, and periodic access reviews across Okta/Auth0/WorkOS.'}
     feature,
@@ -782,7 +779,7 @@ export const real2027Q3Additions = [
   e: true;
     ro,
   i: 'Reduce onboarding time by 80% and access risk by 50%.'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'One-click OpenTelemetry setup with golden signals, latency SLOs, and dashboards for REST and gRPC APIs.'}
     feature,
@@ -801,7 +798,7 @@ export const real2027Q3Additions = [
   e: true;
     ro,
   i: 'Decrease MTTR by 40% and increase release confidence.'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Continuously analyze RBAC bindings, detect excessive privileges, and auto-generate least-privilege policies.'}
     feature,
@@ -820,7 +817,7 @@ export const real2027Q3Additions = [
   e: true;
     ro,
   i: 'Reduce lateral movement risk and pass audits faster.'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Detects drift between IaC (Terraform) and live cloud state, with approvals and auto-remediation.'}
     feature,
@@ -839,7 +836,7 @@ export const real2027Q3Additions = [
   e: true;
     ro,
   i: 'Prevent config drift incidents and reduce compliance toil.'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Triage, summarize, and coordinate incidents with auto-generated timelines and draft postmortems.'}
     feature,
@@ -858,7 +855,7 @@ export const real2027Q3Additions = [
   e: true;
     ro,
   i: 'Reduce incident resolution time by 30–50% and improve learning capture.'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Automate competitor tracking, category mapping, and trend detection with exportable insight briefs.'}
     feature,
@@ -877,7 +874,7 @@ export const real2027Q3Additions = [
   e: true;
     ro,
   i: 'Save 10–20 analyst hours per week while increasing coverage.'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Automate prospecting, enrichment, and multi-channel outreach with AI-drafted replies and meeting booking.'}
     feature,
@@ -896,7 +893,7 @@ export const real2027Q3Additions = [
   e: true;
     ro,
   i: 'Increase meetings booked by 20–40% with consistent outreach.'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Extract key clauses, flag risks, and align to your negotiation playbooks with redlines and exports.'}
     feature,
@@ -915,7 +912,7 @@ export const real2027Q3Additions = [
   e: true;
     ro,
   i: 'Cut review cycles from weeks to days and reduce outside counsel spend.'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'High-quality SEO content in your brand voice with templates, approvals, and CMS integrations.'}
     feature,
@@ -934,7 +931,7 @@ export const real2027Q3Additions = [
   e: true;
     ro,
   i: 'Publish 3–5x more content while improving rankings.'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Aggregate and analyze DMARC reports with actionable guidance to reach enforcement safely.'}
     feature,
@@ -953,7 +950,7 @@ export const real2027Q3Additions = [
   e: true;
     ro,
   i: 'Improve deliverability and block spoofing/phishing attempts.'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.'}
     feature,
@@ -1156,7 +1153,7 @@ export const real2027Q3Additions = [ export const real2027Q3Additions = [; i,
   e: '$199',' perio,
   d: '/month', descriptio,
   n:  ,' 'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.', feature,
-  s: [; ],' categor,
+  s: Service Feature,' categor,
   y: 'Security & Identity'' lin,
   k: '/api - security - scanner' real_servic,
   e: true,' ro,
@@ -1164,58 +1161,58 @@ export const real2027Q3Additions = [ export const real2027Q3Additions = [; i,
   y: 'Security & Identity';' lin,
   k: '/email-dmarc-analyzer'; realServic,
   e: true;' ro,
-  i: 'Improve deliverability and block spoofing/phishing attempts.' }; {/* TODO: Fix JSX expression */}
+  i: 'Improve deliverability and block spoofing/phishing attempts.' } {/* TODO: Fix JSX expression */}
   k: '/api-security-scanner'} realServic,
-  e: true};' ro,
+  e: true}' ro,
   i: 'Prevent high-severity API incidents and cut MTTR.' } ]; export const real2027Q3Additions = [; {/* TODO: Fix JSX expression */}
   k: '/it-asset-discovery-agent'} realServic,
-  e: true};' ro,
-  i: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.' }; {/* TODO: Fix JSX expression */}
+  e: true}' ro,
+  i: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.' } {/* TODO: Fix JSX expression */}
   k: '/managed-postgres-ha'} realServic,
-  e: true};' ro,
-  i: 'Eliminate 2–4 on-call incidents/month and improve p99 latency by 20–40%.' }; {/* TODO: Fix JSX expression */}
+  e: true}' ro,
+  i: 'Eliminate 2–4 on-call incidents/month and improve p99 latency by 20–40%.' } {/* TODO: Fix JSX expression */}
   k: '/vector-search-starter'} realServic,
-  e: true};' ro,
-  i: 'Cut RAG prototyping time from weeks to days while improving answer quality.' }; {/* TODO: Fix JSX expression */}
+  e: true}' ro,
+  i: 'Cut RAG prototyping time from weeks to days while improving answer quality.' } {/* TODO: Fix JSX expression */}
   k: '/serverless-cron-manager'} realServic,
-  e: true};' ro,
-  i: 'Reduce failed job incidents by 70% and engineering toil by 50%.' }; {/* TODO: Fix JSX expression */}
+  e: true}' ro,
+  i: 'Reduce failed job incidents by 70% and engineering toil by 50%.' } {/* TODO: Fix JSX expression */}
   k: '/domain-dns-monitor'} realServic,
-  e: true};' ro,
-  i: 'Avoid costly outages from expired domains and misconfigured DNS.' }; {/* TODO: Fix JSX expression */}
+  e: true}' ro,
+  i: 'Avoid costly outages from expired domains and misconfigured DNS.' } {/* TODO: Fix JSX expression */}
   k: '/uptime-slo-monitor'} realServic,
-  e: true};' ro,
-  i: 'Cut false alerts by 60% and align reliability to user impact.' }; {/* TODO: Fix JSX expression */}
+  e: true}' ro,
+  i: 'Cut false alerts by 60% and align reliability to user impact.' } {/* TODO: Fix JSX expression */}
   k: '/sso-user-lifecycle-automation'} realServic,
-  e: true};' ro,
-  i: 'Reduce onboarding time by 80% and access risk by 50%.' }; {/* TODO: Fix JSX expression */}
+  e: true}' ro,
+  i: 'Reduce onboarding time by 80% and access risk by 50%.' } {/* TODO: Fix JSX expression */}
   k: '/api-observability-starter'} realServic,
-  e: true};' ro,
-  i: 'Decrease MTTR by 40% and increase release confidence.' }; {/* TODO: Fix JSX expression */}
+  e: true}' ro,
+  i: 'Decrease MTTR by 40% and increase release confidence.' } {/* TODO: Fix JSX expression */}
   k: '/kubernetes-rbac-auditor'} realServic,
-  e: true};' ro,
-  i: 'Reduce lateral movement risk and pass audits faster.' }; {/* TODO: Fix JSX expression */}
+  e: true}' ro,
+  i: 'Reduce lateral movement risk and pass audits faster.' } {/* TODO: Fix JSX expression */}
   k: '/infrastructure-drift-detector'} realServic,
-  e: true};' ro,
-  i: 'Prevent config drift incidents and reduce compliance toil.' }; {/* TODO: Fix JSX expression */}
+  e: true}' ro,
+  i: 'Prevent config drift incidents and reduce compliance toil.' } {/* TODO: Fix JSX expression */}
   k: '/incident-copilot'} realServic,
-  e: true};' ro,
-  i: 'Reduce incident resolution time by 30–50% and improve learning capture.' }; {/* TODO: Fix JSX expression */}
+  e: true}' ro,
+  i: 'Reduce incident resolution time by 30–50% and improve learning capture.' } {/* TODO: Fix JSX expression */}
   k: '/ai-market-research'} realServic,
-  e: true};' ro,
-  i: 'Save 10–20 analyst hours per week while increasing coverage.' }; {/* TODO: Fix JSX expression */}
+  e: true}' ro,
+  i: 'Save 10–20 analyst hours per week while increasing coverage.' } {/* TODO: Fix JSX expression */}
   k: '/ai-sales-automation'} realServic,
-  e: true};' ro,
-  i: 'Increase meetings booked by 20–40% with consistent outreach.' }; {/* TODO: Fix JSX expression */}
+  e: true}' ro,
+  i: 'Increase meetings booked by 20–40% with consistent outreach.' } {/* TODO: Fix JSX expression */}
   k: '/ai-legal-contract-analyzer'} realServic,
-  e: true};' ro,
-  i: 'Cut review cycles from weeks to days and reduce outside counsel spend.' }; {/* TODO: Fix JSX expression */}
+  e: true}' ro,
+  i: 'Cut review cycles from weeks to days and reduce outside counsel spend.' } {/* TODO: Fix JSX expression */}
   k: '/ai-content-generator'} realServic,
-  e: true};' ro,
-  i: 'Publish 3–5x more content while improving rankings.' }; {/* TODO: Fix JSX expression */}
+  e: true}' ro,
+  i: 'Publish 3–5x more content while improving rankings.' } {/* TODO: Fix JSX expression */}
   k: '/email-dmarc-analyzer'} realServic,
-  e: true};' ro,
-  i: 'Improve deliverability and block spoofing/phishing attempts.' }; {/* TODO: Fix JSX expression */}
+  e: true}' ro,
+  i: 'Improve deliverability and block spoofing/phishing attempts.' } {/* TODO: Fix JSX expression */}
   k: '/api-security-scanner'} realServic,
-  e: true};' ro,
+  e: true}' ro,
   i: 'Prevent high-severity API incidents and cut MTTR.' } ]; '

@@ -10,12 +10,7 @@ interface ConsultationType {
   description: string;
   duration: string;
   price: string;
-  features: string[];
-  popular: boolean;
-}
-
-const ConsultationPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+  features: stringService Feature = useState({
     name: '',
     email: '',
     company: '',
@@ -25,7 +20,7 @@ const ConsultationPage: React.FC = () => {
     urgency: 'medium'
   });
 
-  const consultationTypes: ConsultationType[] = [
+  const consultationTypes: ConsultationTypeService Feature = [
     {
       id: 'strategy',
       name: 'AI Strategy Consultation',
@@ -95,15 +90,13 @@ const ConsultationPage: React.FC = () => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
-    }));
-  };
+      Service Feature: value
+    }))}
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // In a real app, this would submit the form data
-    alert('Thank you for your interest! We will contact you within 24 hours.');
-  };
+    alert('Thank you for your interest! We will contact you within 24 hours.')}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -392,7 +385,6 @@ const ConsultationPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )}
 
 export default ConsultationPage;

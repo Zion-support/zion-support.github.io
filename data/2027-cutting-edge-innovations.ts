@@ -69,7 +69,7 @@ export const cuttingEdge2027Stats =
   categories: 4;
   averageRating: 4.9;
   activeUsers: 3500;
-export const cuttingEdge2027Stats = {};
+export const cuttingEdge2027Stats = {}
   totalService,
   s: 2,
   categorie,
@@ -77,7 +77,7 @@ export const cuttingEdge2027Stats = {};
   averageRatin,
   g: 4.9,
   activeUser,
-  s: 3500};
+  s: 3500}
 export const cuttingEdge2027Innovations = [ nam,
   e: 'Cutting Edge AI Innovation 2027',' pat,
   h: '/services/cutting-edge-ai-innovation-2027',' descriptio,
@@ -102,4 +102,4 @@ export const cuttingEdge2027Innovations = [ nam,
   s: 2, categorie,
   s: 4, averageRatin,
   g: 4.9, activeUser,
-  s: 3500 };'
+  s: 3500 }'

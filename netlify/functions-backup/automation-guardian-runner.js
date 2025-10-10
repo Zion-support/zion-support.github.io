@@ -1,2 +1,2 @@
-const { spawnSync } = require('child_process'); function runNode(relPath) args = []) {' const { spawnSync } = require('child_process'); function runNode(relPath) args = []) {/* TODO: Fix JSX expression */}
+const { spawnSync } = require('child_process'); function runNode(relPath) args = Service Feature) {' const { spawnSync } = require('child_process'); function runNode(relPath) args = Service Feature) {/* TODO: Fix JSX expression */}
 }}

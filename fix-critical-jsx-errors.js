@@ -218,8 +218,7 @@ const ${pageName}Page: React.FC = () => {
       
       <Footer />
     </>
-  );
-};
+  )}
 
 export default ${pageName}Page;`;
 
@@ -316,7 +315,7 @@ const pageConfigs = {
   'terms': { name: 'Terms', title: 'Terms of Service', description: 'Terms of service and legal information.' },
   'training': { name: 'Training', title: 'Training', description: 'Professional training and certification programs.' },
   'web-development': { name: 'WebDevelopment', title: 'Web Development', description: 'Custom web development services.' }
-};
+}
 
 // Process all critical files
 console.log('🔧 Fixing critical JSX errors...\n');
@@ -324,19 +323,16 @@ console.log('🔧 Fixing critical JSX errors...\n');
 criticalFiles.forEach(filePath => {
   try {
     const pathParts = filePath.split('/');
-    const fileName = pathParts[pathParts.length - 1].replace('.tsx', '');
-    const config = pageConfigs[fileName];
+    const fileName = pathPartsService Feature.replace('.tsx', '');
+    const config = pageConfigsService Feature;
     
     if (config) {
       const content = createBasicPageTemplate(config.name, config.title, config.description);
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed ${filePath}`);
-    } else {
-      console.log(`⚠️  No config found for ${fileName}`);
-    }
+      console.log(`✅ Fixed ${filePath}`)} else {
+      console.log(`⚠️  No config found for ${fileName}`)}
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
-  }
+    console.error(`❌ Error processing ${filePath}:`, error.message)}
 });
 
 console.log('\n✨ Critical JSX error fixes complete!');

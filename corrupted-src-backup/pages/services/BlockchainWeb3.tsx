@@ -9,182 +9,7 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
 const, BlockchainWeb, 3: Rea, c, t.FC = () => {
-  const, feature, s = [
-    {
-      i, c, o;
-  n: Shie, l, d;
-      tit, l, e: "Smart, Contract, Development","
-      descripti, o, n: "Secu, r, e, audited, smart, contracts for, DeF, i, NF, T, s, DA, O, s, and, enterprise, applications with, comprehensive, testing.","
-      tit, l, e: "Smart, Contract, Development",";
-      descripti, o, n: "Secu, r, e, audited, smart, contracts for, DeF, i, NF, T, s, DA, O, s, and, enterprise, applications with, comprehensive, testing.",";
-      benef, i, t: "Zero, security, vulnerabilities"
-    }
-    {
-      ic, o, n: Netwo, r, k;
-      tit, l, e: "Mul, t, i-Chain, Integratio, n","
-      descripti, o, n: "Seamless, integration, across Ethere, u, m, Polyg, o, n, B, S, C, Sola, n, a, and, other, major blockchain, network, s.","
-      tit, l, e: "Mul, t, i-Chain, Integratio, n",";
-      descripti, o, n: "Seamless, integration, across Ethere, u, m, Polyg, o, n, B, S, C, Sola, n, a, and, other, major blockchain, network, s.",";
-      benef, i, t: "Universal, compatibilit, y"
-    }
-    {
-      ic, o, n: Lo, c, k;
-      tit, l, e: "DeFi, Protocol, Development","
-      descripti, o, n: "Custom, DeFi, protocols including, DEX, s, lending, platform, s, yield, farmin, g, and, liquidity, management syste, m, s.","
-      tit, l, e: "DeFi, Protocol, Development",";
-      descripti, o, n: "Custom, DeFi, protocols including, DEX, s, lending, platform, s, yield, farmin, g, and, liquidity, management syste, m, s.",";
-      benef, i, t: "Enterpri, s, e-grade, securit, y"
-    }
-    {
-      ic, o, n: Coi, n, s;
-      tit, l, e: "NFT, Marketplac, e & Tokenizati, o, n","
-      descripti, o, n: "Complete, NFT, marketplace development, with, advanced featur, e, s, tokenization, service, s, and, royalty, management.","
-      tit, l, e: "NFT, Marketplac, e & Tokenizati, o, n",";
-      descripti, o, n: "Complete, NFT, marketplace development, with, advanced featur, e, s, tokenization, service, s, and, royalty, management.",";
-      benef, i, t: "Scalable, NFT, infrastructure"
-    }
-    {
-      ic, o, n: Databa, s, e;
-      tit, l, e: "Blockchain, Analytic, s","
-      descripti, o, n: "Advanced, blockchain, data analys, i, s, transaction, monitorin, g, and, compliance, reporting with, rea, l-time, insight, s.","
-      tit, l, e: "Blockchain, Analytic, s",";
-      descripti, o, n: "Advanced, blockchain, data analys, i, s, transaction, monitorin, g, and, compliance, reporting with, rea, l-time, insight, s.",";
-      benef, i, t: "Re, a, l-time, monitorin, g"
-    }
-    {
-      ic, o, n: Glo, b, e;
-      tit, l, e: "Web3, Integratio, n","
-      descripti, o, n: "Seamless, Web3, integration for, existing, applications with, wallet, connectivity and, decentralized, identity.","
-      tit, l, e: "Web3, Integratio, n",";
-      descripti, o, n: "Seamless, Web3, integration for, existing, applications with, wallet, connectivity and, decentralized, identity.",";
-      benef, i, t: "Smooth, user, experience"
-    }
-  ];
-  const, pricin, g = [
-    {
-      na, m, e: "Start, u, p"
-      pri, c, e: "$8,5, 0, 0"
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Perfect, for, startups and, small, projects entering, the, Web3 spa, c, e"
-      featur, e, s: [,
-        "Basic, smart, contract developme, n, t"
-        "Single, blockchain, integration"
-        "Standard, security, auditing"
-        "Email, suppor, t"
-        "Monthly, progress, reports"
-        "Basic, DeFi, protocol set, u, p"
-        "Simple, NFT, marketplace"
-        "Standard, token, development"
-        "Basic, analytics, dashboard"
-      ]
-      popul, a, r: fal, s, e;
-    }
-    {
-      na, m, e: "Grow, t, h"
-      pri, c, e: "$25,0, 0, 0"
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Ideal, for, growing projects, with, complex blockchain, requirement, s"
-      featur, e, s: [,
-        "Advanced, smart, contract developme, n, t"
-        "Mul, t, i-chain, integratio, n (5, network, s)"
-        "Comprehensive, security, auditing"
-        "Priority, suppor, t"
-        "Weekly, progress, reports"
-        "Advanced, DeFi, protocols"
-        "Custom, NFT, marketplace with, advanced, features"
-        "Tokenomics, desig, n & implementati, o, n"
-        "Advanced, analytic, s & reporti, n, g"
-        "Custom, Web3, integrations"
-        "DAO, governance, setup"
-        "Yield, farming, protocols"
-      ]
-      popul, a, r: tr, u, e;
-    }
-    {
-      na, m, e: "Enterpri, s, e"
-      pri, c, e: "$75,0, 0, 0"
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Complete, solution, for lar, g, e-scale, blockchain, and Web3, implementation, s"
-      featur, e, s: [,
-        "Enterpri, s, e-grade, smart, contract sui, t, e"
-        "Unlimited, blockchain, integrations"
-        "Thi, r, d-party, security, audits"
-        "Dedicated, blockchain, architect"
-        "Daily, progress, reports"
-        "Complex, DeFi, ecosystem developme, n, t"
-        "Enterprise, NF, T & tokenization, platfor, m"
-        "Custom, blockchain, development"
-        "Enterprise, analytic, s & complian, c, e"
-        "Full, Web3, ecosystem integrati, o, n"
-        "Advanced, DAO, governance"
-        "Cro, s, s-chain, bridge, development"
-        "SLA, guarante, e"
-        "24/7, monitorin, g & suppo, r, t"
-      ]
-      popul, a, r: fal, s, e;
-      n, a, m;
-  e: "Start, u, p",";
-      pri, c, e: "$8,5, 0, 0",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Perfect, for, startups and, small, projects entering, the, Web3 spa, c, e",";
-      featur, e, s: [,
-        "Basic, smart, contract developme, n, t",";
-        "Single, blockchain, integration",";
-        "Standard, security, auditing",";
-        "Email, suppor, t",";
-        "Monthly, progress, reports",";
-        "Basic, DeFi, protocol set, u, p",";
-        "Simple, NFT, marketplace",";
-        "Standard, token, development",";
-        "Basic, analytics, dashboard"
-      ]
-      popul, a, r: fal, s, e;
-    }
-    {
-      na, m, e: "Grow, t, h",";
-      pri, c, e: "$25,0, 0, 0",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Ideal, for, growing projects, with, complex blockchain, requirement, s",";
-      featur, e, s: [,
-        "Advanced, smart, contract developme, n, t",";
-        "Mul, t, i-chain, integratio, n (5, network, s)",";
-        "Comprehensive, security, auditing",";
-        "Priority, suppor, t",";
-        "Weekly, progress, reports",";
-        "Advanced, DeFi, protocols",";
-        "Custom, NFT, marketplace with, advanced, features",";
-        "Tokenomics, desig, n & implementati, o, n",";
-        "Advanced, analytic, s & reporti, n, g",";
-        "Custom, Web3, integrations",";
-        "DAO, governance, setup",";
-        "Yield, farming, protocols"
-      ]
-      popul, a, r: tr, u, e;
-    }
-    {
-      na, m, e: "Enterpri, s, e",";
-      pri, c, e: "$75,0, 0, 0",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Complete, solution, for lar, g, e-scale, blockchain, and Web3, implementation, s",";
-      featur, e, s: [,
-        "Enterpri, s, e-grade, smart, contract sui, t, e",";
-        "Unlimited, blockchain, integrations",";
-        "Thi, r, d-party, security, audits",";
-        "Dedicated, blockchain, architect",";
-        "Daily, progress, reports",";
-        "Complex, DeFi, ecosystem developme, n, t",";
-        "Enterprise, NF, T & tokenization, platfor, m",";
-        "Custom, blockchain, development",";
-        "Enterprise, analytic, s & complian, c, e",";
-        "Full, Web3, ecosystem integrati, o, n",";
-        "Advanced, DAO, governance",";
-        "Cro, s, s-chain, bridge, development",";
-        "SLA, guarante, e",";
-        "24/7, monitorin, g & suppo, r, t"
-      ]
-      popul, a, r: fal, s, e;
-    }
-  ];
+  const, feature, s = Service Feature;
   const, testimonial, s = [
     {
       na, m, e: "Jennifer, Martine, z","
@@ -217,135 +42,7 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {
       compa, n, y: "Healthcare, DA, O"
     }
   ];
-  const, service, s = [
-    {
-      tit, l, e: "DeFi, Developmen, t","
-      ic, o, n: Trending, U, p;
-      descripti, o, n: "Complete, DeFi, protocol development, including, DEXs, lending, platform, s, and, yield, farming syste, m, s.","
-      metri, c, s: "$50, 0, M+ TVL, manage, d","
-      benefi, t, s: ["Automated, market, makers", "Liquidity, minin, g", "Cro, s, s-chain, swap, s"]"
-    }
-    {
-      tit, l, e: "NFT, Solution, s","
-      ic, o, n: Coi, n, s;
-      descripti, o, n: "E, n, d-to-end, NFT, marketplace development, with, advanced features, and, tokenization servic, e, s.","
-      metri, c, s: "10, 0, K+ users, supporte, d","
-      benefi, t, s: ["Custom, marketplac, e", "Royalty, managemen, t", "Metadata, optimizatio, n"]"
-    }
-    {
-      tit, l, e: "DAO, Governanc, e","
-      ic, o, n: Glo, b, e;
-      descripti, o, n: "Decentralized, autonomous, organization setup, with, voting mechanisms, and, treasury manageme, n, t.","
-      metri, c, s: "5, 0, K+ community, member, s","
-      benefi, t, s: ["Voting, system, s", "Treasury, managemen, t", "Proposal, mechanism, s"]"
-    }
-    {
-      tit, l, e: "Token, Developmen, t","
-      ic, o, n: Databa, s, e;
-      descripti, o, n: "Custom, token, creation with, advanced, tokenomics, vesting, schedule, s, and, utility, mechanisms.","
-      metri, c, s: "Zero, security, incidents","
-      benefi, t, s: ["Custom, tokenomic, s", "Vesting, schedule, s", "Utility, mechanism, s"]"
-      tit, l, e: "DeFi, Developmen, t",";
-      ic, o, n: Trending, U, p;
-      descripti, o, n: "Complete, DeFi, protocol development, including, DEXs, lending, platform, s, and, yield, farming syste, m, s.",";
-      metri, c, s: "$50, 0, M+ TVL, manage, d",";
-      benefi, t, s: ["Automated, market, makers", "Liquidity, minin, g", "Cro, s, s-chain, swap, s"]";
-    }
-    {
-      tit, l, e: "NFT, Solution, s",";
-      ic, o, n: Coi, n, s;
-      descripti, o, n: "E, n, d-to-end, NFT, marketplace development, with, advanced features, and, tokenization servic, e, s.",";
-      metri, c, s: "10, 0, K+ users, supporte, d",";
-      benefi, t, s: ["Custom, marketplac, e", "Royalty, managemen, t", "Metadata, optimizatio, n"]";
-    }
-    {
-      tit, l, e: "DAO, Governanc, e",";
-      ic, o, n: Glo, b, e;
-      descripti, o, n: "Decentralized, autonomous, organization setup, with, voting mechanisms, and, treasury manageme, n, t.",";
-      metri, c, s: "5, 0, K+ community, member, s",";
-      benefi, t, s: ["Voting, system, s", "Treasury, managemen, t", "Proposal, mechanism, s"]";
-    }
-    {
-      tit, l, e: "Token, Developmen, t",";
-      ic, o, n: Databa, s, e;
-      descripti, o, n: "Custom, token, creation with, advanced, tokenomics, vesting, schedule, s, and, utility, mechanisms.",";
-      metri, c, s: "Zero, security, incidents",";
-      benefi, t, s: ["Custom, tokenomic, s", "Vesting, schedule, s", "Utility, mechanism, s"]";
-const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, pricin, g = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, testimonial, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, service, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, technologie, s = ["
-    { na, m, e: "Ethere, u, m", ty, p, e: "Smart, Contract, s" }"
-    { na, m, e: "Polyg, o, n", ty, p, e: "Layer, 2, Scaling" }"
-    { na, m, e: "Binance, Smart, Chain", ty, p, e: "High, Performanc, e" }"
-    { na, m, e: "Sola, n, a", ty, p, e: "Ultra, Fas, t" }"
-    { na, m, e: "Polkad, o, t", ty, p, e: "Interoperabili, t, y" }"
-    { na, m, e: "Avalanc, h, e", ty, p, e: "Subne, t, s" }"
-    { na, m, e: "Arbitr, u, m", ty, p, e: "Optimistic, Rollup, s" }"
-    { na, m, e: "Optimi, s, m", ty, p, e: "Layer, 2, Solution" }"
-    { na, m, e: "Cosm, o, s", ty, p, e: "Int, e, r-Blockcha, i, n" }"
-    { na, m, e: "Near, Protoco, l", ty, p, e: "Developer, Friendl, y" }"
-    { na, m, e: "Algora, n, d", ty, p, e: "Pure, Proof, of Sta, k, e" }"
-    { na, m, e: "Fant, o, m", ty, p, e: "Fast, Finalit, y" }"
-    { na, m, e: "Ethere, u, m", ty, p, e: "Smart, Contract, s" },";"
-    { na, m, e: "Polyg, o, n", ty, p, e: "Layer, 2, Scaling" },";"
-    { na, m, e: "Binance, Smart, Chain", ty, p, e: "High, Performanc, e" },";"
-    { na, m, e: "Sola, n, a", ty, p, e: "Ultra, Fas, t" },";"
-    { na, m, e: "Polkad, o, t", ty, p, e: "Interoperabili, t, y" },";"
-    { na, m, e: "Avalanc, h, e", ty, p, e: "Subne, t, s" },";"
-    { na, m, e: "Arbitr, u, m", ty, p, e: "Optimistic, Rollup, s" },";"
-    { na, m, e: "Optimi, s, m", ty, p, e: "Layer, 2, Solution" },";"
-    { na, m, e: "Cosm, o, s", ty, p, e: "Int, e, r-Blockcha, i, n" },";"
-    { na, m, e: "Near, Protoco, l", ty, p, e: "Developer, Friendl, y" },";"
-    { na, m, e: "Algora, n, d", ty, p, e: "Pure, Proof, of Sta, k, e" },";"
-    { na, m, e: "Fant, o, m", ty, p, e: "Fast, Finalit, y" }";
-  ];
+  const, service, s = Service Feature;
   return(<React.Fragment>
       <Helmet>
         <title>Blockcha, i, n & Web3, Service, s - Zion, Tech, Group | De, F, i, N, F, T, DAO, Solution, s</title>
@@ -656,8 +353,7 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       ))}
                     </ul>
                   </d, i, v>
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -757,8 +453,7 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
                   </d, i, v>)
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -910,7 +605,7 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 pl, a, n.popul, a, r;
 ? 'bg-indi, g, o-600, tex, t-white, hove, r: bg-indi, g, o-7, 0, 0'
 ? 'bg-indi, g, o-600, tex, t-white, hov, e;
-  r: bg-indi, g, o-7, 0, 0',';}
+  r: bg-indi, g, o-7, 0, 0','}
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
@@ -980,7 +675,7 @@ pl, a, n.popul, a, r;
               {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (</div>
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <div, className="flex, item, s-center, m, b-4">";
-                    {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>
+                    {Service Feature.m, a, p((_, i) => (</div>
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
             </d, i, v>"
             <div, className="gri, d, m,"
@@ -1071,7 +766,5 @@ pl, a, n.popul, a, r;
       </ma, i, n>
       <Foot, e, r   /></Foot>
     </React.Fragment>
-  );
-};
-export default BlockchainWeb3;
-}}}}}"`
+  )}
+export default BlockchainWeb3}}}}}"`

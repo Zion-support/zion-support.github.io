@@ -101,8 +101,7 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
                 </d, i, v  > {/* Hover, Gradient, Effe, c, t */}`
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} /></div>
               </Li, n, k>)
-            );
-          })}
+            )})}
         </div>
         {/* CTA, Sectio, n */}
         <div, classNam, e = "te, x, t-cent, e, r"></div>
@@ -117,7 +116,6 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-};
+  )}
 export default October2025NewContentBanner2;
 "`

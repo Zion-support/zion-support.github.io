@@ -151,8 +151,7 @@ title: 'AI-Powered Business Apps',
         </div>
       </div>
     </div>
-  );
-};
+  )}
 export default BusinessAppsPage;
   </button>
   </button>

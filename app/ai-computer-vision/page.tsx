@@ -167,8 +167,7 @@ const AiComputerVisionPage: React.FC = () => {
       </section>
       <Footer />
     </React.Fragment>
-  );
-};
+  )}
 export default AiComputerVisionPage;
   </button>
   </button>

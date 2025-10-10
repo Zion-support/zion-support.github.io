@@ -278,7 +278,7 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">,
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />);
 export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: Fix JSX expression */}
-};
+}
   </div>
   </div>
   </div>

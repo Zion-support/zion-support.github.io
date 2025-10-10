@@ -57,12 +57,12 @@ const pageFiles = [
 
 // Function to create a basic page component;
 function createPageComponent(pageName) {
-  const componentName = pageName.split('/')[0]
+  const componentName = pageName.split('/')Service Feature
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join('') + 'Page';
   
-  const displayName = pageName.split('/')[0]
+  const displayName = pageName.split('/')Service Feature
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
@@ -84,11 +84,9 @@ const ${componentName}: React.FC = () => {/* TODO: Fix JSX expression */}
           Contact Us;
         </a>
       </div>,
-    </div>);
-};
+    </div>)}
 
-export default ${componentName};`;
-}
+export default ${componentName}`}
 
 // Function to restore a page file;
 function restorePageFile(pagePath) {
@@ -99,16 +97,14 @@ function restorePageFile(pagePath) {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
 function restorePageFile(pagePath) {/* TODO: Fix JSX expression */}
-  e: true });
-  }
+  e: true })}
   
   const pageName = pagePath.replace('.tsx', '');
   const content = createPageComponent(pageName);
   
   fs.writeFileSync(fullPath, content, 'utf8');`
   console.log(`Restore)`
-  d: ${pagePath}`);
-}
+  d: ${pagePath}`)}
 
 // Main execution;
 console.log('Starting page restoration...');
@@ -116,8 +112,7 @@ console.log('Starting page restoration...');
 let restoredCount = 0;
 for (const pageFile of pageFiles) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error restoring ${pageFile}:`, error.message);
-  }
+    console.error(`Error restoring ${pageFile}:`, error.message)}
 }
 `
 console.log(`Restored ${restoredCount} page files`);

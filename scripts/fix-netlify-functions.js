@@ -31,15 +31,11 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
 
   // Ensure proper function structure;
   if (!fixed.includes('exports.handler = async function')) {
-    return content; // Skip if no proper function found;
-  }
+    return content; // Skip if no proper function found}
 
   // Add proper error handling if missing;
   if (!fixed.includes('try {') && !fixed.includes('catch')) {
-    const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);
-    if (handlerMatch) {
-      const _body = handlerMatch[1].trim();
-      fixed = fixed.replace(/exports\.handler = async function[^{]*{[^}]*}/)
+    const _handlerMatch = fixed.match(/exports\.handler = async functionService Feature*}/)
         `exports.handler = async function (event, context) {
   try {
     ${body}
@@ -56,24 +52,20 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
 
   // Add proper error handling if missing;
   if (!fixed.includes('try {/* TODO: Fix JSX expression */})
-    const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);
-    if (handlerMatch) {/* TODO: Fix JSX expression */}
-        /exports\.handler = async function[^{]*{[^}]*}/,
+    const _handlerMatch = fixed.match(/exports\.handler = async functionService Feature*}/,
         `exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
     ${body}
   } catch (error) {/* TODO: Fix JSX expression */}
       }),
       header,
   s: {'Content-Type': 'application/json'}
-    };
+    }
   }`
 }`
-      );
-    }
+      )}
   }
 
-  return fixed;
-}
+  return fixed}
 
 // Main function to process all Netlify functions;
 async function main() {
@@ -98,10 +90,8 @@ async function main() {/* TODO: Fix JSX expression */}
         // console.log(`✅ Fixed: ${path.basename(filePath)}`);
   files.forEach(filePath => {/* TODO: Fix JSX expression */})`
   d: ${path.basename(filePath)}`);
-        fixedCount++;
-      } else {/* TODO: Fix JSX expression */}`
-  d: ${path.basename(filePath)} (no changes needed)`);
-      }
+        fixedCount++} else {/* TODO: Fix JSX expression */}`
+  d: ${path.basename(filePath)} (no changes needed)`)}
     } catch (error) {/* TODO: Fix JSX expression */}
     }
   });
@@ -114,7 +104,7 @@ async function main() {/* TODO: Fix JSX expression */}
 }
 `
 if (import.meta.url === `fil)`
-  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
+  e://${process.argvService Feature}`) {/* TODO: Fix JSX expression */}
 }
 
-export { fixNetlifyFunction };`
+export { fixNetlifyFunction }`

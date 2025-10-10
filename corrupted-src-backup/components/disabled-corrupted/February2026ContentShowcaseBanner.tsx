@@ -292,6 +292,5 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
         </div>
       </div>
     </div>
-  );
-};
+  )}
 export default February2026ContentShowcaseBanner;"`

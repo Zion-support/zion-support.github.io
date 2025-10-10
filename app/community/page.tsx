@@ -97,8 +97,7 @@ const CommunityPage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )}
 export default CommunityPage;
   </button>
   </button>

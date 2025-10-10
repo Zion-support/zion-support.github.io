@@ -4,22 +4,7 @@ import { Helmet } from 'react-helmet-async';
 interface SEOData {
  title: string;
  description: string;
- keywords: string[];
- canonicalUrl: string;
- ogTitle?: string;
- ogDescription?: string;
- ogImage?: string;
- ogType?: string;
- twitterCard?: string;
- twitterTitle?: string;
- twitterDescription?: string;,
- twitterImage?: string;
- structuredData?: Record<string, unknown>;</string>robots</string>?: string;
- author?: string;
- publishedTime?: string;
- modifiedTime?: string;
- section?: string;
- tags?: string[];
+ keywords: stringService Feature;
 interface SEOData {/* TODO: Fix JSX expression */}
 }
 interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
@@ -70,9 +55,8 @@ const,
   s://twitter.com/ziontechgroup',
  'http,
   s://github.com/Zion-Holdings'],
- ...seoData.structuredData};
- return baseStructuredData;
- }, [seoData, enableStructuredData]);
+ ...seoData.structuredData}
+ return baseStructuredData}, Service Feature);
  const generateBreadcrumbStructuredData = useCallback(() => {
  if (!enableSchemaMarkup) return null;
  return {
@@ -92,8 +76,8 @@ const,
  const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
  },
  {/* TODO: Fix JSX expression */}
- }]};
- }, [seoData, enableSchemaMarkup]);
+ }]}
+ }, Service Feature);
  const generateFAQStructuredData = useCallback(() => {
  if (!enableSchemaMarkup) return null;
  const faqData = {
@@ -123,9 +107,8 @@ const,
  {/* TODO: Fix JSX expression */}
  }},
  {/* TODO: Fix JSX expression */}
- }}]};
- return faqData;
- }, [enableSchemaMarkup]);
+ }}]}
+ return faqData}, Service Feature);
  const _structuredData = generateStructuredData();
  const _breadcrumbData = generateBreadcrumbStructuredData();
  const _faqData = generateFAQStructuredData();
@@ -133,7 +116,7 @@ const,
  // Update page title and meta description for better SEO;
  if (typeof document !== 'undefined') {
  document.title = seoData.title;
- let _metaDescription = document.querySelector('meta[name="description"]');
+ let _metaDescription = document.querySelector('metaService Feature');
  if (!metaDescription) {
  metaDescription = document.createElement('meta');
  metaDescription.setAttribute('name', 'description');
@@ -142,20 +125,19 @@ const,
  }
  metaDescription.setAttribute('content', seoData.description);
  // Update canonical URL;
- let _canonicalLink = document.querySelector('link[rel="canonical"]');
+ let _canonicalLink = document.querySelector('linkService Feature');
  if (!canonicalLink) {/* TODO: Fix JSX expression */}
  }
- canonicalLink.setAttribute('href', seoData.canonicalUrl);
- }
- }, [seoData]);
+ canonicalLink.setAttribute('href', seoData.canonicalUrl)}
+ }, Service Feature);
  // const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {,
  // const metaTag = document.createElement('meta');
  // metaTag.setAttribute(attribute, name);
  // metaTag.content = content;
  // document.head.appendChild(metaTag);
- // };
+ // }
  // const _updateCanonicalUrl = (url: string) => {
- // let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+ // let canonicalLink = document.querySelector('linkService Feature') as HTMLLinkElement;
  // ,
  // if (canonicalLink) {,
  // canonicalLink.href = url;
@@ -165,7 +147,7 @@ const,
  // canonicalLink.href = url;
  // document.head.appendChild(canonicalLink);
  // }
- // };origin/
+ // }origin/
  // const _addStructuredData = (data: Record<string, unknown>) => {
  // // Remove existing structured data;
  // // if (structuredDataRef.current) {
@@ -174,12 +156,12 @@ const,
   e: string, conten,
   t: string, attribut)
   e: string = 'name') => {/* TODO: Fix JSX expression */}
- // };
+ // }
  // const _updateCanonicalUrl = (ur)
   l: string) => {/* TODO: Fix JSX expression */}
  // } else {/* TODO: Fix JSX expression */}
  // }
- // };origin/
+ // }origin/
  // const _addStructuredData = (dat)
   a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
  // // }
@@ -188,15 +170,14 @@ const,
  // script.type = 'application/ld+json';
  // script.textContent = JSON.stringify(data);
  // document.head.appendChild(script);
- // };
+ // }
  // Add new structured data;
  const _script = document.createElement('script');
  script.type = 'application/ld+json';
  script.textContent = JSON.stringify(data);
  script.id = 'structured-data';
  document.head.appendChild(script);
- structuredDataRef.current = script;
- };
+ structuredDataRef.current = script}
  const _trackPageView = (config: SEOData) => {,
  if (typeof window !== 'undefined' && 'gtag' in window) {,
  (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {)
@@ -205,13 +186,12 @@ const,
  const _trackPageView = (confi)
   g: SEOData) => {/* TODO: Fix JSX expression */}
   g: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {/* TODO: Fix JSX expression */})
- });
+ })}
  }
- };
  const _trackPerformanceMetrics = () => {
  if (typeof window !== 'undefined' && 'performance' in window) {
  window.addEventListener('load', () => {
- const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+ const _perfData = performance.getEntriesByType('navigation')Service Feature as PerformanceNavigationTiming;
  if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
  (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {)
  event_category: 'Performance'),
@@ -219,11 +199,9 @@ const,
  value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
  const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
   s: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {/* TODO: Fix JSX expression */})
- });
- }
- });
- }
- };origin/
+ })}
+ })}
+ }origin/
  return(<Helmet>)
  {/* Basic Meta Tags */})
  <title>{seoData.title}</title>)
@@ -343,8 +321,7 @@ const,
  <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
  <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
  </Helmet>
- );
-};
+ )}
 export default AdvancedSEOOptimizer;"
   </AdvancedSEOOptimizerProps>
   </AdvancedSEOOptimizerProps>

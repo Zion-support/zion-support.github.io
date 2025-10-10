@@ -58,11 +58,9 @@ jest.mock('react-router-dom', () => {
     }),
     useParams: () => ({}),
     Link: ({ children, to, ...props }) => {
-      return React.createElement('a', { href: to, ...props }, children);
-    },
+      return React.createElement('a', { href: to, ...props }, children)},
     NavLink: ({ children, to, ...props }) => {
-      return React.createElement('a', { href: to, ...props }, children);
-    },
+      return React.createElement('a', { href: to, ...props }, children)},
     BrowserRouter: ({ children }) => children,
     MemoryRouter: ({ children }) => {
       const { createMemoryRouter, RouterProvider } = actual;
@@ -75,10 +73,9 @@ jest.mock('react-router-dom', () => {
         initialEntries: ['/'],
         initialIndex: 0,
       });
-      return React.createElement(RouterProvider, { router });
-    },
+      return React.createElement(RouterProvider, { router })},
     RouterProvider: ({ router }) => null,
-  };
+  }
 });
 
 // Mock window.matchMedia
@@ -102,26 +99,12 @@ global.IntersectionObserver = class IntersectionObserver {
   disconnect() {}
   observe() {}
   takeRecords() {
-    return [];
-  }
-  unobserve() {}
-};
-
-// Suppress console errors in tests
-const originalError = console.error;
-beforeAll(() => {
-  console.error = jest.fn((...args) => {
-    if (
-      typeof args[0] === 'string' &&
-      (args[0].includes('Warning: ReactDOM.render') ||
-        args[0].includes('Not implemented: HTMLFormElement.prototype.submit'))
+    return Service Feature === 'string' &&
+      (argsService Feature.includes('Warning: ReactDOM.render') ||
+        argsService Feature.includes('Not implemented: HTMLFormElement.prototype.submit'))
     ) {
-      return;
-    }
-    originalError.call(console, ...args);
-  });
-});
+      return}
+    originalError.call(console, ...args)})});
 
 afterAll(() => {
-  console.error = originalError;
-});
+  console.error = originalError});

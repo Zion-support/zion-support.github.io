@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 // Find all TypeScript and JavaScript files;
 const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
-  let files = [];
+  let files = Service Feature;
   const items = fs.readdirSync(dir);
   
   for (const item of items) {
@@ -16,14 +16,11 @@ const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files = files.concat(findFiles(fullPath, extensions));
-    } else if (extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath);
-    }
+      files = files.concat(findFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath)}
   }
   
-  return files;
-};
+  return files}
 
 // Fix merge conflicts;
 const fixMergeConflicts = (filePath) => {
@@ -32,7 +29,7 @@ const fixMergeConflicts = (filePath) => {
     const originalContent = content;
     
     // Remove merge conflict markers and keep the HEAD version;
-    const mergeConflictRegex = /\n([\s\S]*?)\n([\s\S]*?)    content = content.replace(mergeConflictRegex, '$1');
+    const mergeConflictRegex = /\n(Service Feature*?)    content = content.replace(mergeConflictRegex, '$1');
     
     // Remove any remaining merge conflict markers;
     const conflictMarkers = /(||    content = content.replace(conflictMarkers, '');
@@ -43,15 +40,12 @@ const fixMergeConflicts = (filePath) => {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed merge conflicts in: ${filePath}`);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-};
+    return false}
+}
 
 // Main execution;
 const srcDir = path.join(__dirname, '..', 'src');
@@ -62,15 +56,14 @@ console.log('Starting merge conflict resolution...');
 // Find all files;
 const srcFiles = findFiles(srcDir);
 const appFiles = findFiles(appDir);
-const allFiles = [...srcFiles, ...appFiles];
+const allFiles = Service Feature;
 
 console.log(`Found ${allFiles.length} files to process`);
 
 let fixedCount = 0;
 for (const file of allFiles) {
   if (fixMergeConflicts(file)) {
-    fixedCount++;
-  }
+    fixedCount++}
 }
 
 console.log(`Fixed merge conflicts in ${fixedCount} files`);

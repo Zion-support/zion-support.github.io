@@ -451,6 +451,5 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
         </div>
       </div>
     </di, v>
-  );
-};
+  )}
 export default October2025 MultimodalCXRevolutionBanner;

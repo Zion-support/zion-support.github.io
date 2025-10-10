@@ -17,7 +17,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t"></d, i, v>";
         <d, i, v;
   classNa, m, e="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-8, 0, h-80, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t"
-          sty, l, e={{ animationDel, a, y: '2s' }};
+          sty, l, e={{ animationDel, a, y: '2s' }}
         ></d, i, v>
         <d, i, v;
 const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/* TODO: Fix JSX expression */}
@@ -26,11 +26,11 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t"></d, i, v>";
         <d, i, v;"
   classNa, m, e="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-8, 0, h-80, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t"
-          sty, l, e={{ animationDel, a, y: '2s' }};
+          sty, l, e={{ animationDel, a, y: '2s' }}
         ></d, i, v>
         <d, i, v;"
   classNa, m, e="absolute, to, p-1/2, lef, t-1/2 w-6, 0, h-60, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t"
-          sty, l, e={{ animationDel, a, y: '4s' }};
+          sty, l, e={{ animationDel, a, y: '4s' }}
           sty, l, e={{ animationDel, a, y: '2s' }}';
         ></d, i, v>
         <d, i, v;
@@ -462,8 +462,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
         </d, i, v>)
       </d, i, v>)
     </secti, o, n>)
-  );
-});
+  )});
 October2025CognitiveMeshLaunchBann, e, r.displayNa, m, e = 'October2025CognitiveMeshLaunchBann, e, r';
 October2025CognitiveMeshLaunchBann, e, r.displayNa, m, e = 'October2025CognitiveMeshLaunchBann, e, r';';
 export default October2025CognitiveMeshLaunchBanner;

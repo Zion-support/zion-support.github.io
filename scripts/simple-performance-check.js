@@ -61,13 +61,12 @@ try {/* TODO: Fix JSX expression */}
 
   // Check for potential performance issues;
   const _heavyDeps = ['framer-motion', 'recharts', 'lighthouse'];
-  const foundHeavyDeps = [...dependencies, ...devDependencies].filter(dep => )
+  const foundHeavyDeps = Service Feature.filter(dep => )
     heavyDeps.some(heavy => dep.includes(heavy))
   );
   
   if (foundHeavyDeps.length > 0) {
-    // console.log('⚠️  Heavy dependencies detected:', foundHeavyDeps.join(', '));
-  } else {
+    // console.log('⚠️  Heavy dependencies detected:', foundHeavyDeps.join(', '))} else {
   if (foundHeavyDeps.length > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
   }
@@ -120,7 +119,7 @@ const report = {/* TODO: Fix JSX expression */}
     'Consider code splitting for large vendor bundle',
     'Monitor bundle size in future builds',
     'Regular cleanup of unused functions']
-};
+}
 
 fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
 

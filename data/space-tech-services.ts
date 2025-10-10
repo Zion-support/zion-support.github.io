@@ -5,23 +5,7 @@ export interface SpaceTechService {id: string;
   price: string;
   period: string;
   description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
+  features: stringService Feature;
   market_size: string;
   growth_rate: string;
   variant: string;
@@ -163,8 +147,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 15'
     customers: 25;
     rating: 5 && 5.0;
-    reviews: 12;
-  },
+    reviews: 12},
       'Multi-satellite coordination',
     id: 'satellite - constellation - management',
     name: 'Satellite Constellation Management System',
@@ -312,8 +295,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 01'
     customers: 40;
     rating: 4 && 4.9;
-    reviews: 20;
-  },
+    reviews: 20},
       'Real-time debris tracking',
     id: 'space - debris - monitoring - system',
     name: 'Space Debris Monitoring & Avoidance System',
@@ -461,8 +443,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 10'
     customers: 60;
     rating: 4 && 4.9;
-    reviews: 30;
-  },
+    reviews: 30},
     id: 'space - weather - forecasting',
     name: 'Space Weather Forecasting & Alert System',
     tagline: 'Predict space weather events that impact satellite operations',
@@ -608,8 +589,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 15'
     customers: 80;
     rating: 4 && 4.8;
-    reviews: 40;
-  },
+    reviews: 40},
     id: 'orbital - launch - coordination',
     name: 'Orbital Launch Coordination Platform',
     tagline: 'Coordinate complex orbital launches with precision timing',
@@ -755,8 +735,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 20'
     customers: 35;
     rating: 4 && 4.9;
-    reviews: 18;
-  },
+    reviews: 18},
     id: 'ground - station - network - management',
     name: 'Ground Station Network Management System',
     tagline: 'Manage global ground station networks for satellite operations',
@@ -902,8 +881,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 25'
     customers: 50;
     rating: 4 && 4.8;
-    reviews: 25;
-  },
+    reviews: 25},
     id: 'space - research - data - platform',
     name: 'Space Research Data & Analytics Platform',
     tagline: 'Access and analyze space research data with AI - powered insights',
@@ -1049,8 +1027,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 03 - 01'
     customers: 200;
     rating: 4 && 4.9;
-    reviews: 100;
-  },
+    reviews: 100},
     id: 'space - commerce - platform',
     name: 'Space Commerce & Trading Platform',
     tagline: 'Trade space assets and services in a secure marketplace',
@@ -1196,8 +1173,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 03 - 05'
     customers: 30;
     rating: 5 && 5.0;
-    reviews: 15;
-  },
+    reviews: 15},
     id: 'space - education - platform'
     name: 'Space Education & Training Platform',
     tagline: 'Learn space technology and operations with interactive courses',
@@ -1343,33 +1319,12 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 03 - 10'
     customers: 500;
     rating: 4 && 4.9;
-    reviews: 250;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 250}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string;
   tagline: string, price: string;
   period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
-  textColor: string, link: string;
-  marketPosition: string, targetAudience: string;
-  trialDays: number, setupTime: string;
-  category: string, realService: boolean;
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string;
-  competitors: string[], marketSize: string;
-  growthRate: string, variant: string;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string;
-    },
-    realImplementation: boolean, implementationDetails: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number;
-}
-export const spaceTechServices: SpaceTechService[] = [,
+  features: stringService Feature = [,
     id: 'space-mission-management-platform', name: 'Space Mission Management Platform',
     tagline: 'Complete space mission planning and execution platform',
     price: '$5,999',
@@ -1445,56 +1400,7 @@ export const spaceTechServices: SpaceTechService[] = [,
   d: string, descriptio,
   n: string,
   feature,
-  s: string[], popula,
-  r: boolean,
-  ico,
-  n: string, colo,
-  r: string,
-  textColo,
-  r: string, lin,
-  k: string,
-  marketPositio,
-  n: string, targetAudienc,
-  e: string,
-  trialDay,
-  s: number, setupTim,
-  e: string,
-  categor,
-  y: string, realServic,
-  e: boolean,
-  technolog,
-  y: string[], integration,
-  s: string[],
-  useCase,
-  s: string[], ro,
-  i: string,
-  competitor,
-  s: string[], marketSiz,
-  e: string,
-  growthRat,
-  e: string, varian,
-  t: string,
-  contactInf,
-  o: unknown,
-    mobil,
-  e: string, emai,
-  l: string,
-    addres,
-  s: string,
-    websit,
-  e: string},
-    realImplementatio,
-  n: boolean, implementationDetail,
-  s: string,
-  launchDat,
-  e: string, customer,
-  s: number,
-  ratin,
-  g: number,
-  review,
-  s: number}
-export const,
-  spaceTechServices: SpaceTechService[] = [,
+  s: stringService Feature = [,
     i,
   d: 'space-mission-management-platform', nam,
   e: 'Space Mission Management Platform',
@@ -1567,20 +1473,15 @@ export const,
   s: 250}
 export interface SpaceTechService {/* TODO: Fix JSX expression */}
   }
+]}
 ];
-;
-;
-  }
-];
-;
     realImplementation: true;
     implementationDetails:,
       'Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance.'
     launchDate: '2024-01-15'
     customers: 25;
     rating: 5.0;
-    reviews: 12;
-  }
+    reviews: 12}
     id: 'satellite-constellation-management',
     name: 'Satellite Constellation Management System',
     tagline: 'Manage large satellite networks with AI-powered optimization',
@@ -2077,8 +1978,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-03-10'
     customers: 500;
     rating: 4.9;
-    reviews: 250;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 250}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -2150,16 +2050,14 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
+  }
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
-;
-export const spaceTechServices: SpaceTechService[] = [;
+  reviews: number}
+export const spaceTechServices: SpaceTechServiceService Feature = [;
   {
     id: 'space-mission-management-platform';
     name: 'Space Mission Management Platform';
@@ -2213,9 +2111,8 @@ export const spaceTechServices: SpaceTechService[] = [;
   g: number;
   review,
   s: number}
-;
 export const,
-  spaceTechServices: SpaceTechService[] = [;
+  spaceTechServices: SpaceTechServiceService Feature = [;
   {/* TODO: Fix JSX expression */}
   t: 'space-futuristic'}
     contactInf,
@@ -2242,9 +2139,7 @@ export const,
   g: 4.9,
     review,
   s: 250}
-];
-  }
-;
+]}
 export interface SpaceTechService,
   id: string; nam,
   e: string; taglin,
@@ -2252,23 +2147,7 @@ export interface SpaceTechService,
   e: string, perio,
   d: string, descriptio,
   n: string; feature,
-  s: string[]; popula,
-  r: boolean; ico,
-  n: string; colo,
-  r: string; text_colo,
-  r: string; lin,
-  k: string; market_positio,
-  n: string; target_audienc,
-  e: string; trial_day,
-  s: number; setup_tim,
-  e: string; categor,
-  y: string; real_servic,
-  e: boolean; technolog,
-  y: string[]; integration,
-  s: string[]; use_case,
-  s: string[]; ro,
-  i: string; competitor,
-  s: string[]; market_siz,
+  s: stringService Feature; market_siz,
   e: string; growth_rat,
   e: string; varian,
   t: string; contact_inf,
@@ -2650,38 +2529,7 @@ export interface SpaceTechService,
   e: string, perio,
   d: string, descriptio,
   n: string, feature,
-  s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
-  r: string, textColo,
-  r: string, lin,
-  k: string, marketPositio,
-  n: string, targetAudienc,
-  e: string, trialDay,
-  s: number, setupTim,
-  e: string, categor,
-  y: string, realServic,
-  e: boolean, technolog,
-  y: string[], integration,
-  s: string[], useCase,
-  s: string[], ro,
-  i: string, competitor,
-  s: string[], marketSiz,
-  e: string, growthRat,
-  e: string, varian,
-  t: string, contactInf,
-  o: mobil,
-  e: string, emai,
-  l: string, addres,
-  s: string, websit,
-  e: string }, realImplementatio,
-  n: boolean, implementationDetail,
-  s: string, launchDat,
-  e: string, customer,
-  s: number, ratin,
-  g: number, review,
-  s: number } export const,
-  spaceTechServices: SpaceTechService[] = [ ' i,
+  s: stringService Feature = [ ' i,
   d: 'space-mission-management-platform', nam,
   e: 'Space Mission Management Platform',' taglin,
   e: 'Complete space mission planning and execution platform',' pric,
@@ -2721,7 +2569,7 @@ export interface SpaceTechService,
   e: '2024 - 03 - 10' customer,
   s: 500, ratin,
   g: 4.9, review,
-  s: 250} export interface SpaceTechService {; } ]; ; } ]; realImplementatio,
+  s: 250} export interface SpaceTechService { } ]} ]; realImplementatio,
   n: true,
   implementationDetails:' 'Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance.'' launchDat,
   e: '2024-01-15' customer,
@@ -2892,16 +2740,16 @@ export interface SpaceTechService,
   g: 4.9,
   reviews: 250 } ]; export interface SpaceTechService {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} }; realImplementatio,
+  e: string} } realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number} ; export const,
-  spaceTechServices: SpaceTechService[] = [; {/* TODO: Fix JSX expression */}
+  s: number} export const,
+  spaceTechServices: SpaceTechServiceService Feature = [; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } real_implementatio,
   n: true,' implementation_detail,
@@ -2909,4 +2757,4 @@ export interface SpaceTechService,
   e: '2024 - 03 - 10' customer,
   s: 500, ratin,
   g: 4.9, review,
-  s: 250} ]; } ; '
+  s: 250} ]} '

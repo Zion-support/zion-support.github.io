@@ -220,8 +220,7 @@ const TeamPage: React.FC = () => {
       </section>
       <Footer />
     </div>
-  );
-};
+  )}
 export default TeamPage;
   </Link>
   </Link>

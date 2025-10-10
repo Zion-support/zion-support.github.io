@@ -15,7 +15,7 @@ function fixCriticalFiles() {
   openGraph: {
     title: 'Zion Tech Group - Advanced AI and IT Solutions',
     description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-    type: 'website'}};`
+    type: 'website'}}`
     },
     {
       path: '/workspace/src/vite-env.d.ts',
@@ -28,12 +28,10 @@ interface ImportMetaEnv {
   readonly VITE_APP_API_URL: string;
   readonly DEV: boolean;
   readonly PROD: boolean;
-  readonly MODE: string;
-}
+  readonly MODE: string}
 
 interface ImportMeta {
-  readonly env: ImportMetaEnv;
-}`
+  readonly env: ImportMetaEnv}`
     },
     {
       path: '/workspace/src/layout.tsx',
@@ -44,8 +42,7 @@ import Analytics from './components/Analytics';
 
 export default function RootLayout({
   children}: {
-  children: React.ReactNode;
-}) {
+  children: React.ReactNode}) {
   return (
     <html lang="en">
       <head>
@@ -57,18 +54,15 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
-  );
-}`
+  )}`
     }
   ];
 
   for (const file of criticalFiles) {
     try {
       fs.writeFileSync(file.path, file.content, 'utf8');
-      console.log(`✓ Fixed: ${file.path}`);
-    } catch (error) {
-      console.error(`Error fixing ${file.path}:`, error.message);
-    }
+      console.log(`✓ Fixed: ${file.path}`)} catch (error) {
+      console.error(`Error fixing ${file.path}:`, error.message)}
   }
 }
 
@@ -93,19 +87,14 @@ function cleanProblematicFiles() {
         // Create minimal valid content for each file type
         let content = '';
         if (filePath.endsWith('.tsx')) {
-          content = `import React from 'react';\n\nexport default function Component() {\n  return <div>Component placeholder</div>;\n}`;
-        } else if (filePath.endsWith('.ts')) {
-          content = `// TypeScript file placeholder\nexport {};`;
-        } else if (filePath.endsWith('.js')) {
-          content = `// JavaScript file placeholder\nexport {};`;
-        }
+          content = `import React from 'react';\n\nexport default function Component() {\n  return <div>Component placeholder</div>;\n}`} else if (filePath.endsWith('.ts')) {
+          content = `// TypeScript file placeholder\nexport {}`} else if (filePath.endsWith('.js')) {
+          content = `// JavaScript file placeholder\nexport {}`}
         
         fs.writeFileSync(filePath, content, 'utf8');
-        console.log(`✓ Cleaned: ${filePath}`);
-      }
+        console.log(`✓ Cleaned: ${filePath}`)}
     } catch (error) {
-      console.error(`Error cleaning ${filePath}:`, error.message);
-    }
+      console.error(`Error cleaning ${filePath}:`, error.message)}
   }
 }
 

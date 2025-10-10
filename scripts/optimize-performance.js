@@ -12,32 +12,26 @@ function optimizeComponent(filePath) {
     if (content.includes('const ') && content.includes(': React.FC') && !content.includes('React.memo')) {
       // This is a basic optimization - in practice, you'd want more sophisticated detection;
 function optimizeComponent(filePath) {/* TODO: Fix JSX expression */}
-      // console.log(`📝 Component ${filePath} could benefit from React.memo optimization`);
-    }
+      // console.log(`📝 Component ${filePath} could benefit from React.memo optimization`)}
     
     // Add useCallback to event handlers;
     if (content.includes('onClick') && !content.includes('useCallback')) {
     if (content.includes('onClick') && !content.includes('useCallback')) {/* TODO: Fix JSX expression */}`
-      // console.log(`📝 Component ${filePath} could benefit from useCallback for event handlers`);
-    }
+      // console.log(`📝 Component ${filePath} could benefit from useCallback for event handlers`)}
     
     // Check for missing key props in lists;
     if (content.includes('.map(') && !content.includes('key=')) {
     if (content.includes('.map(') && !content.includes('key=')) {/* TODO: Fix JSX expression */}`
-      // console.log(`⚠️  Component ${filePath} has .map() without key props`);
-    }
+      // console.log(`⚠️  Component ${filePath} has .map() without key props`)}
     
     // Check for inline object/function definitions in JSX;
     if (content.includes('style={{') || content.includes('onClick={()')) {}
     if (content.includes('style={/* TODO: Fix JSX expression */})`
-      // console.log(`📝 Component ${filePath} has inline styles/functions that could be optimized`);
-    }
+      // console.log(`📝 Component ${filePath} has inline styles/functions that could be optimized`)}
     
-    return modified;
-  } catch (error) {/* TODO: Fix JSX expression */}`
+    return modified} catch (error) {/* TODO: Fix JSX expression */}`
     // console.error(`❌ Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Function to add performance optimizations;
@@ -60,8 +54,7 @@ async function addPerformanceOptimizations() {/* TODO: Fix JSX expression */}
   
   // console.log(`\n📊 Performance Analysis Summary: `);
   // console.log(`   Total components analyzed: ${totalFiles}`);
-  // console.log(`   Components with optimization opportunities: ${optimizedFiles}`);
-}
+  // console.log(`   Components with optimization opportunities: ${optimizedFiles}`)}
 
 // Function to create a performance monitoring component;
 function createPerformanceMonitor() {
@@ -71,8 +64,7 @@ function createPerformanceMonitor() {
   // console.log(`   Total components)`
   analyzed: ${totalFiles}`);`
   // console.log(`   Components with optimization)`
-  opportunities: ${optimizedFiles}`);
-}
+  opportunities: ${optimizedFiles}`)}
 
 // Function to create a performance monitoring component;
 function createPerformanceMonitor() {/* TODO: Fix JSX expression */}
@@ -86,8 +78,7 @@ export default PerformanceMonitor;`
 `;
 
   fs.writeFileSync('app/components/PerformanceMonitor.tsx', performanceMonitorContent);
-  // console.log('✅ Created PerformanceMonitor component');
-}
+  // console.log('✅ Created PerformanceMonitor component')}
 
 // Function to optimize images;
 function createImageOptimization() {
@@ -104,8 +95,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,
   width,
   height,
   className = '',
-  priority = false;
-}) => {
+  priority = false}) => {
   return(<img;
       src={src}
       alt={alt}
@@ -133,15 +123,13 @@ const,
   t: height ? \`\${height}px\` : 'auto'
       }}
     /></img>
-  );
-};
+  )}
 
 export default OptimizedImage;`
 `;
 
   fs.writeFileSync('app/components/OptimizedImage.tsx', imageOptimizationContent);
-  // console.log('✅ Created OptimizedImage component');
-}
+  // console.log('✅ Created OptimizedImage component')}
 
 // Main function;
 async function main() {
@@ -153,8 +141,6 @@ async function main() {/* TODO: Fix JSX expression */}
   createPerformanceMonitor();
   createImageOptimization();
   
-  // console.log('\n✨ Performance optimization completed!');
-}
+  // console.log('\n✨ Performance optimization completed!')}
 
-main().catch(console.error);
-}}}"`
+main().catch(console.error)}}}"`

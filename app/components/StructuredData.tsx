@@ -3,8 +3,7 @@ import React from 'react';
 
 interface StructuredDataProps {
   type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness';
-  data?: Record<string, unknown>;
-}
+  data?: Record<string, unknown>}
 
 const StructuredData: React.FC<StructuredDataProps> = ({ 
   type = 'Organization', 
@@ -34,24 +33,8 @@ const StructuredData: React.FC<StructuredDataProps> = ({
             "postalCode": "19709",
             "addressCountry": "US"
           },
-          "sameAs": [
-            "https://twitter.com/ziontechgroup",
-            "https://linkedin.com/company/ziontechgroup"
-          ],
-          "foundingDate": "2020",
-          "numberOfEmployees": "50+",
-          "areaServed": "Worldwide",
-          "serviceType": [
-            "AI Solutions",
-            "Quantum Computing",
-            "Autonomous Systems",
-            "Digital Transformation",
-            "Cloud Infrastructure",
-            "Cybersecurity",
-            "Data Analytics",
-            "IT Consulting"
-          ]
-        };
+          "sameAs": Service Feature
+        }
       
       case 'WebSite':
         return {
@@ -69,7 +52,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
             "target": "https://ziontechgroup.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
           }
-        };
+        }
       
       case 'WebPage':
         return {
@@ -89,16 +72,9 @@ const StructuredData: React.FC<StructuredDataProps> = ({
           },
           "breadcrumb": {
             "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://ziontechgroup.com"
-              }
-            ]
+            "itemListElement": Service Feature
           }
-        };
+        }
       
       case 'Service':
         return {
@@ -112,20 +88,13 @@ const StructuredData: React.FC<StructuredDataProps> = ({
             "url": "https://ziontechgroup.com"
           },
           "areaServed": "Worldwide",
-          "serviceType": [
-            "AI Solutions",
-            "Cloud Infrastructure",
-            "Cybersecurity",
-            "Data Analytics",
-            "IT Consulting",
-            "Custom Development"
-          ],
+          "serviceType": Service Feature,
           "offers": {
             "@type": "Offer",
             "description": "Professional AI and IT consulting services",
             "availability": "https://schema.org/InStock"
           }
-        };
+        }
       
       case 'LocalBusiness':
         return {
@@ -160,12 +129,12 @@ const StructuredData: React.FC<StructuredDataProps> = ({
             },
             "geoRadius": "100000"
           }
-        };
+        }
       
       default:
-        return {};
+        return {}
     }
-  };
+  }
 
   const structuredData = data || getDefaultData();
 
@@ -176,7 +145,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({
         __html: JSON.stringify(structuredData, null, 2)
       }}
     />
-  );
-};
+  )}
 
 export default StructuredData;

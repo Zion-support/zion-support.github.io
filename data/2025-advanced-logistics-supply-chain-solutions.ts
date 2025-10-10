@@ -5,107 +5,7 @@
   price: string;
   period: string;
   description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: ServiceVariant;
-  contact_info: unknown;
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  i,
-  d: string;
-  nam,
-  e: string;
-  taglin,
-  e: string;
-  pric,
-  e: string,
-  perio,
-  d: string,
-  descriptio,
-  n: string;
-  feature,
-  s: string[];
-  popula,
-  r: boolean;
-  ico,
-  n: string;
-  colo,
-  r: string;
-  text_colo,
-  r: string;
-  lin,
-  k: string;
-  market_positio,
-  n: string;
-  target_audienc,
-  e: string;
-  trial_day,
-  s: number;
-  setup_tim,
-  e: string;
-  categor,
-  y: string;
-  real_servic,
-  e: boolean;
-  technolog,
-  y: string[];
-  integration,
-  s: string[];
-  use_case,
-  s: string[];
-  ro,
-  i: string;
-  competitor,
-  s: string[];
-  market_siz,
-  e: string;
-  growth_rat,
-  e: string;
-  varian,
-  t: ServiceVariant;
-  contact_inf,
-  o: unknown;
-    mobil,
-  e: string;
-    emai,
-  l: string;
-    addres,
-  s: string;
-    websit,
-  e: string}
-  real_implementatio,
-  n: boolean;
-  implementation_detail,
-  s: string;
-  launch_dat,
-  e: string;
-  customer,
-  s: number;
-  ratin,
-  g: number;
-  review,
-  s: number;
-;
-export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] =
+  features: stringService Feature =
   [
       id: 'ai - powered - supply - chain - optimization',
       name: 'AI - Powered Supply Chain Optimization',
@@ -114,7 +14,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       period: '/month',
       description: unknown;
 export const,
-  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] =,
+  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025Service Feature =,
   [
       i,
   d: 'ai - powered - supply - chain - optimization',
@@ -205,8 +105,7 @@ export const,
       launch_date: '2025 - 01 - 26'
       customers: 156;
       rating: 4 && 4.8;
-      reviews: 98;
-    },
+      reviews: 98},
       id: 'quantum - logistics - optimization - platform',
       name: 'Quantum Logistics Optimization Platform',
       tagline: 'Quantum computing for complex logistics problems',
@@ -339,8 +238,7 @@ export const,
       launch_date: '2025 - 02 - 02'
       customers: 34;
       rating: 4 && 4.9;
-      reviews: 23;
-    },
+      reviews: 23},
         'Real-time tracking',
       id: 'iot - fleet - management - platform'
       name: 'IoT Fleet Management Platform',
@@ -471,8 +369,7 @@ export const,
       launch_date: '2025 - 02 - 07'
       customers: 234;
       rating: 4 && 4.7;
-      reviews: 145;
-    },
+      reviews: 145},
         'End-to-end traceability',
       id: 'blockchain - supply - chain - transparency'
       name: 'Blockchain Supply Chain Transparency Platform',
@@ -734,33 +631,8 @@ export const,
         'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launchDate: '2025-02-18',      customers: 178;
       rating: 4 && 4.8;
-      reviews: 112;
-    };
-  ];    features: [,
-export interface AdvancedLogisticsSupplyChainSolution2025 {id: string, name: string;
-  tagline: string, price: string;
-  period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
-  textColor: string, link: string;
-  marketPosition: string, targetAudience: string;
-  trialDays: number, setupTime: string;
-  category: string, realService: boolean;
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string;
-  competitors: string[], marketSize: string;
-  growthRate: string, variant: ServiceVariant;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string}
-    },
-    realImplementation: boolean, implementationDetails: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number;
-}
-export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [,
+      reviews: 112}
+  ];    features: Service Feature = [,
     id: 'ai-powered-supply-chain-optimization', name: 'AI-Powered Supply Chain Optimization',
     tagline: 'Intelligent supply chain planning and optimization',
     price: '$1,299',
@@ -779,24 +651,9 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       ratin,
   g: 4 && 4.8,
       review,
-  s: 112};
+  s: 112}
   ];    feature,
-  s: [,
-export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */}
-  e: string}
-    },
-    realImplementatio,
-  n: boolean, implementationDetail,
-  s: string,
-  launchDat,
-  e: string, customer,
-  s: number,
-  ratin,
-  g: number,
-  review,
-  s: number}
-export const,
-  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [,
+  s: Service Feature = [,
     i,
   d: 'ai-powered-supply-chain-optimization', nam,
   e: 'AI-Powered Supply Chain Optimization',
@@ -937,7 +794,7 @@ export const,
       ratin,
   g: 4.8,
       review,
-  s: 112};
+  s: 112}
   ];    feature,
   s: [;
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'
@@ -969,10 +826,8 @@ export const,
   n: ''];
     popula,
   r: true, ico,
-  n: ''];
-;;}
+  n: '']}
 ];
-;
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'
       'Custom algorithmsCompliance tools'
     ];
@@ -1402,16 +1257,14 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expr
   s: string}
     websit,
   e: string}
-  };
+  }
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
-;
-export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [;
+  reviews: number}
+export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025Service Feature = [;
   {
     id: 'ai-powered-supply-chain-optimization';
     name: 'AI-Powered Supply Chain Optimization';
@@ -1446,15 +1299,14 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
+      website: 'https://ziontechgroup.com'}
     realImplementation: true;
     implementationDetails: 'Production-ready AI supply chain platform with comprehensive optimization and analytics capabilities.';
     launchDate: '2025-01-26';
     customers: 156;
     rating: 4.8;
-    reviews: 98;
-  };
-  {;
+    reviews: 98}
+  {
     id: 'quantum-logistics-optimization-platform';
     name: 'Quantum Logistics Optimization Platform';
     tagline: 'Quantum computing for complex logistics problems';
@@ -1488,15 +1340,14 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
+      website: 'https://ziontechgroup.com'}
     realImplementation: true;
     implementationDetails: 'Production-ready quantum logistics platform with advanced algorithms and enterprise integration.';
     launchDate: '2025-02-02';
     customers: 34;
     rating: 4.9;
-    reviews: 23;
-  };
-  {;
+    reviews: 23}
+  {
     id: 'iot-fleet-management-platform';
     name: 'IoT Fleet Management Platform';
     tagline: 'Comprehensive IoT-based fleet monitoring and management';
@@ -1530,15 +1381,14 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
+      website: 'https://ziontechgroup.com'}
     realImplementation: true;
     implementationDetails: 'Production-ready IoT fleet platform with comprehensive monitoring and optimization capabilities.';
     launchDate: '2025-02-07';
     customers: 234;
     rating: 4.7;
-    reviews: 145;
-  };
-  {;
+    reviews: 145}
+  {
     id: 'blockchain-supply-chain-transparency';
     name: 'Blockchain Supply Chain Transparency Platform';
     tagline: 'End-to-end supply chain transparency with blockchain';
@@ -1572,15 +1422,14 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
+      website: 'https://ziontechgroup.com'}
     realImplementation: true;
     implementationDetails: 'Production-ready blockchain supply chain platform with comprehensive transparency and compliance features.';
     launchDate: '2025-02-12';
     customers: 89;
     rating: 4.6;
-    reviews: 56;
-  };
-  {;
+    reviews: 56}
+  {
     id: 'ai-powered-warehouse-automation';
     name: 'AI-Powered Warehouse Automation Platform';
     tagline: 'Intelligent warehouse automation and optimization';
@@ -1614,7 +1463,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
+      website: 'https://ziontechgroup.com'}
     realImplementation: true;
     implementationDetails: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.';
     launchDate: '2025-02-18';
@@ -1633,9 +1482,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
   g: number;
   review,
   s: number}
-;
 export const,
-  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [;
+  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025Service Feature = [;
   {/* TODO: Fix JSX expression */}
   t: 'logistics'}
     contactInf,
@@ -1649,7 +1497,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    };
+    }
     realImplementatio,
   n: true;
     implementationDetail,
@@ -1661,7 +1509,7 @@ export const,
     ratin,
   g: 4.8;
     review,
-  s: 98};
+  s: 98}
   {/* TODO: Fix JSX expression */}
   t: 'quantum-logistics'}
     contactInf,
@@ -1675,7 +1523,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    };
+    }
     realImplementatio,
   n: true;
     implementationDetail,
@@ -1687,7 +1535,7 @@ export const,
     ratin,
   g: 4.9;
     review,
-  s: 23};
+  s: 23}
   {/* TODO: Fix JSX expression */}
   t: 'iot-futuristic'}
     contactInf,
@@ -1701,7 +1549,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    };
+    }
     realImplementatio,
   n: true;
     implementationDetail,
@@ -1713,7 +1561,7 @@ export const,
     ratin,
   g: 4.7;
     review,
-  s: 145};
+  s: 145}
   {/* TODO: Fix JSX expression */}
   t: 'blockchain-futuristic'}
     contactInf,
@@ -1727,7 +1575,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    };
+    }
     realImplementatio,
   n: true;
     implementationDetail,
@@ -1739,7 +1587,7 @@ export const,
     ratin,
   g: 4.6;
     review,
-  s: 56};
+  s: 56}
   {/* TODO: Fix JSX expression */}
   t: 'ai-supply-chain-enterprise'}
     contactInf,
@@ -1753,7 +1601,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    };
+    }
     realImplementatio,
   n: true;
     implementationDetail,
@@ -1767,7 +1615,6 @@ export const,
     review,
   s: 112}
 ];
-;
 i,
   d: string; nam,
   e: string; taglin,
@@ -1775,38 +1622,7 @@ i,
   e: string, perio,
   d: string, descriptio,
   n: string; feature,
-  s: string[]; popula,
-  r: boolean; ico,
-  n: string; colo,
-  r: string; text_colo,
-  r: string; lin,
-  k: string; market_positio,
-  n: string; target_audienc,
-  e: string; trial_day,
-  s: number; setup_tim,
-  e: string; categor,
-  y: string; real_servic,
-  e: boolean; technolog,
-  y: string[]; integration,
-  s: string[]; use_case,
-  s: string[]; ro,
-  i: string; competitor,
-  s: string[]; market_siz,
-  e: string; growth_rat,
-  e: string; varian,
-  t: ServiceVariant; contact_inf,
-  o: mobil,
-  e: string; emai,
-  l: string; addres,
-  s: string; websit,
-  e: string} real_implementatio,
-  n: boolean; implementation_detail,
-  s: string; launch_dat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number; export const,
-  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] =; [, i,
+  s: stringService Feature =; [, i,
   d: 'ai - powered - supply - chain - optimization',' nam,
   e: 'AI - Powered Supply Chain Optimization',' taglin,
   e: 'Intelligent supply chain planning and optimization',' pric,
@@ -1995,46 +1811,8 @@ i,
   e: '2025-02-18', customer,
   s: 178, ratin,
   g: 4 && 4.8, review,
-  s: 112}; ]; feature,
-  s: [ export interface AdvancedLogisticsSupplyChainSolution2025,
-  id: string, nam,
-  e: string, taglin,
-  e: string, pric,
-  e: string, perio,
-  d: string, descriptio,
-  n: string, feature,
-  s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
-  r: string, textColo,
-  r: string, lin,
-  k: string, marketPositio,
-  n: string, targetAudienc,
-  e: string, trialDay,
-  s: number, setupTim,
-  e: string, categor,
-  y: string, realServic,
-  e: boolean, technolog,
-  y: string[], integration,
-  s: string[], useCase,
-  s: string[], ro,
-  i: string, competitor,
-  s: string[], marketSiz,
-  e: string, growthRat,
-  e: string, varian,
-  t: ServiceVariant, contactInf,
-  o: mobil,
-  e: string, emai,
-  l: string, addres,
-  s: string, websit,
-  e: string }, realImplementatio,
-  n: boolean, implementationDetail,
-  s: string, launchDat,
-  e: string, customer,
-  s: number, ratin,
-  g: number, review,
-  s: number } export const,
-  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [ ' i,
+  s: 112} ]; feature,
+  s: Service Feature = [ ' i,
   d: 'ai-powered-supply-chain-optimization', nam,
   e: 'AI-Powered Supply Chain Optimization',' taglin,
   e: 'Intelligent supply chain planning and optimization',' pric,
@@ -2080,7 +1858,7 @@ i,
   e: '2025-02-18', customer,
   s: 178, ratin,
   g: 4.8, review,
-  s: 112}; ]; feature,
+  s: 112} ]; feature,
   s: [' 'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'' 'Custom algorithmsCompliance tools' ]; feature,
   s: [;' 'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration'' 'Custom algorithms_compliance tools' ], ' popula,
   r: true, ico,
@@ -2092,7 +1870,7 @@ i,
   r: false, ico,
   n: '⛓️']; ' popula,
   r: true, ico,
-  n: '🏭']; ; } ];' 'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'' 'Custom algorithmsCompliance tools' ];' technolog,
+  n: '🏭']} ];' 'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'' 'Custom algorithmsCompliance tools' ];' technolog,
   y: ['Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML'];' integration,
   s: ['ERP systems, WMS platforms, TMS solutions, E-commerce platforms, Analytics tools'];' useCase,
   s: ['Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'];' ro,
@@ -2235,58 +2013,58 @@ i,
   g: 4.8, review,
   s: 112 } ];' import { ServiceVariant } from '../types/service-variants'; export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} }; realImplementatio,
+  e: string} } realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number} ; export const,
-  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [; {/* TODO: Fix JSX expression */}
+  s: number} export const,
+  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025Service Feature = [; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' }; realImplementatio,
+  s://ziontechgroup.com' } realImplementatio,
   n: true;' implementationDetail,
   s: 'Production-ready AI supply chain platform with comprehensive optimization and analytics capabilities.';' launchDat,
   e: '2025-01-26'; customer,
   s: 156; ratin,
   g: 4.8; review,
-  s: 98}; {/* TODO: Fix JSX expression */}
+  s: 98} {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' }; realImplementatio,
+  s://ziontechgroup.com' } realImplementatio,
   n: true;' implementationDetail,
   s: 'Production-ready quantum logistics platform with advanced algorithms and enterprise integration.';' launchDat,
   e: '2025-02-02'; customer,
   s: 34; ratin,
   g: 4.9; review,
-  s: 23}; {/* TODO: Fix JSX expression */}
+  s: 23} {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' }; realImplementatio,
+  s://ziontechgroup.com' } realImplementatio,
   n: true;' implementationDetail,
   s: 'Production-ready IoT fleet platform with comprehensive monitoring and optimization capabilities.';' launchDat,
   e: '2025-02-07'; customer,
   s: 234; ratin,
   g: 4.7; review,
-  s: 145}; {/* TODO: Fix JSX expression */}
+  s: 145} {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' }; realImplementatio,
+  s://ziontechgroup.com' } realImplementatio,
   n: true;' implementationDetail,
   s: 'Production-ready blockchain supply chain platform with comprehensive transparency and compliance features.';' launchDat,
   e: '2025-02-12'; customer,
   s: 89; ratin,
   g: 4.6; review,
-  s: 56}; {/* TODO: Fix JSX expression */}
+  s: 56} {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' }; realImplementatio,
+  s://ziontechgroup.com' } realImplementatio,
   n: true;' implementationDetail,
   s: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.';' launchDat,
   e: '2025-02-18'; customer,

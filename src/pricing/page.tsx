@@ -46,7 +46,7 @@ const PricingPage: React.FC = () => {
         'Monthly Strategy Reviews',
         'Performance Optimization'
       ],
-      limitations: [],
+      limitations: Service Feature,
       cta: 'Start Free Trial',
       popular: true
     },
@@ -69,7 +69,7 @@ const PricingPage: React.FC = () => {
         'Custom Training Programs',
         'SLA Guarantees'
       ],
-      limitations: [],
+      limitations: Service Feature,
       cta: 'Contact Sales',
       popular: false
     }
@@ -135,7 +135,7 @@ const PricingPage: React.FC = () => {
           border: 'border-blue-500',
           light: 'bg-blue-50',
           textLight: 'text-blue-600'
-        };
+        }
       case 'cyan':
         return {
           bg: 'bg-cyan-500',
@@ -143,7 +143,7 @@ const PricingPage: React.FC = () => {
           border: 'border-cyan-500',
           light: 'bg-cyan-50',
           textLight: 'text-cyan-600'
-        };
+        }
       case 'purple':
         return {
           bg: 'bg-purple-500',
@@ -151,7 +151,7 @@ const PricingPage: React.FC = () => {
           border: 'border-purple-500',
           light: 'bg-purple-50',
           textLight: 'text-purple-600'
-        };
+        }
       default:
         return {
           bg: 'bg-gray-500',
@@ -159,9 +159,9 @@ const PricingPage: React.FC = () => {
           border: 'border-gray-500',
           light: 'bg-gray-50',
           textLight: 'text-gray-600'
-        };
+        }
     }
-  };
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -242,8 +242,7 @@ const PricingPage: React.FC = () => {
                     </Link>
                   </div>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -318,8 +317,7 @@ const PricingPage: React.FC = () => {
       </section>
       <Footer />
     </div>
-  );
-};
+  )}
 export default PricingPage;
   </Link>
   </Link>

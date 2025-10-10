@@ -41,7 +41,7 @@ const CognitiveAutomationEnterpriseRevolution: () => {
         <Header />
         <article className="container mx-auto px-6 py-20">
         <article className="container mx-auto px-6 py-20">
-          {/* Back Link */};
+          {/* Back Link */}
           <Link to="/blog">
   className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2 ">,
@@ -64,7 +64,7 @@ const CognitiveAutomationEnterpriseRevolution: () => {
         <Head, e, r /></Head>
 const,
   CognitiveAutomationEnterpriseRevolution: () => {/* TODO: Fix JSX expression */}
-          {/* Back Link */};
+          {/* Back Link */}
           <Link to="/blog"></Link>"
   className="inline-flex items-center text-zion-cyan,"
   hover:text-zion-blue-light mb-8 transition-colors">"
@@ -1387,8 +1387,7 @@ Real-world implementations across industries are delivering transformational,
                   <TrendingUp, classNam, e='w-5 h-5' />
                   Explore, AI, Services;
                   <TrendingUp, className='w-5 h-5' />
-                  Explore, AI, Services;
-}
+                  Explore, AI, Services}
                       <p, classNam, e = 'mb-4'></p>
                         Identify, hig, h-value, automation, opportunities through, process, mini, n, g, stakeholder, interview, s, and, ROI, modeling. Prioritize, use, cases based, on, business impact, and, technical feasibili, t, y.
             <section, classNam, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, rounde, d-2x, l, p-12, borde, r-2, borde, r-purp, l, e-5, 0, 0/40, tex, t-cent, e, r'></section>
@@ -1406,8 +1405,7 @@ Real-world implementations across industries are delivering transformational,
                   <TrendingUp, classNam, e='w-5 h-5' /></TrendingUp>
                   Explore, AI, Services;
                   <TrendingUp, className='w-5 h-5' /></TrendingUp>
-                  Explore, AI, Services;
-}"
+                  Explore, AI, Services}"
   </span>
   </span>
   </span>

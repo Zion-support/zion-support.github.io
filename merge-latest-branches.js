@@ -31,8 +31,7 @@ try {
       if (!uniqueCommits.trim()) {
         console.log(`⏭️  Branch ${branch} has no unique commits, skipping...`);
         skippedCount++;
-        continue;
-      }
+        continue}
 
       console.log(`📝 Unique commits in ${branch}:`);
       console.log(uniqueCommits.split('\n').slice(0, 3).join('\n'));
@@ -42,17 +41,13 @@ try {
       execSync(`git merge ${branch} --no-ff -m "feat: Merge enhancements from ${branch}"`, { stdio: 'inherit' });
       
       console.log(`✅ Successfully merged ${branch}`);
-      mergedCount++;
-
-    } catch (error) {
+      mergedCount++} catch (error) {
       console.log(`⚠️  Could not merge ${branch}: ${error.message}`);
       
       // Try to abort the merge if it failed;
       try {
-        execSync('git merge --abort', { stdio: 'pipe' });
-      } catch (abortError) {
-        // Ignore abort errors;
-      }
+        execSync('git merge --abort', { stdio: 'pipe' })} catch (abortError) {
+        // Ignore abort errors}
     }
   }
 
@@ -64,9 +59,6 @@ try {
   console.log('\n📤 Pushing all changes to origin/main...');
   execSync('git push origin main', { stdio: 'inherit' });
 
-  console.log('🎉 All merges completed successfully!');
-
-} catch (error) {
+  console.log('🎉 All merges completed successfully!')} catch (error) {
   console.error('❌ Error during merge process:', error.message);
-  process.exit(1);
-}
+  process.exit(1)}

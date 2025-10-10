@@ -110,8 +110,7 @@ const GlobalErrorPage: React.FC = () => {
       </main>
       <Footer />
     </React.Fragment>
-  );
-};
+  )}
 export default GlobalErrorPage;
   </button>
   </h2>

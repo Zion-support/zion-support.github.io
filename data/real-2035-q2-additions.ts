@@ -96,8 +96,7 @@
     launchDate: '2025-08-20'
     customers: 48;
     rating: 4.7;
-    reviews: 12;
-  }
+    reviews: 12}
     competitors: ['Superhuman AI', 'Front AI', 'Gmail add - ons'],
     market_size: '$10B+ email productivity'
     growth_rate: '15% CAGR'
@@ -109,8 +108,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 48;
     rating: 4 && 4.7;
-    reviews: 12;
-  },
+    reviews: 12},
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/ai-email-responder';
@@ -306,8 +304,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 22;
     rating: 4 && 4.6;
-    reviews: 9;
-  },
+    reviews: 9},
     id: 'niche - productivity - planner',
     name: 'Niche Productivity Planner',
     tagline: unknown;
@@ -415,8 +412,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 18;
     rating: 4 && 4.5;
-    reviews: 7;
-  },
+    reviews: 7},
       'QR tickets + check-in',
       'Email/SMS reminders',
     id: 'event - management - dashboard',
@@ -525,8 +521,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 31;
     rating: 4 && 4.7;
-    reviews: 11;
-  },
+    reviews: 11},
     id: 'affiliate - tracking - suite',
     name: 'Affiliate Tracking Suite',
     tagline: 'Links, attribution, commission rules, and payouts',
@@ -631,8 +626,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 12;
     rating: 4 && 4.5;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'smb - analytics - lite',
     name: 'SMB Analytics Lite',
     tagline: 'Traffic, funnels, and conversions without complexity',
@@ -737,8 +731,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 40;
     rating: 4 && 4.6;
-    reviews: 8;
-  },
+    reviews: 8},
       'Email-to-ticket',
     id: 'it - helpdesk - portal',
     name: 'IT Helpdesk Portal',
@@ -845,8 +838,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 16;
     rating: 4 && 4.7;
-    reviews: 6;
-  },
+    reviews: 6},
       'Self-serve returns portal',
     id: 'ecommerce - returns - manager'
     name: 'Ecommerce Returns Manager',
@@ -953,8 +945,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 14;
     rating: 4 && 4.6;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'automated - email - followups'
     name: 'Automated Email Followups',
     tagline: 'No - lead - left - behind sequences across inboxes',
@@ -1158,8 +1149,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 20;
     rating: 4 && 4.6;
-    reviews: 6;
-  },
+    reviews: 6},
       'On-page audits',
     id: 'ai - seo - content - optimizer'
     name: 'AI SEO Content Optimizer',
@@ -1266,8 +1256,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 33;
     rating: 4 && 4.7;
-    reviews: 10;
-  },
+    reviews: 10},
     id: 'social - scheduler - ai',
     name: 'Social Scheduler AI',
     tagline: 'Auto - generate, schedule, and repurpose posts cross - platform',
@@ -1372,8 +1361,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 26;
     rating: 4 && 4.5;
-    reviews: 7;
-  },
+    reviews: 7},
     id: 'lead - enrichment - api',
     name: 'Lead Enrichment API',
     tagline: 'Company, role, and social signals from an email / domain',
@@ -1478,8 +1466,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 9;
     rating: 4 && 4.4;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'consent - management - cmp',
     name: 'Consent Management CMP',
     tagline: 'GDPR / CCPA consent banners, preferences, and audit logs',
@@ -1584,8 +1571,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 37;
     rating: 4 && 4.7;
-    reviews: 10;
-  },
+    reviews: 10},
     id: 'cookie - scanner - pro'
     name: 'Cookie Scanner Pro',
     tagline: 'Auto - detects cookies + trackers and updates your policy',
@@ -1690,8 +1676,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 19;
     rating: 4 && 4.5;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'statuspage - sla - tracker'
     name: 'StatusPage SLA Tracker',
     tagline: 'Track uptime / incidents and publish SLA reports',
@@ -1796,8 +1781,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 11;
     rating: 4 && 4.4;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'agentic - lead - qualifier'
     name: 'Agentic Lead Qualifier',
     tagline: 'Website chat agent that pre - qualifies and routes leads',
@@ -1893,8 +1877,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 23;
     rating: 4 && 4.6;
-    reviews: 7;
-  },
+    reviews: 7},
     id: 'gdpr - dsar - portal - lite',
     name: 'GDPR DSAR Portal Lite',
     tagline: 'Accept, verify, export, and fulfill data subject requests',
@@ -1969,8 +1952,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 10;
     rating: 4 && 4.5;
-    reviews: 4;
-  },
+    reviews: 4},
     period: '/month',
     description: unknown;
     popula,
@@ -2040,8 +2022,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 23;
     rating: 4 && 4.6;
-    reviews: 7;
-  },
+    reviews: 7},
     id: 'gdpr - dsar - portal - lite',
     name: 'GDPR DSAR Portal Lite',
     tagline: 'Accept, verify, export, and fulfill data subject requests',
@@ -2146,8 +2127,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 10;
     rating: 4 && 4.5;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'feature-flag-auditor'
     name: 'Feature Flag Auditor',
     tagline: 'Flag hygiene checks and end-of-life automation',
@@ -2337,8 +2317,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 8;
     rating: 4 && 4.4;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'postgres - index - advisor - pro'
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -2553,8 +2532,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 13;
     rating: 4 && 4.6;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'api-breaking-change-watcher'
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
@@ -2580,8 +2558,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 12;
     rating: 4 && 4.5;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'postgres-index-advisor-pro'
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -2820,8 +2797,7 @@
     launchDate: '2025-08-20'
     customers: 17;
     rating: 4.5;
-    reviews: 4;
-  }
+    reviews: 4}
     id: 'pii-discovery-scanner'
     name: 'PII Discovery Scanner',
     tagline: 'Scan buckets and DBs for PII/PHI with evidence exports',
@@ -3011,8 +2987,7 @@
     launchDate: '2025-08-20'
     customers: 8;
     rating: 4.4;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'postgres - index - advisor - pro'
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -3117,8 +3092,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 15;
     rating: 4 && 4.6;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 's3 - lifecycle - optimizer'
     name: 'S3 Lifecycle Optimizer',
     tagline: 'Move objects between storage classes to cut costs',
@@ -3223,8 +3197,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 17;
     rating: 4 && 4.5;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'pii - discovery - scanner'
     name: 'PII Discovery Scanner',
     tagline: 'Scan buckets and DBs for PII / PHI with evidence exports',
@@ -3329,8 +3302,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 13;
     rating: 4 && 4.6;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'api-breaking-change-watcher'
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
@@ -3543,8 +3515,7 @@
     launchDate: '2025-08-20'
     customers: 12;
     rating: 4.5;
-    reviews: 3;
-  }
+    reviews: 3}
     id: 'feature - flag - auditor'
     name: 'Feature Flag Auditor',
     tagline: 'Flag hygiene checks and end - of - life automation',
@@ -3649,8 +3620,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 8;
     rating: 4 && 4.4;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'postgres - index - advisor - pro'
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -3755,8 +3725,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 15;
     rating: 4 && 4.6;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 's3 - lifecycle - optimizer'
     name: 'S3 Lifecycle Optimizer',
     tagline: 'Move objects between storage classes to cut costs',
@@ -3861,8 +3830,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 17;
     rating: 4 && 4.5;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'pii - discovery - scanner'
     name: 'PII Discovery Scanner',
     tagline: 'Scan buckets and DBs for PII / PHI with evidence exports',
@@ -3967,8 +3935,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 13;
     rating: 4 && 4.6;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'api-breaking-change-watcher'
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
@@ -4096,8 +4063,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 12;
     rating: 4 && 4.5;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'synthetic - journey - monitor'
     name: 'Synthetic Journey Monitor',
     tagline: 'Record and replay user flows with SLO alerts',
@@ -4202,8 +4168,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 21;
     rating: 4 && 4.5;
-    reviews: 6;
-  },
+    reviews: 6},
     id: 'iam - permission - analyzer',
     name: 'IAM Permission Analyzer',
     tagline: unknown;
@@ -4310,8 +4275,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 9;
     rating: 4 && 4.6;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'warehouse - cost - optimizer'
     name: 'Data Warehouse Cost Optimizer',
     tagline: 'Right - size warehouses and schedule off - peak workloads',
@@ -4416,8 +4380,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 7;
     rating: 4 && 4.5;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'email - warmup - monitor'
     name: 'Email Warmup & Reputation Monitor',
     tagline: 'Track sender reputation and run inbox placement tests',
@@ -4522,8 +4485,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 16;
     rating: 4 && 4.5;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'ai - meeting - to - ticket'
     name: 'AI MeetingtoTicket Copilot',
     tagline: 'Turn meeting action items into Jira / GitHub tickets',
@@ -4628,8 +4590,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 24;
     rating: 4 && 4.6;
-    reviews: 6;
-  }];
+    reviews: 6}];
 const contact =
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4696,9 +4657,9 @@ const contact =
 	websit,
   e: 'http,
   s://ziontechgroup.com'
-};
+}
 export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [,
+  real2035Q2Additions: EnhancedRealMicroSaasServiceService Feature = [,
 		i,
   d: 'ai-email-responder', nam,
   e: 'AI Email Responder',
@@ -4738,8 +4699,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 48;
 		rating: 4 && 4.7;
-		reviews: 12;
-	}
+		reviews: 12}
 		id: 'mobile-survey-studio',
 		name: 'Mobile Survey Studio',
 		tagline: 'Adaptive, mobile-first surveys with branching logic and analytics'
@@ -4774,8 +4734,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 22;
 		rating: 4 && 4.6;
-		reviews: 9;
-	}
+		reviews: 9}
 		id: 'niche-productivity-planner',
 		name: 'Niche Productivity Planner',
 		tagline: 'Industry-specific planners with templates, rituals, and benchmarks'
@@ -4810,8 +4769,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 18;
 		rating: 4 && 4.5;
-		reviews: 7;
-	}
+		reviews: 7}
 		id: 'event-management-dashboard',
 		name: 'Event Management Dashboard',
 		tagline: 'Tickets, scheduling, comms, and post-event analytics'
@@ -4846,8 +4804,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 31;
 		rating: 4 && 4.7;
-		reviews: 11;
-	}
+		reviews: 11}
 		id: 'affiliate-tracking-suite',
 		name: 'Affiliate Tracking Suite',
 		tagline: 'Links, attribution, commission rules, and payouts'
@@ -4880,8 +4837,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 12;
 		rating: 4 && 4.5;
-		reviews: 5;
-	}
+		reviews: 5}
 		id: 'smb-analytics-lite',
 		name: 'SMB Analytics Lite',
 		tagline: 'Traffic, funnels, and conversions without complexity'
@@ -4914,8 +4870,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 40;
 		rating: 4 && 4.6;
-		reviews: 8;
-	}
+		reviews: 8}
 		id: 'it-helpdesk-portal',
 		name: 'IT Helpdesk Portal',
 		tagline: 'Tickets, knowledge base, SLAs, and client portal'
@@ -4948,8 +4903,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 16;
 		rating: 4 && 4.7;
-		reviews: 6;
-	}
+		reviews: 6}
 		id: 'ecommerce-returns-manager',
 		name: 'Ecommerce Returns Manager',
 		tagline: 'Customer-friendly returns with labels and status tracking',
@@ -4982,8 +4936,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 14;
 		rating: 4 && 4.6;
-		reviews: 5;
-	}
+		reviews: 5}
 		id: 'automated-email-followups'
 		name: 'Automated Email Followups'
 		tagline: 'No-lead-left-behind sequences across inboxes'
@@ -5016,8 +4969,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 28;
 		rating: 4 && 4.5;
-		reviews: 8;
-	}
+		reviews: 8}
 		id: 'podcast-transcription-service',
 		name: 'Podcast Transcription Service',
 		tagline: 'Accurate transcripts, chapters, and SEO blog exports'
@@ -5050,8 +5002,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 20;
 		rating: 4 && 4.6;
-		reviews: 6;
-	}
+		reviews: 6}
 		id: 'ai-seo-content-optimizer',
 		name: 'AI SEO Content Optimizer',
 		tagline: 'Live on-page audits and SEO-aware rewrites',
@@ -5084,8 +5035,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 33;
 		rating: 4 && 4.7;
-		reviews: 10;
-	}
+		reviews: 10}
 		id: 'social-scheduler-ai',
 		name: 'Social Scheduler AI',
 		tagline: 'Auto-generate, schedule, and repurpose posts cross-platform'
@@ -5118,8 +5068,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 26;
 		rating: 4 && 4.5;
-		reviews: 7;
-	}
+		reviews: 7}
 		id: 'lead-enrichment-api',
 		name: 'Lead Enrichment API',
 		tagline: 'Company, role, and social signals from an email/domain'
@@ -5152,8 +5101,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 9;
 		rating: 4 && 4.4;
-		reviews: 4;
-	}
+		reviews: 4}
 		id: 'consent-management-cmp',
 		name: 'Consent Management CMP',
 		tagline: 'GDPR/CCPA consent banners, preferences, and audit logs'
@@ -5186,8 +5134,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 37;
 		rating: 4 && 4.7;
-		reviews: 10;
-	}
+		reviews: 10}
 		id: 'cookie-scanner-pro',
 		name: 'Cookie Scanner Pro',
 		tagline: 'Auto-detects cookies + trackers and updates your policy',
@@ -5220,8 +5167,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 19;
 		rating: 4 && 4.5;
-		reviews: 5;
-	}
+		reviews: 5}
 		id: 'statuspage-sla-tracker',
 		name: 'StatusPage SLA Tracker',
 		tagline: 'Track uptime/incidents and publish SLA reports',
@@ -5254,8 +5200,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 11;
 		rating: 4 && 4.4;
-		reviews: 3;
-	}
+		reviews: 3}
 		id: 'agentic-lead-qualifier',
 		name: 'Agentic Lead Qualifier',
 		tagline: 'Website chat agent that pre-qualifies and routes leads',
@@ -5288,8 +5233,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 23;
 		rating: 4 && 4.6;
-		reviews: 7;
-	}
+		reviews: 7}
 		id: 'gdpr-dsar-portal-lite',
 		name: 'GDPR DSAR Portal Lite',
 		tagline: 'Accept, verify, export, and fulfill data subject requests'
@@ -5322,8 +5266,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 10;
 		rating: 4 && 4.5;
-		reviews: 4;
-	}
+		reviews: 4}
 		id: 'feature-flag-auditor',
 		name: 'Feature Flag Auditor',
 		tagline: 'Flag hygiene checks and end-of-life automation',
@@ -5356,8 +5299,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 8;
 		rating: 4 && 4.4;
-		reviews: 3;
-	}
+		reviews: 3}
 		id: 'postgres-index-advisor-pro',
 		name: 'Postgres Index Advisor Pro',
 		tagline: 'Index recommendations and controlled PR rollouts',
@@ -5390,8 +5332,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 15;
 		rating: 4 && 4.6;
-		reviews: 5;
-	}
+		reviews: 5}
 		id: 's3-lifecycle-optimizer'
 		name: 'S3 Lifecycle Optimizer'
 		tagline: 'Move objects between storage classes to cut costs'
@@ -5424,8 +5365,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 17;
 		rating: 4 && 4.5;
-		reviews: 4;
-	}
+		reviews: 4}
 		id: 'pii-discovery-scanner',
 		name: 'PII Discovery Scanner',
 		tagline: 'Scan buckets and DBs for PII/PHI with evidence exports',
@@ -5458,8 +5398,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 13;
 		rating: 4 && 4.6;
-		reviews: 5;
-	}
+		reviews: 5}
 		id: 'api-breaking-change-watcher',
 		name: 'API Breaking Change Watcher',
 		tagline: 'Schema diffs with CI gates and notifications',
@@ -5492,8 +5431,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 12;
 		rating: 4 && 4.5;
-		reviews: 3;
-	}
+		reviews: 3}
 		id: 'synthetic-journey-monitor',
 		name: 'Synthetic Journey Monitor',
 		tagline: 'Record and replay user flows with SLO alerts',
@@ -5526,8 +5464,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 21;
 		rating: 4 && 4.5;
-		reviews: 6;
-	}
+		reviews: 6}
 		id: 'iam-permission-analyzer'
 		name: 'IAM Permission Analyzer'
 		tagline: 'Detect over-privileged access and propose least-privilege policies'
@@ -5560,8 +5497,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 9;
 		rating: 4 && 4.6;
-		reviews: 3;
-	}
+		reviews: 3}
 		id: 'warehouse-cost-optimizer'
 		name: 'Data Warehouse Cost Optimizer'
 		tagline: 'Right-size warehouses and schedule off-peak workloads'
@@ -5594,8 +5530,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 7;
 		rating: 4 && 4.5;
-		reviews: 3;
-	}
+		reviews: 3}
 		id: 'email-warmup-monitor'
 		name: 'Email Warmup & Reputation Monitor'
 		tagline: 'Track sender reputation and run inbox placement tests'
@@ -5628,8 +5563,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 16;
 		rating: 4 && 4.5;
-		reviews: 4;
-	}
+		reviews: 4}
 		id: 'ai-meeting-to-ticket',
 		name: 'AI MeetingtoTicket Copilot',
 		tagline: 'Turn meeting action items into Jira/GitHub tickets',
@@ -5662,8 +5596,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 24;
 		rating: 4 && 4.6;
-		reviews: 6;
-	}
+		reviews: 6}
 ];
   id: 'ai - email - responder',
   name: 'AI Email Responder',
@@ -5699,8 +5632,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 48;
   rating: 4.7;
-  reviews: 12;
-}
+  reviews: 12}
   id: 'mobile - survey - studio',
   name: 'Mobile Survey Studio',
   tagline: 'Adaptive, mobile - first surveys with branching logic and analytics'
@@ -5735,8 +5667,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 22;
   rating: 4.6;
-  reviews: 9;
-}
+  reviews: 9}
   id: 'niche - productivity - planner',
   name: 'Niche Productivity Planner',
   tagline: 'Industry - specific planners with templates, rituals, and benchmarks'
@@ -5771,8 +5702,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 18;
   rating: 4.5;
-  reviews: 7;
-}
+  reviews: 7}
   id: 'event - management - dashboard',
   name: 'Event Management Dashboard',
   tagline: 'Tickets, scheduling, comms, and post - event analytics'
@@ -5807,8 +5737,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 31;
   rating: 4.7;
-  reviews: 11;
-}
+  reviews: 11}
   id: 'affiliate - tracking - suite',
   name: 'Affiliate Tracking Suite',
   tagline: 'Links, attribution, commission rules, and payouts'
@@ -5841,8 +5770,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 12;
   rating: 4.5;
-  reviews: 5;
-}
+  reviews: 5}
   id: 'smb - analytics - lite',
   name: 'SMB Analytics Lite',
   tagline: 'Traffic, funnels, and conversions without complexity'
@@ -5875,8 +5803,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 40;
   rating: 4.6;
-  reviews: 8;
-}
+  reviews: 8}
   id: 'it - helpdesk - portal',
   name: 'IT Helpdesk Portal',
   tagline: 'Tickets, knowledge base, SLAs, and client portal'
@@ -5909,8 +5836,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 16;
   rating: 4.7;
-  reviews: 6;
-}
+  reviews: 6}
   id: 'ecommerce - returns - manager',
   name: 'Ecommerce Returns Manager',
   tagline: 'Customer - friendly returns with labels and status tracking',
@@ -5943,8 +5869,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 14;
   rating: 4.6;
-  reviews: 5;
-}
+  reviews: 5}
   id: 'automated - email - followups'
   name: 'Automated Email Followups'
   tagline: 'No - lead - left - behind sequences across inboxes'
@@ -5977,8 +5902,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 28;
   rating: 4.5;
-  reviews: 8;
-}
+  reviews: 8}
   id: 'podcast - transcription - service',
   name: 'Podcast Transcription Service',
   tagline: 'Accurate transcripts, chapters, and SEO blog exports'
@@ -6011,8 +5935,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 20;
   rating: 4.6;
-  reviews: 6;
-}
+  reviews: 6}
   id: 'ai - seo - content - optimizer',
   name: 'AI SEO Content Optimizer',
   tagline: 'Live on - page audits and SEO - aware rewrites',
@@ -6045,8 +5968,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 33;
   rating: 4.7;
-  reviews: 10;
-}
+  reviews: 10}
   id: 'social - scheduler - ai',
   name: 'Social Scheduler AI',
   tagline: 'Auto - generate, schedule, and repurpose posts cross - platform'
@@ -6079,8 +6001,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 26;
   rating: 4.5;
-  reviews: 7;
-}
+  reviews: 7}
   id: 'lead - enrichment - api',
   name: 'Lead Enrichment API',
   tagline: 'Company, role, and social signals from an email / domain'
@@ -6113,8 +6034,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 9;
   rating: 4.4;
-  reviews: 4;
-}
+  reviews: 4}
   id: 'consent - management - cmp',
   name: 'Consent Management CMP',
   tagline: 'GDPR / CCPA consent banners, preferences, and audit logs'
@@ -6147,8 +6067,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 37;
   rating: 4.7;
-  reviews: 10;
-}
+  reviews: 10}
   id: 'cookie - scanner - pro',
   name: 'Cookie Scanner Pro',
   tagline: 'Auto - detects cookies + trackers and updates your policy',
@@ -6181,8 +6100,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 19;
   rating: 4.5;
-  reviews: 5;
-}
+  reviews: 5}
   id: 'statuspage - sla - tracker',
   name: 'StatusPage SLA Tracker',
   tagline: 'Track uptime / incidents and publish SLA reports',
@@ -6215,8 +6133,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 11;
   rating: 4.4;
-  reviews: 3;
-}
+  reviews: 3}
   id: 'agentic - lead - qualifier',
   name: 'Agentic Lead Qualifier',
   tagline: 'Website chat agent that pre - qualifies and routes leads',
@@ -6249,8 +6166,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 23;
   rating: 4.6;
-  reviews: 7;
-}
+  reviews: 7}
   id: 'gdpr - dsar - portal - lite',
   name: 'GDPR DSAR Portal Lite',
   tagline: 'Accept, verify, export, and fulfill data subject requests'
@@ -6283,8 +6199,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 10;
   rating: 4.5;
-  reviews: 4;
-}
+  reviews: 4}
   id: 'feature - flag - auditor',
   name: 'Feature Flag Auditor',
   tagline: 'Flag hygiene checks and end - of - life automation',
@@ -6317,8 +6232,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 8;
   rating: 4.4;
-  reviews: 3;
-}
+  reviews: 3}
   id: 'postgres - index - advisor - pro',
   name: 'Postgres Index Advisor Pro',
   tagline: 'Index recommendations and controlled PR rollouts',
@@ -6351,8 +6265,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 15;
   rating: 4.6;
-  reviews: 5;
-}
+  reviews: 5}
   id: 's3 - lifecycle - optimizer'
   name: 'S3 Lifecycle Optimizer'
   tagline: 'Move objects between storage classes to cut costs'
@@ -6385,8 +6298,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 17;
   rating: 4.5;
-  reviews: 4;
-}
+  reviews: 4}
   id: 'pii - discovery - scanner',
   name: 'PII Discovery Scanner',
   tagline: 'Scan buckets and DBs for PII / PHI with evidence exports',
@@ -6419,8 +6331,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 13;
   rating: 4.6;
-  reviews: 5;
-}
+  reviews: 5}
   id: 'api - breaking - change - watcher',
   name: 'API Breaking Change Watcher',
   tagline: 'Schema diffs with CI gates and notifications',
@@ -6453,8 +6364,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 12;
   rating: 4.5;
-  reviews: 3;
-}
+  reviews: 3}
   id: 'synthetic - journey - monitor',
   name: 'Synthetic Journey Monitor',
   tagline: 'Record and replay user flows with SLO alerts',
@@ -6487,8 +6397,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 21;
   rating: 4.5;
-  reviews: 6;
-}
+  reviews: 6}
   id: 'iam - permission - analyzer'
   name: 'IAM Permission Analyzer'
   tagline: 'Detect over - privileged access and propose least - privilege policies'
@@ -6521,8 +6430,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 9;
   rating: 4.6;
-  reviews: 3;
-}
+  reviews: 3}
   id: 'warehouse - cost - optimizer'
   name: 'Data Warehouse Cost Optimizer'
   tagline: 'Right - size warehouses and schedule off - peak workloads'
@@ -6555,8 +6463,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 7;
   rating: 4.5;
-  reviews: 3;
-}
+  reviews: 3}
   id: 'email - warmup - monitor'
   name: 'Email Warmup & Reputation Monitor'
   tagline: 'Track sender reputation and run inbox placement tests'
@@ -6589,8 +6496,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 16;
   rating: 4.5;
-  reviews: 4;
-}
+  reviews: 4}
   id: 'ai - meeting - to - ticket',
   name: 'AI MeetingtoTicket Copilot',
   tagline: 'Turn meeting action items into Jira / GitHub tickets',
@@ -6623,16 +6529,15 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 24;
   rating: 4.6;
-  reviews: 6;
-}
+  reviews: 6}
 		rating: 4.6;
 		reviews: 6;
-// const contact = {;
+// const contact = {
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
-	website: 'https://ziontechgroup.com'};
-export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
+	website: 'https://ziontechgroup.com'}
+export const real2035 Q2 Additions: EnhancedRealMicroSaasServiceService Feature = [;
 	{,
 		id: 'ai-email-responder';
 		name: 'AI Email Responder';
@@ -6669,8 +6574,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 48;
 		rating: 4.7}
 		reviews: 12}
-	};
-	{;
+	}
+	{
 		id: 'mobile-survey-studio';
 		name: 'Mobile Survey Studio';
 		tagline: 'Adaptive, mobile-first surveys with branching logic and analytics';
@@ -6706,8 +6611,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 22;
 		rating: 4.6}
 		reviews: 9}
-	};
-	{;
+	}
+	{
 		id: 'niche-productivity-planner';
 		name: 'Niche Productivity Planner';
 		tagline: 'Industry-specific planners with templates, rituals, and benchmarks';
@@ -6743,8 +6648,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 18;
 		rating: 4.5}
 		reviews: 7}
-	};
-	{;
+	}
+	{
 		id: 'event-management-dashboard';
 		name: 'Event Management Dashboard';
 		tagline: 'Tickets, scheduling, comms, and post-event analytics';
@@ -10542,157 +10447,15 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 	websit,
   e: 'http,
   s://ziontechgroup.com'
-};
+}
 export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
-		review,
-  s: 12}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-		review,
-  s: 9}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 7}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
-		review,
-  s: 11}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 5}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-		review,
-  s: 8}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
-		review,
-  s: 6}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-		review,
-  s: 5}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 8}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-		review,
-  s: 6}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
-		review,
-  s: 10}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 7}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
-		review,
-  s: 4}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
-		review,
-  s: 10}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 5}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
-		review,
-  s: 3}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-		review,
-  s: 7}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 4}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
-		review,
-  s: 3}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-		review,
-  s: 5}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 4}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-		review,
-  s: 5}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 3}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 6}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-		review,
-  s: 3}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 3}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 4}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-		review,
-  s: 6}
-	}
-];
-;
-// const contact = {;
+  real2035Q2Additions: EnhancedRealMicroSaasServiceService Feature;
+// const contact = {
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
-	website: 'https://ziontechgroup.com'};
-export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
+	website: 'https://ziontechgroup.com'}
+export const real2035 Q2 Additions: EnhancedRealMicroSaasServiceService Feature = [;
 	{,
 		id: 'ai-email-responder';
 		name: 'AI Email Responder';
@@ -10729,8 +10492,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 48;
 		rating: 4.7}
 		reviews: 12}
-	};
-	{;
+	}
+	{
 		id: 'mobile-survey-studio';
 		name: 'Mobile Survey Studio';
 		tagline: 'Adaptive, mobile-first surveys with branching logic and analytics';
@@ -10766,8 +10529,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 22;
 		rating: 4.6}
 		reviews: 9}
-	};
-	{;
+	}
+	{
 		id: 'niche-productivity-planner';
 		name: 'Niche Productivity Planner';
 		tagline: 'Industry-specific planners with templates, rituals, and benchmarks';
@@ -10803,8 +10566,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 18;
 		rating: 4.5}
 		reviews: 7}
-	};
-	{;
+	}
+	{
 		id: 'event-management-dashboard';
 		name: 'Event Management Dashboard';
 		tagline: 'Tickets, scheduling, comms, and post-event analytics';
@@ -10845,150 +10608,9 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 	websit,
   e: 'http,
   s://ziontechgroup.com'
-};
+}
 export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
-		review,
-  s: 12}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-		review,
-  s: 9}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 7}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
-		review,
-  s: 11}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 5}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-		review,
-  s: 8}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
-		review,
-  s: 6}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-		review,
-  s: 5}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 8}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-		review,
-  s: 6}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
-		review,
-  s: 10}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 7}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
-		review,
-  s: 4}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
-		review,
-  s: 10}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 5}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
-		review,
-  s: 3}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-		review,
-  s: 7}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 4}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
-		review,
-  s: 3}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-		review,
-  s: 5}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 4}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-		review,
-  s: 5}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 3}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 6}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-		review,
-  s: 3}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 3}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 4}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-		review,
-  s: 6}
-	}
-];
+  real2035Q2Additions: EnhancedRealMicroSaasServiceService Feature;
 'Intent classification + prioritization'' 'On-brand response drafting'' 'Automatic polite follow-ups'' 'Lead/contact enrichment'' 'Analytics and response SLAs' ] popula,
   r: true' ico,
   n: '📧'' colo,
@@ -12486,8 +12108,8 @@ export const,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' }; export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [ ' i,
+  s://ziontechgroup.com' } export const,
+  real2035Q2Additions: EnhancedRealMicroSaasServiceService Feature = [ ' i,
   d: 'ai-email-responder', nam,
   e: 'AI Email Responder',' taglin,
   e: 'Autonomous email triage, drafting, and follow-ups for sales and support',' pric,
@@ -14395,124 +14017,12 @@ export const,
   g: 4.6,
   reviews: 6 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' }; export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 12} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 9} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 7} }; {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 11} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 8} }; {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 6} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 8} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 6} }; {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 10} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 7} }; {/* TODO: Fix JSX expression */}
-  g: 4.4} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 10} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
-  g: 4.4} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 7} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
-  g: 4.4} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 6} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 6} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } export const,
+  real2035Q2Additions: EnhancedRealMicroSaasServiceService Feature; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' }; export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 12} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 9} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 7} }; {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 11} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 8} }; {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 6} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 8} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 6} }; {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 10} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 7} }; {/* TODO: Fix JSX expression */}
-  g: 4.4} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 10} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
-  g: 4.4} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 7} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
-  g: 4.4} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 6} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 6} } ]; '
+  s://ziontechgroup.com' } export const,
+  real2035Q2Additions: EnhancedRealMicroSaasServiceService Feature; '

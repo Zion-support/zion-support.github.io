@@ -10,11 +10,10 @@ bad, g, e: stri, n, g;
 gradie, n, t: stri, n, g;
 ic, o, n: Rea, c, t.ReactNo, d, e;
 l, i, n;
-  k: stri, n, g;
-}
+  k: stri, n, g}
 const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
   const, featuredConte, n;
-  t: FeaturedConte, n, t[] = [
+  t: FeaturedConte, n, tService Feature = [
     {
       id: 0;
       tit, l, e: 'Governed, Agent, Rollbacks','

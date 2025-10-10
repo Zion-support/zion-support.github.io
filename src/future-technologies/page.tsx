@@ -4,10 +4,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Rocket, Target, Zap, Settings, CheckCircle, Star,  Rocket,  Target,  Settings } from 'lucide-react';
 const FutureTechnologiesPage: React.FC = () => {
-  const features = [];
+  const features = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   ico,
   n: Rocket,
       titl,
@@ -15,8 +15,7 @@ const FutureTechnologiesPage: React.FC = () => {
       descriptio,
   n: 'Cutting-edge technologies and future innovations',
       benefit,
-  s: ['AI advancement', 'Quantum computing', 'Blockchain'];
-    },
+  s: ['AI advancement', 'Quantum computing', 'Blockchain']},
       ico,
   n: Target,
       titl,
@@ -89,6 +88,5 @@ const FutureTechnologiesPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default FutureTechnologiesPage;

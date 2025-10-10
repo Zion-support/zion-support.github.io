@@ -24,7 +24,7 @@ function cleanMergeConflicts(filePath) {
     content = content.replace(/,\s*;/g, ';');
     content = content.replace(/\(\s*\)/g, '()');
     content = content.replace(/{\s*}/g, '{}');
-    content = content.replace(/\[\s*\]/g, '[]');
+    content = content.replace(/\Service Feature/g, 'Service Feature');
     
     // Fix common JSX issues
     content = content.replace(/<\s*\/\s*>/g, '</>');
@@ -40,13 +40,10 @@ function cleanMergeConflicts(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Cleaned: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
+      return true}
+    return false} catch (error) {
     console.error(`Error cleaning ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Function to recursively find and clean files
@@ -63,25 +60,20 @@ function cleanDirectory(dirPath) {
       if (stat.isDirectory()) {
         // Skip node_modules and other directories we don't want to process
         if (item === 'node_modules' || item === '.git' || item === 'dist' || item === '.next') {
-          continue;
-        }
-        cleanedCount += cleanDirectory(fullPath);
-      } else if (stat.isFile()) {
+          continue}
+        cleanedCount += cleanDirectory(fullPath)} else if (stat.isFile()) {
         // Only process certain file types
         const ext = path.extname(item);
         if (['.ts', '.tsx', '.js', '.jsx', '.json', '.md'].includes(ext)) {
           if (cleanMergeConflicts(fullPath)) {
-            cleanedCount++;
-          }
+            cleanedCount++}
         }
       }
     }
   } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
-  }
+    console.error(`Error processing directory ${dirPath}:`, error.message)}
   
-  return cleanedCount;
-}
+  return cleanedCount}
 
 // Main execution
 console.log('Starting merge conflict cleanup...');
@@ -101,8 +93,7 @@ console.log('Cleaning critical files...');
 for (const file of criticalFiles) {
   if (fs.existsSync(file)) {
     if (cleanMergeConflicts(file)) {
-      console.log(`Cleaned critical file: ${file}`);
-    }
+      console.log(`Cleaned critical file: ${file}`)}
   }
 }
 

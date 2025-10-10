@@ -123,8 +123,7 @@ const ${pageName}Page: React.FC = () => {
       
       <Footer />
     </>
-  );
-};
+  )}
 
 export default ${pageName}Page;`;
 
@@ -237,10 +236,8 @@ aiPages.forEach(page => {
   try {
     const content = createAiPageTemplate(page.name, page.title, page.description, page.keywords);
     fs.writeFileSync(page.file, content, 'utf8');
-    console.log(`✅ Fixed ${page.file}`);
-  } catch (error) {
-    console.error(`❌ Error processing ${page.file}:`, error.message);
-  }
+    console.log(`✅ Fixed ${page.file}`)} catch (error) {
+    console.error(`❌ Error processing ${page.file}:`, error.message)}
 });
 
 console.log('\n✨ All AI pages fixed!');

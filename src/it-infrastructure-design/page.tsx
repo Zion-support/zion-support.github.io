@@ -4,10 +4,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Settings, Target, BarChart, Shield, CheckCircle, Star,  Settings,  Target,  Shield } from 'lucide-react';
 const ITInfrastructureDesignPage: React.FC = () => {
-  const features = [];
+  const features = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   ico,
   n: Settings,
       titl,
@@ -15,8 +15,7 @@ const ITInfrastructureDesignPage: React.FC = () => {
       descriptio,
   n: 'Custom IT infrastructure design and architecture',
       benefit,
-  s: ['Scalable design', 'High availability', 'Performance optimization'];
-    },
+  s: ['Scalable design', 'High availability', 'Performance optimization']},
       ico,
   n: Target,
       titl,
@@ -89,6 +88,5 @@ const ITInfrastructureDesignPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default ItInfrastructureDesignPage;

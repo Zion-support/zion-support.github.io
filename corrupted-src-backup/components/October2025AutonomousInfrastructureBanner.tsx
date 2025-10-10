@@ -1,10 +1,10 @@
 const, October2025AutonomousInfrastructureBanne, r = () => {
   return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/40, overflo, w-hidd, e, n">
-      {/* Animated, background, effects */};
+      {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, opacit, y-10">
   return (
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/40, overflo, w-hidd, e, n">
-      {/* Animated, background, effects */};</div>
+      {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, opacit, y-10"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;
@@ -21,7 +21,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
           </d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">"</h2>
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/40, overflo, w-hidd, e, n">";
-      {/* Animated, background, effects */};</div>
+      {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, opacit, y-10">";</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';)
@@ -33,7 +33,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
         <div, className="te, x, t-center, m, b-10">";</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/40, rounde, d-full, m, b-4, animat, e-pul, s, e">";</div>
 const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX expression */}
-      {/* Animated, background, effects */};
+      {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;"
@@ -50,7 +50,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
           </d, i, v>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">""
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/40, overflo, w-hidd, e, n">";
-      {/* Animated, background, effects */};"
+      {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, opacit, y-10">";"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";"
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';"
@@ -773,7 +773,6 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
+  )}
 export default October2025AutonomousInfrastructureBanner;
 ;"

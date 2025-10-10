@@ -1,154 +1,12 @@
 export interface NextGenerationAIService;
-export interface NextGenerationAIService {;
+export interface NextGenerationAIService {
   id: string;
   name: string;
   tagline: string;
   price: string;
   period: string;
   description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
-    address: string;
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-export interface NextGenerationAIService {}
-  reviews: number,    mobile: string;
-    email: string;
-    address: string;
-    website: string}
-  },
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-export interface NextGenerationAIService {/* TODO: Fix JSX expression */}
-export interface NextGenerationAIService {}
-  review,
-  s: number,    mobil,
-  e: string,
-    emai,
-  l: string,
-    addres,
-  s: string,
-    websit,
-  e: string}
-  },
-  realImplementatio,
-  n: boolean,
-  implementationDetail,
-  s: string,
-  launchDat,
-  e: string,
-  customer,
-  s: number,
-  ratin,
-  g: number,
-  review,
-  s: number}
-  i,
-  d: string;
-  nam,
-  e: string;
-  taglin,
-  e: string;
-  pric,
-  e: string;
-  perio,
-  d: string;
-  descriptio,
-  n: string;
-  feature,
-  s: string[];
-  popula,
-  r: boolean;
-  ico,
-  n: string;
-  colo,
-  r: string;
-  textColo,
-  r: string;
-  lin,
-  k: string;
-  marketPositio,
-  n: string;
-  targetAudienc,
-  e: string;
-  trialDay,
-  s: number;
-  setupTim,
-  e: string;
-  categor,
-  y: string;
-  realServic,
-  e: boolean;
-  technolog,
-  y: string[];
-  integration,
-  s: string[];
-  useCase,
-  s: string[];
-  ro,
-  i: string;
-  competitor,
-  s: string[];
-  marketSiz,
-  e: string;
-  growthRat,
-  e: string;
-  varian,
-  t: string;
-  contactInf,
-  o: {/* TODO: Fix JSX expression */}
-  s: string}
-    websit,
-  e: string}
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
-  reviews: number;    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  }
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
-export const nextGenerationAIServices: NextGenerationAIService[] = [
+  features: stringService Feature = [
   // Advanced AI Agents & Autonomous Systems;
     id: 'ai-autonomous-business-agent',
     name: 'AI Autonomous Business Agent',
@@ -156,42 +14,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     price: '$2,999',
     period: '/month',
     description: 'Revolutionary AI agent that autonomously manages business operations, makes decisions, and executes tasks without human intervention. Achieve 24/7 business operations with intelligent automation.',
-    features: [,
-  realImplementatio,
-  n: boolean;
-  implementationDetail,
-  s: string;
-  launchDat,
-  e: string;
-  customer,
-  s: number;
-  ratin,
-  g: number;
-  review,
-  s: number}
-  review,
-  s: number;    mobil,
-  e: string;
-    emai,
-  l: string;
-    addres,
-  s: string;
-    websit,
-  e: string}
-  realImplementatio,
-  n: boolean;
-  implementationDetail,
-  s: string;
-  launchDat,
-  e: string;
-  customer,
-  s: number;
-  ratin,
-  g: number;
-  review,
-  s: number}
-export const,
-  nextGenerationAIServices: NextGenerationAIService[] = [,
+    features: Service Feature = [,
   // Advanced AI Agents & Autonomous Systems,
   id: 'ai-autonomous-business-agent',
     nam,
@@ -246,8 +69,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 150;
     rating: 4.9;
-    reviews: 89;
-  },
+    reviews: 89},
   // Quantum AI Computing Platform;
     id: 'quantum-ai-computing-platform',
     name: 'Quantum AI Computing Platform',
@@ -374,8 +196,7 @@ export const,
     launchDate: '2024-11-15'
     customers: 75;
     rating: 4.8;
-    reviews: 45;
-  },
+    reviews: 45},
   // Neural Interface Development Platform;
     id: 'neural-interface-development-platform',
     name: 'Neural Interface Development Platform',
@@ -501,8 +322,7 @@ export const,
     launchDate: '2024-10-01'
     customers: 120;
     rating: 4.7;
-    reviews: 67;
-  },
+    reviews: 67},
   // AI-Powered Space Exploration Platform;
     id: 'ai-space-exploration-platform',
     name: 'AI-Powered Space Exploration Platform',
@@ -628,8 +448,7 @@ export const,
     launchDate: '2024-09-15'
     customers: 45;
     rating: 4.9;
-    reviews: 28;
-  },
+    reviews: 28},
   // Biotech AI Drug Discovery Platform;
     id: 'biotech-ai-drug-discovery',
     name: 'Biotech AI Drug Discovery Platform',
@@ -755,8 +574,7 @@ export const,
     launchDate: '2024-08-01'
     customers: 85;
     rating: 4.8;
-    reviews: 52;
-  },
+    reviews: 52},
   // Quantum Financial Trading Platform;
     id: 'quantum-financial-trading-platform',
     name: 'Quantum Financial Trading Platform',
@@ -882,8 +700,7 @@ export const,
     launchDate: '2024-07-15'
     customers: 95;
     rating: 4.7;
-    reviews: 58;
-  },
+    reviews: 58},
   // AI-Powered Metaverse Development Platform;
     id: 'ai-metaverse-development-platform',
     name: 'AI-Powered Metaverse Development Platform',
@@ -1009,8 +826,7 @@ export const,
     launchDate: '2024-06-01'
     customers: 180;
     rating: 4.6;
-    reviews: 95;
-  },
+    reviews: 95},
   // Autonomous Vehicle AI Platform;
     id: 'autonomous-vehicle-ai-platform',
     name: 'Autonomous Vehicle AI Platform',
@@ -1136,8 +952,7 @@ export const,
     launchDate: '2024-05-15'
     customers: 65;
     rating: 4.8;
-    reviews: 42;
-  },
+    reviews: 42},
   // Quantum Internet Security Platform;
     id: 'quantum-internet-security-platform',
     name: 'Quantum Internet Security Platform',
@@ -1263,8 +1078,7 @@ export const,
     launchDate: '2024-04-01'
     customers: 55;
     rating: 4.9;
-    reviews: 33;
-  },
+    reviews: 33},
   // AI-Powered Manufacturing Platform;
     id: 'ai-manufacturing-platform',
     name: 'AI-Powered Manufacturing Platform',
@@ -1478,47 +1292,7 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   e: string; perio,
   d: string; descriptio,
   n: string; feature,
-  s: string[]; popula,
-  r: boolean; ico,
-  n: string; colo,
-  r: string; textColo,
-  r: string; lin,
-  k: string; marketPositio,
-  n: string; targetAudienc,
-  e: string; trialDay,
-  s: number; setupTim,
-  e: string; categor,
-  y: string; realServic,
-  e: boolean; technolog,
-  y: string[]; integration,
-  s: string[]; useCase,
-  s: string[]; ro,
-  i: string; competitor,
-  s: string[]; marketSiz,
-  e: string; growthRat,
-  e: string; varian,
-  t: string; contactInf,
-  o: {/* TODO: Fix JSX expression */}
-  s: string} websit,
-  e: string} }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number} review,
-  s: number, mobil,
-  e: string,
-  email: string,
-  address: string,
-  website: string } realImplementatio,
-  n: boolean,
-  implementationDetails: string,
-  launchDate: string,
-  customers: number,
-  rating: number,
-  reviews: number } export const,
-  nextGenerationAIServices: NextGenerationAIService[] = [ // Advanced AI Agents & Autonomous Systems,
+  s: stringService Feature = [ // Advanced AI Agents & Autonomous Systems,
   id: 'ai-autonomous-business-agent',' nam,
   e: 'AI Autonomous Business Agent',' taglin,
   e: 'Fully autonomous AI agent that runs your business operations',' pric,

@@ -300,7 +300,7 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
                 <Zap className="ml-2 h-5 w-5 ">,
                 <Zap className="ml-2 h-5 w-5" />);
 export default function AutonomousInfrastructureHealing20, 2, 5() {/* TODO: Fix JSX expression */}
-};
+}
   </div>
   </div>
   </div>

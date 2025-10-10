@@ -4,10 +4,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Globe, Shield, Zap, Settings, CheckCircle, Star,  Globe,  Shield,  Settings } from 'lucide-react';
 const NetworkSolutionsPage: React.FC = () => {
-  const features = [];
+  const features = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   ico,
   n: Globe,
       titl,
@@ -15,8 +15,7 @@ const NetworkSolutionsPage: React.FC = () => {
       descriptio,
   n: 'Custom network architecture design and implementation',
       benefit,
-  s: ['Scalable design', 'High availability', 'Performance optimization'];
-    },
+  s: ['Scalable design', 'High availability', 'Performance optimization']},
       ico,
   n: Shield,
       titl,
@@ -89,6 +88,5 @@ const NetworkSolutionsPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default NetworkSolutionsPage;

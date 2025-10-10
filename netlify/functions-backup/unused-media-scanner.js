@@ -17,9 +17,8 @@ exports.handler = async function (event, context) {
           unusedFound: 0;
           lastScan: new Date().toISOString()}
       })
-    };
-    return result;
-  } catch (error) {
+    }
+    return result} catch (error) {
 
     return {
       statusCode: 500;
@@ -36,13 +35,12 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   y: JSON.stringify({/* TODO: Fix JSX expression */}
         })
       })
-    };
-    return result;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    }
+    return result} catch (error) {/* TODO: Fix JSX expression */}
       },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
       })
-    };
+    }
   }
-};
+}

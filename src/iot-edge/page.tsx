@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-};
+import Footer from '../components/Footer'}
   titl,
   e: 'IoT Device Management Platform',
       descriptio,
@@ -144,7 +143,7 @@ titl,
   s: ['Time Series DB', 'Apache Kafka', 'Apache Spark', 'Data Lakes', 'ETL Tools']
     }
   ];
-  const categories = [...new Set(iotServices.map(service => service.category))];
+  const categories = Service Feature;
   return (<div>Coming Soon</div>)
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
@@ -214,7 +213,7 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
               <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
-                {iotServices;}
+                {iotServices}
                   .filter(service => service.category === category)
                   .map((service, index) => ()
                     "
@@ -303,7 +302,6 @@ href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-whi
                 ✉️ kleber@ziontechgroup.com;
             <div className="mt-8 text-sm text-cyan-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-  );
-};
+  )}
 export default IotEdgePage;
   </div>

@@ -6,9 +6,9 @@ interface ServiceCardProps {/* TODO: Fix JSX expression */}
 const,
   ServiceCard: React.FC<ServiceCardProps> = memo(({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  };
+  }
   const bgColorClasses = {/* TODO: Fix JSX expression */}
-  };
+  }
   return (<article></article>
       className="quantum-card p-4,"
   sm:p-6 energy-pulse group relative""
@@ -61,29 +61,7 @@ const,
         <div className="flex flex-wrap gap-1"></div>
           {/* TODO: Fix JSX expression */}
               key={idx} `
-              className={`px-2 py-1 ${bgColorClasses[color as keyof typeof bgColorClasses]} text-cyan-300 text-xs rounded`}
-            >
-              {tech}
-            </span>
-          ))}
-          {/* TODO: Fix JSX expression */}
-              +{technologies.length - 4}
-            </span>
-          )}
-        </div>
-      </div>
-      "
-      <div className="text-center mb-4"></div>"
-        <div className="text-lg,"
-  sm:text-2xl font-bold text-cyan-400 mb-2 neon-text" aria-label="Starting price"></div>
-          {price}
-        </div>"
-        <div className="text-xs text-gray-400">Categor,
-  y: {category}</div>
-      </div>
-      <a></a>
-        href={href}`
-        className={`${colorClasses[color as keyof typeof colorClasses]} font-medium text-sm,
+              className={`px-2 py-1 ${bgColorClassesService Feature} font-medium text-sm,
   sm:text-base transition-all duration-300,
   hover:neon-glow,
   focus:outline-none,
@@ -97,8 +75,7 @@ const,
         <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
       </a>
     </article>
-  );
-});
+  )});
 ServiceCard.displayName = 'ServiceCard';
 export default ServiceCard;"`
   </ServiceCardProps>

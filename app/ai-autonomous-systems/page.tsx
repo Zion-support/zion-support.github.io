@@ -167,8 +167,7 @@ const AiAutonomousSystemsPage: React.FC = () => {
       </section>
       <Footer />
     </div>
-  );
-};
+  )}
 export default PagePage;
   </button>
   </button>

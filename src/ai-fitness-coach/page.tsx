@@ -190,8 +190,7 @@ const AIFitnessCoachPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
+  )}
 export default AIFitnessCoachPage;
   </a>
   </p>

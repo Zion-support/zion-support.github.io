@@ -444,6 +444,5 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
         </div>
       </div>
     </di, v>
-  );
-};
+  )}
 export default October2025 OperationalExcellenceBanner;

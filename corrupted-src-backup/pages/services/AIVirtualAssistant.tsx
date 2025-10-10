@@ -9,76 +9,7 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
 const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
-  const, feature, s = [
-    {
-      i, c, o;
-  n: Bra, i, n;
-      tit, l, e: "Natural, Language, Processing","
-      descripti, o, n: "Advanced, NLP, capabilities that, understand, context, sentime, n, t, and, intent, with 95% accura, c, y.","
-      tit, l, e: "Natural, Language, Processing",";
-      descripti, o, n: "Advanced, NLP, capabilities that, understand, context, sentime, n, t, and, intent, with 95% accura, c, y.",";
-      benef, i, t: "95% conversation, accuracy, rate"
-    }
-    {
-      ic, o, n: MessageCirc, l, e;
-      tit, l, e: "Mul, t, i-Channel, Suppor, t","
-      descripti, o, n: "Deploy, across, web, mobi, l, e, social, medi, a, and, voice, channels with, unified, conversation histo, r, y.","
-      tit, l, e: "Mul, t, i-Channel, Suppor, t",";
-      descripti, o, n: "Deploy, across, web, mobi, l, e, social, medi, a, and, voice, channels with, unified, conversation histo, r, y.",";
-      benef, i, t: "Unified, customer, experience"
-    }
-    {
-      ic, o, n: Languag, e, s;
-      tit, l, e: "1, 2, 0+ Language, Suppor, t","
-      descripti, o, n: "Re, a, l-time, translation, and multilingual, support, for global, customer, bases.","
-      tit, l, e: "1, 2, 0+ Language, Suppor, t",";
-      descripti, o, n: "Re, a, l-time, translation, and multilingual, support, for global, customer, bases.",";
-      benef, i, t: "Global, reach, capability"
-    }
-    {
-      ic, o, n: Shie, l, d;
-      tit, l, e: "Enterprise, Securit, y","
-      descripti, o, n: "Ba, n, k-grade, security, with e, n, d-to-end, encryptio, n, GDPR, complianc, e, and, data, privacy protecti, o, n.","
-      tit, l, e: "Enterprise, Securit, y",";
-      descripti, o, n: "Ba, n, k-grade, security, with e, n, d-to-end, encryptio, n, GDPR, complianc, e, and, data, privacy protecti, o, n.",";
-      benef, i, t: "1, 0, 0% compliance, guarantee, d"
-    }
-    {
-      ic, o, n: Clo, c, k;
-      tit, l, e: "24/7, Availabilit, y","
-      descripti, o, n: "Never, miss, a customer, inquiry, with rou, n, d-t, h, e-clock, intelligent, assistance.","
-      tit, l, e: "24/7, Availabilit, y",";
-      descripti, o, n: "Never, miss, a customer, inquiry, with rou, n, d-t, h, e-clock, intelligent, assistance.",";
-      benef, i, t: "99.9% uptime, SL, A"
-    }
-    {
-      ic, o, n: Use, r, s;
-      tit, l, e: "Human, Handof, f","
-      descripti, o, n: "Seamless, escalation, to human, agents, when complex, issues, require personal, attentio, n.","
-      tit, l, e: "Human, Handof, f",";
-      descripti, o, n: "Seamless, escalation, to human, agents, when complex, issues, require personal, attentio, n.",";
-      benef, i, t: "Perfect, customer, satisfaction"
-    }
-  ];
-  return(<React.Fragment>
-      <Helmet>
-        <title>AI, Virtual, Assistant - Zion, Tech, Group | 24/7, Intelligent, Customer Suppo, r, t</title>
-        <me, t, a;
-  na, m, e="descripti, o, n"
-          content="Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4/7, with, 95% accura, c, y. Mul, t, i-channel, suppor, t, 1, 2, 0+ languag, e, s, enterprise, securit, y." /><meta name="keywor, d, s" content="AI, virtual, assistant, chatb, o, t, customer, support, automation, conversational, A, I, virtual, agen, t, AI, customer, service" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-virtu, a, l-assista, n, t/>"
-const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
+  const, feature, s = Service Feature;
   return (<React.Fragment>
       <Helmet></Helmet>
         <title>AI, Virtual, Assistant - Zion, Tech, Group | 24/7, Intelligent, Customer Suppo, r, t</title>
@@ -382,8 +313,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                       {featu, r, e.benef, i, t}
                     </d, i, v>
                   </d, i, v>)
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -451,8 +381,5 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
       </ma, i, n>
       <Foot, e, r   /></Foot>
     </React.Fragment>
-  );
-};
-export default AIVirtualAssistant;
-;
-}}"
+  )}
+export default AIVirtualAssistant}}"

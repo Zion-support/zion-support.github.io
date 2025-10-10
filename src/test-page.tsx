@@ -4,7 +4,7 @@ import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Pho
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const testPagetsx: React.FC = () => {
-  const _features = [];
+  const _features = Service Feature;
   return (
     {icon: Users,
     title: 'Advanced Features',
@@ -88,6 +88,5 @@ const testPagetsx: React.FC = () => {
       </main>
       <Footer />
     </div>
-  );
-};
+  )}
 export default testPagetsx;

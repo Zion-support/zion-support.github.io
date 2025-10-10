@@ -9,176 +9,7 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
 const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
-  const, feature, s = [
-    {
-      i, c, o;
-  n: C, p, u;
-      tit, l, e: "Edge, AI, Processing","
-      descripti, o, n: "Re, a, l-time, AI, inference at, the, edge with, optimized, models for, lo, w-latency, decision, making.","
-      tit, l, e: "Edge, AI, Processing",";
-      descripti, o, n: "Re, a, l-time, AI, inference at, the, edge with, optimized, models for, lo, w-latency, decision, making.",";
-      benef, i, t: "95% latency, reductio, n"
-    }
-    {
-      ic, o, n: Netwo, r, k;
-      tit, l, e: "5G, Integratio, n","
-      descripti, o, n: "Seamless, 5G, connectivity with, edge, computing for, ultr, a-low, latency, applications.","
-      tit, l, e: "5G, Integratio, n",";
-      descripti, o, n: "Seamless, 5G, connectivity with, edge, computing for, ultr, a-low, latency, applications.",";
-      benef, i, t: "S, u, b-millisecond, response, times"
-    }
-    {
-      ic, o, n: Shie, l, d;
-      tit, l, e: "Edge, Securit, y","
-      descripti, o, n: "Advanced, security, protocols for, edge, devices with, encrypted, communication and, threat, detection.","
-      tit, l, e: "Edge, Securit, y",";
-      descripti, o, n: "Advanced, security, protocols for, edge, devices with, encrypted, communication and, threat, detection.",";
-      benef, i, t: "Ze, r, o-trust, architectur, e"
-    }
-    {
-      ic, o, n: Databa, s, e;
-      tit, l, e: "Data, Synchronizatio, n","
-      descripti, o, n: "Intelligent, data, synchronization between, edge, devices and, cloud, with conflict, resolutio, n.","
-      tit, l, e: "Data, Synchronizatio, n",";
-      descripti, o, n: "Intelligent, data, synchronization between, edge, devices and, cloud, with conflict, resolutio, n.",";
-      benef, i, t: "99.9% data, consistenc, y"
-    }
-    {
-      ic, o, n: Z, a, p;
-      tit, l, e: "Re, a, l-time, Analytic, s","
-      descripti, o, n: "Stream, processing, and analytics, at, the edge, for, immediate insights, and, actions.","
-      tit, l, e: "Re, a, l-time, Analytic, s",";
-      descripti, o, n: "Stream, processing, and analytics, at, the edge, for, immediate insights, and, actions.",";
-      benef, i, t: "Re, a, l-time, decision, making"
-    }
-    {
-      ic, o, n: Glo, b, e;
-      tit, l, e: "Global, Connectivit, y","
-      descripti, o, n: "Worldwide, IoT, device management, with, regional compliance, and, data sovereign, t, y.","
-      tit, l, e: "Global, Connectivit, y",";
-      descripti, o, n: "Worldwide, IoT, device management, with, regional compliance, and, data sovereign, t, y.",";
-      benef, i, t: "Global, deployment, ready"
-    }
-  ];
-  const, pricin, g = [
-    {
-      na, m, e: "Developme, n, t"
-      pri, c, e: "$5,0, 0, 0"
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Perfect, for, IoT projects, in, development and, testing, phases"
-      featur, e, s: [,
-        "Up, to, 1,000, connected, devices"
-        "Basic, edge, computing capabiliti, e, s"
-        "Standard, data, analytics"
-        "Email, suppor, t"
-        "Monthly, device, health repor, t, s"
-        "Basic, security, monitoring"
-        "Cloud, data, storage (100, G, B)"
-        "Standard, integration, s (10)"
-      ]
-      popul, a, r: fal, s, e;
-    }
-    {
-      na, m, e: "Producti, o, n"
-      pri, c, e: "$15,0, 0, 0"
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Ideal, for, production IoT, deployments, with high, device, counts"
-      featur, e, s: [,
-        "Up, to, 10,000, connected, devices"
-        "Advanced, edge, AI processi, n, g"
-        "Re, a, l-time, analytic, s & insigh, t, s"
-        "Priority, suppor, t"
-        "Weekly, performance, reports"
-        "Advanced, securit, y & threat, detectio, n"
-        "Cloud, data, storage (1, T, B)"
-        "Advanced, integration, s (50)"
-        "Custom, device, protocols"
-        "Ed, g, e-to-cloud, synchronizatio, n"
-        "5 G, connectivity, support"
-      ]
-      popul, a, r: tr, u, e;
-    }
-    {
-      na, m, e: "Enterpri, s, e"
-      pri, c, e: "$45,0, 0, 0"
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Complete, solution, for lar, g, e-scale, enterprise, IoT deploymen, t, s"
-      featur, e, s: [,
-        "Unlimited, connected, devices"
-        "Premium, edge, AI with, custom, models"
-        "Enterpri, s, e-grade, analytics, platform"
-        "Dedicated, IoT, engineer"
-        "Daily, monitorin, g & optimizati, o, n"
-        "Full, security, suite with, complianc, e"
-        "Unlimited, cloud, data stora, g, e"
-        "Unlimited, integration, s"
-        "Custom, protocol, development"
-        "Mul, t, i-region, deploymen, t"
-        "Private, 5 G, network set, u, p"
-        "SLA, guarante, e"
-        "On-premise, edge, infrastructure"
-      ]
-      popul, a, r: fal, s, e;
-      n, a, m;
-  e: "Developme, n, t",";
-      pri, c, e: "$5,0, 0, 0",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Perfect, for, IoT projects, in, development and, testing, phases",";
-      featur, e, s: [,
-        "Up, to, 1,000, connected, devices",";
-        "Basic, edge, computing capabiliti, e, s",";
-        "Standard, data, analytics",";
-        "Email, suppor, t",";
-        "Monthly, device, health repor, t, s",";
-        "Basic, security, monitoring",";
-        "Cloud, data, storage (100, G, B)",";
-        "Standard, integration, s (10)"
-      ]
-      popul, a, r: fal, s, e;
-    }
-    {
-      na, m, e: "Producti, o, n",";
-      pri, c, e: "$15,0, 0, 0",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Ideal, for, production IoT, deployments, with high, device, counts",";
-      featur, e, s: [,
-        "Up, to, 10,000, connected, devices",";
-        "Advanced, edge, AI processi, n, g",";
-        "Re, a, l-time, analytic, s & insigh, t, s",";
-        "Priority, suppor, t",";
-        "Weekly, performance, reports",";
-        "Advanced, securit, y & threat, detectio, n",";
-        "Cloud, data, storage (1, T, B)",";
-        "Advanced, integration, s (50)",";
-        "Custom, device, protocols",";
-        "Ed, g, e-to-cloud, synchronizatio, n",";
-        "5 G, connectivity, support"
-      ]
-      popul, a, r: tr, u, e;
-    }
-    {
-      na, m, e: "Enterpri, s, e",";
-      pri, c, e: "$45,0, 0, 0",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Complete, solution, for lar, g, e-scale, enterprise, IoT deploymen, t, s",";
-      featur, e, s: [,
-        "Unlimited, connected, devices",";
-        "Premium, edge, AI with, custom, models",";
-        "Enterpri, s, e-grade, analytics, platform",";
-        "Dedicated, IoT, engineer",";
-        "Daily, monitorin, g & optimizati, o, n",";
-        "Full, security, suite with, complianc, e",";
-        "Unlimited, cloud, data stora, g, e",";
-        "Unlimited, integration, s",";
-        "Custom, protocol, development",";
-        "Mul, t, i-region, deploymen, t",";
-        "Private, 5 G, network set, u, p",";
-        "SLA, guarante, e",";
-        "On-premise, edge, infrastructure"
-      ]
-      popul, a, r: fal, s, e;
-    }
-  ];
+  const, feature, s = Service Feature;
   const, testimonial, s = [
     {
       na, m, e: "Robert, Ki, m","
@@ -211,123 +42,7 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
       compa, n, y: "Healthcare, Io, T"
     }
   ];
-  const, useCase, s = [
-    {
-      tit, l, e: "Smart, Manufacturin, g","
-      ic, o, n: C, p, u;
-      descripti, o, n: "Re, a, l-time, quality, control, predictive, maintenanc, e, and, automated, optimization on, production, lines.","
-      metri, c, s: "98% defect, detection, accuracy","
-      benefi, t, s: ["Predictive, maintenanc, e", "Quality, control, automation", "Energy, optimizatio, n"]"
-    }
-    {
-      tit, l, e: "Smart, Citie, s","
-      ic, o, n: Glo, b, e;
-      descripti, o, n: "Traffic, managemen, t, environmental, monitorin, g, and, public, safety systems, with, real-time, respons, e.","
-      metri, c, s: "35% traffic, reductio, n","
-      benefi, t, s: ["Traffic, optimizatio, n", "Environmental, monitorin, g", "Public, safety, alerts"]"
-    }
-    {
-      tit, l, e: "Healthcare, Io, T","
-      ic, o, n: Monit, o, r;
-      descripti, o, n: "Patient, monitorin, g, medical, device, integration, and, emergency, response syste, m, s.","
-      metri, c, s: "50% faster, emergency, response","
-      benefi, t, s: ["Re, a, l-time, patient, monitoring", "Medical, device, integration", "Emergency, automatio, n"]"
-    }
-    {
-      tit, l, e: "Retail, Analytic, s","
-      ic, o, n: BarChar, t, 3;
-      descripti, o, n: "Customer, behavior, analysis, inventory, managemen, t, and, personalized, experiences.","
-      metri, c, s: "60% inventory, efficiency, gain","
-      benefi, t, s: ["Customer, analytic, s", "Inventory, optimizatio, n", "Personalized, experience, s"]"
-      tit, l, e: "Smart, Manufacturin, g",";
-      ic, o, n: C, p, u;
-      descripti, o, n: "Re, a, l-time, quality, control, predictive, maintenanc, e, and, automated, optimization on, production, lines.",";
-      metri, c, s: "98% defect, detection, accuracy",";
-      benefi, t, s: ["Predictive, maintenanc, e", "Quality, control, automation", "Energy, optimizatio, n"]";
-    }
-    {
-      tit, l, e: "Smart, Citie, s",";
-      ic, o, n: Glo, b, e;
-      descripti, o, n: "Traffic, managemen, t, environmental, monitorin, g, and, public, safety systems, with, real-time, respons, e.",";
-      metri, c, s: "35% traffic, reductio, n",";
-      benefi, t, s: ["Traffic, optimizatio, n", "Environmental, monitorin, g", "Public, safety, alerts"]";
-    }
-    {
-      tit, l, e: "Healthcare, Io, T",";
-      ic, o, n: Monit, o, r;
-      descripti, o, n: "Patient, monitorin, g, medical, device, integration, and, emergency, response syste, m, s.",";
-      metri, c, s: "50% faster, emergency, response",";
-      benefi, t, s: ["Re, a, l-time, patient, monitoring", "Medical, device, integration", "Emergency, automatio, n"]";
-    }
-    {
-      tit, l, e: "Retail, Analytic, s",";
-      ic, o, n: BarChar, t, 3;
-      descripti, o, n: "Customer, behavior, analysis, inventory, managemen, t, and, personalized, experiences.",";
-      metri, c, s: "60% inventory, efficiency, gain",";
-      benefi, t, s: ["Customer, analytic, s", "Inventory, optimizatio, n", "Personalized, experience, s"]";
-const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, pricin, g = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, testimonial, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, useCase, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, industrie, s = ["
-    { na, m, e: "Manufacturi, n, g", devic, e, s: "Industrial, sensor, s, PL, C, s, roboti, c, s" }"
-    { na, m, e: "Healthca, r, e", devic, e, s: "Patient, monitor, s, medical, device, s, wearabl, e, s" }"
-    { na, m, e: "Reta, i, l", devic, e, s: "POS, system, s, inventory, sensor, s, customer, analytic, s" }"
-    { na, m, e: "Transportati, o, n", devic, e, s: "Fleet, trackin, g, traffic, sensor, s, autonomous, vehicle, s" }"
-    { na, m, e: "Ener, g, y", devic, e, s: "Smart, meter, s, grid, sensor, s, renewable, energ, y" }"
-    { na, m, e: "Agricultu, r, e", devic, e, s: "Soil, sensor, s, weather, station, s, irrigation, system, s" }"
-    { na, m, e: "Manufacturi, n, g", devic, e, s: "Industrial, sensor, s, PL, C, s, roboti, c, s" },";"
-    { na, m, e: "Healthca, r, e", devic, e, s: "Patient, monitor, s, medical, device, s, wearabl, e, s" },";"
-    { na, m, e: "Reta, i, l", devic, e, s: "POS, system, s, inventory, sensor, s, customer, analytic, s" },";"
-    { na, m, e: "Transportati, o, n", devic, e, s: "Fleet, trackin, g, traffic, sensor, s, autonomous, vehicle, s" },";"
-    { na, m, e: "Ener, g, y", devic, e, s: "Smart, meter, s, grid, sensor, s, renewable, energ, y" },";"
-    { na, m, e: "Agricultu, r, e", devic, e, s: "Soil, sensor, s, weather, station, s, irrigation, system, s" }";
-  ];
+  const, useCase, s = Service Feature;
   return(<React.Fragment>
       <Helmet>
         <title>I, o, T & Edge, Computin, g - Zion, Tech, Group | Smart, Connected, Solutions</title>
@@ -638,8 +353,7 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       ))}
                     </ul>
                   </d, i, v>
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -736,8 +450,7 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
                   </d, i, v>)
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -897,7 +610,7 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 pl, a, n.popul, a, r;
 ? 'bg-oran, g, e-600, tex, t-white, hove, r: bg-oran, g, e-7, 0, 0'
 ? 'bg-oran, g, e-600, tex, t-white, hov, e;
-  r: bg-oran, g, e-7, 0, 0',';}
+  r: bg-oran, g, e-7, 0, 0','}
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
@@ -967,7 +680,7 @@ pl, a, n.popul, a, r;
               {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (</div>
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <div, className="flex, item, s-center, m, b-4">";
-                    {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>
+                    {Service Feature.m, a, p((_, i) => (</div>
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
             </d, i, v>"
             <div, className="gri, d, m,"
@@ -1060,7 +773,5 @@ pl, a, n.popul, a, r;
       </ma, i, n>
       <Foot, e, r   /></Foot>
     </React.Fragment>
-  );
-};
-export default IoTEdgeComputing;
-}}}}}"`
+  )}
+export default IoTEdgeComputing}}}}}"`

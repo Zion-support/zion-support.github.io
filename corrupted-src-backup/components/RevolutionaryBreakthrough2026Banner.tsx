@@ -42,12 +42,12 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
               >
                 <div, classNam, e='te, x, t-4xl, m, b-3'>{st, a, t.ic, o, n}</d, i, v>)
                 <div, classNam, e = 'te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2'>)
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o'>)
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-Service Feature mx-au, t, o'>)
           { breakthroughConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
               ></div>
                 <div, classNam, e='te, x, t-4xl, m, b-3'>{st, a, t.ic, o, n}</d, i, v>
                 <div, classNam, e = 'te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2'></div>
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o'>
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-Service Feature mx-au, t, o'>
           { breakthroughConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
             <div, ke, y = { conte, n, t.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
@@ -69,7 +69,7 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
               ></div>
                 <div, classNam, e='te, x, t-4xl, m, b-3'>{st, a, t.ic, o, n}</d, i, v>
                 <div, classNam, e = 'te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2'></div>
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o'></div>
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-Service Feature mx-au, t, o'></div>
           {/* TODO: Fix JSX expression */}
             <div, ke, y = { conte, n, t.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}

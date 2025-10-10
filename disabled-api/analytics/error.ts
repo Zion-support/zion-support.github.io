@@ -1,8 +1,8 @@
 // import {NextApiRequest} NextApiResponse } from 'next' interface ErrorData {/* TODO: Fix JSX expression */}
   e: string} stack?: string} nam,
-  e: string}; errorInf,
+  e: string} errorInf,
   o: {/* TODO: Fix JSX expression */}
-  k: string}; ur,
+  k: string} ur,
   l: string; timestam,
   p: number, userAgen,
   t: string} export default function handler(re)

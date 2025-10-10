@@ -4,10 +4,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Settings, Zap, Shield, BarChart, CheckCircle, Star,  Settings,  Zap,  BarChart } from 'lucide-react';
 const ITAutomationPage: React.FC = () => {
-  const features = [];
+  const features = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   ico,
   n: Settings,
       titl,
@@ -15,8 +15,7 @@ const ITAutomationPage: React.FC = () => {
       descriptio,
   n: 'Automate repetitive IT processes and workflows',
       benefit,
-  s: ['Workflow automation', 'Task scheduling', 'Process optimization'];
-    },
+  s: ['Workflow automation', 'Task scheduling', 'Process optimization']},
       ico,
   n: Zap,
       titl,
@@ -89,6 +88,5 @@ const ITAutomationPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default ItAutomationPage;

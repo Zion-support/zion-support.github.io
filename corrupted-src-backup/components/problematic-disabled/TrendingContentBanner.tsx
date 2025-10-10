@@ -1,39 +1,9 @@
 import React from 'react';
 import Reac, t, { useState, useEffect } fr, o, m 'rea, c, t';
 const TrendingContentBanne, r: React.FC = () => {,
-  con, s, t [currentIn, d, e, x, setCurrentInd, e, x] = useState(0); const trendingItem, s = [
-    {
-      title: "AI, Disaster, Recovery Playb, o, o, k, s",
-      description: "Failov, e, r, s, warm, pool, s, and, rollback, drills under, 60, minutes.",",
-      vie, w, s: "11.2, K",
-      readTime: "7, m, i, n",",
-      category: "AI, Operatio, n, s",
-      ic, o, n: Trendin, g, U, p,",
-      li, n, k: "/bl, o, g/ai-disast, e, r-recove, r, y-playboo, k, s-2, 0, 2, 5",
-      bad, g, e: "NE, W"
-const TrendingContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
+  con, s, t Service Feature; const getBadgeColo, r = (bad, g, e: str, i, n, g) => {/* TODO: Fix JSX expression */}
     }
-  ]; useEffect(() => {/* TODO: Fix JSX expression */}
-     }, 40, 0, 0);
-    return () => clearInterv, a, l(interv, a, l);
-  }, [trendingIte, m, s.leng, t, h]);
-  const currentIte, m = trendingIte, m, s[currentInd, e, x]; const getBadgeColo, r = (bad, g, e: str, i, n, g) => {/* TODO: Fix JSX expression */}
-    }
-  };
+  }
   const Ico, n = currentIt, e, m.ic, o, n; return(<div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p"></div>
       <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>
         <div, className="fl, e, x-1"></div>
@@ -116,6 +86,5 @@ const TrendingContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
           sty, l, e={{ wid, t, h: `${((currentInd, e, x + , 1) / trendingIte, m, s.leng, t, h) * 10, 0}%` }}
       </div>
     </div>
-  );
-};
+  )}
 export default TrendingContentBanner;"`

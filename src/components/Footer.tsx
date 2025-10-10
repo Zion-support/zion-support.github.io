@@ -98,7 +98,7 @@ const Footer: React.FC = memo(() => {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST'
-  };
+  }
   const achievements = [
     { icon: Award, text: '50+ Successful Projects' },
     { icon: Users, text: '100+ Happy Clients' },
@@ -357,8 +357,7 @@ const Footer: React.FC = memo(() => {
         </div>
       </div>
     </footer>
-  );
-});
+  )});
 Footer.displayName = 'Footer';
 export default Footer</Link>
   </Link>

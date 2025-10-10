@@ -15,23 +15,19 @@ function makeGitHubRequest(endpoint) {
         'Accept': 'application/vnd.github.v3+json',
 function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
       }
-    };
+    }
 
     const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
       });
       res.on('end', () => {/* TODO: Fix JSX expression */}
         } catch (error) {/* TODO: Fix JSX expression */}
-  JSON: ${error.message}`));
-        }
-      });
-    });
+  JSON: ${error.message}`))}
+      })});
 
     req.on('error', (error) => {/* TODO: Fix JSX expression */}
     });
 
-    req.end();
-  });
-}
+    req.end()})}
 
 async function getOpenPRs() {/* TODO: Fix JSX expression */}
 }
@@ -51,7 +47,7 @@ function runGitCommand(command) {
       cwd: '/workspace'),
       encoding: 'utf8'),
       stdio: 'pipe'});
-    return { success: true, output: result };
+    return { success: true, output: result }
   } catch (error) {
     return {
       success: false;
@@ -61,9 +57,9 @@ function runGitCommand(command) {
 function runGitCommand(command) {/* TODO: Fix JSX expression */}
     });
     return {/* TODO: Fix JSX expression */}
-  t: result };
+  t: result }
   } catch (error) {/* TODO: Fix JSX expression */}
-    };
+    }
   }
 }
 
@@ -72,8 +68,7 @@ async function mergePRWithGit(pr) {
     // Get detailed PR info;
     if (!prDetails) {
 
-      return false;
-    }
+      return false}
 
     // Check if PR is mergeable;
     if (prDetails.mergeable === false) {}
@@ -81,14 +76,12 @@ async function mergePRWithGit(pr) {
     // Fetch the PR branch;
     if (!fetchResult.success) {
 
-      return false;
-    }
+      return false}
 
     // Try to merge the branch;
     if (mergeResult.success) {
 
-      return true;
-    } else {
+      return true} else {
       // If merge failed due to conflicts, try to resolve them;
       // Check if there are merge conflicts;
       if (statusResult.success && statusResult.output.includes('UU')) {
@@ -101,13 +94,10 @@ async function mergePRWithGit(pr) {
           // Commit the merge;
           if (commitResult.success) {
 
-            return true;
-          } else {
-            return false;
-          }
+            return true} else {
+            return false}
         } else {
-          return false;
-        }
+          return false}
       } else {
         return false;
 async function mergePRWithGit(pr) {/* TODO: Fix JSX expression */}
@@ -158,16 +148,14 @@ async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */}
     // Process PRs one by one;
     for (const pr of mainPRs) {
       if (success) {
-        successCount++;
-      } else {
+        successCount++} else {
         failCount++;
     for (const pr of mainPRs) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
       
       // Add a small delay between merges;
-      await new Promise(resolve => setTimeout(resolve, 2000));
-    }
+      await new Promise(resolve => setTimeout(resolve, 2000))}
 
 
 
@@ -180,11 +168,9 @@ async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */}
 // Run the merge process;
 mergeAllPRsWithGit().then(() => {
 
-  process.exit(0);
-}).catch(error => {)
+  process.exit(0)}).catch(error => {)
 )
-  process.exit(1);
-});
+  process.exit(1)});
 mergeAllPRsWithGit().then(() => {/* TODO: Fix JSX expression */}
 }).catch(error => {/* TODO: Fix JSX expression */})
 });`

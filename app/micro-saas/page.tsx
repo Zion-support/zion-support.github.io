@@ -9,17 +9,9 @@ interface MicroSaasProduct {
   icon: string;
   title: string;
   description: string;
-  features: string[];
-  price: string;
-  users: string;
-  popular: boolean;
-  category: string;
-}
+  features: stringService Feature = useState('All');
 
-const MicroSaasPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-
-  const products: MicroSaasProduct[] = [
+  const products: MicroSaasProductService Feature = [
     {
       id: '1',
       icon: '📊',
@@ -357,7 +349,6 @@ const MicroSaasPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )}
 
 export default MicroSaasPage;

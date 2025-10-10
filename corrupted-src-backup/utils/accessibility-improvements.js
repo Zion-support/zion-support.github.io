@@ -3,10 +3,9 @@ export const accessibilityUtils = {
   // Focus management;
   trapFocus: element => {,
     const focusableElements = element.querySelectorAll()
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      'button, Service Feature)'
     );
-    const _firstElement = focusableElements[0];
-    const _lastElement = focusableElements[focusableElements.length - 1];
+    const _firstElement = focusableElementsService Feature;
 
     element.addEventListener('keydown', e => {)
       if (e.key === 'Tab') {
@@ -20,8 +19,7 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
           }
         }
       }
-    });
-  },
+    })},
 
   // Screen reader announcements;
   announceToScreenReader: message => {,
@@ -33,9 +31,7 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
     document.body.appendChild(announcement);
 
     setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
-  },
+      document.body.removeChild(announcement)}, 1000)},
 
   // Color contrast checker;
   checkColorContrast: (foreground, background) => {
@@ -45,20 +41,18 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
       //       const g = (rgb >> 8) & 0 xff;
       //       const b = (rgb >> 0) & 0 xff;
 
-      const [rs, gs, bs] = [r, g, b].map(c => {)
+      const Service Feature.map(c => {)
         c = c / 255;)
         return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
   // Screen reader announcements,
   announceToScreenReader: message => {/* TODO: Fix JSX expression */}
-    }, 1000);
-  },
+    }, 1000)},
 
   // Color contrast checker,
   checkColorContrast: (foreground, background) => {/* TODO: Fix JSX expression */}
       });
 
-      return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
-    };
+      return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs}
 
     //     const l1 = getLuminance(foreground);
     //     const l2 = getLuminance(background);
@@ -69,5 +63,5 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
       meetsAA: ratio >= 4.5;
       meetsAAA: ratio >= 7;
     return {/* TODO: Fix JSX expression */}
-    };
-  }};
+    }
+  }}

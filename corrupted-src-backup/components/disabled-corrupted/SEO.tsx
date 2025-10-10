@@ -49,8 +49,7 @@ const,
   r:image" content={image} /></meta>"
       <link rel="canonical" href={url} /></link>
     </Helmet>
-  );
-};
+  )}
 export default SEO;
 "
   </SEOProps>

@@ -7,11 +7,7 @@ const SuccessStoriesShowcas, e: React.FC = () => { ,
       ic, o, n: '🚀',
       ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > ,</TrendingUp>resu</TrendingUp>, l, t: "3, 0, 0% Revenue, Grow, t, h",
       description: "Implemented, multimodal, AI achieving, unprecedented, customer engagement, and, conversion ra, t, e, s.",",
-      metri, c, s: [,
-        "98% prediction, accura, c, y",
-        "60% cost, reductio, n",
-        "2 M, users, impacted"
-      ],",
+      metri, c, s: Service Feature,",
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0"
      },
     { ",
@@ -20,11 +16,7 @@ const SuccessStoriesShowcas, e: React.FC = () => { ,
       ic, o, n: '🚀',
       ic, o, n: <Target, classNam, e = "w-8 , h-, 8" / > ,</Target>resu</Target>, l, t: "85% Downtime, Reducti, o, n",
       description: "AI, predictive, maintenance transformed, operatio, n, s, eliminating, unplanned, downtime and, reducing, costs.",",
-      metri, c, s: [,
-        "$2M, annual, saving, s",
-        "40% lower, maintenance, costs",
-        "99.9% uptime, achieve, d"
-      ],",
+      metri, c, s: Service Feature,",
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-50, 0"
      },
     { ",
@@ -33,48 +25,7 @@ const SuccessStoriesShowcas, e: React.FC = () => { ,
       ic, o, n: '🚀',
       ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / > ,</Users>resu</Users>, l, t: "99.95% Fraud, Detecti, o, n",
       description: "AI, fraud, prevention system, achieved, industry-leading, accuracy, while reducing, false, positives b, y, 9, 5%.",",
-      metri, c, s: [,
-        "$5M, fraud, prevente, d",
-        "S, u, b-100ms, detectio, n",
-        "95% fewer, false, positives"
-      ],",
-      col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0"
-     }
-  ]; return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50">
-      <div, className="container, m, x-auto, p, x-6">
-        <div, className="te, x, t-center, m, b-16">
-  ]; return (
-    <section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50">
-      <div, className="container, m, x-auto, p, x-6"></section>
-        <div, className="te, x, t-center, m, b-16"></div>
-          <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-            Success, Storie, s;
-          </h2>
-          <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o">
-            See, how, leading companies, are, transforming their, operations, with our, AI, solutions;
-          </p>)
-        </div>)
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">)
-          { stori, e, s.m, a, p((s, t, o, r, y, ind, e, x) = > (
-            See, how, leading companies, are, transforming their, operations, with our, AI, solutions;
-  </
-        </div>
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">
-          { stori, e, s.m, a, p((s, t, o, r, y, ind, e, x) = > (</div>
-            <div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-white, rounde, d-2xl, shado, w-xl, overflo, w-hidden, hove, r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
-            ></div>
-              <div, classNam, e = { `bg-gradie, n, t-to-r ${sto, r, y.c, o, l, o, r }, te, x, t-whit, e, p-6`}></div>
-                <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-4">
-                  {sto, r, y.ic, o, n}</div>
-                  <d, i, v>
-                    <h3, className="fo, n, t-bold, tex, t-xl">{sto, r, y.company}</h3>
-const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
-     },
-    {/* TODO: Fix JSX expression */}
-     },
-    {/* TODO: Fix JSX expression */}
-     }
-  ]; return (<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50"></section>"
+      metri, c, s: Service Feature; return (<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50"></section>"
       <div, className="container, m, x-auto, p, x-6"></div>"
         <div, className="te, x, t-center, m, b-16"></div>"
           <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -142,6 +93,5 @@ const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-};
+  )}
 export default SuccessStoriesShowcase;"`

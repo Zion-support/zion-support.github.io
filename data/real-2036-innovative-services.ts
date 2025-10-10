@@ -10,42 +10,7 @@ export type Real2036InnovativeService =
   category: string;
   price: string;
   period?: string;
-  features: string[], link: string;
-  i,
-  d: string, nam,
-  e: string,
-  taglin,
-  e: string, descriptio,
-  n: string,
-  categor,
-  y: string, pric,
-  e: string,
-export type Real2036InnovativeService =
-  i,
-  d: string;
-  nam,
-  e: string;
-  taglin,
-  e: string;
-  descriptio,
-  n: string;
-  categor,
-  y: string;
-  pric,
-  e: string;
-  period?: string,
-  feature,
-  s: string[], lin,
-  k: string,
-  launchDate?: string;
-  rating?: number;
-  feature,
-  s: string[];
-  marketSize?: string;
-  targetAudience?: string;
-  competitiveAdvantage?: string;
-  integration?: string[],
-  useCases?: string[]};
+  features: stringService Feature}
     categor,
   y: 'AI & Data',
     pric,
@@ -1048,8 +1013,7 @@ export type Real2036InnovativeService =
       'Cloud services'
     ]
     useCase,
-  s: [;
-];      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'
+  s: Service Feature;      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'
     ];
     link: 'https://ziontechgroup && ziontechgroup.com/services/ai-supply-chain-optimization-platform',
     launchDate: '2036-03-30',
@@ -1073,7 +1037,7 @@ export type Real2036InnovativeService =
     integratio,
   n: ['Trading platformsMarket data feedsRisk systemsCompliance platforms'],
     useCase,
-  s: ['Algorithmic tradingRisk managementPortfolio optimizationMarket analysis']};
+  s: ['Algorithmic tradingRisk managementPortfolio optimizationMarket analysis']}
   // AI-Powered Supply Chain Optimization;
     id: 'ai-supply-chain-optimization-platform', name: 'AI Supply Chain Optimization Platform',
     tagline: 'Intelligent supply chain management and optimization',
@@ -1159,7 +1123,6 @@ export type Real2036InnovativeService =
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devices_cloud services'],
     use_cases: ['Demand planning_inventory management_logistics optimization_risk management']}
 ];
-;
     rating: 4.7;
     marketSize: '$28.4B',
     targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers'
@@ -1167,7 +1130,7 @@ export type Real2036InnovativeService =
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'];
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']}
 ];
-export type Real2036 InnovativeService = {;
+export type Real2036 InnovativeService = {
     features: [,
       'Quantum key distribution (QKD)',
       'End - to - end quantum encryption',
@@ -1221,7 +1184,6 @@ export type Real2036 InnovativeService = {;
     use_case,
   s: ['Demand planning_inventory management_logistics optimization_risk management']}
 ];
-;
     ratin,
   g: 4.7,
     marketSiz,
@@ -1255,8 +1217,7 @@ export type Real2036InnovativeService = {/* TODO: Fix JSX expression */}
     perio,
   d: '/month',
     feature,
-  s: [}
-];
+  s: Service Feature;
     link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform'
     launch_date: '2036 - 03 - 30'
     rating: 4.7;
@@ -1301,7 +1262,7 @@ export type Real2036InnovativeService = {/* TODO: Fix JSX expression */}
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'];
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']}
 ];
-export type Real2036 InnovativeService = {;
+export type Real2036 InnovativeService = {
   id: string;
   name: string;
   tagline: string;
@@ -1309,14 +1270,7 @@ export type Real2036 InnovativeService = {;
   category: string;
   price: string;
   period?: string;
-  features: string[];
-  link: string;
-  launchDate?: string;
-  rating?: number;
-  marketSize?: string;
-  targetAudience?: string;
-  competitiveAdvantage?: string;,
-  integration?: string[];,
+  features: stringService Feature;,
     lin,
   k: 'http,
   s://ziontechgroup.com / services / ai - supply - chain - optimization - platform'
@@ -1336,10 +1290,7 @@ export type Real2036 InnovativeService = {;
   s: ['Demand planningInventory managementLogistics optimizationRisk management']}
 ];
 export type Real2036InnovativeService = {/* TODO: Fix JSX expression */}
-  useCases?: string[]}
-};
-export const,
-  real2036InnovativeServices: Real2036InnovativeService[] = [;
+  useCases?: stringService Feature = [;
   // AI-Powered Business Intelligence;
   {
     id: 'ai-business-intelligence-platform-pro';
@@ -1360,9 +1311,9 @@ export const,
     competitiveAdvantage: 'Advanced AI algorithms, Real-time processing, Natural language interface';
     integration: ['SalesforceHubSpotGoogle AnalyticsAWSAzureSlack']}
     useCases: ['Sales forecastingCustomer behavior analysisFinancial planningMarket trend analysis']}
-  };
+  }
   // Quantum-Secure Communication Platform;
-  {;
+  {
     id: 'quantum-secure-communication-enterprise';
     name: 'Quantum-Secure Communication Enterprise';
     tagline: 'Unbreakable communication using quantum cryptography';
@@ -1381,9 +1332,9 @@ export const,
     competitiveAdvantage: 'True quantum security, Unbreakable encryption, Future-proof technology';
     integration: ['Microsoft TeamsSlackZoomCustom APIsVPN solutions']}
     useCases: ['Government communicationsFinancial transactionsHealthcare data sharingMilitary operations']}
-  };
+  }
   // Autonomous DevOps Platform;
-  {;
+  {
     id: 'autonomous-devops-platform-enterprise';
     name: 'Autonomous DevOps Platform Enterprise';
     tagline: 'Self-healing infrastructure with AI-powered automation';
@@ -1402,9 +1353,9 @@ export const,
     competitiveAdvantage: 'Autonomous operations, AI-driven optimization, Zero human intervention';
     integration: ['AWSAzureGCPKubernetesDockerJenkinsGitLab']}
     useCases: ['Continuous deploymentInfrastructure managementPerformance optimizationIncident response']}
-  };
+  }
   // Space Technology Analytics Platform;
-  {;
+  {
     id: 'space-technology-analytics-platform';
     name: 'Space Technology Analytics Platform';
     tagline: 'Advanced analytics for space exploration and satellite operations';
@@ -1423,9 +1374,9 @@ export const,
     competitiveAdvantage: 'Space-specific algorithms, Real-time data processing, Advanced visualization';
     integration: ['NASA APIsESA systemsSatellite ground stationsWeather services']}
     useCases: ['Satellite operationsMission planningSpace weather analysisOrbital optimization']}
-  };
+  }
   // AI-Powered Cybersecurity Suite;
-  {;
+  {
     id: 'ai-cybersecurity-suite-enterprise';
     name: 'AI Cybersecurity Suite Enterprise';
     tagline: 'Intelligent threat detection and response powered by AI';
@@ -1444,9 +1395,9 @@ export const,
     competitiveAdvantage: 'AI-driven detection, Real-time response, Comprehensive coverage';
     integration: ['SIEM systemsFirewallsEDR solutionsIdentity providersCloud platforms']}
     useCases: ['Threat detectionIncident responseCompliance managementSecurity monitoring']}
-  };
+  }
   // Quantum Machine Learning Platform;
-  {;
+  {
     id: 'quantum-machine-learning-platform';
     name: 'Quantum Machine Learning Platform';
     tagline: 'Accelerate ML with quantum computing power';
@@ -1465,9 +1416,9 @@ export const,
     competitiveAdvantage: 'Quantum advantage, Exponential speedup, Future-proof technology';
     integration: ['TensorFlowPyTorchScikit-learnQuantum simulatorsCloud quantum services']}
     useCases: ['Drug discoveryFinancial modelingOptimization problemsScientific research']}
-  };
+  }
   // Edge Computing Orchestration Platform;
-  {;
+  {
     id: 'edge-computing-orchestration-enterprise';
     name: 'Edge Computing Orchestration Enterprise';
     tagline: 'Intelligent edge computing management and optimization';
@@ -1486,9 +1437,9 @@ export const,
     competitiveAdvantage: 'Intelligent orchestration, Real-time optimization, Multi-edge coordination';
     integration: ['KubernetesDockerIoT platforms5 G networksCloud services']}
     useCases: ['IoT management5 G optimizationManufacturing automationSmart cities']}
-  };
+  }
   // AI-Powered Customer Experience Platform;
-  {;
+  {
     id: 'ai-customer-experience-platform';
     name: 'AI Customer Experience Platform';
     tagline: 'Personalized customer experiences powered by AI';
@@ -1507,9 +1458,9 @@ export const,
     competitiveAdvantage: 'AI personalization, Omnichannel integration, Predictive insights';
     integration: ['ShopifyWooCommerceSalesforceHubSpotZendeskIntercom']}
     useCases: ['E-commerce personalizationCustomer service automationMarketing optimizationCustomer retention']}
-  };
+  }
   // Blockchain Infrastructure Platform;
-  {;
+  {
     id: 'blockchain-infrastructure-enterprise';
     name: 'Blockchain Infrastructure Enterprise';
     tagline: 'Enterprise-grade blockchain infrastructure and development';
@@ -1528,9 +1479,9 @@ export const,
     competitiveAdvantage: 'Multi-chain support, Enterprise features, Security focus';
     integration: ['EthereumPolygonSolanaHyperledgerCloud platforms']}
     useCases: ['DeFi applicationsSupply chain trackingDigital identitySmart contracts']}
-  };
+  }
   // Autonomous Manufacturing Platform;
-  {;
+  {
     id: 'autonomous-manufacturing-platform';
     name: 'Autonomous Manufacturing Platform';
     tagline: 'AI-powered manufacturing automation and optimization';
@@ -1549,9 +1500,9 @@ export const,
     competitiveAdvantage: 'AI automation, Predictive capabilities, Real-time optimization';
     integration: ['ERP systemsMES platformsIoT devicesRobotics systemsCloud services']}
     useCases: ['Quality controlProduction optimizationPredictive maintenanceSupply chain management']}
-  };
+  }
   // Quantum Internet Security Gateway;
-  {;
+  {
     id: 'quantum-internet-security-gateway';
     name: 'Quantum Internet Security Gateway';
     tagline: 'Next-generation internet security using quantum technology';
@@ -1570,9 +1521,9 @@ export const,
     competitiveAdvantage: 'Quantum security, Future-proof protection, Advanced algorithms';
     integration: ['FirewallsLoad balancersVPN solutionsCloud platformsCDN services']}
     useCases: ['Internet securityData protectionNetwork securityCompliance management']}
-  };
+  }
   // AI-Powered Healthcare Diagnostics;
-  {;
+  {
     id: 'ai-healthcare-diagnostics-platform';
     name: 'AI Healthcare Diagnostics Platform';
     tagline: 'Advanced medical diagnostics powered by artificial intelligence';
@@ -1591,9 +1542,9 @@ export const,
     competitiveAdvantage: 'Advanced AI algorithms, Medical expertise, Compliance focus';
     integration: ['EHR systemsPACS systemsLab systemsTelemedicine platforms']}
     useCases: ['Medical imagingDiagnosis supportTreatment planningPatient monitoring']}
-  };
+  }
   // Space Resource Mining Platform;
-  {;
+  {
     id: 'space-resource-mining-platform';
     name: 'Space Resource Mining Platform';
     tagline: 'Advanced platform for space resource exploration and mining';
@@ -1612,9 +1563,9 @@ export const,
     competitiveAdvantage: 'Space expertise, Advanced robotics, AI optimization';
     integration: ['Satellite systemsRobotics platformsAI systemsGround stations']}
     useCases: ['Asteroid miningLunar explorationResource mappingMining operations']}
-  };
+  }
   // Quantum Financial Trading Platform;
-  {;
+  {
     id: 'quantum-financial-trading-platform';
     name: 'Quantum Financial Trading Platform';
     tagline: 'Revolutionary trading platform powered by quantum computing';
@@ -1633,9 +1584,9 @@ export const,
     competitiveAdvantage: 'Quantum advantage, High-frequency capabilities, Advanced algorithms';
     integration: ['Trading platformsMarket data feedsRisk systemsCompliance platforms']}
     useCases: ['Algorithmic tradingRisk managementPortfolio optimizationMarket analysis']}
-  };
+  }
   // AI-Powered Supply Chain Optimization;
-  {;
+  {
     id: 'ai-supply-chain-optimization-platform';
     name: 'AI Supply Chain Optimization Platform';
     tagline: 'Intelligent supply chain management and optimization';
@@ -1658,85 +1609,85 @@ export const,
   n: ['SalesforceHubSpotGoogle AnalyticsAWSAzureSlack']}
     useCase,
   s: ['Sales forecastingCustomer behavior analysisFinancial planningMarket trend analysis']}
-  };
+  }
   // Quantum-Secure Communication Platform;
   {/* TODO: Fix JSX expression */}
   n: ['Microsoft TeamsSlackZoomCustom APIsVPN solutions']}
     useCase,
   s: ['Government communicationsFinancial transactionsHealthcare data sharingMilitary operations']}
-  };
+  }
   // Autonomous DevOps Platform;
   {/* TODO: Fix JSX expression */}
   n: ['AWSAzureGCPKubernetesDockerJenkinsGitLab']}
     useCase,
   s: ['Continuous deploymentInfrastructure managementPerformance optimizationIncident response']}
-  };
+  }
   // Space Technology Analytics Platform;
   {/* TODO: Fix JSX expression */}
   n: ['NASA APIsESA systemsSatellite ground stationsWeather services']}
     useCase,
   s: ['Satellite operationsMission planningSpace weather analysisOrbital optimization']}
-  };
+  }
   // AI-Powered Cybersecurity Suite;
   {/* TODO: Fix JSX expression */}
   n: ['SIEM systemsFirewallsEDR solutionsIdentity providersCloud platforms']}
     useCase,
   s: ['Threat detectionIncident responseCompliance managementSecurity monitoring']}
-  };
+  }
   // Quantum Machine Learning Platform;
   {/* TODO: Fix JSX expression */}
   n: ['TensorFlowPyTorchScikit-learnQuantum simulatorsCloud quantum services']}
     useCase,
   s: ['Drug discoveryFinancial modelingOptimization problemsScientific research']}
-  };
+  }
   // Edge Computing Orchestration Platform;
   {/* TODO: Fix JSX expression */}
   n: ['KubernetesDockerIoT platforms5G networksCloud services']}
     useCase,
   s: ['IoT management5G optimizationManufacturing automationSmart cities']}
-  };
+  }
   // AI-Powered Customer Experience Platform;
   {/* TODO: Fix JSX expression */}
   n: ['ShopifyWooCommerceSalesforceHubSpotZendeskIntercom']}
     useCase,
   s: ['E-commerce personalizationCustomer service automationMarketing optimizationCustomer retention']}
-  };
+  }
   // Blockchain Infrastructure Platform;
   {/* TODO: Fix JSX expression */}
   n: ['EthereumPolygonSolanaHyperledgerCloud platforms']}
     useCase,
   s: ['DeFi applicationsSupply chain trackingDigital identitySmart contracts']}
-  };
+  }
   // Autonomous Manufacturing Platform;
   {/* TODO: Fix JSX expression */}
   n: ['ERP systemsMES platformsIoT devicesRobotics systemsCloud services']}
     useCase,
   s: ['Quality controlProduction optimizationPredictive maintenanceSupply chain management']}
-  };
+  }
   // Quantum Internet Security Gateway;
   {/* TODO: Fix JSX expression */}
   n: ['FirewallsLoad balancersVPN solutionsCloud platformsCDN services']}
     useCase,
   s: ['Internet securityData protectionNetwork securityCompliance management']}
-  };
+  }
   // AI-Powered Healthcare Diagnostics;
   {/* TODO: Fix JSX expression */}
   n: ['EHR systemsPACS systemsLab systemsTelemedicine platforms']}
     useCase,
   s: ['Medical imagingDiagnosis supportTreatment planningPatient monitoring']}
-  };
+  }
   // Space Resource Mining Platform;
   {/* TODO: Fix JSX expression */}
   n: ['Satellite systemsRobotics platformsAI systemsGround stations']}
     useCase,
   s: ['Asteroid miningLunar explorationResource mappingMining operations']}
-  };
+  }
   // Quantum Financial Trading Platform;
   {/* TODO: Fix JSX expression */}
   n: ['Trading platformsMarket data feedsRisk systemsCompliance platforms']}
     useCase,
   s: ['Algorithmic tradingRisk managementPortfolio optimizationMarket analysis']}
-  };
+  }
   // AI-Powered Supply Chain Optimization;
   {/* TODO: Fix JSX expression */}
   n: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']}
@@ -1757,9 +1708,7 @@ export type Real2036InnovativeService = i,
   n: string; categor,
   y: string; pric,
   e: string; period?: string, feature,
-  s: string[], lin,
-  k: string, launchDate?: string; rating?: number; feature,
-  s: string[]; marketSize?: string; targetAudience?: string; competitiveAdvantage?: string; integration?: string[], useCases?: string[] }; categor,
+  s: stringService Feature } categor,
   y: 'AI & Data',' pric,
   e: '$299',' perio,
   d: '/month',' 'AI - powered data pattern recognition',' 'Predictive analytics and forecasting',' 'Natural language query interface',' 'Automated report generation',' 'Real - time data visualization',' 'Multi - source data integration',' 'Custom dashboard builder',' 'Mobile - responsive interface'], ' lin,
@@ -2029,7 +1978,7 @@ export type Real2036InnovativeService = i,
   e: 'Investment banks, Hedge funds, Trading firms',' competitiveAdvantag,
   e: 'Quantum advantage, High-frequency capabilities, Advanced algorithms',' integratio,
   n: ['Trading platformsMarket data feedsRisk systemsCompliance platforms'],' useCase,
-  s: ['Algorithmic tradingRisk managementPortfolio optimizationMarket analysis'] }; // AI-Powered Supply Chain Optimization ' i,
+  s: ['Algorithmic tradingRisk managementPortfolio optimizationMarket analysis'] } // AI-Powered Supply Chain Optimization ' i,
   d: 'ai-supply-chain-optimization-platform', nam,
   e: 'AI Supply Chain Optimization Platform',' taglin,
   e: 'Intelligent supply chain management and optimization',' descriptio,
@@ -2079,7 +2028,7 @@ export type Real2036InnovativeService = i,
   y: 'IT Infrastructure',' pric,
   e: '$799',' perio,
   d: '/month', feature,
-  s: [} ];' lin,
+  s: Service Feature;' lin,
   k: 'http,
   s://ziontechgroup.com / services / ai - supply - chain - optimization - platform',' launch_dat,
   e: '2036 - 03 - 30', ratin,
@@ -2098,35 +2047,34 @@ export type Real2036InnovativeService = i,
   e: 'AI optimization, Real-time insights, Comprehensive coverage'' integratio,
   n: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']' useCase,
   s: ['Demand planningInventory managementLogistics optimizationRisk management'] } ]; export type Real2036InnovativeService = {/* TODO: Fix JSX expression */}
-  k: string; launchDate?: string; rating?: number; marketSize?: string; targetAudience?: string; competitiveAdvantage?: string} integration?: string[]}; useCases?: string[]; }; export const,
-  real2036InnovativeServices: Real2036InnovativeService[] = [; // AI-Powered Business Intelligence; {/* TODO: Fix JSX expression */}
+  k: string; launchDate?: string; rating?: number; marketSize?: string; targetAudience?: string; competitiveAdvantage?: string} integration?: stringService Feature = [; // AI-Powered Business Intelligence; {/* TODO: Fix JSX expression */}
   n: ['SalesforceHubSpotGoogle AnalyticsAWSAzureSlack']}' useCase,
-  s: ['Sales forecastingCustomer behavior analysisFinancial planningMarket trend analysis']} }; // Quantum-Secure Communication Platform; {/* TODO: Fix JSX expression */}
+  s: ['Sales forecastingCustomer behavior analysisFinancial planningMarket trend analysis']} } // Quantum-Secure Communication Platform; {/* TODO: Fix JSX expression */}
   n: ['Microsoft TeamsSlackZoomCustom APIsVPN solutions']}' useCase,
-  s: ['Government communicationsFinancial transactionsHealthcare data sharingMilitary operations']} }; // Autonomous DevOps Platform; {/* TODO: Fix JSX expression */}
+  s: ['Government communicationsFinancial transactionsHealthcare data sharingMilitary operations']} } // Autonomous DevOps Platform; {/* TODO: Fix JSX expression */}
   n: ['AWSAzureGCPKubernetesDockerJenkinsGitLab']}' useCase,
-  s: ['Continuous deploymentInfrastructure managementPerformance optimizationIncident response']} }; // Space Technology Analytics Platform; {/* TODO: Fix JSX expression */}
+  s: ['Continuous deploymentInfrastructure managementPerformance optimizationIncident response']} } // Space Technology Analytics Platform; {/* TODO: Fix JSX expression */}
   n: ['NASA APIsESA systemsSatellite ground stationsWeather services']}' useCase,
-  s: ['Satellite operationsMission planningSpace weather analysisOrbital optimization']} }; // AI-Powered Cybersecurity Suite; {/* TODO: Fix JSX expression */}
+  s: ['Satellite operationsMission planningSpace weather analysisOrbital optimization']} } // AI-Powered Cybersecurity Suite; {/* TODO: Fix JSX expression */}
   n: ['SIEM systemsFirewallsEDR solutionsIdentity providersCloud platforms']}' useCase,
-  s: ['Threat detectionIncident responseCompliance managementSecurity monitoring']} }; // Quantum Machine Learning Platform; {/* TODO: Fix JSX expression */}
+  s: ['Threat detectionIncident responseCompliance managementSecurity monitoring']} } // Quantum Machine Learning Platform; {/* TODO: Fix JSX expression */}
   n: ['TensorFlowPyTorchScikit-learnQuantum simulatorsCloud quantum services']}' useCase,
-  s: ['Drug discoveryFinancial modelingOptimization problemsScientific research']} }; // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */}
+  s: ['Drug discoveryFinancial modelingOptimization problemsScientific research']} } // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */}
   n: ['KubernetesDockerIoT platforms5G networksCloud services']}' useCase,
-  s: ['IoT management5G optimizationManufacturing automationSmart cities']} }; // AI-Powered Customer Experience Platform; {/* TODO: Fix JSX expression */}
+  s: ['IoT management5G optimizationManufacturing automationSmart cities']} } // AI-Powered Customer Experience Platform; {/* TODO: Fix JSX expression */}
   n: ['ShopifyWooCommerceSalesforceHubSpotZendeskIntercom']}' useCase,
-  s: ['E-commerce personalizationCustomer service automationMarketing optimizationCustomer retention']} }; // Blockchain Infrastructure Platform; {/* TODO: Fix JSX expression */}
+  s: ['E-commerce personalizationCustomer service automationMarketing optimizationCustomer retention']} } // Blockchain Infrastructure Platform; {/* TODO: Fix JSX expression */}
   n: ['EthereumPolygonSolanaHyperledgerCloud platforms']}' useCase,
-  s: ['DeFi applicationsSupply chain trackingDigital identitySmart contracts']} }; // Autonomous Manufacturing Platform; {/* TODO: Fix JSX expression */}
+  s: ['DeFi applicationsSupply chain trackingDigital identitySmart contracts']} } // Autonomous Manufacturing Platform; {/* TODO: Fix JSX expression */}
   n: ['ERP systemsMES platformsIoT devicesRobotics systemsCloud services']}' useCase,
-  s: ['Quality controlProduction optimizationPredictive maintenanceSupply chain management']} }; // Quantum Internet Security Gateway; {/* TODO: Fix JSX expression */}
+  s: ['Quality controlProduction optimizationPredictive maintenanceSupply chain management']} } // Quantum Internet Security Gateway; {/* TODO: Fix JSX expression */}
   n: ['FirewallsLoad balancersVPN solutionsCloud platformsCDN services']}' useCase,
-  s: ['Internet securityData protectionNetwork securityCompliance management']} }; // AI-Powered Healthcare Diagnostics; {/* TODO: Fix JSX expression */}
+  s: ['Internet securityData protectionNetwork securityCompliance management']} } // AI-Powered Healthcare Diagnostics; {/* TODO: Fix JSX expression */}
   n: ['EHR systemsPACS systemsLab systemsTelemedicine platforms']}' useCase,
-  s: ['Medical imagingDiagnosis supportTreatment planningPatient monitoring']} }; // Space Resource Mining Platform; {/* TODO: Fix JSX expression */}
+  s: ['Medical imagingDiagnosis supportTreatment planningPatient monitoring']} } // Space Resource Mining Platform; {/* TODO: Fix JSX expression */}
   n: ['Satellite systemsRobotics platformsAI systemsGround stations']}' useCase,
-  s: ['Asteroid miningLunar explorationResource mappingMining operations']} }; // Quantum Financial Trading Platform; {/* TODO: Fix JSX expression */}
+  s: ['Asteroid miningLunar explorationResource mappingMining operations']} } // Quantum Financial Trading Platform; {/* TODO: Fix JSX expression */}
   n: ['Trading platformsMarket data feedsRisk systemsCompliance platforms']}' useCase,
-  s: ['Algorithmic tradingRisk managementPortfolio optimizationMarket analysis']} }; // AI-Powered Supply Chain Optimization; {/* TODO: Fix JSX expression */}
+  s: ['Algorithmic tradingRisk managementPortfolio optimizationMarket analysis']} } // AI-Powered Supply Chain Optimization; {/* TODO: Fix JSX expression */}
   n: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']}' useCase,
   s: ['Demand planningInventory managementLogistics optimizationRisk management']} } ]; '

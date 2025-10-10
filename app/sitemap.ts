@@ -1,71 +1,70 @@
 import { MetadataRoute } from 'next';
-export default function sitemap(): MetadataRoute.Sitemap {;
+export default function sitemap(): MetadataRoute.Sitemap {
   return [;
-    {;
-      url: 'https://ziontechgroup.com',;
+    {
+      url: '[^']*',
       lastModified: new Date(),;
-      changeFrequency: 'yearly',;
-      priority: 1,;}
+      changeFrequency: '[^']*',
+      priority: 1,}
     },;
-    {;
-      url: 'https://ziontechgroup.com/about',;
+    {
+      url: '[^']*',
       lastModified: new Date(),;
-      changeFrequency: 'monthly',;
-      priority: 0.8,;}
+      changeFrequency: '[^']*',
+      priority: 0.8,}
     },;
-    {;
-      url: 'https://ziontechgroup.com/services',;
+    {
+      url: '[^']*',
       lastModified: new Date(),;
-      changeFrequency: 'monthly',;
-      priority: 0.8,;}
+      changeFrequency: '[^']*',
+      priority: 0.8,}
     },;
-    {;
-      url: 'https://ziontechgroup.com/contact',;
+    {
+      url: '[^']*',
       lastModified: new Date(),;
-      changeFrequency: 'monthly',;
-      priority: 0.8,;}
+      changeFrequency: '[^']*',
+      priority: 0.8,}
     },;
-    {;
-      url: 'https://ziontechgroup.com/blog',;
+    {
+      url: '[^']*',
       lastModified: new Date(),;
-      changeFrequency: 'weekly',;
-      priority: 0.7,;}
+      changeFrequency: '[^']*',
+      priority: 0.7,}
     },;
-    {;
-      url: 'https://ziontechgroup.com/ai-3d-generation',;
+    {
+      url: '[^']*',
       lastModified: new Date(),;
-      changeFrequency: 'monthly',;
-      priority: 0.6,;}
+      changeFrequency: '[^']*',
+      priority: 0.6,}
     },;
-    {;
-      url: 'https://ziontechgroup.com/edge-computing',;
+    {
+      url: '[^']*',
       lastModified: new Date(),;
-      changeFrequency: 'monthly',;
-      priority: 0.6,;}
+      changeFrequency: '[^']*',
+      priority: 0.6,}
     },;
-    {;
-      url: 'https://ziontechgroup.com/financial-it',;
+    {
+      url: '[^']*',
       lastModified: new Date(),;
-      changeFrequency: 'monthly',;
-      priority: 0.6,;}
+      changeFrequency: '[^']*',
+      priority: 0.6,}
     },;
-    {;
-      url: 'https://ziontechgroup.com/consultation',;
+    {
+      url: '[^']*',
       lastModified: new Date(),;
-      changeFrequency: 'monthly',;
-      priority: 0.6,;}
+      changeFrequency: '[^']*',
+      priority: 0.6,}
     },;
-    {;
-      url: 'https://ziontechgroup.com/partners',;
+    {
+      url: '[^']*',
       lastModified: new Date(),;
-      changeFrequency: 'monthly',;
-      priority: 0.5,;}
+      changeFrequency: '[^']*',
+      priority: 0.5,}
     },;
-    {;
-      url: 'https://ziontechgroup.com/support',;
+    {
+      url: '[^']*',
       lastModified: new Date(),;
-      changeFrequency: 'monthly',;
-      priority: 0.5,;}
+      changeFrequency: '[^']*',
+      priority: 0.5,}
     },;
-  ];
-}
+  ]}

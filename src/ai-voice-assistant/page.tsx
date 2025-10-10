@@ -4,10 +4,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Mic, Target, Zap, Settings, CheckCircle, Star,  Mic,  Target,  Settings } from 'lucide-react';
 const AIVoiceAssistantPage: React.FC = () => {
-  const features = [];
+  const features = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   ico,
   n: Mic,
       titl,
@@ -15,8 +15,7 @@ const AIVoiceAssistantPage: React.FC = () => {
       descriptio,
   n: 'Advanced voice recognition and processing',
       benefit,
-  s: ['Speech-to-text', 'Voice commands', 'Multi-language support'];
-    },
+  s: ['Speech-to-text', 'Voice commands', 'Multi-language support']},
       ico,
   n: Target,
       titl,
@@ -84,6 +83,5 @@ const AIVoiceAssistantPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default AiVoiceAssistantPage;

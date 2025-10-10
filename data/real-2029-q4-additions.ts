@@ -111,8 +111,7 @@
     launch_date: '2029 - 10 - 12'
     customers: 120;
     rating: 4 && 4.8;
-    reviews: 74;
-  },
+    reviews: 74},
     id: 'mobile - survey - studio',
     name: 'Mobile Survey Studio',
     tagline: unknown;
@@ -436,8 +435,7 @@
     launch_date: '2029 - 09 - 23'
     customers: 48;
     rating: 4 && 4.7;
-    reviews: 29;
-  },
+    reviews: 29},
     id: 'oncall - scheduler - pro',
     name: 'OnCall Scheduler Pro',
     tagline: unknown;
@@ -519,8 +517,7 @@
     launch_date: '2029 - 10 - 30'
     customers: 32;
     rating: 4 && 4.5;
-    reviews: 19;
-  },
+    reviews: 19},
     id: 'seo - content - optimizer - pro',
     name: 'SEO Content Optimizer Pro',
     tagline: unknown;
@@ -607,8 +604,7 @@
     launch_date: '2029 - 09 - 10'
     customers: 95;
     rating: 4 && 4.6;
-    reviews: 54;
-  },
+    reviews: 54},
     id: 'feature - flags - lite',
     name: 'Feature Flags Lite',
     tagline: unknown;
@@ -776,8 +772,7 @@
     launch_date: '2029 - 12 - 01'
     customers: 27;
     rating: 4 && 4.5;
-    reviews: 14;
-  },
+    reviews: 14},
     id: 'rpa - browser - automation',
     name: 'RPA Browser Automation Kit',
     tagline: unknown;
@@ -853,8 +848,7 @@
     launch_date: '2029 - 11 - 28'
     customers: 38;
     rating: 4 && 4.4;
-    reviews: 18;
-  },
+    reviews: 18},
     id: 'redaction - compliance - api',
     name: 'Redaction & Compliance API',
     tagline: unknown;
@@ -934,8 +928,7 @@
     launch_date: '2029 - 12 - 03'
     customers: 22;
     rating: 4 && 4.3;
-    reviews: 12;
-  },
+    reviews: 12},
     id: 'kpi-scorecards-studio',
     name: 'KPI Scorecards Studio',
     tagline: 'OKR/KPI dashboards with goals, alerts, and executive summaries'
@@ -1042,8 +1035,7 @@
     launchDate: '2029-10-20'
     customers: 36;
     rating: 4.4;
-    reviews: 16;
-  }
+    reviews: 16}
     id: 'kpi - scorecards - studio',
     name: 'KPI Scorecards Studio',
     tagline: 'OKR / KPI dashboards with goals, alerts, and executive summaries',
@@ -1149,8 +1141,7 @@
     launch_date: '2029 - 10 - 20'
     customers: 36;
     rating: 4 && 4.4;
-    reviews: 16;
-  };
+    reviews: 16}
 ];
 const contact =
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -1208,7 +1199,7 @@ const contact =
     ratin,
   g: 4 && 4.4,
     review,
-  s: 16};
+  s: 16}
 ];
 const contact =
 	mobil,
@@ -1219,9 +1210,9 @@ const contact =
 	websit,
   e: 'http,
   s://ziontechgroup.com'
-};
+}
 export const,
-  real2029Q4Additions: RealMarketService[] = [,
+  real2029Q4Additions: RealMarketServiceService Feature = [,
 		i,
   d: 'ai-email-triage-copilot', nam,
   e: 'AI Email Triage Copilot',
@@ -1233,8 +1224,7 @@ export const,
 		descriptio,
   n: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.',
     feature,
-  s: [;
-],
+  s: Service Feature,
 			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and,
   summariesAnalytics: response time, CSAT impact, volume by topic'
 		];
@@ -1263,8 +1253,7 @@ export const,
 		launchDate: '2029-10-12'
 		customers: 120;
 		rating: 4 && 4.8;
-		reviews: 74;
-	}
+		reviews: 74}
 		id: 'mobile-survey-studio',
 		name: 'Mobile Survey Studio',
 		tagline: 'Conversational, mobile-first surveys with branching logic and realtime dashboards'
@@ -1299,8 +1288,7 @@ export const,
 		launchDate: '2029-11-05'
 		customers: 60;
 		rating: 4 && 4.6;
-		reviews: 33;
-	}
+		reviews: 33}
 		id: 'event-ops-dashboard',
 		name: 'EventOps Dashboard',
 		tagline: 'Ticketing, invitations, run-of-show, and post-event analytics in one place'
@@ -1335,8 +1323,7 @@ export const,
 		launchDate: '2029-09-23'
 		customers: 48;
 		rating: 4 && 4.7;
-		reviews: 29;
-	}
+		reviews: 29}
 		id: 'oncall-scheduler-pro',
 		name: 'OnCall Scheduler Pro',
 		tagline: 'Policy-based shift planning, rotations, and escalations with Slack/Teams'
@@ -1371,8 +1358,7 @@ export const,
 		launchDate: '2029-10-30'
 		customers: 32;
 		rating: 4 && 4.5;
-		reviews: 19;
-	}
+		reviews: 19}
 		id: 'seo-content-optimizer-pro',
 		name: 'SEO Content Optimizer Pro',
 		tagline: 'AI-assisted briefs, outlines, and on-page optimization with live SERP data'
@@ -1407,8 +1393,7 @@ export const,
 		launchDate: '2029-09-10'
 		customers: 95;
 		rating: 4 && 4.6;
-		reviews: 54;
-	}
+		reviews: 54}
 		id: 'feature-flags-lite',
 		name: 'Feature Flags Lite',
 		tagline: 'Simple kill switches, gradual rollouts, and A/B targeting for web apps'
@@ -1443,8 +1428,7 @@ export const,
 		launchDate: '2029-10-02'
 		customers: 70;
 		rating: 4 && 4.5;
-		reviews: 21;
-	}
+		reviews: 21}
 		id: 'sales-lead-enrichment',
 		name: 'Sales Lead Enrichment',
 		tagline: 'Firmographics and signals to qualify leads instantly via API and CSV',
@@ -1479,8 +1463,7 @@ export const,
 		launchDate: '2029-11-18'
 		customers: 40;
 		rating: 4 && 4.4;
-		reviews: 17;
-	}
+		reviews: 17}
 		id: 'invoice-ocr-processor',
 		name: 'Invoice OCR Processor',
 		tagline: 'Extract line items and totals from invoices and receipts to your ERP',
@@ -1515,8 +1498,7 @@ export const,
 		launchDate: '2029-12-01'
 		customers: 27;
 		rating: 4 && 4.5;
-		reviews: 14;
-	}
+		reviews: 14}
 		id: 'rpa-browser-automation',
 		name: 'RPA Browser Automation Kit',
 		tagline: 'Headless browser workflows with queues, retries, and human review'
@@ -1551,8 +1533,7 @@ export const,
 		launchDate: '2029-11-28'
 		customers: 38;
 		rating: 4 && 4.4;
-		reviews: 18;
-	}
+		reviews: 18}
 		id: 'redaction-compliance-api'
 		name: 'Redaction & Compliance API'
 		tagline: 'PII detection and redaction for text and documents with audit logs',
@@ -1587,8 +1568,7 @@ export const,
 		launchDate: '2029-12-03'
 		customers: 22;
 		rating: 4 && 4.3;
-		reviews: 12;
-	}
+		reviews: 12}
 		id: 'kpi-scorecards-studio',
 		name: 'KPI Scorecards Studio',
 		tagline: 'OKR/KPI dashboards with goals, alerts, and executive summaries'
@@ -1623,8 +1603,7 @@ export const,
 		launchDate: '2029-10-20'
 		customers: 36;
 		rating: 4 && 4.4;
-		reviews: 16;
-	}
+		reviews: 16}
 ];
   id: 'ai - email - triage - copilot',
   name: 'AI Email Triage Copilot',
@@ -1660,8 +1639,7 @@ export const,
   launch_date: '2029 - 10 - 12'
   customers: 120;
   rating: 4.8;
-  reviews: 74;
-}
+  reviews: 74}
   id: 'mobile - survey - studio',
   name: 'Mobile Survey Studio',
   tagline: 'Conversational, mobile - first surveys with branching logic and realtime dashboards'
@@ -1696,8 +1674,7 @@ export const,
   launch_date: '2029 - 11 - 05'
   customers: 60;
   rating: 4.6;
-  reviews: 33;
-}
+  reviews: 33}
   id: 'event - ops - dashboard',
   name: 'EventOps Dashboard',
   tagline: 'Ticketing, invitations, run - of - show, and post - event analytics in one place'
@@ -1732,8 +1709,7 @@ export const,
   launch_date: '2029 - 09 - 23'
   customers: 48;
   rating: 4.7;
-  reviews: 29;
-}
+  reviews: 29}
   id: 'oncall - scheduler - pro',
   name: 'OnCall Scheduler Pro',
   tagline: 'Policy - based shift planning, rotations, and escalations with Slack / Teams'
@@ -1768,8 +1744,7 @@ export const,
   launch_date: '2029 - 10 - 30'
   customers: 32;
   rating: 4.5;
-  reviews: 19;
-}
+  reviews: 19}
   id: 'seo - content - optimizer - pro',
   name: 'SEO Content Optimizer Pro',
   tagline: 'AI - assisted briefs, outlines, and on - page optimization with live SERP data'
@@ -1804,8 +1779,7 @@ export const,
   launch_date: '2029 - 09 - 10'
   customers: 95;
   rating: 4.6;
-  reviews: 54;
-}
+  reviews: 54}
   id: 'feature - flags - lite',
   name: 'Feature Flags Lite',
   tagline: 'Simple kill switches, gradual rollouts, and A / B targeting for web apps'
@@ -1840,8 +1814,7 @@ export const,
   launch_date: '2029 - 10 - 02'
   customers: 70;
   rating: 4.5;
-  reviews: 21;
-}
+  reviews: 21}
   id: 'sales - lead - enrichment',
   name: 'Sales Lead Enrichment',
   tagline: 'Firmographics and signals to qualify leads instantly via API and CSV',
@@ -1876,8 +1849,7 @@ export const,
   launch_date: '2029 - 11 - 18'
   customers: 40;
   rating: 4.4;
-  reviews: 17;
-}
+  reviews: 17}
   id: 'invoice - ocr - processor',
   name: 'Invoice OCR Processor',
   tagline: 'Extract line items and totals from invoices and receipts to your ERP',
@@ -1912,8 +1884,7 @@ export const,
   launch_date: '2029 - 12 - 01'
   customers: 27;
   rating: 4.5;
-  reviews: 14;
-}
+  reviews: 14}
   id: 'rpa - browser - automation',
   name: 'RPA Browser Automation Kit',
   tagline: 'Headless browser workflows with queues, retries, and human review'
@@ -1948,8 +1919,7 @@ export const,
   launch_date: '2029 - 11 - 28'
   customers: 38;
   rating: 4.4;
-  reviews: 18;
-}
+  reviews: 18}
   id: 'redaction - compliance - api'
   name: 'Redaction & Compliance API'
   tagline: 'PII detection and redaction for text and documents with audit logs',
@@ -1984,8 +1954,7 @@ export const,
   launch_date: '2029 - 12 - 03'
   customers: 22;
   rating: 4.3;
-  reviews: 12;
-}
+  reviews: 12}
   id: 'kpi - scorecards - studio',
   name: 'KPI Scorecards Studio',
   tagline: 'OKR / KPI dashboards with goals, alerts, and executive summaries'
@@ -2020,11 +1989,10 @@ export const,
   launch_date: '2029 - 10 - 20'
   customers: 36;
   rating: 4.4;
-  reviews: 16;
-}
+  reviews: 16}
 		rating: 4.4;
 		reviews: 16;
-// const contact = {;
+// const contact = {
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -3546,20 +3514,20 @@ export const,
 	websit,
   e: 'http,
   s://ziontechgroup.com'
-};
+}
 export const,
-  real2029Q4Additions: RealMarketService[] = [;
+  real2029Q4Additions: RealMarketServiceService Feature = [;
 	{/* TODO: Fix JSX expression */}
   g: 4.8}
 		review,
   s: 74}
-	};
+	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 33}
-	};
-	{;
+	}
+	{
 		id: 'event-ops-dashboard';
 		name: 'EventOps Dashboard';
 		tagline: 'Ticketing, invitations, run-of-show, and post-event analytics in one place';
@@ -3595,8 +3563,8 @@ export const,
 		customers: 48;
 		rating: 4.7}
 		reviews: 29}
-	};
-	{;
+	}
+	{
 		id: 'oncall-scheduler-pro';
 		name: 'OnCall Scheduler Pro';
 		tagline: 'Policy-based shift planning, rotations, and escalations with Slack/Teams';
@@ -3632,8 +3600,8 @@ export const,
 		customers: 32;
 		rating: 4.5}
 		reviews: 19}
-	};
-	{;
+	}
+	{
 		id: 'seo-content-optimizer-pro';
 		name: 'SEO Content Optimizer Pro';
 		tagline: 'AI-assisted briefs, outlines, and on-page optimization with live SERP data';
@@ -3673,23 +3641,23 @@ export const,
   g: 4.7}
 		review,
   s: 29}
-	};
+	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 19}
-	};
+	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 54}
-	};
+	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 21}
-	};
-	{;
+	}
+	{
 		id: 'sales-lead-enrichment';
 		name: 'Sales Lead Enrichment';
 		tagline: 'Firmographics and signals to qualify leads instantly via API and CSV';
@@ -3729,23 +3697,23 @@ export const,
   g: 4.4}
 		review,
   s: 17}
-	};
+	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 14}
-	};
+	}
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 18}
-	};
+	}
 	{/* TODO: Fix JSX expression */}
   g: 4.3}
 		review,
   s: 12}
-	};
-	{;
+	}
+	{
 		id: 'kpi-scorecards-studio';
 		name: 'KPI Scorecards Studio';
 		tagline: 'OKR/KPI dashboards with goals, alerts, and executive summaries';
@@ -3783,8 +3751,7 @@ export const,
 		reviews: 16}
 	}
 ];
-;
-// const contact = {;
+// const contact = {
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -3795,26 +3762,25 @@ export const,
   s: 16}
 	}
 ];
-;
 // const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
   s://ziontechgroup.com'
-};
+}
 export const,
-  real2029Q4Additions: RealMarketService[] = [;
+  real2029Q4Additions: RealMarketServiceService Feature = [;
 	{/* TODO: Fix JSX expression */}
   g: 4.8}
 		review,
   s: 74}
-	};
+	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 33}
-	};
-	{;
+	}
+	{
 		id: 'event-ops-dashboard';
 		name: 'EventOps Dashboard';
 		tagline: 'Ticketing, invitations, run-of-show, and post-event analytics in one place';
@@ -3850,8 +3816,8 @@ export const,
 		customers: 48;
 		rating: 4.7}
 		reviews: 29}
-	};
-	{;
+	}
+	{
 		id: 'oncall-scheduler-pro';
 		name: 'OnCall Scheduler Pro';
 		tagline: 'Policy-based shift planning, rotations, and escalations with Slack/Teams';
@@ -3887,8 +3853,8 @@ export const,
 		customers: 32;
 		rating: 4.5}
 		reviews: 19}
-	};
-	{;
+	}
+	{
 		id: 'seo-content-optimizer-pro';
 		name: 'SEO Content Optimizer Pro';
 		tagline: 'AI-assisted briefs, outlines, and on-page optimization with live SERP data';
@@ -3928,23 +3894,23 @@ export const,
   g: 4.7}
 		review,
   s: 29}
-	};
+	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 19}
-	};
+	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 54}
-	};
+	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 21}
-	};
-	{;
+	}
+	{
 		id: 'sales-lead-enrichment';
 		name: 'Sales Lead Enrichment';
 		tagline: 'Firmographics and signals to qualify leads instantly via API and CSV';
@@ -3984,23 +3950,23 @@ export const,
   g: 4.4}
 		review,
   s: 17}
-	};
+	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 14}
-	};
+	}
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 18}
-	};
+	}
 	{/* TODO: Fix JSX expression */}
   g: 4.3}
 		review,
   s: 12}
-	};
-	{;
+	}
+	{
 		id: 'kpi-scorecards-studio';
 		name: 'KPI Scorecards Studio';
 		tagline: 'OKR/KPI dashboards with goals, alerts, and executive summaries';
@@ -4397,20 +4363,20 @@ export const,
   e: '2029 - 10 - 20', customer,
   s: 36, ratin,
   g: 4 && 4.4, review,
-  s: 16}; ]; const contact = ' mobil,
+  s: 16} ]; const contact = ' mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' }; export const,
-  real2029Q4Additions: RealMarketService[] = [ ' i,
+  s://ziontechgroup.com' } export const,
+  real2029Q4Additions: RealMarketServiceService Feature = [ ' i,
   d: 'ai-email-triage-copilot', nam,
   e: 'AI Email Triage Copilot',' taglin,
   e: 'Auto-categorize, summarize, and draft replies for inbound email',' pric,
   e: '$99', perio,
   d: '/month',' descriptio,
   n: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.', feature,
-  s: [], ' 'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and,
+  s: Service Feature, ' 'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and,
   summariesAnalytics: response time, CSAT impact, volume by topic' ]; popula,
   r: true,' ico,
   n: '✉️'' colo,
@@ -5161,56 +5127,12 @@ export const,
   g: 4.4,
   reviews: 16 ' import { RealMarketService } from './real-market-services'; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' }; export const,
-  real2029Q4Additions: RealMarketService[] = [; {/* TODO: Fix JSX expression */}
-  g: 4.8} review,
-  s: 74} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 33} }; {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 29} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 19} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 54} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 21} }; {/* TODO: Fix JSX expression */}
-  g: 4.4} review,
-  s: 17} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 14} }; {/* TODO: Fix JSX expression */}
-  g: 4.4} review,
-  s: 18} }; {/* TODO: Fix JSX expression */}
-  g: 4.3} review,
-  s: 12} }; {/* TODO: Fix JSX expression */}
-  g: 4.4} review,
-  s: 16} } ]; ' import { RealMarketService } from './real-market-services'; const contact = {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } export const,
+  real2029Q4Additions: RealMarketServiceService Feature; ' import { RealMarketService } from './real-market-services'; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' }; export const,
-  real2029Q4Additions: RealMarketService[] = [; {/* TODO: Fix JSX expression */}
-  g: 4.8} review,
-  s: 74} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 33} }; {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 29} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 19} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 54} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 21} }; {/* TODO: Fix JSX expression */}
-  g: 4.4} review,
-  s: 17} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 14} }; {/* TODO: Fix JSX expression */}
-  g: 4.4} review,
-  s: 18} }; {/* TODO: Fix JSX expression */}
-  g: 4.3} review,
-  s: 12} }; {/* TODO: Fix JSX expression */}
-  g: 4.4} review,
-  s: 16} } ]; '
+  s://ziontechgroup.com' } export const,
+  real2029Q4Additions: RealMarketServiceService Feature; '

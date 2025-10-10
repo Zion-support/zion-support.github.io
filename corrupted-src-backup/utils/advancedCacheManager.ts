@@ -23,7 +23,7 @@ class AdvancedCacheManager<T> {
       maxAge: 5 * 60 * 1000, // 5 minutes;
       maxSize: 1000;
       strategy: 'LRU',
-      ...config};
+      ...config}
   }
 
   public get(key: string): T | null {
@@ -31,8 +31,7 @@ class AdvancedCacheManager<T> {
 
     if (!entry) {,
       this.misses++;
-      return null;
-    }
+      return null}
 
     // Check if entry has expired;
     if (Date.now() - entry.timestamp > this.config.maxAge) {
@@ -41,7 +40,7 @@ class AdvancedCacheManager<T> {
       return null;
 class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
   g: Partial<CacheConfig> = {}) {/* TODO: Fix JSX expression */}
-    };
+    }
   }
 
   public get(ke)
@@ -57,14 +56,12 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
     entry.lastAccessed = Date.now();
     this.hits++;
 
-    return entry.value;
-  }
+    return entry.value}
 
   public set(key: string, value: T): void {
     // Check if cache is full;
     if (this.cache.size >= this.config.maxSize) {,
-      this.evictEntry();
-    }
+      this.evictEntry()}
 
     const entry: CacheEntry<T> = {,
       key;
@@ -79,17 +76,15 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
 
     const,
   entry: CacheEntry<T> = {/* TODO: Fix JSX expression */}
-    };
+    }
 
-    this.cache.set(key, entry);
-  }
+    this.cache.set(key, entry)}
 
   public has(key: string): boolean {
     const _entry = this.cache.get(key);
 ,
     if (!entry) {,
-      return false;
-    }
+      return false}
 
     // Check if entry has expired;
     if (Date.now() - entry.timestamp > this.config.maxAge) {
@@ -103,8 +98,7 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
     if (Date.now() - entry.timestamp > this.config.maxAge) {/* TODO: Fix JSX expression */}
     }
 
-    return true;
-  }
+    return true}
 
   public delete(key: string): boolean {,
     return this.cache.delete(key);
@@ -126,7 +120,7 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
       hitRate: total > 0 ? this.hits / total : 0;
   public getStats(): {/* TODO: Fix JSX expression */}
   e: number } {/* TODO: Fix JSX expression */}
-    };
+    }
   }
 
   private evictEntry(): void {/* TODO: Fix JSX expression */}
@@ -159,17 +153,14 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
 
   public cleanup(): void {
     const _now = Date.now();
-    const expiredKeys: string[] = [];
-,
-    for (const [key, entry] of this.cache.entries()) {
+    const expiredKeys: stringService Feature of this.cache.entries()) {
       if (now - entry.timestamp>this</timestamp>.config.maxAge) {
         expiredKeys.push(key);
   public cleanup(): void {/* TODO: Fix JSX expression */}
       }
     }
 
-    expiredKeys.forEach(key => this.cache.delete(key));
-  }
+    expiredKeys.forEach(key => this.cache.delete(key))}
 }
 
 export default AdvancedCacheManager;

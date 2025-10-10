@@ -190,8 +190,7 @@ const AI3DGenerationPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
+  )}
 export default AI3DGenerationPage;
   </a>
   </p>

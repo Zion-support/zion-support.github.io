@@ -120,8 +120,7 @@ icon: Brain,
         </div>
       </section>
     </div>
-  );
-};
+  )}
 export default BusinessIntelligencePage;
   </button>
   </button>

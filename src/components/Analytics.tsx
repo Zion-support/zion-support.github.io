@@ -12,14 +12,13 @@ const,
     }
     if (enableUserBehaviorTracking) {/* TODO: Fix JSX expression */}
     }
-  }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
+  }, Service Feature);
   const initializeGoogleAnalytics = () => {/* TODO: Fix JSX expression */}
     }
     (window as any).gtag = gtag;
     gtag('js', new Date());
     gtag('config', 'GA_MEASUREMENT_ID', {/* TODO: Fix JSX expression */})
-    });
-  };
+    })}
   const initializePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
           } else if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
           } else if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */}
@@ -32,22 +31,17 @@ const,
       // Monitor page load time;
       window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
         }
-      });
-    }
-  };
+      })}
+  }
   const initializeErrorTracking = () => {/* TODO: Fix JSX expression */}
-      });
-    });
+      })});
     // Track unhandled promise rejections;
     window.addEventListener('unhandledrejection', (event) => {/* TODO: Fix JSX expression */}
-      });
-    });
+      })});
     // Track resource loading errors;
     window.addEventListener('error', (event) => {/* TODO: Fix JSX expression */}
-        });
-      }
-    }, true);
-  };
+        })}
+    }, true)}
   const initializeUserBehaviorTracking = () => {/* TODO: Fix JSX expression */}
     });
     // Track scroll depth;
@@ -62,22 +56,16 @@ const,
     });
     // Track clicks on important elements;
     document.addEventListener('click', (event) => {/* TODO: Fix JSX expression */}
-        });
-      } else if (tagName === 'button') {/* TODO: Fix JSX expression */}
-        });
-      }
+        })} else if (tagName === 'button') {/* TODO: Fix JSX expression */}
+        })}
     });
     // Track form submissions;
     document.addEventListener('submit', (event) => {/* TODO: Fix JSX expression */}
-      });
-    });
-  };
+      })})}
   const trackEvent = (categor,
   y: string, actio)
   n: string, value?: any) => {/* TODO: Fix JSX expression */}
-      });
-    }
-  };
-  return null;
-};
+      })}
+  }
+  return null}
 export default Analytics</AnalyticsProps>

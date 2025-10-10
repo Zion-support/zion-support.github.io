@@ -69,7 +69,7 @@ export const revolutionary2026MicroSaasStats =
   categories: 4;
   averageRating: 4.8;
   activeUsers: 1800;
-export const revolutionary2026MicroSaasStats = {};
+export const revolutionary2026MicroSaasStats = {}
   totalService,
   s: 2,
   categorie,
@@ -77,7 +77,7 @@ export const revolutionary2026MicroSaasStats = {};
   averageRatin,
   g: 4.8,
   activeUser,
-  s: 1800};
+  s: 1800}
 export const revolutionary2026MicroSaasServices = [ nam,
   e: 'Revolutionary 2026 Micro-SaaS Platform',' pat,
   h: '/services/revolutionary-2026-micro-saas-platform',' descriptio,
@@ -102,4 +102,4 @@ export const revolutionary2026MicroSaasServices = [ nam,
   s: 2, categorie,
   s: 4, averageRatin,
   g: 4.8, activeUser,
-  s: 1800 };'
+  s: 1800 }'

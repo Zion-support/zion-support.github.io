@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 'use client';
 import React, { useState } from 'react';
 const RequestQuotePage: React.FC = () => {
-  const [formData, setFormData] = useState({
+  const Service Feature = useState({
     name: '',
     email: '',
     company: '',
@@ -18,8 +18,7 @@ const RequestQuotePage: React.FC = () => {
     description: '',
     requirements:   ,
 $4});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const Service Feature = useState(false);
   const _serviceTypes = [
     'AI Services',
     'IT Infrastructure',
@@ -57,17 +56,15 @@ $4});
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
-    }));
-  };
+      Service Feature: value
+    }))}
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
+    setIsSubmitted(true)}
   const benefits = [
     {
       icon: Calculator,
@@ -165,8 +162,7 @@ $4}
         </div>
         <Footer />
       </React.Fragment>
-    );
-  }
+    )}
   return (
     <React.Fragment>
       <Navigation />
@@ -417,11 +413,10 @@ $4}
                   </a>
                 </div>
     <div>Coming Soon</div>
-  );
-};
-  const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  )}
+  const Service Feature = useState({/* TODO: Fix JSX expression */}
+  O: Add content}
+}
   nam,
   e: '',
     emai,
@@ -443,12 +438,7 @@ $4}
     requirement,
   s: '')
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const _serviceTypes = [
-  // TOD,
-  O: Add items;
-];;
+  const Service Feature;
 //     'AI Services',
 //     'IT Infrastructure',
 //     'Cybersecurity',
@@ -459,19 +449,13 @@ $4}
 //     'Consulting Services',
 //     'Other'
   ];
-  const projectSizes = [
-  // TOD,
-  O: Add items;
-];;
+  const projectSizes = Service Feature;
 //     'Small (1-10 employees)',
 //     'Medium (11-100 employees)',
 //     'Large (101-1000 employees)',
 //     'Enterprise (1000+ employees)'
   ];
-  const timelines = [
-  // TOD,
-  O: Add items;
-];;
+  const timelines = Service Feature;
 //     'ASAP',
 //     '1-3 months',
 //     '3-6 months',
@@ -479,10 +463,7 @@ $4}
 //     '12+ months',
 //     'Flexible'
   ];
-  const budgetRanges = [
-  // TOD,
-  O: Add items;
-];;
+  const budgetRanges = Service Feature;
 //     'Under $10,000',
 //     '$10,000 - $50,000',
 //     '$50,000 - $100,000',
@@ -492,33 +473,17 @@ $4}
   ];
   const handleInputChange = (e: React.ChangeEvent;)
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     const { name, value } = e.target;
     setFormData(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
 //       ...prev,
-      [name]: value;)
-    }));
-  };
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    e.preventDefault();
-    setIsSubmitting(true);
-    // Simulate form submission;
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
-  const benefits = [
-  // TOD,
-  O: Add items;
-];;
+      Service Feature;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Calculator,
       titl,
@@ -527,8 +492,8 @@ $4}
   n: 'Get a detailed, no-obligation quote within 24 hours'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Clock,
       titl,
@@ -537,8 +502,8 @@ $4}
   n: 'We respond to all quote requests within 4 hours'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: CheckCircle,
       titl,
@@ -547,8 +512,8 @@ $4}
   n: 'Clear, detailed pricing with no hidden fees'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Star,
       titl,
@@ -557,13 +522,10 @@ $4}
   n: 'Free consultation with our technology experts'
     }
   ];
-  const whyChooseUs = [
-  // TOD,
-  O: Add items;
-];;
+  const whyChooseUs = Service Feature;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Users,
       titl,
@@ -572,8 +534,8 @@ $4}
   n: 'Proven track record of delivering results'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Award,
       titl,
@@ -582,8 +544,8 @@ $4}
   n: 'Our clients see significant returns on investment'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Clock,
       titl,
@@ -592,8 +554,8 @@ $4}
   n: 'Round-the-clock support for all our clients'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Star,
       titl,
@@ -603,7 +565,7 @@ $4}
     }
   ];
   if (isSubmitted) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     return (<div>Coming Soon</div>)
   )
@@ -663,8 +625,7 @@ $4}
     </React.Fragment>
         <Footer /></Footer>
       </React.Fragment>
-    );
-  }
+    )}
   return (<div>Coming Soon</div>)
   )
           <React.Fragment>
@@ -893,8 +854,7 @@ type="submit" disabled={isSubmitting}
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default RequestQuotePage;
   </textarea>
   </textarea>

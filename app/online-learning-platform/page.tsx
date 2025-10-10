@@ -40,6 +40,5 @@ const OnlineLearningPlatformPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
+  )}
 export default OnlineLearningPlatformPage;

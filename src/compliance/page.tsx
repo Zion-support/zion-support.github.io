@@ -5,7 +5,7 @@ import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileTe
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const CompliancePage: React.FC = () => {
-  const certifications = [];
+  const certifications = Service Feature;
   return (
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
@@ -14,13 +14,10 @@ const CompliancePage: React.FC = () => {
     { name: 'PCI DSS Level 1', status: 'Certified' },
     { name: 'NIST Framework', status: 'Implemented' }
   ];
-  const complianceAreas = [
-  // TOD,
-  O: Add items;
-];;
+  const complianceAreas = Service Feature;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Shield,
       titl,
@@ -125,8 +122,7 @@ Compliance Areas;"
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
         </main>
         <Footer />
-  );
-};
+  )}
 export default CompliancePage;
   </div>
   </div>

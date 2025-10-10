@@ -142,8 +142,7 @@ function shouldRemoveFunction(filename) {/* TODO: Fix JSX expression */}
   }
   
   // Remove functions that match any of the patterns;
-  return functionsToRemove.some(pattern => filename.includes(pattern));
-}
+  return functionsToRemove.some(pattern => filename.includes(pattern))}
 
 function cleanupFunctions() {/* TODO: Fix JSX expression */}
 }
@@ -162,8 +161,7 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
         try {
           fs.unlinkSync(filePath);
 
-          removedCount++;
-        } catch (error) {}
+          removedCount++} catch (error) {}
       } else {
         keptCount++;
   files.forEach(file => {/* TODO: Fix JSX expression */})
@@ -172,11 +170,7 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
     }
-  });
-
-
-
-}
+  })}
 
 // Run the cleanup;
 cleanupFunctions();

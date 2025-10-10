@@ -111,7 +111,6 @@ export default function AIAutomationPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}
   </a>
   </h1>

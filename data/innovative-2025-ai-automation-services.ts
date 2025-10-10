@@ -4,39 +4,7 @@
   price: string;
   period: string;
   description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
-    address: string;
-  }
-;
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =
+  features: stringService Feature =
   [
     // AI-Powered Autonomous Business Process Orchestrator;
       id: 'ai-autonomous-business-orchestrator',
@@ -58,68 +26,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
   descriptio,
   n: string;
   feature,
-  s: string[];
-  popula,
-  r: boolean;
-  ico,
-  n: string;
-  colo,
-  r: string;
-  textColo,
-  r: string;
-  lin,
-  k: string;
-  marketPositio,
-  n: string;
-  targetAudienc,
-  e: string;
-  trialDay,
-  s: number;
-  setupTim,
-  e: string;
-  categor,
-  y: string;
-  realServic,
-  e: boolean;
-  technolog,
-  y: string[];
-  integration,
-  s: string[];
-  useCase,
-  s: string[];
-  ro,
-  i: string;
-  competitor,
-  s: string[];
-  marketSiz,
-  e: string;
-  growthRat,
-  e: string;
-  varian,
-  t: string;
-  contactInf,
-  o: unknown;
-    mobil,
-  e: string;
-    emai,
-  l: string;
-    addres,
-  s: string}
-;
-  realImplementatio,
-  n: boolean;
-  implementationDetail,
-  s: string;
-  launchDat,
-  e: string;
-  customer,
-  s: number;
-  ratin,
-  g: number;
-  review,
-  s: number;
-export const,
-  innovative2025AIAutomationServices: InnovativeAIAutomationService[] =,
+  s: stringService Feature =,
   [
     // AI-Powered Autonomous Business Process Orchestrator,
   id: 'ai-autonomous-business-orchestrator'
@@ -213,8 +120,7 @@ export const,
       launchDate: '2025-01-15'
       customers: 75;
       rating: 4.9;
-      reviews: 45;
-    }
+      reviews: 45}
     // AI-Powered Predictive Customer Intelligence Platform;
       id: 'ai-predictive-customer-intelligence',
       name: 'AI Predictive Customer Intelligence Platform',
@@ -348,8 +254,7 @@ export const,
       launchDate: '2025-02-01'
       customers: 120;
       rating: 4.8;
-      reviews: 78;
-    }
+      reviews: 78}
     // AI-Powered Autonomous Code Generation & Deployment;
       id: 'ai-autonomous-code-generation',
       name: 'AI Autonomous Code Generation & Deployment',
@@ -488,8 +393,7 @@ export const,
       launchDate: '2025-01-20'
       customers: 95;
       rating: 4.9;
-      reviews: 62;
-    }
+      reviews: 62}
     // AI-Powered Autonomous Financial Trading Platform;
       id: 'ai-autonomous-financial-trading',
       name: 'AI Autonomous Financial Trading Platform',
@@ -621,8 +525,7 @@ export const,
       launchDate: '2025-02-15'
       customers: 45;
       rating: 4.9;
-      reviews: 38;
-    }
+      reviews: 38}
     // AI-Powered Autonomous Healthcare Diagnosis Platform;
       id: 'ai-autonomous-healthcare-diagnosis',
       name: 'AI Autonomous Healthcare Diagnosis Platform',
@@ -790,27 +693,7 @@ export const,
   setup_time: string;
   category: string;
   real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: string;
-  contact_info: unknown;
-    mobile: string;
-    email: string;
-    address: string;
-  }
-  }
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =
+  technology: stringService Feature =
   [
     // AI-Powered Autonomous Business Process Orchestrator;
       id: 'ai-autonomous-business-orchestrator',
@@ -923,44 +806,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
   real_servic,
   e: boolean;
   technolog,
-  y: string[];
-  integration,
-  s: string[];
-  use_case,
-  s: string[];
-  ro,
-  i: string;
-  competitor,
-  s: string[];
-  market_siz,
-  e: string;
-  growth_rat,
-  e: string;
-  varian,
-  t: string;
-  contact_inf,
-  o: unknown;
-    mobil,
-  e: string;
-    emai,
-  l: string;
-    addres,
-  s: string}
-  }
-  realImplementatio,
-  n: boolean;
-  implementationDetail,
-  s: string;
-  launchDat,
-  e: string;
-  customer,
-  s: number;
-  ratin,
-  g: number;
-  review,
-  s: number;
-export const,
-  innovative2025AIAutomationServices: InnovativeAIAutomationService[] =,
+  y: stringService Feature =,
   [
     // AI-Powered Autonomous Business Process Orchestrator,
   id: 'ai-autonomous-business-orchestrator'
@@ -1054,8 +900,7 @@ export const,
       launchDate: '2025-01-15'
       customers: 75;
       rating: 4.9;
-      reviews: 45;
-    }
+      reviews: 45}
     // AI-Powered Predictive Customer Intelligence Platform;
       id: 'ai-predictive-customer-intelligence',
       name: 'AI Predictive Customer Intelligence Platform',
@@ -1189,8 +1034,7 @@ export const,
       launchDate: '2025-02-01'
       customers: 120;
       rating: 4.8;
-      reviews: 78;
-    }
+      reviews: 78}
     // AI-Powered Autonomous Code Generation & Deployment;
       id: 'ai-autonomous-code-generation',
       name: 'AI Autonomous Code Generation & Deployment',
@@ -1329,8 +1173,7 @@ export const,
       launchDate: '2025-01-20'
       customers: 95;
       rating: 4.9;
-      reviews: 62;
-    }
+      reviews: 62}
     // AI-Powered Autonomous Financial Trading Platform;
       id: 'ai-autonomous-financial-trading',
       name: 'AI Autonomous Financial Trading Platform',
@@ -1462,8 +1305,7 @@ export const,
       launchDate: '2025-02-15'
       customers: 45;
       rating: 4.9;
-      reviews: 38;
-    }
+      reviews: 38}
     // AI-Powered Autonomous Healthcare Diagnosis Platform;
       id: 'ai-autonomous-healthcare-diagnosis',
       name: 'AI Autonomous Healthcare Diagnosis Platform',
@@ -1602,8 +1444,7 @@ export const,
       launchDate: '2025-03-01'
       customers: 35;
       rating: 4.9;
-      reviews: 28;
-    }
+      reviews: 28}
         'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.',
       launchDate: '2025-03-01'
       customers: 35;
@@ -1653,7 +1494,7 @@ export const,
       ratin,
   g: 4.9,
       review,
-  s: 28};
+  s: 28}
   ];    feature,
   s: [,
       '98% accurate medical diagnosisAutonomous patient monitoringTreatment recommendation engineMedical image analysis (X-ray, MRI) CT)Symptom analysis & triageDrug interaction checkingPatient history analysisReal-time health alerts'
@@ -1735,19 +1576,19 @@ export const,
     ratin,
   g: 4.9;
     review,
-  s: 28};
+  s: 28}
   }
 ];
 export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} } ; realImplementatio,
+  s: string} } realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
   g: number; review,
   s: number, export const,
-  innovative2025AIAutomationServices: InnovativeAIAutomationService[] = [ // AI-Powered Autonomous Business Process Orchestrator,
+  innovative2025AIAutomationServices: InnovativeAIAutomationServiceService Feature = [ // AI-Powered Autonomous Business Process Orchestrator,
   id: 'ai-autonomous-business-orchestrator'' nam,
   e: 'AI Autonomous Business Process Orchestrator' taglin,
   e:' 'Fully autonomous business process management with zero human intervention'' pric,
@@ -1980,25 +1821,7 @@ export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
   e: string; categor,
   y: string; real_servic,
   e: boolean; technolog,
-  y: string[]; integration,
-  s: string[]; use_case,
-  s: string[]; ro,
-  i: string; competitor,
-  s: string[]; market_siz,
-  e: string; growth_rat,
-  e: string; varian,
-  t: string; contact_inf,
-  o: mobil,
-  e: string; emai,
-  l: string; addres,
-  s: string} } realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number, export const,
-  innovative2025AIAutomationServices: InnovativeAIAutomationService[] = [ // AI-Powered Autonomous Business Process Orchestrator ' i,
+  y: stringService Feature = [ // AI-Powered Autonomous Business Process Orchestrator ' i,
   d: 'ai-autonomous-business-orchestrator'' nam,
   e: 'AI Autonomous Business Process Orchestrator' taglin,
   e:' 'Fully autonomous business process management with zero human intervention'' pric,
@@ -2197,7 +2020,7 @@ export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
   e: '2025-03-01', customer,
   s: 35, ratin,
   g: 4.9, review,
-  s: 28}; ]; feature,
+  s: 28} ]; feature,
   s: [' '98% accurate medical diagnosisAutonomous patient monitoringTreatment recommendation engineMedical image analysis (X-ray, MRI) CT)Symptom analysis & triageDrug interaction checkingPatient history analysisReal-time health alerts'' 'Comprehensive medical reportsHIPAA-compliant security' ];' popula,
   r: true, ico,
   n: '🏥'' colo,
@@ -2230,4 +2053,4 @@ export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
   e: '2025-03-01', customer,
   s: 35,
   rating: 4.9,
-  reviews: 28 }; } ]; export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
+  reviews: 28 }} ]; export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}

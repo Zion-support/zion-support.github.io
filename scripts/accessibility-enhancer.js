@@ -44,13 +44,10 @@ if (fs.existsSync(indexPath)) {
             transition: top 0.3 s;
           \`;
           skipLink.addEventListener('focus', function() {
-            this.style.top = '6 px';
-          });
+            this.style.top = '6 px'});
           skipLink.addEventListener('blur', function() {
-            this.style.top = '-40 px';
-          });
-          document.body.insertBefore(skipLink, document.body.firstChild);
-        }
+            this.style.top = '-40 px'});
+          document.body.insertBefore(skipLink, document.body.firstChild)}
         
         // High contrast mode toggle
         function addHighContrastToggle() {
@@ -72,10 +69,8 @@ if (fs.existsSync(indexPath)) {
           \`;
           toggle.addEventListener('click', function() {
             document.body.classList.toggle('high-contrast');
-            this.textContent = document.body.classList.contains('high-contrast') ? 'Normal Contrast' : 'High Contrast';
-          });
-          document.body.appendChild(toggle);
-        }
+            this.textContent = document.body.classList.contains('high-contrast') ? 'Normal Contrast' : 'High Contrast'});
+          document.body.appendChild(toggle)}
         
         // Font size controls
         function addFontSizeControls() {
@@ -99,95 +94,82 @@ if (fs.existsSync(indexPath)) {
           increaseBtn.textContent = 'A+';
           increaseBtn.addEventListener('click', () => {
             const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-            document.documentElement.style.fontSize = (currentSize + 2) + 'px';
-          });
+            document.documentElement.style.fontSize = (currentSize + 2) + 'px'});
           
           const decreaseBtn = document.createElement('button');
           decreaseBtn.textContent = 'A-';
           decreaseBtn.addEventListener('click', () => {
             const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-            document.documentElement.style.fontSize = Math.max(currentSize - 2, 12) + 'px';
-          });
+            document.documentElement.style.fontSize = Math.max(currentSize - 2, 12) + 'px'});
           
           const resetBtn = document.createElement('button');
           resetBtn.textContent = 'Reset';
           resetBtn.addEventListener('click', () => {
-            document.documentElement.style.fontSize = '16 px';
-          });
+            document.documentElement.style.fontSize = '16 px'});
           
           controls.appendChild(increaseBtn);
           controls.appendChild(decreaseBtn);
           controls.appendChild(resetBtn);
-          document.body.appendChild(controls);
-        }
+          document.body.appendChild(controls)}
         
         // Focus management for modals and dropdowns
         function enhanceFocusManagement() {
           // Trap focus in modals
           document.addEventListener('keydown', function(e) {
             if (e.key === 'Tab') {
-              const modal = document.querySelector('.modal:not([style*="display: none"])');
+              const modal = document.querySelector('.modal:not(Service Feature)');
               if (modal) {
                 const focusableElements = modal.querySelectorAll(
-                  'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+                  'button, Service Feature)'
                 );
-                const firstElement = focusableElements[0];
-                const lastElement = focusableElements[focusableElements.length - 1];
+                const firstElement = focusableElementsService Feature;
                 
                 if (e.shiftKey) {
                   if (document.activeElement === firstElement) {
                     lastElement.focus();
-                    e.preventDefault();
-                  }
+                    e.preventDefault()}
                 } else {
                   if (document.activeElement === lastElement) {
                     firstElement.focus();
-                    e.preventDefault();
-                  }
+                    e.preventDefault()}
                 }
               }
             }
             
             // Close modals with Escape key
             if (e.key === 'Escape') {
-              const modal = document.querySelector('.modal:not([style*="display: none"])');
+              const modal = document.querySelector('.modal:not(Service Feature)');
               if (modal) {
-                const closeBtn = modal.querySelector('[aria-label="Close"], .close-btn');
-                if (closeBtn) closeBtn.click();
-              }
+                const closeBtn = modal.querySelector('Service Feature, .close-btn');
+                if (closeBtn) closeBtn.click()}
             }
-          });
-        }
+          })}
         
         // Add ARIA labels to interactive elements
         function addAriaLabels() {
           // Add aria-labels to buttons without text
-          const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+          const iconButtons = document.querySelectorAll('button:not(Service Feature)');
           iconButtons.forEach(button => {
             const icon = button.querySelector('svg, i');
             if (icon) {
               const iconName = icon.getAttribute('class') || icon.tagName.toLowerCase();
-              button.setAttribute('aria-label', \`\${iconName} button\`);
-            }
+              button.setAttribute('aria-label', \`\${iconName} button\`)}
           });
           
           // Add role="button" to clickable divs
-          const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer"]');
+          const clickableDivs = document.querySelectorAll('divService Feature');
           clickableDivs.forEach(div => {
             if (!div.getAttribute('role')) {
               div.setAttribute('role', 'button');
-              div.setAttribute('tabindex', '0');
-            }
+              div.setAttribute('tabindex', '0')}
           });
           
           // Add aria-expanded to collapsible elements
-          const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="collapse"]');
+          const collapsibles = document.querySelectorAll('Service Feature');
           collapsibles.forEach(element => {
             if (!element.getAttribute('aria-expanded')) {
-              element.setAttribute('aria-expanded', 'false');
-            }
-          });
-        }
+              element.setAttribute('aria-expanded', 'false')}
+          })}
         
         // Announce page changes to screen readers
         function addLiveRegion() {
@@ -212,8 +194,7 @@ if (fs.existsSync(indexPath)) {
           const originalPushState = history.pushState;
           history.pushState = function() {
             originalPushState.apply(history, arguments);
-            liveRegion.textContent = 'Page navigation complete';
-          };
+            liveRegion.textContent = 'Page navigation complete'}
         }
         
         // Initialize accessibility features
@@ -223,27 +204,22 @@ if (fs.existsSync(indexPath)) {
           addFontSizeControls();
           enhanceFocusManagement();
           addAriaLabels();
-          addLiveRegion();
-        });
+          addLiveRegion()});
         
         // Add high contrast styles
         const highContrastStyles = \`
           .high-contrast {
-            filter: contrast(150%) brightness(120%);
-          }
+            filter: contrast(150%) brightness(120%)}
           .high-contrast * {
-            border-color: currentColor !important;
-          }
+            border-color: currentColor !important}
           .high-contrast button,
           .high-contrast a {
-            border: 2 px solid currentColor !important;
-          }
+            border: 2 px solid currentColor !important}
         \`;
         
         const styleSheet = document.createElement('style');
         styleSheet.textContent = highContrastStyles;
-        document.head.appendChild(styleSheet);
-      })();
+        document.head.appendChild(styleSheet)})();
     </script>
   `;
   
@@ -251,8 +227,7 @@ if (fs.existsSync(indexPath)) {
   indexContent = indexContent.replace('</body>', `${accessibilityScript}</body>`);
   
   fs.writeFileSync(indexPath, indexContent);
-  console.log('✅ Enhanced accessibility features');
-}
+  console.log('✅ Enhanced accessibility features')}
 
 // Create accessibility statement
 const accessibilityStatement = `# Accessibility Statement
@@ -267,66 +242,15 @@ function generateAccessibilityReport() {
       totalIssues: 0;
       criticalIssues: 0;
       warnings: 0;
-      passed: 0;
-    },
-    checks: [
-      {,
-        id: "alt-text",
-        name: "Alt text for images",
-        status: "passed",
-        description: "All images have appropriate alt text"},
-      {
-        id: "heading-structure",
-        name: "Heading structure",
-        status: "passed",
-        description: "Proper heading hierarchy (h1, h2, h3, etc.)"
-      },
-      {
-        id: "color-contrast",
-        name: "Color contrast",
-        status: "passed",
-        description: "Sufficient color contrast ratios"},
-      {
-        id: "keyboard-navigation",
-        name: "Keyboard navigation",
-        status: "passed",
-        description: "All interactive elements are keyboard accessible"},
-      {
-        id: "focus-management",
-        name: "Focus management",
-        status: "passed",
-        description: "Proper focus management and visible focus indicators"},
-      {
-        id: "aria-labels",
-        name: "ARIA labels",
-        status: "passed",
-        description: "Appropriate ARIA labels and roles"},
-      {
-        id: "semantic-html",
-        name: "Semantic HTML",
-        status: "passed",
-        description: "Proper use of semantic HTML elements"},
-      {
-        id: "skip-links",
-        name: "Skip links",
-        status: "passed",
-        description: "Skip links for keyboard navigation"}
-    ],
-    recommendations: [,
-      "Continue regular accessibility audits",
-      "Test with screen readers",
-      "Ensure keyboard-only navigation works",
-      "Maintain color contrast standards",
-      "Keep ARIA labels up to date"
-    ]
-  };
+      passed: 0},
+    checks: Service Feature
+  }
 
   fs.writeFileSync(
     path.join(__dirname, '../public/accessibility-report.json'), 
     JSON.stringify(accessibilityReport, null, 2)
   );
-  console.log('✅ Accessibility report generated');
-}
+  console.log('✅ Accessibility report generated')}
 
 // 2. Generate accessibility checklist;
 function generateAccessibilityChecklist() {
@@ -336,105 +260,26 @@ function generateAccessibilityChecklist() {
     title: "Zion Tech Group Accessibility Checklist"
     version: "1.0.0"
     lastUpdated: new Date().toISOString()
-    categories: [,
-      {,
-        name: "Visual Design",
-        items: [,
-          "Color contrast meets WCAG AA standards (4.5:1 for normal text)",
-          "Text is readable at 200% zoom",
-          "No reliance on color alone to convey information",
-          "Focus indicators are visible and clear"
-        ]
-      },
-      {
-        name: "Navigation",
-        items: [,
-          "Skip links are available for keyboard users",
-          "All interactive elements are keyboard accessible",
-          "Tab order is logical and intuitive",
-          "Focus management works correctly"
-        ]
-      },
-      {
-        name: "Content",
-        items: [,
-          "All images have appropriate alt text",
-          "Headings follow proper hierarchy (h1, h2, h3, etc.)",
-          "Links have descriptive text",
-          "Form labels are properly associated"
-        ]
-      },
-      {
-        name: "ARIA and Semantics",
-        items: [,
-          "ARIA labels are used appropriately",
-          "Semantic HTML elements are used correctly",
-          "Roles are properly assigned",
-          "Live regions are used for dynamic content"
-        ]
-      },
-      {
-        name: "Testing",
-        items: [,
-          "Tested with screen readers (NVDA, JAWS, VoiceOver)",
-          "Tested with keyboard-only navigation",
-          "Tested with voice control software",
-          "Tested with high contrast mode"
-        ]
-      }
-    ]
-  };
+    categories: Service Feature
+  }
 
   fs.writeFileSync(
     path.join(__dirname, '../public/accessibility-checklist.json'), 
     JSON.stringify(checklist, null, 2)
   );
-  console.log('✅ Accessibility checklist generated');
-}
+  console.log('✅ Accessibility checklist generated')}
 
 // 3. Generate accessibility improvements;
 function generateAccessibilityImprovements() {
   console.log('🔧 Generating accessibility improvements...');
   
-  const improvements = [
-    {
-      id: "skip-links",
-      title: "Add Skip Links",
-      description: "Add skip links to allow keyboard users to bypass navigation",
-      priority: "high",
-      implementation: "Add skip links at the top of each page"},
-    {
-      id: "focus-management",
-      title: "Improve Focus Management",
-      description: "Ensure proper focus management for modal dialogs and dynamic content",
-      priority: "high",
-      implementation: "Implement focus trapping and restoration"},
-    {
-      id: "aria-labels",
-      title: "Enhance ARIA Labels",
-      description: "Add more descriptive ARIA labels for complex UI components",
-      priority: "medium",
-      implementation: "Review and enhance ARIA labels throughout the application"},
-    {
-      id: "color-contrast",
-      title: "Verify Color Contrast",
-      description: "Ensure all text meets WCAG AA contrast requirements",
-      priority: "high",
-      implementation: "Test and adjust color combinations as needed"},
-    {
-      id: "keyboard-navigation",
-      title: "Enhance Keyboard Navigation",
-      description: "Ensure all interactive elements are keyboard accessible",
-      priority: "high",
-      implementation: "Add keyboard event handlers where needed"}
-  ];
+  const improvements = Service Feature;
 
   fs.writeFileSync(
     path.join(__dirname, '../public/accessibility-improvements.json'), 
     JSON.stringify(improvements, null, 2)
   );
-  console.log('✅ Accessibility improvements generated');
-}
+  console.log('✅ Accessibility improvements generated')}
 
 // 4. Generate accessibility testing guide;
 function generateAccessibilityTestingGuide() {
@@ -463,22 +308,8 @@ function generateAccessibilityTestingGuide() {
         usage: "NVDA (Windows), JAWS (Windows), VoiceOver (Mac)"
       }
     ],
-    manualTests: [,
-      "Navigate the entire site using only the keyboard",
-      "Test with screen reader software",
-      "Verify color contrast ratios",
-      "Test with high contrast mode enabled",
-      "Test with zoom levels up to 200%",
-      "Verify form labels and error messages",
-      "Test focus indicators and tab order"
-    ],
-    automatedTests: [,
-      "Run axe-core tests in CI/CD pipeline",
-      "Use Lighthouse accessibility audit",
-      "Implement automated color contrast testing",
-      "Test with accessibility testing tools"
-    ]
-  };
+    manualTests: Service Feature
+  }
 
 ## Our Commitment
 Zion Tech Group is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.
@@ -493,11 +324,9 @@ async function runAccessibilityEnhancements() {
     generateAccessibilityImprovements();
     generateAccessibilityTestingGuide();
     
-    console.log('🎉 Accessibility enhancement completed successfully!');
-  } catch (error) {
+    console.log('🎉 Accessibility enhancement completed successfully!')} catch (error) {
     console.error('❌ Error during accessibility enhancement:', error);
-    process.exit(1);
-  }
+    process.exit(1)}
 }
 
 ## Accessibility Features

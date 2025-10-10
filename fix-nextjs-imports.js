@@ -125,23 +125,21 @@ function processFile(filePath) {
         const regex = new RegExp(
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     replacements.forEach(({ from, to, context }) => {/* TODO: Fix JSX expression */}
-          `(${context}[^>]*?)${from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`,
+          `(${context}Service Feature/g, '\\$&')}`,
           'g'
         );
         if (regex.test(content)) {/* TODO: Fix JSX expression */}`
           content = content.replace(regex, `$1${to}`);
-          modified = true;
-        }
+          modified = true}
       } else {
         // Simple replacement;
         if (content.includes(from)) {
           content = content.replace(
       } else {/* TODO: Fix JSX expression */}
-            new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'),
+            new RegExp(from.replace(/Service Feature/g, '\\$&'), 'g'),
             to;
           );
-          modified = true;
-        }
+          modified = true}
       }
     });
 
@@ -149,31 +147,22 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     content = content;
       .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines;
       .replace(/import\s+{\s*}\s+from\s+['"][^'"]*['"];?\s*\n/g, '') // Remove empty imports;
-      .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match => {)
-        // Merge consecutive imports from same module;)
-        lines.forEach(line => {)
-          if (match) {
-            const [, importsStr, module] = match;
-            if (!imports[module]) imports[module] = [];
-            imports[module].push(importsStr);
-          }
+      .replace(/import\s+Service Feature.push(importsStr)}
       .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines;"
       .replace(/import\s+{\s*}\s+from\s+['"][^'"]*['"];?\s*\n/g, '') // Remove empty imports;
-      .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match => {/* TODO: Fix JSX expression */}
+      .replace(/import\s+Service Feature+;\s*\n/g, match => {/* TODO: Fix JSX expression */}
           })
         });
 
         return ()
           Object.entries(imports)
             .join('\n') + '\n'
-        );
-      });
+        )});
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -197,8 +186,7 @@ async function main() {
     files.forEach(file => {)
       totalFiles++;)
       if (processFile(file)) {
-        fixedFiles++;
-      }
+        fixedFiles++}
 async function main() {/* TODO: Fix JSX expression */}
 }
   // Find all TypeScript/JavaScript files in app directory;
@@ -207,8 +195,7 @@ async function main() {/* TODO: Fix JSX expression */}
 
     files.forEach(file => {/* TODO: Fix JSX expression */}
       })
-    });
-  }
+    })}
 
 
 
@@ -220,9 +207,9 @@ async function main() {/* TODO: Fix JSX expression */}
 }
 `
 if (import.meta.url === `fil)`
-  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
+  e://${process.argvService Feature}`) {/* TODO: Fix JSX expression */}
 }
 
-export { processFile, replacements };
+export { processFile, replacements }
 
 }}}}}}}}}}}"`

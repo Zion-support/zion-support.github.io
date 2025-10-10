@@ -4,10 +4,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Shield, Target, Zap, Settings, CheckCircle, Star,  Shield,  Target,  Settings } from 'lucide-react';
 const AISecurityMonitorPage: React.FC = () => {
-  const features = [];
+  const features = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   ico,
   n: Shield,
       titl,
@@ -15,8 +15,7 @@ const AISecurityMonitorPage: React.FC = () => {
       descriptio,
   n: 'AI-powered threat detection and monitoring',
       benefit,
-  s: ['Real-time monitoring', 'Threat analysis', 'Incident response'];
-    },
+  s: ['Real-time monitoring', 'Threat analysis', 'Incident response']},
       ico,
   n: Target,
       titl,
@@ -84,6 +83,5 @@ const AISecurityMonitorPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default AiSecurityMonitorPage;

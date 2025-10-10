@@ -6,15 +6,12 @@ import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, Boo
 interface FAQ {
   question: string;
   answer: string;
-  category: string;
-}
+  category: string}
 
 const SupportPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
-
-  const faqs: FAQ[] = [
+  const Service Feature = useState('');
+  const Service Feature = useState('all');
+  const Service Feature = [
     {
       question: 'How do I get started with your AI solutions?',
       answer: 'Getting started is easy! Contact our team for a consultation where we\'ll assess your needs and recommend the best AI solutions for your business. We\'ll guide you through the entire implementation process.',
@@ -90,12 +87,10 @@ const SupportPage: React.FC = () => {
     const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+    return matchesSearch && matchesCategory});
 
   const toggleFAQ = (index: number) => {
-    setExpandedFAQ(expandedFAQ === index ? null : index);
-  };
+    setExpandedFAQ(expandedFAQ === index ? null : index)}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -258,7 +253,6 @@ const SupportPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )}
 
 export default SupportPage;

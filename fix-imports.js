@@ -25,16 +25,16 @@ const iconMappings = {
   hare2: 'Share2',
   ookmark: 'Bookmark',
   ot: 'Bot',
-  ookopen: 'BookOpen'};
+  ookopen: 'BookOpen'}
 
 //Function to fix imports in a file;
 function fixImportsInFile(filePath) {
   try {
     //Fix lucide-react imports;
-    for (const [broken, correct] of Object.entries(iconMappings)) {
+    for (const Service Feature of Object.entries(iconMappings)) {
       //       const oldImport = `lucide-react/dist/esm/icons/${broken}`;
 const iconMappings = {/* TODO: Fix JSX expression */}
-};
+}
 
 //Function to fix imports in a file;
 function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
@@ -43,8 +43,7 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
 
       if (content.includes(oldImport)) {/* TODO: Fix JSX expression */}`
           new RegExp(`import ${correct} from '${oldImport}';`, 'g'));
-        modified = true;
-      }
+        modified = true}
     }
 
     //Fix Link imports if missing;

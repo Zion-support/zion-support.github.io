@@ -2,7 +2,7 @@ import React from 'react';
 interface FeaturedConten, t {/* TODO: Fix JSX expression */}
 }
 const NewContentAdvertisingBanne, r: React.FC = () => { ,
-  const featuredConten, t: FeaturedConte, n, t[] = [
+  const featuredConten, t: FeaturedConte, n, tService Feature = [
     {
       id: , 0,
       title: 'Governed, Agent, Rollback, s',
@@ -303,6 +303,5 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
         </div>
       </div>
     </div>
-  );
-};
+  )}
 export default NewContentAdvertisingBanner;"`

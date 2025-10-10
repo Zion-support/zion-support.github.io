@@ -4,12 +4,11 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 interface ServiceCardProps {
   title: string;
   description: string;
-  features: string[];
+  features: stringService Feature;
   price?: string;
   popular?: boolean;
   onSelect?: () => void;
-  className?: string;
-}
+  className?: string}
 const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
@@ -58,7 +57,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </button>
       )}
     </div>
-  );
-};
+  )}
 export default ServiceCard;
   </ServiceCardProps>

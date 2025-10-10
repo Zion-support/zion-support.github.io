@@ -1,9 +1,8 @@
 import { execSync } from 'child_process';
 
 function runCommand(command) {/* TODO: Fix JSX expression */}
-  o: 'pipe' });
-  } catch (error) {/* TODO: Fix JSX expression */}
-  r: error.stderr };
+  o: 'pipe' })} catch (error) {/* TODO: Fix JSX expression */}
+  r: error.stderr }
   }
 }
 
@@ -40,11 +39,8 @@ function main() {/* TODO: Fix JSX expression */}
     console.log(statusResult);
     
     console.log('🎉 All changes successfully pushed to main!');
-    return true;
-    } catch (error) {
+    return true} catch (error) {
     console.log('❌ Error pushing changes:', error.message);
-    return false;
-    
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }

@@ -6,11 +6,11 @@ interface Props {/* TODO: Fix JSX expression */}
 interface State {/* TODO: Fix JSX expression */}
 }
 class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
-  r: false };
+  r: false }
   }
   static getDerivedStateFromError(erro)
   r: Error): State {/* TODO: Fix JSX expression */}
-  r: true, error };
+  r: true, error }
   }
   componentDidCatch(erro,
   r: Error, errorInf)
@@ -21,14 +21,12 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   error:', error, errorInfo);
     // You can also log to external services here;
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
-      });
-    }
+      })}
   }
   handleRetry = () => {/* TODO: Fix JSX expression */}
-  o: undefined });
-  };
+  o: undefined })}
   handleReload = () => {/* TODO: Fix JSX expression */}
-  };
+  }
   render() {/* TODO: Fix JSX expression */}
       }
       return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
@@ -108,9 +106,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
             </div>
           </div>
         </div>
-      );
-    }
-    return this.props.children;
-  }
+      )}
+    return this.props.children}
 }
 export default ErrorBoundary;"

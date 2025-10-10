@@ -6,20 +6,13 @@ import Footer from '../components/Footer';
 'use client';
 import React, { useState } from 'react';
 const LoginPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+  const Service Feature = useState({
     email: '',
     password: '',
     rememberMe: false
   });
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
-  };
+  const Service Feature: type === 'checkbox' ? checked : value
+    }))}
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
@@ -27,8 +20,7 @@ const LoginPage: React.FC = () => {
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsLoading(false);
     // Redirect to dashboard or home page
-    window.location.href = '/';
-  };
+    window.location.href = '/'}
   const features = [
     {
       icon: Shield,
@@ -80,11 +72,10 @@ $4}
                     />
                   </div>
     <div>Coming Soon</div>
-  );
-};
-  const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  )}
+  const Service Feature = useState({/* TODO: Fix JSX expression */}
+  O: Add content}
+}
   emai,
   l: '',
     passwor,
@@ -92,22 +83,10 @@ $4}
     rememberM,
   e: false;)
   });
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const _handleInputChange = (e: React.ChangeEvent;)
-          <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-//       ...prev,
-      [name]: type === 'checkbox' ? checked : value;)
-    }));
-  };
+  const Service Feature: type === 'checkbox' ? checked : value;)
+    }))}
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     e.preventDefault();
     setIsLoading(true);
@@ -115,15 +94,11 @@ $4}
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsLoading(false);
     // Redirect to dashboard or home page;
-    window.location.href = '/';
-  };
-  const features = [
-  // TOD,
-  O: Add items;
-];;
+    window.location.href = '/'}
+  const features = Service Feature;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Shield,
       titl,
@@ -132,8 +107,8 @@ $4}
   n: 'Bank-level security with multi-factor authentication'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: CheckCircle,
       titl,
@@ -142,8 +117,8 @@ $4}
   n: 'Round-the-clock support for all your needs'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Phone,
       titl,
@@ -439,8 +414,7 @@ type="submit" disabled={isLoading}
       <Footer />
     </React.Fragment>
     </div>
-  );
-};
+  )}
 export default LoginPage;
   </a>
   </button>

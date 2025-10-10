@@ -92,8 +92,7 @@ export default function NotFound() {
         </div>
       </div>
     </div>
-  );
-}
+  )}
   </Link>
   </Link>
   </h2>

@@ -106,15 +106,11 @@ $4}
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-5 h-5" />
     <div>Coming Soon</div>
-  );
-};
-  const _devTools = [
-  // TOD,
-  O: Add items;
-];;
+  )}
+  const _devTools = Service Feature;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'AI Code Generator',
       descriptio,
@@ -129,8 +125,8 @@ $4}
   e: 'Starting at $99/month'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'API Testing Suite',
       descriptio,
@@ -145,8 +141,8 @@ $4}
   e: 'Starting at $149/month'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Database Management Tool',
       descriptio,
@@ -161,8 +157,8 @@ $4}
   e: 'Starting at $199/month'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'DevOps Automation',
       descriptio,
@@ -177,8 +173,8 @@ $4}
   e: 'Starting at $299/month'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Code Review Assistant',
       descriptio,
@@ -193,8 +189,8 @@ $4}
   e: 'Starting at $79/month'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Performance Profiler',
       descriptio,
@@ -426,8 +422,7 @@ $4}
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default DeveloperToolsPage;
   </a>
   </a>

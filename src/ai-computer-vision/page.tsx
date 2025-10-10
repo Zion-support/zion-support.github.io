@@ -5,10 +5,10 @@ import Footer from '../components/Footer';
 import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
 import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucide-react';
 const AIComputerVisionPage: React.FC = () => {
-  const features = [];
+  const features = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   ico,
   n: Eye,
       titl,
@@ -16,8 +16,7 @@ const AIComputerVisionPage: React.FC = () => {
       descriptio,
   n: 'Advanced object detection and recognition with high accuracy',
       benefit,
-  s: ['Real-time detection', 'Multi-class recognition', 'Custom model training'];
-    },
+  s: ['Real-time detection', 'Multi-class recognition', 'Custom model training']},
       ico,
   n: Camera,
       titl,
@@ -61,9 +60,7 @@ const AIComputerVisionPage: React.FC = () => {
       descriptio,
   n: 'Perfect for small projects',
       feature,
-  s: [
-  // TOD,
-  O: Add items];
+  s: Service Feature;
 //         'Up to 1,000 images/month',
 //         'Basic models',
 //         'Email support',
@@ -167,8 +164,7 @@ Most Popular;
                       {feature}`
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
   // TOD,
-  O: Add content;
-}
+  O: Add content}
 //                     plan.popular;
 //                       ? 'cyber-button'
                       : 'border-2 border-cyan-400 text-cyan-400,
@@ -191,7 +187,6 @@ Ready to See the Future?"
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default PagePage;
   </p>

@@ -1,23 +1,6 @@
 import React from 'react';
 const January2026NewContentShowcaseBanne, r: React.FC = () => {,
-  const features = [,
-    { ic, o, n: B, r, a, i, n, title: "Synthetic, Consciousne, s, s", de, s, c: "True, AI, awarenes, s" },
-    { ic, o, n: Za, p, title: "Quantum, Edge, Processin, g", de, s, c: "S, u, b-millisecond, spe, e, d" },
-    { ic, o, n: Netw, o, r, k, title: "Autonomous, Me, s, h", de, s, c: "Se, l, f-organizing, syste, m, s" },
-    { ic, o, n: Shi, e, l, d, title: "Quantum, Securi, t, y", de, s, c: "Unbreakable, protecti, o, n" },
-    { ic, o, n: Cp, u, title: "Neuromorphi, c, A, I", de, s, c: "Bra, i, n-inspired, computi, n, g" }
-  ]; return(<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
-const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
-  e: "Synthetic, Consciousne, s, s", de, s, c: "True, AI, awarenes, s" },
-    {/* TODO: Fix JSX expression */}"
-  e: "Quantum, Edge, Processin, g", de, s, c: "S, u, b-millisecond, spe, e, d" },
-    {/* TODO: Fix JSX expression */}"
-  e: "Autonomous, Me, s, h", de, s, c: "Se, l, f-organizing, syste, m, s" },
-    {/* TODO: Fix JSX expression */}"
-  e: "Quantum, Securi, t, y", de, s, c: "Unbreakable, protecti, o, n" },
-    {/* TODO: Fix JSX expression */}"
-  e: "Neuromorphi, c, A, I", de, s, c: "Bra, i, n-inspired, computi, n, g" }
-  ]; return (<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
+  const features = Service Feature; return (<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
       anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
       transiti, o, n = {/* TODO: Fix JSX expression */}
   n: , 0., 8 }}"
@@ -154,6 +137,5 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
       <div, classNam, e = "absolute, to, p-10, lef, t-1, 0, w-2, 0, h-20, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-xl, animat, e-pul, s, e" /></div>"
       <div, className="absolute, botto, m-10, righ, t-1, 0, w-3, 2, h-32, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-xl, animat, e-pulse, dela, y-10, 0, 0" /></div>
     </moti, o, n.di, v>
-  );
-};
+  )}
 export default January2026NewContentShowcaseBanner;"

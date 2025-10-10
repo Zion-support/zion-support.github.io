@@ -39,14 +39,7 @@ const,
     {/* TODO: Fix JSX expression */}
     }
   ];
-  const pricing = [
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
+  const pricing = Service Feature;
   const stats = [
     {/* TODO: Fix JSX expression */}
   l: 'Time Savings' },
@@ -61,23 +54,19 @@ const,
     {
       title: 'Customer Onboarding',
       description: 'Automate the entire customer onboarding process from signup to first value delivery with personalized workflows.',
-      icon: Users;
-    },
+      icon: Users},
     {
       title: 'Invoice Processing',
       description: 'Automatically process invoices, validate data, route for approval, and update accounting systems.',
-      icon: Database;
-    },
+      icon: Database},
     {
       title: 'Lead Management',
       description: 'Automate lead scoring, assignment, follow-up sequences, and CRM updates based on lead behavior.',
-      icon: Globe;
-    },
+      icon: Globe},
     {
       title: 'Employee Onboarding',
       description: 'Streamline new hire processes with automated document collection, system access, and training assignments.',
-      icon: Settings;
-    }
+      icon: Settings}
   ];
   return(<React.Fragment>
       <SEOOptimizer;
@@ -201,8 +190,7 @@ const,
       </div>
     </div>
     </React.Fragment>
-  );
-};
+  )}
 const AIWorkflowAutomationPage = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
   return (
@@ -341,8 +329,7 @@ const AIWorkflowAutomationPage = () => {
         </main>
         <Footer />
       </div>,
-    </div>);
-}</h3>
+    </div>)}</h3>
   </h2>
   </h2>
   </div>

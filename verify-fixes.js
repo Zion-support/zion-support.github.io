@@ -21,8 +21,7 @@ import { fileURLToPath } from 'url';
     interfacePropsMatches.length === 1 &&)
     !hasDoubleClosing;)
   ) {
-    //     process.exit(0);
-  } else {
+    //     process.exit(0)} else {
     //     process.exit(1);
 // try {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}

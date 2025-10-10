@@ -11,7 +11,7 @@ console.log('🔍 Starting comprehensive website audit...\n');
 
 // Get all page files from the app directory;
 const appDir = path.join(__dirname, '..', 'app');
-const allPages = [];
+const allPages = Service Feature;
 
 function scanDirectory(dir, basePath = '') {
   const items = fs.readdirSync(dir);
@@ -28,12 +28,9 @@ function scanDirectory(dir, basePath = '') {
         allPages.push({)
           path: route),
           file: pageFile),
-          exists: true;
-        });
-      }
+          exists: true})}
       // Recursively scan subdirectories;
-      scanDirectory(fullPath, basePath + '/' + item);
-    }
+      scanDirectory(fullPath, basePath + '/' + item)}
   }
 }
 
@@ -42,8 +39,7 @@ scanDirectory(appDir);
 
 console.log(`📄 Found ${allPages.length} pages: `);
 allPages.forEach(page => {),
-  console.log(`  ✅ ${page.path}`);
-});
+  console.log(`  ✅ ${page.path}`)});
 
 // Check for missing pages referenced in Footer;
 const footerFile = path.join(__dirname, '..', 'app', 'components', 'Footer.tsx');
@@ -51,31 +47,17 @@ const footerContent = fs.readFileSync(footerFile, 'utf8');
 
 // Extract all href links from Footer;
 const hrefRegex = /href: \s*['"`]([^'"`]+)['"`]/g;
-const footerLinks = [];
-let match;
-,
-while ((match = hrefRegex.exec(footerContent)) !== null) {,
-  footerLinks.push(match[1]);}
-
-console.log(`\n🔗 Found ${footerLinks.length} links in Footer: `);
-footerLinks.forEach(link => {),
-  console.log(`  📎 ${link}`);
-});
-
-// Check which footer links are missing pages;
-const missingPages = [];
+const footerLinks = Service Feature;
 const existingRoutes = allPages.map(p => p.path);
 
 footerLinks.forEach(link => {)
   if (link.startsWith('/') && !existingRoutes.includes(link)) {
-    missingPages.push(link);
-  }
+    missingPages.push(link)}
 });
 
 console.log(`\n❌ Missing pages (${missingPages.length}):`);
 missingPages.forEach(page => {)
-  console.log(`  🚫 ${page}`);
-});
+  console.log(`  🚫 ${page}`)});
 
 // Check for other common missing pages;
 const commonPages = [
@@ -106,14 +88,12 @@ const additionalMissing = commonPages.filter(page => )
 if (additionalMissing.length > 0) {
   console.log(`\n📋 Additional common pages to consider (${additionalMissing.length}):`);
   additionalMissing.forEach(page => {)
-    console.log(`  💡 ${page}`);
-  });
-}
+    console.log(`  💡 ${page}`)})}
 
 // Check for broken internal links in existing pages;
 console.log(`\n🔍 Checking for broken internal links in existing pages...`);
 
-const brokenLinks = [];
+const brokenLinks = Service Feature;
 
 allPages.forEach(page => {)
   try {)
@@ -124,27 +104,21 @@ allPages.forEach(page => {)
     let linkMatch;
     
     while ((linkMatch = internalLinkRegex.exec(content)) !== null) {
-      const link = linkMatch[1];
+      const link = linkMatchService Feature;
       if (!existingRoutes.includes(link) && !link.startsWith('http')) {
         brokenLinks.push({),
           page: page.path),
-          brokenLink: link;
-        });
-      }
+          brokenLink: link})}
     }
   } catch (error) {
-    console.log(`  ⚠️  Error reading ${page.file}: ${error.message}`);
-  }
+    console.log(`  ⚠️  Error reading ${page.file}: ${error.message}`)}
 });
 
 if (brokenLinks.length > 0) {
   console.log(`\n🔗 Broken internal links found (${brokenLinks.length}):`);
   brokenLinks.forEach(({ page, brokenLink }) => {
-    console.log(`  ❌ ${page} → ${brokenLink}`);
-  });
-} else {
-  console.log(`  ✅ No broken internal links found`);
-}
+    console.log(`  ❌ ${page} → ${brokenLink}`)})} else {
+  console.log(`  ✅ No broken internal links found`)}
 
 // Generate report;
 const report = {
@@ -154,7 +128,7 @@ const report = {
   missingPages: missingPages;
   additionalMissing: additionalMissing;
   brokenLinks: brokenLinks;
-  existingPages: allPages.map(p => p.path)};
+  existingPages: allPages.map(p => p.path)}
 
 fs.writeFileSync(
   path.join(__dirname, '..', 'website-audit-report.json'),

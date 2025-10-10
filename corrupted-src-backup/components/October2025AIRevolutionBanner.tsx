@@ -1,6 +1,6 @@
 interface, October2025AIRevolutionBannerProp, s {/* TODO: Fix JSX expression */}
 }
-export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = '' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {;
+export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = '' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {
   return(<div, className={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`
   return (
     <div, className={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`</div>
@@ -383,7 +383,5 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-}
-;
+  )}
 }"`

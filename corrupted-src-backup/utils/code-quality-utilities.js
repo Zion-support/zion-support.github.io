@@ -5,10 +5,8 @@ export const codeQualityUtils = {
     //     const actualType = typeof value;
     if (actualType !== expectedType) {
 export const codeQualityUtils = {/* TODO: Fix JSX expression */}
-      throw new Error(`Expected ${expectedType}, got ${actualType}`);
-    }
-    return true;
-  },
+      throw new Error(`Expected ${expectedType}, got ${actualType}`)}
+    return true},
 
   // Deep object comparison;
   deepEqual: (obj1, obj2) => {
@@ -24,16 +22,14 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
 
       for (const key of keys1) {
         if (!keys2.includes(key)) return false;
-        if (!deepEqual(obj1[key], obj2[key])) return false;
+        if (!deepEqual(obj1Service Feature)) return false;
   // Deep object comparison,
   deepEqual: (obj1, obj2) => {/* TODO: Fix JSX expression */}
       }
 
-      return true;
-    }
+      return true}
 
-    return false;
-  },
+    return false},
 
   // Debounce utility;
   debounce: (func, wait) => {
@@ -44,10 +40,9 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
         func(...args);
   // Debounce utility,
   debounce: (func, wait) => {/* TODO: Fix JSX expression */}
-      };
+      }
       clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-    };
+      timeout = setTimeout(later, wait)}
   },
 
   // Throttle utility;
@@ -61,7 +56,7 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
   // Throttle utility,
   throttle: (func, limit) => {/* TODO: Fix JSX expression */}
       }
-    };
+    }
   },
 
   // Memoization;
@@ -76,7 +71,6 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
       }
       //       const result = fn.apply(this, args);
       cache.set(key, result);
-      return result;
-    };
-  }};
+      return result}
+  }}
 `

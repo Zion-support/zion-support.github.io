@@ -110,8 +110,7 @@ const AiClimateSolutionsProPage: React.FC = () => {
       </main>
       <Footer />
     </React.Fragment>
-  );
-};
+  )}
 export default AiClimateSolutionsProPage;
   </button>
   </h2>

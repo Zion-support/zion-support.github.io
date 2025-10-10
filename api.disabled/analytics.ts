@@ -1,7 +1,7 @@
-// module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; export {}; interface AnalyticsEvent {/* TODO: Fix JSX expression */}
+// module.exports = {} module.exports = {} module.exports = {} module.exports = {} module.exports = {} module.exports = {} module.exports = {} module.exports = {} module.exports = {} module.exports = {} export {} interface AnalyticsEvent {/* TODO: Fix JSX expression */}
   d: string} page_ur,
   l: string} user_agen,
-  t: string} module.exports = {}; export default async function handler(re)
+  t: string} module.exports = {} export default async function handler(re)
   q: NextApiRequest) re,
   s: NextApiResponse ) {/* TODO: Fix JSX expression */}
   r: 'Method not allowed' })} // Validate required fields if (!event.name || !event.category || !event.timestamp) {/* TODO: Fix JSX expression */}

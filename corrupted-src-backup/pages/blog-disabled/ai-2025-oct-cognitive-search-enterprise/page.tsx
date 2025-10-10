@@ -393,7 +393,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 <Brain className="ml-2 h-5 w-5 ">,
                 <Brain className="ml-2 h-5 w-5" />);
 export default function CognitiveSearchEnterprise20, 2, 5() {/* TODO: Fix JSX expression */}
-};
+}
   </div>
   </div>
   </div>

@@ -4,10 +4,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Palette, Target, Zap, Settings, CheckCircle, Star,  Palette,  Target,  Settings } from 'lucide-react';
 const AIDesignAssistantPage: React.FC = () => {
-  const features = [];
+  const features = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   ico,
   n: Palette,
       titl,
@@ -15,8 +15,7 @@ const AIDesignAssistantPage: React.FC = () => {
       descriptio,
   n: 'AI-powered design creation and optimization',
       benefit,
-  s: ['Auto design', 'Style optimization', 'Brand consistency'];
-    },
+  s: ['Auto design', 'Style optimization', 'Brand consistency']},
       ico,
   n: Target,
       titl,
@@ -89,6 +88,5 @@ const AIDesignAssistantPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default PagePage;

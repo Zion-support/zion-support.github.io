@@ -7,8 +7,7 @@ interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
-}
+  enableCodeSplitting?: boolean}
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
   children, 
@@ -17,9 +16,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enablePreloading = true,
   enableCodeSplitting = true
 }) => {
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizations, setOptimizations] = useState<string[]>([]);
-  const [performanceScore, setPerformanceScore] = useState<number | null>(null);
+  const Service Feature = useState<number | null>(null);
 
   const optimizeImages = useCallback(() => {
     if (!enableImageOptimization) return;
@@ -27,13 +24,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
       if (!img.loading) {
-        img.loading = 'lazy';
-      }
+        img.loading = 'lazy'}
       if (!img.decoding) {
-        img.decoding = 'async';
-      }
-    });
-  }, [enableImageOptimization]);
+        img.decoding = 'async'}
+    })}, Service Feature);
 
   const optimizeMemory = useCallback(() => {
     if ('memory' in performance) {
@@ -41,21 +35,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
         // Trigger garbage collection if available
         if (window.gc) {
-          window.gc();
-        }
+          window.gc()}
       }
     }
-  }, []);
-
-  const runOptimizations = useCallback(async () => {
-    setIsOptimizing(true);
-    const newOptimizations: string[] = [];
+  }, Service Feature;
 
     // Optimize images
     if (enableImageOptimization) {
       optimizeImages();
-      newOptimizations.push('Images optimized for lazy loading');
-    }
+      newOptimizations.push('Images optimized for lazy loading')}
 
     // Optimize memory
     optimizeMemory();
@@ -67,17 +55,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     newOptimizations.push(`Performance score: ${score}/100`);
 
     setOptimizations(newOptimizations);
-    setIsOptimizing(false);
-  }, [enableImageOptimization, optimizeImages, optimizeMemory]);
-
-  useEffect(() => {
-    // Run initial optimizations
-    const timer = setTimeout(() => {
-      runOptimizations();
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, [runOptimizations]);
+    setIsOptimizing(false)}, Service Feature);
 
   return (
     <div className="performance-optimizer">
@@ -125,8 +103,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       )}
     </div>
   );
-<<<<<<< HEAD
-=======
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
@@ -155,9 +131,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         link.rel = 'preload';
         link.href = src;
         link.as = 'image';
-        document.head.appendChild(link);
-      });
-    }
+        document.head.appendChild(link)})}
 
     // Optimize images
     if (enableImageOptimization && typeof window !== 'undefined') {
@@ -165,15 +139,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       images.forEach(img => {
         // Add loading="lazy" for non-critical images
         if (enableLazyLoading && !img.hasAttribute('loading')) {
-          img.loading = 'lazy';
-        }
+          img.loading = 'lazy'}
 
         // Add decoding="async" for better performance
         if (!img.hasAttribute('decoding')) {
-          img.decoding = 'async';
-        }
-      });
-    }
+          img.decoding = 'async'}
+      })}
 
     // Intersection Observer for lazy loading
     if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
@@ -184,15 +155,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             if (img.dataset.src) {
               img.src = img.dataset.src;
               img.removeAttribute('data-src');
-              observer.unobserve(img);
-            }
+              observer.unobserve(img)}
           }
-        });
-      });
+        })});
 
-      const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach(img => imageObserver.observe(img));
-    }
+      const lazyImages = document.querySelectorAll('imgService Feature');
+      lazyImages.forEach(img => imageObserver.observe(img))}
 
     // Performance monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -204,21 +172,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           if (entry.entryType === 'first-input') {
             // FID measurement logged for performance monitoring
           }
-        });
-      });
+        })});
 
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-      } catch (e) {
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] })} catch (e) {
         // Fallback for browsers that don't support these entry types
       }
     }
-  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
+  }, Service Feature);
 
-  return null;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
-};
+  return null}
 
 export default PerformanceOptimizer;

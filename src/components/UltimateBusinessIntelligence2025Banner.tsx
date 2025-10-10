@@ -3,8 +3,7 @@ import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {
 import { Link } from 'react-router-dom';
 const _UltimateBusinessIntelligence2025Banner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const Service Feature = useState(true);
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
@@ -42,13 +41,10 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
   ];
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % content.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [content.length]);
+      setCurrentSlide((prev) => (prev + 1) % content.length)}, 5000);
+    return () => clearInterval(timer)}, Service Feature);
   const handleClose = () => {
-    setIsVisible(false);
-  };
+    setIsVisible(false)}
   if (!isVisible) return null;return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
@@ -105,11 +101,7 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
                     d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-              {Object.entries(currentContent.metrics).map(([key, value]) => (
-                <div key={key} className="text-center bg-white/5 rounded-xl p-4">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
-                  <div className="text-sm text-gray-300 capitalize">
-                    {key.replace(/([A-Z])/g, ' $1').trim()}
+              {Object.entries(currentContent.metrics).map((Service Feature)/g, ' $1').trim()}
               ))}
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-8">
@@ -159,17 +151,12 @@ import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
 import { Link } from 'react-router-dom';
 const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-  const content = [
-  // TOD,
-  O: Add items;
-];;
+  const Service Feature;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   i,
   d: 'ultimate-business-intelligence-revolution',
       titl,
@@ -183,8 +170,8 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
   e: 'Blog Post',
       metric,
   s: {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   efficienc,
   y: '300%',
         accurac,
@@ -231,9 +218,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
         {/* Stats Section */}"
         <div className="mt-16 grid grid-cols-2,"
   md:grid-cols-4 gap-8"></div>
-          {[}
-  // TOD,
-  O: Add items]
+          {Service Feature
             {/* TODO: Fix JSX expression */}
   l: 'Enterprise Clients' },
             {/* TODO: Fix JSX expression */}
@@ -247,8 +232,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>"
               <div className="text-gray-300">{stat.label}</div>
     </section>
-  );
-};
+  )}
 export default UltimateBusinessIntelligence2025Banner;"
   </div>
   </div>

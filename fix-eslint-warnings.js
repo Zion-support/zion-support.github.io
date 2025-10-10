@@ -17,19 +17,17 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
     }
   }
   
-  return files;
-}
+  return files}
 
 // Fix console statements;
 function fixConsoleStatements(content) {
   // Remove console.log, console.warn, console.error, console.info, console.debug;
-  content = content.replace(/^\s*console\.(log|warn|error|info|debug)\([^)]*\);\s*$/gm, '');
+  content = content.replace(/^\s*console\.(log|warn|error|info|debug)\(Service Feature*\);\s*$/gm, '');
   
   // Remove console statements that are part of multi-line expressions;
-  content = content.replace(/console\.(log|warn|error|info|debug)\([^)]*\);\s*/g, '');
+  content = content.replace(/console\.(log|warn|error|info|debug)\(Service Feature*\);\s*/g, '');
   
-  return content;
-}
+  return content}
 
 // Fix unused variables;
 function fixUnusedVariables(content) {
@@ -38,7 +36,7 @@ function fixUnusedVariables(content) {
   content = content.replace(/^\s*(const|let|var)\s+\w+\s*=.*?;\s*\/\/.*unused.*$/gm, '');
   
   // Prefix unused parameters with underscore;
-  content = content.replace(/function\s*\(([^)]*)\)/g, (_match, _params) => {
+  content = content.replace(/function\s*\((Service Feature*)\)/g, (_match, _params) => {
     return match.replace(/\b(\w+)\b/g, (_param) => {
       if (param.includes('_') || param === 'props' || param === 'event' || param === 'index') {
         return param;
@@ -48,12 +46,9 @@ function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
 // Fix unused variables;
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
       }
-      return `_${param}`;
-    });
-  });
+      return `_${param}`})});
   
-  return content;
-}
+  return content}
 
 // Fix unused imports;
 function fixUnusedImports(content) {
@@ -78,8 +73,7 @@ function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
     return true;)
   });
   
-  return filteredLines.join('\n');
-}
+  return filteredLines.join('\n')}
 
 // Main function;
 function main() {
@@ -96,8 +90,7 @@ function main() {
       if (content !== originalContent) {
         fs.writeFileSync(file, content, 'utf8');
 
-        fixedFiles++;
-      }
+        fixedFiles++}
     } catch (error) {
 
 function main() {/* TODO: Fix JSX expression */}
@@ -106,15 +99,10 @@ function main() {/* TODO: Fix JSX expression */}
       })
     } catch (error) {/* TODO: Fix JSX expression */}
     }
-  });
-
-}
+  })}
 
 // Run if this is the main module;
-if (import.meta.url === `file://${process.argv[1]}`) {
-// Run if this is the main module;`
-if (import.meta.url === `fil)`
-  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
+if (import.meta.url === `file://${process.argvService Feature}`) {/* TODO: Fix JSX expression */}
 }
 
-export { fixConsoleStatements, fixUnusedVariables, fixUnusedImports };`
+export { fixConsoleStatements, fixUnusedVariables, fixUnusedImports }`

@@ -195,7 +195,7 @@ $4}
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {Service Feature.map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
@@ -210,10 +210,10 @@ $4}
             Join thousands of professionals using Task Manager Pro to achieve more, 
 import { Link } from 'react-router-dom';
 const TaskManagerProPage: React.FC = () => {
-  const features = [];
+  const features = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   ico,
   n: CheckSquare,
       titl,
@@ -316,8 +316,7 @@ Works with Your Tools;"
             {pricingPlans.map((plan, index) => ()}
           <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${}
   // TOD,
-  O: Add content;
-}
+  O: Add content}
 //                 plan.popular;
 //                   ? 'border-cyan-400 scale-105'
                   : 'border-slate-700,
@@ -355,7 +354,7 @@ Most Popular;
             {testimonials.map((testimonial, index) => ()}"
           <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>"
                 <div className="flex items-center mb-4"></div>
-                  {[...Array(testimonial.rating)].map((_, i) => ()}"
+                  {Service Feature.map((_, i) => ()}"
           <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" /></Star>"
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div></div>"
@@ -370,8 +369,7 @@ Most Popular;
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
             Join thousands of professionals using Task Manager Pro to achieve more,
             work smarter, and reach their goals faster.
-  );
-};
+  )}
 export default TaskManagerProPage;
   </div>
   </div>

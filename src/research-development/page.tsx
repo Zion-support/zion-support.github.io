@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 'use client';
 import React, { useState } from 'react';
 const ResearchDevelopmentPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
+  const Service Feature = useState('ai');
   const _researchAreas = [
     {
       id: 'ai',
@@ -185,7 +185,7 @@ $4},
         color:       ,
 $4}
     ]
-  };
+  }
   const publications = [
     {
       title: 'Consensus Intelligence: A Framework for Multi-Agent Decision Making',
@@ -278,16 +278,12 @@ $4}
             <div className="text-center">
               <p className="text-gray-300 max-w-2xl mx-auto">
     <div>Coming Soon</div>
-  );
-};
-  const [activeTab, setActiveTab] = useState('ai');
-  const _researchAreas = [
-  // TOD,
-  O: Add items;
-];;
+  )}
+  const Service Feature = useState('ai');
+  const _researchAreas = Service Feature;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   i,
   d: 'ai',
       nam,
@@ -302,8 +298,8 @@ $4}
   n: 'Advancing the frontiers of AI and machine learning'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   i,
   d: 'quantum',
       nam,
@@ -318,8 +314,8 @@ $4}
   n: 'Exploring quantum algorithms and quantum advantage'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   i,
   d: 'autonomous',
       nam,
@@ -334,8 +330,8 @@ $4}
   n: 'Developing self-managing and intelligent systems'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   i,
   d: 'emerging',
       nam,
@@ -351,15 +347,13 @@ $4}
     }
   ];
   const researchProjects = {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   a,
-  i: [
-  // TOD,
-  O: Add items]
+  i: Service Feature
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Consensus Intelligence Framework',
         descriptio,
@@ -373,9 +367,7 @@ $4}
         fundin,
   g: '$2.5M',
         outcome,
-  s: [
-  // TOD,
-  O: Add items]
+  s: Service Feature
 //           'Improved decision accuracy by 40%',
 //           'Reduced computational overhead by 30%',
 //           'Published 3 papers in top-tier conferences'
@@ -386,8 +378,8 @@ $4}
   r: 'text-purple-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Autonomous Business Intelligence',
         descriptio,
@@ -401,9 +393,7 @@ $4}
         fundin,
   g: '$1.8M',
         outcome,
-  s: [
-  // TOD,
-  O: Add items]
+  s: Service Feature
 //           '95% automation of business processes',
 //           '300% improvement in decision speed',
           'Patent filed for core algorithms'
@@ -414,8 +404,8 @@ $4}
   r: 'text-green-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Neural Architecture Search for Enterprise',
         descriptio,
@@ -429,9 +419,7 @@ $4}
         fundin,
   g: '$3.2M',
         outcome,
-  s: [
-  // TOD,
-  O: Add items]
+  s: Service Feature
 //           '50% reduction in model development time',
 //           '25% improvement in model performance',
 //           'Open-source framework released'
@@ -443,12 +431,10 @@ $4}
       }
 //     ],
     quantu,
-  m: [
-  // TOD,
-  O: Add items]
+  m: Service Feature
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Quantum Machine Learning Algorithms',
         descriptio,
@@ -462,9 +448,7 @@ $4}
         fundin,
   g: '$4.1M',
         outcome,
-  s: [
-  // TOD,
-  O: Add items]
+  s: Service Feature
           'Quantum speedup demonstrated for specific problems',
 //           'Novel quantum ML algorithms developed',
 //           'Partnership with leading quantum hardware companies'
@@ -475,8 +459,8 @@ $4}
   r: 'text-blue-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Quantum Error Correction for Business Applications',
         descriptio,
@@ -490,9 +474,7 @@ $4}
         fundin,
   g: '$5.5M',
         outcome,
-  s: [
-  // TOD,
-  O: Add items]
+  s: Service Feature
 //           'Improved quantum error rates',
 //           'Practical implementation strategies',
           'Industry collaboration established'
@@ -504,12 +486,10 @@ $4}
       }
 //     ],
     autonomou,
-  s: [
-  // TOD,
-  O: Add items]
+  s: Service Feature
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Autonomous Enterprise Operations',
         descriptio,
@@ -523,9 +503,7 @@ $4}
         fundin,
   g: '$6.8M',
         outcome,
-  s: [
-  // TOD,
-  O: Add items]
+  s: Service Feature
 //           '90% reduction in manual operations',
 //           'Self-healing system capabilities',
 //           'Real-world deployment in 5 enterprises'
@@ -536,8 +514,8 @@ $4}
   r: 'text-green-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Multi-Agent Coordination Systems',
         descriptio,
@@ -551,9 +529,7 @@ $4}
         fundin,
   g: '$1.2M',
         outcome,
-  s: [
-  // TOD,
-  O: Add items]
+  s: Service Feature
 //           'Novel coordination algorithms developed',
 //           'Scalability demonstrated up to 1000 agents',
 //           'Published in Nature Communications'
@@ -565,12 +541,10 @@ $4}
       }
 //     ],
     emergin,
-  g: [
-  // TOD,
-  O: Add items]
+  g: Service Feature
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Neuromorphic Computing for AI',
         descriptio,
@@ -584,9 +558,7 @@ $4}
         fundin,
   g: '$3.7M',
         outcome,
-  s: [
-  // TOD,
-  O: Add items]
+  s: Service Feature
 //           'Novel neuromorphic algorithms',
 //           'Hardware-software co-design',
           'Industry partnerships established'
@@ -597,8 +569,8 @@ $4}
   r: 'text-yellow-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Edge AI for IoT Systems',
         descriptio,
@@ -612,9 +584,7 @@ $4}
         fundin,
   g: '$2.1M',
         outcome,
-  s: [
-  // TOD,
-  O: Add items]
+  s: Service Feature
 //           '10x reduction in power consumption',
 //           'Real-time processing capabilities',
 //           'Commercial product launched'
@@ -625,14 +595,11 @@ $4}
   r: 'text-blue-400'
       }
 //     ]
-  };
-  const publications = [
-  // TOD,
-  O: Add items;
-];;
+  }
+  const publications = Service Feature;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Consensus,
   Intelligence: A Framework for Multi-Agent Decision Making',
@@ -648,8 +615,8 @@ $4}
   k: '#'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Autonomous Business Process Optimization Using Reinforcement Learning',
       author,
@@ -664,8 +631,8 @@ $4}
   k: '#'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Quantum Machine Learning for Financial Risk Assessment',
       author,
@@ -680,8 +647,8 @@ $4}
   k: '#'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Multi-Agent Coordination in Distributed Systems',
       author,
@@ -696,13 +663,10 @@ $4}
   k: '#'
     }
   ];
-  const achievements = [
-  // TOD,
-  O: Add items;
-];;
+  const achievements = Service Feature;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Award,
       titl,
@@ -711,8 +675,8 @@ $4}
   n: 'Published in top-tier conferences and journals'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Users,
       titl,
@@ -721,8 +685,8 @@ $4}
   n: 'World-class research team across multiple disciplines'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Target,
       titl,
@@ -731,8 +695,8 @@ $4}
   n: 'Innovative technologies and methodologies'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Globe,
       titl,
@@ -766,8 +730,7 @@ $4}
                   onClick={() => setActiveTab(area.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
-  O: Add content;
-}
+  O: Add content}
                     activeTab === area.id;`
                       ? `${area.bgColor} ${area.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
@@ -792,7 +755,7 @@ $4}
               Current Research Projects;
   </
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => (
+              {researchProjectsService Feature.map((project, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
@@ -838,7 +801,7 @@ $4}
           </h2>"
             <div className="grid grid-cols-1,"
   lg:grid-cols-2 gap-8"></div>
-              {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => ()}"
+              {researchProjectsService Feature.map((project, index) => ()}"
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
   hover:border-cyan-400/50 transition-all duration-300"></div>"
                   <div className="flex items-start mb-4"></div>`
@@ -855,8 +818,7 @@ $4}
                       <div className="text-sm text-gray-400 mb-1">Status</div>`
                       <div className={`text-sm font-medium ${}
   // TOD,
-  O: Add content;
-}
+  O: Add content}
                         project.status === 'Completed' ? 'text-green-400' :
                         project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'`
                       }`}></div>
@@ -938,8 +900,7 @@ $4}
                         <span>{pub.year}</span>`
                         <span className={`px-2 py-1 rounded text-xs ${}
   // TOD,
-  O: Add content;
-}
+  O: Add content}
                           pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'`
                         }`}></span>
                           {pub.impact} Impact;
@@ -1055,8 +1016,7 @@ $4}
       <Footer />
     </React.Fragment>
     </div>
-  );
-};
+  )}
 export default ResearchDevelopmentPage;
   </a>
   </a>

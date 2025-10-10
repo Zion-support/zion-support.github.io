@@ -5,6 +5,5 @@ const,
   LoadingComponents: React.FC<LoadingComponentsProps> = () => {/* TODO: Fix JSX expression */}
       {/* Component content */}
     </div>
-  );
-}
+  )}
   </LoadingComponentsProps>

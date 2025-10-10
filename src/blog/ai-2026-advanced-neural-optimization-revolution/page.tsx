@@ -19,7 +19,6 @@ const Ai2026AdvancedNeuralOptimizationRevolutionPage: React.FC = () => {
       </div>
       <Footer />
     </div>
-  );
-};
+  )}
 export default Ai2026AdvancedNeuralOptimizationRevolutionPage;
   </Link>

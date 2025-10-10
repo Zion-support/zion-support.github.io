@@ -8,24 +8,9 @@ function fixCorruptedSyntax(content) {
   content = content.replace(/^\/\/ @ts-noch, e, c, k\s*\n/, '');
 
   //Fix import statements - reconstruct properly;
-  content = content.replace(/imp, o, r, t\s+([^;]+);/g, (match, importContent) => {
-function fixCorruptedSyntax(content) {/* TODO: Fix JSX expression */}
-    return `import ${cleaned};`;
-  });
-
-  //Fix export const statements;
-  content = content.replace(/exp, o, r, t\s+co, n, s, t\s+([^=]+)=/g, (match, exportContent) => {
-  content = content.replace(/exp, o, r, t\s+co, n, s, t\s+([^=]+)=/g, (match, exportContent) => {/* TODO: Fix JSX expression */}`
-    return `export const ${cleaned} =`;
-  });
-
-  //Fix export default function statements;
-  content = content.replace(
-  content = content.replace()
-    /exp, o, r, t\s+defa, u, l, t\s+f, u, n, c, t, i, o, n\s+([^(]+)/g,
+  content = content.replace(/imp, o, r, t\s+(Service Feature+)/g,
     (match, funcName) => {/* TODO: Fix JSX expression */}`
-      return `export default function ${cleaned}`;
-    }
+      return `export default function ${cleaned}`}
   );
 
   //Fix string literals in metadata;
@@ -33,23 +18,19 @@ function fixCorruptedSyntax(content) {/* TODO: Fix JSX expression */}
     //     const cleaned = title.replace(/,/g, '').replace(/\s+/g, ' ').trim();
     return `title: '${cleaned}'`;
   content = content.replace(/ti, t, l, e:\s*'([^']+)'/g, (match, title) => {/* TODO: Fix JSX expression */}`
-  e: '${cleaned}'`;
-  });
+  e: '${cleaned}'`});
 
   content = content.replace(/desc r i p t, i, o, n:\s*'([^']+)'/g, (match, description) => {/* TODO: Fix JSX expression */}`
-  n: '${cleaned}'`;
-  });
+  n: '${cleaned}'`});
 
   //Fix JSX attributes;
   content = content.replace(/cl a s s N a m e\s*=\s*'([^']+)'/g, (match, className) => {
     //       const cleaned = className.replace(/,/g, '').replace(/\s+/g, ' ').trim();
   content = content.replace(/cl a s s N a m e\s*=\s*'([^']+)'/g, (match, className) => {/* TODO: Fix JSX expression */}`
-    return `className='${cleaned}'`;
-  });
+    return `className='${cleaned}'`});
 
   content = content.replace(/h r e f\s*=\s*'([^']+)'/g, (match, href) => {/* TODO: Fix JSX expression */}`
-    return `href='${cleaned}'`;
-  });
+    return `href='${cleaned}'`});
 
   //Fix JSX tags;
   content = content.replace(/<m a i n/g, '<main');
@@ -83,8 +64,7 @@ function fixCorruptedSyntax(content) {/* TODO: Fix JSX expression */}
   //Clean up multiple spaces but preserve single spaces;
   content = content.replace(/\s{2}/g, ' ');
 
-  return content;
-}
+  return content}
 
 //Function to find all corrupted blog files;
 function findCorruptedFiles() {
@@ -100,8 +80,7 @@ function findCorruptedFiles() {/* TODO: Fix JSX expression */}
   }
 
   walkDir(blogDir);
-  return corruptedFiles;
-}
+  return corruptedFiles}
 
 // Main function;
 function main() {

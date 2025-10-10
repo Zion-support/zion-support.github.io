@@ -1,36 +1,17 @@
-<<<<<<< HEAD
-interface LinkProps {
-  href: string,
-    children: React.ReactNode
-interface LinkProps {}
-  href: string,
-    children: React.ReactNode
-  className?: string
-  target?: string
-  rel?: string
-  onClick?: () => void
-  'aria-label'?: string;}
-}
-export const Link: React.FC<LinkProps>= ({
-export const Link: React.FC<LinkProps> = ({}
-  href,
-  href: string,
-=======
 
-interface LinkProps {;
+interface LinkProps {
   href: string,;
-    children: React.ReactNode;}
+    children: React.ReactNode}
 interface LinkProps {}
   href: string;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   children: React.ReactNode;
   className?: string;
   target?: string;
   rel?: string;
   onClick?: () => void;
-  'aria-label'?: string;}
+  'aria-label'?: string}
 }
-export const Link: React.FC<LinkProps>= ({;}
+export const Link: React.FC<LinkProps>= ({}
 export const Link: React.FC<LinkProps> = ({}
   href,;
   href: string,;
@@ -39,7 +20,7 @@ export const Link: React.FC<LinkProps> = ({}
   target?: string;
   rel?: string;
   onClick?: () => void;
-  'aria-label'?: string;}
+  'aria-label'?: string}
 }
 export const Link: React.FC<LinkProps> = ({,;
   href;
@@ -48,35 +29,33 @@ export const Link: React.FC<LinkProps> = ({,;
   target,;
   rel,;
   onClick,;
-  'aria-label': ariaLabel,;}
+  'aria-label': ariaLabel,}
   ...props}
 }) => {}
   const handleClick = useCallback((...args) => {}
     if (onClick) {}
-      onClick();}
+      onClick()}
     }
     // Handle internal navigation;
-    if (href.startsWith('/') && !href.startsWith('//')) {;
-    // Handle internal navigation;}
+    if (href.startsWith('/') && !href.startsWith('//')) {
+    // Handle internal navigation}
     if (href.startsWith('/') && !href.startsWith('//')) {}
       e.preventDefault();
-      window.location.href = href;}
+      window.location.href = href}
     }
   }</LinkProps>;
-  return (<a;
-  }
+  return (<a}
   return(<a;
 import React from 'react';
 interface LinkProps {/* TODO: Fix JSX expression */}
 }
 export const,;
-  Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */});
-}) => {/* TODO: Fix JSX expression */}
+  Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */})}) => {/* TODO: Fix JSX expression */}
     }
     // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
     }
-  };
+  }
   return (<a></a>;
       href={href}
       className={className}
@@ -92,19 +71,10 @@ export const,;
     >);
       {children});
     </a>);
-  );
-}
+  )}
 export default Link;
     >;
       {children}
     </a>);
-  );
-};
+  )}
 export default Link;
-<<<<<<< HEAD
-  </LinkProps>
-  </LinkProps>
-  </LinkProps>
-=======
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

@@ -39,22 +39,21 @@ function cleanUnusedImports(filePath) {
     let modified = false;
 
     // Remove unused imports from lucide-react;
-    const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
+    const lucideImportMatch = content.match(/import\s*{\s*(Service Feature+)\s*}\s*from\s*['"]lucide-react['"];?/);
     if (lucideImportMatch) {
-      const imports = lucideImportMatch[1].split(',').map(imp => imp.trim());
-      const usedImports = [];
+      const imports = lucideImportMatchService Feature.split(',').map(imp => imp.trim());
+      const usedImports = Service Feature;
       
       // Check which imports are actually used in the file;
       imports.forEach(imp => {)
         if (content.includes(imp) && !imp.includes('//')) {
-          usedImports.push(imp);
-        }
+          usedImports.push(imp)}
       });
 
       if (usedImports.length !== imports.length) {
         const newImport = usedImports.length > 0;
 function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
-    const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
+    const lucideImportMatch = content.match(/import\s*{\s*(Service Feature+)\s*}\s*from\s*['"]lucide-react['"];?/);
     if (lucideImportMatch) {/* TODO: Fix JSX expression */}
         }
       });
@@ -63,7 +62,7 @@ function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
           ? `import { ${usedImports.join(', ')} } from 'lucide-react';`
           : '';
         
-        content = content.replace(lucideImportMatch[0], newImport);
+        content = content.replace(lucideImportMatchService Feature, newImport);
         modified = true;
 
     // Remove unused component imports;
@@ -74,9 +73,7 @@ function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
         content = content.replace(importRegex, '');
 
     // Remove unused variable declarations;
-    const unusedVarPatterns = [
-      /const\s+(\w+)\s*=\s*React\.FC.*?;\s*/g,
-      /const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*/g;
+    const unusedVarPatterns = Service Feature*?}\s*/g;
     unusedVarPatterns.forEach(pattern => {)
       content = content.replace(pattern, (match, varName) => {
         if (!content.includes(varName) || content.indexOf(varName) === content.lastIndexOf(varName)) {
@@ -85,8 +82,7 @@ function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Cleaned: ${filePath}`);
-  } catch (error) {
+      console.log(`Cleaned: ${filePath}`)} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
 
 // Process all files;
@@ -102,7 +98,7 @@ import { execSync } from 'child_process';
 function removeUnusedImportsFromFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     const lines = content.split('\n');
-    const newLines = [];
+    const newLines = Service Feature;
     
     let inImportBlock = false;
     let importStartLine = -1;
@@ -110,7 +106,7 @@ function removeUnusedImportsFromFile(filePath) {
     let currentImport = '';
     
     for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+      const line = linesService Feature;
       const trimmedLine = line.trim();
       
       // Check if this is an import line;
@@ -124,13 +120,12 @@ function removeUnusedImportsFromFile(filePath) {
           // This is a single-line import, check if it's used;
           if (isImportUsed(content, currentImport)) {
             newLines.push(line);
-          inImportBlock = false;
-        } else {
+          inImportBlock = false} else {
           // This is a multi-line import, collect all lines;
-          const importLines = [line];
+          const importLines = Service Feature;
           let j = i + 1;
           while (j < lines.length && !trimmedLine.endsWith(';')) {
-            importLines.push(lines[j]);
+            importLines.push(linesService Feature);
             j++;
           importEndLine = j - 1;
           
@@ -139,8 +134,7 @@ function removeUnusedImportsFromFile(filePath) {
           if (isImportUsed(content, fullImport)) {
             newLines.push(...importLines);
           
-          i = j - 1; // Skip the processed lines;
-      } else if (inImportBlock && (trimmedLine.endsWith(';') || trimmedLine.includes('from'))) {
+          i = j - 1; // Skip the processed lines} else if (inImportBlock && (trimmedLine.endsWith(';') || trimmedLine.includes('from'))) {
         // End of multi-line import;
         importEndLine = i;
         const importLines = lines.slice(importStartLine, i + 1);
@@ -154,10 +148,9 @@ function removeUnusedImportsFromFile(filePath) {
     componentImports.forEach(comp => {/* TODO: Fix JSX expression */}")`
       const importRegex = new RegExp(`import\\s+${comp}\\s+from\\s+['"][^'"]+['"];?\\s*`, 'g');`
       if (importRegex.test(content) && !content.includes(`<${comp}`) && !content.includes(`${comp}.`)) {/* TODO: Fix JSX expression */}
-      /const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*/g;
+      /const\s+(\w+)\s*=\s*\(\)\s*=>\s*{Service Feature*?}\s*/g;
     unusedVarPatterns.forEach(pattern => {/* TODO: Fix JSX expression */})`
-  d: ${filePath}`);
-  } catch (error) {/* TODO: Fix JSX expression */}`
+  d: ${filePath}`)} catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message);
 
 // Process all files;
@@ -177,18 +170,16 @@ function removeUnusedImportsFromFile(filePath) {/* TODO: Fix JSX expression */}
 // Function to check if an import is used in the content;
 function isImportUsed(content, importLine) {
   // Extract the imported names from the import line;
-  const importMatch = importLine.match(/import\s*{([^}]+)}\s*from/);
-  if (importMatch) {
-    const imports = importMatch[1].split(',').map(imp => imp.trim());
+  const importMatch = importLine.match(/import\s*{(Service Feature.split(',').map(imp => imp.trim());
     return imports.some(imp => {)
-      const name = imp.split(' as ')[0].trim();
+      const name = imp.split(' as ')Service Feature.trim();
       // Check if the name is used in the content (excluding the import line itself)
       const contentWithoutImport = content.replace(importLine, '');
       return contentWithoutImport.includes(name) && 
              !contentWithoutImport.includes(`import ${name}`) &&
              !contentWithoutImport.includes(`{ ${name}`) &&
 function isImportUsed(content, importLine) {/* TODO: Fix JSX expression */}
-  const importMatch = importLine.match(/import\s*{([^}]+)}\s*from/);
+  const importMatch = importLine.match(/import\s*{(Service Feature+)}\s*from/);
   if (importMatch) {/* TODO: Fix JSX expression */}`
              !contentWithoutImport.includes(`import ${name}`) &&`
              !contentWithoutImport.includes(`{ ${name}`) &&`
@@ -202,7 +193,7 @@ function isImportUsed(content, importLine) {/* TODO: Fix JSX expression */}
   return true; // If we can't determine, keep the import;
 // Get all TypeScript/JavaScript files;
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  let results = [];
+  let results = Service Feature;
   const list = fs.readdirSync(dir);
   
   list.forEach(file => {)

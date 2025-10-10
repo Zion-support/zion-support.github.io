@@ -14,52 +14,28 @@ function fixFile(filePath) {
     let originalContent = content;
     
     // Remove duplicate function declarations;
-    content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {
-      return `const ${name}: React.FC = () => {`;
-function fixFile(filePath) {/* TODO: Fix JSX expression */}
-    content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
-      return `const ${name}: React.FC = () => {/* TODO: Fix JSX expression */}
-    });
-    
-    content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}`
-      return `const ${name} = () => {/* TODO: Fix JSX expression */}
-    });
-    
-    // Fix missing closing braces;
-    content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{([\s\S]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, name, body) => {
+    content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{Service Feature*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, name, body) => {
       const lines = body.split('\n');
       let openBraces = 0;
       let closeBraces = 0;
       
       for (const line of lines) {
-        openBraces += (line.match(/{/g) || []).length;
-    content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
-        closeBraces += (line.match(/}/g) || []).length;
-      }
+        openBraces += (line.match(/{/g) || Service Feature).length}
       
       if (openBraces > closeBraces) {/* TODO: Fix JSX expression */}`
-        return `${name} = () => {${body}${'  '.repeat(missingBraces).replace(/  /g, '}\n')}`;
-      }
-      return match;
-    });
+        return `${name} = () => {${body}${'  '.repeat(missingBraces).replace(/  /g, '}\n')}`}
+      return match});
     
     // Fix missing semicolons;
-    content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {
+    content = content.replace(/(\w+)\s*=\s*\Service Feature\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {
       if (!match.endsWith(';')) {
         return match + ';';
-    content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {/* TODO: Fix JSX expression */}
-      }
-      return match;
-    });
-    
-    // Fix missing closing braces for JSX;
-    content = content.replace(/(<[^>]*>)([^<]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, tag, body) => {
+    content = content.replace(/(\w+)\s*=\s*\Service Feature*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, tag, body) => {
       if (tag.includes('<div') && !match.includes('</div>')) {
         return match + '</div>';
-    content = content.replace(/(<[^>]*>)([^<]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, tag, body) => {/* TODO: Fix JSX expression */}
+    content = content.replace(/(<Service Feature*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, tag, body) => {/* TODO: Fix JSX expression */}
       }
-      return match;
-    });
+      return match});
     
     // Only write if content changed;
     if (content !== originalContent) {
@@ -67,19 +43,16 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       console.log(`Fixed: ${filePath}`);
     if (content !== originalContent) {/* TODO: Fix JSX expression */}`
   d: ${filePath}`);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}`
+    return false} catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Function to find all TypeScript/JavaScript files;
 function findFiles(dir) {
-  const files = [];
+  const files = Service Feature;
   
   function walkDir(currentPath) {
     try {
@@ -99,14 +72,12 @@ function findFiles(dir) {/* TODO: Fix JSX expression */}
         }
       }
     } catch (error) {
-      // Skip directories that can't be read;
-    } catch (error) {/* TODO: Fix JSX expression */}
+      // Skip directories that can't be read} catch (error) {/* TODO: Fix JSX expression */}
     }
   }
   
   walkDir(dir);
-  return files;
-}
+  return files}
 
 // Main execution;
 console.log('🔧 Fixing all remaining issues...');
@@ -126,8 +97,7 @@ console.log(`✅ Fixed issues in ${fixedCount} files`);
 console.log('\n🔍 Running build to check results...');
 try {/* TODO: Fix JSX expression */}
   o: 'pipe' });
-  console.log('✅ Build successful!');
-} catch (error) {/* TODO: Fix JSX expression */}
+  console.log('✅ Build successful!')} catch (error) {/* TODO: Fix JSX expression */}
 }
 
 console.log('\n🎉 Issue fixing complete!');`

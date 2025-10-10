@@ -140,6 +140,5 @@ export default function October2025NewContentAdvertisingBann, e, r() {/* TODO: F
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-}
+  )}
 "

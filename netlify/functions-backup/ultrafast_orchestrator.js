@@ -8,7 +8,7 @@ exports.handler = async function (event, context) {
         message: 'ultrafast_orchestrator function executed successfully'),
         timestamp: timestamp),
         function: 'ultrafast_orchestrator'})
-    };
+    }
   } catch (error) {
 
     return {
@@ -19,9 +19,9 @@ exports.handler = async function (event, context) {
         timestamp: new Date().toISOString(),
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
       })
-    };
+    }
   } catch (error) {/* TODO: Fix JSX expression */}
       })
-    };
+    }
   }
-};
+}

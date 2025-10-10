@@ -5,12 +5,7 @@ export type CaseStudy = {
   industry: string;
   challenge: string;
   solution: string;
-  results: string[];
-  technologies: string[];
-  duration: string;
-  imageUrl?: string;};
-
-export const caseStudies: CaseStudy[] = [
+  results: stringService Feature = [
   {
     id: 'global-energy-digital-twin-850 m',
     title: 'Global Energy Corporation: $850 M Digital Twin Transformation Success',
@@ -170,25 +165,7 @@ export const caseStudies: CaseStudy[] = [
     duration: '10 weeks',
     imageUrl: '/images/case-studies/enterprise-rag.jpg',
 export type CaseStudy = {/* TODO: Fix JSX expression */}
-};
+}
 
 export const,
-  caseStudies: CaseStudy[] = [
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  }];
+  caseStudies: CaseStudyService Feature;

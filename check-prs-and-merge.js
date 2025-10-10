@@ -13,11 +13,11 @@ const report = {
   conflictFiles: conflictFiles;
       ?.trim()
       .split('\n')
-      .filter(f => f) || [],
-  recentCommits: recentCommits?.trim().split('\n') || [],
-  recentBranches: recentBranches?.trim().split('\n') || [],
+      .filter(f => f) || Service Feature,
+  recentCommits: recentCommits?.trim().split('\n') || Service Feature,
+  recentBranches: recentBranches?.trim().split('\n') || Service Feature,
 const report = {/* TODO: Fix JSX expression */}
-};
+}
 
 fs.writeFileSync('merge-analysis-report.json', JSON.stringify(report, null, 2));
 

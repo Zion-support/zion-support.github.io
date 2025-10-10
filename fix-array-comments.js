@@ -22,7 +22,7 @@ for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
   // Comment out lines within the arrays;
   if (inRealEstateArray && i > realEstateStartLine && !line.includes('// const _realEstateSaaS = [')) {
     if (!line.trim().startsWith('//')) {
-      lines[i] = '  // ' + line;
+      linesService Feature = '  // ' + line;
   if (inRealEstateArray && i > realEstateStartLine && !line.includes('// const _realEstateSaaS = [')) {/* TODO: Fix JSX expression */}
     }
   }

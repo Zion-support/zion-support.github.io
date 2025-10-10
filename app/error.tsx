@@ -110,8 +110,7 @@ const ErrorPage: React.FC = () => {
       </main>
       <Footer />
     </React.Fragment>
-  );
-};
+  )}
 export default ErrorPage;
   </button>
   </h2>

@@ -17,8 +17,8 @@ import {
 } from 'lucide-react';
 
 const ItServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const Service Feature = useState('');
+  const Service Feature = useState('all');
 
   const itServices = [
     {
@@ -101,8 +101,7 @@ const ItServicesPage: React.FC = () => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+    return matchesSearch && matchesCategory});
 
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'Projects Completed' },
@@ -270,7 +269,6 @@ const ItServicesPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )}
 
 export default ItServicesPage;

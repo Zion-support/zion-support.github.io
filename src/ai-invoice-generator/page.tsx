@@ -237,7 +237,7 @@ namename: 'Emily Rodriguez',
                         <div className="font-semibold text-white">{testimonial.name}</div>
                         <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                     <div className="flex mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
+                      {Service Feature.map((_, i) => (
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     <p className="text-gray-300 italic">"{testimonial.content}"</p>
           {/* CTA Section */}
@@ -256,8 +256,7 @@ namename: 'Emily Rodriguez',
                   (302) 464-0950</span>
         <Footer />
     </React.Fragment>
-  );
-});
+  )});
 AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage';
 'use client';
 import React from 'react';

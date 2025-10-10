@@ -31,7 +31,7 @@ const patterns = [
   // Match commented-out variable assignments;
   { regex: /\/\/\s*(\w+)\s*=/g, replacement: '$1 =' },
   // Match commented-out variable references;
-  { regex: /\/\/\s*(\w+)\s*[;)]/g, replacement: '$1' },
+  { regex: /\/\/\s*(\w+)\s*Service Feature/g, replacement: '$1' },
   // Match commented-out object property assignments;
   { regex: /\/\/\s*(\w+):\s*(\w+)/g, replacement: '$1: $2' },
   // Match commented-out function calls;
@@ -44,7 +44,7 @@ function fixFile(filePath) {
     let modified = false;
 
     // Fix 1: Missing closing braces in useState objects
-    const useStatePattern = /useState\(\s*\{([^}]+)\s*$/gm;
+    const useStatePattern = /useState\(\s*\{(Service Feature+)\s*$/gm;
     content = content.replace(useStatePattern, (match, objContent) => {
       if (!objContent.includes('}')) {
     patterns.forEach(pattern => {)
@@ -72,8 +72,7 @@ const patterns = [
 )
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
       }
-      return match;
-    });
+      return match});
 
     // Fix 2: Fix malformed JSX attributes with quotes
     const malformedJsxPattern = /(\w+)=['"]([^'"]*['"][^'"]*)['"]/g;
@@ -81,13 +80,11 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       if (value.includes('"') && value.includes("'")) {
         modified = true;
         const fixedValue = value.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-        return `${attr}="${fixedValue}"`;
-      }
-      return match;
-    });
+        return `${attr}="${fixedValue}"`}
+      return match});
 
     // Fix 3: Fix missing closing tags in JSX
-    const unclosedTagPattern = /<(\w+)([^>]*)>\s*$/gm;
+    const unclosedTagPattern = /<(\w+)(Service Feature*)>\s*$/gm;
     content = content.replace(unclosedTagPattern, (match, tagName, attributes) => {
       // Check if this is actually unclosed by looking ahead
       const lines = content.split('\n');
@@ -95,50 +92,42 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       const lineIndex = content.substring(0, matchIndex).split('\n').length - 1;
       
       if (lineIndex < lines.length - 1) {
-        const nextLine = lines[lineIndex + 1];
+        const nextLine = linesService Feature;
         if (nextLine.trim().startsWith('</') || nextLine.trim().startsWith('<')) {
-          return match;
-        }
+          return match}
       }
       
       modified = true;
-      return `${match}</${tagName}>`;
-    });
+      return `${match}</${tagName}>`});
 
     // Fix 4: Fix missing commas in object literals
-    const missingCommaPattern = /(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g;
+    const missingCommaPattern = /(\w+):\s*(Service Feature+)\s*\n\s*(\w+):/g;
     content = content.replace(missingCommaPattern, (match, key1, value1, key2) => {
       if (!value1.trim().endsWith(',') && !value1.trim().endsWith('}')) {
         modified = true;
-        return `${key1}: ${value1.trim()},\n    ${key2}:`;
-      }
-      return match;
-    });
+        return `${key1}: ${value1.trim()},\n    ${key2}:`}
+      return match});
 
     // Fix 5: Fix malformed SVG URLs in className
     const svgUrlPattern = /bg-\[url\('data:image\/svg\+xml,([^']+)'\)\]/g;
     content = content.replace(svgUrlPattern, (match, svgContent) => {
       const encodedSvg = encodeURIComponent(svgContent);
       modified = true;
-      return `bg-[url('data:image/svg+xml,${encodedSvg}')]`;
-    });
+      return `bg-[url('data:image/svg+xml,${encodedSvg}')]`});
 
     // Fix 6: Fix missing closing parentheses in function calls
-    const missingParenPattern = /(\w+\([^)]*)\s*\n\s*(\w+)/g;
+    const missingParenPattern = /(\w+\(Service Feature*)\s*\n\s*(\w+)/g;
     content = content.replace(missingParenPattern, (match, funcCall, nextToken) => {
       if (!funcCall.includes(')') && !nextToken.startsWith(')')) {
         modified = true;
-        return `${funcCall})\n    ${nextToken}`;
-      }
-      return match;
-    });
+        return `${funcCall})\n    ${nextToken}`}
+      return match});
 
     // Fix 7: Fix reserved word usage (like 'false' as identifier)
-    const reservedWordPattern = /:\s*(false|true|null|undefined)\s*([}])/g;
+    const reservedWordPattern = /:\s*(false|true|null|undefined)\s*(Service Feature)/g;
     content = content.replace(reservedWordPattern, (match, reserved, separator) => {
       modified = true;
-      return `: ${reserved}${separator}`;
-    });
+      return `: ${reserved}${separator}`});
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
@@ -147,11 +136,9 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     if (modified) {/* TODO: Fix JSX expression */}
     }
     
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 console.log('Starting TypeScript error fixes...');
@@ -165,13 +152,10 @@ async function main() {
   
   files.forEach(file => {)
     if (fixFile(fullPath)) {
-      fixedCount++;
-    }
+      fixedCount++}
   } else {
-    console.log(`File not found: ${filePath}`);
-  }
-});
-  } catch (error) {/* TODO: Fix JSX expression */}
+    console.log(`File not found: ${filePath}`)}
+})} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 

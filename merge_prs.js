@@ -15,7 +15,7 @@ function makeGitHubRequest(endpoint, method = 'GET', data = null) {
         'Content-Type': 'application/json'
 function makeGitHubRequest(endpoint, method = 'GET', data = null) {/* TODO: Fix JSX expression */}
       }
-    };
+    }
 
     if (data) {/* TODO: Fix JSX expression */}
     }
@@ -23,12 +23,9 @@ function makeGitHubRequest(endpoint, method = 'GET', data = null) {/* TODO: Fix 
     const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
       });
       res.on('end', () => {/* TODO: Fix JSX expression */}
-  a: jsonData });
-        } catch (error) {/* TODO: Fix JSX expression */}
-  JSON: ${error.message}`));
-        }
-      });
-    });
+  a: jsonData })} catch (error) {/* TODO: Fix JSX expression */}
+  JSON: ${error.message}`))}
+      })});
 
     req.on('error', (error) => {/* TODO: Fix JSX expression */}
     });
@@ -36,9 +33,7 @@ function makeGitHubRequest(endpoint, method = 'GET', data = null) {/* TODO: Fix 
     if (data) {/* TODO: Fix JSX expression */}
     }
 
-    req.end();
-  });
-}
+    req.end()})}
 
 async function getOpenPRs() {/* TODO: Fix JSX expression */}
 }
@@ -57,8 +52,7 @@ async function mergePR(prNumber, title) {
     // Get PR details first;
     if (!prDetails) {
 
-      return false;
-    }
+      return false}
 
     // Check if PR is mergeable;
     if (prDetails.mergeable === false) {
@@ -86,8 +80,7 @@ async function mergePR(prNumber, title) {/* TODO: Fix JSX expression */}
 
     if (response.status === 200) {
 
-      return true;
-    } else {
+      return true} else {
       return false;
     const mergeData = JSON.stringify({/* TODO: Fix JSX expression */}`
   e: `Merge PR #${prNumber}: ${title}`,
@@ -136,16 +129,14 @@ async function mergeAllPRs() {/* TODO: Fix JSX expression */}
     // Merge PRs one by one;
     for (const pr of mainPRs) {
       if (success) {
-        successCount++;
-      } else {
+        successCount++} else {
         failCount++;
     for (const pr of mainPRs) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
       
       // Add a small delay between merges;
-      await new Promise(resolve => setTimeout(resolve, 1000));
-    }
+      await new Promise(resolve => setTimeout(resolve, 1000))}
 
 
 
@@ -158,11 +149,9 @@ async function mergeAllPRs() {/* TODO: Fix JSX expression */}
 // Run the merge process;
 mergeAllPRs().then(() => {
 
-  process.exit(0);
-}).catch(error => {)
+  process.exit(0)}).catch(error => {)
 )
-  process.exit(1);
-});
+  process.exit(1)});
 mergeAllPRs().then(() => {/* TODO: Fix JSX expression */}
 }).catch(error => {/* TODO: Fix JSX expression */})
 });`

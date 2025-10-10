@@ -9,172 +9,7 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
 const, SmartContractAudi, t: Rea, c, t.FC = () => {
-  const, feature, s = [
-    {
-      i, c, o;
-  n: Shie, l, d;
-      tit, l, e: "Comprehensive, Security, Analysis","
-      descripti, o, n: "Deep, code, analysis using, static, analysis, dynamic, testin, g, and, formal, verification to, identify, vulnerabilities.","
-      tit, l, e: "Comprehensive, Security, Analysis",";
-      descripti, o, n: "Deep, code, analysis using, static, analysis, dynamic, testin, g, and, formal, verification to, identify, vulnerabilities.",";
-      benef, i, t: "99.8% vulnerability, detection, rate"
-    }
-    {
-      ic, o, n: Sear, c, h;
-      tit, l, e: "Automated, Vulnerability, Scanning","
-      descripti, o, n: "AI-powered, scanning, tools that, detect, common smart, contract, vulnerabilities and, security, patterns.","
-      tit, l, e: "Automated, Vulnerability, Scanning",";
-      descripti, o, n: "AI-powered, scanning, tools that, detect, common smart, contract, vulnerabilities and, security, patterns.",";
-      benef, i, t: "1, 0, 0+ vulnerability, patterns, detected"
-    }
-    {
-      ic, o, n: AlertTriang, l, e;
-      tit, l, e: "Risk, Assessmen, t & Mitigati, o, n","
-      descripti, o, n: "Detailed, risk, analysis with, prioritized, recommendations and, mitigation, strategies.","
-      tit, l, e: "Risk, Assessmen, t & Mitigati, o, n",";
-      descripti, o, n: "Detailed, risk, analysis with, prioritized, recommendations and, mitigation, strategies.",";
-      benef, i, t: "Zero, critical, vulnerabilities in, productio, n"
-    }
-    {
-      ic, o, n: CheckCirc, l, e;
-      tit, l, e: "Compliance, Verificatio, n","
-      descripti, o, n: "Ensure, compliance, with industry, standard, s, regulatory, requirement, s, and, best, practices.","
-      tit, l, e: "Compliance, Verificatio, n",";
-      descripti, o, n: "Ensure, compliance, with industry, standard, s, regulatory, requirement, s, and, best, practices.",";
-      benef, i, t: "1, 0, 0% compliance, with, standards"
-    }
-    {
-      ic, o, n: Clo, c, k;
-      tit, l, e: "Fast, Turnaroun, d","
-      descripti, o, n: "Rapid, audit, completion with, detailed, reports delivered, within, 5-10, business, days.","
-      tit, l, e: "Fast, Turnaroun, d",";
-      descripti, o, n: "Rapid, audit, completion with, detailed, reports delivered, within, 5-10, business, days.",";
-      benef, i, t: "5-10, day, delivery guarant, e, e"
-    }
-    {
-      ic, o, n: Use, r, s;
-      tit, l, e: "Expert, Tea, m","
-      descripti, o, n: "Certified, blockchain, security experts, with, extensive experience, in, smart contract, auditin, g.","
-      tit, l, e: "Expert, Tea, m",";
-      descripti, o, n: "Certified, blockchain, security experts, with, extensive experience, in, smart contract, auditin, g.",";
-      benef, i, t: "50+ successful, audits, completed"
-    }
-  ];
-  const, pricin, g = [
-    {
-      na, m, e: "Basic, Audi, t"
-      pri, c, e: "$2,5, 0, 0"
-      peri, o, d: "o, n, e-ti, m, e"
-      descripti, o, n: "Perfect, for, simple smart, contracts, and token, contract, s"
-      featur, e, s: [,
-        "Static, code, analysis"
-        "Manual, code, review"
-        "Basic, vulnerability, scan"
-        "Security, repor, t"
-        "Email, suppor, t"
-        "1, revision, included"
-        "Standard, compliance, check"
-        "Up, to, 500 lines, of, code"
-      ]
-      popul, a, r: fal, s, e;
-    }
-    {
-      na, m, e: "Professional, Audi, t"
-      pri, c, e: "$8,5, 0, 0"
-      peri, o, d: "o, n, e-ti, m, e"
-      descripti, o, n: "Comprehensive, audit, for complex, DeFi, protocols and, dApp, s"
-      featur, e, s: [,
-        "Full, stati, c & dynamic, analysi, s"
-        "Comprehensive, manual, review"
-        "Advanced, vulnerability, scanning"
-        "Detailed, security, report"
-        "Priority, suppor, t"
-        "3, revisions, included"
-        "Full, compliance, verification"
-        "Up, to, 2,000, lines, of co, d, e"
-        "Gas, optimization, analysis"
-        "Architecture, revie, w"
-      ]
-      popul, a, r: tr, u, e;
-    }
-    {
-      na, m, e: "Enterprise, Audi, t"
-      pri, c, e: "$25,0, 0, 0"
-      peri, o, d: "o, n, e-ti, m, e"
-      descripti, o, n: "Complete, audit, solution for, enterprise, blockchain projec, t, s"
-      featur, e, s: [,
-        "E, n, d-to-end, security, analysis"
-        "Mul, t, i-contract, system, review"
-        "Formal, verificatio, n"
-        "Executive, summary, report"
-        "Dedicated, security, consultant"
-        "Unlimited, revision, s"
-        "Full, regulatory, compliance"
-        "Unlimited, lines, of co, d, e"
-        "Performance, optimizatio, n"
-        "Architectu, r, e & design, revie, w"
-        "Po, s, t-deployment, monitorin, g"
-        "Security, training, included"
-      ]
-      popul, a, r: fal, s, e;
-      n, a, m;
-  e: "Basic, Audi, t",";
-      pri, c, e: "$2,5, 0, 0",";
-      peri, o, d: "o, n, e-ti, m, e",";
-      descripti, o, n: "Perfect, for, simple smart, contracts, and token, contract, s",";
-      featur, e, s: [,
-        "Static, code, analysis",";
-        "Manual, code, review",";
-        "Basic, vulnerability, scan",";
-        "Security, repor, t",";
-        "Email, suppor, t",";
-        "1, revision, included",";
-        "Standard, compliance, check",";
-        "Up, to, 500 lines, of, code"
-      ]
-      popul, a, r: fal, s, e;
-    }
-    {
-      na, m, e: "Professional, Audi, t",";
-      pri, c, e: "$8,5, 0, 0",";
-      peri, o, d: "o, n, e-ti, m, e",";
-      descripti, o, n: "Comprehensive, audit, for complex, DeFi, protocols and, dApp, s",";
-      featur, e, s: [,
-        "Full, stati, c & dynamic, analysi, s",";
-        "Comprehensive, manual, review",";
-        "Advanced, vulnerability, scanning",";
-        "Detailed, security, report",";
-        "Priority, suppor, t",";
-        "3, revisions, included",";
-        "Full, compliance, verification",";
-        "Up, to, 2,000, lines, of co, d, e",";
-        "Gas, optimization, analysis",";
-        "Architecture, revie, w"
-      ]
-      popul, a, r: tr, u, e;
-    }
-    {
-      na, m, e: "Enterprise, Audi, t",";
-      pri, c, e: "$25,0, 0, 0",";
-      peri, o, d: "o, n, e-ti, m, e",";
-      descripti, o, n: "Complete, audit, solution for, enterprise, blockchain projec, t, s",";
-      featur, e, s: [,
-        "E, n, d-to-end, security, analysis",";
-        "Mul, t, i-contract, system, review",";
-        "Formal, verificatio, n",";
-        "Executive, summary, report",";
-        "Dedicated, security, consultant",";
-        "Unlimited, revision, s",";
-        "Full, regulatory, compliance",";
-        "Unlimited, lines, of co, d, e",";
-        "Performance, optimizatio, n",";
-        "Architectu, r, e & design, revie, w",";
-        "Po, s, t-deployment, monitorin, g",";
-        "Security, training, included"
-      ]
-      popul, a, r: fal, s, e;
-    }
-  ];
+  const, feature, s = Service Feature;
   const, testimonial, s = [
     {
       na, m, e: "Michael, Che, n","
@@ -207,125 +42,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       compa, n, y: "FinTe, c, h"
     }
   ];
-  const, auditType, s = [
-    {
-      tit, l, e: "DeFi, Protocol, s","
-      ic, o, n: Glo, b, e;
-      descripti, o, n: "Comprehensive, auditing, for decentralized, finance, protocols including, lendin, g, borrowi, n, g, and, trading, platforms.","
-      vulnerabiliti, e, s: ["Reentrancy, attack, s", "Flash, loan, exploits", "Oracle, manipulatio, n", "Liquidity, pool, risks"]"
-    }
-    {
-      tit, l, e: "NFT, Smart, Contracts","
-      ic, o, n: Co, d, e;
-      descripti, o, n: "Specialized, auditing, for NFT, marketplace, s, minting, contract, s, and, token, standards complian, c, e.","
-      vulnerabiliti, e, s: ["Metadata, manipulatio, n", "Royalty, bypas, s", "Minting, vulnerabilitie, s", "Transfer, restriction, s"]"
-    }
-    {
-      tit, l, e: "Token, Contract, s","
-      ic, o, n: Databa, s, e;
-      descripti, o, n: "Security, analysis, for E, R, C-20, E, R, C-7, 2, 1, E, R, C-11, 5, 5, and, custom, token implementatio, n, s.","
-      vulnerabiliti, e, s: ["Supply, manipulatio, n", "Access, control, issues", "Transfer, bug, s", "Approval, vulnerabilitie, s"]"
-    }
-    {
-      tit, l, e: "DAO, Governanc, e","
-      ic, o, n: Use, r, s;
-      descripti, o, n: "Auditing, governance, contracts, voting, mechanism, s, and, treasury, management syste, m, s.","
-      vulnerabiliti, e, s: ["Vote, manipulatio, n", "Treasury, exploit, s", "Proposal, vulnerabilitie, s", "Execution, risk, s"]"
-      tit, l, e: "DeFi, Protocol, s",";
-      ic, o, n: Glo, b, e;
-      descripti, o, n: "Comprehensive, auditing, for decentralized, finance, protocols including, lendin, g, borrowi, n, g, and, trading, platforms.",";
-      vulnerabiliti, e, s: ["Reentrancy, attack, s", "Flash, loan, exploits", "Oracle, manipulatio, n", "Liquidity, pool, risks"]";
-    }
-    {
-      tit, l, e: "NFT, Smart, Contracts",";
-      ic, o, n: Co, d, e;
-      descripti, o, n: "Specialized, auditing, for NFT, marketplace, s, minting, contract, s, and, token, standards complian, c, e.",";
-      vulnerabiliti, e, s: ["Metadata, manipulatio, n", "Royalty, bypas, s", "Minting, vulnerabilitie, s", "Transfer, restriction, s"]";
-    }
-    {
-      tit, l, e: "Token, Contract, s",";
-      ic, o, n: Databa, s, e;
-      descripti, o, n: "Security, analysis, for E, R, C-20, E, R, C-7, 2, 1, E, R, C-11, 5, 5, and, custom, token implementatio, n, s.",";
-      vulnerabiliti, e, s: ["Supply, manipulatio, n", "Access, control, issues", "Transfer, bug, s", "Approval, vulnerabilitie, s"]";
-    }
-    {
-      tit, l, e: "DAO, Governanc, e",";
-      ic, o, n: Use, r, s;
-      descripti, o, n: "Auditing, governance, contracts, voting, mechanism, s, and, treasury, management syste, m, s.",";
-      vulnerabiliti, e, s: ["Vote, manipulatio, n", "Treasury, exploit, s", "Proposal, vulnerabilitie, s", "Execution, risk, s"]";
-const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, pricin, g = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, testimonial, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, auditType, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, proces, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
+  const, auditType, s = Service Feature;
   return(<React.Fragment>
       <Helmet>
         <title>Smart, Contract, Audit - Zion, Tech, Group | Blockchain, Security, Experts</title>
@@ -656,8 +373,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                       </ul>
                     </d, i, v>
                   </d, i, v>
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -813,8 +529,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
                   </d, i, v>)
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -902,7 +617,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
 pl, a, n.popul, a, r;
 ? 'bg-r, e, d-600, tex, t-white, hove, r: bg-r, e, d-7, 0, 0'
 ? 'bg-r, e, d-600, tex, t-white, hov, e;
-  r: bg-r, e, d-7, 0, 0',';}
+  r: bg-r, e, d-7, 0, 0','}
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
@@ -972,7 +687,7 @@ pl, a, n.popul, a, r;
               {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (</div>
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <div, className="flex, item, s-center, m, b-4">";
-                    {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>
+                    {Service Feature.m, a, p((_, i) => (</div>
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
             </d, i, v>"
             <div, className="gri, d, m,"
@@ -1063,7 +778,5 @@ pl, a, n.popul, a, r;
       </ma, i, n>
       <Foot, e, r   /></Foot>
     </React.Fragment>
-  );
-};
-export default SmartContractAudit;
-}}}}}"`
+  )}
+export default SmartContractAudit}}}}}"`

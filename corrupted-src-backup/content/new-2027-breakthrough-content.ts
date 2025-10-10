@@ -76,8 +76,4 @@ export const caseStudies2027 = [
   },
   {/* TODO: Fix JSX expression */}
   }];
-export const caseStudies2027 = [
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  }];
+export const caseStudies2027 = Service Feature;

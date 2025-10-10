@@ -1,45 +1,9 @@
 
-export interface EnterpriseITService2029V2 {;
+export interface EnterpriseITService2029V2 {
   id: string;
   name: string;
   description: string;
-  category: string[];
-  price: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  marketSize: string;
-  competitors: string[];
-  technology: string[];
-  integration: string[];
-  support: string[];
-  compliance: string[];
-  scalability: string;
-  roi: string;
-  deployment: string;
-  maintenance: string;
-  training: string;
-  documentation: string;
-  api: string;
-  mobile: string;
-  security: string;
-  backup: string;
-  monitoring: string;
-  analytics: string;
-  customization: string;
-  whiteLabel: string;
-  affiliate: string;
-  referral: string;
-  partnership: string;
-  funding: string;
-  exit: string;
-  contact: unknown;
-    mobile: string;
-    email: string;
-    website: string}
-    address: string}
-  }
-export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [,
+  category: stringService Feature = [,
     id: 'autonomous-devops-platform',
     name: 'Autonomous DevOps Platform',
     description:,
@@ -49,7 +13,7 @@ export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   s: string}
   }
 export const,
-  enterpriseITServices2029V2: EnterpriseITService2029V2[] = [,
+  enterpriseITServices2029V2: EnterpriseITService2029V2Service Feature = [,
     i,
   d: 'autonomous-devops-platform'
     nam,
@@ -638,7 +602,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}};
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}
 ];      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
     ];
     benefit,
@@ -731,7 +695,7 @@ export const,
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  };
+  }
     i,
   d: 'ai-powered-enterprise-security', nam,
   e: 'AI-Powered Enterprise Security',
@@ -835,7 +799,7 @@ export const,
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  };
+  }
     i,
   d: 'autonomous-it-operations-center', nam,
   e: 'Autonomous IT Operations Center',
@@ -915,7 +879,6 @@ export const,
     }
   }
 ];
-;
 ];      'Enterprise IT operations_data center management_application performance management_infrastructure automation_service desk automationIT service management'
     ];
     market_size: '$28.9B by 2029'
@@ -1047,11 +1010,10 @@ export const,
     }
   }
 ];
-;
 export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   e: string} addres,
   s: string} } export const,
-  enterpriseITServices2029V2: EnterpriseITService2029V2[] = [ i,
+  enterpriseITServices2029V2: EnterpriseITService2029V2Service Feature = [ i,
   d: 'autonomous-devops-platform'' nam,
   e: 'Autonomous DevOps Platform' descriptio,
   n:' 'Fully autonomous DevOps platform that automatically manages infrastructure, deployments, monitoring, and optimization without human intervention, reducing operational overhead by 90%.'' categor,
@@ -1212,7 +1174,7 @@ export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
   s://ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}};' ]; 'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management' ]; benefit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}' ]; 'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management' ]; benefit,
   s: [' 'Quantum computing capabilitiesUnbreakable securityExponential performance gainsFuture-proof infrastructureCompetitive advantageLong-term investment value' ]; useCase,
   s: [' 'Scientific computingFinancial modelingCryptography researchMachine learning accelerationOptimization problemsResearch and development' ],' marketSiz,
   e: '$35.2B by 2029', competitor,
@@ -1245,7 +1207,7 @@ export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
   s://ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } }; ' i,
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } ' i,
   d: 'ai-powered-enterprise-security', nam,
   e: 'AI-Powered Enterprise Security',' descriptio,
   n: 'Advanced AI-driven enterprise security platform that provides real-time threat detection, automated response, and predictive security analytics to protect against evolving cyber threats.',' categor,
@@ -1284,7 +1246,7 @@ export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
   s://ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } }; ' i,
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } ' i,
   d: 'autonomous-it-operations-center', nam,
   e: 'Autonomous IT Operations Center',' descriptio,
   n: 'Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal performance.',' categor,

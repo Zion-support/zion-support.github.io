@@ -3,7 +3,7 @@
   s:  ,3, logFil,
   e:} this.initialize()} initialize() {this.setupLogging(); this.validateConfiguration(); this.ensureLogDirectory()} setupLogging() {/* TODO: Fix JSX expression */}
   g: = message => { const timestamp = new Date().toISOString()} cons,
-  t: logMessage = `[${timestamp}] ${message}`; // ensureLogDirectory() {/* TODO: Fix JSX expression */}
+  t: logMessage = `Service Feature ${message}`; // ensureLogDirectory() {/* TODO: Fix JSX expression */}
   t: logDir = path.dirname(this.config.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
   e: true })} } return} this.isRunnin,
@@ -39,7 +39,7 @@
   f: (recentBuilds.length >= 5) {/* TODO: Fix JSX expression */}
   d: => build.duration)} i,`
   f: (durations.length > 0) { const avgDuration =} `/sites/${this.config.netlifySiteId}/deploys`); i,`
-  f: (deployments && deployments.length > 0) {const latestDeploy = deployments[0]} `/deploys/${deployment.id}/log`); i,
+  f: (deployments && deployments.length > 0) {const latestDeploy = deploymentsService Feature} `/deploys/${deployment.id}/log`); i,
   f: (logs) {/* TODO: Fix JSX expression */}
   d: timeout during deployment}' '})}' retur,
   n: errors} async applyDeploymentFixes(errors) {/* TODO: Fix JSX expression */}

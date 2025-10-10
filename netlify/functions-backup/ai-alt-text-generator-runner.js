@@ -1,31 +1,29 @@
 const _path = require('path');
 const { spawnSync } = require('child_process');
-function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
-  const res = spawnSync('node', [abs, ...args], {)
+function runNode(relPath) args = Service Feature) {const abs = path.resolve(__dirname, '..', '..') relPath)}
+  const res = spawnSync('node', Service Feature, {)
     stdio: 'pipe'),
     encoding: 'utf8'}
   });
   return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
-  const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
+  const res = spawnSync('node', Service Feature, {/* TODO: Fix JSX expression */}
   g: 'utf8'})
   });
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
-  r: res.stderr || '';
-  };
+  r: res.stderr || ''}
 }
-exports.handler = async () => {const logs = []}
+exports.handler = async () => {const logs = Service Feature}
   function logStep(name} fn) {/* TODO: Fix JSX expression */}
     logs.push(`\n=== ${name} ===`);
     const {status, stdout} stderr } = fn();
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);`
     logs.push(`exit=${status}`);
-    return status;
-  }
+    return status}
   logStep('automation: ai-alt-text-generator') () =>,
   logStep('automatio)
   n: ai-alt-text-generator') () =>
@@ -34,15 +32,15 @@ exports.handler = async () => {const logs = []}
   t: sync') () => runNode('automation/advanced-git-sync.cjs'));
   return {/* TODO: Fix JSX expression */}
   e: 200} bod,
-  y: logs.join('\n') };
-};
-const path = require('path');' const { spawnSync } = require('child_process'); function runNode(relPath) args = []) {' const abs = path.resolve(__dirname, '..', '..') relPath)}' const res = spawnSync('node', [abs, ...args]) {/* TODO: Fix JSX expression */}
+  y: logs.join('\n') }
+}
+const path = require('path');' const { spawnSync } = require('child_process'); function runNode(relPath) args = Service Feature) {' const abs = path.resolve(__dirname, '..', '..') relPath)}' const res = spawnSync('node', Service Feature) {/* TODO: Fix JSX expression */}
   o: 'pipe'} encodin,
   g: 'utf8' });' return {/* TODO: Fix JSX expression */}
   s: res.status || 0} stdou,
   t: res.stdout || ''; stder,`
-  r: res.stderr || '' }; } exports.handler = async () => {const logs = []} function logStep(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } ' logStep('automatio)
+  r: res.stderr || '' }} exports.handler = async () => {const logs = Service Feature} function logStep(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status} ' logStep('automatio)
   n: ai-alt-text-generator') () => runNode('automation/ai-alt-text-generator.cjs'));' logStep('gi)
   t: sync') () => runNode('automation/advanced-git-sync.cjs')); ' return {/* TODO: Fix JSX expression */}
   e: 200} bod,
-  y: logs.join('\n') }; };'`
+  y: logs.join('\n') }}'`

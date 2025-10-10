@@ -1,11 +1,6 @@
 
 
-export const PROVIDERS: IntegrationProviderMeta[] = [
-,
-export const PROVIDERS: IntegrationProviderMeta[] = [,
-export const PROVIDERS: IntegrationProviderMeta[] = [,
-,
-export const PROVIDERS: IntegrationProviderMeta[] = [,
+export const PROVIDERS: IntegrationProviderMetaService Feature = [,
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
   { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' },
   { id: 'zoho', name: 'Zoho CRM', category: 'crm', description: 'All-in-one CRM' },
@@ -17,7 +12,7 @@ import type { IntegrationProviderMeta } from './types';
 
 
 export const,
-  PROVIDERS: IntegrationProviderMeta[] = [
+  PROVIDERS: IntegrationProviderMetaService Feature = [
   {/* TODO: Fix JSX expression */}
   n: 'Enterprise CRM' },
   {/* TODO: Fix JSX expression */}
@@ -34,42 +29,22 @@ export const,
   n: 'Recruiting software' },
 
 export const,
-  PROVIDERS: IntegrationProviderMeta[] = [
-
-export const,
-  PROVIDERS: IntegrationProviderMeta[] = [
-
-export const PROVIDERS: IntegrationProviderMeta[] = [,
-,
-export const PROVIDERS: IntegrationProviderMeta[] = [,
-,
-export const PROVIDERS: IntegrationProviderMeta[] = [,
+  PROVIDERS: IntegrationProviderMetaService Feature = [,
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' },
 export const,
-  PROVIDERS: IntegrationProviderMeta[] = [
-
-export const,
-  PROVIDERS: IntegrationProviderMeta[] = [
-
-export const,
-  PROVIDERS: IntegrationProviderMeta[] = [
+  PROVIDERS: IntegrationProviderMetaService Feature = [
   {/* TODO: Fix JSX expression */}
   n: 'HRIS & ATS' },
 
 export const,
-  PROVIDERS: IntegrationProviderMeta[] = [
-
-export const,
-  PROVIDERS: IntegrationProviderMeta[] = [
-
-export const PROVIDERS: IntegrationProviderMeta[] = [
+  PROVIDERS: IntegrationProviderMetaService Feature = [
   {,
     id: 'salesforce',
     name: 'Salesforce',
     category: 'crm',
     description: 'Enterprise CRM',
 export const,
-  PROVIDERS: IntegrationProviderMeta[] = [
+  PROVIDERS: IntegrationProviderMetaService Feature = [
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}

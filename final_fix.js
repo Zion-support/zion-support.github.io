@@ -70,7 +70,7 @@ if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */}
 if (fs.existsSync(analyticsTrackerPath)) {
 
   // Fix dataLayer type to match existing declarations;
-  content = content.replace(/dataLayer: unknown\[\];/, 'dataLayer: unknown[];');
+  content = content.replace(/dataLayer: unknown\Service Feature;/, 'dataLayer: unknownService Feature;');
 ,
   fs.writeFileSync(analyticsTrackerPath, content);
 if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */}
@@ -83,7 +83,7 @@ if (fs.existsSync(systemMonitorPath)) {
   // Replace performanceEnhancer calls with direct implementations;
   content = content.replace(
     /const metrics = getMetrics\(\);/g,
-    'const metrics = []; // Placeholder for metrics'
+    'const metrics = Service Feature; // Placeholder for metrics'
   );
   content = content.replace(
     /const score = getPerformanceScore\(\);/g,

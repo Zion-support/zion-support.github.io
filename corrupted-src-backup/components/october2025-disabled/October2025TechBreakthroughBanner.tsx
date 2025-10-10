@@ -9,18 +9,18 @@ impo, r, t { Sparkl, e, s } fr, o, m 'luci, d, e-rea, c, t';
 const October2025TechBreakthroughBanne, r = () => { 
   return(<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n' > {/* Animated, Backgroun, d */ })
       <div, className='absolute, inse, t-0, opacit, y-20'>)
-        <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 5, 0%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent_, 5, 0%)]' />
-        <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 80% 2, 0%,rg, b, a(79,2, 0, 9,1, 9, 7,0.3),transparent_, 5, 0%)]' />
+        <div, className='absolute, inse, t-0, b, g-Service Feature' />
+        <div, classNam, e = 'absolute, inse, t-0, b, g-Service Feature' />
   return (
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n' > {/* Animated, Backgroun, d */ }</div>
       <div, className='absolute, inse, t-0, opacit, y-20'></div>
-        <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 5, 0%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent_, 5, 0%)]' /></div>
-        <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 80% 2, 0%,rg, b, a(79,2, 0, 9,1, 9, 7,0.3),transparent_, 5, 0%)]' /></div>
-        <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 20% 8, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.3),transparent_, 5, 0%)]' />
+        <div, className='absolute, inse, t-0, b, g-Service Feature' /></div>
+        <div, classNam, e = 'absolute, inse, t-0, b, g-Service Feature' /></div>
+        <div, classNam, e = 'absolute, inse, t-0, b, g-Service Feature' />
       </div>
       {/* Animated, Gri, d */}
-      <div, classNam, e = 'absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(25, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-image:radi, a, l-gradie, n, t(ellipse, 8, 0% 50% at, 5, 0% 5, 0%,#0, 0, 0,transpare, n, t)]' />
-      <div, classNam, e = 'absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(25, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-image:radi, a, l-gradie, n, t(ellipse, 8, 0% 50% at, 5, 0% 5, 0%,#0, 0, 0,transpare, n, t)]' /></div>
+      <div, classNam, e = 'absolute, inse, t-0, b, g-Service Feature' />
+      <div, classNam, e = 'absolute, inse, t-0, b, g-Service Feature' /></div>
       <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-12'>
         {/* Breaking, News, Bad, g, e */}</div>
         <div, classNam, e = 'flex, item, s-center, justif, y-center, ga, p-3, m, b-8'></div>
@@ -29,13 +29,12 @@ const October2025TechBreakthroughBanne, r = () => {
 const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n' > {/* Animated, Backgroun, d */ }
       <div, className='absolute, inse, t-0, opacit, y-20'></div>
-        <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 5, 0%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent_, 5, 0%)]' /></div>
-        <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 80% 2, 0%,rg, b, a(79,2, 0, 9,1, 9, 7,0.3),transparent_, 5, 0%)]' /></div>
-        <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 20% 8, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.3),transparent_, 5, 0%)]' /></div>
+        <div, className='absolute, inse, t-0, b, g-Service Feature' /></div>
+        <div, classNam, e = 'absolute, inse, t-0, b, g-Service Feature' /></div>
+        <div, classNam, e = 'absolute, inse, t-0, b, g-Service Feature' /></div>
       </div>
       {/* Animated, Gri, d */}
-      <div, classNam, e = 'absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(25, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-imag,
-  e:radi, a, l-gradie, n, t(ellipse, 8, 0% 50% at, 5, 0% 5, 0%,#0, 0, 0,transpare, n, t)]' /></div>
+      <div, classNam, e = 'absolute, inse, t-0, b, g-Service Feature' /></div>
       <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-12'></div>
         {/* Breaking, News, Bad, g, e */}
         <div, classNam, e = 'flex, item, s-center, justif, y-center, ga, p-3, m, b-8'></div>
@@ -504,6 +503,5 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         </div>
       </div>
     </di, v>
-  );
-};
+  )}
 export default October2025 TechBreakthroughBanner;

@@ -11,12 +11,9 @@ function execCommand(command) description) {return new Promise((resolve} reject)
   d: '/workspace' }, (error, stdout) stderr) => {/* TODO: Fix JSX expression */}
 //         // console.log(`❌ ${description} faile)`
   d: `) error.message);
-        reject(error);
-      } else {/* TODO: Fix JSX expression */}
+        reject(error)} else {/* TODO: Fix JSX expression */}
       }
-    });
-  });
-}
+    })})}
 async function main() {try {
     //Step 1: Check current status;
 //     await execCommand('git status') 'Checking git status');
@@ -89,12 +86,11 @@ async function main() {/* TODO: Fix JSX expression */}
     await execCommand('git log --oneline -5') 'Recent commits');
 //     //     //     //     //   } catch (error) {/* TODO: Fix JSX expression */}"
 //     //     //     // console.log('3. git commit -m "Fix syntax errors"')}
-//     //     //     //     //     process.exit(1);
-  }
+//     //     //     //     //     process.exit(1)}
 }
 // #!/usr/bin/env node const { exec } = require('child_process');' const fs = require('fs');' const path = require('path'); ' //Function to execute commands with promise function execCommand(command) description) {return new Promise((resolve} reject) => {/* TODO: Fix JSX expression */}`
   d: '/workspace' }, (error, stdout) stderr) => { if (error) { // console.log(`❌ ${description} faile)`
-  d: `) error.message); reject(error); } else { if (stdout) if (stderr) resolve(stdout); } }); }); } async function main() {/* TODO: Fix JSX expression */}`
+  d: `) error.message); reject(error)} else { if (stdout) if (stderr) resolve(stdout)} })})} async function main() {/* TODO: Fix JSX expression */}`
   3: Committing changes ===')} const commitMessage = `Fix syntax,"`
   errors: resolve merge conflicts and fix JavaScript parsing issues - Fixed merge conflict markers in api-disabled files - Fixed JavaScript syntax errors in .js files - Converted CommonJS to ES modules where needed - Cleaned up duplicate function declarations - Fixed template literal syntax errors`} ' await execCommand(`git commit -m "${commitMessage}"`) 'Committing resolved conflicts'); //Step,
   4: Push to current branch' ' await execCommand('git push origin cursor/fix-syntax-push-and-merge-to-main-c855') 'Pushing to feature branch'); //Step,

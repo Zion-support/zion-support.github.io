@@ -23,18 +23,15 @@ try {
   
   try {
     execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`, { stdio: 'pipe' });
-    console.log(`✅ Branch ${branchName} exists`);
-  } catch (error) {
+    console.log(`✅ Branch ${branchName} exists`)} catch (error) {
     console.log(`❌ Branch ${branchName} not found`);
-    process.exit(1);
-  }
+    process.exit(1)}
 
   // Try to merge the branch;
   console.log(`🔄 Attempting to merge ${branchName} into main...`);
   try {
     execSync(`git merge origin/${branchName} --no-ff -m "feat: Merge enhanced app with 50+ micro SAAS services and futuristic design"`, { stdio: 'inherit' });
-    console.log('✅ Merge successful!');
-  } catch (error) {
+    console.log('✅ Merge successful!')} catch (error) {
     console.log('⚠️  Merge conflicts detected. Attempting to resolve...');
     
     // Check for conflicts;
@@ -46,13 +43,11 @@ try {
       try {
         execSync('git add .', { stdio: 'inherit' });
         execSync('git commit -m "feat: Resolve merge conflicts and integrate enhanced app features"', { stdio: 'inherit' });
-        console.log('✅ Conflicts resolved and committed!');
-      } catch (resolveError) {
+        console.log('✅ Conflicts resolved and committed!')} catch (resolveError) {
         console.log('❌ Could not automatically resolve conflicts. Manual intervention needed.');
         console.log('📋 Conflict files: ');
         console.log(status);
-        process.exit(1);
-      }
+        process.exit(1)}
     }
   }
 
@@ -61,9 +56,6 @@ try {
   execSync('git push origin main', { stdio: 'inherit' });
 
   console.log('🎉 Successfully merged and pushed to main!');
-  console.log('✅ PR merge process completed successfully!');
-
-} catch (error) {
+  console.log('✅ PR merge process completed successfully!')} catch (error) {
   console.error('❌ Error during merge process:', error.message);
-  process.exit(1);
-}
+  process.exit(1)}

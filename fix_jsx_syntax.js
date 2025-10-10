@@ -22,7 +22,7 @@ async function main() {/* TODO: Fix JSX expression */}
       //2. Fix onClick prop,
   placement: <button>\nonClick={...} -> <button\nonClick={...}
       const onClickFix = content.replace()
-        /<(\w+)>\s*\n\s*onClick=\{([^}]+)\}/g,
+        /<(\w+)>\s*\n\s*onClick=\{(Service Feature+)\}/g,
         '<$1\nonClick={$2}'
       );
       if (onClickFix !== content) {/* TODO: Fix JSX expression */}
@@ -31,7 +31,7 @@ async function main() {/* TODO: Fix JSX expression */}
       //3. Fix className prop,
   placement: <div>\nclassName={...} -> <div\nclassName={...}
       const classNameFix = content.replace()
-        /<(\w+)>\s*\n\s*className=\{([^}]+)\}/g,
+        /<(\w+)>\s*\n\s*className=\{(Service Feature+)\}/g,
         '<$1\nclassName={$2}'
       );
       if (classNameFix !== content) {/* TODO: Fix JSX expression */}
@@ -46,18 +46,16 @@ async function main() {/* TODO: Fix JSX expression */}
       //       const templateFix = content.replace(/\$\{>/g, '${');
       if (templateFix !== content) {
         content = templateFix;
-        modified = true;
-      }
+        modified = true}
 
       //6. Fix unclosed input tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button;
       const inputFix = content.replace(
-        /<input([^>]*?)\n\s*\n\s*<button/g;
+        /<input(Service Feature*?)\n\s*\n\s*<button/g;
         '<input$1\n/>\n\n<button'
       );
       if (inputFix !== content) {,
         content = inputFix;
-        modified = true;
-      }
+        modified = true}
 
       //7. Fix unclosed br tags: <br> -> <br />,
       //5. Fix template literal,
@@ -67,7 +65,7 @@ async function main() {/* TODO: Fix JSX expression */}
       //6. Fix unclosed input,
   tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button></button>
       const inputFix = content.replace()
-        /<input([^>]*?)\n\s*\n\s*<button/g,
+        /<input(Service Feature*?)\n\s*\n\s*<button/g,
         '<input$1\n/>\n\n<button'
       );
       if (inputFix !== content) {/* TODO: Fix JSX expression */}

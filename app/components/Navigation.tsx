@@ -4,32 +4,24 @@ import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Share2, Mic, Wrench, Truck } from 'lucide-react';
 
 const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-  const [itServicesOpen, setItServicesOpen] = useState(false);
-  const [microSaasOpen, setMicroSaasOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const Service Feature = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false);
-      }
-    };
+        setIsOpen(false)}
+    }
 
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+      setIsScrolled(window.scrollY > 50)}
 
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)}
+  }, Service Feature);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleServices = () => setServicesOpen(!servicesOpen);
@@ -42,8 +34,7 @@ const Navigation: React.FC = () => {
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
-    setIsOpen(false);
-  };
+    setIsOpen(false)}
 
   // Service data
   const aiServices = [
@@ -346,7 +337,6 @@ const Navigation: React.FC = () => {
         )}
       </div>
     </nav>
-  );
-};
+  )}
 
 export default Navigation;

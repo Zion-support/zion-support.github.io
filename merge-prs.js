@@ -10,8 +10,7 @@ try {
   if (status.trim()) {
     console.log('⚠️  Working directory not clean, committing changes...');
     execSync('git add .', { stdio: 'inherit' });
-    execSync('git commit -m "Auto-commit before merge"', { stdio: 'inherit' });
-  }
+    execSync('git commit -m "Auto-commit before merge"', { stdio: 'inherit' })}
 
   // Switch to main branch;
   console.log('🔄 Switching to main branch...');
@@ -33,15 +32,7 @@ import { execSync } from 'child_process';
 import fs from 'fs';
 
 //PR information from the JSON files;
-const prs = [
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  }];
+const prs = Service Feature;
 
 // //Ensure we're on main branch;
 try {/* TODO: Fix JSX expression */}
@@ -106,17 +97,14 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
           console.log(`🔧 Resolving conflicts in ${file}...`);
           try {
             execSync(`git checkout --ours "${file}"`, { stdio: 'inherit' });
-            execSync(`git add "${file}"`, { stdio: 'inherit' });
-          } catch (e) {
-            console.log(`⚠️  Could not auto-resolve ${file}, manual intervention needed`);
-          }
+            execSync(`git add "${file}"`, { stdio: 'inherit' })} catch (e) {
+            console.log(`⚠️  Could not auto-resolve ${file}, manual intervention needed`)}
         }
       }
       
       // Complete the merge;
       execSync('git commit -m "Resolve merge conflicts - accept website audit changes"', { stdio: 'inherit' });
-      console.log('✅ Merge conflicts resolved!');
-    }
+      console.log('✅ Merge conflicts resolved!')}
   }
 
   // Push to main;
@@ -130,12 +118,9 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
   execSync('git branch -d cursor/website-audit-and-update-with-deployment-1500', { stdio: 'inherit' });
   execSync('git push origin --delete cursor/website-audit-and-update-with-deployment-1500', { stdio: 'inherit' });
 
-  console.log('✨ All done! Feature branch merged and cleaned up.');
-
-} catch (error) {
+  console.log('✨ All done! Feature branch merged and cleaned up.')} catch (error) {
   console.error('❌ Error during merge process:', error.message);
-  process.exit(1);
-}
+  process.exit(1)}
   } catch (error) {/* TODO: Fix JSX expression */}
 //     }
 }

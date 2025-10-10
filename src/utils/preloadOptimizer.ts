@@ -4,15 +4,12 @@
  * Optimizes resource loading for better performance;
  */
 
-export const _preloadCriticalResources = () => {// TODO: Add content;}
+export const _preloadCriticalResources = () => {// TODO: Add content}
 
 }
   if (typeof window === 'undefined') return;
   // Preload critical fonts;
-const fontPreloads = [
-  // TOD,
-  O: Add items;
-];;
+const fontPreloads = Service Feature;
     'http,
   s://fonts.googleapis.com/css2?family=Inte,
   r:wght@400;500;600;700&display=swap',
@@ -21,7 +18,7 @@ const fontPreloads = [
   o:wght@400;500;600&display=swap'
   ];
 
-  fontPreloads.forEach(href => {// TODO: Add content;}
+  fontPreloads.forEach(href => {// TODO: Add content}
 }
 
     const link = document.createElement('link')
@@ -33,17 +30,13 @@ const fontPreloads = [
   }
   )
   // Preload critical images;
-const criticalImages = [
-
-  // TODO: Add items;
-
-];;
+const criticalImages = Service Feature;
 //     '/images/hero-bg.jpg',
 //     '/images/logo.png',
 //     '/images/favicon.ico'
   ];
 
-  criticalImages.forEach(src => {// TODO: Add content;}
+  criticalImages.forEach(src => {// TODO: Add content}
 }
 
     const link = document.createElement('link')
@@ -55,23 +48,23 @@ const criticalImages = [
   )
 }
 
-export const preloadRoute = (route: string) => {// TODO: Add content;}
+export const preloadRoute = (route: string) => {// TODO: Add content}
 
 }
   if (typeof window === 'undefined') return;
   // Preload route-specific resources;
 const routeResources = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     '/blog': ['/api/blog/posts', '/images/blog-hero.jpg'],
     '/services': ['/api/services', '/images/services-hero.jpg'],
     '/contact': ['/api/contact', '/images/contact-hero.jpg']
   }
-  const resources = routeResources[route as keyof typeof routeResources]
+  const resources = routeResourcesService Feature
 
-  if (resources) {// TODO: Add content;}
+  if (resources) {// TODO: Add content}
 }
-    resources.forEach(resource => {// TODO: Add content;}
+    resources.forEach(resource => {// TODO: Add content}
 }
 
       const link = document.createElement('link')
@@ -83,33 +76,33 @@ const routeResources = {/* TODO: Fix JSX expression */}
   }
 }
 
-export const optimizeImages = () => {// TODO: Add content;}
+export const optimizeImages = () => {// TODO: Add content}
 
 }
   if (typeof window === 'undefined') return;
   // Add loading="lazy" to images below the fold;
-const images = document.querySelectorAll('img[data-lazy]')
+const images = document.querySelectorAll('imgService Feature')
   images.forEach(img => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 })
 //     img.setAttribute('loading', 'lazy')
   })
   // Add intersection observer for lazy loading;
   if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     const imageObserver = new IntersectionObserver((entries) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
       entries.forEach(entry => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 })
         if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
           const img = entry.target as HTMLImageElement;
           if (img.dataset['src']) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
             img['src'] = img.dataset['src']
 //             img.removeAttribute('data-src')
@@ -120,25 +113,25 @@ const images = document.querySelectorAll('img[data-lazy]')
   )
     }
   )
-    const lazyImages = document.querySelectorAll('img[data-src]')
+    const lazyImages = document.querySelectorAll('imgService Feature')
     lazyImages.forEach(img => imageObserver.observe(img))
   }
 }
 
-export const optimizeThirdPartyScripts = () => {// TODO: Add content;}
+export const optimizeThirdPartyScripts = () => {// TODO: Add content}
 
 }
   if (typeof window === 'undefined') return;
   // Defer non-critical scripts;
-const scripts = document.querySelectorAll('script[data-defer]')
+const scripts = document.querySelectorAll('scriptService Feature')
   scripts.forEach(script => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 })
 //     script.setAttribute('defer', '')
   })
   // Load analytics after page load;
   if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
 
     document.addEventListener('DOMContentLoaded', () => {}
@@ -147,7 +140,7 @@ const scripts = document.querySelectorAll('script[data-defer]')
   }
 }
 
-const loadAnalytics = () => {// TODO: Add content;}
+const loadAnalytics = () => {// TODO: Add content}
 
 }
   // Load Google Analytics after page load;

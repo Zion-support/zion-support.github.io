@@ -36,6 +36,5 @@ const ApiDocs: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default ApiDocsPage;

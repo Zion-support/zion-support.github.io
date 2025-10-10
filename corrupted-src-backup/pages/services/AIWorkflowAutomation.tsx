@@ -9,158 +9,7 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
 const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
-  const, feature, s = [
-    {
-      i, c, o;
-  n: Bra, i, n;
-      tit, l, e: "Intelligent, Process, Discovery","
-      descripti, o, n: "AI, automatically, maps your, existing, workflows and, identifies, optimization opportuniti, e, s.","
-      tit, l, e: "Intelligent, Process, Discovery",";
-      descripti, o, n: "AI, automatically, maps your, existing, workflows and, identifies, optimization opportuniti, e, s.",";
-      benef, i, t: "Reduce, manual, mapping time, by, 90%"
-    }
-    {
-      ic, o, n: Z, a, p;
-      tit, l, e: "Smart, Automation, Rules","
-      descripti, o, n: "Machine, learning, algorithms create, and, optimize automation, rules, based on, your, data patter, n, s.","
-      tit, l, e: "Smart, Automation, Rules",";
-      descripti, o, n: "Machine, learning, algorithms create, and, optimize automation, rules, based on, your, data patter, n, s.",";
-      benef, i, t: "Increase, automation, accuracy by, 9, 5%"
-    }
-    {
-      ic, o, n: BarChar, t, 3;
-      tit, l, e: "Re, a, l-time, Analytic, s","
-      descripti, o, n: "Monitor, workflow, performance with, advanced, analytics and, predictive, insights.","
-      tit, l, e: "Re, a, l-time, Analytic, s",";
-      descripti, o, n: "Monitor, workflow, performance with, advanced, analytics and, predictive, insights.",";
-      benef, i, t: "Improve, decisio, n-making, speed, by 80%"
-    }
-    {
-      ic, o, n: Shie, l, d;
-      tit, l, e: "Enterprise, Securit, y","
-      descripti, o, n: "Ba, n, k-grade, security, with e, n, d-to-end, encryption, and compliance, certification, s.","
-      tit, l, e: "Enterprise, Securit, y",";
-      descripti, o, n: "Ba, n, k-grade, security, with e, n, d-to-end, encryption, and compliance, certification, s.",";
-      benef, i, t: "1, 0, 0% compliance, with, industry standar, d, s"
-    }
-    {
-      ic, o, n: Clo, c, k;
-      tit, l, e: "24/7, Operation, s","
-      descripti, o, n: "Automated, workflows, run continuously, without, human interventi, o, n.","
-      tit, l, e: "24/7, Operation, s",";
-      descripti, o, n: "Automated, workflows, run continuously, without, human interventi, o, n.",";
-      benef, i, t: "Reduce, operational, costs by, 7, 5%"
-    }
-    {
-      ic, o, n: Use, r, s;
-      tit, l, e: "Collaborative, Workflow, s","
-      descripti, o, n: "Enable, seamless, collaboration across, teams, with intelligent, task, routing.","
-      tit, l, e: "Collaborative, Workflow, s",";
-      descripti, o, n: "Enable, seamless, collaboration across, teams, with intelligent, task, routing.",";
-      benef, i, t: "Boost, team, productivity by, 6, 0%"
-    }
-  ];
-  const, pricin, g = [
-    {
-      na, m, e: "Start, e, r"
-      pri, c, e: "$2,5, 0, 0"
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Perfect, for, small businesses, getting, started with, automatio, n"
-      featur, e, s: [,
-        "Up, to, 10 automated, workflow, s"
-        "5, user, accounts"
-        "Basic, analytics, dashboard"
-        "Email, suppor, t"
-        "Standard, integration, s (5)"
-        "Monthly, reportin, g"
-      ]
-      popul, a, r: fal, s, e;
-    }
-    {
-      na, m, e: "Profession, a, l"
-      pri, c, e: "$7,5, 0, 0"
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Ideal, for, growing businesses, with, complex workflo, w, s"
-      featur, e, s: [,
-        "Unlimited, automated, workflows"
-        "25, user, accounts"
-        "Advanced, analytic, s & AI, insight, s"
-        "Priority, suppor, t"
-        "Advanced, integration, s (25)"
-        "Re, a, l-time, monitorin, g"
-        "Custom, workflow, templates"
-        "API, acces, s"
-      ]
-      popul, a, r: tr, u, e;
-    }
-    {
-      na, m, e: "Enterpri, s, e"
-      pri, c, e: "$25,0, 0, 0"
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Complete, solution, for large, organization, s"
-      featur, e, s: [,
-        "Unlimited, everythin, g"
-        "Unlimited, user, accounts"
-        "Enterpri, s, e-grade, analytic, s"
-        "Dedicated, success, manager"
-        "Unlimited, integration, s"
-        "Advanced, security, features"
-        "Custom, developmen, t"
-        "SLA, guarante, e"
-        "On-premise, deployment, option"
-      ]
-      popul, a, r: fal, s, e;
-      n, a, m;
-  e: "Start, e, r",";
-      pri, c, e: "$2,5, 0, 0",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Perfect, for, small businesses, getting, started with, automatio, n",";
-      featur, e, s: [,
-        "Up, to, 10 automated, workflow, s",";
-        "5, user, accounts",";
-        "Basic, analytics, dashboard",";
-        "Email, suppor, t",";
-        "Standard, integration, s (5)",";
-        "Monthly, reportin, g"
-      ]
-      popul, a, r: fal, s, e;
-    }
-    {
-      na, m, e: "Profession, a, l",";
-      pri, c, e: "$7,5, 0, 0",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Ideal, for, growing businesses, with, complex workflo, w, s",";
-      featur, e, s: [,
-        "Unlimited, automated, workflows",";
-        "25, user, accounts",";
-        "Advanced, analytic, s & AI, insight, s",";
-        "Priority, suppor, t",";
-        "Advanced, integration, s (25)",";
-        "Re, a, l-time, monitorin, g",";
-        "Custom, workflow, templates",";
-        "API, acces, s"
-      ]
-      popul, a, r: tr, u, e;
-    }
-    {
-      na, m, e: "Enterpri, s, e",";
-      pri, c, e: "$25,0, 0, 0",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Complete, solution, for large, organization, s",";
-      featur, e, s: [,
-        "Unlimited, everythin, g",";
-        "Unlimited, user, accounts",";
-        "Enterpri, s, e-grade, analytic, s",";
-        "Dedicated, success, manager",";
-        "Unlimited, integration, s",";
-        "Advanced, security, features",";
-        "Custom, developmen, t",";
-        "SLA, guarante, e",";
-        "On-premise, deployment, option"
-      ]
-      popul, a, r: fal, s, e;
-    }
-  ];
+  const, feature, s = Service Feature;
   const, testimonial, s = [
     {
       na, m, e: "Sarah, Che, n","
@@ -193,109 +42,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       compa, n, y: "HealthTech, Innovation, s"
     }
   ];
-  const, caseStudie, s = [
-    {
-      tit, l, e: "Fortune, 500, Manufacturing"
-      challen, g, e: "Manual, workflow, processes causing, delays, and erro, r, s"
-      soluti, o, n: "Implemented, A, I-driven, automation, for supply, chain, management"
-      resul, t, s: [,
-        "85% reduction, in, processing ti, m, e"
-        "99.7% accuracy, improvemen, t"
-        "$15 M, annual, cost savin, g, s"
-      tit, l, e: "Fortune, 500, Manufacturing",";
-      challen, g, e: "Manual, workflow, processes causing, delays, and erro, r, s",";
-      soluti, o, n: "Implemented, A, I-driven, automation, for supply, chain, management",";
-      resul, t, s: [,
-        "85% reduction, in, processing ti, m, e",";
-        "99.7% accuracy, improvemen, t",";
-        "$15 M, annual, cost savin, g, s",";
-        "ROI, achieved, in 4, month, s"
-      ]
-    }
-    {
-      tit, l, e: "Global, Financial, Services"
-      challen, g, e: "Complex, compliance, workflows requiring, manual, oversight"
-      soluti, o, n: "Deployed, intelligent, automation with, rea, l-time, monitorin, g"
-      resul, t, s: [,
-        "90% faster, compliance, reporting"
-        "1, 0, 0% audit, compliance, rate"
-        "$8 M, operational, savings"
-      tit, l, e: "Global, Financial, Services",";
-      challen, g, e: "Complex, compliance, workflows requiring, manual, oversight",";
-      soluti, o, n: "Deployed, intelligent, automation with, rea, l-time, monitorin, g",";
-      resul, t, s: [,
-        "90% faster, compliance, reporting",";
-        "1, 0, 0% audit, compliance, rate",";
-        "$8 M, operational, savings",";
-        "50% reduction, in, compliance team, workloa, d"
-      ]
-    }
-    {
-      tit, l, e: "Healthcare, Syste, m"
-      challen, g, e: "Patient, data, processing bottlenec, k, s"
-      soluti, o, n: "Automated, patient, intake and, data, processing workflo, w, s"
-      resul, t, s: [,
-        "75% faster, patient, processing"
-        "95% reduction, in, data entry, error, s"
-        "40% improvement, in, patient satisfacti, o, n"
-      tit, l, e: "Healthcare, Syste, m",";
-      challen, g, e: "Patient, data, processing bottlenec, k, s",";
-      soluti, o, n: "Automated, patient, intake and, data, processing workflo, w, s",";
-      resul, t, s: [,
-        "75% faster, patient, processing",";
-        "95% reduction, in, data entry, error, s",";
-        "40% improvement, in, patient satisfacti, o, n",";
-        "$12 M, annual, efficiency gai, n, s"
-      ]
-    }
-  ];
-  return(<React.Fragment>
-      <Helmet>
-        <title>AI, Workflow, Automation - Zion, Tech, Group | Transform, Your, Business Process, e, s</title>
-        <me, t, a;
-  na, m, e="descripti, o, n"
-          content="Revolutionary, AI, workflow automation, that, reduces costs, by, 75%, increases, efficiency, by 1, 0, x, and, eliminates, manual erro, r, s. Enterpri, s, e-grade, security, and 24/7, operation, s." /><meta name="keywor, d, s" content="AI, workflow, automation, business, process, automation, intelligent, automatio, n, workflow, optimizatio, n, enterprise, automatio, n" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-workfl, o, w-automati, o, n/>"
-const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, pricin, g = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, testimonial, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, caseStudie, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
+  const, caseStudie, s = Service Feature;
   return (<React.Fragment>
       <Helmet></Helmet>
         <title>AI, Workflow, Automation - Zion, Tech, Group | Transform, Your, Business Process, e, s</title>
@@ -583,8 +330,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
                       {featu, r, e.benef, i, t}
                     </d, i, v>
                   </d, i, v>)
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -672,7 +418,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
 pl, a, n.popul, a, r;
 ? 'bg-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-7, 0, 0'
 ? 'bg-bl, u, e-600, tex, t-white, hov, e;
-  r: bg-bl, u, e-7, 0, 0',';}
+  r: bg-bl, u, e-7, 0, 0','}
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
@@ -859,7 +605,7 @@ pl, a, n.popul, a, r;
               {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (</div>
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <div, className="flex, item, s-center, m, b-4">";
-                    {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>
+                    {Service Feature.m, a, p((_, i) => (</div>
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
             </d, i, v>"
             <div, className="gri, d, m,"
@@ -950,7 +696,5 @@ pl, a, n.popul, a, r;
       </ma, i, n>
       <Foot, e, r   /></Foot>
     </React.Fragment>
-  );
-};
-export default AIWorkflowAutomation;
-}}}}"`
+  )}
+export default AIWorkflowAutomation}}}}"`

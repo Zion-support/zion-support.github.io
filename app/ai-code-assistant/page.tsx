@@ -110,8 +110,7 @@ const AiCodeAssistantPage: React.FC = () => {
       </main>
       <Footer />
     </React.Fragment>
-  );
-};
+  )}
 export default AiCodeAssistantPage;
   </button>
   </h2>

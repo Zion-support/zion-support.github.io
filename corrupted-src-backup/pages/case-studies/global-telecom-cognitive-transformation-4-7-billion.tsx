@@ -27,11 +27,11 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => { ,
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
         <Head, e, r / > {/* Hero, Sect, i, o, n */ }
         <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'>
-          <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)]' />
+          <div, className='absolute, inse, t-0, b, g-Service Feature' />
           <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8'>,
             {/* Breadc, r, u, m, b */}
         <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'></div>
-          <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)]' /></div>
+          <div, className='absolute, inse, t-0, b, g-Service Feature' /></div>
           <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
             {/* Breadc, r, u, m, b */}</div>
             <nav, classNam, e = 'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8'>
@@ -41,7 +41,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => { ,
 const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX expression */}
         <Head, e, r / > {/* Hero, Sect, i, o, n */ }
         <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'></div>
-          <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)]' /></div>
+          <div, className='absolute, inse, t-0, b, g-Service Feature' /></div>
           <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'></div>
             {/* Breadc, r, u, m, b */}
             <nav, classNam, e = 'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8'></nav>

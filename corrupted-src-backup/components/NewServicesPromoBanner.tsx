@@ -42,7 +42,7 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
               <h3, classNam, e = "te, x, t-xl, fon, t-bold, m, b-2">{servi, c, e.na, m, e}</h3>
               <p, classNam, e="te, x, t-oran, g, e-100, tex, t-sm, m, b-4, lin, e-cla, m, p-2">{servi, c, e.description}</p>
               <div, classNam, e="mb-4"></div>
-                <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.benefi, t, s[0]}</sp, a, n>
+                <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.benefi, t, sService Feature}</sp, a, n>
                 Learn, Mor, e <Link, classNam, e="w-4 h-4" />
         <div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-6">
           { servic, e, s.m, a, p((serv, i, c, e) = > (</div>
@@ -84,7 +84,7 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
               <h3, classNam, e = "te, x, t-xl, fon, t-bold, m, b-2">{servi, c, e.na, m, e}</h3>"
               <p, classNam, e="te, x, t-oran, g, e-100, tex, t-sm, m, b-4, lin, e-cla, m, p-2">{servi, c, e.description}</p>"
               <div, classNam, e="mb-4"></div>"
-                <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.benefi, t, s[0]}</sp, a, n>"
+                <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.benefi, t, sService Feature}</sp, a, n>"
                 Learn, Mor, e <Link, classNam, e="w-4 h-4" /></Link>"
         <div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-6"></div>
           {/* TODO: Fix JSX expression */}"

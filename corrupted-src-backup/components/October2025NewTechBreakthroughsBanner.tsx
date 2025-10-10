@@ -496,6 +496,5 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-}
+  )}
 ;"

@@ -31,11 +31,9 @@ function fixFooter() {
   ];
   
   fixes.forEach(fix => {
-    content = content.replace(fix.pattern, fix.replacement);
-  });
+    content = content.replace(fix.pattern, fix.replacement)});
   
   fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed Footer component');
-}
+  console.log('Fixed Footer component')}
 
 fixFooter();

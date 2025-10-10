@@ -6,60 +6,49 @@ function fixUnusedImports(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     const lines = content.split('\n');
-    const newLines = [];
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+    const newLines = Service Feature;
       const trimmedLine = line.trim();
       
       // Check if this is an import line;
       if (trimmedLine.startsWith('import ')) {
         // Extract the imported names from the import line;
-        const importMatch = trimmedLine.match(/import\s*{([^}]+)}\s*from/);
-        if (importMatch) {
-          const imports = importMatch[1].split(',').map(imp => imp.trim());
+        const importMatch = trimmedLine.match(/import\s*{(Service Feature.split(',').map(imp => imp.trim());
           const usedImports = imports.filter(imp => {)
-            const name = imp.split(' as ')[0].trim();
+            const name = imp.split(' as ')Service Feature.trim();
             // Check if the name is used in the content (excluding the import line itself)
             const contentWithoutImport = content.replace(line, '');
             return contentWithoutImport.includes(name) && 
                    !contentWithoutImport.includes(`import ${name}`) &&
                    !contentWithoutImport.includes(`{ ${name}`) &&
-                   !contentWithoutImport.includes(`{${name}`);
-          });
+                   !contentWithoutImport.includes(`{${name}`)});
           
           if (usedImports.length === 0) {
             // No used imports, remove the entire line;
-            continue;
-          } else if (usedImports.length < imports.length) {
+            continue} else if (usedImports.length < imports.length) {
             // Some imports are unused, keep only the used ones;
-            const newImportLine = line.replace(importMatch[1], usedImports.join(', '));
-            newLines.push(newImportLine);
-          } else {
+            const newImportLine = line.replace(importMatchService Feature, usedImports.join(', '));
+            newLines.push(newImportLine)} else {
             // All imports are used, keep the line;
-            newLines.push(line);
-          }
+            newLines.push(line)}
         } else {
           // For default imports, check if they're used;
           const defaultImportMatch = trimmedLine.match(/import\s+(\w+)\s+from/);
           if (defaultImportMatch) {
-            const name = defaultImportMatch[1];
+            const name = defaultImportMatchService Feature;
             const contentWithoutImport = content.replace(line, '');
             if (contentWithoutImport.includes(name) && 
                 !contentWithoutImport.includes(`import ${name}`)) {
-              newLines.push(line);
-            }
+              newLines.push(line)}
             // If not used, skip the line (don't add it)
           } else {
             // Other import types, keep them;
             newLines.push(line);
 function fixUnusedImports(filePath) {/* TODO: Fix JSX expression */}
-        const importMatch = trimmedLine.match(/import\s*{([^}]+)}\s*from/);
+        const importMatch = trimmedLine.match(/import\s*{(Service Feature+)}\s*from/);
         if (importMatch) {/* TODO: Fix JSX expression */}
                    !contentWithoutImport.includes(`import ${name}`) &&`
                    !contentWithoutImport.includes(`{ ${name}`) &&`
-                   !contentWithoutImport.includes(`{${name}`);
-          });
+                   !contentWithoutImport.includes(`{${name}`)});
           
           if (usedImports.length === 0) {/* TODO: Fix JSX expression */}
           } else if (usedImports.length < imports.length) {/* TODO: Fix JSX expression */}
@@ -79,15 +68,12 @@ function fixUnusedImports(filePath) {/* TODO: Fix JSX expression */}
     const newContent = newLines.join('\n');
     if (newContent !== content) {/* TODO: Fix JSX expression */}`
   in: ${filePath}`);
-      return true;
-    }
+      return true}
     
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
+    console.error(`Error processing ${filePath}:`, error.message)}
   
-  return false;
-}
+  return false}
 
 // Function to fix parsing errors in blog files;
 function fixParsingErrors(filePath) {
@@ -102,28 +88,22 @@ function fixParsingErrors(filePath) {
       console.log(`Fixed parsing error in: ${filePath}`);
 function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}`
   in: ${filePath}`);
-      return true;
-    }
+      return true}
     
     // Check for missing closing braces;
-    const openBraces = (content.match(/\{/g) || []).length;
-    const openBraces = (content.match(/\{/* TODO: Fix JSX expression */})
-    const closeBraces = (content.match(/\}/g) || []).length;
+    const openBraces = (content.match(/\{/g) || Service Feature).length;
     
     if (openBraces > closeBraces) {/* TODO: Fix JSX expression */}
       const newContent = content + '\n' + '}'.repeat(missingBraces);
       fs.writeFileSync(filePath, newContent, 'utf8');`
       console.log(`Fixed missing braces)`
   in: ${filePath}`);
-      return true;
-    }
+      return true}
     
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
+    console.error(`Error processing ${filePath}:`, error.message)}
   
-  return false;
-}
+  return false}
 
 // Function to fix unused variables by prefixing with underscore;
 function fixUnusedVariables(filePath) {
@@ -143,8 +123,7 @@ function fixUnusedVariables(filePath) {
     patterns.forEach(pattern => {)
       if (pattern.regex.test(newContent)) {
         newContent = newContent.replace(pattern.regex, pattern.replacement);
-        changed = true;
-      }
+        changed = true}
 function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
   t: '_$1: $2 = ' },
       {/* TODO: Fix JSX expression */}
@@ -162,19 +141,16 @@ function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
     
     if (changed) {/* TODO: Fix JSX expression */}`
   in: ${filePath}`);
-      return true;
-    }
+      return true}
     
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
+    console.error(`Error processing ${filePath}:`, error.message)}
   
-  return false;
-}
+  return false}
 
 // Get all TypeScript/JavaScript files in src directory;
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  let results = [];
+  let results = Service Feature;
   const list = fs.readdirSync(dir);
   
   list.forEach(file => {)
@@ -192,8 +168,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
     }
   });
   
-  return results;
-}
+  return results}
 
 // Main execution;
 console.log('Fixing all remaining issues in src directory...');
@@ -206,13 +181,11 @@ files.forEach(file => {)
   )
   // Fix unused imports;)
   if (fixUnusedImports(file)) {
-    fileFixed = true;
-  }
+    fileFixed = true}
   
   // Fix parsing errors;
   if (fixParsingErrors(file)) {
-    fileFixed = true;
-  }
+    fileFixed = true}
   
   // Fix unused variables;
   if (fixUnusedVariables(file)) {

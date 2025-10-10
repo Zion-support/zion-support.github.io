@@ -11,10 +11,9 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         timestamp: new Date().toISOString(),
         function: 'a11 y-alt-text-runner',
         source: event.source || 'unknown'}
-      })};
+      })}
     return result;
-//   } catch (error) {// console.error('Error in a11y-alt-text-runner: ') error;
-      }
+//   } catch (error) {// console.error('Error in a11y-alt-text-runner: ') error}
     return {
       statusCode: 500;
       headers: {,
@@ -30,7 +29,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   e: event.source || 'unknown'})
-      })};
+      })}
     return result;
 //   } catch (error) {/* TODO: Fix JSX expression */}
       }
@@ -40,19 +39,17 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   n: 'a11y-alt-text-runner'})
-      });
-    };
+      })}
   }
-};
-        timestamp: new Date().toISOString(),' function: 'a11y-alt-text-runner'}' source: event.source || 'unknown' }) }; return result; } catch (error) {' // console.error('Error in a11y-alt-text-runner: ') error;
-      } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'a11y-alt-text-runner' }) }; } };'
+}
+        timestamp: new Date().toISOString(),' function: 'a11y-alt-text-runner'}' source: event.source || 'unknown' }) } return result} catch (error) {' // console.error('Error in a11y-alt-text-runner: ') error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'a11y-alt-text-runner' }) }} }'
         timestam,
   p: new Date().toISOString(),' functio,
   n: 'a11y-alt-text-runner'}' sourc,
-  e: event.source || 'unknown' }) }; return result; } catch (error) {/* TODO: Fix JSX expression */}
+  e: event.source || 'unknown' }) } return result} catch (error) {/* TODO: Fix JSX expression */}
       } return {/* TODO: Fix JSX expression */}
   s: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'a11y-alt-text-runner' }) }; } };'
+  n: 'a11y-alt-text-runner' }) }} }'

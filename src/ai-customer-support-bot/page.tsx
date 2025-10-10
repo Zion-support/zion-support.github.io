@@ -130,8 +130,7 @@ const AICustomerSupportBotPage: React.FC = () => {
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               View Case Studies
       <Footer />
-  );
-};
+  )}
 export default $1;
 'use client';
 import React, { useState, useEffect } from 'react';

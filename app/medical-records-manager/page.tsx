@@ -70,7 +70,6 @@ const MedicalRecordsManagerPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
+  )}
 export default MedicalRecordsManagerPage;
   </h1>

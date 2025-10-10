@@ -7,10 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'front_ads_promoter function executed successfully'),
         timestamp: timestamp),
         function: 'front_ads_promoter'}
-      });
-    };
-//   } catch (error) {// console.error('❌ front_ads_promoter function failed: ') error;
-      }
+      })}
+//   } catch (error) {// console.error('❌ front_ads_promoter function failed: ') error}
     return {
       statusCode: 500;
       body: JSON.stringify({),
@@ -21,15 +19,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const timestamp = new Date().toISOString()}
     return {/* TODO: Fix JSX expression */}
   n: 'front_ads_promoter'}
-      });
-    };
+      })}
 //   } catch (error) {/* TODO: Fix JSX expression */}
       }
     return {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
-      });
-    };
+      })}
   }
-};
+}
         timestam,
-  p: new Date().toISOString() }) }; } };'
+  p: new Date().toISOString() }) }} }'

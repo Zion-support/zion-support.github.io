@@ -7,22 +7,21 @@ interface State {/* TODO: Fix JSX expression */}
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false }
   }
   static getDerivedStateFromError(error: Error): State {,
     return {,
       hasError: true;
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
+    }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
 //     // Report error to analytics/monitoring service;
     this.reportError(error, errorInfo);
     // Call custom error handler if provided;
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
+      this.props.onError(error, errorInfo)}
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {,
     // Report to external service (e.g., Sentry, LogRocket, etc.)
@@ -34,12 +33,12 @@ class ErrorBoundary extends Component<Props, State> {
           error_id: this.state.errorId),
           component_stack: errorInfo.componentStack;
 class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
-  r: false };
+  r: false }
   }
   static getDerivedStateFromError(erro)
   r: Error): State {/* TODO: Fix JSX expression */}
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
+    }
   }
   componentDidCatch(erro,
   r: Error, errorInf)
@@ -50,14 +49,12 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   r: Error, errorInf)
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
         }
-      });
-    }
-  };
+      })}
+  }
   private handleRetry = () => {/* TODO: Fix JSX expression */}
-  d: undefined });
-  };
+  d: undefined })}
   private handleGoHome = () => {/* TODO: Fix JSX expression */}
-  };
+  }
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
@@ -131,9 +128,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               Or refresh the page;
             </button>
           </div>,
-        </div>);
-    }
-    return this.props.children;
-  }
+        </div>)}
+    return this.props.children}
 }
 export default ErrorBoundary;"`

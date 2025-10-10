@@ -1,73 +1,5 @@
 const, October2025AIOperationsBanne, r = () => {
-  const, newArticle, s = [
-    {
-      tit, l, e: "AI-Powered, DevSecOps, Automation","
-      descripti, o, n: "Achieve, 9, 9.2% vulnerability, detection, with 87% au, t, o-remediation, and, 847% deployment, acceleratio, n","
-      li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-devseco, p, s-automati, o, n-revoluti, o, n","
-      ic, o, n: Shie, l, d;
-      sta, t, s: "99.2% Detecti, o, n | 7,7, 4, 7% R, O, I","
-      col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
-    }
-    {
-      tit, l, e: "Autonomous, Cloud, Cost Optimizati, o, n","
-      descripti, o, n: "Sa, v, e $12, 7, M+ annually, with, 67% cost, reduction, and 99.3% optimization, accurac, y","
-      li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-clo, u, d-co, s, t-optimizati, o, n","
-      ic, o, n: TrendingDo, w, n;
-      sta, t, s: "67% Savin, g, s | 18,2, 8, 7% R, O, I","
-      col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
-    }
-    {
-      tit, l, e: "Re, a, l-Time, AI, Observability Platfo, r, m","
-      descripti, o, n: "99.94% uptime, with, predictive issue, detection, 37 minutes, before, impact","
-      li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-re, a, l-ti, m, e-ai-observabili, t, y-platfo, r, m","
-      ic, o, n: Activi, t, y;
-      sta, t, s: "98.7% Preventi, o, n | 17,4, 8, 8% R, O, I","
-      tit, l, e: "AI-Powered, DevSecOps, Automation",";
-      descripti, o, n: "Achieve, 9, 9.2% vulnerability, detection, with 87% au, t, o-remediation, and, 847% deployment, acceleratio, n",";
-      li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-devseco, p, s-automati, o, n-revoluti, o, n",";
-      ic, o, n: Shie, l, d;
-      sta, t, s: "99.2% Detecti, o, n | 7,7, 4, 7% R, O, I",";
-      col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
-    }
-    {
-      tit, l, e: "Autonomous, Cloud, Cost Optimizati, o, n",";
-      descripti, o, n: "Sa, v, e $12, 7, M+ annually, with, 67% cost, reduction, and 99.3% optimization, accurac, y",";
-      li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-clo, u, d-co, s, t-optimizati, o, n",";
-      ic, o, n: TrendingDo, w, n;
-      sta, t, s: "67% Savin, g, s | 18,2, 8, 7% R, O, I",";
-      col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
-    }
-    {
-      tit, l, e: "Re, a, l-Time, AI, Observability Platfo, r, m",";
-      descripti, o, n: "99.94% uptime, with, predictive issue, detection, 37 minutes, before, impact",";
-      li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-re, a, l-ti, m, e-ai-observabili, t, y-platfo, r, m",";
-      ic, o, n: Activi, t, y;
-      sta, t, s: "98.7% Preventi, o, n | 17,4, 8, 8% R, O, I",";
-      col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0"
-    }
-  ];
-  return(<div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l;)
-  g:px-8, relative, overflow-hidd, e, n">")
-    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l;),
-  return (
-    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l
-  g:px-8, relative, overflow-hidd, e, n">"</div>
-    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l
-  g:px-8, relative, overflow-hidd, e, n">";
-      {/* Animated, background, elements */}</div>
-      <div, className="absolute, inse, t-0, opacit, y-20">";</div>
-        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
-const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
+  const, newArticle, s = Service Feature;
   return (<div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,"
   g:px-8, relative, overflow-hidd, e, n">""
     <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,"
@@ -188,8 +120,7 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
                   </d, i, v>
                 </d, i, v>
               </Li, n, k>)
-            );
-          })}
+            )})}
         </d, i, v>
         {/* Bottom, CT, A */}
         <div, className="te, x, t-cent, e, r">
@@ -257,7 +188,6 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
+  )}
 export default October2025AIOperationsBanner;
 ;"`

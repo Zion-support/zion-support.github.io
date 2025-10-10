@@ -9,172 +9,7 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
 const, CloudDevOp, s: Rea, c, t.FC = () => {
-  const, feature, s = [
-    {
-      i, c, o;
-  n: Clo, u, d;
-      tit, l, e: "Mul, t, i-Cloud, Strateg, y","
-      descripti, o, n: "Seamlessly, deploy, across A, W, S, Azu, r, e, GCP, with, intelligent workload, optimization, and cost, managemen, t.","
-      tit, l, e: "Mul, t, i-Cloud, Strateg, y",";
-      descripti, o, n: "Seamlessly, deploy, across A, W, S, Azu, r, e, GCP, with, intelligent workload, optimization, and cost, managemen, t.",";
-      benef, i, t: "40% cost, reduction, average"
-    }
-    {
-      ic, o, n: GitBran, c, h;
-      tit, l, e: "CI/CD, Automatio, n","
-      descripti, o, n: "E, n, d-to-end, automation, from code, commit, to production, deployment, with advanced, testing, and rollback, capabilitie, s.","
-      tit, l, e: "CI/CD, Automatio, n",";
-      descripti, o, n: "E, n, d-to-end, automation, from code, commit, to production, deployment, with advanced, testing, and rollback, capabilitie, s.",";
-      benef, i, t: "90% faster, deployment, s"
-    }
-    {
-      ic, o, n: Shie, l, d;
-      tit, l, e: "DevSecOps, Integratio, n","
-      descripti, o, n: "Securi, t, y-first, approach, with automated, vulnerability, scanning, compliance, check, s, and, threat, detection.","
-      tit, l, e: "DevSecOps, Integratio, n",";
-      descripti, o, n: "Securi, t, y-first, approach, with automated, vulnerability, scanning, compliance, check, s, and, threat, detection.",";
-      benef, i, t: "99.9% security, complianc, e"
-    }
-    {
-      ic, o, n: Monit, o, r;
-      tit, l, e: "Infrastructure, as, Code","
-      descripti, o, n: "Manage, entire, infrastructure through, code, with Terrafo, r, m, Ansib, l, e, and, custom, automation too, l, s.","
-      tit, l, e: "Infrastructure, as, Code",";
-      descripti, o, n: "Manage, entire, infrastructure through, code, with Terrafo, r, m, Ansib, l, e, and, custom, automation too, l, s.",";
-      benef, i, t: "Ze, r, o-downtime, deployment, s"
-    }
-    {
-      ic, o, n: BarChar, t, 3;
-      tit, l, e: "Advanced, Monitorin, g","
-      descripti, o, n: "Re, a, l-time, monitorin, g, alerti, n, g, and, performance, optimization with, A, I-powered, insight, s.","
-      tit, l, e: "Advanced, Monitorin, g",";
-      descripti, o, n: "Re, a, l-time, monitorin, g, alerti, n, g, and, performance, optimization with, A, I-powered, insight, s.",";
-      benef, i, t: "99.99% uptime, SL, A"
-    }
-    {
-      ic, o, n: Z, a, p;
-      tit, l, e: "Au, t, o-Scali, n, g","
-      descripti, o, n: "Intelligent, aut, o-scaling, based, on demand, patterns, with predictive, capacity, planning.","
-      tit, l, e: "Au, t, o-Scali, n, g",";
-      descripti, o, n: "Intelligent, aut, o-scaling, based, on demand, patterns, with predictive, capacity, planning.",";
-      benef, i, t: "60% infrastructure, saving, s"
-    }
-  ];
-  const, pricin, g = [
-    {
-      na, m, e: "Start, u, p"
-      pri, c, e: "$3,5, 0, 0"
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Perfect, for, startups and, small, teams getting, started, with cloud, infrastructur, e"
-      featur, e, s: [,
-        "Single, cloud, provider set, u, p"
-        "Basic, C, I/CD, pipelin, e"
-        "Standard, monitorin, g"
-        "Email, suppor, t"
-        "Monthly, infrastructure, review"
-        "Basic, security, scanning"
-        "Up, to, 5 environmen, t, s"
-        "Standard, backup, strategy"
-      ]
-      popul, a, r: fal, s, e;
-    }
-    {
-      na, m, e: "Grow, t, h"
-      pri, c, e: "$8,5, 0, 0"
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Ideal, for, growing companies, with, complex deployment, need, s"
-      featur, e, s: [,
-        "Mul, t, i-cloud, setu, p"
-        "Advanced, C, I/CD, with, testing"
-        "Comprehensive, monitorin, g & alerti, n, g"
-        "Priority, suppor, t"
-        "Weekly, infrastructure, reviews"
-        "Advanced, securit, y & complian, c, e"
-        "Up, to, 15 environmen, t, s"
-        "Automated, backu, p & recove, r, y"
-        "Performance, optimizatio, n"
-        "Disaster, recovery, planning"
-      ]
-      popul, a, r: tr, u, e;
-    }
-    {
-      na, m, e: "Enterpri, s, e"
-      pri, c, e: "$25,0, 0, 0"
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s"
-      featur, e, s: [,
-        "Hybr, i, d & mul, t, i-cloud, architectur, e"
-        "Enterpri, s, e-grade, C, I/CD"
-        "Advanced, monitoring, with AI, insight, s"
-        "Dedicated, DevOps, engineer"
-        "Daily, infrastructure, management"
-        "Full, securit, y & compliance, suit, e"
-        "Unlimited, environment, s"
-        "Enterprise, backu, p & disaster, recover, y"
-        "24/7, monitorin, g & suppo, r, t"
-        "Custom, automation, development"
-        "SLA, guarante, e"
-        "On-premise, integratio, n"
-      ]
-      popul, a, r: fal, s, e;
-      n, a, m;
-  e: "Start, u, p",";
-      pri, c, e: "$3,5, 0, 0",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Perfect, for, startups and, small, teams getting, started, with cloud, infrastructur, e",";
-      featur, e, s: [,
-        "Single, cloud, provider set, u, p",";
-        "Basic, C, I/CD, pipelin, e",";
-        "Standard, monitorin, g",";
-        "Email, suppor, t",";
-        "Monthly, infrastructure, review",";
-        "Basic, security, scanning",";
-        "Up, to, 5 environmen, t, s",";
-        "Standard, backup, strategy"
-      ]
-      popul, a, r: fal, s, e;
-    }
-    {
-      na, m, e: "Grow, t, h",";
-      pri, c, e: "$8,5, 0, 0",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Ideal, for, growing companies, with, complex deployment, need, s",";
-      featur, e, s: [,
-        "Mul, t, i-cloud, setu, p",";
-        "Advanced, C, I/CD, with, testing",";
-        "Comprehensive, monitorin, g & alerti, n, g",";
-        "Priority, suppor, t",";
-        "Weekly, infrastructure, reviews",";
-        "Advanced, securit, y & complian, c, e",";
-        "Up, to, 15 environmen, t, s",";
-        "Automated, backu, p & recove, r, y",";
-        "Performance, optimizatio, n",";
-        "Disaster, recovery, planning"
-      ]
-      popul, a, r: tr, u, e;
-    }
-    {
-      na, m, e: "Enterpri, s, e",";
-      pri, c, e: "$25,0, 0, 0",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s",";
-      featur, e, s: [,
-        "Hybr, i, d & mul, t, i-cloud, architectur, e",";
-        "Enterpri, s, e-grade, C, I/CD",";
-        "Advanced, monitoring, with AI, insight, s",";
-        "Dedicated, DevOps, engineer",";
-        "Daily, infrastructure, management",";
-        "Full, securit, y & compliance, suit, e",";
-        "Unlimited, environment, s",";
-        "Enterprise, backu, p & disaster, recover, y",";
-        "24/7, monitorin, g & suppo, r, t",";
-        "Custom, automation, development",";
-        "SLA, guarante, e",";
-        "On-premise, integratio, n"
-      ]
-      popul, a, r: fal, s, e;
-    }
-  ];
+  const, feature, s = Service Feature;
   const, testimonial, s = [
     {
       na, m, e: "Alex, Thompso, n","
@@ -207,109 +42,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       compa, n, y: "Healthcare, Networ, k"
     }
   ];
-  const, service, s = [
-    {
-      tit, l, e: "Cloud, Migratio, n","
-      ic, o, n: Clo, u, d;
-      descripti, o, n: "Seamless, migration, to cloud, platforms, with zero, downtime, and minimal, disruptio, n.","
-      benefi, t, s: ["99.9% uptime, during, migration", "Automated, data, validation", "Rollback, capabilitie, s"]"
-    }
-    {
-      tit, l, e: "Container, Orchestratio, n","
-      ic, o, n: Serv, e, r;
-      descripti, o, n: "Kubernetes, and, Docker expertise, for, scalable, resilient, containerized, applications.","
-      benefi, t, s: ["Au, t, o-scaling, capabilitie, s", "Service, mesh, integration", "Advanced, networkin, g"]"
-    }
-    {
-      tit, l, e: "Infrastructure, Automatio, n","
-      ic, o, n: Z, a, p;
-      descripti, o, n: "Complete, infrastructure, automation using, Terrafor, m, Ansib, l, e, and, custom, tools.","
-      benefi, t, s: ["Infrastructure, as, Code", "Automated, provisionin, g", "Environment, consistenc, y"]"
-    }
-    {
-      tit, l, e: "Securi, t, y & Complian, c, e","
-      ic, o, n: Shie, l, d;
-      descripti, o, n: "Comprehensive, security, implementation with, automated, compliance monitori, n, g.","
-      benefi, t, s: ["Automated, security, scanning", "Compliance, reportin, g", "Threat, detectio, n"]"
-      tit, l, e: "Cloud, Migratio, n",";
-      ic, o, n: Clo, u, d;
-      descripti, o, n: "Seamless, migration, to cloud, platforms, with zero, downtime, and minimal, disruptio, n.",";
-      benefi, t, s: ["99.9% uptime, during, migration", "Automated, data, validation", "Rollback, capabilitie, s"]";
-    }
-    {
-      tit, l, e: "Container, Orchestratio, n",";
-      ic, o, n: Serv, e, r;
-      descripti, o, n: "Kubernetes, and, Docker expertise, for, scalable, resilient, containerized, applications.",";
-      benefi, t, s: ["Au, t, o-scaling, capabilitie, s", "Service, mesh, integration", "Advanced, networkin, g"]";
-    }
-    {
-      tit, l, e: "Infrastructure, Automatio, n",";
-      ic, o, n: Z, a, p;
-      descripti, o, n: "Complete, infrastructure, automation using, Terrafor, m, Ansib, l, e, and, custom, tools.",";
-      benefi, t, s: ["Infrastructure, as, Code", "Automated, provisionin, g", "Environment, consistenc, y"]";
-    }
-    {
-      tit, l, e: "Securi, t, y & Complian, c, e",";
-      ic, o, n: Shie, l, d;
-      descripti, o, n: "Comprehensive, security, implementation with, automated, compliance monitori, n, g.",";
-      benefi, t, s: ["Automated, security, scanning", "Compliance, reportin, g", "Threat, detectio, n"]";
-    }
-  ];
-  return(<React.Fragment>
-      <Helmet>
-        <title>Clo, u, d & DevOps, Service, s - Zion, Tech, Group | Enterprise, Cloud, Solutions</title>
-        <me, t, a;
-  na, m, e="descripti, o, n"
-          content="Expert, Clou, d & DevOps, services, including mul, t, i-cloud, strateg, y, CI/CD, automatio, n, infrastructure, as, code, and, advanced, monitoring. 99.99% uptime, SL, A." /><meta name="keywor, d, s" content="cloud, service, s, devops, consultin, g, CI/CD, automatio, n, infrastructure, as, code, cloud, migratio, n, kubernet, e, s, dock, e, r" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/clo, u, d-devo, p, s/>"
-const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, pricin, g = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, testimonial, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, service, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
+  const, service, s = Service Feature;
   return (<React.Fragment>
       <Helmet></Helmet>
         <title>Clo, u, d & DevOps, Service, s - Zion, Tech, Group | Enterprise, Cloud, Solutions</title>
@@ -612,8 +345,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       ))}
                     </ul>
                   </d, i, v>
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -710,8 +442,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
                   </d, i, v>)
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -799,7 +530,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 pl, a, n.popul, a, r;
 ? 'bg-gre, e, n-600, tex, t-white, hove, r: bg-gre, e, n-7, 0, 0'
 ? 'bg-gre, e, n-600, tex, t-white, hov, e;
-  r: bg-gre, e, n-7, 0, 0',';}
+  r: bg-gre, e, n-7, 0, 0','}
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
@@ -869,7 +600,7 @@ pl, a, n.popul, a, r;
               {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (</div>
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <div, className="flex, item, s-center, m, b-4">";
-                    {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>
+                    {Service Feature.m, a, p((_, i) => (</div>
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
             </d, i, v>"
             <div, className="gri, d, m,"
@@ -960,7 +691,5 @@ pl, a, n.popul, a, r;
       </ma, i, n>
       <Foot, e, r   /></Foot>
     </React.Fragment>
-  );
-};
-export default CloudDevOps;
-}}}}"`
+  )}
+export default CloudDevOps}}}}"`

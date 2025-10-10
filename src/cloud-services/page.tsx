@@ -5,15 +5,11 @@ import Footer from '../components/Footer';
 const CloudServicesPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
-};
-  const _services = [
-  // TOD,
-  O: Add items;
-];;
+  )}
+  const _services = Service Feature;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Cloud,
       titl,
@@ -24,8 +20,8 @@ const CloudServicesPage: React.FC = () => {
   s: ['AWS Migration', 'Azure Migration', 'Google Cloud Migration', 'Zero Downtime']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Shield,
       titl,
@@ -36,8 +32,8 @@ const CloudServicesPage: React.FC = () => {
   s: ['Identity Management', 'Data Encryption', 'Compliance', 'Threat Detection']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Zap,
       titl,
@@ -48,8 +44,8 @@ const CloudServicesPage: React.FC = () => {
   s: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: BarChart,
       titl,
@@ -60,10 +56,7 @@ const CloudServicesPage: React.FC = () => {
   s: ['Real-time Monitoring', 'Cost Analytics', 'Performance Metrics', 'Predictive Insights']
     }
   ];
-  const benefits = [
-  // TOD,
-  O: Add items;
-];;
+  const benefits = Service Feature;
 //     '99.9% Uptime Guarantee',
 //     '24/7 Expert Support',
 //     'Cost Optimization',
@@ -159,6 +152,5 @@ const CloudServicesPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default CloudServicesPage;

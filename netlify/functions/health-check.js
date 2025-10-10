@@ -8,5 +8,5 @@ exports.handler = async (event, context) => {
       version: process.version;
 exports.handler = async (event, context) => {/* TODO: Fix JSX expression */}
     })
-  };
-};
+  }
+}

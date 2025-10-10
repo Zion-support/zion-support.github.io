@@ -106,6 +106,5 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         </div>
       </div>
     </div>
-  );
-}
+  )}
 "

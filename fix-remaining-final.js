@@ -27,7 +27,7 @@ function processFile(filePath) {
         replacement: "keywords: ['$1'],"},
       // Remove tags property that doesn't exist in our type;
       {
-        pattern: /,\s*tags: \s*\[[^\]]+\]/g;
+        pattern: /,\s*tags: \s*\Service Feature/g;
         replacement: '',
 function processFile(filePath) {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
@@ -58,8 +58,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -68,8 +67,7 @@ function processDirectory(dirPath) {
   items.forEach(item => {)
 )
     if (stat.isDirectory()) {
-      totalFixed += processDirectory(fullPath);
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      totalFixed += processDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
         totalFixed++;
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
@@ -78,8 +76,7 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     }
   });
 
-  return totalFixed;
-}
+  return totalFixed}
 
 // Process the app directory;
 // Process the app directory;"

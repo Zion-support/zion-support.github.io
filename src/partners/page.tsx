@@ -91,10 +91,10 @@ namename: 'Channel Partners',
         'Competitive margins'
       color: 'text-orange-400',
       bgColor: 'bg-orange-500/10'
-  const partnerTypes = [];
+  const partnerTypes = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   titl,
   e: 'Technology Partners',
       descriptio,
@@ -106,9 +106,7 @@ namename: 'Channel Partners',
       bgColo,
   r: 'bg-blue-500/10',
       partner,
-  s: [
-  // TOD,
-  O: Add items];
+  s: Service Feature;
         {/* TODO: Fix JSX expression */}
   o: '' },
         {/* TODO: Fix JSX expression */}
@@ -144,7 +142,7 @@ namename: 'Channel Partners',
         {/* TODO: Fix JSX expression */}
   o: '👥' },
         {/* TODO: Fix JSX expression */}
-  o: '🎧' };
+  o: '🎧' }
   titl,
   e: 'Integration Partners',
       descriptio,
@@ -341,8 +339,7 @@ const PagePage: React.FC = () => {
                 Email Us;
       <Footer />
     </div>
-  );
-};
+  )}
 export default PartnersPage;
   </a>
   </div>

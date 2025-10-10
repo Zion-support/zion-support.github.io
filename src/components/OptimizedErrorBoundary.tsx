@@ -4,14 +4,12 @@ interface OptimizedErrorBoundaryProps {
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   resetOnPropsChange?: boolean;
-  resetKeys?: Array<string | number>;
-}
+  resetKeys?: Array<string | number>}
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-  errorId: string;
-}
+  errorId: string}
 class OptimizedErrorBoundary extends Component
   OptimizedErrorBoundaryProps,
   State
@@ -24,14 +22,14 @@ class OptimizedErrorBoundary extends Component
       error: null,
       errorInfo: null,
       errorId:     ,
-$4};
+$4}
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
+    }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
@@ -42,23 +40,20 @@ $4};
     if (process.env['NODE_ENV'] === 'development') {}
     // Call custom error handler if provided
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
+      this.props.onError(error, errorInfo)}
     // Send error to monitoring service in production
     if (process.env['NODE_ENV'] === 'production') {
-      this.reportError(error, errorInfo);
-    }
+      this.reportError(error, errorInfo)}
   }
   componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {
     const { resetKeys, resetOnPropsChange } = this.props;
     const { hasError } = this.state;
     if (hasError && prevProps.resetKeys !== resetKeys) {
       if (resetKeys && prevProps.resetKeys) {
-          (key, index) => key !== prevProps.resetKeys?.[index]
+          (key, index) => key !== prevProps.resetKeys?.Service Feature
         );
         if (hasResetKeyChanged) {
-          this.resetErrorBoundary();
-        }
+          this.resetErrorBoundary()}
       }
     }
     if (
@@ -66,13 +61,11 @@ $4};
       resetOnPropsChange &&
       prevProps.children !== this.props.children
     ) {
-      this.resetErrorBoundary();
-    }
+      this.resetErrorBoundary()}
   }
   componentWillUnmount() {
     if (this.resetTimeoutId) {
-      clearTimeout(this.resetTimeoutId);
-    }
+      clearTimeout(this.resetTimeoutId)}
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Report to error monitoring service
@@ -83,8 +76,7 @@ $4};
             command: string,
             action: string,
             parameters: Record<string, unknown>
-          ) => void;
-        }
+          ) => void}
       ).gtag;
       gtag('event', 'exception', {
         description: error.message,
@@ -93,30 +85,24 @@ $4};
           error_id: this.state.errorId,
           component_stack: errorInfo.componentStack
         }
-      });
-    }
-  };
+      })}
+  }
   private resetErrorBoundary = () => {
     if (this.resetTimeoutId) {
-      clearTimeout(this.resetTimeoutId);
-    }
+      clearTimeout(this.resetTimeoutId)}
     this.resetTimeoutId = window.setTimeout(() => {
       this.setState({
         hasError: false,
         error: null,
         errorInfo: null,
         errorId:       ,
-$4});
-    }, 100);
-  };
+$4})}, 100)}
   private handleRetry = () => {
-    this.resetErrorBoundary();
-  };
+    this.resetErrorBoundary()}
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
-      }
+        return this.props.fallback}
       return (
         <ErrorFallback
           error={this.state.error}
@@ -124,17 +110,14 @@ $4});
           errorId={this.state.errorId}
           onRetry={this.handleRetry}
         />
-      );
-    }
-    return this.props.children;
-  }
+      )}
+    return this.props.children}
 }
 interface ErrorFallbackProps {
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string;
-  onRetry: () => void;
-}
+  onRetry: () => void}
 const ErrorFallback = memo<ErrorFallbackProps>(
   ({ error, errorInfo, errorId, onRetry }) => (
     <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'>

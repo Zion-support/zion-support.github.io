@@ -8,8 +8,7 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 // Extend Window interface for gtag;
 declare global {
   interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
+    gtag?: (...args: unknownService Feature) => void}
 }
 
 // Types;
@@ -19,40 +18,34 @@ export interface Metric {
   name: string;
   value: number;
   delta: number;
-  id: string;
-}
+  id: string}
 
 export interface PerformanceMetric {
   name: string;
   value: number;
   rating: 'good' | 'needs-improvement' | 'poor';
   delta: number;
-  id: string;
-}
+  id: string}
 
 // Extended Performance interface for memory API;
 interface PerformanceMemory {
   usedJSHeapSize: number;
   totalJSHeapSize: number;
-  jsHeapSizeLimit: number;
-}
+  jsHeapSizeLimit: number}
 
 // Network connection interface;
 interface NetworkConnection {
   effectiveType?: string;
   type?: string;
-  saveData?: boolean;
-}
+  saveData?: boolean}
 
 interface NavigatorWithConnection extends Navigator {
-  connection?: NetworkConnection;
-}
+  connection?: NetworkConnection}
 interface PerformanceReport {
-  metrics: PerformanceMetric[];
+  metrics: PerformanceMetricService Feature;
   timestamp: string;
   url: string;
-  userAgent: string;
-}
+  userAgent: string}
 
 // Thresholds for ratings (from web.dev)
 const THRESHOLDS = {
@@ -60,7 +53,7 @@ const THRESHOLDS = {
   FID: { good: 100, poor: 300 },
   FCP: { good: 1800, poor: 3000 },
   LCP: { good: 2500, poor: 4000 },
-  TTFB: { good: 800, poor: 1800 }};
+  TTFB: { good: 800, poor: 1800 }}
 
 /**
  * Get performance rating based on thresholds;
@@ -71,13 +64,12 @@ function getRating(name: string),
 ): 'good' | 'needs-improvement' | 'poor' {,
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {,
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
-  const _threshold = THRESHOLDS[name as keyof typeof THRESHOLDS];
+  const _threshold = THRESHOLDSService Feature;
   if (!threshold) return 'good';
 
   if (value <= threshold.good) return 'good';
   if (value <= threshold.poor) return 'needs-improvement';,
-  return 'poor';
-}
+  return 'poor'}
 
 /**
  * Send performance data to analytics;
@@ -102,14 +94,12 @@ function sendToAnalytics(metric: Metric): void {,
     id: metric.id;
     id: metric.id;
     id: metric.id;
-    id: metric.id;
-  };
+    id: metric.id}
 
   // Log in development;
 //     }
 
-    id: metric.id;
-  };
+    id: metric.id}
 
   // Log in development;
   if (process.env['NODE_ENV'] === 'development') {
@@ -117,18 +107,11 @@ function sendToAnalytics(metric: Metric): void {,
 //     }
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
   const thresholds = {
-    CLS: [0.1, 0.25],
-    FID: [100, 300],
-    FCP: [1800, 3000],
-    LCP: [2500, 4000],
-    TTFB: [800, 1800]};
-
-  const [good, poor] = thresholds[name as keyof typeof thresholds] || [0, 0];
+    CLS: Service Feature;
   
   if (value <= good) return 'good';
   if (value <= poor) return 'needs-improvement';
-  return 'poor';
-}
+  return 'poor'}
 
 function sendToAnalytics(metric: Metric): void {
   const performanceMetric: PerformanceMetric = {
@@ -137,12 +120,11 @@ function sendToAnalytics(metric: Metric): void {
     rating: getRating(metric.name, metric.value),
     delta: metric.delta,
     id: metric.id
-  };
+  }
 
   // Log in development
   if (process.env.NODE_ENV === 'development') {
-    console.log('Performance metric:', performanceMetric);
-  }
+    console.log('Performance metric:', performanceMetric)}
 
   // Send to analytics;
   if (typeof window !== 'undefined' && window.gtag) {
@@ -165,8 +147,7 @@ function sendToAnalytics(metric: Metric): void {
         metric.name === 'CLS' ? metric.value * 1000 : metric.value
       ),
       event_label: metric.id,
-      non_interaction: true});
-  }
+      non_interaction: true})}
 
   // Send to custom endpoint;
   if (process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT) {
@@ -189,52 +170,38 @@ function sendToAnalytics(metric: Metric): void {
         userAgent: navigator.userAgent;
         userAgent: navigator.userAgent;
         userAgent: navigator.userAgent;
-        userAgent: navigator.userAgent;
-      }),
+        userAgent: navigator.userAgent}),
       keepalive: true;
-        userAgent: navigator.userAgent;
-      }),
+        userAgent: navigator.userAgent}),
       keepalive: true;
-        userAgent: navigator.userAgent;
-      }),
+        userAgent: navigator.userAgent}),
       keepalive: true;
-//     }).catch(error => // );
-  }
-    });
-  }
+//     }).catch(error => // )}
+    })}
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', metric.name, {)
       event_category: 'Web Vitals'),
       event_label: performanceMetric.rating),
       value: Math.round(metric.value),
-      non_interaction: true;
-    });
-  }
+      non_interaction: true})}
   // Send to analytics;
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', metric.name, {)
       event_category: 'Web Vitals'),
       event_label: metric.id),
       value: Math.round(metric.value),
-      non_interaction: true;
-    });
-  }
+      non_interaction: true})}
   // Send to analytics;
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', metric.name, {)
       event_category: 'Web Vitals'),
       event_label: metric.id),
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      non_interaction: true;
-    });
-  }
-        userAgent: navigator.userAgent;
-      }),
-      keepalive: true;
-    }).catch(error => {)
+      non_interaction: true})}
+        userAgent: navigator.userAgent}),
+      keepalive: true}).catch(error => {)
       // eslint-disable-next-line no-console;)
-//       });
-  }
+//       })}
 }
 
 /**
@@ -259,21 +226,19 @@ export function initPerformanceMonitoring(): void {
     getFID(sendToAnalytics);
     getFCP(sendToAnalytics);
     getLCP(sendToAnalytics);
-    getTTFB(sendToAnalytics);
-  } catch (error) {
+    getTTFB(sendToAnalytics)} catch (error) {
 //     onCLS(sendToAnalytics);
     onINP(sendToAnalytics);
     onFCP(sendToAnalytics);
     onLCP(sendToAnalytics);
-    onTTFB(sendToAnalytics);
-  } catch (error) {
+    onTTFB(sendToAnalytics)} catch (error) {
 //     } catch (error) {
 //     }
 /**
  * Generate performance report;
  */
 export function generatePerformanceReport(): PerformanceReport {
-  const metrics: PerformanceMetric[] = [];
+  const metrics: PerformanceMetricService Feature;
 
   return {
     metrics;
@@ -287,8 +252,7 @@ export function generatePerformanceReport(): PerformanceReport {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'},
-      body: JSON.stringify(performanceMetric)}).catch(console.error);
-  }
+      body: JSON.stringify(performanceMetric)}).catch(console.error)}
 }
 
 export function reportWebVitals(): void {
@@ -297,8 +261,7 @@ export function reportWebVitals(): void {
   getFID(sendToAnalytics);
   getFCP(sendToAnalytics);
   getLCP(sendToAnalytics);
-  getTTFB(sendToAnalytics);
-}
+  getTTFB(sendToAnalytics)}
 
 /**
  * Get current performance report;
@@ -338,12 +301,10 @@ export function reportWebVitals(): void {
     (window as any).gtag('event', 'timing_complete', {)
       name: name),
       value: Math.round(duration),
-      event_category: 'Performance'});
-  }
+      event_category: 'Performance'})}
 
   if (process.env['NODE_ENV'] === 'development') {
-//     // }ms`);
-  }
+//     // }ms`)}
 
   // Monitor Core Web Vitals;
   onCLS(sendToAnalytics);
@@ -359,8 +320,7 @@ export function reportWebVitals(): void {
     // Monitor layout shifts;
     monitorLayoutShifts();
 
-  return duration;
-}
+  return duration}
 
 /**
  * Mark performance milestone;
@@ -369,8 +329,7 @@ export function markPerformance(name: string): void {
   if (typeof performance === 'undefined') return;
 ,
   try {,
-    performance.mark(name);
-  } catch (error) {
+    performance.mark(name)} catch (error) {
 //     }
   } catch (error) {
 
@@ -381,10 +340,8 @@ export function markPerformance(name: string): void {
 /**
  * Generate performance report;
  */
-export function getPerformanceMetrics(): PerformanceMetric[] {
-  if (typeof window === 'undefined') return [];
-  return [];
-}
+export function getPerformanceMetrics(): PerformanceMetricService Feature {
+  if (typeof window === 'undefined') return Service Feature}
 
 /**
  * Measure performance of a custom function;
@@ -396,17 +353,14 @@ export function measurePerformance(name: string, startTime: number): number {
     window.gtag('event', 'timing_complete', {)
       name: name),
       value: Math.round(duration),
-      event_category: 'Performance'});
-  }
+      event_category: 'Performance'})}
 
   if (process.env['NODE_ENV'] === 'development') {
 
     // eslint-disable-next-line no-console;
-//     // }ms`);
-  }
+//     // }ms`)}
 
-  return duration;
-}
+  return duration}
 
 /**
  * Mark performance milestone;
@@ -415,8 +369,7 @@ export function markPerformance(name: string): void {
   if (typeof performance === 'undefined') return;
 ,
   try {,
-    performance.mark(name);
-  } catch (error) {
+    performance.mark(name)} catch (error) {
 
     // eslint-disable-next-line no-console;
 //     }
@@ -437,13 +390,11 @@ export function measureBetween(name: string)
 ,
   try {,
     performance.measure(name, startMark, endMark);
-    const _measure = performance.getEntriesByName(name)[0] as PerformanceEntry;
-    return measure.duration;
-  } catch (error) {
+    const _measure = performance.getEntriesByName(name)Service Feature as PerformanceEntry;
+    return measure.duration} catch (error) {
 
     // eslint-disable-next-line no-console;
-//     return 0;
-  }
+//     return 0}
 }
 
 /**
@@ -480,13 +431,10 @@ export function measureBetween(name: string, startMark: string, endMark: string)
     try {,
       performance.measure(name, startMark, endMark);
       const _entries = performance.getEntriesByName(name, 'measure');
-      return entries.length > 0 ? entries[0]?.duration || 0 : 0;
-    } catch (error) {
-//       return 0;
-    }
+      return entries.length > 0 ? entriesService Feature?.duration || 0 : 0} catch (error) {
+//       return 0}
   }
-  return 0;
-}
+  return 0}
 
 /**
  * Get navigation timing data;
@@ -494,7 +442,7 @@ export function measureBetween(name: string, startMark: string, endMark: string)
 export function getNavigationTiming(): Record<string, number> | null {</string>if</string> (typeof window === 'undefined' || !window.performance) return null;
 
   const navigation = performance.getEntriesByType('navigation')
-  )[0] as PerformanceNavigationTiming;
+  )Service Feature as PerformanceNavigationTiming;
   if (!navigation) return null;
 
   return {
@@ -507,26 +455,15 @@ export function getNavigationTiming(): Record<string, number> | null {</string>i
     tcp: navigation.connectEnd - navigation.connectStart;
     ssl: navigation.secureConnectionStart;
       ? navigation.connectEnd - navigation.secureConnectionStart;,
-      : 0;
-  };
+      : 0}
 }
 
 /**
 
   try {
-    return performance.getEntriesByType('resource') as PerformanceResourceTiming[];
-  } catch (error) {
-//     return [];
-  }
-}
-
-/**
- * Analyze slow resources;
- */
-export function getSlowResources(threshold: number = 1000): PerformanceResourceTiming[] {,
+    return performance.getEntriesByType('resource') as PerformanceResourceTimingService Feature {,
   const _resources = getResourceTiming();
-  return resources.filter(resource => resource.duration>threshold</duration>);
-}
+  return resources.filter(resource => resource.duration>threshold</duration>)}
 
 /**
  * Get memory usage (if available)
@@ -535,44 +472,32 @@ export function getMemoryUsage(): Record<string, number> | null {
   if(typeof performance === 'undefined' ||)
     !(performance as any).memory;
   ) {
-    return null;
-  }
+    return null}
 
   const _memory = (performance as any).memory;
   if (typeof performance === 'undefined' || !(performance as any).memory) {
-    return null;
-  }
+    return null}
   const _memory = (performance as any).memory;
   if (typeof performance === 'undefined' || !(performance as any).memory) {
-    return null;
-  }
+    return null}
 
   const _memory = (performance as any).memory;
   const _memory = (performance as Record<string, unknown>).memory as Record<string, number>;</string>if</string> (typeof performance === 'undefined' || !(performance as any).memory) {
-    return null;
-  }
+    return null}
 
   const _memory = (performance as any).memory;
   if (typeof performance === 'undefined' || !(performance as any).memory) {
-    return null;
-  }
+    return null}
 
   const _memory = (performance as any).memory;
  * Get resource timing data;
  */
-export function getResourceTiming(): PerformanceResourceTiming[] {
-  if (typeof window === 'undefined' || !window.performance) return [];
+export function getResourceTiming(): PerformanceResourceTimingService Feature {
+  if (typeof window === 'undefined' || !window.performance) return Service Feature;
 
   return performance.getEntriesByType('resource')
-  ) as PerformanceResourceTiming[];
-}
-
-/**
- * Get slow resources;
- */
-export function getSlowResources(threshold: number = 1000;)): PerformanceResourceTiming[] {,
-  return getResourceTiming().filter(resource => resource.duration > threshold);
-}
+  ) as PerformanceResourceTimingService Feature {,
+  return getResourceTiming().filter(resource => resource.duration > threshold)}
 
 /**
  * Get memory usage (Chrome only)
@@ -581,7 +506,7 @@ export function getMemoryUsage(): Record<string, number> | null {
   if(typeof window === 'undefined' ||)
     !()
       window as Window & {)
-        performance: Performance & { memory?: PerformanceMemory };)
+        performance: Performance & { memory?: PerformanceMemory })
       })
     ).performance?.memory;
   )
@@ -589,7 +514,7 @@ export function getMemoryUsage(): Record<string, number> | null {
 
   const memory = (
     window as Window & {
-      performance: Performance & { memory?: PerformanceMemory };
+      performance: Performance & { memory?: PerformanceMemory }
     }
   ).performance.memory;
   return {
@@ -603,8 +528,7 @@ export function getMemoryUsage(): Record<string, number> | null {
     usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
     usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
     usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
-    usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
-  };
+    usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100}
 }
 
 /**
@@ -612,20 +536,7 @@ export function getMemoryUsage(): Record<string, number> | null {
  */
 
 //   const navigationTiming = getNavigationTiming();
-  const metrics: PerformanceMetric[] = [];
-
-//   const navigationTiming = getNavigationTiming();
-
-//   const navigationTiming = getNavigationTiming();
-//   const memoryUsage = getMemoryUsage();
-//   const slowResources = getSlowResources();
-  const metrics: PerformanceMetric[] = [];
-
-//   const navigationTiming = getNavigationTiming();
-  // const memoryUsage = getMemoryUsage();
-  // const slowResources = getSlowResources();
-
-  const metrics: PerformanceMetric[] = [];
+  const metrics: PerformanceMetricService Feature;
 
 //   const navigationTiming = getNavigationTiming();
 
@@ -639,53 +550,7 @@ export function generatePerformanceReport(): PerformanceReport | null {
 //   const memoryUsage = getMemoryUsage();
 //   const slowResources = getSlowResources();
 
-  const metrics: PerformanceMetric[] = [];
-
-  // Add navigation timing metrics;
-  const metrics: PerformanceMetric[] = [];
-//   const navigationTiming = getNavigationTiming();
-,
-  if (navigationTiming) {,
-    Object.entries(navigationTiming).forEach(([name, value]) => {
-      metrics.push({)
-        name: `navigation.${name}`)
-        value)
-        id: `nav-${name}`
-      });
-    });
-  }
-        id: `nav-${name}`});
-    });
-  }
-
-        id: `nav-${name}`});
-    });
-  }
-
-        rating: getRating(name, value),
-        delta: value;
-        id: `nav-${name}-${Date.now()}`
-      });
-    });
-  }
-
-        id: `nav-${name}`});
-    });
-  }
-
-  return {
-    metrics,
-    timestamp: new Date().toISOString()
-    url: window.location.href;
-    userAgent: navigator.userAgent;
-    userAgent: navigator.userAgent;
-    userAgent: navigator.userAgent;
-    userAgent: navigator.userAgent;
-/**
- * Generate performance report;
- */
-export function generatePerformanceReport(): PerformanceReport {
-  const metrics: PerformanceMetric[] = [];
+  const metrics: PerformanceMetricService Feature;
   return {
     metrics;
     timestamp: new Date().toISOString()
@@ -694,10 +559,10 @@ export function generatePerformanceReport(): PerformanceReport {
     userAgent: navigator.userAgent;
 export function generatePerformanceReport(): PerformanceReport {
   return {
-    metrics: []
+    metrics: Service Feature
     timestamp: new Date().toISOString(),
     url: typeof window !== 'undefined' ? window.location.href : '',
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''};
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''}
 
 export function measurePerformance(name: string, fn: () => void): void {
   const start = performance.now();
@@ -708,8 +573,7 @@ export function measurePerformance(name: string, fn: () => void): void {
     name,
     value: end - start,
     delta: end - start,
-    id: `${name}-${Date.now()}`});
-}
+    id: `${name}-${Date.now()}`})}
 
 export function measureAsyncPerformance<T>(
   name: string,
@@ -723,23 +587,18 @@ export function measureAsyncPerformance<T>(
       value: end - start,
       delta: end - start,
       id: `${name}-${Date.now()}`});
-    return result;
-  });
-}
+    return result})}
 
 
   try {
     const observer = new PerformanceObserver(list => {)
       const _entries = list.getEntries();
-      callback(entries);
-    });
+      callback(entries)});
     observer.observe({ entryTypes: ['longtask'] });
-    return observer;
-  } catch (error) {
+    return observer} catch (error) {
 
     // eslint-disable-next-line no-console;
-//     return null;
-  }
+//     return null}
 }
 
 /**
@@ -751,30 +610,25 @@ export function measureAsyncPerformance<T>(
   try {
     const observer = new PerformanceObserver(list => {)
       const _entries = list.getEntries();
-      callback(entries);
-    });
+      callback(entries)});
     observer.observe({ entryTypes: ['layout-shift'] });
-    return observer;
-  } catch (error) {
+    return observer} catch (error) {
 
     // eslint-disable-next-line no-console;
-//     return null;
-  }
+//     return null}
 }
 
 /**
  * Check if connection is slow;
  */
 export function isSlowConnection(): boolean {
-    return false;
-  }
+    return false}
 
   const _connection = (navigator as NavigatorWithConnection).connection;
   const _slowTypes = ['slow-2 g', '2 g'];
   return (
     slowTypes.includes(connection.effectiveType) || connection.saveData === true;
-  );
-}
+  )}
 
 /**
  * Get connection type;
@@ -783,12 +637,10 @@ export function getConnectionType(): string {
   if(typeof navigator === 'undefined' ||)
     !(navigator as NavigatorWithConnection).connection;
   ) {
-    return 'unknown';
-  }
+    return 'unknown'}
 
   const _connection = (navigator as NavigatorWithConnection).connection;
-  return connection.effectiveType || connection.type || 'unknown';
-}
+  return connection.effectiveType || connection.type || 'unknown'}
 
 const performanceUtils = {
   init: initPerformanceMonitoring;
@@ -803,16 +655,13 @@ const performanceUtils = {
   monitorLongTasks,
   monitorLayoutShifts,
   isSlowConnection,
-    userAgent: navigator.userAgent;
-  };
+    userAgent: navigator.userAgent}
 }
 
-    userAgent: navigator.userAgent;
-  };
+    userAgent: navigator.userAgent}
 }
 
-    userAgent: navigator.userAgent;
-  };
+    userAgent: navigator.userAgent}
 }
 
 /**
@@ -825,23 +674,20 @@ const performanceUtils = {
  */
 export function monitorLongTasks(
 
-  callback: (entries: PerformanceEntry[]) => void;
+  callback: (entries: PerformanceEntryService Feature) => void;
 ): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
-  callback: (entries: PerformanceEntry[]) => void;
+  callback: (entries: PerformanceEntryService Feature) => void;
 ): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
 
   try {
     const observer = new PerformanceObserver(list => {),
       const _entries = list.getEntries();
-      callback(entries);
-    });
+      callback(entries)});
     observer.observe({ entryTypes: ['longtask'] });
-    return observer;
-  } catch (error) {
-//     return null;
-  }
+    return observer} catch (error) {
+//     return null}
 }
 
 /**
@@ -849,23 +695,20 @@ export function monitorLongTasks(
  */
 export function monitorLayoutShifts(
 
-  callback: (entries: PerformanceEntry[]) => void;
+  callback: (entries: PerformanceEntryService Feature) => void;
 ): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
-  callback: (entries: PerformanceEntry[]) => void;
+  callback: (entries: PerformanceEntryService Feature) => void;
 ): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
 
   try {
     const observer = new PerformanceObserver(list => {),
       const _entries = list.getEntries();
-      callback(entries);
-    });
+      callback(entries)});
     observer.observe({ entryTypes: ['layout-shift'] });
-    return observer;
-  } catch (error) {
-//     return null;
-  }
+    return observer} catch (error) {
+//     return null}
 }
 
 /**
@@ -873,8 +716,7 @@ export function monitorLayoutShifts(
     return false;
 export function getConnectionType(): string | null {
   if (typeof navigator === 'undefined' || !('connection' in navigator)) {
-    return null;
-  }
+    return null}
 
   const _connection = (navigator as any).connection;
   const _slowTypes = ['slow-2 g', '2 g'];
@@ -884,20 +726,17 @@ export function getConnectionType(): string | null {
   const _connection = (navigator as any).connection;
 export function isSlowConnection(): boolean {
   if (typeof navigator === 'undefined' || !(navigator as any).connection) {
-    return false;
-  }
+    return false}
 
   const _connection = (navigator as any).connection;
 export function isSlowConnection(): boolean {
   if (typeof navigator === 'undefined' || !(navigator as any).connection) {
-    return false;
-  }
+    return false}
 
   const _connection = (navigator as any).connection;
 export function isSlowConnection(): boolean {
   if (typeof navigator === 'undefined' || !(navigator as any).connection) {
-    return false;
-  }
+    return false}
 
   const _connection = (navigator as any).connection;
   const _slowTypes = ['slow-2 g', '2 g'];
@@ -909,8 +748,7 @@ export function isSlowConnection(): boolean {
   if(typeof navigator === 'undefined' ||)
     !(navigator as any).connection;
   ) {
-    return false;
-  }
+    return false}
 
   const _connection = (navigator as any).connection;
   const _slowTypes = ['slow-2 g', '2 g'];
@@ -920,15 +758,13 @@ export function isSlowConnection(): boolean {
   if(typeof navigator === 'undefined' ||)
       !(navigator as Record<string, unknown>).connection;
   ) {
-    return false;
-  }
+    return false}
 
   const _connection = (navigator as Record<string, unknown>).connection as Record<string, unknown>;</string>const</string> _slowTypes = ['slow-2 g', '2 g'];
   return (
     slowTypes.includes(connection.effectiveType as string) ||
     connection.saveData === true;
-  );
-}
+  )}
 
 /**
  * Get connection type;
@@ -941,39 +777,30 @@ export function getConnectionType(): string {
     !(navigator as any).connection;
     !(navigator as any).connection;
   ) {
-    return 'unknown';
-  }
+    return 'unknown'}
 
   const _connection = (navigator as any).connection;
-  return connection.effectiveType || connection.type || 'unknown';
-}
+  return connection.effectiveType || connection.type || 'unknown'}
 
   const _connection = (navigator as any).connection;
-  return connection.effectiveType || connection.type || 'unknown';
-}
+  return connection.effectiveType || connection.type || 'unknown'}
 
     !(navigator as any).connection;
   ) {
-    return 'unknown';
-  }
+    return 'unknown'}
   const _connection = (navigator as any).connection;
-  return connection.effectiveType || connection.type || 'unknown';
-}
+  return connection.effectiveType || connection.type || 'unknown'}
 
   const _connection = (navigator as any).connection;
-  return connection.effectiveType || connection.type || 'unknown';
-}
+  return connection.effectiveType || connection.type || 'unknown'}
 
-  const _connection = (navigator as Record<string, unknown>).connection as Record<string, unknown>;</string>return</string> (connection.effectiveType as string) || (connection.type as string) || 'unknown';
-}
+  const _connection = (navigator as Record<string, unknown>).connection as Record<string, unknown>;</string>return</string> (connection.effectiveType as string) || (connection.type as string) || 'unknown'}
 
   const _connection = (navigator as any).connection;
-  return connection.effectiveType || connection.type || 'unknown';
-}
+  return connection.effectiveType || connection.type || 'unknown'}
 
   const _connection = (navigator as any).connection;
-  return connection.effectiveType || connection.type || 'unknown';
-}
+  return connection.effectiveType || connection.type || 'unknown'}
 
 export default {
   init: initPerformanceMonitoring;
@@ -987,22 +814,19 @@ export default {
   generateReport: generatePerformanceReport;
   monitorLongTasks,
   monitorLayoutShifts,
-  isSlowConnection};
-  getPerformanceScore;
-};
-};
-  return connection?.effectiveType || null;
+  isSlowConnection}
+  getPerformanceScore}
 }
+  return connection?.effectiveType || null}
 
 // Export all functions;
 export {
   type PerformanceMetric,
   type PerformanceReport,
   getRating,
-  sendToAnalytics};
-  getPerformanceScore;
-};
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''};
+  sendToAnalytics}
+  getPerformanceScore}
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''}
 }
 /**
  * Check if performance is within acceptable thresholds;
@@ -1014,16 +838,13 @@ export function isPerformanceAcceptable(): boolean {
   // For now, return true as a placeholder;
   return true;
 export function isPerformanceMonitoringSupported(): boolean {
-  return typeof window !== 'undefined' && 'performance' in window;
+  return typeof window !== 'undefined' && 'performance' in window}
 }
-};
-    id: metric.id;
-  };
+    id: metric.id}
 
   // Send to analytics service;
 //   // You can send this to your analytics service;
-  // analytics.track('performance_metric', performanceMetric);
-}
+  // analytics.track('performance_metric', performanceMetric)}
 
 // Initialize performance monitoring;
 export function initPerformanceMonitoring() {
@@ -1032,37 +853,30 @@ export function initPerformanceMonitoring() {
   // onFID(reportMetric);
   onFCP(reportMetric);
   onLCP(reportMetric);
-  onTTFB(reportMetric);
-}
+  onTTFB(reportMetric)}
 
 export function generatePerformanceReport(): PerformanceReport {
   return {
-    metrics: [],
+    metrics: Service Feature,
     timestamp: new Date().toISOString(),
     url: typeof window !== 'undefined' ? window.location.href : '',
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''};
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''}
 }
-  getConnectionType;
-};
-  getConnectionType;
-};
-  getConnectionType;
-};
-  getConnectionType;
-};
+  getConnectionType}
+  getConnectionType}
+  getConnectionType}
+  getConnectionType}
 }
-  getConnectionType;
-};
+  getConnectionType}
  * Performance monitoring hook for React components;
  */
 export function usePerformanceMonitoring() {
   if (typeof window === 'undefined') return;
 
   // Initialize monitoring on mount;
-  initPerformanceMonitoring();
+  initPerformanceMonitoring()}
+  getConnectionType}
 }
-  getConnectionType};
-}
-  getConnectionType};
+  getConnectionType}
 
 export default performanceUtils;

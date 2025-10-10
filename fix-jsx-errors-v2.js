@@ -11,18 +11,14 @@ for (const filePath of files) {
     content = content.replace(/^\s*\/>\s*$/gm, '');
 
     //Fix unterminated regular expression literals in object properties;
-    //Pattern: property: /pattern without closing /content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
+    //Pattern: property: /pattern without closing /content = content.replace(/(\w+):\s*\/Service Feature*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
 for (const filePath of files) {/* TODO: Fix JSX expression */}
-        return `${prop}: '${value.substring(1)}'`;
-      }
-      return match;
-    });
+        return `${prop}: '${value.substring(1)}'`}
+      return match});
 
     //Fix JSX attributes that look like regex but are actually strings;
-    content = content.replace(/={\s*\/[^\/\n]*$/gm, match => {)
-      const value = match;)
-        .match(/={\s*\/[^\/\n]*$/)[0]
+    content = content.replace(/={\s*\/Service Feature
         .replace(/={\s*\//, '')
         .trim();
       return `={'${value}'}`;
@@ -42,35 +38,31 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
     content = content.replace(/<br\s*>\s*$/gm, '<br />');
 
     //Fix unterminated regular expressions in array/object literals;
-    content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
+    content = content.replace(/(\w+):\s*\/Service Feature*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
-    content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
-        return `${prop}: '${value.substring(1)}'`;
-      }
-      return match;
-    });
+    content = content.replace(/(\w+):\s*\/Service Feature*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
+        return `${prop}: '${value.substring(1)}'`}
+      return match});
 
     //Fix malformed JSX expressions;
-    content = content.replace(/\{\s*\/[^\/\n]*$/gm, match => {)
+    content = content.replace(/\{\s*\/Service Feature*$/gm, match => {)
     content = content.replace(/\{/* TODO: Fix JSX expression */}`
       return `{'${value}'}`;)
     });
 
     //Fix specific patterns with unterminated regex in object properties;
-    content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
+    content = content.replace(/(\w+):\s*\/Service Feature*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
-    content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
-        return `${prop}: '${value.substring(1)}'`;
-      }
-      return match;
-    });
+    content = content.replace(/(\w+):\s*\/Service Feature*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
+        return `${prop}: '${value.substring(1)}'`}
+      return match});
 
     //Fix malformed template literals;
-    content = content.replace(/`[^`]*$/gm, match => {)
+    content = content.replace(/`Service Feature*$/gm, match => {)
       if (!match.endsWith('`')) {
         return match + '`';
     //Fix malformed template literals;`
-    content = content.replace(/`[^`]*$/gm, match => {/* TODO: Fix JSX expression */}
+    content = content.replace(/`Service Feature*$/gm, match => {/* TODO: Fix JSX expression */}
       }
       return match;)
     });
@@ -80,23 +72,19 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
     content = content.replace(/\s*\/>\s*<\/(\w+)>/g, '</$1>');
 
     //Fix malformed JSX attributes;
-    content = content.replace(/(\w+)=\{[^}]*$/gm, match => {
+    content = content.replace(/(\w+)=\{Service Feature*$/gm, match => {
       if (!match.includes('}')) {
-    content = content.replace(/(\w+)=\{[^}]*$/gm, match => {/* TODO: Fix JSX expression */}
+    content = content.replace(/(\w+)=\{Service Feature*$/gm, match => {/* TODO: Fix JSX expression */}
       if (!match.includes('}')) {/* TODO: Fix JSX expression */}
-        return match + '}';
-      }
-      return match;
-    });
+        return match + '}'}
+      return match});
 
     //Fix specific patterns with malformed object properties;
-    content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
+    content = content.replace(/(\w+):\s*\/Service Feature*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
-    content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
-        return `${prop}: '${value.substring(1)}'`;
-      }
-      return match;
-    });
+    content = content.replace(/(\w+):\s*\/Service Feature*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
+        return `${prop}: '${value.substring(1)}'`}
+      return match});
 
     if (content !== originalContent) {/* TODO: Fix JSX expression */}
     }

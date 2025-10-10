@@ -240,7 +240,7 @@ const AIProjectManagerPage: React.FC = () => {
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {Service Feature.map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -284,7 +284,6 @@ const AIProjectManagerPage: React.FC = () => {
       
       <Footer />
     </div>
-  );
-};
+  )}
 
 export default AIProjectManagerPage;

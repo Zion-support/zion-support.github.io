@@ -1,7 +1,7 @@
 export interface Insight {/* TODO: Fix JSX expression */}
 }
 
-export const newInsights: Insight[] = [
+export const newInsights: InsightService Feature = [
   {
     id: 'ai-platform-optimization-insights'
     title: 'AI Platform Optimization: Maximizing ROI with Intelligent Scorecards'
@@ -41,8 +41,4 @@ Protect your AI systems with next-generation quantum security frameworks.
 - Real-time monitoring provides instant threat response;
     `,
 export const,
-  newInsights: Insight[] = [
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  }];
+  newInsights: InsightService Feature;

@@ -563,8 +563,7 @@ const ITServicesPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-  );
-};
+  )}
 export default ITServicesPage</a>
   </a>
   </a>

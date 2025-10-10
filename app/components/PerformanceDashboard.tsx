@@ -6,25 +6,12 @@ interface PerformanceMetrics {
   renderTime: number;
   memoryUsage: number;
   fps: number;
-  [key: string]: number;
-}
-interface PerformanceProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-}
-const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    fps: 0
-  });
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [alerts, setAlerts] = useState<string[]>([]);
+  Service Feature);
   useEffect(() => {
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType(
         'navigation'
-      )[0] as PerformanceNavigationTiming;
+      )Service Feature as PerformanceNavigationTiming;
       const loadTime = navigation
         ? navigation.loadEventEnd - navigation.fetchStart
         : 0;
@@ -35,8 +22,7 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
       let memoryUsage = 0;
       if ('memory' in performance) {
         const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
-        memoryUsage = memory?.usedJSHeapSize || 0;
-      }
+        memoryUsage = memory?.usedJSHeapSize || 0}
       // Measure FPS (simplified)
       let fps = 60;
       if ('requestAnimationFrame' in window) {
@@ -48,59 +34,45 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
           if (currentTime - lastTime >= 1000) {
             fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
             frameCount = 0;
-            lastTime = currentTime;
-          }
+            lastTime = currentTime}
           if (isMonitoring) {
-            requestAnimationFrame(measureFPS);
-          }
-        };
-        requestAnimationFrame(measureFPS);
-      }
+            requestAnimationFrame(measureFPS)}
+        }
+        requestAnimationFrame(measureFPS)}
       const newMetrics: PerformanceMetrics = {
         loadTime,
         renderTime,
         memoryUsage,
         fps
-      };
+      }
       setMetrics(newMetrics);
       onMetricsUpdate?.(newMetrics);
       // Check for performance alerts
-      checkPerformanceAlerts(newMetrics);
-    };
+      checkPerformanceAlerts(newMetrics)}
     if (isMonitoring) {
       updateMetrics();
       const interval = setInterval(updateMetrics, 1000);
-      return () => clearInterval(interval);
-    }
-  }, [isMonitoring, onMetricsUpdate]);
-  const checkPerformanceAlerts = (currentMetrics: PerformanceMetrics) => {
-    const newAlerts: string[] = [];
+      return () => clearInterval(interval)}
+  }, Service Feature;
     if (currentMetrics.loadTime > 3000) {
-      newAlerts.push('Load time is above 3 seconds');
-    }
+      newAlerts.push('Load time is above 3 seconds')}
     if (currentMetrics.memoryUsage > 50 * 1024 * 1024) { // 50MB
-      newAlerts.push('Memory usage is high');
-    }
+      newAlerts.push('Memory usage is high')}
     if (currentMetrics.fps < 30) {
-      newAlerts.push('FPS is below 30');
-    }
-    setAlerts(newAlerts);
-  };
+      newAlerts.push('FPS is below 30')}
+    setAlerts(newAlerts)}
   const toggleMonitoring = () => {
-    setIsMonitoring(!isMonitoring);
-  };
+    setIsMonitoring(!isMonitoring)}
   const formatBytes = (bytes: number) => {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-  };
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizesService Feature}
   const getPerformanceColor = (value: number, thresholds: { good: number; warning: number }) => {
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.warning) return 'text-yellow-400';
-    return 'text-red-400';
-  };
+    return 'text-red-400'}
   return (
     <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
       <div className="flex items-center justify-between mb-6">
@@ -176,8 +148,7 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
         </p>
       </div>
     </div>
-  );
-};
+  )}
 export default PerformanceDashboard;
   </div>
   </h3>

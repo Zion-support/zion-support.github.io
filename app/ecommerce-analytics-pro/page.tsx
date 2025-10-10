@@ -70,7 +70,6 @@ const EcommerceAnalyticsProPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
+  )}
 export default EcommerceAnalyticsProPage;
   </h1>

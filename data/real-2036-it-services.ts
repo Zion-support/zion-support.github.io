@@ -1080,9 +1080,7 @@ export const real2036ITServices = [{id: 'quantum - cloud - infrastructure - plat
     tagline: 'Intelligent DevOps automation',
     description: unknown;
     useCase,
-  s: [,
-export const real2036ITServices = [{/* TODO: Fix JSX expression */}
-    ]}
+  s: Service Feature}
   },
     i,
   d: 'ai - powered - devops - platform',
@@ -1529,21 +1527,21 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Data center recovery',
       'Cloud recovery',
       'Application recovery',
-      'Business continuity']};
+      'Business continuity']}
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
-  };
+  }
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
 export const real2036 ITServices = [
       'Data center recovery',
       'Cloud recovery',
       'Application recovery',
-      'Business continuity']};
+      'Business continuity']}
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
 export const real2036ITServices = [
-  {;
+  {
     id: 'quantum-cloud-infrastructure-platform';
     name: 'Quantum Cloud Infrastructure Platform';
     tagline: 'Next-generation quantum cloud computing';
@@ -1562,8 +1560,8 @@ export const real2036ITServices = [
     useCases: [}
       'Scientific research computingFinancial modelingDrug discoveryClimate simulation'
     ]}
-  };
-  {;
+  }
+  {
     id: 'ai-powered-devops-platform';
     name: 'AI-Powered DevOps Platform';
     tagline: 'Intelligent DevOps automation';
@@ -1582,8 +1580,8 @@ export const real2036ITServices = [
     useCases: [}
       'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting'
     ]}
-  };
-  {;
+  }
+  {
     id: 'quantum-cybersecurity-platform';
     name: 'Quantum Cybersecurity Platform';
     tagline: 'Quantum-resistant security solutions';
@@ -1602,8 +1600,8 @@ export const real2036ITServices = [
     useCases: [}
       'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure'
     ]}
-  };
-  {;
+  }
+  {
     id: 'edge-computing-orchestration-platform';
     name: 'Edge Computing Orchestration Platform';
     tagline: 'Intelligent edge computing management';
@@ -1622,8 +1620,8 @@ export const real2036ITServices = [
     useCases: [}
       'IoT applicationsReal-time analyticsEdge AI processingDistributed computing'
     ]}
-  };
-  {;
+  }
+  {
     id: 'quantum-database-platform';
     name: 'Quantum Database Platform';
     tagline: 'Quantum-powered data management';
@@ -1642,8 +1640,8 @@ export const real2036ITServices = [
     useCases: [}
       'Big data analyticsReal-time searchData warehousingBusiness intelligence'
     ]}
-  };
-  {;
+  }
+  {
     id: 'ai-powered-network-security';
     name: 'AI-Powered Network Security';
     tagline: 'Intelligent network protection';
@@ -1662,8 +1660,8 @@ export const real2036ITServices = [
     useCases: [}
       'Enterprise network securityCloud securityIoT securityRemote work security'
     ]}
-  };
-  {;
+  }
+  {
     id: 'quantum-internet-protocols';
     name: 'Quantum Internet Protocols';
     tagline: 'Next-generation quantum networking';
@@ -1682,8 +1680,8 @@ export const real2036ITServices = [
     useCases: [}
       'Government communicationsFinancial networksResearch networksQuantum internet backbone'
     ]}
-  };
-  {;
+  }
+  {
     id: 'ai-powered-infrastructure-monitoring';
     name: 'AI-Powered Infrastructure Monitoring';
     tagline: 'Intelligent infrastructure oversight';
@@ -1702,8 +1700,8 @@ export const real2036ITServices = [
     useCases: [}
       'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure'
     ]}
-  };
-  {;
+  }
+  {
     id: 'quantum-storage-platform';
     name: 'Quantum Storage Platform';
     tagline: 'Quantum-accelerated data storage';
@@ -1722,8 +1720,8 @@ export const real2036ITServices = [
     useCases: [}
       'Big data storageData archivingCloud storageData backup'
     ]}
-  };
-  {;
+  }
+  {
     id: 'ai-powered-disaster-recovery';
     name: 'AI-Powered Disaster Recovery';
     tagline: 'Intelligent recovery automation';
@@ -1744,59 +1742,57 @@ export const real2036ITServices = [
   s: [}
       'Scientific research computingFinancial modelingDrug discoveryClimate simulation'
     ]}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting'
     ]}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure'
     ]}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'IoT applicationsReal-time analyticsEdge AI processingDistributed computing'
     ]}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Big data analyticsReal-time searchData warehousingBusiness intelligence'
     ]}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Enterprise network securityCloud securityIoT securityRemote work security'
     ]}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Government communicationsFinancial networksResearch networksQuantum internet backbone'
     ]}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure'
     ]}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Big data storageData archivingCloud storageData backup'
     ]}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]}
   }
-];
-;
-  };
+]}
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
 export const real2036ITServices = [
-  {;
+  {
     id: 'quantum-cloud-infrastructure-platform';
     name: 'Quantum Cloud Infrastructure Platform';
     tagline: 'Next-generation quantum cloud computing';
@@ -1815,8 +1811,8 @@ export const real2036ITServices = [
     useCases: [}
       'Scientific research computingFinancial modelingDrug discoveryClimate simulation'
     ]}
-  };
-  {;
+  }
+  {
     id: 'ai-powered-devops-platform';
     name: 'AI-Powered DevOps Platform';
     tagline: 'Intelligent DevOps automation';
@@ -1835,8 +1831,8 @@ export const real2036ITServices = [
     useCases: [}
       'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting'
     ]}
-  };
-  {;
+  }
+  {
     id: 'quantum-cybersecurity-platform';
     name: 'Quantum Cybersecurity Platform';
     tagline: 'Quantum-resistant security solutions';
@@ -1855,8 +1851,8 @@ export const real2036ITServices = [
     useCases: [}
       'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure'
     ]}
-  };
-  {;
+  }
+  {
     id: 'edge-computing-orchestration-platform';
     name: 'Edge Computing Orchestration Platform';
     tagline: 'Intelligent edge computing management';
@@ -1875,8 +1871,8 @@ export const real2036ITServices = [
     useCases: [}
       'IoT applicationsReal-time analyticsEdge AI processingDistributed computing'
     ]}
-  };
-  {;
+  }
+  {
     id: 'quantum-database-platform';
     name: 'Quantum Database Platform';
     tagline: 'Quantum-powered data management';
@@ -1895,8 +1891,8 @@ export const real2036ITServices = [
     useCases: [}
       'Big data analyticsReal-time searchData warehousingBusiness intelligence'
     ]}
-  };
-  {;
+  }
+  {
     id: 'ai-powered-network-security';
     name: 'AI-Powered Network Security';
     tagline: 'Intelligent network protection';
@@ -1915,8 +1911,8 @@ export const real2036ITServices = [
     useCases: [}
       'Enterprise network securityCloud securityIoT securityRemote work security'
     ]}
-  };
-  {;
+  }
+  {
     id: 'quantum-internet-protocols';
     name: 'Quantum Internet Protocols';
     tagline: 'Next-generation quantum networking';
@@ -1935,8 +1931,8 @@ export const real2036ITServices = [
     useCases: [}
       'Government communicationsFinancial networksResearch networksQuantum internet backbone'
     ]}
-  };
-  {;
+  }
+  {
     id: 'ai-powered-infrastructure-monitoring';
     name: 'AI-Powered Infrastructure Monitoring';
     tagline: 'Intelligent infrastructure oversight';
@@ -1955,8 +1951,8 @@ export const real2036ITServices = [
     useCases: [}
       'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure'
     ]}
-  };
-  {;
+  }
+  {
     id: 'quantum-storage-platform';
     name: 'Quantum Storage Platform';
     tagline: 'Quantum-accelerated data storage';
@@ -1975,8 +1971,8 @@ export const real2036ITServices = [
     useCases: [}
       'Big data storageData archivingCloud storageData backup'
     ]}
-  };
-  {;
+  }
+  {
     id: 'ai-powered-disaster-recovery';
     name: 'AI-Powered Disaster Recovery';
     tagline: 'Intelligent recovery automation';
@@ -1997,47 +1993,47 @@ export const real2036ITServices = [
   s: [}
       'Scientific research computingFinancial modelingDrug discoveryClimate simulation'
     ]}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting'
     ]}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure'
     ]}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'IoT applicationsReal-time analyticsEdge AI processingDistributed computing'
     ]}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Big data analyticsReal-time searchData warehousingBusiness intelligence'
     ]}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Enterprise network securityCloud securityIoT securityRemote work security'
     ]}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Government communicationsFinancial networksResearch networksQuantum internet backbone'
     ]}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure'
     ]}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Big data storageData archivingCloud storageData backup'
     ]}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
@@ -2437,24 +2433,24 @@ export const real2036ITServices = [ i,
   n: '🔄🤖',' market_pric,
   e: '$4, 500 - 7, 000 / month', benefit,
   s: [,' 'Automated recovery procedures',' 'Intelligent backup management',' 'Predictive recovery planning',' 'Reduced recovery time'], use_case,
-  s: [,' 'Data center recovery',' 'Cloud recovery',' 'Application recovery',' 'Business continuity']};' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] };' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = [ ' 'Data center recovery',' 'Cloud recovery',' 'Application recovery',' 'Business continuity']};' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = [; {/* TODO: Fix JSX expression */}
-  s: [}' 'Scientific research computingFinancial modelingDrug discoveryClimate simulation' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'IoT applicationsReal-time analyticsEdge AI processingDistributed computing' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'Big data analyticsReal-time searchData warehousingBusiness intelligence' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'Enterprise network securityCloud securityIoT securityRemote work security' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'Government communicationsFinancial networksResearch networksQuantum internet backbone' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'Big data storageData archivingCloud storageData backup' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ]} } ]; };' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = [; {/* TODO: Fix JSX expression */}
-  s: [}' 'Scientific research computingFinancial modelingDrug discoveryClimate simulation' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'IoT applicationsReal-time analyticsEdge AI processingDistributed computing' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'Big data analyticsReal-time searchData warehousingBusiness intelligence' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'Enterprise network securityCloud securityIoT securityRemote work security' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'Government communicationsFinancial networksResearch networksQuantum internet backbone' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'Big data storageData archivingCloud storageData backup' ]} }; {/* TODO: Fix JSX expression */}
+  s: [,' 'Data center recovery',' 'Cloud recovery',' 'Application recovery',' 'Business continuity']}' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] }' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = [ ' 'Data center recovery',' 'Cloud recovery',' 'Application recovery',' 'Business continuity']}' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = [; {/* TODO: Fix JSX expression */}
+  s: [}' 'Scientific research computingFinancial modelingDrug discoveryClimate simulation' ]} } {/* TODO: Fix JSX expression */}
+  s: [}' 'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting' ]} } {/* TODO: Fix JSX expression */}
+  s: [}' 'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure' ]} } {/* TODO: Fix JSX expression */}
+  s: [}' 'IoT applicationsReal-time analyticsEdge AI processingDistributed computing' ]} } {/* TODO: Fix JSX expression */}
+  s: [}' 'Big data analyticsReal-time searchData warehousingBusiness intelligence' ]} } {/* TODO: Fix JSX expression */}
+  s: [}' 'Enterprise network securityCloud securityIoT securityRemote work security' ]} } {/* TODO: Fix JSX expression */}
+  s: [}' 'Government communicationsFinancial networksResearch networksQuantum internet backbone' ]} } {/* TODO: Fix JSX expression */}
+  s: [}' 'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure' ]} } {/* TODO: Fix JSX expression */}
+  s: [}' 'Big data storageData archivingCloud storageData backup' ]} } {/* TODO: Fix JSX expression */}
+  s: [}' 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ]} } ]}' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = [; {/* TODO: Fix JSX expression */}
+  s: [}' 'Scientific research computingFinancial modelingDrug discoveryClimate simulation' ]} } {/* TODO: Fix JSX expression */}
+  s: [}' 'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting' ]} } {/* TODO: Fix JSX expression */}
+  s: [}' 'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure' ]} } {/* TODO: Fix JSX expression */}
+  s: [}' 'IoT applicationsReal-time analyticsEdge AI processingDistributed computing' ]} } {/* TODO: Fix JSX expression */}
+  s: [}' 'Big data analyticsReal-time searchData warehousingBusiness intelligence' ]} } {/* TODO: Fix JSX expression */}
+  s: [}' 'Enterprise network securityCloud securityIoT securityRemote work security' ]} } {/* TODO: Fix JSX expression */}
+  s: [}' 'Government communicationsFinancial networksResearch networksQuantum internet backbone' ]} } {/* TODO: Fix JSX expression */}
+  s: [}' 'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure' ]} } {/* TODO: Fix JSX expression */}
+  s: [}' 'Big data storageData archivingCloud storageData backup' ]} } {/* TODO: Fix JSX expression */}
   s: [}' 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ]} } ]; '

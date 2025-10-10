@@ -388,7 +388,7 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                 <Target className="ml-2 h-5 w-5 ">,
                 <Target className="ml-2 h-5 w-5" />);
 export default function RealtimePersonalizationEngine20, 2, 5() {/* TODO: Fix JSX expression */}
-};
+}
   </div>
   </div>
   </div>

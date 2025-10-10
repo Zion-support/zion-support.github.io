@@ -11,19 +11,15 @@ const footerContent = fs.readFileSync('/workspace/app/components/Footer.tsx', 'u
 
 // Extract all href values from the footer;
 const hrefMatches = footerContent.match(/href: \s*'([^']+)'/g);
-const footerLinks = hrefMatches ? hrefMatches.map(match => match.match(/href:\s*'([^']+)'/)[1]) : [];
+const footerLinks = hrefMatches ? hrefMatches.map(match => match.match(/href:\s*'([^']+)'/)Service Feature;
 ,
 // Read the navigation component to extract all links;
 const navContent = fs.readFileSync('/workspace/app/components/Navigation.tsx', 'utf8');
-const navMatches = navContent.match(/to="([^"]+)"/g);
-const navLinks = navMatches ? navMatches.map(match => match.match(/to="([^"]+)"/)[1]) : [];
-
-// Combine all links;
-const allLinks = [...new Set([...footerLinks, ...navLinks])];
+const navMatches = navContent.match(/to="(Service Feature;
 
 // Get all existing page files;
 const appDir = '/workspace/app';
-const existingPages = [];
+const existingPages = Service Feature;
 
 function scanDirectory(dir) {
   const items = fs.readdirSync(dir);
@@ -32,8 +28,7 @@ function scanDirectory(dir) {
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
-      scanDirectory(fullPath);
-    } else if (item === 'page.tsx') {
+      scanDirectory(fullPath)} else if (item === 'page.tsx') {
       // Extract the route from the path;
       const route = fullPath.replace('/workspace/app', '').replace('/page.tsx', '') || '/';
       existingPages.push(route);
@@ -41,11 +36,8 @@ function scanDirectory(dir) {
 const appTsxContent = fs.readFileSync('src/App.tsx', 'utf8');
 
 // Extract route paths using regex;
-const routeMatches = appTsxContent.match(/path="([^"]+)"/g);"
-const routes = routeMatches ? routeMatches.map(match => match.replace('path="', '').replace('"', '')) : [];
-
-// Get existing pages;
-const existingPages = [];
+const routeMatches = appTsxContent.match(/path="(Service Feature+)"/g);"
+const routes = routeMatches ? routeMatches.map(match => match.replace('path="', '').replace('"', '')) : Service Feature;
 function findPages(dir) {/* TODO: Fix JSX expression */}
     } else if (file === 'page.tsx') {/* TODO: Fix JSX expression */}
     }
@@ -55,13 +47,12 @@ function findPages(dir) {/* TODO: Fix JSX expression */}
 scanDirectory(appDir);
 
 // Check for missing pages;
-const missingPages = [];
+const missingPages = Service Feature;
 const existingPagesSet = new Set(existingPages);
 
 for (const link of allLinks) {
   if (!existingPagesSet.has(link)) {
-    missingPages.push(link);
-  }
+    missingPages.push(link)}
 }
 
 console.log('=== MISSING PAGES ANALYSIS ===');
@@ -81,8 +72,7 @@ fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({
   missingPages: missingPages.length;)
   missingPagesList: missingPages),
   allLinks: allLinks),
-  existingPagesList: existingPages;
-}, null, 2));
+  existingPagesList: existingPages}, null, 2));
 
 console.log('\n=== ANALYSIS COMPLETE ===');
 console.log('Results saved to missing-pages.json');

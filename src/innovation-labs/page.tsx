@@ -4,10 +4,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { FlaskConical, Target, Zap, Settings, CheckCircle, Star,  FlaskConical,  Target,  Settings } from 'lucide-react';
 const InnovationLabsPage: React.FC = () => {
-  const features = [];
+  const features = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   ico,
   n: FlaskConical,
       titl,
@@ -15,8 +15,7 @@ const InnovationLabsPage: React.FC = () => {
       descriptio,
   n: 'Cutting-edge research and development projects',
       benefit,
-  s: ['Technology research', 'Prototype development', 'Innovation projects'];
-    },
+  s: ['Technology research', 'Prototype development', 'Innovation projects']},
       ico,
   n: Target,
       titl,
@@ -89,6 +88,5 @@ const InnovationLabsPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default InnovationLabsPage;

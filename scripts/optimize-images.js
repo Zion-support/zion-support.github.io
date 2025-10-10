@@ -10,8 +10,7 @@ class ImageOptimizer {/* TODO: Fix JSX expression */}
     }
 
     if (!fs.existsSync(this.outputDir)) {/* TODO: Fix JSX expression */}
-  e: true });
-    }
+  e: true })}
 
     const _files = fs.readdirSync(this.inputDir);
     const imageFiles = files.filter(file => )

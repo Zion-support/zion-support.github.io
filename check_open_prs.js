@@ -14,31 +14,26 @@ function makeGitHubRequest(endpoint) {
         'Accept': 'application/vnd.github.v3+json',
 function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
       }
-    };
+    }
 
     const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
       });
       res.on('end', () => {/* TODO: Fix JSX expression */}
         } catch (error) {/* TODO: Fix JSX expression */}
-  JSON: ${error.message}`));
-        }
-      });
-    });
+  JSON: ${error.message}`))}
+      })});
 
     req.on('error', (error) => {/* TODO: Fix JSX expression */}
     });
 
-    req.end();
-  });
-}
+    req.end()})}
 
 async function checkOpenPRs() {
   try {
     // Get open pull requests;
     if (prs.length === 0) {
 
-      return [];
-    }
+      return Service Feature}
     
     
     for (const pr of prs) {
@@ -66,23 +61,18 @@ async function checkOpenPRs() {/* TODO: Fix JSX expression */}
     
     
     for (const pr of prs) {/* TODO: Fix JSX expression */}
-      });
-    }
+      })}
     
-    return prDetails;
-    
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return prDetails} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
 // Run the check;
 checkOpenPRs().then(prs => {)
 )
-  process.exit(0);
-}).catch(error => {)
+  process.exit(0)}).catch(error => {)
 )
-  process.exit(1);
-});
+  process.exit(1)});
 checkOpenPRs().then(prs => {/* TODO: Fix JSX expression */})
 }).catch(error => {/* TODO: Fix JSX expression */})
 });`

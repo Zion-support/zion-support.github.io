@@ -4,15 +4,9 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const FAQPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [openItems, setOpenItems] = useState<number[]>([]);
-  const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(i => i !== index)
-        : [...prev, index]
-    );
-  };
+  const Service Feature = useState('');
+  const Service Feature
+    )}
   const faqData = [
     {
       category: 'General Questions',
@@ -160,24 +154,12 @@ import Footer from '../components/Footer';
 const FAQPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
-};
-  const [searchTerm, setSearchTerm] = useState('');
-  const [openItems, setOpenItems] = useState<number[]>([]);
-const toggleItem = (inde)
-  x: number) => {setOpenItems(prev =>})
-      prev.includes(index)
-        ? prev.filter(i => i !== index)
-        : [...prev, index]
-    );
-  };
-  const faqData = [
-  // TOD,
-  O: Add items;
-];;
+  )}
+  const Service Feature = useState('');
+  const Service Feature;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   categor,
   y: 'General Questions',
       question,
@@ -293,7 +275,7 @@ const toggleItem = (inde)
   r: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
   ];
   const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
 //     ...category,
     question,
@@ -340,8 +322,7 @@ type="text" placeholder="Search FAQs..."
                 <div className="space-y-4"></div>
                   {category.questions.map((item, itemIndex) => {}
   // TOD,
-  O: Add content;
-}
+  O: Add content}
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
           "

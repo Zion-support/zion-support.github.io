@@ -5,13 +5,11 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 export default function APIDocsPage() {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+  const Service Feature = useState('');
   const copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code);
     setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
+    setTimeout(() => setCopiedCode(null), 2000)}
   const apiEndpoints = [
     {
       title: 'AI Services',
@@ -28,7 +26,7 @@ export default function APIDocsPage() {
   -H "Content-Type: application/json" \\
   -d '{
     "text": "Your text to analyze",
-    "features": ["sentiment", "entities", "key_phrases"]
+    "features": Service Feature
   }'`
         },
         {
@@ -41,7 +39,7 @@ export default function APIDocsPage() {
   -H "Content-Type: application/json" \\
   -d '{
     "image_url": "https://example.com/image.jpg",
-    "features": ["objects", "faces", "text"]
+    "features": Service Feature
   }'`
         }
       ]
@@ -86,7 +84,7 @@ export default function APIDocsPage() {
   -H "Content-Type: application/json" \\
   -d '{
     "dataset_id": "dataset_123",
-    "operations": ["aggregate", "filter", "transform"],
+    "operations": Service Feature,
     "output_format": "json"
   }'`
         }
@@ -250,8 +248,7 @@ export default function APIDocsPage() {
       </section>
       <Footer />
     </div>
-  );
-}
+  )}
   </button>
   </button>
   </button>

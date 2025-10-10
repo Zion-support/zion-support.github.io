@@ -6,12 +6,7 @@ export interface BlogPost {
   author: string;
   date: string;
   category: string;
-  tags: string[];
-  featured: boolean;
-  readTime: string;
-  image?: string;}
-
-export const blogPosts: BlogPost[] = [,
+  tags: stringService Feature = [,
   {,
     slug: 'ai-2025-oct-04-operational-ai-scorecards-v2',
     title: 'Operational AI Scorecards v2: Gate Risk, Ship Faster',
@@ -124,14 +119,4 @@ export interface BlogPost {/* TODO: Fix JSX expression */}
 }
 
 export const,
-  blogPosts: BlogPost[] = [
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  }];
+  blogPosts: BlogPostService Feature;

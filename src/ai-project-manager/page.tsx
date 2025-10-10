@@ -89,8 +89,7 @@ const AiProjectManagerPage: React.FC = () => {
               Learn More;
   </
       <Footer />
-  );
-};
+  )}
 export default $1;
 'use client';
 import React, { useState, useEffect } from 'react';

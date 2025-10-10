@@ -240,7 +240,6 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
+  )}
 export default October2025CuttingEdgeInnovationsBanner;
 ;"

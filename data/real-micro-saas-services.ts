@@ -5,32 +5,7 @@
   price: string;
   period: string;
   description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
-    address: string;
-  }
-}
-export const realMicroSaasServices: RealMicroSaasService[] = [
+  features: stringService Feature = [
   // AI-Powered Business Solutions;
     id: 'ai-legal-document-generator'
     name: 'AI Legal Document Generator'
@@ -38,68 +13,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     price: '$89',
     period: '/month',
     description: 'Professional legal document generation platform powered by AI that creates contracts, agreements, and legal forms in seconds. Ensures compliance with current laws and regulations.',
-    features: [,
-  i,
-  d: string;
-  nam,
-  e: string;
-  taglin,
-  e: string;
-  pric,
-  e: string;
-  perio,
-  d: string;
-  descriptio,
-  n: string;
-  feature,
-  s: string[];
-  popula,
-  r: boolean;
-  ico,
-  n: string;
-  colo,
-  r: string;
-  textColo,
-  r: string;
-  lin,
-  k: string;
-  marketPositio,
-  n: string;
-  targetAudienc,
-  e: string;
-  trialDay,
-  s: number;
-  setupTim,
-  e: string;
-  categor,
-  y: string;
-  realServic,
-  e: boolean;
-  technolog,
-  y: string[];
-  integration,
-  s: string[];
-  useCase,
-  s: string[];
-  ro,
-  i: string;
-  competitor,
-  s: string[];
-  marketSiz,
-  e: string;
-  growthRat,
-  e: string;
-  contactInf,
-  o: unknown;
-    mobil,
-  e: string;
-    emai,
-  l: string;
-    addres,
-  s: string}
-}
-export const,
-  realMicroSaasServices: RealMicroSaasService[] = [,
+    features: Service Feature = [,
   // AI-Powered Business Solutions,
   id: 'ai-legal-document-generator',
     nam,
@@ -1250,8 +1164,7 @@ export const,
     launchDate: '2024-03-05'
     customers: 1100;
     rating: 4.6;
-    reviews: 134;
-  },
+    reviews: 134},
     id: 'ai-email-responder-pro',
     name: 'AI Email Responder Pro',
     tagline: 'Auto-triage and reply to routine emails with guardrails',
@@ -1360,8 +1273,7 @@ export const,
     launchDate: '2025-02-01'
     customers: 180;
     rating: 4.7;
-    reviews: 46;
-  },
+    reviews: 46},
     id: 'mobile-conversational-surveys',
     name: 'Mobile Conversational Surveys',
     tagline: 'Adaptive, chat-style surveys with higher completion rates',
@@ -1447,8 +1359,7 @@ export const,
     launchDate: '2024-12-10'
     customers: 95;
     rating: 4.6;
-    reviews: 22;
-  },
+    reviews: 22},
     id: 'niche-productivity-planner',
     name: 'Niche Productivity Planner',
     tagline: 'Opinionated project boards, tailored to your industry',
@@ -1546,8 +1457,7 @@ export const,
     launchDate: '2025-01-20'
     customers: 60;
     rating: 4.5;
-    reviews: 14;
-  },
+    reviews: 14},
     id: 'event-management-dashboard',
     name: 'Event Management Dashboard',
     tagline: 'Tickets, scheduling, engagement analytics in one place',
@@ -1647,8 +1557,7 @@ export const,
     launchDate: '2024-11-18'
     customers: 70;
     rating: 4.6;
-    reviews: 18;
-  },
+    reviews: 18},
     id: 'affiliate-tracking-suite',
     name: 'Affiliate Tracking Suite',
     tagline: 'Links, attribution, commissions, payoutsno spreadsheet required',
@@ -1748,8 +1657,7 @@ export const,
     launchDate: '2024-10-12'
     customers: 55;
     rating: 4.4;
-    reviews: 12;
-  },
+    reviews: 12},
     id: 'smb-website-analytics',
     name: 'SMB Website Analytics',
     tagline: 'Privacy-friendly analytics with actionable insights',
@@ -1849,8 +1757,7 @@ export const,
     launchDate: '2025-02-05'
     customers: 140;
     rating: 4.7;
-    reviews: 28;
-  },
+    reviews: 28},
     id: 'it-helpdesk-lite',
     name: 'IT Helpdesk Lite',
     tagline: 'Tickets, SLA timers, knowledge base, portalready day one',
@@ -1950,8 +1857,7 @@ export const,
     launchDate: '2024-09-22'
     customers: 120;
     rating: 4.5;
-    reviews: 31;
-  },
+    reviews: 31},
     id: 'ecommerce-return-manager',
     name: 'Ecommerce Return Manager',
     tagline: 'Customer-friendly returns with labels and status tracking',
@@ -2051,8 +1957,7 @@ export const,
     launchDate: '2024-08-30'
     customers: 75;
     rating: 4.4;
-    reviews: 19;
-  },
+    reviews: 19},
     id: 'auto-email-followups'
     name: 'Automated Email Followups'
     tagline: 'Cadence sequences for leads with AI personalization'
@@ -2152,8 +2057,7 @@ export const,
     launchDate: '2025-01-25'
     customers: 90;
     rating: 4.5;
-    reviews: 17;
-  },
+    reviews: 17},
     id: 'podcast-transcription-studio',
     name: 'Podcast Transcription Studio',
     tagline: 'Accurate transcripts, show notes, and highlights',
@@ -2253,8 +2157,7 @@ export const,
     launchDate: '2024-12-02'
     customers: 210;
     rating: 4.7;
-    reviews: 52;
-  },
+    reviews: 52},
     id: 'ai-knowledge-graph-studio',
     name: 'AI Knowledge Graph Studio',
     tagline: 'Build semantic graphs for RAG and lineage in minutes',
@@ -2354,8 +2257,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 35;
     rating: 4.8;
-    reviews: 11;
-  },
+    reviews: 11},
     id: 'llm-guarded-api-gateway',
     name: 'LLM Guarded API Gateway',
     tagline: 'Policy, safety, metering and routing for GenAI apps',
@@ -2459,8 +2361,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 42;
     rating: 4.8;
-    reviews: 13;
-  },
+    reviews: 13},
     id: 'serverless-lakehouse-starter',
     name: 'Serverless Lakehouse Starter',
     tagline: 'Spin up ELT + dbt + dashboards in a day',
@@ -2554,8 +2455,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 24;
     rating: 4.6;
-    reviews: 7;
-  },
+    reviews: 7},
     id: 'data-contracts-hub',
     name: 'Data Contracts Hub',
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes',
@@ -2655,8 +2555,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 19;
     rating: 4.6;
-    reviews: 6;
-  }];
+    reviews: 6}];
     id: 'ai-legal-document-generator'
     name: 'AI Legal Document Generator',
     tagline: 'Generate legally compliant documents in seconds with AI',
@@ -3948,8 +3847,7 @@ export const,
     launchDate: '2024-03-05'
     customers: 1100;
     rating: 4.6;
-    reviews: 134;
-  }
+    reviews: 134}
     id: 'ai-email-responder-pro',
     name: 'AI Email Responder Pro',
     tagline: 'Auto-triage and reply to routine emails with guardrails',
@@ -3995,8 +3893,7 @@ export const,
     launchDate: '2025-02-01'
     customers: 180;
     rating: 4.7;
-    reviews: 46;
-  }
+    reviews: 46}
     id: 'mobile-conversational-surveys',
     name: 'Mobile Conversational Surveys',
     tagline: 'Adaptive, chat-style surveys with higher completion rates'
@@ -4172,8 +4069,7 @@ export const,
     launchDate: '2024-12-10'
     customers: 95;
     rating: 4.6;
-    reviews: 22;
-  }
+    reviews: 22}
     id: 'niche-productivity-planner',
     name: 'Niche Productivity Planner',
     tagline: 'Opinionated project boards, tailored to your industry'
@@ -4209,8 +4105,7 @@ export const,
     launchDate: '2025-01-20'
     customers: 60;
     rating: 4.5;
-    reviews: 14;
-  }
+    reviews: 14}
     id: 'event-management-dashboard',
     name: 'Event Management Dashboard',
     tagline: 'Tickets, scheduling, engagement analytics in one place'
@@ -4245,8 +4140,7 @@ export const,
     launchDate: '2024-11-18'
     customers: 70;
     rating: 4.6;
-    reviews: 18;
-  }
+    reviews: 18}
     id: 'affiliate-tracking-suite',
     name: 'Affiliate Tracking Suite',
     tagline: 'Links, attribution, commissions, payoutsno spreadsheet required'
@@ -4281,8 +4175,7 @@ export const,
     launchDate: '2024-10-12'
     customers: 55;
     rating: 4.4;
-    reviews: 12;
-  }
+    reviews: 12}
     id: 'smb-website-analytics',
     name: 'SMB Website Analytics',
     tagline: 'Privacy-friendly analytics with actionable insights',
@@ -4318,8 +4211,7 @@ export const,
     launchDate: '2025-02-05'
     customers: 140;
     rating: 4.7;
-    reviews: 28;
-  }
+    reviews: 28}
     id: 'it-helpdesk-lite',
     name: 'IT Helpdesk Lite',
     tagline: 'Tickets, SLA timers, knowledge base, portalready day one'
@@ -4354,8 +4246,7 @@ export const,
     launchDate: '2024-09-22'
     customers: 120;
     rating: 4.5;
-    reviews: 31;
-  }
+    reviews: 31}
     id: 'ecommerce-return-manager',
     name: 'Ecommerce Return Manager',
     tagline: 'Customer-friendly returns with labels and status tracking',
@@ -4392,8 +4283,7 @@ export const,
     launchDate: '2024-08-30'
     customers: 75;
     rating: 4.4;
-    reviews: 19;
-  }
+    reviews: 19}
     id: 'auto-email-followups'
     name: 'Automated Email Followups'
     tagline: 'Cadence sequences for leads with AI personalization'
@@ -4428,8 +4318,7 @@ export const,
     launchDate: '2025-01-25'
     customers: 90;
     rating: 4.5;
-    reviews: 17;
-  }
+    reviews: 17}
     id: 'podcast-transcription-studio',
     name: 'Podcast Transcription Studio',
     tagline: 'Accurate transcripts, show notes, and highlights'
@@ -4464,8 +4353,7 @@ export const,
     launchDate: '2024-12-02'
     customers: 210;
     rating: 4.7;
-    reviews: 52;
-  }
+    reviews: 52}
     id: 'ai-knowledge-graph-studio',
     name: 'AI Knowledge Graph Studio',
     tagline: 'Build semantic graphs for RAG and lineage in minutes',
@@ -4501,8 +4389,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 35;
     rating: 4.8;
-    reviews: 11;
-  }
+    reviews: 11}
     id: 'llm-guarded-api-gateway',
     name: 'LLM Guarded API Gateway',
     tagline: 'Policy, safety, metering and routing for GenAI apps'
@@ -4537,8 +4424,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 42;
     rating: 4.8;
-    reviews: 13;
-  }
+    reviews: 13}
     id: 'serverless-lakehouse-starter',
     name: 'Serverless Lakehouse Starter',
     tagline: 'Spin up ELT + dbt + dashboards in a day',
@@ -4574,8 +4460,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 24;
     rating: 4.6;
-    reviews: 7;
-  }
+    reviews: 7}
     id: 'data-contracts-hub',
     name: 'Data Contracts Hub',
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes'
@@ -4610,11 +4495,9 @@ export const,
     launchDate: '2025-02-08'
     customers: 19;
     rating: 4.6;
-    reviews: 6;
-  }];
+    reviews: 6}];
 // Helper functions;
 export const getServicesByCategory = (category: string) =>}];
-;
 // Helper functions;
 export const getServicesByCategory = (category: string) =>: unknown;
   return realMicroSaasServices.filter (service => service.category === category),    id: 'data - contracts - hub',
@@ -4643,8 +4526,7 @@ export const getServicesByCategory = (category: string) =>: unknown;
     launch_date: '2025 - 02 - 08'
     customers: 19;
     rating: 4 && 4.6;
-    reviews: 6;
-  }
+    reviews: 6}
 ];
 // Helper functions;
 export const getServicesByCategory = (category: string) =>;
@@ -5551,7 +5433,6 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
 // Helper functions;
 export const getServicesByCategory = (categor)
   y: string) =>}];
-;
 // Helper functions;
 export const getServicesByCategory = (categor)
   y: string) =>: unknown;
@@ -5633,7 +5514,6 @@ implementationDetail,
     review,
   s: 6}
 ];
-;
 // Helper functions;
 export const getServicesByCategory = (categor)
   y: string) =>: unknown;
@@ -5655,15 +5535,13 @@ popular: false;
 launch_date: '2024 - 12 - 10'
 customers: 95;
 rating: 4 && 4.6;
-reviews: 22;
-};
+reviews: 22}
 marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.'
 competitors: ['AsanaClickUpNotion'];
 techStack: ['Next && Next.jsPrismaPostgreSQL'];
 realImplementation: true;
 implementationDetails: 'Template JSON schemas, rules engine, import/export.'
-reviews: 22;
-}
+reviews: 22}
 market_position: 'Alternative to Notion templates + Asana. Faster to start with curated flows.'
 competitors: ['AsanaClickUpNotion'];
 tech_stack: ['Next.jsPrismaPostgreSQL'];
@@ -5718,7 +5596,7 @@ customer,
 ratin,
   g: 4 && 4.6;
 review,
-  s: 22};
+  s: 22}
 marketPositio,
   n: 'Alternative to Notion templates + Asana. Faster to start with curated flows.'
 competitor,
@@ -5767,7 +5645,7 @@ customer,
 ratin,
   g: 4 && 4.5;
 review,
-  s: 14};
+  s: 14}
 export const serviceCategories = [
   'Legal Technology'
   'Customer Service & Support'
@@ -5822,10 +5700,10 @@ export const serviceCategories = [
   'Enterprise IT';
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research'
   return realMicroSaasServices.filter(service => service.category === category)
-};
+}
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research'
   return realMicroSaasServices.filter(service => service.category === category)
-};
+}
 export const getServicesByPriceRange = (min: number) max: number) =>,
   return realMicroSaasServices.filter(service =>)
 export const getServicesByPriceRange = (mi)
@@ -5834,7 +5712,7 @@ export const getServicesByPriceRange = (mi)
   return realMicroSaasServices.filter(service =>)
     const _price = parseFloat(service.price.replace('$') '').replace(; ''));
     return price >= min && (max === Infinity || price <= max)})
-};
+}
 export const serviceCategories = [
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research'
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity'
@@ -5851,39 +5729,7 @@ export const serviceCategories = [
   descriptio,
   n: string;
   feature,
-  s: string[];
-  popula,
-  r: boolean;
-  ico,
-  n: string;
-  colo,
-  r: string;
-  textColo,
-  r: string;
-  lin,
-  k: string;
-  marketPositio,
-  n: string;
-  targetAudienc,
-  e: string;
-  trialDay,
-  s: number;
-  setupTim,
-  e: string;
-  categor,
-  y: string;
-  realServic,
-  e: boolean;
-  technolog,
-  y: string[];
-  integration,
-  s: string[];
-  useCase,
-  s: string[];
-  ro,
-  i: string;
-  competitor,
-  s: string[];
+  s: stringService Feature;
   marketSiz,
   e: string;
   growthRat,
@@ -5895,20 +5741,17 @@ export const serviceCategories = [
   e: string}
   }
 }
-;
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology'
   'Enterprise IT'
 ];
-;
 export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
   }
 }
-;
 export const,
-  realMicroSaasServices: RealMicroSaasService[] = [;
+  realMicroSaasServices: RealMicroSaasServiceService Feature = [;
   // AI-Powered Business Solutions;
   {
     id: 'ai-legal-document-generator';
@@ -5944,8 +5787,8 @@ export const,
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-customer-service-automation';
     name: 'AI Customer Service Automation';
     tagline: '24/7 intelligent customer support with AI chatbots';
@@ -5979,8 +5822,8 @@ export const,
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-seo-optimizer-pro';
     name: 'AI SEO Optimizer Pro';
     tagline: 'Automated SEO optimization powered by artificial intelligence';
@@ -6014,8 +5857,8 @@ export const,
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-video-editing-suite';
     name: 'AI Video Editing Suite';
     tagline: 'Professional video editing powered by artificial intelligence';
@@ -6049,8 +5892,8 @@ export const,
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-data-analytics-platform';
     name: 'AI Data Analytics Platform';
     tagline: 'Transform raw data into actionable insights with AI';
@@ -6084,8 +5927,8 @@ export const,
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-hr-recruitment-platform';
     name: 'AI HR Recruitment Platform';
     tagline: 'Streamline hiring with AI-powered recruitment automation';
@@ -6119,8 +5962,8 @@ export const,
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-sales-automation-platform';
     name: 'AI Sales Automation Platform';
     tagline: 'Boost sales performance with intelligent automation';
@@ -6154,8 +5997,8 @@ export const,
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-market-research-platform';
     name: 'AI Market Research Platform';
     tagline: 'Discover market opportunities with AI-powered research';
@@ -6189,8 +6032,8 @@ export const,
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-blockchain-analytics';
     name: 'AI Blockchain Analytics Platform';
     tagline: 'Advanced blockchain intelligence and analytics';
@@ -6224,8 +6067,8 @@ export const,
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-cloud-cost-optimizer';
     name: 'AI Cloud Cost Optimizer';
     tagline: 'Reduce cloud costs by up to 40% with AI optimization';
@@ -6259,8 +6102,8 @@ export const,
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-database-performance-monitor';
     name: 'AI Database Performance Monitor';
     tagline: 'Optimize database performance with AI-powered monitoring';
@@ -6295,7 +6138,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '28% annual growth'}
     contactInf,
@@ -6310,7 +6153,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '32% annual growth'}
     contactInf,
@@ -6325,7 +6168,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '45% annual growth'}
     contactInf,
@@ -6340,7 +6183,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '38% annual growth'}
     contactInf,
@@ -6355,7 +6198,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '42% annual growth'}
     contactInf,
@@ -6370,7 +6213,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '33% annual growth'}
     contactInf,
@@ -6385,7 +6228,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '28% annual growth'}
     contactInf,
@@ -6400,7 +6243,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '65% annual growth'}
     contactInf,
@@ -6415,7 +6258,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '52% annual growth'}
     contactInf,
@@ -6430,18 +6273,18 @@ export const,
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   g: 4.6}
     review,
   s: 134}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   y: 'Productivity & Automation'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '15 minutes' };
+  e: '15 minutes' }
     feature,
   s: [,
       'Inbox labeling and prioritizationOn-brand response templatesSentiment and urgency detectionAuto-draft with human-in-the-loopZendesk/HubSpot/Gmail,
@@ -6468,15 +6311,14 @@ export const,
     launchDate: '2025-02-01';
     customers: 180;
     rating: 4.7;
-    reviews: 46;
-  };
-  {;
+    reviews: 46}
+  {
     id: 'mobile-conversational-surveys';
     name: 'Mobile Conversational Surveys';
     tagline: 'Adaptive, chat-style surveys with higher completion rates';
     description: 'Create mobile-first, conversational surveys that adapt based on answers. Real-time analytics and webhook exports.';
     category: 'Marketing & Research'}
-    price: { monthly: 49, yearly: 490, currency: 'USD', trialDays: 7} setupTime: '10 minutes' };
+    price: { monthly: 49, yearly: 490, currency: 'USD', trialDays: 7} setupTime: '10 minutes' }
     features: ['Branching logicA/B promptsEmbeddable widgetCSV/JSON exportWebhook triggers'];
     benefits: ['+35% completion rate vs. formsCleaner data, fewer drop-offs'];
     targetAudience: ['Product teamsMarketersUX researchers'];
@@ -6497,15 +6339,14 @@ export const,
     launchDate: '2024-12-10';
     customers: 95;
     rating: 4.6;
-    reviews: 22;
-  };
-  {;
+    reviews: 22}
+  {
     id: 'niche-productivity-planner';
     name: 'Niche Productivity Planner';
     tagline: 'Opinionated project boards, tailored to your industry';
     description: 'Pre-built workflows, dashboards, and automations tailored per industry vertical with exportable templates.';
     category: 'Operations'}
-    price: { monthly: 39, yearly: 390, currency: 'USD', trialDays: 14} setupTime: '5 minutes' };
+    price: { monthly: 39, yearly: 390, currency: 'USD', trialDays: 14} setupTime: '5 minutes' }
     features: ['Industry templatesAutomationsCalendar & GanttRole-based permissions'];
     benefits: ['Reduce setup time by 80%Consistency across teams'];
     targetAudience: ['AgenciesStudiosSMBs'];
@@ -6526,15 +6367,14 @@ export const,
     launchDate: '2025-01-20';
     customers: 60;
     rating: 4.5;
-    reviews: 14;
-  };
-  {;
+    reviews: 14}
+  {
     id: 'event-management-dashboard';
     name: 'Event Management Dashboard';
     tagline: 'Tickets, scheduling, engagement analytics in one place';
     description: 'Plan and manage events end-to-end. Handle ticketing, agenda, speaker management, sponsor pages, and live engagement.';
     category: 'Media & Events'}
-    price: { monthly: 129, yearly: 1290, currency: 'USD', trialDays: 7} setupTime: '1 day' };
+    price: { monthly: 129, yearly: 1290, currency: 'USD', trialDays: 7} setupTime: '1 day' }
     features: ['Ticketing & check-inSession builderEmail campaignsLive polls & Q&A'];
     benefits: ['Launch events fasterBetter attendee engagement'];
     targetAudience: ['ConferencesMeetupsCommunities'];
@@ -6555,15 +6395,14 @@ export const,
     launchDate: '2024-11-18';
     customers: 70;
     rating: 4.6;
-    reviews: 18;
-  };
-  {;
+    reviews: 18}
+  {
     id: 'affiliate-tracking-suite';
     name: 'Affiliate Tracking Suite';
     tagline: 'Links, attribution, commissions, payoutsno spreadsheet required';
     description: 'Manage affiliates with custom links, multi-touch attribution, fraud checks, and automated commission payouts.';
     category: 'Growth'}
-    price: { monthly: 99, yearly: 990, currency: 'USD', trialDays: 14} setupTime: '1 hour' };
+    price: { monthly: 99, yearly: 990, currency: 'USD', trialDays: 14} setupTime: '1 hour' }
     features: ['Custom linksAttribution windowsCoupon attributionPayout exports'];
     benefits: ['Grow revenue via affiliatesReduce fraud'];
     targetAudience: ['EcommerceSaaS'];
@@ -6584,15 +6423,14 @@ export const,
     launchDate: '2024-10-12';
     customers: 55;
     rating: 4.4;
-    reviews: 12;
-  };
-  {;
+    reviews: 12}
+  {
     id: 'smb-website-analytics';
     name: 'SMB Website Analytics';
     tagline: 'Privacy-friendly analytics with actionable insights';
     description: 'Simple dashboards for traffic, engagement, and conversionsno cookies by default. Alerts for anomalies and goals.';
     category: 'Analytics'}
-    price: { monthly: 29, yearly: 290, currency: 'USD', trialDays: 14} setupTime: '5 minutes' };
+    price: { monthly: 29, yearly: 290, currency: 'USD', trialDays: 14} setupTime: '5 minutes' }
     features: ['Goals & funnelsWeekly insights emailAnomaly alertsShareable dashboards'];
     benefits: ['Know what worksFocus on actions'];
     targetAudience: ['FoundersMarketersAgencies'];
@@ -6613,15 +6451,14 @@ export const,
     launchDate: '2025-02-05';
     customers: 140;
     rating: 4.7;
-    reviews: 28;
-  };
-  {;
+    reviews: 28}
+  {
     id: 'it-helpdesk-lite';
     name: 'IT Helpdesk Lite';
     tagline: 'Tickets, SLA timers, knowledge base, portalready day one';
     description: 'Streamlined helpdesk for MSPs and internal IT with email-to-ticket, SLA rules, automations, and a searchable KB.';
     category: 'IT & Operations'}
-    price: { monthly: 59, yearly: 590, currency: 'USD', trialDays: 14} setupTime: '2 hours' };
+    price: { monthly: 59, yearly: 590, currency: 'USD', trialDays: 14} setupTime: '2 hours' }
     features: ['Email-to-ticketSLA timersMacros/automationsSelf-serve portal'];
     benefits: ['Shorter MTTRFewer escalations'];
     targetAudience: ['MSPsIT teams'];
@@ -6642,15 +6479,14 @@ export const,
     launchDate: '2024-09-22';
     customers: 120;
     rating: 4.5;
-    reviews: 31;
-  };
-  {;
+    reviews: 31}
+  {
     id: 'ecommerce-return-manager';
     name: 'Ecommerce Return Manager';
     tagline: 'Customer-friendly returns with labels and status tracking';
     description: 'Automate RMA creation, generate labels, track statuses, and sync inventory updates to your store.';
     category: 'Ecommerce'}
-    price: { monthly: 79, yearly: 790, currency: 'USD', trialDays: 14} setupTime: '1 hour' };
+    price: { monthly: 79, yearly: 790, currency: 'USD', trialDays: 14} setupTime: '1 hour' }
     features: ['Self-service portalLabel generationReturn reasons analyticsExchanges & store credit'];
     benefits: ['Higher retentionLower support load'];
     targetAudience: ['D2 C brandsMarketplaces'];
@@ -6671,15 +6507,14 @@ export const,
     launchDate: '2024-08-30';
     customers: 75;
     rating: 4.4;
-    reviews: 19;
-  };
-  {;
+    reviews: 19}
+  {
     id: 'auto-email-followups';
     name: 'Automated Email Followups';
     tagline: 'Cadence sequences for leads with AI personalization';
     description: 'Consistent multi-touch follow-ups with AI-personalized snippets from CRM context and recent events.';
     category: 'Sales'}
-    price: { monthly: 49, yearly: 490, currency: 'USD', trialDays: 7} setupTime: '20 minutes' };
+    price: { monthly: 49, yearly: 490, currency: 'USD', trialDays: 7} setupTime: '20 minutes' }
     features: ['SequencesRules & triggersOpen/click trackingAI snippets'];
     benefits: ['Higher reply rateFewer manual tasks'];
     targetAudience: ['SMB sales teamsAgencies'];
@@ -6700,15 +6535,14 @@ export const,
     launchDate: '2025-01-25';
     customers: 90;
     rating: 4.5;
-    reviews: 17;
-  };
-  {;
+    reviews: 17}
+  {
     id: 'podcast-transcription-studio';
     name: 'Podcast Transcription Studio';
     tagline: 'Accurate transcripts, show notes, and highlights';
     description: 'Upload your episodes and receive transcripts, summaries, chapters, and social-ready highlights in minutes.';
     category: 'Media & Content'}
-    price: { monthly: 39, yearly: 390, currency: 'USD', trialDays: 7} setupTime: '5 minutes' };
+    price: { monthly: 39, yearly: 390, currency: 'USD', trialDays: 7} setupTime: '5 minutes' }
     features: ['Speaker diarizationTimecodesChaptersShow notes drafts'];
     benefits: ['AccessibilitySEO-ready content'];
     targetAudience: ['PodcastersAgencies'];
@@ -6729,15 +6563,14 @@ export const,
     launchDate: '2024-12-02';
     customers: 210;
     rating: 4.7;
-    reviews: 52;
-  };
-  {;
+    reviews: 52}
+  {
     id: 'ai-knowledge-graph-studio';
     name: 'AI Knowledge Graph Studio';
     tagline: 'Build semantic graphs for RAG and lineage in minutes';
     description: 'Auto-extract entities and relationships from docs to construct a knowledge graph with search, lineage, and governance.';
     category: 'AI & Data'}
-    price: { monthly: 199, yearly: 1990, currency: 'USD', trialDays: 14} setupTime: '1 day' };
+    price: { monthly: 199, yearly: 1990, currency: 'USD', trialDays: 14} setupTime: '1 day' }
     features: ['Entity/relation extractionSchema editorVector + graph searchLineage view'];
     benefits: ['Higher RAG precisionGovernance & explainability'];
     targetAudience: ['Data teamsPlatform engineeringCompliance'];
@@ -6758,15 +6591,14 @@ export const,
     launchDate: '2025-02-08';
     customers: 35;
     rating: 4.8;
-    reviews: 11;
-  };
-  {;
+    reviews: 11}
+  {
     id: 'llm-guarded-api-gateway';
     name: 'LLM Guarded API Gateway';
     tagline: 'Policy, safety, metering and routing for GenAI apps';
     description: 'A hardened gateway with prompt filtering, PII redaction, usage caps, and multi-provider routing.';
     category: 'AI & Platform'}
-    price: { monthly: 299, yearly: 2990, currency: 'USD', trialDays: 14} setupTime: '1 day' };
+    price: { monthly: 299, yearly: 2990, currency: 'USD', trialDays: 14} setupTime: '1 day' }
     features: ['Provider adaptersPolicy enginePII redactionRate limits'];
     benefits: ['Control spendReduce risk'];
     targetAudience: ['Platform teamsAI product'];
@@ -6787,15 +6619,14 @@ export const,
     launchDate: '2025-02-08';
     customers: 42;
     rating: 4.8;
-    reviews: 13;
-  };
-  {;
+    reviews: 13}
+  {
     id: 'serverless-lakehouse-starter';
     name: 'Serverless Lakehouse Starter';
     tagline: 'Spin up ELT + dbt + dashboards in a day';
     description: 'Opinionated stack for event collection, ELT pipelines, dbt models, and BI dashboards with infra as code.';
     category: 'Data & Analytics'}
-    price: { monthly: 249, yearly: 2490, currency: 'USD', trialDays: 7} setupTime: '1 day' };
+    price: { monthly: 249, yearly: 2490, currency: 'USD', trialDays: 7} setupTime: '1 day' }
     features: ['Event collectorConnector librarydbt modelsGrafana dashboards'];
     benefits: ['Faster analytics ROILower platform toil'];
     targetAudience: ['Data teamsOps'];
@@ -6816,15 +6647,14 @@ export const,
     launchDate: '2025-02-08';
     customers: 24;
     rating: 4.6;
-    reviews: 7;
-  };
-  {;
+    reviews: 7}
+  {
     id: 'data-contracts-hub';
     name: 'Data Contracts Hub';
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes';
     description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.';
     category: 'Data & Platform'}
-    price: { monthly: 129, yearly: 1290, currency: 'USD', trialDays: 14} setupTime: '2 hours' };
+    price: { monthly: 129, yearly: 1290, currency: 'USD', trialDays: 14} setupTime: '2 hours' }
     features: ['Schema registryDiff viewerCI gatesBackfill helpers'];
     benefits: ['Fewer incidentsFaster changes'];
     targetAudience: ['Data platformAnalytics engineers'];
@@ -6889,13 +6719,13 @@ export const,
     ratin,
   g: 4.7;
     review,
-  s: 46};
+  s: 46}
   {/* TODO: Fix JSX expression */}
   y: 'Marketing & Research'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '10 minutes' };
+  e: '10 minutes' }
     feature,
   s: ['Branching logicA/B promptsEmbeddable widgetCSV/JSON exportWebhook triggers'];
     benefit,
@@ -6938,13 +6768,13 @@ export const,
     ratin,
   g: 4.6;
     review,
-  s: 22};
+  s: 22}
   {/* TODO: Fix JSX expression */}
   y: 'Operations'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '5 minutes' };
+  e: '5 minutes' }
     feature,
   s: ['Industry templatesAutomationsCalendar & GanttRole-based permissions'];
     benefit,
@@ -6987,13 +6817,13 @@ export const,
     ratin,
   g: 4.5;
     review,
-  s: 14};
+  s: 14}
   {/* TODO: Fix JSX expression */}
   y: 'Media & Events'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '1 day' };
+  e: '1 day' }
     feature,
   s: ['Ticketing & check-inSession builderEmail campaignsLive polls & Q&A'];
     benefit,
@@ -7036,13 +6866,13 @@ export const,
     ratin,
   g: 4.6;
     review,
-  s: 18};
+  s: 18}
   {/* TODO: Fix JSX expression */}
   y: 'Growth'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 hour' };
+  e: '1 hour' }
     feature,
   s: ['Custom linksAttribution windowsCoupon attributionPayout exports'];
     benefit,
@@ -7085,13 +6915,13 @@ export const,
     ratin,
   g: 4.4;
     review,
-  s: 12};
+  s: 12}
   {/* TODO: Fix JSX expression */}
   y: 'Analytics'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '5 minutes' };
+  e: '5 minutes' }
     feature,
   s: ['Goals & funnelsWeekly insights emailAnomaly alertsShareable dashboards'];
     benefit,
@@ -7134,13 +6964,13 @@ export const,
     ratin,
   g: 4.7;
     review,
-  s: 28};
+  s: 28}
   {/* TODO: Fix JSX expression */}
   y: 'IT & Operations'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '2 hours' };
+  e: '2 hours' }
     feature,
   s: ['Email-to-ticketSLA timersMacros/automationsSelf-serve portal'];
     benefit,
@@ -7183,13 +7013,13 @@ export const,
     ratin,
   g: 4.5;
     review,
-  s: 31};
+  s: 31}
   {/* TODO: Fix JSX expression */}
   y: 'Ecommerce'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 hour' };
+  e: '1 hour' }
     feature,
   s: ['Self-service portalLabel generationReturn reasons analyticsExchanges & store credit'];
     benefit,
@@ -7232,13 +7062,13 @@ export const,
     ratin,
   g: 4.4;
     review,
-  s: 19};
+  s: 19}
   {/* TODO: Fix JSX expression */}
   y: 'Sales'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '20 minutes' };
+  e: '20 minutes' }
     feature,
   s: ['SequencesRules & triggersOpen/click trackingAI snippets'];
     benefit,
@@ -7281,13 +7111,13 @@ export const,
     ratin,
   g: 4.5;
     review,
-  s: 17};
+  s: 17}
   {/* TODO: Fix JSX expression */}
   y: 'Media & Content'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '5 minutes' };
+  e: '5 minutes' }
     feature,
   s: ['Speaker diarizationTimecodesChaptersShow notes drafts'];
     benefit,
@@ -7330,13 +7160,13 @@ export const,
     ratin,
   g: 4.7;
     review,
-  s: 52};
+  s: 52}
   {/* TODO: Fix JSX expression */}
   y: 'AI & Data'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 day' };
+  e: '1 day' }
     feature,
   s: ['Entity/relation extractionSchema editorVector + graph searchLineage view'];
     benefit,
@@ -7379,13 +7209,13 @@ export const,
     ratin,
   g: 4.8;
     review,
-  s: 11};
+  s: 11}
   {/* TODO: Fix JSX expression */}
   y: 'AI & Platform'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 day' };
+  e: '1 day' }
     feature,
   s: ['Provider adaptersPolicy enginePII redactionRate limits'];
     benefit,
@@ -7428,13 +7258,13 @@ export const,
     ratin,
   g: 4.8;
     review,
-  s: 13};
+  s: 13}
   {/* TODO: Fix JSX expression */}
   y: 'Data & Analytics'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '1 day' };
+  e: '1 day' }
     feature,
   s: ['Event collectorConnector librarydbt modelsGrafana dashboards'];
     benefit,
@@ -7477,13 +7307,13 @@ export const,
     ratin,
   g: 4.6;
     review,
-  s: 7};
+  s: 7}
   {/* TODO: Fix JSX expression */}
   y: 'Data & Platform'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '2 hours' };
+  e: '2 hours' }
     feature,
   s: ['Schema registryDiff viewerCI gatesBackfill helpers'];
     benefit,
@@ -7532,27 +7362,24 @@ export const,
 export const getServicesByCategory = (categor)
   y: string) => {/* TODO: Fix JSX expression */}
   return realMicroSaasServices.filter(service => service.category === category)}
-};
-export const getServicesByPriceRange = (min: number) max: number) => {;
+}
+export const getServicesByPriceRange = (min: number) max: number) => {
   return realMicroSaasServices.filter(service => {),
 export const getServicesByPriceRange = (mi)
   n: number) ma,
   x: number) => {/* TODO: Fix JSX expression */}
     const _price = parseFloat(service.price.replace('$') '').replace(} ''));
-    return price >= min && (max === Infinity || price <= max);
-  });
-};
+    return price >= min && (max === Infinity || price <= max)})}
 export const getPopularServices = () => {/* TODO: Fix JSX expression */}
   return realMicroSaasServices.filter(service => service.popular)}
-};
+}
 export const serviceCategories = [
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
   'Enterprise IT'
 ];
-    website: string;
-  }
+    website: string}
     name: 'AI Legal Document Generator',
     tagline: 'Generate legally compliant documents in seconds with AI',
     price: '$89',
@@ -8507,8 +8334,7 @@ export const serviceCategories = [
     launch_date: '2024 - 03 - 05'
     customers: 1100;
     rating: 4 && 4.6;
-    reviews: 134;
-  },
+    reviews: 134},
     id: 'ai - email - responder - pro',
     name: 'AI Email Responder Pro',
     tagline: 'Auto - triage and reply to routine emails with guardrails',
@@ -8603,8 +8429,7 @@ export const serviceCategories = [
     launch_date: '2025 - 02 - 01'
     customers: 180;
     rating: 4 && 4.7;
-    reviews: 46;
-  },
+    reviews: 46},
     id: 'mobile - conversational - surveys',
     name: 'Mobile Conversational Surveys',
     tagline: 'Adaptive, chat - style surveys with higher completion rates',
@@ -8692,8 +8517,7 @@ export const serviceCategories = [
     launch_date: '2024 - 12 - 10'
     customers: 95;
     rating: 4 && 4.6;
-    reviews: 22;
-  },
+    reviews: 22},
     id: 'niche - productivity - planner',
     name: 'Niche Productivity Planner',
     tagline: 'Opinionated project boards, tailored to your industry',
@@ -8775,8 +8599,7 @@ export const serviceCategories = [
     launch_date: '2025 - 01 - 20'
     customers: 60;
     rating: 4 && 4.5;
-    reviews: 14;
-  },
+    reviews: 14},
     id: 'event - management - dashboard',
     name: 'Event Management Dashboard',
     tagline: 'Tickets, scheduling, engagement analytics in one place',
@@ -8867,8 +8690,7 @@ export const serviceCategories = [
     launch_date: '2024 - 11 - 18'
     customers: 70;
     rating: 4 && 4.6;
-    reviews: 18;
-  },
+    reviews: 18},
     id: 'affiliate - tracking - suite',
     name: 'Affiliate Tracking Suite',
     tagline: 'Links, attribution, commissions, payoutsno spreadsheet required',
@@ -8959,8 +8781,7 @@ export const serviceCategories = [
     launch_date: '2024 - 10 - 12'
     customers: 55;
     rating: 4 && 4.4;
-    reviews: 12;
-  },
+    reviews: 12},
     id: 'smb - website - analytics',
     name: 'SMB Website Analytics',
     tagline: 'Privacy - friendly analytics with actionable insights',
@@ -9051,8 +8872,7 @@ export const serviceCategories = [
     launch_date: '2025 - 02 - 05'
     customers: 140;
     rating: 4 && 4.7;
-    reviews: 28;
-  },
+    reviews: 28},
     id: 'it - helpdesk - lite',
     name: 'IT Helpdesk Lite',
     tagline: 'Tickets, SLA timers, knowledge base, portalready day one',
@@ -9142,8 +8962,7 @@ export const serviceCategories = [
     launch_date: '2024 - 09 - 22'
     customers: 120;
     rating: 4 && 4.5;
-    reviews: 31;
-  },
+    reviews: 31},
     id: 'ecommerce - return - manager',
     name: 'Ecommerce Return Manager',
     tagline: 'Customer - friendly returns with labels and status tracking',
@@ -9237,8 +9056,7 @@ export const serviceCategories = [
     launch_date: '2024 - 08 - 30'
     customers: 75;
     rating: 4 && 4.4;
-    reviews: 19;
-  },
+    reviews: 19},
     id: 'auto - email - followups',
     name: 'Automated Email Followups',
     tagline: 'Cadence sequences for leads with AI personalization',
@@ -9319,8 +9137,7 @@ export const serviceCategories = [
     launch_date: '2025 - 01 - 25'
     customers: 90;
     rating: 4 && 4.5;
-    reviews: 17;
-  },
+    reviews: 17},
     id: 'podcast - transcription - studio',
     name: 'Podcast Transcription Studio',
     tagline: 'Accurate transcripts, show notes, and highlights',
@@ -9403,8 +9220,7 @@ export const serviceCategories = [
     launch_date: '2024 - 12 - 02'
     customers: 210;
     rating: 4 && 4.7;
-    reviews: 52;
-  },
+    reviews: 52},
     id: 'ai - knowledge - graph - studio',
     name: 'AI Knowledge Graph Studio',
     tagline: 'Build semantic graphs for RAG and lineage in minutes',
@@ -9487,8 +9303,7 @@ export const serviceCategories = [
     launch_date: '2025 - 02 - 08'
     customers: 35;
     rating: 4 && 4.8;
-    reviews: 11;
-  },
+    reviews: 11},
     id: 'llm - guarded - api - gateway',
     name: 'LLM Guarded API Gateway',
     tagline: 'Policy, safety, metering and routing for GenAI apps',
@@ -9588,8 +9403,7 @@ export const serviceCategories = [
     launch_date: '2025 - 02 - 08'
     customers: 42;
     rating: 4 && 4.8;
-    reviews: 13;
-  },
+    reviews: 13},
     id: 'serverless - lakehouse - starter',
     name: 'Serverless Lakehouse Starter',
     tagline: 'Spin up ELT + dbt + dashboards in a day',
@@ -9675,8 +9489,7 @@ export const serviceCategories = [
     launch_date: '2025 - 02 - 08'
     customers: 24;
     rating: 4 && 4.6;
-    reviews: 7;
-  },
+    reviews: 7},
     id: 'data - contracts - hub',
     name: 'Data Contracts Hub',
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes',
@@ -9778,23 +9591,7 @@ export const serviceCategories = [
   id: string, name: string;
   tagline: string, price: string;
   period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
-  textColor: string, link: string;
-  marketPosition: string, targetAudience: string;
-  trialDays: number, setupTime: string;
-  category: string, realService: boolean;
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string;
-  competitors: string[], marketSize: string;
-  growthRate: string;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string;
-  }
-}
-export const realMicroSaasServices: RealMicroSaasService[] = [
+  features: stringService Feature = [
     id: 'ai-legal-document-generator'
     name: 'AI Legal Document Generator',
     tagline: 'Generate legally compliant documents in seconds with AI',
@@ -9849,46 +9646,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
   d: string, descriptio,
   n: string,
   feature,
-  s: string[], popula,
-  r: boolean,
-  ico,
-  n: string, colo,
-  r: string,
-  textColo,
-  r: string, lin,
-  k: string,
-  marketPositio,
-  n: string, targetAudienc,
-  e: string,
-  trialDay,
-  s: number, setupTim,
-  e: string,
-  categor,
-  y: string, realServic,
-  e: boolean,
-  technolog,
-  y: string[], integration,
-  s: string[],
-  useCase,
-  s: string[], ro,
-  i: string,
-  competitor,
-  s: string[], marketSiz,
-  e: string,
-  growthRat,
-  e: string,
-  contactInf,
-  o: unknown,
-    mobil,
-  e: string, emai,
-  l: string,
-    addres,
-  s: string,
-    websit,
-  e: string}
-}
-export const,
-  realMicroSaasServices: RealMicroSaasService[] = [,
+  s: stringService Feature = [,
     i,
   d: 'ai-legal-document-generator'
     nam,
@@ -11133,8 +10891,7 @@ export const,
     launchDate: '2024-03-05'
     customers: 1100;
     rating: 4.6;
-    reviews: 134;
-  }
+    reviews: 134}
     id: 'ai-email-responder-pro',
     name: 'AI Email Responder Pro',
     tagline: 'Auto-triage and reply to routine emails with guardrails',
@@ -11180,8 +10937,7 @@ export const,
     launchDate: '2025-02-01'
     customers: 180;
     rating: 4.7;
-    reviews: 46;
-  }
+    reviews: 46}
     id: 'mobile-conversational-surveys',
     name: 'Mobile Conversational Surveys',
     tagline: 'Adaptive, chat-style surveys with higher completion rates'
@@ -11357,8 +11113,7 @@ export const,
     launchDate: '2024-12-10'
     customers: 95;
     rating: 4.6;
-    reviews: 22;
-  }
+    reviews: 22}
     id: 'niche-productivity-planner',
     name: 'Niche Productivity Planner',
     tagline: 'Opinionated project boards, tailored to your industry'
@@ -11394,8 +11149,7 @@ export const,
     launchDate: '2025-01-20'
     customers: 60;
     rating: 4.5;
-    reviews: 14;
-  }
+    reviews: 14}
     id: 'event-management-dashboard',
     name: 'Event Management Dashboard',
     tagline: 'Tickets, scheduling, engagement analytics in one place'
@@ -11430,8 +11184,7 @@ export const,
     launchDate: '2024-11-18'
     customers: 70;
     rating: 4.6;
-    reviews: 18;
-  }
+    reviews: 18}
     id: 'affiliate-tracking-suite',
     name: 'Affiliate Tracking Suite',
     tagline: 'Links, attribution, commissions, payoutsno spreadsheet required'
@@ -11466,8 +11219,7 @@ export const,
     launchDate: '2024-10-12'
     customers: 55;
     rating: 4.4;
-    reviews: 12;
-  }
+    reviews: 12}
     id: 'smb-website-analytics',
     name: 'SMB Website Analytics',
     tagline: 'Privacy-friendly analytics with actionable insights',
@@ -11503,8 +11255,7 @@ export const,
     launchDate: '2025-02-05'
     customers: 140;
     rating: 4.7;
-    reviews: 28;
-  }
+    reviews: 28}
     id: 'it-helpdesk-lite',
     name: 'IT Helpdesk Lite',
     tagline: 'Tickets, SLA timers, knowledge base, portalready day one'
@@ -11539,8 +11290,7 @@ export const,
     launchDate: '2024-09-22'
     customers: 120;
     rating: 4.5;
-    reviews: 31;
-  }
+    reviews: 31}
     id: 'ecommerce-return-manager',
     name: 'Ecommerce Return Manager',
     tagline: 'Customer-friendly returns with labels and status tracking',
@@ -11577,8 +11327,7 @@ export const,
     launchDate: '2024-08-30'
     customers: 75;
     rating: 4.4;
-    reviews: 19;
-  }
+    reviews: 19}
     id: 'auto-email-followups'
     name: 'Automated Email Followups'
     tagline: 'Cadence sequences for leads with AI personalization'
@@ -11613,8 +11362,7 @@ export const,
     launchDate: '2025-01-25'
     customers: 90;
     rating: 4.5;
-    reviews: 17;
-  }
+    reviews: 17}
     id: 'podcast-transcription-studio',
     name: 'Podcast Transcription Studio',
     tagline: 'Accurate transcripts, show notes, and highlights'
@@ -11649,8 +11397,7 @@ export const,
     launchDate: '2024-12-02'
     customers: 210;
     rating: 4.7;
-    reviews: 52;
-  }
+    reviews: 52}
     id: 'ai-knowledge-graph-studio',
     name: 'AI Knowledge Graph Studio',
     tagline: 'Build semantic graphs for RAG and lineage in minutes',
@@ -11686,8 +11433,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 35;
     rating: 4.8;
-    reviews: 11;
-  }
+    reviews: 11}
     id: 'llm-guarded-api-gateway',
     name: 'LLM Guarded API Gateway',
     tagline: 'Policy, safety, metering and routing for GenAI apps'
@@ -11722,8 +11468,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 42;
     rating: 4.8;
-    reviews: 13;
-  }
+    reviews: 13}
     id: 'serverless-lakehouse-starter',
     name: 'Serverless Lakehouse Starter',
     tagline: 'Spin up ELT + dbt + dashboards in a day',
@@ -11759,8 +11504,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 24;
     rating: 4.6;
-    reviews: 7;
-  }
+    reviews: 7}
     id: 'data-contracts-hub',
     name: 'Data Contracts Hub',
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes'
@@ -11795,8 +11539,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 19;
     rating: 4.6;
-    reviews: 6;
-  }];
+    reviews: 6}];
 // Helper functions;
 export const getServicesByCategory = (category: string) =>;
     roi: 'Reduce data breakage incidents by 5070%.'
@@ -11809,8 +11552,7 @@ export const getServicesByCategory = (category: string) =>;
     popular: false;
     launch_date: '2025 - 02 - 08',
     customers: 19;
-    reviews: 6;
-  }
+    reviews: 6}
 ];
 // Helper functions;
 export const getServicesByCategory = (category: string) =>;
@@ -12759,7 +12501,6 @@ implementationDetail,
     review,
   s: 6}
 ];
-;
 // Helper functions;
 export const getServicesByCategory = (categor)
   y: string) =>: unknown;
@@ -12784,8 +12525,7 @@ competitors: ['AsanaClickUpNotion'];
 techStack: ['Next && Next.jsPrismaPostgreSQL'];
 realImplementation: true;
 implementationDetails: 'Template JSON schemas, rules engine, import/export.'
-reviews: 22;
-}
+reviews: 22}
 market_position: 'Alternative to Notion templates + Asana. Faster to start with curated flows.'
 competitors: ['AsanaClickUpNotion'];
 tech_stack: ['Next.jsPrismaPostgreSQL'];
@@ -12906,7 +12646,6 @@ reviews: 14;
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity'
 review,
   s: 14}
-;
 export const service_categories = [
   'Legal Technology',
   'Customer Service & Support',
@@ -12947,9 +12686,8 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: string}
   }
 }
-;
-export interface RealMicroSaasService {;
-export const realMicroSaasServices: RealMicroSaasService[] = [;
+export interface RealMicroSaasService {
+export const realMicroSaasServices: RealMicroSaasServiceService Feature = [;
   // AI-Powered Business Solutions;
   {
     id: 'ai-legal-document-generator';
@@ -12985,8 +12723,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-customer-service-automation';
     name: 'AI Customer Service Automation';
     tagline: '24/7 intelligent customer support with AI chatbots';
@@ -13020,8 +12758,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-seo-optimizer-pro';
     name: 'AI SEO Optimizer Pro';
     tagline: 'Automated SEO optimization powered by artificial intelligence';
@@ -13055,8 +12793,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-video-editing-suite';
     name: 'AI Video Editing Suite';
     tagline: 'Professional video editing powered by artificial intelligence';
@@ -13090,8 +12828,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-data-analytics-platform';
     name: 'AI Data Analytics Platform';
     tagline: 'Transform raw data into actionable insights with AI';
@@ -13125,8 +12863,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-hr-recruitment-platform';
     name: 'AI HR Recruitment Platform';
     tagline: 'Streamline hiring with AI-powered recruitment automation';
@@ -13160,8 +12898,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-sales-automation-platform';
     name: 'AI Sales Automation Platform';
     tagline: 'Boost sales performance with intelligent automation';
@@ -13195,8 +12933,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-market-research-platform';
     name: 'AI Market Research Platform';
     tagline: 'Discover market opportunities with AI-powered research';
@@ -13230,8 +12968,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-blockchain-analytics';
     name: 'AI Blockchain Analytics Platform';
     tagline: 'Advanced blockchain intelligence and analytics';
@@ -13265,8 +13003,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-cloud-cost-optimizer';
     name: 'AI Cloud Cost Optimizer';
     tagline: 'Reduce cloud costs by up to 40% with AI optimization';
@@ -13300,8 +13038,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-database-performance-monitor';
     name: 'AI Database Performance Monitor';
     tagline: 'Optimize database performance with AI-powered monitoring';
@@ -13336,7 +13074,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '28% annual growth'}
     contactInf,
@@ -13351,7 +13089,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '32% annual growth'}
     contactInf,
@@ -13366,7 +13104,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '45% annual growth'}
     contactInf,
@@ -13381,7 +13119,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '38% annual growth'}
     contactInf,
@@ -13396,7 +13134,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '42% annual growth'}
     contactInf,
@@ -13411,7 +13149,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '33% annual growth'}
     contactInf,
@@ -13426,7 +13164,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '28% annual growth'}
     contactInf,
@@ -13441,7 +13179,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '65% annual growth'}
     contactInf,
@@ -13456,7 +13194,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '52% annual growth'}
     contactInf,
@@ -13471,18 +13209,18 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   g: 4.6}
     review,
   s: 134}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   y: 'Productivity & Automation'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '15 minutes' };
+  e: '15 minutes' }
     feature,
   s: [,
       'Inbox labeling and prioritizationOn-brand response templatesSentiment and urgency detectionAuto-draft with human-in-the-loopZendesk/HubSpot/Gmail,
@@ -13509,15 +13247,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-01';
     customers: 180;
     rating: 4.7;
-    reviews: 46;
-  };
-  {;
+    reviews: 46}
+  {
     id: 'mobile-conversational-surveys';
     name: 'Mobile Conversational Surveys';
     tagline: 'Adaptive, chat-style surveys with higher completion rates';
     description: 'Create mobile-first, conversational surveys that adapt based on answers. Real-time analytics and webhook exports.';
     category: 'Marketing & Research'}
-    price: { monthly: 49, yearly: 490, currency: 'USD', trialDays: 7} setupTime: '10 minutes' };
+    price: { monthly: 49, yearly: 490, currency: 'USD', trialDays: 7} setupTime: '10 minutes' }
     features: ['Branching logicA/B promptsEmbeddable widgetCSV/JSON exportWebhook triggers'];
     benefits: ['+35% completion rate vs. formsCleaner data, fewer drop-offs'];
     targetAudience: ['Product teamsMarketersUX researchers'];
@@ -13538,15 +13275,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-12-10';
     customers: 95;
     rating: 4.6;
-    reviews: 22;
-  };
-  {;
+    reviews: 22}
+  {
     id: 'niche-productivity-planner';
     name: 'Niche Productivity Planner';
     tagline: 'Opinionated project boards, tailored to your industry';
     description: 'Pre-built workflows, dashboards, and automations tailored per industry vertical with exportable templates.';
     category: 'Operations'}
-    price: { monthly: 39, yearly: 390, currency: 'USD', trialDays: 14} setupTime: '5 minutes' };
+    price: { monthly: 39, yearly: 390, currency: 'USD', trialDays: 14} setupTime: '5 minutes' }
     features: ['Industry templatesAutomationsCalendar & GanttRole-based permissions'];
     benefits: ['Reduce setup time by 80%Consistency across teams'];
     targetAudience: ['AgenciesStudiosSMBs'];
@@ -13567,15 +13303,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-01-20';
     customers: 60;
     rating: 4.5;
-    reviews: 14;
-  };
-  {;
+    reviews: 14}
+  {
     id: 'event-management-dashboard';
     name: 'Event Management Dashboard';
     tagline: 'Tickets, scheduling, engagement analytics in one place';
     description: 'Plan and manage events end-to-end. Handle ticketing, agenda, speaker management, sponsor pages, and live engagement.';
     category: 'Media & Events'}
-    price: { monthly: 129, yearly: 1290, currency: 'USD', trialDays: 7} setupTime: '1 day' };
+    price: { monthly: 129, yearly: 1290, currency: 'USD', trialDays: 7} setupTime: '1 day' }
     features: ['Ticketing & check-inSession builderEmail campaignsLive polls & Q&A'];
     benefits: ['Launch events fasterBetter attendee engagement'];
     targetAudience: ['ConferencesMeetupsCommunities'];
@@ -13596,15 +13331,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-11-18';
     customers: 70;
     rating: 4.6;
-    reviews: 18;
-  };
-  {;
+    reviews: 18}
+  {
     id: 'affiliate-tracking-suite';
     name: 'Affiliate Tracking Suite';
     tagline: 'Links, attribution, commissions, payoutsno spreadsheet required';
     description: 'Manage affiliates with custom links, multi-touch attribution, fraud checks, and automated commission payouts.';
     category: 'Growth'}
-    price: { monthly: 99, yearly: 990, currency: 'USD', trialDays: 14} setupTime: '1 hour' };
+    price: { monthly: 99, yearly: 990, currency: 'USD', trialDays: 14} setupTime: '1 hour' }
     features: ['Custom linksAttribution windowsCoupon attributionPayout exports'];
     benefits: ['Grow revenue via affiliatesReduce fraud'];
     targetAudience: ['EcommerceSaaS'];
@@ -13625,15 +13359,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-10-12';
     customers: 55;
     rating: 4.4;
-    reviews: 12;
-  };
-  {;
+    reviews: 12}
+  {
     id: 'smb-website-analytics';
     name: 'SMB Website Analytics';
     tagline: 'Privacy-friendly analytics with actionable insights';
     description: 'Simple dashboards for traffic, engagement, and conversionsno cookies by default. Alerts for anomalies and goals.';
     category: 'Analytics'}
-    price: { monthly: 29, yearly: 290, currency: 'USD', trialDays: 14} setupTime: '5 minutes' };
+    price: { monthly: 29, yearly: 290, currency: 'USD', trialDays: 14} setupTime: '5 minutes' }
     features: ['Goals & funnelsWeekly insights emailAnomaly alertsShareable dashboards'];
     benefits: ['Know what worksFocus on actions'];
     targetAudience: ['FoundersMarketersAgencies'];
@@ -13654,15 +13387,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-05';
     customers: 140;
     rating: 4.7;
-    reviews: 28;
-  };
-  {;
+    reviews: 28}
+  {
     id: 'it-helpdesk-lite';
     name: 'IT Helpdesk Lite';
     tagline: 'Tickets, SLA timers, knowledge base, portalready day one';
     description: 'Streamlined helpdesk for MSPs and internal IT with email-to-ticket, SLA rules, automations, and a searchable KB.';
     category: 'IT & Operations'}
-    price: { monthly: 59, yearly: 590, currency: 'USD', trialDays: 14} setupTime: '2 hours' };
+    price: { monthly: 59, yearly: 590, currency: 'USD', trialDays: 14} setupTime: '2 hours' }
     features: ['Email-to-ticketSLA timersMacros/automationsSelf-serve portal'];
     benefits: ['Shorter MTTRFewer escalations'];
     targetAudience: ['MSPsIT teams'];
@@ -13683,15 +13415,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-09-22';
     customers: 120;
     rating: 4.5;
-    reviews: 31;
-  };
-  {;
+    reviews: 31}
+  {
     id: 'ecommerce-return-manager';
     name: 'Ecommerce Return Manager';
     tagline: 'Customer-friendly returns with labels and status tracking';
     description: 'Automate RMA creation, generate labels, track statuses, and sync inventory updates to your store.';
     category: 'Ecommerce'}
-    price: { monthly: 79, yearly: 790, currency: 'USD', trialDays: 14} setupTime: '1 hour' };
+    price: { monthly: 79, yearly: 790, currency: 'USD', trialDays: 14} setupTime: '1 hour' }
     features: ['Self-service portalLabel generationReturn reasons analyticsExchanges & store credit'];
     benefits: ['Higher retentionLower support load'];
     targetAudience: ['D2 C brandsMarketplaces'];
@@ -13712,15 +13443,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-08-30';
     customers: 75;
     rating: 4.4;
-    reviews: 19;
-  };
-  {;
+    reviews: 19}
+  {
     id: 'auto-email-followups';
     name: 'Automated Email Followups';
     tagline: 'Cadence sequences for leads with AI personalization';
     description: 'Consistent multi-touch follow-ups with AI-personalized snippets from CRM context and recent events.';
     category: 'Sales'}
-    price: { monthly: 49, yearly: 490, currency: 'USD', trialDays: 7} setupTime: '20 minutes' };
+    price: { monthly: 49, yearly: 490, currency: 'USD', trialDays: 7} setupTime: '20 minutes' }
     features: ['SequencesRules & triggersOpen/click trackingAI snippets'];
     benefits: ['Higher reply rateFewer manual tasks'];
     targetAudience: ['SMB sales teamsAgencies'];
@@ -13741,15 +13471,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-01-25';
     customers: 90;
     rating: 4.5;
-    reviews: 17;
-  };
-  {;
+    reviews: 17}
+  {
     id: 'podcast-transcription-studio';
     name: 'Podcast Transcription Studio';
     tagline: 'Accurate transcripts, show notes, and highlights';
     description: 'Upload your episodes and receive transcripts, summaries, chapters, and social-ready highlights in minutes.';
     category: 'Media & Content'}
-    price: { monthly: 39, yearly: 390, currency: 'USD', trialDays: 7} setupTime: '5 minutes' };
+    price: { monthly: 39, yearly: 390, currency: 'USD', trialDays: 7} setupTime: '5 minutes' }
     features: ['Speaker diarizationTimecodesChaptersShow notes drafts'];
     benefits: ['AccessibilitySEO-ready content'];
     targetAudience: ['PodcastersAgencies'];
@@ -13770,15 +13499,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-12-02';
     customers: 210;
     rating: 4.7;
-    reviews: 52;
-  };
-  {;
+    reviews: 52}
+  {
     id: 'ai-knowledge-graph-studio';
     name: 'AI Knowledge Graph Studio';
     tagline: 'Build semantic graphs for RAG and lineage in minutes';
     description: 'Auto-extract entities and relationships from docs to construct a knowledge graph with search, lineage, and governance.';
     category: 'AI & Data'}
-    price: { monthly: 199, yearly: 1990, currency: 'USD', trialDays: 14} setupTime: '1 day' };
+    price: { monthly: 199, yearly: 1990, currency: 'USD', trialDays: 14} setupTime: '1 day' }
     features: ['Entity/relation extractionSchema editorVector + graph searchLineage view'];
     benefits: ['Higher RAG precisionGovernance & explainability'];
     targetAudience: ['Data teamsPlatform engineeringCompliance'];
@@ -13799,15 +13527,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-08';
     customers: 35;
     rating: 4.8;
-    reviews: 11;
-  };
-  {;
+    reviews: 11}
+  {
     id: 'llm-guarded-api-gateway';
     name: 'LLM Guarded API Gateway';
     tagline: 'Policy, safety, metering and routing for GenAI apps';
     description: 'A hardened gateway with prompt filtering, PII redaction, usage caps, and multi-provider routing.';
     category: 'AI & Platform'}
-    price: { monthly: 299, yearly: 2990, currency: 'USD', trialDays: 14} setupTime: '1 day' };
+    price: { monthly: 299, yearly: 2990, currency: 'USD', trialDays: 14} setupTime: '1 day' }
     features: ['Provider adaptersPolicy enginePII redactionRate limits'];
     benefits: ['Control spendReduce risk'];
     targetAudience: ['Platform teamsAI product'];
@@ -13828,15 +13555,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-08';
     customers: 42;
     rating: 4.8;
-    reviews: 13;
-  };
-  {;
+    reviews: 13}
+  {
     id: 'serverless-lakehouse-starter';
     name: 'Serverless Lakehouse Starter';
     tagline: 'Spin up ELT + dbt + dashboards in a day';
     description: 'Opinionated stack for event collection, ELT pipelines, dbt models, and BI dashboards with infra as code.';
     category: 'Data & Analytics'}
-    price: { monthly: 249, yearly: 2490, currency: 'USD', trialDays: 7} setupTime: '1 day' };
+    price: { monthly: 249, yearly: 2490, currency: 'USD', trialDays: 7} setupTime: '1 day' }
     features: ['Event collectorConnector librarydbt modelsGrafana dashboards'];
     benefits: ['Faster analytics ROILower platform toil'];
     targetAudience: ['Data teamsOps'];
@@ -13857,15 +13583,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-08';
     customers: 24;
     rating: 4.6;
-    reviews: 7;
-  };
-  {;
+    reviews: 7}
+  {
     id: 'data-contracts-hub';
     name: 'Data Contracts Hub';
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes';
     description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.';
     category: 'Data & Platform'}
-    price: { monthly: 129, yearly: 1290, currency: 'USD', trialDays: 14} setupTime: '2 hours' };
+    price: { monthly: 129, yearly: 1290, currency: 'USD', trialDays: 14} setupTime: '2 hours' }
     features: ['Schema registryDiff viewerCI gatesBackfill helpers'];
     benefits: ['Fewer incidentsFaster changes'];
     targetAudience: ['Data platformAnalytics engineers'];
@@ -13930,13 +13655,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7;
     review,
-  s: 46};
+  s: 46}
   {/* TODO: Fix JSX expression */}
   y: 'Marketing & Research'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '10 minutes' };
+  e: '10 minutes' }
     feature,
   s: ['Branching logicA/B promptsEmbeddable widgetCSV/JSON exportWebhook triggers'];
     benefit,
@@ -13979,13 +13704,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6;
     review,
-  s: 22};
+  s: 22}
   {/* TODO: Fix JSX expression */}
   y: 'Operations'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '5 minutes' };
+  e: '5 minutes' }
     feature,
   s: ['Industry templatesAutomationsCalendar & GanttRole-based permissions'];
     benefit,
@@ -14028,13 +13753,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5;
     review,
-  s: 14};
+  s: 14}
   {/* TODO: Fix JSX expression */}
   y: 'Media & Events'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '1 day' };
+  e: '1 day' }
     feature,
   s: ['Ticketing & check-inSession builderEmail campaignsLive polls & Q&A'];
     benefit,
@@ -14077,13 +13802,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6;
     review,
-  s: 18};
+  s: 18}
   {/* TODO: Fix JSX expression */}
   y: 'Growth'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 hour' };
+  e: '1 hour' }
     feature,
   s: ['Custom linksAttribution windowsCoupon attributionPayout exports'];
     benefit,
@@ -14126,13 +13851,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.4;
     review,
-  s: 12};
+  s: 12}
   {/* TODO: Fix JSX expression */}
   y: 'Analytics'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '5 minutes' };
+  e: '5 minutes' }
     feature,
   s: ['Goals & funnelsWeekly insights emailAnomaly alertsShareable dashboards'];
     benefit,
@@ -14175,13 +13900,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7;
     review,
-  s: 28};
+  s: 28}
   {/* TODO: Fix JSX expression */}
   y: 'IT & Operations'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '2 hours' };
+  e: '2 hours' }
     feature,
   s: ['Email-to-ticketSLA timersMacros/automationsSelf-serve portal'];
     benefit,
@@ -14224,13 +13949,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5;
     review,
-  s: 31};
+  s: 31}
   {/* TODO: Fix JSX expression */}
   y: 'Ecommerce'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 hour' };
+  e: '1 hour' }
     feature,
   s: ['Self-service portalLabel generationReturn reasons analyticsExchanges & store credit'];
     benefit,
@@ -14273,13 +13998,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.4;
     review,
-  s: 19};
+  s: 19}
   {/* TODO: Fix JSX expression */}
   y: 'Sales'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '20 minutes' };
+  e: '20 minutes' }
     feature,
   s: ['SequencesRules & triggersOpen/click trackingAI snippets'];
     benefit,
@@ -14322,13 +14047,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5;
     review,
-  s: 17};
+  s: 17}
   {/* TODO: Fix JSX expression */}
   y: 'Media & Content'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '5 minutes' };
+  e: '5 minutes' }
     feature,
   s: ['Speaker diarizationTimecodesChaptersShow notes drafts'];
     benefit,
@@ -14371,13 +14096,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7;
     review,
-  s: 52};
+  s: 52}
   {/* TODO: Fix JSX expression */}
   y: 'AI & Data'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 day' };
+  e: '1 day' }
     feature,
   s: ['Entity/relation extractionSchema editorVector + graph searchLineage view'];
     benefit,
@@ -14420,13 +14145,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8;
     review,
-  s: 11};
+  s: 11}
   {/* TODO: Fix JSX expression */}
   y: 'AI & Platform'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 day' };
+  e: '1 day' }
     feature,
   s: ['Provider adaptersPolicy enginePII redactionRate limits'];
     benefit,
@@ -14469,13 +14194,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8;
     review,
-  s: 13};
+  s: 13}
   {/* TODO: Fix JSX expression */}
   y: 'Data & Analytics'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '1 day' };
+  e: '1 day' }
     feature,
   s: ['Event collectorConnector librarydbt modelsGrafana dashboards'];
     benefit,
@@ -14518,13 +14243,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6;
     review,
-  s: 7};
+  s: 7}
   {/* TODO: Fix JSX expression */}
   y: 'Data & Platform'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '2 hours' };
+  e: '2 hours' }
     feature,
   s: ['Schema registryDiff viewerCI gatesBackfill helpers'];
     benefit,
@@ -14573,19 +14298,17 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
 export const getServicesByCategory = (categor)
   y: string) => {/* TODO: Fix JSX expression */}
   return realMicroSaasServices.filter(service => service.category === category)}
-};
-export const getServicesByPriceRange = (min: number) max: number) => {;
+}
+export const getServicesByPriceRange = (min: number) max: number) => {
   return realMicroSaasServices.filter(service => {),
 export const getServicesByPriceRange = (mi)
   n: number) ma,
   x: number) => {/* TODO: Fix JSX expression */}
     const _price = parseFloat(service.price.replace('$') '').replace(} ''));
-    return price >= min && (max === Infinity || price <= max);
-  });
-};
+    return price >= min && (max === Infinity || price <= max)})}
 export const getPopularServices = () => {/* TODO: Fix JSX expression */}
   return realMicroSaasServices.filter(service => service.popular)}
-};
+}
 export const serviceCategories = [
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
@@ -14600,9 +14323,8 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: string}
   }
 }
-;
-export interface RealMicroSaasService {;
-export const realMicroSaasServices: RealMicroSaasService[] = [;
+export interface RealMicroSaasService {
+export const realMicroSaasServices: RealMicroSaasServiceService Feature = [;
   // AI-Powered Business Solutions;
   {
     id: 'ai-legal-document-generator';
@@ -14638,8 +14360,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-customer-service-automation';
     name: 'AI Customer Service Automation';
     tagline: '24/7 intelligent customer support with AI chatbots';
@@ -14673,8 +14395,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-seo-optimizer-pro';
     name: 'AI SEO Optimizer Pro';
     tagline: 'Automated SEO optimization powered by artificial intelligence';
@@ -14708,8 +14430,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-video-editing-suite';
     name: 'AI Video Editing Suite';
     tagline: 'Professional video editing powered by artificial intelligence';
@@ -14743,8 +14465,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-data-analytics-platform';
     name: 'AI Data Analytics Platform';
     tagline: 'Transform raw data into actionable insights with AI';
@@ -14778,8 +14500,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-hr-recruitment-platform';
     name: 'AI HR Recruitment Platform';
     tagline: 'Streamline hiring with AI-powered recruitment automation';
@@ -14813,8 +14535,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-sales-automation-platform';
     name: 'AI Sales Automation Platform';
     tagline: 'Boost sales performance with intelligent automation';
@@ -14848,8 +14570,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-market-research-platform';
     name: 'AI Market Research Platform';
     tagline: 'Discover market opportunities with AI-powered research';
@@ -14883,8 +14605,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-blockchain-analytics';
     name: 'AI Blockchain Analytics Platform';
     tagline: 'Advanced blockchain intelligence and analytics';
@@ -14918,8 +14640,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-cloud-cost-optimizer';
     name: 'AI Cloud Cost Optimizer';
     tagline: 'Reduce cloud costs by up to 40% with AI optimization';
@@ -14953,8 +14675,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'}
-  };
-  {;
+  }
+  {
     id: 'ai-database-performance-monitor';
     name: 'AI Database Performance Monitor';
     tagline: 'Optimize database performance with AI-powered monitoring';
@@ -14989,7 +14711,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '28% annual growth'}
     contactInf,
@@ -15004,7 +14726,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '32% annual growth'}
     contactInf,
@@ -15019,7 +14741,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '45% annual growth'}
     contactInf,
@@ -15034,7 +14756,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '38% annual growth'}
     contactInf,
@@ -15049,7 +14771,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '42% annual growth'}
     contactInf,
@@ -15064,7 +14786,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '33% annual growth'}
     contactInf,
@@ -15079,7 +14801,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '28% annual growth'}
     contactInf,
@@ -15094,7 +14816,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '65% annual growth'}
     contactInf,
@@ -15109,7 +14831,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   e: '52% annual growth'}
     contactInf,
@@ -15124,18 +14846,18 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup.com'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   g: 4.6}
     review,
   s: 134}
-  };
+  }
   {/* TODO: Fix JSX expression */}
   y: 'Productivity & Automation'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '15 minutes' };
+  e: '15 minutes' }
     feature,
   s: [,
       'Inbox labeling and prioritizationOn-brand response templatesSentiment and urgency detectionAuto-draft with human-in-the-loopZendesk/HubSpot/Gmail,
@@ -15162,15 +14884,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-01';
     customers: 180;
     rating: 4.7;
-    reviews: 46;
-  };
-  {;
+    reviews: 46}
+  {
     id: 'mobile-conversational-surveys';
     name: 'Mobile Conversational Surveys';
     tagline: 'Adaptive, chat-style surveys with higher completion rates';
     description: 'Create mobile-first, conversational surveys that adapt based on answers. Real-time analytics and webhook exports.';
     category: 'Marketing & Research'}
-    price: { monthly: 49, yearly: 490, currency: 'USD', trialDays: 7} setupTime: '10 minutes' };
+    price: { monthly: 49, yearly: 490, currency: 'USD', trialDays: 7} setupTime: '10 minutes' }
     features: ['Branching logicA/B promptsEmbeddable widgetCSV/JSON exportWebhook triggers'];
     benefits: ['+35% completion rate vs. formsCleaner data, fewer drop-offs'];
     targetAudience: ['Product teamsMarketersUX researchers'];
@@ -15191,15 +14912,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-12-10';
     customers: 95;
     rating: 4.6;
-    reviews: 22;
-  };
-  {;
+    reviews: 22}
+  {
     id: 'niche-productivity-planner';
     name: 'Niche Productivity Planner';
     tagline: 'Opinionated project boards, tailored to your industry';
     description: 'Pre-built workflows, dashboards, and automations tailored per industry vertical with exportable templates.';
     category: 'Operations'}
-    price: { monthly: 39, yearly: 390, currency: 'USD', trialDays: 14} setupTime: '5 minutes' };
+    price: { monthly: 39, yearly: 390, currency: 'USD', trialDays: 14} setupTime: '5 minutes' }
     features: ['Industry templatesAutomationsCalendar & GanttRole-based permissions'];
     benefits: ['Reduce setup time by 80%Consistency across teams'];
     targetAudience: ['AgenciesStudiosSMBs'];
@@ -15220,15 +14940,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-01-20';
     customers: 60;
     rating: 4.5;
-    reviews: 14;
-  };
-  {;
+    reviews: 14}
+  {
     id: 'event-management-dashboard';
     name: 'Event Management Dashboard';
     tagline: 'Tickets, scheduling, engagement analytics in one place';
     description: 'Plan and manage events end-to-end. Handle ticketing, agenda, speaker management, sponsor pages, and live engagement.';
     category: 'Media & Events'}
-    price: { monthly: 129, yearly: 1290, currency: 'USD', trialDays: 7} setupTime: '1 day' };
+    price: { monthly: 129, yearly: 1290, currency: 'USD', trialDays: 7} setupTime: '1 day' }
     features: ['Ticketing & check-inSession builderEmail campaignsLive polls & Q&A'];
     benefits: ['Launch events fasterBetter attendee engagement'];
     targetAudience: ['ConferencesMeetupsCommunities'];
@@ -15249,15 +14968,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-11-18';
     customers: 70;
     rating: 4.6;
-    reviews: 18;
-  };
-  {;
+    reviews: 18}
+  {
     id: 'affiliate-tracking-suite';
     name: 'Affiliate Tracking Suite';
     tagline: 'Links, attribution, commissions, payoutsno spreadsheet required';
     description: 'Manage affiliates with custom links, multi-touch attribution, fraud checks, and automated commission payouts.';
     category: 'Growth'}
-    price: { monthly: 99, yearly: 990, currency: 'USD', trialDays: 14} setupTime: '1 hour' };
+    price: { monthly: 99, yearly: 990, currency: 'USD', trialDays: 14} setupTime: '1 hour' }
     features: ['Custom linksAttribution windowsCoupon attributionPayout exports'];
     benefits: ['Grow revenue via affiliatesReduce fraud'];
     targetAudience: ['EcommerceSaaS'];
@@ -15278,15 +14996,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-10-12';
     customers: 55;
     rating: 4.4;
-    reviews: 12;
-  };
-  {;
+    reviews: 12}
+  {
     id: 'smb-website-analytics';
     name: 'SMB Website Analytics';
     tagline: 'Privacy-friendly analytics with actionable insights';
     description: 'Simple dashboards for traffic, engagement, and conversionsno cookies by default. Alerts for anomalies and goals.';
     category: 'Analytics'}
-    price: { monthly: 29, yearly: 290, currency: 'USD', trialDays: 14} setupTime: '5 minutes' };
+    price: { monthly: 29, yearly: 290, currency: 'USD', trialDays: 14} setupTime: '5 minutes' }
     features: ['Goals & funnelsWeekly insights emailAnomaly alertsShareable dashboards'];
     benefits: ['Know what worksFocus on actions'];
     targetAudience: ['FoundersMarketersAgencies'];
@@ -15307,15 +15024,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-05';
     customers: 140;
     rating: 4.7;
-    reviews: 28;
-  };
-  {;
+    reviews: 28}
+  {
     id: 'it-helpdesk-lite';
     name: 'IT Helpdesk Lite';
     tagline: 'Tickets, SLA timers, knowledge base, portalready day one';
     description: 'Streamlined helpdesk for MSPs and internal IT with email-to-ticket, SLA rules, automations, and a searchable KB.';
     category: 'IT & Operations'}
-    price: { monthly: 59, yearly: 590, currency: 'USD', trialDays: 14} setupTime: '2 hours' };
+    price: { monthly: 59, yearly: 590, currency: 'USD', trialDays: 14} setupTime: '2 hours' }
     features: ['Email-to-ticketSLA timersMacros/automationsSelf-serve portal'];
     benefits: ['Shorter MTTRFewer escalations'];
     targetAudience: ['MSPsIT teams'];
@@ -15336,15 +15052,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-09-22';
     customers: 120;
     rating: 4.5;
-    reviews: 31;
-  };
-  {;
+    reviews: 31}
+  {
     id: 'ecommerce-return-manager';
     name: 'Ecommerce Return Manager';
     tagline: 'Customer-friendly returns with labels and status tracking';
     description: 'Automate RMA creation, generate labels, track statuses, and sync inventory updates to your store.';
     category: 'Ecommerce'}
-    price: { monthly: 79, yearly: 790, currency: 'USD', trialDays: 14} setupTime: '1 hour' };
+    price: { monthly: 79, yearly: 790, currency: 'USD', trialDays: 14} setupTime: '1 hour' }
     features: ['Self-service portalLabel generationReturn reasons analyticsExchanges & store credit'];
     benefits: ['Higher retentionLower support load'];
     targetAudience: ['D2 C brandsMarketplaces'];
@@ -15365,15 +15080,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-08-30';
     customers: 75;
     rating: 4.4;
-    reviews: 19;
-  };
-  {;
+    reviews: 19}
+  {
     id: 'auto-email-followups';
     name: 'Automated Email Followups';
     tagline: 'Cadence sequences for leads with AI personalization';
     description: 'Consistent multi-touch follow-ups with AI-personalized snippets from CRM context and recent events.';
     category: 'Sales'}
-    price: { monthly: 49, yearly: 490, currency: 'USD', trialDays: 7} setupTime: '20 minutes' };
+    price: { monthly: 49, yearly: 490, currency: 'USD', trialDays: 7} setupTime: '20 minutes' }
     features: ['SequencesRules & triggersOpen/click trackingAI snippets'];
     benefits: ['Higher reply rateFewer manual tasks'];
     targetAudience: ['SMB sales teamsAgencies'];
@@ -15394,15 +15108,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-01-25';
     customers: 90;
     rating: 4.5;
-    reviews: 17;
-  };
-  {;
+    reviews: 17}
+  {
     id: 'podcast-transcription-studio';
     name: 'Podcast Transcription Studio';
     tagline: 'Accurate transcripts, show notes, and highlights';
     description: 'Upload your episodes and receive transcripts, summaries, chapters, and social-ready highlights in minutes.';
     category: 'Media & Content'}
-    price: { monthly: 39, yearly: 390, currency: 'USD', trialDays: 7} setupTime: '5 minutes' };
+    price: { monthly: 39, yearly: 390, currency: 'USD', trialDays: 7} setupTime: '5 minutes' }
     features: ['Speaker diarizationTimecodesChaptersShow notes drafts'];
     benefits: ['AccessibilitySEO-ready content'];
     targetAudience: ['PodcastersAgencies'];
@@ -15423,15 +15136,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-12-02';
     customers: 210;
     rating: 4.7;
-    reviews: 52;
-  };
-  {;
+    reviews: 52}
+  {
     id: 'ai-knowledge-graph-studio';
     name: 'AI Knowledge Graph Studio';
     tagline: 'Build semantic graphs for RAG and lineage in minutes';
     description: 'Auto-extract entities and relationships from docs to construct a knowledge graph with search, lineage, and governance.';
     category: 'AI & Data'}
-    price: { monthly: 199, yearly: 1990, currency: 'USD', trialDays: 14} setupTime: '1 day' };
+    price: { monthly: 199, yearly: 1990, currency: 'USD', trialDays: 14} setupTime: '1 day' }
     features: ['Entity/relation extractionSchema editorVector + graph searchLineage view'];
     benefits: ['Higher RAG precisionGovernance & explainability'];
     targetAudience: ['Data teamsPlatform engineeringCompliance'];
@@ -15452,15 +15164,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-08';
     customers: 35;
     rating: 4.8;
-    reviews: 11;
-  };
-  {;
+    reviews: 11}
+  {
     id: 'llm-guarded-api-gateway';
     name: 'LLM Guarded API Gateway';
     tagline: 'Policy, safety, metering and routing for GenAI apps';
     description: 'A hardened gateway with prompt filtering, PII redaction, usage caps, and multi-provider routing.';
     category: 'AI & Platform'}
-    price: { monthly: 299, yearly: 2990, currency: 'USD', trialDays: 14} setupTime: '1 day' };
+    price: { monthly: 299, yearly: 2990, currency: 'USD', trialDays: 14} setupTime: '1 day' }
     features: ['Provider adaptersPolicy enginePII redactionRate limits'];
     benefits: ['Control spendReduce risk'];
     targetAudience: ['Platform teamsAI product'];
@@ -15481,15 +15192,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-08';
     customers: 42;
     rating: 4.8;
-    reviews: 13;
-  };
-  {;
+    reviews: 13}
+  {
     id: 'serverless-lakehouse-starter';
     name: 'Serverless Lakehouse Starter';
     tagline: 'Spin up ELT + dbt + dashboards in a day';
     description: 'Opinionated stack for event collection, ELT pipelines, dbt models, and BI dashboards with infra as code.';
     category: 'Data & Analytics'}
-    price: { monthly: 249, yearly: 2490, currency: 'USD', trialDays: 7} setupTime: '1 day' };
+    price: { monthly: 249, yearly: 2490, currency: 'USD', trialDays: 7} setupTime: '1 day' }
     features: ['Event collectorConnector librarydbt modelsGrafana dashboards'];
     benefits: ['Faster analytics ROILower platform toil'];
     targetAudience: ['Data teamsOps'];
@@ -15510,15 +15220,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-08';
     customers: 24;
     rating: 4.6;
-    reviews: 7;
-  };
-  {;
+    reviews: 7}
+  {
     id: 'data-contracts-hub';
     name: 'Data Contracts Hub';
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes';
     description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.';
     category: 'Data & Platform'}
-    price: { monthly: 129, yearly: 1290, currency: 'USD', trialDays: 14} setupTime: '2 hours' };
+    price: { monthly: 129, yearly: 1290, currency: 'USD', trialDays: 14} setupTime: '2 hours' }
     features: ['Schema registryDiff viewerCI gatesBackfill helpers'];
     benefits: ['Fewer incidentsFaster changes'];
     targetAudience: ['Data platformAnalytics engineers'];
@@ -15583,13 +15292,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7;
     review,
-  s: 46};
+  s: 46}
   {/* TODO: Fix JSX expression */}
   y: 'Marketing & Research'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '10 minutes' };
+  e: '10 minutes' }
     feature,
   s: ['Branching logicA/B promptsEmbeddable widgetCSV/JSON exportWebhook triggers'];
     benefit,
@@ -15632,13 +15341,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6;
     review,
-  s: 22};
+  s: 22}
   {/* TODO: Fix JSX expression */}
   y: 'Operations'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '5 minutes' };
+  e: '5 minutes' }
     feature,
   s: ['Industry templatesAutomationsCalendar & GanttRole-based permissions'];
     benefit,
@@ -15681,13 +15390,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5;
     review,
-  s: 14};
+  s: 14}
   {/* TODO: Fix JSX expression */}
   y: 'Media & Events'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '1 day' };
+  e: '1 day' }
     feature,
   s: ['Ticketing & check-inSession builderEmail campaignsLive polls & Q&A'];
     benefit,
@@ -15730,13 +15439,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6;
     review,
-  s: 18};
+  s: 18}
   {/* TODO: Fix JSX expression */}
   y: 'Growth'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 hour' };
+  e: '1 hour' }
     feature,
   s: ['Custom linksAttribution windowsCoupon attributionPayout exports'];
     benefit,
@@ -15779,13 +15488,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.4;
     review,
-  s: 12};
+  s: 12}
   {/* TODO: Fix JSX expression */}
   y: 'Analytics'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '5 minutes' };
+  e: '5 minutes' }
     feature,
   s: ['Goals & funnelsWeekly insights emailAnomaly alertsShareable dashboards'];
     benefit,
@@ -15828,13 +15537,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7;
     review,
-  s: 28};
+  s: 28}
   {/* TODO: Fix JSX expression */}
   y: 'IT & Operations'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '2 hours' };
+  e: '2 hours' }
     feature,
   s: ['Email-to-ticketSLA timersMacros/automationsSelf-serve portal'];
     benefit,
@@ -15877,13 +15586,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5;
     review,
-  s: 31};
+  s: 31}
   {/* TODO: Fix JSX expression */}
   y: 'Ecommerce'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 hour' };
+  e: '1 hour' }
     feature,
   s: ['Self-service portalLabel generationReturn reasons analyticsExchanges & store credit'];
     benefit,
@@ -15926,13 +15635,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.4;
     review,
-  s: 19};
+  s: 19}
   {/* TODO: Fix JSX expression */}
   y: 'Sales'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '20 minutes' };
+  e: '20 minutes' }
     feature,
   s: ['SequencesRules & triggersOpen/click trackingAI snippets'];
     benefit,
@@ -15975,13 +15684,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5;
     review,
-  s: 17};
+  s: 17}
   {/* TODO: Fix JSX expression */}
   y: 'Media & Content'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '5 minutes' };
+  e: '5 minutes' }
     feature,
   s: ['Speaker diarizationTimecodesChaptersShow notes drafts'];
     benefit,
@@ -16024,13 +15733,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7;
     review,
-  s: 52};
+  s: 52}
   {/* TODO: Fix JSX expression */}
   y: 'AI & Data'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 day' };
+  e: '1 day' }
     feature,
   s: ['Entity/relation extractionSchema editorVector + graph searchLineage view'];
     benefit,
@@ -16073,13 +15782,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8;
     review,
-  s: 11};
+  s: 11}
   {/* TODO: Fix JSX expression */}
   y: 'AI & Platform'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 day' };
+  e: '1 day' }
     feature,
   s: ['Provider adaptersPolicy enginePII redactionRate limits'];
     benefit,
@@ -16122,13 +15831,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8;
     review,
-  s: 13};
+  s: 13}
   {/* TODO: Fix JSX expression */}
   y: 'Data & Analytics'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '1 day' };
+  e: '1 day' }
     feature,
   s: ['Event collectorConnector librarydbt modelsGrafana dashboards'];
     benefit,
@@ -16171,13 +15880,13 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6;
     review,
-  s: 7};
+  s: 7}
   {/* TODO: Fix JSX expression */}
   y: 'Data & Platform'}
     pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '2 hours' };
+  e: '2 hours' }
     feature,
   s: ['Schema registryDiff viewerCI gatesBackfill helpers'];
     benefit,
@@ -16226,19 +15935,17 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
 export const getServicesByCategory = (categor)
   y: string) => {/* TODO: Fix JSX expression */}
   return realMicroSaasServices.filter(service => service.category === category)}
-};
-export const getServicesByPriceRange = (min: number) max: number) => {;
+}
+export const getServicesByPriceRange = (min: number) max: number) => {
   return realMicroSaasServices.filter(service => {),
 export const getServicesByPriceRange = (mi)
   n: number) ma,
   x: number) => {/* TODO: Fix JSX expression */}
     const _price = parseFloat(service.price.replace('$') '').replace(} ''));
-    return price >= min && (max === Infinity || price <= max);
-  });
-};
+    return price >= min && (max === Infinity || price <= max)})}
 export const getPopularServices = () => {/* TODO: Fix JSX expression */}
   return realMicroSaasServices.filter(service => service.popular)}
-};
+}
 export const serviceCategories = [
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
@@ -16247,7 +15954,6 @@ export const serviceCategories = [
 ];
   'Enterprise IT'
 ];
-;
 i,
   d: string; nam,
   e: string; taglin,
@@ -16255,30 +15961,7 @@ i,
   e: string; perio,
   d: string; descriptio,
   n: string; feature,
-  s: string[]; popula,
-  r: boolean; ico,
-  n: string; colo,
-  r: string; textColo,
-  r: string; lin,
-  k: string; marketPositio,
-  n: string; targetAudienc,
-  e: string; trialDay,
-  s: number; setupTim,
-  e: string; categor,
-  y: string; realServic,
-  e: boolean; technolog,
-  y: string[]; integration,
-  s: string[]; useCase,
-  s: string[]; ro,
-  i: string; competitor,
-  s: string[]; marketSiz,
-  e: string; growthRat,
-  e: string; contactInf,
-  o: mobil,
-  e: string; emai,
-  l: string; addres,
-  s: string} } export const,
-  realMicroSaasServices: RealMicroSaasService[] = [ // AI-Powered Business Solutions,
+  s: stringService Feature = [ // AI-Powered Business Solutions,
   id: 'ai-legal-document-generator',' nam,
   e: 'AI Legal Document Generator',' taglin,
   e: 'Generate legally compliant documents in seconds with AI',' pric,
@@ -17945,7 +17628,7 @@ i,
   e: '2024 - 12 - 10' customer,
   s: 95; ratin,
   g: 4 && 4.6, review,
-  s: 22 }; ' marketPositio,
+  s: 22 } ' marketPositio,
   n: 'Alternative to Notion templates + Asana. Faster to start with curated flows.'' competitor,
   s: ['AsanaClickUpNotion'];' techStac,
   k: ['Next && Next.jsPrismaPostgreSQL']; realImplementatio,
@@ -17970,86 +17653,70 @@ i,
   e: '2025 - 01 - 20' customer,
   s: 60; ratin,
   g: 4 && 4.5, review,
-  s: 14 }; export const serviceCategories = [' 'Legal Technology'' 'Customer Service & Support'' 'Digital Marketing & SEO'' 'Creative & Media'' 'Data & Analytics'' 'Human Resources'' 'Sales & CRM'' 'Market Research'' 'Blockchain & Cryptocurrency'' 'Cloud & DevOps'' 'Database & Performance'' 'Design & UI/UX'' 'Development & DevOps'' 'Business Intelligence'' 'Quantum Computing'' 'Cybersecurity'' 'Metaverse & Virtual Reality'' 'Web3 & DeFi'' 'IoT & Edge Computing'' 'Autonomous Vehicles & Robotics'' 'Climate & Environmental'' 'Biotechnology & Healthcare'' 'Financial Technology'' 'Education Technology'' 'Enterprise IT'' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' ' 'Legal Technology',' 'Customer Service & Support',' 'Digital Marketing & SEO',' 'Creative & Media',' 'Data & Analytics',' 'Human Resources',' 'Sales & CRM',' 'Market Research',' 'Blockchain & Cryptocurrency',' 'Cloud & DevOps',' 'Database & Performance',' 'Design & UI/UX',' 'Development & DevOps',' 'Business Intelligence',' 'Quantum Computing',' 'Cybersecurity',' 'Metaverse & Virtual Reality',' 'Web3 & DeFi',' 'IoT & Edge Computing',' 'Autonomous Vehicles & Robotics',' 'Climate & Environmental',' 'Biotechnology & Healthcare',' 'Financial Technology',' 'Education Technology',' 'Enterprise IT';' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' return realMicroSaasServices.filter(service => service.category === category) };' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' return realMicroSaasServices.filter(service => service.category === category) }; export const getServicesByPriceRange = (mi)
+  s: 14 } export const serviceCategories = [' 'Legal Technology'' 'Customer Service & Support'' 'Digital Marketing & SEO'' 'Creative & Media'' 'Data & Analytics'' 'Human Resources'' 'Sales & CRM'' 'Market Research'' 'Blockchain & Cryptocurrency'' 'Cloud & DevOps'' 'Database & Performance'' 'Design & UI/UX'' 'Development & DevOps'' 'Business Intelligence'' 'Quantum Computing'' 'Cybersecurity'' 'Metaverse & Virtual Reality'' 'Web3 & DeFi'' 'IoT & Edge Computing'' 'Autonomous Vehicles & Robotics'' 'Climate & Environmental'' 'Biotechnology & Healthcare'' 'Financial Technology'' 'Education Technology'' 'Enterprise IT'' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' ' 'Legal Technology',' 'Customer Service & Support',' 'Digital Marketing & SEO',' 'Creative & Media',' 'Data & Analytics',' 'Human Resources',' 'Sales & CRM',' 'Market Research',' 'Blockchain & Cryptocurrency',' 'Cloud & DevOps',' 'Database & Performance',' 'Design & UI/UX',' 'Development & DevOps',' 'Business Intelligence',' 'Quantum Computing',' 'Cybersecurity',' 'Metaverse & Virtual Reality',' 'Web3 & DeFi',' 'IoT & Edge Computing',' 'Autonomous Vehicles & Robotics',' 'Climate & Environmental',' 'Biotechnology & Healthcare',' 'Financial Technology',' 'Education Technology',' 'Enterprise IT';' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' return realMicroSaasServices.filter(service => service.category === category) }' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' return realMicroSaasServices.filter(service => service.category === category) } export const getServicesByPriceRange = (mi)
   n: number) ma,
-  x: number) => return realMicroSaasServices.filter(service => ' const price = parseFloat(service.price.replace('$') '').replace(; '')); return price >= min && (max === Infinity || price <= max) }) }; export const serviceCategories = [' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' ' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity' i,
+  x: number) => return realMicroSaasServices.filter(service => ' const price = parseFloat(service.price.replace('$') '').replace(; '')); return price >= min && (max === Infinity || price <= max) }) } export const serviceCategories = [' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' ' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity' i,
   d: string; nam,
   e: string; taglin,
   e: string; pric,
   e: string; perio,
   d: string; descriptio,
   n: string; feature,
-  s: string[]; popula,
-  r: boolean; ico,
-  n: string; colo,
-  r: string; textColo,
-  r: string; lin,
-  k: string; marketPositio,
-  n: string; targetAudienc,
-  e: string; trialDay,
-  s: number; setupTim,
-  e: string; categor,
-  y: string; realServic,
-  e: boolean; technolog,
-  y: string[]; integration,
-  s: string[]; useCase,
-  s: string[]; ro,
-  i: string; competitor,
-  s: string[]; marketSiz,
+  s: stringService Feature; marketSiz,
   e: string; growthRat,
   e: string; contactInf,
   o: {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} } } ;' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology'' 'Enterprise IT' ]; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
+  e: string} } }' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology'' 'Enterprise IT' ]; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} } } ; export const,
-  realMicroSaasServices: RealMicroSaasService[] = [; // AI-Powered Business Solutions; {/* TODO: Fix JSX expression */}
+  e: string} } } export const,
+  realMicroSaasServices: RealMicroSaasServiceService Feature = [; // AI-Powered Business Solutions; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 134} }; {/* TODO: Fix JSX expression */}
+  s: 134} } {/* TODO: Fix JSX expression */}
   y: 'Productivity & Automation'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '15 minutes' }; feature,
+  e: '15 minutes' } feature,
   s: [,' 'Inbox labeling and prioritizationOn-brand response templatesSentiment and urgency detectionAuto-draft with human-in-the-loopZendesk/HubSpot/Gmail,
   integrationMetrics: FRT/ART, deflection rate' ]; benefit,
   s: [,' 'Cut response time by 60%Deflect 30–50% routine ticketsImprove CSAT and NPS' ];' targetAudienc,
@@ -18073,11 +17740,11 @@ i,
   e: '2025-02-01'; customer,
   s: 180; ratin,
   g: 4.7; review,
-  s: 46}; {/* TODO: Fix JSX expression */}
+  s: 46} {/* TODO: Fix JSX expression */}
   y: 'Marketing & Research'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '10 minutes' };' feature,
+  e: '10 minutes' }' feature,
   s: ['Branching logicA/B promptsEmbeddable widgetCSV/JSON exportWebhook triggers'];' benefit,
   s: ['+35% completion rate vs. formsCleaner data, fewer drop-offs'];' targetAudienc,
   e: ['Product teamsMarketersUX researchers'];' marketPositio,
@@ -18099,11 +17766,11 @@ i,
   e: '2024-12-10'; customer,
   s: 95; ratin,
   g: 4.6; review,
-  s: 22}; {/* TODO: Fix JSX expression */}
+  s: 22} {/* TODO: Fix JSX expression */}
   y: 'Operations'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '5 minutes' };' feature,
+  e: '5 minutes' }' feature,
   s: ['Industry templatesAutomationsCalendar & GanttRole-based permissions'];' benefit,
   s: ['Reduce setup time by 80%Consistency across teams'];' targetAudienc,
   e: ['AgenciesStudiosSMBs'];' marketPositio,
@@ -18125,11 +17792,11 @@ i,
   e: '2025-01-20'; customer,
   s: 60; ratin,
   g: 4.5; review,
-  s: 14}; {/* TODO: Fix JSX expression */}
+  s: 14} {/* TODO: Fix JSX expression */}
   y: 'Media & Events'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '1 day' };' feature,
+  e: '1 day' }' feature,
   s: ['Ticketing & check-inSession builderEmail campaignsLive polls & Q&A'];' benefit,
   s: ['Launch events fasterBetter attendee engagement'];' targetAudienc,
   e: ['ConferencesMeetupsCommunities'];' marketPositio,
@@ -18151,11 +17818,11 @@ i,
   e: '2024-11-18'; customer,
   s: 70; ratin,
   g: 4.6; review,
-  s: 18}; {/* TODO: Fix JSX expression */}
+  s: 18} {/* TODO: Fix JSX expression */}
   y: 'Growth'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 hour' };' feature,
+  e: '1 hour' }' feature,
   s: ['Custom linksAttribution windowsCoupon attributionPayout exports'];' benefit,
   s: ['Grow revenue via affiliatesReduce fraud'];' targetAudienc,
   e: ['E‑commerceSaaS'];' marketPositio,
@@ -18177,11 +17844,11 @@ i,
   e: '2024-10-12'; customer,
   s: 55; ratin,
   g: 4.4; review,
-  s: 12}; {/* TODO: Fix JSX expression */}
+  s: 12} {/* TODO: Fix JSX expression */}
   y: 'Analytics'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '5 minutes' };' feature,
+  e: '5 minutes' }' feature,
   s: ['Goals & funnelsWeekly insights emailAnomaly alertsShareable dashboards'];' benefit,
   s: ['Know what worksFocus on actions'];' targetAudienc,
   e: ['FoundersMarketersAgencies'];' marketPositio,
@@ -18203,11 +17870,11 @@ i,
   e: '2025-02-05'; customer,
   s: 140; ratin,
   g: 4.7; review,
-  s: 28}; {/* TODO: Fix JSX expression */}
+  s: 28} {/* TODO: Fix JSX expression */}
   y: 'IT & Operations'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '2 hours' };' feature,
+  e: '2 hours' }' feature,
   s: ['Email-to-ticketSLA timersMacros/automationsSelf-serve portal'];' benefit,
   s: ['Shorter MTTRFewer escalations'];' targetAudienc,
   e: ['MSPsIT teams'];' marketPositio,
@@ -18229,11 +17896,11 @@ i,
   e: '2024-09-22'; customer,
   s: 120; ratin,
   g: 4.5; review,
-  s: 31}; {/* TODO: Fix JSX expression */}
+  s: 31} {/* TODO: Fix JSX expression */}
   y: 'E‑commerce'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 hour' };' feature,
+  e: '1 hour' }' feature,
   s: ['Self-service portalLabel generationReturn reasons analyticsExchanges & store credit'];' benefit,
   s: ['Higher retentionLower support load'];' targetAudienc,
   e: ['D2C brandsMarketplaces'];' marketPositio,
@@ -18255,11 +17922,11 @@ i,
   e: '2024-08-30'; customer,
   s: 75; ratin,
   g: 4.4; review,
-  s: 19}; {/* TODO: Fix JSX expression */}
+  s: 19} {/* TODO: Fix JSX expression */}
   y: 'Sales'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '20 minutes' };' feature,
+  e: '20 minutes' }' feature,
   s: ['SequencesRules & triggersOpen/click trackingAI snippets'];' benefit,
   s: ['Higher reply rateFewer manual tasks'];' targetAudienc,
   e: ['SMB sales teamsAgencies'];' marketPositio,
@@ -18281,11 +17948,11 @@ i,
   e: '2025-01-25'; customer,
   s: 90; ratin,
   g: 4.5; review,
-  s: 17}; {/* TODO: Fix JSX expression */}
+  s: 17} {/* TODO: Fix JSX expression */}
   y: 'Media & Content'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '5 minutes' };' feature,
+  e: '5 minutes' }' feature,
   s: ['Speaker diarizationTimecodesChaptersShow notes drafts'];' benefit,
   s: ['AccessibilitySEO-ready content'];' targetAudienc,
   e: ['PodcastersAgencies'];' marketPositio,
@@ -18307,11 +17974,11 @@ i,
   e: '2024-12-02'; customer,
   s: 210; ratin,
   g: 4.7; review,
-  s: 52}; {/* TODO: Fix JSX expression */}
+  s: 52} {/* TODO: Fix JSX expression */}
   y: 'AI & Data'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 day' };' feature,
+  e: '1 day' }' feature,
   s: ['Entity/relation extractionSchema editorVector + graph searchLineage view'];' benefit,
   s: ['Higher RAG precisionGovernance & explainability'];' targetAudienc,
   e: ['Data teamsPlatform engineeringCompliance'];' marketPositio,
@@ -18333,11 +18000,11 @@ i,
   e: '2025-02-08'; customer,
   s: 35; ratin,
   g: 4.8; review,
-  s: 11}; {/* TODO: Fix JSX expression */}
+  s: 11} {/* TODO: Fix JSX expression */}
   y: 'AI & Platform'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 day' };' feature,
+  e: '1 day' }' feature,
   s: ['Provider adaptersPolicy enginePII redactionRate limits'];' benefit,
   s: ['Control spendReduce risk'];' targetAudienc,
   e: ['Platform teamsAI product'];' marketPositio,
@@ -18359,11 +18026,11 @@ i,
   e: '2025-02-08'; customer,
   s: 42; ratin,
   g: 4.8; review,
-  s: 13}; {/* TODO: Fix JSX expression */}
+  s: 13} {/* TODO: Fix JSX expression */}
   y: 'Data & Analytics'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '1 day' };' feature,
+  e: '1 day' }' feature,
   s: ['Event collectorConnector librarydbt modelsGrafana dashboards'];' benefit,
   s: ['Faster analytics ROILower platform toil'];' targetAudienc,
   e: ['Data teamsOps'];' marketPositio,
@@ -18385,11 +18052,11 @@ i,
   e: '2025-02-08'; customer,
   s: 24; ratin,
   g: 4.6; review,
-  s: 7}; {/* TODO: Fix JSX expression */}
+  s: 7} {/* TODO: Fix JSX expression */}
   y: 'Data & Platform'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '2 hours' };' feature,
+  e: '2 hours' }' feature,
   s: ['Schema registryDiff viewerCI gatesBackfill helpers'];' benefit,
   s: ['Fewer incidentsFaster changes'];' targetAudienc,
   e: ['Data platformAnalytics engineers'];' marketPositio,
@@ -18412,9 +18079,9 @@ i,
   s: 19; ratin,
   g: 4.6; review,
   s: 6} ]; // Helper functions; export const getServicesByCategory = (categor)
-  y: string) => {; return realMicroSaasServices.filter(service => service.category === category)} };; export const getServicesByPriceRange = (mi)
+  y: string) => { return realMicroSaasServices.filter(service => service.category === category)} }; export const getServicesByPriceRange = (mi)
   n: number) ma,
-  x: number) => {; return realMicroSaasServices.filter(service => {,' const price = parseFloat(service.price.replace('$') '').replace(} ''));; return price >= min && (max === Infinity || price <= max); }); }; export const getPopularServices = () => {; return realMicroSaasServices.filter(service => service.popular)} }; export const serviceCategories = [;' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';' 'Enterprise IT' ]; websit,
+  x: number) => { return realMicroSaasServices.filter(service => {,' const price = parseFloat(service.price.replace('$') '').replace(} '')); return price >= min && (max === Infinity || price <= max)})} export const getPopularServices = () => { return realMicroSaasServices.filter(service => service.popular)} } export const serviceCategories = [;' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';' 'Enterprise IT' ]; websit,
   e: string}' nam,
   e: 'AI Legal Document Generator',' taglin,
   e: 'Generate legally compliant documents in seconds with AI',' pric,
@@ -19064,31 +18731,7 @@ i,
   e: string, perio,
   d: string, descriptio,
   n: string, feature,
-  s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
-  r: string, textColo,
-  r: string, lin,
-  k: string, marketPositio,
-  n: string, targetAudienc,
-  e: string, trialDay,
-  s: number, setupTim,
-  e: string, categor,
-  y: string, realServic,
-  e: boolean, technolog,
-  y: string[], integration,
-  s: string[], useCase,
-  s: string[], ro,
-  i: string, competitor,
-  s: string[], marketSiz,
-  e: string, growthRat,
-  e: string, contactInf,
-  o: mobil,
-  e: string, emai,
-  l: string, addres,
-  s: string, websit,
-  e: string } } export const,
-  realMicroSaasServices: RealMicroSaasService[] = [ ' i,
+  s: stringService Feature = [ ' i,
   d: 'ai-legal-document-generator'' nam,
   e: 'AI Legal Document Generator'' taglin,
   e: 'Generate legally compliant documents in seconds with AI'' pric,
@@ -19949,55 +19592,55 @@ i,
   r: false;' launch_dat,
   e: '2025 - 01 - 20' customer,
   s: 60; export const serviceCategories = [' 'Legal Technology'' 'Customer Service & Support'' 'Digital Marketing & SEO'' 'Creative & Media'' 'Data & Analytics'' 'Human Resources'' 'Sales & CRM'' 'Market Research'' 'Blockchain & Cryptocurrency'' 'Cloud & DevOps'' 'Database & Performance'' 'Design & UI/UX'' 'Development & DevOps'' 'Business Intelligence'' 'Quantum Computing'' 'Cybersecurity'' 'Metaverse & Virtual Reality'' 'Web3 & DeFi'' 'IoT & Edge Computing'' 'Autonomous Vehicles & Robotics'' 'Climate & Environmental'' 'Biotechnology & Healthcare'' 'Financial Technology'' 'Education Technology'' 'Enterprise IT'' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research'' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity' review,
-  s: 14} ; export const service_categories = [;' 'Legal Technology',' 'Customer Service & Support',' 'Digital Marketing & SEO',' 'Creative & Media',' 'Data & Analytics',' 'Human Resources',' 'Sales & CRM',' 'Market Research',' 'Blockchain & Cryptocurrency',' 'Cloud & DevOps',' 'Database & Performance',' 'Design & UI / UX',' 'Development & DevOps',' 'Business Intelligence',' 'Quantum Computing',' 'Cybersecurity',' 'Metaverse & Virtual Reality',' 'Web3 & DeFi',' 'IoT & Edge Computing',' 'Autonomous Vehicles & Robotics',' 'Climate & Environmental',' 'Biotechnology & Healthcare',' 'Financial Technology',' 'Education Technology',' 'Enterprise IT',' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research'' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity'' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology'' 'Enterprise IT' ]; ' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity'' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology'' 'Enterprise IT' ]; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
+  s: 14} export const service_categories = [;' 'Legal Technology',' 'Customer Service & Support',' 'Digital Marketing & SEO',' 'Creative & Media',' 'Data & Analytics',' 'Human Resources',' 'Sales & CRM',' 'Market Research',' 'Blockchain & Cryptocurrency',' 'Cloud & DevOps',' 'Database & Performance',' 'Design & UI / UX',' 'Development & DevOps',' 'Business Intelligence',' 'Quantum Computing',' 'Cybersecurity',' 'Metaverse & Virtual Reality',' 'Web3 & DeFi',' 'IoT & Edge Computing',' 'Autonomous Vehicles & Robotics',' 'Climate & Environmental',' 'Biotechnology & Healthcare',' 'Financial Technology',' 'Education Technology',' 'Enterprise IT',' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research'' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity'' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology'' 'Enterprise IT' ]; ' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity'' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology'' 'Enterprise IT' ]; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} } } ; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
+  e: string} } } export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 134} }; {/* TODO: Fix JSX expression */}
+  s: 134} } {/* TODO: Fix JSX expression */}
   y: 'Productivity & Automation'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '15 minutes' }; feature,
+  e: '15 minutes' } feature,
   s: [,' 'Inbox labeling and prioritizationOn-brand response templatesSentiment and urgency detectionAuto-draft with human-in-the-loopZendesk/HubSpot/Gmail,
   integrationMetrics: FRT/ART, deflection rate' ]; benefit,
   s: [,' 'Cut response time by 60%Deflect 30–50% routine ticketsImprove CSAT and NPS' ];' targetAudienc,
@@ -20021,11 +19664,11 @@ i,
   e: '2025-02-01'; customer,
   s: 180; ratin,
   g: 4.7; review,
-  s: 46}; {/* TODO: Fix JSX expression */}
+  s: 46} {/* TODO: Fix JSX expression */}
   y: 'Marketing & Research'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '10 minutes' };' feature,
+  e: '10 minutes' }' feature,
   s: ['Branching logicA/B promptsEmbeddable widgetCSV/JSON exportWebhook triggers'];' benefit,
   s: ['+35% completion rate vs. formsCleaner data, fewer drop-offs'];' targetAudienc,
   e: ['Product teamsMarketersUX researchers'];' marketPositio,
@@ -20047,11 +19690,11 @@ i,
   e: '2024-12-10'; customer,
   s: 95; ratin,
   g: 4.6; review,
-  s: 22}; {/* TODO: Fix JSX expression */}
+  s: 22} {/* TODO: Fix JSX expression */}
   y: 'Operations'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '5 minutes' };' feature,
+  e: '5 minutes' }' feature,
   s: ['Industry templatesAutomationsCalendar & GanttRole-based permissions'];' benefit,
   s: ['Reduce setup time by 80%Consistency across teams'];' targetAudienc,
   e: ['AgenciesStudiosSMBs'];' marketPositio,
@@ -20073,11 +19716,11 @@ i,
   e: '2025-01-20'; customer,
   s: 60; ratin,
   g: 4.5; review,
-  s: 14}; {/* TODO: Fix JSX expression */}
+  s: 14} {/* TODO: Fix JSX expression */}
   y: 'Media & Events'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '1 day' };' feature,
+  e: '1 day' }' feature,
   s: ['Ticketing & check-inSession builderEmail campaignsLive polls & Q&A'];' benefit,
   s: ['Launch events fasterBetter attendee engagement'];' targetAudienc,
   e: ['ConferencesMeetupsCommunities'];' marketPositio,
@@ -20099,11 +19742,11 @@ i,
   e: '2024-11-18'; customer,
   s: 70; ratin,
   g: 4.6; review,
-  s: 18}; {/* TODO: Fix JSX expression */}
+  s: 18} {/* TODO: Fix JSX expression */}
   y: 'Growth'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 hour' };' feature,
+  e: '1 hour' }' feature,
   s: ['Custom linksAttribution windowsCoupon attributionPayout exports'];' benefit,
   s: ['Grow revenue via affiliatesReduce fraud'];' targetAudienc,
   e: ['E‑commerceSaaS'];' marketPositio,
@@ -20125,11 +19768,11 @@ i,
   e: '2024-10-12'; customer,
   s: 55; ratin,
   g: 4.4; review,
-  s: 12}; {/* TODO: Fix JSX expression */}
+  s: 12} {/* TODO: Fix JSX expression */}
   y: 'Analytics'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '5 minutes' };' feature,
+  e: '5 minutes' }' feature,
   s: ['Goals & funnelsWeekly insights emailAnomaly alertsShareable dashboards'];' benefit,
   s: ['Know what worksFocus on actions'];' targetAudienc,
   e: ['FoundersMarketersAgencies'];' marketPositio,
@@ -20151,11 +19794,11 @@ i,
   e: '2025-02-05'; customer,
   s: 140; ratin,
   g: 4.7; review,
-  s: 28}; {/* TODO: Fix JSX expression */}
+  s: 28} {/* TODO: Fix JSX expression */}
   y: 'IT & Operations'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '2 hours' };' feature,
+  e: '2 hours' }' feature,
   s: ['Email-to-ticketSLA timersMacros/automationsSelf-serve portal'];' benefit,
   s: ['Shorter MTTRFewer escalations'];' targetAudienc,
   e: ['MSPsIT teams'];' marketPositio,
@@ -20177,11 +19820,11 @@ i,
   e: '2024-09-22'; customer,
   s: 120; ratin,
   g: 4.5; review,
-  s: 31}; {/* TODO: Fix JSX expression */}
+  s: 31} {/* TODO: Fix JSX expression */}
   y: 'E‑commerce'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 hour' };' feature,
+  e: '1 hour' }' feature,
   s: ['Self-service portalLabel generationReturn reasons analyticsExchanges & store credit'];' benefit,
   s: ['Higher retentionLower support load'];' targetAudienc,
   e: ['D2C brandsMarketplaces'];' marketPositio,
@@ -20203,11 +19846,11 @@ i,
   e: '2024-08-30'; customer,
   s: 75; ratin,
   g: 4.4; review,
-  s: 19}; {/* TODO: Fix JSX expression */}
+  s: 19} {/* TODO: Fix JSX expression */}
   y: 'Sales'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '20 minutes' };' feature,
+  e: '20 minutes' }' feature,
   s: ['SequencesRules & triggersOpen/click trackingAI snippets'];' benefit,
   s: ['Higher reply rateFewer manual tasks'];' targetAudienc,
   e: ['SMB sales teamsAgencies'];' marketPositio,
@@ -20229,11 +19872,11 @@ i,
   e: '2025-01-25'; customer,
   s: 90; ratin,
   g: 4.5; review,
-  s: 17}; {/* TODO: Fix JSX expression */}
+  s: 17} {/* TODO: Fix JSX expression */}
   y: 'Media & Content'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '5 minutes' };' feature,
+  e: '5 minutes' }' feature,
   s: ['Speaker diarizationTimecodesChaptersShow notes drafts'];' benefit,
   s: ['AccessibilitySEO-ready content'];' targetAudienc,
   e: ['PodcastersAgencies'];' marketPositio,
@@ -20255,11 +19898,11 @@ i,
   e: '2024-12-02'; customer,
   s: 210; ratin,
   g: 4.7; review,
-  s: 52}; {/* TODO: Fix JSX expression */}
+  s: 52} {/* TODO: Fix JSX expression */}
   y: 'AI & Data'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 day' };' feature,
+  e: '1 day' }' feature,
   s: ['Entity/relation extractionSchema editorVector + graph searchLineage view'];' benefit,
   s: ['Higher RAG precisionGovernance & explainability'];' targetAudienc,
   e: ['Data teamsPlatform engineeringCompliance'];' marketPositio,
@@ -20281,11 +19924,11 @@ i,
   e: '2025-02-08'; customer,
   s: 35; ratin,
   g: 4.8; review,
-  s: 11}; {/* TODO: Fix JSX expression */}
+  s: 11} {/* TODO: Fix JSX expression */}
   y: 'AI & Platform'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 day' };' feature,
+  e: '1 day' }' feature,
   s: ['Provider adaptersPolicy enginePII redactionRate limits'];' benefit,
   s: ['Control spendReduce risk'];' targetAudienc,
   e: ['Platform teamsAI product'];' marketPositio,
@@ -20307,11 +19950,11 @@ i,
   e: '2025-02-08'; customer,
   s: 42; ratin,
   g: 4.8; review,
-  s: 13}; {/* TODO: Fix JSX expression */}
+  s: 13} {/* TODO: Fix JSX expression */}
   y: 'Data & Analytics'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '1 day' };' feature,
+  e: '1 day' }' feature,
   s: ['Event collectorConnector librarydbt modelsGrafana dashboards'];' benefit,
   s: ['Faster analytics ROILower platform toil'];' targetAudienc,
   e: ['Data teamsOps'];' marketPositio,
@@ -20333,11 +19976,11 @@ i,
   e: '2025-02-08'; customer,
   s: 24; ratin,
   g: 4.6; review,
-  s: 7}; {/* TODO: Fix JSX expression */}
+  s: 7} {/* TODO: Fix JSX expression */}
   y: 'Data & Platform'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '2 hours' };' feature,
+  e: '2 hours' }' feature,
   s: ['Schema registryDiff viewerCI gatesBackfill helpers'];' benefit,
   s: ['Fewer incidentsFaster changes'];' targetAudienc,
   e: ['Data platformAnalytics engineers'];' marketPositio,
@@ -20360,57 +20003,57 @@ i,
   s: 19; ratin,
   g: 4.6; review,
   s: 6} ]; // Helper functions; export const getServicesByCategory = (categor)
-  y: string) => {; return realMicroSaasServices.filter(service => service.category === category)} };; export const getServicesByPriceRange = (mi)
+  y: string) => { return realMicroSaasServices.filter(service => service.category === category)} }; export const getServicesByPriceRange = (mi)
   n: number) ma,
-  x: number) => {; return realMicroSaasServices.filter(service => {,' const price = parseFloat(service.price.replace('$') '').replace(} ''));; return price >= min && (max === Infinity || price <= max); }); }; export const getPopularServices = () => {; return realMicroSaasServices.filter(service => service.popular)} }; export const serviceCategories = [;' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';' 'Enterprise IT' ];' 'Enterprise IT' ]; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
+  x: number) => { return realMicroSaasServices.filter(service => {,' const price = parseFloat(service.price.replace('$') '').replace(} '')); return price >= min && (max === Infinity || price <= max)})} export const getPopularServices = () => { return realMicroSaasServices.filter(service => service.popular)} } export const serviceCategories = [;' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';' 'Enterprise IT' ];' 'Enterprise IT' ]; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} } } ; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
+  e: string} } } export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } } {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 134} }; {/* TODO: Fix JSX expression */}
+  s: 134} } {/* TODO: Fix JSX expression */}
   y: 'Productivity & Automation'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '15 minutes' }; feature,
+  e: '15 minutes' } feature,
   s: [,' 'Inbox labeling and prioritizationOn-brand response templatesSentiment and urgency detectionAuto-draft with human-in-the-loopZendesk/HubSpot/Gmail,
   integrationMetrics: FRT/ART, deflection rate' ]; benefit,
   s: [,' 'Cut response time by 60%Deflect 30–50% routine ticketsImprove CSAT and NPS' ];' targetAudienc,
@@ -20434,11 +20077,11 @@ i,
   e: '2025-02-01'; customer,
   s: 180; ratin,
   g: 4.7; review,
-  s: 46}; {/* TODO: Fix JSX expression */}
+  s: 46} {/* TODO: Fix JSX expression */}
   y: 'Marketing & Research'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '10 minutes' };' feature,
+  e: '10 minutes' }' feature,
   s: ['Branching logicA/B promptsEmbeddable widgetCSV/JSON exportWebhook triggers'];' benefit,
   s: ['+35% completion rate vs. formsCleaner data, fewer drop-offs'];' targetAudienc,
   e: ['Product teamsMarketersUX researchers'];' marketPositio,
@@ -20460,11 +20103,11 @@ i,
   e: '2024-12-10'; customer,
   s: 95; ratin,
   g: 4.6; review,
-  s: 22}; {/* TODO: Fix JSX expression */}
+  s: 22} {/* TODO: Fix JSX expression */}
   y: 'Operations'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '5 minutes' };' feature,
+  e: '5 minutes' }' feature,
   s: ['Industry templatesAutomationsCalendar & GanttRole-based permissions'];' benefit,
   s: ['Reduce setup time by 80%Consistency across teams'];' targetAudienc,
   e: ['AgenciesStudiosSMBs'];' marketPositio,
@@ -20486,11 +20129,11 @@ i,
   e: '2025-01-20'; customer,
   s: 60; ratin,
   g: 4.5; review,
-  s: 14}; {/* TODO: Fix JSX expression */}
+  s: 14} {/* TODO: Fix JSX expression */}
   y: 'Media & Events'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '1 day' };' feature,
+  e: '1 day' }' feature,
   s: ['Ticketing & check-inSession builderEmail campaignsLive polls & Q&A'];' benefit,
   s: ['Launch events fasterBetter attendee engagement'];' targetAudienc,
   e: ['ConferencesMeetupsCommunities'];' marketPositio,
@@ -20512,11 +20155,11 @@ i,
   e: '2024-11-18'; customer,
   s: 70; ratin,
   g: 4.6; review,
-  s: 18}; {/* TODO: Fix JSX expression */}
+  s: 18} {/* TODO: Fix JSX expression */}
   y: 'Growth'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 hour' };' feature,
+  e: '1 hour' }' feature,
   s: ['Custom linksAttribution windowsCoupon attributionPayout exports'];' benefit,
   s: ['Grow revenue via affiliatesReduce fraud'];' targetAudienc,
   e: ['E‑commerceSaaS'];' marketPositio,
@@ -20538,11 +20181,11 @@ i,
   e: '2024-10-12'; customer,
   s: 55; ratin,
   g: 4.4; review,
-  s: 12}; {/* TODO: Fix JSX expression */}
+  s: 12} {/* TODO: Fix JSX expression */}
   y: 'Analytics'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '5 minutes' };' feature,
+  e: '5 minutes' }' feature,
   s: ['Goals & funnelsWeekly insights emailAnomaly alertsShareable dashboards'];' benefit,
   s: ['Know what worksFocus on actions'];' targetAudienc,
   e: ['FoundersMarketersAgencies'];' marketPositio,
@@ -20564,11 +20207,11 @@ i,
   e: '2025-02-05'; customer,
   s: 140; ratin,
   g: 4.7; review,
-  s: 28}; {/* TODO: Fix JSX expression */}
+  s: 28} {/* TODO: Fix JSX expression */}
   y: 'IT & Operations'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '2 hours' };' feature,
+  e: '2 hours' }' feature,
   s: ['Email-to-ticketSLA timersMacros/automationsSelf-serve portal'];' benefit,
   s: ['Shorter MTTRFewer escalations'];' targetAudienc,
   e: ['MSPsIT teams'];' marketPositio,
@@ -20590,11 +20233,11 @@ i,
   e: '2024-09-22'; customer,
   s: 120; ratin,
   g: 4.5; review,
-  s: 31}; {/* TODO: Fix JSX expression */}
+  s: 31} {/* TODO: Fix JSX expression */}
   y: 'E‑commerce'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 hour' };' feature,
+  e: '1 hour' }' feature,
   s: ['Self-service portalLabel generationReturn reasons analyticsExchanges & store credit'];' benefit,
   s: ['Higher retentionLower support load'];' targetAudienc,
   e: ['D2C brandsMarketplaces'];' marketPositio,
@@ -20616,11 +20259,11 @@ i,
   e: '2024-08-30'; customer,
   s: 75; ratin,
   g: 4.4; review,
-  s: 19}; {/* TODO: Fix JSX expression */}
+  s: 19} {/* TODO: Fix JSX expression */}
   y: 'Sales'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '20 minutes' };' feature,
+  e: '20 minutes' }' feature,
   s: ['SequencesRules & triggersOpen/click trackingAI snippets'];' benefit,
   s: ['Higher reply rateFewer manual tasks'];' targetAudienc,
   e: ['SMB sales teamsAgencies'];' marketPositio,
@@ -20642,11 +20285,11 @@ i,
   e: '2025-01-25'; customer,
   s: 90; ratin,
   g: 4.5; review,
-  s: 17}; {/* TODO: Fix JSX expression */}
+  s: 17} {/* TODO: Fix JSX expression */}
   y: 'Media & Content'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '5 minutes' };' feature,
+  e: '5 minutes' }' feature,
   s: ['Speaker diarizationTimecodesChaptersShow notes drafts'];' benefit,
   s: ['AccessibilitySEO-ready content'];' targetAudienc,
   e: ['PodcastersAgencies'];' marketPositio,
@@ -20668,11 +20311,11 @@ i,
   e: '2024-12-02'; customer,
   s: 210; ratin,
   g: 4.7; review,
-  s: 52}; {/* TODO: Fix JSX expression */}
+  s: 52} {/* TODO: Fix JSX expression */}
   y: 'AI & Data'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 day' };' feature,
+  e: '1 day' }' feature,
   s: ['Entity/relation extractionSchema editorVector + graph searchLineage view'];' benefit,
   s: ['Higher RAG precisionGovernance & explainability'];' targetAudienc,
   e: ['Data teamsPlatform engineeringCompliance'];' marketPositio,
@@ -20694,11 +20337,11 @@ i,
   e: '2025-02-08'; customer,
   s: 35; ratin,
   g: 4.8; review,
-  s: 11}; {/* TODO: Fix JSX expression */}
+  s: 11} {/* TODO: Fix JSX expression */}
   y: 'AI & Platform'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 day' };' feature,
+  e: '1 day' }' feature,
   s: ['Provider adaptersPolicy enginePII redactionRate limits'];' benefit,
   s: ['Control spendReduce risk'];' targetAudienc,
   e: ['Platform teamsAI product'];' marketPositio,
@@ -20720,11 +20363,11 @@ i,
   e: '2025-02-08'; customer,
   s: 42; ratin,
   g: 4.8; review,
-  s: 13}; {/* TODO: Fix JSX expression */}
+  s: 13} {/* TODO: Fix JSX expression */}
   y: 'Data & Analytics'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '1 day' };' feature,
+  e: '1 day' }' feature,
   s: ['Event collectorConnector librarydbt modelsGrafana dashboards'];' benefit,
   s: ['Faster analytics ROILower platform toil'];' targetAudienc,
   e: ['Data teamsOps'];' marketPositio,
@@ -20746,11 +20389,11 @@ i,
   e: '2025-02-08'; customer,
   s: 24; ratin,
   g: 4.6; review,
-  s: 7}; {/* TODO: Fix JSX expression */}
+  s: 7} {/* TODO: Fix JSX expression */}
   y: 'Data & Platform'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '2 hours' };' feature,
+  e: '2 hours' }' feature,
   s: ['Schema registryDiff viewerCI gatesBackfill helpers'];' benefit,
   s: ['Fewer incidentsFaster changes'];' targetAudienc,
   e: ['Data platformAnalytics engineers'];' marketPositio,
@@ -20773,6 +20416,6 @@ i,
   s: 19; ratin,
   g: 4.6; review,
   s: 6} ]; // Helper functions; export const getServicesByCategory = (categor)
-  y: string) => {; return realMicroSaasServices.filter(service => service.category === category)} };; export const getServicesByPriceRange = (mi)
+  y: string) => { return realMicroSaasServices.filter(service => service.category === category)} }; export const getServicesByPriceRange = (mi)
   n: number) ma,
-  x: number) => {; return realMicroSaasServices.filter(service => {,' const price = parseFloat(service.price.replace('$') '').replace(} ''));; return price >= min && (max === Infinity || price <= max); }); }; export const getPopularServices = () => {; return realMicroSaasServices.filter(service => service.popular)} }; export const serviceCategories = [;' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';' 'Enterprise IT' ];' 'Enterprise IT' ]; '
+  x: number) => { return realMicroSaasServices.filter(service => {,' const price = parseFloat(service.price.replace('$') '').replace(} '')); return price >= min && (max === Infinity || price <= max)})} export const getPopularServices = () => { return realMicroSaasServices.filter(service => service.popular)} } export const serviceCategories = [;' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';' 'Enterprise IT' ];' 'Enterprise IT' ]; '

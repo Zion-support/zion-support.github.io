@@ -8,13 +8,11 @@ interface SearchResult {
   category: string;
   type: 'page' | 'service' | 'blog' | 'documentation';
   popularity?: number;
-  lastModified?: string;
-}
+  lastModified?: string}
 interface SearchModalProps {
   isOpen: boolean;
-  onClose: () => void;
-}
-const mockSearchResults: SearchResult[] = [
+  onClose: () => void}
+const mockSearchResults: SearchResultService Feature = [
   {
     id: '1',
     title: 'AI Analytics Dashboard',
@@ -77,42 +75,26 @@ const popularSearches = [
   'Cybersecurity',
   'Data Analytics'
 ];
-const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {</SearchModalProps>const</SearchModalProps> [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([])</SearchResult>const</SearchResult> [isSearching, setIsSearching] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
-  const [showSuggestions, setShowSuggestions] = useState(false);
-  const inputRef = useRef<HTMLInputElement>(null)</HTMLInputElement>const</HTMLInputElement> resultsRef = useRef<HTMLDivElement>(null)</HTMLDivElement>useEffect</HTMLDivElement>(() => {
-    if (isOpen && inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, [isOpen]);
+const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {</SearchModalProps>const</SearchModalProps> Service Feature = useState('');
+  const Service Feature);
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!isOpen) return;
       if (e.key === 'Escape') {
-        onClose();
-      } else if (e.key === 'ArrowDown') {
+        onClose()} else if (e.key === 'ArrowDown') {
         e.preventDefault();
         setSelectedIndex(prev => 
           prev < results.length - 1 ? prev + 1 : prev
-        );
-      } else if (e.key === 'ArrowUp') {
+        )} else if (e.key === 'ArrowUp') {
         e.preventDefault();
-        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
-      } else if (e.key === 'Enter' && selectedIndex >= 0) {
+        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1)} else if (e.key === 'Enter' && selectedIndex >= 0) {
         e.preventDefault();
-        handleResultClick(results[selectedIndex]);
-      }
-    };
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, results, selectedIndex, onClose]);
-  const searchResults = async (searchQuery: string) => {
-    if (!searchQuery.trim()) {
-      setResults([]);
-      setShowSuggestions(true);
-      return;
+        handleResultClick(resultsService Feature)}
     }
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown)}, Service Feature);
+      setShowSuggestions(true);
+      return}
     setIsSearching(true);
     setShowSuggestions(false);
     // Simulate API call delay
@@ -126,24 +108,19 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     const sortedResults = filteredResults.sort((a, b) => {
       const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
       const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
-      return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance;
-    });
+      return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance});
     setResults(sortedResults);
     setSelectedIndex(-1);
-    setIsSearching(false);
-  };
+    setIsSearching(false)}
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {</HTMLInputElement>const</HTMLInputElement> value = e.target.value;
     setQuery(value);
-    searchResults(value);
-  };
+    searchResults(value)}
   const handleResultClick = (result: SearchResult) => {
     window.location.href = result.url;
-    onClose();
-  };
+    onClose()}
   const handleSuggestionClick = (suggestion: string) => {
     setQuery(suggestion);
-    searchResults(suggestion);
-  };
+    searchResults(suggestion)}
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI Services':
@@ -157,9 +134,8 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
       case 'Documentation':
         return '📚';
       default:
-        return '🔍';
-    }
-  };
+        return '🔍'}
+  }
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'service':
@@ -171,9 +147,8 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
       case 'documentation':
         return 'text-green-400';
       default:
-        return 'text-gray-400';
-    }
-  };
+        return 'text-gray-400'}
+  }
   if (!isOpen) return null;
   return (
     <div className="fixed inset-0 z-50 flex min-h-screen items-start justify-center p-4 pt-16">
@@ -301,8 +276,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
         </div>
       </div>
     </div>
-  );
-};
+  )}
 export default EnhancedSearchModal</p>
   </h3>
   </h3>

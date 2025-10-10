@@ -106,8 +106,7 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
           </div>
         </div>
       </div>,
-    </React.Fragment>);
-}
+    </React.Fragment>)}
 "`
   </h1>
   </h1>

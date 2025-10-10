@@ -27,7 +27,7 @@ export const metadata = {
     description: "Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains for Fortune 500 companies.",
     images: ['/og-ai-cost-optimization-2026.jpg']
   }
-};
+}
 export default function AICostOptimizationBreakthrough2026() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -143,8 +143,7 @@ export default function AICostOptimizationBreakthrough2026() {
           </a>
 href="/services" className="inline-block bg-white text-green-600 px-6 py-3 rounded-lg border-2 border-green-600 hover:bg-green-50 transition-colors">
                   Explore AI Services;
-  );
-};
+  )}
 export default AiCostOptimizationBreakthrough2026Page;
 export default AICostOptimizationBreakthrough2026Page;
   </div>

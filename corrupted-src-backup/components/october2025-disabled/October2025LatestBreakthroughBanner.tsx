@@ -81,20 +81,7 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
                 </p>)
                 {/* Key, Metric, s */})
                 <div, className="grid, gri, d-co, l, s-2, ga, p-2, m, b-4">)
-                  { Obje, c, t.entri, e, s(conte, n, t.metr, i, c, s).sli, c, e(0, 2).m, a, p(([k, e, y, val, u, e]) = > (
-                    <div, ke, y = { ke, y  }, classNa, m, e = "bg-whi, t, e/5, rounde, d-l, g, p-2">
-                </p>
-                {/* Key, Metric, s */}
-                <div, className="grid, gri, d-co, l, s-2, ga, p-2, m, b-4">
-                  { Obje, c, t.entri, e, s(conte, n, t.metr, i, c, s).sli, c, e(0, 2).m, a, p(([k, e, y, val, u, e]) = > (</div>
-                    <div, ke, y = { ke, y  }, classNa, m, e = "bg-whi, t, e/5, rounde, d-l, g, p-2"></div>
-                      <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">{val, u, e}</div>
-                {/* Key, Metric, s */}"
-                <div, className="grid, gri, d-co, l, s-2, ga, p-2, m, b-4"></div>
-                  {/* TODO: Fix JSX expression */}"
-                    <div, ke, y = { ke, y  }, classNa, m, e = "bg-whi, t, e/5, rounde, d-l, g, p-2"></div>"
-                      <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">{val, u, e}</div>"
-                      <div, className="te, x, t-xs, tex, t-bl, u, e-300, capitaliz, e">{k, e, y.repla, c, e(/([A-, Z])/g, ' $1').tr, i, m()}</div>
+                  { Obje, c, t.entri, e, s(conte, n, t.metr, i, c, s).sli, c, e(0, 2).m, a, p((Service Feature)/g, ' $1').tr, i, m()}</div>
                     </div>
                   ))}
                 </div>
@@ -117,8 +104,7 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
                   <Link, className="w-4 h-4" /></Link>
                 </div>
               </Li, n, k>
-            );
-          })}
+            )})}
         </div>
         {/* CTA, Sectio, n */}
         <div, classNam, e = "te, x, t-center, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-8"></div>
@@ -190,7 +176,6 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
         </div>
       </div>
     </div>
-  );
-};
+  )}
 export default October2025LatestBreakthroughBanner;
 "`

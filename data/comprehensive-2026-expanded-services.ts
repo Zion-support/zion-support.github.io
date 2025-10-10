@@ -3,7 +3,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     emai,
   l: string}
     addres,
-  s: string};
+  s: string}
   lin,
   k: string;
   ico,
@@ -17,22 +17,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   targetAudience: string;
   trialDays: number;
   setupTime: string;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number}
-const contact =
-  mobile: "+1 302 464 0950",
-  email: "kleber@ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709"};
-export const comprehensiveExpandedServices: ComprehensiveService[] = [
+  technology: stringService Feature = [
   // AI & Machine Learning Services;
     id: 'ai-autonomous-customer-success'
     name: 'AI Autonomous Customer Success'
@@ -40,47 +25,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     price: '$299'
     period: '/month',
     description: 'AI-powered platform that predicts customer churn risk and automatically triggers personalized retention campaigns.',
-    features: [,
-  marketPositio,
-  n: string;
-  targetAudienc,
-  e: string;
-  trialDay,
-  s: number;
-  setupTim,
-  e: string;
-  technolog,
-  y: string[];
-  integration,
-  s: string[];
-  useCase,
-  s: string[];
-  ro,
-  i: string;
-  competitor,
-  s: string[];
-  marketSiz,
-  e: string;
-  growthRat,
-  e: string;
-  launchDat,
-  e: string;
-  customer,
-  s: number;
-  ratin,
-  g: number,
-  review,
-  s: number}
-const contact =
-  mobil,
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
-};
-export const,
-  comprehensiveExpandedServices: ComprehensiveService[] = [,
+    features: Service Feature = [,
   // AI & Machine Learning Services,
   id: 'ai-autonomous-customer-success',
     nam,
@@ -310,8 +255,7 @@ export const,
     launchDate: '2025-01-20'
     customers: 73;
     rating: 4.7;
-    reviews: 41;
-  },
+    reviews: 41},
   // Cloud & Infrastructure Services;
     id: 'autonomous-cloud-cost-optimization',
     name: 'Autonomous Cloud Cost Optimization',
@@ -412,8 +356,7 @@ export const,
     launchDate: '2025-01-10'
     customers: 128;
     rating: 4.9;
-    reviews: 89;
-  },
+    reviews: 89},
     id: 'zero-trust-security-platform'
     name: 'Zero Trust Security Platform'
     tagline: 'Comprehensive zero-trust architecture implementation',
@@ -606,8 +549,7 @@ export const,
     launchDate: '2025-02-15'
     customers: 94;
     rating: 4.7;
-    reviews: 67;
-  },
+    reviews: 67},
   // Data & Analytics Services;
     id: 'real-time-data-pipeline-platform'
     name: 'Real-Time Data Pipeline Platform'
@@ -801,8 +743,7 @@ export const,
     launchDate: '2025-02-10'
     customers: 112;
     rating: 4.6;
-    reviews: 78;
-  },
+    reviews: 78},
   // Developer Tools & DevOps;
     id: 'ai-code-review-assistant',
     name: 'AI Code Review Assistant',
@@ -996,8 +937,7 @@ export const,
     launchDate: '2025-01-30'
     customers: 89;
     rating: 4.8;
-    reviews: 67;
-  },
+    reviews: 67},
   // Industry-Specific Solutions;
     id: 'healthcare-ai-compliance-platform',
     name: 'Healthcare AI Compliance Platform',
@@ -1098,8 +1038,7 @@ export const,
     launchDate: '2025-01-15'
     customers: 45;
     rating: 4.9;
-    reviews: 34;
-  },
+    reviews: 34},
     id: 'fintech-fraud-detection-ai'
     name: 'FinTech Fraud Detection AI'
     tagline: 'Real-time fraud detection for financial transactions',
@@ -1199,8 +1138,7 @@ export const,
     launchDate: '2025-02-01'
     customers: 67;
     rating: 4.8;
-    reviews: 52;
-  },
+    reviews: 52},
   // Micro SaaS Services;
     id: 'ai-email-automation-suite',
     name: 'AI Email Automation Suite',
@@ -1580,8 +1518,7 @@ export const,
     launchDate: '2025-02-01'
     customers: 167;
     rating: 4.5;
-    reviews: 112;
-  },
+    reviews: 112},
   // IT Services;
     id: 'managed-it-support-services',
     name: 'Managed IT Support Services',
@@ -1868,8 +1805,7 @@ export const,
     launchDate: '2025-01-25'
     customers: 67;
     rating: 4.9;
-    reviews: 45;
-  },
+    reviews: 45},
   // Advanced AI Services;
     id: 'ai-document-processing-platform',
     name: 'AI Document Processing Platform',
@@ -2063,8 +1999,7 @@ export const,
     launchDate: '2025-02-05'
     customers: 78;
     rating: 4.7;
-    reviews: 56;
-  },
+    reviews: 56},
   // Emerging Technology Services;
     id: 'quantum-computing-simulation-platform',
     name: 'Quantum Computing Simulation Platform',
@@ -2258,8 +2193,7 @@ export const,
     launchDate: '2025-02-15'
     customers: 34;
     rating: 4.7;
-    reviews: 28;
-  }
+    reviews: 28}
 ];
 export const serviceCategories = [{name: 'Micro SaaS',
     description: 'Affordable, specialized software solutions for small businesses',
@@ -2440,37 +2374,7 @@ export interface ComprehensiveService,
   e: string; pric,
   e: string; period?: string; descriptio,
   n: string; feature,
-  s: string[]; categor,
-  y: string; subcategor,
-  y: string; realImplementatio,
-  n: boolean; contactInf,
-  o: mobil,
-  e: string; emai,
-  l: string, addres,
-  s: string}; lin,
-  k: string; ico,
-  n: string; colo,
-  r: string; textColo,
-  r: string; popular?: boolean; marketPositio,
-  n: string; targetAudienc,
-  e: string; trialDay,
-  s: number; setupTim,
-  e: string; technolog,
-  y: string[]; integration,
-  s: string[]; useCase,
-  s: string[]; ro,
-  i: string; competitor,
-  s: string[]; marketSiz,
-  e: string; growthRat,
-  e: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number, review,
-  s: number} const contact = mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" }; export const,
-  comprehensiveExpandedServices: ComprehensiveService[] = [ // AI & Machine Learning Services,
+  s: stringService Feature = [ // AI & Machine Learning Services,
   id: 'ai-autonomous-customer-success',' nam,
   e: 'AI Autonomous Customer Success',' taglin,
   e: 'Predictive customer health scoring with automated interventions',' pric,

@@ -1,7 +1,7 @@
 export interface NewArticle {/* TODO: Fix JSX expression */}
 }
 
-export const newArticles2025: NewArticle[] = [
+export const newArticles2025: NewArticleService Feature = [
   {
     id: 'ai-automation-2025'
     title: 'AI Automation Trends 2025: The Future of Work'
@@ -23,8 +23,4 @@ export const newArticles2025: NewArticle[] = [
     readTime: '12 min read',
     tags: ['Quantum Computing', 'AI', 'Breakthrough', 'Technology'],
 export const,
-  newArticles2025: NewArticle[] = [
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  }];
+  newArticles2025: NewArticleService Feature;

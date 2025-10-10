@@ -4,8 +4,8 @@ import { CheckCircle, Star, Phone } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 interface ServicePageProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: string;,
     descriptio,
@@ -15,16 +15,10 @@ interface ServicePageProps {/* TODO: Fix JSX expression */}
           <{ className?: string }>;
   service,
   s: Array<{/* TODO: Fix JSX expression */}
-  s: string[];}
-    pric,
-  e: string;
-  }>;
-  benefit,
-  s: string[];
-}
+  s: stringService Feature}
 const,
   ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -95,8 +89,7 @@ Ready to Transform Your Business?"
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default ServicePage;
   </p>
   </h1>

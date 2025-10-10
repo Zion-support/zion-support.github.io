@@ -4,10 +4,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Leaf, Target, Zap, Settings, CheckCircle, Star,  Leaf,  Target,  Settings } from 'lucide-react';
 const SustainabilityTechPage: React.FC = () => {
-  const features = [];
+  const features = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   ico,
   n: Leaf,
       titl,
@@ -15,8 +15,7 @@ const SustainabilityTechPage: React.FC = () => {
       descriptio,
   n: 'Sustainable technology solutions for environmental impact',
       benefit,
-  s: ['Carbon reduction', 'Energy efficiency', 'Waste reduction'];
-    },
+  s: ['Carbon reduction', 'Energy efficiency', 'Waste reduction']},
       ico,
   n: Target,
       titl,
@@ -89,6 +88,5 @@ const SustainabilityTechPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default SustainabilityTechPage;

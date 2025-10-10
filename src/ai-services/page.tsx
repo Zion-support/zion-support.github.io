@@ -58,8 +58,7 @@ $4}
               Learn More;
   </
       <Footer />
-  );
-};
+  )}
 export default $1;
 'use client';
 import React, { useState, useEffect } from 'react';
@@ -70,11 +69,8 @@ import {
   Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare
 } from 'lucide-react';
 export default function AIServicesPage() {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
+  const Service Feature = useState('overview');
+  const Service Feature);
   const aiServices = [
     {
       id: 'ai-automation',
@@ -305,11 +301,7 @@ export default function AIServicesPage() {
                   <div className="border-t border-gray-700 pt-6">
                     <h4 className="text-lg font-semibold text-cyan-400 mb-4">Pricing:</h4>
                     <div className="space-y-3">
-                      {Object.entries(service.pricing).map(([tier, details]) => (
-                        <div key={tier} className="flex justify-between items-center p-3 bg-slate-800/50 rounded-lg">
-                          <div>
-                            <div className="text-white font-semibold capitalize">{tier}</div>
-                            <div className="text-sm text-gray-400">{details.features[0]}</div>
+                      {Object.entries(service.pricing).map((Service Feature}</div>
                           </div>
                           <div className="text-right">
                             <div className="text-cyan-400 font-bold">{details.price}{details.period}</div>
@@ -362,8 +354,7 @@ export default function AIServicesPage() {
         </section>
       </div>
     </React.Fragment>
-  );
-}
+  )}
   </a>
   </a>
   </a>

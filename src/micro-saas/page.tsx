@@ -385,7 +385,7 @@ export default function MicroSaasPage() {
                 <div className="text-center">
                   <div className="text-xl font-bold text-purple-400 mb-2">{service.price}</div>
                   <div className="text-xs text-gray-400 mb-3">
-                    {service.benefits[0]}
+                    {service.benefitsService Feature}
                   </div>
                   <Link
                     to={service.link}
@@ -559,8 +559,7 @@ export default function MicroSaasPage() {
       </section>
       <Footer />
     </div>
-  );
-}
+  )}
   </Link>
   </a>
   </Link>

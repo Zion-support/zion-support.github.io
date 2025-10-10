@@ -5,56 +5,7 @@
   price: string;
   period: string;
   description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string[];
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: string;
-  contact_info: unknown;
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  }
-export interface InnovativeBusinessSolution {id: string, name: string;
-  tagline: string, price: string;
-  period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
-  textColor: string, link: string;
-  marketPosition: string, targetAudience: string[],
-  trialDays: number, setupTime: string;
-  category: string, realService: boolean;
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string;
-  competitors: string[], marketSize: string;
-  growthRate: string, variant: string;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string}
-    },
-    realImplementation: boolean, implementationDetails: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number;
-}
-export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
+  features: stringService Feature = [,
   // AI Business Intelligence Suite;
     id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
     tagline: 'Intelligent business insights and analytics',
@@ -102,70 +53,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
   descriptio,
   n: string;
   feature,
-  s: string[];
-  popula,
-  r: boolean;
-  ico,
-  n: string;
-  colo,
-  r: string;
-  text_colo,
-  r: string;
-  lin,
-  k: string;
-  market_positio,
-  n: string;
-  target_audienc,
-  e: string[];
-  trial_day,
-  s: number;
-  setup_tim,
-  e: string;
-  categor,
-  y: string;
-  real_servic,
-  e: boolean;
-  technolog,
-  y: string[];
-  integration,
-  s: string[];
-  use_case,
-  s: string[];
-  ro,
-  i: string;
-  competitor,
-  s: string[];
-  market_siz,
-  e: string;
-  growth_rat,
-  e: string;
-  varian,
-  t: string;
-  contact_inf,
-  o: unknown;
-    mobil,
-  e: string;
-    emai,
-  l: string;
-    addres,
-  s: string;
-    websit,
-  e: string}
-export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
-  e: string}
-    },
-    realImplementatio,
-  n: boolean, implementationDetail,
-  s: string,
-  launchDat,
-  e: string, customer,
-  s: number,
-  ratin,
-  g: number,
-  review,
-  s: number}
-export const,
-  innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
+  s: stringService Feature = [,
   // AI Business Intelligence Suite,
   id: 'ai-business-intelligence-suite', nam,
   e: 'AI Business Intelligence Suite',
@@ -244,19 +132,15 @@ export const,
   e: 'http,
   s://ziontechgroup.com'
     }
+]}
 ];
-;
-  }
-];
-;
     realImplementation: true;
     implementationDetails:,
       'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'
     launchDate: '2025-02-15'
     customers: 89;
     rating: 4.7;
-    reviews: 62;
-  }
+    reviews: 62}
   // AI Sales Intelligence Platform;
     id: 'ai-sales-intelligence-platform-v2',
     name: 'AI Sales Intelligence Platform',
@@ -380,8 +264,7 @@ export const,
     launchDate: '2025-03-01'
     customers: 67;
     rating: 4.9;
-    reviews: 45;
-  }
+    reviews: 45}
   // AI Customer Service Platform;
     id: 'ai-customer-service-platform',
     name: 'AI Customer Service Platform',
@@ -528,8 +411,7 @@ export const,
     launchDate: '2025-03-15'
     customers: 54;
     rating: 4.7;
-    reviews: 38;
-  }
+    reviews: 38}
   // AI HR Management Platform;
     id: 'ai-hr-management-platform',
     name: 'AI HR Management Platform',
@@ -676,8 +558,7 @@ export const,
     launchDate: '2025-04-01'
     customers: 42;
     rating: 4.8;
-    reviews: 29;
-  }
+    reviews: 29}
   // AI Financial Analytics Platform;
     id: 'ai-financial-analytics-platform',
     name: 'AI Financial Analytics Platform',
@@ -824,8 +705,7 @@ export const,
     launchDate: '2025-04-15'
     customers: 28;
     rating: 4.9;
-    reviews: 19;
-  }
+    reviews: 19}
   // AI Project Management Platform;
     id: 'ai-project-management-platform',
     name: 'AI Project Management Platform',
@@ -972,8 +852,7 @@ export const,
     launchDate: '2025-05-01'
     customers: 38;
     rating: 4.7;
-    reviews: 26;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 26}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -1045,23 +924,20 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
+  }
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
-;
+  reviews: number}
     realImplementation: true;
     implementationDetails:,
       'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'
     launchDate: '2025-02-15'
     customers: 89;
     rating: 4.7;
-    reviews: 62;
-  }
+    reviews: 62}
   // AI Sales Intelligence Platform;
     id: 'ai-sales-intelligence-platform-v2',
     name: 'AI Sales Intelligence Platform',
@@ -1084,7 +960,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   g: number;
   review,
   s: number}
-;
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1413,10 +1288,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'Communication tools'
     ]
     useCase,
-  s: [}
-;
-export const,
-  innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
+  s: Service Feature = [;
   // AI Business Intelligence Suite;
   {
     id: 'ai-business-intelligence-suite';
@@ -1452,7 +1324,7 @@ export const,
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'}
-export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
+export const innovativeBusinessSolutions2025: InnovativeBusinessSolutionService Feature = [,
   // AI Business Intelligence Suite;
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 26}
@@ -1466,7 +1338,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
   {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 export const,
-  innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
+  innovativeBusinessSolutions2025: InnovativeBusinessSolutionService Feature = [,
   // AI Business Intelligence Suite,
   address: '364 E Main St STE 1008 Middletown DE 19709',
     review,
@@ -1488,7 +1360,6 @@ export const,
     review,
   s: 26}
 ];
-;
 i,
   d: string; nam,
   e: string; taglin,
@@ -1496,69 +1367,7 @@ i,
   e: string, perio,
   d: string, descriptio,
   n: string; feature,
-  s: string[]; popula,
-  r: boolean; ico,
-  n: string; colo,
-  r: string; text_colo,
-  r: string; lin,
-  k: string; market_positio,
-  n: string; target_audienc,
-  e: string[]; trial_day,
-  s: number; setup_tim,
-  e: string; categor,
-  y: string; real_servic,
-  e: boolean; technolog,
-  y: string[]; integration,
-  s: string[]; use_case,
-  s: string[]; ro,
-  i: string; competitor,
-  s: string[]; market_siz,
-  e: string; growth_rat,
-  e: string; varian,
-  t: string; contact_inf,
-  o: mobil,
-  e: string; emai,
-  l: string; addres,
-  s: string; websit,
-  e: string} export interface InnovativeBusinessSolution,
-  id: string, nam,
-  e: string, taglin,
-  e: string, pric,
-  e: string, perio,
-  d: string, descriptio,
-  n: string, feature,
-  s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
-  r: string, textColo,
-  r: string, lin,
-  k: string, marketPositio,
-  n: string, targetAudienc,
-  e: string[], trialDay,
-  s: number, setupTim,
-  e: string, categor,
-  y: string, realServic,
-  e: boolean, technolog,
-  y: string[], integration,
-  s: string[], useCase,
-  s: string[], ro,
-  i: string, competitor,
-  s: string[], marketSiz,
-  e: string, growthRat,
-  e: string, varian,
-  t: string, contactInf,
-  o: mobil,
-  e: string, emai,
-  l: string, addres,
-  s: string, websit,
-  e: string }, realImplementatio,
-  n: boolean, implementationDetail,
-  s: string, launchDat,
-  e: string, customer,
-  s: number, ratin,
-  g: number, review,
-  s: number } export const,
-  innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [ // AI Business Intelligence Suite,
+  s: stringService Feature = [ // AI Business Intelligence Suite,
   id: 'ai-business-intelligence-suite', nam,
   e: 'AI Business Intelligence Suite',' taglin,
   e: 'Intelligent business insights and analytics',' pric,
@@ -1600,7 +1409,7 @@ i,
   s: 26; ],' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' } ]; } ]; realImplementatio,
+  s://ziontechgroup.com' } ]} ]; realImplementatio,
   n: true,
   implementationDetails:' 'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'' launchDat,
   e: '2025-02-15' customer,
@@ -1814,13 +1623,13 @@ i,
   g: 4.7,
   reviews: 26 } ];' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} }; realImplementatio,
+  e: string} } realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number} ; realImplementatio,
+  s: number} realImplementatio,
   n: true,
   implementationDetails:' 'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'' launchDat,
   e: '2025-02-15' customer,
@@ -1906,10 +1715,9 @@ i,
   e: true,
   technology: [' 'Artificial Intelligence'' 'Machine Learning'' 'Project Management'' 'Resource Optimization'' 'Python'' 'TensorFlow'' 'React' ] integration,
   s: [' 'Project management tools'' 'Collaboration platforms'' 'Time tracking tools'' 'Resource management systems'' 'Communication tools' ] useCase,
-  s: [ } ; export const,
-  innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [; // AI Business Intelligence Suite; {/* TODO: Fix JSX expression */}
+  s: Service Feature = [; // AI Business Intelligence Suite; {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'} export const,
-  innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [ // AI Business Intelligence Suite ' addres,
+  innovativeBusinessSolutions2025: InnovativeBusinessSolutionService Feature = [ // AI Business Intelligence Suite ' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'} review,
   s: 26' websit,
   e: 'http,

@@ -5,8 +5,8 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Phone, Mail, MessageSquare, Search, Clock, Users, Award, Zap, Brain, Shield, Code, BarChart, MessageSquare as Chat, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
 const SupportPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const Service Feature = useState('');
+  const Service Feature = useState('all');
   const supportCategories = [
     { id: 'all', name: 'All Topics', icon: Search, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 12 },
@@ -280,8 +280,7 @@ const SupportPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
+  )}
 export default SupportPage;
   </a>
   </a>

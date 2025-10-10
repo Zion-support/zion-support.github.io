@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const SignupPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+  const Service Feature = useState({
     firstName: '',
     lastName: '',
     email: '',
@@ -16,22 +16,13 @@ const SignupPage: React.FC = () => {
     agreeToTerms: false,
     subscribeNewsletter: false
   });
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
-  };
+  const Service Feature: type === 'checkbox' ? checked : value
+    }))}
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
       alert('Passwords do not match');
-      return;
-    }
+      return}
     if (!formData.agreeToTerms) {
       alert('Please agree to the terms and conditions');
     setIsLoading(true);
@@ -63,11 +54,10 @@ $4];
   return (
     <React.Fragment>
     <div>Coming Soon</div>
-  );
-};
-  const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  )}
+  const Service Feature = useState({/* TODO: Fix JSX expression */}
+  O: Add content}
+}
   firstNam,
   e: '',
     lastNam,
@@ -87,31 +77,19 @@ $4];
     subscribeNewslette,
   r: false;)
   });
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-const handleInputChange = (e: React.ChangeEvent;)
-          <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-//       ...prev,
-      [name]: type === 'checkbox' ? checked : value;)
-    }));
-  };
+  const Service Feature: type === 'checkbox' ? checked : value;)
+    }))}
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
       alert('Passwords do not match');
-      return;
-    }
+      return}
     if (!formData.agreeToTerms) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
       alert('Please agree to the terms and conditions');
     setIsLoading(true);
@@ -120,13 +98,10 @@ const handleInputChange = (e: React.ChangeEvent;)
     setIsLoading(false);
     // Redirect to dashboard or home page;
     window.location.href = '/';
-  const features = [
-  // TOD,
-  O: Add items;
-];;
+  const features = Service Feature;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Shield,
       titl,

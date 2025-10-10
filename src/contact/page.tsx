@@ -7,7 +7,7 @@ import React from 'react';
 const ContactPage: React.FC = () => {
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, User, Building, Globe, Shield, Brain, Zap, Cloud, Database, Code, BarChart, Users, Award, Target, Star, TrendingUp, ArrowRight } from 'lucide-react';
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
+  const Service Feature = useState({
     name: '',
     email: '',
     company: '',
@@ -15,21 +15,14 @@ export default function ContactPage() {
     service: '',
     message:   ,
 $4});
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const Service Feature = useState(false);
   const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     message: '',
     budget: '',
     timeline: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
+  const Service Feature: value
+    }))}
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
@@ -45,14 +38,13 @@ $4});
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsSubmitted(true);
-    setIsSubmitting(false);
-  };
+    setIsSubmitting(false)}
   const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST'
-  };
+  }
   const services = [
     'AI Services',
     'IT Services',
@@ -187,8 +179,7 @@ export default ContactPage;
           </div>
         </div>
       </div>
-    );
-  }
+    )}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -489,8 +480,7 @@ export default ContactPage;
         </div>
       </section>
     </div>
-  );
-}
+  )}
   </p>
   </h2>
   </p>

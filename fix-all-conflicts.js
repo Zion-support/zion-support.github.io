@@ -14,17 +14,7 @@ function fixMergeConflicts(filePath) {
     let modified = false;
 
     // Remove merge conflict markers and keep the HEAD version (first part)
-    const conflictRegex = /\n([\s\S]*?)\n;
-    const originalContent = content;
-    content = content.replace(conflictRegex, (match, headContent, otherContent) => {
-      modified = true;
-      return headContent.trim();
-function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}
-    });
-
-    // Remove any remaining conflict markers;
-    content = content;
-      .replace(/[\s\S]*?)
+    const conflictRegex = /\n(Service Feature*?)
       .replace(//g, '')
       .replace(/)
 )
@@ -41,19 +31,16 @@ function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}
       console.log(`Fixed: ${filePath}`);
     if (modified || content !== originalContent) {/* TODO: Fix JSX expression */}
   d: ${filePath}`);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}`
+    return false} catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Function to find all TypeScript/React files;
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
-  const files = [];
+  const files = Service Feature;
   
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
@@ -63,8 +50,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */}
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
@@ -73,8 +59,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: F
   }
   
   traverse(dir);
-  return files;
-}
+  return files}
 
 // Main execution;
 console.log('Starting comprehensive merge conflict resolution...');
@@ -89,8 +74,7 @@ for (const file of files) {/* TODO: Fix JSX expression */}
     }
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Failed to process ${file}:`, error.message);
-    errorCount++;
-  }
+    errorCount++}
 }
 `
 console.log(`\nMerge conflict resolution)`
@@ -111,14 +95,12 @@ console.log(`- Errors: ${errorCount}`);
 console.log('\nRunning linting to check for remaining issues...');
 try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-  console.log('Linting passed!');
-} catch (error) {/* TODO: Fix JSX expression */}
+  console.log('Linting passed!')} catch (error) {/* TODO: Fix JSX expression */}
 }
 
 // Try building;
 console.log('\nTrying to build...');
 try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-  console.log('Build successful!');
-} catch (error) {/* TODO: Fix JSX expression */}
+  console.log('Build successful!')} catch (error) {/* TODO: Fix JSX expression */}
 }`

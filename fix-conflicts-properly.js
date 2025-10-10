@@ -14,32 +14,20 @@ function fixFile(filePath) {
     let modified = false;
 
     // Remove merge conflict markers and keep the HEAD version;
-    const conflictRegex = /\n([\s\S]*?)\n;
-    const originalContent = content;
-    content = content.replace(conflictRegex, (match, headContent, otherContent) => {
-      modified = true;
-      return headContent.trim();
-function fixFile(filePath) {/* TODO: Fix JSX expression */}
-    });
-
-    // Fix common syntax issues;
-    content = content;
-      // Remove any remaining conflict markers;
-      .replace(/[\s\S]*?)
+    const conflictRegex = /\n(Service Feature*?)
       // Fix common syntax patterns;)
       .replace(/\{\s*$/gm, '{\n  // TODO: Add content\n}')
-      .replace(/\[\s*$/gm, '[\n  // TODO: Add items\n]'),
+      .replace(/\[\s*$/gm, 'Service Feature'),
       .replace(/\(\s*$/gm, '(\n  // TODO: Add parameters\n)'),
       // Fix missing semicolons;
       .replace(/(\w+)\s*\n\s*(import|export|const|let|var|function|class|interface|type)/g, '$1;\n$2')
       // Fix missing commas in object literals;
       .replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n  $2: '),
-      .replace(/[\s\S]*?
+      .replace(/Service Feature*?
       // Fix common syntax patterns;
       .replace(/\{/* TODO: Fix JSX expression */})
   O: Add content\n}')
-      .replace(/\[\s*$/gm, '[\n  // TOD)
-  O: Add items\n]')
+      .replace(/\[\s*$/gm, 'Service Feature')
       .replace(/\(\s*$/gm, '(\n  // TOD)
   O: Add parameters\n)')
       // Fix missing semicolons;
@@ -51,14 +39,14 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       // Fix missing commas in function parameters;
       .replace(/(\w+)\s*\n\s*\)/g, '$1,\n)')
       // Fix invalid characters;
-      .replace(/[^\x00-\x7F]/g, '')
+      .replace(/Service Feature/g, '')
       // Fix duplicate 'use client' directives;
       .replace(/'use client';\s*'use client';/g, "'use client';")
       // Fix duplicate React imports;
-      .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {
+      .replace(/import ReactService Feature+;/g, (match) => {
         const lines = match.split('\n');
-        return lines[0] + ';';
-      .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {/* TODO: Fix JSX expression */}
+        return linesService Feature + ';';
+      .replace(/import ReactService Feature+;/g, (match) => {/* TODO: Fix JSX expression */}
       })
       // Remove empty lines with just spaces;
       .replace(/^\s*\n/gm, '\n')
@@ -69,14 +57,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Additional specific fixes for common patterns;
     const lines = content.split('\n');
-    const cleanedLines = [];
-    let inJSX = false;
-    let braceCount = 0;
-    let bracketCount = 0;
-    let parenCount = 0;
-
-    for (let i = 0; i < lines.length; i++) {
-      let line = lines[i];
+    const cleanedLines = Service Feature;
       const trimmed = line.trim();
 
       // Track JSX state;
@@ -88,13 +69,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       }
 
       // Track brace/bracket/paren counts;
-      braceCount += (line.match(/\{/g) || []).length;
-      braceCount += (line.match(/\{/* TODO: Fix JSX expression */})
-      braceCount -= (line.match(/\}/g) || []).length;
-      bracketCount += (line.match(/\[/g) || []).length;
-      bracketCount -= (line.match(/\]/g) || []).length;
-      parenCount += (line.match(/\(/g) || []).length;
-      parenCount -= (line.match(/\)/g) || []).length;
+      braceCount += (line.match(/\{/g) || Service Feature).length;
 
       // Fix common issues;
       if (trimmed === '') {
@@ -109,11 +84,11 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       }
 
       // Fix missing semicolons;
-      if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while')) {
-        if (i === lines.length - 1 || lines[i + 1].trim().match(/^(import|export|const|let|var|function|class|interface|type)/)) {
+      if (!inJSX && trimmed.match(/^\w+.*Service Feature$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while')) {
+        if (i === lines.length - 1 || linesService Feature.trim().match(/^(import|export|const|let|var|function|class|interface|type)/)) {
           line = line.replace(/\s*$/, ';');
           modified = true;
-      if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while')) {/* TODO: Fix JSX expression */}
+      if (!inJSX && trimmed.match(/^\w+.*Service Feature$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while')) {/* TODO: Fix JSX expression */}
         }
       }
 
@@ -121,10 +96,8 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       if (braceCount > 0 && i === lines.length - 1) {
         for (let j = 0; j < braceCount; j++) {
       if (braceCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
-          line += '\n}';
-        }
-        modified = true;
-      }
+          line += '\n}'}
+        modified = true}
 
       // Fix missing closing brackets;
       if (bracketCount > 0 && i === lines.length - 1) {
@@ -132,8 +105,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
           line += '\n]';
       if (bracketCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
         }
-        modified = true;
-      }
+        modified = true}
 
       // Fix missing closing parentheses;
       if (parenCount > 0 && i === lines.length - 1) {
@@ -141,11 +113,9 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
           line += '\n)';
       if (parenCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
         }
-        modified = true;
-      }
+        modified = true}
 
-      cleanedLines.push(line);
-    }
+      cleanedLines.push(line)}
 
     content = cleanedLines.join('\n');
 
@@ -159,19 +129,16 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       console.log(`Fixed: ${filePath}`);
     if (modified || content !== originalContent) {/* TODO: Fix JSX expression */}
   d: ${filePath}`);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}`
+    return false} catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Function to find all TypeScript/React files;
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
-  const files = [];
+  const files = Service Feature;
   
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
@@ -181,8 +148,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */}
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
@@ -191,8 +157,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: F
   }
   
   traverse(dir);
-  return files;
-}
+  return files}
 
 // Main execution;
 console.log('Starting proper merge conflict resolution...');
@@ -207,8 +172,7 @@ for (const file of files) {/* TODO: Fix JSX expression */}
     }
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Failed to process ${file}:`, error.message);
-    errorCount++;
-  }
+    errorCount++}
 }
 `
 console.log(`\nMerge conflict resolution)`
@@ -229,6 +193,5 @@ console.log(`- Errors: ${errorCount}`);
 console.log('\nRunning linting to check for remaining issues...');
 try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-  console.log('Linting passed!');
-} catch (error) {/* TODO: Fix JSX expression */}
+  console.log('Linting passed!')} catch (error) {/* TODO: Fix JSX expression */}
 }"`

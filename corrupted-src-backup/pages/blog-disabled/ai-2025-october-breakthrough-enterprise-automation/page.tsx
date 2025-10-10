@@ -668,8 +668,7 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
           </article>
         </div>
       </div>,
-    </React.Fragment>);
-};
+    </React.Fragment>)}
 export default EnterpriseAutomation2025;
   </div>
 </article>

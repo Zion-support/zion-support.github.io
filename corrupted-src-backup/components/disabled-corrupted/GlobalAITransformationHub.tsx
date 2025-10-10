@@ -161,6 +161,5 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
         </p>
       </div>
     </div>
-  );
-};
+  )}
 export default GlobalAITransformationHub;"`

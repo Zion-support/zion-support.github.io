@@ -475,6 +475,5 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
         </d, i, v>)
       </d, i, v>)
     </React.Fragment>)
-  );
-};
+  )}
 export default SmartAppointmentScheduler;"

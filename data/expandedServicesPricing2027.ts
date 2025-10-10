@@ -9,62 +9,20 @@ export type ExpandedServicePricing =
       price: number;
       currency: string;
       billingCycle: string;
-      features: string[];
-      limitations: string[];
-      bestFor: string[];
-      setupFee: number;
-      contractTerm: string};
-    professional: unknown;
-      price: number;
-      currency: string;
-      billingCycle: string;
-      features: string[];
-      limitations: string[];
-      bestFor: string[];
-      setupFee: number;
-      contractTerm: string};
-    enterprise: unknown;
-      price: number;
-      currency: string;
-      billingCycle: string;
-      features: string[];
-      limitations: string[];
-      bestFor: string[];
-      setupFee: number;
-      contractTerm: string};
-    custom: unknown;
-      priceRange: string;
-      currency: string;
-      billingCycle: string;
-      features: string[];
-      limitations: string[];
-      bestFor: string[];
-      setupFee: number;
-      contractTerm: string}};
-  marketComparison: unknown;
-    competitors: string[];
+      features: stringService Feature;
     marketPosition: 'leader' | 'challenger' | 'niche' | 'emerging',
     priceAdvantage: string;
-    valueProposition: string};
+    valueProposition: string}
   roiAnalysis: unknown;
     paybackPeriod: string;
     annualROI: string;
-    costSavings: string[];
-    revenueImpact: string[],
-    riskMitigation: string[]};
+    costSavings: stringService Feature}
   implementation: unknown;
     setupTime: string;
     trainingRequired: string;
     integrationComplexity: 'low' | 'medium' | 'high',
     supportIncluded: string;
-    customizationOptions: string[]};
-  contactInfo: unknown;
-    phone: string;
-    email: string;
-    website: string;
-    address: string}}
-// 1. CYBERSECURITY SERVICES PRICING;
-export const cybersecurityPricing: ExpandedServicePricing[] = [
+    customizationOptions: stringService Feature = [
     serviceId: 'quantum-threat-hunter'
     serviceName: 'Quantum Threat Hunter'
     category: 'Cybersecurity'
@@ -73,98 +31,13 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
         price: 2500;
         currency: 'USD',
         billingCycle: 'monthly',
-        features[,
-  serviceI,
-  d: string;
-  serviceNam,
-  e: string;
-  categor,
-  y: string;
-  subcategor,
-  y: string;
-  pricingTier,
-  s: starte,
-  r: unknown;
-      pric,
-  e: number;
-      currenc,
-  y: string;
-      billingCycl,
-  e: string;
-      feature,
-  s: string[];
-      limitation,
-  s: string[];
-      bestFo,
-  r: string[];
-      setupFe,
-  e: number,
-      contractTer,
-  m: string};
-    professiona,
-  l: unknown;
-      pric,
-  e: number;
-      currenc,
-  y: string;
-      billingCycl,
-  e: string;
-      feature,
-  s: string[];
-      limitation,
-  s: string[];
-      bestFo,
-  r: string[];
-      setupFe,
-  e: number,
-      contractTer,
-  m: string};
-    enterpris,
-  e: unknown;
-      pric,
-  e: number;
-      currenc,
-  y: string;
-      billingCycl,
-  e: string;
-      feature,
-  s: string[];
-      limitation,
-  s: string[];
-      bestFo,
-  r: string[];
-      setupFe,
-  e: number,
-      contractTer,
-  m: string};
-    custo,
-  m: unknown;
-      priceRang,
-  e: string;
-      currenc,
-  y: string;
-      billingCycl,
-  e: string;
-      feature,
-  s: string[];
-      limitation,
-  s: string[];
-      bestFo,
-  r: string[];
-      setupFe,
-  e: number,
-      contractTer,
-  m: string}};
-  marketCompariso,
-  n: unknown;
-    competitor,
-  s: string[];
+        featuresService Feature;
     marketPositio,
   n: 'leader' | 'challenger' | 'niche' | 'emerging'
     priceAdvantag,
   e: string,
     valuePropositio,
-  n: string};
+  n: string}
   roiAnalysi,
   s: unknown;
     paybackPerio,
@@ -172,11 +45,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
     annualRO,
   I: string;
     costSaving,
-  s: string[];
-    revenueImpac,
-  t: string[],
-    riskMitigatio,
-  n: string[]};
+  s: stringService Feature}
   implementatio,
   n: unknown;
     setupTim,
@@ -188,20 +57,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
     supportInclude,
   d: string,
     customizationOption,
-  s: string[]};
-  contactInf,
-  o: unknown;
-    phon,
-  e: string;
-    emai,
-  l: string;
-    websit,
-  e: string,
-    addres,
-  s: string}}
-// 1. CYBERSECURITY SERVICES PRICING;
-export const,
-  cybersecurityPricing: ExpandedServicePricing[] = [,
+  s: stringService Feature = [,
     serviceI,
   d: 'quantum-threat-hunter',
     serviceNam,
@@ -701,7 +557,7 @@ export const,
   }
 ];
 // 2. DATA ANALYTICS SERVICES PRICING;
-export const dataAnalyticsPricing: ExpandedServicePricing[] = [
+export const dataAnalyticsPricing: ExpandedServicePricingService Feature = [
     serviceId: 'predictive-insights-engine'
     serviceName: 'Predictive Insights Engine'
     category: 'Data Analytics'
@@ -710,9 +566,7 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
         price: 1800;
         currency: 'USD',
         billingCycle: 'monthly',
-        features[,
-export const,
-  dataAnalyticsPricing: ExpandedServicePricing[] = [,
+        featuresService Feature = [,
     serviceI,
   d: 'predictive-insights-engine',
     serviceNam,
@@ -952,7 +806,7 @@ export const,
   }
 ];
 // 3. CLOUD & DEVOPS SERVICES PRICING;
-export const cloudDevOpsPricing: ExpandedServicePricing[] = [
+export const cloudDevOpsPricing: ExpandedServicePricingService Feature = [
     serviceId: 'multi-cloud-orchestrator'
     serviceName: 'Multi-Cloud Orchestrator'
     category: 'Cloud & DevOps'
@@ -961,9 +815,7 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
         price: 2000;
         currency: 'USD',
         billingCycle: 'monthly',
-        features[,
-export const,
-  cloudDevOpsPricing: ExpandedServicePricing[] = [,
+        featuresService Feature = [,
     serviceI,
   d: 'multi-cloud-orchestrator',
     serviceNam,
@@ -1203,7 +1055,7 @@ export const,
   }
 ];
 // 4. IOT & EDGE COMPUTING SERVICES PRICING;
-export const iotEdgePricing: ExpandedServicePricing[] = [
+export const iotEdgePricing: ExpandedServicePricingService Feature = [
     serviceId: 'industrial-iot-intelligence'
     serviceName: 'Industrial IoT Intelligence Platform'
     category: 'IoT & Edge Computing'
@@ -1212,9 +1064,7 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
         price: 2800;
         currency: 'USD',
         billingCycle: 'monthly',
-        features[,
-export const,
-  iotEdgePricing: ExpandedServicePricing[] = [,
+        featuresService Feature = [,
     serviceI,
   d: 'industrial-iot-intelligence',
     serviceNam,
@@ -1454,7 +1304,7 @@ export const,
   }
 ];
 // 5. FINANCIAL TECHNOLOGY SERVICES PRICING;
-export const finTechPricing: ExpandedServicePricing[] = [
+export const finTechPricing: ExpandedServicePricingService Feature = [
     serviceId: 'quantum-financial-modeling'
     serviceName: 'Quantum Financial Modeling Platform'
     category: 'Financial Technology'
@@ -1463,9 +1313,7 @@ export const finTechPricing: ExpandedServicePricing[] = [
         price: 8000;
         currency: 'USD',
         billingCycle: 'monthly',
-        features[,
-export const,
-  finTechPricing: ExpandedServicePricing[] = [,
+        featuresService Feature = [,
     serviceI,
   d: 'quantum-financial-modeling',
     serviceNam,
@@ -1705,7 +1553,7 @@ export const,
   }
 ];
 // 6. HEALTHCARE TECHNOLOGY SERVICES PRICING;
-export const healthcarePricing: ExpandedServicePricing[] = [
+export const healthcarePricing: ExpandedServicePricingService Feature = [
     serviceId: 'ai-diagnostic-assistant'
     serviceName: 'AI Diagnostic Assistant'
     category: 'Healthcare Technology'
@@ -1714,9 +1562,7 @@ export const healthcarePricing: ExpandedServicePricing[] = [
         price: 3500;
         currency: 'USD',
         billingCycle: 'monthly',
-        features[,
-export const,
-  healthcarePricing: ExpandedServicePricing[] = [,
+        featuresService Feature = [,
     serviceI,
   d: 'ai-diagnostic-assistant',
     serviceNam,
@@ -1956,104 +1802,20 @@ export const,
   }
 ];
 // Export all pricing data;
-export const ALL_EXPANDED_SERVICES_PRICING = [
-  ...cybersecurityPricing,
-  ...dataAnalyticsPricing,
-  ...cloudDevOpsPricing,
-  ...iotEdgePricing,
-  ...finTechPricing,
-  ...healthcarePricing;
-];
-// Helper functions;
-export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | undefined =>,
-export const getPricingByServiceId = (serviceI)
-  d: string): ExpandedServicePricing | undefined =>,
-  return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)};
-export const getPricingByCategory = (categor)
-  y: string): ExpandedServicePricing[] =>,
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)};
-export const getPricingBySubcategory = (subcategor)
-  y: string): ExpandedServicePricing[] =>,
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)};
-export const searchPricing = (query: string): ExpandedServicePricing[] =>;
-  const lowercaseQuery = query.toLowerCase()
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing =>)
-    pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||,
-    pricing.category.toLowerCase().includes(lowercaseQuery) ||,
-    pricing.subcategory.toLowerCase().includes(lowercaseQuery),
-export const searchPricing = (quer)
-  y: string): ExpandedServicePricing[] =>;
-  const lowercaseQuery = query.toLowerCase(),
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing =>)
-    pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||
-    pricing.category.toLowerCase().includes(lowercaseQuery) ||
-    pricing.subcategory.toLowerCase().includes(lowercaseQuery)
-  )};
-// Expanded Services Pricing Guide 2027 - Zion Tech Group // Comprehensive pricing information for all expanded innovative services export type ExpandedServicePricing = serviceI,
-  d: string; serviceNam,
-  e: string; categor,
-  y: string; subcategor,
-  y: string; pricingTier,
-  s: starte,
-  r: pric,
-  e: number; currenc,
-  y: string; billingCycl,
-  e: string; feature,
-  s: string[]; limitation,
-  s: string[]; bestFo,
-  r: string[]; setupFe,
-  e: number, contractTer,
-  m: string}; professiona,
-  l: pric,
-  e: number; currenc,
-  y: string; billingCycl,
-  e: string; feature,
-  s: string[]; limitation,
-  s: string[]; bestFo,
-  r: string[]; setupFe,
-  e: number, contractTer,
-  m: string}; enterpris,
-  e: pric,
-  e: number; currenc,
-  y: string; billingCycl,
-  e: string; feature,
-  s: string[]; limitation,
-  s: string[]; bestFo,
-  r: string[]; setupFe,
-  e: number, contractTer,
-  m: string}; custo,
-  m: priceRang,
-  e: string; currenc,
-  y: string; billingCycl,
-  e: string; feature,
-  s: string[]; limitation,
-  s: string[]; bestFo,
-  r: string[]; setupFe,
-  e: number, contractTer,
-  m: string}}; marketCompariso,
-  n: competitor,
-  s: string[]; marketPositio,
+export const ALL_EXPANDED_SERVICES_PRICING = Service Feature; marketPositio,
   n: 'leader' | 'challenger' | 'niche' | 'emerging' priceAdvantag,
   e: string, valuePropositio,
-  n: string}; roiAnalysi,
+  n: string} roiAnalysi,
   s: paybackPerio,
   d: string; annualRO,
   I: string; costSaving,
-  s: string[]; revenueImpac,
-  t: string[], riskMitigatio,
-  n: string[]}; implementatio,
+  s: stringService Feature} implementatio,
   n: setupTim,
   e: string; trainingRequire,
   d: string;' integrationComplexit,
   y: 'low' | 'medium' | 'high' supportInclude,
   d: string, customizationOption,
-  s: string[]}; contactInf,
-  o: phon,
-  e: string; emai,
-  l: string; websit,
-  e: string, addres,
-  s: string}} // 1. CYBERSECURITY SERVICES PRICING export const,
-  cybersecurityPricing: ExpandedServicePricing[] = [ ' serviceI,
+  s: stringService Feature = [ ' serviceI,
   d: 'quantum-threat-hunter',' serviceNam,
   e: 'Quantum Threat Hunter',' categor,
   y: 'Cybersecurity',' subcategor,
@@ -2148,7 +1910,7 @@ export const searchPricing = (quer)
   e: 'http,
   s://ziontechgroup.com/ai-compliance-automator',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; // 2. DATA ANALYTICS SERVICES PRICING export const,
-  dataAnalyticsPricing: ExpandedServicePricing[] = [ ' serviceI,
+  dataAnalyticsPricing: ExpandedServicePricingService Feature = [ ' serviceI,
   d: 'predictive-insights-engine',' serviceNam,
   e: 'Predictive Insights Engine',' categor,
   y: 'Data Analytics',' subcategor,
@@ -2196,7 +1958,7 @@ export const searchPricing = (quer)
   e: 'http,
   s://ziontechgroup.com/predictive-insights-engine',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; // 3. CLOUD & DEVOPS SERVICES PRICING export const,
-  cloudDevOpsPricing: ExpandedServicePricing[] = [ ' serviceI,
+  cloudDevOpsPricing: ExpandedServicePricingService Feature = [ ' serviceI,
   d: 'multi-cloud-orchestrator',' serviceNam,
   e: 'Multi-Cloud Orchestrator',' categor,
   y: 'Cloud & DevOps',' subcategor,
@@ -2244,7 +2006,7 @@ export const searchPricing = (quer)
   e: 'http,
   s://ziontechgroup.com/multi-cloud-orchestrator',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; // 4. IOT & EDGE COMPUTING SERVICES PRICING export const,
-  iotEdgePricing: ExpandedServicePricing[] = [ ' serviceI,
+  iotEdgePricing: ExpandedServicePricingService Feature = [ ' serviceI,
   d: 'industrial-iot-intelligence',' serviceNam,
   e: 'Industrial IoT Intelligence Platform',' categor,
   y: 'IoT & Edge Computing',' subcategor,
@@ -2292,7 +2054,7 @@ export const searchPricing = (quer)
   e: 'http,
   s://ziontechgroup.com/industrial-iot-intelligence',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; // 5. FINANCIAL TECHNOLOGY SERVICES PRICING export const,
-  finTechPricing: ExpandedServicePricing[] = [ ' serviceI,
+  finTechPricing: ExpandedServicePricingService Feature = [ ' serviceI,
   d: 'quantum-financial-modeling',' serviceNam,
   e: 'Quantum Financial Modeling Platform',' categor,
   y: 'Financial Technology',' subcategor,
@@ -2340,7 +2102,7 @@ export const searchPricing = (quer)
   e: 'http,
   s://ziontechgroup.com/quantum-financial-modeling',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; // 6. HEALTHCARE TECHNOLOGY SERVICES PRICING export const,
-  healthcarePricing: ExpandedServicePricing[] = [ ' serviceI,
+  healthcarePricing: ExpandedServicePricingService Feature = [ ' serviceI,
   d: 'ai-diagnostic-assistant',' serviceNam,
   e: 'AI Diagnostic Assistant',' categor,
   y: 'Healthcare Technology',' subcategor,
@@ -2387,8 +2149,4 @@ export const searchPricing = (quer)
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
   s://ziontechgroup.com/ai-diagnostic-assistant',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; // Export all pricing data export const ALL_EXPANDED_SERVICES_PRICING = [ ...cybersecurityPricing, ...dataAnalyticsPricing, ...cloudDevOpsPricing, ...iotEdgePricing, ...finTechPricing, ...healthcarePricing ]; // Helper functions export const getPricingByServiceId = (serviceI)
-  d: string): ExpandedServicePricing | undefined => return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)}; export const getPricingByCategory = (categor)
-  y: string): ExpandedServicePricing[] => return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)}; export const getPricingBySubcategory = (subcategor)
-  y: string): ExpandedServicePricing[] => return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)}; export const searchPricing = (quer)
-  y: string): ExpandedServicePricing[] => const lowercaseQuery = query.toLowerCase(), return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.serviceName.toLowerCase().includes(lowercaseQuery) || pricing.category.toLowerCase().includes(lowercaseQuery) || pricing.subcategory.toLowerCase().includes(lowercaseQuery) )};'
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; // Export all pricing data export const ALL_EXPANDED_SERVICES_PRICING = Service Feature => const lowercaseQuery = query.toLowerCase(), return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.serviceName.toLowerCase().includes(lowercaseQuery) || pricing.category.toLowerCase().includes(lowercaseQuery) || pricing.subcategory.toLowerCase().includes(lowercaseQuery) )}'

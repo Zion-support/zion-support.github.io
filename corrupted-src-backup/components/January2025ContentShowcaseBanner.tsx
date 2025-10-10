@@ -128,5 +128,4 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
               <BookOpen, classNam, e='w-5 h-5' /></BookOpen>
               Explore, Complete, Library;
               <Users, classNam, e='w-5 h-5' /></Users>
-              Join, AI, Community;
-}
+              Join, AI, Community}

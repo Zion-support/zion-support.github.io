@@ -180,8 +180,7 @@ const AIMusicCompositionPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
+  )}
 export default AIMusicCompositionPage</a>
   </p>
   </a>

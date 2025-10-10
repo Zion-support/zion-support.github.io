@@ -85,8 +85,7 @@ const QuantumComputingPage: React.FC = () => {
       </main>
       <Footer />
     </React.Fragment>
-  );
-};
+  )}
 export default QuantumComputingPage;
   </a>
   </a>

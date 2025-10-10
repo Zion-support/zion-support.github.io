@@ -3,7 +3,7 @@ export const analyticsUtils = {
   // Performance monitoring;
   measurePerformance: () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const _navigation = performance.getEntriesByType('navigation')[0];
+      const _navigation = performance.getEntriesByType('navigation')Service Feature;
       const _paint = performance.getEntriesByType('paint');
 
       const metrics = {
@@ -13,12 +13,10 @@ export const analyticsUtils = {
         firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0;
         firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
 export const analyticsUtils = {/* TODO: Fix JSX expression */}
-      };
+      }
 
-      return metrics;
-    }
-    return null;
-  },
+      return metrics}
+    return null},
 
   // Error tracking;
   trackError: (error, context = {}) => {
@@ -31,12 +29,11 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
       context,
   // Error tracking,
   trackError: (error, context = {}) => {/* TODO: Fix JSX expression */}
-    };
+    }
 
     // Send to analytics service;
     //     // You can integrate with services like Sentry, LogRocket, etc.
-    return errorData;
-  },
+    return errorData},
 
   // User behavior tracking;
   trackUserInteraction: (action, element, metadata = {}) => {
@@ -50,10 +47,9 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
       metadata,
   // User behavior tracking,
   trackUserInteraction: (action, element, metadata = {}) => {/* TODO: Fix JSX expression */}
-    };
+    }
 
-    //     return interactionData;
-  },
+    //     return interactionData},
 
   // Core Web Vitals;
   measureCoreWebVitals: () => {,
@@ -67,6 +63,5 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
   // Core Web Vitals,
   measureCoreWebVitals: () => {/* TODO: Fix JSX expression */}
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
-      });
-    }
-  }};
+      })}
+  }}

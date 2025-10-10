@@ -271,7 +271,6 @@ export default function PrivacyPage() {
         </div>
       </section>
     </div>
-  );
-}
+  )}
   </a>
   </h1>

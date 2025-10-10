@@ -5,100 +5,14 @@
   price: string;
   period: string;
   description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
-    address: string;
-export const advancedITServices: AdvancedITService[] = [
+  features: stringService Feature = [
     id: 'quantum-cloud-platform',
     name: 'Quantum Cloud Platform',
     tagline: 'Next-generation quantum computing in the cloud',
     price: '$9,999',
     period: '/month',
     description: 'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical-quantum workflows for enterprise applications.',
-    features: [,
-  i,
-  d: string;
-  nam,
-  e: string;
-  taglin,
-  e: string;
-  pric,
-  e: string,
-  perio,
-  d: string,
-  descriptio,
-  n: string;
-  feature,
-  s: string[];
-  popula,
-  r: boolean;
-  ico,
-  n: string;
-  colo,
-  r: string;
-  textColo,
-  r: string;
-  lin,
-  k: string;
-  marketPositio,
-  n: string;
-  targetAudienc,
-  e: string;
-  trialDay,
-  s: number;
-  setupTim,
-  e: string;
-  categor,
-  y: string;
-  realServic,
-  e: boolean;
-  technolog,
-  y: string[];
-  integration,
-  s: string[];
-  useCase,
-  s: string[];
-  ro,
-  i: string;
-  competitor,
-  s: string[];
-  marketSiz,
-  e: string;
-  growthRat,
-  e: string;
-  varian,
-  t: string;
-  contactInf,
-  o: unknown;
-    mobil,
-  e: string;
-    emai,
-  l: string;
-    addres,
-  s: string;
-export const,
-  advancedITServices: AdvancedITService[] = [,
+    features: Service Feature = [,
     i,
   d: 'quantum-cloud-platform',
     nam,
@@ -153,8 +67,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 8;
     rating: 4.9;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'edge-computing-orchestrator',
     name: 'Edge Computing Orchestrator',
     tagline: 'Intelligent edge computing management and optimization',
@@ -267,8 +180,7 @@ export const,
   g: number;
   review,
   s: number;
-;
-export const advancedITServices: AdvancedITService[] = [
+export const advancedITServices: AdvancedITServiceService Feature = [
     id: 'quantum - cloud - platform',
     name: 'Quantum Cloud Platform',
     tagline: 'Next - generation quantum computing in the cloud',
@@ -276,7 +188,7 @@ export const advancedITServices: AdvancedITService[] = [
     period: '/month',
     description: unknown;
 export const,
-  advancedITServices: AdvancedITService[] = [,
+  advancedITServices: AdvancedITServiceService Feature = [,
     i,
   d: 'quantum - cloud - platform',
     nam,
@@ -382,8 +294,7 @@ export const,
     launch_date: '2024 - 12 - 01'
     customers: 8;
     rating: 4 && 4.9;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'edge - computing - orchestrator',
     name: 'Edge Computing Orchestrator',
     tagline: 'Intelligent edge computing management and optimization',
@@ -519,8 +430,7 @@ export const,
     launchDate: '2024-10-01'
     customers: 156;
     rating: 4 && 4.7;
-    reviews: 89;
-  },
+    reviews: 89},
     id: 'zero - trust - security - platform',
     name: 'Zero Trust Security Platform',
     tagline: 'Comprehensive zero trust security implementation',
@@ -802,8 +712,7 @@ export const,
     launchDate: '2024-10-01'
     customers: 89;
     rating: 4.8;
-    reviews: 45;
-  }
+    reviews: 45}
   },
       'AI-powered automation',
     id: 'ai - powered - devops - platform',
@@ -944,8 +853,7 @@ export const,
     launchDate: '2024-08-01'
     customers: 234;
     rating: 4 && 4.6;
-    reviews: 123;
-  },
+    reviews: 123},
     id: 'blockchain - enterprise - platform',
     name: 'Blockchain Enterprise Platform',
     tagline: 'Enterprise - grade blockchain solutions and infrastructure',
@@ -1039,8 +947,7 @@ export const,
     launchDate: '2024-07-01'
     customers: 67;
     rating: 4 && 4.7;
-    reviews: 34;
-  },
+    reviews: 34},
     id: 'quantum - data - center',
     name: 'Quantum Data Center',
     tagline: 'Next - generation quantum - enhanced data center infrastructure',
@@ -1214,8 +1121,7 @@ export const,
     launch_date: '2024 - 11 - 01'
     customers: 12;
     rating: 4 && 4.9;
-    reviews: 6;
-  },
+    reviews: 6},
     id: 'ai - powered - network - security',
     name: 'AI - Powered Network Security',
     tagline: 'Intelligent network security with AI threat detection',
@@ -1357,8 +1263,7 @@ export const,
     launch_date: '2024 - 09 - 15'
     customers: 178;
     rating: 4 && 4.7;
-    reviews: 89;
-  },
+    reviews: 89},
     id: 'quantum - iot - platform',
     name: 'Quantum IoT Platform',
     tagline: 'Quantum - enhanced IoT with AI intelligence',
@@ -1500,8 +1405,7 @@ export const,
     launch_date: '2024 - 08 - 15'
     customers: 234;
     rating: 4 && 4.6;
-    reviews: 123;
-  },
+    reviews: 123},
     id: 'ai - powered - cloud - migration',
     name: 'AI - Powered Cloud Migration',
     tagline: 'Intelligent cloud migration and optimization',
@@ -1592,8 +1496,7 @@ export const,
     launchDate: '2024-10-01'
     customers: 89;
     rating: 4 && 4.8;
-    reviews: 45;
-  }];      mobile: '+1 302 464 0950'
+    reviews: 45}];      mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     realImplementation: true;
@@ -1682,29 +1585,24 @@ export const,
     review,
   s: 45}
 ];
-;
 export interface AdvancedITService {/* TODO: Fix JSX expression */}
   }
 ];
-];
-;
-  }
+]}
 ];
 ];
 export interface AdvancedITService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
+  }
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
-;
-export const advancedITServices: AdvancedITService[] = [;
+  reviews: number}
+export const advancedITServices: AdvancedITServiceService Feature = [;
   {
     id: 'quantum-cloud-platform';
     name: 'Quantum Cloud Platform';
@@ -1739,15 +1637,14 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
+      website: 'https://ziontechgroup.com'}
     realImplementation: true;
     implementationDetails: 'Complete quantum cloud platform with quantum computers, algorithm libraries, and hybrid workflow capabilities.';
     launchDate: '2024-12-01';
     customers: 8;
     rating: 4.9;
-    reviews: 4;
-  };
-  {;
+    reviews: 4}
+  {
     id: 'edge-computing-orchestrator';
     name: 'Edge Computing Orchestrator';
     tagline: 'Intelligent edge computing management and optimization';
@@ -1781,15 +1678,14 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
+      website: 'https://ziontechgroup.com'}
     realImplementation: true;
     implementationDetails: 'Complete edge computing orchestration platform with intelligent resource management and real-time optimization.';
     launchDate: '2024-10-01';
     customers: 156;
     rating: 4.7;
-    reviews: 89;
-  };
-  {;
+    reviews: 89}
+  {
     id: 'zero-trust-security-platform';
     name: 'Zero Trust Security Platform';
     tagline: 'Comprehensive zero trust security implementation';
@@ -1823,15 +1719,14 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
+      website: 'https://ziontechgroup.com'}
     realImplementation: true;
     implementationDetails: 'Complete zero trust security platform with continuous verification and advanced threat detection capabilities.';
     launchDate: '2024-09-01';
     customers: 89;
     rating: 4.8;
-    reviews: 45;
-  };
-  {;
+    reviews: 45}
+  {
     id: 'ai-powered-devops-platform';
     name: 'AI-Powered DevOps Platform';
     tagline: 'Intelligent DevOps automation and optimization';
@@ -1865,15 +1760,14 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
+      website: 'https://ziontechgroup.com'}
     realImplementation: true;
     implementationDetails: 'AI-powered DevOps platform with intelligent automation, testing, and monitoring capabilities.';
     launchDate: '2024-08-01';
     customers: 234;
     rating: 4.6;
-    reviews: 123;
-  };
-  {;
+    reviews: 123}
+  {
     id: 'blockchain-enterprise-platform';
     name: 'Blockchain Enterprise Platform';
     tagline: 'Enterprise-grade blockchain solutions and infrastructure';
@@ -1907,15 +1801,14 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
+      website: 'https://ziontechgroup.com'}
     realImplementation: true;
     implementationDetails: 'Complete enterprise blockchain platform with smart contracts, token management, and compliance features.';
     launchDate: '2024-07-01';
     customers: 67;
     rating: 4.7;
-    reviews: 34;
-  };
-  {;
+    reviews: 34}
+  {
     id: 'quantum-data-center';
     name: 'Quantum Data Center';
     tagline: 'Next-generation quantum-enhanced data center infrastructure';
@@ -1949,15 +1842,14 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
+      website: 'https://ziontechgroup.com'}
     realImplementation: true;
     implementationDetails: 'Quantum-enhanced data center with quantum computing integration and AI optimization capabilities.';
     launchDate: '2024-11-01';
     customers: 12;
     rating: 4.9;
-    reviews: 6;
-  };
-  {;
+    reviews: 6}
+  {
     id: 'ai-powered-network-security';
     name: 'AI-Powered Network Security';
     tagline: 'Intelligent network security with AI threat detection';
@@ -1991,15 +1883,14 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
+      website: 'https://ziontechgroup.com'}
     realImplementation: true;
     implementationDetails: 'AI-powered network security platform with real-time threat detection and automated response capabilities.';
     launchDate: '2024-09-15';
     customers: 178;
     rating: 4.7;
-    reviews: 89;
-  };
-  {;
+    reviews: 89}
+  {
     id: 'quantum-iot-platform';
     name: 'Quantum IoT Platform';
     tagline: 'Quantum-enhanced IoT with AI intelligence';
@@ -2033,15 +1924,14 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
+      website: 'https://ziontechgroup.com'}
     realImplementation: true;
     implementationDetails: 'Quantum-enhanced IoT platform with quantum encryption and AI-powered analytics capabilities.';
     launchDate: '2024-08-15';
     customers: 234;
     rating: 4.6;
-    reviews: 123;
-  };
-  {;
+    reviews: 123}
+  {
     id: 'ai-powered-cloud-migration';
     name: 'AI-Powered Cloud Migration';
     tagline: 'Intelligent cloud migration and optimization';
@@ -2075,7 +1965,7 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
+      website: 'https://ziontechgroup.com'}
     realImplementation: true;
     implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.';
     launchDate: '2024-10-01';
@@ -2094,9 +1984,8 @@ export const advancedITServices: AdvancedITService[] = [;
   g: number;
   review,
   s: number}
-;
 export const,
-  advancedITServices: AdvancedITService[] = [;
+  advancedITServices: AdvancedITServiceService Feature = [;
   {/* TODO: Fix JSX expression */}
   t: 'quantum-cloud'}
     contactInf,
@@ -2110,7 +1999,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    };
+    }
     realImplementatio,
   n: true;
     implementationDetail,
@@ -2122,7 +2011,7 @@ export const,
     ratin,
   g: 4.9;
     review,
-  s: 4};
+  s: 4}
   {/* TODO: Fix JSX expression */}
   t: 'edge-futuristic'}
     contactInf,
@@ -2136,7 +2025,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    };
+    }
     realImplementatio,
   n: true;
     implementationDetail,
@@ -2148,7 +2037,7 @@ export const,
     ratin,
   g: 4.7;
     review,
-  s: 89};
+  s: 89}
   {/* TODO: Fix JSX expression */}
   t: 'zero-trust-futuristic'}
     contactInf,
@@ -2162,7 +2051,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    };
+    }
     realImplementatio,
   n: true;
     implementationDetail,
@@ -2174,7 +2063,7 @@ export const,
     ratin,
   g: 4.8;
     review,
-  s: 45};
+  s: 45}
   {/* TODO: Fix JSX expression */}
   t: 'ai-devops-futuristic'}
     contactInf,
@@ -2188,7 +2077,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    };
+    }
     realImplementatio,
   n: true;
     implementationDetail,
@@ -2200,7 +2089,7 @@ export const,
     ratin,
   g: 4.6;
     review,
-  s: 123};
+  s: 123}
   {/* TODO: Fix JSX expression */}
   t: 'blockchain-futuristic'}
     contactInf,
@@ -2214,7 +2103,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    };
+    }
     realImplementatio,
   n: true;
     implementationDetail,
@@ -2226,7 +2115,7 @@ export const,
     ratin,
   g: 4.7;
     review,
-  s: 34};
+  s: 34}
   {/* TODO: Fix JSX expression */}
   t: 'quantum-infrastructure'}
     contactInf,
@@ -2240,7 +2129,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    };
+    }
     realImplementatio,
   n: true;
     implementationDetail,
@@ -2252,7 +2141,7 @@ export const,
     ratin,
   g: 4.9;
     review,
-  s: 6};
+  s: 6}
   {/* TODO: Fix JSX expression */}
   t: 'ai-network-futuristic'}
     contactInf,
@@ -2266,7 +2155,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    };
+    }
     realImplementatio,
   n: true;
     implementationDetail,
@@ -2278,7 +2167,7 @@ export const,
     ratin,
   g: 4.7;
     review,
-  s: 89};
+  s: 89}
   {/* TODO: Fix JSX expression */}
   t: 'quantum-iot-futuristic'}
     contactInf,
@@ -2292,7 +2181,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    };
+    }
     realImplementatio,
   n: true;
     implementationDetail,
@@ -2304,7 +2193,7 @@ export const,
     ratin,
   g: 4.6;
     review,
-  s: 123};
+  s: 123}
   {/* TODO: Fix JSX expression */}
   t: 'ai-migration-futuristic'}
     contactInf,
@@ -2318,7 +2207,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    };
+    }
     realImplementatio,
   n: true;
     implementationDetail,
@@ -2341,31 +2230,7 @@ i,
   e: string, perio,
   d: string, descriptio,
   n: string; feature,
-  s: string[]; popula,
-  r: boolean; ico,
-  n: string; colo,
-  r: string; textColo,
-  r: string; lin,
-  k: string; marketPositio,
-  n: string; targetAudienc,
-  e: string; trialDay,
-  s: number; setupTim,
-  e: string; categor,
-  y: string; realServic,
-  e: boolean; technolog,
-  y: string[]; integration,
-  s: string[]; useCase,
-  s: string[]; ro,
-  i: string; competitor,
-  s: string[]; marketSiz,
-  e: string; growthRat,
-  e: string; varian,
-  t: string; contactInf,
-  o: mobil,
-  e: string; emai,
-  l: string; addres,
-  s: string, export const,
-  advancedITServices: AdvancedITService[] = [ i,
+  s: stringService Feature = [ i,
   d: 'quantum-cloud-platform',' nam,
   e: 'Quantum Cloud Platform',' taglin,
   e: 'Next-generation quantum computing in the cloud',' pric,
@@ -2420,7 +2285,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number; export const,
-  advancedITServices: AdvancedITService[] = [, ' i,
+  advancedITServices: AdvancedITServiceService Feature = [, ' i,
   d: 'quantum - cloud - platform',' nam,
   e: 'Quantum Cloud Platform',' taglin,
   e: 'Next - generation quantum computing in the cloud',' pric,
@@ -2819,103 +2684,103 @@ i,
   e: '2024-10-01' customer,
   s: 89, ratin,
   g: 4 && 4.8, review,
-  s: 45 } ]; export interface AdvancedITService {; } ]; ]; } ]; ]; export interface AdvancedITService {/* TODO: Fix JSX expression */}
+  s: 45 } ]; export interface AdvancedITService { } ]; ]} ]; ]; export interface AdvancedITService {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} }; realImplementatio,
+  e: string} } realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number} ; export const,
-  advancedITServices: AdvancedITService[] = [; {/* TODO: Fix JSX expression */}
+  s: number} export const,
+  advancedITServices: AdvancedITServiceService Feature = [; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' }; realImplementatio,
+  s://ziontechgroup.com' } realImplementatio,
   n: true;' implementationDetail,
   s: 'Complete quantum cloud platform with quantum computers, algorithm libraries, and hybrid workflow capabilities.';' launchDat,
   e: '2024-12-01'; customer,
   s: 8; ratin,
   g: 4.9; review,
-  s: 4}; {/* TODO: Fix JSX expression */}
+  s: 4} {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' }; realImplementatio,
+  s://ziontechgroup.com' } realImplementatio,
   n: true;' implementationDetail,
   s: 'Complete edge computing orchestration platform with intelligent resource management and real-time optimization.';' launchDat,
   e: '2024-10-01'; customer,
   s: 156; ratin,
   g: 4.7; review,
-  s: 89}; {/* TODO: Fix JSX expression */}
+  s: 89} {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' }; realImplementatio,
+  s://ziontechgroup.com' } realImplementatio,
   n: true;' implementationDetail,
   s: 'Complete zero trust security platform with continuous verification and advanced threat detection capabilities.';' launchDat,
   e: '2024-09-01'; customer,
   s: 89; ratin,
   g: 4.8; review,
-  s: 45}; {/* TODO: Fix JSX expression */}
+  s: 45} {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' }; realImplementatio,
+  s://ziontechgroup.com' } realImplementatio,
   n: true;' implementationDetail,
   s: 'AI-powered DevOps platform with intelligent automation, testing, and monitoring capabilities.';' launchDat,
   e: '2024-08-01'; customer,
   s: 234; ratin,
   g: 4.6; review,
-  s: 123}; {/* TODO: Fix JSX expression */}
+  s: 123} {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' }; realImplementatio,
+  s://ziontechgroup.com' } realImplementatio,
   n: true;' implementationDetail,
   s: 'Complete enterprise blockchain platform with smart contracts, token management, and compliance features.';' launchDat,
   e: '2024-07-01'; customer,
   s: 67; ratin,
   g: 4.7; review,
-  s: 34}; {/* TODO: Fix JSX expression */}
+  s: 34} {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' }; realImplementatio,
+  s://ziontechgroup.com' } realImplementatio,
   n: true;' implementationDetail,
   s: 'Quantum-enhanced data center with quantum computing integration and AI optimization capabilities.';' launchDat,
   e: '2024-11-01'; customer,
   s: 12; ratin,
   g: 4.9; review,
-  s: 6}; {/* TODO: Fix JSX expression */}
+  s: 6} {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' }; realImplementatio,
+  s://ziontechgroup.com' } realImplementatio,
   n: true;' implementationDetail,
   s: 'AI-powered network security platform with real-time threat detection and automated response capabilities.';' launchDat,
   e: '2024-09-15'; customer,
   s: 178; ratin,
   g: 4.7; review,
-  s: 89}; {/* TODO: Fix JSX expression */}
+  s: 89} {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' }; realImplementatio,
+  s://ziontechgroup.com' } realImplementatio,
   n: true;' implementationDetail,
   s: 'Quantum-enhanced IoT platform with quantum encryption and AI-powered analytics capabilities.';' launchDat,
   e: '2024-08-15'; customer,
   s: 234; ratin,
   g: 4.6; review,
-  s: 123}; {/* TODO: Fix JSX expression */}
+  s: 123} {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' }; realImplementatio,
+  s://ziontechgroup.com' } realImplementatio,
   n: true;' implementationDetail,
   s: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.';' launchDat,
   e: '2024-10-01'; customer,
   s: 89; ratin,
   g: 4.8; review,
-  s: 45} export interface AdvancedITService {; } ]; '
+  s: 45} export interface AdvancedITService { } ]; '

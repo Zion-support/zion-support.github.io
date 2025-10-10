@@ -293,5 +293,4 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
 })
                 ></Link>
                   <Target, classNam, e='w-5 h-5' /></Target>
-                  Request, Dem, o;
-}
+                  Request, Dem, o}

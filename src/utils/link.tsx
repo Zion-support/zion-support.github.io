@@ -1,6 +1,6 @@
 import React from 'react';
-interface LinkProps {// TODO: Add content;}
-};
+interface LinkProps {// TODO: Add content}
+}
   href: string;,
     children: React.ReactNode
   className?: string
@@ -10,7 +10,7 @@ interface LinkProps {// TODO: Add content;}
   'aria-label'?: string
 }
 export const Link: React.FC;
-          <LinkProps> = ({// TODO: Add content;}
+          <LinkProps> = ({// TODO: Add content}
 }
 //   href,
 //   children,
@@ -24,11 +24,10 @@ export const Link: React.FC;
     }
     // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
       e.preventDefault();
-      window.location.href = href;
-    }
+      window.location.href = href}
   }
   return (<div>Coming Soon</div>)
   )

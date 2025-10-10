@@ -9,323 +9,7 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
 const, EdgeComputingA, I: Rea, c, t.FC = () => {
-  const, feature, s = [
-    {
-      i, c, o;
-  n: C, p, u;
-      tit, l, e: "Edge, AI, Processing","
-      descripti, o, n: "Deploy, AI, models directly, on, edge devices, for, real-time, inference, without cloud, dependenc, y.","
-      tit, l, e: "Edge, AI, Processing",";
-      descripti, o, n: "Deploy, AI, models directly, on, edge devices, for, real-time, inference, without cloud, dependenc, y.",";
-      benef, i, t: "S, u, b-10 ms, response, times"
-    }
-    {
-      ic, o, n: Z, a, p;
-      tit, l, e: "Re, a, l-Time, Analytic, s","
-      descripti, o, n: "Process, and, analyze data, at, the edge, for, instant insights, and, immediate action, trigger, s.","
-      tit, l, e: "Re, a, l-Time, Analytic, s",";
-      descripti, o, n: "Process, and, analyze data, at, the edge, for, instant insights, and, immediate action, trigger, s.",";
-      benef, i, t: "99.9% uptime, with, offline capabili, t, y"
-    }
-    {
-      ic, o, n: Wi, f, i;
-      tit, l, e: "L, o, w-Latency, Communicatio, n","
-      descripti, o, n: "Optimized, protocols, for minimal, latency, between edge, devices, and central, system, s.","
-      tit, l, e: "L, o, w-Latency, Communicatio, n",";
-      descripti, o, n: "Optimized, protocols, for minimal, latency, between edge, devices, and central, system, s.",";
-      benef, i, t: "90% reduction, in, network laten, c, y"
-    }
-    {
-      ic, o, n: Shie, l, d;
-      tit, l, e: "Enhanced, Securit, y","
-      descripti, o, n: "Data, processing, at the, edge, reduces exposure, and, provides local, security, controls.","
-      tit, l, e: "Enhanced, Securit, y",";
-      descripti, o, n: "Data, processing, at the, edge, reduces exposure, and, provides local, security, controls.",";
-      benef, i, t: "Zero, data, transmission vulnerabiliti, e, s"
-    }
-    {
-      ic, o, n: Clo, c, k;
-      tit, l, e: "Continuous, Operatio, n","
-      descripti, o, n: "Edge, devices, operate independent, l, y, ensuring, functionality, even during, network, outages.","
-      tit, l, e: "Continuous, Operatio, n",";
-      descripti, o, n: "Edge, devices, operate independent, l, y, ensuring, functionality, even during, network, outages.",";
-      benef, i, t: "1, 0, 0% local, processing, capability"
-    }
-    {
-      ic, o, n: Use, r, s;
-      tit, l, e: "Scalable, Deploymen, t","
-      descripti, o, n: "Easily, scale, from single, devices, to thousands, of, edge nodes, across, multiple locatio, n, s.","
-      tit, l, e: "Scalable, Deploymen, t",";
-      descripti, o, n: "Easily, scale, from single, devices, to thousands, of, edge nodes, across, multiple locatio, n, s.",";
-      benef, i, t: "Unlimited, edge, node deployme, n, t"
-    }
-  ];
-  const, pricin, g = [
-    {
-      na, m, e: "Edge, Starte, r"
-      pri, c, e: "$1,9, 9, 9"
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Perfect, for, small-scale, edge, deployments and, proof, of concep, t, s"
-      featur, e, s: [,
-        "Up, to, 10 edge, device, s"
-        "Basic, AI, model deployme, n, t"
-        "Standard, monitorin, g"
-        "Email, suppor, t"
-        "Monthly, analytics, reports"
-        "Basic, security, features"
-        "Standard, protocol, s"
-        "Cloud, backup, integration"
-      ]
-      popul, a, r: fal, s, e;
-    }
-    {
-      na, m, e: "Edge, Professiona, l"
-      pri, c, e: "$5,9, 9, 9"
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Ideal, for, medium-scale, deployments, with advanced, requirement, s"
-      featur, e, s: [,
-        "Up, to, 100 edge, device, s"
-        "Advanced, AI, model deployme, n, t"
-        "Re, a, l-time, monitorin, g & alerti, n, g"
-        "Priority, suppor, t"
-        "Custom, analytics, dashboards"
-        "Advanced, securit, y & encrypti, o, n"
-        "Optimized, protocol, s"
-        "Hybrid, cloud, integration"
-        "Custom, model, training"
-        "API, acces, s"
-      ]
-      popul, a, r: tr, u, e;
-    }
-    {
-      na, m, e: "Edge, Enterpris, e"
-      pri, c, e: "$15,9, 9, 9"
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Complete, solution, for lar, g, e-scale, enterprise, edge deploymen, t, s"
-      featur, e, s: [,
-        "Unlimited, edge, devices"
-        "Custom, AI, model developme, n, t"
-        "Enterprise, monitoring, suite"
-        "Dedicated, edge, specialist"
-        "Custom, analytic, s & reporti, n, g"
-        "Enterprise, security, suite"
-        "Custom, protocol, development"
-        "Mul, t, i-cloud, integratio, n"
-        "On-premise, deploymen, t"
-        "24/7, monitorin, g & suppo, r, t"
-        "SLA, guarante, e"
-        "Traini, n, g & consultati, o, n"
-      ]
-      popul, a, r: fal, s, e;
-      n, a, m;
-  e: "Edge, Starte, r",";
-      pri, c, e: "$1,9, 9, 9",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Perfect, for, small-scale, edge, deployments and, proof, of concep, t, s",";
-      featur, e, s: [,
-        "Up, to, 10 edge, device, s",";
-        "Basic, AI, model deployme, n, t",";
-        "Standard, monitorin, g",";
-        "Email, suppor, t",";
-        "Monthly, analytics, reports",";
-        "Basic, security, features",";
-        "Standard, protocol, s",";
-        "Cloud, backup, integration"
-      ]
-      popul, a, r: fal, s, e;
-    }
-    {
-      na, m, e: "Edge, Professiona, l",";
-      pri, c, e: "$5,9, 9, 9",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Ideal, for, medium-scale, deployments, with advanced, requirement, s",";
-      featur, e, s: [,
-        "Up, to, 100 edge, device, s",";
-        "Advanced, AI, model deployme, n, t",";
-        "Re, a, l-time, monitorin, g & alerti, n, g",";
-        "Priority, suppor, t",";
-        "Custom, analytics, dashboards",";
-        "Advanced, securit, y & encrypti, o, n",";
-        "Optimized, protocol, s",";
-        "Hybrid, cloud, integration",";
-        "Custom, model, training",";
-        "API, acces, s"
-      ]
-      popul, a, r: tr, u, e;
-    }
-    {
-      na, m, e: "Edge, Enterpris, e",";
-      pri, c, e: "$15,9, 9, 9",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Complete, solution, for lar, g, e-scale, enterprise, edge deploymen, t, s",";
-      featur, e, s: [,
-        "Unlimited, edge, devices",";
-        "Custom, AI, model developme, n, t",";
-        "Enterprise, monitoring, suite",";
-        "Dedicated, edge, specialist",";
-        "Custom, analytic, s & reporti, n, g",";
-        "Enterprise, security, suite",";
-        "Custom, protocol, development",";
-        "Mul, t, i-cloud, integratio, n",";
-        "On-premise, deploymen, t",";
-        "24/7, monitorin, g & suppo, r, t",";
-        "SLA, guarante, e",";
-        "Traini, n, g & consultati, o, n"
-      ]
-      popul, a, r: fal, s, e;
-    }
-  ];
-  const, testimonial, s = [
-    {
-      na, m, e: "Robert, Ki, m","
-      ro, l, e: "C, T, O, Manufacturing, Solution, s","
-      conte, n, t: "Edge, AI, processing reduced, our, production line, response, times from, 500 ms, to 8, m, s. This, enabled, real-time, quality, control that, increased, our product, quality, by 40%.","
-      na, m, e: "Robert, Ki, m",";
-      ro, l, e: "C, T, O, Manufacturing, Solution, s",";
-      conte, n, t: "Edge, AI, processing reduced, our, production line, response, times from, 500ms, to 8, m, s. This, enabled, real-time, quality, control that, increased, our product, quality, by 40%.",";
-      rati, n, g: 5;
-      compa, n, y: "Manufacturing, Solution, s"
-    }
-    {
-      na, m, e: "Lisa, Che, n","
-      ro, l, e: "VP, Engineerin, g, Smart, City, Initiative","
-      conte, n, t: "The, edge, computing platform, enabled, us to, process, traffic data, locall, y, reducing, network, costs by, 6, 0% while, improving, traffic management, response, times by, 10, x.","
-      na, m, e: "Lisa, Che, n",";
-      ro, l, e: "VP, Engineerin, g, Smart, City, Initiative",";
-      conte, n, t: "The, edge, computing platform, enabled, us to, process, traffic data, locall, y, reducing, network, costs by, 6, 0% while, improving, traffic management, response, times by, 10, x.",";
-      rati, n, g: 5;
-      compa, n, y: "Smart, City, Initiative"
-    }
-    {
-      na, m, e: "Dr. Michael, Rodrigue, z","
-      ro, l, e: "Head, of, Innovation, Healthcare, System, s","
-      conte, n, t: "Edge, AI, deployment in, our, medical devices, enabled, real-time, patient, monitoring with, zero, network dependen, c, y. Patient, safety, improved significantly, with, instant aler, t, s.","
-      na, m, e: "Dr. Michael, Rodrigue, z",";
-      ro, l, e: "Head, of, Innovation, Healthcare, System, s",";
-      conte, n, t: "Edge, AI, deployment in, our, medical devices, enabled, real-time, patient, monitoring with, zero, network dependen, c, y. Patient, safety, improved significantly, with, instant aler, t, s.",";
-      rati, n, g: 5;
-      compa, n, y: "Healthcare, System, s"
-    }
-  ];
-  const, useCase, s = [
-    {
-      tit, l, e: "Industrial, Io, T","
-      ic, o, n: Monit, o, r;
-      descripti, o, n: "Re, a, l-time, monitoring, and control, of, industrial equipment, with, predictive maintenance, capabilitie, s.","
-      benefi, t, s: ["50% reduction, in, downtime", "30% improvement, in, efficiency", "40% cost, savings, in maintenan, c, e"]"
-    }
-    {
-      tit, l, e: "Smart, Citie, s","
-      ic, o, n: Glo, b, e;
-      descripti, o, n: "Intelligent, traffic, management, environmental, monitorin, g, and, public, safety syste, m, s.","
-      benefi, t, s: ["60% reduction, in, traffic congesti, o, n", "25% improvement, in, air quali, t, y", "35% faster, emergency, response"]"
-    }
-    {
-      tit, l, e: "Healthca, r, e","
-      ic, o, n: Smartpho, n, e;
-      descripti, o, n: "Re, a, l-time, patient, monitoring, medical, device, control, and, emergency, response syste, m, s.","
-      benefi, t, s: ["45% improvement, in, patient outcom, e, s", "70% faster, emergency, detection", "50% reduction, in, hospital readmissio, n, s"]"
-    }
-    {
-      tit, l, e: "Reta, i, l & Commer, c, e","
-      ic, o, n: Databa, s, e;
-      descripti, o, n: "Intelligent, inventory, management, customer, behavior, analysis, and, automated, checkout syste, m, s.","
-      benefi, t, s: ["35% improvement, in, inventory accura, c, y", "25% increase, in, sales", "40% reduction, in, checkout ti, m, e"]"
-      tit, l, e: "Industrial, Io, T",";
-      ic, o, n: Monit, o, r;
-      descripti, o, n: "Re, a, l-time, monitoring, and control, of, industrial equipment, with, predictive maintenance, capabilitie, s.",";
-      benefi, t, s: ["50% reduction, in, downtime", "30% improvement, in, efficiency", "40% cost, savings, in maintenan, c, e"]";
-    }
-    {
-      tit, l, e: "Smart, Citie, s",";
-      ic, o, n: Glo, b, e;
-      descripti, o, n: "Intelligent, traffic, management, environmental, monitorin, g, and, public, safety syste, m, s.",";
-      benefi, t, s: ["60% reduction, in, traffic congesti, o, n", "25% improvement, in, air quali, t, y", "35% faster, emergency, response"]";
-    }
-    {
-      tit, l, e: "Healthca, r, e",";
-      ic, o, n: Smartpho, n, e;
-      descripti, o, n: "Re, a, l-time, patient, monitoring, medical, device, control, and, emergency, response syste, m, s.",";
-      benefi, t, s: ["45% improvement, in, patient outcom, e, s", "70% faster, emergency, detection", "50% reduction, in, hospital readmissio, n, s"]";
-    }
-    {
-      tit, l, e: "Reta, i, l & Commer, c, e",";
-      ic, o, n: Databa, s, e;
-      descripti, o, n: "Intelligent, inventory, management, customer, behavior, analysis, and, automated, checkout syste, m, s.",";
-      benefi, t, s: ["35% improvement, in, inventory accura, c, y", "25% increase, in, sales", "40% reduction, in, checkout ti, m, e"]";
-const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, pricin, g = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, testimonial, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, useCase, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, technologie, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
+  const, feature, s = Service Feature;
   return(<React.Fragment>
       <Helmet>
         <title>Edge, Computing, AI - Zion, Tech, Group | Re, a, l-Time, Edge, Intelligence</title>
@@ -634,8 +318,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       ))}
                     </ul>
                   </d, i, v>
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -788,8 +471,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
                   </d, i, v>)
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -877,7 +559,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 pl, a, n.popul, a, r;
 ? 'bg-te, a, l-600, tex, t-white, hove, r: bg-te, a, l-7, 0, 0'
 ? 'bg-te, a, l-600, tex, t-white, hov, e;
-  r: bg-te, a, l-7, 0, 0',';}
+  r: bg-te, a, l-7, 0, 0','}
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
@@ -947,7 +629,7 @@ pl, a, n.popul, a, r;
               {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (</div>
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <div, className="flex, item, s-center, m, b-4">";
-                    {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>
+                    {Service Feature.m, a, p((_, i) => (</div>
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
             </d, i, v>"
             <div, className="gri, d, m,"
@@ -1038,7 +720,5 @@ pl, a, n.popul, a, r;
       </ma, i, n>
       <Foot, e, r   /></Foot>
     </React.Fragment>
-  );
-};
-export default EdgeComputingAI;
-}}}}"`
+  )}
+export default EdgeComputingAI}}}}"`

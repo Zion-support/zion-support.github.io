@@ -4,21 +4,7 @@ import path from 'path';
 import { glob } from 'glob';
 
 // Patterns to match console statements;
-const consolePatterns = [
-  /console\.log\([^)]*\);?/g,
-  /console\.warn\([^)]*\);?/g,
-  /console\.error\([^)]*\);?/g,
-  /console\.info\([^)]*\);?/g,
-  /console\.debug\([^)]*\);?/g,
-  /console\.trace\([^)]*\);?/g,
-  /console\.table\([^)]*\);?/g,
-  /console\.group\([^)]*\);?/g,
-  /console\.groupEnd\([^)]*\);?/g,
-  /console\.time\([^)]*\);?/g,
-  /console\.timeEnd\([^)]*\);?/g,
-  /console\.count\([^)]*\);?/g,
-  /console\.clear\([^)]*\);?/g;
-];
+const consolePatterns = Service Feature;
 
 // Files to process;
 const filePatterns = [
@@ -66,14 +52,11 @@ function processFile(filePath) {
         newContent = newContent.replace(pattern, '');
 // Function to remove console statements from a file;
 function removeConsoleStatements(filePath) {/* TODO: Fix JSX expression */}
-  from: ${filePath}`);
-    }
+  from: ${filePath}`)}
     
-    return modified;
-  } catch (error) {/* TODO: Fix JSX expression */}`
+    return modified} catch (error) {/* TODO: Fix JSX expression */}`
     // console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Main function;
@@ -104,47 +87,20 @@ async function main() {/* TODO: Fix JSX expression */}
     if (fileRemovedCount > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8');
       console.log(`✅ ${filePath}: Removed ${fileRemovedCount} console statements`);
-      removedStatements += fileRemovedCount;
-    }
+      removedStatements += fileRemovedCount}
 
-    processedFiles++;
-  } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
-  }
+    processedFiles++} catch (error) {
+    console.error(`❌ Error processing ${filePath}:`, error.message)}
 }
 
 async function main() {
   console.log('🚀 Starting console statement removal...\n');
 
   // Get all files to process;
-  const allFiles = [];
-  for (const pattern of filePatterns) {
-    const files = await glob(pattern, {)
-      ignore: excludePatterns),
-      cwd: process.cwd()});
-    allFiles.push(...files);
-  }
+  const allFiles = Service Feature}`) {
+  main()}
 
-  // Remove duplicates;
-  const uniqueFiles = [...new Set(allFiles)];
-  totalFiles = uniqueFiles.length;
-
-  console.log(`📁 Found ${totalFiles} files to process\n`);
-
-  // Process each file;
-  uniqueFiles.forEach(processFile);
-
-  console.log(`\n🎉 Console statement removal completed!`);
-  console.log(`📊 Statistics: `);
-  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
-  console.log(`   - Console statements removed: ${removedStatements}`);
-}
-
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
-}
-
-export { processFile, consolePatterns };
+export { processFile, consolePatterns }
   }
   `
   // console.log(`\n📊 Summar)`
@@ -164,4 +120,4 @@ export { processFile, consolePatterns };
 // Run the script;
 main().catch(console.error);
 
-export { removeConsoleStatements };`
+export { removeConsoleStatements }`

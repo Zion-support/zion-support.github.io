@@ -4,47 +4,40 @@ import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
-}
+  fallback?: ReactNode}
 
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
-}
+  errorInfo?: ErrorInfo}
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false }
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error for monitoring in production
     if (process.env.NODE_ENV === 'production') {
       // In production, you would send this to an error reporting service
-      // Example: errorReportingService.captureException(error, { extra: errorInfo });
-    }
-    this.setState({ error, errorInfo });
-  }
+      // Example: errorReportingService.captureException(error, { extra: errorInfo })}
+    this.setState({ error, errorInfo })}
 
   handleReload = () => {
-    window.location.reload();
-  };
+    window.location.reload()}
 
   handleGoHome = () => {
-    window.location.href = '/';
-  };
+    window.location.href = '/'}
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
-      }
+        return this.props.fallback}
 
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
@@ -104,10 +97,8 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
-    }
-    return this.props.children;
-  }
+      )}
+    return this.props.children}
 }
 
 export default ErrorBoundary;

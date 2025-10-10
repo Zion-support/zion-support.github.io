@@ -11,31 +11,27 @@ const,
     // Add FAQ structured data;
     addFAQStructuredData();
     // Add organization structured data;
-    addOrganizationStructuredData();
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
+    addOrganizationStructuredData()}, Service Feature);
   const updateMetaTag = (nam,
   e: string, conten,
   t: string, attribut)
   e: string = 'name') => {/* TODO: Fix JSX expression */}
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+    let meta = document.querySelector(`metaService Feature`);
     if (!meta) {/* TODO: Fix JSX expression */}
     }
-    meta.setAttribute('content', content);
-  };
+    meta.setAttribute('content', content)}
   const updateCanonicalUrl = (ur)
   l: string) => {/* TODO: Fix JSX expression */}
     }
-    canonical.setAttribute('href', url);
-  };
+    canonical.setAttribute('href', url)}
   const addStructuredData = (dat)
   a: any) => {/* TODO: Fix JSX expression */}
     }
-    document.head.appendChild(script);
-  };
+    document.head.appendChild(script)}
   const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
         }
       ]
-    };
+    }
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(breadcrumbData);
@@ -44,8 +40,7 @@ const,
     const existing = document.getElementById('breadcrumb-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
     }
-    document.head.appendChild(script);
-  };
+    document.head.appendChild(script)}
   const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
           }
         },
@@ -56,7 +51,7 @@ const,
           }
         }
       ]
-    };
+    }
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(faqData);
@@ -65,8 +60,7 @@ const,
     const existing = document.getElementById('faq-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
     }
-    document.head.appendChild(script);
-  };
+    document.head.appendChild(script)}
   const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
       },
       'address': {/* TODO: Fix JSX expression */}
@@ -77,7 +71,7 @@ const,
         'http,
   s://linkedin.com/company/ziontechgroup'
       ]
-    };
+    }
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(organizationData);
@@ -86,8 +80,8 @@ const,
     const existing = document.getElementById('organization-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
     }
-  };
-  const mergedSEOData = { ...defaultSEOData, ...seoData };
+  }
+  const mergedSEOData = { ...defaultSEOData, ...seoData }
   useEffect(() => {
     // Log SEO optimization
     logger.info('SEO optimization applied', { 
@@ -103,9 +97,8 @@ const,
         custom_map: {
           page_type: page
         }
-      });
-    }
-  }, [mergedSEOData, page]);
+      })}
+  }, Service Feature);
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -207,8 +200,7 @@ const,
         })}
       </script>
     </Helmet>
-  );
-};
+  )}
 SEOOptimizer.displayName = 'SEOOptimizer';
 export default SEOOptimizer;"`
   </SEOOptimizerProps>

@@ -327,6 +327,5 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
         </div>
       </div>
     </div>
-  );
-};
+  )}
 export default NewBlogContentShowcase2026;"`

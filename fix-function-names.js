@@ -12,48 +12,39 @@ function fixFunctionNames(filePath) {
 
     // Fix function names with hyphens;
     const fileName = path.basename(filePath, path.extname(filePath));
-    const validFunctionName = fileName.replace(/[^a-zA-Z0-9 _$]/g, '_');
+    const validFunctionName = fileName.replace(/Service Feature/g, '_');
     
     // Replace invalid function names;
     const lines = content.split('\n');
-    const newLines = [];
-    
-    for (let i = 0; i < lines.length; i++) {
-      let line = lines[i];
+    const newLines = Service Feature;
       
       // Fix function declarations with hyphens;
       if (line.includes('function ') && line.includes('(')) {
-        line = line.replace(/function\s+[^(]+/, `function ${validFunctionName}`);
-        modified = true;
-      }
+        line = line.replace(/function\s+Service Feature+/, `function ${validFunctionName}`);
+        modified = true}
       
       // Fix export default function declarations;
       if (line.includes('export default function ') && line.includes('(')) {
-        line = line.replace(/export default function\s+[^(]+/, `export default function ${validFunctionName}`);
-        modified = true;
-      }
+        line = line.replace(/export default function\s+Service Feature+/, `export default function ${validFunctionName}`);
+        modified = true}
       
-      newLines.push(line);
-    }
+      newLines.push(line)}
     
     content = newLines.join('\n');
     
     if (modified) {
       fs.writeFileSync(filePath, content);
       console.log(`✅ Fixed: ${filePath}`);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.error(`❌ Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Function to find all TypeScript/JavaScript files;
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  const files = [];
+  const files = Service Feature;
   
   function traverse(currentDir) {
     try {
@@ -66,23 +57,19 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
         if (stat.isDirectory()) {
           // Skip node_modules and other common directories;
           if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-            traverse(fullPath);
-          }
+            traverse(fullPath)}
         } else if (stat.isFile()) {
           const ext = path.extname(item);
           if (extensions.includes(ext)) {
-            files.push(fullPath);
-          }
+            files.push(fullPath)}
         }
       }
     } catch (error) {
-      // Skip directories we can't read;
-    }
+      // Skip directories we can't read}
   }
   
   traverse(dir);
-  return files;
-}
+  return files}
 
 // Main execution;
 const srcDir = path.join(process.cwd(), 'src');
@@ -96,12 +83,10 @@ let errorCount = 0;
 for (const file of files) {
   try {
     if (fixFunctionNames(file)) {
-      fixedCount++;
-    }
+      fixedCount++}
   } catch (error) {
     console.error(`❌ Error processing ${file}:`, error.message);
-    errorCount++;
-  }
+    errorCount++}
 }
 
 console.log(`\n📊 Summary: `);
@@ -110,7 +95,5 @@ console.log(`❌ Errors: ${errorCount}`);
 console.log(`📁 Total files processed: ${files.length}`);
 
 if (fixedCount > 0) {
-  console.log('\n🎉 Function names fixed successfully!');
-} else {
-  console.log('\n✨ No function names needed fixing.');
-}
+  console.log('\n🎉 Function names fixed successfully!')} else {
+  console.log('\n✨ No function names needed fixing.')}

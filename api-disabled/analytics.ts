@@ -2,7 +2,7 @@
   d: string} page_ur,
   l: string} user_agen,
   t: string} // In-memory storage for demo purposes // In production, you would use a proper database const,
-  analyticsData: AnalyticsEvent[] = [], export default async function handler(re)
+  analyticsData: AnalyticsEventService Feature, export default async function handler(re)
   q: NextApiRequest) re,
   s: NextApiResponse ) {/* TODO: Fix JSX expression */}
   r: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}

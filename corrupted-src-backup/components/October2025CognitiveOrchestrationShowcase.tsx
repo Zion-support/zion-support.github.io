@@ -43,8 +43,7 @@ Discover, how, Fortune 50, companies, are achievi, n, g $84.7 B, in, value with,
 }
           <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e;
   r:shad, o, w-cy, a, n-5, 0, 0/50">";
-            <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">";
-}</div>
+            <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">"}</div>
           <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e
   r:shad, o, w-cy, a, n-5, 0, 0/50">"</div>
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4"></div>
@@ -235,8 +234,5 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
         </d, i, v>)
       </d, i, v>)
     </secti, o, n>)
-  );
-};
-export default October2025 CognitiveOrchestrationShowcase;
-;
-}"
+  )}
+export default October2025 CognitiveOrchestrationShowcase}"

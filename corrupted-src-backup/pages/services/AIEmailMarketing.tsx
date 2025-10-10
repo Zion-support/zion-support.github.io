@@ -9,323 +9,7 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
 const, AIEmailMarketin, g: Rea, c, t.FC = () => {
-  const, feature, s = [
-    {
-      i, c, o;
-  n: Bra, i, n;
-      tit, l, e: "AI, Content, Generation","
-      descripti, o, n: "Automatically, generate, personalized email, content, based on, customer, behavior, preferenc, e, s, and, engagement, history.","
-      tit, l, e: "AI, Content, Generation",";
-      descripti, o, n: "Automatically, generate, personalized email, content, based on, customer, behavior, preferenc, e, s, and, engagement, history.",";
-      benef, i, t: "3, 0, 0% increase, in, open rat, e, s"
-    }
-    {
-      ic, o, n: Targ, e, t;
-      tit, l, e: "Smart, Segmentatio, n","
-      descripti, o, n: "AI-powered, audience, segmentation that, identifies, high-value, customers, and predicts, optimal, send tim, e, s.","
-      tit, l, e: "Smart, Segmentatio, n",";
-      descripti, o, n: "AI-powered, audience, segmentation that, identifies, high-value, customers, and predicts, optimal, send tim, e, s.",";
-      benef, i, t: "85% improvement, in, click-through, rate, s"
-    }
-    {
-      ic, o, n: BarChar, t, 3;
-      tit, l, e: "Predictive, Analytic, s","
-      descripti, o, n: "Advanced, analytics, that predict, campaign, performance and, optimize, subject lin, e, s, conte, n, t, and, timin, g.","
-      tit, l, e: "Predictive, Analytic, s",";
-      descripti, o, n: "Advanced, analytics, that predict, campaign, performance and, optimize, subject lin, e, s, conte, n, t, and, timin, g.",";
-      benef, i, t: "2, 5, 0% ROI, improvemen, t"
-    }
-    {
-      ic, o, n: Z, a, p;
-      tit, l, e: "Automated, Campaign, s","
-      descripti, o, n: "Intelligent, automation, that triggers, personalized, campaigns based, on, customer actions, and, lifecycle stag, e, s.","
-      tit, l, e: "Automated, Campaign, s",";
-      descripti, o, n: "Intelligent, automation, that triggers, personalized, campaigns based, on, customer actions, and, lifecycle stag, e, s.",";
-      benef, i, t: "70% reduction, in, manual wo, r, k"
-    }
-    {
-      ic, o, n: Clo, c, k;
-      tit, l, e: "Optimal, Timin, g","
-      descripti, o, n: "AI, determines, the best, time, to send, emails, to each, individual, recipient for, maximum, engagement.","
-      tit, l, e: "Optimal, Timin, g",";
-      descripti, o, n: "AI, determines, the best, time, to send, emails, to each, individual, recipient for, maximum, engagement.",";
-      benef, i, t: "45% increase, in, engagement"
-    }
-    {
-      ic, o, n: Shie, l, d;
-      tit, l, e: "Deliverability, Optimizatio, n","
-      descripti, o, n: "Advanced, algorithms, ensure maximum, inbox, placement and, compliance, with email, regulation, s.","
-      tit, l, e: "Deliverability, Optimizatio, n",";
-      descripti, o, n: "Advanced, algorithms, ensure maximum, inbox, placement and, compliance, with email, regulation, s.",";
-      benef, i, t: "98% deliverability, rat, e"
-    }
-  ];
-  const, pricin, g = [
-    {
-      na, m, e: "Start, e, r"
-      pri, c, e: "$79",
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Perfect, for, small businesses, starting, with AI-powered, email, marketing"
-      featur, e, s: [,
-        "Up, to, 10,000, subscriber, s"
-        "Basic, AI, content generati, o, n"
-        "Simple, automatio, n"
-        "Email, suppor, t"
-        "Basic, analytic, s"
-        "Standard, template, s"
-        "5, campaign, s/mon, t, h"
-        "Basic, segmentatio, n"
-      ]
-      popul, a, r: fal, s, e;
-    }
-    {
-      na, m, e: "Profession, a, l"
-      pri, c, e: "$1, 9, 9"
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Ideal, for, growing businesses, with, advanced email, marketing, needs"
-      featur, e, s: [,
-        "Up, to, 50,000, subscriber, s"
-        "Advanced, AI, content generati, o, n"
-        "Smart, automation, workflows"
-        "Priority, suppor, t"
-        "Advanced, analytic, s & insigh, t, s"
-        "Custom, template, s"
-        "Unlimited, campaign, s"
-        "Advanced, segmentatio, n"
-        "A/B, testin, g"
-        "API, acces, s"
-      ]
-      popul, a, r: tr, u, e;
-    }
-    {
-      na, m, e: "Enterpri, s, e"
-      pri, c, e: "$5, 9, 9"
-      peri, o, d: "/mon, t, h"
-      descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s"
-      featur, e, s: [,
-        "Unlimited, subscriber, s"
-        "Enterprise, AI, capabilities"
-        "Complex, automation, workflows"
-        "Dedicated, account, manager"
-        "Enterprise, analytics, suite"
-        "Whi, t, e-label, template, s"
-        "Unlimited, campaign, s"
-        "Advanced, AI, segmentation"
-        "Custom, integration, s"
-        "Advanced, security, features"
-        "SLA, guarante, e"
-        "Traini, n, g & consultati, o, n"
-      ]
-      popul, a, r: fal, s, e;
-      n, a, m;
-  e: "Start, e, r",";
-      pri, c, e: "$79",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Perfect, for, small businesses, starting, with AI-powered, email, marketing",";
-      featur, e, s: [,
-        "Up, to, 10,000, subscriber, s",";
-        "Basic, AI, content generati, o, n",";
-        "Simple, automatio, n",";
-        "Email, suppor, t",";
-        "Basic, analytic, s",";
-        "Standard, template, s",";
-        "5, campaign, s/mon, t, h",";
-        "Basic, segmentatio, n"
-      ]
-      popul, a, r: fal, s, e;
-    }
-    {
-      na, m, e: "Profession, a, l",";
-      pri, c, e: "$1, 9, 9",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Ideal, for, growing businesses, with, advanced email, marketing, needs",";
-      featur, e, s: [,
-        "Up, to, 50,000, subscriber, s",";
-        "Advanced, AI, content generati, o, n",";
-        "Smart, automation, workflows",";
-        "Priority, suppor, t",";
-        "Advanced, analytic, s & insigh, t, s",";
-        "Custom, template, s",";
-        "Unlimited, campaign, s",";
-        "Advanced, segmentatio, n",";
-        "A/B, testin, g",";
-        "API, acces, s"
-      ]
-      popul, a, r: tr, u, e;
-    }
-    {
-      na, m, e: "Enterpri, s, e",";
-      pri, c, e: "$5, 9, 9",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s",";
-      featur, e, s: [,
-        "Unlimited, subscriber, s",";
-        "Enterprise, AI, capabilities",";
-        "Complex, automation, workflows",";
-        "Dedicated, account, manager",";
-        "Enterprise, analytics, suite",";
-        "Whi, t, e-label, template, s",";
-        "Unlimited, campaign, s",";
-        "Advanced, AI, segmentation",";
-        "Custom, integration, s",";
-        "Advanced, security, features",";
-        "SLA, guarante, e",";
-        "Traini, n, g & consultati, o, n"
-      ]
-      popul, a, r: fal, s, e;
-    }
-  ];
-  const, testimonial, s = [
-    {
-      na, m, e: "Jennifer, Martine, z","
-      ro, l, e: "Marketing, Directo, r, E-Commerce, Platfor, m","
-      conte, n, t: "AI, email, marketing increased, our, revenue by, 18, 0% in, just, 3 mont, h, s. The, personalized, content generation, and, optimal timing, features, were ga, m, e-changers, for, our busine, s, s.","
-      na, m, e: "Jennifer, Martine, z",";
-      ro, l, e: "Marketing, Directo, r, E-Commerce, Platfor, m",";
-      conte, n, t: "AI, email, marketing increased, our, revenue by, 18, 0% in, just, 3 mont, h, s. The, personalized, content generation, and, optimal timing, features, were ga, m, e-changers, for, our busine, s, s.",";
-      rati, n, g: 5;
-      compa, n, y: "E-Commerce, Platfor, m"
-    }
-    {
-      na, m, e: "David, Che, n","
-      ro, l, e: "VP, Marketin, g, SaaS, Startu, p","
-      conte, n, t: "The, automated, segmentation and, predictive, analytics helped, us, achieve a, 1, 5% conversion, rate, improvement. ROI, increased, by 2, 5, 0% within, the, first quart, e, r.","
-      na, m, e: "David, Che, n",";
-      ro, l, e: "VP, Marketin, g, SaaS, Startu, p",";
-      conte, n, t: "The, automated, segmentation and, predictive, analytics helped, us, achieve a, 1, 5% conversion, rate, improvement. ROI, increased, by 2, 5, 0% within, the, first quart, e, r.",";
-      rati, n, g: 5;
-      compa, n, y: "SaaS, Startu, p"
-    }
-    {
-      na, m, e: "Sarah, Johnso, n","
-      ro, l, e: "Head, of, Growth, FinTe, c, h","
-      conte, n, t: "Deliverability, optimization, and AI, content, generation reduced, our, unsubscribe rate, by, 60% while, increasing, engagement by, 8, 5%. The, platform, is incredibly, intuitiv, e.","
-      na, m, e: "Sarah, Johnso, n",";
-      ro, l, e: "Head, of, Growth, FinTe, c, h",";
-      conte, n, t: "Deliverability, optimization, and AI, content, generation reduced, our, unsubscribe rate, by, 60% while, increasing, engagement by, 8, 5%. The, platform, is incredibly, intuitiv, e.",";
-      rati, n, g: 5;
-      compa, n, y: "FinTe, c, h"
-    }
-  ];
-  const, useCase, s = [
-    {
-      tit, l, e: "E-Commer, c, e","
-      ic, o, n: Glo, b, e;
-      descripti, o, n: "Personalized, product, recommendations, abandoned, cart, recovery, and, pos, t-purchase, follo, w-u, p, s.","
-      benefi, t, s: ["40% increase, in, sales", "60% cart, recovery, rate", "35% customer, lifetime, value"]"
-    }
-    {
-      tit, l, e: "Sa, a, S & B, 2, B","
-      ic, o, n: Trending, U, p;
-      descripti, o, n: "Lead, nurturin, g, customer, onboardin, g, feature, announcement, s, and, churn, prevention campaig, n, s.","
-      benefi, t, s: ["50% faster, onboardin, g", "30% reduction, in, churn", "45% increase, in, upgrades"]"
-    }
-    {
-      tit, l, e: "Healthca, r, e","
-      ic, o, n: Use, r, s;
-      descripti, o, n: "Patient, engagemen, t, appointment, reminder, s, health, tip, s, and, medication, compliance.","
-      benefi, t, s: ["70% appointment, complianc, e", "40% patient, engagemen, t", "25% readmission, reductio, n"]"
-    }
-    {
-      tit, l, e: "Educati, o, n","
-      ic, o, n: Bra, i, n;
-      descripti, o, n: "Student, engagemen, t, course, update, s, enrollment, campaign, s, and, alumni, communication.","
-      benefi, t, s: ["55% enrollment, increas, e", "60% course, completio, n", "80% student, satisfactio, n"]"
-      tit, l, e: "E-Commer, c, e",";
-      ic, o, n: Glo, b, e;
-      descripti, o, n: "Personalized, product, recommendations, abandoned, cart, recovery, and, pos, t-purchase, follo, w-u, p, s.",";
-      benefi, t, s: ["40% increase, in, sales", "60% cart, recovery, rate", "35% customer, lifetime, value"]";
-    }
-    {
-      tit, l, e: "Sa, a, S & B, 2, B",";
-      ic, o, n: Trending, U, p;
-      descripti, o, n: "Lead, nurturin, g, customer, onboardin, g, feature, announcement, s, and, churn, prevention campaig, n, s.",";
-      benefi, t, s: ["50% faster, onboardin, g", "30% reduction, in, churn", "45% increase, in, upgrades"]";
-    }
-    {
-      tit, l, e: "Healthca, r, e",";
-      ic, o, n: Use, r, s;
-      descripti, o, n: "Patient, engagemen, t, appointment, reminder, s, health, tip, s, and, medication, compliance.",";
-      benefi, t, s: ["70% appointment, complianc, e", "40% patient, engagemen, t", "25% readmission, reductio, n"]";
-    }
-    {
-      tit, l, e: "Educati, o, n",";
-      ic, o, n: Bra, i, n;
-      descripti, o, n: "Student, engagemen, t, course, update, s, enrollment, campaign, s, and, alumni, communication.",";
-      benefi, t, s: ["55% enrollment, increas, e", "60% course, completio, n", "80% student, satisfactio, n"]";
-const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, pricin, g = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, testimonial, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, useCase, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  const, capabilitie, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
+  const, feature, s = Service Feature;
   return(<React.Fragment>
       <Helmet>
         <title>AI, Email, Marketing - Zion, Tech, Group | Intelligent, Email, Automation</title>
@@ -631,8 +315,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       ))}
                     </ul>
                   </d, i, v>
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -788,8 +471,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
                   </d, i, v>)
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -877,7 +559,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 pl, a, n.popul, a, r;
 ? 'bg-emera, l, d-600, tex, t-white, hove, r: bg-emera, l, d-7, 0, 0'
 ? 'bg-emera, l, d-600, tex, t-white, hov, e;
-  r: bg-emera, l, d-7, 0, 0',';}
+  r: bg-emera, l, d-7, 0, 0','}
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
@@ -947,7 +629,7 @@ pl, a, n.popul, a, r;
               {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (</div>
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <div, className="flex, item, s-center, m, b-4">";
-                    {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>
+                    {Service Feature.m, a, p((_, i) => (</div>
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
             </d, i, v>"
             <div, className="gri, d, m,"
@@ -1038,7 +720,5 @@ pl, a, n.popul, a, r;
       </ma, i, n>
       <Foot, e, r   /></Foot>
     </React.Fragment>
-  );
-};
-export default AIEmailMarketing;
-}}}}"`
+  )}
+export default AIEmailMarketing}}}}"`

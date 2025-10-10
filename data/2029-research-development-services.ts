@@ -2,62 +2,7 @@
   id: string;
   name: string;
   description: string;
-  category: string[];
-  price: string;
-  features: string[];
-  benefits: string[];
-  competitors: string[];
-  technology: string[];
-  integration: string[];
-  support: string[];
-  compliance: string[];
-  scalability: string;
-  roi: string;
-  deployment: string;
-  maintenance: string;
-  training: string;
-  documentation: string;
-  api: string;
-  mobile: string;
-  security: string;
-  backup: string;
-  monitoring: string;
-  analytics: string;
-  customization: string;
-  affiliate: string;
-  referral: string;
-  partnership: string;
-  funding: string;
-  exit: string;
-  contact: unknown;
-    mobile: string;
-    email: string;
-    website: string;
-      contact: unknown;
-  i,
-  d: string,
-  nam,
-  e: string,
-  descriptio,
-  n: string;
-  categor,
-  y: string[];
-  pric,
-  e: string;
-  feature,
-  s: string[];
-  benefit,
-  s: string[];
-  competitor,
-  s: string[];
-  technolog,
-  y: string[];
-  integratio,
-  n: string[];
-  suppor,
-  t: string[];
-  complianc,
-  e: string[];
+  category: stringService Feature;
   scalabilit,
   y: string;
   ro,
@@ -1265,8 +1210,6 @@ export interface ResearchDevelopmentService2029 {/* TODO: Fix JSX expression */}
     }
   }
 ];
-;
-;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709',
       mobil,
@@ -1285,8 +1228,7 @@ export interface ResearchDevelopmentService2029 {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
-;
-export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [;
+export const researchDevelopmentServices2029: ResearchDevelopmentService2029Service Feature = [;
   {,
     id: 'advanced-research-automation';
     name: 'Advanced Research Automation',,
@@ -1332,8 +1274,8 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       email: 'kleber@ziontechgroup.com';
       website: 'https://ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'}
-  };
-  {;
+  }
+  {
     id: 'quantum-research-platform';
     name: 'Quantum Research Platform',,
   description: 'Advanced quantum research platform that provides quantum computing resources, quantum algorithms, and research tools for quantum science and technology development.';
@@ -1378,8 +1320,8 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       email: 'kleber@ziontechgroup.com';
       website: 'https://ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'}
-  };
-  {;
+  }
+  {
     id: 'ai-research-assistant';
     name: 'AI Research Assistant',,
   description: 'Intelligent AI research assistant that helps researchers with literature review, data analysis, hypothesis generation, and research planning across all scientific domains.';
@@ -1424,8 +1366,8 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       email: 'kleber@ziontechgroup.com';
       website: 'https://ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'}
-  };
-  {;
+  }
+  {
     id: 'biotech-research-suite';
     name: 'Biotech Research Suite',,
   description: 'Comprehensive biotech research platform that provides tools for genetic research, drug discovery, clinical trials, and biotechnology development with AI-powered insights.';
@@ -1475,7 +1417,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709',
 export const,
-  researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [;
+  researchDevelopmentServices2029: ResearchDevelopmentService2029Service Feature = [;
   {/* TODO: Fix JSX expression */}
   t: 'Acquisition by major research platform'}
     contac,
@@ -1490,7 +1432,7 @@ export const,
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   t: 'IPO or quantum acquisition'}
     contac,
@@ -1505,7 +1447,7 @@ export const,
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   t: 'Acquisition by major research platform'}
     contac,
@@ -1520,7 +1462,7 @@ export const,
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  };
+  }
   {/* TODO: Fix JSX expression */}
   t: 'IPO or biotech acquisition'}
     contac,
@@ -1546,20 +1488,11 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-;
 i,
   d: string, nam,
   e: string, descriptio,
   n: string; categor,
-  y: string[]; pric,
-  e: string; feature,
-  s: string[]; benefit,
-  s: string[]; competitor,
-  s: string[]; technolog,
-  y: string[]; integratio,
-  n: string[]; suppor,
-  t: string[]; complianc,
-  e: string[]; scalabilit,
+  y: stringService Feature; scalabilit,
   y: string; ro,
   i: string; deploymen,
   t: string; maintenanc,
@@ -1981,33 +1914,33 @@ i,
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
   s://ziontechgroup.com', addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } export interface ResearchDevelopmentService2029 {; } } ]; ;' mobil,
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } export interface ResearchDevelopmentService2029 { } } ]; ;' mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com'' websit,
   e: 'http,
   s://ziontechgroup.com', addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; export interface ResearchDevelopmentService2029 {/* TODO: Fix JSX expression */}
   e: string} addres,
-  s: string} } } ; export const,
-  researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [; {/* TODO: Fix JSX expression */}
+  s: string} } } export const,
+  researchDevelopmentServices2029: ResearchDevelopmentService2029Service Feature = [; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' websit,
   e: 'http,
-  s://ziontechgroup.com'};' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com'}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' websit,
   e: 'http,
-  s://ziontechgroup.com'};' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com'}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' websit,
   e: 'http,
-  s://ziontechgroup.com'};' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com'}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' websit,
   e: 'http,
-  s://ziontechgroup.com'};' addres,
+  s://ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' } } ];' mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
   s://ziontechgroup.com', addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ; '
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } '

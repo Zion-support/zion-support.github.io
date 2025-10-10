@@ -7,18 +7,17 @@
  * Real-time application monitoring, performance tracking, and error reporting;
  */
 export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   lcp?: number;
   fid?: number;
   cls?: number;
   fcp?: number;
   ttfb?: number;
-  inp?: number;
-}
+  inp?: number}
 export interface ErrorReport {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   messag,
   e: string;
   stack?: string;
@@ -30,12 +29,12 @@ export interface ErrorReport {/* TODO: Fix JSX expression */}
     ur,
   l: string;
 class MonitoringService {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
 
 class MonitoringService {
   private metrics: PerformanceMetrics = {}
-  private errors: ErrorReport[] = []
+  private errors: ErrorReportService Feature
   private observer: PerformanceObserver | null = null
 
   constructor() {
@@ -56,7 +55,7 @@ class MonitoringService {
       try {
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries()
-          const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
+          const lastEntry = entriesService Feature as PerformanceEntry & { renderTime?: number; loadTime?: number }
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
           this.reportMetric('lcp', this.metrics.lcp)
         })
@@ -67,9 +66,7 @@ class MonitoringService {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = (entry as any).processingStart - entry.startTime;
-            this.reportMetric('fid', this.metrics.fid);
-          });
-        });
+            this.reportMetric('fid', this.metrics.fid)})});
         fidObserver.observe({ entryTypes: ['first-input'] });
 
         let clsValue = 0;
@@ -79,8 +76,7 @@ class MonitoringService {
             if (!(entry as any).hadRecentInput) {
               clsValue += (entry as any).value || 0;
               this.metrics.cls = clsValue;
-              this.reportMetric('cls', clsValue);
-            }
+              this.reportMetric('cls', clsValue)}
           })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
@@ -90,13 +86,9 @@ class MonitoringService {
           const entries = list.getEntries();
           entries.forEach(entry => {
             this.metrics.fcp = entry.startTime;
-            this.reportMetric('fcp', entry.startTime);
-          });
-        });
-        fcpObserver.observe({ entryTypes: ['paint'] });
-      } catch (error) {
-        // console.error('Error setting up performance observers:', error);
-      }
+            this.reportMetric('fcp', entry.startTime)})});
+        fcpObserver.observe({ entryTypes: ['paint'] })} catch (error) {
+        // console.error('Error setting up performance observers:', error)}
     }
   }
 
@@ -132,12 +124,9 @@ class MonitoringService {
               //   type: resourceEntry.initiatorType
               // })
             }
-          });
-        });
-        resourceObserver.observe({ entryTypes: ['resource'] });
-      } catch (_error) {
-        // console.error('Error monitoring resources:', _error);
-      }
+          })});
+        resourceObserver.observe({ entryTypes: ['resource'] })} catch (_error) {
+        // console.error('Error monitoring resources:', _error)}
     }
   }
 
@@ -167,7 +156,7 @@ class MonitoringService {
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
       return
     }
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
+    const thresholds = performanceConfig.webVitalsService Feature
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
     }
@@ -191,19 +180,14 @@ class MonitoringService {
     return { ...this.metrics }
   }
 
-  public getErrors(): ErrorReport[] {
-    return [...this.errors]
-  }
-
-  public clearErrors(): void {
-    this.errors = []
+  public getErrors(): ErrorReportService Feature
   }
 
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
       if (memory) {
-        // console.log('[Memory]', {
+        // console.log('Service Feature', {
         //   used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
         //   total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
         //   limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
@@ -214,9 +198,9 @@ class MonitoringService {
 
   public measureNavigationTiming(): void {
     if ('performance' in window && 'getEntriesByType' in performance) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const navigation = performance.getEntriesByType('navigation')Service Feature as PerformanceNavigationTiming
       if (navigation) {
-        // console.log('[Navigation Timing]', {
+        // console.log('Service Feature', {
         //   'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
         //   'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
         //   'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,

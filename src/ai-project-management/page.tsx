@@ -183,5 +183,4 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
         <Footer /></Footer>
       </div>
     </div>
-  );
-}"
+  )}"

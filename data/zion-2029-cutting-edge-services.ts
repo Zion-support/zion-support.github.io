@@ -5,49 +5,7 @@ export type ZionCuttingEdgeService2029 =
   price: string;
   period: string;
   description: string;
-  features: string[];
-  benefits: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  aiTechnology: string[];
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  pricing: unknown;
-    starter: number;
-    professional: number;
-    enterprise: number;
-    currency: string;
-    period: string;
-  };
-}
-export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
+  features: stringService Feature = [
   // 1. AI-Powered Quantum Computing Optimization Platform;
     id: 'ai-quantum-computing-optimization',
     name: 'AI-Powered Quantum Computing Optimization Platform',
@@ -55,100 +13,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     price: '$2,999',
     period: '/month',
     description: 'Revolutionary platform that combines AI and quantum computing to solve complex optimization problems in logistics, finance, drug discovery, and materials science.',
-    features: [,
-  i,
-  d: string;
-  nam,
-  e: string;
-  taglin,
-  e: string;
-  pric,
-  e: string;
-  perio,
-  d: string;
-  descriptio,
-  n: string;
-  feature,
-  s: string[];
-  benefit,
-  s: string[];
-  popula,
-  r: boolean;
-  ico,
-  n: string;
-  colo,
-  r: string;
-  textColo,
-  r: string;
-  lin,
-  k: string;
-  marketPositio,
-  n: string;
-  targetAudienc,
-  e: string[];
-  trialDay,
-  s: number;
-  setupTim,
-  e: string;
-  categor,
-  y: string;
-  aiTechnolog,
-  y: string[];
-  realServic,
-  e: boolean;
-  technolog,
-  y: string[];
-  integration,
-  s: string[];
-  useCase,
-  s: string[];
-  ro,
-  i: string;
-  competitor,
-  s: string[];
-  marketSiz,
-  e: string;
-  growthRat,
-  e: string;
-  varian,
-  t: string;
-  contactInf,
-  o: unknown;
-    mobil,
-  e: string;
-    emai,
-  l: string;
-    addres,
-  s: string;
-    websit,
-  e: string};
-  realImplementatio,
-  n: boolean;
-  implementationDetail,
-  s: string;
-  launchDat,
-  e: string;
-  customer,
-  s: number;
-  ratin,
-  g: number;
-  review,
-  s: number;
-  pricin,
-  g: unknown;
-    starte,
-  r: number;
-    professiona,
-  l: number;
-    enterpris,
-  e: number;
-    currenc,
-  y: string;
-    perio,
-  d: string};
-}
-export const,
-  zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [,
+    features: Service Feature = [,
   // 1. AI-Powered Quantum Computing Optimization Platform,
   id: 'ai-quantum-computing-optimization',
     nam,
@@ -1717,15 +1582,12 @@ export const getServicesByCategory = (category: string) =>;
 ];
 export const getServicesByCategory = (categor)
   y: string) =>;
-  return zionCuttingEdgeServices2029.filter(service => service.category === category);
-};
+  return zionCuttingEdgeServices2029.filter(service => service.category === category)}
 export const getPopularServices = () =>
-  return zionCuttingEdgeServices2029.filter(service => service.popular);
-};
+  return zionCuttingEdgeServices2029.filter(service => service.popular)}
 export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>;
   return zionCuttingEdgeServices2029.filter(service => //     const starterPrice = service.pricing.starter;)
-    return starterPrice >= minPrice && starterPrice <= maxPrice)});
-};
+    return starterPrice >= minPrice && starterPrice <= maxPrice)})}
 export const getServicesByTechnology = (technology: string) =>;
   return zionCuttingEdgeServices2029.filter(service =>),
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())),
@@ -1735,14 +1597,12 @@ export const getServicesByPriceRange = (minPric)
   return zionCuttingEdgeServices2029.filter(service =>
 //     const starterPrice = service.pricing.starter;)
     return starterPrice >= minPrice && starterPrice <= maxPrice)
-  });
-};
+  })}
 export const getServicesByTechnology = (technolog)
   y: string) =>;
   return zionCuttingEdgeServices2029.filter(service =>)
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
-  );
-};
+  )}
 export type ZionCuttingEdgeService2029 = i,
   d: string; nam,
   e: string; taglin,
@@ -1750,46 +1610,7 @@ export type ZionCuttingEdgeService2029 = i,
   e: string; perio,
   d: string; descriptio,
   n: string; feature,
-  s: string[]; benefit,
-  s: string[]; popula,
-  r: boolean; ico,
-  n: string; colo,
-  r: string; textColo,
-  r: string; lin,
-  k: string; marketPositio,
-  n: string; targetAudienc,
-  e: string[]; trialDay,
-  s: number; setupTim,
-  e: string; categor,
-  y: string; aiTechnolog,
-  y: string[]; realServic,
-  e: boolean; technolog,
-  y: string[]; integration,
-  s: string[]; useCase,
-  s: string[]; ro,
-  i: string; competitor,
-  s: string[]; marketSiz,
-  e: string; growthRat,
-  e: string; varian,
-  t: string; contactInf,
-  o: mobil,
-  e: string; emai,
-  l: string; addres,
-  s: string; websit,
-  e: string}; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number; pricin,
-  g: starte,
-  r: number; professiona,
-  l: number; enterpris,
-  e: number; currenc,
-  y: string; perio,
-  d: string}; } export const,
-  zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [ // 1. AI-Powered Quantum Computing Optimization Platform,
+  s: stringService Feature = [ // 1. AI-Powered Quantum Computing Optimization Platform,
   id: 'ai-quantum-computing-optimization',' nam,
   e: 'AI-Powered Quantum Computing Optimization Platform',' taglin,
   e: 'Optimize quantum algorithms with AI-driven insights',' pric,
@@ -2260,7 +2081,7 @@ export type ZionCuttingEdgeService2029 = i,
   e: 29999,' currenc,
   y: 'USD',' perio,
   d: 'month' } } ]; export const getServicesByCategory = (categor)
-  y: string) => return zionCuttingEdgeServices2029.filter(service => service.category === category); }; export const getPopularServices = () => return zionCuttingEdgeServices2029.filter(service => service.popular); }; export const getServicesByPriceRange = (minPric)
+  y: string) => return zionCuttingEdgeServices2029.filter(service => service.category === category)} export const getPopularServices = () => return zionCuttingEdgeServices2029.filter(service => service.popular)} export const getServicesByPriceRange = (minPric)
   e: number) maxPric,
-  e: number) => return zionCuttingEdgeServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) }); }; export const getServicesByTechnology = (technolog)
-  y: string) => return zionCuttingEdgeServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) ); };'
+  e: number) => return zionCuttingEdgeServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) })} export const getServicesByTechnology = (technolog)
+  y: string) => return zionCuttingEdgeServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) )}'

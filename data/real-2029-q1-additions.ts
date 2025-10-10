@@ -50,8 +50,7 @@
     launch_date: '2025 - 02 - 10'
     customers: 25;
     rating: 4 && 4.6;
-    reviews: 12;
-  },
+    reviews: 12},
     id: 'db - index - advisor'
     name: 'DB Index Advisor',
     tagline: 'AI index recommendations for Postgres / MySQL',
@@ -157,8 +156,7 @@
     launch_date: '2025 - 02 - 12'
     customers: 18;
     rating: 4 && 4.5;
-    reviews: 9;
-  };
+    reviews: 9}
       'Modern alternative to legacy APM addons with focused insights.'
     targetAudience: 'DBA, Backend, Platform'
     trialDays: 14;
@@ -179,8 +177,7 @@
     launchDate: '2025-02-12'
     customers: 18;
     rating: 4.5;
-    reviews: 9;
-  }
+    reviews: 9}
       'Modern alternative to legacy APM addons with focused insights.',
     targetAudience: 'DBA, Backend, Platform',
     trialDays: 14;
@@ -201,8 +198,7 @@
     launchDate: '2025-02-12'
     customers: 18;
     rating: 4.5;
-    reviews: 9;
-  };
+    reviews: 9}
 ];
 		period: '/month',
 		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.'
@@ -236,8 +232,7 @@
 		launchDate: '2025-02-01'
 		customers: 40;
 		rating: 4 && 4.7;
-		reviews: 18;
-	}
+		reviews: 18}
 		id: 'finops-scheduler-optimizer'
 		name: 'FinOps Scheduler Optimizer'
 		tagline: 'Rightsizing & schedules with IaC exports'
@@ -270,8 +265,7 @@
 		launchDate: '2025-02-10'
 		customers: 25;
 		rating: 4 && 4.6;
-		reviews: 12;
-	}
+		reviews: 12}
 		id: 'db-index-advisor'
 		name: 'DB Index Advisor'
 		tagline: 'AI index recommendations for Postgres/MySQL'
@@ -304,8 +298,7 @@
 		launchDate: '2025-02-12'
 		customers: 18;
 		rating: 4 && 4.5;
-		reviews: 9;
-	}
+		reviews: 9}
 ];
   id: 'ai - redteam - evaluator',
   name: 'AI RedTeam Evaluator',
@@ -339,8 +332,7 @@
   launch_date: '2025 - 02 - 01'
   customers: 40;
   rating: 4.7;
-  reviews: 18;
-}
+  reviews: 18}
   id: 'finops - scheduler - optimizer'
   name: 'FinOps Scheduler Optimizer'
   tagline: 'Rightsizing & schedules with IaC exports'
@@ -373,8 +365,7 @@
   launch_date: '2025 - 02 - 10'
   customers: 25;
   rating: 4.6;
-  reviews: 12;
-}
+  reviews: 12}
   id: 'db - index - advisor'
   name: 'DB Index Advisor'
   tagline: 'AI index recommendations for Postgres / MySQL'
@@ -407,16 +398,15 @@
   launch_date: '2025 - 02 - 12'
   customers: 18;
   rating: 4.5;
-  reviews: 9;
-}
+  reviews: 9}
 		rating: 4.5;
 		reviews: 9;
-// const contact = {;
+// const contact = {
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
-	website: 'https://ziontechgroup.com'};
-export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
+	website: 'https://ziontechgroup.com'}
+export const real2029Q1Additions: EnhancedRealMicroSaasServiceService Feature = [;
 	{
 		id: 'ai-redteam-evaluator';
 		name: 'AI RedTeam Evaluator';
@@ -504,7 +494,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
     ratin,
   g: 4 && 4.5,
     review,
-  s: 9};
+  s: 9}
       'Modern alternative to legacy APM addons with focused insights.'
     targetAudienc,
   e: 'DBA, Backend, Platform'
@@ -586,7 +576,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
     ratin,
   g: 4.5,
     review,
-  s: 9};
+  s: 9}
 ];
 		perio,
   d: '/month'
@@ -1003,32 +993,15 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 	websit,
   e: 'http,
   s://ziontechgroup.com'
-};
+}
 export const,
-  real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
-		review,
-  s: 18}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-		review,
-  s: 12}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 9}
-	}
-];
-;
-// const contact = {;
+  real2029Q1Additions: EnhancedRealMicroSaasServiceService Feature;
+// const contact = {
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
-	website: 'https://ziontechgroup.com'};
-export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
+	website: 'https://ziontechgroup.com'}
+export const real2029Q1Additions: EnhancedRealMicroSaasServiceService Feature = [;
 	{
 		id: 'ai-redteam-evaluator';
 		name: 'AI RedTeam Evaluator';
@@ -1068,25 +1041,9 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 	websit,
   e: 'http,
   s://ziontechgroup.com'
-};
+}
 export const,
-  real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
-		review,
-  s: 18}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-		review,
-  s: 12}
-	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-		review,
-  s: 9}
-	}
-];
+  real2029Q1Additions: EnhancedRealMicroSaasServiceService Feature;
 i,
   d: 'finops - scheduler - optimizer',' nam,
   e: 'FinOps Scheduler Optimizer',' taglin,
@@ -1155,7 +1112,7 @@ i,
   e: '2025 - 02 - 12', customer,
   s: 18, ratin,
   g: 4 && 4.5, review,
-  s: 9}; ' 'Modern alternative to legacy APM add‑ons with focused insights.'' targetAudienc,
+  s: 9} ' 'Modern alternative to legacy APM add‑ons with focused insights.'' targetAudienc,
   e: 'DBA, Backend, Platform' trialDay,
   s: 14' setupTim,
   e: '30 minutes'' categor,
@@ -1195,7 +1152,7 @@ i,
   e: '2025-02-12', customer,
   s: 18, ratin,
   g: 4.5, review,
-  s: 9}; ]; ' perio,
+  s: 9} ]; ' perio,
   d: '/month'' descriptio,
   n: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.'' feature,
   s: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts']; popula,
@@ -1406,24 +1363,12 @@ i,
   g: 4.5,
   reviews: 9 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' }; export const,
-  real2029Q1Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 18} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 12} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 9} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com' } export const,
+  real2029Q1Additions: EnhancedRealMicroSaasServiceService Feature; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' }; export const,
-  real2029Q1Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 18} }; {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 12} }; {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 9} } ]; '
+  s://ziontechgroup.com' } export const,
+  real2029Q1Additions: EnhancedRealMicroSaasServiceService Feature; '

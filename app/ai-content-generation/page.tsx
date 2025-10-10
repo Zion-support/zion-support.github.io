@@ -167,8 +167,7 @@ const AiContentGenerationPage: React.FC = () => {
       </section>
       <Footer />
     </React.Fragment>
-  );
-};
+  )}
 export default AiContentGenerationPage;
   </button>
   </button>

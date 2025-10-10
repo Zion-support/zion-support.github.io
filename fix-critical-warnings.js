@@ -17,16 +17,14 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
     }
   }
   
-  return files;
-}
+  return files}
 
 // Fix console statements by removing them;
 function fixConsoleStatements(content) {
   // Remove console.log, console.warn, console.error, console.info, console.debug;
-  content = content.replace(/^\s*console\.(log|warn|error|info|debug)\([^)]*\);\s*$/gm, '');
-  content = content.replace(/console\.(log|warn|error|info|debug)\([^)]*\);\s*/g, '');
-  return content;
-}
+  content = content.replace(/^\s*console\.(log|warn|error|info|debug)\(Service Feature*\);\s*$/gm, '');
+  content = content.replace(/console\.(log|warn|error|info|debug)\(Service Feature*\);\s*/g, '');
+  return content}
 
 // Fix unused imports by removing them;
 function fixUnusedImports(content) {
@@ -54,8 +52,7 @@ function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
     return true;)
   });
   
-  return filteredLines.join('\n');
-}
+  return filteredLines.join('\n')}
 
 // Fix unused variables by prefixing with underscore;
 function fixUnusedVariables(content) {
@@ -65,11 +62,9 @@ function fixUnusedVariables(content) {
       return match;
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
     }
-    return match.replace(varName, `_${varName}`);
-  });
+    return match.replace(varName, `_${varName}`)});
 
-  return content;
-}
+  return content}
 
 // Main function;
 function main() {
@@ -86,8 +81,7 @@ function main() {
       if (content !== originalContent) {
         fs.writeFileSync(file, content, 'utf8');
 
-        fixedFiles++;
-      }
+        fixedFiles++}
     } catch (error) {
 
 function main() {/* TODO: Fix JSX expression */}
@@ -96,15 +90,10 @@ function main() {/* TODO: Fix JSX expression */}
       })
     } catch (error) {/* TODO: Fix JSX expression */}
     }
-  });
-
-}
+  })}
 
 // Run if this is the main module;
-if (import.meta.url === `file://${process.argv[1]}`) {
-// Run if this is the main module;`
-if (import.meta.url === `fil)`
-  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
+if (import.meta.url === `file://${process.argvService Feature}`) {/* TODO: Fix JSX expression */}
 }
 
-export { fixConsoleStatements, fixUnusedImports, fixUnusedVariables };`
+export { fixConsoleStatements, fixUnusedImports, fixUnusedVariables }`

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 export default function EnhancedContactForm(): React.JSX.Element {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const Service Feature = useState('');
+  const Service Feature = useState('');
+  const Service Feature = useState('');
   return(<form;)
       aria-label="Contact form")
       onSubmit={e => e.preventDefault()}
@@ -43,6 +43,5 @@ export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix J
         Send;
       </button>
     </form>
-  );
-}
+  )}
 "

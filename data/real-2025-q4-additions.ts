@@ -5,27 +5,7 @@ export interface Q4Service {id: string;
   price: string;
   period: string;
   description: string;
-  features: string[];
-  popular?: boolean;
-  icon?: string;
-  color?: string;
-  text_color?: string;
-  link: string;
-  market_position?: string;
-  target_audience?: string;
-  trial_days?: number;
-  setup_time?: string;
-  category: string;
-  roi?: string;,
-  competitors?: string[],
-  marketSize?: string;
-  growthRate?: string;
-  variant?: string;
-  contactInfo?:
-  real_service: boolean;  technology?: string[];  integrations?: string[];
-  use_cases?: string[];
-  roi?: string;
-  competitors?: string[];
+  features: stringService Feature;
   market_size?: string;
   growth_rate?: string;
   variant?: string;
@@ -92,8 +72,7 @@ const contact =
     launch_date: '2025 - 10 - 01'
     customers: 120;
     rating: 4 && 4.7;
-    reviews: 48;
-  },
+    reviews: 48},
       'Multi-speaker diarization',
     id: 'podcast - transcription - studio',
     name: 'Podcast Transcription Studio',
@@ -213,8 +192,7 @@ const contact =
     launch_date: '2025 - 09 - 15'
     customers: 60;
     rating: 4 && 4.6;
-    reviews: 22;
-  },
+    reviews: 22},
     id: 'micro - crm - local - business',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
@@ -403,8 +381,7 @@ const contact =
     launch_date: '2025 - 10 - 20'
     customers: 210;
     rating: 4 && 4.5;
-    reviews: 77;
-  },
+    reviews: 77},
     id: 'returns - automation - saas'
     name: 'Ecommerce Returns Automation',
     tagline: 'Self - serve returns portal and automated labels',
@@ -603,8 +580,7 @@ const contact =
     launch_date: '2025 - 10 - 05'
     customers: 95;
     rating: 4 && 4.6;
-    reviews: 35;
-  },
+    reviews: 35},
     id: 'it - helpdesk - for - msps',
     technology: ['Next.js', 'Node.js', 'Stripe', 'Shippo'],
     integrations: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],
@@ -783,8 +759,7 @@ const contact =
     launch_date: '2025 - 09 - 28'
     customers: 70;
     rating: 4 && 4.5;
-    reviews: 28;
-  }];
+    reviews: 28}];
 export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     name: 'AI - Governed RAG Platform',
     tagline: 'Enterprise - grade RAG with guardrails, approvals, and evals',
@@ -826,8 +801,7 @@ export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     launch_date: '2025 - 03 - 01'
     customers: 18;
     rating: 4 && 4.8;
-    reviews: 11;
-  },
+    reviews: 11},
     id: 'edge - personalization - engine'
     name: 'Edge Personalization Engine',
     tagline: 'Real - time content and pricing personalization at the edge',
@@ -994,9 +968,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launchDate: '2025-09-28'
     customers: 70;
     rating: 4.5;
-    reviews: 28;
-  }];
-}
+    reviews: 28}]}
     customers: 120;
     rating: 4.7;
     reviews: 48;
@@ -1033,8 +1005,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5,
     review,
-  s: 28}];
-}
+  s: 28}]}
     customer,
   s: 120,
     ratin,
@@ -1450,8 +1421,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 10'
     customers: 42;
     rating: 4 && 4.6;
-    reviews: 23;
-  },
+    reviews: 23},
       'One-PR one-env automation',
     id: 'devx - preview - environments'
     name: 'DevX Preview Environments',
@@ -1585,8 +1555,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 05'
     customers: 27;
     rating: 4 && 4.7;
-    reviews: 16;
-  },
+    reviews: 16},
     id: 'real - time - log - anomaly - guard'
     name: 'Real - time Log Anomaly Guard',
     tagline: 'Detect anomalies and regressions with LLM - assisted alerts',
@@ -1684,8 +1653,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 08'
     customers: 33;
     rating: 4 && 4.5;
-    reviews: 19;
-  },
+    reviews: 19},
     id: 'governed - feature - flags',
     name: 'Governed Feature Flags',
     tagline: 'Audit - ready flags with policies, approvals, and rollbacks',
@@ -2037,8 +2005,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 02'
     customers: 21;
     rating: 4 && 4.6;
-    reviews: 12;
-  },
+    reviews: 12},
     id: 'email - sequence - copilot',
     name: 'Email Sequence Copilot',
     tagline: 'On - brand outbound with warm - up, scoring, and safety',
@@ -2155,8 +2122,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 12'
     customers: 38;
     rating: 4 && 4.5;
-    reviews: 20;
-  },
+    reviews: 20},
     id: 'data - contracts - guardrails',
     name: 'Data Contracts Guardrails',
     tagline: 'Schema governance, lineage, and backward - compat checks',
@@ -2431,8 +2397,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 03'
     customers: 12;
     rating: 4 && 4.6;
-    reviews: 9;
-  },
+    reviews: 9},
       'Okta/Entra app configs',
       'SAML/OIDC + SCIM',
     id: 'managed - sso - fast - track',
@@ -2630,8 +2595,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 06'
     customers: 9;
     rating: 4 && 4.7;
-    reviews: 7;
-  },
+    reviews: 7},
     id: 'ai - sales - pipeline - insights',
     name: 'AI Sales Pipeline Insights',
     tagline: 'Forecast hygiene, stage risks, and next - best actions',
@@ -2839,8 +2803,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 04'
     customers: 14;
     rating: 4 && 4.5;
-    reviews: 10;
-  },
+    reviews: 10},
     id: 'secure - webhook - relay'
     customers: 14;
     rating: 4.5;
@@ -3019,8 +2982,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 09'
     customers: 31;
     rating: 4 && 4.6;
-    reviews: 18;
-  },
+    reviews: 18},
     id: 'managed - postgres - ha - lite',
     category: 'Developer Tools',
     realService: true;
@@ -3197,8 +3159,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 11'
     customers: 17;
     rating: 4 && 4.6;
-    reviews: 9;
-  },
+    reviews: 9},
     mobile: string, email: string;
     address: string;
     website: string;
@@ -3259,14 +3220,13 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     addres,
   s: string,
     websit,
-  e: string};
+  e: string}
   realImplementatio,
   n: boolean, implementationDetails?: string,
   launchDate?: string;
   customers?: number;
   rating?: number;
-  reviews?: number;
-}
+  reviews?: number}
 const contact =
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3279,9 +3239,9 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup.com'
-};
+}
 export const,
-  realQ4Services2025: RealQ4Service[] = [,
+  realQ4Services2025: RealQ4ServiceService Feature = [,
 		i,
   d: 'affiliate-marketing-hub', nam,
   e: 'Affiliate Marketing Hub',
@@ -3352,7 +3312,7 @@ export const,
   s: 120, ratin,
   g: 4.7,
 		review,
-  s: 48};
+  s: 48}
 		i,
   d: 'podcast-transcription-studio', nam,
   e: 'Podcast Transcription Studio',
@@ -3382,8 +3342,7 @@ export const,
 		implementationDetails: 'Batch transcription queue with GPU support, diarization and summarization pipeline.',
     launchDate: '2025-09-15', customers: 60;
 		rating: 4.6;
-		reviews: 22;
-	};
+		reviews: 22}
 		id: 'micro-crm-local-business', name: 'Micro CRM for Local Business',
 		tagline: 'Simple contacts, pipelines, and reminders that just work',
     price: '$19', period: '/month',
@@ -3405,8 +3364,7 @@ export const,
 		implementationDetails: 'PWA with offline storage, task reminders, and webhook-based integrations.',
     launchDate: '2025-10-20', customers: 210;
 		rating: 4.5;
-		reviews: 77;
-	};
+		reviews: 77}
 		id: 'returns-automation-saas', name: 'Ecommerce Returns Automation',
 		tagline: 'Self-serve returns portal and automated labels', price: '$49',
 		period: '/month',
@@ -3471,7 +3429,7 @@ export const,
 		ratin,
   g: 4.6,
 		review,
-  s: 22};
+  s: 22}
 		i,
   d: 'micro-crm-local-business', nam,
   e: 'Micro CRM for Local Business',
@@ -3528,7 +3486,7 @@ export const,
 		ratin,
   g: 4.5,
 		review,
-  s: 77};
+  s: 77}
 		i,
   d: 'returns-automation-saas', nam,
   e: 'Ecommerce Returns Automation',
@@ -3585,7 +3543,7 @@ export const,
 		ratin,
   g: 4.6,
 		review,
-  s: 35};
+  s: 35}
 		i,
   d: 'it-helpdesk-for-msps', nam,
   e: 'IT Helpdesk for MSPs',
@@ -3616,8 +3574,7 @@ export const,
 		implementationDetails: 'Email ingestion, rules engine, and portal with RBAC.',
     launchDate: '2025-09-28', customers: 70;
 		rating: 4.5;
-		reviews: 28;
-	}
+		reviews: 28}
 ];
 export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI-Governed RAG Platform',
     tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
@@ -3671,8 +3628,7 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
     launchDate: '2025-03-11'
     customers: 17;
     rating: 4.6;
-    reviews: 9;
-  }
+    reviews: 9}
 ];
     rating: 4 && 4.6;
     reviews: 9;
@@ -3721,8 +3677,7 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
 		review,
   s: 28}
 ];
-export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
-    ]}
+export const real2025Q4Additions = Service Feature}
     ico,
   n: '',
     colo,
@@ -3833,9 +3788,9 @@ const contact =
   s: '364 E Main St STE 1008 Middletown DE 19709',
   websit,
   e: 'http,
-  s://ziontechgroup.com'};
+  s://ziontechgroup.com'}
 export const,
-  realQ4Services2025: RealQ4Service[] = [,
+  realQ4Services2025: RealQ4ServiceService Feature = [,
     i,
   d: 'affiliate-marketing-hub',
     nam,
@@ -4285,9 +4240,7 @@ export const,
     launchDate: '2025-09-28'
     customers: 70;
     rating: 4.5;
-    reviews: 28;
-  }];
-}
+    reviews: 28}]}
 export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     name: 'AI-Governed RAG Platform',
     tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
@@ -4378,8 +4331,7 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     ratin,
   g: 4.5,
     review,
-  s: 28}];
-}
+  s: 28}]}
 export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   r: 'text-cyan-300'}
     lin,`
@@ -5316,8 +5268,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launchDate: '2025-03-11'
     customers: 17;
     rating: 4.6;
-    reviews: 9;
-  }
+    reviews: 9}
 ];
     reviews: 9;
     ico,
@@ -5382,10 +5333,7 @@ export interface Q4Service,
   e: string, perio,
   d: string, descriptio,
   n: string; feature,
-  s: string[]; popular?: boolean; icon?: string; color?: string; text_color?: string; lin,
-  k: string; market_position?: string; target_audience?: string; trial_days?: number; setup_time?: string; categor,
-  y: string; roi?: string, competitors?: string[], marketSize?: string; growthRate?: string; variant?: string; contactInfo?: real_servic,
-  e: boolean; technology?: string[]; integrations?: string[]; use_cases?: string[]; roi?: string; competitors?: string[]; market_size?: string; growth_rate?: string; variant?: string; contact_info?: mobil,
+  s: stringService Feature; market_size?: string; growth_rate?: string; variant?: string; contact_info?: mobil,
   e: string; emai,
   l: string; addres,
   s: string; websit,
@@ -5715,7 +5663,7 @@ export interface Q4Service,
   e: '2025-09-28', customer,
   s: 70, ratin,
   g: 4.5, review,
-  s: 28}]; } customer,
+  s: 28}]} customer,
   s: 120, ratin,
   g: 4.7, review,
   s: 48}, ' i,
@@ -6458,14 +6406,14 @@ export interface Q4Service,
   e: string, emai,
   l: string, addres,
   s: string, websit,
-  e: string }; realImplementatio,
+  e: string } realImplementatio,
   n: boolean, implementationDetails?: string, launchDate?: string; customers?: number; rating?: number; reviews?: number } const contact = ' mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' }; export const,
-  realQ4Services2025: RealQ4Service[] = [ ' i,
+  s://ziontechgroup.com' } export const,
+  realQ4Services2025: RealQ4ServiceService Feature = [ ' i,
   d: 'affiliate-marketing-hub', nam,
   e: 'Affiliate Marketing Hub',' taglin,
   e: 'Track affiliates, prevent fraud, and automate payouts',' pric,
@@ -6499,7 +6447,7 @@ export interface Q4Service,
   e: '2025-10-01', customer,
   s: 120, ratin,
   g: 4.7, review,
-  s: 48 }; ' i,
+  s: 48 } ' i,
   d: 'podcast-transcription-studio', nam,
   e: 'Podcast Transcription Studio',' taglin,
   e: 'Fast, accurate multi-speaker transcriptions with summaries',' pric,
@@ -6533,7 +6481,7 @@ export interface Q4Service,
   e: '2025-09-15', customer,
   s: 60, ratin,
   g: 4.6, review,
-  s: 22 }; ' i,
+  s: 22 } ' i,
   d: 'micro-crm-local-business', nam,
   e: 'Micro CRM for Local Business',' taglin,
   e: 'Simple contacts, pipelines, and reminders that just work',' pric,
@@ -6567,7 +6515,7 @@ export interface Q4Service,
   e: '2025-10-20', customer,
   s: 210, ratin,
   g: 4.5, review,
-  s: 77 }; ' i,
+  s: 77 } ' i,
   d: 'returns-automation-saas', nam,
   e: 'E‑commerce Returns Automation',' taglin,
   e: 'Self-serve returns portal and automated labels', pric,
@@ -6601,7 +6549,7 @@ export interface Q4Service,
   e: '2025-10-05', customer,
   s: 95, ratin,
   g: 4.6, review,
-  s: 35 }; ' i,
+  s: 35 } ' i,
   d: 'it-helpdesk-for-msps', nam,
   e: 'IT Helpdesk for MSPs',' taglin,
   e: 'Ticketing, SLAs, and client portal built for MSPs',' pric,
@@ -6697,8 +6645,8 @@ export interface Q4Service,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com'}; export const,
-  realQ4Services2025: RealQ4Service[] = [ ' i,
+  s://ziontechgroup.com'} export const,
+  realQ4Services2025: RealQ4ServiceService Feature = [ ' i,
   d: 'affiliate-marketing-hub',' nam,
   e: 'Affiliate Marketing Hub',' taglin,
   e: 'Track affiliates, prevent fraud, and automate payouts',' pric,
@@ -6868,7 +6816,7 @@ export interface Q4Service,
   e: '2025-09-28', customer,
   s: 70, ratin,
   g: 4.5, review,
-  s: 28}]; } export const real2025Q4Additions = [ ' i,
+  s: 28}]} export const real2025Q4Additions = [ ' i,
   d: 'ai-governed-rag-platform',' nam,
   e: 'AI-Governed RAG Platform',' taglin,
   e: 'Enterprise-grade RAG with guardrails, approvals, and evals',' pric,

@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 'use client';
 import React, { useState } from 'react';
 const SolutionsPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
+  const Service Feature = useState('ai');
   const _solutionCategories = [
     {
       id: 'ai',
@@ -178,7 +178,7 @@ $4},
         color:       ,
 $4}
     ]
-  };
+  }
   const benefits = [
     {
       icon: Star,
@@ -237,16 +237,12 @@ $4}
             <div className="text-center">
               <p className="text-gray-300 max-w-2xl mx-auto">
     <div>Coming Soon</div>
-  );
-};
-  const [activeTab, setActiveTab] = useState('ai');
-  const _solutionCategories = [
-  // TOD,
-  O: Add items;
-];;
+  )}
+  const Service Feature = useState('ai');
+  const _solutionCategories = Service Feature;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   i,
   d: 'ai',
       nam,
@@ -261,8 +257,8 @@ $4}
   n: 'Transform your business with cutting-edge artificial intelligence'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   i,
   d: 'it',
       nam,
@@ -277,8 +273,8 @@ $4}
   n: 'Robust and scalable IT infrastructure solutions'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   i,
   d: 'security',
       nam,
@@ -293,8 +289,8 @@ $4}
   n: 'Comprehensive security solutions for your digital assets'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   i,
   d: 'automation',
       nam,
@@ -310,15 +306,13 @@ $4}
     }
   ];
   const solutions = {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   a,
-  i: [
-  // TOD,
-  O: Add items]
+  i: Service Feature
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'AI-Powered Analytics',
         descriptio,
@@ -333,8 +327,8 @@ $4}
   r: 'text-blue-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'AI Marketing Automation',
         descriptio,
@@ -349,8 +343,8 @@ $4}
   r: 'text-pink-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'AI Customer Support',
         descriptio,
@@ -365,8 +359,8 @@ $4}
   r: 'text-green-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'AI Process Automation',
         descriptio,
@@ -382,12 +376,10 @@ $4}
       }
 //     ],
     i,
-  t: [
-  // TOD,
-  O: Add items]
+  t: Service Feature
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Cloud Migration',
         descriptio,
@@ -402,8 +394,8 @@ $4}
   r: 'text-blue-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'IT Infrastructure Management',
         descriptio,
@@ -418,8 +410,8 @@ $4}
   r: 'text-green-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'DevOps & CI/CD',
         descriptio,
@@ -434,8 +426,8 @@ $4}
   r: 'text-purple-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Database Management',
         descriptio,
@@ -451,12 +443,10 @@ $4}
       }
 //     ],
     securit,
-  y: [
-  // TOD,
-  O: Add items]
+  y: Service Feature
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Cybersecurity Suite',
         descriptio,
@@ -471,8 +461,8 @@ $4}
   r: 'text-red-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'AI Security Monitoring',
         descriptio,
@@ -487,8 +477,8 @@ $4}
   r: 'text-purple-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Compliance Management',
         descriptio,
@@ -503,8 +493,8 @@ $4}
   r: 'text-green-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Security Training',
         descriptio,
@@ -520,12 +510,10 @@ $4}
       }
 //     ],
     automatio,
-  n: [
-  // TOD,
-  O: Add items]
+  n: Service Feature
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Business Process Automation',
         descriptio,
@@ -540,8 +528,8 @@ $4}
   r: 'text-yellow-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'IT Automation',
         descriptio,
@@ -556,8 +544,8 @@ $4}
   r: 'text-blue-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Marketing Automation',
         descriptio,
@@ -572,8 +560,8 @@ $4}
   r: 'text-pink-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
   e: 'Data Automation',
         descriptio,
@@ -588,14 +576,11 @@ $4}
   r: 'text-green-400'
       }
 //     ]
-  };
-  const benefits = [
-  // TOD,
-  O: Add items;
-];;
+  }
+  const benefits = Service Feature;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Star,
       titl,
@@ -604,8 +589,8 @@ $4}
   n: '300% average ROI and 95% process automation for our clients'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Shield,
       titl,
@@ -614,8 +599,8 @@ $4}
   n: 'Bank-level security and compliance for all our solutions'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Globe,
       titl,
@@ -624,8 +609,8 @@ $4}
   n: '24/7 support and services across multiple time zones'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Users,
       titl,
@@ -660,8 +645,7 @@ $4}
                   onClick={() => setActiveTab(category.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
-  O: Add content;
-}
+  O: Add content}
                     activeTab === category.id;`
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
@@ -683,28 +667,7 @@ $4}
           {/* Solutions Grid */}
           <div className="mb-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {solutions[activeTab as keyof typeof solutions].map((solution, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="flex items-start mb-4">
-                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
-                      <solution.icon className={`w-6 h-6 ${solution.color}`} />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>
-                      <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
-                    </div>
-                  </div>
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {solution.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-          {/* Solutions Grid */}"
-          <div className="mb-16"></div>"
-            <div className="grid grid-cols-1,"
-  md:grid-cols-2 gap-8"></div>
-              {solutions[activeTab as keyof typeof solutions].map((solution, index) => ()}"
+              {solutionsService Feature.map((solution, index) => ()}"
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
   hover:border-cyan-400/50 transition-all duration-300"></div>"
                   <div className="flex items-start mb-4"></div>`
@@ -850,8 +813,7 @@ $4}
       <Footer />
     </React.Fragment>
     </div>
-  );
-};
+  )}
 export default SolutionsPage;
   </a>
   </a>

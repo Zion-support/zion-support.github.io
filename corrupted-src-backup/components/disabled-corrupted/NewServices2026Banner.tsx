@@ -1,5 +1,5 @@
 type NewServices2026BannerProp, s = {/* TODO: Fix JSX expression */}
- };
+ }
 export default function NewServices2026Bann, e, r({)
   varia, n, t = 'showc, a, s, e')
   showCou, n, t =  , 6)
@@ -80,6 +80,5 @@ export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression *
         </div>
       </div>
     </secti, o, n>
-  );
-}
+  )}
 `

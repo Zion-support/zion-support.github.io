@@ -6,17 +6,15 @@ interface PerformanceMetrics {
   fid: number | null;
   cls: number | null;
   ttfb: number | null;
-  memory: number | null;
-}
+  memory: number | null}
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enableRealTimeMonitoring?: boolean;
-}
+  enableRealTimeMonitoring?: boolean}
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const Service Feature = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
     fid: null,
@@ -27,21 +25,18 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const measureWebVitals = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
-    const observers: PerformanceObserver[] = [];
+    const observers: PerformanceObserverService Feature;
     // Measure First Contentful Paint (FCP)
-    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
-    const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
+    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || Service Feature.startTime : null;
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {
       try {
         const lcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-        });
+          const lastEntry = entriesService Feature;
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))});
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-        observers.push(lcpObserver);
-      } catch (error) {
+        observers.push(lcpObserver)} catch (error) {
         // eslint-disable-next-line no-console
       }
     }
@@ -60,13 +55,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               setMetrics(prev => ({
                 ...prev,
                 fid: fidEntry.processingStart - fidEntry.startTime,
-              }));
-            }
-          });
-        });
+              }))}
+          })});
         fidObserver.observe({ entryTypes: ['first-input'] });
-        observers.push(fidObserver);
-      } catch (error) {
+        observers.push(fidObserver)} catch (error) {
         // eslint-disable-next-line no-console
       }
     }
@@ -85,48 +77,17 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               const clsEntry = entry as LayoutShift;
               if (!clsEntry.hadRecentInput) {
                 clsValue += clsEntry.value;
-                setMetrics(prev => ({ ...prev, cls: clsValue }));
-              }
+                setMetrics(prev => ({ ...prev, cls: clsValue }))}
             }
-          });
-        });
+          })});
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-        observers.push(clsObserver);
-      } catch (error) {
+        observers.push(clsObserver)} catch (error) {
         // eslint-disable-next-line no-console
       }
     }
     // Measure Time to First Byte (TTFB)
     try {
-      const navigationEntries = performance.getEntriesByType?.('navigation') || [];
-      const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
-      const ttfb = navigationEntry
-        ? navigationEntry.responseStart - navigationEntry.requestStart
-        : null;
-      // Measure Memory Usage
-      const memory =
-        (performance as Performance & { memory?: { usedJSHeapSize: number } })
-          .memory?.usedJSHeapSize || null;
-      setMetrics(prev => ({
-        ...prev,
-        fcp,
-        ttfb,
-        memory,
-      }));
-    } catch (error) {
-      // eslint-disable-next-line no-console
-    }
-    // Cleanup observers
-    return () => {
-      observers.forEach(observer => {
-        try {
-          observer.disconnect();
-        } catch (error) {
-          // eslint-disable-next-line no-console
-        }
-      });
-    };
-  }, []);
+      const navigationEntries = performance.getEntriesByType?.('navigation') || Service Feature);
   const measureResourceTiming = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
     const resources = performance.getEntriesByType('resource');
@@ -142,9 +103,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           duration: r.duration,
           size: r.transferSize,
         }))
-      );
-    }
-  }, []);
+      )}
+  }, Service Feature);
   const measureCoreWebVitals = useCallback(() => {
     if (typeof window === 'undefined') return;
     // Use web-vitals library if available
@@ -155,85 +115,47 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           if (onCLS) {
             onCLS((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, cls: metric.value }))
-            );
-          }
+            )}
           if (onFCP) {
             onFCP((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, fcp: metric.value }))
-            );
-          }
+            )}
           if (onLCP) {
             onLCP((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, lcp: metric.value }))
-            );
-          }
+            )}
           if (onTTFB) {
             onTTFB((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, ttfb: metric.value }))
-            );
-          }
+            )}
         })
         .catch(() => {
           // web-vitals not available, continue without it
-        });
-    } catch {
+        })} catch {
       // web-vitals not available, continue without it
     }
-  }, []);
-  useEffect(() => {
-    if (!enableRealTimeMonitoring) return;
-    const cleanup = measureWebVitals();
-    measureResourceTiming();
-    measureCoreWebVitals();
-    // Monitor performance every 5 seconds
-    const interval = setInterval(() => {
-      measureResourceTiming();
-    }, 5000);
-    return () => {
-      if (cleanup) cleanup();
-      clearInterval(interval);
-    };
-  }, [
-    enableRealTimeMonitoring,
-    measureWebVitals,
-    measureResourceTiming,
-    measureCoreWebVitals,
-  ]);
-  useEffect(() => {
-    if (onMetricsUpdate) {
-      onMetricsUpdate(metrics);
-    }
-  }, [metrics, onMetricsUpdate]);
-  // Performance recommendations
-  const getPerformanceRecommendations = useCallback(() => {
-    const recommendations: string[] = [];
+  }, Service Feature;
     if (metrics.fcp && metrics.fcp > 1800) {
       recommendations.push(
         'First Contentful Paint is slow. Consider optimizing critical rendering path.'
-      );
-    }
+      )}
     if (metrics.lcp && metrics.lcp > 2500) {
       recommendations.push(
         'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
-      );
-    }
+      )}
     if (metrics.fid && metrics.fid > 100) {
       recommendations.push(
         'First Input Delay is high. Reduce JavaScript execution time.'
-      );
-    }
+      )}
     if (metrics.cls && metrics.cls > 0.1) {
       recommendations.push(
         'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
-      );
-    }
+      )}
     if (metrics.ttfb && metrics.ttfb > 600) {
       recommendations.push(
         'Time to First Byte is slow. Optimize server response time.'
-      );
-    }
-    return recommendations;
-  }, [metrics]);
+      )}
+    return recommendations}, Service Feature);
   const _recommendations = getPerformanceRecommendations();
   if (process.env.NODE_ENV === 'development') {
     return (
@@ -265,10 +187,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           </div>
         )}
       </div>
-    );
-  }
-  return null;
-};
+    )}
+  return null}
 export default AdvancedPerformanceMonitor;
   </PerformanceMetrics>
   </PerformanceMonitorProps>

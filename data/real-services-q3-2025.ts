@@ -5,39 +5,7 @@
   price: string;
   period: string;
   description: string;
-  features: string[];
-  popular?: boolean;
-  icon: string;
-  color: string;
-  link: string;
-export interface Q3Service {id: string, name: string;
-  tagline: string, price: string;
-  period: string, description: string;
-  features: string[], popular?: boolean,
-  icon: string, color: string;
-  textColor: string, link: string;
-  marketPosition?: string;
-  targetAudience?: string;
-  trialDays?: number;
-  setupTime?: string;
-  category: string, realService: boolean;
-  technology?: string[];
-  integrations?: string[];
-  useCases?: string[];,
-  roi?: string;
-  competitors?: string[],
-  marketSize?: string;
-  growthRate?: string;
-  text_color: string;
-  link: string;  market_position?: string;
-  target_audience?: string;
-  trial_days?: number;
-  setup_time?: string;
-  category: string;
-  real_service: boolean;  technology?: string[];  integrations?: string[];
-  use_cases?: string[];
-  roi?: string;
-  competitors?: string[];
+  features: stringService Feature;
   market_size?: string;
   growth_rate?: string;,
   variant?: ServiceVariant;
@@ -48,22 +16,7 @@ const contact =
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'}}
-export const realServicesQ32025: Q3Service[] = [,
-  {  reviews?: number;
-  i,
-  d: string;
-  nam,
-  e: string;
-  taglin,
-  e: string;
-  pric,
-  e: string,
-  perio,
-  d: string,
-  descriptio,
-  n: string;
-  feature,
-  s: string[];
+export const realServicesQ32025: Q3ServiceService Feature;
   popular?: boolean;
   ico,
   n: string;
@@ -85,7 +38,7 @@ const contact =
   e: 'http,
   s://ziontechgroup.com'}}
 export const,
-  realServicesQ32025: Q3Service[] = [,
+  realServicesQ32025: Q3ServiceService Feature = [,
   {/* TODO: Fix JSX expression */}
 }
 const contact =
@@ -101,7 +54,7 @@ const contact =
 const contact =
   mobile: '+1 302 464 0950'
   address: '364 E Main St STE 1008 Middletown DE 19709'
-// const contact = {;
+// const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -116,26 +69,24 @@ const contact =
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'
 }
-};
+}
 export const,
-  realServicesQ32025: Q3Service[] = [}
-export const realServicesQ32025: Q3Service[] = [,
+  realServicesQ32025: Q3ServiceService Feature = [,
     id: 'subscription-analytics-revenue-optimization',
     name: 'Subscription Analytics & Revenue Optimization'}
   address: '364 E Main St STE 1008 Middletown DE 19709',
-export const realServicesQ32025: Q3Service[] = [,
-  {  reviews?: number;
-}
+export const realServicesQ32025: Q3ServiceService Feature = [,
+  {  reviews?: number}
 const contact =
-  mobile: '+1 302 464 0950'};
-export const realServicesQ32025: Q3Service[] = [,
+  mobile: '+1 302 464 0950'}
+export const realServicesQ32025: Q3ServiceService Feature = [,
     tagline:,
       'Churn insights, cohort analysis, and pricing experiments for SaaS growth'
     price: '$599',
     period: '/month',
     description:,
 export const,
-  realServicesQ32025: Q3Service[] = [,
+  realServicesQ32025: Q3ServiceService Feature = [,
     i,
   d: 'subscription-analytics-revenue-optimization'
     nam,
@@ -144,15 +95,15 @@ export const,
   addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',
 export const,
-  realServicesQ32025: Q3Service[] = [,
+  realServicesQ32025: Q3ServiceService Feature = [,
   {/* TODO: Fix JSX expression */}
 }
 const contact =
   mobil,
   e: '+1 302 464 0950'
-};
+}
 export const,
-  realServicesQ32025: Q3Service[] = [,
+  realServicesQ32025: Q3ServiceService Feature = [,
     taglin,
   e:
       'Churn insights, cohort analysis, and pricing experiments for SaaS growth'
@@ -261,8 +212,7 @@ export const,
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
     contactInfo: contact;
     // @ts - expect - error augment common shape for UI components that expect contact_info;,
-    contact_info: contact;
-  }
+    contact_info: contact}
     id: 'digital - product - commerce - stack',
     name: 'Digital Product Commerce Stack',
     tagline: 'End - to - end setup for selling downloads, licenses, and subscriptions'
@@ -290,8 +240,7 @@ export const,
     rating: 4 && 4.8;
     reviews: 18;
     // @ts - expect - error augment common shape for UI components that expect contact_info;,
-    contact_info: contact;
-  }
+    contact_info: contact}
     id: 'wordpress - internal - linking - automation',
     name: 'WordPress Internal Linking Automation',
     tagline: 'AI - guided internal links that improve SEO structure and topical authority',
@@ -327,8 +276,7 @@ export const,
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
     contactInfo: contact;
     // @ts - expect - error augment common shape for UI components that expect contact_info;,
-    contact_info: contact;
-  }
+    contact_info: contact}
     name: 'Ecommerce Reviews & UGC Activation',
     tagline: 'Deploy reviews and UGC workflows that increase trust and conversion',
     price: '$999',
@@ -644,8 +592,7 @@ export const,
     description: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.',
     features: [;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
-    contactInfo: contact;
-  }
+    contactInfo: contact}
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams'
     trialDays: 14;
     category: 'AI & Data',
@@ -661,8 +608,7 @@ export const,
     rating: 4.9;
     reviews: 31;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
-    contactInfo: contact;
-  }
+    contactInfo: contact}
     id: 'digital-product-commerce-stack',
     name: 'Digital Product Commerce Stack',
     tagline:,
@@ -764,8 +710,7 @@ export const,
     rating: 4.8;
     reviews: 18;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
-    contactInfo: contact;
-  }
+    contactInfo: contact}
     id: 'wordpress-internal-linking-automation'
     name: 'WordPress Internal Linking Automation',
     tagline: 'AI-guided internal links that improve SEO structure and topical authority',
@@ -852,8 +797,7 @@ export const,
     rating: 4.7;
     reviews: 22;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
-    contactInfo: contact;
-  }
+    contactInfo: contact}
     id: 'reviews-ugc-activation'
     name: 'Ecommerce Reviews & UGC Activation',
     tagline: 'Deploy reviews and UGC workflows that increase trust and conversion',
@@ -942,8 +886,7 @@ export const,
     rating: 4.8;
     reviews: 12;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
-    contactInfo: contact;
-  }];    contactInfo: contact;
+    contactInfo: contact}];    contactInfo: contact;
     ico,
   n: '';
     colo,
@@ -993,8 +936,7 @@ export const,
     textColor: 'text-emerald-300'
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
-    contactInfo: contact;
-  },
+    contactInfo: contact},
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays: 14;
@@ -1046,8 +988,7 @@ export const,
   g: 4.9,
     review,
   s: 31,
-    // @ts-expect-error augment common shape for UI components that expect contactInfo;
-  },
+    // @ts-expect-error augment common shape for UI components that expect contactInfo},
     i,
   d: 'digital-product-commerce-stack',
     nam,
@@ -1086,8 +1027,7 @@ export const,
   g: 4.8,
     review,
   s: 18,
-    // @ts-expect-error augment common shape for UI components that expect contactInfo;
-  },
+    // @ts-expect-error augment common shape for UI components that expect contactInfo},
     i,
   d: 'wordpress-internal-linking-automation',
     nam,
@@ -1129,8 +1069,7 @@ export const,
   g: 4.7,
     review,
   s: 22,
-    // @ts-expect-error augment common shape for UI components that expect contactInfo;
-  },
+    // @ts-expect-error augment common shape for UI components that expect contactInfo},
     i,
   d: 'reviews-ugc-activation',
     nam,
@@ -1169,14 +1108,11 @@ export const,
   g: 4.8,
     review,
   s: 12,
-    // @ts-expect-error augment common shape for UI components that expect contactInfo;
-  }
-];
-;
+    // @ts-expect-error augment common shape for UI components that expect contactInfo}
+]}
 }
-};
 export const,
-  realServicesQ32025: Q3Service[] = [,
+  realServicesQ32025: Q3ServiceService Feature = [,
     i,
   d: 'subscription-analytics-revenue-optimization',
     nam,
@@ -1201,8 +1137,7 @@ export const,
     textColor: 'text-emerald-300'
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
-    contactInfo: contact;
-  },
+    contactInfo: contact},
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays: 14;
@@ -1595,8 +1530,7 @@ export const,
     reviews: 12;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
     contactInfo: contact;
-    contactInfo: contact;
-  }];    contactInfo: contact;
+    contactInfo: contact}];    contactInfo: contact;
     contactInfo: contact;
     ico,
   n: '',
@@ -1654,8 +1588,7 @@ export const,
   o: contact;
     contactInf,
   o: contact}
-];
-  }
+]}
 ];
 i,
   d: string; nam,
@@ -1664,33 +1597,13 @@ i,
   e: string, perio,
   d: string, descriptio,
   n: string; feature,
-  s: string[]; popular?: boolean; ico,
-  n: string; colo,
-  r: string; lin,
-  k: string, export interface Q3Service,
-  id: string, nam,
-  e: string, taglin,
-  e: string, pric,
-  e: string, perio,
-  d: string, descriptio,
-  n: string, feature,
-  s: string[], popular?: boolean, ico,
-  n: string, colo,
-  r: string, textColo,
-  r: string, lin,
-  k: string, marketPosition?: string; targetAudience?: string; trialDays?: number; setupTime?: string; categor,
-  y: string, realServic,
-  e: boolean, technology?: string[]; integrations?: string[]; useCases?: string[]; roi?: string; competitors?: string[], marketSize?: string; growthRate?: string; text_colo,
-  r: string; lin,
-  k: string; market_position?: string; target_audience?: string; trial_days?: number; setup_time?: string; categor,
-  y: string; real_servic,
-  e: boolean; technology?: string[]; integrations?: string[]; use_cases?: string[]; roi?: string; competitors?: string[]; market_size?: string; growth_rate?: string; variant?: ServiceVariant; customers?: number; rating?: number, const contact = mobil,
+  s: stringService Feature; market_size?: string; growth_rate?: string; variant?: ServiceVariant; customers?: number; rating?: number, const contact = mobil,
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
   s://ziontechgroup.com'} export const,
-  realServicesQ32025: Q3Service[] = [ { reviews?: number } const contact = ' mobil,
+  realServicesQ32025: Q3ServiceService Feature = [ { reviews?: number } const contact = ' mobil,
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
@@ -1700,15 +1613,14 @@ i,
   s: '364 E Main St STE 1008 Middletown DE 19709', const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com' } }; export const,
-  realServicesQ32025: Q3Service[] = [ } export const,
-  realServicesQ32025: Q3Service[] = [ ' i,
+  s://ziontechgroup && ziontechgroup.com' } } export const,
+  realServicesQ32025: Q3ServiceService Feature = [ ' i,
   d: 'subscription-analytics-revenue-optimization'' nam,
   e: 'Subscription Analytics & Revenue Optimization' }' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', export const,
-  realServicesQ32025: Q3Service[] = [ { reviews?: number } const contact = ' mobil,
-  e: '+1 302 464 0950' }; export const,
-  realServicesQ32025: Q3Service[] = [ taglin,
+  realServicesQ32025: Q3ServiceService Feature = [ { reviews?: number } const contact = ' mobil,
+  e: '+1 302 464 0950' } export const,
+  realServicesQ32025: Q3ServiceService Feature = [ taglin,
   e:' 'Churn insights, cohort analysis, and pricing experiments for SaaS growth'' pric,
   e: '$599'' perio,
   d: '/month' descriptio,
@@ -2029,8 +1941,8 @@ i,
   e: true, customer,
   s: 10, ratin,
   g: 4.8, review,
-  s: 12, // @ts-expect-error augment common shape for UI components that expect contactInfo } ]; } }; export const,
-  realServicesQ32025: Q3Service[] = [ ' i,
+  s: 12, // @ts-expect-error augment common shape for UI components that expect contactInfo } ]} } export const,
+  realServicesQ32025: Q3ServiceService Feature = [ ' i,
   d: 'subscription-analytics-revenue-optimization',' nam,
   e: 'Subscription Analytics & Revenue Optimization',' taglin,
   e: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth',' pric,
@@ -2192,4 +2104,4 @@ i,
   contactInfo: contact,
   contactInfo: contact}]; contactInf,
   o: contact,
-  contactInfo: contact } ]; } ]; '
+  contactInfo: contact } ]} ]; '

@@ -4,10 +4,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Package, Target, Zap, Settings, CheckCircle, Star,  Package,  Target,  Settings } from 'lucide-react';
 const AIInventoryManagerPage: React.FC = () => {
-  const features = [];
+  const features = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   ico,
   n: Package,
       titl,
@@ -15,8 +15,7 @@ const AIInventoryManagerPage: React.FC = () => {
       descriptio,
   n: 'AI-powered inventory tracking and management',
       benefit,
-  s: ['Real-time tracking', 'Stock monitoring', 'Automated alerts'];
-    },
+  s: ['Real-time tracking', 'Stock monitoring', 'Automated alerts']},
       ico,
   n: Target,
       titl,
@@ -89,6 +88,5 @@ const AIInventoryManagerPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default PagePage;

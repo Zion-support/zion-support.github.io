@@ -13,7 +13,6 @@ const optimizePerformance = () => {
   // 4. Optimize fonts
   // 5. Generate service worker
   
-  console.log('Performance optimizations completed');
-};
+  console.log('Performance optimizations completed')}
 
 optimizePerformance();

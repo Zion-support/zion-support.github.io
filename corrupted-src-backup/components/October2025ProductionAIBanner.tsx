@@ -481,6 +481,5 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
         </d, i, v>
       </d, i, v>
     </secti, o, n>
-  );
-}
+  )}
 ;"

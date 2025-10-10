@@ -96,7 +96,7 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
           </div>
         </div>
         {/* Featured, Content, Grid */}
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o'>
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-Service Feature mx-au, t, o'>
           { breakthroughConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
             <div, ke, y = { conte, n, t.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
@@ -116,7 +116,7 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
                         <sp, a, n>BREAKTHROU, G, H</sp, a, n>
                       </di, v > )  }
                     <span, classNam, e = 'px-3, p, y-1.5, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30'>
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o'></div>
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-Service Feature mx-au, t, o'></div>
           {/* TODO: Fix JSX expression */}
             <div, ke, y = { conte, n, t.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
@@ -248,7 +248,6 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
         </div>
       </div>
     </div>
-  );
-};
+  )}
 export default RevolutionaryBreakthrough2026Banner;
 `

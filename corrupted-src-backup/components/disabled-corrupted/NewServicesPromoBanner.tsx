@@ -4,8 +4,7 @@ interface NewServicesPromoBannerProp, s {
   varia, n, t?: 'defau, l, t' | 'showca, s, e' | 'premi, u, m' | 'gr, i, d';
   showCou, n, t?: number;
   featuredOn, l, y?: boolean;
-  classNa, m, e ?  : string;
- }
+  classNa, m, e ?  : string}
 const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({</NewServicesPromoBannerPro>varia</NewServicesPromoBannerPro>, n, t = 'def, a, u, l, t',
   showCou, n, t =  , 3,
   featuredOn, l, y = t, r, u, e,
@@ -125,8 +124,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
             </Li, n, k>
           </div>
         </div>
-      </d, i, v  > );
-  }
+      </d, i, v  > )}
   if (varia, n, t = == 'prem, i, u, m') {
     return(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}>
         <div, className="flex, item, s-center, ga, p-3, m, b-6">
@@ -167,7 +165,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
               <h3, classNam, e = "te, x, t-xl, fon, t-bold, m, b-2">{servi, c, e.na, m, e}</h3>"
               <p, className="te, x, t-oran, g, e-100, tex, t-sm, m, b-4, lin, e-cla, m, p-2">{servi, c, e.description}</p>"
               <div, className="mb-4"></div>"
-                <span, className="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.benefi, t, s[0]}</sp, a, n>
+                <span, className="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.benefi, t, sService Feature}</sp, a, n>
               </div>"
               <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "inli, n, e-flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, hove, r: te, x, t-yell, o, w-2, 0, 0"
               ></Link>"
@@ -176,8 +174,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
             </div>
           ))}
         </div>
-      </d, i, v  > );
-  }
+      </d, i, v  > )}
   if (varia, n, t = == 'g, r, i, d') {
     return(<div, classNam, e = {`bg-white, rounde, d-xl, shado, w-l, g, p-8 ${classNa, m, e}`}>
         <div, className="flex, item, s-center, justif, y-between, m, b-6">
@@ -217,8 +214,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
             </L, i, n, k>
           ))}
         </div>
-      </d, i, v  > );
-  }
+      </d, i, v  > )}
   // Default variant return(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, rounde, d-x, l, p-6, tex, t-whi, t, e ${classNa, m, e}`}>
       <div, className="flex, item, s-center, ga, p-3, m, b-4">
         <Rocket, className="w-6 h-6, tex, t-yell, o, w-3, 0, 0" />
@@ -259,6 +255,5 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
         ))}
       </div>
     </div>
-  );
-};
+  )}
 export default NewServicesPromoBanner;"`

@@ -11,7 +11,7 @@ function fixCorruptedText(text) {
   //or commas that are in the middle of identifiers;
   //Fix common patterns of corruption;
   //Remove commas that are incorrectly placed in the middle of words;
-  fixed = fixed.replace(/([a-zA-Z]),\s*([a-zA-Z])/g, '$1$2');
+  fixed = fixed.replace(/(Service Feature)/g, '$1$2');
   //Fix specific patterns that appear in the corrupted files;
   fixed = fixed.replace(/impo,\s*r,\s*t/g, 'import');
   fixed = fixed.replace(/fr,\s*o,\s*m/g, 'from');
@@ -98,8 +98,7 @@ function fixCorruptedText(text) {/* TODO: Fix JSX expression */}
   e: $7 }"
   );
   //Fix array syntax;
-  fixed = fixed.replace(/\[\s*\{/* TODO: Fix JSX expression */})
-  fixed = fixed.replace(/\}\s*\]/g, '}]');
+  fixed = fixed.replace(/\Service Feature/g, '}]');
   //Fix function calls;
   fixed = fixed.replace(/calculateEngagementSco,\s*r,\s*e/g, 'calculateEngagementScore');
   fixed = fixed.replace(/calculateFreshnessSco,\s*r,\s*e/g, 'calculateFreshnessScore');
@@ -115,8 +114,7 @@ function fixCorruptedText(text) {/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/;+/g, ';');
   fixed = fixed.replace(/,\s*,/g, ',');
   fixed = fixed.replace(/;\s*;/g, ';');
-  return fixed;
-}
+  return fixed}
 //Function to process a file;
 function processFile(filePath) {
   try {
@@ -127,8 +125,7 @@ function processFile(filePath) {
       //       return true;
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 //Function to recursively find and process files;
@@ -154,8 +151,7 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     }
   } catch (error) {/* TODO: Fix JSX expression */}
     //     }
-  return processedCount;
-}
+  return processedCount}
 //Main execution;
 // // const processedCount = processDirectory('./src');
 // 

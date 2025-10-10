@@ -49,34 +49,16 @@ function fixPageJSX() {
       
       // Fix broken closing tags
       { pattern: /<\/\w+><\/\w+>/g, replacement: (match) => {
-        const firstTag = match.match(/<\/(\w+)>/)[1];
-        return `</${firstTag}>`;
-      }}
-    ];
-    
-    let modified = false;
-    for (const fix of fixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    }
-    
-    // Additional specific fixes for common patterns
-    content = content.replace(/<(\w+)([^>]*)>([^<]*?)(?![^<]*<\/\1>)(?=\s*<)/g, '<$1$2>$3</$1>');
+        const firstTag = match.match(/<\/(\w+)>/)Service Feature*<\/\1>)(?=\s*<)/g, '<$1$2>$3</$1>');
     
     if (modified) {
       fs.writeFileSync('app/page.tsx', content, 'utf8');
       console.log('Fixed app/page.tsx');
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.error('Error fixing app/page.tsx:', error.message);
-    return false;
-  }
+    return false}
 }
 
 fixPageJSX();

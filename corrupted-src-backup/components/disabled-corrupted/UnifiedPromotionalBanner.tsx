@@ -4,8 +4,7 @@ export interface FeaturedItem {
   title: string;
   category: string;
   li, n, k: string;
-  metri, c, s ?  : str, i, n, g;
- }
+  metri, c, s ?  : str, i, n, g}
 export interface UnifiedPromotionalBannerProps {
   varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a';
   title: string;
@@ -13,7 +12,7 @@ export interface UnifiedPromotionalBannerProps {
   ctaTe, x, t: string;
   ctaLi, n, k: string;
   the, m, e?: 'bl, u, e' | 'purp, l, e' | 'gre, e, n' | 'oran, g, e' | 'r, e, d' | 'gradie, n, t' | 'cy, a, n';
-  featuredIte, m, s?: FeaturedIt, e, m[];
+  featuredIte, m, s?: FeaturedIt, e, mService Feature;
   showCou, n, t?: number;
   classNa, m, e?: string;
   ic, o, n?: 'sparkl, e, s' | 'z, a, p' | 'rock, e, t' | 'st, a, r' | 'no, n, e';
@@ -26,21 +25,20 @@ export interface UnifiedPromotionalBannerProps {/* TODO: Fix JSX expression */}
  }
 const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  }; const buttonTheme, s = {/* TODO: Fix JSX expression */}
-  };
+  } const buttonTheme, s = {/* TODO: Fix JSX expression */}
+  }
   // Icon selection const IconCompone n t = {/* TODO: Fix JSX expression */}
-  }[ic, o, n];
+  }Service Feature;
   // Varia n t-specific styles const variantClass e s = {
     defau, l, t: 'py-8 p, x-, 6',
     premi, u, m: 'py-12, p, x-, 8',
     he, r, o: 'py-16, p, x-1, 0',
     compa, c, t: 'py-6, p, x-, 4',
-    me, g, a: 'py-20, p, x-1, 2'}; const visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return(<div, classNam, e = { `
+    me, g, a: 'py-20, p, x-1, 2'} const visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return(<div, classNam, e = { `
   // Varia n t-specific styles const variantClass e s = {/* TODO: Fix JSX expression */}
-  }; const visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return (<div, classNam, e = {/* TODO: Fix JSX expression */}
-        bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl;
-        ${variantClass, e, s[varia, n, t]} 
-        ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2 xl, hove, r:sca, l, e-[1.0, 1]'  : '' }
+  } const visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return (<div, classNam, e = {/* TODO: Fix JSX expression */}
+        bg-gradie, n, t-to-r ${themeClass, e, sService Feature} 
+        ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2 xl, hove, r:sca, l, e-Service Feature'  : '' }
         ${classNa, m, e}
       `}
     >
@@ -135,9 +133,9 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
         )}
         {/* CTA, Butto, n */}
         <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' > <Link, t, o = { ctaL, i, n, k }, className={ `}
-              inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl;
+              inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, sService Feature } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl;
         <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' ></div> <Link, t, o = { ctaL, i, n, k }, className={ `
-              inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl
+              inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, sService Feature } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl
               ${ 
                 varia, n, t === 'compa, c, t'
                   ? 'px-6, p, y-3, tex, t-sm'
@@ -146,7 +144,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
                      : 'te, x, t-ba, s, e'
                }
         <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' > <Link, t, o = { ctaL, i, n, k }, className={/* TODO: Fix JSX expression */}
-              inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl;
+              inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, sService Feature } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl;
               ${/* TODO: Fix JSX expression */}
                }`
             `}
@@ -165,7 +163,6 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
         </div>
       </div>
     </div>
-  );
-};
+  )}
 export default UnifiedPromotionalBanner;
 `

@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const HelpPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [activeCategory, setActiveCategory] = useState('getting-started');
+  const Service Feature = useState('');
+  const Service Feature = useState('getting-started');
   const categories = [
     {
       id: 'getting-started',
@@ -88,7 +88,7 @@ titletitle: 'Security Best Practices',
         readTime: '12 min read',
         title: 'Monitoring and Logging',
         description: 'Set up monitoring and logging for your AI services and applications']
-  };
+  }
   const resources = [
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all our services',
@@ -135,7 +135,7 @@ questionquestion: 'Can I integrate your services with my existing systems?',
 questionquestion: 'Is there a free trial available?',
       answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.'
   const getCurrentArticles = () => {
-    return helpArticles[activeCategory as keyof typeof helpArticles] || [];
+    return helpArticlesService Feature;
   const filteredArticles = getCurrentArticles().filter(article =>
     article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     article.description.toLowerCase().includes(searchTerm.toLowerCase())
@@ -266,14 +266,13 @@ questionquestion: 'Is there a free trial available?',
     </React.Fragment>
   return (
     <div>Coming Soon</div>
-  );
-};
-  const [searchTerm, setSearchTerm] = useState('');
-  const [activeCategory, setActiveCategory] = useState('getting-started');
+  )}
+  const Service Feature = useState('');
+  const Service Feature = useState('getting-started');
 const categories = [
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   i,
   d: 'getting-started',
       nam,
@@ -308,7 +307,7 @@ const categories = [
     }
   ];
   const helpArticles = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     'getting-started': [;
   titl,

@@ -193,8 +193,7 @@ const AIServicesPage: React.FC = () => {
 
         <Footer />
       </div>,
-    </>);
-};
+    </>)}
 
 export default AIServicesPage;`;
 

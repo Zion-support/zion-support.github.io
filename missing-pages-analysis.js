@@ -149,8 +149,7 @@ extraPages.forEach(page => console.log(`- ${page}`));
 const brokenLinks = missingPages.filter(page => {
   // These are critical pages that should exist
   const criticalPages = ['/blockchain-web3'];
-  return criticalPages.includes(page);
-});
+  return criticalPages.includes(page)});
 
 console.log('\nCritical missing pages (broken links):');
 brokenLinks.forEach(page => console.log(`- ${page}`));

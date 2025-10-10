@@ -5,77 +5,7 @@
   price: string;
   period: string;
   description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: ServiceVariant;
-  contact_info: unknown;
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  i,
-  d: string;
-  nam,
-  e: string;
-  taglin,
-  e: string;
-  pric,
-  e: string,
-  perio,
-  d: string,
-  descriptio,
-  n: string;
-  feature,
-  s: string[];
-  popula,
-  r: boolean;
-  ico,
-  n: string;
-  colo,
-  r: string;
-  text_colo,
-  r: string;
-  lin,
-  k: string;
-  market_positio,
-  n: string;
-  target_audienc,
-  e: string;
-  trial_day,
-  s: number;
-  setup_tim,
-  e: string;
-  categor,
-  y: string;
-  real_servic,
-  e: boolean;
-  technolog,
-  y: string[];
-  integration,
-  s: string[];
-  use_case,
-  s: string[];
-  ro,
-  i: string;
-  competitor,
-  s: string[];
+  features: stringService Feature;
   market_siz,
   e: string;
   growth_rat,
@@ -105,9 +35,8 @@
   g: number;
   review,
   s: number;
-;
 export const,
-  innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionService[] =;
+  innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionServiceService Feature =;
   [
     // AI - Powered Customer Success Automation;
       id: 'ai - customer - success - automation'
@@ -239,8 +168,7 @@ export const,
       launch_date: '2024 - 11 - 15'
       customers: 320;
       rating: 4 && 4.8;
-      reviews: 156;
-    },
+      reviews: 156},
         'Advanced document processing platform that uses AI to extract, classify, and process documents with 99 && 99.2% accuracy, automating workflows and reducing manual data entry.',
       features: [;
     // Intelligent Document Processing Hub;
@@ -382,8 +310,7 @@ export const,
       launch_date: '2024 - 10 - 20'
       customers: 280;
       rating: 4 && 4.7;
-      reviews: 134;
-    },
+      reviews: 134},
     // Smart Inventory Management System;
       id: 'smart - inventory - management - system'
       name: 'Smart Inventory Management System',
@@ -542,8 +469,7 @@ export const,
       launch_date: '2024 - 09 - 10'
       customers: 450;
       rating: 4 && 4.9;
-      reviews: 223;
-    },
+      reviews: 223},
         'AI-powered candidate screening and matching',
     // AI - Powered HR Recruitment Suite;
       id: 'ai - hr - recruitment - suite'
@@ -686,8 +612,7 @@ export const,
       launch_date: '2024 - 08 - 25'
       customers: 380;
       rating: 4 && 4.8;
-      reviews: 187;
-    },
+      reviews: 187},
         'AI-powered project risk prediction',
     // Intelligent Project Management Hub;
       id: 'intelligent - project - management - hub'
@@ -879,23 +804,7 @@ i,
   e: string, perio,
   d: string, descriptio,
   n: string; feature,
-  s: string[]; popula,
-  r: boolean; ico,
-  n: string; colo,
-  r: string; text_colo,
-  r: string; lin,
-  k: string; market_positio,
-  n: string; target_audienc,
-  e: string; trial_day,
-  s: number; setup_tim,
-  e: string; categor,
-  y: string; real_servic,
-  e: boolean; technolog,
-  y: string[]; integration,
-  s: string[]; use_case,
-  s: string[]; ro,
-  i: string; competitor,
-  s: string[]; market_siz,
+  s: stringService Feature; market_siz,
   e: string; growth_rat,
   e: string; varian,
   t: ServiceVariant; contact_inf,
@@ -910,7 +819,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number; export const,
-  innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionService[] =; [; // AI - Powered Customer Success Automation, ' i,
+  innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionServiceService Feature =; [; // AI - Powered Customer Success Automation, ' i,
   d: 'ai - customer - success - automation',' nam,
   e: 'AI Customer Success Automation',' taglin,
   e: 'Automate customer success with intelligent AI',' pric,

@@ -21,8 +21,7 @@ const nextConfig = {
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'],
     formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    deviceSizes: Service Feature,
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
@@ -35,8 +34,7 @@ const nextConfig = {
         new webpack.DefinePlugin({
           'self': 'undefined',
         })
-      );
-    }
+      )}
 
     // Optimize bundle size
     config.optimization = {
@@ -49,22 +47,12 @@ const nextConfig = {
           framework: {
             chunks: 'all',
             name: 'framework',
-            test: /(?<!node_modules.*)[\\/]node_modules[\\/](react|react-dom|scheduler|prop-types|use-subscription)[\\/]/,
-            priority: 40,
-            enforce: true,
-          },
-          lib: {
-            test(module) {
-              return (
-                module.size() > 160000 &&
-                /node_modules[/\\]/.test(module.identifier())
-              );
-            },
+            test: /(?<!node_modules.*)Service Feature/.test(module.identifier())
+              )},
             name(module) {
               const _hash = crypto.createHash('sha1');
               _hash.update(module.identifier());
-              return _hash.digest('hex').substring(0, 8);
-            },
+              return _hash.digest('hex').substring(0, 8)},
             priority: 30,
             minChunks: 1,
             reuseExistingChunk: true,
@@ -83,8 +71,7 @@ const nextConfig = {
                   .update(chunks.reduce((acc, chunk) => acc + chunk.name, ''))
                   .digest('hex')
                   .substring(0, 8)
-              );
-            },
+              )},
             priority: 10,
             minChunks: 2,
             reuseExistingChunk: true,
@@ -94,13 +81,12 @@ const nextConfig = {
         minSize: 20000,
       },
       minimize: !dev,
-    };
+    }
 
     // Tree shaking
     config.optimization.usedExports = true;
 
-    return config;
-  },
+    return config},
 
   async headers() {
     return [
@@ -155,8 +141,7 @@ const nextConfig = {
           },
         ],
       },
-    ];
-  },
+    ]},
 
   async redirects() {
     return [
@@ -165,8 +150,7 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
-    ];
-  },
+    ]},
 
   experimental: {
     optimizeCss: true,
@@ -190,6 +174,6 @@ const nextConfig = {
       exclude: ['error', 'warn'],
     } : false,
   },
-};
+}
 
 export default bundleAnalyzer(nextConfig);

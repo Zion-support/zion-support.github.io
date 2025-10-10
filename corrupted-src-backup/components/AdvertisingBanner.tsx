@@ -63,10 +63,10 @@ const,
             transition: 'background-color 0.2s'}
           }}
           onMouseOver={e => {}
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';}
+            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)'}
           }}
           onMouseOut={e => {}
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';}
+            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'}
       <div className="banner-content" style={/* TODO: Fix JSX expression */}
   x: 1 }}></div>
         <h2 style={/* TODO: Fix JSX expression */}
@@ -86,8 +86,7 @@ const,
         </a>
       </div>
     </div>
-  );
-};
+  )}
 export default AdvertisingBanner;
 "
   </AdvertisingBannerProps>

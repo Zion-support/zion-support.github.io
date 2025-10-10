@@ -23,10 +23,10 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AIAnalyticsPage: React.FC = () => {
-  const features = [];
+  const features = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   ico,
   n: Brain,
       titl,
@@ -34,9 +34,7 @@ const AIAnalyticsPage: React.FC = () => {
       descriptio,
   n: 'Forecast future trends and outcomes with advanced machine learning algorithms',
       benefit,
-  s: [
-  // TOD,
-  O: Add items];
+  s: Service Feature;
 //         '95% accuracy in predictions',
 //         'Real-time data processing',
 //         'Automated trend detection',
@@ -302,8 +300,7 @@ icon$5: Award,
                 Email Us
       <Footer />
     </React.Fragment>
-  );
-};
+  )}
 export default AIAnalyticsPage;
 {/* Use Cases */}
               Use Cases;"
@@ -341,8 +338,7 @@ export default AIAnalyticsPage;
                         {feature}
                   <a
                     href="/contact" className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${}
-  // TODO: Add content;
-}
+  // TODO: Add content}
 //                       tier.popular;
                         ? 'bg-cyan-400 text-slate-900,
   hover:bg-cyan-300'
@@ -377,8 +373,7 @@ export default AIAnalyticsPage;
                 Email Us;
       <Footer />
     </div>
-  );
-};
+  )}
 export default AiAnalyticsPage;
   </div>
   </p>

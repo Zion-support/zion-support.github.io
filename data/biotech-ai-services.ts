@@ -5,23 +5,7 @@ export interface BiotechAIService {id: string;
   price: string;
   period: string;
   description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
+  features: stringService Feature;
   market_size: string;
   growth_rate: string;
   variant: string;
@@ -54,8 +38,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     implementation_details: unknown;
     customers: 120;
     rating: 5 && 5.0;
-    reviews: 60;
-  },
+    reviews: 60},
     id: 'ai - genetic - engineering - suite',
     name: 'AI Genetic Engineering Suite',
     tagline: 'Revolutionary genetic engineering with AI precision',
@@ -177,8 +160,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 01'
     customers: 80;
     rating: 5 && 5.0;
-    reviews: 40;
-  },
+    reviews: 40},
     id: 'ai - protein - design - platform',
     name: 'AI Protein Design Platform',
     tagline: 'Design novel proteins with AI - powered algorithms',
@@ -324,8 +306,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 10'
     customers: 150;
     rating: 4 && 4.9;
-    reviews: 75;
-  },
+    reviews: 75},
     id: 'ai - clinical - trial - optimization',
     name: 'AI Clinical Trial Optimization Platform',
     tagline: 'Optimize clinical trials with AI - powered insights',
@@ -471,8 +452,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 15'
     customers: 200;
     rating: 4 && 4.9;
-    reviews: 100;
-  },
+    reviews: 100},
     id: 'ai - biomarker - discovery',
     name: 'AI Biomarker Discovery Platform',
     tagline: 'Discover biomarkers with AI - powered analysis',
@@ -618,8 +598,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 20'
     customers: 180;
     rating: 4 && 4.8;
-    reviews: 90;
-  },
+    reviews: 90},
     id: 'ai - personalized - medicine',
     name: 'AI Personalized Medicine Platform',
     tagline: 'Enable personalized medicine with AI - powered genomics',
@@ -765,8 +744,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 25'
     customers: 120;
     rating: 5 && 5.0;
-    reviews: 60;
-  },
+    reviews: 60},
     id: 'ai - drug - repurposing',
     name: 'AI Drug Repurposing Platform',
     tagline: 'Discover new uses for existing drugs with AI',
@@ -912,8 +890,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 03 - 01'
     customers: 160;
     rating: 4 && 4.9;
-    reviews: 80;
-  },
+    reviews: 80},
       'Multi-omics analysis',
     id: 'ai - bioinformatics - platform',
     name: 'AI Bioinformatics Platform',
@@ -1061,8 +1038,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 03 - 05'
     customers: 300;
     rating: 4 && 4.8;
-    reviews: 150;
-  },
+    reviews: 150},
     id: 'ai - biomanufacturing - optimization',
     name: 'AI Biomanufacturing Optimization Platform',
     tagline: 'Optimize biomanufacturing with AI - powered insights',
@@ -1208,33 +1184,12 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 03 - 10'
     customers: 90;
     rating: 4 && 4.9;
-    reviews: 45;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 45}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string;
   tagline: string, price: string;
   period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
-  textColor: string, link: string;
-  marketPosition: string, targetAudience: string;
-  trialDays: number, setupTime: string;
-  category: string, realService: boolean;
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string;
-  competitors: string[], marketSize: string;
-  growthRate: string, variant: string;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string;
-    },
-    realImplementation: boolean, implementationDetails: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number;
-}
-export const biotechAIServices: BiotechAIService[] = [,
+  features: stringService Feature = [,
     id: 'ai-drug-discovery-platform', name: 'AI Drug Discovery Platform',
     tagline: 'Accelerate drug development with AI-powered discovery',
     price: '$3,999',
@@ -1309,56 +1264,7 @@ export const biotechAIServices: BiotechAIService[] = [,
   d: string, descriptio,
   n: string,
   feature,
-  s: string[], popula,
-  r: boolean,
-  ico,
-  n: string, colo,
-  r: string,
-  textColo,
-  r: string, lin,
-  k: string,
-  marketPositio,
-  n: string, targetAudienc,
-  e: string,
-  trialDay,
-  s: number, setupTim,
-  e: string,
-  categor,
-  y: string, realServic,
-  e: boolean,
-  technolog,
-  y: string[], integration,
-  s: string[],
-  useCase,
-  s: string[], ro,
-  i: string,
-  competitor,
-  s: string[], marketSiz,
-  e: string,
-  growthRat,
-  e: string, varian,
-  t: string,
-  contactInf,
-  o: unknown,
-    mobil,
-  e: string, emai,
-  l: string,
-    addres,
-  s: string,
-    websit,
-  e: string},
-    realImplementatio,
-  n: boolean, implementationDetail,
-  s: string,
-  launchDat,
-  e: string, customer,
-  s: number,
-  ratin,
-  g: number,
-  review,
-  s: number}
-export const,
-  biotechAIServices: BiotechAIService[] = [,
+  s: stringService Feature = [,
     i,
   d: 'ai-drug-discovery-platform', nam,
   e: 'AI Drug Discovery Platform',
@@ -1430,20 +1336,15 @@ export const,
   s: 45}
 export interface BiotechAIService {/* TODO: Fix JSX expression */}
   }
+]}
 ];
-;
-;
-  }
-];
-;
     realImplementation: true;
     implementationDetails:,
       'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.'
     launchDate: '2024-01-15'
     customers: 120;
     rating: 5.0;
-    reviews: 60;
-  }
+    reviews: 60}
     id: 'ai-genetic-engineering-suite',
     name: 'AI Genetic Engineering Suite',
     tagline: 'Revolutionary genetic engineering with AI precision',
@@ -1940,8 +1841,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launchDate: '2024-03-10'
     customers: 90;
     rating: 4.9;
-    reviews: 45;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 45}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -2013,16 +1913,14 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
+  }
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
-;
-export const biotechAIServices: BiotechAIService[] = [;
+  reviews: number}
+export const biotechAIServices: BiotechAIServiceService Feature = [;
   {
     id: 'ai-drug-discovery-platform';
     name: 'AI Drug Discovery Platform';
@@ -2076,9 +1974,8 @@ export const biotechAIServices: BiotechAIService[] = [;
   g: number;
   review,
   s: number}
-;
 export const,
-  biotechAIServices: BiotechAIService[] = [;
+  biotechAIServices: BiotechAIServiceService Feature = [;
   {/* TODO: Fix JSX expression */}
   t: 'biotech-futuristic'}
     contactInf,
@@ -2105,9 +2002,7 @@ export const,
   g: 4.9,
     review,
   s: 45}
-];
-  }
-;
+]}
 export interface BiotechAIService,
   id: string; nam,
   e: string; taglin,
@@ -2115,23 +2010,7 @@ export interface BiotechAIService,
   e: string, perio,
   d: string, descriptio,
   n: string; feature,
-  s: string[]; popula,
-  r: boolean; ico,
-  n: string; colo,
-  r: string; text_colo,
-  r: string; lin,
-  k: string; market_positio,
-  n: string; target_audienc,
-  e: string; trial_day,
-  s: number; setup_tim,
-  e: string; categor,
-  y: string; real_servic,
-  e: boolean; technolog,
-  y: string[]; integration,
-  s: string[]; use_case,
-  s: string[]; ro,
-  i: string; competitor,
-  s: string[]; market_siz,
+  s: stringService Feature; market_siz,
   e: string; growth_rat,
   e: string; varian,
   t: string; contact_inf,
@@ -2478,38 +2357,7 @@ export interface BiotechAIService,
   e: string, perio,
   d: string, descriptio,
   n: string, feature,
-  s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
-  r: string, textColo,
-  r: string, lin,
-  k: string, marketPositio,
-  n: string, targetAudienc,
-  e: string, trialDay,
-  s: number, setupTim,
-  e: string, categor,
-  y: string, realServic,
-  e: boolean, technolog,
-  y: string[], integration,
-  s: string[], useCase,
-  s: string[], ro,
-  i: string, competitor,
-  s: string[], marketSiz,
-  e: string, growthRat,
-  e: string, varian,
-  t: string, contactInf,
-  o: mobil,
-  e: string, emai,
-  l: string, addres,
-  s: string, websit,
-  e: string }, realImplementatio,
-  n: boolean, implementationDetail,
-  s: string, launchDat,
-  e: string, customer,
-  s: number, ratin,
-  g: number, review,
-  s: number } export const,
-  biotechAIServices: BiotechAIService[] = [ ' i,
+  s: stringService Feature = [ ' i,
   d: 'ai-drug-discovery-platform', nam,
   e: 'AI Drug Discovery Platform',' taglin,
   e: 'Accelerate drug development with AI-powered discovery',' pric,
@@ -2549,7 +2397,7 @@ export interface BiotechAIService,
   e: '2024 - 03 - 10' customer,
   s: 90, ratin,
   g: 4.9, review,
-  s: 45} export interface BiotechAIService {; } ]; ; } ]; realImplementatio,
+  s: 45} export interface BiotechAIService { } ]} ]; realImplementatio,
   n: true,
   implementationDetails:' 'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.'' launchDat,
   e: '2024-01-15' customer,
@@ -2720,16 +2568,16 @@ export interface BiotechAIService,
   g: 4.9,
   reviews: 45 } ]; export interface BiotechAIService {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} }; realImplementatio,
+  e: string} } realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number} ; export const,
-  biotechAIServices: BiotechAIService[] = [; {/* TODO: Fix JSX expression */}
+  s: number} export const,
+  biotechAIServices: BiotechAIServiceService Feature = [; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } real_implementatio,
   n: true,' implementation_detail,
@@ -2737,4 +2585,4 @@ export interface BiotechAIService,
   e: '2024 - 03 - 10' customer,
   s: 90, ratin,
   g: 4.9, review,
-  s: 45} ]; } ; '
+  s: 45} ]} '

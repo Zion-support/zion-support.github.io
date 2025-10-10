@@ -7,17 +7,15 @@ async function handler(req, res) {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
-  }
+    return}
 
-  const { productId, userId } = req.body || {};
+  const { productId, userId } = req.body || {}
 
   if (!productId) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Product ID is required' }));
-    return;
-  }
+    return}
 
   try {
     // Basic checkout session creation logic
@@ -26,7 +24,7 @@ async function handler(req, res) {
       userId: userId || null,
       timestamp: new Date().toISOString(),
       status: 'pending'
-    };
+    }
 
     // In a real implementation, you would:
     // 1. Create a session with your payment provider (Stripe, PayPal, etc.)
@@ -40,19 +38,16 @@ async function handler(req, res) {
       sessionId: `session_${Date.now()}`,
       checkoutUrl: `${PROD_DOMAIN}/checkout?session=${Date.now()}`,
       data: sessionData
-    }));
-  } catch (error) {
+    }))} catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Checkout session creation error:', error);
-    }
+      console.error('Checkout session creation error:', error)}
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       error: 'Failed to create checkout session',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
-    }));
-  }
+    }))}
 }
 
 export default withErrorLogging(handler);

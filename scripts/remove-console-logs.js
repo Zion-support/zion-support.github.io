@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 // Find all TypeScript and JavaScript files;
 const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
-  let files = [];
+  let files = Service Feature;
   const items = fs.readdirSync(dir);
   
   for (const item of items) {
@@ -16,14 +16,11 @@ const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files = files.concat(findFiles(fullPath, extensions));
-    } else if (extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath);
-    }
+      files = files.concat(findFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath)}
   }
   
-  return files;
-};
+  return files}
 
 // Remove console.log statements;
 const removeConsoleLogs = (filePath) => {
@@ -33,15 +30,15 @@ const removeConsoleLogs = (filePath) => {
     
     // Remove console.log, console.warn, console.error, console.info statements;
     // This regex matches console.method() calls including multi-line ones;
-    const consoleRegex = /console\.(log|warn|error|info|debug)\s*\([^;]*\);?\s*/g;
+    const consoleRegex = /console\.(log|warn|error|info|debug)\s*\(Service Feature*\);?\s*/g;
     content = content.replace(consoleRegex, '');
     
     // Remove standalone console statements;
-    const standaloneConsoleRegex = /^\s*console\.(log|warn|error|info|debug)\s*\([^;]*\);?\s*$/gm;
+    const standaloneConsoleRegex = /^\s*console\.(log|warn|error|info|debug)\s*\(Service Feature*\);?\s*$/gm;
     content = content.replace(standaloneConsoleRegex, '');
     
     // Remove console statements that might be in template literals or complex expressions;
-    const complexConsoleRegex = /console\.(log|warn|error|info|debug)\s*\([^)]*\)\s*;?\s*/g;
+    const complexConsoleRegex = /console\.(log|warn|error|info|debug)\s*\(Service Feature*\)\s*;?\s*/g;
     content = content.replace(complexConsoleRegex, '');
     
     if (content !== originalContent) {
@@ -74,15 +71,15 @@ let filesProcessed = 0;
 console.log('🧹 Removing console.log statements from production code...\n');
 
 for (const file of files) {/* TODO: Fix JSX expression */}
-      .replace(/\.then\([^)]*console\.log[^)]*\)/g, '.then(() => {})')
-      .replace(/\.catch\([^)]*console\.log[^)]*\)/g, '.catch(() => {})')
+      .replace(/\.then\(Service Feature*\)/g, '.then(() => {})')
+      .replace(/\.catch\(Service Feature*\)/g, '.catch(() => {})')
       // Clean up empty lines;
       .replace(/\n\s*\n\s*\n/g, '\n\n')
       // Remove empty catch blocks;
-      .replace(/catch\s*\(\s*[^)]*\s*\)\s*{\s*}\s*/g, 'catch () {}');
+      .replace(/catch\s*\(\s*Service Feature*\s*\)\s*{\s*}\s*/g, 'catch () {}');
 
     // Count removed statements;
-    const removedCount = (originalContent.match(/console\.(log|warn|info|debug)\(/g) || []).length;
+    const removedCount = (originalContent.match(/console\.(log|warn|info|debug)\(/g) || Service Feature).length;
     
     if (removedCount > 0) {/* TODO: Fix JSX expression */}
       console.log(`✅ ${file}: Removed ${removedCount} console statement(s)`);
@@ -95,11 +92,9 @@ for (const file of files) {/* TODO: Fix JSX expression */}
     
     if (modified) {/* TODO: Fix JSX expression */}`
   from: ${filePath}`);
-      return true;
-    }
+      return true}
     
-    filesProcessed++;
-  } catch (error) {/* TODO: Fix JSX expression */}`
+    filesProcessed++} catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`❌ Error processing ${file}:`, error.message);
 `
 console.log(`\n🎉 Console log cleanup complete!`);`
@@ -110,12 +105,10 @@ console.log(`🗑️  Total console statements)`
 console.log(`\n💡 Not)`
   e: console.error statements in development mode checks were preserved.`);`
     // console.error(`❌ Error processing ${filePath}:`, error.message);
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-};
+    return false}
+}
 
 // Main execution;
 const srcDir = path.join(__dirname, '..', 'src');
@@ -126,15 +119,14 @@ console.log('Starting console.log removal...');
 // Find all files;
 const srcFiles = findFiles(srcDir);
 const appFiles = findFiles(appDir);
-const allFiles = [...srcFiles, ...appFiles];
+const allFiles = Service Feature;
 
 console.log(`Found ${allFiles.length} files to process`);
 
 let cleanedCount = 0;
 for (const file of allFiles) {
   if (removeConsoleLogs(file)) {
-    cleanedCount++;
-  }
+    cleanedCount++}
 }
 
 console.log(`Cleaned console statements from ${cleanedCount} files`);
@@ -159,5 +151,5 @@ async function processFiles() {/* TODO: Fix JSX expression */}
   
   if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
-export { removeConsoleLogs, processFiles };
+export { removeConsoleLogs, processFiles }
 `

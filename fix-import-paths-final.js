@@ -12,14 +12,11 @@ function processFile(filePath) {
 
     if (isInBlog || isInGuides || isInPages) {
       utilsPath = '../../utils/';
-      typesPath = '../../types/';
-    } else if (isInComponents) {
+      typesPath = '../../types/'} else if (isInComponents) {
       utilsPath = '../utils/';
-      typesPath = '../types/';
-    } else if (isInApp) {
+      typesPath = '../types/'} else if (isInApp) {
       utilsPath = './utils/';
-      typesPath = './types/';
-    } else {
+      typesPath = './types/'} else {
       utilsPath = './utils/';
       typesPath = './types/';
 function processFile(filePath) {/* TODO: Fix JSX expression */}
@@ -83,8 +80,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -93,8 +89,7 @@ function processDirectory(dirPath) {
   items.forEach(item => {)
 )
     if (stat.isDirectory()) {
-      totalFixed += processDirectory(fullPath);
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      totalFixed += processDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
         totalFixed++;
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
@@ -103,8 +98,7 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     }
   });
 
-  return totalFixed;
-}
+  return totalFixed}
 
 // Process the app directory;
 // Process the app directory;`

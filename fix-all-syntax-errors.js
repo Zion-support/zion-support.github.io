@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 // Get all files with errors;
 const getAllFilesWithErrors = () => {
   const srcDir = path.join(__dirname, 'src');
-  const files = [];
+  const files = Service Feature;
   
   const scanDirectory = (dir) => {
     const items = fs.readdirSync(dir);
@@ -20,16 +20,13 @@ const getAllFilesWithErrors = () => {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        scanDirectory(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath);
-      }
+        scanDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath)}
     }
-  };
+  }
   
   scanDirectory(srcDir);
-  return files;
-};
+  return files}
 
 // Template for a simple coming soon page;
 const createComingSoonPage = (filePath) => {
@@ -64,14 +61,11 @@ const ${title}Page: React.FC = () => {
         </div>
       </div>
       <Footer />,
-    </div>);
-};
+    </div>)}
 
-export default ${title}Page;`;
-  }
+export default ${title}Page;`}
   
-  return null;
-};
+  return null}
 
 // Check if file has syntax errors by trying to parse it;
 const hasSyntaxErrors = (filePath) => {
@@ -82,26 +76,11 @@ function fixSyntaxErrors(filePath) {
     let modified = false;
     
     // Check for common syntax error patterns;
-    const errorPatterns = [
-      /\/\/ TODO: Add content\s*}/,
-      /\/\/ TODO: Add parameters,\s*\)/,
-      /\/\/ TODO: Add items,\s*]/,
-      /{\s*\/\/ TODO: Add content\s*}/,
-      /{\s*\/\/ TODO: Add parameters,\s*\)/,
-      /{\s*\/\/ TODO: Add items,\s*]/,
-      /^\s*}\s*$/m,
-      /^\s*]\s*$/m,
-      /^\s*\)\s*$/m,
-      /\/\/\s*[^/]/,
-      /<[^>]*\/\/[^>]*>/,
-      /{\s*\/\/[^}]*$/m;
-    ];
+    const errorPatterns = Service Feature;
     
-    return errorPatterns.some(pattern => pattern.test(content));
-  } catch (error) {
-    return true;
-  }
-};
+    return errorPatterns.some(pattern => pattern.test(content))} catch (error) {
+    return true}
+}
 
 // Fix all files;
 const fixAllFiles = () => {
@@ -115,10 +94,8 @@ const fixAllFiles = () => {
         try {
           fs.writeFileSync(filePath, newContent);
           console.log(`Fixed: ${path.relative(__dirname, filePath)}`);
-          fixedCount++;
-        } catch (error) {
-          console.error(`Error fixing ${filePath}:`, error.message);
-        }
+          fixedCount++} catch (error) {
+          console.error(`Error fixing ${filePath}:`, error.message)}
     // Fix common syntax patterns
     const fixes = [
       // Fix malformed object properties with missing commas
@@ -135,7 +112,7 @@ const fixAllFiles = () => {
   $3:'
       },
       {
-        pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*"([^"]*)",?\s*}\s*(\w+):/g,
+        pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*"(Service Feature*)",?\s*}\s*(\w+):/g,
         replacement: 'export const metadata = {
   $1: "$2",
   $3:'
@@ -173,7 +150,7 @@ const fixAllFiles = () => {
       },
       // Fix malformed JSX attributes
       {
-        pattern: /(\w+)="([^"]*)"\s*(\w+)/g,
+        pattern: /(\w+)="(Service Feature*)"\s*(\w+)/g,
         replacement: '$1="$2" $3'
       },
       // Fix missing closing braces
@@ -188,8 +165,7 @@ const fixAllFiles = () => {
       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
-        modified = true;
-      }
+        modified = true}
     }
     
     // Additional specific fixes
@@ -219,21 +195,17 @@ const fixAllFiles = () => {
       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
-        modified = true;
-      }
+        modified = true}
     }
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed syntax errors in: ${filePath}`);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Function to find files with syntax errors
@@ -241,11 +213,9 @@ function findFilesWithSyntaxErrors() {
   try {
     const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8' });
     return result.trim().split('
-').filter(file => file.length > 0);
-  } catch (error) {
+').filter(file => file.length > 0)} catch (error) {
     console.error('Error finding files with syntax errors:', error.message);
-    return [];
-  }
+    return Service Feature}
 }
 
 // Main execution
@@ -257,8 +227,7 @@ console.log(`Found ${filesWithErrors.length} files with syntax errors`);
 let fixedCount = 0;
 for (const file of filesWithErrors) {
   if (fixSyntaxErrors(file)) {
-    fixedCount++;
-  }
+    fixedCount++}
 }
 
 console.log(`Fixed syntax errors in ${fixedCount} files`);
@@ -268,12 +237,9 @@ try {
   const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' });
   const count = parseInt(remainingErrors.trim());
   if (count === 0) {
-    console.log('✅ All syntax errors resolved!');
-  } else {
-    console.log(`⚠️  ${count} syntax errors still remain`);
-  }
+    console.log('✅ All syntax errors resolved!')} else {
+    console.log(`⚠️  ${count} syntax errors still remain`)}
 } catch (error) {
-  console.log('✅ No syntax errors found');
-}
+  console.log('✅ No syntax errors found')}
 
 

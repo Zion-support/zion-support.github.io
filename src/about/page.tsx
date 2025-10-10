@@ -475,7 +475,7 @@ export default function AboutPage() {
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center group hover:bg-slate-700/50 transition-all duration-300">
                 <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-2xl font-bold text-white">
-                    {member.name.split(' ').map(n => n[0]).join('')}
+                    {member.name.split(' ').map(n => nService Feature).join('')}
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
@@ -578,8 +578,7 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
-  );
-}
+  )}
   </a>
   </a>
   </p>

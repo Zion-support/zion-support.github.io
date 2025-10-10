@@ -14,7 +14,6 @@ const Search = React.memo(function Search({ className = '' }: SearchProps) {/* T
       <h3 className="text-lg font-semibold text-blue-800">Search</h3>"
       <p className="text-blue-600">This component is under development.</p>
     </div>
-  );
-});
+  )});
 export default Search;
 "`

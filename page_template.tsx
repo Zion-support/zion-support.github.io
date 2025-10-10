@@ -7,12 +7,7 @@ import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain,
 const PageTemplate: React.FC<{
   title: string;
   description: string;
-  icon: React.ComponentType<any>;</any>features</any>: string[];
-  benefits: string[];
-  price: string;
-  category: string;
-  keywords: string[];
-}> = ({ title, description, icon: Icon, features, benefits, price, category, keywords }) => {
+  icon: React.ComponentType<any>;</any>features</any>: stringService Feature}> = ({ title, description, icon: Icon, features, benefits, price, category, keywords }) => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
       <SEOOptimizer;)
         title={`${title} - Zion Tech Group`})
@@ -187,8 +182,7 @@ const PageTemplate: React.FC<{
         </section>
       </main>
       <Footer />,
-    </div>);
-};
+    </div>)}
 export default PageTemplate;
   </h2>
   </h2>

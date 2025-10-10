@@ -14,10 +14,10 @@ function fixJSXSyntax(content) {
 ,
   //Fix malformed JSX elements that are self-closing but shouldn't be;
   //Pattern: <div></div> followed by content that should be inside;
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*([^<]+)/g, '<$1$2>$3</$1>');
+  fixed = fixed.replace(/<(\w+)(Service Feature+)/g, '<$1$2>$3</$1>');
 
   //Fix malformed JSX elements with attributes;
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g, '<$1$2><$3$4></$3></$1>');
+  fixed = fixed.replace(/<(\w+)(Service Feature*?)><\/\3>/g, '<$1$2><$3$4></$3></$1>');
 
   //Fix array syntax issues;
   fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{');
@@ -36,8 +36,7 @@ function fixJSXSyntax(content) {/* TODO: Fix JSX expression */}
     "$1: '$2',\n      $3: '$4',\n      $5: '$6',\n      $7: '$8'\n    }"
   );
 
-  return fixed;
-}
+  return fixed}
 
 //Function to process a single file;
 function processFile(filePath) {
@@ -52,7 +51,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   },
   // Fix malformed JSX fragments
   {
-    pattern: /<>\s*<div([^>]*)>([^<]*?)<\/div>\s*<\/>/g,
+    pattern: /<>\s*<div(Service Feature*?)<\/div>\s*<\/>/g,
     replacement: '<div$1>$2</div>'
   }
 ];
@@ -66,18 +65,15 @@ function fixFile(filePath) {
       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
-        modified = true;
-      }
+        modified = true}
     });
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -124,9 +120,9 @@ async function main() {/* TODO: Fix JSX expression */}
   //   }
 
 if (import.meta.url === `fil)`
-  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
+  e://${process.argvService Feature}`) {/* TODO: Fix JSX expression */}
 }
 
-export { fixJSXSyntax, processFile };
+export { fixJSXSyntax, processFile }
 
 }"`

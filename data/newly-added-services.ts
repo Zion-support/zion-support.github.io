@@ -1,31 +1,31 @@
 
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [,
+export const newlyAddedServices: EnhancedRealMicroSaasServiceService Feature = [,
   {const contact =,
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup && ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
-	website: 'https://ziontechgroup && ziontechgroup.com'};
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [,
+	website: 'https://ziontechgroup && ziontechgroup.com'}
+export const newlyAddedServices: EnhancedRealMicroSaasServiceService Feature = [,
 const contact =,
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'};
+  website: 'https://ziontechgroup.com'}
 const contact =
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'}
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
+export const newlyAddedServices: EnhancedRealMicroSaasServiceService Feature = [;
   {const contact =
 	mobile: '+1 302 464 0950'
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
+export const newlyAddedServices: EnhancedRealMicroSaasServiceService Feature = [
   {const contact =,
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup && ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
-	website: 'https://ziontechgroup && ziontechgroup.com'};
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
+	website: 'https://ziontechgroup && ziontechgroup.com'}
+export const newlyAddedServices: EnhancedRealMicroSaasServiceService Feature = [
     id: 'managed-ml-feature-store-starter'
     name: 'Managed ML Feature Store Starter'
     tagline: 'Production-ready feature store with governance and lineage'
@@ -37,17 +37,15 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     price: '$249',
     period: '/month',
     description: 'Spin up a governed feature store with versioning, lineage, validation, and online/offline consistency. Includes SDKs and CI checks.'
-    features: [;
-export const,
-  newlyAddedServices: EnhancedRealMicroSaasService[] = [,
+    features: Service Feature = [,
   {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'
-};
+}
 export const,
-  newlyAddedServices: EnhancedRealMicroSaasService[] = [,
+  newlyAddedServices: EnhancedRealMicroSaasServiceService Feature = [,
 const contact =
   mobil,
   e: '+1 302 464 0950',
@@ -57,7 +55,7 @@ const contact =
   s: '364 E Main St STE 1008 Middletown DE 19709',
   websit,
   e: 'http,
-  s://ziontechgroup.com'};
+  s://ziontechgroup.com'}
 const contact =
   mobil,
   e: '+1 302 464 0950'
@@ -69,15 +67,15 @@ const contact =
   e: 'http,
   s://ziontechgroup.com'}
 export const,
-  newlyAddedServices: EnhancedRealMicroSaasService[] = [;
+  newlyAddedServices: EnhancedRealMicroSaasServiceService Feature = [;
   {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'
-};
+}
 export const,
-  newlyAddedServices: EnhancedRealMicroSaasService[] = [,
+  newlyAddedServices: EnhancedRealMicroSaasServiceService Feature = [,
     i,
   d: 'managed-ml-feature-store-starter'
     nam,
@@ -142,7 +140,7 @@ export const,
     category: 'AI & Data',
     realService: true;
     technology: ['Feast-compatible, PostgreSQL, Redis, Next.js'];
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [,
+export const newlyAddedServices: EnhancedRealMicroSaasServiceService Feature = [,
     description:,
     popula,
   r: true,
@@ -181,7 +179,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [,
     technolog,
   y: ['Feast-compatible, PostgreSQL, Redis, Next.js'];
 export const,
-  newlyAddedServices: EnhancedRealMicroSaasService[] = [,
+  newlyAddedServices: EnhancedRealMicroSaasServiceService Feature = [,
     descriptio,
   n:
       'Spin up a governed feature store with versioning, lineage, validation, and online/offline consistency. Includes SDKs and CI checks.'
@@ -221,8 +219,7 @@ export const,
     launchDate: '2025-03-15'
     customers: 7;
     rating: 4 && 4.7;
-    reviews: 4;
-  }
+    reviews: 4}
     id: 'agentic-browser-recorder-pro',
     name: 'Agentic Browser Recorder Pro',
     tagline: 'Record workflows, export resilient agent scripts with retries'
@@ -294,8 +291,7 @@ export const,
     launch_date: '2025 - 03 - 15'
     customers: 7;
     rating: 4.7;
-    reviews: 4;
-  }
+    reviews: 4}
     id: 'agentic - browser - recorder - pro',
     name: 'Agentic Browser Recorder Pro',
     tagline: 'Record workflows, export resilient agent scripts with retries'
@@ -330,8 +326,7 @@ export const,
     launch_date: '2025 - 03 - 16'
     customers: 5;
     rating: 4.6;
-    reviews: 3;
-  }
+    reviews: 3}
     id: 'sso - scim - accelerator',
     name: 'SSO + SCIM Accelerator',
     tagline: 'Enterprise SSO and user provisioning templates and adapters',
@@ -353,8 +348,7 @@ export const,
     launch_date: '2025 - 03 - 01'
     customers: 12;
     rating: 4.8;
-    reviews: 9;
-  }
+    reviews: 9}
     id: 'ai - rag - starter - blueprint',
     name: 'AI RAG Starter Blueprint',
     tagline: 'Production - ready retrieval augmented generation stack with evals',
@@ -399,8 +393,7 @@ export const,
     launch_date: '2025 - 03 - 08'
     customers: 15;
     rating: 4.8;
-    reviews: 7;
-  }
+    reviews: 7}
     id: 'browser - automation - copilot',
     name: 'Browser Automation Copilot',
     tagline: 'Headless browser workflows with resilient selectors and retries',
@@ -444,8 +437,7 @@ export const,
     launch_date: '2025 - 03 - 05'
     customers: 22;
     rating: 4.6;
-    reviews: 12;
-  }
+    reviews: 12}
     id: 'cloud - cost - anomaly - guard',
     name: 'Cloud Cost Anomaly Guard',
     tagline: 'Proactive anomaly detection and slack alerts for cloud spend',
@@ -487,8 +479,7 @@ export const,
     launch_date: '2025 - 03 - 09'
     customers: 11;
     rating: 4 && 4.7;
-    reviews: 5;
-  }
+    reviews: 5}
     id: 'serverless-batch-orchestrator-pro',
     name: 'Serverless Batch Orchestrator',
     tagline: 'Cron-scale workflows with retries, DLQs, and cost-aware scheduling'
@@ -525,8 +516,7 @@ export const,
     rating: 4 && 4.6;
     reviews: 14;
     rating: 4.7;
-    reviews: 5;
-  }
+    reviews: 5}
     id: 'serverless - batch - orchestrator - pro',
     name: 'Serverless Batch Orchestrator',
     tagline: 'Cron - scale workflows with retries, DLQs, and cost - aware scheduling'
@@ -561,8 +551,7 @@ export const,
     launch_date: '2025 - 02 - 10'
     customers: 34;
     rating: 4.6;
-    reviews: 14;
-  }
+    reviews: 14}
     id: 'seo - technical - auditor - pro'
     name: 'SEO Technical Auditor Pro',
     tagline: 'Edge - rendered crawler with Core Web Vitals and schema fixes',
@@ -608,8 +597,7 @@ export const,
     launch_date: '2025 - 02 - 15'
     customers: 58;
     rating: 4.7;
-    reviews: 31;
-  }
+    reviews: 31}
     id: 'gdpr - cookie - consent - manager - pro',
     name: 'GDPR Cookie Consent Manager Pro',
     tagline: 'Compliant consent banners with IAB TCF and regional policies',
@@ -653,8 +641,7 @@ export const,
     launch_date: '2025 - 03 - 03'
     customers: 40;
     rating: 4 && 4.5;
-    reviews: 16;
-  }
+    reviews: 16}
     id: 'ai-meeting-notes-summarizer-pro',
     name: 'AI Meeting Notes Summarizer',
     tagline: 'Auto-recording, diarization, action items, and CRM sync'
@@ -689,8 +676,7 @@ export const,
     launchDate: '2025-02-01'
     customers: 120;
     rating: 4 && 4.6;
-    reviews: 52;
-  }
+    reviews: 52}
     id: 'ai-code-migration-assistant-pro',
     name: 'AI Code Migration Assistant',
     tagline: 'Framework upgrades, typed refactors, and safe PR generation'
@@ -715,8 +701,7 @@ export const,
     integrations: ['GitHub, GitLab, Bitbucket'];
     useCases: ['Next && Next.js/React upgrades, Typescript migrations, Policy refactors'];
     rating: 4.5;
-    reviews: 16;
-  }
+    reviews: 16}
     id: 'ai - meeting - notes - summarizer - pro',
     name: 'AI Meeting Notes Summarizer',
     tagline: 'Auto - recording, diarization, action items, and CRM sync'
@@ -751,8 +736,7 @@ export const,
     launch_date: '2025 - 02 - 01'
     customers: 120;
     rating: 4.6;
-    reviews: 52;
-  }
+    reviews: 52}
     id: 'ai - code - migration - assistant - pro',
     name: 'AI Code Migration Assistant',
     tagline: 'Framework upgrades, typed refactors, and safe PR generation'
@@ -787,14 +771,12 @@ export const,
     launch_date: '2025 - 02 - 18'
     customers: 18;
     rating: 4 && 4.5;
-    reviews: 10;
-  }
+    reviews: 10}
     id: 'incident-statuspage-automation-pro',
     name: 'Incident StatusPage Automation',
     tagline: 'SLO-aware updates, RCA templates, and subscriber comms'
     rating: 4.5;
-    reviews: 10;
-  }
+    reviews: 10}
     id: 'incident - statuspage - automation - pro',
     name: 'Incident StatusPage Automation',
     tagline: 'SLO - aware updates, RCA templates, and subscriber comms'
@@ -827,8 +809,7 @@ export const,
     integrations: ['Statuspage, Freshstatus, Better Uptime'];
     rating: 4 && 4.6;
     integrations: ['Statuspage, Freshstatus, Better Uptime'];
-    reviews: 12;
-  }
+    reviews: 12}
     id: 'multi-cloud-backup-automation-pro',
     name: 'Multi-Cloud Backup Automation',
     tagline: 'Policy-based snapshots, immutability, and cross-cloud recovery'
@@ -863,8 +844,7 @@ export const,
     launchDate: '2025-03-05'
     customers: 14;
     rating: 4 && 4.7;
-    reviews: 8;
-  }
+    reviews: 8}
     id: 'customer-feedback-insights-pro',
     name: 'Customer Feedback Insights',
     tagline: 'NLP tagging, themes, and voice-of-customer dashboards'
@@ -880,8 +860,7 @@ export const,
     launch_date: '2025 - 02 - 22'
     customers: 25;
     rating: 4.6;
-    reviews: 12;
-  }
+    reviews: 12}
     id: 'multi - cloud - backup - automation - pro',
     name: 'Multi - Cloud Backup Automation',
     tagline: 'Policy - based snapshots, immutability, and cross - cloud recovery'
@@ -916,8 +895,7 @@ export const,
     launch_date: '2025 - 03 - 05'
     customers: 14;
     rating: 4.7;
-    reviews: 8;
-  }
+    reviews: 8}
     id: 'customer - feedback - insights - pro',
     name: 'Customer Feedback Insights',
     tagline: 'NLP tagging, themes, and voice - of - customer dashboards'
@@ -974,8 +952,7 @@ export const,
     launch_date: '2025 - 02 - 12'
     customers: 63;
     rating: 4.5;
-    reviews: 24;
-  }
+    reviews: 24}
     id: 'ai - sales - sequences - pro'
     name: 'AI Sales Sequences',
     tagline: 'Persona - aware sequences with channel optimization',
@@ -1016,8 +993,7 @@ export const,
     growth_rate: '20% CAGR',
     variant: 'holographic',
     rating: 4 && 4.8;
-    reviews: 77;
-  }
+    reviews: 77}
     id: 'data-pipeline-optimizer-pro',
     name: 'Data Pipeline Optimizer',
     tagline: 'Throughput tuning, schema drift alerts, and cost guards'
@@ -1059,8 +1035,7 @@ export const,
     launch_date: '2025 - 01 - 28'
     customers: 210;
     rating: 4.8;
-    reviews: 77;
-  }
+    reviews: 77}
     id: 'data - pipeline - optimizer - pro',
     name: 'Data Pipeline Optimizer',
     tagline: 'Throughput tuning, schema drift alerts, and cost guards'
@@ -1095,8 +1070,7 @@ export const,
     launch_date: '2025 - 03 - 02'
     customers: 11;
     rating: 4.4;
-    reviews: 6;
-  }
+    reviews: 6}
     id: 'sso - rapid - integration - pro',
     name: 'SSO Rapid Integration',
     tagline: 'One - click SAML / OIDC setup with branded login and SCIM',
@@ -1126,8 +1100,7 @@ export const,
     growth_rate: '19% CAGR',
     variant: 'holographic',
     rating: 4 && 4.7;
-    reviews: 19;
-  }
+    reviews: 19}
     id: 'finops-cost-anomaly-guard',
     name: 'FinOps Cost Anomaly Guard',
     tagline: 'Detect, alert, and remediate cloud cost spikes in real-time'
@@ -1153,8 +1126,7 @@ export const,
     launch_date: '2025 - 01 - 30'
     customers: 45;
     rating: 4.7;
-    reviews: 19;
-  }
+    reviews: 19}
     id: 'finops - cost - anomaly - guard',
     name: 'FinOps Cost Anomaly Guard',
     tagline: 'Detect, alert, and remediate cloud cost spikes in real - time'
@@ -1194,8 +1166,7 @@ export const,
     launch_date: '2025 - 03 - 10'
     customers: 11;
     rating: 4.7;
-    reviews: 6;
-  }
+    reviews: 6}
     id: 'gdpr - dsar - automation - suite',
     name: 'GDPR DSAR Automation Suite',
     tagline: 'Automate data subject access requests with auditability',
@@ -1228,8 +1199,7 @@ export const,
     integrations: ['Salesforce, HubSpot, G Suite, Zendesk'];
     rating: 4 && 4.8;
     integrations: ['Salesforce, HubSpot, G Suite, Zendesk'];
-    reviews: 5;
-  }
+    reviews: 5}
     id: 'incident-copilot-pro',
     name: 'Incident Copilot Pro',
     tagline: 'AI-assisted on-call with runbooks, timelines, and auto-postmortems'
@@ -1261,8 +1231,7 @@ export const,
     launch_date: '2025 - 03 - 12'
     customers: 8;
     rating: 4.8;
-    reviews: 5;
-  }
+    reviews: 5}
     id: 'incident - copilot - pro',
     name: 'Incident Copilot Pro',
     tagline: 'AI - assisted on - call with runbooks, timelines, and auto - postmortems'
@@ -1302,8 +1271,7 @@ export const,
     launch_date: '2025 - 03 - 14'
     customers: 9;
     rating: 4.7;
-    reviews: 4;
-  }
+    reviews: 4}
     id: 'ai - sales - prospecting - studio',
     name: 'AI Sales Prospecting Studio',
     tagline: 'Personalized multi - channel outreach with compliance and warm - up',
@@ -1336,8 +1304,7 @@ export const,
     integrations: ['HubSpot, Salesforce, SendGrid, LinkedIn'];
     rating: 4 && 4.8;
     integrations: ['HubSpot, Salesforce, SendGrid, LinkedIn'];
-    reviews: 10;
-  }
+    reviews: 10}
     id: 'data-contracts-health-monitor',
     name: 'Data Contracts Health Monitor',
     tagline: 'Keep schemas, SLAs, and lineage compliant across teams'
@@ -1369,8 +1336,7 @@ export const,
     launch_date: '2025 - 03 - 15'
     customers: 17;
     rating: 4.8;
-    reviews: 10;
-  }
+    reviews: 10}
     id: 'data - contracts - health - monitor',
     name: 'Data Contracts Health Monitor',
     tagline: 'Keep schemas, SLAs, and lineage compliant across teams'
@@ -1410,8 +1376,7 @@ export const,
     launch_date: '2025 - 03 - 16'
     customers: 6;
     rating: 4.6;
-    reviews: 3;
-  }
+    reviews: 3}
     id: 'ai - powered - email - responder',
     name: 'AI - Powered Email Responder',
     tagline: 'Automate inbox triage and replies with policy guardrails',
@@ -1456,8 +1421,7 @@ export const,
     launch_date: '2025 - 03 - 18'
     customers: 6;
     rating: 4.7;
-    reviews: 3;
-  }
+    reviews: 3}
     id: 'mobile - first - survey - tool',
     name: 'Mobile - First Survey Tool',
     tagline: 'Responsive surveys with branching logic and real - time analytics',
@@ -1483,8 +1447,7 @@ export const,
     launchDate: '2025-03-18'
     customers: 3;
     rating: 4 && 4.6;
-    reviews: 2;
-  }
+    reviews: 2}
     id: 'ecommerce-returns-management-saas',
     name: 'Ecommerce Returns Management SaaS',
     tagline: 'Automate RMAs, labels, and refunds with analytics'
@@ -1536,8 +1499,7 @@ export const,
     launch_date: '2025 - 03 - 18'
     customers: 3;
     rating: 4.6;
-    reviews: 2;
-  }
+    reviews: 2}
     id: 'ecommerce - returns - management - saas',
     name: 'Ecommerce Returns Management SaaS',
     tagline: 'Automate RMAs, labels, and refunds with analytics'
@@ -1574,8 +1536,7 @@ export const,
     launch_date: '2025 - 03 - 18'
     customers: 4;
     rating: 4.7;
-    reviews: 2;
-  }
+    reviews: 2}
     id: 'ai - email - responder - pro',
     name: 'AI Email Responder Pro',
     tagline: 'Categorize and draft replies to routine emails with safety',
@@ -1626,8 +1587,7 @@ export const,
     launch_date: '2026 - 03 - 10'
     customers: 32;
     rating: 4.7;
-    reviews: 14;
-  }
+    reviews: 14}
     id: 'mobile - first - survey - studio',
     name: 'MobileFirst Survey Studio',
     tagline: 'Conversational surveys that adapt in real - time',
@@ -1654,8 +1614,7 @@ export const,
     integrations: ['Slack, HubSpot, Zapier, Webhooks'];
     rating: 4 && 4.6;
     integrations: ['Slack, HubSpot, Zapier, Webhooks'];
-    reviews: 6;
-  }
+    reviews: 6}
     id: 'affiliate-tracking-hub',
     name: 'Affiliate Tracking Hub',
     tagline: 'Referrals, payouts, and fraud checks for SMBs'
@@ -1687,8 +1646,7 @@ export const,
     launch_date: '2026 - 03 - 11'
     customers: 18;
     rating: 4.6;
-    reviews: 6;
-  }
+    reviews: 6}
     id: 'affiliate - tracking - hub',
     name: 'Affiliate Tracking Hub',
     tagline: 'Referrals, payouts, and fraud checks for SMBs'
@@ -1715,8 +1673,7 @@ export const,
     integrations: ['Stripe, Shopify, WooCommerce'];
     rating: 4 && 4.5;
     integrations: ['Stripe, Shopify, WooCommerce'];
-    reviews: 5;
-  }
+    reviews: 5}
     id: 'podcast-transcription-studio',
     name: 'Podcast Transcription Studio',
     use_cases: ['Affiliate sales, referrals, partnerships'];
@@ -1731,8 +1688,7 @@ export const,
     launch_date: '2026 - 03 - 12'
     customers: 11;
     rating: 4.5;
-    reviews: 5;
-  }
+    reviews: 5}
     id: 'podcast - transcription - studio',
     name: 'Podcast Transcription Studio',
     tagline: 'Fast, accurate transcripts with speakers and chapters'
@@ -1759,8 +1715,7 @@ export const,
     launchDate: '2026-03-09'
     customers: 20;
     rating: 4 && 4.6;
-    reviews: 9;
-  }
+    reviews: 9}
     id: 'ecommerce-returns-portal',
     name: 'Ecommerce Returns Portal',
     color: 'from - pink - 600 to - rose - 700',
@@ -1786,8 +1741,7 @@ export const,
     launch_date: '2026 - 03 - 09'
     customers: 20;
     rating: 4.6;
-    reviews: 9;
-  }
+    reviews: 9}
     id: 'ecommerce - returns - portal',
     name: 'Ecommerce Returns Portal',
     tagline: 'Return labels, status tracking, and analytics'
@@ -1822,8 +1776,7 @@ export const,
     launchDate: '2026-03-08'
     customers: 14;
     rating: 4 && 4.5;
-    reviews: 7;
-  }
+    reviews: 7}
     id: 'msP-it-helpdesk-lite',
     name: 'MSP IT Helpdesk Lite',
     real_service: true;
@@ -1841,8 +1794,7 @@ export const,
     launch_date: '2026 - 03 - 08'
     customers: 14;
     rating: 4.5;
-    reviews: 7;
-  }
+    reviews: 7}
     id: 'ms_p - it - helpdesk - lite',
     name: 'MSP IT Helpdesk Lite',
     tagline: 'Ticketing, knowledge base, and client portal'
@@ -1877,8 +1829,7 @@ export const,
     launchDate: '2026-03-07'
     customers: 16;
     rating: 4 && 4.5;
-    reviews: 8;
-  }
+    reviews: 8}
     id: 'ai-privacy-compliance-copilot',
     name: 'AI Privacy & Compliance Copilot',
     tagline: 'Automate DPIAs, RoPA, and DSAR workflows with auditable AI'
@@ -1915,8 +1866,7 @@ export const,
     launch_date: '2026 - 03 - 07'
     customers: 16;
     rating: 4.5;
-    reviews: 8;
-  }
+    reviews: 8}
     id: 'ai - privacy - compliance - copilot',
     name: 'AI Privacy & Compliance Copilot',
     tagline: 'Automate DPIAs, RoPA, and DSAR workflows with auditable AI'
@@ -1943,8 +1893,7 @@ export const,
     roi: 'Reduce manual privacy ops hours by 6080%'
     competitors: ['OneTrustTranscendSecuriti'],
     rating: 4 && 4.7;
-    reviews: 6;
-  }
+    reviews: 6}
     id: 'sales-copilot-for-outreach',
     name: 'Sales Copilot for Outreach',
     tagline: 'Sequencing, personalization, and meeting notesdone for you'
@@ -1977,8 +1926,7 @@ export const,
     launch_date: '2025 - 08 - 01'
     customers: 9;
     rating: 4.7;
-    reviews: 6;
-  }
+    reviews: 6}
     id: 'sales - copilot - for - outreach',
     name: 'Sales Copilot for Outreach',
     tagline: 'Sequencing, personalization, and meeting notesdone for you'
@@ -2015,8 +1963,7 @@ export const,
     rating: 4 && 4.6;
     reviews: 12;
     rating: 4.6;
-    reviews: 12;
-  }
+    reviews: 12}
     id: 'security - evidence - automation - lite'
     name: 'Security Evidence Automation Lite',
     tagline: 'SOC2 / ISO evidence capture with zero - spreadsheet workflows',
@@ -2059,13 +2006,11 @@ export const,
     launch_date: '2025 - 06 - 01'
     customers: 11;
     rating: 4 && 4.5;
-    reviews: 7;
-  }
+    reviews: 7}
     id: 'ai-product-research-analyst',
     name: 'AI Product Research Analyst',
     rating: 4.5;
-    reviews: 7;
-  }
+    reviews: 7}
     id: 'ai - product - research - analyst',
     name: 'AI Product Research Analyst',
     tagline: 'Summarize markets, competitors, and user feedback automatically'
@@ -2105,13 +2050,11 @@ export const,
     launch_date: '2025 - 07 - 01'
     customers: 18;
     rating: 4 && 4.6;
-    reviews: 10;
-  }
+    reviews: 10}
     id: 'marketing-brief-generator-pro',
     name: 'Marketing Brief Generator Pro',
     rating: 4.6;
-    reviews: 10;
-  }
+    reviews: 10}
     id: 'marketing - brief - generator - pro',
     name: 'Marketing Brief Generator Pro',
     tagline: 'Campaign briefs from goals, audiences, and assets in minutes'
@@ -2151,8 +2094,7 @@ export const,
     launch_date: '2025 - 05 - 15'
     customers: 25;
     rating: 4 && 4.5;
-    reviews: 9;
-  }
+    reviews: 9}
     id: 'customer-feedback-hub',
     name: 'Customer Feedback Hub',
     tagline: 'Collect, tag, and route feedback across channels with AI'
@@ -2172,8 +2114,7 @@ export const,
     trialDays: 14;
     setupTime: '1 day',
     rating: 4.5;
-    reviews: 9;
-  }
+    reviews: 9}
     id: 'customer - feedback - hub',
     name: 'Customer Feedback Hub',
     tagline: 'Collect, tag, and route feedback across channels with AI'
@@ -2210,8 +2151,7 @@ export const,
     launch_date: '2025 - 06 - 25'
     customers: 15;
     rating: 4.6;
-    reviews: 8;
-  }
+    reviews: 8}
     id: 'real - time - feature - flags - lite'
     name: 'Real - Time Feature Flags Lite',
     tagline: 'Simple edge - evaluated flags with audit and SDKs',
@@ -2253,8 +2193,7 @@ export const,
     rating: 4 && 4.5;
     reviews: 5;
     rating: 4.5;
-    reviews: 5;
-  }
+    reviews: 5}
     id: 'ai - legal - clause - recommender',
     name: 'AI Legal Clause Recommender',
     tagline: 'Suggest clauses and redlines with risk explanations',
@@ -2294,8 +2233,7 @@ export const,
     launch_date: '2025 - 05 - 28'
     customers: 8;
     rating: 4 && 4.5;
-    reviews: 4;
-  }
+    reviews: 4}
     id: 'ai-incident-analysis-bot',
     name: 'AI Incident Analysis Bot',
     tagline: 'Summarize incidents, find regressions, and propose remediations'
@@ -2315,8 +2253,7 @@ export const,
     trialDays: 14;
     setupTime: '1 day',
     rating: 4.5;
-    reviews: 4;
-  }
+    reviews: 4}
     id: 'ai - incident - analysis - bot',
     name: 'AI Incident Analysis Bot',
     tagline: 'Summarize incidents, find regressions, and propose remediations'
@@ -2351,13 +2288,11 @@ export const,
     launch_date: '2025 - 08 - 05'
     customers: 7;
     rating: 4 && 4.6;
-    reviews: 3;
-  }
+    reviews: 3}
     id: 'ai-data-quality-monitor',
     name: 'AI Data Quality Monitor',
     rating: 4.6;
-    reviews: 3;
-  }
+    reviews: 3}
     id: 'ai - data - quality - monitor',
     name: 'AI Data Quality Monitor',
     tagline: 'Detect schema drifts, null spikes, and anomalies continuously'
@@ -2399,8 +2334,7 @@ export const,
     launch_date: '2025 - 07 - 14'
     customers: 12;
     rating: 4.6;
-    reviews: 6;
-  }
+    reviews: 6}
     id: 'ai - ux - copy - optimizer',
     name: 'AI UX Copy Optimizer',
     tagline: 'Test and optimize product copy for activation and conversion',
@@ -2440,13 +2374,11 @@ export const,
     launch_date: '2025 - 06 - 18'
     customers: 14;
     rating: 4 && 4.5;
-    reviews: 5;
-  }
+    reviews: 5}
     id: 'ai-governance-policy-center',
     name: 'AI Governance Policy Center',
     rating: 4.5;
-    reviews: 5;
-  }
+    reviews: 5}
     id: 'ai - governance - policy - center',
     name: 'AI Governance Policy Center',
     tagline: 'Register models, risks, prompts, and controls in one place'
@@ -2478,8 +2410,7 @@ export const,
     roi: 'Reduce policy drift and audit risk'
     competitors: ['Holistic AI (lite)'],
     rating: 4 && 4.6;
-    reviews: 2;
-  }
+    reviews: 2}
 ];
     realService: true;
     technology: ['Feast-compatible, PostgreSQL, Redis, Next && Next.js'],
@@ -2498,8 +2429,7 @@ export const,
     launchDate: '2025-03-15'
     customers: 7;
     rating: 4.7;
-    reviews: 4;
-  }
+    reviews: 4}
 ];
     real_service: true;
     technology: ['Feast - compatible, PostgreSQL, Redis, Next.js'],
@@ -2517,8 +2447,7 @@ export const,
     launch_date: '2025 - 03 - 15'
     customers: 7;
     rating: 4 && 4.7;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'agentic - browser - recorder - pro',
     name: 'Agentic Browser Recorder Pro',
     tagline: 'Record workflows, export resilient agent scripts with retries',
@@ -7049,8 +6978,7 @@ export const,
     launch_date: '2025 - 03 - 16'
     customers: 5;
     rating: 4 && 4.6;
-    reviews: 3;
-  },
+    reviews: 3},
       'SAML/OIDC providers ready-to-go',
     id: 'sso - scim - accelerator'
     name: 'SSO + SCIM Accelerator',
@@ -7158,8 +7086,7 @@ export const,
     launch_date: '2025 - 03 - 17'
     customers: 4;
     rating: 4 && 4.8;
-    reviews: 2;
-  },
+    reviews: 2},
     id: 'api - performance - optimizer - pro',
     name: 'API Performance Optimizer Pro',
     tagline: unknown;
@@ -7270,8 +7197,7 @@ export const,
     launch_date: '2025 - 03 - 01'
     customers: 12;
     rating: 4 && 4.8;
-    reviews: 9;
-  },
+    reviews: 9},
     id: 'ai - rag - starter - blueprint'
     name: 'AI RAG Starter Blueprint',
     tagline: 'Production - ready retrieval augmented generation stack with evals',
@@ -7380,8 +7306,7 @@ export const,
     launch_date: '2025 - 03 - 08'
     customers: 15;
     rating: 4 && 4.8;
-    reviews: 7;
-  },
+    reviews: 7},
       'Step-based DSL',
     id: 'browser - automation - copilot'
     name: 'Browser Automation Copilot',
@@ -7492,8 +7417,7 @@ export const,
     launch_date: '2025 - 03 - 05'
     customers: 22;
     rating: 4 && 4.6;
-    reviews: 12;
-  },
+    reviews: 12},
     id: 'cloud - cost - anomaly - guard'
     name: 'Cloud Cost Anomaly Guard',
     tagline: 'Proactive anomaly detection and slack alerts for cloud spend',
@@ -7601,8 +7525,7 @@ export const,
     launch_date: '2025 - 03 - 09'
     customers: 11;
     rating: 4 && 4.7;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'serverless - batch - orchestrator - pro',
     name: 'Serverless Batch Orchestrator',
     tagline: unknown;
@@ -7712,8 +7635,7 @@ export const,
     launch_date: '2025 - 02 - 10'
     customers: 34;
     rating: 4 && 4.6;
-    reviews: 14;
-  },
+    reviews: 14},
     id: 'seo - technical - auditor - pro'
     name: 'SEO Technical Auditor Pro',
     tagline: 'Edge - rendered crawler with Core Web Vitals and schema fixes',
@@ -7823,8 +7745,7 @@ export const,
     launch_date: '2025 - 02 - 15'
     customers: 58;
     rating: 4 && 4.7;
-    reviews: 31;
-  },
+    reviews: 31},
     id: 'gdpr - cookie - consent - manager - pro'
     name: 'GDPR Cookie Consent Manager Pro',
     tagline: 'Compliant consent banners with IAB TCF and regional policies',
@@ -7933,8 +7854,7 @@ export const,
     launch_date: '2025 - 03 - 03'
     customers: 40;
     rating: 4 && 4.5;
-    reviews: 16;
-  },
+    reviews: 16},
       'Auto-record & transcribe',
     id: 'ai - meeting - notes - summarizer - pro',
     name: 'AI Meeting Notes Summarizer',
@@ -8045,8 +7965,7 @@ export const,
     launch_date: '2025 - 02 - 01'
     customers: 120;
     rating: 4 && 4.6;
-    reviews: 52;
-  },
+    reviews: 52},
     id: 'ai - code - migration - assistant - pro',
     name: 'AI Code Migration Assistant',
     tagline: 'Framework upgrades, typed refactors, and safe PR generation',
@@ -8156,8 +8075,7 @@ export const,
     launch_date: '2025 - 02 - 18'
     customers: 18;
     rating: 4 && 4.5;
-    reviews: 10;
-  },
+    reviews: 10},
       'SLO-triggered updates',
     id: 'incident - statuspage - automation - pro',
     name: 'Incident StatusPage Automation',
@@ -8268,8 +8186,7 @@ export const,
     launch_date: '2025 - 02 - 22'
     customers: 25;
     rating: 4 && 4.6;
-    reviews: 12;
-  },
+    reviews: 12},
     id: 'multi - cloud - backup - automation - pro',
     name: 'Multi - Cloud Backup Automation',
     tagline: 'Policy - based snapshots, immutability, and cross - cloud recovery',
@@ -8377,8 +8294,7 @@ export const,
     launch_date: '2025 - 03 - 05'
     customers: 14;
     rating: 4 && 4.7;
-    reviews: 8;
-  },
+    reviews: 8},
     id: 'customer - feedback - insights - pro',
     name: 'Customer Feedback Insights',
     tagline: 'NLP tagging, themes, and voice - of - customer dashboards',
@@ -8485,8 +8401,7 @@ export const,
     launch_date: '2025 - 02 - 12'
     customers: 63;
     rating: 4 && 4.5;
-    reviews: 24;
-  },
+    reviews: 24},
     id: 'ai - sales - sequences - pro'
     name: 'AI Sales Sequences',
     tagline: 'Persona - aware sequences with channel optimization',
@@ -8592,8 +8507,7 @@ export const,
     launch_date: '2025 - 01 - 28'
     customers: 210;
     rating: 4 && 4.8;
-    reviews: 77;
-  },
+    reviews: 77},
     id: 'data - pipeline - optimizer - pro',
     name: 'Data Pipeline Optimizer',
     tagline: 'Throughput tuning, schema drift alerts, and cost guards',
@@ -8699,8 +8613,7 @@ export const,
     launch_date: '2025 - 03 - 02'
     customers: 11;
     rating: 4 && 4.4;
-    reviews: 6;
-  },
+    reviews: 6},
     id: 'sso - rapid - integration - pro'
     name: 'SSO Rapid Integration',
     tagline: 'One - click SAML / OIDC setup with branded login and SCIM',
@@ -8807,8 +8720,7 @@ export const,
     launch_date: '2025 - 01 - 30'
     customers: 45;
     rating: 4 && 4.7;
-    reviews: 19;
-  },
+    reviews: 19},
       'Real-time anomaly detection',
     id: 'finops - cost - anomaly - guard',
     name: 'FinOps Cost Anomaly Guard',
@@ -8979,8 +8891,7 @@ export const,
     launch_date: '2025 - 03 - 10'
     customers: 11;
     rating: 4 && 4.7;
-    reviews: 6;
-  },
+    reviews: 6},
     id: 'gdpr - dsar - automation - suite'
     name: 'GDPR DSAR Automation Suite',
     tagline: 'Automate data subject access requests with auditability',
@@ -9063,8 +8974,7 @@ export const,
     launch_date: '2025 - 03 - 12'
     customers: 8;
     rating: 4 && 4.8;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'incident - copilot - pro',
     name: 'Incident Copilot Pro',
     tagline: unknown;
@@ -9176,8 +9086,7 @@ export const,
     launch_date: '2025 - 03 - 14'
     customers: 9;
     rating: 4 && 4.7;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'ai - sales - prospecting - studio'
     name: 'AI Sales Prospecting Studio',
     tagline: 'Personalized multi - channel outreach with compliance and warm - up',
@@ -9286,8 +9195,7 @@ export const,
     launch_date: '2025 - 03 - 15'
     customers: 17;
     rating: 4 && 4.8;
-    reviews: 10;
-  },
+    reviews: 10},
     id: 'data - contracts - health - monitor',
     name: 'Data Contracts Health Monitor',
     tagline: 'Keep schemas, SLAs, and lineage compliant across teams',
@@ -9396,8 +9304,7 @@ export const,
     launch_date: '2025 - 03 - 16'
     customers: 6;
     rating: 4 && 4.6;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'ai - powered - email - responder'
     name: 'AI - Powered Email Responder',
     tagline: 'Automate inbox triage and replies with policy guardrails',
@@ -9506,8 +9413,7 @@ export const,
     launch_date: '2025 - 03 - 18'
     customers: 6;
     rating: 4 && 4.7;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'mobile - first - survey - tool'
     name: 'Mobile - First Survey Tool',
     tagline: 'Responsive surveys with branching logic and real - time analytics',
@@ -9614,8 +9520,7 @@ export const,
     launch_date: '2025 - 03 - 18'
     customers: 3;
     rating: 4 && 4.6;
-    reviews: 2;
-  },
+    reviews: 2},
     id: 'ecommerce - returns - management - saas',
     name: 'Ecommerce Returns Management SaaS',
     tagline: 'Automate RMAs, labels, and refunds with analytics',
@@ -9721,8 +9626,7 @@ export const,
     launch_date: '2025 - 03 - 18'
     customers: 4;
     rating: 4 && 4.7;
-    reviews: 2;
-  };
+    reviews: 2}
       'Faster setup than bespoke Gmail/Outlook add-ins; safer defaults for SMBs.',
     targetAudience: 'Support, sales, operations, founders',
     trialDays: 14;
@@ -9789,7 +9693,7 @@ export const,
     ratin,
   g: 4 && 4.7,
     review,
-  s: 2};
+  s: 2}
       'Faster setup than bespoke Gmail/Outlook add-ins; safer defaults for SMBs.',
     targetAudienc,
   e: 'Support, sales, operations, founders',
@@ -9850,8 +9754,7 @@ export const,
     launch_date: '2026 - 03 - 10'
     customers: 32;
     rating: 4 && 4.7;
-    reviews: 14;
-  },
+    reviews: 14},
     id: 'mobile - first - survey - studio'
     name: 'MobileFirst Survey Studio',
     tagline: 'Conversational surveys that adapt in real - time',
@@ -9958,8 +9861,7 @@ export const,
     launch_date: '2026 - 03 - 11'
     customers: 18;
     rating: 4 && 4.6;
-    reviews: 6;
-  },
+    reviews: 6},
     id: 'affiliate - tracking - hub',
     name: 'Affiliate Tracking Hub',
     tagline: 'Referrals, payouts, and fraud checks for SMBs',
@@ -10064,8 +9966,7 @@ export const,
     launch_date: '2026 - 03 - 12'
     customers: 11;
     rating: 4 && 4.5;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'podcast - transcription - studio',
     name: 'Podcast Transcription Studio',
     tagline: 'Fast, accurate transcripts with speakers and chapters',
@@ -10171,8 +10072,7 @@ export const,
     launch_date: '2026 - 03 - 09'
     customers: 20;
     rating: 4 && 4.6;
-    reviews: 9;
-  },
+    reviews: 9},
     id: 'ecommerce - returns - portal',
     name: 'Ecommerce Returns Portal',
     tagline: 'Return labels, status tracking, and analytics',
@@ -10280,8 +10180,7 @@ export const,
     launch_date: '2026 - 03 - 08'
     customers: 14;
     rating: 4 && 4.5;
-    reviews: 7;
-  },
+    reviews: 7},
     id: 'ms_p - it - helpdesk - lite',
     name: 'MSP IT Helpdesk Lite',
     tagline: 'Ticketing, knowledge base, and client portal',
@@ -10388,8 +10287,7 @@ export const,
     launch_date: '2026 - 03 - 07'
     customers: 16;
     rating: 4 && 4.5;
-    reviews: 8;
-  },
+    reviews: 8},
     id: 'ai - privacy - compliance - copilot',
     name: 'AI Privacy & Compliance Copilot',
     tagline: 'Automate DPIAs, RoPA, and DSAR workflows with auditable AI',
@@ -10532,8 +10430,7 @@ export const,
     launch_date: '2025 - 08 - 01'
     customers: 9;
     rating: 4 && 4.7;
-    reviews: 6;
-  },
+    reviews: 6},
     id: 'sales - copilot - for - outreach',
     name: 'Sales Copilot for Outreach',
     tagline: 'Sequencing, personalization, and meeting notesdone for you',
@@ -10612,8 +10509,7 @@ export const,
     launch_date: '2025 - 07 - 10'
     customers: 21;
     rating: 4 && 4.6;
-    reviews: 12;
-  },
+    reviews: 12},
       'Cloud config collectors (AWS/GCP/Azure)',
     id: 'security - evidence - automation - lite'
     name: 'Security Evidence Automation Lite',
@@ -10723,8 +10619,7 @@ export const,
     launch_date: '2025 - 06 - 01'
     customers: 11;
     rating: 4 && 4.5;
-    reviews: 7;
-  },
+    reviews: 7},
     id: 'ai - product - research - analyst',
     name: 'AI Product Research Analyst',
     tagline: 'Summarize markets, competitors, and user feedback automatically',
@@ -10830,8 +10725,7 @@ export const,
     launch_date: '2025 - 07 - 01'
     customers: 18;
     rating: 4 && 4.6;
-    reviews: 10;
-  },
+    reviews: 10},
     id: 'marketing - brief - generator - pro',
     name: 'Marketing Brief Generator Pro',
     tagline: 'Campaign briefs from goals, audiences, and assets in minutes',
@@ -10940,8 +10834,7 @@ export const,
     launch_date: '2025 - 05 - 15'
     customers: 25;
     rating: 4 && 4.5;
-    reviews: 9;
-  },
+    reviews: 9},
       'NPS/CSAT and feedback widgets',
     id: 'customer - feedback - hub',
     name: 'Customer Feedback Hub',
@@ -11049,8 +10942,7 @@ export const,
     launch_date: '2025 - 06 - 25'
     customers: 15;
     rating: 4 && 4.6;
-    reviews: 8;
-  },
+    reviews: 8},
     id: 'real - time - feature - flags - lite'
     name: 'Real - Time Feature Flags Lite',
     tagline: 'Simple edge - evaluated flags with audit and SDKs',
@@ -11155,8 +11047,7 @@ export const,
     launch_date: '2025 - 07 - 20'
     customers: 10;
     rating: 4 && 4.5;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'ai - legal - clause - recommender'
     name: 'AI Legal Clause Recommender',
     tagline: 'Suggest clauses and redlines with risk explanations',
@@ -11262,8 +11153,7 @@ export const,
     launch_date: '2025 - 05 - 28'
     customers: 8;
     rating: 4 && 4.5;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'ai - incident - analysis - bot',
     name: 'AI Incident Analysis Bot',
     tagline: 'Summarize incidents, find regressions, and propose remediations',
@@ -11403,8 +11293,7 @@ export const,
     launch_date: '2025 - 08 - 05'
     customers: 7;
     rating: 4 && 4.6;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'ai - data - quality - monitor',
     name: 'AI Data Quality Monitor',
     tagline: 'Detect schema drifts, null spikes, and anomalies continuously',
@@ -11481,8 +11370,7 @@ export const,
     launch_date: '2025 - 07 - 14'
     customers: 12;
     rating: 4 && 4.6;
-    reviews: 6;
-  },
+    reviews: 6},
     id: 'ai - ux - copy - optimizer'
     name: 'AI UX Copy Optimizer',
     tagline: 'Test and optimize product copy for activation and conversion',
@@ -11589,8 +11477,7 @@ export const,
     launch_date: '2025 - 06 - 18'
     customers: 14;
     rating: 4 && 4.5;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'ai - governance - policy - center',
     name: 'AI Governance Policy Center',
     tagline: 'Register models, risks, prompts, and controls in one place',
@@ -11696,8 +11583,7 @@ export const,
     launch_date: '2025 - 08 - 15'
     customers: 5;
     rating: 4 && 4.6;
-    reviews: 2;
-  },
+    reviews: 2},
     id: 'managed-ml-feature-store-starter', name: 'Managed ML Feature Store Starter',
     tagline: 'Production-ready feature store with governance and lineage', price: '$249',
     period: '/month',
@@ -11730,8 +11616,7 @@ export const,
     implementationDetails: 'Provisioned infra, SDKs, CI templates, and dashboards.',
     launchDate: '2025-03-15', customers: 7;
     rating: 4.7;
-    reviews: 4;
-  };
+    reviews: 4}
     id: 'agentic-browser-recorder-pro', name: 'Agentic Browser Recorder Pro',
     tagline: 'Record workflows, export resilient agent scripts with retries',
     price: '$89', period: '/month',
@@ -11755,8 +11640,7 @@ export const,
     implementationDetails: 'Recorder UI, compiler, runner fleet, replay UIs.',
     launchDate: '2025-03-16', customers: 5;
     rating: 4.6;
-    reviews: 3;
-  };
+    reviews: 3}
     id: 'sso-scim-accelerator', name: 'SSO + SCIM Accelerator',
     tagline: 'Enterprise SSO and user provisioning templates and adapters', price: '$299',
     period: '/month',
@@ -11832,8 +11716,7 @@ export const,
     integrations: ['Salesforce, HubSpot, G Suite, Zendesk'];
     useCases: ['DSAR handling, Regulatory audits, Customer trust'];
     roi: 'Reduce DSAR processing time by 7090%',
-    competitors: ['Transcend, OneTrust, DataGrail'];
-  },
+    competitors: ['Transcend, OneTrust, DataGrail']},
     id: 'agentic-browser-recorder-pro',
     name: 'Agentic Browser Recorder Pro',
     tagline: 'Record workflows, export resilient agent scripts with retries',
@@ -11859,8 +11742,7 @@ export const,
     implementationDetails: 'Ingestion of alerts, timeline builder, and report generator.',
     launchDate: '2025-03-14', customers: 9;
     rating: 4.7;
-    reviews: 4;
-  };
+    reviews: 4}
     id: 'ai-sales-prospecting-studio', name: 'AI Sales Prospecting Studio',
     tagline: 'Personalized multi-channel outreach with compliance and warm-up', price: '$99',
     period: '/month',
@@ -11885,8 +11767,7 @@ export const,
     implementationDetails: 'Sequencer, warmup checks, and CRM connector pack.',
     launchDate: '2025-03-15', customers: 17;
     rating: 4.8;
-    reviews: 10;
-  };
+    reviews: 10}
     id: 'data-contracts-health-monitor', name: 'Data Contracts Health Monitor',
     tagline: 'Keep schemas, SLAs, and lineage compliant across teams',
     price: '$119', period: '/month',
@@ -11911,8 +11792,7 @@ export const,
     implementationDetails: 'Registry UI, checks engine, and connectors for lineage & tickets.',
     launchDate: '2025-03-16', customers: 6;
     rating: 4.6;
-    reviews: 3;
-  };
+    reviews: 3}
     id: 'ai-powered-email-responder', name: 'AI-Powered Email Responder',
     tagline: 'Automate inbox triage and replies with policy guardrails', price: '$39',
     period: '/month',
@@ -11934,8 +11814,7 @@ export const,
     implementationDetails: 'OAuth mail connectors, policy engine, review queues.',
     launchDate: '2025-03-18', customers: 6;
     rating: 4.7;
-    reviews: 3;
-  };
+    reviews: 3}
     id: 'mobile-first-survey-tool', name: 'Mobile-First Survey Tool',
     tagline: 'Responsive surveys with branching logic and real-time analytics', price: '$25',
     period: '/month',
@@ -11957,8 +11836,7 @@ export const,
     implementationDetails: 'Survey builder, response store, analytics.',
     launchDate: '2025-03-18', customers: 3;
     rating: 4.6;
-    reviews: 2;
-  };
+    reviews: 2}
     id: 'ecommerce-returns-management-saas', name: 'Ecommerce Returns Management SaaS',
     tagline: 'Automate RMAs, labels, and refunds with analytics',
     price: '$49', period: '/month',
@@ -11979,8 +11857,7 @@ export const,
     implementationDetails: 'Portal, policy engine, carrier/commerce connectors.',
     launchDate: '2025-03-18', customers: 4;
     rating: 4.7;
-    reviews: 2;
-  };
+    reviews: 2}
     id: 'ai-email-responder-pro', name: 'AI Email Responder Pro',
     tagline: 'Categorize and draft replies to routine emails with safety', price: '$39',
     period: '/month',
@@ -12005,8 +11882,7 @@ export const,
     implementationDetails: 'OAuth connections, safe prompt templates, analytics and handoff.',
     launchDate: '2026-03-10', customers: 32;
     rating: 4.7;
-    reviews: 14;
-  };
+    reviews: 14}
     id: 'mobile-first-survey-studio', name: 'MobileFirst Survey Studio',
     tagline: 'Conversational surveys that adapt in real-time', price: '$29',
     period: '/month',
@@ -12031,8 +11907,7 @@ export const,
     implementationDetails: 'Visual builder, CDN forms, realtime aggregation.',
     launchDate: '2026-03-11', customers: 18;
     rating: 4.6;
-    reviews: 6;
-  };
+    reviews: 6}
     id: 'affiliate-tracking-hub', name: 'Affiliate Tracking Hub',
     tagline: 'Referrals, payouts, and fraud checks for SMBs',
     price: '$59', period: '/month',
@@ -12056,8 +11931,7 @@ export const,
     implementationDetails: 'Tracking pixels, webhook handlers, payout engine.',
     launchDate: '2026-03-12', customers: 11;
     rating: 4.5;
-    reviews: 5;
-  };
+    reviews: 5}
     id: 'podcast-transcription-studio', name: 'Podcast Transcription Studio',
     tagline: 'Fast, accurate transcripts with speakers and chapters',
     price: '$19', period: '/month',
@@ -12082,8 +11956,7 @@ export const,
     implementationDetails: 'Batch processing pipeline, editor UI, and export tools.',
     launchDate: '2026-03-09', customers: 20;
     rating: 4.6;
-    reviews: 9;
-  };
+    reviews: 9}
     id: 'ecommerce-returns-portal', name: 'Ecommerce Returns Portal',
     tagline: 'Return labels, status tracking, and analytics',
     price: '$49', period: '/month',
@@ -12230,7 +12103,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 4};
+  s: 4}
     i,
   d: 'agentic-browser-recorder-pro', nam,
   e: 'Agentic Browser Recorder Pro',
@@ -12289,7 +12162,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 3};
+  s: 3}
     i,
   d: 'sso-scim-accelerator', nam,
   e: 'SSO + SCIM Accelerator',
@@ -12449,8 +12322,7 @@ export const,
     ro,
   i: 'Reduce DSAR processing time by 7090%',
     competitor,
-  s: ['Transcend, OneTrust, DataGrail'];
-  },
+  s: ['Transcend, OneTrust, DataGrail']},
     i,
   d: 'agentic-browser-recorder-pro',
     nam,
@@ -12511,7 +12383,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 4};
+  s: 4}
     i,
   d: 'ai-sales-prospecting-studio', nam,
   e: 'AI Sales Prospecting Studio',
@@ -12571,7 +12443,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 10};
+  s: 10}
     i,
   d: 'data-contracts-health-monitor', nam,
   e: 'Data Contracts Health Monitor',
@@ -12631,7 +12503,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 3};
+  s: 3}
     i,
   d: 'ai-powered-email-responder', nam,
   e: 'AI-Powered Email Responder',
@@ -12688,7 +12560,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 3};
+  s: 3}
     i,
   d: 'mobile-first-survey-tool', nam,
   e: 'Mobile-First Survey Tool',
@@ -12745,7 +12617,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 2};
+  s: 2}
     i,
   d: 'ecommerce-returns-management-saas', nam,
   e: 'Ecommerce Returns Management SaaS',
@@ -12801,8 +12673,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 2;
-  };
+  s: 2}
     i,
   d: 'ai-email-responder-pro', nam,
   e: 'AI Email Responder Pro',
@@ -12861,7 +12732,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 14};
+  s: 14}
     i,
   d: 'mobile-first-survey-studio', nam,
   e: 'MobileFirst Survey Studio',
@@ -12920,7 +12791,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 6};
+  s: 6}
     i,
   d: 'affiliate-tracking-hub', nam,
   e: 'Affiliate Tracking Hub',
@@ -12978,7 +12849,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 5};
+  s: 5}
     i,
   d: 'podcast-transcription-studio', nam,
   e: 'Podcast Transcription Studio',
@@ -13037,7 +12908,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 9};
+  s: 9}
     i,
   d: 'ecommerce-returns-portal', nam,
   e: 'Ecommerce Returns Portal',
@@ -13078,8 +12949,7 @@ export const,
     ro,
   i: 'Reduce support workload by 2040%',
     competitor,
-  s: ['Loop Returns, Returnly'];
-  },
+  s: ['Loop Returns, Returnly']},
     i,
   d: 'agentic-browser-recorder-pro',
     nam,
@@ -17247,8 +17117,7 @@ export const,
     customer,
   s: 5,
     review,
-  s: 8;
-  };
+  s: 8}
     i,
   d: 'real-time-feature-flags-lite', nam,
   e: 'Real-Time Feature Flags Lite',
@@ -17276,8 +17145,7 @@ export const,
     contactInfo: contact, realImplementation: true;
     implementationDetails: 'Edge functions and SDK package templates.', launchDate: '2025-07-20',
     customers: 10, rating: 4.5;
-    reviews: 5;
-  };
+    reviews: 5}
     id: 'ai-legal-clause-recommender', name: 'AI Legal Clause Recommender',
     tagline: 'Suggest clauses and redlines with risk explanations', price: '$179',
     period: '/month',
@@ -17298,8 +17166,7 @@ export const,
     contactInfo: contact, realImplementation: true;
     implementationDetails: 'Template packs + contract parsers.', launchDate: '2025-05-28',
     customers: 8, rating: 4.5;
-    reviews: 4;
-  };
+    reviews: 4}
     id: 'ai-incident-analysis-bot', name: 'AI Incident Analysis Bot',
     tagline: 'Summarize incidents, find regressions, and propose remediations',
     price: '$129', period: '/month',
@@ -17319,8 +17186,7 @@ export const,
     contactInfo: contact, realImplementation: true;
     implementationDetails: 'Event ingestors and summarization pipelines.', launchDate: '2025-08-05',
     customers: 7, rating: 4.6;
-    reviews: 3;
-  };
+    reviews: 3}
     id: 'ai-data-quality-monitor', name: 'AI Data Quality Monitor',
     tagline: 'Detect schema drifts, null spikes, and anomalies continuously',
     price: '$169', period: '/month',
@@ -17341,8 +17207,7 @@ export const,
     implementationDetails: 'Warehouse connectors, alerting, and PR generators.',
     launchDate: '2025-07-14', customers: 12;
     rating: 4.6;
-    reviews: 6;
-  };
+    reviews: 6}
     id: 'ai-ux-copy-optimizer', name: 'AI UX Copy Optimizer',
     tagline: 'Test and optimize product copy for activation and conversion', price: '$59',
     period: '/month',
@@ -17362,8 +17227,7 @@ export const,
     contactInfo: contact, realImplementation: true;
     implementationDetails: 'Browser extension + flag hooks + PR templates.', launchDate: '2025-06-18',
     customers: 14, rating: 4.5;
-    reviews: 5;
-  };
+    reviews: 5}
     id: 'ai-governance-policy-center', name: 'AI Governance Policy Center',
     tagline: 'Register models, risks, prompts, and controls in one place',
     price: '$249', period: '/month',
@@ -17424,7 +17288,7 @@ export const,
   s: 10, ratin,
   g: 4.5,
     review,
-  s: 5};
+  s: 5}
     i,
   d: 'ai-legal-clause-recommender', nam,
   e: 'AI Legal Clause Recommender',
@@ -17480,7 +17344,7 @@ export const,
   s: 8, ratin,
   g: 4.5,
     review,
-  s: 4};
+  s: 4}
     i,
   d: 'ai-incident-analysis-bot', nam,
   e: 'AI Incident Analysis Bot',
@@ -17535,7 +17399,7 @@ export const,
   s: 7, ratin,
   g: 4.6,
     review,
-  s: 3};
+  s: 3}
     i,
   d: 'ai-data-quality-monitor', nam,
   e: 'AI Data Quality Monitor',
@@ -17591,7 +17455,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 6};
+  s: 6}
     i,
   d: 'ai-ux-copy-optimizer', nam,
   e: 'AI UX Copy Optimizer',
@@ -17646,7 +17510,7 @@ export const,
   s: 14, ratin,
   g: 4.5,
     review,
-  s: 5};
+  s: 5}
     i,
   d: 'ai-governance-policy-center', nam,
   e: 'AI Governance Policy Center',
@@ -17703,9 +17567,6 @@ export const,
     review,
   s: 2}
 ];
-;
-;
-;
       'System registry and ownership'
       'Risk assessment and mitigations'
       'Prompt evals and guardrails'
@@ -17741,8 +17602,8 @@ reviews: 2;
 	mobile: '+1 302 464 0950'
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
-	website: 'https://ziontechgroup.com'};
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
+	website: 'https://ziontechgroup.com'}
+export const newlyAddedServices: EnhancedRealMicroSaasServiceService Feature = [
     id: 'managed-ml-feature-store-starter',
     name: 'Managed ML Feature Store Starter',
     tagline: 'Production-ready feature store with governance and lineage',
@@ -17812,9 +17673,9 @@ review,
 	websit,
   e: 'http,
   s://ziontechgroup.com'
-};
+}
 export const,
-  newlyAddedServices: EnhancedRealMicroSaasService[] = [,
+  newlyAddedServices: EnhancedRealMicroSaasServiceService Feature = [,
     i,
   d: 'managed-ml-feature-store-starter',
     nam,
@@ -19938,8 +19799,7 @@ export const,
     launchDate: '2025-01-30'
     customers: 45;
     rating: 4.7;
-    reviews: 19;
-  },
+    reviews: 19},
     implementationDetails: 'Config UI, metadata exchange, and provisioning agent.',
     launchDate: '2025-01-30'
     customers: 45;
@@ -21900,8 +21760,7 @@ export const,
     launchDate: '2025-08-01'
     customers: 9;
     rating: 4.7;
-    reviews: 6;
-  },
+    reviews: 6},
     id: 'sales-copilot-for-outreach',
     name: 'Sales Copilot for Outreach',
     tagline: 'Sequencing, personalization, and meeting notesdone for you',
@@ -23078,8 +22937,7 @@ export const,
     rating: 4.6;
     reviews: 6;
     reviews: 6;
-    reviews: 6;
-  },
+    reviews: 6},
     id: 'ai-ux-copy-optimizer'
     name: 'AI UX Copy Optimizer',
     tagline: 'Test and optimize product copy for activation and conversion',
@@ -23354,8 +23212,7 @@ export const,
     launchDate: '2025-08-15'
     customers: 5;
     rating: 4.6;
-reviews: 2;
-  }];
+reviews: 2}];
     reviews: 2;
     popula,
   r: true,
@@ -23425,28 +23282,27 @@ review,
     review,
   s: 2}
 ];
-;
 export const,
-  newlyAddedServices: EnhancedRealMicroSaasService[] = [ {/* TODO: Fix JSX expression */}
+  newlyAddedServices: EnhancedRealMicroSaasServiceService Feature = [ {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com' }; export const,
-  newlyAddedServices: EnhancedRealMicroSaasService[] = [ const contact = ' mobil,
+  s://ziontechgroup && ziontechgroup.com' } export const,
+  newlyAddedServices: EnhancedRealMicroSaasServiceService Feature = [ const contact = ' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com'}; const contact = ' mobil,
+  s://ziontechgroup.com'} const contact = ' mobil,
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
   s://ziontechgroup.com'} export const,
-  newlyAddedServices: EnhancedRealMicroSaasService[] = [ {/* TODO: Fix JSX expression */}
+  newlyAddedServices: EnhancedRealMicroSaasServiceService Feature = [ {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com' }; export const,
-  newlyAddedServices: EnhancedRealMicroSaasService[] = [ ' i,
+  s://ziontechgroup && ziontechgroup.com' } export const,
+  newlyAddedServices: EnhancedRealMicroSaasServiceService Feature = [ ' i,
   d: 'managed-ml-feature-store-starter'' nam,
   e: 'Managed ML Feature Store Starter'' taglin,
   e: 'Production-ready feature store with governance and lineage'' pric,
@@ -23481,7 +23337,7 @@ export const,
   y: 'AI & Data' realServic,
   e: true' technolog,
   y: ['Feast-compatible, PostgreSQL, Redis, Next.js']; export const,
-  newlyAddedServices: EnhancedRealMicroSaasService[] = [ descriptio,
+  newlyAddedServices: EnhancedRealMicroSaasServiceService Feature = [ descriptio,
   n:' 'Spin up a governed feature store with versioning, lineage, validation, and online/offline consistency. Includes SDKs and CI checks.' feature,
   s: [' 'Drift alerts and quality tests',' 'RBAC and audit logs'], popula,
   r: true,' ico,
@@ -26562,7 +26418,7 @@ export const,
   e: '2025 - 03 - 18', customer,
   s: 4, ratin,
   g: 4 && 4.7, review,
-  s: 2}; ' 'Faster setup than bespoke Gmail/Outlook add-ins; safer defaults for SMBs.',' targetAudienc,
+  s: 2} ' 'Faster setup than bespoke Gmail/Outlook add-ins; safer defaults for SMBs.',' targetAudienc,
   e: 'Support, sales, operations, founders', trialDay,
   s: 14,' setupTim,
   e: '30 minutes',' categor,
@@ -27219,7 +27075,7 @@ export const,
   e: '2025-03-15', customer,
   s: 7, ratin,
   g: 4.7, review,
-  s: 4 }; ' i,
+  s: 4 } ' i,
   d: 'agentic-browser-recorder-pro', nam,
   e: 'Agentic Browser Recorder Pro',' taglin,
   e: 'Record workflows, export resilient agent scripts with retries',' pric,
@@ -27253,7 +27109,7 @@ export const,
   e: '2025-03-16', customer,
   s: 5, ratin,
   g: 4.6, review,
-  s: 3 }; ' i,
+  s: 3 } ' i,
   d: 'sso-scim-accelerator', nam,
   e: 'SSO + SCIM Accelerator',' taglin,
   e: 'Enterprise SSO and user provisioning templates and adapters', pric,
@@ -27336,7 +27192,7 @@ export const,
   s: ['Salesforce, HubSpot, G Suite, Zendesk'];' useCase,
   s: ['DSAR handling, Regulatory audits, Customer trust'];' ro,
   i: 'Reduce DSAR processing time by 70–90%',' competitor,
-  s: ['Transcend, OneTrust, DataGrail']; }, ' i,
+  s: ['Transcend, OneTrust, DataGrail']}, ' i,
   d: 'agentic-browser-recorder-pro',' nam,
   e: 'Agentic Browser Recorder Pro',' taglin,
   e: 'Record workflows, export resilient agent scripts with retries',' pric,
@@ -27370,7 +27226,7 @@ export const,
   e: '2025-03-14', customer,
   s: 9, ratin,
   g: 4.7, review,
-  s: 4 }; ' i,
+  s: 4 } ' i,
   d: 'ai-sales-prospecting-studio', nam,
   e: 'AI Sales Prospecting Studio',' taglin,
   e: 'Personalized multi-channel outreach with compliance and warm-up', pric,
@@ -27404,7 +27260,7 @@ export const,
   e: '2025-03-15', customer,
   s: 17, ratin,
   g: 4.8, review,
-  s: 10 }; ' i,
+  s: 10 } ' i,
   d: 'data-contracts-health-monitor', nam,
   e: 'Data Contracts Health Monitor',' taglin,
   e: 'Keep schemas, SLAs, and lineage compliant across teams',' pric,
@@ -27438,7 +27294,7 @@ export const,
   e: '2025-03-16', customer,
   s: 6, ratin,
   g: 4.6, review,
-  s: 3 }; ' i,
+  s: 3 } ' i,
   d: 'ai-powered-email-responder', nam,
   e: 'AI-Powered Email Responder',' taglin,
   e: 'Automate inbox triage and replies with policy guardrails', pric,
@@ -27472,7 +27328,7 @@ export const,
   e: '2025-03-18', customer,
   s: 6, ratin,
   g: 4.7, review,
-  s: 3 }; ' i,
+  s: 3 } ' i,
   d: 'mobile-first-survey-tool', nam,
   e: 'Mobile-First Survey Tool',' taglin,
   e: 'Responsive surveys with branching logic and real-time analytics', pric,
@@ -27506,7 +27362,7 @@ export const,
   e: '2025-03-18', customer,
   s: 3, ratin,
   g: 4.6, review,
-  s: 2 }; ' i,
+  s: 2 } ' i,
   d: 'ecommerce-returns-management-saas', nam,
   e: 'E‑commerce Returns Management SaaS',' taglin,
   e: 'Automate RMAs, labels, and refunds with analytics',' pric,
@@ -27540,7 +27396,7 @@ export const,
   e: '2025-03-18', customer,
   s: 4, ratin,
   g: 4.7; review,
-  s: 2 }; ' i,
+  s: 2 } ' i,
   d: 'ai-email-responder-pro', nam,
   e: 'AI Email Responder Pro',' taglin,
   e: 'Categorize and draft replies to routine emails with safety', pric,
@@ -27573,7 +27429,7 @@ export const,
   e: '2026-03-10', customer,
   s: 32, ratin,
   g: 4.7, review,
-  s: 14 }; ' i,
+  s: 14 } ' i,
   d: 'mobile-first-survey-studio', nam,
   e: 'Mobile‑First Survey Studio',' taglin,
   e: 'Conversational surveys that adapt in real-time', pric,
@@ -27606,7 +27462,7 @@ export const,
   e: '2026-03-11', customer,
   s: 18, ratin,
   g: 4.6, review,
-  s: 6 }; ' i,
+  s: 6 } ' i,
   d: 'affiliate-tracking-hub', nam,
   e: 'Affiliate Tracking Hub',' taglin,
   e: 'Referrals, payouts, and fraud checks for SMBs',' pric,
@@ -27639,7 +27495,7 @@ export const,
   e: '2026-03-12', customer,
   s: 11, ratin,
   g: 4.5, review,
-  s: 5 }; ' i,
+  s: 5 } ' i,
   d: 'podcast-transcription-studio', nam,
   e: 'Podcast Transcription Studio',' taglin,
   e: 'Fast, accurate transcripts with speakers and chapters',' pric,
@@ -27672,7 +27528,7 @@ export const,
   e: '2026-03-09', customer,
   s: 20, ratin,
   g: 4.6, review,
-  s: 9 }; ' i,
+  s: 9 } ' i,
   d: 'ecommerce-returns-portal', nam,
   e: 'E‑commerce Returns Portal',' taglin,
   e: 'Return labels, status tracking, and analytics',' pric,
@@ -27695,7 +27551,7 @@ export const,
   s: ['Shopify, WooCommerce, Stripe'];' useCase,
   s: ['Returns, exchanges, refunds'];' ro,
   i: 'Reduce support workload by 20–40%',' competitor,
-  s: ['Loop Returns, Returnly']; }, ' i,
+  s: ['Loop Returns, Returnly']}, ' i,
   d: 'agentic-browser-recorder-pro',' nam,
   e: 'Agentic Browser Recorder Pro', ' 'DOM diff–based selector healingAuto-wait and idempotent steps',' 'Proxies and device profilesRun history and replays',' 'Webhooks and schedules' ], popula,
   r: false,' ico,
@@ -29138,7 +28994,7 @@ export const,
   s: 'Registry + eval runners + approval flows.',' launchDat,
   e: '2025-08-15', customer,
   s: 5; review,
-  s: 8 }; ' i,
+  s: 8 } ' i,
   d: 'real-time-feature-flags-lite', nam,
   e: 'Real-Time Feature Flags Lite',' taglin,
   e: 'Simple edge-evaluated flags with audit and SDKs', pric,
@@ -29172,7 +29028,7 @@ export const,
   e: '2025-07-20', customer,
   s: 10, ratin,
   g: 4.5, review,
-  s: 5 }; ' i,
+  s: 5 } ' i,
   d: 'ai-legal-clause-recommender', nam,
   e: 'AI Legal Clause Recommender',' taglin,
   e: 'Suggest clauses and redlines with risk explanations', pric,
@@ -29206,7 +29062,7 @@ export const,
   e: '2025-05-28', customer,
   s: 8, ratin,
   g: 4.5, review,
-  s: 4 }; ' i,
+  s: 4 } ' i,
   d: 'ai-incident-analysis-bot', nam,
   e: 'AI Incident Analysis Bot',' taglin,
   e: 'Summarize incidents, find regressions, and propose remediations',' pric,
@@ -29240,7 +29096,7 @@ export const,
   e: '2025-08-05', customer,
   s: 7, ratin,
   g: 4.6, review,
-  s: 3 }; ' i,
+  s: 3 } ' i,
   d: 'ai-data-quality-monitor', nam,
   e: 'AI Data Quality Monitor',' taglin,
   e: 'Detect schema drifts, null spikes, and anomalies continuously',' pric,
@@ -29274,7 +29130,7 @@ export const,
   e: '2025-07-14', customer,
   s: 12, ratin,
   g: 4.6, review,
-  s: 6 }; ' i,
+  s: 6 } ' i,
   d: 'ai-ux-copy-optimizer', nam,
   e: 'AI UX Copy Optimizer',' taglin,
   e: 'Test and optimize product copy for activation and conversion', pric,
@@ -29308,7 +29164,7 @@ export const,
   e: '2025-06-18', customer,
   s: 14, ratin,
   g: 4.5, review,
-  s: 5 }; ' i,
+  s: 5 } ' i,
   d: 'ai-governance-policy-center', nam,
   e: 'AI Governance Policy Center',' taglin,
   e: 'Register models, risks, prompts, and controls in one place',' pric,
@@ -29374,8 +29230,8 @@ export const,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' }; export const,
-  newlyAddedServices: EnhancedRealMicroSaasService[] = [ ' i,
+  s://ziontechgroup.com' } export const,
+  newlyAddedServices: EnhancedRealMicroSaasServiceService Feature = [ ' i,
   d: 'managed-ml-feature-store-starter',' nam,
   e: 'Managed ML Feature Store Starter',' taglin,
   e: 'Production-ready feature store with governance and lineage',' pric,

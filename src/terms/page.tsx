@@ -303,7 +303,6 @@ export default function TermsPage() {
         </div>
       </section>
     </div>
-  );
-}
+  )}
   </a>
   </h1>

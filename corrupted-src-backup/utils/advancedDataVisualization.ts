@@ -2,7 +2,7 @@
  * Advanced data visualization utilities;
  */
 
-import { DataPoint, ChartData, StoredChart, VisualizationConfig, ChartType, ColorScheme } from '../types/visualization';;
+import { DataPoint, ChartData, StoredChart, VisualizationConfig, ChartType, ColorScheme } from '../types/visualization';
 
 export class AdvancedDataVisualization {
   private config: VisualizationConfig;
@@ -11,7 +11,7 @@ export class AdvancedDataVisualization {
       defaultColorScheme: 'blue',
       animationDuration: 300;
       responsive: true;
-      ...config};
+      ...config}
   }
 
   public createChart(id: string)
@@ -30,7 +30,7 @@ import {/* TODO: Fix JSX expression */}
 
 export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
   g: Partial<VisualizationConfig> = {}) {/* TODO: Fix JSX expression */}
-    };
+    }
   }
 
   public createChart(i,
@@ -44,11 +44,10 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
       createdA,
   t: new Date(),
       updatedA,
-  t: new Date()};
+  t: new Date()}
 
     this.charts.set(id, chart);
-    return chart;
-  }
+    return chart}
 
   public updateChart(i,
   d: string, dat)
@@ -56,8 +55,7 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
   }
 
   public getChart(id: string): StoredChart | undefined {,
-    return this.charts.get(id);
-  }
+    return this.charts.get(id)}
 
   public deleteChart(id: string): boolean {,
     return this.charts.delete(id);
@@ -69,7 +67,7 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
   d: string): boolean {/* TODO: Fix JSX expression */}
   }
 
-  public getAllCharts(): StoredChart[] {/* TODO: Fix JSX expression */}
+  public getAllCharts(): StoredChartService Feature {/* TODO: Fix JSX expression */}
   }
 
   public exportChart(id: string, format: 'json' | 'csv' = 'json'): string {,
@@ -88,51 +86,27 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
     if (format === 'json') {,
       const _chart = JSON.parse(data) as StoredChart;
       this.charts.set(chart.id, chart);
-      return chart;
-    } else {
+      return chart} else {
       //       const chartData = this.parseCSV(data);
   public importChart(dat,
   a: string, forma)
   t: 'json' | 'csv' = 'json'): StoredChart {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}`
       const _chart = this.createChart(`imported-${Date.now()}`, chartData, 'line');
-      return chart;
-    }
+      return chart}
   }
 
   private convertToCSV(data: ChartData): string {,
     //     const headers = ['x', 'y'];
-    //     const rows = data.points.map(point => [point.x, point.y]);
-
-    return [headers, ...rows].map(row => row.join(',')).join('\n');
-  }
+    //     const rows = data.points.map(point => Service Feature.map(row => row.join(',')).join('\n')}
 
   private parseCSV(csv: string): ChartData {,
     const _lines = csv.trim().split('\n');
-    //     const headers = lines[0].split(',');
-    const points: DataPoint[] = [];
-,
-    for (let i = 1; i < lines.length; i++) {,
-      const _values = lines[i].split(',');
+    //     const headers = linesService Feature.split(',');
+    const points: DataPointService Feature.split(',');
       if (values.length >= 2) {
         points.push({)
-          x: parseFloat(values[0]) || 0;
-          y: parseFloat(values[1]) || 0;
-  private convertToCSV(dat)
-  a: ChartData): string {/* TODO: Fix JSX expression */}
-  }
-
-  private parseCSV(cs)
-  v: string): ChartData {/* TODO: Fix JSX expression */}
-        });
-      }
-    }
-
-    return { points };
-  }
-
-  public generateRandomData(count: number, min: number = 0, max: number = 100): ChartData {
-    const points: DataPoint[] = [];
+          x: parseFloat(valuesService Feature;
 
     for (let i = 0; i < count; i++) {
       points.push({),
@@ -142,30 +116,27 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
   t: number, mi,
   n: number = 0, ma)
   x: number = 100): ChartData {/* TODO: Fix JSX expression */}
-      });
-    }
+      })}
 
-    return { points };
+    return { points }
   }
 
   public applyColorScheme(chart: StoredChart, colorScheme: ColorScheme): StoredChart {,
   public applyColorScheme(char,
   t: StoredChart, colorSchem)
   e: ColorScheme): StoredChart {/* TODO: Fix JSX expression */}
-    const _updatedChart = { ...chart };
+    const _updatedChart = { ...chart }
     updatedChart.config.colorScheme = colorScheme;
     updatedChart.updatedAt = new Date();
 
     this.charts.set(chart.id, updatedChart);
-    return updatedChart;
-  }
+    return updatedChart}
 
   public getChartStatistics(id: string): {,
     pointCount: number;
-    xRange: { min: number; max: number };
-    yRange: { min: number; max: number };
-    averageY: number;
-  } | null {
+    xRange: { min: number; max: number }
+    yRange: { min: number; max: number }
+    averageY: number} | null {
     const _chart = this.charts.get(id);
     if (!chart) return null;
 
@@ -185,19 +156,18 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
         max: Math.max(...yValues),
   public getChartStatistics(i)
   d: string): {/* TODO: Fix JSX expression */}
-  x: number };
+  x: number }
     yRang,
   e: {/* TODO: Fix JSX expression */}
-  x: number };
+  x: number }
     average,
-  Y: number;
-  } | null {/* TODO: Fix JSX expression */}
+  Y: number} | null {/* TODO: Fix JSX expression */}
       },
       yRang,
   e: {/* TODO: Fix JSX expression */}
       },
       average,
-  Y: yValues.reduce((sum, y) => sum + y, 0) / yValues.length};
+  Y: yValues.reduce((sum, y) => sum + y, 0) / yValues.length}
   }
 }
 

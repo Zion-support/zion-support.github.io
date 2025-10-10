@@ -4,10 +4,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Brain, Code, FlaskConical, Target, CheckCircle, Star,  Brain,  Code,  Target } from 'lucide-react';
 const AIResearchDevelopmentPage: React.FC = () => {
-  const features = [];
+  const features = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   ico,
   n: Brain,
       titl,
@@ -15,8 +15,7 @@ const AIResearchDevelopmentPage: React.FC = () => {
       descriptio,
   n: 'Tailored AI research solutions for your specific needs',
       benefit,
-  s: ['Custom algorithms', 'Research partnerships', 'Innovation labs'];
-    },
+  s: ['Custom algorithms', 'Research partnerships', 'Innovation labs']},
       ico,
   n: Code,
       titl,
@@ -89,6 +88,5 @@ const AIResearchDevelopmentPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default AiResearchDevelopmentPage;

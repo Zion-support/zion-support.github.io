@@ -601,8 +601,7 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
                     </Link>"
                     <Link to="/services/quantum-computing-consulting"></Link>"
   className= " />
-  );
-};
+  )}
 export default QuantumAIHybrid2025;
   </div>  </div>
 </article>

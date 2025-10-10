@@ -5,6 +5,5 @@ const,
   ScrollToTop: React.FC<ScrollToTopProps> = () => {/* TODO: Fix JSX expression */}
       {/* Component content */}
     </div>
-  );
-}
+  )}
   </ScrollToTopProps>

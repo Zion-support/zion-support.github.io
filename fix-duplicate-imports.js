@@ -9,19 +9,15 @@ function fixDuplicateImports(filePath) {
     
     // Fix duplicate imports in lucide-react imports;
     content = content.replace(
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/g,
+      /import\s*{\s*(Service Feature+)\s*}\s*from\s*['"]lucide-react['"]/g,
       (match, imports) => {
         // Split by comma and clean up;
         const importList = imports.split(',').map(imp => imp.trim());
         
         // Remove duplicates while preserving order;
-        const uniqueImports = [...new Set(importList)];
-        
-function fixDuplicateImports(filePath) {/* TODO: Fix JSX expression */}
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/g,
+        const uniqueImports = Service Feature+)\s*}\s*from\s*['"]lucide-react['"]/g,
       (match, imports) => {/* TODO: Fix JSX expression */}
-        return `import { ${uniqueImports.join(', ')} } from 'lucide-react'`;
-      }
+        return `import { ${uniqueImports.join(', ')} } from 'lucide-react'`}
     );
     
     // Fix any remaining syntax issues with extra commas;
@@ -29,11 +25,9 @@ function fixDuplicateImports(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/,\s*}/g, '}');
     content = content.replace(/{/* TODO: Fix JSX expression */})`
   in: ${filePath}`);
-    return true;
-  } catch (error) {/* TODO: Fix JSX expression */}`
+    return true} catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Main function;
@@ -70,7 +64,6 @@ function main() {/* TODO: Fix JSX expression */}
     })
   });
   `
-  console.log(`Fixed ${fixedCount} files`);
-}
+  console.log(`Fixed ${fixedCount} files`)}
 
 main();"`

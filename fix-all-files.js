@@ -31,26 +31,22 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}(
         </div>
       </div>
     </div>
-  );
-}`;
-  } else if (isComponent) {
+  )}`} else if (isComponent) {
     content = `import React from 'react';
 
 interface ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}Props {
   className?: string;
-  children?: React.ReactNode;
-}
+  children?: React.ReactNode}
 
 export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}({ 
   className = '', 
-  children;
-}: ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}Props) {
+  children}: ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}Props) {
   return (
     <div className={\`${fileName.toLowerCase()} \${className}\`}></div>
       {children || (
         <div className="p-4"></div>
           <h3 className="text-lg font-semibold mb-2"></h>
-            ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/([A-Z])/g, ' $1').trim()}
+            ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/(Service Feature)/g, ' $1').trim()}
           </h3>
           <p className="text-gray-600">
             Component content will be added here.
@@ -58,37 +54,28 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}(
         </div>
       )}
     </div>
-  );
-}`;
-  } else if (isUtil || isConfig) {
+  )}`} else if (isUtil || isConfig) {
     content = `// ${fileName.charAt(0).toUpperCase() + fileName.slice(1)} utility;
 // This file contains utility functions and configurations;
 export const ${fileName} = {
   // Add utility functions here;
   init: () => {,
-    console.log('${fileName} initialized');
-  }
-};
+    console.log('${fileName} initialized')}
+}
 
-export default ${fileName};`;
-  } else if (isType) {
+export default ${fileName}`} else if (isType) {
     content = `// Type definitions for ${fileName}
 
 export interface ${fileName.charAt(0).toUpperCase() + fileName.slice(1)} {
-  // Add type definitions here;
-}
+  // Add type definitions here}
 
-export default ${fileName.charAt(0).toUpperCase() + fileName.slice(1)};`;
-  } else {
+export default ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}`} else {
     content = `// ${fileName} file;
 // This file is under development;
 export default function ${fileName}() {
-  return null;
-}`;
-  }
+  return null}`}
   
-  return content;
-}
+  return content}
 
 // Function to fix a file;
 function fixFile(filePath) {
@@ -96,16 +83,14 @@ function fixFile(filePath) {
     const content = createProperComponent(filePath);
     fs.writeFileSync(filePath, content);
     console.log(`✅ Fixed: ${filePath}`);
-    return true;
-  } catch (error) {
+    return true} catch (error) {
     console.error(`❌ Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Function to find all TypeScript/JavaScript files;
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  const files = [];
+  const files = Service Feature;
   
   function traverse(currentDir) {
     try {
@@ -118,23 +103,19 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
         if (stat.isDirectory()) {
           // Skip node_modules and other common directories;
           if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-            traverse(fullPath);
-          }
+            traverse(fullPath)}
         } else if (stat.isFile()) {
           const ext = path.extname(item);
           if (extensions.includes(ext)) {
-            files.push(fullPath);
-          }
+            files.push(fullPath)}
         }
       }
     } catch (error) {
-      // Skip directories we can't read;
-    }
+      // Skip directories we can't read}
   }
   
   traverse(dir);
-  return files;
-}
+  return files}
 
 // Main execution;
 const srcDir = path.join(process.cwd(), 'src');
@@ -148,12 +129,10 @@ let errorCount = 0;
 for (const file of files) {
   try {
     if (fixFile(file)) {
-      fixedCount++;
-    }
+      fixedCount++}
   } catch (error) {
     console.error(`❌ Error processing ${file}:`, error.message);
-    errorCount++;
-  }
+    errorCount++}
 }
 
 console.log(`\n📊 Summary: `);
@@ -162,7 +141,5 @@ console.log(`❌ Errors: ${errorCount}`);
 console.log(`📁 Total files processed: ${files.length}`);
 
 if (fixedCount > 0) {
-  console.log('\n🎉 All files fixed successfully!');
-} else {
-  console.log('\n✨ No files needed fixing.');
-}
+  console.log('\n🎉 All files fixed successfully!')} else {
+  console.log('\n✨ No files needed fixing.')}

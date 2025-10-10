@@ -9,10 +9,9 @@ async function getOpenPRs() {
   try {
     const response = await fetch('https: //api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100');
     const prs = await response.json();
-    return prs;
-  } catch (error) {
+    return prs} catch (error) {
     console.error('❌ Failed to fetch PRs:', error.message);
-    return [];
+    return Service Feature;
 async function getOpenPRs() {/* TODO: Fix JSX expression */}
 }
   try {/* TODO: Fix JSX expression */}
@@ -43,8 +42,7 @@ function mergePRBranch(branchName, prNumber) {/* TODO: Fix JSX expression */}
       execSync(`git merge origin/${branchName} --no-commit`, {/* TODO: Fix JSX expression */})
   o: 'pipe' });`
       console.log(`✅ PR #${prNumber} merged successfully without conflicts`);
-      return true;
-    } catch (mergeError) {/* TODO: Fix JSX expression */}`
+      return true} catch (mergeError) {/* TODO: Fix JSX expression */}`
       console.log(`⚠️  Merge conflicts detected in PR #${prNumber}, resolving...`);
       
       // Get conflicted files;
@@ -67,10 +65,8 @@ function mergePRBranch(branchName, prNumber) {/* TODO: Fix JSX expression */}
   o: 'pipe' });"`
               execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
   o: 'pipe' });`
-              console.log(`  ✅ Resolved ${file}`);
-            } catch (error) {/* TODO: Fix JSX expression */}`
-              console.log(`  ❌ Failed to resolve ${file}: ${error.message}`);
-            }
+              console.log(`  ✅ Resolved ${file}`)} catch (error) {/* TODO: Fix JSX expression */}`
+              console.log(`  ❌ Failed to resolve ${file}: ${error.message}`)}
           }
         });
         
@@ -80,16 +76,13 @@ function mergePRBranch(branchName, prNumber) {/* TODO: Fix JSX expression */}
         execSync(`git commit -m "Merge PR #${prNumber}: ${branchName} (conflicts resolved)"`, {/* TODO: Fix JSX expression */}
   o: 'pipe' });`
         console.log(`✅ PR #${prNumber} merged with conflicts resolved`);
-        return true;
-      } else {/* TODO: Fix JSX expression */}`
+        return true} else {/* TODO: Fix JSX expression */}`
         console.log(`❌ No conflicted files found for PR #${prNumber}`);
-        return false;
-      }
+        return false}
     }
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.log(`❌ Failed to merge PR #${prNumber}: ${error.message}`);
-    return false;
-  }
+    return false}
 }
 
 // Function to clean up console.log statements;
@@ -114,8 +107,8 @@ function cleanConsoleLogs() {/* TODO: Fix JSX expression */}
         const originalLength = content.length;
         
         // Remove console.log statements;
-        content = content.replace(/^\s*console\.log\([^)]*\);\s*$/gm, '');
-        content = content.replace(/^\s*console\.(warn|error|info|debug)\([^)]*\);\s*$/gm, '');
+        content = content.replace(/^\s*console\.log\(Service Feature*\);\s*$/gm, '');
+        content = content.replace(/^\s*console\.(warn|error|info|debug)\(Service Feature*\);\s*$/gm, '');
         
         // Clean up extra whitespace;
         content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
@@ -123,14 +116,11 @@ function cleanConsoleLogs() {/* TODO: Fix JSX expression */}
         if (content.length !== originalLength) {
           fs.writeFileSync(file, content);
   commonFiles.forEach(file => {/* TODO: Fix JSX expression */})`
-          console.log(`  ✅ Cleaned ${file}`);
-        }
+          console.log(`  ✅ Cleaned ${file}`)}
       } catch (error) {/* TODO: Fix JSX expression */}`
-        console.log(`  ⚠️  Could not clean ${file}: ${error.message}`);
-      }
+        console.log(`  ⚠️  Could not clean ${file}: ${error.message}`)}
     }
-  });
-}
+  })}
 
 // Function to optimize build configuration;
 function optimizeBuild() {
@@ -155,13 +145,11 @@ function optimizeBuild() {/* TODO: Fix JSX expression */}
         'prebuild': 'npm run clean',
         'postbuild': 'echo "Build completed successfully"'
   if (fs.existsSync(packageJsonPath)) {/* TODO: Fix JSX expression */}
-      };
+      }
       
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-      console.log('✅ Updated package.json with optimized scripts');
-    } catch (error) {/* TODO: Fix JSX expression */}`
-  n: ${error.message}`);
-    }
+      console.log('✅ Updated package.json with optimized scripts')} catch (error) {/* TODO: Fix JSX expression */}`
+  n: ${error.message}`)}
   }
 }
 
@@ -195,13 +183,10 @@ async function main() {/* TODO: Fix JSX expression */}
   h: ${branchName}`);
       
       try {/* TODO: Fix JSX expression */}`
-          console.log(`✅ Successfully merged PR #${prNumber}`);
-        } else {/* TODO: Fix JSX expression */}`
-          console.log(`❌ Failed to merge PR #${prNumber}`);
-        }
+          console.log(`✅ Successfully merged PR #${prNumber}`)} else {/* TODO: Fix JSX expression */}`
+          console.log(`❌ Failed to merge PR #${prNumber}`)}
       } catch (error) {/* TODO: Fix JSX expression */}`
-        console.log(`❌ Error processing PR #${prNumber}: ${error.message}`);
-      }
+        console.log(`❌ Error processing PR #${prNumber}: ${error.message}`)}
     }
     
     // Clean up and optimize;
@@ -234,9 +219,7 @@ async function main() {/* TODO: Fix JSX expression */}
   merge: ${failedCount} PRs`);`
     console.log(`  🧹 Console.log statements cleaned`);`
     console.log(`  ⚡ Build configuration optimized`);`
-    console.log(`  🚀 All changes pushed to main`);
-    
-  } catch (error) {/* TODO: Fix JSX expression */}
+    console.log(`  🚀 All changes pushed to main`)} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 "`

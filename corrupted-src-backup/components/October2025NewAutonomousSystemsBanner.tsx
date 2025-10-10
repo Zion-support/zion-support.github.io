@@ -1,87 +1,7 @@
 const, October2025NewAutonomousSystemsBanne, r = () => {
   return(<div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/30, relative, overflow-hidd, e, n">
-      {/* Animated, background, effects */};
-      <div, className="absolute, inse, t-0, b, g-gr, i, d-whi, t, e/[0.02] bg-[si, z, e: 60 px_60, p, x]/></div>"
-      <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-bla, c, k/50, t, o-transpare, n, t  /></div>
-      {/* Floating, particles, effect */}
-      <div, className="absolute, to, p-0, lef, t-1/4 w-7, 2, h-72, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  />
-      <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0  />
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  return (
-    <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/30, relative, overflow-hidd, e, n">
-      {/* Animated, background, effects */};</div>
-      <div, className="absolute, inse, t-0, b, g-gr, i, d-whi, t, e/[0.02] bg-[si, z, e: 60px_60, p, x]/>"</div>
-      <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-bla, c, k/50, t, o-transpare, n, t  />
-      {/* Floating, particles, effect */}</div>
-      <div, className="absolute, to, p-0, lef, t-1/4 w-7, 2, h-72, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  /></div>
-      <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0  /></div>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8, p, y-8">"
-        {/* Header, with, badge */}</div>
-        <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>
-          <div, className="flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, rounde, d-full, p, x-4, p, y-2"></div>
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
-            <span, className="te, x, t-yell, o, w-300, fon, t-bold, tex, t-sm, uppercase, tracking-wid, e, r">
-              🚀 BREAKI, N, G: Octobe, r, 1, 20, 2, 5;
-            </sp, a, n>
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
-    <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/30, relative, overflow-hidd, e, n">";
-      {/* Animated, background, effects */};</div>
-      <div, className="absolute, inse, t-0, b, g-gr, i, d-whi, t, e/[0.02] bg-[si, z, e: 60px_60, p, x]" />";</div>
-      <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-bla, c, k/50, t, o-transpare, n, t" />";
-      {/* Floating, particles, effect */})
-      <div, className="absolute, to, p-0, lef, t-1/4 w-7, 2, h-72, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";)
-      <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0" />";)
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;),
-      {/* Floating, particles, effect */}</div>
-      <div, className="absolute, to, p-0, lef, t-1/4 w-7, 2, h-72, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";</div>
-      <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0" />";</div>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8, p, y-8">";
-        {/* Header, with, badge */}</div>
-        <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">";</div>
-          <div, className="flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, rounde, d-full, p, x-4, p, y-2">";</div>
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
-            <span, className="te, x, t-yell, o, w-300, fon, t-bold, tex, t-sm, uppercase, tracking-wid, e, r">";
-              🚀 BREAKI, N, G: Octobe, r, 1, 20, 2, 5;
-            </sp, a, n>
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";</Sparkles>
-          </d, i, v>
-        </d, i, v>
-        {/* Main, headlin, e */}
-        <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-center, m, b-4, leadin, g-tig, h, t">"</h2>
-          <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-oran, g, e-300, t, o-pi, n, k-300, tex, t-transparent, b, g-cl, i, p-text, dro, p-shad, o, w-lg"></span>
-        <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-center, m, b-4, leadin, g-tig, h, t">";</h2>
-          <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-oran, g, e-300, t, o-pi, n, k-300, tex, t-transparent, b, g-cl, i, p-text, dro, p-shad, o, w-lg">";
-            🔥 REVOLUTION, A, R;
-  Y: 2, Gam, e-Changing, Autonomous, Systems!
-          </sp, a, n>
-        </h2>
-        {/* S, u, b-headli, n, e */}
-        <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-center, tex, t-bl, u, e-100, m, b-8, ma, x-w-5xl, m, x-auto, fon, t-semibo, l, d">"
-          ⚡ Just, Release, d:</p> <span, className="te, x, t-yell, o, w-300, fon, t-bla, c, k">$974M, Combined, Annual Val, u, e</sp, a, n> — "
-        <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-center, tex, t-bl, u, e-100, m, b-8, ma, x-w-5xl, m, x-auto, fon, t-semibo, l, d">";
-          ⚡ Just, Releas, e;
-const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX expression */}
-      {/* Animated, background, effects */};
-      <div, className="absolute, inse, t-0, b, g-gr, i, d-whi, t, e/[0.02] bg-[si, z, e: 60px_60, p, x]/>""
-      <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-bla, c, k/50, t, o-transpare, n, t  /></div>
-      {/* Floating, particles, effect */}"
-      <div, className="absolute, to, p-0, lef, t-1/4 w-7, 2, h-72, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  /></div>"
-      <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0  /></div>"
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
-  g:px-8, p, y-8">"
-        {/* Header, with, badge */}"
-        <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>"
-          <div, className="flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, rounde, d-full, p, x-4, p, y-2"></div>"
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  /></Sparkles>"
-            <span, className="te, x, t-yell, o, w-300, fon, t-bold, tex, t-sm, uppercase, tracking-wid, e, r"></span>
-              🚀 BREAKI, N, G: Octobe, r, 1, 20, 2, 5;
-            </sp, a, n>"
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  /></Sparkles>"
-    <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/30, relative, overflow-hidd, e, n">";
-      {/* Animated, background, effects */};"
-      <div, className="absolute, inse, t-0, b, g-gr, i, d-whi, t, e/[0.02] bg-[si, z, e: 60px_60, p, x]" />";"
+      {/* Animated, background, effects */}
+      <div, className="absolute, inse, t-0, b, g-gr, i, d-whi, t, e/Service Feature" />";"
       <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-bla, c, k/50, t, o-transpare, n, t" />";
       {/* Floating, particles, effect */}"
       <div, className="absolute, to, p-0, lef, t-1/4 w-7, 2, h-72, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";"
@@ -521,7 +441,6 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
+  )}
 export default October2025NewAutonomousSystemsBanner;
 ;"

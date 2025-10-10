@@ -10,47 +10,35 @@ function resolveConflicts(filePath) {
     
     // Check if file has conflict markers;
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
-      return false; // No conflicts;
-    }
+      return false; // No conflicts}
 
     console.log(`🔧 Resolving conflicts in ${filePath}...`);
     
     // Split by conflict markers and keep the incoming version (after )
     const lines = content.split('\n');
-    const resolvedLines = [];
-    let skipUntilNextMarker = false;
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+    const resolvedLines = Service Feature;
       
       if (line.includes('')) {
         skipUntilNextMarker = true;
-        continue;
-      }
+        continue}
       
       if (line.includes('')) {
         skipUntilNextMarker = false;
-        continue;
-      }
+        continue}
       
       if (line.includes('>>>>>>>')) {
-        continue;
-      }
+        continue}
       
       if (!skipUntilNextMarker) {
-        resolvedLines.push(line);
-      }
+        resolvedLines.push(line)}
     }
     
     // Write the resolved content;
     writeFileSync(filePath, resolvedLines.join('\n'));
     console.log(`✅ Resolved conflicts in ${filePath}`);
-    return true;
-    
-  } catch (error) {
+    return true} catch (error) {
     console.log(`❌ Error resolving ${filePath}: ${error.message}`);
-    return false;
-  }
+    return false}
 }
 
 function mergeBranch(branchName) {
@@ -61,9 +49,7 @@ function mergeBranch(branchName) {
     execSync(`git merge ${branchName} --no-ff -m "feat: Merge enhancements from ${branchName}"`, { stdio: 'pipe' });
     
     console.log(`✅ Successfully merged ${branchName}`);
-    return true;
-    
-  } catch (error) {
+    return true} catch (error) {
     console.log(`⚠️  Merge conflicts detected in ${branchName}, resolving...`);
     
     // Check for conflicts;
@@ -78,8 +64,7 @@ function mergeBranch(branchName) {
       for (const file of files) {
         if (file.trim()) {
           if (resolveConflicts(file.trim())) {
-            resolvedCount++;
-          }
+            resolvedCount++}
         }
       }
 
@@ -92,11 +77,9 @@ function mergeBranch(branchName) {
       execSync(`git commit -m "feat: Resolve merge conflicts from ${branchName}"`, { stdio: 'inherit' });
       
       console.log(`✅ Successfully merged ${branchName} with conflict resolution`);
-      return true;
-    } else {
+      return true} else {
       console.log(`❌ Could not resolve conflicts for ${branchName}`);
-      return false;
-    }
+      return false}
   }
 }
 
@@ -120,22 +103,18 @@ try {
       
       if (!uniqueCommits.trim()) {
         console.log(`⏭️  Branch ${branch} has no unique commits, skipping...`);
-        continue;
-      }
+        continue}
 
       console.log(`📝 Unique commits in ${branch}:`);
       console.log(uniqueCommits.split('\n').slice(0, 2).join('\n'));
 
       if (mergeBranch(branch)) {
-        mergedCount++;
-      } else {
-        failedCount++;
-      }
+        mergedCount++} else {
+        failedCount++}
 
     } catch (error) {
       console.log(`❌ Error processing ${branch}: ${error.message}`);
-      failedCount++;
-    }
+      failedCount++}
   }
 
   console.log(`\n📊 Merge Summary: `);
@@ -146,9 +125,6 @@ try {
   console.log('\n📤 Pushing all changes to origin/main...');
   execSync('git push origin main', { stdio: 'inherit' });
 
-  console.log('🎉 Merge process completed!');
-
-} catch (error) {
+  console.log('🎉 Merge process completed!')} catch (error) {
   console.error('❌ Error during merge process:', error.message);
-  process.exit(1);
-}
+  process.exit(1)}

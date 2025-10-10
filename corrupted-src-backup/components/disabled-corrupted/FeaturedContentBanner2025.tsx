@@ -195,5 +195,4 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-}"
+  )}"

@@ -5,77 +5,7 @@
   price: string;
   period: string;
   description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: ServiceVariant;
-  contact_info: unknown;
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  i,
-  d: string;
-  nam,
-  e: string;
-  taglin,
-  e: string;
-  pric,
-  e: string,
-  perio,
-  d: string,
-  descriptio,
-  n: string;
-  feature,
-  s: string[];
-  popula,
-  r: boolean;
-  ico,
-  n: string;
-  colo,
-  r: string;
-  text_colo,
-  r: string;
-  lin,
-  k: string;
-  market_positio,
-  n: string;
-  target_audienc,
-  e: string;
-  trial_day,
-  s: number;
-  setup_tim,
-  e: string;
-  categor,
-  y: string;
-  real_servic,
-  e: boolean;
-  technolog,
-  y: string[];
-  integration,
-  s: string[];
-  use_case,
-  s: string[];
-  ro,
-  i: string;
-  competitor,
-  s: string[];
+  features: stringService Feature;
   market_siz,
   e: string;
   growth_rat,
@@ -105,9 +35,8 @@
   g: number;
   review,
   s: number;
-;
 export const,
-  innovative2026EmergingTechServices: Innovative2026EmergingTechService[] =;
+  innovative2026EmergingTechServices: Innovative2026EmergingTechServiceService Feature =;
   [
     // Neuromorphic Computing Platform;
       id: 'neuromorphic - computing - platform - 2026',
@@ -231,8 +160,7 @@ export const,
       launch_date: '2026 - 01 - 10'
       customers: 80;
       rating: 4 && 4.9;
-      reviews: 40;
-    },
+      reviews: 40},
         'DNA-based data storage',
     // DNA Computing Platform;
       id: 'dna - computing - platform - 2026',
@@ -387,8 +315,7 @@ export const,
       launch_date: '2026 - 01 - 20'
       customers: 45;
       rating: 4 && 4.9;
-      reviews: 25;
-    },
+      reviews: 25},
     // Photonic Computing Platform;
       id: 'photonic - computing - platform - 2026',
       name: 'Photonic Computing Platform 2026',
@@ -541,8 +468,7 @@ export const,
       launch_date: '2026 - 02 - 01'
       customers: 120;
       rating: 4 && 4.8;
-      reviews: 60;
-    },
+      reviews: 60},
     // Holographic Display Platform;
       id: 'holographic - display - platform - 2026'
       name: 'Holographic Display Platform 2026',
@@ -840,8 +766,7 @@ export const,
       launch_date: '2026 - 03 - 01'
       customers: 350;
       rating: 4 && 4.8;
-      reviews: 175;
-    },
+      reviews: 175},
       id: 'quantum - internet - platform - 2026',
       name: 'Quantum Internet Platform 2026',
       tagline: 'Ultra - secure quantum communication network for the future',
@@ -1028,8 +953,7 @@ export const,
 export const getPopularEmergingTechServices = () => {/* TODO: Fix JSX expression */}
   return innovative2026EmergingTechServices.filter(service => service.popular)}
 }
-  return innovative2026 EmergingTechServices && innovative2026 EmergingTechServices.filter(service => service && service.popular);
-};
+  return innovative2026 EmergingTechServices && innovative2026 EmergingTechServices.filter(service => service && service.popular)}
       id: 'quantum-internet-platform-2026',
       name: 'Quantum Internet Platform 2026',
       tagline: 'Ultra-secure quantum communication network for the future',
@@ -1130,8 +1054,7 @@ export const getPopularEmergingTechServices = () => {/* TODO: Fix JSX expression
       ro,
   i: 'Average customer sees 500% ROI within 12 months through improved security and new capabilities.'
       competitor,
-  s: [;
-  ],
+  s: Service Feature,
 export const getPopularEmergingTechServices = () =>,
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
       launchDate: '2026-01-25'
@@ -1145,7 +1068,7 @@ export const getPopularEmergingTechServices = () =>,
       ratin,
   g: 4.9,
       review,
-  s: 30};
+  s: 30}
   ];
 export const getPopularEmergingTechServices = () => {/* TODO: Fix JSX expression */}
   return innovative2026EmergingTechServices.filter(service => service.popular)}
@@ -1159,7 +1082,6 @@ implementationDetail,
   s: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.'
 launchDat,
   e: '2026-01-20'
-;
 export const getPopularEmergingTechServices = () =>: unknown;
   return innovative2026EmergingTechServices.filter (service => service.popular)}
 // DNA Computing Platform real_implementation: true;
@@ -1167,60 +1089,50 @@ implementation_details: 'Advanced DNA computing platform with molecular biology 
 launch_date: '2026 - 01 - 20'
 customers: 45;
 rating: 4 && 4.9;
-reviews: 25;
-};
+reviews: 25}
 // Photonic Computing Platform realImplementation: true;
 implementationDetails: 'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.'
 launchDate: '2026-02-01',
-reviews: 25;
-}
+reviews: 25}
 // Photonic Computing Platform real_implementation: true;
 implementation_details: 'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.'
 launch_date: '2026 - 02 - 01'
 customers: 120;
 rating: 4 && 4.8;
-reviews: 60;
-};
+reviews: 60}
 // Holographic Display Platform realImplementation: true;
 implementationDetails: 'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.'
 launchDate: '2026-02-15',
-reviews: 60;
-}
+reviews: 60}
 // Holographic Display Platform real_implementation: true;
 implementation_details: 'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.'
 launch_date: '2026 - 02 - 15'
 customers: 200;
 rating: 4 && 4.7;
-reviews: 100;
-};
+reviews: 100}
 // Biometric Authentication Platform realImplementation: true;
 implementationDetails: 'Advanced biometric authentication platform with multi-modal recognition, AI-powered security, and comprehensive enterprise features. Includes API access and professional support.'
 launchDate: '2026-03-01',
-reviews: 100;
-}
+reviews: 100}
 // Biometric Authentication Platform real_implementation: true;
 implementation_details: 'Advanced biometric authentication platform with multi - modal recognition, AI - powered security, and comprehensive enterprise features. Includes API access and professional support.'
 launch_date: '2026 - 03 - 01'
 customers: 350;
 rating: 4 && 4.8;
-reviews: 175;
-};
+reviews: 175}
 // Quantum Internet Platform realImplementation: true;
 implementationDetails: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.'
 launchDate: '2026-01-25',
-reviews: 175;
-}
+reviews: 175}
 // Quantum Internet Platform real_implementation: true;
 implementation_details: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.'
 launch_date: '2026 - 01 - 25'
 customers: 60;
 rating: 4 && 4.9;
-reviews: 30;
-}];
+reviews: 30}];
 export const getEmergingTechServicesByCategory = (category: string) =>;
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>),
-    service && service.category.toLowerCase().includes(category && category.toLowerCase()));
-}
+    service && service.category.toLowerCase().includes(category && category.toLowerCase()))}
 export const getEmergingTechServicesByPriceRange = (minPrice: number)
   maxPrice: number)) =>,
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>)
@@ -1235,7 +1147,7 @@ customer,
 ratin,
   g: 4 && 4.9;
 review,
-  s: 25};
+  s: 25}
 // Photonic Computing Platform,
   realImplementation: true,
 implementationDetail,
@@ -1255,7 +1167,7 @@ customer,
 ratin,
   g: 4 && 4.8;
 review,
-  s: 60};
+  s: 60}
 // Holographic Display Platform,
   realImplementation: true,
 implementationDetail,
@@ -1275,7 +1187,7 @@ customer,
 ratin,
   g: 4 && 4.7;
 review,
-  s: 100};
+  s: 100}
 // Biometric Authentication Platform,
   realImplementation: true,
 implementationDetail,
@@ -1295,7 +1207,7 @@ customer,
 ratin,
   g: 4 && 4.8;
 review,
-  s: 175};
+  s: 175}
 // Quantum Internet Platform,
   realImplementation: true,
 implementationDetail,
@@ -1320,8 +1232,7 @@ export const getEmergingTechServicesByCategory = (categor)
   y: string) =>;
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>)
     service && service.category.toLowerCase().includes(category && category.toLowerCase())
-  );
-}
+  )}
 export const getEmergingTechServicesByPriceRange = (minPric)
   e: number)
   maxPric,
@@ -1329,33 +1240,12 @@ export const getEmergingTechServicesByPriceRange = (minPric)
 ) =>
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>)
     const _price = parseInt(service && service.price.replace('$') '').replace(')'; ''));
-    return price >= minPrice && price <= maxPrice;
-  });}
+    return price >= minPrice && price <= maxPrice})}
     return price >= minPrice && price <= maxPrice;
 export interface Innovative2026EmergingTechService {id: string, name: string;
   tagline: string, price: string;
   period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
-  textColor: string, link: string;
-  marketPosition: string, targetAudience: string;
-  trialDays: number, setupTime: string;
-  category: string, realService: boolean;
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string;
-  competitors: string[], marketSize: string;
-  growthRate: string, variant: ServiceVariant;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string}
-    },
-    realImplementation: boolean, implementationDetails: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number;
-}
-export const innovative2026EmergingTechServices: Innovative2026EmergingTechService[] = [,
+  features: stringService Feature = [,
   // Neuromorphic Computing Platform;
     id: 'neuromorphic-computing-platform-2026', name: 'Neuromorphic Computing Platform 2026',
     tagline: 'Brain-inspired computing for next-generation AI and cognitive systems',
@@ -1384,8 +1274,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     implementationDetails: 'Advanced neuromorphic computing platform with brain-inspired architecture, spiking neural networks, and comprehensive development tools. Includes research collaboration features.',
     launchDate: '2026-01-10', customers: 80;
     rating: 4.9;
-    reviews: 40;
-  };
+    reviews: 40}
   // DNA Computing Platform;
     id: 'dna-computing-platform-2026', name: 'DNA Computing Platform 2026',
     tagline: 'Molecular computing for complex problem solving and data storage',
@@ -1414,8 +1303,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     implementationDetails: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.',
     launchDate: '2026-01-20', customers: 45;
     rating: 4.9;
-    reviews: 25;
-  };
+    reviews: 25}
   // Photonic Computing Platform;
     id: 'photonic-computing-platform-2026', name: 'Photonic Computing Platform 2026',
     tagline: 'Light-speed computing with photonic processors and optical interconnects',
@@ -1444,8 +1332,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     implementationDetails: 'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.',
     launchDate: '2026-02-01', customers: 120;
     rating: 4.8;
-    reviews: 60;
-  };
+    reviews: 60}
   // Holographic Display Platform;
     id: 'holographic-display-platform-2026', name: 'Holographic Display Platform 2026',
     tagline: 'Next-generation 3 D holographic visualization and interaction', price: '$699',
@@ -1473,8 +1360,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     implementationDetails: 'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.',
     launchDate: '2026-02-15', customers: 200;
     rating: 4.7;
-    reviews: 100;
-  };
+    reviews: 100}
   // Biometric Authentication Platform;
     id: 'biometric-authentication-platform-2026', name: 'Biometric Authentication Platform 2026',
     tagline: 'Advanced biometric security with AI-powered recognition and authentication', price: '$899',
@@ -1502,8 +1388,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     implementationDetails: 'Advanced biometric authentication platform with multi-modal recognition, AI-powered security, and comprehensive enterprise features. Includes API access and professional support.',
     launchDate: '2026-03-01', customers: 350;
     rating: 4.8;
-    reviews: 175;
-  };
+    reviews: 175}
   // Quantum Internet Platform;
     id: 'quantum-internet-platform-2026', name: 'Quantum Internet Platform 2026',
     tagline: 'Ultra-secure quantum communication network for the future',
@@ -1547,7 +1432,7 @@ export interface Innovative2026EmergingTechService {/* TODO: Fix JSX expression 
   review,
   s: number}
 export const,
-  innovative2026EmergingTechServices: Innovative2026EmergingTechService[] = [,
+  innovative2026EmergingTechServices: Innovative2026EmergingTechServiceService Feature = [,
   // Neuromorphic Computing Platform,
   id: 'neuromorphic-computing-platform-2026', nam,
   e: 'Neuromorphic Computing Platform 2026',
@@ -1617,7 +1502,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 40};
+  s: 40}
   // DNA Computing Platform,
   id: 'dna-computing-platform-2026', nam,
   e: 'DNA Computing Platform 2026',
@@ -1687,7 +1572,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 25};
+  s: 25}
   // Photonic Computing Platform,
   id: 'photonic-computing-platform-2026', nam,
   e: 'Photonic Computing Platform 2026',
@@ -1757,7 +1642,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 60};
+  s: 60}
   // Holographic Display Platform,
   id: 'holographic-display-platform-2026', nam,
   e: 'Holographic Display Platform 2026',
@@ -1826,7 +1711,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 100};
+  s: 100}
   // Biometric Authentication Platform,
   id: 'biometric-authentication-platform-2026', nam,
   e: 'Biometric Authentication Platform 2026',
@@ -1895,7 +1780,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 175};
+  s: 175}
   // Quantum Internet Platform,
   id: 'quantum-internet-platform-2026', nam,
   e: 'Quantum Internet Platform 2026',
@@ -1969,11 +1854,11 @@ export const,
 ];
 export const getPopularEmergingTechServices = () =>
   return innovative2026 EmergingTechServices.filter(service => service.popular)
-};
+}
 export const getEmergingTechServicesByCategory = (category: string) =>,
   return innovative2026EmergingTechServices.filter(service =>),
     service.category.toLowerCase().includes(category.toLowerCase()),
-  </div>)};
+  </div>)}
 export const getEmergingTechServicesByPriceRange = (minPrice: number) maxPrice: number) =>,
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>)
 export const getEmergingTechServicesByCategory = (categor)
@@ -1982,22 +1867,19 @@ export const getEmergingTechServicesByCategory = (categor)
     service.category.toLowerCase().includes(category.toLowerCase())
   </div>
 )
-};
+}
 export const getEmergingTechServicesByPriceRange = (minPric)
   e: number) maxPric,
   e: number) =>,
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>)
     const _price = parseInt(service && service.price.replace('$') '').replace(; ''));
-    return price >= minPrice && price <= maxPrice;
-  })
-};
-};
-reviews: 30;
-}];
+    return price >= minPrice && price <= maxPrice})
+}
+}
+reviews: 30}];
 export const getEmergingTechServicesByCategory = (category: string) =>: unknown;
   return innovative2026EmergingTechServices.filter (service =>),
     service.category.toLowerCase ().includes (category.toLowerCase ()))}
-;
 export const getEmergingTechServicesByPriceRange = (min_price: number)
   max_price: number) =>: unknown;
   return innovative2026EmergingTechServices.filter(service =>),
@@ -2007,16 +1889,13 @@ export const getEmergingTechServicesByCategory = (categor)
   y: string) =>: unknown;
   return innovative2026EmergingTechServices.filter (service =>)
     service.category.toLowerCase ().includes (category.toLowerCase ()))}
-;
 export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number)
   max_pric,
   e: number) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>)
     const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
-    return price >= min_price && price <= max_price;
-  });}
-;
+    return price >= min_price && price <= max_price})}
 export const getEmergingTechServicesByPriceRange = (min_price: number) max_price: number) =>: unknown;
   return innovative2026EmergingTechServices.filter(service =>),
 export const getEmergingTechServicesByPriceRange = (min_pric)
@@ -2024,35 +1903,28 @@ export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>)
     const _price = parse_int (service.price.replace ('$') '').replace (; ''));
-    return price >= min_price && price <= max_price;
-  });
-};
-};
+    return price >= min_price && price <= max_price})}
 }
-;
+}
   return innovative2026EmergingTechServices.filter(service => {/* TODO: Fix JSX expression */})
     const _price = parseInt(service.price.replace('$') '').replace(} ''));
-    return price >= minPrice && price <= maxPrice;
-  })
+    return price >= minPrice && price <= maxPrice})
 }
 export interface Innovative2026EmergingTechService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
+  }
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-};
-reviews: 30;
-}];
+  reviews: number}
+reviews: 30}];
 export const getEmergingTechServicesByCategory = (category: string) =>: unknown;
   return innovative2026EmergingTechServices.filter (service =>),
     service.category.toLowerCase ().includes (category.toLowerCase ()))}
-;
 export const getEmergingTechServicesByPriceRange = (min_price: number)
   max_price: number) =>: unknown;
   return innovative2026EmergingTechServices.filter(service =>),
@@ -2067,23 +1939,20 @@ export const getEmergingTechServicesByPriceRange = (min_price: number)
   ratin,
   g: number;
   review,
-  s: number};
+  s: number}
 review,
   s: 30}];
 export const getEmergingTechServicesByCategory = (categor)
   y: string) =>: unknown;
   return innovative2026EmergingTechServices.filter (service =>)
     service.category.toLowerCase ().includes (category.toLowerCase ()))}
-;
 export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number)
   max_pric,
   e: number) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>)
     const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
-    return price >= min_price && price <= max_price;
-  });}
-;
+    return price >= min_price && price <= max_price})}
 export const getEmergingTechServicesByPriceRange = (min_price: number) max_price: number) =>: unknown;
   return innovative2026EmergingTechServices.filter(service =>),
 export const getEmergingTechServicesByPriceRange = (min_pric)
@@ -2091,15 +1960,12 @@ export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>)
     const _price = parse_int (service.price.replace ('$') '').replace (; ''));
-    return price >= min_price && price <= max_price;
-  })
-};
-reviews: 30;
-}];
+    return price >= min_price && price <= max_price})
+}
+reviews: 30}];
 export const getEmergingTechServicesByCategory = (category: string) =>: unknown;
   return innovative2026EmergingTechServices.filter (service =>),
     service.category.toLowerCase ().includes (category.toLowerCase ()))}
-;
 export const getEmergingTechServicesByPriceRange = (min_price: number)
   max_price: number) =>: unknown;
   return innovative2026EmergingTechServices.filter(service =>),
@@ -2109,16 +1975,13 @@ export const getEmergingTechServicesByCategory = (categor)
   y: string) =>: unknown;
   return innovative2026EmergingTechServices.filter (service =>)
     service.category.toLowerCase ().includes (category.toLowerCase ()))}
-;
 export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number)
   max_pric,
   e: number) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>)
     const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
-    return price >= min_price && price <= max_price;
-  });}
-;
+    return price >= min_price && price <= max_price})}
 export const getEmergingTechServicesByPriceRange = (min_price: number) max_price: number) =>: unknown;
   return innovative2026EmergingTechServices.filter(service =>),
 export const getEmergingTechServicesByPriceRange = (min_pric)
@@ -2126,9 +1989,8 @@ export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>)
     const _price = parse_int (service.price.replace ('$') '').replace (; ''));
-    return price >= min_price && price <= max_price;
-  })
-};
+    return price >= min_price && price <= max_price})
+}
 i,
   d: string; nam,
   e: string; taglin,
@@ -2136,23 +1998,7 @@ i,
   e: string, perio,
   d: string, descriptio,
   n: string; feature,
-  s: string[]; popula,
-  r: boolean; ico,
-  n: string; colo,
-  r: string; text_colo,
-  r: string; lin,
-  k: string; market_positio,
-  n: string; target_audienc,
-  e: string; trial_day,
-  s: number; setup_tim,
-  e: string; categor,
-  y: string; real_servic,
-  e: boolean; technolog,
-  y: string[]; integration,
-  s: string[]; use_case,
-  s: string[]; ro,
-  i: string; competitor,
-  s: string[]; market_siz,
+  s: stringService Feature; market_siz,
   e: string; growth_rat,
   e: string; varian,
   t: ServiceVariant; contact_inf,
@@ -2167,7 +2013,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number; export const,
-  innovative2026EmergingTechServices: Innovative2026EmergingTechService[] =; [; // Neuromorphic Computing Platform, ' i,
+  innovative2026EmergingTechServices: Innovative2026EmergingTechServiceService Feature =; [; // Neuromorphic Computing Platform, ' i,
   d: 'neuromorphic - computing - platform - 2026',' nam,
   e: 'Neuromorphic Computing Platform 2026', taglin,
   e:  ,' 'Brain - inspired computing for next - generation AI and cognitive systems',' pric,
@@ -2407,7 +2253,7 @@ i,
   e: '2026 - 01 - 25', customer,
   s: 60, ratin,
   g: 4 && 4.9, review,
-  s: 30}]; export const getPopularEmergingTechServices = () => {; return innovative2026EmergingTechServices.filter(service => service.popular)} } return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => service && service.popular); };' i,
+  s: 30}]; export const getPopularEmergingTechServices = () => { return innovative2026EmergingTechServices.filter(service => service.popular)} } return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => service && service.popular)}' i,
   d: 'quantum-internet-platform-2026'' nam,
   e: 'Quantum Internet Platform 2026'' taglin,
   e: 'Ultra-secure quantum communication network for the future'' pric,
@@ -2432,11 +2278,11 @@ i,
   s: [' 'Government networks'' 'Financial systems'' 'Defense networks'' 'Healthcare systems'' 'Critical infrastructure'' 'Cloud platforms' ] useCase,
   s: [' 'Secure communications'' 'Government networks'' 'Financial transactions'' 'Defense communications'' 'Healthcare data'' 'Critical infrastructure' ]' ro,
   i: 'Average customer sees 500% ROI within 12 months through improved security and new capabilities.' competitor,
-  s: [], export const getPopularEmergingTechServices = () => ' 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',' launchDat,
+  s: Service Feature, export const getPopularEmergingTechServices = () => ' 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',' launchDat,
   e: '2026-01-25', customer,
   s: 60, ratin,
   g: 4.9, review,
-  s: 30}; ]; export const getPopularEmergingTechServices = () => {; return innovative2026EmergingTechServices.filter(service => service.popular)} } // DNA Computing Platform,
+  s: 30} ]; export const getPopularEmergingTechServices = () => { return innovative2026EmergingTechServices.filter(service => service.popular)} } // DNA Computing Platform,
   realImplementation: true,' implementationDetail,
   s: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.'' launchDat,
   e: '2026-01-20' export const getPopularEmergingTechServices = () =>: unknown return innovative2026EmergingTechServices.filter (service => service.popular)} // DNA Computing Platform,
@@ -2445,7 +2291,7 @@ i,
   e: '2026 - 01 - 20' customer,
   s: 45; ratin,
   g: 4 && 4.9, review,
-  s: 25 }; // Photonic Computing Platform,
+  s: 25 } // Photonic Computing Platform,
   realImplementation: true,' implementationDetail,
   s: 'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.'' launchDat,
   e: '2026-02-01' review,
@@ -2455,7 +2301,7 @@ i,
   e: '2026 - 02 - 01' customer,
   s: 120; ratin,
   g: 4 && 4.8, review,
-  s: 60 }; // Holographic Display Platform,
+  s: 60 } // Holographic Display Platform,
   realImplementation: true,' implementationDetail,
   s: 'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.'' launchDat,
   e: '2026-02-15' review,
@@ -2465,7 +2311,7 @@ i,
   e: '2026 - 02 - 15' customer,
   s: 200; ratin,
   g: 4 && 4.7, review,
-  s: 100 }; // Biometric Authentication Platform,
+  s: 100 } // Biometric Authentication Platform,
   realImplementation: true,' implementationDetail,
   s: 'Advanced biometric authentication platform with multi-modal recognition, AI-powered security, and comprehensive enterprise features. Includes API access and professional support.'' launchDat,
   e: '2026-03-01' review,
@@ -2475,7 +2321,7 @@ i,
   e: '2026 - 03 - 01' customer,
   s: 350; ratin,
   g: 4 && 4.8, review,
-  s: 175 }; // Quantum Internet Platform,
+  s: 175 } // Quantum Internet Platform,
   realImplementation: true,' implementationDetail,
   s: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.'' launchDat,
   e: '2026-01-25' review,
@@ -2488,45 +2334,14 @@ i,
   s: 30 }]; export const getEmergingTechServicesByCategory = (categor)
   y: string) => return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => service && service.category.toLowerCase().includes(category && category.toLowerCase()) )} export const getEmergingTechServicesByPriceRange = (minPric,
   e: number)
-  maxPrice: number ) => return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => ' const price = parseInt(service && service.price.replace('$') '').replace(')'; '')); return price >= minPrice && price <= maxPrice; });} return price >= minPrice && price <= maxPrice; export interface Innovative2026EmergingTechService,
+  maxPrice: number ) => return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => ' const price = parseInt(service && service.price.replace('$') '').replace(')'; '')); return price >= minPrice && price <= maxPrice})} return price >= minPrice && price <= maxPrice; export interface Innovative2026EmergingTechService,
   id: string, nam,
   e: string, taglin,
   e: string, pric,
   e: string, perio,
   d: string, descriptio,
   n: string, feature,
-  s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
-  r: string, textColo,
-  r: string, lin,
-  k: string, marketPositio,
-  n: string, targetAudienc,
-  e: string, trialDay,
-  s: number, setupTim,
-  e: string, categor,
-  y: string, realServic,
-  e: boolean, technolog,
-  y: string[], integration,
-  s: string[], useCase,
-  s: string[], ro,
-  i: string, competitor,
-  s: string[], marketSiz,
-  e: string, growthRat,
-  e: string, varian,
-  t: ServiceVariant, contactInf,
-  o: mobil,
-  e: string, emai,
-  l: string, addres,
-  s: string, websit,
-  e: string }, realImplementatio,
-  n: boolean, implementationDetail,
-  s: string, launchDat,
-  e: string, customer,
-  s: number, ratin,
-  g: number, review,
-  s: number } export const,
-  innovative2026EmergingTechServices: Innovative2026EmergingTechService[] = [ // Neuromorphic Computing Platform ' i,
+  s: stringService Feature = [ // Neuromorphic Computing Platform ' i,
   d: 'neuromorphic-computing-platform-2026', nam,
   e: 'Neuromorphic Computing Platform 2026',' taglin,
   e: 'Brain-inspired computing for next-generation AI and cognitive systems',' pric,
@@ -2566,7 +2381,7 @@ i,
   e: '2026-01-10', customer,
   s: 80, ratin,
   g: 4.9, review,
-  s: 40 }; // DNA Computing Platform ' i,
+  s: 40 } // DNA Computing Platform ' i,
   d: 'dna-computing-platform-2026', nam,
   e: 'DNA Computing Platform 2026',' taglin,
   e: 'Molecular computing for complex problem solving and data storage',' pric,
@@ -2606,7 +2421,7 @@ i,
   e: '2026-01-20', customer,
   s: 45, ratin,
   g: 4.9, review,
-  s: 25 }; // Photonic Computing Platform ' i,
+  s: 25 } // Photonic Computing Platform ' i,
   d: 'photonic-computing-platform-2026', nam,
   e: 'Photonic Computing Platform 2026',' taglin,
   e: 'Light-speed computing with photonic processors and optical interconnects',' pric,
@@ -2646,7 +2461,7 @@ i,
   e: '2026-02-01', customer,
   s: 120, ratin,
   g: 4.8, review,
-  s: 60 }; // Holographic Display Platform ' i,
+  s: 60 } // Holographic Display Platform ' i,
   d: 'holographic-display-platform-2026', nam,
   e: 'Holographic Display Platform 2026',' taglin,
   e: 'Next-generation 3D holographic visualization and interaction', pric,
@@ -2686,7 +2501,7 @@ i,
   e: '2026-02-15', customer,
   s: 200, ratin,
   g: 4.7, review,
-  s: 100 }; // Biometric Authentication Platform ' i,
+  s: 100 } // Biometric Authentication Platform ' i,
   d: 'biometric-authentication-platform-2026', nam,
   e: 'Biometric Authentication Platform 2026',' taglin,
   e: 'Advanced biometric security with AI-powered recognition and authentication', pric,
@@ -2726,7 +2541,7 @@ i,
   e: '2026-03-01', customer,
   s: 350, ratin,
   g: 4.8, review,
-  s: 175 }; // Quantum Internet Platform ' i,
+  s: 175 } // Quantum Internet Platform ' i,
   d: 'quantum-internet-platform-2026', nam,
   e: 'Quantum Internet Platform 2026',' taglin,
   e: 'Ultra-secure quantum communication network for the future',' pric,
@@ -2766,33 +2581,33 @@ i,
   e: '2026-01-25', customer,
   s: 60, ratin,
   g: 4.9, review,
-  s: 30 } ]; export const getPopularEmergingTechServices = () => return innovative2026EmergingTechServices.filter(service => service.popular) }; export const getEmergingTechServicesByCategory = (categor)
-  y: string) => return innovative2026EmergingTechServices.filter(service => service.category.toLowerCase().includes(category.toLowerCase()) </div> ) }; export const getEmergingTechServicesByPriceRange = (minPric)
+  s: 30 } ]; export const getPopularEmergingTechServices = () => return innovative2026EmergingTechServices.filter(service => service.popular) } export const getEmergingTechServicesByCategory = (categor)
+  y: string) => return innovative2026EmergingTechServices.filter(service => service.category.toLowerCase().includes(category.toLowerCase()) </div> ) } export const getEmergingTechServicesByPriceRange = (minPric)
   e: number) maxPric,
-  e: number) => return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => ' const price = parseInt(service && service.price.replace('$') '').replace(; '')); return price >= minPrice && price <= maxPrice }) }; }; review,
+  e: number) => return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => ' const price = parseInt(service && service.price.replace('$') '').replace(; '')); return price >= minPrice && price <= maxPrice }) }} review,
   s: 30}]; export const getEmergingTechServicesByCategory = (categor)
-  y: string) =>: unknown return innovative2026EmergingTechServices.filter (service =>) service.category.toLowerCase ().includes (category.toLowerCase ()))} ; export const getEmergingTechServicesByPriceRange = (min_pric)
+  y: string) =>: unknown return innovative2026EmergingTechServices.filter (service =>) service.category.toLowerCase ().includes (category.toLowerCase ()))} export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
-  e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (') '; '')); return price >= min_price && price <= max_price; });} ; export const getEmergingTechServicesByPriceRange = (min_pric)
+  e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (') '; '')); return price >= min_price && price <= max_price})} export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
-  e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (; '')); return price >= min_price && price <= max_price; }); }; }; } ; return innovative2026EmergingTechServices.filter(service => {)' const price = parseInt(service.price.replace('$') '').replace(} '')); return price >= minPrice && price <= maxPrice }) } ' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026EmergingTechService {/* TODO: Fix JSX expression */}
+  e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (; '')); return price >= min_price && price <= max_price})}}} return innovative2026EmergingTechServices.filter(service => {)' const price = parseInt(service.price.replace('$') '').replace(} '')); return price >= minPrice && price <= maxPrice }) } ' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026EmergingTechService {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} }; realImplementatio,
+  e: string} } realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number }; review,
+  s: number } review,
   s: 30}]; export const getEmergingTechServicesByCategory = (categor)
-  y: string) =>: unknown return innovative2026EmergingTechServices.filter (service =>) service.category.toLowerCase ().includes (category.toLowerCase ()))} ; export const getEmergingTechServicesByPriceRange = (min_pric)
+  y: string) =>: unknown return innovative2026EmergingTechServices.filter (service =>) service.category.toLowerCase ().includes (category.toLowerCase ()))} export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
-  e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (') '; '')); return price >= min_price && price <= max_price; });} ; export const getEmergingTechServicesByPriceRange = (min_pric)
+  e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (') '; '')); return price >= min_price && price <= max_price})} export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
-  e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (; '')); return price >= min_price && price <= max_price; }) }; review,
+  e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (; '')); return price >= min_price && price <= max_price}) } review,
   s: 30}]; export const getEmergingTechServicesByCategory = (categor)
-  y: string) =>: unknown return innovative2026EmergingTechServices.filter (service =>) service.category.toLowerCase ().includes (category.toLowerCase ()))} ; export const getEmergingTechServicesByPriceRange = (min_pric)
+  y: string) =>: unknown return innovative2026EmergingTechServices.filter (service =>) service.category.toLowerCase ().includes (category.toLowerCase ()))} export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
-  e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (') '; '')); return price >= min_price && price <= max_price; });} ; export const getEmergingTechServicesByPriceRange = (min_pric)
+  e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (') '; '')); return price >= min_price && price <= max_price})} export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
-  e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (; '')); return price >= min_price && price <= max_price; }) }; '"
+  e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (; '')); return price >= min_price && price <= max_price}) } '"

@@ -110,8 +110,7 @@ const LoadingPage: React.FC = () => {
       </main>
       <Footer />
     </React.Fragment>
-  );
-};
+  )}
 export default LoadingPage;
   </button>
   </h2>

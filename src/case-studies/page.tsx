@@ -134,10 +134,7 @@ const CaseStudiesPage: React.FC = () => {
                         </div>
                         <div className="text-center p-3 bg-blue-50 rounded-lg">
                           <div className="text-2xl font-bold text-blue-600">
-                            {Object.values(study.results)[1]}
-                          </div>
-                          <div className="text-sm text-gray-600">
-                            {Object.keys(study.results)[1].replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
+                            {Object.values(study.results)Service Feature)/g, ' $1').replace(/^./, str => str.toUpperCase())}
                           </div>
                         </div>
                       </div>
@@ -216,8 +213,7 @@ const CaseStudiesPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
+  )}
 export default CaseStudiesPage;
   </Link>
   </p>

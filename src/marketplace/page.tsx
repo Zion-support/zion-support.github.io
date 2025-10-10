@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const MarketplacePage: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('products');
-  const [searchTerm, setSearchTerm] = useState('');
+  const Service Feature = useState('products');
+  const Service Feature = useState('');
   const categories = [
     {
       id: 'products',
@@ -123,8 +123,7 @@ $4}
       case 'equipment':
         return equipment;
       default:
-        return [];
-  };
+        return Service Feature}
   const filteredItems = getCurrentItems().filter(item =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     item.description.toLowerCase().includes(searchTerm.toLowerCase())
@@ -305,14 +304,13 @@ icon$5: Award,
       <Footer />
   return (
     <div>Coming Soon</div>
-  );
-};
-  const [activeCategory, setActiveCategory] = useState('products');
-  const [searchTerm, setSearchTerm] = useState('');
+  )}
+  const Service Feature = useState('products');
+  const Service Feature = useState('');
 const categories = [
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   i,
   d: 'products',
       nam,

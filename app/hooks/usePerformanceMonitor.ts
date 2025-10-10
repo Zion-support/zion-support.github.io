@@ -9,23 +9,18 @@ export const usePerformanceMonitor = () => {
     const monitorWebVitals = () => {
       // This is a simplified version - in production you'd use the web-vitals library
       if ('performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const navigation = performance.getEntriesByType('navigation')Service Feature as PerformanceNavigationTiming;
         if (navigation) {
           const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-          console.log('Page load time:', loadTime);
-        }
+          console.log('Page load time:', loadTime)}
       }
-    };
+    }
 
     // Run monitoring after page load
     if (document.readyState === 'complete') {
-      monitorWebVitals();
-    } else {
-      window.addEventListener('load', monitorWebVitals);
-    }
+      monitorWebVitals()} else {
+      window.addEventListener('load', monitorWebVitals)}
 
     return () => {
-      window.removeEventListener('load', monitorWebVitals);
-    };
-  }, []);
-};
+      window.removeEventListener('load', monitorWebVitals)}
+  }, Service Feature)}

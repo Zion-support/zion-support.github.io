@@ -57,14 +57,12 @@ function fixEmojis(content) {
     '🎮': 'gamepad',
     '🎲': 'dice',
     '🎯': 'target'
-  };
+  }
 
   let fixed = content;
-  for (const [emoji, replacement] of Object.entries(emojiMap)) {
-    fixed = fixed.replace(new RegExp(emoji, 'g'), replacement);
-  }
-  return fixed;
-}
+  for (const Service Feature of Object.entries(emojiMap)) {
+    fixed = fixed.replace(new RegExp(emoji, 'g'), replacement)}
+  return fixed}
 
 // Function to fix common JSX parsing issues
 function fixJSXIssues(content) {
@@ -78,10 +76,9 @@ function fixJSXIssues(content) {
   
   // Fix common syntax issues
   fixed = fixed.replace(/\{\s*'([^']*)'\s*\}/g, '"$1"'); // Fix single quotes in JSX expressions
-  fixed = fixed.replace(/\{\s*"([^"]*)"\s*\}/g, '"$1"'); // Normalize quotes
+  fixed = fixed.replace(/\{\s*"(Service Feature*)"\s*\}/g, '"$1"'); // Normalize quotes
   
-  return fixed;
-}
+  return fixed}
 
 // Function to check and fix JSX structure
 function fixJSXStructure(content) {
@@ -89,16 +86,14 @@ function fixJSXStructure(content) {
   let fixed = content;
   
   // Count opening and closing div tags
-  const openDivs = (content.match(/<div/g) || []).length;
-  const closeDivs = (content.match(/<\/div>/g) || []).length;
+  const openDivs = (content.match(/<div/g) || Service Feature).length;
   
   if (openDivs > closeDivs) {
     console.log(`Warning: Found ${openDivs - closeDivs} unclosed div tags`);
     // This is a basic check - more sophisticated parsing would be needed
   }
   
-  return fixed;
-}
+  return fixed}
 
 // Main function to process files
 async function processFiles() {
@@ -135,17 +130,14 @@ async function processFiles() {
         if (fixed !== content) {
           fs.writeFileSync(file, fixed, 'utf8');
           console.log(`Fixed: ${file}`);
-          processedCount++;
-        }
+          processedCount++}
       } catch (error) {
         console.error(`Error processing ${file}:`, error.message);
-        errorCount++;
-      }
+        errorCount++}
     }
   }
   
-  console.log(`\nProcessed ${processedCount} files with ${errorCount} errors`);
-}
+  console.log(`\nProcessed ${processedCount} files with ${errorCount} errors`)}
 
 // Run the script
 processFiles().catch(console.error);

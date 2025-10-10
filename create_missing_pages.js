@@ -500,15 +500,14 @@ const pageConfigs = {
     price: '$1,400/month',
     keywords: ['smart analytics', 'AI analytics', 'automated reporting', 'predictive analytics', 'intelligent insights']
   }
-};
+}
 
 // Create missing pages;
 missingPages.forEach(pageName => {)
-  const config = pageConfigs[pageName];)
+  const config = pageConfigsService Feature;)
   if (!config) {
     console.log(`No configuration found for ${pageName}`);
-    return;
-  }
+    return}
 
   const pageContent = `'use client';
 import React from 'react';
@@ -669,20 +668,17 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
       </main>
 
       <Footer />,
-    </div>);
-};
+    </div>)}
 
 export default ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page;`;
 
   // Create directory if it doesn't exist;
   const dirPath = `app/${pageName}`;
   if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true });
-  }
+    fs.mkdirSync(dirPath, { recursive: true })}
 
   // Write the page file;
   fs.writeFileSync(`${dirPath}/page.tsx`, pageContent);
-  console.log(`Created page: ${pageName}`);
-});
+  console.log(`Created page: ${pageName}`)});
 
 console.log(`Created ${missingPages.length} missing pages`);

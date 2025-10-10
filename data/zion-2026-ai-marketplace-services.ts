@@ -7,24 +7,8 @@ export type Zion2026AIMarketplaceService =
     monthly: number;
     yearly: number;
     enterprise: number;
-    currency: string;
-  };
-  features: string[];
-  benefits: string[];
-  roi: string;
-  marketSize: string;
-  targetAudience: string[];
-  useCases: string[];
-  integration: string[];
-  support: string[];
-  contactInfo: unknown;
-    phone: string;
-    email: string;
-    website: string;
-    address: string;
-  };
-}
-export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [,
+    currency: string}
+  features: stringService Feature = [,
     id: 'ai-marketplace-001',
     name: 'Zion AI Service Marketplace Platform',
     description: 'A comprehensive AI service marketplace that connects businesses with AI service providers, featuring automated matching, quality assurance, and seamless integration.',
@@ -51,36 +35,9 @@ export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [
     enterpris,
   e: number;
     currenc,
-  y: string};
+  y: string}
   feature,
-  s: string[];
-  benefit,
-  s: string[];
-  ro,
-  i: string;
-  marketSiz,
-  e: string;
-  targetAudienc,
-  e: string[];
-  useCase,
-  s: string[];
-  integratio,
-  n: string[];
-  suppor,
-  t: string[];
-  contactInf,
-  o: unknown;
-    phon,
-  e: string;
-    emai,
-  l: string;
-    websit,
-  e: string;
-    addres,
-  s: string};
-}
-export const,
-  zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
+  s: stringService Feature = [,
     i,
   d: 'ai-marketplace-001',
     nam,
@@ -601,21 +558,8 @@ export type Zion2026AIMarketplaceService = i,
   y: number; yearl,
   y: number; enterpris,
   e: number; currenc,
-  y: string}; feature,
-  s: string[]; benefit,
-  s: string[]; ro,
-  i: string; marketSiz,
-  e: string; targetAudienc,
-  e: string[]; useCase,
-  s: string[]; integratio,
-  n: string[]; suppor,
-  t: string[]; contactInf,
-  o: phon,
-  e: string; emai,
-  l: string; websit,
-  e: string; addres,
-  s: string}; } export const,
-  zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [ ' i,
+  y: string} feature,
+  s: stringService Feature = [ ' i,
   d: 'ai-marketplace-001',' nam,
   e: 'Zion AI Service Marketplace Platform',' descriptio,
   n: 'A comprehensive AI service marketplace that connects businesses with AI service providers, featuring automated matching, quality assurance, and seamless integration.',' categor,

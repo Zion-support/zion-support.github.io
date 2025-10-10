@@ -19,7 +19,6 @@ const Ai2025MarchAutonomousEnterpriseOperationsRevolutionPage: React.FC = () => 
       </div>
       <Footer />
     </div>
-  );
-};
+  )}
 export default Ai2025MarchAutonomousEnterpriseOperationsRevolutionPage;
   </Link>

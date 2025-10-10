@@ -29,11 +29,7 @@ const fixes = [
     pattern: /<\/\w+><\/\w+>/g,
     replacement: (match) => {
       // Extract the first closing tag
-      const firstTag = match.match(/<\/(\w+)>/)[1];
-      return `</${firstTag}>`;
-    }
-  }
-];
+      const firstTag = match.match(/<\/(\w+)>/)Service Feature;
 
 function fixFile(filePath) {
   try {
@@ -45,21 +41,17 @@ function fixFile(filePath) {
       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
-        modified = true;
-      }
+        modified = true}
     }
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Main function
@@ -71,27 +63,21 @@ async function main() {
     'App.tsx'
   ];
   
-  let allFiles = [];
+  let allFiles = Service Feature;
   for (const pattern of priorityFiles) {
     const files = await glob(pattern, {
       ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**']
     });
-    allFiles = [...allFiles, ...files];
-  }
-  
-  // Remove duplicates
-  allFiles = [...new Set(allFiles)];
+    allFiles = Service Feature;
   
   console.log(`Found ${allFiles.length} files to check...`);
 
   let fixedCount = 0;
   for (const file of allFiles) {
     if (fixFile(file)) {
-      fixedCount++;
-    }
+      fixedCount++}
   }
 
-  console.log(`Fixed ${fixedCount} files`);
-}
+  console.log(`Fixed ${fixedCount} files`)}
 
 main().catch(console.error);

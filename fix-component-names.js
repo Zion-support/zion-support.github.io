@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 // Get all files with errors;
 const getAllFilesWithErrors = () => {
   const srcDir = path.join(__dirname, 'src');
-  const files = [];
+  const files = Service Feature;
   
   const scanDirectory = (dir) => {
     const items = fs.readdirSync(dir);
@@ -17,16 +17,13 @@ const getAllFilesWithErrors = () => {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        scanDirectory(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath);
-      }
+        scanDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath)}
     }
-  };
+  }
   
   scanDirectory(srcDir);
-  return files;
-};
+  return files}
 
 // Fix component names in files;
 const fixComponentNames = () => {
@@ -39,41 +36,31 @@ const fixComponentNames = () => {
       let modified = false;
       
       // Fix component names with spaces;
-      const componentNameMatch = content.match(/const\s+([A-Za-z\s]+)Page: \s*React\.FC/);
-      if (componentNameMatch) {,
-        const oldName = componentNameMatch[1];,
-        const newName = oldName.replace(/\s+/g, '').replace(/^([a-z])/, (match, letter) => letter.toUpperCase());
+      const componentNameMatch = content.match(/const\s+(Service Feature;,
+        const newName = oldName.replace(/\s+/g, '').replace(/^(Service Feature)/, (match, letter) => letter.toUpperCase());
         
         if (oldName !== newName) {
           content = content.replace(new RegExp(`const\\s+${oldName.replace(/\s+/g, '\\s+')}Page:\\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC`);
           content = content.replace(new RegExp(`export\\s+default\\s+${oldName.replace(/\s+/g, '\\s+')}Page`, 'g'), `export default ${newName}Page`);
-          modified = true;
-        }
+          modified = true}
       }
       
       // Fix title in JSX;
-      const titleMatch = content.match(/<h1[^>]*>([^<]+)<\/h1>/);
-      if (titleMatch) {
-        const oldTitle = titleMatch[1];
-        const newTitle = oldTitle.replace(/\b([a-z])/g, (match, letter) => letter.toUpperCase());
+      const titleMatch = content.match(/<h1Service Feature)/g, (match, letter) => letter.toUpperCase());
         
         if (oldTitle !== newTitle) {
           content = content.replace(oldTitle, newTitle);
-          modified = true;
-        }
+          modified = true}
       }
       
       if (modified) {
         fs.writeFileSync(filePath, content);
         console.log(`Fixed: ${path.relative(__dirname, filePath)}`);
-        fixedCount++;
-      }
+        fixedCount++}
     } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
-    }
+      console.error(`Error fixing ${filePath}:`, error.message)}
   }
   
-  console.log(`Fixed ${fixedCount} files!`);
-};
+  console.log(`Fixed ${fixedCount} files!`)}
 
 fixComponentNames();

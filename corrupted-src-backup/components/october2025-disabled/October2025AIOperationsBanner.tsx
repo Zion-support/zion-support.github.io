@@ -109,8 +109,7 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
                   </div>
                 </div>
               </Li, n, k>)
-            );
-          })}
+            )})}
         </div>
         {/* Bottom, CT, A */}
         <div, classNam, e = "te, x, t-cent, e, r"></div>
@@ -155,7 +154,6 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
         </div>
       </div>
     </div>
-  );
-};
+  )}
 export default October2025AIOperationsBanner;
 "`

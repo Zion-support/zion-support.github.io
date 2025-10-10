@@ -136,7 +136,7 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
       </div>
       {/* Floating, particles, effect */}
       <div, classNam, e = "absolute, inse, t-0, overflo, w-hidden, pointe, r-even, t, s-no, n, e">
-        { [...Arr, a, y(2, 0)].m, a, p((_, i) =    > (</div>
+        { Service Feature.m, a, p((_, i) =    > (</div>
           <moti, o, n.div, ke, y = { , i  }, classNa, m, e = "absolut, e, w-2 h-2, b, g-purp, l, e-4, 0, 0/30, rounde, d-fu, l, l"
             sty, l, e={{}
               le, f, t: `${Ma, t, h.ran, d, o, m() * 10, 0}%`,
@@ -163,7 +163,6 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
         ))}
       </div></moti>
     </moti, o, n.d, i, v>
-  );
-};
+  )}
 export default October2025TechBannerNew;
 "`

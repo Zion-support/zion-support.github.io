@@ -13,10 +13,9 @@ class PerformanceOptimizer {
       firstInputDelay: 0;
       interactionToNextPaint: 0;
 class PerformanceOptimizer {/* TODO: Fix JSX expression */}
-    };
+    }
     this.observers = new Map();
-    this.init();
-  }
+    this.init()}
 
   init() {/* TODO: Fix JSX expression */}
   }
@@ -34,8 +33,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   setupWebVitals() {/* TODO: Fix JSX expression */}
         ({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
         }
-      );
-    }
+      )}
   }
 
   setupResourceOptimization() {
@@ -46,8 +44,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     this.setupLazyLoading();
 
     // Optimize font loading;
-    this.optimizeFontLoading();
-  }
+    this.optimizeFontLoading()}
 
   setupImageOptimization() {
     // Intersection Observer for lazy loading images;
@@ -66,14 +63,12 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   setupImageOptimization() {/* TODO: Fix JSX expression */}
             }
           }
-        });
-      });
+        })});
 
-      document.querySelectorAll('img[data-src]').forEach(img => {)
+      document.querySelectorAll('imgService Feature').forEach(img => {)
         imageObserver.observe(img);
-      document.querySelectorAll('img[data-src]').forEach(img => {/* TODO: Fix JSX expression */})
-      });
-    }
+      document.querySelectorAll('imgService Feature').forEach(img => {/* TODO: Fix JSX expression */})
+      })}
   }
 
   setupCodeSplitting() {
@@ -81,8 +76,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     this.setupRouteBasedSplitting();
 
     // Component-based splitting;
-    this.setupComponentSplitting();
-  }
+    this.setupComponentSplitting()}
 
   setupCaching() {
     // Service Worker registration for caching;
@@ -98,8 +92,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   setupCaching() {/* TODO: Fix JSX expression */}
 //           })
         .catch(registrationError => {/* TODO: Fix JSX expression */})
-//           });
-    }
+//           })}
   }
 
   preloadCriticalResources() {
@@ -113,13 +106,11 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       link.rel = 'preload';
       link.href = resource;
       link.as = 'script';
-      document.head.appendChild(link);
-    });
-  }
+      document.head.appendChild(link)})}
 
   setupLazyLoading() {
     // Lazy load non-critical components;
-    const _lazyComponents = document.querySelectorAll('[data-lazy]');
+    const _lazyComponents = document.querySelectorAll('Service Feature');
 
     if ('IntersectionObserver' in window) {
       const lazyObserver = new IntersectionObserver(entries => {)
@@ -129,19 +120,16 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
             this.loadLazyComponent(component);
             lazyObserver.unobserve(component);
   preloadCriticalResources() {/* TODO: Fix JSX expression */}
-    });
-  }
+    })}
 
   setupLazyLoading() {/* TODO: Fix JSX expression */}
           }
-        });
-      });
+        })});
 
       lazyComponents.forEach(component => {)
         lazyObserver.observe(component);
       lazyComponents.forEach(component => {/* TODO: Fix JSX expression */})
-      });
-    }
+      })}
   }
 
   optimizeFontLoading() {
@@ -158,10 +146,8 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       link.onload = () => {,
         link.rel = 'stylesheet';
   optimizeFontLoading() {/* TODO: Fix JSX expression */}
-      };
-      document.head.appendChild(link);
-    });
-  }
+      }
+      document.head.appendChild(link)})}
 
   setupRouteBasedSplitting() {
     // Implement route-based code splitting;
@@ -175,11 +161,10 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       '/privacy': () => import('../pages/Privacy'),
       '/terms': () => import('../pages/Terms'),
   setupRouteBasedSplitting() {/* TODO: Fix JSX expression */}
-    };
+    }
 
     // Preload next likely routes;
-    this.preloadNextRoutes(routes);
-  }
+    this.preloadNextRoutes(routes)}
 
   setupComponentSplitting() {
     // Lazy load heavy components that are not already statically imported;
@@ -190,9 +175,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       'InteractiveMaps'];
 
     heavyComponents.forEach(component => {)
-      this.setupComponentLazyLoading(component);
-    });
-  }
+      this.setupComponentLazyLoading(component)})}
 
   preloadNextRoutes(routes) {
     // Preload likely next routes based on user behavior;
@@ -200,26 +183,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     const _likelyNextRoutes = this.getLikelyNextRoutes(currentPath);
 
     likelyNextRoutes.forEach(route => {)
-      if (routes[route]) {
-//         routes[route]().catch(console.error);
-  setupComponentSplitting() {/* TODO: Fix JSX expression */}
-    });
-  }
-
-  preloadNextRoutes(routes) {/* TODO: Fix JSX expression */}
-      }
-    });
-  }
-
-  getLikelyNextRoutes(currentPath) {/* TODO: Fix JSX expression */}
-    };
-
-    return routeMap[currentPath] || [];
-  }
-
-  setupComponentLazyLoading(componentName) {
-    // Set up lazy loading for specific components;
-    const componentElements = document.querySelectorAll(`[data-component="${componentName}"]`)
+      if (routesService Feature`)
     );
 
     if ('IntersectionObserver' in window) {
@@ -229,19 +193,17 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
             this.loadComponent(componentName, entry.target);
             componentObserver.unobserve(entry.target);
   setupComponentLazyLoading(componentName) {/* TODO: Fix JSX expression */}
-      `[data-component="${componentName}"]`
+      `Service Feature`
     );
 
     if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
           }
-        });
-      });
+        })});
 
       componentElements.forEach(element => {)
         componentObserver.observe(element);
       componentElements.forEach(element => {/* TODO: Fix JSX expression */})
-      });
-    }
+      })}
   }
 
   async loadComponent(componentName, element) {
@@ -285,8 +247,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         event_label: 'Core Web Vitals'),
         value: Math.round(this.metrics.largestContentfulPaint),
   reportMetrics() {/* TODO: Fix JSX expression */}
-      });
-    }
+      })}
 
     // Log to console in development;
     if (process.env['NODE_ENV'] === 'development') {
@@ -304,77 +265,69 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       }
       if (!img.decoding) {/* TODO: Fix JSX expression */}
       }
-    });
-  }
+    })}
 
   optimizeScripts() {
-    const _scripts = document.querySelectorAll('script[src]');
+    const _scripts = document.querySelectorAll('scriptService Feature');
     scripts.forEach(script => {)
       if (!script.async && !script.defer) {
         script.defer = true;
   optimizeScripts() {/* TODO: Fix JSX expression */}
       }
-    });
-  }
+    })}
 
   optimizeStyles() {
     // Inline critical CSS;
     this.inlineCriticalCSS();
 
     // Defer non-critical CSS;
-    this.deferNonCriticalCSS();
-  }
+    this.deferNonCriticalCSS()}
 
   inlineCriticalCSS() {
     // This would typically be done at build time;
     // For runtime, we can add critical styles to head;
     const criticalCSS = `
-      body { font-family: Inter, sans-serif; }
-      .container { max-width: 1200px; margin: 0 auto; }
-      .header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+      body { font-family: Inter, sans-serif}
+      .container { max-width: 1200px; margin: 0 auto}
+      .header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1)}
   optimizeStyles() {/* TODO: Fix JSX expression */}
   }
 
   inlineCriticalCSS() {/* TODO: Fix JSX expression */}
-  y: Inter, sans-serif; }
+  y: Inter, sans-serif}
       .container {/* TODO: Fix JSX expression */}
-  n: 0 auto; }
+  n: 0 auto}
       .header {/* TODO: Fix JSX expression */}
-  w: 0 2px 4px rgba(0,0,0,0.1); }`
+  w: 0 2px 4px rgba(0,0,0,0.1)}`
     `;
 
     const _style = document.createElement('style');
     style.textContent = criticalCSS;
-    document.head.appendChild(style);
-  }
+    document.head.appendChild(style)}
 
   deferNonCriticalCSS() {
     const nonCriticalCSS = document.querySelectorAll(
-      'link[rel="stylesheet"]:not([data-critical])'
+      'linkService Feature)'
     );
     nonCriticalCSS.forEach(link => {)
       link.media = 'print';)
       link.onload = () => {
         link.media = 'all';
   deferNonCriticalCSS() {/* TODO: Fix JSX expression */}
-      };
-    });
-  }
+      }
+    })}
 
   // Memory management;
   cleanup() {
     this.observers.forEach(observer => observer.disconnect());
-    this.observers.clear();
-  }
+    this.observers.clear()}
 
   // Performance monitoring;
   startPerformanceMonitoring() {
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver(list => {)
         list.getEntries().forEach(entry => {)
-          this.handlePerformanceEntry(entry);
-        });
-      });
+          this.handlePerformanceEntry(entry)})});
 
       observer.observe({)
         entryTypes: ['navigation', 'resource', 'paint', 'layout-shift'])
@@ -383,13 +336,11 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
   // Performance monitoring;
   startPerformanceMonitoring() {/* TODO: Fix JSX expression */}
-        });
-      });
+        })});
 
       observer.observe({/* TODO: Fix JSX expression */})
       });
-      this.observers.set('performance', observer);
-    }
+      this.observers.set('performance', observer)}
   }
 
   handlePerformanceEntry(entry) {/* TODO: Fix JSX expression */}
@@ -398,8 +349,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       case 'layout-shift':
         if (!entry.hadRecentInput) {/* TODO: Fix JSX expression */}
         }
-        break;
-    }
+        break}
   }
 }
 
@@ -414,7 +364,6 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     performanceOptimizer.startPerformanceMonitoring();
 if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
-  });
-} else {/* TODO: Fix JSX expression */}
+  })} else {/* TODO: Fix JSX expression */}
 }
 "`

@@ -190,8 +190,7 @@ const AIVoiceCloningPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
+  )}
 export default AIVoiceCloningPage;
   </a>
   </p>

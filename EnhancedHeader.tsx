@@ -2,10 +2,9 @@ import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 const EnhancedHeader: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const Service Feature = useState(false);
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+    setIsMenuOpen(!isMenuOpen)}
   return (
     <header className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 fixed w-full top-0 z-50">
       <div className="container mx-auto px-4">
@@ -60,7 +59,6 @@ const EnhancedHeader: React.FC = () => {
         )}
       </div>
     </header>
-  );
-};
+  )}
 
 export default EnhancedHeader;

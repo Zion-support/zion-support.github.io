@@ -14,9 +14,9 @@ let content = fs.readFileSync(filePath, 'utf8');
 // Fix malformed JSX elements
 content = content.replace(/<\/undefined>/g, '');
 content = content.replace(/&quot;/g, '"');
-content = content.replace(/className="([^"]*)"([^>]*)><\/undefined>/g, 'className="$1"$2>');
-content = content.replace(/className="([^"]*)"([^>]*)><\/undefined><\/undefined>/g, 'className="$1"$2>');
-content = content.replace(/className="([^"]*)"([^>]*)><\/undefined><\/undefined><\/undefined>/g, 'className="$1"$2>');
+content = content.replace(/className="(Service Feature*)><\/undefined>/g, 'className="$1"$2>');
+content = content.replace(/className="(Service Feature*)><\/undefined><\/undefined>/g, 'className="$1"$2>');
+content = content.replace(/className="(Service Feature*)><\/undefined><\/undefined><\/undefined>/g, 'className="$1"$2>');
 
 // Fix malformed closing tags
 content = content.replace(/<\/undefined><\/undefined>/g, '');
@@ -26,7 +26,7 @@ content = content.replace(/<\/undefined><\/undefined><\/undefined>/g, '');
 content = content.replace(/\/><\/undefined>/g, '/>');
 
 // Fix malformed quotes in className
-content = content.replace(/className="([^"]*)"([^>]*)><\/undefined>/g, 'className="$1"$2>');
+content = content.replace(/className="(Service Feature*)><\/undefined>/g, 'className="$1"$2>');
 
 fs.writeFileSync(filePath, content, 'utf8');
 console.log('Fixed 5 g-implementation/page.tsx');

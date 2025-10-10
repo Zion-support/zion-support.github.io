@@ -1,8 +1,8 @@
 export interface BreakthroughContent {/* TODO: Fix JSX expression */}
-  };
+  }
 }
 
-export const newBreakthroughContent2025: BreakthroughContent[] = [
+export const newBreakthroughContent2025: BreakthroughContentService Feature = [
   {
     id: 'ai-platform-optimization-2025'
     title: 'AI Platform Optimization 2025: Maximizing ROI with Intelligent Scorecards'
@@ -58,8 +58,4 @@ Protect your AI systems with next-generation quantum security frameworks.
       accuracy: 'Zero breaches',
       roi: '500%',
 export const,
-  newBreakthroughContent2025: BreakthroughContent[] = [
-  {/* TODO: Fix JSX expression */}
-    }},
-  {/* TODO: Fix JSX expression */}
-    }}];
+  newBreakthroughContent2025: BreakthroughContentService Feature;

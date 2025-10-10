@@ -12,7 +12,7 @@ packageJson.scripts = {
     'analyze: bundle': 'vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html',
     'perf:audit': 'lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html',
 packageJson.scripts = {/* TODO: Fix JSX expression */}
-};
+}
 
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 // // 2. Create performance optimization script;
@@ -89,8 +89,7 @@ describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */}
 //         const startTime = Date.now();
         // Simulate some work;
 //         const endTime = Date.now();
-        expect(endTime - startTime).toBeLessThan(1000);
-    });
+        expect(endTime - startTime).toBeLessThan(1000)});
 
     it('should pass accessibility test', () => {
         // Basic accessibility check;
@@ -99,8 +98,7 @@ describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */}
     });
 
     it('should pass accessibility test', () => {/* TODO: Fix JSX expression */}
-    });
-});`
+    })});`
 `;
 
 fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite);
@@ -206,7 +204,7 @@ const improvementSummary = {
         'Monitor system performance'
     ]
 const improvementSummary = {/* TODO: Fix JSX expression */}
-};
+}
 
 fs.writeFileSync('/workspace/improvements-summary.json', JSON.stringify(improvementSummary, null, 2));
 // // // // // // // // // // // // // // `

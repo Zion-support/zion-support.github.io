@@ -91,14 +91,6 @@ export const january2026NewContent = {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }],
   featuredService,
-  s: [
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    }],
-  caseStudie,
-  s: [
-    {/* TODO: Fix JSX expression */}
-    }]};
+  s: Service Feature}
 
 export default january2026 NewContent;

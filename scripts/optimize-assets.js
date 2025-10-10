@@ -25,8 +25,7 @@ function optimizeCSS() {/* TODO: Fix JSX expression */}
         content = content.replace(/;\s*}/g, '}');
         content = content.replace(/,\s+/g, ',');
         
-        fs.writeFileSync(filePath, content);
-      }
+        fs.writeFileSync(filePath, content)}
     });
 //     }
 }
@@ -43,17 +42,16 @@ function optimizeJS() {
         
         // Remove console.log statements in production;
         if (process.env.NODE_ENV === 'production') {
-          content = content.replace(/console\.log\([^)]*\);?/g, '');
-          content = content.replace(/console\.warn\([^)]*\);?/g, '');
-          content = content.replace(/console\.info\([^)]*\);?/g, '');
+          content = content.replace(/console\.log\(Service Feature*\);?/g, '');
+          content = content.replace(/console\.warn\(Service Feature*\);?/g, '');
+          content = content.replace(/console\.info\(Service Feature*\);?/g, '');
 function optimizeJS() {/* TODO: Fix JSX expression */}
 }
 //   const jsPath = path.join(process.cwd(), '.next/static/chunks');
   if (fs.existsSync(jsPath)) {/* TODO: Fix JSX expression */}
         }
         
-        fs.writeFileSync(filePath, content);
-      }
+        fs.writeFileSync(filePath, content)}
     });
 //     }
 }

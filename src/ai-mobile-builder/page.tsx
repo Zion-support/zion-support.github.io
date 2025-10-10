@@ -4,10 +4,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Smartphone, Target, Zap, Settings, CheckCircle, Star, Code,  Smartphone,  Target,  Settings } from 'lucide-react';
 const AIMobileBuilderPage: React.FC = () => {
-  const features = [];
+  const features = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   ico,
   n: Smartphone,
       titl,
@@ -15,8 +15,7 @@ const AIMobileBuilderPage: React.FC = () => {
       descriptio,
   n: 'Intelligent mobile app development with AI assistance',
       benefit,
-  s: ['Code generation', 'UI/UX optimization', 'Performance tuning'];
-    },
+  s: ['Code generation', 'UI/UX optimization', 'Performance tuning']},
       ico,
   n: Target,
       titl,
@@ -89,6 +88,5 @@ const AIMobileBuilderPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default AiMobileBuilderPage;

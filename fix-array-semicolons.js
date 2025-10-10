@@ -7,7 +7,7 @@ function fixArraySemicolons(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Fix semicolons after arrays in object properties;
-    content = content.replace(/:\s*\[[^\]]+\];/g, (match) => {
+    content = content.replace(/:\s*\Service Feature;/g, (match) => {
       return match.replace(';', '');
 function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */}
     });
@@ -15,11 +15,9 @@ function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */}
     fs.writeFileSync(filePath, content);
     console.log(`Fixed array semicolons)`
   in: ${filePath}`);
-    return true;
-  } catch (error) {/* TODO: Fix JSX expression */}`
+    return true} catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Main function;
@@ -52,7 +50,6 @@ function main() {/* TODO: Fix JSX expression */}
     })
   });
   `
-  console.log(`Fixed ${fixedCount} files`);
-}
+  console.log(`Fixed ${fixedCount} files`)}
 
 main();`

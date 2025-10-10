@@ -4,10 +4,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Target, Zap, Settings, BarChart, CheckCircle, Star,  Target,  Zap,  BarChart } from 'lucide-react';
 const DigitalTransformationPage: React.FC = () => {
-  const features = [];
+  const features = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   ico,
   n: Target,
       titl,
@@ -15,8 +15,7 @@ const DigitalTransformationPage: React.FC = () => {
       descriptio,
   n: 'Digital transformation strategy and roadmap development',
       benefit,
-  s: ['Strategic planning', 'Technology assessment', 'Change management'];
-    },
+  s: ['Strategic planning', 'Technology assessment', 'Change management']},
       ico,
   n: Zap,
       titl,
@@ -89,6 +88,5 @@ const DigitalTransformationPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default DigitalTransformationPage;

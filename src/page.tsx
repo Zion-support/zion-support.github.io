@@ -124,10 +124,8 @@ const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     setTimeout(() => {
       import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
-  }
-};
+      import('./components/ContentCarousel')}, 100)}
+}
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
@@ -138,25 +136,15 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    setIsLoaded(true);
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    preloadComponents();
-    // Initialize performance optimizations
-    initializePerformanceOptimizations();
-    return () => clearTimeout(timer);
-  }, []);
+  const Service Feature);
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
-      });
-    }
-  }, []);
+      })}
+  }, Service Feature);
   // Enhanced Micro SAAS Services with real functionality and pricing
   const microSAASServices = [
     {
@@ -1052,8 +1040,7 @@ const HomePage: React.FC = () => {
       {/* Footer */}
       <Footer />
     </div>
-  );
-};
+  )}
 export default HomePage;
   </p>
   </a>

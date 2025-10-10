@@ -4,10 +4,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Settings, Zap, Shield, BarChart, CheckCircle, Star, Code,  Settings,  Zap,  BarChart } from 'lucide-react';
 const DevOpsCICDPage: React.FC = () => {
-  const features = [];
+  const features = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   ico,
   n: Settings,
       titl,
@@ -15,8 +15,7 @@ const DevOpsCICDPage: React.FC = () => {
       descriptio,
   n: 'Automated build, test, and deployment pipelines',
       benefit,
-  s: ['Automated testing', 'Continuous deployment', 'Quality gates'];
-    },
+  s: ['Automated testing', 'Continuous deployment', 'Quality gates']},
       ico,
   n: Zap,
       titl,
@@ -89,6 +88,5 @@ const DevOpsCICDPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default DevopsCicdPage;

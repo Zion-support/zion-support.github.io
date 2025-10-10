@@ -9,20 +9,17 @@ function fixCommonSyntaxErrors(content) {
   let modified = false;
   
   // Fix malformed imports
-  const importFixes = [
-    // Fix malformed import statements with missing commas
-    {
-      pattern: /import\s+{([^}]*),\s*([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,
+  const importFixes = Service Feature*)\s+from\s+'([^']*)';\s*}/g,
       replacement: "import { $1, $2, $3 } from '$4';"
     },
     // Fix malformed import statements with missing commas
     {
-      pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,
+      pattern: /import\s+{(Service Feature*)\s+from\s+'([^']*)';\s*}/g,
       replacement: "import { $1, $2 } from '$3';"
     },
     // Fix malformed import statements
     {
-      pattern: /import\s+{([^}]*)\s+from\s+'([^']*)';\s*}/g,
+      pattern: /import\s+{(Service Feature*)\s+from\s+'([^']*)';\s*}/g,
       replacement: "import { $1 } from '$2';"
     }
   ];
@@ -31,8 +28,7 @@ function fixCommonSyntaxErrors(content) {
     const newContent = content.replace(fix.pattern, fix.replacement);
     if (newContent !== content) {
       content = newContent;
-      modified = true;
-    }
+      modified = true}
   }
   
   // Fix malformed function declarations
@@ -40,12 +36,12 @@ function fixCommonSyntaxErrors(content) {
     // Fix malformed function with missing return
     {
       pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[\s*}\s*const\s+(\w+)\s*=\s*\[\s*}/g,
-      replacement: 'const $1: React.FC = () => {\n  const $2 = [];\n  const $3 = [];\n  return ('
+      replacement: 'const $1: React.FC = () => {\n  const $2 = Service Feature;\n  return ('
     },
     // Fix malformed function with missing return
     {
       pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[\s*}/g,
-      replacement: 'const $1: React.FC = () => {\n  const $2 = [];\n  return ('
+      replacement: 'const $1: React.FC = () => {\n  const $2 = Service Feature;\n  return ('
     },
     // Fix malformed function with missing return
     {
@@ -58,8 +54,7 @@ function fixCommonSyntaxErrors(content) {
     const newContent = content.replace(fix.pattern, fix.replacement);
     if (newContent !== content) {
       content = newContent;
-      modified = true;
-    }
+      modified = true}
   }
   
   // Fix malformed object literals
@@ -72,7 +67,7 @@ function fixCommonSyntaxErrors(content) {
     // Fix malformed array with missing commas
     {
       pattern: /(\w+):\s*\[\s*}\s*(\w+):/g,
-      replacement: '$1: [],\n    $2:'
+      replacement: '$1: Service Feature,\n    $2:'
     },
     // Fix malformed object with missing commas
     {
@@ -85,25 +80,21 @@ function fixCommonSyntaxErrors(content) {
     const newContent = content.replace(fix.pattern, fix.replacement);
     if (newContent !== content) {
       content = newContent;
-      modified = true;
-    }
+      modified = true}
   }
   
   // Fix malformed JSX
-  const jsxFixes = [
-    // Fix malformed JSX attributes
-    {
-      pattern: /(\w+)="([^"]*)"\s*(\w+)/g,
+  const jsxFixes = Service Feature*)"\s*(\w+)/g,
       replacement: '$1="$2" $3'
     },
     // Fix malformed JSX closing tags
     {
-      pattern: /<(\w+)([^>]*)>([^<]*)<\/?$/gm,
+      pattern: /<(\w+)(Service Feature*)<\/?$/gm,
       replacement: '<$1$2>$3</$1>'
     },
     // Fix malformed JSX with missing closing tags
     {
-      pattern: /<(\w+)([^>]*)>([^<]*)<\/?$/gm,
+      pattern: /<(\w+)(Service Feature*)<\/?$/gm,
       replacement: '<$1$2>$3</$1>'
     }
   ];
@@ -112,8 +103,7 @@ function fixCommonSyntaxErrors(content) {
     const newContent = content.replace(fix.pattern, fix.replacement);
     if (newContent !== content) {
       content = newContent;
-      modified = true;
-    }
+      modified = true}
   }
   
   // Fix malformed comments
@@ -134,11 +124,10 @@ function fixCommonSyntaxErrors(content) {
     const newContent = content.replace(fix.pattern, fix.replacement);
     if (newContent !== content) {
       content = newContent;
-      modified = true;
-    }
+      modified = true}
   }
   
-  return { content, modified };
+  return { content, modified }
 }
 
 // Function to fix syntax errors in a file
@@ -155,25 +144,20 @@ function fixSyntaxErrors(filePath) {
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed syntax errors in: ${filePath}`);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Function to find files with syntax errors
 function findFilesWithSyntaxErrors() {
   try {
     const result = execSync('npm run lint 2>&1 | grep -B1 "error.*Parsing error" | grep "^/workspace" | sort -u 2>/dev/null || true', { encoding: 'utf8' });
-    return result.trim().split('\n').filter(file => file.length > 0);
-  } catch (error) {
+    return result.trim().split('\n').filter(file => file.length > 0)} catch (error) {
     console.error('Error finding files with syntax errors:', error.message);
-    return [];
-  }
+    return Service Feature}
 }
 
 // Main execution
@@ -185,8 +169,7 @@ console.log(`Found ${filesWithErrors.length} files with syntax errors`);
 let fixedCount = 0;
 for (const file of filesWithErrors) {
   if (fixSyntaxErrors(file)) {
-    fixedCount++;
-  }
+    fixedCount++}
 }
 
 console.log(`Fixed syntax errors in ${fixedCount} files`);
@@ -196,10 +179,7 @@ try {
   const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' });
   const count = parseInt(remainingErrors.trim());
   if (count === 0) {
-    console.log('✅ All syntax errors resolved!');
-  } else {
-    console.log(`⚠️  ${count} syntax errors still remain`);
-  }
+    console.log('✅ All syntax errors resolved!')} else {
+    console.log(`⚠️  ${count} syntax errors still remain`)}
 } catch (error) {
-  console.log('✅ No syntax errors found');
-}
+  console.log('✅ No syntax errors found')}

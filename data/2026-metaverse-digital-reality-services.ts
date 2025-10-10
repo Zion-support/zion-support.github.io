@@ -69,7 +69,7 @@ export const metaverseDigitalStats2026 =
   categories: 4;
   averageRating: 4.7;
   activeUsers: 1200;
-export const metaverseDigitalStats2026 = {};
+export const metaverseDigitalStats2026 = {}
   totalService,
   s: 2,
   categorie,
@@ -77,7 +77,7 @@ export const metaverseDigitalStats2026 = {};
   averageRatin,
   g: 4.7,
   activeUser,
-  s: 1200};
+  s: 1200}
 export const metaverseDigitalRealityServices2026 = [ nam,
   e: 'Metaverse Development Platform 2026',' pat,
   h: '/services/metaverse-development-platform-2026',' descriptio,
@@ -102,4 +102,4 @@ export const metaverseDigitalRealityServices2026 = [ nam,
   s: 2, categorie,
   s: 4, averageRatin,
   g: 4.7, activeUser,
-  s: 1200 };'
+  s: 1200 }'

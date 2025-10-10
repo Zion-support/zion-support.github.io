@@ -68,19 +68,9 @@ if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */}
 if (fs.existsSync(seoOptimizerPath)) {
 
   // Update the interface to include all missing props;
-  content = content.replace(/interface AdvancedSEOOptimizerProps \{[^}]*\}/)
-    `interface AdvancedSEOOptimizerProps {
-  config?: {
-    title: string;
-    description: string;
-    keywords: string[];
-    canonicalUrl: string;
-    ogImage: string;
-    structuredData?: unknown;,
-if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
-    /interface AdvancedSEOOptimizerProps \{[^}]*\}/,`
+  content = content.replace(/interface AdvancedSEOOptimizerProps \{Service Feature*\}/,`
     `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
-  };
+  }
   enableStructuredData?: boolean;
   enableAnalytics?: boolean;
   enablePerformanceTracking?: boolean;
@@ -99,11 +89,11 @@ if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
 if (fs.existsSync(analyticsTrackerPath)) {
 
   // Remove conflicting declarations;
-  content = content.replace(/declare global \{[^}]*\}/g, '');
+  content = content.replace(/declare global \{Service Feature*\}/g, '');
 
   // Add proper imports and declarations at the top;
 if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */}
-  content = content.replace(/declare global \{[^}]*\}/g, '');
+  content = content.replace(/declare global \{Service Feature*\}/g, '');
 
   // Add proper imports and declarations at the top;`
   content = `
@@ -144,14 +134,12 @@ if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */}`
 if (fs.existsSync(performancePath)) {
 
   // Remove conflicting declarations;
-  content = content.replace(/declare global \{[^}]*\}/g, '');
+  content = content.replace(/declare global \{Service Feature*\}/g, '');
 
   // Add proper declaration at the top;
   content = `declare global {
   interface Window {
-    gtag: (...args: unknown[]) => void;
-if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */}
-  content = content.replace(/declare global \{[^}]*\}/g, '');
+    gtag: (...args: unknownService Feature*\}/g, '');
 
   // Add proper declaration at the top;`
   content = `declare global {/* TODO: Fix JSX expression */}

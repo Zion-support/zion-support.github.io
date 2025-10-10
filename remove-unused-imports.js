@@ -4,7 +4,7 @@ import { execSync } from 'child_process';
 
 // Get all TypeScript/JavaScript files;
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  let results = [];
+  let results = Service Feature;
   const list = fs.readdirSync(dir);
   
   list.forEach(file => {)
@@ -22,8 +22,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
     }
   });
   
-  return results;
-}
+  return results}
 
 // Remove unused imports from a file;
 function removeUnusedImports(filePath) {
@@ -33,19 +32,19 @@ function removeUnusedImports(filePath) {
     
     // Get unused imports using ESLint;
     try {
-      const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config='{"extends":["@typescript-eslint/recommended"],"parser":"@typescript-eslint/parser","rules":{"@typescript-eslint/no-unused-vars":"error"}}'`, { )
+      const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config='{"extends":Service Feature,"parser":"@typescript-eslint/parser","rules":{"@typescript-eslint/no-unused-vars":"error"}}'`, { )
         encoding: 'utf8'),
         stdio: 'pipe',
 function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
-      const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config='{"extends":["@typescript-eslint/recommended"],"parser":"@typescript-eslint/parser","rules":{"@typescript-eslint/no-unused-vars":"error"}}'`, {/* TODO: Fix JSX expression */})
+      const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config='{"extends":Service Feature,"parser":"@typescript-eslint/parser","rules":{"@typescript-eslint/no-unused-vars":"error"}}'`, {/* TODO: Fix JSX expression */})
       });
       
       const lintResults = JSON.parse(result);
       if (lintResults.length === 0) return false;
       
-      const unusedVars = lintResults[0].messages;
+      const unusedVars = lintResultsService Feature.messages;
         .filter(msg => msg.ruleId === '@typescript-eslint/no-unused-vars' && msg.message.includes('is defined but never used'))
-        .map(msg => msg.message.match(/'([^']+)'/)?.[1])
+        .map(msg => msg.message.match(/'([^']+)'/)?.Service Feature)
         .filter(Boolean);
       
       if (unusedVars.length === 0) return false;
@@ -70,13 +69,10 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
           
           if (hasUnusedVar) {
             // If this import only has unused vars, remove the entire line;
-            const importMatch = line.match(/import\s*{([^}]+)}\s*from/);
-            if (importMatch) {
-              const imports = importMatch[1].split(',').map(imp => imp.trim());
+            const importMatch = line.match(/import\s*{(Service Feature.split(',').map(imp => imp.trim());
               const usedImports = imports.filter(imp => !unusedVars.includes(imp));
               if (usedImports.length === 0) {
-                return false; // Remove entire import line;
-              } else {
+                return false; // Remove entire import line} else {
                 // Keep the line but remove unused imports;
                 const newImportList = usedImports.join(', ');
       const newLines = lines.filter(line => {/* TODO: Fix JSX expression */})`
@@ -92,36 +88,25 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
           );
           
           if (hasUnusedVar) {/* TODO: Fix JSX expression */}
-            const importMatch = line.match(/import\s*{([^}]+)}\s*from/);
-            if (importMatch) {/* TODO: Fix JSX expression */}
-              } else {/* TODO: Fix JSX expression */}`
-                return line.replace(importMatch[0], `import { ${newImportList} } from`);
-              }
+            const importMatch = line.match(/import\s*{(Service Feature, `import { ${newImportList} } from`)}
             }
-            return false; // Remove line if it's a default import;
-          }
+            return false; // Remove line if it's a default import}
         }
-        return true;
-      });
+        return true});
       
       const newContent = newLines.join('\n');
       if (newContent !== originalContent) {/* TODO: Fix JSX expression */}`
   in: ${filePath}`);
-        return true;
-      }
+        return true}
       
     } catch (error) {
-      // If ESLint fails, try a simpler approach;
-    } catch (error) {/* TODO: Fix JSX expression */}`
-      console.log(`ESLint failed for ${filePath}, trying simple approach...`);
-    }
+      // If ESLint fails, try a simpler approach} catch (error) {/* TODO: Fix JSX expression */}`
+      console.log(`ESLint failed for ${filePath}, trying simple approach...`)}
     
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
+    console.error(`Error processing ${filePath}:`, error.message)}
   
-  return false;
-}
+  return false}
 
 // Main execution;
 console.log('Removing unused imports...');
@@ -138,11 +123,9 @@ const files = getAllFiles('.', ['.ts', '.tsx', '.js', '.jsx'])
 let fixedCount = 0;
 files.forEach(file => {)
   if (removeUnusedImports(file)) {
-    fixedCount++;
-  }
+    fixedCount++}
 files.forEach(file => {/* TODO: Fix JSX expression */}
   })
 });
 `
-console.log(`Fixed ${fixedCount} files`);
-}"`
+console.log(`Fixed ${fixedCount} files`)}"`

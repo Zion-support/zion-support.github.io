@@ -8,18 +8,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 export default async function handler(re,
   q: NextApiRequest, re)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
-  r: 'Method not allowed' });
-  }
+  r: 'Method not allowed' })}
 
   const { text, targets } = req.body as {/* TODO: Fix JSX expression */}
-  s: string[] };
+  s: stringService Feature }
 
   if (!text || !Array.isArray(targets) || targets.length === 0) {/* TODO: Fix JSX expression */}
-  r: 'Invalid input' });
-  }
+  r: 'Invalid input' })}
 
   try {/* TODO: Fix JSX expression */}
-  results: Record<string, string> = {};
+  results: Record<string, string> = {}
 
     for (const lng of targets) {
       const langName = lng.startsWith('pt')
@@ -47,16 +45,12 @@ export default async function handler(re,
         temperatur,
   e: 0.2});
 
-      const _translated = completion.choices?.[0]?.message?.content?.trim() || '';
-      results[lng] = translated;
-    }
+      const _translated = completion.choices?.Service Feature?.message?.content?.trim() || '';
+      resultsService Feature = translated}
 
-    return res.status(200).json(results);
-  } catch (err: unknown) {,
-    //     return res.status(500).json({ error: 'Translation failed' });
-  } catch (er)
+    return res.status(200).json(results)} catch (err: unknown) {,
+    //     return res.status(500).json({ error: 'Translation failed' })} catch (er)
   r: unknown) {/* TODO: Fix JSX expression */}
-  r: 'Translation failed' });
-  }
+  r: 'Translation failed' })}
 }
 `

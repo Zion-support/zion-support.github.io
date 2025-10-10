@@ -11,13 +11,11 @@ for (const filePath of files) {
     content = content.replace(/^\s*\/>\s*$/gm, '');
 
     //Fix unterminated regular expression literals in object properties;
-    //Pattern: property: /pattern without closing /content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
+    //Pattern: property: /pattern without closing /content = content.replace(/(\w+):\s*\/Service Feature*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
 for (const filePath of files) {/* TODO: Fix JSX expression */}
-        return `${prop}: '${value.substring(1)}'`;
-      }
-      return match;
-    });
+        return `${prop}: '${value.substring(1)}'`}
+      return match});
 
     //Fix malformed <br> tags;
     content = content.replace(/<br\s*>\s*<\/br>/g, '<br />');

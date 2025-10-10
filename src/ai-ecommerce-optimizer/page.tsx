@@ -4,10 +4,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ShoppingCart, Target, Zap, Settings, CheckCircle, Star,  ShoppingCart,  Target,  Settings } from 'lucide-react';
 const AIEcommerceOptimizerPage: React.FC = () => {
-  const features = [];
+  const features = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   ico,
   n: ShoppingCart,
       titl,
@@ -15,8 +15,7 @@ const AIEcommerceOptimizerPage: React.FC = () => {
       descriptio,
   n: 'AI-powered e-commerce optimization and enhancement',
       benefit,
-  s: ['Conversion optimization', 'User experience', 'Performance tuning'];
-    },
+  s: ['Conversion optimization', 'User experience', 'Performance tuning']},
       ico,
   n: Target,
       titl,
@@ -89,6 +88,5 @@ const AIEcommerceOptimizerPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default PagePage;

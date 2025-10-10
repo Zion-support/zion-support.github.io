@@ -8,27 +8,23 @@
 // 2. Implement focus management
 const trapFocus = (element) => {
   const focusableElements = element.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    'button, Service Feature)'
   );
-  const firstElement = focusableElements[0];
-  const lastElement = focusableElements[focusableElements.length - 1];
+  const firstElement = focusableElementsService Feature;
   
   element.addEventListener('keydown', (e) => {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           lastElement.focus();
-          e.preventDefault();
-        }
+          e.preventDefault()}
       } else {
         if (document.activeElement === lastElement) {
           firstElement.focus();
-          e.preventDefault();
-        }
+          e.preventDefault()}
       }
     }
-  });
-};
+  })}
 
 // 3. Add live regions for dynamic content
 // Example JSX:
@@ -95,4 +91,4 @@ const trapFocus = (element) => {
 //   {errorMessage}
 // </div>
 
-export { trapFocus };
+export { trapFocus }

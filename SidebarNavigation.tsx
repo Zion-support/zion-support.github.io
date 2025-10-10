@@ -3,8 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 interface SidebarNavigationProps {
   isOpen: boolean;
-  onClose: () => void;
-}
+  onClose: () => void}
 const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
   const navigationItems = [
     { name: 'Home', href: '/', icon: Home },
@@ -50,7 +49,6 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
         </nav>
       </div>
     </React.Fragment>
-  );
-};
+  )}
 
 export default SidebarNavigation;

@@ -87,8 +87,7 @@ const,
         )}
       </div>
     </nav>
-  );
-};
+  )}
 export default ModernNavigation;
 "`
   </button>

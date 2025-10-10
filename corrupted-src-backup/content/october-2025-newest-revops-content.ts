@@ -5,24 +5,7 @@ export interface RevOpsContent {
   category: string;
   date: string;
   readTime: string;
-  tags: string[];
-  featured: boolean;
-  content?: string;
-  author?: string;
-  valueProposition?: string;
-  highlights: string[];
-  metrics: {,
-    [key: string]: string;
-export interface RevOpsContent {/* TODO: Fix JSX expression */}
-  };
-  icon?: string;
-  gradient?: string;
-  breaking?: boolean;
-  cta?: {/* TODO: Fix JSX expression */}
-  };
-}
-
-export const octoberNewestRevOpsContent: RevOpsContent[] = [
+  tags: stringService Feature = [
   {
     id: 'ai-revops-automation-2025'
     title: 'AI RevOps Automation 2025: 3.2x Pipeline Velocity'
@@ -83,20 +66,13 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       velocity: '3.2 x',
       roi: '704%',
 export const,
-  octoberNewestRevOpsContent: RevOpsContent[] = [
-  {/* TODO: Fix JSX expression */}
-    },
-    ct,
-  a: {/* TODO: Fix JSX expression */}
-    }},
-  {/* TODO: Fix JSX expression */}
-    }}];
+  octoberNewestRevOpsContent: RevOpsContentService Feature;
 
 export const getFeaturedRevOpsContent = () => {/* TODO: Fix JSX expression */}
-};
+}
 
 export const getBreakingRevOpsContent = () => {/* TODO: Fix JSX expression */}
-};
+}
 
 export const getAllRevOpsContent = () => {/* TODO: Fix JSX expression */}
-};
+}

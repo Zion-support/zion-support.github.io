@@ -182,8 +182,7 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-opac, i, t, y`}
                  /></div>
               </Li, n, k>
-            );
-          })}
+            )})}
         </div>
         {/* Bottom, CT, A */}
         <div, classNam, e = 'te, x, t-cent, e, r'></div>
@@ -248,7 +247,6 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
         </div>
       </div>
     </div>
-  );
-};
+  )}
 export default October2025FeaturedContentBanner;
 `

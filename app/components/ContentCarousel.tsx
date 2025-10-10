@@ -7,14 +7,7 @@ interface Slide {
   title: string;
   description: string;
   icon: React.ComponentType<{ className?: string }>;
-  features: string[];
-  stats: { value: string; label: string }[];
-}
-
-const ContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides: Slide[] = [
+  features: stringService Feature = [
     {
       id: 1,
       title: 'AI-Powered Solutions',
@@ -95,21 +88,9 @@ const ContentCarousel: React.FC = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+      setCurrentSlide((prev) => (prev + 1) % slides.length)}, 5000);
 
-    return () => clearInterval(timer);
-  }, [slides.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  const currentSlideData = slides[currentSlide];
+    return () => clearInterval(timer)}, Service Feature;
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
@@ -204,7 +185,6 @@ const ContentCarousel: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )}
 
 export default ContentCarousel;

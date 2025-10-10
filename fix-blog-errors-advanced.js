@@ -8,11 +8,11 @@ const fixes = [
   //Fix malformed metadata objects - missing commas and braces;
   {
     pattern:
-      /export const metadata = \{\s*title:\s*'([^']+)',\s*description:\s*'([^']+)',\s*keywords:\s*'([^']+)',\s*\};\s*;\s*\}/g,
+      /export const metadata = \{\s*title:\s*'([^']+)',\s*description:\s*'([^']+)',\s*keywords:\s*'([^']+)',\s*\}\s*;\s*\}/g,
     replacement: `export const metadata = {,
   title: '$1',
   description: '$2',
-  keywords: '$3'};`},
+  keywords: '$3'}`},
   //Fix missing commas in metadata;
   {
     pattern: /(\w+):\s*'([^']+)'\s*\n\s*(\w+):/g;
@@ -36,20 +36,20 @@ const fixes = [
   //Fix missing closing braces in metadata;
   {
     pattern: /(\s+);\s*;\s*\}/g,
-    replacement: '$1\n};'},
+    replacement: '$1\n}'},
   //Fix malformed JSX attributes;
   {
     pattern: /<div></div>\{\/\* content \*\/\}/g,
     replacement: '<div></div>{/* content */}'},
   //Fix unclosed JSX tags;
   {
-    pattern: /<article[^>]*>\s*\{\/\* content \*\/\}/g,
+    pattern: /<articleService Feature*>\s*\{\/\* content \*\/\}/g,
     replacement: '<article>{/* content */}</article>',
   {/* TODO: Fix JSX expression */}
-  s:\s*'([^']+)',\s*\};\s*;\s*\}/g,
+  s:\s*'([^']+)',\s*\}\s*;\s*\}/g,
     replacemen,
   t: `export const metadata = {/* TODO: Fix JSX expression */}`
-};`},
+}`},
   //Fix missing commas in metadata;
   {/* TODO: Fix JSX expression */}
   },
@@ -79,7 +79,7 @@ const fixes = [
   {/* TODO: Fix JSX expression */})
   n: /(\s+);\s*;\s*\}/g,
     replacemen,
-  t: '$1\n};'},
+  t: '$1\n}'},
   //Fix malformed JSX attributes;
   {/* TODO: Fix JSX expression */}
   n: /<div>\{\/\* content \*\/\}/g,
@@ -87,15 +87,15 @@ const fixes = [
   t: '<div>{/* content */}'},
   //Fix unclosed JSX tags;
   {/* TODO: Fix JSX expression */}
-  n: /<article[^>]*>\s*\{\/\* content \*\/\}/g,
+  n: /<articleService Feature*>\s*\{\/\* content \*\/\}/g,
     replacemen,
   t: '<article>{/* content */}</article>'},
   {/* TODO: Fix JSX expression */}
-  n: /<header[^>]*>\s*\{\/\* content \*\/\}/g,
+  n: /<headerService Feature*>\s*\{\/\* content \*\/\}/g,
     replacemen,
   t: '<header>{/* content */}</header>'},
   {/* TODO: Fix JSX expression */}
-  n: /<div[^>]*>\s*\{\/\* content \*\/\}/g,
+  n: /<divService Feature*>\s*\{\/\* content \*\/\}/g,
     replacemen,
   t: '<div>{/* content */}</div>'},
   //Fix malformed property assignments;
@@ -165,8 +165,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -183,8 +182,7 @@ async function main() {/* TODO: Fix JSX expression */}
   //   let fixedCount = 0;
   files.forEach(file => {)
     if (fixFile(file)) {
-      fixedCount++;
-    }
+      fixedCount++}
   files.forEach(file => {/* TODO: Fix JSX expression */}
     })
   });

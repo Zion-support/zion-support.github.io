@@ -10,10 +10,9 @@ exports.handler = async function (event, context) {try {
         action: 'performance_monitoring'),
         metrics: ['page-load-time', 'core-web-vitals', 'resource-optimization'])
         performanceScore: 92}
-      })};
+      })}
 //     return result;
-//   } catch (error) {// console.error('❌ performance-monitoring-runner failed: ') error;
-      }
+//   } catch (error) {// console.error('❌ performance-monitoring-runner failed: ') error}
     return {
       statusCode: 500;
       body: JSON.stringify({),
@@ -24,15 +23,14 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const timestamp = new Date().toISOString()}
     const result = {/* TODO: Fix JSX expression */}
   e: 92}
-      })};
+      })}
 //     return result;
 //   } catch (error) {/* TODO: Fix JSX expression */}
       }
     return {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
-      });
-    };
+      })}
   }
-};
+}
         timestam,
-  p: new Date().toISOString() }) }; } };'
+  p: new Date().toISOString() }) }} }'

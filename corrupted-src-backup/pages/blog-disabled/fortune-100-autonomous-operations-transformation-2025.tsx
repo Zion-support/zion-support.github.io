@@ -100,6 +100,5 @@ export default function CaseStudy(): React.JSX.Element {/* TODO: Fix JSX express
           </div>
         </div>
       </div>,
-    </React.Fragment>);
-}
+    </React.Fragment>)}
 "`

@@ -490,7 +490,6 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
         </d, i, v>)
       </d, i, v>)
     </d, i, v>)
-  );
-};
+  )}
 export default October2025NewPremiumContentBanner;
 ;"

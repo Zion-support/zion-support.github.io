@@ -5,23 +5,7 @@ export interface InnovativeITService {id: string;
   price: string;
   period: string;
   description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
+  features: stringService Feature;
   market_size: string;
   growth_rate: string;
   variant: string;
@@ -158,8 +142,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 01'
     customers: 800;
     rating: 4 && 4.9;
-    reviews: 400;
-  },
+    reviews: 400},
     id: 'edge - computing - platform'
     name: 'Edge Computing Platform',
     tagline: 'Distributed computing at the network edge',
@@ -313,8 +296,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 10'
     customers: 1500;
     rating: 4 && 4.8;
-    reviews: 750;
-  },
+    reviews: 750},
     id: 'quantum - computing - as - a-service'
     name: 'Quantum Computing as a Service',
     tagline: 'Access to quantum computing power',
@@ -467,8 +449,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 05'
     customers: 300;
     rating: 4 && 4.9;
-    reviews: 150;
-  },
+    reviews: 150},
       'Multi-consensus algorithms',
     id: 'blockchain - enterprise - platform'
     name: 'Blockchain Enterprise Platform',
@@ -625,8 +606,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 15'
     customers: 600;
     rating: 4 && 4.8;
-    reviews: 300;
-  },
+    reviews: 300},
       'CI/CD pipelines',
     id: 'devops - automation - platform'
     name: 'DevOps Automation Platform',
@@ -785,33 +765,12 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 20'
     customers: 2500;
     rating: 4 && 4.7;
-    reviews: 1250;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 1250}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string;
   tagline: string, price: string;
   period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
-  textColor: string, link: string;
-  marketPosition: string, targetAudience: string;
-  trialDays: number, setupTime: string;
-  category: string, realService: boolean;
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string;
-  competitors: string[], marketSize: string;
-  growthRate: string, variant: string;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string;
-    },
-    realImplementation: boolean, implementationDetails: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number;
-}
-export const innovativeITServices: InnovativeITService[] = [,
+  features: stringService Feature = [,
     id: 'zero-trust-security-platform', name: 'Zero Trust Security Platform',
     tagline: 'Next-generation cybersecurity with zero trust architecture', price: '$599',
     period: '/month',
@@ -883,56 +842,7 @@ export const innovativeITServices: InnovativeITService[] = [,
   d: string, descriptio,
   n: string,
   feature,
-  s: string[], popula,
-  r: boolean,
-  ico,
-  n: string, colo,
-  r: string,
-  textColo,
-  r: string, lin,
-  k: string,
-  marketPositio,
-  n: string, targetAudienc,
-  e: string,
-  trialDay,
-  s: number, setupTim,
-  e: string,
-  categor,
-  y: string, realServic,
-  e: boolean,
-  technolog,
-  y: string[], integration,
-  s: string[],
-  useCase,
-  s: string[], ro,
-  i: string,
-  competitor,
-  s: string[], marketSiz,
-  e: string,
-  growthRat,
-  e: string, varian,
-  t: string,
-  contactInf,
-  o: unknown,
-    mobil,
-  e: string, emai,
-  l: string,
-    addres,
-  s: string,
-    websit,
-  e: string},
-    realImplementatio,
-  n: boolean, implementationDetail,
-  s: string,
-  launchDat,
-  e: string, customer,
-  s: number,
-  ratin,
-  g: number,
-  review,
-  s: number}
-export const,
-  innovativeITServices: InnovativeITService[] = [,
+  s: stringService Feature = [,
     i,
   d: 'zero-trust-security-platform', nam,
   e: 'Zero Trust Security Platform',
@@ -1005,20 +915,15 @@ export const,
   s: 1250}
 export interface InnovativeITService {/* TODO: Fix JSX expression */}
   }
+]}
 ];
-;
-;
-  }
-];
-;
     realImplementation: true;
     implementationDetails:,
       'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'
     launchDate: '2024-01-01'
     customers: 800;
     rating: 4.9;
-    reviews: 400;
-  }
+    reviews: 400}
     id: 'edge-computing-platform'
     name: 'Edge Computing Platform',
     tagline: 'Distributed computing at the network edge',
@@ -1345,8 +1250,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-01-20'
     customers: 2500;
     rating: 4.7;
-    reviews: 1250;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 1250}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -1412,16 +1316,14 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
+  }
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
-;
-export const innovativeITServices: InnovativeITService[] = [;
+  reviews: number}
+export const innovativeITServices: InnovativeITServiceService Feature = [;
   {
     id: 'zero-trust-security-platform';
     name: 'Zero Trust Security Platform';
@@ -1475,9 +1377,8 @@ export const innovativeITServices: InnovativeITService[] = [;
   g: number;
   review,
   s: number}
-;
 export const,
-  innovativeITServices: InnovativeITService[] = [;
+  innovativeITServices: InnovativeITServiceService Feature = [;
   {/* TODO: Fix JSX expression */}
   t: 'cyberpunk'}
     contactInf,
@@ -1504,9 +1405,7 @@ export const,
   g: 4.7,
     review,
   s: 1250}
-];
-  }
-;
+]}
 export interface InnovativeITService,
   id: string; nam,
   e: string; taglin,
@@ -1514,23 +1413,7 @@ export interface InnovativeITService,
   e: string, perio,
   d: string, descriptio,
   n: string; feature,
-  s: string[]; popula,
-  r: boolean; ico,
-  n: string; colo,
-  r: string; text_colo,
-  r: string; lin,
-  k: string; market_positio,
-  n: string; target_audienc,
-  e: string; trial_day,
-  s: number; setup_tim,
-  e: string; categor,
-  y: string; real_servic,
-  e: boolean; technolog,
-  y: string[]; integration,
-  s: string[]; use_case,
-  s: string[]; ro,
-  i: string; competitor,
-  s: string[]; market_siz,
+  s: stringService Feature; market_siz,
   e: string; growth_rat,
   e: string; varian,
   t: string; contact_inf,
@@ -1747,38 +1630,7 @@ export interface InnovativeITService,
   e: string, perio,
   d: string, descriptio,
   n: string, feature,
-  s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
-  r: string, textColo,
-  r: string, lin,
-  k: string, marketPositio,
-  n: string, targetAudienc,
-  e: string, trialDay,
-  s: number, setupTim,
-  e: string, categor,
-  y: string, realServic,
-  e: boolean, technolog,
-  y: string[], integration,
-  s: string[], useCase,
-  s: string[], ro,
-  i: string, competitor,
-  s: string[], marketSiz,
-  e: string, growthRat,
-  e: string, varian,
-  t: string, contactInf,
-  o: mobil,
-  e: string, emai,
-  l: string, addres,
-  s: string, websit,
-  e: string }, realImplementatio,
-  n: boolean, implementationDetail,
-  s: string, launchDat,
-  e: string, customer,
-  s: number, ratin,
-  g: number, review,
-  s: number } export const,
-  innovativeITServices: InnovativeITService[] = [ ' i,
+  s: stringService Feature = [ ' i,
   d: 'zero-trust-security-platform', nam,
   e: 'Zero Trust Security Platform',' taglin,
   e: 'Next-generation cybersecurity with zero trust architecture', pric,
@@ -1818,7 +1670,7 @@ export interface InnovativeITService,
   e: '2024 - 01 - 20' customer,
   s: 2500, ratin,
   g: 4.7, review,
-  s: 1250} export interface InnovativeITService {; } ]; ; } ]; realImplementatio,
+  s: 1250} export interface InnovativeITService { } ]} ]; realImplementatio,
   n: true,
   implementationDetails:' 'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'' launchDat,
   e: '2024-01-01' customer,
@@ -1923,16 +1775,16 @@ export interface InnovativeITService,
   g: 4.7,
   reviews: 1250 } ]; export interface InnovativeITService {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} }; realImplementatio,
+  e: string} } realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number} ; export const,
-  innovativeITServices: InnovativeITService[] = [; {/* TODO: Fix JSX expression */}
+  s: number} export const,
+  innovativeITServices: InnovativeITServiceService Feature = [; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } real_implementatio,
   n: true,' implementation_detail,
@@ -1940,4 +1792,4 @@ export interface InnovativeITService,
   e: '2024 - 01 - 20' customer,
   s: 2500, ratin,
   g: 4.7, review,
-  s: 1250} ]; } ; '
+  s: 1250} ]} '

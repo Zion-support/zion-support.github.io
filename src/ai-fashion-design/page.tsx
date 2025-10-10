@@ -180,8 +180,7 @@ const AIFashionDesignPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
+  )}
 export default AIFashionDesignPage</a>
   </p>
   </a>

@@ -4,8 +4,7 @@ interface ModernLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'accent';
   text?: string;
-  fullScreen?: boolean;
-}
+  fullScreen?: boolean}
 const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   size = 'md',
   color = 'primary',
@@ -16,15 +15,14 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
     xl:   ,
-$4};
+$4}
   const colorClasses = {
     primary: 'text-cyan-400',
     secondary: 'text-purple-400',
     accent:   ,
-$4};
+$4}
   const spinnerClasses = `
-    ${sizeClasses[size]}
-    ${colorClasses[color]}
+    ${sizeClassesService Feature}
     animate-spin
     border-2
     border-current
@@ -47,17 +45,16 @@ $4};
       </div>
 'use client';
 interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'accent';
   text?: string;
-  fullScreen?: boolean;
-}
+  fullScreen?: boolean}
 const,
   ModernLoadingSpinner: React.FC;
           <ModernLoadingSpinnerProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   size = 'md',
   color = 'primary',
@@ -71,20 +68,19 @@ const,
   g: 'w-12 h-12',
     x,
   l: 'w-16 h-16'
-  };
+  }
   const colorClasses = {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   primar,
   y: 'text-cyan-400',
     secondar,
   y: 'text-purple-400',
     accen,
   t: 'text-pink-400'
-  };
+  }
   const spinnerClasses = `
-    ${sizeClasses[size]}
-    ${colorClasses[color]}
+    ${sizeClassesService Feature}
 //     animate-spin;
 //     border-2;
 //     border-current;
@@ -108,8 +104,7 @@ const,
       </div>"
       <span className="sr-only">Loading content, please wait...</span>
     </div>
-  );
-};
+  )}
 export default ModernLoadingSpinner;
 export default ModernLoadingSpinner;"`
   </ModernLoadingSpinnerProps>

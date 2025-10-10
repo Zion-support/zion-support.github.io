@@ -10,24 +10,20 @@ function fixBlogFile(filePath) {
     let modified = false;
 
     // Fix missing closing parenthesis and return statement;
-    if (content.includes('};') && !content.includes('  );')) {
+    if (content.includes('}') && !content.includes('  );')) {
 function fixBlogFile(filePath) {/* TODO: Fix JSX expression */}
-    if (content.includes('};') && !content.includes('  );')) {/* TODO: Fix JSX expression */}
-      content = content.replace(/};$/, '  );\n};');
-      modified = true;
-    }
+    if (content.includes('}') && !content.includes('  );')) {/* TODO: Fix JSX expression */}
+      content = content.replace(/}$/, '  );\n}');
+      modified = true}
 
     // Fix merge conflict markers;
     if (content.includes('      console.log(`⚠ Found merge conflict markers in ${filePath}, skipping...`);
-      return;
-    }
+      return}
 
     if (modified) {/* TODO: Fix JSX expression */}`
-      console.log(`✓ Fixed ${filePath}`);
-    }
+      console.log(`✓ Fixed ${filePath}`)}
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.log(`✗ Error processing ${filePath}: ${error.message}`);
-  }
+    console.log(`✗ Error processing ${filePath}: ${error.message}`)}
 }
 
 // Main execution;

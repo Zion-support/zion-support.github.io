@@ -1,15 +1,12 @@
 'use client';
 import React, { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+  const Service Feature = useState({
     name: '',
     email: '',
     phone: '',
@@ -17,16 +14,13 @@ const ContactPage: React.FC = () => {
     service: '',
     message: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const Service Feature = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
-    }));
-  }, []);
+      Service Feature);
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,72 +38,11 @@ const ContactPage: React.FC = () => {
         company: '',
         service: '',
         message: ''
-      });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
-  }, []);
+      })} catch (error) {
+      setSubmitStatus('error')} finally {
+      setIsSubmitting(false)}
+  }, Service Feature);
 
-<<<<<<< HEAD
-  const services = [
-    'AI Solutions',
-    'Cloud Computing',
-    'Cybersecurity',
-    'Software Development',
-    'IT Consulting',
-    'Other'
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Contact Us - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts for consultation and support." />
-        <meta name="keywords" content="contact, AI solutions, IT consulting, support, consultation" />
-      </Helmet>
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Get In
-            <span className="block bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Touch
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Ready to transform your business with AI and technology? Let's discuss your project and explore how we can help you achieve your goals.
-          </p>
-        </div>
-      </section>
-
-      {/* Contact Form Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20">
-              <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
-              
-              {submitStatus === 'success' && (
-                <div className="mb-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                  <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
-                </div>
-              )}
-              
-              {submitStatus === 'error' && (
-                <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg flex items-center">
-                  <AlertCircle className="w-5 h-5 text-red-400 mr-2" />
-                  <span className="text-red-400">Failed to send message. Please try again.</span>
-                </div>
-              )}
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -272,207 +205,10 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
                     </label>
-<<<<<<< HEAD
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                      Company
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
-                      placeholder="Your company name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
-                      placeholder="+1 (555) 123-4567"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                    Service Interest
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
-                  >
-                    <option value="">Select a service</option>
-                    {services.map((service) => (
-                      <option key={service} value={service}>
-                        {service}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
-                    placeholder="Tell us about your project..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      <span>Sending...</span>
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5" />
-                      <span>Send Message</span>
-                    </>
-                  )}
-                </button>
-              </form>
-            </div>
-
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center">
-                      <Phone className="w-6 h-6 text-cyan-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
-                      <p className="text-gray-300">+1 (302) 464-0950</p>
-                      <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center">
-                      <Mail className="w-6 h-6 text-cyan-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-                      <p className="text-gray-300">info@ziontechgroup.com</p>
-                      <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center">
-                      <MapPin className="w-6 h-6 text-cyan-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Address</h3>
-                      <p className="text-gray-300">
-                        364 E Main St STE 1008<br />
-                        Middletown, DE 19709
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center">
-                      <Clock className="w-6 h-6 text-cyan-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Business Hours</h3>
-                      <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                      <p className="text-gray-300">Saturday: 10:00 AM - 4:00 PM</p>
-                      <p className="text-gray-300">Sunday: Closed</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-slate-800/50 rounded-2xl p-6 border border-cyan-500/20">
-                <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Expert AI and IT professionals
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    24/7 customer support
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Customized solutions for your business
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Proven track record of success
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-=======
                     <select
                       id="service"
                       name="service"
@@ -532,9 +268,7 @@ const ContactPage: React.FC = () => {
       </main>
       
       <Footer />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
     </div>
-  );
-};
+  )}
 
 export default ContactPage;

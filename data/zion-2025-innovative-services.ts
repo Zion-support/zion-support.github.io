@@ -2,21 +2,9 @@ export interface ZionInnovativeService2025 {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
+  }
   realImplementation: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
-export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
+  technology: stringService Feature = [
   // AI-Powered Quantum Edge Computing;
     id: 'quantum-edge-ai-platform',
     name: 'Quantum Edge AI Platform',
@@ -24,33 +12,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     price: '$4,999',
     period: '/month',
     description: 'Revolutionary platform combining quantum computing with edge AI to deliver real-time intelligence processing at the network edge, enabling instant decision-making for autonomous systems.',
-    features: [,
-  realImplementatio,
-  n: boolean;
-  technolog,
-  y: string[];
-  integration,
-  s: string[];
-  useCase,
-  s: string[];
-  ro,
-  i: string;
-  competitor,
-  s: string[];
-  marketSiz,
-  e: string;
-  growthRat,
-  e: string;
-  launchDat,
-  e: string;
-  customer,
-  s: number;
-  ratin,
-  g: number;
-  review,
-  s: number}
-export const,
-  zionInnovativeServices2025: ZionInnovativeService2025[] = [,
+    features: Service Feature = [,
   // AI-Powered Quantum Edge Computing,
   id: 'quantum-edge-ai-platform',
     nam,
@@ -104,8 +66,7 @@ export const,
     launchDate: '2024-03-15'
     customers: 28;
     rating: 4.9;
-    reviews: 15;
-  },
+    reviews: 15},
   // AI-Powered Carbon Footprint Analytics;
     id: 'ai-carbon-intelligence-suite',
     name: 'AI Carbon Intelligence Suite',
@@ -216,8 +177,7 @@ export const,
     launchDate: '2024-02-20'
     customers: 156;
     rating: 4.8;
-    reviews: 89;
-  },
+    reviews: 89},
   // Autonomous AI DevOps Platform;
     id: 'autonomous-ai-devops-platform',
     name: 'Autonomous AI DevOps Platform',
@@ -328,8 +288,7 @@ export const,
     launchDate: '2024-01-10'
     customers: 342;
     rating: 4.9;
-    reviews: 234;
-  },
+    reviews: 234},
   // AI-Powered Financial Crime Detection;
     id: 'ai-financial-crime-detection',
     name: 'AI Financial Crime Detection',
@@ -440,8 +399,7 @@ export const,
     launchDate: '2023-11-15'
     customers: 189;
     rating: 4.8;
-    reviews: 156;
-  },
+    reviews: 156},
   // Quantum-Secure Communication Network;
     id: 'quantum-secure-communication',
     name: 'Quantum-Secure Communication Network',
@@ -552,8 +510,7 @@ export const,
     launchDate: '2024-04-01'
     customers: 45;
     rating: 4.9;
-    reviews: 23;
-  },
+    reviews: 23},
   // AI-Powered Healthcare Predictive Analytics;
     id: 'ai-healthcare-predictive-analytics',
     name: 'AI Healthcare Predictive Analytics',
@@ -664,8 +621,7 @@ export const,
     launchDate: '2023-09-20'
     customers: 267;
     rating: 4.8;
-    reviews: 189;
-  },
+    reviews: 189},
   // Edge AI IoT Platform;
     id: 'edge-ai-iot-platform',
     name: 'Edge AI IoT Platform',
@@ -776,8 +732,7 @@ export const,
     launchDate: '2023-12-10'
     customers: 423;
     rating: 4.7;
-    reviews: 298;
-  },
+    reviews: 298},
   // AI-Powered Content Generation Suite;
     id: 'ai-content-generation-suite',
     name: 'AI Content Generation Suite',
@@ -888,8 +843,7 @@ export const,
     launchDate: '2023-10-15'
     customers: 567;
     rating: 4.6;
-    reviews: 423;
-  },
+    reviews: 423},
   // Blockchain Supply Chain Transparency;
     id: 'blockchain-supply-chain-transparency',
     name: 'Blockchain Supply Chain Transparency',
@@ -1000,8 +954,7 @@ export const,
     launchDate: '2023-08-20'
     customers: 234;
     rating: 4.7;
-    reviews: 167;
-  },
+    reviews: 167},
   // AI-Powered Customer Experience Platform;
     id: 'ai-customer-experience-platform',
     name: 'AI Customer Experience Platform',
@@ -1170,8 +1123,7 @@ export interface ZionInnovativeService2025,
   e: string; perio,
   d: string; descriptio,
   n: string; feature,
-  s: string[]; benefit,
-  s: string[]; marketPric,
+  s: stringService Feature; marketPric,
   e: string; categor,
   y: 'AI' | 'IT' | 'SAAS' | 'Development' | 'Cloud' | 'Security' | 'Analytics' | 'Automation' | 'Fintech' | 'Healthcare' | 'IoT' | 'Blockchain' | 'Quantum' | 'Edge' | 'GreenTech' ico,
   n: string; isPopular?: boolean; isNew?: boolean; lin,
@@ -1180,20 +1132,9 @@ export interface ZionInnovativeService2025,
   e: string; emai,
   l: string; addres,
   s: string; websit,
-  e: string}; realImplementatio,
+  e: string} realImplementatio,
   n: boolean; technolog,
-  y: string[]; integration,
-  s: string[]; useCase,
-  s: string[]; ro,
-  i: string; competitor,
-  s: string[]; marketSiz,
-  e: string; growthRat,
-  e: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number} export const,
-  zionInnovativeServices2025: ZionInnovativeService2025[] = [ // AI-Powered Quantum Edge Computing ' i,
+  y: stringService Feature = [ // AI-Powered Quantum Edge Computing ' i,
   d: 'quantum-edge-ai-platform',' nam,
   e: 'Quantum Edge AI Platform',' taglin,
   e: 'Quantum computing meets edge AI for real-time intelligence',' pric,

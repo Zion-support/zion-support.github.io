@@ -2,24 +2,24 @@
  * Security Headers Configuration;
  * Comprehensive security headers for production applications;
  */;
-export interface SecurityHeadersConfig {;
+export interface SecurityHeadersConfig {
   contentSecurityPolicy?: string;
   strictTransportSecurity?: string;
   xFrameOptions?: string;
   xContentTypeOptions?: string;
-  referrerPolicy?: string;}
-  permissionsPolicy?: string;}
+  referrerPolicy?: string}
+  permissionsPolicy?: string}
 }
-export const defaultSecurityHeaders: SecurityHeadersConfig = {;
+export const defaultSecurityHeaders: SecurityHeadersConfig = {
   // Content Security Policy;
-  contentSecurityPolicy: [,;}
+  contentSecurityPolicy: [,}
 export interface SecurityHeadersConfig {}
   contentSecurityPolicy?: string;
   strictTransportSecurity?: string;
   xFrameOptions?: string;
   xContentTypeOptions?: string;
   referrerPolicy?: string;
-  permissionsPolicy?: string;}
+  permissionsPolicy?: string}
 }
 export const defaultSecurityHeaders: SecurityHeadersConfig = {}
   // Content Security Policy;
@@ -44,14 +44,14 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
   referrerPolicy: 'strict-origin-when-cross-origin';
   // Permissions Policy (formerly Feature Policy),;
   permissionsPolicy: [,;
-    'camera=()',;
-    'microphone=()',;
-    'geolocation=()',;
-    'payment=()',;
-    'usb=()',;
-    'interest-cohort=()',;
-    'accelerometer=()',;
-    'gyroscope=()',;
+    '[^']*',
+    '[^']*',
+    '[^']*',
+    '[^']*',
+    '[^']*',
+    '[^']*',
+    '[^']*',
+    '[^']*',
     'magnetometer=()'].join(', ')}
 }
 /**;
@@ -63,40 +63,40 @@ export function getSecurityHeaders();
 ): Record<string, string> {}
   const config = { ...defaultSecurityHeaders, ...customConfig }
   const headers: Record<string, string> = {}
-    'X-XSS-Protection': '1; mode=block',;
+    'X-XSS-Protection': '[^']*',
     'X-DNS-Prefetch-Control': 'on'}
   }
   if (config.contentSecurityPolicy) {}
-    headers['Content-Security-Policy'] = config.contentSecurityPolicy;}
+    headers['Content-Security-Policy'] = config.contentSecurityPolicy}
   }
   if (config.strictTransportSecurity) {}
-    headers['Strict-Transport-Security'] = config.strictTransportSecurity;}
+    headers['Strict-Transport-Security'] = config.strictTransportSecurity}
   }
   if (config.xFrameOptions) {}
-    headers['X-Frame-Options'] = config.xFrameOptions;}
+    headers['X-Frame-Options'] = config.xFrameOptions}
   }
   if (config.xContentTypeOptions) {}
-    headers['X-Content-Type-Options'] = config.xContentTypeOptions;}
+    headers['X-Content-Type-Options'] = config.xContentTypeOptions}
   }
   if (config.referrerPolicy) {}
-    headers['Referrer-Policy'] = config.referrerPolicy;}
+    headers['Referrer-Policy'] = config.referrerPolicy}
   }
   if (config.permissionsPolicy) {}
-    headers['Permissions-Policy'] = config.permissionsPolicy;}
+    headers['Permissions-Policy'] = config.permissionsPolicy}
 export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */}
 }
 export const,;
   defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
-};
+}
 /**;
  * Get security headers as key-value pairs;
  */;
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>);
 ): Record<string, string> {/* TODO: Fix JSX expression */}
-  const config = { ...defaultSecurityHeaders, ...customConfig };
+  const config = { ...defaultSecurityHeaders, ...customConfig }
   const,;
   headers: Record<string, string> = {/* TODO: Fix JSX expression */}
-  };
+  }
   if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}
   }
   if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */}
@@ -109,24 +109,22 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
   }
   if (config.permissionsPolicy) {/* TODO: Fix JSX expression */}
   }
-  return headers;
-}
+  return headers}
 /**;
  * Get security headers in Next.js format;
  */;
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);
-): Array<{ key: string; value: string }> {;
+): Array<{ key: string; value: string }> {
 export function getNextSecurityHeaders();
-  customConfig?: Partial<SecurityHeadersConfig>;}
+  customConfig?: Partial<SecurityHeadersConfig>}
 ): Array<{ key: string; value: string }> {}
   const headers = getSecurityHeaders(customConfig);
-  return Object.entries(headers).map(([key, value]) => ({}
+  return Object.entries(headers).map((Service Feature) => ({}
     key,;
     value}
   }));
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>);
 ): Array<{/* TODO: Fix JSX expression */}
   e: string }> {/* TODO: Fix JSX expression */}
-  }));
-}
+  }))}
 export default defaultSecurityHeaders;

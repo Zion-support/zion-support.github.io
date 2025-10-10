@@ -167,8 +167,7 @@ const AiCodeSecurityAuditorPage: React.FC = () => {
       </section>
       <Footer />
     </React.Fragment>
-  );
-};
+  )}
 export default AiCodeSecurityAuditorPage;
   </button>
   </button>

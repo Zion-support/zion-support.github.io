@@ -5,8 +5,8 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Search, BookOpen, Code, Zap, Brain, Shield, Database, Cloud, Settings, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink, Download, Play, Users, Award, Globe } from 'lucide-react';
 const DocsPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const Service Feature = useState('');
+  const Service Feature = useState('all');
   const docCategories = [
     { id: 'all', name: 'All Documentation', icon: BookOpen, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 8 },
@@ -162,9 +162,8 @@ const DocsPage: React.FC = () => {
       case 'Beginner': return 'text-green-400 bg-green-500/20';
       case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20';
       case 'Advanced': return 'text-red-400 bg-red-500/20';
-      default: return 'text-gray-400 bg-gray-500/20';
-    }
-  };
+      default: return 'text-gray-400 bg-gray-500/20'}
+  }
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -319,8 +318,7 @@ const DocsPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
+  )}
 export default DocsPage;
   </Link>
   </Link>

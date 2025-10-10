@@ -161,8 +161,7 @@ title: 'Real-Time Dashboards',
       </main>
       <Footer />
     </React.Fragment>
-  );
-};
+  )}
 export default AiAnalyticsPage;
   </button>
   </h2>

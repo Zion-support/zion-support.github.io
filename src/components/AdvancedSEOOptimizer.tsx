@@ -14,9 +14,9 @@ const,
       addres,
   s: {/* TODO: Fix JSX expression */}
       },
-      ...seoData.structuredData};
+      ...seoData.structuredData}
     if (seoData.author) {/* TODO: Fix JSX expression */}
-      };
+      }
     }
     if (seoData.publishedTime) {/* TODO: Fix JSX expression */}
     }
@@ -26,33 +26,7 @@ const,
     }
     if (seoData.tags && seoData.tags.length > 0) {/* TODO: Fix JSX expression */}
     }
-    return baseStructuredData;
-  }, [seoData, enableStructuredData]);
-  const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
-    }
-    return {/* TODO: Fix JSX expression */}
-      }))
-    };
-  }, [seoData, enableStructuredData]);
-  const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
-    }
-    return {/* TODO: Fix JSX expression */}
-        }
-      }))
-    };
-  }, [seoData, enableStructuredData]);
-  // Generate Open Graph data;
-  const generateOpenGraphData = useCallback(() => {/* TODO: Fix JSX expression */}
-    if (!enableOpenGraph) return {};
-    return {/* TODO: Fix JSX expression */}
-    };
-  }, [seoData, enableOpenGraph]);
-  // Generate Twitter Card data;
-  const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
-    if (!enableTwitterCards) return {};
-    return {/* TODO: Fix JSX expression */}
-    };
-  }, [seoData, enableTwitterCards]);
+    return baseStructuredData}, Service Feature);
   // Generate meta tags;
   const generateMetaTags = useCallback(() => {/* TODO: Fix JSX expression */}
   t: seoData.description },
@@ -70,21 +44,7 @@ const,
   t: '#3B82F6' },
       {/* TODO: Fix JSX expression */}
   t: '/browserconfig.xml' }];
-    return metaTags;
-  }, [seoData]);
-  const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
-    }
-    return {/* TODO: Fix JSX expression */}
-      }))
-    };
-  }, [seoData.breadcrumbs]);
-  const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
-    }
-    return {/* TODO: Fix JSX expression */}
-        }
-      }))
-    };
-  }, [seoData.faqs]);
+    return metaTags}, Service Feature);
   const structuredData = generateStructuredData();
   const openGraphData = generateOpenGraphData();
   const twitterCardData = generateTwitterCardData();
@@ -93,12 +53,11 @@ const,
       }
       metaDescription.setAttribute('content', seoData.description);
       // Update canonical URL;
-      let canonicalLink = document.querySelector('link[rel="canonical"]');
+      let canonicalLink = document.querySelector('linkService Feature');
       if (!canonicalLink) {/* TODO: Fix JSX expression */}
       }
-      canonicalLink.setAttribute('href', seoData.canonicalUrl);
-    }
-  }, [seoData]);
+      canonicalLink.setAttribute('href', seoData.canonicalUrl)}
+  }, Service Feature);
   const addStructuredData = (dat)
   a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
     }
@@ -106,17 +65,10 @@ const,
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
-    structuredDataRef.current = script;
-  };
+    structuredDataRef.current = script}
   useEffect(() => {/* TODO: Fix JSX expression */}
     }
-  }, [structuredData]);
-  useEffect(() => {/* TODO: Fix JSX expression */}
-          });
-        }
-      }
-    }
-  }, []);
+  }, Service Feature);
   return (<Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{seoData.title}</title>
@@ -161,8 +113,6 @@ const,
       <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
       <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
     </Helmet>
-  );
-};
-export default AdvancedSEOOptimizer;
-}"
+  )}
+export default AdvancedSEOOptimizer}"
   </AdvancedSEOOptimizerProps>

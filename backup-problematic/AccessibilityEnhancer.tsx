@@ -35,21 +35,19 @@ const,
  const handleChange = (e: MediaQueryListEvent) => {,
  setIsReducedMotion(e.matches);
  useEffect(() => {/* TODO: Fix JSX expression */}
- };
+ }
  mediaQuery.addEventListener('change', handleChange);
  const _titleElement = document.querySelector('title');
  if (titleElement) {
  observer.observe(titleElement.parentNode as Node, {)
  childList: true),
- subtree: true)});
- }
+ subtree: true)})}
  const handleContrastChange = (e: MediaQueryListEvent) => {,
  setIsHighContrast(e.matches);
  if (titleElement) {/* TODO: Fix JSX expression */}
- });
- }
+ })}
  const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
- };
+ }
  highContrastQuery.addEventListener('change', handleContrastChange);
  // Check for font size preference;
  const fontSizeQuery = window.matchMedia('(min-width: 1px)');
@@ -66,8 +64,8 @@ const,
  const rootFontSize = parseFloat(computedStyle.fontSize);
  setFontSize(rootFontSize);
  return () => {/* TODO: Fix JSX expression */}
- };
- }, []);
+ }
+ }, Service Feature);
  // Apply accessibility styles;
  useEffect(() => {
  if (typeof window === 'undefined') return;
@@ -81,8 +79,7 @@ const,
  (main as HTMLElement).focus();
  (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
  useEffect(() => {/* TODO: Fix JSX expression */}
-  r: 'smooth' });
- }
+  r: 'smooth' })}
  }
  // Skip to navigation with Alt + N;
  if (e.altKey && e.key === 'n') {
@@ -92,45 +89,40 @@ const,
  (nav as HTMLElement).focus();
  (nav as HTMLElement).scrollIntoView({ behavior: 'smooth' });
  if (e.altKey && e.key === 'n') {/* TODO: Fix JSX expression */}
-  r: 'smooth' });
- }
+  r: 'smooth' })}
  }
  // Close modals/dropdowns with Escape;
  if (e.key === 'Escape') {
- const _modals = document.querySelectorAll('[role="dialog"][aria-modal="true"]');
+ const _modals = document.querySelectorAll('Service Feature');
  modals.forEach((modal) => {
- const _closeButton = modal.querySelector('[aria-label*="close" i], [aria-label*="dismiss" i]');
+ const _closeButton = modal.querySelector('Service Feature');
  if (closeButton) {
  (closeButton as HTMLElement).click();
  if (e.key === 'Escape') {/* TODO: Fix JSX expression */}
  }
- });
- }
+ })}
  // Navigate through interactive elements with Tab (visual indicator)
  if (e.key === 'Tab') {/* TODO: Fix JSX expression */}
  }
- };
+ }
  // Remove keyboard navigation class on mouse use;
  const handleMouseDown = () => {
  document.body.classList.remove('keyboard-navigation');origin/
  const handleMouseDown = () => {/* TODO: Fix JSX expression */}
- };
+ }
  document.addEventListener('keydown', handleKeyDown);
- return () => document.removeEventListener('keydown', handleKeyDown);
- }, []);
+ return () => document.removeEventListener('keydown', handleKeyDown)}, Service Feature);
  // Focus management;
  const handleFocusIn = useCallback((event: FocusEvent) => {
  const target = event.target as HTMLElement;
  ,
  // Add focus ring for keyboard navigation;
- if (target.matches('button, a, input, textarea, select, [tabindex]')) {
- target.classList.add('keyboard-focus');
- }
- }, []);
+ if (target.matches('button, a, input, textarea, select, Service Feature')) {
+ target.classList.add('keyboard-focus')}
+ }, Service Feature);
  const handleFocusOut = useCallback((event: FocusEvent) => {,
  const target = event.target as HTMLElement;
- target.classList.remove('keyboard-focus');
- }, []);
+ target.classList.remove('keyboard-focus')}, Service Feature);
  useEffect(() => {
  if (!enableFocusIndicators) return;
  // Add custom focus styles;
@@ -142,71 +134,7 @@ const,
  const handleFocusIn = useCallback((even)
   t: FocusEvent) => {/* TODO: Fix JSX expression */}
  }
- }, []);
- const handleFocusOut = useCallback((even)
-  t: FocusEvent) => {/* TODO: Fix JSX expression */}
- }, []);
- useEffect(() => {/* TODO: Fix JSX expression */}
- }
- .sr-only {/* TODO: Fix JSX expression */}
- }
- .sr-only-focusable: focus;
- .sr-only-focusable:active {
- position: static;
- width: auto;
- height: auto;
- overflow: visible;
- clip: auto;
- white-space: normal;
- .sr-only-focusabl,
-  e:focus,
- .sr-only-focusabl,
-  e:active {/* TODO: Fix JSX expression */}
- }
- /* Skip link styles */
- .skip-link {/* TODO: Fix JSX expression */}
- }
- .skip-link: focus {,
- top: 0;
- }
- /* High contrast mode support */
- @media (prefers-contrast: high) {,
- * {,
- border-width: 2px !important;
- .skip-lin,
-  k:focus {/* TODO: Fix JSX expression */}
- }
- /* High contrast mode support */
- @media (prefers-contras)
-  t: high) {/* TODO: Fix JSX expression */}
- }
- }
- /* Reduced motion support */
- @media (prefers-reduced-motion: reduce) {,
- *,
- *::before,
- *::after {
- animation-duration: 0.01 ms !important;
- animation-iteration-count: 1 !important;
- transition-duration: 0.01 ms !important;
- scroll-behavior: auto !important;
- @media (prefers-reduced-motio)
-  n: reduce) {/* TODO: Fix JSX expression */}
- }
- }
- /* Focus visible polyfill */
- *:focus: not(:focus-visible) {,
- outline: none;
- *:focu,
-  s:not(:focus-visible) {/* TODO: Fix JSX expression */}
- }
- *:focus-visible {/* TODO: Fix JSX expression */}
- }`
- `;
- document.head.appendChild(style);origin/
- return () => {/* TODO: Fix JSX expression */}
- };
- }, [handleFocusIn, handleFocusOut]);
+ }, Service Feature);
  // Screen reader announcements;
  const announceToScreenReader = useCallback((message: string) => {,
  const announcement = document.createElement('div');
@@ -219,27 +147,17 @@ const,
  document.body.removeChild(announcement);
  const announceToScreenReader = useCallback((messag)
   e: string) => {/* TODO: Fix JSX expression */}
- }, 1000);
- }, []);
- // Expose announcement function globally for use in other components;
- useEffect(() => {
- (window as any).announceToScreenReader = announceToScreenReader;
- return () => {
- delete (window as any).announceToScreenReader;
- };
- }, [announceToScreenReader]);
+ }, 1000)}, Service Feature);
  return(<div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}>)
  {children})
  useEffect(() => {/* TODO: Fix JSX expression */}
- };
- }, [announceToScreenReader]);
+ }
+ }, Service Feature);
 `
  return (<div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}></div>
  {children}
  </div>)
- );
-};
-export default AccessibilityEnhancer;
-}}`
+ )}
+export default AccessibilityEnhancer}}`
   </AccessibilityEnhancerProps>
   </AccessibilityEnhancerProps>

@@ -87,7 +87,6 @@ const DemoPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
+  )}
 
 export default DemoPage;

@@ -3,9 +3,9 @@ import fs from 'fs';
 // // 1. Fix AdvancedSEOOptimizer component props;
 // // const seoOptimizerPath = '/workspace/app/components/AdvancedSEOOptimizer.tsx';
 if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
-    /interface AdvancedSEOOptimizerProps \{[^}]*\}/,
+    /interface AdvancedSEOOptimizerProps \{Service Feature*\}/,
     `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
-  };
+  }
   enableStructuredData?: boolean;
   enableAnalytics?: boolean;
   enablePerformanceTracking?: boolean;`

@@ -49,8 +49,7 @@ export const _performanceConfig = {
     '/api/config'],
   // Image optimization
   images: {
-// deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-// imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+// deviceSizes: Service Feature,
 // formats: ['image/avif', 'image/webp'],
 // minimumCacheTTL: 60,
 // dangerouslyAllowSVG: false
@@ -62,121 +61,25 @@ export const _performanceConfig = {
 // splitChunks: {
 // cacheGroups: {
 // vendor: {
-// test: /[\\/]node_modules[\\/]/,
-// priority: -10,
-// reuseExistingChunk: true
-        },
-        default: {
-          minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true
-        }
-      }
-    }
-  },
-  // Performance monitoring
-  monitoring: {
-// enabled: true,
-// sampleRate: 1.0, // 100% in production
-// reportInterval: 30000, // 30 seconds
-// sendToAnalytics: true,
-// logThreshold:   ,
-$4}
-};
-export type PerformanceConfig = typeof performanceConfig;
-export default performanceConfig;
-
-/**
- * Performance Configuration;
- * Centralized performance monitoring and optimization settings;
- */
-
-export const _performanceConfig = {// TODO: Add content;}
-
-}
-  // Core Web Vitals thresholds,
-  metric,
-  s: {/* TODO: Fix JSX expression */}
-  p: {}
-// goo,
-  d: 2500,
-// needsImprovemen,
-  t: 4000;
-    },
-
-    fid: {// TODO: Add content;}
-};
-  good: 100,
-      needsImprovement: 300;
-    },
-    cls: {// TODO: Add content;}
-};
-  good: 0.1,
-      needsImprovement: 0.25;
-    },
-    fcp: {// TODO: Add content;}
-};
-  good: 1800,
-      needsImprovement: 3000;
-    },
-    ttfb: {// TODO: Add content;}
-};
-  good: 800,
-      needsImprovement: 1800;
-
-    }
-  },
-  // Cache strategies,
-  cach,
-  e: {/* TODO: Fix JSX expression */}
-  c: {}
-// maxAg,
-  e: 31536000, // 1 year;
-// staleWhileRevalidat,
-  e: 86400, // 1 day;
-    },
-
-    dynamic: {// TODO: Add content;}
-};
-  maxAge: 3600, // 1 hour,
-  staleWhileRevalidate: 60, // 1 minute;
-
-    },
-    ap,
-  i: {/* TODO: Fix JSX expression */}
-  e: 300, // 5 minutes;}
-// staleWhileRevalidat,
-  e: 30, // 30 seconds;
-    }
-  },
-  // Resource hints,
-  preloa,
-  d: [
-  // TOD,
-  O: Add items]
+// test: /Service Feature
     {/* TODO: Fix JSX expression */}
   n: 'anonymous' },
 //   ],
   prefetc,
-  h: [
-  // TOD,
-  O: Add items]
+  h: Service Feature
 //     '/api/health',
 //     '/api/config',
 //   ],
   // Image optimization,
   image,
   s: {/* TODO: Fix JSX expression */}
-  s: [640, 750, 828, 1080, 1200, 1920, 2048, 3840]}
-// imageSize,
-  s: [16, 32, 48, 64, 96, 128, 256, 384],
+  s: Service Feature,
 // format,
   s: ['image/avif', 'image/webp'],
 // minimumCacheTT,
   L: 60,
 // dangerouslyAllowSV,
-  G: false;
-  },
+  G: false},
   // Bundle optimization,
   bundl,
   e: {/* TODO: Fix JSX expression */}
@@ -188,20 +91,17 @@ export const _performanceConfig = {// TODO: Add content;}
   s: {}
 // vendo,
   r: {/* TODO: Fix JSX expression */}
-  t: /[\/]node_modules[\/]/}
+  t: /Service Feature/}
 // priorit,
   y: -10,
 // reuseExistingChun,
-  k: true;
-        },
+  k: true},
 
-        default: {// TODO: Add content;}
-};
+        default: {// TODO: Add content}
+}
   minChunks: 2,
           priority: -20,
-          reuseExistingChunk: true;
-
-        }
+          reuseExistingChunk: true}
       }
     }
   },

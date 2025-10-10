@@ -79,8 +79,7 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
                   <Link, className="w-4 h-4" /></Link>
                 </div>
               </Li, n, k>)
-            );
-          })}
+            )})}
         </div>
         {/* Stats, Ba, r */}
         <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, b, g-sla, t, e-8, 0, 0/30, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, rounde, d-x, l, p-8"></div>
@@ -149,7 +148,6 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-};
+  )}
 export default October2025LatestContentBanner;
 "`

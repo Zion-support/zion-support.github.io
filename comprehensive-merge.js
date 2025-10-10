@@ -6,15 +6,15 @@ import fs from 'fs';
 function safeGitCommand(command, description) {
   try {
     //     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
-    //     return { success: true, result };
+    //     return { success: true, result }
   } catch (error) {
-    //     return { success: false, error: error.message };
+    //     return { success: false, error: error.message }
 function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
   o: 'pipe' });
     //     return {/* TODO: Fix JSX expression */}
-  s: true, result };
+  s: true, result }
   } catch (error) {/* TODO: Fix JSX expression */}
-  r: error.message };
+  r: error.message }
   }
 }
 
@@ -59,8 +59,7 @@ for (const branch of prBranches) {/* TODO: Fix JSX expression */}
 
   if (mergeResult.success) {/* TODO: Fix JSX expression */}
     //     } else {/* TODO: Fix JSX expression */}`
-    safeGitCommand('git merge --abort', `Abort merge for ${branch}`);
-  }
+    safeGitCommand('git merge --abort', `Abort merge for ${branch}`)}
 }
 
 // // // //Push changes if any were merged;
@@ -80,7 +79,7 @@ const summary = {
   totalProcessed: prBranches.length;
   status: mergedCount > 0 ? 'success' : 'no-changes',
 const summary = {/* TODO: Fix JSX expression */}
-};
+}
 
 fs.writeFileSync('merge-summary.json', JSON.stringify(summary, null, 2));
 // "`

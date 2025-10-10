@@ -263,8 +263,7 @@ const BlockchainPage: React.FC = () => {
         </section>
       </div>
     </div>
-  );
-};
+  )}
 export default BlockchainPage;
   </a>
   </a>

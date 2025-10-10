@@ -522,7 +522,6 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
         </div>
       </div>
     </di, v>
-  );
-};
+  )}
 export default October2025FraudDetectionBanner;
 "

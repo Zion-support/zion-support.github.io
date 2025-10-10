@@ -7,10 +7,8 @@ exports.handler = async function (event, context) {try {
         message: 'broken_image_scanner_runner function executed successfully'),
         timestamp: timestamp),
         function: 'broken_image_scanner_runner'}
-      });
-    };
-//   } catch (error) {// console.error('❌ broken_image_scanner_runner function failed: ') error;
-      }
+      })}
+//   } catch (error) {// console.error('❌ broken_image_scanner_runner function failed: ') error}
     return {
       statusCode: 500;
       body: JSON.stringify({),
@@ -21,15 +19,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const timestamp = new Date().toISOString()}
     return {/* TODO: Fix JSX expression */}
   n: 'broken_image_scanner_runner'}
-      });
-    };
+      })}
 //   } catch (error) {/* TODO: Fix JSX expression */}
       }
     return {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
-      });
-    };
+      })}
   }
-};
+}
         timestam,
-  p: new Date().toISOString() }) }; } };'
+  p: new Date().toISOString() }) }} }'

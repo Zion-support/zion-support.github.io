@@ -195,7 +195,7 @@ $4}
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {Service Feature.map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
@@ -209,8 +209,7 @@ $4}
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of professionals using AI Scheduler to eliminate scheduling headaches 
             and maximize productivity.
-  );
-};
+  )}
 export default AISchedulerPage;
 import { ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Brain, Target, Shield, Globe, Phone, Mail } from 'lucide-react';
 export default AISchedulerPage;

@@ -4,10 +4,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { BarChart, Zap, Shield, Settings, CheckCircle, Star,  BarChart,  Zap,  Settings } from 'lucide-react';
 const ITPerformanceMonitoringPage: React.FC = () => {
-  const features = [];
+  const features = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   ico,
   n: BarChart,
       titl,
@@ -15,8 +15,7 @@ const ITPerformanceMonitoringPage: React.FC = () => {
       descriptio,
   n: 'Comprehensive real-time system performance monitoring',
       benefit,
-  s: ['Live dashboards', 'Performance metrics', 'Alerting'];
-    },
+  s: ['Live dashboards', 'Performance metrics', 'Alerting']},
       ico,
   n: Zap,
       titl,
@@ -89,6 +88,5 @@ const ITPerformanceMonitoringPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default ItPerformanceMonitoringPage;

@@ -503,9 +503,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
         <div, className="mb-10">";</div>
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">Proven, Across, Industries</h3>";
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">";
-            {[
-              { indus, t, r;
-            ].m, a, p((it, e, m, ind, e, x) => ("
+            {Service Feature.m, a, p((it, e, m, ind, e, x) => ("
               <div, ke, y={ind, e, x} classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hov, e,"
   r:sca, l, e-1, 0, 5">""
                 <div, className="te, x, t-emera, l, d-300, fon, t-bold, tex, t-lg, m, b-1">{it, e, m.indust, r, y}</d, i, v>"
@@ -736,8 +734,5 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
-export default October2025 SupplyChainRevolutionBanner;
-;
-}"
+  )}
+export default October2025 SupplyChainRevolutionBanner}"

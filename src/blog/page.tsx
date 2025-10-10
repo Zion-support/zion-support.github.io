@@ -13,14 +13,11 @@ interface BlogPost {
   featured: boolean;
   stats?: {
     views: number;
-    engagement: number;
-  };
+    engagement: number}
 }
 export default function BlogPage() {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const blogPosts: BlogPost[] = useMemo(() => [
+  const Service Feature = useState<string>('all');
+  const blogPosts: BlogPostService Feature = useMemo(() => [
     {
       id: 'ai-enterprise-transformation-2025',
       title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
@@ -117,14 +114,7 @@ export default function BlogPage() {
       featured: false,
       stats: { views: 11200, engagement: 93 }
     }
-  ], []);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setPosts(blogPosts);
-      setLoading(false);
-    }, 500);
-    return () => clearTimeout(timer);
-  }, [blogPosts]);
+  ], Service Feature);
   const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
   const filteredPosts = selectedCategory === 'all' 
     ? posts 
@@ -139,7 +129,7 @@ export default function BlogPage() {
             <div className="h-6 bg-gray-200 rounded w-64 mx-auto animate-pulse"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map(item => (
+            {Service Feature.map(item => (
               <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse">
                 <div className="h-48 bg-gray-200 rounded-lg mb-4"></div>
                 <div className="h-6 bg-gray-200 rounded mb-2"></div>
@@ -150,8 +140,7 @@ export default function BlogPage() {
           </div>
         </div>
       </div>
-    );
-  }
+    )}
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
@@ -227,8 +216,7 @@ export default function BlogPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}
   </Link>
   </h3>
   </ContentPreviewCard>

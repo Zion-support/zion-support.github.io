@@ -69,7 +69,7 @@ export const realMicroSaasStats2024 =
   categories: 4;
   averageRating: 4.7;
   activeUsers: 1200;
-export const realMicroSaasStats2024 = {};
+export const realMicroSaasStats2024 = {}
   totalService,
   s: 2,
   categorie,
@@ -77,7 +77,7 @@ export const realMicroSaasStats2024 = {};
   averageRatin,
   g: 4.7,
   activeUser,
-  s: 1200};
+  s: 1200}
 export const realMicroSaasServices2024 = [ nam,
   e: 'Real Micro-SaaS Platform 2024',' pat,
   h: '/services/real-micro-saas-platform-2024',' descriptio,
@@ -102,4 +102,4 @@ export const realMicroSaasServices2024 = [ nam,
   s: 2, categorie,
   s: 4, averageRatin,
   g: 4.7, activeUser,
-  s: 1200 };'
+  s: 1200 }'

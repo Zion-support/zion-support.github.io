@@ -1,8 +1,7 @@
 import React from 'react';
 'use client';
 const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({,
- children;
-}) => {
+ children}) => {
  // Preload critical resources;
  useEffect(() => {
  const preloadCriticalResources = () => {
@@ -17,10 +16,10 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({,
  // Performance monitoring;
  const measurePerformance = () => {
  if ('performance' in window) {
- const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+ const navigation = performance.getEntriesByType('navigation')Service Feature as PerformanceNavigationTiming;
  const paintEntries = performance.getEntriesByType('paint');
  const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
- const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
+ const lcp = performance.getEntriesByType('largest-contentful-paint')Service Feature;
  const metrics: PerformanceMetrics = {
  loadTime: navigation.loadEventEnd - navigation.loadEventStart;
  firstContentfulPaint: fcp ? fcp.startTime : 0;
@@ -30,21 +29,18 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({,
 const,
   PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
- };
+ }
  setMetrics(metrics);
  // Check if performance is optimized;
  const isGoodPerformance = 
  metrics.firstContentfulPaint < 1500 && 
  metrics.largestContentfulPaint < 2500;
- setIsOptimized(isGoodPerformance);
+ setIsOptimized(isGoodPerformance)}
  }
- };
  // Measure after page load;
  if (document.readyState === 'complete') {
- measurePerformance();
- } else {
- window.addEventListener('load', measurePerformance);
- }
+ measurePerformance()} else {
+ window.addEventListener('load', measurePerformance)}
  // Preload critical resources;
  const preloadCriticalResources = () => {
  const criticalImages = [
@@ -63,16 +59,14 @@ const,
  }
  // Preload critical resources;
  const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
- });
- };
+ })}
  // Optimize images;
  const optimizeImages = () => {
  const images = document.querySelectorAll('img');
  images.forEach(img => {)
  // Add loading="lazy" to non-critical images;)
  if (!img.hasAttribute('loading')) {
- img.setAttribute('loading', 'lazy');
- }
+ img.setAttribute('loading', 'lazy')}
  // Add decoding="async" for better performance;
  if (!img.hasAttribute('decoding')) {
  img.setAttribute('decoding', 'async');
@@ -81,8 +75,7 @@ const,
  // Add decoding="async" for better performance;
  if (!img.hasAttribute('decoding')) {/* TODO: Fix JSX expression */}
  }
- });
- };
+ })}
  // Intersection Observer for animations;
  const setupIntersectionObserver = () => {
  const observer = new IntersectionObserver(
@@ -92,14 +85,12 @@ const,
  entry.target.classList.add('animate-fade-in');
  const setupIntersectionObserver = () => {/* TODO: Fix JSX expression */}
  }
- });
- },
+ })},
  {/* TODO: Fix JSX expression */}
   d: 0.1 }
  );
  const elements = document.querySelectorAll('.animate-on-scroll');
- elements.forEach(el => observer.observe(el));
- };
+ elements.forEach(el => observer.observe(el))}
  // Initialize optimizations;
  preloadCriticalResources();
  optimizeImages();
@@ -108,8 +99,7 @@ const,
  return () => {
  // Cleanup if needed;
  return () => {/* TODO: Fix JSX expression */}
- };
- }, []);
-}}}"
+ }
+ }, Service Feature)}}}"
   </PerformanceOptimizerProps>
   </PerformanceOptimizerProps>

@@ -11,8 +11,7 @@ import fs from 'fs';
   execSync('git reset --hard HEAD', { stdio: 'inherit' });
   execSync('git pull origin main', { stdio: 'inherit' });
 //   } catch (error) {
-//   process.exit(1);
-}
+//   process.exit(1)}
 
 //Step 2: Get all remote branches that could be PRs;
 // const branches = execSync('git branch -r', { encoding: 'utf8' })
@@ -60,7 +59,7 @@ const mergeStrategy = {
   skip: branches.filter(branch =>)
       branch.includes('disabled') ||
       branch.includes('backup') ||,
-      branch.includes('old'))};
+      branch.includes('old'))}
 
 // // // // // //Step 4: Enhanced conflict resolution function;
 function resolveConflictsAndMerge(branchName) {,
@@ -73,7 +72,7 @@ function resolveConflictsAndMerge(branchName) {,
       { stdio: 'inherit' }
     );
 
-//     return { success: true, method: 'direct' };
+//     return { success: true, method: 'direct' }
   } catch (error) {
 //     //Check for merge conflicts;
     try {
@@ -89,7 +88,7 @@ function resolveConflictsAndMerge(branchName) {,
 // //Step,
   3: Create merge strategy with conflict resolution;
 const mergeStrategy = {/* TODO: Fix JSX expression */}
-};
+}
 
 // // // // // //Step,
   4: Enhanced conflict resolution function;
@@ -104,7 +103,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
     );
 
 //     return {/* TODO: Fix JSX expression */}
-  d: 'direct' };
+  d: 'direct' }
   } catch (error) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
           execSync(")`
@@ -113,7 +112,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
   o: 'inherit' }
           );
 //           return {/* TODO: Fix JSX expression */}
-  d: 'theirs' };
+  d: 'theirs' }
         } catch (theirsError) {/* TODO: Fix JSX expression */}
 //           }
 
@@ -131,7 +130,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
   o: 'inherit' }
           );
 //           return {/* TODO: Fix JSX expression */}
-  d: 'ours' };
+  d: 'ours' }
         } catch (oursError) {/* TODO: Fix JSX expression */}
 //           }
 
@@ -183,7 +182,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
   o: 'inherit' })
           );
 //           return {/* TODO: Fix JSX expression */}
-  d: 'manual' };
+  d: 'manual' }
         } catch (manualError) {/* TODO: Fix JSX expression */}
 //           }
       }
@@ -198,20 +197,16 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
     try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
 //       } catch (abortError) {/* TODO: Fix JSX expression */}
-  o: 'inherit' });
-    }
+  o: 'inherit' })}
 
     return {/* TODO: Fix JSX expression */}
-  d: 'failed' };
+  d: 'failed' }
   }
 }
 
 //Step 5: Execute merge strategy;
 // const results = {
-  priority: []
-  features: []
-  content: []
-  failed: []
+  priority: Service Feature
   summary: {
     total: 0;
     successful: 0;
@@ -220,7 +215,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 //Step,
   5: Execute merge strategy;
 // const results = {/* TODO: Fix JSX expression */}
-  d: 0 }}};
+  d: 0 }}}
 
 //Merge priority branches first;
 // for (const branch of mergeStrategy.priority) {
@@ -262,8 +257,7 @@ results.branchCounts = {
   priority: mergeStrategy.priority.length;
   features: mergeStrategy.features.length;
   content: mergeStrategy.content.length;
-  skipped: mergeStrategy.skip.length;
-};
+  skipped: mergeStrategy.skip.length}
 
 fs.writeFileSync('comprehensive-merge-report.json')
   JSON.stringify(results, null, 2)
@@ -271,8 +265,7 @@ fs.writeFileSync('comprehensive-merge-report.json')
 
 //Step 7: Display summary;
 // // // // // // // // // // // if (results.failed.length > 0) {,
-//   //   results.failed.forEach(branch => // console.log(`  - ${branch}`));
-}
+//   //   results.failed.forEach(branch => // console.log(`  - ${branch}`))}
 
 // Step 8: Push changes;
 // try {,
@@ -282,7 +275,7 @@ fs.writeFileSync('comprehensive-merge-report.json')
   6: Generate comprehensive report;
 // results.timestamp = new Date().toISOString();
 results.branchCounts = {/* TODO: Fix JSX expression */}
-};
+}
 
 fs.writeFileSync('comprehensive-merge-report.json')
   JSON.stringify(results, null, 2)
@@ -291,8 +284,7 @@ fs.writeFileSync('comprehensive-merge-report.json')
 //Step,
   7: Display summary;
 // // // // // // // // // // // if (results.failed.length > 0) {/* TODO: Fix JSX expression */}`
-//   //   results.failed.forEach(branch => // console.log(`  - ${branch}`));
-}
+//   //   results.failed.forEach(branch => // console.log(`  - ${branch}`))}
 
 // Step,
   8: Push changes;

@@ -2,20 +2,19 @@ import React from 'react';
 'use client';
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
 export interface ToastProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   messag,
   e: string;
   type?: ToastType;
   duration?: number;
   onClose?: () => void;,
     sho,
-  w: boolean;
-}
+  w: boolean}
 const,
   Toast: React.FC;
           <ToastProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
 //   message,
   type = 'success',
@@ -23,27 +22,15 @@ const,
 //   onClose,
 //   show;)
 }) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
-  const [isVisible, setIsVisible] = useState(show);
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    setIsVisible(show);
-    if (show && duration > 0) {setIsVisible(false);}
-        if (onClose) {/* TODO: Fix JSX expression */}
-        }
-      }, duration);
-      return () => clearTimeout(timer);
-    }
-    return undefined;
-  }, [show, duration, onClose]);
+  const Service Feature);
   if (!isVisible) return null;
   const getToastStyles = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     switch (type) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
       case 'success':
         return 'bg-green-600 text-white';
@@ -55,14 +42,13 @@ const,
         return 'bg-blue-600 text-white';
       defaul,
   t:
-        return 'bg-gray-800 text-white';
-    }
-  };
+        return 'bg-gray-800 text-white'}
+  }
   const getIcon = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     switch (type) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
       case 'success':
         return '';
@@ -74,9 +60,8 @@ const,
         return '';
       defaul,
   t:
-        return '';
-    }
-  };
+        return ''}
+  }
   return (<div>Coming Soon</div>)
   )
           <div></div>
@@ -90,11 +75,9 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
       <button></button>
         onClick={() => {}
   // TOD,
-  O: Add content;
-}
+  O: Add content}
           setIsVisible(false);
-          if (onClose) onClose();
-        }}"
+          if (onClose) onClose()}}"
         className="ml-4,"
   hover:opacity-80 transition-opacity""
         aria-label="Close notification"
@@ -102,7 +85,6 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
 //
           </button>
     </div>
-  );
-};
+  )}
 export default Toast;"`
   </ToastProps>

@@ -29,7 +29,6 @@ export default function AIFintechPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}
   </a>
   </h1>

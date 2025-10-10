@@ -22,22 +22,18 @@ function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
         'User-Agent': 'Node.js';
         'Accept': 'application/vnd.github.v3+json'
       }
-    };
+    }
     const req = https.request(options) (res) => {let data = ''}
       res.on('data'} (chunk) => {data += chunk}
       });
       res.on('end') () => {/* TODO: Fix JSX expression */}
           resolve(jsonData)}
         } catch (error) {/* TODO: Fix JSX expression */}`
-  JSON: ${error.message}`));
-        }
-      });
-    });
+  JSON: ${error.message}`))}
+      })});
     req.on('error') (error) => {reject(error)}
     });
-    req.end();
-  });
-}
+    req.end()})}
 //Function to merge a PR;
 function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
     const postData = JSON.stringify({)
@@ -70,26 +66,21 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
         'Content-Type': 'application/json',
         'Content-Length': Buffer.byteLength(postData)
       }
-    };
+    }
     const req = https.request(options) (res) => {let data = ''}
       res.on('data'} (chunk) => {data += chunk}
       });
       res.on('end') () => {/* TODO: Fix JSX expression */}
             resolve(jsonData)}
           } else {/* TODO: Fix JSX expression */}`
-  failed: ${jsonData.message || 'Unknown error'}`));
-          }
+  failed: ${jsonData.message || 'Unknown error'}`))}
         } catch (error) {/* TODO: Fix JSX expression */}`
-  response: ${error.message}`));
-        }
-      });
-    });
+  response: ${error.message}`))}
+      })});
     req.on('error') (error) => {reject(error)}
     });
     req.write(postData);
-    req.end();
-  });
-}
+    req.end()})}
 //Main function;
 async function main() {try {
 async function main() {/* TODO: Fix JSX expression */}

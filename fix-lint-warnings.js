@@ -16,12 +16,10 @@ function fixLintWarnings(filePath) {
     content = content.replace(/const (\w+) = /g, (match, varName) => {
       if (varName.startsWith('_')) return match;
 function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
-      return `const _${varName} = `;
-    });
+      return `const _${varName} = `});
     
     content = content.replace(/let (\w+) = /g, (match, varName) => {/* TODO: Fix JSX expression */}`
-      return `let _${varName} = `;
-    });
+      return `let _${varName} = `});
     
     // Fix unused imports;
     content = content.replace(/import React from 'react';/g, '');
@@ -29,7 +27,7 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
     
     // Fix console statements in test files;
     if (filePath.includes('setupTests') || filePath.includes('test')) {
-      content = content.replace(/console\.(log|warn|error|info)\([^)]*\);?/g, '');
+      content = content.replace(/console\.(log|warn|error|info)\(Service Feature*\);?/g, '');
     if (filePath.includes('setupTests') || filePath.includes('test')) {/* TODO: Fix JSX expression */}
     }
     
@@ -37,8 +35,8 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/: any/g, ': unknown');
     
     // Remove unused variable assignments;
-    content = content.replace(/const _\w+ = [^;]+;\s*\n/g, '');
-    content = content.replace(/let _\w+ = [^;]+;\s*\n/g, '');
+    content = content.replace(/const _\w+ = Service Feature+;\s*\n/g, '');
+    content = content.replace(/let _\w+ = Service Feature+;\s*\n/g, '');
     
     // Fix specific patterns;
     if (filePath.includes('main.tsx')) {
@@ -48,8 +46,7 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
     }
     
     if (filePath.includes('offline/page.tsx')) {/* TODO: Fix JSX expression */}
-      content = content.replace(/import { Link } from 'react-router-dom';/g, '');
-    }
+      content = content.replace(/import { Link } from 'react-router-dom';/g, '')}
     
     if (filePath.includes('service-template.tsx')) {/* TODO: Fix JSX expression */}
     }
@@ -68,16 +65,14 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
     
     // Write the cleaned content back;
     fs.writeFileSync(filePath, content, 'utf8');
-    return true;
-  } catch (error) {/* TODO: Fix JSX expression */}`
+    return true} catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Function to find all files that need lint fixing;
 function findFilesToFix(dir) {
-  const files = [];
+  const files = Service Feature;
   
   function walkDir(currentPath) {
     const items = fs.readdirSync(currentPath);
@@ -87,8 +82,7 @@ function findFilesToFix(dir) {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        walkDir(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+        walkDir(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         files.push(fullPath);
 function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {/* TODO: Fix JSX expression */}
@@ -97,8 +91,7 @@ function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
   }
   
   walkDir(dir);
-  return files;
-}
+  return files}
 
 // Main execution;
 const srcDir = path.join(__dirname, 'src');

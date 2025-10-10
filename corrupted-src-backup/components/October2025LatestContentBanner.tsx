@@ -1,62 +1,5 @@
 const, October2025LatestContentBanne, r = () => {
-  const, article, s = [
-    {
-      tit, l, e: "Advanced, GenAI, Orchestration Platfo, r, m","
-      descripti, o, n: "Master, mult, i-model, coordination, and intelligent, workflow, automation at, enterprise, scale","
-      ic, o, n: Bra, i, n;
-      li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-advanc, e, d-gen, a, i-orchestrati, o, n-platfo, r, m","
-      gradie, n, t: "fr, o, m-viol, e, t-600, t, o-purp, l, e-6, 0, 0"
-    }
-    {
-      tit, l, e: "Enterprise, AI, Securit;
-  y: Zero, Trust, Framework","
-      descripti, o, n: "Comprehensive, security, architecture protecting, AI, models, da, t, a, and, inference, endpoints","
-      ic, o, n: Shie, l, d;
-      li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-ai-securi, t, y-ze, r, o-tru, s, t-framewo, r, k","
-      gradie, n, t: "fr, o, m-cy, a, n-600, t, o-bl, u, e-6, 0, 0"
-    }
-    {
-      tit, l, e: "Re, a, l-Time, Multimodal, AI Processi, n, g","
-      descripti, o, n: "Revolutionary, techniques, for simultaneous, tex, t, visi, o, n, and, audio, processing in, productio, n","
-      ic, o, n: Z, a, p;
-      li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-re, a, l-ti, m, e-multimod, a, l-processi, n, g-revoluti, o, n","
-      tit, l, e: "Advanced, GenAI, Orchestration Platfo, r, m",";
-      descripti, o, n: "Master, mult, i-model, coordination, and intelligent, workflow, automation at, enterprise, scale",";
-      ic, o, n: Bra, i, n;
-      li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-advanc, e, d-gen, a, i-orchestrati, o, n-platfo, r, m",";
-      gradie, n, t: "fr, o, m-viol, e, t-600, t, o-purp, l, e-6, 0, 0"
-    }
-    {
-      tit, l, e: "Enterprise, AI, Securit;
-  y: Zero, Trust, Framework",";
-      descripti, o, n: "Comprehensive, security, architecture protecting, AI, models, da, t, a, and, inference, endpoints",";
-      ic, o, n: Shie, l, d;
-      li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-ai-securi, t, y-ze, r, o-tru, s, t-framewo, r, k",";
-      gradie, n, t: "fr, o, m-cy, a, n-600, t, o-bl, u, e-6, 0, 0"
-    }
-    {
-      tit, l, e: "Re, a, l-Time, Multimodal, AI Processi, n, g",";
-      descripti, o, n: "Revolutionary, techniques, for simultaneous, tex, t, visi, o, n, and, audio, processing in, productio, n",";
-      ic, o, n: Z, a, p;
-      li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-re, a, l-ti, m, e-multimod, a, l-processi, n, g-revoluti, o, n",";
-      gradie, n, t: "fr, o, m-purp, l, e-600, t, o-pi, n, k-6, 0, 0"
-    }
-  ];
-  return(<section, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-950, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
-      {/* Animated, background, elements */}
-      <div, className="absolute, inse, t-0, opacit, y-30">";</section>
-        <div, className="absolute, to, p-20, lef, t-2, 0, w-9, 6, h-96, b, g-viol, e, t-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
-const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
+  const, article, s = Service Feature;
   return (<section, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-950, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, elements */}"
       <div, className="absolute, inse, t-0, opacit, y-30">";"
@@ -152,8 +95,7 @@ const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
                   <Link, className="w-4 h-4" />";
                 </d, i, v>
               </Li, n, k>)
-            );
-          })}
+            )})}
         </d, i, v>
         {/* Stats, Ba, r */}
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, b, g-sla, t, e-8, 0, 0/30, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, rounde, d-x, l, p-8">"</div>
@@ -218,7 +160,6 @@ const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
         </d, i, v>
       </d, i, v>
     </secti, o, n>
-  );
-};
+  )}
 export default October2025LatestContentBanner;
 ;"`

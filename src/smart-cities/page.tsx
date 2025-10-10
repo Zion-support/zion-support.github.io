@@ -4,10 +4,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Building, Target, Zap, Settings, CheckCircle, Star,  Building,  Target,  Settings } from 'lucide-react';
 const SmartCitiesPage: React.FC = () => {
-  const features = [];
+  const features = Service Feature;
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content}
+}
   ico,
   n: Building,
       titl,
@@ -15,8 +15,7 @@ const SmartCitiesPage: React.FC = () => {
       descriptio,
   n: 'Intelligent city infrastructure and management systems',
       benefit,
-  s: ['Traffic management', 'Energy optimization', 'Waste management'];
-    },
+  s: ['Traffic management', 'Energy optimization', 'Waste management']},
       ico,
   n: Target,
       titl,
@@ -89,6 +88,5 @@ const SmartCitiesPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )}
 export default SmartCitiesPage;

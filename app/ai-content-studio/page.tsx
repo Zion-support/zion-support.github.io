@@ -167,8 +167,7 @@ icon: Brain,
       </section>
       <Footer />
     </React.Fragment>
-  );
-};
+  )}
 export default AiContentStudioPage;
   </button>
   </button>

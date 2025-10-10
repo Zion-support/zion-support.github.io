@@ -186,5 +186,4 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
         <Footer /></Footer>
       </div>
     </div>
-  );
-}"
+  )}"

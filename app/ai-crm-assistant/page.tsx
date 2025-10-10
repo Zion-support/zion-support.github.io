@@ -167,8 +167,7 @@ const AiCrmAssistantPage: React.FC = () => {
       </section>
       <Footer />
     </React.Fragment>
-  );
-};
+  )}
 export default AiCrmAssistantPage;
   </button>
   </button>

@@ -13,67 +13,7 @@ export const seoUtils = {/* content */}
     "url": "https: //zion.app",
     "logo": "https: //zion.app/logo.png",
     "description": "Advanced AI and IT Solutions",
-    "sameAs": [
-      "https: //linkedin.com/company/zion-tech"]}),
-  // Generate breadcrumb structured data;
-  generateBreadcrumbSchema: (items: Array<{name: string, url: string}>) => ({/* content */}
-    "@context": "https: //schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": items.map((item, index) => ({/* content */}
-      "@type": "ListItem",
-      "position": index + 1,
-      "name": item.name,
-      "item": item.url;
-    }))
-  }),
-  // Generate FAQ structured data;
-  generateFAQSchema: (faqs: Array<{question: string, answer: string}>) => ({/* content */}
-    "@context": "https: //schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({/* content */})
-      "@type": "Question")
-      "name": faq.question)
-      "acceptedAnswer": {/* content */}
-        "@type": "Answer")
-        "text": faq.answer;
-      }
-    }))
-  }),
-  // Generate article structured data;
-  generateArticleSchema: (article: {/* content */}
-    title: string;
-    description: string;
-    author: string;
-    datePublished: string;
-    dateModified: string;
-    image?: string;
-    url: string;
-  }) => ({/* content */}
-    "@context": "https: //schema.org",
-    "@type": "Article",
-    "headline": article.title,
-    "description": article.description,
-    "author": {/* content */}
-      "@type": "Person",
-      "name": article.author;
-    },
-    "image": {/* content */}
-      "url": article.image || "https: //zion.app/logo.png"}
-  // Generate structured data for organization,
-  generateOrganizationSchema: () => ({/* content */}
-    "@context": "http,"
-  s://schema.org","
-    "@type": "Organization","
-    "name": "Zion Tech Group","
-    "url": "http,"
-  s://zion.app","
-    "logo": "http,"
-  s://zion.app/logo.png","
-    "description": "Advanced AI and IT Solutions","
-    "sameAs": ["
-      "http,"
-  s://linkedin.com/company/zion-tech"
-    ])
+    "sameAs": Service Feature)
   }),
   // Generate breadcrumb structured data,
   generateBreadcrumbSchema: (item,
@@ -101,8 +41,7 @@ export const seoUtils = {/* content */}
       "name": faq.question,"
       "acceptedAnswer": {/* content */}"
         "@type": "Answer","
-        "text": faq.answer;
-      })
+        "text": faq.answer})
     }))
   }),
   // Generate article structured data,
@@ -129,24 +68,22 @@ export const seoUtils = {/* content */}
     "description": article.description,"
     "author": {/* content */}"
       "@type": "Person","
-      "name": article.author;
-    },"
+      "name": article.author},"
     "image": {/* content */}"
       "url": article.image || "http,"
   s://zion.app/logo.png"
     })
   })
-});
-};
+})}
 // Sitemap generation utilities;
 export const sitemapUtils = {/* content */}
   // Generate sitemap entries;
   generateSitemapEntry: (url: string, lastmod?: string, changefreq?: string, priority?: string) => {/* content */}
     return {/* content */}
       url,
-      lastmod: lastmod || new Date().toISOString().split('T')[0],
+      lastmod: lastmod || new Date().toISOString().split('T')Service Feature,
       changefreq: changefreq || 'weekly',
-      priority: priority || '0.8'};
+      priority: priority || '0.8'}
   },
   // Generate robots.txt content;
   generateRobotsTxt: (sitemapUrl: string = 'https://zion.app/sitemap.xml') => {/* content */}
@@ -160,12 +97,12 @@ Sitemap: ${sitemapUrl}`;
     return {/* content */}
       url,
       lastmo,
-  d: lastmod || new Date().toISOString().split('T')[0],
+  d: lastmod || new Date().toISOString().split('T')Service Feature,
       changefre,
   q: changefreq || 'weekly',
       priorit,
   y: priority || '0.8'
-    };
+    }
   },
   // Generate robots.txt content,
   generateRobotsTxt: (sitemapUr,
@@ -176,19 +113,16 @@ Sitemap: ${sitemapUrl}`;
 Allo,
   w: /
 Sitema,`
-  p: ${sitemapUrl}`;
-  }
-};
+  p: ${sitemapUrl}`}
+}
 // URL optimization utilities;
 export const urlUtils = {/* content */}
   // Generate canonical URL;
   generateCanonicalUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
-    return `${baseUrl}${path}`;
-  },
+    return `${baseUrl}${path}`},
   // Generate Open Graph URL;
   generateOGUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
-    return `${baseUrl}${path}`;
-  },
+    return `${baseUrl}${path}`},
   // Generate Twitter Card URL;
   generateTwitterUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
   // Generate canonical URL,
@@ -196,53 +130,30 @@ export const urlUtils = {/* content */}
   h: string, baseUr,
   l: string = 'http)
   s://zion.app') => {/* content */}`
-    return `${baseUrl}${path}`;
-  },
+    return `${baseUrl}${path}`},
   // Generate Open Graph URL,
   generateOGUrl: (pat,
   h: string, baseUr,
   l: string = 'http)
   s://zion.app') => {/* content */}`
-    return `${baseUrl}${path}`;
-  },
+    return `${baseUrl}${path}`},
   // Generate Twitter Card URL,
   generateTwitterUrl: (pat,
   h: string, baseUr,
   l: string = 'http)
   s://zion.app') => {/* content */}`
-    return `${baseUrl}${path}`;
-  }
-};
+    return `${baseUrl}${path}`}
+}
 // Content optimization utilities;
 export const contentOptimization = {/* content */}
   // Extract keywords from content;
-  extractKeywords: (content: string, minLength: number = 3): string[] => {/* content */}
-  // Extract keywords from content,
-  extractKeywords: (conten,
-  t: string, minLengt)
-  h: number = 3): string[] => {/* content */}
-    const words = content.toLowerCase()
-      .replace(/[^\w\s]/g, '')
+  extractKeywords: (content: string, minLength: number = 3): stringService Feature/g, '')
       .split(/\s+/)
       .filter(word => word.length >= minLength);
     const wordCount = words.reduce((acc, word) => {/* content */}
-      acc[word] = (acc[word] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);</string>return</string> Object.entries(wordCount)
-      .sort(([,a], [,b]) => b - a)
-      .slice(0, 10)
-      .map(([word]) => word);
-  },
-  // Generate meta description;
-  generateMetaDescription: (content: string, maxLength: number = 160): string => {/* content */}
-  // Generate meta description,
-  generateMetaDescription: (conten,
-  t: string, maxLengt)
-  h: number = 160): string => {/* content */}
-    const _cleanContent = content.replace(/<[^>]*>/g, '').trim();
+      accService Feature*>/g, '').trim();
     if (cleanContent.length <= maxLength) return cleanContent;
-    return cleanContent.substring(0, maxLength - 3) + '...';
-  },
+    return cleanContent.substring(0, maxLength - 3) + '...'},
   // Generate title tag;
   generateTitle: (pageTitle: string, siteName: string = 'Zion Tech Group', separator: string = ' | '): string => {/* content */}
   // Generate title tag,
@@ -250,9 +161,8 @@ export const contentOptimization = {/* content */}
   e: string, siteNam,
   e: string = 'Zion Tech Group', separato)
   r: string = ' | '): string => {/* content */}`
-    return pageTitle ? `${pageTitle}${separator}${siteName}` : siteName;
-  }
-};
+    return pageTitle ? `${pageTitle}${separator}${siteName}` : siteName}
+}
 // Performance SEO utilities;
 export const performanceSEO = {/* content */}
   // Preload critical resources;
@@ -272,9 +182,7 @@ export const performanceSEO = {/* content */}
       link.href = resource.href;
       link.as = resource.as;
       if (resource.type) link.type = resource.type;
-      document.head.appendChild(link);
-    });
-  },
+      document.head.appendChild(link)})},
   // Optimize images for SEO;
   optimizeImageSEO: (src: string, alt: string, width?: number, height?: number): {/* content */}
     src: string;
@@ -290,8 +198,7 @@ export const performanceSEO = {/* content */}
     width?: number;
     height?: number;
     loadin,
-  g: 'lazy';
-  } => {/* content */}
+  g: 'lazy'} => {/* content */}
     return {/* content */}
       sr,`
   c: src.includes('?') ? src : `${src}?w=${width || 800}&h=${height || 600}&f=webp&q=85`,
@@ -300,10 +207,9 @@ export const performanceSEO = {/* content */}
       height,
       loading: 'lazy' as const;
       loadin,
-  g: 'lazy' as const;
-    };
+  g: 'lazy' as const}
   }
-};
+}
 // Analytics and tracking utilities;
 export const analyticsUtils = {/* content */}
   // Track page views;
@@ -323,8 +229,7 @@ export const analyticsUtils = {/* content */}
   e: title,
         page_locatio,
   n: url;)
-      });
-    }
+      })}
   },
   // Track custom events;
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {/* content */}
@@ -333,8 +238,7 @@ export const analyticsUtils = {/* content */}
   e: string, parameters?: Record<string, unknown>) => {/* content */}
     if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {/* content */}
       (window as Window & {/* TODO: Fix JSX expression */})
-  g: Function }).gtag('event', eventName, parameters);
-    }
+  g: Function }).gtag('event', eventName, parameters)}
   },
   // Track conversion events;
   trackConversion: (conversionId: string, value?: number) => {/* content */}
@@ -352,10 +256,9 @@ export const analyticsUtils = {/* content */}
   o: conversionId,
         valu,
   e: value;)
-      });
-    }
+      })}
   }
-};
+}
 // Core Web Vitals tracking;
 export const coreWebVitals = {/* content */}
   // Track Core Web Vitals;
@@ -381,19 +284,15 @@ export const coreWebVitals = {/* content */}
         metric_i,
   d: metric.id,
         metric_delt,
-  a: metric.delta;
-      });
-    };
+  a: metric.delta})}
     // Import and track web vitals;
     import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {/* content */}
       onCLS(trackMetric);
       // onFID(trackMetric); // onFID is deprecated in newer web-vitals versions;
       onFCP(trackMetric);
       onLCP(trackMetric);
-      onTTFB(trackMetric);
-    });
-  }
-};
+      onTTFB(trackMetric)})}
+}
 // SEO component for React;
 export const SEOComponent = ({/* content */}
   title, 
@@ -402,8 +301,7 @@ export const SEOComponent = ({/* content */}
   image, 
   url, 
   type = 'website',
-  structuredData;
-}: {/* content */}
+  structuredData}: {/* content */}
   title?: string;
   description?: string;
   keywords?: string;
@@ -471,8 +369,7 @@ export const SEOComponent = ({/* content */}
         </script>
       )}
     </Helmet>
-  );
-};
+  )}
 // Initialize SEO optimizations;
 export const initializeSEO = () => {/* content */}
   // Preload critical resources;
@@ -482,12 +379,11 @@ export const initializeSEO = () => {/* content */}
   // Set up meta tags;
   if (typeof document !== 'undefined') {/* content */}
   if (typeof document !== 'undefined') {/* content */}"
-//     const viewport = document.querySelector('meta[name="viewport"]');
+//     const viewport = document.querySelector('metaService Feature');
     if (!viewport) {/* content */}
       const _meta = document.createElement('meta');
       meta.name = 'viewport';
       meta.content = 'width=device-width, initial-scale=1.0';
-      document.head.appendChild(meta);
-    }
+      document.head.appendChild(meta)}
   }
-};"`
+}"`

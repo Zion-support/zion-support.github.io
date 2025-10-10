@@ -29,7 +29,6 @@ export default function ITInfrastructurePage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}
   </a>
   </h1>

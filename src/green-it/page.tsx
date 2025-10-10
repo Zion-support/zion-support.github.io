@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const GreenITPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('solutions');
+  const Service Feature = useState('solutions');
   const tabs = [
     {
       id: 'solutions',
@@ -301,8 +301,7 @@ valuevalue: '100%',
                 Email Us
       <Footer />
     </React.Fragment>
-  );
-};
+  )}
 export default GreenITPage;
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
@@ -310,13 +309,12 @@ import Footer from '../components/Footer';
 const GreenITPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
-};
-  const [activeTab, setActiveTab] = useState('solutions');
+  )}
+  const Service Feature = useState('solutions');
 const tabs = [
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   i,
   d: 'solutions',
       nam,
@@ -345,9 +343,7 @@ const tabs = [
       ico,
   n: Zap,
       feature,
-  s: [
-  // TOD,
-  O: Add items];
+  s: Service Feature;
 //         'PUE (Power Usage Effectiveness) optimization',
 //         'Renewable energy integration',
 //         'Cooling system optimization',
@@ -593,8 +589,7 @@ const tabs = [
                   onClick={() => setActiveTab(tab.id)}`
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
-  O: Add content;
-}
+  O: Add content}
                     activeTab === tab.id;`
                       ? `${tab.bgColor} ${tab.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
@@ -708,8 +703,7 @@ Benefits of Green IT;"
                 Email Us;
       <Footer />
     </div>
-  );
-};
+  )}
 export default GreenItPage;
   </div>
   </div>

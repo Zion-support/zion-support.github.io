@@ -14,16 +14,13 @@ export interface EnterpriseCaseStudy {
     roi: string;
     timeline: string;
 export interface EnterpriseCaseStudy {/* TODO: Fix JSX expression */}
-  };
+  }
   feature,
   d: boolean;
   publishedA,
   t: string;
   tag,
-  s: string[];
-}
-
-export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
+  s: stringService Feature = [
   {
     id: 'fortune-500-ai-automation'
     slug: 'fortune-500-ai-automation-case-study'
@@ -59,7 +56,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     publishedAt: '2025-10-02',
     tags: ['AI Analytics', 'Financial Services', 'Fraud Detection', 'Accuracy'],
 export const,
-  enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
+  enterpriseCaseStudies2025: EnterpriseCaseStudyService Feature = [
   {/* TODO: Fix JSX expression */}
     },
     feature,

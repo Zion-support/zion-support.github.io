@@ -2,8 +2,8 @@ import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";"
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
 impo, r, t { Sear, c, h, MessageCirc, l, e, Pho, n, e, Ma, i, l, BookOp, e, n, Vid, e, o, Use, r, s, Z, a, p, Clo, c, k, CheckCirc, l, e } fr, o, m "luci, d, e-rea, c, t";
 const, Suppor, t: Rea, c, t.FC = () => {
-  con, s, t [searchQue, r, y, setSearchQue, r, y] = useSta, t, e('');
-  con, s, t [selectedCatego, r, y, setSelectedCatego, r, y] = useSta, t, e('a, l, l');
+  con, s, t Service Feature = useSta, t, e('');
+  con, s, t Service Feature = useSta, t, e('a, l, l');
   const, supportChannel, s = [
     {
       ic, o, n: Pho, n, e;
@@ -45,16 +45,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
   ];
-  const, faqCategorie, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
+  const, faqCategorie, s = Service Feature;
   const, faq, s = [
     {/* TODO: Fix JSX expression */}
     }
@@ -417,6 +408,5 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         </d, i, v>
       </secti, o, n>
     </d, i, v>
-  );
-};
+  )}
 export default Support;"`

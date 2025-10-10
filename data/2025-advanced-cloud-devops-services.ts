@@ -2,30 +2,8 @@ export interface CloudDevOpsService {/* TODO: Fix JSX expression */}
   s: number}
     setupTim,
   e: string}
-  };
-  keyFeatures: string[];
-  benefits: string[];
-  targetAudience: string[];
-  marketPosition: string;
-  competitors: string[];
-  techStack: string[];
-  realImplementation: boolean;
-  implementationDetails: string;
-  roi: string;
-  useCases: string[];
-  integrations: string[];
-  support: string;
-  compliance: string[];
-  link: string;
-  icon: string;
-  color: string;
-  popular: boolean;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
-export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [,
+  }
+  keyFeatures: stringService Feature = [,
     id: 'multi-cloud-orchestration-platform',
     name: 'Multi-Cloud Orchestration Platform',
     tagline: 'Unified management and orchestration across multiple cloud providers',
@@ -39,49 +17,7 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [,
       trialDays: 30;
       setupTime: '1-2 weeks',
   keyFeature,
-  s: string[];
-  benefit,
-  s: string[];
-  targetAudienc,
-  e: string[];
-  marketPositio,
-  n: string;
-  competitor,
-  s: string[];
-  techStac,
-  k: string[];
-  realImplementatio,
-  n: boolean;
-  implementationDetail,
-  s: string;
-  ro,
-  i: string;
-  useCase,
-  s: string[];
-  integration,
-  s: string[];
-  suppor,
-  t: string;
-  complianc,
-  e: string[];
-  lin,
-  k: string;
-  ico,
-  n: string;
-  colo,
-  r: string;
-  popula,
-  r: boolean;
-  launchDat,
-  e: string;
-  customer,
-  s: number;
-  ratin,
-  g: number;
-  review,
-  s: number}
-export const,
-  advancedCloudDevOpsServices2025: CloudDevOpsService[] = [,
+  s: stringService Feature = [,
     i,
   d: 'multi-cloud-orchestration-platform',
     nam,
@@ -176,8 +112,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 110;
     rating: 4.8;
-    reviews: 167;
-  },
+    reviews: 167},
     id: 'intelligent-devops-automation-suite',
     name: 'Intelligent DevOps Automation Suite',
     tagline: 'AI-powered DevOps automation with intelligent CI/CD and infrastructure management',
@@ -307,8 +242,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 95;
     rating: 4.7;
-    reviews: 145;
-  },
+    reviews: 145},
     id: 'enterprise-kubernetes-management-platform',
     name: 'Enterprise Kubernetes Management Platform',
     tagline: 'Enterprise-grade Kubernetes management with advanced monitoring and automation',
@@ -438,8 +372,7 @@ export const,
     launchDate: '2024-11-15'
     customers: 75;
     rating: 4.8;
-    reviews: 112;
-  },
+    reviews: 112},
     id: 'intelligent-infrastructure-monitoring',
     name: 'Intelligent Infrastructure Monitoring',
     tagline: 'AI-powered infrastructure monitoring with predictive analytics and automated alerting',
@@ -569,8 +502,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 160;
     rating: 4.8;
-    reviews: 234;
-  },
+    reviews: 234},
     id: 'cloud-security-posture-management',
     name: 'Cloud Security Posture Management',
     tagline: 'Comprehensive cloud security management with automated compliance and threat detection',
@@ -737,29 +669,8 @@ export interface CloudDevOpsService,
   e: string; currenc,
   y: string; trialDay,
   s: number; setupTim,
-  e: string}; keyFeature,
-  s: string[]; benefit,
-  s: string[]; targetAudienc,
-  e: string[]; marketPositio,
-  n: string; competitor,
-  s: string[]; techStac,
-  k: string[]; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; ro,
-  i: string; useCase,
-  s: string[]; integration,
-  s: string[]; suppor,
-  t: string; complianc,
-  e: string[]; lin,
-  k: string; ico,
-  n: string; colo,
-  r: string; popula,
-  r: boolean; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number} export const,
-  advancedCloudDevOpsServices2025: CloudDevOpsService[] = [ i,
+  e: string} keyFeature,
+  s: stringService Feature = [ i,
   d: 'multi-cloud-orchestration-platform',' nam,
   e: 'Multi-Cloud Orchestration Platform',' taglin,
   e: 'Unified management and orchestration across multiple cloud providers',' descriptio,

@@ -11,10 +11,9 @@ import Footer from '../components/Footer';
  */
 const,
   OfflinePage: React.FC = () => {const handleRetry = () => {}
-    window.location.reload();
-  };
+    window.location.reload()}
   const handleGoHome = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     window.location.href = '/';
   return (<div>Coming Soon</div>)
@@ -54,6 +53,5 @@ onClick={handleGoHome}"
           <p className="text-xs text-gray-400"></p>
             Some content may be available offline thanks to our service worker.
             Try refreshing the page once you're back online.
-  );
-};
+  )}
 export default OfflinePage;

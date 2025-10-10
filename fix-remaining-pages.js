@@ -26,15 +26,14 @@ function processFile(filePath) {
         (line.includes('openGraph:') && !line.includes('//')) ||,
         (line.includes('twitter:') && !line.includes('<meta') && !line.includes('//')) ||,
         (line.includes('images:') && !line.includes('<meta') && !line.includes('//')) ||,
-        (line.trim() === '{' && i > 0 && lines[i - 1].includes('metadata')) ||,
+        (line.trim() === '{' && i > 0 && linesService Feature.includes('metadata')) ||,
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-        (line.trim() === '},' && i > 0 && lines[i - 1].includes('metadata')) ||
-        (line.trim() === '};' && i > 0 && lines[i - 1].includes('metadata'))
+        (line.trim() === '},' && i > 0 && linesService Feature.includes('metadata')) ||
+        (line.trim() === '}' && i > 0 && linesService Feature.includes('metadata'))
       ) {/* TODO: Fix JSX expression */}
       }
 
-      filteredLines.push(line);
-    }
+      filteredLines.push(line)}
 
     content = filteredLines.join('\n');
 
@@ -49,28 +48,25 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Add proper export at the end if missing;
     if (!content.includes('export default') && content.includes('const ')) {,
-      //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,
+      //       const componentName = content.match(/const (\w+): React\.FC/)?.Service Feature;,
       if (componentName) {,
     content = content.replace()
       /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
-        content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
-        modified = true;
-      }
+        content = content.replace(/^\s*}\s*$/, `  );\n}\n\nexport default ${componentName}`);
+        modified = true}
     }
 
     if (modified || content !== fs.readFileSync(filePath, 'utf8')) {/* TODO: Fix JSX expression */}
     }
 
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
 // Process all files;
 filesToFix.forEach(file => {)
   if (processFile(file)) {
-    fixedCount++;
-  }
+    fixedCount++}
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
   })
 });

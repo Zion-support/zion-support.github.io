@@ -5,77 +5,7 @@
   price: string;
   period: string;
   description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: string;
-  contact_info: unknown;
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  i,
-  d: string;
-  nam,
-  e: string;
-  taglin,
-  e: string;
-  pric,
-  e: string,
-  perio,
-  d: string,
-  descriptio,
-  n: string;
-  feature,
-  s: string[];
-  popula,
-  r: boolean;
-  ico,
-  n: string;
-  colo,
-  r: string;
-  text_colo,
-  r: string;
-  lin,
-  k: string;
-  market_positio,
-  n: string;
-  target_audienc,
-  e: string;
-  trial_day,
-  s: number;
-  setup_tim,
-  e: string;
-  categor,
-  y: string;
-  real_servic,
-  e: boolean;
-  technolog,
-  y: string[];
-  integration,
-  s: string[];
-  use_case,
-  s: string[];
-  ro,
-  i: string;
-  competitor,
-  s: string[];
+  features: stringService Feature;
   market_siz,
   e: string;
   growth_rat,
@@ -105,9 +35,8 @@
   g: number;
   review,
   s: number;
-;
 export const,
-  advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] =;
+  advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechServiceService Feature =;
   [
     // AI - Powered Drug Discovery Platform;
       id: 'ai - drug - discovery - platform',
@@ -239,8 +168,7 @@ export const,
       launch_date: '2024 - 08 - 15'
       customers: 23;
       rating: 4 && 4.9;
-      reviews: 12;
-    },
+      reviews: 12},
     // Precision Medicine & Genomics Platform;
       id: 'precision - medicine - genomics',
       name: 'Precision Medicine & Genomics Platform',
@@ -539,8 +467,7 @@ export const,
       launch_date: '2024 - 10 - 10'
       customers: 67;
       rating: 4 && 4.7;
-      reviews: 34;
-    },
+      reviews: 34},
         'High-quality video consultations',
     // Digital Health & Telemedicine Platform;
       id: 'digital - health - telemedicine'
@@ -701,8 +628,7 @@ export const,
       launch_date: '2024 - 07 - 15'
       customers: 156;
       rating: 4 && 4.6;
-      reviews: 78;
-    },
+      reviews: 78},
         'AI-powered trial design optimization',
     // Clinical Trial Management & Optimization;
       id: 'clinical - trial - management - optimization',
@@ -893,23 +819,7 @@ i,
   e: string, perio,
   d: string, descriptio,
   n: string; feature,
-  s: string[]; popula,
-  r: boolean; ico,
-  n: string; colo,
-  r: string; text_colo,
-  r: string; lin,
-  k: string; market_positio,
-  n: string; target_audienc,
-  e: string; trial_day,
-  s: number; setup_tim,
-  e: string; categor,
-  y: string; real_servic,
-  e: boolean; technolog,
-  y: string[]; integration,
-  s: string[]; use_case,
-  s: string[]; ro,
-  i: string; competitor,
-  s: string[]; market_siz,
+  s: stringService Feature; market_siz,
   e: string; growth_rat,
   e: string; varian,
   t: string; contact_inf,
@@ -924,7 +834,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number; export const,
-  advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] =; [; // AI - Powered Drug Discovery Platform, ' i,
+  advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechServiceService Feature =; [; // AI - Powered Drug Discovery Platform, ' i,
   d: 'ai - drug - discovery - platform',' nam,
   e: 'AI - Powered Drug Discovery Platform',' taglin,
   e: 'Accelerate drug discovery with AI and machine learning',' pric,
