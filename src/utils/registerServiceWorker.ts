@@ -4,8 +4,7 @@
 export const registerServiceWorker = {
   // Add utility functions here
   init: () => {
-    console.log('registerServiceWorker initialized');
-  }
+    }
 };
 
 export default registerServiceWorker;

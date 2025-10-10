@@ -4,8 +4,7 @@
 export const apiClient = {
   // Add utility functions here
   init: () => {
-    console.log('apiClient initialized');
-  }
+    }
 };
 
 export default apiClient;

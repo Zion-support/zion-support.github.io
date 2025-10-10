@@ -83,11 +83,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     if ('serviceWorker' in navigator && enableServiceWorker) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          // console.log('SW registered: ', registration);
-        })
+          // })
         .catch((registrationError) => {
-          // console.log('SW registration failed: ', registrationError);
-        });
+          // });
     }
 
     // Memory-based caching for API responses

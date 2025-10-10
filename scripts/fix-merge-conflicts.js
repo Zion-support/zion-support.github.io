@@ -26,28 +26,26 @@ const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
   return files;
 };
 
-// Remove console.log statements
-const removeConsoleLogs = (filePath) => {
+// Fix merge conflicts
+const fixMergeConflicts = (filePath) => {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
-    // Remove console.log, console.warn, console.error, console.info statements
-    // This regex matches console.method() calls including multi-line ones
-    const consoleRegex = /console\.(log|warn|error|info|debug)\s*\([^;]*\);?\s*/g;
-    content = content.replace(consoleRegex, '');
+    // Remove merge conflict markers and keep the HEAD version
+    const mergeConflictRegex = /<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]*\n/g;
+    content = content.replace(mergeConflictRegex, '$1');
     
-    // Remove standalone console statements
-    const standaloneConsoleRegex = /^\s*console\.(log|warn|error|info|debug)\s*\([^;]*\);?\s*$/gm;
-    content = content.replace(standaloneConsoleRegex, '');
+    // Remove any remaining merge conflict markers
+    const conflictMarkers = /(<<<<<<< HEAD|=======|>>>>>>> [^\n]*)/g;
+    content = content.replace(conflictMarkers, '');
     
-    // Remove console statements that might be in template literals or complex expressions
-    const complexConsoleRegex = /console\.(log|warn|error|info|debug)\s*\([^)]*\)\s*;?\s*/g;
-    content = content.replace(complexConsoleRegex, '');
+    // Clean up extra whitespace
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Cleaned console statements from: ${filePath}`);
+      console.log(`Fixed merge conflicts in: ${filePath}`);
       return true;
     }
     
@@ -62,7 +60,7 @@ const removeConsoleLogs = (filePath) => {
 const srcDir = path.join(__dirname, '..', 'src');
 const appDir = path.join(__dirname, '..', 'app');
 
-console.log('Starting console.log removal...');
+console.log('Starting merge conflict resolution...');
 
 // Find all files
 const srcFiles = findFiles(srcDir);
@@ -71,12 +69,12 @@ const allFiles = [...srcFiles, ...appFiles];
 
 console.log(`Found ${allFiles.length} files to process`);
 
-let cleanedCount = 0;
+let fixedCount = 0;
 for (const file of allFiles) {
-  if (removeConsoleLogs(file)) {
-    cleanedCount++;
+  if (fixMergeConflicts(file)) {
+    fixedCount++;
   }
 }
 
-console.log(`Cleaned console statements from ${cleanedCount} files`);
-console.log('Console.log removal completed!');
+console.log(`Fixed merge conflicts in ${fixedCount} files`);
+console.log('Merge conflict resolution completed!');

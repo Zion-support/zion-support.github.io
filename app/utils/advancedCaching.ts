@@ -59,8 +59,7 @@ class AdvancedCache<T = unknown> {
         this.accessOrder = parsed.accessOrder || [];
       }
     } catch (error) {
-      console.warn('Failed to load cache from storage:', error);
-    }
+      }
   }
 
   private saveToStorage(): void {
@@ -74,8 +73,7 @@ class AdvancedCache<T = unknown> {
       };
       storage?.setItem(this.storageKey, JSON.stringify(data));
     } catch (error) {
-      console.warn('Failed to save cache to storage:', error);
-    }
+      }
   }
 
   private getStorage(): Storage | null {
@@ -98,7 +96,6 @@ class AdvancedCache<T = unknown> {
     for (const [key, entry] of this.cache.entries()) {
       if (entry.expiry <= now) {
         expiredKeys.push(key);
-<<<<<<< HEAD
       }
     }
     
@@ -112,81 +109,6 @@ class AdvancedCache<T = unknown> {
     
     if (expiredKeys.length > 0) {
       this.saveToStorage();
-=======
-      }
-    }
-    
-    expiredKeys.forEach(key => {
-      this.cache.delete(key);
-      const index = this.accessOrder.indexOf(key);
-      if (index > -1) {
-        this.accessOrder.splice(index, 1);
-      }
-    });
-    
-    if (expiredKeys.length > 0) {
-      this.saveToStorage();
-    }
-  }
-
-  private evictLRU(): void {
-    if (this.accessOrder.length === 0) return;
-    
-    const lruKey = this.accessOrder[0];
-    this.cache.delete(lruKey);
-    this.accessOrder.shift();
-  }
-
-  private updateAccessOrder(key: string): void {
-    const index = this.accessOrder.indexOf(key);
-    if (index > -1) {
-      this.accessOrder.splice(index, 1);
-    }
-    this.accessOrder.push(key);
-  }
-
-  set(key: string, value: T, ttl?: number): void {
-    const now = Date.now();
-    const expiry = now + (ttl || this.options.ttl);
-    
-    // Remove existing entry if it exists
-    if (this.cache.has(key)) {
-      const index = this.accessOrder.indexOf(key);
-      if (index > -1) {
-        this.accessOrder.splice(index, 1);
-      }
-    }
-    
-    // Check if we need to evict entries
-    while (this.cache.size >= this.options.maxSize) {
-      this.evictLRU();
-    }
-    
-    this.cache.set(key, {
-      value,
-      expiry,
-      hits: 0,
-      lastAccessed: now
-    });
-    
-    this.updateAccessOrder(key);
-    this.saveToStorage();
-  }
-
-  get(key: string): T | null {
-    const entry = this.cache.get(key);
-    if (!entry) return null;
-    
-    const now = Date.now();
-    if (entry.expiry <= now) {
-      this.cache.delete(key);
-      const index = this.accessOrder.indexOf(key);
-      if (index > -1) {
-        this.accessOrder.splice(index, 1);
-      }
-      this.saveToStorage();
-      return null;
->>>>>>> cursor/fix-errors-and-merge-to-main-7c55
     }
     
     // Update access statistics
@@ -197,7 +119,6 @@ class AdvancedCache<T = unknown> {
     return entry.value;
   }
 
-<<<<<<< HEAD
   private evictLRU(): void {
     if (this.accessOrder.length === 0) return;
     
@@ -267,8 +188,6 @@ class AdvancedCache<T = unknown> {
     return entry.value;
   }
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7c55
   has(key: string): boolean {
     const entry = this.cache.get(key);
     if (!entry) return false;
@@ -317,7 +236,6 @@ class AdvancedCache<T = unknown> {
     size: number;
     maxSize: number;
     hitRate: number;
-<<<<<<< HEAD
     oldestEntry: number;
     newestEntry: number;
   } {
@@ -328,40 +246,13 @@ class AdvancedCache<T = unknown> {
     const timestamps = entries.map(entry => entry.lastAccessed);
     const oldestEntry = timestamps.length > 0 ? Math.min(...timestamps) : 0;
     const newestEntry = timestamps.length > 0 ? Math.max(...timestamps) : 0;
-=======
-    oldestEntry: number | null;
-    newestEntry: number | null;
-  } {
-    const now = Date.now();
-    let totalHits = 0;
-    let oldestTime = Infinity;
-    let newestTime = -Infinity;
-    
-    for (const entry of this.cache.values()) {
-      totalHits += entry.hits;
-      if (entry.lastAccessed < oldestTime) {
-        oldestTime = entry.lastAccessed;
-      }
-      if (entry.lastAccessed > newestTime) {
-        newestTime = entry.lastAccessed;
-      }
-    }
-    
-    const hitRate = this.cache.size > 0 ? totalHits / this.cache.size : 0;
->>>>>>> cursor/fix-errors-and-merge-to-main-7c55
     
     return {
       size: this.cache.size,
       maxSize: this.options.maxSize,
-<<<<<<< HEAD
       hitRate,
       oldestEntry,
       newestEntry
-=======
-      hitRate: Math.round(hitRate * 100) / 100,
-      oldestEntry: oldestTime === Infinity ? null : oldestTime,
-      newestEntry: newestTime === -Infinity ? null : newestTime
->>>>>>> cursor/fix-errors-and-merge-to-main-7c55
     };
   }
 }
@@ -369,7 +260,6 @@ class AdvancedCache<T = unknown> {
 // Create singleton instances for different use cases
 export const memoryCache = new AdvancedCache({ storage: 'memory' });
 export const localStorageCache = new AdvancedCache({ 
-<<<<<<< HEAD
   storage: 'localStorage',
   ttl: 30 * 60 * 1000, // 30 minutes
   maxSize: 50
@@ -378,16 +268,6 @@ export const sessionStorageCache = new AdvancedCache({
   storage: 'sessionStorage',
   ttl: 10 * 60 * 1000, // 10 minutes
   maxSize: 25
-=======
-  storage: 'localStorage', 
-  ttl: 30 * 60 * 1000, // 30 minutes
-  maxSize: 50 
-});
-export const sessionStorageCache = new AdvancedCache({ 
-  storage: 'sessionStorage', 
-  ttl: 60 * 60 * 1000, // 1 hour
-  maxSize: 100 
->>>>>>> cursor/fix-errors-and-merge-to-main-7c55
 });
 
 export default AdvancedCache;

@@ -4,8 +4,7 @@
 export const enhancedLogger = {
   // Add utility functions here
   init: () => {
-    console.log('enhancedLogger initialized');
-  }
+    }
 };
 
 export default enhancedLogger;

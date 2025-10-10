@@ -144,8 +144,6 @@ const EnhancedContactForm: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       // In a real application, you would send the data to your backend
-      console.log('Form submitted:', formData);
-      
       setIsSubmitted(true);
     } catch (error) {
       setSubmitError('Failed to send message. Please try again or contact us directly.');

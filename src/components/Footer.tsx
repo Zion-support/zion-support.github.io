@@ -4,7 +4,6 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
-  
 
   const microSaasServices = {
     'Productivity': [

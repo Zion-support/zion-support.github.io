@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 interface SkipLinkProps {
   to: string;
@@ -12,14 +11,23 @@ const SkipLink: React.FC<SkipLinkProps> = ({
   children, 
   className = '' 
 }) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const target = document.querySelector(to);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+      (target as HTMLElement).focus();
+    }
+  };
+
   return (
-    <Link
-      to={to}
-      data-skip-link
-      className={`sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-cyan-600 focus:text-white focus:rounded-lg focus:font-semibold focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 transition-all duration-200 ${className}`}
+    <a
+      href={to}
+      onClick={handleClick}
+      className={`sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50 transition-all duration-200 ${className}`}
     >
       {children}
-    </Link>
+    </a>
   );
 };
 
