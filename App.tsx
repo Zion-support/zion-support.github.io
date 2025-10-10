@@ -21,8 +21,6 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 =======
 import ServiceWorker from './app/components/ServiceWorker';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
-
->>>>>>> cursor/analyze-improve-and-deploy-application-5431
 // Structured data for SEO - moved to SEOHead component
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));

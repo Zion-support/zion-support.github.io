@@ -5,11 +5,8 @@ import Footer from './components/Footer';
 import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-<<<<<<< HEAD
 import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
-=======
 import StructuredData from './components/StructuredData';
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
 import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 // Dynamically import heavy components for better performance
@@ -29,7 +26,6 @@ const preloadComponents = () => {
     }, 100);
   }
 };
-<<<<<<< HEAD
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
@@ -39,6 +35,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
+
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
