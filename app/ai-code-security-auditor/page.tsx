@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiCodeSecurityAuditorPage: React.FC = () => {
@@ -31,7 +30,6 @@ const AiCodeSecurityAuditorPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const PagePage: React.FC = () => {
@@ -50,12 +48,10 @@ const PagePage: React.FC = () => {
       title: 'Feature 3',
       description: 'Description of feature 3',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -173,7 +169,6 @@ const PagePage: React.FC = () => {
                 <button className="border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
-=======
     'Benefit 1',
     'Benefit 2',
     'Benefit 3',
@@ -244,14 +239,11 @@ const PagePage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
               </div>
             ))}
           </div>
-<<<<<<< HEAD
         </section>
       </div>
-=======
         </div>
       </section>
 
@@ -296,14 +288,10 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
       <Footer />
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default AiCodeSecurityAuditorPage;
-=======
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4

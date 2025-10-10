@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Calendar, User, ArrowRight, Clock, Tag } from 'lucide-react';
@@ -70,7 +69,6 @@ const BlogPage: React.FC = () => {
       readTime: '11 min read',
       category: 'Emerging Technology',
       image: '/api/placeholder/600/400',
-=======
 
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -147,14 +145,11 @@ const BlogPage: React.FC = () => {
       category: 'Development',
       tags: ['Web Development', 'Scalability', 'Architecture'],
       image: '/images/blog/scalable-apps.jpg',
->>>>>>> cursor/fix-errors-and-merge-to-main-19af
       featured: false
     }
   ];
 
-<<<<<<< HEAD
   const categories = ['All', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Development', 'Data Analytics', 'Emerging Technology'];
-=======
   const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Development'];
 
   useEffect(() => {
@@ -174,12 +169,10 @@ const BlogPage: React.FC = () => {
 
     setFilteredPosts(filtered);
   }, [searchTerm, selectedCategory]);
->>>>>>> cursor/fix-errors-and-merge-to-main-19af
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Blog - Zion Tech Group | AI and IT Insights</title>
         <meta name="description" content="Stay updated with the latest insights on AI, IT solutions, and emerging technologies. Expert articles, tutorials, and industry trends." />
         <meta name="keywords" content="AI blog, IT insights, technology trends, enterprise solutions, cloud computing, cybersecurity" />
@@ -314,7 +307,6 @@ const BlogPage: React.FC = () => {
                 Subscribe
               </button>
             </div>
-=======
         <title>Blog - Zion Tech Group | AI & IT Insights</title>
         <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and IT solutions from our expert team." />
         <meta name="keywords" content="AI blog, IT insights, technology trends, cloud computing, cybersecurity, software development" />
@@ -467,7 +459,6 @@ const BlogPage: React.FC = () => {
                 <p className="text-gray-400 text-lg">No articles found matching your search criteria.</p>
               </div>
             )}
->>>>>>> cursor/fix-errors-and-merge-to-main-19af
           </div>
         </section>
       </div>
