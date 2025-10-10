@@ -1,4 +1,3 @@
-
 'use client'
 /**
  * Enhanced Performance Hook;
@@ -6,8 +5,7 @@
  */
 
 export interface UseEnhancedPerformanceOptions {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   component?: string;
@@ -72,7 +70,7 @@ export function useEnhancedPerformance(__option)
       // Many re-renders detected;
 'High Render Count',
         renderCountRef.current;
-  });
+    )};
   const trackError = useCallback()
     (erro,
   r: Error, context?: Record;)
@@ -83,8 +81,7 @@ export function useEnhancedPerformance(__option)
   O: Add content,}
 }
         errorTracker.trackError(error, {
-    ...context
-  }
+    ...context,
     },
     [component, trackErrors])
   const trackUserAction = useCallback()
@@ -120,4 +117,3 @@ analytics.trackPerformance(
     trackError,
     trackUserAction,
     measureOperation;)`
-

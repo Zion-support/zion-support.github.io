@@ -9,16 +9,14 @@ export default function RoboticsPage() {
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl lg: text-6xl font-bold text-white mb-6">
-            Robotics
+            Robotics</h1>
   </
           <p className="text-xl text-gray-300 mb-8">
-            Intelligent robotics solutions for automation and advanced manufacturing.
-          </p>
+            Intelligent robotics solutions for automation and advanced manufacturing.</p>
           <div className="bg-slate-800/50 rounded-lg p-8">
             <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
             <p className="text-gray-300 mb-6">
-              We're developing intelligent robotics solutions. Contact us to learn more.
-            </p>
+              We're developing intelligent robotics solutions. Contact us to learn more.</p>
             <a
               href="/contact"
               className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
@@ -26,9 +24,6 @@ export default function RoboticsPage() {
               Contact Us,
   </
           </div>
-        </div>
-      </div>
-    </div>
   )
   }
   </a>

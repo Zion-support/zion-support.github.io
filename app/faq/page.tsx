@@ -11,7 +11,7 @@ const FAQPage: React.FC = () => {
         : [...prev, index]
     );
   }
-  const faqs = [
+  const faqs: any[] = [
     {
       question: "What AI services do you offer?",
       answer: "We offer comprehensive AI services including marketing automation, customer support, data analytics, content generation, healthcare solutions, financial services, e-commerce solutions, cybersecurity, mobile apps, sales automation, workflow automation, and data visualization."
@@ -59,8 +59,7 @@ const FAQPage: React.FC = () => {
               Frequently Asked <span className="text-cyan-400">Questions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Find answers to common questions about our AI and IT services, pricing, and implementation.
-            </p>
+              Find answers to common questions about our AI and IT services, pricing, and implementation.</p>
           </div>
         </section>
         <section className="py-16 px-4">
@@ -86,7 +85,6 @@ const FAQPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
       </div>
     </React.Fragment>

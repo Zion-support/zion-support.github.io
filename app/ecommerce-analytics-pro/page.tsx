@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target, CheckCircle, ArrowRight } from 'lucide-react';
 const EcommerceAnalyticsProPage: React.FC = () => {
-  const features = [
+  const features: any[] = [
     {
       icon: BarChart,
       title: 'Real-time Analytics',
@@ -12,8 +12,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
     {
       icon: TrendingUp,
       title: 'Revenue Optimization',
-      description: 'Identify trends and opportunities to maximize revenue and improve profit margins.'
-    },
+      description: 'Identify trends and opportunities to maximize revenue and improve profit margins.',,
     {
       icon: Users,
       title: 'Customer Insights',
@@ -22,18 +21,15 @@ const EcommerceAnalyticsProPage: React.FC = () => {
     {
       icon: ShoppingCart,
       title: 'Inventory Management',
-      description: 'Optimize stock levels and predict demand with AI-powered inventory analytics.'
-    },
+      description: 'Optimize stock levels and predict demand with AI-powered inventory analytics.',,
     {
       icon: DollarSign,
       title: 'Pricing Intelligence',
-      description: 'Dynamic pricing recommendations based on market conditions and competitor analysis.'
-    },
+      description: 'Dynamic pricing recommendations based on market conditions and competitor analysis.',,
     {
       icon: Target,
       title: 'Conversion Tracking',
-      description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
-    }
+      description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.',
   ]
   return (
     <React.Fragment>
@@ -47,11 +43,10 @@ const EcommerceAnalyticsProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
-                E-commerce Analytics Pro,
+                E-commerce Analytics Pro,</h1>
   </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your e-commerce business with AI-powered analytics that drive growth, optimize operations, and maximize revenue.
-              </p>
+                Transform your e-commerce business with AI-powered analytics that drive growth, optimize operations, and maximize revenue.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -66,7 +61,6 @@ const EcommerceAnalyticsProPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
       </div>
     </React.Fragment>

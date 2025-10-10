@@ -26,7 +26,7 @@ const Navigation: React.FC = () => {
       if (isOpen && !(event.target as Element).closest('.mobile-menu')) {
         setIsOpen(false);
       }
-    }
+    };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isOpen]);
@@ -72,7 +72,7 @@ const Navigation: React.FC = () => {
   }, []);
 
   // Service data
-  const aiServices = [
+  const aiServices: any[] = [
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows' },
     { name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent conversations' },
@@ -112,7 +112,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro', icon: FileText, description: 'Advanced content creation' }
   ]
 
-  const itServices = [
+  const itServices: any[] = [
     { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
     { name: 'API Development', href: '/api-development', icon: Code, description: 'API development & management' },
     { name: 'Cybersecurity', href: '/cybersecurity-solutions', icon: Shield, description: 'Comprehensive security' },
@@ -149,7 +149,7 @@ const Navigation: React.FC = () => {
     { name: 'Cloud-Native Security', href: '/cloud-native-security', icon: Shield, description: 'Container security' }
   ]
 
-  const microSaasServices = [
+  const microSaasServices: any[] = [
     { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: BarChart, description: 'Business intelligence platform' },
     { name: 'Zion Chat AI', href: '/zion-chat-ai', icon: MessageCircle, description: 'AI customer support' },
     { name: 'Zion Security Shield', href: '/zion-security-shield', icon: Shield, description: 'Cybersecurity monitoring' },
@@ -188,7 +188,7 @@ const Navigation: React.FC = () => {
     { name: 'Zion AI Document AI', href: '/zion-ai-document-ai', icon: FileText, description: 'Document processing' }
   ];
 
-  const microSaasServices2 = [
+  const microSaasServices2: any[] = [
     { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Real-time BI & Analytics' },
     { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Brain, description: 'No-code Chatbot Platform' },
     { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail, description: 'Automated Email Campaigns' },
@@ -203,7 +203,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Lead Scoring', href: '/ai-lead-scoring', icon: Cpu, description: 'Intelligent Lead Qualification' }
   ];
 
-  const emergingTech = [
+  const emergingTech: any[] = [
     { name: '5G Implementation', href: '/5g-implementation', icon: Zap, description: 'Next-gen connectivity' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box, description: '3D content creation' },
     { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace', icon: Monitor, description: 'Immersive work environments' },
@@ -270,7 +270,6 @@ const Navigation: React.FC = () => {
                         <div className="flex-1">
                           <div className="text-white font-semibold group-hover:text-cyan-300 transition-colors">{service.name}</div>
                           <div className="text-xs text-gray-400 group-hover:text-gray-300">{service.description}</div>
-                        </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto group-hover:translate-x-1 transition-all" />
                       </Link>
                     ))}
@@ -285,7 +284,6 @@ const Navigation: React.FC = () => {
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </div>
-                </div>
               )}
             </div>
 
@@ -318,7 +316,6 @@ const Navigation: React.FC = () => {
                         <div className="flex-1">
                           <div className="text-white font-semibold group-hover:text-purple-300 transition-colors">{service.name}</div>
                           <div className="text-xs text-gray-400 group-hover:text-gray-300">{service.description}</div>
-                        </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-purple-400 ml-auto group-hover:translate-x-1 transition-all" />
                       </Link>
                     ))}
@@ -333,7 +330,6 @@ const Navigation: React.FC = () => {
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </div>
-                </div>
               )}
             </div>
 
@@ -366,7 +362,6 @@ const Navigation: React.FC = () => {
                         <div className="flex-1">
                           <div className="text-white font-semibold group-hover:text-green-300 transition-colors">{service.name}</div>
                           <div className="text-xs text-gray-400 group-hover:text-gray-300">{service.description}</div>
-                        </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-green-400 ml-auto group-hover:translate-x-1 transition-all" />
                       </Link>
                     ))}
@@ -381,7 +376,6 @@ const Navigation: React.FC = () => {
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </div>
-                </div>
               )}
             </div>
 
@@ -414,12 +408,10 @@ const Navigation: React.FC = () => {
                         <div className="flex-1">
                           <div className="text-white font-semibold group-hover:text-orange-300 transition-colors">{service.name}</div>
                           <div className="text-xs text-gray-400 group-hover:text-gray-300">{service.description}</div>
-                        </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-orange-400 ml-auto group-hover:translate-x-1 transition-all" />
                       </Link>
                     ))}
                   </div>
-                </div>
               )}
             </div>
 
@@ -471,7 +463,6 @@ const Navigation: React.FC = () => {
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
-        </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
@@ -489,7 +480,6 @@ const Navigation: React.FC = () => {
                   <span className="flex items-center space-x-2">
                     <Brain className="w-4 h-4" />
                     <span>AI Services</span>
-                  </span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {aiServicesOpen && (
@@ -523,7 +513,6 @@ const Navigation: React.FC = () => {
                   <span className="flex items-center space-x-2">
                     <Cloud className="w-4 h-4" />
                     <span>IT Services</span>
-                  </span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {itServicesOpen && (
@@ -550,7 +539,6 @@ const Navigation: React.FC = () => {
                   <span className="flex items-center space-x-2">
                     <Cpu className="w-4 h-4" />
                     <span>Micro SAAS</span>
-                  </span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {microSaasOpen && (
@@ -616,9 +604,6 @@ const Navigation: React.FC = () => {
                   <MapPin className="w-4 h-4" />
                   <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
-              </div>
-            </div>
-          </div>
         )}
       </div>
     </nav>

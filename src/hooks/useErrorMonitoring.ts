@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 'use client';
 // ErrorInfo interface removed as it's not used in this hook;
@@ -62,7 +60,7 @@ const handleUnhandledRejection = (even)
   O: Add content,}
 }
       const componentStack =
-        (errorInfo as { componentStack?: string })?.componentStack || 'unknown';
+        (errorInfo as { componentStack?: string   )}?.componentStack || 'unknown';
       reportError(error, `react_error_boundar)`
   y: ${componentStack}`);
     }
@@ -81,7 +79,7 @@ const handleUnhandledRejection = (even)
 }
       window.removeEventListener('error', handleError);
       window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-      delete (window as Window & { __REACT_ERROR_HANDLER__?: unknown }).__REACT_ERROR_HANDLER__;
+      delete (window as Window & { __REACT_ERROR_HANDLER__?: unknown   )}.__REACT_ERROR_HANDLER__;
     }
   }, [reportError]);
   return {/* TODO: Fix JSX expression */}
@@ -91,4 +89,3 @@ const handleUnhandledRejection = (even)
   }
 }
 export default useErrorMonitoring;
-

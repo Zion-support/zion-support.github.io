@@ -4,8 +4,7 @@ import React from 'react';
 import React, { useState, useCallback } from 'react';
 interface ImageProps {
     src: string,
-    alt: string
-  }
+    alt: string,
 interface ImageProps {}
 
   src: string;
@@ -52,7 +51,7 @@ export const Image: React.FC<ImageProps> = ({
   onError,
   }
   ...props}
-}) => {}
+  )} => {}
   const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const handleLoad = useCallback(() => {}
@@ -79,10 +78,9 @@ export const Image: React.FC<ImageProps> = ({
       width: '100%',
       height: '100%',
       objectFit: 'cover'}
-    })
+      )}
   }
-  if (hasError) {
-    </ImageProps>
+  if (hasError) {</ImageProps>
     return (</ImageProps>
   }
   if (hasError) {}
@@ -95,14 +93,13 @@ import React, { useState, useCallback } from 'react';
 interface ImageProps {/* TODO: Fix JSX expression */}
 }
 export const,
-  Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */}))} => {/* TODO: Fix JSX expression */}
   }, [onLoad]);
   const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
   }, [onError]);
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
-    })
+      )}
   }
   if (hasError) {/* TODO: Fix JSX expression */}
         className={`bg-gray-200 flex items-center justify-center ${className}`}
@@ -150,4 +147,3 @@ export default Image;
 export default Image;
 
 "`;
-

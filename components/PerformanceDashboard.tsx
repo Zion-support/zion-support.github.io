@@ -3,8 +3,8 @@ interface PerformanceMetrics {
     loadTime: number
   renderTime: number
   memoryUsage: number,
-  fps: number
-  }
+  fps: number;
+}
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -35,8 +35,8 @@ const PerformanceDashboard: React.FC = () => {
   }, []);
   //Only show in development
   if (process.env['NODE_ENV'] !== 'development') {
-    return null
-  }
+    return null;
+}
   return (
     <div className="fixed bottom-4 right-4 z-50">
       <button
@@ -61,7 +61,6 @@ const PerformanceDashboard: React.FC = () => {
               <span className="text-gray-600">FPS:</span>
               <span className="font-mono">{metrics?.fps.toFixed(1)}</span>
             </div>
-          </div>
         </div>
       )}
     </div>

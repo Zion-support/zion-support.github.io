@@ -5,7 +5,7 @@ import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
 const AIInvoiceGeneratorPage: React.FC = memo(() => {
-  const features = [
+  const features: any[] = [
     {
       icon: Brain,
       title: 'AI-Powered Invoice Generation',
@@ -34,7 +34,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       benefits: ['Mobile-first design', 'Offline capability', 'Touch optimization', 'Push notifications']
     }
   ];
-  const pricingPlans = [
+  const pricingPlans: any[] = [
       name: 'Starter',
       price: '$29',
       period: '/month',
@@ -74,7 +74,7 @@ namename: 'Enterprise',
         'SLA guarantee',
         'On-premise deployment'
       color: 'green'
-  const testimonials = [
+  const testimonials: any[] = [
       name: 'Sarah Johnson',
       role: 'Freelance Designer',
       company: 'Creative Studio',
@@ -91,7 +91,7 @@ namename: 'Emily Rodriguez',
       company: 'Finance Pro',
       content: 'Compliance features are outstanding. Never worry about tax calculations or regulatory requirements again.',
       avatar: '👩‍💻'
-  const useCases = [
+  const useCases: any[] = [
       title: 'Freelancers & Consultants',
       description: 'Streamline invoicing for project-based work with AI that understands your service offerings.',
       icon: Briefcase,
@@ -133,8 +133,7 @@ namename: 'Emily Rodriguez',
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Transform your invoicing process with AI-powered automation. Create, send, and track invoices 
-                effortlessly while gaining valuable insights into your business performance.
-              </p>
+                effortlessly while gaining valuable insights into your business performance.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a
                   href="#pricing"
@@ -208,8 +207,7 @@ namename: 'Emily Rodriguez',
                     {plan.popular && (
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                         <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-                          Most Popular
-                    )}
+                          Most Popular)}
                     <div className="text-center mb-6">
                       <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                       <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -257,7 +255,7 @@ namename: 'Emily Rodriguez',
         <Footer />
     </React.Fragment>
   ),
-});
+  )};
 AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage';
 'use client';
 import React from 'react';
@@ -269,33 +267,21 @@ export default AIInvoiceGeneratorPage</div>
   </section>
   </div>
   </div>
-  </div>
-  </div>
-  </div>
   </button>
   </li>
   </ul>
   </div>
-  </div>
   </span>
-  </div>
-  </div>
   </div>
   </section>
   </ul>
   </div>
-  </div>
-  </div>
   </section>
-  </div>
-  </div>
   </div>
   </p>
   </h2>
   </div>
-  </div>
   </section>
-  </div>
   </div>
   </a>
   </div>

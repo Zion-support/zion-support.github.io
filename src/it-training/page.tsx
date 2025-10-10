@@ -4,10 +4,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { GraduationCap, BookOpen, Users, Award, CheckCircle, Star,  GraduationCap,  BookOpen,  Award } from 'lucide-react';
 const ITTrainingPage: React.FC = () => {
-    const features = [],
+    const features: any[] = [],
   return (
-    {// TODO: Add content
-  }
+    {// TODO: Add content,
 }
   ico,
   n: GraduationCap,

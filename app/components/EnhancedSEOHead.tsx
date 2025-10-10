@@ -9,8 +9,7 @@ interface SEOHeadProps {
   canonicalUrl?: string;
   structuredData?: any;
   ogImage?: string;
-  twitterCard?: string;
-}
+  twitterCard?: string,
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title,
@@ -20,7 +19,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   structuredData,
   ogImage = '/og-image.jpg',
   twitterCard = 'summary_large_image'
-}) => {
+  )} => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   
   return (

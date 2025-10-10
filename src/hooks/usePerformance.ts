@@ -4,8 +4,7 @@ interface PerformanceMetrics {
     loadTime: number
   renderTime: number
   memoryUsage: number,
-  networkLatency: number
-  }
+  networkLatency: number,
 
 export const usePerformance = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({</PerformanceMetrics>loadTime</PerformanceMetrics>: 0,
@@ -19,7 +18,7 @@ export const usePerformance = () => {
       requestIdleCallback(() => {
         // Run optimization tasks during idle time
         console.log('Running performance optimizations...')
-  });
+    )};
     }
   }, []);
 
@@ -56,11 +55,9 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
     firstContentfulPaint: number,,
     largestContentfulPaint: number,,
     cumulativeLayoutShift: number,,
-    firstInputDelay: number
-}
+    firstInputDelay: number,
 export const _usePerformance = () => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   const [metrics, setMetrics] = useState;
@@ -84,43 +81,41 @@ export const _usePerformance = () => {
       // Measure CLS (Cumulative Layout Shift)
 
       if ('PerformanceObserver' in window) {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
         const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
           for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
             if ()
               entry.entryType === 'layout-shift' &&
               !(entry as unknown as {/* TODO: Fix JSX expression */})
-  t: boolean }).hadRecentInput) {/* TODO: Fix JSX expression */}
+  t: boolean   )}.hadRecentInput) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 
-              cumulativeLayoutShift += (entry as unknown as { value: number }).value;
+              cumulativeLayoutShift += (entry as unknown as { value: number   )}.value;
 
             }
           }
         }
   )
         observer.observe({/* TODO: Fix JSX expression */}
-  s: ['layout-shift'] })
+  s: ['layout-shift']   )}
   )
       }
       // Measure FID (First Input Delay)
 
       if ('PerformanceObserver' in window) {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
         const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
           for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -129,19 +124,18 @@ export const _usePerformance = () => {
 }
 
             if (entry.entryType === 'first-input') {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
 
               firstInputDelay =
                 (entry as unknown as {/* TODO: Fix JSX expression */})
-  t: number }).processingStart - entry.startTime;
+  t: number   )}.processingStart - entry.startTime;
             }
           }
         }
   )
         observer.observe({/* TODO: Fix JSX expression */}
-  s: ['first-input'] })
+  s: ['first-input']   )}
   )
       }
         loadTim,
@@ -190,4 +184,3 @@ export const _usePerformance = () => {
   }, []);
   return { metrics, isMonitoring }
 }
-

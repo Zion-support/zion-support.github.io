@@ -4,8 +4,8 @@ import { ChevronRight, Home } from 'lucide-react';
 interface BreadcrumbItem {
     name: string
   href: string,
-  current?: boolean
-  }
+  current?: boolean;
+}
 const Breadcrumb: React.FC = () => {
   const location = useLocation(),
   const generateBreadcrumbs = (): BreadcrumbItem[] => {,
@@ -26,16 +26,15 @@ const Breadcrumb: React.FC = () => {
     )
         name)
         href: currentPath),
-        current: isLast
-  });
-    });
+        current: isLast,);
+      )};
     return breadcrumbs;
   }
   const breadcrumbs = generateBreadcrumbs();
   // Don't show breadcrumb on home page;
   if (location.pathname === '/') {
-    return null
-  }
+    return null;
+}
   const structuredData = {
     "@context": "https: //schema.org",
     "@type": "BreadcrumbList",
@@ -44,7 +43,7 @@ const Breadcrumb: React.FC = () => {
       "position": index + 1,
       "name": item.name,
       "item": `https://ziontechgroup.com${item.href}`
-    }))
+      )})
   }
   return(<React.Fragment>)
       <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3">)

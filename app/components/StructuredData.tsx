@@ -8,8 +8,8 @@ interface StructuredDataProps {
 
 const StructuredData: React.FC<StructuredDataProps> = ({ 
   type = 'Organization', 
-  data 
-}) => {
+  data;
+  )} => {
   const getDefaultData = () => {
     switch (type) {
       case 'Organization':
@@ -81,8 +81,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
           "isPartOf": {
             "@type": "WebSite",
             "name": "Zion Tech Group",
-            "url": "https://ziontechgroup.com"
-          },
+            "url": "https: //ziontechgroup.com",,
           "about": {
             "@type": "Organization",
             "name": "Zion Tech Group"
@@ -94,8 +93,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://ziontechgroup.com"
-              }
+                "item": "https: //ziontechgroup.com",
             ]
           }
         }
@@ -109,8 +107,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
           "provider": {
             "@type": "Organization",
             "name": "Zion Tech Group",
-            "url": "https://ziontechgroup.com"
-          },
+            "url": "https: //ziontechgroup.com",,
           "areaServed": "Worldwide",
           "serviceType": [
             "AI Solutions",
@@ -123,8 +120,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
           "offers": {
             "@type": "Offer",
             "description": "Professional AI and IT consulting services",
-            "availability": "https://schema.org/InStock"
-          }
+            "availability": "https: //schema.org/InStock",
         }
       
       case 'LocalBusiness':

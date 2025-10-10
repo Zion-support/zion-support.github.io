@@ -9,8 +9,7 @@ export interface UseEnhancedPerformanceOptions {
     component?: string;
   trackErrors?: boolean;
   trackPerformance?: boolean;
-  trackAnalytics?: boolean
-  }
+  trackAnalytics?: boolean,
 }
 export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
     const {
@@ -63,7 +62,7 @@ if (trackPerformance && renderCountRef.current > 10) {
       )
   }
     }
-  })
+    )}
 const trackError = useCallback(;
     (error: Error, context?: Record<string, unknown>) => {
     if (trackErrors) {
@@ -71,7 +70,7 @@ const trackError = useCallback(;
           component,;
           ...context,
   }
-        })
+          )}
       },
     [component, trackErrors]
   );

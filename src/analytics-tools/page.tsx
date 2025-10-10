@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin} from 'lucide-react';
 import React from 'react';
 const AnalyticsToolsPage: React.FC = () => {
-  const analyticsTools = [
+  const analyticsTools: any[] = [
     {
       title: 'AI Business Intelligence',
       price: '$399/month',
@@ -44,7 +44,7 @@ titletitle: 'AI Financial Analytics',
       category:     ,
 $4}
   ];
-  const benefits = [
+  const benefits: any[] = [
       icon: TrendingUp,
       title: 'Data-Driven Decisions',
       description:       ,
@@ -76,7 +76,7 @@ const PagePage: React.FC = () => {
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Analytics Tools,
+            AI Analytics Tools,</h1>
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.
@@ -89,14 +89,13 @@ const PagePage: React.FC = () => {
 // AI Analytics Tools
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon,
+            Coming Soon,</p>
   </
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-cyan-400 mb-2">6</div>
               <div className="text-gray-300">Analytics Tools</div>
-            </div>
               <div className="text-3xl font-bold text-green-400 mb-2">$179</div>
               <div className="text-gray-300">Starting Price</div>
               <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
@@ -118,7 +117,7 @@ const PagePage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
-            Our Analytics Tools,
+            Our Analytics Tools,</h2>
   </
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {analyticsTools.map((tool, index) => (
@@ -144,7 +143,7 @@ const PagePage: React.FC = () => {
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all inline-block">
-                    Get Started,
+                    Get Started,</a>
   </
       {/* Benefits Section */}
             Why Choose Our Analytics Tools?
@@ -154,8 +153,7 @@ const PagePage: React.FC = () => {
                 <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
-              <div className="text-gray-300">Analytics Tools</div>
-            </div>"
+              <div className="text-gray-300">Analytics Tools</div>"
               <div className="text-3xl font-bold text-green-400 mb-2">$179</div>"
               <div className="text-gray-300">Starting Price</div>"
               <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>"
@@ -241,8 +239,7 @@ Why Choose Our Analytics Tools?"
               Call (302) 464-0950
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-              Email Us
-  ),
+              Email Us),
 }
 Ready to Unlock Your Data?
           <p className="text-xl text-purple-100 mb-8">
@@ -251,11 +248,9 @@ Ready to Unlock Your Data?
               href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 Call (302) 464-0950
               href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-              Email Us
-  ),
+              Email Us),
 }
-export default AnalyticsToolsPage;
-  </div>
+export default AnalyticsToolsPage;</div>
   </p>
   </div>
   </p>
@@ -265,17 +260,5 @@ export default AnalyticsToolsPage;
   </div>
   </div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
   </p>
-  </p>
-  </div>
-  </div>
   </div>

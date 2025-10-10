@@ -4,7 +4,7 @@ import { CheckCircle, X, Zap, Brain, Cloud, ArrowRight, Star, Users, Shield, Clo
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const PricingPage: React.FC = () => {
-  const plans = [
+  const plans: any[] = [
     {
       name: 'Starter',
       description: 'Perfect for small businesses getting started with AI',
@@ -26,8 +26,7 @@ const PricingPage: React.FC = () => {
         'Basic Analytics'
       ],
       cta: 'Get Started',
-      popular: false
-    },
+      popular: false,,
     {
       name: 'Professional',
       description: 'Ideal for growing companies with advanced AI needs',
@@ -48,8 +47,7 @@ const PricingPage: React.FC = () => {
       ],
       limitations: [],
       cta: 'Start Free Trial',
-      popular: true
-    },
+      popular: true,,
     {
       name: 'Enterprise',
       description: 'Complete AI transformation for large organizations',
@@ -71,36 +69,31 @@ const PricingPage: React.FC = () => {
       ],
       limitations: [],
       cta: 'Contact Sales',
-      popular: false
-    }
+      popular: false,
   ];
-  const addOns = [
+  const addOns: any[] = [
     {
       name: 'Additional AI Models',
       description: 'Extra custom AI models beyond your plan limits',
       price: '$500',
-      period: '/model/month'
-    },
+      period: '/model/month',,
     {
       name: 'Priority Support',
       description: '24/7 priority support with dedicated account manager',
       price: '$1,000',
-      period: '/month'
-    },
+      period: '/month',,
     {
       name: 'Custom Integrations',
       description: 'Bespoke integrations with your existing systems',
       price: '$2,000',
-      period: '/integration'
-    },
+      period: '/integration',,
     {
       name: 'Training & Workshops',
       description: 'On-site or virtual training for your team',
       price: '$5,000',
-      period: '/day'
-    }
+      period: '/day',
   ];
-  const faqs = [
+  const faqs: any[] = [
     {
       question: 'Can I change my plan at any time?',
       answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the beginning of your next billing cycle.'
@@ -111,16 +104,14 @@ const PricingPage: React.FC = () => {
     },
     {
       question: 'What happens if I exceed my plan limits?',
-      answer: 'We\'ll notify you when you\'re approaching your limits and help you upgrade or purchase additional capacity.'
-    },
+      answer: 'We\'ll notify you when you\'re approaching your limits and help you upgrade or purchase additional capacity.',,
     {
       question: 'Do you offer custom pricing for large organizations?',
       answer: 'Yes, we offer custom pricing and enterprise solutions for organizations with specific needs. Contact our sales team for more information.'
     },
     {
       question: 'What support is included?',
-      answer: 'All plans include email support. Professional and Enterprise plans include priority support with faster response times.'
-    },
+      answer: 'All plans include email support. Professional and Enterprise plans include priority support with faster response times.',,
     {
       question: 'Can I cancel anytime?',
       answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.'
@@ -134,32 +125,28 @@ const PricingPage: React.FC = () => {
           text: 'text-blue-500',
           border: 'border-blue-500',
           light: 'bg-blue-50',
-          textLight: 'text-blue-600'
-        }
+          textLight: 'text-blue-600',
       case 'cyan':
         return {
           bg: 'bg-cyan-500',
           text: 'text-cyan-500',
           border: 'border-cyan-500',
           light: 'bg-cyan-50',
-          textLight: 'text-cyan-600'
-        }
+          textLight: 'text-cyan-600',
       case 'purple':
         return {
           bg: 'bg-purple-500',
           text: 'text-purple-500',
           border: 'border-purple-500',
           light: 'bg-purple-50',
-          textLight: 'text-purple-600'
-        }
+          textLight: 'text-purple-600',
       default:
         return {
           bg: 'bg-gray-500',
           text: 'text-gray-500',
           border: 'border-gray-500',
           light: 'bg-gray-50',
-          textLight: 'text-gray-600'
-        }
+          textLight: 'text-gray-600',
     }
   }
   return (
@@ -172,8 +159,7 @@ const PricingPage: React.FC = () => {
             Simple <span className="text-cyan-400">Pricing</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Choose the perfect plan for your business. All plans include our core AI and IT solutions with transparent pricing.
-          </p>
+            Choose the perfect plan for your business. All plans include our core AI and IT solutions with transparent pricing.</p>
         </div>
       </section>
       {/* Pricing Plans */}
@@ -191,7 +177,7 @@ const PricingPage: React.FC = () => {
                 >
                   {plan.popular && (
                     <div className={`absolute top-0 left-0 right-0 ${colors.bg} text-white text-center py-2 text-sm font-semibold`}>
-                      Most Popular;
+                      Most Popular;</div>
   </
                   )}
                   <div className={`p-8 ${plan.popular ? 'pt-12' : ''}`}>
@@ -205,7 +191,6 @@ const PricingPage: React.FC = () => {
                         <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
                         <span className="text-gray-600 ml-1">{plan.period}</span>
                       </div>
-                    </div>
                     <div className="mb-8">
                       <h4 className="font-semibold text-gray-900 mb-4">What's included:</h4>
                       <ul className="space-y-3">
@@ -235,27 +220,23 @@ const PricingPage: React.FC = () => {
                       className={`w-full ${
                         plan.popular
                           ? `${colors.bg} hover:opacity-90 text-white`
-                          : `${colors.border} ${colors.text} hover:${colors.bg} hover:text-white`
-                      } border-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-center block`}
+                          : `${colors.border} ${colors.text} hover:${colors.bg} hover: text-white`, border-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-center block`}
                     >
-                      {plan.cta}
-                    </Link>
+                      {plan.cta}</Link>
                   </div>
-                </div>
               );
-            })}
+              )}}
           </div>
-        </div>
       </section>
       {/* Add-ons */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Add-on Services
+              Add-on Services</h2>
   </
             <p className="text-xl text-gray-600">
-              Enhance your plan with additional services and features,
+              Enhance your plan with additional services and features,</p>
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -267,20 +248,18 @@ const PricingPage: React.FC = () => {
                   <span className="text-2xl font-bold text-cyan-600">{addOn.price}</span>
                   <span className="text-gray-600 text-sm">{addOn.period}</span>
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
       {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions
+              Frequently Asked Questions</h2>
   </
             <p className="text-xl text-gray-600">
-              Everything you need to know about our pricing and plans,
+              Everything you need to know about our pricing and plans,</p>
   </
           </div>
           <div className="space-y-8">
@@ -291,37 +270,32 @@ const PricingPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Get Started?
-          </h2>
+            Ready to Get Started?</h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
-            Choose your plan and start transforming your business with AI and IT solutions today.
-          </p>
+            Choose your plan and start transforming your business with AI and IT solutions today.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-              Start Free Trial
+              Start Free Trial</Link>
   </
             <Link
               to="/demo"
               className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
-              Schedule Demo
+              Schedule Demo</Link>
   </
           </div>
-        </div>
       </section>
       <Footer />
     </div>
   ),
 }
 export default PricingPage;
-  </Link>
   </Link>
   </p>
   </h2>

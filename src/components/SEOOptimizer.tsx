@@ -3,8 +3,7 @@ import React from 'react';
 interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 const,
-  SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */}))} => {/* TODO: Fix JSX expression */}
     }
     // Add breadcrumb structured data;
     addBreadcrumbStructuredData();
@@ -75,9 +74,8 @@ const,
         'http,
   s://twitter.com/ziontechgroup',
         'http,
-  s://linkedin.com/company/ziontechgroup'
-      ]
-    }
+  s: //linkedin.com/company/ziontechgroup'
+      ],
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(organizationData);
@@ -93,17 +91,15 @@ const,
     logger.info('SEO optimization applied', { 
       page, 
       title: mergedSEOData.title,
-      description: mergedSEOData.description 
-    });
+      description: mergedSEOData.description,);
     // Track page view for analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: mergedSEOData.title,
         page_location: mergedSEOData.canonical,
         custom_map: {
-          page_type: page
-        }
-      });
+          page_type: page,
+        )};
     }
   }, [mergedSEOData, page]);
   return (
@@ -159,8 +155,7 @@ const,
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(mergedSEOData.structuredData)}
-      </script>
+        {JSON.stringify(mergedSEOData.structuredData)}</script>
       {/* Additional structured data for services */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -169,8 +164,7 @@ const,
           name: 'AI and IT Solutions',
           provider: {
             '@type': 'Organization',
-            name: 'Zion Tech Group'
-          },
+            name: 'Zion Tech Group',,
           description: mergedSEOData.description,
           serviceType: 'Technology Services',
           areaServed: 'United States',
@@ -183,29 +177,25 @@ const,
                 itemOffered: {
                   '@type': 'Service',
                   name: 'AI Solutions',
-                  description: 'Advanced artificial intelligence solutions'
-                }
+                  description: 'Advanced artificial intelligence solutions',
               },
               {
                 '@type': 'Offer',
                 itemOffered: {
                   '@type': 'Service',
                   name: 'Cybersecurity',
-                  description: 'Comprehensive cybersecurity solutions'
-                }
+                  description: 'Comprehensive cybersecurity solutions',
               },
               {
                 '@type': 'Offer',
                 itemOffered: {
                   '@type': 'Service',
                   name: 'Cloud Infrastructure',
-                  description: 'Scalable cloud infrastructure solutions'
-                }
+                  description: 'Scalable cloud infrastructure solutions',
               }
             ]
           }
-        })}
-      </script>
+          )}}</script>
     </Helmet>
   );
 }

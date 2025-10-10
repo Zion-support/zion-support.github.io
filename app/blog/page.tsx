@@ -7,7 +7,7 @@ import { Search, Calendar, User, Clock, ArrowRight } from 'lucide-react';
 const BlogPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const blogPosts = [
+  const blogPosts: any[] = [
     {
       id: 1,
       title: 'The Future of AI in Business',
@@ -16,8 +16,7 @@ const BlogPage: React.FC = () => {
       date: '2024-01-15',
       readTime: '5 min read',
       category: 'AI & Technology',
-      image: '/images/blog/ai-business.jpg'
-    },
+      image: '/images/blog/ai-business.jpg',,
     {
       id: 2,
       title: 'Cloud Migration Best Practices',
@@ -26,8 +25,7 @@ const BlogPage: React.FC = () => {
       date: '2024-01-10',
       readTime: '7 min read',
       category: 'Cloud Computing',
-      image: '/images/blog/cloud-migration.jpg'
-    },
+      image: '/images/blog/cloud-migration.jpg',,
     {
       id: 3,
       title: 'Cybersecurity in the Digital Age',
@@ -36,8 +34,7 @@ const BlogPage: React.FC = () => {
       date: '2024-01-05',
       readTime: '6 min read',
       category: 'Security',
-      image: '/images/blog/cybersecurity.jpg'
-    },
+      image: '/images/blog/cybersecurity.jpg',,
     {
       id: 4,
       title: 'Micro SaaS Development Guide',
@@ -46,10 +43,9 @@ const BlogPage: React.FC = () => {
       date: '2024-01-01',
       readTime: '8 min read',
       category: 'Development',
-      image: '/images/blog/micro-saas.jpg'
-    }
+      image: '/images/blog/micro-saas.jpg',
   ];
-  const categories = ['All', 'AI & Technology', 'Cloud Computing', 'Security', 'Development']
+  const categories: any[] = ['All', 'AI & Technology', 'Cloud Computing', 'Security', 'Development']
 
   const filteredPosts = blogPosts.filter(post => 
     post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -59,7 +55,7 @@ const BlogPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>Blog - Zion Tech Group | AI & IT Insights</title>
         <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends from Zion Tech Group experts." />
         <meta name="keywords" content="AI blog, technology insights, cloud computing, cybersecurity, micro SaaS, tech trends" />
@@ -70,11 +66,9 @@ const BlogPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Tech Insights & Blog
-              </h1>
+                Tech Insights & Blog</h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Stay ahead with the latest trends, insights, and best practices in AI, cloud computing, and technology.
-              </p>
+                Stay ahead with the latest trends, insights, and best practices in AI, cloud computing, and technology.</p>
             </div>
 
             <div className="mb-12">
@@ -86,9 +80,8 @@ const BlogPage: React.FC = () => {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20"
-                />
+                /></input>
               </div>
-            </div>
 
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {categories.map((category) => (
@@ -96,8 +89,7 @@ const BlogPage: React.FC = () => {
                   key={category}
                   className="px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300"
                 >
-                  {category}
-                </button>
+                  {category}</button>
               ))}
             </div>
 
@@ -109,7 +101,6 @@ const BlogPage: React.FC = () => {
                 >
                   <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl mb-6 flex items-center justify-center">
                     <div className="text-6xl opacity-50">📝</div>
-                  </div>
                   
                   <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
                     <span className="flex items-center gap-1">
@@ -123,12 +114,10 @@ const BlogPage: React.FC = () => {
                   </div>
 
                   <h2 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {post.title}
-                  </h2>
+                    {post.title}</h2>
                   
                   <p className="text-gray-300 mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
+                    {post.excerpt}</p>
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-sm text-gray-400">

@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Calendar, ArrowRight, TrendingUp, Users, Award, Globe, Zap, Brain, Shield, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Clock3, Compass, PieChart, TrendingDown, Activity } from 'lucide-react';
 const NewsPage: React.FC = () => {
-  const newsArticles = [
+  const newsArticles: any[] = [
     {
       id: 1,
       title: 'Zion Tech Group Launches Revolutionary AI Analytics Dashboard',
@@ -14,8 +14,7 @@ const NewsPage: React.FC = () => {
       category: 'Product Launch',
       image: '📊',
       featured: true,
-      readTime: '5 min read'
-    },
+      readTime: '5 min read',,
     {
       id: 2,
       title: 'AI Enterprise Transformation: $50M Annual Savings Achieved',
@@ -24,8 +23,7 @@ const NewsPage: React.FC = () => {
       category: 'Success Story',
       image: '💰',
       featured: true,
-      readTime: '8 min read'
-    },
+      readTime: '8 min read',,
     {
       id: 3,
       title: 'Quantum Computing Breakthrough: Next-Gen Algorithms Ready',
@@ -34,8 +32,7 @@ const NewsPage: React.FC = () => {
       category: 'Technology',
       image: '⚡',
       featured: false,
-      readTime: '6 min read'
-    },
+      readTime: '6 min read',,
     {
       id: 4,
       title: 'Autonomous Systems Revolution: Self-Managing Infrastructure',
@@ -44,8 +41,7 @@ const NewsPage: React.FC = () => {
       category: 'Innovation',
       image: '🤖',
       featured: false,
-      readTime: '7 min read'
-    },
+      readTime: '7 min read',,
     {
       id: 5,
       title: 'AI Cybersecurity: 99.9% Threat Detection Rate Achieved',
@@ -54,8 +50,7 @@ const NewsPage: React.FC = () => {
       category: 'Security',
       image: '🔒',
       featured: false,
-      readTime: '4 min read'
-    },
+      readTime: '4 min read',,
     {
       id: 6,
       title: 'Micro SAAS Solutions: 12 New AI Tools Launched',
@@ -64,11 +59,10 @@ const NewsPage: React.FC = () => {
       category: 'Product Launch',
       image: '🛠️',
       featured: false,
-      readTime: '5 min read'
-    }
+      readTime: '5 min read',
   ];
-  const categories = ['All', 'Product Launch', 'Success Story', 'Technology', 'Innovation', 'Security'];
-  const stats = [
+  const categories: any[] = ['All', 'Product Launch', 'Success Story', 'Technology', 'Innovation', 'Security'];
+  const stats: any[] = [
     { icon: Users, number: '100+', label: 'Happy Clients' },
     { icon: Award, number: '50+', label: 'Awards Won' },
     { icon: TrendingUp, number: '300%', label: 'Average ROI' },
@@ -88,15 +82,14 @@ const NewsPage: React.FC = () => {
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
-              News & Updates
+              News & Updates</h1>
   </
             <p className="text-xl text-cyan-400 mb-8">
-              Stay informed with our latest innovations and success stories,
+              Stay informed with our latest innovations and success stories,</p>
   </
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Discover the latest developments in AI technology, product launches, 
-              client success stories, and industry insights from Zion Tech Group.
-            </p>
+              client success stories, and industry insights from Zion Tech Group.</p>
           </section>
           {/* Stats Section */}
           <section className="mb-16">
@@ -106,14 +99,13 @@ const NewsPage: React.FC = () => {
                   <stat.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300">{stat.label}</div>
-                </div>
               ))}
             </div>
           </section>
           {/* Featured Articles */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Featured News;
+              Featured News;</h2>
   </
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {newsArticles.filter(article => article.featured).map((article) => (
@@ -123,8 +115,7 @@ const NewsPage: React.FC = () => {
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
                         <span className="bg-cyan-500 text-slate-900 px-3 py-1 rounded-full text-sm font-semibold">
-                          {article.category}
-                        </span>
+                          {article.category}</span>
                         <span className="text-gray-400 text-sm">{article.readTime}</span>
                       </div>
                       <div className="flex items-center text-gray-400 text-sm">
@@ -133,16 +124,12 @@ const NewsPage: React.FC = () => {
                           year: 'numeric', 
                           month: 'long', 
                           day: 'numeric' 
-                        })}
+                          )}}
                       </div>
-                    </div>
-                  </div>
                   <h3 className="text-2xl font-bold text-white mb-4 hover:text-cyan-400 transition-colors">
-                    {article.title}
-                  </h3>
+                    {article.title}</h3>
                   <p className="text-gray-300 mb-6 leading-relaxed">
-                    {article.excerpt}
-                  </p>
+                    {article.excerpt}</p>
                   <Link
                     to={`/blog/${article.id}`}
                     className="inline-flex items-center text-cyan-400 hover:text-white transition-colors">
@@ -156,7 +143,7 @@ const NewsPage: React.FC = () => {
           {/* All Articles */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Latest Updates;
+              Latest Updates;</h2>
   </
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {newsArticles.map((article) => (
@@ -166,8 +153,7 @@ const NewsPage: React.FC = () => {
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
                         <span className="bg-purple-500 text-white px-2 py-1 rounded text-xs font-semibold">
-                          {article.category}
-                        </span>
+                          {article.category}</span>
                         <span className="text-gray-400 text-xs">{article.readTime}</span>
                       </div>
                       <div className="flex items-center text-gray-400 text-xs">
@@ -176,16 +162,12 @@ const NewsPage: React.FC = () => {
                           month: 'short', 
                           day: 'numeric',
                           year: 'numeric'
-                        })}
+                          )}}
                       </div>
-                    </div>
-                  </div>
                   <h3 className="text-lg font-bold text-white mb-3 hover:text-cyan-400 transition-colors">
-                    {article.title}
-                  </h3>
+                    {article.title}</h3>
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                    {article.excerpt}
-                  </p>
+                    {article.excerpt}</p>
                   <Link
                     to={`/blog/${article.id}`}
                     className="inline-flex items-center text-cyan-400 hover:text-white transition-colors text-sm">
@@ -200,10 +182,10 @@ const NewsPage: React.FC = () => {
           <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">
-                Stay Updated;
+                Stay Updated;</h2>
   </
               <p className="text-xl text-gray-300 mb-8">
-                Subscribe to our newsletter for the latest AI insights and company updates;
+                Subscribe to our newsletter for the latest AI insights and company updates;</p>
   </
               <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
                 <input
@@ -212,12 +194,11 @@ const NewsPage: React.FC = () => {
                   className="flex-1 px-4 py-3 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
                 <button className="cyber-button px-8 py-3 font-semibold">
-                  Subscribe,
+                  Subscribe,</button>
   </
               </div>
               <p className="text-gray-400 text-sm mt-4">
-                No spam, unsubscribe at any time.
-              </p>
+                No spam, unsubscribe at any time.</p>
             </div>
           </section>
         </main>
@@ -229,8 +210,6 @@ const NewsPage: React.FC = () => {
 export default NewsPage;
   </button>
   </p>
-  </h2>
-  </h2>
   </h2>
   </p>
   </h1>

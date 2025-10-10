@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 export default function MicroSaasPage() {
-  const microSaasServices = [
+  const microSaasServices: any[] = [
     {
       icon: BarChart3,
       title: 'AI Analytics Dashboard',
@@ -238,7 +238,7 @@ export default function MicroSaasPage() {
       benefits: ['Increase productivity by 25%', 'Better time management', 'Detailed insights']
     }
   ];
-  const categories = [
+  const categories: any[] = [
     { name: 'All', count: microSaasServices.length },
     { name: 'Analytics', count: microSaasServices.filter(s => s.category === 'Analytics').length },
     { name: 'E-commerce', count: microSaasServices.filter(s => s.category === 'E-commerce').length },
@@ -255,29 +255,25 @@ export default function MicroSaasPage() {
     { name: 'Automation', count: microSaasServices.filter(s => s.category === 'Automation').length },
     { name: 'Content Creation', count: microSaasServices.filter(s => s.category === 'Content Creation').length }
   ];
-  const benefits = [
+  const benefits: any[] = [
     {
       icon: TrendingUp,
       title: 'Proven ROI',
-      description: 'Average 300% return on investment for our micro SAAS clients'
-    },
+      description: 'Average 300% return on investment for our micro SAAS clients',,
     {
       icon: Users,
       title: 'Easy Setup',
-      description: 'Get started in minutes with our intuitive setup process'
-    },
+      description: 'Get started in minutes with our intuitive setup process',,
     {
       icon: Clock,
       title: '24/7 Support',
-      description: 'Round-the-clock support with guaranteed response times'
-    },
+      description: 'Round-the-clock support with guaranteed response times',,
     {
       icon: Shield,
       title: 'Secure & Reliable',
-      description: 'Enterprise-grade security with 99.9% uptime guarantee'
-    }
+      description: 'Enterprise-grade security with 99.9% uptime guarantee',
   ];
-  const stats = [
+  const stats: any[] = [
     { label: 'Active Users', value: '10,000+' },
     { label: 'Apps Available', value: '50+' },
     { label: 'Uptime Guarantee', value: '99.9%' },
@@ -296,11 +292,10 @@ export default function MicroSaasPage() {
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Micro SAAS Solutions,
+              Micro SAAS Solutions,</h1>
   </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              50+ AI-powered micro SAAS applications designed for modern businesses. Affordable, powerful, and easy to use.
-            </p>
+              50+ AI-powered micro SAAS applications designed for modern businesses. Affordable, powerful, and easy to use.</p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
@@ -311,11 +306,9 @@ export default function MicroSaasPage() {
               <Link
                 to="/contact"
                 className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                Get Free Trial,
+                Get Free Trial,</Link>
   </
             </div>
-          </div>
-        </div>
       </section>
       {/* Stats Section */}
       <section className="py-16 bg-white/5">
@@ -324,15 +317,11 @@ export default function MicroSaasPage() {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
-                  {stat.value}
-                </div>
+                  {stat.value}</div>
                 <div className="text-gray-300 text-sm md:text-base">
-                  {stat.label}
-                </div>
-              </div>
+                  {stat.label}</div>
             ))}
           </div>
-        </div>
       </section>
       {/* Category Filter */}
       <section className="py-8">
@@ -342,11 +331,9 @@ export default function MicroSaasPage() {
               <button
                 key={index}
                 className="bg-slate-800/50 hover:bg-cyan-500/20 text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-colors duration-300">
-                {category.name} ({category.count})
-              </button>
+                {category.name} ({category.count})</button>
             ))}
           </div>
-        </div>
       </section>
       {/* Services Grid */}
       <section className="py-24">
@@ -357,7 +344,7 @@ export default function MicroSaasPage() {
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular;
+                      Most Popular;</span>
   </
                   </div>
                 )}
@@ -367,7 +354,6 @@ export default function MicroSaasPage() {
                     <h3 className="text-lg font-semibold text-white">{service.title}</h3>
                     <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded">{service.category}</span>
                   </div>
-                </div>
                 <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
                 <ul className="space-y-1 mb-4">
                   {service.features.slice(0, 3).map((feature, featureIndex) => (
@@ -378,35 +364,31 @@ export default function MicroSaasPage() {
                   ))}
                   {service.features.length > 3 && (
                     <li className="text-xs text-gray-400">
-                      +{service.features.length - 3} more features;
+                      +{service.features.length - 3} more features;</li>
   </
                   )}
                 </ul>
                 <div className="text-center">
                   <div className="text-xl font-bold text-purple-400 mb-2">{service.price}</div>
                   <div className="text-xs text-gray-400 mb-3">
-                    {service.benefits[0]}
-                  </div>
+                    {service.benefits[0]}</div>
                   <Link
                     to={service.link}
                     className="bg-purple-500 hover: bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors inline-block text-sm">
-                    Learn More,
+                    Learn More,</Link>
   </
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
       {/* Benefits Section */}
       <section className="py-24 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Micro SAAS Solutions?
-            </h2>
+              Why Choose Our Micro SAAS Solutions?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We deliver powerful, affordable tools that help businesses grow and succeed;
+              We deliver powerful, affordable tools that help businesses grow and succeed;</p>
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -420,18 +402,16 @@ export default function MicroSaasPage() {
               </div>
             ))}
           </div>
-        </div>
       </section>
       {/* Pricing Tiers */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing;
+              Simple, Transparent Pricing;</h2>
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your business needs. All plans include 24/7 support and regular updates.
-            </p>
+              Choose the plan that fits your business needs. All plans include 24/7 support and regular updates.</p>
           </div>
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg">
@@ -458,13 +438,13 @@ export default function MicroSaasPage() {
               <Link
                 to="/contact"
                 className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block">
-                Get Started;
+                Get Started;</Link>
   </
             </div>
             <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 p-8 rounded-xl shadow-lg ring-2 ring-cyan-400">
               <div className="flex items-center justify-center mb-4">
                 <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                  Most Popular;
+                  Most Popular;</span>
   </
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
@@ -494,7 +474,7 @@ export default function MicroSaasPage() {
               <Link
                 to="/contact"
                 className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block">
-                Get Started;
+                Get Started;</Link>
   </
             </div>
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg">
@@ -525,22 +505,18 @@ export default function MicroSaasPage() {
               <Link
                 to="/contact"
                 className="w-full bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block">
-                Contact Sales,
+                Contact Sales,</Link>
   </
             </div>
-          </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h2>
+              Ready to Transform Your Business?</h2>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-              Start your free trial today and experience the power of AI-driven micro SAAS solutions.
-            </p>
+              Start your free trial today and experience the power of AI-driven micro SAAS solutions.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
@@ -551,11 +527,9 @@ export default function MicroSaasPage() {
               <Link
                 to="/contact"
                 className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Start Free Trial
+                Start Free Trial</Link>
   </
             </div>
-          </div>
-        </div>
       </section>
       <Footer />
     </div>
@@ -566,19 +540,10 @@ export default function MicroSaasPage() {
   </Link>
   </li>
   </li>
-  </li>
-  </li>
-  </li>
   </Link>
   </li>
   </li>
-  </li>
-  </li>
-  </li>
   </Link>
-  </li>
-  </li>
-  </li>
   </li>
   </div>
   </h2>

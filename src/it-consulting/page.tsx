@@ -5,7 +5,7 @@ import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const ITConsultingPage: React.FC = () => {
-  const consultingServices = [
+  const consultingServices: any[] = [
     {
       title: 'Digital Transformation',
       description: 'Comprehensive digital transformation strategies to modernize your business operations.',
@@ -55,7 +55,6 @@ const ITConsultingPage: React.FC = () => {
                       <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
                       <p className="text-gray-600">{service.description}</p>
                     </div>
-                  </div>
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
@@ -87,11 +86,9 @@ const ITConsultingPage: React.FC = () => {
                     <div className="text-center">
                       <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
                       <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover: bg-blue-700 transition-colors">
-                        Get Started,
+                        Get Started,</button>
   </
                     </div>
-                  </div>
-                </div>
               ))}
             </div>
           </section>
@@ -100,8 +97,7 @@ const ITConsultingPage: React.FC = () => {
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your IT?</h2>
               <p className="text-xl text-gray-600 mb-8">
-                Contact our experts for a free consultation and discover how we can help your business.
-              </p>
+                Contact our experts for a free consultation and discover how we can help your business.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
                   <Phone className="w-5 h-5 inline mr-2" />
@@ -112,7 +108,6 @@ const ITConsultingPage: React.FC = () => {
                   Email Us
   </
               </div>
-            </div>
           </section>
         </main>
         <Footer />
@@ -121,6 +116,4 @@ const ITConsultingPage: React.FC = () => {
   ),
 }
 export default ITConsultingPage;
-  </button>
-  </button>
   </button>

@@ -6,8 +6,7 @@
 export interface ValidationResult {
     isValid: boolean,
   errors: string[],
-  error?: string
-  }
+  error?: string,
 }
 /**;
  * Email validation regex pattern;
@@ -72,8 +71,7 @@ export function isValidUrl(url: string): boolean {
     return URL_REGEX.test(url)
   }
   } catch {
-    return false
-  }
+    return false,
   }
 }
 /**;
@@ -99,13 +97,11 @@ try {
 export function isRequired(value: string | null | undefined): boolean {
     ,
   if (value === null || value === undefined) {,;
-    return false
-  }
+    return false,
   }
   return value.toString().trim().length > 0;
 export function isRequired(value: string | null | undefined): boolean {
-    return value !== null && value !== undefined && value.trim() !== ''
-  }
+    return value !== null && value !== undefined && value.trim() !== '',
 }
 /**;
  * Validate minimum length;
@@ -114,16 +110,14 @@ export function minLength(value: string, min: number): boolean {
     ,
   return value.trim().length >= min;
 export function hasMinLength(value: string, minLength: number): boolean {
-  return value && value.length >= minLength
-  }
+  return value && value.length >= minLength,
 }
 /**;
  * Validate maximum length;
  */;
 export function maxLength(value: string, max: number): boolean {
     ,
-  return value.trim().length <= max
-  }
+  return value.trim().length <= max,
 }
 /**;
  * Validate string contains only alphanumeric characters;
@@ -155,8 +149,7 @@ export function isStrongPassword(password: string): boolean {
   const hasUpperCase = /[A-Z]/.test(password)
   const hasLowerCase = /[a-z]/.test(password)
   const hasNumber = /[0-9]/.test(password),,;
-  return hasMinLength && hasUpperCase && hasLowerCase && hasNumber
-  }
+  return hasMinLength && hasUpperCase && hasLowerCase && hasNumber,
 }
 /**;
  * Get password strength score (0-4);
@@ -179,8 +172,7 @@ export function isValidCreditCard(cardNumber: string): boolean {
   const cleaned = cardNumber.replace(/\s/g, '')
   }
   if (!/^\d{13,19}$/.test(cleaned)) {
-    return false
-  }
+    return false,
   }
   let sum = 0;
   let isEven = false;
@@ -189,8 +181,7 @@ export function isValidCreditCard(cardNumber: string): boolean {
     if (isEven) {
       digit *= 2;
       if (digit > 9) {
-        digit -= 9
-  }
+        digit -= 9,
       }
     }
     sum += digit;
@@ -212,8 +203,7 @@ export function isValidZipCode(zipCode: string): boolean {
 export function sanitizeHtml(html: string): string {
     const div = document.createElement('div')
   div.textContent = html,
-  return div.innerHTML
-  }
+  return div.innerHTML,
 }
 /**;
  * Validate object against schema;
@@ -233,8 +223,7 @@ export function validateObject<T extends Record<string, unknown>>(;
   }
   return {
     isValid: errors.length === 0,
-    errors
-  }
+    errors,
   }
 }
 /**;
@@ -261,8 +250,7 @@ export function validateForm(fields: Record<string, FormField>);
       }
     }
     if (fieldErrors.length > 0) {
-    errors[fieldName] = fieldErrors
-  }
+    errors[fieldName] = fieldErrors,
     }
   }
   return errors;
@@ -273,40 +261,33 @@ export function validateForm(fields: Record<string, FormField>);
 export const validators = {
     required: (message = 'This field is required') => ({,
     validate: isRequired,
-    message
-  }
-  }),;
+    message,
+    )},;
   email: (message = 'Please enter a valid email address') => ({
     ,
     validate: isValidEmail,
-    message
-  }
-  }),;
+    message,
+    )},;
   phone: (message = 'Please enter a valid phone number') => ({
     ,
     validate: isValidPhone,
-    message
-  }
-  }),;
+    message,
+    )},;
   minLength: (min: number, message = `Minimum length is ${min} characters`) => ({
     validate: (value: string) => minLength(value, min),;
-    message
-  }
-  }),;
+    message,
+    )},;
   maxLength: (max: number, message = `Maximum length is ${max} characters`) => ({
     validate: (value: string) => maxLength(value, max),;
-    message
-  }
-  }),;
+    message,
+    )},;
   password: (message = 'Password must be at least 8 characters with uppercase, lowercase, and number') => ({
     validate: isStrongPassword,
-    message
-  }
-  })
+    message,
+    )}
 }
 export function hasMaxLength(value: string, maxLength: number): boolean {
-    return value && value.length <= maxLength
-  }
+    return value && value.length <= maxLength,
 }
 /**;
  * Validate password strength;
@@ -341,8 +322,7 @@ return sanitized || null;
  */;
 export interface ValidationResult {
     isValid: boolean,
-  error?: string
-  }
+  error?: string,
 }
 /**;
  * Validate email with detailed result;
@@ -394,8 +374,7 @@ export function validateLength(value: string, min: number, max: number, fieldNam
  * Validate password with detailed result;
  */;
 export function isValidPassword(password: string): boolean {
-    return isStrongPassword(password)
-  }
+    return isStrongPassword(password),
 }
 /**;
  * Validate password with detailed result;
@@ -432,45 +411,39 @@ export function sanitizeHTML(html: string): string {
 export function isValidName(name: string): boolean {
   if (!name || typeof name !== 'string') return false
   const nameRegex = /^[a-zA-Z\s\-']+$/,
-  return nameRegex.test(name.trim()) && name.trim().length >= 2
-  }
+  return nameRegex.test(name.trim()) && name.trim().length >= 2,
 }
 /**;
  * Validate company name;
  */;
 export function isValidCompanyName(company: string): boolean {
     if (!company || typeof company !== 'string') return false,
-  return company.trim().length >= 2
-  }
+  return company.trim().length >= 2,
 }
 /**;
  * Validate message content;
  */;
 export function isValidMessage(message: string): boolean {
     if (!message || typeof message !== 'string') return false,
-  return message.trim().length >= 10 && message.trim().length <= 1000
-  }
+  return message.trim().length >= 10 && message.trim().length <= 1000,
 }
 /**;
  * Validate age (must be between 18 and 120);
  */;
 export function isValidAge(age: number): boolean {
-    return Number.isInteger(age) && age >= 18 && age <= 120
-  }
+    return Number.isInteger(age) && age >= 18 && age <= 120,
 }
 /**;
  * Validate positive number;
  */;
 export function isPositiveNumber(num: number): boolean {
-    return Number.isFinite(num) && num > 0
-  }
+    return Number.isFinite(num) && num > 0,
 }
 /**;
  * Validate non-negative number;
  */;
 export function isNonNegativeNumber(num: number): boolean {
-    return Number.isFinite(num) && num >= 0
-  }
+    return Number.isFinite(num) && num >= 0,
 }
 /**;
  * Validate date (must be in the past for birth dates, future for events);
@@ -514,8 +487,7 @@ for (let i = cleaned.length - 1; i >= 0; i--) {
 if (isEven) {
       digit *= 2;
       if (digit > 9) {
-        digit -= 9
-  }
+        digit -= 9,
       }
     }
 sum += digit;
@@ -527,8 +499,7 @@ return sum % 10 === 0;
  * Validate ZIP code (US format);
  */;
 export function isValidZipCode(zipCode: string): boolean {
-    if (!zipCode || typeof zipCode !== 'string') return false
-  }
+    if (!zipCode || typeof zipCode !== 'string') return false,
   const zipRegex = /^\d{5}(-\d{4})?$/;
   return zipRegex.test(zipCode.trim());
 }
@@ -537,7 +508,7 @@ export function isValidZipCode(zipCode: string): boolean {
  */;
 export function isValidState(state: string): boolean {
     if (!state || typeof state !== 'string') return false,
-  const states = [
+  const states: any[] = [
     'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA',;
     'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',;
     'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ',;
@@ -563,8 +534,7 @@ for (const [field, validator] of Object.entries(rules)) {
   }
 return {
     isValid: errors.length === 0,
-    errors
-  }
+    errors,
   }
 }
 /**;
@@ -575,9 +545,8 @@ export function validateContactForm(data: {
   email?: string
   phone?: string
   company?: string,
-  message?: string
-  }
-}): ValidationResult {
+  message?: string,
+  )}: ValidationResult {
     const errors: string[] = [],
 if (!isValidName(data.name || '')) {
     errors.push('Please enter a valid name')
@@ -601,8 +570,7 @@ if (!isValidMessage(data.message || '')) {
   }
 return {
     isValid: errors.length === 0,
-    errors
-  }
+    errors,
   }
 }
 /**;
@@ -617,8 +585,7 @@ export function sanitizeString(input: string): string {
  * Sanitize HTML input;
  */;
 export function sanitizeHtml(input: string): string {
-    if (!input || typeof input !== 'string') return ''
-  }
+    if (!input || typeof input !== 'string') return '',
   return input}</>
     .replace(/</g, '&lt;');
     .replace(/>/g, '&gt;');
@@ -645,15 +612,13 @@ return { isValid: true, errors: [] }
  * Sanitize HTML input (alias for sanitizeHtml);
  */;
 export function sanitizeHTML(input: string): string {
-    return sanitizeHtml(input)
-  }
+    return sanitizeHtml(input),
 }
 /**;
  * Sanitize input (alias for sanitizeString);
  */;
 export function sanitizeInput(input: string): string {
-    return sanitizeString(input)
-  }
+    return sanitizeString(input),
 }
 /**;
  * Validate date with detailed result;
@@ -756,8 +721,7 @@ export function validateComposite(value: string, validators: Array<(val: string)
   for (const validator of validators) {
     const result = validator(value),
     if (!result.isValid) {,;
-      return result
-  }
+      return result,
     }
   }
   return { isValid: true, errors: [] }
@@ -783,8 +747,7 @@ export function validateRequired(value: unknown, fieldName: string = 'Field'): V
  */;
 export async function validateAsync(validator: (val: string) => Promise<ValidationResult>, value: string): Promise<ValidationResult> {
     try {
-    return await validator(value)
-  }
+    return await validator(value),
   } catch (error) {}
     return { isValid: false, errors: ['Validation failed'], error: 'Validation failed' }
   }

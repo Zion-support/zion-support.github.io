@@ -3,7 +3,7 @@ import React from 'react';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
 export default function PrivacyPage() {
   const lastUpdated = 'January 1, 2024';
-  const dataTypes = [
+  const dataTypes: any[] = [
     {
       category: 'Personal Information',
       icon: User,
@@ -29,39 +29,33 @@ export default function PrivacyPage() {
       examples: ['Contact forms', 'Support requests', 'Email correspondence']
     }
   ];
-  const rights = [
+  const rights: any[] = [
     {
       title: 'Right to Access',
       description: 'Request a copy of your personal data',
-      icon: Eye
-    },
+      icon: Eye,,
     {
       title: 'Right to Rectification',
       description: 'Correct inaccurate or incomplete data',
-      icon: FileText
-    },
+      icon: FileText,,
     {
       title: 'Right to Erasure',
       description: 'Request deletion of your personal data',
-      icon: Database
-    },
+      icon: Database,,
     {
       title: 'Right to Portability',
       description: 'Receive your data in a structured format',
-      icon: ArrowRight
-    },
+      icon: ArrowRight,,
     {
       title: 'Right to Object',
       description: 'Object to processing of your data',
-      icon: AlertTriangle
-    },
+      icon: AlertTriangle,,
     {
       title: 'Right to Restrict',
       description: 'Limit how we process your data',
-      icon: Lock
-    }
+      icon: Lock,
   ];
-  const securityMeasures = [
+  const securityMeasures: any[] = [
     'SSL/TLS encryption for data transmission',
     'Regular security audits and penetration testing',
     'Access controls and authentication systems',
@@ -77,11 +71,10 @@ export default function PrivacyPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              Privacy Policy,
+              Privacy Policy,</h1>
   </
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Your privacy is important to us. Learn how we collect, use, and protect your personal information.
-            </p>
+              Your privacy is important to us. Learn how we collect, use, and protect your personal information.</p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
                 <Shield className="w-5 h-5 text-cyan-400" />
@@ -95,9 +88,6 @@ export default function PrivacyPage() {
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">Transparent</span>
               </div>
-            </div>
-          </div>
-        </div>
       </section>
       {/* Last Updated */}
       <section className="py-8">
@@ -108,11 +98,8 @@ export default function PrivacyPage() {
                 <strong>Last Updated:</strong> {lastUpdated}
               </p>
               <p className="text-sm text-gray-400 mt-2">
-                This privacy policy may be updated from time to time. We will notify you of any changes.
-              </p>
+                This privacy policy may be updated from time to time. We will notify you of any changes.</p>
             </div>
-          </div>
-        </div>
       </section>
       {/* Introduction */}
       <section className="py-20">
@@ -123,15 +110,11 @@ export default function PrivacyPage() {
               <p className="text-gray-300 mb-6">
                 Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy and personal information. 
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit 
-                our website or use our services.
-              </p>
+                our website or use our services.</p>
               <p className="text-gray-300 mb-6">
                 By using our website or services, you agree to the collection and use of information in accordance with 
-                this policy. If you do not agree with the terms of this Privacy Policy, please do not access the site.
-              </p>
+                this policy. If you do not agree with the terms of this Privacy Policy, please do not access the site.</p>
             </div>
-          </div>
-        </div>
       </section>
       {/* Information We Collect */}
       <section className="py-20 bg-slate-800/50">
@@ -157,11 +140,8 @@ export default function PrivacyPage() {
                       ))}
                     </ul>
                   </div>
-                </div>
               ))}
             </div>
-          </div>
-        </div>
       </section>
       {/* How We Use Your Information */}
       <section className="py-20">
@@ -172,36 +152,28 @@ export default function PrivacyPage() {
               <div className="bg-slate-800/50 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-3">Service Delivery</h3>
                 <p className="text-gray-300">
-                  To provide, maintain, and improve our services, including AI solutions, IT services, and customer support.
-                </p>
+                  To provide, maintain, and improve our services, including AI solutions, IT services, and customer support.</p>
               </div>
               <div className="bg-slate-800/50 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-3">Communication</h3>
                 <p className="text-gray-300">
-                  To respond to your inquiries, send important updates, and provide customer support.
-                </p>
+                  To respond to your inquiries, send important updates, and provide customer support.</p>
               </div>
               <div className="bg-slate-800/50 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-3">Marketing</h3>
                 <p className="text-gray-300">
-                  To send you newsletters, promotional materials, and information about our services (with your consent).
-                </p>
+                  To send you newsletters, promotional materials, and information about our services (with your consent).</p>
               </div>
               <div className="bg-slate-800/50 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-3">Analytics</h3>
                 <p className="text-gray-300">
-                  To analyze website usage, improve user experience, and understand how our services are used.
-                </p>
+                  To analyze website usage, improve user experience, and understand how our services are used.</p>
               </div>
               <div className="bg-slate-800/50 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-3">Legal Compliance</h3>
                 <p className="text-gray-300">
-                  To comply with legal obligations, resolve disputes, and enforce our agreements.
-                </p>
+                  To comply with legal obligations, resolve disputes, and enforce our agreements.</p>
               </div>
-            </div>
-          </div>
-        </div>
       </section>
       {/* Data Security */}
       <section className="py-20 bg-slate-800/50">
@@ -209,8 +181,7 @@ export default function PrivacyPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Data Security</h2>
             <p className="text-gray-300 mb-8 text-center">
-              We implement appropriate technical and organizational measures to protect your personal information.
-            </p>
+              We implement appropriate technical and organizational measures to protect your personal information.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {securityMeasures.map((measure, index) => (
                 <div key={index} className="flex items-center space-x-3">
@@ -219,8 +190,6 @@ export default function PrivacyPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
       </section>
       {/* Your Rights */}
       <section className="py-20">
@@ -236,8 +205,6 @@ export default function PrivacyPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
       </section>
       {/* Contact Information */}
       <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
@@ -245,8 +212,7 @@ export default function PrivacyPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Questions About Your Privacy?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              If you have any questions about this Privacy Policy or our data practices, please contact us.
-            </p>
+              If you have any questions about this Privacy Policy or our data practices, please contact us.</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3">
                 <Mail className="w-5 h-5 text-cyan-400" />
@@ -260,7 +226,6 @@ export default function PrivacyPage() {
                 <Globe className="w-5 h-5 text-cyan-400" />
                 <span className="text-white">Middletown, DE</span>
               </div>
-            </div>
             <a
               href="/contact"
               className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center">
@@ -268,7 +233,6 @@ export default function PrivacyPage() {
               Contact Us
   </
           </div>
-        </div>
       </section>
     </div>
   ),

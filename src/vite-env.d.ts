@@ -1,10 +1,8 @@
-
 // / 
 
           <reference types="vite/client" />
 interface ImportMetaEnv {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
 
   readonly DEV: boolean
@@ -13,11 +11,9 @@ interface ImportMetaEnv {
 }
 
 interface ImportMeta {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
 
   readonly env: ImportMetaEnv,
 
 }
-

@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users, Search, Brain, Target, CheckCircle, ArrowRight, Zap, Shield, BarChart } from 'lucide-react';
 const AIRecruitmentAssistantPage: React.FC = () => {
-  const features = [
+  const features: any[] = [
     {
       icon: Search,
       title: 'Smart Candidate Matching',
@@ -12,18 +12,15 @@ const AIRecruitmentAssistantPage: React.FC = () => {
     {
       icon: Brain,
       title: 'Resume Analysis',
-      description: 'Automated resume screening and analysis to identify top talent quickly and efficiently.'
-    },
+      description: 'Automated resume screening and analysis to identify top talent quickly and efficiently.',,
     {
       icon: Target,
       title: 'Job Description Optimization',
-      description: 'AI-generated job descriptions that attract the right candidates and improve application quality.'
-    },
+      description: 'AI-generated job descriptions that attract the right candidates and improve application quality.',,
     {
       icon: Users,
       title: 'Interview Scheduling',
-      description: 'Automated interview scheduling and coordination to streamline the hiring process.'
-    },
+      description: 'Automated interview scheduling and coordination to streamline the hiring process.',,
     {
       icon: BarChart,
       title: 'Analytics & Insights',
@@ -32,8 +29,7 @@ const AIRecruitmentAssistantPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Automated Screening',
-      description: 'AI-powered initial screening questions and assessments to filter candidates effectively.'
-    }
+      description: 'AI-powered initial screening questions and assessments to filter candidates effectively.',
   ]
   return (
     <React.Fragment>
@@ -47,11 +43,10 @@ const AIRecruitmentAssistantPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
-                AI Recruitment Assistant,
+                AI Recruitment Assistant,</h1>
   </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your hiring process with AI-powered recruitment tools that find, screen, and hire the best candidates faster and more efficiently.
-              </p>
+                Transform your hiring process with AI-powered recruitment tools that find, screen, and hire the best candidates faster and more efficiently.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -66,7 +61,6 @@ const AIRecruitmentAssistantPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
       </div>
     </React.Fragment>

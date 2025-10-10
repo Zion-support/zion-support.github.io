@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'luci
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
-  const aiServices = [
+  const aiServices: any[] = [
     { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Automated content' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Business intelligence' },
@@ -41,7 +41,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Content Generation Pro', url: '/ai-content-generation-pro', description: 'Advanced content creation' }
   ]
 
-  const microSaasServices = [
+  const microSaasServices: any[] = [
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Real-time BI & Analytics' },
     { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'No-code Chatbot Platform' },
     { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Automated Email Campaigns' },
@@ -52,7 +52,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Design Studio', url: '/ai-design-studio', description: 'AI Design Tools' }
   ];
 
-  const itServices = [
+  const itServices: any[] = [
     { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, GCP' },
     { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Automation pipelines' },
     { name: 'Database Management', url: '/database-management', description: 'Database solutions' },
@@ -78,7 +78,6 @@ const Footer: React.FC = memo(() => {
                 <span className="text-2xl font-bold neon-text-enhanced group-hover:glow">Zion Tech Group</span>
                 <span className="text-sm text-cyan-400 font-medium tracking-wider">AI & IT SOLUTIONS</span>
               </div>
-            </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               Leading provider of AI and IT solutions for modern businesses. 
               We help companies transform their operations with cutting-edge technology, 
@@ -109,8 +108,6 @@ const Footer: React.FC = memo(() => {
                 </div>
                 <span className="font-medium">Mon-Fri: 9AM-6PM EST<br />24/7 Emergency Support Available</span>
               </div>
-            </div>
-          </div>
 
           {/* AI Services */}
           <div className="cyber-card-enhanced p-6 rounded-2xl">
@@ -161,7 +158,6 @@ const Footer: React.FC = memo(() => {
                       <div className="text-xs text-gray-400 group-hover:text-gray-300">
                         {service.description}
                       </div>
-                    </div>
                   </Link>
                 </li>
               ))}
@@ -227,7 +223,6 @@ const Footer: React.FC = memo(() => {
               </li>
             </ul>
           </div>
-        </div>
 
         {/* Additional Links Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mt-12 pt-8 border-t border-gray-700">
@@ -256,8 +251,7 @@ const Footer: React.FC = memo(() => {
                     to={link.url} 
                     className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
                   >
-                    {link.name}
-                  </Link>
+                    {link.name}</Link>
                 </li>
               ))}
             </ul>
@@ -272,8 +266,7 @@ const Footer: React.FC = memo(() => {
                     to={link.url} 
                     className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
                   >
-                    {link.name}
-                  </Link>
+                    {link.name}</Link>
                 </li>
               ))}
             </ul>
@@ -284,33 +277,27 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2">
               <li>
                 <Link to="/consultation" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
-                  Free Consultation
-                </Link>
+                  Free Consultation</Link>
               </li>
               <li>
                 <Link to="/demo" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
-                  Request Demo
-                </Link>
+                  Request Demo</Link>
               </li>
               <li>
                 <Link to="/contact" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
-                  Contact Sales
-                </Link>
+                  Contact Sales</Link>
               </li>
               <li>
                 <Link to="/support" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
-                  Technical Support
-                </Link>
+                  Technical Support</Link>
               </li>
               <li>
                 <Link to="/privacy" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
-                  Privacy Policy
-                </Link>
+                  Privacy Policy</Link>
               </li>
               <li>
                 <Link to="/terms" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
-                  Terms of Service
-                </Link>
+                  Terms of Service</Link>
               </li>
             </ul>
           </div>
@@ -320,27 +307,20 @@ const Footer: React.FC = memo(() => {
             <div className="space-y-3">
               <div className="flex space-x-4">
                 <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
-                  LinkedIn
-                </a>
+                  LinkedIn</a>
                 <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
-                  Twitter
-                </a>
+                  Twitter</a>
               </div>
               <div className="flex space-x-4">
                 <a href="https://github.com/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
-                  GitHub
-                </a>
+                  GitHub</a>
                 <a href="https://youtube.com/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
-                  YouTube
-                </a>
+                  YouTube</a>
               </div>
               <div className="text-sm text-gray-400">
                 <p>📧 kleber@ziontechgroup.com</p>
                 <p>📞 +1 302 464 0950</p>
               </div>
-            </div>
-          </div>
-        </div>
 
         {/* Bottom Section */}
         <div className="border-t border-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 mt-12 pt-8">
@@ -351,26 +331,18 @@ const Footer: React.FC = memo(() => {
               </div>
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            <div className="flex flex-wrap justify-center md:justify-end space-x-6 gap-y-2">
+            <div className="flex flex-wrap justify-center md: justify-end space-x-6 gap-y-2">
               <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">
-                Privacy Policy
-              </a>
+                Privacy Policy</a>
               <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">
-                Terms of Service
-              </a>
+                Terms of Service</a>
               <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">
-                Cookie Policy
-              </a>
+                Cookie Policy</a>
               <a href="/sitemap" className="text-sm text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">
-                Sitemap
-              </a>
+                Sitemap</a>
             </div>
-          </div>
-        </div>
-      </div>
     </footer>
-  );
-})
+  ),)
 
 Footer.displayName = 'Footer';
 

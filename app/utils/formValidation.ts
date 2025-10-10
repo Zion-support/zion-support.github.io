@@ -4,8 +4,7 @@
  * Provides common validation rules and form handling utilities;
  */;
 export interface ValidationRule<T = unknown> {
-    validate: (value: T) => boolean
-  }
+    validate: (value: T) => boolean,
   message: string,}
 }
 export interface ValidationResult {
@@ -36,13 +35,12 @@ export const validationRules = {}
    */;
   required: (message = 'This field is required'): ValidationRule<string> => ({
     ,
-    validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0
-  }
+    validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
   required: (message = 'This field is required'): ValidationRule<string> => ({}
     validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
     message}
 export const validationRules = {/* TODO: Fix JSX expression */}
-  }),;
+    )},;
   /**;
    * Validate email format;
    */;
@@ -59,7 +57,7 @@ export const validationRules = {/* TODO: Fix JSX expression */}
   emai,;
   l: (message = 'Please enter a valid email address'): ValidationRule<string> => ({/* TODO: Fix JSX expression */},
     message;);
-  }),;
+    )},;
   /**;
    * Validate minimum length;
    */;
@@ -70,7 +68,7 @@ export const validationRules = {/* TODO: Fix JSX expression */}
   h: (mi),
   n: number, message?: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */}
   e: message || `Must be at least ${min} characters`);
-  }),;
+    )},;
   /**;
    * Validate maximum length;
    */;
@@ -81,7 +79,7 @@ export const validationRules = {/* TODO: Fix JSX expression */}
   h: (ma),
   x: number, message?: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */}`;
   e: message || `Must be no more than ${max} characters`);
-  }),;
+    )},;
   /**;
    * Validate phone number (US format);
    */;
@@ -98,7 +96,7 @@ export const validationRules = {/* TODO: Fix JSX expression */}
       return phoneRegex.test(value.replace(/\s/g, ''));
     },;
     message;
-  }),;
+    )},;
   /**;
    * Validate URL format;
    */;
@@ -122,7 +120,7 @@ export const validationRules = {/* TODO: Fix JSX expression */}
       } catch {/* TODO: Fix JSX expression */}
       },
     message;);
-  }),;
+    )},;
   /**;
    * Validate number range;
    */;
@@ -134,7 +132,7 @@ export const validationRules = {/* TODO: Fix JSX expression */}
   n: number, ma);
   x: number, message?: string): ValidationRule<number> => ({/* TODO: Fix JSX expression */}`;
   e: message || `Must be between ${min} and ${max}`);
-  }),;
+    )},;
   /**;
    * Validate pattern match;
    */;
@@ -143,8 +141,7 @@ export const validationRules = {/* TODO: Fix JSX expression */}
     message}
   patter,;
   n: (rege),
-  x: RegExp, message = 'Invalid format'): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
-  }),;
+  x: RegExp, message = 'Invalid format'): ValidationRule<string> => ({/* TODO: Fix JSX expression */}))},;
   /**;
    * Validate custom condition;
    */;
@@ -159,8 +156,7 @@ export const validationRules = {/* TODO: Fix JSX expression */}
   m: <T>(validato,
   r: (valu),
   e: T) => boolean, messag,;
-  e: string): ValidationRule<T> => ({/* TODO: Fix JSX expression */})
-  }),;
+  e: string): ValidationRule<T> => ({/* TODO: Fix JSX expression */}))},;
   /**;
    * Validate password strength;
    */;
@@ -184,10 +180,9 @@ export const validationRules = {/* TODO: Fix JSX expression */}
       const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{
     ]/.test(value);
       const hasMinLength = value.length >= 8;
-      return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength
-  },
+      return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength,,
     message;
-  }),;
+    )},;
   /**;
    * Validate matching fields (e.g., password confirmation);
    */}</>
@@ -202,14 +197,13 @@ export const validationRules = {/* TODO: Fix JSX expression */}
   e: string, fieldNam);
   e: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */}`;
   e: `Must match ${fieldName}`);
-  }),;
+    )},;
   /**;
    * Validate file size;
    */;
   fileSize: (maxSizeInMB: number, message?: string): ValidationRule<File> => ({
     validate: (file: File) => {,
-      const maxSizeInBytes = maxSizeInMB * 1024 * 1024
-  }
+      const maxSizeInBytes = maxSizeInMB * 1024 * 1024,
   fileSize: (maxSizeInMB: number, message?: string): ValidationRule<File> => ({}
     validate: (file: File) => {}
       const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
@@ -220,7 +214,7 @@ export const validationRules = {/* TODO: Fix JSX expression */}
   B: number, message?: string): ValidationRule<File> => ({/* TODO: Fix JSX expression */},
     messag,`;
   e: message || `File size must not exceed ${maxSizeInMB}MB`);
-  }),;
+    )},;
   /**;
    * Validate file type;
    */;
@@ -231,7 +225,7 @@ export const validationRules = {/* TODO: Fix JSX expression */}
   e: (allowedType),
   s: string[], message?: string): ValidationRule<File> => ({/* TODO: Fix JSX expression */})`;
   of: ${allowedTypes.join(', ')}`;
-  })
+    )}
 }
 /**;
  * Validate a single field with multiple rules;
@@ -246,8 +240,7 @@ export function validateField<T>(value: T, rules: ValidationRule<T>[]): Validati
     }
   }
   return {
-    valid: errors.length === 0
-  }
+    valid: errors.length === 0,
 export function validateField<T>(value: T, rules: ValidationRule<T>[]): ValidationResult {}
   const errors: string[] = [],
   for (const rule of rules) {}
@@ -327,14 +320,12 @@ export function sanitizeInput(input: string): string {
     ,
   return input;
     .trim(),;
-    .replace(/[<>{]/g, '') // Remove potential HTML tags
-  }
+    .replace(/[<>{]/g, '') // Remove potential HTML tags,
 export function sanitizeInput(input: string): string {}
   return input;
     .trim()}</>
     .replace(/[<>{
-    ]/g, '') // Remove potential HTML tags
-  }
+    ]/g, '') // Remove potential HTML tags,
     .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -}
 export function sanitizeInput(inpu);
   t: string): string {/* TODO: Fix JSX expression */}
@@ -351,8 +342,7 @@ export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(,
     const later = useCallback((...args) => {,;
       timeout = null;
   func: T,
-  wait: number
-  }
+  wait: number,
 ): (...args: Parameters<T>) => void {}
   let timeout: NodeJS.Timeout | null = null,
   return function executedFunction(...args: Parameters<T>) {}

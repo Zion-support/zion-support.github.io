@@ -23,8 +23,7 @@ export const initAnalytics = (measurementId: string) => {
     // Initialize gtag
     window.dataLayer = window.dataLayer || [];
     function gtag(...args: any[]) {
-    window.dataLayer.push(args)
-  }
+    window.dataLayer.push(args),
     window.gtag = gtag;
     gtag('js', new Date());
     gtag('config', measurementId);
@@ -35,6 +34,5 @@ export const initAnalytics = (measurementId: string) => {
 declare global {
     interface Window {
     gtag: (...args: any[]) => void,
-    dataLayer: any[]
-  }
+    dataLayer: any[],
 }

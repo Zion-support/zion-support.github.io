@@ -79,7 +79,6 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
                   AI learns from each interaction to provide increasingly personalized and relevant responses.
                 </p>
               </div>
-            </div>
           </section>
           {/* Pricing Section */}"
           <section className="mb-16"></section>"
@@ -126,7 +125,6 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
                 </ul>"
                 <a href="/contact" className="cyber-button w-full">Contact Sales</a>
               </div>
-            </div>
           </section>
           {/* Benefits Section */}"
           <section className="mb-16"></section>"
@@ -160,7 +158,6 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
                   Handle traffic spikes effortlessly with AI that scales automatically to meet demand.
                 </p>
               </div>
-            </div>
           </section>
           {/* CTA Section */}"
           <section className="text-center"></section>"
@@ -185,6 +182,5 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
         </main>
         <Footer /></Footer>
       </div>
-    </div>
   ),
 }"

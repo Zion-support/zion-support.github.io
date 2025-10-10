@@ -15,13 +15,12 @@ interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
 const,
   OptimizedLoadingSpinner: React.FC,
           <OptimizedLoadingSpinnerProps> = memo()
-  ({ size = 'md', color = 'primary', className = '' }) => {/* TODO: Fix JSX expression */}
+  ({ size = 'md', color = 'primary', className = ''   )} => {/* TODO: Fix JSX expression */}
   m: 'w-4 h-4'}
       m,
   d: 'w-8 h-8',
       l,
-  g: 'w-12 h-12'
-    }
+  g: 'w-12 h-12',
     const colorClasses = {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -30,8 +29,7 @@ const,
       secondar,
   y: 'text-purple-400',
       whit,
-  e: 'text-white'
-    }
+  e: 'text-white',
     return (<div>Coming Soon</div>)
   )
           <div></div>
@@ -67,7 +65,7 @@ className="opacity-75""
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
-  ({ size = 'md', color = 'primary', className = '' }) => {
+  ({ size = 'md', color = 'primary', className = ''   )} => {
       sm: 'w-4 h-4',
       md: 'w-8 h-8',
       lg:     ,
@@ -111,5 +109,4 @@ OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;
   </path>
   </circle>
-  </OptimizedLoadingSpinnerProps>
   </OptimizedLoadingSpinnerProps>

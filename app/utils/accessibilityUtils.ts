@@ -19,8 +19,7 @@ setTimeout(() => {
 }
 export const focusElement = (element: HTMLElement | null): void => {
     if (element) {
-    element.focus()
-  }
+    element.focus(),
   }
 }
 export const trapFocus = (container: HTMLElement): (() => void) => {
@@ -35,8 +34,7 @@ const handleTabKey = (;
         if (document.activeElement === firstElement) {
           lastElement.focus();) => {
   return (
-    $3
-  )
+    $3)
   }
           e.preventDefault();}
         }
@@ -81,11 +79,10 @@ element.addEventListener('keydown', (e) => {
       element.click()
   }
     }
-  })
+    )}
 }
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {
-    const skipLink = document.createElement('a')
-  }
+    const skipLink = document.createElement('a'),
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
   skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
@@ -100,7 +97,7 @@ const [r, g, b] = rgb.map(Number).map(c => {
       c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)
   }
-    })
+      )}
 return 0.2126 * r + 0.7152 * g + 0.0722 * b;
   }
 const l1 = getLuminance(foreground);
@@ -157,5 +154,5 @@ export const initializeAccessibility = (): void => {
   interactiveElements.forEach((element) => {
     enhanceKeyboardNavigation(element as HTMLElement)
   }
-  })
+    )}
 }

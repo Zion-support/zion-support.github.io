@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const Pagetsx: React.FC = () => {
-  const _features = [],
+  const _features: any[] = [],
   return (
     {icon: Users,
     title: 'Advanced Features',
@@ -44,7 +44,6 @@ const Pagetsx: React.FC = () => {
   hover:text-white transition-colors"></a>
                 View Demo</a>
             </div>
-          </div>
         </section>
         {/* Features Section */}
         <section className="py-16 px-4">
@@ -67,7 +66,6 @@ const Pagetsx: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
         {/* CTA Section */}"
         <section className="py-16 px-4 bg-gray-800"></section>"
@@ -75,13 +73,12 @@ const Pagetsx: React.FC = () => {
             <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>"
             <p className="text-gray-300 mb-8">Contact us today for a free consultation and customized solution</p>"
             <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"
-  hover:bg-cyan-600 transition-colors"></a>
+  hover: bg-cyan-600 transition-colors"></a>
               Contact Us</a>
           </div>
         </section>
       </main>
       <Footer /></div>
-  )
-}
+  ),
 export default Pagetsx;"
 export default GdprPage;

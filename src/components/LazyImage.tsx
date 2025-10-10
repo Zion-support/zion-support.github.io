@@ -25,7 +25,7 @@ const,
   priority = false,
 //   onLoad,
 //   onError)
-}) => {/* TODO: Fix JSX expression */}
+  )} => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   const [isLoaded, setIsLoaded] = useState(false);

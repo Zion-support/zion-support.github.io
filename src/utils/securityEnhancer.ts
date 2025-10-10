@@ -2,8 +2,7 @@
 // This file contains utility functions and configurations
 
 interface SecurityConfig {
-    enableCSP: boolean
-  }
+    enableCSP: boolean,
   enableHTTPS: boolean;
   enableXSSProtection: boolean
   enableCSRFProtection: boolean
@@ -11,8 +10,7 @@ interface SecurityConfig {
 }
 
 class SecurityEnhancer {
-    private config: SecurityConfig
-  }
+    private config: SecurityConfig,
   constructor(config?: SecurityConfig) {this.config = config || {}
       enableCSP: true,
       enableHTTPS: true,
@@ -22,8 +20,7 @@ class SecurityEnhancer {
     this.init()
 
   private init(): void {
-    // Initialize security enhancements
-  }
+    // Initialize security enhancements,
     this.setupSecurityHeaders();
   }
   private initializeSecurity(): void {
@@ -36,7 +33,7 @@ class SecurityEnhancer {
   }
   private setupContentSecurityPolicy(): void {
     if (!this.config.enableContentSecurityPolicy) return
-    const csp = [
+    const csp: any[] = [
       "default-src 'self'",
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
@@ -80,7 +77,7 @@ class SecurityEnhancer {
       input.name = 'csrf-token'
       input.value = token
       form.appendChild(input)
-    })
+      )}
   }
   private monitorSuspiciousActivity(): void {
     // Monitor for suspicious patterns
@@ -93,8 +90,7 @@ class SecurityEnhancer {
       log: console.log.bind(console),
       warn: console.warn.bind(console),
       error: console.error.bind(console),
-      info: console.info.bind(console)
-    }
+      info: console.info.bind(console),
     // Override console methods to detect debugging
     Object.assign(console, originalConsole);
   }
@@ -109,14 +105,13 @@ class SecurityEnhancer {
                 this.metrics.securityViolations++
                 }
             }
-          })
+            )}
         }
-      })
-    })
+        )}
+      )}
     observer.observe(document.body, {
       childList: true,
-      subtree: true
-    })
+      subtree: true,)
     this.eventListeners.push(() => observer.disconnect())
   }
   private monitorNetworkRequests(): void {
@@ -126,17 +121,14 @@ class SecurityEnhancer {
       // Check if request is to allowed origins
       if (!this.isAllowedOrigin(url)) {
         this.metrics.blockedRequests++
-        throw new Error('Request blocked: Origin not allowed')
-      }
+        throw new Error('Request blocked: Origin not allowed'),
       return originalFetch(input, init)
     }
   }
 
   public cleanup(): void {
-    // Cleanup security enhancements
-  }
+    // Cleanup security enhancements,
   }
 }
 
 export default SecurityEnhancer;"
-

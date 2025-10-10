@@ -13,8 +13,8 @@ import {
 
   Send,
 
-  CheckCircle
-  }
+  CheckCircle;
+}
 } from 'lucide-react'
 const ContactPage: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -25,9 +25,8 @@ phone: '',
     service: '',
     budget: '',
     timeline: '',
-    message: ''
-  }
-  })
+    message: '',
+    )}
 const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
@@ -35,9 +34,9 @@ const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | H
     const { name, value } = e.target;
     setFormData(prev => ({
     ...prev,
-      [name]: value
-  }
-    }));
+      [name]: value;
+}
+      )});
   }, []);
 const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -56,9 +55,8 @@ try {
         service: '',
         budget: '',
         timeline: '',
-        message: ''
-  }
-      })
+        message: '',
+        )}
     } catch (error) {
     setSubmitStatus('error')
   }
@@ -67,7 +65,7 @@ try {
   }
     }
   }
-const services = [
+const services: any[] = [
     'AI Solutions',
     'Cloud Computing',
     'Mobile App Development',
@@ -82,36 +80,32 @@ const services = [
 
     'Other'
   ]
-const contactInfo = [
+const contactInfo: any[] = [
     {
     icon: Phone,
       title: 'Phone',
       details: '+1 (302) 464-0950',
-      description: 'Mon-Fri 9AM-6PM EST'
-  },
+      description: 'Mon-Fri 9AM-6PM EST',,
     {
     icon: Mail,
       title: 'Email',
       details: 'kleber@ziontechgroup.com',
-      description: 'We respond within 24 hours'
-  },
+      description: 'We respond within 24 hours',,
     {
     icon: MapPin,
       title: 'Address',
       details: '123 Tech Street, Suite 100\nWilmington, DE 19801',
-      description: 'Visit our office'
-  },
+      description: 'Visit our office',,
     {
     icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
-      description: 'Eastern Time'
-  }
+      description: 'Eastern Time',
     }
   ]
 return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -123,13 +117,11 @@ return (
             <h1>
               Get in;
               <span>
-                {' '}Touch
-              </span>
+                {' '}Touch</span>
             </h1>
             <p>
               Ready to transform your business? Let's discuss your project and explore;
-              how our AI and IT solutions can help you achieve your goals.
-            </p>
+              how our AI and IT solutions can help you achieve your goals.</p>
           </div>
         </section>
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
@@ -155,43 +147,36 @@ return (
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
                   <div />
                     <label>
-                      Full Name *
-                    </label>
+                      Full Name *</label>
                     <div className="relative"></div>
                       <User>
                       <input />
                   </div>
                   <div />
                     <label>
-                      Email Address *
-                    </label>
+                      Email Address *</label>
                     <div className="relative"></div>
                       <Mail>
                       <input />
                   </div>
-                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
                   <div />
                     <label>
-                      Company
-                    </label>
+                      Company</label>
                     <div className="relative"></div>
                       <Building>
                       <input />
                   </div>
                   <div />
                     <label>
-                      Phone Number
-                    </label>
+                      Phone Number</label>
                     <div className="relative"></div>
                       <Phone>
                       <input />
                   </div>
-                </div>
                 <div />
                   <label>
-                    Service Interest,
-                  </label>
+                    Service Interest,</label>
                   <div className="relative"></div>
                     <Globe>
                     <select>
@@ -201,17 +186,14 @@ return (
   }
                         <option>
 
-                          {service}
-                        </option>
+                          {service}</option>
                       ))}
 
                     </select>
                   </div>
-                </div>
                 <div />
                   <label>
-                    Message *
-                  </label>
+                    Message *</label>
                   <div className="relative"></div>
                     <MessageCircle>
                     <textarea />
@@ -219,13 +201,13 @@ return (
                 <button>
                   {
     isSubmitting ? (;
-                    <>
+                    <></>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       <span>Sending...</span>
                     </>
                   ) : (;
                     <>
-                      <Send>
+                      <Send></>
                       <span>Send Message</span>
                     </>
   }
@@ -239,16 +221,14 @@ return (
                 <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
                 <p>
                   We're here to help! Reach out to us through any of these channels;
-                  and we'll get back to you as soon as possible.
-                </p>
+                  and we'll get back to you as soon as possible.</p>
               </div>
               {/* Contact Information */}
               <div className="space-y-8"></div>
                 <div />
                   <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
                   <p>
-                    We're here to help you transform your business with cutting-edge AI and technology solutions.
-                  </p>
+                    We're here to help you transform your business with cutting-edge AI and technology solutions.</p>
                 </div>
                 <div className="space-y-6"></div>
                   <div className="flex items-center"></div>
@@ -257,17 +237,12 @@ return (
                     <div />
 <h3>
 
-                        {info.title}
-                      </h3>
+                        {info.title}</h3>
                       <p>
-                        {info.details}
-                      </p>
+                        {info.details}</p>
                       <p>
-                        {info.description}
-
-                      </p>
+                        {info.description}</p>
                     </div>
-                  </div>
                   <div className="flex items-center"></div>
                     <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"></div>
                       <Mail />
@@ -275,7 +250,6 @@ return (
                       <h3 className="text-lg font-semibold text-white">Email</h3>
                       <p className="text-gray-300">info@ziontechgroup.com</p>
                     </div>
-                  </div>
                   <div className="flex items-center"></div>
                     <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4"></div>
                       <MapPin />
@@ -283,7 +257,6 @@ return (
                       <h3 className="text-lg font-semibold text-white">Address</h3>
                       <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
                     </div>
-                  </div>
                   <div className="flex items-center"></div>
                     <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4"></div>
                       <Clock />
@@ -291,16 +264,10 @@ return (
                       <h3 className="text-lg font-semibold text-white">Business Hours</h3>
                       <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
                     </div>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
         </section>
       </div>
-</div>
   ),
 };
 
 export default ContactPage;
-

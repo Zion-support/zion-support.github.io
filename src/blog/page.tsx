@@ -13,8 +13,7 @@ interface BlogPost {
   featured: boolean
   stats?: {
     views: number,
-    engagement: number
-  }
+    engagement: number,
 }
 export default function BlogPage() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
@@ -125,7 +124,7 @@ export default function BlogPage() {
   }, 500);
     return () => clearTimeout(timer);
   }, [blogPosts]);
-  const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
+  const categories: any[] = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
   const filteredPosts = selectedCategory === 'all' 
     ? posts 
     : posts.filter(post => post.category === selectedCategory);
@@ -137,7 +136,6 @@ export default function BlogPage() {
           <div className="text-center mb-12">
             <div className="h-12 bg-gray-200 rounded w-96 mx-auto mb-4 animate-pulse"></div>
             <div className="h-6 bg-gray-200 rounded w-64 mx-auto animate-pulse"></div>
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3, 4, 5, 6].map(item => (
               <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse">
@@ -145,11 +143,8 @@ export default function BlogPage() {
                 <div className="h-6 bg-gray-200 rounded mb-2"></div>
                 <div className="h-4 bg-gray-200 rounded mb-2"></div>
                 <div className="h-4 bg-gray-200 rounded w-3/4"></div>
-              </div>
             ))}
           </div>
-        </div>
-      </div>
     );
   }
   return (
@@ -159,7 +154,7 @@ export default function BlogPage() {
         <header className="text-center mb-12">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">AI & Technology Blog</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Latest insights on AI, enterprise automation, and digital transformation from our expert team;
+            Latest insights on AI, enterprise automation, and digital transformation from our expert team;</p>
   </
         </header>
         {/* Category Filter */}
@@ -171,18 +166,16 @@ export default function BlogPage() {
               className={`px-6 py-2 rounded-full font-medium transition-colors ${
                 selectedCategory === category
                   ? 'bg-indigo-600 text-white'
-                  : 'bg-white text-gray-600 hover:bg-gray-100'
-              }`}
+                  : 'bg-white text-gray-600 hover: bg-gray-100',`}
             >
-              {category === 'all' ? 'All Articles' : category}
-            </button>
+              {category === 'all' ? 'All Articles' : category}</button>
           ))}
         </div>
         {/* Featured Posts */}
         {selectedCategory === 'all' && (
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              🌟 Featured Articles;
+              🌟 Featured Articles;</h2>
   </
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {featuredPosts.map((post) => (
@@ -197,8 +190,7 @@ export default function BlogPage() {
         {/* All Posts */}
         <section>
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            {selectedCategory === 'all' ? 'All Articles' : `${selectedCategory} Articles`}
-          </h2>
+            {selectedCategory === 'all' ? 'All Articles' : `${selectedCategory} Articles`}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
               <ContentPreviewCard
@@ -212,26 +204,21 @@ export default function BlogPage() {
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Never Miss an Update;
+              Never Miss an Update;</h3>
   </
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Subscribe to our newsletter and get the latest AI insights, enterprise transformation guides, 
-              and breakthrough content delivered directly to your inbox.
-            </p>
+              and breakthrough content delivered directly to your inbox.</p>
             <Link
               to="/"
               className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors">
-              Subscribe to Newsletter
+              Subscribe to Newsletter</Link>
   </
           </div>
-        </div>
-      </div>
-    </div>
   ),
 }
   </Link>
   </h3>
-  </ContentPreviewCard>
   </ContentPreviewCard>
   </h2>
   </p>

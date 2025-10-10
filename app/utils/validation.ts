@@ -246,8 +246,7 @@ for (let i = cleaned.length - 1; i >= 0; i--) {
     if (isEven) {
       digit *= 2;
       if (digit > 9) {
-        digit -= 9
-  }
+        digit -= 9,
   for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */}
       }
     }
@@ -318,8 +317,7 @@ export function validateComposite(valu,;
   e: unknown,
   validator,;
   s: Array<(va),
-  l: unknown) => ValidationResult>
-  }
+  l: unknown) => ValidationResult>,
 ): ValidationResult {/* TODO: Fix JSX expression */}
     }
   }
@@ -359,8 +357,7 @@ export {
   isValidUrl,;
   isRequired,;
   isValidPassword,;
-  sanitizeInput
-  }
+  sanitizeInput,
 } from './validators';
 export {/* TODO: Fix JSX expression */}
 } from './validators';"`;

@@ -1,4 +1,3 @@
-
 'use client'
 /**
  * Advanced Caching Utility;
@@ -6,8 +5,7 @@
  */
 
 export interface CacheOptions {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   ttl?: number; // Time to live in milliseconds;
@@ -22,9 +20,7 @@ export interface CacheEntry;
   value: T,,
     expiry: number,,
     hits: number,,
-    lastAccessed: number
-
-}
+    lastAccessed: number,
 class AdvancedCache;
           <T = unknown> {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -132,8 +128,7 @@ class AdvancedCache;
   }
 
   public set(key: string, value: T, ttl?: number): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     const expiry = Date.now() + (ttl || this.options.ttl);
@@ -152,7 +147,7 @@ class AdvancedCache;
       hits: 0,
       lastAccessed: Date.now()
 
-    });
+      )};
     // Update access order;
     this.updateAccessOrder(key);
     // Save to storage if needed;
@@ -204,8 +199,7 @@ class AdvancedCache;
   }
 
   public delete(key: string): boolean {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     this.removeFromAccessOrder(key);
@@ -234,8 +228,7 @@ class AdvancedCache;
   }
 
   private removeFromAccessOrder(key: string): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     const index = this.accessOrder.indexOf(key);
@@ -270,7 +263,7 @@ class AdvancedCache;
 }
         keysToDelete.push(key);
       }
-    });
+      )};
     keysToDelete.forEach(key => this.delete(key));
     if (keysToDelete.length > 0 && this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -319,8 +312,8 @@ class AdvancedCache;
   s: entry.hits,
         ag,
   e: now - entry.lastAccessed,)
-      });
-    });
+        )};
+      )};
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -341,8 +334,7 @@ class AdvancedCache;
   r: () => Promise,
           <R>,
     ttl?: number): Promise<R> {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     const cached = this.get(key);
@@ -366,4 +358,3 @@ export function createCache;
 }
 // Export default cache instance;
 export const defaultCache = new AdvancedCache();
-

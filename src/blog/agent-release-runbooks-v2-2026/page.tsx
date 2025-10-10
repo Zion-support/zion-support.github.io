@@ -9,11 +9,10 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page,
+            Page,</h1>
   </
 <p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI;
-            canaries, approvals and one‑click rollback.
-          </p>
+            canaries, approvals and one‑click rollback.</p>
           <div></div>
             <div></div>
               <Calendar /></Calendar>
@@ -23,8 +22,6 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
               <Clock /></Clock>
               <span>18 min read</span>
             </div>
-          </div>
-        </div>
       </header>
       <section className='py-16'></section>
         <div></div>
@@ -32,8 +29,7 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
 <p>Operational safety hinges on three,
   primitives: hard,
             budgets, lightweight approvals and KPI-linked canaries that trigger;
-            automatic rollback when thresholds are breached.
-          </p>
+            automatic rollback when thresholds are breached.</p>
           <h3>Runbook Outline</h3>
           <ol></ol>
             <li>Define budgeted actions and guardrails</li>
@@ -48,16 +44,12 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
           <div></div>
             <div>Budgets</div>
             <div className='text-slate-600'>Max cost, time, scope per release</div>
-          </div>
           <div></div>
             <div>Canaries</div>
             <div>KPI-linked checks in CI and live</div>
-          </div>
           <div></div>
             <div>Rollback</div>
             <div className='text-slate-600'>One click, under 60s MTR</div>
-          </div>
-        </div>
       </section>
       <section className='py-16'></section>
         <div></div>
@@ -77,7 +69,6 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
           <RefreshCw />
             </Link>
           </div>
-        </div>
       </section>)
     </main>)
 }

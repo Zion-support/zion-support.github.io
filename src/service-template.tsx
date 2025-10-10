@@ -23,7 +23,7 @@ interface ServicePageProps {/* TODO: Fix JSX expression */}
   s: string[],
 }
 const,
-  ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {/* TODO: Fix JSX expression */}
+  ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits   )} => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   return (
@@ -32,10 +32,10 @@ const,
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
-            Service Template;
+            Service Template;</h1>
   </
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Blog Post
+            Blog Post</p>
   </
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -76,8 +76,7 @@ const,
                   className="cyber-button w-full text-center inline-block" Get Started;
         {/* Benefits Section */}
           <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-            Why Choose Our {title}?
-          </h2>"
+            Why Choose Our {title}?</h2>"
           <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>

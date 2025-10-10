@@ -6,8 +6,8 @@ interface OptimizedLoadingSpinnerProps {
   text?: string;
   className?: string;
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
-  fullScreen?: boolean
-  }
+  fullScreen?: boolean;
+}
 }
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(,
   ({
@@ -18,7 +18,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(,
     color = 'blue',
     fullScreen = false,
   }
-  }) => {
+    )} => {
     const sizeClasses = useMemo(;
       () => ({
         xs: 'h-3 w-3',
@@ -27,7 +27,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(,
         lg: 'h-12 w-12',
         xl: 'h-16 w-16',
   }
-      }),
+        )},
       []
     );
 const textSizeClasses = useMemo(;
@@ -38,7 +38,7 @@ const textSizeClasses = useMemo(;
         lg: 'text-lg',
         xl: 'text-xl',
   }
-      }),
+        )},
       []
     );
 const colorClasses = useMemo(;
@@ -49,7 +49,7 @@ const colorClasses = useMemo(;
         red: 'border-red-600 bg-red-600',
         purple: 'border-purple-600 bg-purple-600',
   }
-      }),
+        )},
       []
     );
 const renderSpinner = useMemo(() => {
@@ -58,8 +58,8 @@ const renderSpinner = useMemo(() => {
           return (
             <div className='flex space-x-1' role='status' aria-label='Loading'></div>
               {[0, 1, 2].map(i => (</div>
-                <div
-  }
+                <div;
+}
 
                   key={i}
                   className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
@@ -97,8 +97,8 @@ case 'bars':;
             <div className='flex space-x-1' role='status' aria-label='Loading'></div>
               {
     [0, 1, 2, 3].map(i => (</div>
-                <div
-  }
+                <div;
+}
 
                   key={i}
                   className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
@@ -132,8 +132,7 @@ return (</div>
     text && (</div>
   }
             <p>
-              {text}
-            </p>
+              {text}</p>
           )}
         </div>
     );

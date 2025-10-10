@@ -82,8 +82,8 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>(ob,;
 ): Pick<T, K> {/* TODO: Fix JSX expression */}
   const result = {} as Pick<T>
   keys.forEach(key => {/* TODO: Fix JSX expression */}
-    })
-  })
+      )}
+    )}
   return result;
 }
 /**;
@@ -95,8 +95,7 @@ export function omit<T extends Record<string, unknown>, K extends keyof T>(ob,;
   s: K[]),
 ): Omit<T, K> {/* TODO: Fix JSX expression */}
   const result = { ...obj }
-  keys.forEach(key => {/* TODO: Fix JSX expression */})
-  })
+  keys.forEach(key => {/* TODO: Fix JSX expression */}))}
   return result as Omit<T>
 }
 /**;
@@ -119,10 +118,10 @@ export function unique<T>(arra);
   }
   const seen = new Set();
   return array.filter(item => {/* TODO: Fix JSX expression */}
-    })
+      )}
     seen.add(value);
     return true;
-  })
+    )}
 }
 /**;
  * Sort array by multiple keys;
@@ -149,7 +148,7 @@ export function sortBy<T>(arra,;
       if (aComp > bComp) return order === 'asc' ? 1 : -1;
     }
     return 0;
-  })
+    )}
 }
 /**;
  * Chunk array into smaller arrays;
@@ -186,7 +185,7 @@ export function formatNumber(nu);
  */;
 export function formatCurrency(amoun);
   t: number, currency = 'USD', locale = 'en-US'): string {/* TODO: Fix JSX expression */}
-  }).format(amount);
+    )}.format(amount);
 }
 /**;
  * Format date;

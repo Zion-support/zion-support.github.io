@@ -14,8 +14,7 @@ const SignupPage: React.FC = () => {
     password: '',
     confirmPassword: '',
     agreeToTerms: false,
-    subscribeNewsletter: false
-  });
+    subscribeNewsletter: false,);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -23,15 +22,15 @@ const SignupPage: React.FC = () => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
+      [name]: type === 'checkbox' ? checked : value;
+  )});
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (formData.password !== formData.confirmPassword) {
       alert('Passwords do not match'),
-      return
-  }
+      return;
+}
     if (!formData.agreeToTerms) {
       alert('Please agree to the terms and conditions');
     setIsLoading(true);
@@ -40,7 +39,7 @@ const SignupPage: React.FC = () => {
     setIsLoading(false);
     // Redirect to dashboard or home page
     window.location.href = '/';
-  const features = [
+  const features: any[] = [
     {
       icon: Shield,
       title: 'Enterprise Security',
@@ -53,7 +52,7 @@ icon$5: Globe,
       title: 'Global Support',
       description:   ,
 $4];
-  const benefits = [
+  const benefits: any[] = [
     'Free 14-day trial',
     'No setup fees',
     '24/7 expert support',
@@ -86,7 +85,7 @@ $4];
   s: false,
     subscribeNewslette,
   r: false,)
-  });
+    )};
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -98,7 +97,7 @@ const handleInputChange = (e: React.ChangeEvent,)
 }
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value;)
-    }));
+      )});
   }
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -120,9 +119,9 @@ const handleInputChange = (e: React.ChangeEvent,)
     setIsLoading(false);
     // Redirect to dashboard or home page;
     window.location.href = '/';
-  const features = [
+  const features: any[] = [
   // TOD,
-  O: Add items
+  O: Add items,
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -132,8 +131,7 @@ const handleInputChange = (e: React.ChangeEvent,)
       titl,
   e: 'Enterprise Security',
       descriptio,
-  n: 'Bank-level security with advanced encryption and compliance'
-    },
+  n: 'Bank-level security with advanced encryption and compliance',,
 icon: Award,
       title: 'Proven Results',
       description: '300% average ROI and 95% process automation for our clients',
@@ -148,17 +146,17 @@ const PagePage: React.FC = () => {
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
               <div className="text-center mb-8">
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text">
-                  Create Your Account;
+                  Create Your Account;</h1>
   </
                 <p className="text-gray-300">
-                  Join thousands of businesses transforming with AI and IT solutions;
+                  Join thousands of businesses transforming with AI and IT solutions;</p>
   </
               </div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      First Name,
+                      First Name,</label>
   </
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -280,11 +278,11 @@ Confirm Password;
                     <span className="ml-2 text-sm text-gray-300">
                       I agree to the{' '}
                       <a href="/terms" className="text-cyan-400 hover: text-cyan-300">
-                        Terms of Service,
+                        Terms of Service,</a>
   </{' '}
                       and{' '}
                       <a href="/privacy" className="text-cyan-400 hover: text-cyan-300">
-                        Privacy Policy,
+                        Privacy Policy,</a>
   </
                     </span>
                       name="subscribeNewsletter"
@@ -310,7 +308,7 @@ Confirm Password;
             {/* Right Side - Features and Benefits */}
             <div className="space-y-8">
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text">
-                  Transform Your Business Today;
+                  Transform Your Business Today;</h2>
   </
                 <p className="text-xl text-gray-300 mb-8">
                   Join thousands of businesses already using our AI and IT solutions 
@@ -325,8 +323,7 @@ Confirm Password;
                 ))}
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-white mb-4">
-                  What You Get:
-                </h3>
+                  What You Get:</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-center text-sm text-gray-300">
@@ -409,27 +406,12 @@ export default SignupPage;
   </p>
   </div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
   </p>
-  </div>
-  </div>
   </div>
   </a>
   </label>
   </div>
-  </div>
-  </div>
   </label>
   </div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </HTMLInputElement>
   </HTMLInputElement>

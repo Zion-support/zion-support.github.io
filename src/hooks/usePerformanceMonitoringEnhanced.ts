@@ -1,11 +1,9 @@
-
 'use client'
 export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
 import { useEffect, useCallback } from 'react';
 
 export const _usePerformanceMonitoring = () => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   const reportWebVitals = useCallback((metri)
@@ -22,11 +20,11 @@ export const _usePerformanceMonitoring = () => {
   O: Add content,}
 }
       fetch(url, {/* TODO: Fix JSX expression */})
-  e: true }).catch(() => {/* TODO: Fix JSX expression */}
+  e: true   )}.catch(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         // Analytics reporting failed;
-      });
+        )};
     }
   }, []);
   useEffect(() => {/* TODO: Fix JSX expression */}
@@ -56,4 +54,3 @@ const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression 
   }, [reportWebVitals])
   return { reportWebVitals }
 }
-

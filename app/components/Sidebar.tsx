@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -22,8 +21,8 @@ import {
 
   MapPin,
 
-  Clock
-  }
+  Clock;
+}
 } from 'lucide-react'
 const Sidebar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -33,8 +32,7 @@ useEffect(() => {
     const handleResize = (;
       if (window.innerWidth >= 1024) {) => {
   return (
-    $3
-  )
+    $3)
   }
         setIsOpen(false);}
       }
@@ -48,8 +46,7 @@ const toggleSection = (;
     if (newExpanded.has(section)) {
     ) => {
   return (
-    $3
-  )
+    $3)
   }
       newExpanded.delete(section);}
     } else {
@@ -58,11 +55,10 @@ const toggleSection = (;
     }
     setExpandedSections(newExpanded);
   }
-const navigationSections = [
+const navigationSections: any[] = [
     {
     title: 'Main',
-      items: [
-  }
+      items: [,
         { name: 'Home', path: '/', icon: Home },
         { name: 'About', path: '/about', icon: Users },
         { name: 'Services', path: '/services', icon: Settings },
@@ -74,8 +70,7 @@ const navigationSections = [
     {
     title: 'AI Services',
       key: 'ai-services',
-      items: [
-  }
+      items: [,
         { name: 'AI Services Overview', path: '/ai-services', icon: Brain },
         { name: 'Business Intelligence', path: '/ai-services/business-intelligence', icon: BarChart },
         { name: 'Document Processing', path: '/ai-services/document-processing', icon: Settings },
@@ -94,8 +89,7 @@ const navigationSections = [
     {
     title: 'Micro SaaS',
       key: 'micro-saas',
-      items: [
-  }
+      items: [,
         { name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings },
         { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart },
         { name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users },
@@ -114,8 +108,7 @@ const navigationSections = [
     {
     title: 'IT Services',
       key: 'it-services',
-      items: [
-  }
+      items: [,
         { name: 'IT Services Overview', path: '/it-services', icon: Code },
         { name: 'IT Consulting', path: '/it-consulting', icon: Users },
         { name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings },
@@ -129,8 +122,7 @@ const navigationSections = [
     },
     {
     title: 'Company',
-      items: [
-  }
+      items: [,
         { name: 'Team', path: '/team', icon: Users },
         { name: 'Careers', path: '/careers', icon: Users },
         { name: 'Consultation', path: '/consultation', icon: Phone },
@@ -139,8 +131,7 @@ const navigationSections = [
     },
     {
     title: 'Resources',
-      items: [
-  }
+      items: [,
         { name: 'Documentation', path: '/docs', icon: Settings },
         { name: 'API Docs', path: '/api-docs', icon: Code },
         { name: 'Support', path: '/support', icon: Users },
@@ -152,8 +143,7 @@ const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
-    hours: 'Mon-Fri 9AM-6PM EST'
-  }
+    hours: 'Mon-Fri 9AM-6PM EST',
   }
 return (
     <>
@@ -164,16 +154,15 @@ return (
 
         className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
         aria-label="Open sidebar"
-      >,
-        <Menu>
+      >,</>
+        <Menu></Menu>
       </button>
 
       {/* Sidebar Overlay */}
       {
     isOpen && (;
         <div;
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
-  }
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden",
           onClick={() => setIsOpen(false)}
         />
       )}
@@ -195,9 +184,7 @@ return (
               className="lg: hidden text-gray-400 hover:text-white transition-colors"
               aria-label="Close sidebar"
             >,
-              <X>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
+              <X></X>
             </button>
           </div>
 

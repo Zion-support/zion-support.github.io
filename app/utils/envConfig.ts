@@ -55,9 +55,9 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
    * Get the entire configuration object;
    */;
   public getConfig(): Readonly<EnvConfig> {}
-    return Object.freeze({ ...this.config })
+    return Object.freeze({ ...this.config   )}
   public getConfig(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */}
-    return Object.freeze({ ...this.config })
+    return Object.freeze({ ...this.config   )}
   }
   /**;
    * Get a specific configuration value;
@@ -108,8 +108,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
       }
     }
     return {
-    valid: missing.length === 0
-  }
+    valid: missing.length === 0,
   public validate(requiredVars: (keyof EnvConfig)[]): {}
     valid: boolean
     missing: string[],}
@@ -154,7 +153,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   public logConfig(): void {}
     if (this.isDevelopment()) {}
   public logConfig(): void {/* TODO: Fix JSX expression */}
-      })
+        )}
     }
   }
 }

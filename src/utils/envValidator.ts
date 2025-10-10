@@ -1,4 +1,3 @@
-
 'use client'
 /**
  * Environment Variables Validator;
@@ -6,8 +5,7 @@
  */
 
 export interface EnvConfig {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   NODE_EN,
@@ -26,8 +24,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
    * Validate all environment variables
    */
   validate(): { isValid: boolean; errors: string[], warnings: string[] } {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     this.errors = []
@@ -38,8 +35,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
 //     this.validateOptionalVars()
 
     return {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   isVali,
@@ -67,7 +63,7 @@ ${validation.errors.join('
     if (validation.warnings.length > 0) {
     const nodeEnv = process.env['NODE_ENV']
   }
-    const validEnvs = ['development', 'production', 'test'];
+    const validEnvs: any[] = ['development', 'production', 'test'];
     if (!nodeEnv) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -76,8 +72,7 @@ ${validation.errors.join('
     }
 
     if (!validEnvs.includes(nodeEnv)) {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
 //       this.errors.push()
         `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`
@@ -85,8 +80,7 @@ ${validation.errors.join('
     }
   }
   private validateOptionalVars(): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     const nodeEnv = this.getNodeEnv()
@@ -103,8 +97,7 @@ ${validation.errors.join('
       }
 
       if (!process.env['NEXT_PUBLIC_GA_ID']) {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
 //         this.warnings.push()
@@ -115,8 +108,7 @@ ${validation.errors.join('
   }
 
   private getNodeEnv(): 'development' | 'production' | 'test' {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     const env = process.env['NODE_ENV'] || 'development'
@@ -132,4 +124,3 @@ export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */}
   return envValidator.getConfig()
 }
 export default envValidator;`
-

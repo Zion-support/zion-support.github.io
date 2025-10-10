@@ -25,16 +25,15 @@ import {
 
   Workflow,
 
-  Bot
-  }
+  Bot;
+}
 } from 'lucide-react'
 const ProcessAutomationPage: React.FC = () => {
-    const features = [
+    const features: any[] = [
     {
       icon: Zap,
       title: 'Workflow Automation',
-      description: 'Streamline your business processes with intelligent automation that reduces manual work and errors.'
-  },
+      description: 'Streamline your business processes with intelligent automation that reduces manual work and errors.',,
     {
     icon: Bot,
       title: 'AI-Powered Automation',
@@ -43,16 +42,14 @@ const ProcessAutomationPage: React.FC = () => {
     {
     icon: Settings,
       title: 'Custom Integration',
-      description: 'Seamlessly integrate with your existing systems and tools for a unified automation experience.'
-  },
+      description: 'Seamlessly integrate with your existing systems and tools for a unified automation experience.',,
     {
     icon: BarChart,
       title: 'Performance Monitoring',
-      description: 'Track and optimize your automated processes with real-time analytics and reporting.'
-  }
+      description: 'Track and optimize your automated processes with real-time analytics and reporting.',
     }
   ]
-const benefits = [
+const benefits: any[] = [
     'Reduce manual work and human errors',
     'Increase operational efficiency',
     'Lower operational costs',
@@ -68,7 +65,7 @@ const benefits = [
   ]
 return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>Process Automation Services - Zion Tech Group | Workflow Automation</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -81,29 +78,24 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h1>
-                Process Automation Services
-              </h1>
+                Process Automation Services</h1>
               <p>
                 Streamline your business operations with intelligent automation solutions.;
-                Reduce costs, improve efficiency, and scale your business with AI-powered process automation.
-              </p>
+                Reduce costs, improve efficiency, and scale your business with AI-powered process automation.</p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
                   <Zap>
-                  Automate Now
+                  Automate Now</Zap>
                 </button>
                 <button>
                   <Phone>
-                  Call (302) 464-0950,
+                  Call (302) 464-0950,</Phone>
                 </button>
               </div>
-            </div>
-          </div>
         </section>
         {/* Features Section */}
         <section className="py-20 px-4">
@@ -112,16 +104,13 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2>
-                Our Automation Solutions
-              </h2>
+                Our Automation Solutions</h2>
               <p>
-                We provide comprehensive process automation services to transform your business operations.,
-              </p>
+                We provide comprehensive process automation services to transform your business operations.,</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
@@ -133,7 +122,6 @@ return (
                 </div>
               ))}
             </div>
-          </div>
         </section>
         {/* Benefits Section */}
         <section className="py-20 px-4">
@@ -142,16 +130,13 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2>
-                Key Benefits
-              </h2>
+                Key Benefits</h2>
               <p>
-                Transform your business with our comprehensive process automation services.,
-              </p>
+                Transform your business with our comprehensive process automation services.,</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (
@@ -161,7 +146,6 @@ return (
                 </div>
               ))}
             </div>
-          </div>
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4">
@@ -170,28 +154,23 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
               <h2>
-                Ready to Automate Your Processes?
-              </h2>
+                Ready to Automate Your Processes?</h2>
               <p>
-                Contact our automation experts to discuss your process optimization needs.
-              </p>
+                Contact our automation experts to discuss your process optimization needs.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button>
                   <Phone>
-                  Call (302) 464-0950
+                  Call (302) 464-0950</Phone>
                 </button>
                 <button>
                   <Mail>
-                  Email Us
+                  Email Us</Mail>
                 </button>
               </div>
-            </div>
-          </div>
         </section>
       </div>
     </>
@@ -199,4 +178,3 @@ return (
 };
 
 export default ProcessAutomationPage;
-

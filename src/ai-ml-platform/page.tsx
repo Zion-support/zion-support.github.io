@@ -9,7 +9,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AIMLPlatformPage: React.FC = () => {
-  const features = [
+  const features: any[] = [
     {
       icon: Brain,
       title: 'Complete ML Platform',
@@ -30,7 +30,7 @@ const AIMLPlatformPage: React.FC = () => {
       benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
   ];
-  const pricingPlans = [
+  const pricingPlans: any[] = [
       name: 'Developer',
       price: '$999',
       period: '/month',
@@ -46,11 +46,10 @@ const AIMLPlatformPage: React.FC = () => {
     name: 'Team',
       price: '$2,499',
       description: 'Ideal for development teams',
-  const features = [];
+  const features: any[] = [];
   return (
     {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   ico,
   n: Brain,
@@ -79,7 +78,7 @@ const AIMLPlatformPage: React.FC = () => {
   s: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
   ];
-  const pricingPlans = [
+  const pricingPlans: any[] = [
       nam,
   e: 'Team',
       pric,
@@ -112,10 +111,10 @@ const AIMLPlatformPage: React.FC = () => {
         'Custom analytics',
         'White-label options',
         'API access'
-  const stats = [
-  const stats = [
+  const stats: any[] = [
+  const stats: any[] = [
   // TOD,
-  O: Add items
+  O: Add items,
 ],
     { icon: Users, value: '500+', label: 'Data Scientists' },
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
@@ -132,28 +131,26 @@ const AIMLPlatformPage: React.FC = () => {
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">AI ML Platform</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Coming Soon - Advanced AI ML platform solutions that will transform your business.
-          </p>
+            Coming Soon - Advanced AI ML platform solutions that will transform your business.</p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us;
+              Contact Us;</button>
   </
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More;
+              Learn More;</button>
   </
       <Footer />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
+            Page</h1>
   </
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
+            Coming Soon</p>
   </
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Contact Us,
-          </button>"
+// Contact Us,</button>"
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg,
   hover:bg-cyan-400,"
   hover: text-slate-900 transition-colors"></button>
@@ -170,7 +167,4 @@ export default AiMlPlatformPage;
   </section>
   </main>
   </button>
-  </button>
-  </div>
-  </div>
   </div>

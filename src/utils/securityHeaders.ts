@@ -1,12 +1,10 @@
-
 /**
  * Security Headers Configuration;
  * Comprehensive security headers for production applications;
  */
 
 export interface SecurityHeadersConfig {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   contentSecurityPolicy?: string;
@@ -127,8 +125,7 @@ export function getNextSecurityHeaders()
 
           <SecurityHeadersConfig>
 ): Array<{ key: string, value: string }> {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   const headers = getSecurityHeaders(customConfig);
@@ -137,7 +134,6 @@ export function getNextSecurityHeaders()
 }
 //     key,
 //     value;)
-  }));
+    )});
 }
 export default defaultSecurityHeaders;"
-

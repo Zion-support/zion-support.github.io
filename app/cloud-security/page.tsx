@@ -3,11 +3,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Lock, Eye, ShieldCheck } from 'lucide-react';
 const CloudSecurityPage: React.FC = () => {
-  const features = [
-    {
-    }
+  const features: any[] = [
+    {,
   ];
-  const benefits = [
+  const benefits: any[] = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
@@ -17,31 +16,25 @@ const CloudSecurityPage: React.FC = () => {
       <Helmet>
         <title>Cloud Security | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Security services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<<<<<<< HEAD
 <meta name="keywords" content="cloud security, security services, IT services, Zion Tech Group, cybersecurity" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Cloud Security
+            Cloud Security</h1>
   </
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud security solutions. 
-            Powered by cutting-edge AI technology and industry expertise.
-          </p>
+            Powered by cutting-edge AI technology and industry expertise.</p>
       </section>
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Cloud Security?
-            </h2>
+              Why Choose Our Cloud Security?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our cloud security solutions deliver unmatched performance, security, and scalability.
-            </p>
+              Our cloud security solutions deliver unmatched performance, security, and scalability.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -52,16 +45,14 @@ const CloudSecurityPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Key Benefits,
+              Key Benefits,</h2>
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our cloud security solutions for your business.
-            </p>
+              Experience the power of our cloud security solutions for your business.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
@@ -71,17 +62,14 @@ const CloudSecurityPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-            Ready to Get Started?
-          </h2>
+            Ready to Get Started?</h2>
           <p className="text-xl text-purple-100 mb-8">
-            Contact our experts to discuss your cloud security needs and get a customized solution.
-          </p>
+            Contact our experts to discuss your cloud security needs and get a customized solution.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               <Phone className="mr-2 h-5 w-5" />
@@ -89,20 +77,14 @@ const CloudSecurityPage: React.FC = () => {
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Mail className="mr-2 h-5 w-5" />
-<<<<<<< HEAD
               Email Us
   </
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
           </div>
-        </div>
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
+            Ready to Get Started?</h2>
           <p className="text-xl text-purple-100 mb-8">
-            Contact our experts to discuss your cloud security needs and get a customized solution.
-          </p>
+            Contact our experts to discuss your cloud security needs and get a customized solution.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               <Phone className="mr-2 h-5 w-5" />
@@ -113,16 +95,10 @@ const CloudSecurityPage: React.FC = () => {
               Email Us
   </
           </div>
-        </div>
-      </div>
-    </div>
   ),
 };
 
 export default CloudSecurityPage
-  </button>
-  </button>
-  </button>
   </button>
   </section>
   </h2>

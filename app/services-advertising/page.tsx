@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 }
   ]
-const benefits = [
+const benefits: any[] = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -22,15 +22,13 @@ return (
             </h1>
             <p>
               Transform your business with our advanced page solutions.;
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
+              Powered by cutting-edge AI technology and industry expertise.</p>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Benefits Section */}
@@ -38,12 +36,10 @@ return (
             ))}
 
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
           </div>
-        </div>
       </section>
     </div>
   );

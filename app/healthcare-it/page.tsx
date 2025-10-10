@@ -52,7 +52,6 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
@@ -60,20 +59,16 @@ return (
           <h1>
             Healthcare;
             <span>
-              IT Solutions
-            </span>
+              IT Solutions</span>
           </h1>
           <p>
             Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations.;
-            Protect patient data while improving operational efficiency.
-          </p>
-              <ArrowRight>
+            Protect patient data while improving operational efficiency.</p>
+              <ArrowRight></ArrowRight>
             </button>
             <button>
-              Learn More
-            </button>
+              Learn More</button>
 </div>
-        </div>
       </section>
 {/* Features Section */}
       <section className="py-20 px-4">
@@ -82,11 +77,9 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
             <p>
-              Comprehensive IT solutions for all aspects of healthcare delivery and management.
-            </p>
+              Comprehensive IT solutions for all aspects of healthcare delivery and management.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {
@@ -99,7 +92,6 @@ return (
               </div>
             ))}
           </div>
-        </div>
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4">
@@ -108,16 +100,13 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>
-              Why Choose Our Healthcare IT Solutions?
-            </h2>
+              Why Choose Our Healthcare IT Solutions?</h2>
             <p>
-              Experience the benefits of modern healthcare technology with our proven solutions.
-            </p>
+              Experience the benefits of modern healthcare technology with our proven solutions.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
             {benefits.map((benefit, index) => (
@@ -128,7 +117,6 @@ return (
               </div>
             ))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
 <section className="py-20 px-4">
@@ -137,14 +125,11 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
             </button>
             <button>
-              View Case Studies
-            </button>
+              View Case Studies</button>
           </div>
-        </div>
       </section>
       <Footer />
   );

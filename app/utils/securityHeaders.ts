@@ -7,8 +7,7 @@ export interface SecurityHeadersConfig {
   strictTransportSecurity?: string;
   xFrameOptions?: string;
   xContentTypeOptions?: string;
-  referrerPolicy?: string
-  }
+  referrerPolicy?: string,
   permissionsPolicy?: string;}
 }
 export const defaultSecurityHeaders: SecurityHeadersConfig = {
@@ -126,10 +125,10 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
   return Object.entries(headers).map(([key, value]) => ({}
     key,;
     value}
-  }));
+    )});
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
 ): Array<{/* TODO: Fix JSX expression */}
   e: string }> {/* TODO: Fix JSX expression */}
-  }));
+    )});
 }
 export default defaultSecurityHeaders;

@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, FileText, Users, Lock, BarChart, CheckCircle, ArrowRight, Zap, Brain } from 'lucide-react';
 const MedicalRecordsManagerPage: React.FC = () => {
-  const features = [
+  const features: any[] = [
     {
       icon: FileText,
       title: 'Digital Records Management',
@@ -12,8 +12,7 @@ const MedicalRecordsManagerPage: React.FC = () => {
     {
       icon: Shield,
       title: 'HIPAA Compliance',
-      description: 'Fully compliant with HIPAA regulations and healthcare data security standards to protect patient privacy.'
-    },
+      description: 'Fully compliant with HIPAA regulations and healthcare data security standards to protect patient privacy.',,
     {
       icon: Brain,
       title: 'AI-Powered Insights',
@@ -22,8 +21,7 @@ const MedicalRecordsManagerPage: React.FC = () => {
     {
       icon: Users,
       title: 'Multi-Provider Access',
-      description: 'Secure access for multiple healthcare providers with role-based permissions and audit trails.'
-    },
+      description: 'Secure access for multiple healthcare providers with role-based permissions and audit trails.',,
     {
       icon: BarChart,
       title: 'Analytics Dashboard',
@@ -47,11 +45,10 @@ const MedicalRecordsManagerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
-                Medical Records Manager,
+                Medical Records Manager,</h1>
   </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Secure, HIPAA-compliant medical records management system with AI-powered insights to streamline healthcare data management and improve patient care.
-              </p>
+                Secure, HIPAA-compliant medical records management system with AI-powered insights to streamline healthcare data management and improve patient care.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -66,7 +63,6 @@ const MedicalRecordsManagerPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
       </div>
     </React.Fragment>

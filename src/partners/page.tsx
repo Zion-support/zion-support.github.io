@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const PartnersPage: React.FC = () => {
-  const partnerTypes = [
+  const partnerTypes: any[] = [
     {
       title: 'Technology Partners',
       description: 'Leading technology companies that provide the foundation for our solutions',
@@ -45,7 +45,7 @@ const PartnersPage: React.FC = () => {
         { name: 'SAP', description: 'Enterprise Resource Planning', logo: '📋' }
     }
   ];
-  const benefits = [
+  const benefits: any[] = [
       icon: Globe,
       title: 'Global Reach',
       description:       ,
@@ -58,7 +58,7 @@ icon$5: Star,
 icon$5: CheckCircle,
       title: 'Quality Assurance',
       description: 'Rigorous partner certification and quality standards'
-  const partnershipTiers = [
+  const partnershipTiers: any[] = [
       name: 'Strategic Partners',
       level: 'Platinum',
       description: 'Long-term strategic relationships with joint go-to-market initiatives',
@@ -91,11 +91,10 @@ namename: 'Channel Partners',
         'Competitive margins'
       color: 'text-orange-400',
       bgColor: 'bg-orange-500/10'
-  const partnerTypes = [],
+  const partnerTypes: any[] = [],
   return (
     {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   titl,
   e: 'Technology Partners',
@@ -171,7 +170,7 @@ namename: 'Channel Partners',
   o: '📋' }
     }
   ];
-  const benefits = [
+  const benefits: any[] = [
 icon: Globe,
       title: 'Global Reach',
       description: 'Access to worldwide markets and customers through our partner network',
@@ -184,12 +183,11 @@ const PagePage: React.FC = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Our Partners,
+              Our Partners,</h1>
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               We work with industry-leading technology partners to deliver comprehensive solutions 
-              that drive innovation and business success.
-            </p>
+              that drive innovation and business success.</p>
           </div>
           {/* Partner Types */}
           <div className="mb-16">
@@ -210,8 +208,7 @@ const PagePage: React.FC = () => {
                   ))}
           {/* Partnership Benefits */}
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Why Partner With Us?
-            </h2>
+              Why Partner With Us?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
@@ -347,18 +344,6 @@ const PagePage: React.FC = () => {
 }
 export default PartnersPage;
   </a>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
   </div>
   </div>
   </div>

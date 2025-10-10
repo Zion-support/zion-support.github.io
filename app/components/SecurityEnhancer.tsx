@@ -3,10 +3,9 @@ import React from 'react';
 'use client';
 import React, { useEffect } from 'react';
 interface SecurityEnhancerProps {
-    children: React.ReactNode
-  }
+    children: React.ReactNode,
 }
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children   )} => {
     useEffect(() => {
     // Security enhancement logic;
     const enhanceSecurity = (;
@@ -16,8 +15,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
         'X-Frame-Options': 'DENY',
         'X-XSS-Protection': '1; mode=block',) => {
   return (
-    $3
-  )
+    $3)
   }
         'Referrer-Policy': 'strict-origin-when-cross-origin';}
       }
@@ -31,14 +29,14 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
       document.addEventListener('contextmenu', (e) => {
     e.preventDefault()
   }
-      })
+        )}
 // Disable F12 and other dev tools shortcuts;
       document.addEventListener('keydown', (e) => {
     if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
           e.preventDefault()
   }
         }
-      })
+        )}
     }
 enhanceSecurity();
   }, []);
@@ -46,4 +44,3 @@ return <>{children}</>
 };
 
 export default SecurityEnhancer;
-

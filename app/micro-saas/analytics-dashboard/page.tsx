@@ -2,40 +2,34 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
 const AIAnalyticsDashboardPage: React.FC = () => {
-    const features = [
+    const features: any[] = [
     {
       icon: BarChart,
       title: 'Real-time Analytics',
-      description: 'Live data visualization with instant updates and interactive charts.'
-  },
+      description: 'Live data visualization with instant updates and interactive charts.',,
     {
     icon: TrendingUp,
       title: 'Predictive Insights',
-      description: 'AI-powered forecasting and trend analysis for better decision making.'
-  },
+      description: 'AI-powered forecasting and trend analysis for better decision making.',,
     {
     icon: Users,
       title: 'User Behavior Tracking',
-      description: 'Comprehensive user analytics and engagement metrics tracking.'
-  },
+      description: 'Comprehensive user analytics and engagement metrics tracking.',,
     {
     icon: DollarSign,
       title: 'Revenue Analytics',
-      description: 'Detailed financial metrics and revenue optimization insights.'
-  },
+      description: 'Detailed financial metrics and revenue optimization insights.',,
     {
     icon: Zap,
       title: 'Custom Dashboards',
-      description: 'Build personalized dashboards tailored to your business needs.'
-  },
+      description: 'Build personalized dashboards tailored to your business needs.',,
     {
     icon: Target,
       title: 'Goal Tracking',
-      description: 'Monitor KPIs and business objectives with automated alerts.'
-  }
+      description: 'Monitor KPIs and business objectives with automated alerts.',
     }
   ]
-const benefits = [
+const benefits: any[] = [
     'Real-time data visualization and reporting',
     'AI-powered predictive analytics',
 
@@ -47,7 +41,7 @@ const benefits = [
 
     'Mobile-responsive design'
   ]
-const metrics = [
+const metrics: any[] = [
     { label: 'Data Sources', value: '50+', icon: BarChart },
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
@@ -55,11 +49,11 @@ const metrics = [
   ]
 return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-        <link>
+        <link></link>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}</div>
@@ -69,7 +63,6 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
@@ -83,19 +76,15 @@ return (
               </h1>
               <p>
                 Transform your data into actionable insights with our AI-powered analytics dashboard.;
-                Get real-time visualization, predictive analytics, and custom reporting in one powerful platform.
-              </p>
+                Get real-time visualization, predictive analytics, and custom reporting in one powerful platform.</p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
                   <span>Start Free Trial</span>
-                  <ArrowRight>
+                  <ArrowRight></ArrowRight>
                 </button>
                 <button>
-                  View Demo,
-                </button>
+                  View Demo,</button>
               </div>
-            </div>
-          </div>
         </section>
         {/* Features Section */}
         <section className="py-20 px-4">
@@ -104,14 +93,12 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
               <p>
-                Everything you need to make data-driven decisions with confidence
-              </p>
+                Everything you need to make data-driven decisions with confidence</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {
@@ -125,7 +112,6 @@ return (
                 </div>
               ))}
             </div>
-          </div>
         </section>
         {/* Metrics Section */}
         <section className="py-20 px-4">
@@ -134,14 +120,12 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Platform Performance</h2>
               <p>
-                Built for scale and reliability
-              </p>
+                Built for scale and reliability</p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
               {
@@ -152,10 +136,8 @@ return (
                     <metric />
                   <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
                   <div className="text-gray-300">{metric.label}</div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
         {/* Benefits Section */}
         <section className="py-20 px-4">
@@ -164,14 +146,12 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Dashboard</h2>
               <p>
-                Experience the difference with our AI-powered analytics platform
-              </p>
+                Experience the difference with our AI-powered analytics platform</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
               <div className="space-y-6"></div>
@@ -199,9 +179,6 @@ return (
                     <Star>
                     <span className="text-gray-300">"Improved decision making speed by 3x"</span>
                   </div>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
         {/* CTA Section */}
@@ -211,28 +188,22 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30"></div>
               <h2>
-                Ready to Transform Your Analytics?
-              </h2>
+                Ready to Transform Your Analytics?</h2>
               <p>
                 Join thousands of businesses already using our AI analytics dashboard;
-                to make smarter, data-driven decisions.
-              </p>
+                to make smarter, data-driven decisions.</p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
                   <span>Start Free Trial</span>
-                  <ArrowRight>
+                  <ArrowRight></ArrowRight>
                 </button>
                 <button>
-                  Schedule Demo
-                </button>
+                  Schedule Demo</button>
               </div>
-            </div>
-          </div>
         </section>
       </div>
     </>
@@ -240,4 +211,3 @@ return (
 };
 
 export default AIAnalyticsDashboardPage;
-

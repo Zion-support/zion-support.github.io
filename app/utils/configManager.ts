@@ -107,12 +107,10 @@ private loadEnvironmentConfig(): void {
     if (env === 'production') {
       this.config.logging.level = 'error';
       this.config.logging.enableConsole = false;
-      this.config.features.enableAnalytics = true
-  }
+      this.config.features.enableAnalytics = true,
     } else if (env === 'staging') {
     this.config.logging.level = 'warn';
-      this.config.logging.enableConsole = true
-  }
+      this.config.logging.enableConsole = true,
     }
   }
 public getConfig(): AppConfig {}
@@ -124,28 +122,22 @@ public updateConfig(updates: Partial<AppConfig>): void {
     this.config = { ...this.config, ...updates }
   }
 public getApiConfig() {
-    return this.config.api
-  }
+    return this.config.api,
   }
 public getFeatureConfig() {
-    return this.config.features
-  }
+    return this.config.features,
   }
 public getPerformanceConfig() {
-    return this.config.performance
-  }
+    return this.config.performance,
   }
 public getSecurityConfig() {
-    return this.config.security
-  }
+    return this.config.security,
   }
 public getUIConfig() {
-    return this.config.ui
-  }
+    return this.config.ui,
   }
 public getLoggingConfig() {
-    return this.config.logging
-  }
+    return this.config.logging,
   }
 public isDevelopment(): boolean {
     return this.config.environment === 'development'
@@ -312,11 +304,9 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   e: NK | AppConfig[K],
     value?: AppConfig[K][NK]);
   ): void {/* TODO: Fix JSX expression */}
-        this.config[key] = Object.assign({}, currentValue, {/* TODO: Fix JSX expression */})
-        }) as AppConfig[K]
+        this.config[key] = Object.assign({}, currentValue, {/* TODO: Fix JSX expression */}))} as AppConfig[K]
       } else {/* TODO: Fix JSX expression */}
-        this.config[key] = Object.assign({}, defaultValue, {/* TODO: Fix JSX expression */})
-        }) as AppConfig[K]
+        this.config[key] = Object.assign({}, defaultValue, {/* TODO: Fix JSX expression */}))} as AppConfig[K]
       }
     } else {/* TODO: Fix JSX expression */}
     }

@@ -6,16 +6,14 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     {
     icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-  },
+      description: 'Bank-level security with encryption and compliance standards',,
     {
     icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-  }
+      description: 'Worldwide deployment and support for international businesses',
     }
   ]
-const benefits = [
+const benefits: any[] = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -31,18 +29,14 @@ const benefits = [
   ]
 return (
           </div>
-        </div>
       </section>
               </div>
             ))}
           </div>
-        </div>
       </section>
           </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
 };
 

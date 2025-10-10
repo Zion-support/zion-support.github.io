@@ -1,4 +1,3 @@
-
 'use client'
 /**
  * Comprehensive Monitoring Utility;
@@ -40,8 +39,7 @@ class MonitoringService {
 
   constructor() {
     if (typeof window !== 'undefined') {
-      this.initializeMonitoring()
-    }
+      this.initializeMonitoring(),
   }
 
   private initializeMonitoring(): void {
@@ -59,8 +57,8 @@ class MonitoringService {
           const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
           this.reportMetric('lcp', this.metrics.lcp)
-        })
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+          )}
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint']   )}
 
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
@@ -68,9 +66,9 @@ class MonitoringService {
           entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = (entry as any).processingStart - entry.startTime,
             this.reportMetric('fid', this.metrics.fid)
-  });
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
+    )};
+          )};
+        fidObserver.observe({ entryTypes: ['first-input']   )};
 
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
@@ -81,9 +79,9 @@ class MonitoringService {
               this.metrics.cls = clsValue,
               this.reportMetric('cls', clsValue)
   }
-          })
-        })
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
+            )}
+          )}
+        clsObserver.observe({ entryTypes: ['layout-shift']   )}
 
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {
@@ -91,9 +89,9 @@ class MonitoringService {
           entries.forEach(entry => {
             this.metrics.fcp = entry.startTime;
             this.reportMetric('fcp', entry.startTime)
-  });
-        });
-        fcpObserver.observe({ entryTypes: ['paint'] });
+    )};
+          )};
+        fcpObserver.observe({ entryTypes: ['paint']   )};
       } catch (error) {
     // console.error('Error setting up performance observers:', error)
   }
@@ -108,13 +106,12 @@ class MonitoringService {
             // console.warn('Long task detected:', {
             //   duration: entry.duration,
             //   startTime: entry.startTime
-            // })
+            //   )}
           }
-        })
-        longTaskObserver.observe({ entryTypes: ['longtask'] })
+          )}
+        longTaskObserver.observe({ entryTypes: ['longtask']   )}
       } catch (error) {
-        // Long task API might not be available
-      }
+        // Long task API might not be available,
     }
   }
 
@@ -130,11 +127,11 @@ class MonitoringService {
               //   name: resourceEntry.name,
               //   duration: resourceEntry.duration,
               //   type: resourceEntry.initiatorType
-              // })
+              //   )}
             }
-          });
-        });
-        resourceObserver.observe({ entryTypes: ['resource'] });
+            )};
+          )};
+        resourceObserver.observe({ entryTypes: ['resource']   )};
       } catch (_error) {
     // console.error('Error monitoring resources:', _error)
   }
@@ -148,9 +145,8 @@ class MonitoringService {
         stack: event.error?.stack,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
-        url: window.location.href
-      })
-    })
+        url: window.location.href,)
+      )}
 
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
@@ -158,15 +154,13 @@ class MonitoringService {
         message: `Unhandled Promise Rejection: ${event.reason}`,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
-        url: window.location.href
-      })
-    })
+        url: window.location.href,)
+      )}
   }
 
   private reportMetric(name: string, value: number): void {
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
-      return
-    }
+      return,
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
@@ -176,15 +170,14 @@ class MonitoringService {
       (window as any).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals'
-      })
+        )}
     }
   }
 
   public logError(error: ErrorReport): void {
     this.errors.push(error)
     if (this.errors.length > 50) {
-      this.errors = this.errors.slice(-50)
-    }
+      this.errors = this.errors.slice(-50),
   }
 
   public getMetrics(): PerformanceMetrics {
@@ -201,13 +194,13 @@ class MonitoringService {
 
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number }   )}.memory
       if (memory) {
         // console.log('[Memory]', {
         //   used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
         //   total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
         //   limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
-        // })
+        //   )}
       }
     }
   }
@@ -224,7 +217,7 @@ class MonitoringService {
         //   'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,
         //   'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
         //   'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
-        // })
+        //   )}
       }
     }
   }
@@ -232,4 +225,3 @@ class MonitoringService {
 
 const monitoring = new MonitoringService()
 export default monitoring;`
-

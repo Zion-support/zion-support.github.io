@@ -10,7 +10,7 @@ const AISmartContractAuditor: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  const features = [
+  const features: any[] = [
     {
       icon: Shield,
       title: 'Automated Security Analysis',
@@ -37,7 +37,7 @@ const AISmartContractAuditor: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
+  const pricingPlans: any[] = [
     {
       name: 'Starter',
       price: '$299',
@@ -51,8 +51,7 @@ const AISmartContractAuditor: React.FC = () => {
         'PDF audit reports',
         'Basic risk scoring'
       ],
-      popular: false
-    },
+      popular: false,,
     {
       name: 'Professional',
       price: '$799',
@@ -68,8 +67,7 @@ const AISmartContractAuditor: React.FC = () => {
         'API access',
         'Custom compliance checks'
       ],
-      popular: true
-    },
+      popular: true,,
     {
       name: 'Enterprise',
       price: '$1,999',
@@ -86,40 +84,35 @@ const AISmartContractAuditor: React.FC = () => {
         'White-label solutions',
         'On-site consultation'
       ],
-      popular: false
-    }
+      popular: false,
   ];
 
-  const useCases = [
+  const useCases: any[] = [
     {
       title: 'DeFi Protocol Audits',
       description: 'Comprehensive security analysis for decentralized finance protocols',
       icon: DollarSign,
-      results: 'Reduced security incidents by 95%'
-    },
+      results: 'Reduced security incidents by 95%',,
     {
       title: 'NFT Marketplace Security',
       description: 'Smart contract auditing for NFT platforms and marketplaces',
       icon: Image,
-      results: 'Zero critical vulnerabilities found'
-    },
+      results: 'Zero critical vulnerabilities found',,
     {
       title: 'Token Launch Security',
       description: 'Pre-launch security audits for new token contracts',
       icon: Rocket,
-      results: '100% successful token launches'
-    },
+      results: '100% successful token launches',,
     {
       title: 'Cross-Chain Bridge Audits',
       description: 'Security analysis for cross-chain bridge implementations',
       icon: Globe,
-      results: 'Prevented $50M+ in potential losses'
-    }
+      results: 'Prevented $50M+ in potential losses',
   ];
 
   return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>AI Smart Contract Auditor - Automated Security Analysis | Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered smart contract auditing with automated security analysis, vulnerability detection, and risk assessment. Secure your blockchain projects with our cutting-edge technology." />
         <meta name="keywords" content="smart contract audit, blockchain security, AI auditing, DeFi security, smart contract analysis, vulnerability detection" />
@@ -144,13 +137,11 @@ const AISmartContractAuditor: React.FC = () => {
               </div>
               
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                AI Smart Contract Auditor
-              </h1>
+                AI Smart Contract Auditor</h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Advanced AI-powered smart contract auditing with automated security analysis, 
-                vulnerability detection, and comprehensive risk assessment for blockchain projects.
-              </p>
+                vulnerability detection, and comprehensive risk assessment for blockchain projects.</p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                 <div className="flex items-center space-x-2 text-cyan-400">
@@ -165,7 +156,6 @@ const AISmartContractAuditor: React.FC = () => {
                   <Shield className="w-5 h-5" />
                   <span className="font-semibold">Zero False Positives</span>
                 </div>
-              </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -183,8 +173,6 @@ const AISmartContractAuditor: React.FC = () => {
                   Get Quote
                 </a>
               </div>
-            </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -192,12 +180,10 @@ const AISmartContractAuditor: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Advanced AI Security Features
-              </h2>
+                Advanced AI Security Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our AI-powered smart contract auditor uses cutting-edge machine learning 
-                and static analysis to provide comprehensive security assessments.
-              </p>
+                and static analysis to provide comprehensive security assessments.</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -222,7 +208,6 @@ const AISmartContractAuditor: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Use Cases Section */}
@@ -230,12 +215,10 @@ const AISmartContractAuditor: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Trusted by Leading Projects
-              </h2>
+                Trusted by Leading Projects</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our AI smart contract auditor has secured billions in value across 
-                various blockchain ecosystems and use cases.
-              </p>
+                various blockchain ecosystems and use cases.</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -250,12 +233,9 @@ const AISmartContractAuditor: React.FC = () => {
                   <h3 className="text-xl font-bold mb-4 text-white">{useCase.title}</h3>
                   <p className="text-gray-300 mb-4">{useCase.description}</p>
                   <div className="text-cyan-400 font-semibold text-sm">
-                    {useCase.results}
-                  </div>
-                </div>
+                    {useCase.results}</div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Pricing Section */}
@@ -263,30 +243,25 @@ const AISmartContractAuditor: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
-                Transparent Pricing
-              </h2>
+                Transparent Pricing</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the perfect plan for your smart contract auditing needs. 
-                All plans include our advanced AI security analysis.
-              </p>
+                All plans include our advanced AI security analysis.</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border transition-all duration-300 hover: scale-105 hover:shadow-xl ${
                     plan.popular 
                       ? 'border-cyan-500/50 shadow-cyan-500/20' 
-                      : 'border-gray-700/50 hover:border-cyan-500/30'
-                  }`}
+                      : 'border-gray-700/50 hover:border-cyan-500/30',`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
-                    </div>
+                        Most Popular</div>
                   )}
                   
                   <div className="text-center mb-8">
@@ -296,7 +271,6 @@ const AISmartContractAuditor: React.FC = () => {
                       <span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
                       <span className="text-gray-400 ml-2">{plan.period}</span>
                     </div>
-                  </div>
                   
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, idx) => (
@@ -308,31 +282,26 @@ const AISmartContractAuditor: React.FC = () => {
                   </ul>
                   
                   <a
-                    href="tel:+13024640950"
+                    href="tel: +13024640950"
                     className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
-                        : 'bg-gradient-to-r from-gray-700 to-gray-600 text-white hover:from-gray-600 hover:to-gray-500'
-                    }`}
+                        : 'bg-gradient-to-r from-gray-700 to-gray-600 text-white hover:from-gray-600 hover:to-gray-500',`}
                   >
-                    Get Started
-                  </a>
+                    Get Started</a>
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Secure Your Smart Contracts Today
-            </h2>
+              Secure Your Smart Contracts Today</h2>
             <p className="text-xl text-gray-300 mb-8">
               Don't risk your project's security. Get comprehensive AI-powered smart contract auditing 
-              with our advanced security analysis platform.
-            </p>
+              with our advanced security analysis platform.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
@@ -349,11 +318,9 @@ const AISmartContractAuditor: React.FC = () => {
                 Get Free Quote
               </a>
             </div>
-          </div>
         </section>
       </div>
     </>
-  );
-};
+  ),;
 
 export default AISmartContractAuditor;

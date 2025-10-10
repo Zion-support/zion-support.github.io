@@ -8,8 +8,8 @@ interface SEOHeadProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: object
-  }
+  structuredData?: object;
+}
 }
 const SEOHead: React.FC<SEOHeadProps> = ({
     title = 'Zion Tech Group - Advanced AI & IT Solutions',
@@ -23,9 +23,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
   twitterCard = 'summary_large_image',
 
-  structuredData
-  }
-}) => {}
+  structuredData;
+}
+  )} => {}
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 const defaultStructuredData = {
@@ -86,11 +86,9 @@ return (
 
       {/* Structured Data */}
       <script>
-        {JSON.stringify(structuredData || defaultStructuredData)}
-      </script>
+        {JSON.stringify(structuredData || defaultStructuredData)}</script>
     </Helmet>
   );
 };
 
 export default SEOHead;
-

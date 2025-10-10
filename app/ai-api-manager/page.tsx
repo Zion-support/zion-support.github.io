@@ -8,7 +8,7 @@ import { CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3 } from
 
 const AIApiManagerPage: React.FC = () => {
 
-  const features = [
+  const features: any[] = [
     {
       title: 'Centralized API Control',
       description: 'Manage all your APIs from a single, intuitive dashboard with comprehensive monitoring and control capabilities.',
@@ -21,13 +21,12 @@ const AIApiManagerPage: React.FC = () => {
     },
     {
 
-<<<<<<< HEAD
       title: 'Security & Compliance',
       description: 'Enterprise-grade security with automated compliance monitoring and threat detection.',
       benefits: ['Threat detection', 'Compliance monitoring', 'Security scanning', 'Access control']
     },
   ];
-  const benefits = [
+  const benefits: any[] = [
     'Centralized API management',
     'Real-time performance monitoring',
     'Advanced security features',
@@ -35,14 +34,12 @@ const AIApiManagerPage: React.FC = () => {
     'Easy integration',
     '24/7 support'
   ];
-  const stats = [
+  const stats: any[] = [
     { icon: <Settings className="w-8 h-8 text-blue-500" />, value: '500+', label: 'APIs Managed' },
     { icon: <Zap className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' },
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Security' },
     { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '60%', label: 'Efficiency Gain' }
   ]
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -60,21 +57,16 @@ const AIApiManagerPage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto text-center">
 
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            AI API Manager
-
-          </h1>
+            AI API Manager</h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Comprehensive API management platform with AI-powered insights, security, and optimization
-          </p>
+            Comprehensive API management platform with AI-powered insights, security, and optimization</p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Get Started
-            </button>
+              Get Started</button>
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Demo,
+              View Demo,</button>
   </
           </div>
-        </div>
       </section>
 
       {/* Stats Section */}
@@ -84,14 +76,11 @@ const AIApiManagerPage: React.FC = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
-                  {stat.icon}
-                </div>
+                  {stat.icon}</div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Features Section */}
@@ -99,12 +88,10 @@ const AIApiManagerPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Platform Features
-            </h2>
+              Platform Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 
-              Everything you need to manage your APIs effectively
-            </p>
+              Everything you need to manage your APIs effectively</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -124,7 +111,6 @@ const AIApiManagerPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4">
@@ -133,8 +119,7 @@ const AIApiManagerPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Platform?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 
-              Experience the benefits of our comprehensive API management solution
-            </p>
+              Experience the benefits of our comprehensive API management solution</p>
 
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -147,7 +132,6 @@ const AIApiManagerPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4">
@@ -155,21 +139,15 @@ const AIApiManagerPage: React.FC = () => {
 
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
-              Ready to Manage Your APIs?
-            </h2>
+              Ready to Manage Your APIs?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start managing your APIs more effectively with our comprehensive platform.
-            </p>
+              Start managing your APIs more effectively with our comprehensive platform.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
-          </div>
-        </div>
       </section>
 
       <Footer />
@@ -178,4 +156,3 @@ const AIApiManagerPage: React.FC = () => {
 };
 
 export default AIApiManagerPage;
-

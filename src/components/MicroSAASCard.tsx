@@ -31,9 +31,8 @@ interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
   }
 }
 const MicroSAASCard: React.FC,
-          <MicroSAASCardProps> = ({ service }) => {
-    // TODO: Add content
-  }
+          <MicroSAASCardProps> = ({ service   )} => {
+    // TODO: Add content,
 }
 const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
   return (
@@ -58,8 +57,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
         </div>"
         <div className="text-xs text-gray-400 mb-4"></div>"
           <span className="bg-gray-800 px-2 py-1 rounded">{service.category}</span>
-        </div>
-      </div>"
+        </div>"
       <div className="space-y-4"></div>
         <div></div>"
           <h4 className="text-sm font-semibold text-white mb-2">Key,
@@ -94,8 +92,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
                 {tech}
               </span>
             ))}
-          </div>
-        </div>"
+          </div>"
         <div className="pt-4"></div>
           <a></a>
             href={/* TODO: Fix JSX expression */}
@@ -109,10 +106,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
           </a>"
           <p className="text-xs text-gray-400 mt-2 text-center">{service.contactInfo}</p>
         </div>
-      </div>
-    </div>
   );
 }
 export default MicroSAASCard;"`
-  </MicroSAASCardProps>
   </MicroSAASCardProps>

@@ -13,8 +13,7 @@ const originalConsoleError = console.error;
 // eslint-disable-next-line no-console;
 const __originalConsoleError = console.error;
 console.error = (...args) => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
 // Suppress jsdom navigation warnings
 // eslint-disable-next-line no-console
@@ -23,8 +22,7 @@ const originalConsoleError = console.error;
 console.error = (...args) => {
     const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') ||
-      message.includes('navigation (except hash changes)')) {// TODO: Add content
-  }
+      message.includes('navigation (except hash changes)')) {// TODO: Add content,
 }
     return;
   }
@@ -32,13 +30,11 @@ console.error = (...args) => {
 }
 // Mock window.matchMedia;
 Object.defineProperty(window, 'matchMedia', {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   writable: true,
   value: jest.fn().mockImplementation(query => ({
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   matches: false,
     media: query,
@@ -48,23 +44,21 @@ Object.defineProperty(window, 'matchMedia', {
   addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
-  }))
-});
+    )})
+  )};
 // Mock requestAnimationFrame;
 global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
 global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
 // Mock localStorage;
 const localStorageMock = {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
   clear: jest.fn()
 Object.defineProperty(window, 'localStorage', {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   value: localStorageMock
 // Mock sessionStorage,
@@ -81,8 +75,7 @@ const originalConsoleWarn = console.warn
 // eslint-disable-next-line no-console
 const originalConsoleInfo = console.info,
 console.warn = (...args) => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
 // eslint-disable-next-line no-console
 console.warn = (...args) => {
@@ -95,15 +88,14 @@ console.warn = (...args) => {
 delete (window as unknown as Record;
           <string, unknown>).location;
 (window as unknown as Record<string, unknown>).location = {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
 // eslint-disable-next-line no-console
 console.info = (...args) => {
     const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
-    return
-  }
+    return;
+}
   originalConsoleInfo(...args);
 }
 // Mock PerformanceObserver
@@ -120,8 +112,8 @@ global.PerformanceObserver = class MockPerformanceObserver {
 // eslint-disable-next-line no-console
 console.error = (...args) => {
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
-    return; // Suppress JSDOM navigation warnings
-  }
+    return; // Suppress JSDOM navigation warnings;
+}
   originalConsoleError(...args);
 }
 // Mock window.location

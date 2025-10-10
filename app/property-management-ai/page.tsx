@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Home, Users, DollarSign, BarChart, Shield, Zap } from 'lucide-react';
 const PropertyManagementAIPage: React.FC = () => {
-  const features = [
+  const features: any[] = [
     { icon: Home, title: 'Property Portfolio Management', description: 'Comprehensive management of multiple properties with AI insights.' },
     { icon: Users, title: 'Tenant Management', description: 'Automated tenant screening, communication, and relationship management.' },
     { icon: DollarSign, title: 'Rent Optimization', description: 'AI-powered rent pricing and revenue optimization strategies.' },
@@ -36,7 +36,6 @@ const PropertyManagementAIPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
       </div>
     </React.Fragment>

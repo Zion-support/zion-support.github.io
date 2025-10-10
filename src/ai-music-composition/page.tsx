@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 const AIMusicCompositionPage: React.FC = () => {
-  const features = [
+  const features: any[] = [
     'AI Composition',
     'Multiple Genres',
     'Custom Length',
@@ -16,7 +16,7 @@ const AIMusicCompositionPage: React.FC = () => {
     'Tempo Control',
     'Export Options'
   ];
-  const benefits = [
+  const benefits: any[] = [
     'Unlimited music',
     'No copyright issues',
     'Custom compositions',
@@ -24,28 +24,25 @@ const AIMusicCompositionPage: React.FC = () => {
     'Fast generation',
     'Cost-effective'
   ];
-  const pricingPlans = [
+  const pricingPlans: any[] = [
     {
       name: 'Starter',
       price: '$99',
       period: '/month',
       features: ['10 tracks/month', 'MP3 export', 'Basic genres', 'Email support'],
-      popular: false
-    },
+      popular: false,,
     {
       name: 'Professional',
       price: '$199',
       period: '/month',
       features: ['Unlimited tracks', 'WAV/MP3 export', 'All genres', 'API access', 'Priority support'],
-      popular: true
-    },
+      popular: true,,
     {
       name: 'Enterprise',
       price: '$399',
       period: '/month',
       features: ['Everything in Pro', 'Custom genres', 'White-label', 'Dedicated support', 'Commercial license'],
-      popular: false
-    }
+      popular: false,
   ];
   return (
     <React.Fragment>
@@ -81,7 +78,6 @@ const AIMusicCompositionPage: React.FC = () => {
                   <Play className="w-5 h-5" />
                   Listen to Samples</span>
               </div>
-            </div>
           </section>
           {/* Features Section */}
           <section className="mb-16">
@@ -94,15 +90,13 @@ const AIMusicCompositionPage: React.FC = () => {
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                     <h3 className="text-lg font-semibold text-white">{feature}</h3>
                   </div>
-                </div>
               ))}
             </div>
           </section>
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Why Choose AI Music Composer?
-            </h2>
+              Why Choose AI Music Composer?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
@@ -133,7 +127,6 @@ const AIMusicCompositionPage: React.FC = () => {
                       <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
                       <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>
-                  </div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -147,8 +140,7 @@ const AIMusicCompositionPage: React.FC = () => {
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'cyber-button'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                    }`}
+                        : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900',`}
                   >
                     Get Started</span>
                 </div>
@@ -159,8 +151,7 @@ const AIMusicCompositionPage: React.FC = () => {
           <section className="text-center mb-16">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-4 neon-text">
-                Ready to Create Amazing Music?
-              </h2>
+                Ready to Create Amazing Music?</h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of creators using AI music technology</span>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -174,7 +165,6 @@ const AIMusicCompositionPage: React.FC = () => {
                   <span>Call +1 302 464 0950</span>
                 </a>
               </div>
-            </div>
           </section>
         </main>
         <Footer />
@@ -186,8 +176,6 @@ export default AIMusicCompositionPage</a>
   </p>
   </a>
   </h2>
-  </h2>
-  </a>
   </a>
   </p>
   </h1>

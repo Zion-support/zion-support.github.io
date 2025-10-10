@@ -12,31 +12,24 @@ return (
 
       {/* Hero Section */}
             <h2>
-              Why Choose Our Page?
-            </h2>
+              Why Choose Our Page?</h2>
             <p>
-              Our page solutions deliver unmatched performance, security, and scalability.
-            </p>
+              Our page solutions deliver unmatched performance, security, and scalability.</p>
               </div>
             ))}
 
           </div>
-        </div>
       </section>
             <h2>
-              Key Benefits
-            </h2>
+              Key Benefits</h2>
             <p>
-              Experience the power of our page solutions for your business.
-            </p>
+              Experience the power of our page solutions for your business.</p>
               </div>
             ))}
           </div>
-        </div>
       </section>
     </div>
   );
 };
 
 export default PagePage;
-

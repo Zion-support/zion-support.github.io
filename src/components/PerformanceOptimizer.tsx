@@ -6,24 +6,23 @@ interface PerformanceOptimizerProps {
   enablePreloading?: boolean;
   enableCodeSplitting?: boolean;
   enableResourceHints?: boolean;
-  enableServiceWorker?: boolean
-  }
+  enableServiceWorker?: boolean;
+}
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
   enableCodeSplitting = true,
   enableResourceHints = true,
-  enableServiceWorker = true
-}) => {
+  enableServiceWorker = true;
+  )} => {
   const [optimizationStatus, setOptimizationStatus] = useState({
     imagesOptimized: 0,
     lazyLoaded: 0,
     preloaded: 0,
     codeSplit: false,
     resourceHints: 0,
-    serviceWorker: false
-  });
+    serviceWorker: false,);
   useEffect(() => {
     if (enableImageOptimization) {
       optimizeImages()
@@ -63,8 +62,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       if (!img.getAttribute('alt')) {
     img.setAttribute('alt', 'Zion Tech Group - AI and IT Solutions')
   }
-    });
-    setOptimizationStatus(prev => ({ ...prev, imagesOptimized: optimized }));
+      )};
+    setOptimizationStatus(prev => ({ ...prev, imagesOptimized: optimized   )});
   }
   const setupLazyLoading = () => {
     if ('IntersectionObserver' in window) {
@@ -78,28 +77,25 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               observer.unobserve(img)
   }
           }
-        });
+          )};
       }, {
         rootMargin: '50px 0px',
-        threshold: 0.1
-      });
+        threshold: 0.1,);
       const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach((img) => observer.observe(img));
-      setOptimizationStatus(prev => ({ ...prev, lazyLoaded: lazyImages.length }));
+      setOptimizationStatus(prev => ({ ...prev, lazyLoaded: lazyImages.length   )});
     }
   }
   const preloadCriticalResources = () => {
-    const criticalResources = [
+    const criticalResources: any[] = [
       {
         href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600,700&display=swap',
         as: 'style',
-        type: 'text/css'
-      },
+        type: 'text/css',,
       {
         href: '/styles/critical.css',
         as: 'style',
-        type: 'text/css'
-      }
+        type: 'text/css',
     ];
     criticalResources.forEach((resource) => {
     const link = document.createElement('link');
@@ -107,18 +103,18 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       link.href = resource.href;
       link.as = resource.as;
       if (resource.type) {
-        link.type = resource.type
-  }
+        link.type = resource.type;
+}
       document.head.appendChild(link);
-    });
-    setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }));
+      )};
+    setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length   )});
   }
   const setupCodeSplitting = () => {
     // This would be handled by Next.js dynamic imports
-    setOptimizationStatus(prev => ({ ...prev, codeSplit: true }));
+    setOptimizationStatus(prev => ({ ...prev, codeSplit: true   )});
   }
   const addResourceHints = () => {
-    const hints = [
+    const hints: any[] = [
       { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
       { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
       { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
@@ -131,20 +127,20 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       link.rel = hint.rel;
       link.href = hint.href;
       if (hint.crossorigin) {
-        link.crossOrigin = hint.crossorigin
-  }
+        link.crossOrigin = hint.crossorigin;
+}
       document.head.appendChild(link);
-    });
-    setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length }));
+      )};
+    setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length   )});
   }
   const registerServiceWorker = async () => {
     if ('serviceWorker' in navigator) {
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
-        setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
+        setOptimizationStatus(prev => ({ ...prev, serviceWorker: true   )});
         } catch (error) {
-          // Service Worker registration failed - handled silently in production
-        }
+          // Service Worker registration failed - handled silently in production;
+}
     }
   }
   // Performance monitoring
@@ -159,12 +155,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                 name: 'LCP',
                 value: Math.round(entry.startTime),
                 event_category: 'Performance'
-              });
+                )};
             }
           }
         }
-      });
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+        )};
+      observer.observe({ entryTypes: ['largest-contentful-paint']   )};
     }
   }, []);
   return null;

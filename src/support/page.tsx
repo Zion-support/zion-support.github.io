@@ -7,7 +7,7 @@ import { Phone, Mail, MessageSquare, Search, Clock, Users, Award, Zap, Brain, Sh
 const SupportPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const supportCategories = [
+  const supportCategories: any[] = [
     { id: 'all', name: 'All Topics', icon: Search, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 12 },
     { id: 'ai-services', name: 'AI Services', icon: Brain, count: 8 },
@@ -16,115 +16,99 @@ const SupportPage: React.FC = () => {
     { id: 'account', name: 'Account Management', icon: Users, count: 5 },
     { id: 'api', name: 'API & Integration', icon: BarChart, count: 4 }
   ];
-  const faqs = [
+  const faqs: any[] = [
     {
       id: 1,
       question: 'How do I get started with Zion Tech Group services?',
       answer: 'Getting started is easy! Contact our team at +1 302 464 0950 or email kleber@ziontechgroup.com for a free consultation. We\'ll assess your needs and recommend the best AI solutions for your business.',
-      category: 'getting-started'
-    },
+      category: 'getting-started',,
     {
       id: 2,
       question: 'What AI services do you offer?',
       answer: 'We offer comprehensive AI services including Machine Learning, Natural Language Processing, Computer Vision, AI Automation, Quantum AI Computing, and AI Cybersecurity. We also provide Micro SAAS solutions for immediate deployment.',
-      category: 'ai-services'
-    },
+      category: 'ai-services',,
     {
       id: 3,
       question: 'How much do your services cost?',
       answer: 'Our pricing starts at $299/month for the Starter plan. We offer flexible pricing based on your specific needs. Contact us for a custom quote tailored to your requirements.',
-      category: 'billing'
-    },
+      category: 'billing',,
     {
       id: 4,
       question: 'Do you provide 24/7 technical support?',
       answer: 'Yes! We offer 24/7 technical support for all our clients. Our expert team is always available to help with any technical issues or questions you may have.',
-      category: 'technical'
-    },
+      category: 'technical',,
     {
       id: 5,
       question: 'How do I integrate your AI services with my existing systems?',
       answer: 'Our team provides comprehensive integration support. We work with your existing infrastructure and provide APIs, SDKs, and custom integration solutions to ensure seamless implementation.',
-      category: 'api'
-    },
+      category: 'api',,
     {
       id: 6,
       question: 'What is your typical project timeline?',
       answer: 'Project timelines vary based on complexity. Simple AI implementations can take 2-4 weeks, while complex enterprise transformations may take 3-6 months. We provide detailed timelines during our consultation.',
-      category: 'getting-started'
-    }
+      category: 'getting-started',
   ];
-  const supportChannels = [
+  const supportChannels: any[] = [
     {
       icon: Phone,
       title: 'Phone Support',
       description: 'Speak directly with our AI experts',
       contact: '+1 302 464 0950',
       availability: '24/7 Available',
-      color: 'text-green-400'
-    },
+      color: 'text-green-400',,
     {
       icon: Mail,
       title: 'Email Support',
       description: 'Get detailed responses via email',
       contact: 'kleber@ziontechgroup.com',
       availability: 'Response within 2 hours',
-      color: 'text-blue-400'
-    },
+      color: 'text-blue-400',,
     {
       icon: MessageSquare,
       title: 'Live Chat',
       description: 'Instant support through our chat system',
       contact: 'Start Chat',
       availability: 'Mon-Fri 9AM-6PM EST',
-      color: 'text-purple-400'
-    },
+      color: 'text-purple-400',,
     {
       icon: Calendar,
       title: 'Schedule Call',
       description: 'Book a consultation with our team',
       contact: 'Book Now',
       availability: 'Flexible scheduling',
-      color: 'text-cyan-400'
-    }
+      color: 'text-cyan-400',
   ];
-  const resources = [
+  const resources: any[] = [
     {
       title: 'Documentation',
       description: 'Comprehensive guides and API documentation',
       icon: FileText,
-      link: '/docs'
-    },
+      link: '/docs',,
     {
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all services',
       icon: Eye,
-      link: '/tutorials'
-    },
+      link: '/tutorials',,
     {
       title: 'Case Studies',
       description: 'Real-world examples and success stories',
       icon: BarChart,
-      link: '/case-studies'
-    },
+      link: '/case-studies',,
     {
       title: 'API Reference',
       description: 'Complete API documentation and examples',
       icon: Code,
-      link: '/api-docs'
-    },
+      link: '/api-docs',,
     {
       title: 'Best Practices',
       description: 'Industry best practices and guidelines',
       icon: Award,
-      link: '/best-practices'
-    },
+      link: '/best-practices',,
     {
       title: 'Community Forum',
       description: 'Connect with other users and experts',
       icon: Users,
-      link: '/community'
-    }
+      link: '/community',
   ];
   const filteredFaqs = selectedCategory === 'all' 
     ? faqs 
@@ -149,15 +133,14 @@ const SupportPage: React.FC = () => {
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
-              Support Center
+              Support Center</h1>
   </
             <p className="text-xl text-cyan-400 mb-8">
-              We're here to help you succeed with AI,
+              We're here to help you succeed with AI,</p>
   </
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Get instant answers to your questions, access comprehensive resources, 
-              and connect with our expert support team.
-            </p>
+              and connect with our expert support team.</p>
           </section>
           {/* Search Section */}
           <section className="mb-16">
@@ -170,14 +153,13 @@ const SupportPage: React.FC = () => {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
-                />
+                /></input>
               </div>
-            </div>
           </section>
           {/* Support Channels */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Get Support;
+              Get Support;</h2>
   </
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {supportChannels.map((channel, index) => (
@@ -187,14 +169,13 @@ const SupportPage: React.FC = () => {
                   <p className="text-gray-300 mb-4">{channel.description}</p>
                   <div className="text-cyan-400 font-semibold mb-2">{channel.contact}</div>
                   <div className="text-gray-400 text-sm">{channel.availability}</div>
-                </div>
               ))}
             </div>
           </section>
           {/* FAQ Categories */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Browse by Category;
+              Browse by Category;</h2>
   </
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
               {supportCategories.map((category) => (
@@ -204,8 +185,7 @@ const SupportPage: React.FC = () => {
                   className={`p-4 rounded-lg text-center transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-cyan-500 text-slate-900'
-                      : 'bg-slate-800 text-white hover:bg-slate-700'
-                  }`}
+                      : 'bg-slate-800 text-white hover: bg-slate-700',`}
                 >
                   <category.icon className="w-6 h-6 mx-auto mb-2" />
                   <div className="text-sm font-semibold">{category.name}</div>
@@ -217,7 +197,7 @@ const SupportPage: React.FC = () => {
           {/* FAQ Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Frequently Asked Questions;
+              Frequently Asked Questions;</h2>
   </
             <div className="max-w-4xl mx-auto space-y-4">
               {searchResults.map((faq) => (
@@ -231,7 +211,7 @@ const SupportPage: React.FC = () => {
           {/* Resources Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Helpful Resources;
+              Helpful Resources;</h2>
   </
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {resources.map((resource, index) => (
@@ -244,8 +224,7 @@ const SupportPage: React.FC = () => {
                     <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {resource.title}
-                  </h3>
+                    {resource.title}</h3>
                   <p className="text-gray-300">{resource.description}</p>
                 </Link>
               ))}
@@ -255,10 +234,9 @@ const SupportPage: React.FC = () => {
           <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">
-                Still Need Help?
-              </h2>
+                Still Need Help?</h2>
               <p className="text-xl text-gray-300 mb-8">
-                Our expert team is ready to assist you with any questions or issues;
+                Our expert team is ready to assist you with any questions or issues;</p>
   </
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
@@ -274,7 +252,6 @@ const SupportPage: React.FC = () => {
                   Send Email
   </
               </div>
-            </div>
           </section>
         </main>
         <Footer />
@@ -284,11 +261,7 @@ const SupportPage: React.FC = () => {
 }
 export default SupportPage;
   </a>
-  </a>
   </p>
-  </h2>
-  </h2>
-  </h2>
   </h2>
   </p>
   </h1>

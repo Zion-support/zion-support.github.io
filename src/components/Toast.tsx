@@ -22,7 +22,7 @@ const,
   duration = 3000,
 //   onClose,
 //   show;)
-}) => {/* TODO: Fix JSX expression */}
+  )} => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   const [isVisible, setIsVisible] = useState(show);

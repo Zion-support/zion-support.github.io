@@ -10,8 +10,7 @@ export interface ErrorContext {
  * Provides comprehensive error tracking with detailed context;
  */
 
-export interface ErrorContext {// TODO: Add content
-  }
+export interface ErrorContext {// TODO: Add content,
 
 }
   component?: string;
@@ -26,8 +25,7 @@ export interface TrackedError {
   context: ErrorContext
   timestamp: string
   userAgent: string,
-  url: string
-  }
+  url: string,
 class EnhancedErrorTracker {
     private errors: TrackedError[] = [];
   private maxErrors = 100
@@ -46,13 +44,13 @@ class EnhancedErrorTracker {
           component: 'Global',
           action:         ,
 $4});
-      });
+        )};
       window.addEventListener('unhandledrejection', event => {
         this.trackError(new Error(event.reason), {
           component: 'Global',
           action:         ,
 $4});
-      });
+        )};
     }
   }
   public trackError(error: Error, _context: ErrorContext = {}): void {
@@ -62,12 +60,10 @@ $4});
       stack: error.stack,
       context: {
         ...context,
-        sessionId: this.sessionId
-      },
+        sessionId: this.sessionId,,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href
-    }
+      url: window.location.href,
     this.errors.push(trackedError);
     // Keep only the most recent errors
     if (this.errors.length > this.maxErrors) {
@@ -85,19 +81,15 @@ $4});
       typeof window !== 'undefined' &&
       (
         window as {
-          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void
-  }
-      ).gtag
-    ) {
+          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void,
+      ).gtag) {
     (
         window as unknown as {
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void
-  }
+          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void,
       ).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
-        component: error.context.component
-      });
+        component: error.context.component,);
     }
   }
   public getErrors(): TrackedError[] {
@@ -109,17 +101,14 @@ $4});
   public getErrorStats(): {
     total: number,
     byComponent: Record<string>
-    recent: TrackedError[]
-  } {
+    recent: TrackedError[], {
     const byComponent: Record<string, number> = {}
     this.errors.forEach(error => {
-    byComponent[component] = (byComponent[component] || 0) + 1
-  });
+    byComponent[component] = (byComponent[component] || 0) + 1,);
     return {
       total: this.errors.length,
       byComponent,
-      recent: this.errors.slice(-10)
-    }
+      recent: this.errors.slice(-10),
   }
 }
 // Export singleton instance
@@ -145,8 +134,7 @@ export interface TrackedError {/* TODO: Fix JSX expression */}
 }
 
 class EnhancedErrorTracker {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   private,
@@ -181,19 +169,18 @@ class EnhancedErrorTracker {
   t: 'Global',
           actio,
   n: 'Uncaught Error')
-        });
-      });
+          )};
+        )};
       window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
         this.trackError(new Error(event.reason), {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 
   component: 'Global',
           action: 'Unhandled Promise Rejection'
-
-        }
+,
   )
       }
   )
@@ -201,8 +188,7 @@ class EnhancedErrorTracker {
   }
 
   public trackError(error: Error, _context: ErrorContext = {}): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     if (typeof window === 'undefined') return;
@@ -281,7 +267,7 @@ class EnhancedErrorTracker {
   l: false,
         componen,
   t: error.context.component,)
-      });
+        )};
     }
   }
   public getErrors(): TrackedError[] {/* TODO: Fix JSX expression */}
@@ -311,9 +297,8 @@ class EnhancedErrorTracker {
   byComponent: Record,
           <string, number> = {}
     this.errors.forEach(error => {
-    byComponent[component] = (byComponent[component] || 0) + 1
-  }
-    });
+    byComponent[component] = (byComponent[component] || 0) + 1,
+      )};
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -322,11 +307,9 @@ class EnhancedErrorTracker {
 
 //       byComponent,
       recen,
-  t: this.errors.slice(-10)
-    }
+  t: this.errors.slice(-10),
   }
 }
 // Export singleton instance;
 export const errorTracker = new EnhancedErrorTracker()
 export default errorTracker;`
-

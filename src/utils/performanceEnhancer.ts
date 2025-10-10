@@ -2,8 +2,7 @@
 // This file contains utility functions and configurations
 
 interface PerformanceMetrics {
-    lcp: number
-  }
+    lcp: number,
   fid: number;
   cls: number;
   fcp: number
@@ -12,8 +11,7 @@ interface PerformanceMetrics {
 }
 
 interface OptimizationConfig {
-    enableImageOptimization: boolean
-  }
+    enableImageOptimization: boolean,
   enableLazyLoading: boolean;
   enableCodeSplitting: boolean;
   enablePrefetching: boolean;
@@ -24,20 +22,17 @@ interface OptimizationConfig {
 }
 
 class PerformanceEnhancer {
-    private config: OptimizationConfig
-  }
+    private config: OptimizationConfig,
   private metrics: PerformanceMetrics | null = null,
 
   constructor(config: OptimizationConfig) {
-    this.config = config
-  }
+    this.config = config,
 
     this.init();
   }
 
   private init(): void {
-    // Initialize performance monitoring
-  }
+    // Initialize performance monitoring,
     this.observePerformance();
   }
 
@@ -45,14 +40,13 @@ class PerformanceEnhancer {
       try {const observer = new PerformanceObserver((list) => {}
           const entries = list.getEntries();
           entries.forEach((entry) => {
-    // Process performance entries
-  }
+    // Process performance entries,
             console.log('Performance)
   entry:', entry.name, entry.duration);
-          });
-        });
+            )};
+          )};
 
-        observer.observe({ entryTypes: ['measure', 'navigation'] });
+        observer.observe({ entryTypes: ['measure', 'navigation']   )};
       } catch (error) {
     console.warn('PerformanceObserver not supported:', error)
   }
@@ -62,15 +56,12 @@ class PerformanceEnhancer {
   }
 
   public getMetrics(): PerformanceMetrics | null {
-    return this.metrics
-  }
+    return this.metrics,
   }
 
   public cleanup(): void {
-    // Cleanup resources
-  }
+    // Cleanup resources,
   }
 }
 
 export default PerformanceEnhancer;
-

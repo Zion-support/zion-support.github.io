@@ -12,8 +12,7 @@ import Footer from '../components/Footer';
   md:text-2xl text-cyan-400 mb-8 font-medium neon-glow"></p>
 // Smart Email Management with AI-Powered Intelligence</p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
+            This page is under development. Please check back soon for updates.</p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">
             <a
               href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center"
@@ -81,7 +80,6 @@ import Footer from '../components/Footer';
 //                 private and protected at all times.
           </p>
             </div>
-          </div>
         </section>
         {/* Pricing Section */}"
         <section className="mb-16"></section>"
@@ -131,7 +129,6 @@ import Footer from '../components/Footer';
               <a href="/contact" className="cyber-button w-full text-center"></a>
 // Contact Sales</a>
             </div>
-          </div>
         </section>
         {/* Contact Section */}"
         <section className="text-center"></section>"

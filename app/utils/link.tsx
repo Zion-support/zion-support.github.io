@@ -1,9 +1,6 @@
-
-
 interface LinkProps {
     href: string,
-    children: React.ReactNode
-  }
+    children: React.ReactNode,
 interface LinkProps {}
   href: string;
 
@@ -36,15 +33,15 @@ export const Link: React.FC<LinkProps> = ({
   'aria-label': ariaLabel,
   }
   ...props}
-}) => {}
+  )} => {}
   const handleClick = useCallback((...args) => {}
     if (onClick) {}
       onClick();}
     }
     // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {
-    // Handle internal navigation
-  }
+    // Handle internal navigation;
+}
     if (href.startsWith('/') && !href.startsWith('//')) {}
       e.preventDefault();
       window.location.href = href;}
@@ -57,8 +54,7 @@ import React from 'react';
 interface LinkProps {/* TODO: Fix JSX expression */}
 }
 export const,
-  Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */}))} => {/* TODO: Fix JSX expression */}
     }
     // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
@@ -73,7 +69,6 @@ export const,
       aria-label={ariaLabel}
       {...props}
     >{children}</a>
-    </a>
       aria-label={ariaLabel})
       {...props})
     >);

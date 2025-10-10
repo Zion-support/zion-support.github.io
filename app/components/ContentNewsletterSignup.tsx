@@ -36,17 +36,14 @@ const ContentNewsletterSignup: React.FC = () => {
         </div>
         <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>
         <p className="text-white/90 mb-4">
-          You've successfully subscribed to our newsletter. Check your email for confirmation.
-        </p>
+          You've successfully subscribed to our newsletter. Check your email for confirmation.</p>
         <button
           onClick={() => setIsSubscribed(false)}
-          className="text-white/80 hover:text-white underline"
+          className="text-white/80 hover: text-white underline"
         >
-          Subscribe another email
-        </button>
+          Subscribe another email</button>
       </div>
-    );
-  }
+    ),
 
   return (
     <div className="bg-slate-800/50 rounded-lg p-8">
@@ -56,8 +53,7 @@ const ContentNewsletterSignup: React.FC = () => {
         </div>
         <h3 className="text-2xl font-bold text-white mb-2">Stay Updated</h3>
         <p className="text-gray-300">
-          Get the latest insights on AI, IT, and technology trends delivered to your inbox.
-        </p>
+          Get the latest insights on AI, IT, and technology trends delivered to your inbox.</p>
       </div>
 
       <form onSubmit={handleSubmit} className="max-w-md mx-auto">
@@ -84,26 +80,19 @@ const ContentNewsletterSignup: React.FC = () => {
         </div>
         
         <p className="text-xs text-gray-400 text-center mt-3">
-          We respect your privacy. Unsubscribe at any time.
-        </p>
+          We respect your privacy. Unsubscribe at any time.</p>
       </form>
 
-      <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+      <div className="mt-6 grid grid-cols-1 sm: grid-cols-3 gap-4 text-center">
         <div className="text-sm">
           <div className="text-2xl font-bold text-blue-400">10K+</div>
           <div className="text-gray-400">Subscribers</div>
-        </div>
         <div className="text-sm">
           <div className="text-2xl font-bold text-purple-400">Weekly</div>
           <div className="text-gray-400">Updates</div>
-        </div>
         <div className="text-sm">
           <div className="text-2xl font-bold text-green-400">Free</div>
           <div className="text-gray-400">Forever</div>
-        </div>
-      </div>
-    </div>
-  );
-};
+  ),;
 
 export default ContentNewsletterSignup;

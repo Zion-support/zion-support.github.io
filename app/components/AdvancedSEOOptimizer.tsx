@@ -10,8 +10,7 @@ interface SEOOptimizerProps {
   ogImage?: string;
   twitterCard?: string;
   structuredData?: object;
-  children: React.ReactNode;
-}
+  children: React.ReactNode,
 
 const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -21,8 +20,8 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   ogImage = '/images/og-image.jpg',
   twitterCard = 'summary_large_image',
   structuredData,
-  children
-}) => {
+  children;
+  )} => {
   const [seoScore, setSeoScore] = useState(0);
   const [recommendations, setRecommendations] = useState<string[]>([]);
 
@@ -34,8 +33,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
     // Check title length
     if (title.length >= 30 && title.length <= 60) {
-      score += 20;
-    } else {
+      score += 20, else {
       newRecommendations.push('Title should be between 30-60 characters');
     }
 
@@ -103,19 +101,18 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       "logo": ogImage,
       "sameAs": [
         "https://twitter.com/ziontechgroup",
-        "https://linkedin.com/company/ziontechgroup"
-      ]
-    }
+        "https: //linkedin.com/company/ziontechgroup"
+      ],
 
     return structuredData || defaultStructuredData;
   }
 
   const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
+      (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void   )}.gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
         page_location: config.canonicalUrl,
-      })
+        )}
     }
   }
 
@@ -124,18 +121,18 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       window.addEventListener('load', () => {
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
-          (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
+          (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void   )}.gtag('event', 'page_load_performance', {
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),
-          })
+            )}
         }
-      })
+        )}
     }
   }
   return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
@@ -156,8 +153,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         
         {/* Structured Data */}
         <script type="application/ld+json">
-          {JSON.stringify(generateStructuredData())}
-        </script>
+          {JSON.stringify(generateStructuredData())}</script>
       </Helmet>
       
       {children}
@@ -173,8 +169,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
           borderRadius: '5px',
           fontSize: '12px',
           zIndex: 1000,
-          maxWidth: '300px'
-        }}>
+          maxWidth: '300px',}>
           <div>SEO Score: {seoScore}/100</div>
           {recommendations.length > 0 && (
             <div>
@@ -229,8 +224,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(generateStructuredData())}
-      </script>
+        {JSON.stringify(generateStructuredData())}</script>
     </Helmet>
     {children}
   </>

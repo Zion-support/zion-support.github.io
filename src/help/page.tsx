@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 const HelpPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
-  const categories = [
+  const categories: any[] = [
     {
       id: 'getting-started',
       name: 'Getting Started',
@@ -87,9 +87,8 @@ titletitle: 'Security Best Practices',
         description: 'Build custom integrations with our platform using webhooks and APIs',
         readTime: '12 min read',
         title: 'Monitoring and Logging',
-        description: 'Set up monitoring and logging for your AI services and applications']
-  }
-  const resources = [
+        description: 'Set up monitoring and logging for your AI services and applications'],
+  const resources: any[] = [
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all our services',
       icon: Video,
@@ -104,7 +103,7 @@ titletitle: 'Download Center',
       description: 'SDKs, tools, and resources for developers',
       icon: Download,
       count: '25+ downloads'
-  const supportChannels = [
+  const supportChannels: any[] = [
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       color: 'text-cyan-400',
@@ -123,7 +122,7 @@ titletitle: 'Community Forum',
       description: 'Connect with other users and share knowledge',
       icon: Users,
       responseTime: 'Community driven'
-  const faqs = [
+  const faqs: any[] = [
       question: 'How quickly can I get started with your AI services?',
       answer: 'Most of our AI services can be set up within 24-48 hours. We provide comprehensive onboarding support to ensure you\'re up and running quickly.'
       question: 'Do you offer training for our team?',
@@ -148,12 +147,11 @@ questionquestion: 'Is there a free trial available?',
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Help Center,
+              Help Center,</h1>
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Find answers, get support, and learn how to make the most of our AI and IT services. 
-              We're here to help you succeed.
-            </p>
+              We're here to help you succeed.</p>
           </div>
           {/* Search */}
           <div className="max-w-2xl mx-auto mb-12">
@@ -176,8 +174,7 @@ questionquestion: 'Is there a free trial available?',
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
                     activeCategory === category.id
                       ? `${category.bgColor} ${category.color} border-2 border-current`
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
-                  }`}
+                      : 'bg-slate-800/50 text-gray-300 hover: bg-slate-700/50 border-2 border-transparent',`}
                 >
                   <category.icon className="w-5 h-5 mr-2" />
                   <span className="font-medium">{category.name}</span>
@@ -186,7 +183,7 @@ questionquestion: 'Is there a free trial available?',
           {/* Articles */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-white mb-8">
-              {categories.find(cat => cat.id === activeCategory)?.name} Articles;
+              {categories.find(cat => cat.id === activeCategory)?.name} Articles;</h2>
   </
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredArticles.map((article, index) => (
@@ -204,8 +201,7 @@ questionquestion: 'Is there a free trial available?',
                       article.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
                       'bg-red-500/20 text-red-400'
                     }`}>
-                      {article.difficulty}
-                    </span>
+                      {article.difficulty}</span>
                   <button className="w-full text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors flex items-center justify-center">
                     Read Article
                     <ArrowRight className="w-4 h-4 ml-1" />
@@ -270,7 +266,7 @@ questionquestion: 'Is there a free trial available?',
 }
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
-const categories = [
+const categories: any[] = [
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -283,8 +279,7 @@ const categories = [
       colo,
   r: 'text-blue-400',
       bgColo,
-  r: 'bg-blue-500/10'
-    },
+  r: 'bg-blue-500/10',,
       i,
   d: 'troubleshooting',
       nam,
@@ -304,8 +299,7 @@ const categories = [
       colo,
   r: 'text-purple-400',
       bgColo,
-  r: 'bg-purple-500/10'
-    }
+  r: 'bg-purple-500/10',
   ];
   const helpArticles = {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -377,29 +371,15 @@ export default HelpPage,
   </p>
   </h2>
   </div>
-  </div>
-  </div>
-  </div>
   </button>
-  </div>
-  </div>
-  </div>
   </div>
   </div>
   </h2>
   </button>
   </div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
   </h2>
-  </div>
-  </div>
-  </div>
   </div>
   </div>
   </h1>
-  </div>
   </div>

@@ -9,8 +9,7 @@ export enum CacheStorage {}
   SessionStorage = 'sessionStorage';
 }
 export interface CacheOptions {
-    ttl?: number; // Time to live in milliseconds
-  }
+    ttl?: number; // Time to live in milliseconds,
 export interface CacheOptions {}
   ttl?: number; // Time to live in milliseconds;
   storage?: CacheStorage;
@@ -47,8 +46,7 @@ export class CacheManager<T = unknown> {}
   constructor(config: CacheConfig = {}) {
     this.config = {
       storage: config.storage || CacheStorage.Memory,
-      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes
-  }
+      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes,
   private stats: CacheStats = {}
     hits: 0,
     misses: 0,
@@ -68,8 +66,7 @@ constructor(config: CacheConfig = {}) {}
    */;
   set(key: string, value: T, ttl?: number): void {
     const entry: CacheEntry<T> = {
-      value
-  }
+      value,
   set(key: string, value: T, ttl?: number): void {}
     const entry: CacheEntry<T> = {}
       value,;
@@ -80,8 +77,7 @@ this.cache.set(key, entry);
     this.stats.entries = this.cache.size;
 // Save to persistent storage if needed;
     if (this.config.storage !== CacheStorage.Memory) {
-    // Save to persistent storage if needed
-  }
+    // Save to persistent storage if needed,
     if (this.config.storage !== CacheStorage.Memory) {}
       this.saveToStorage();
 export enum CacheStorage {/* TODO: Fix JSX expression */}
@@ -178,8 +174,7 @@ if (!entry) {}
     }
 // Check if entry has expired;
     if (Date.now() - entry.timestamp > entry.ttl) {
-    // Check if entry has expired
-  }
+    // Check if entry has expired,
     if (Date.now() - entry.timestamp > entry.ttl) {}
       this.cache.delete(key);
       this.stats.misses++;
@@ -232,8 +227,7 @@ this.stats.hits++;
 ,;
     if (!entry) {
     ,;
-      return false
-  }
+      return false,
     }
 // Check if entry has expired;
     if (Date.now() - entry.timestamp > entry.ttl) {}
@@ -258,8 +252,7 @@ return true;
 // Save to persistent storage if needed;
       if (this.config.storage !== CacheStorage.Memory) {
     ,;
-      // Save to persistent storage if needed
-  }
+      // Save to persistent storage if needed,
       if (this.config.storage !== CacheStorage.Memory) {}
         this.saveToStorage();
    * Check if key exists and is not expired;
@@ -304,8 +297,7 @@ return true;
     this.stats.entries = 0;
 // Clear persistent storage if needed;
     if (this.config.storage !== CacheStorage.Memory) {
-    // Clear persistent storage if needed
-  }
+    // Clear persistent storage if needed,
     if (this.config.storage !== CacheStorage.Memory) {}
       this.clearStorage();
     }
@@ -348,14 +340,13 @@ for (const [key, entry] of this.cache.entries()) {}
 this.stats.entries = this.cache.size;
 // Save to persistent storage if needed;
     if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {
-    // Save to persistent storage if needed
-  }
+    // Save to persistent storage if needed,
     if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {}
       this.saveToStorage();
     }
 return cleaned;
     logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */})
-  e: this.storage })
+  e: this.storage   )}
   }
   /**;
    * Get or set with function (handles both sync and async);
@@ -374,7 +365,7 @@ return cleaned;
     performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
     // Handle both sync and async values;
     if (value instanceof Promise) {/* TODO: Fix JSX expression */}
-      })
+        )}
     }
     this.set(key, value, options);
     return value;
@@ -490,8 +481,7 @@ try {}
   private getStorage(): Storage | null {}
     if (typeof window === 'undefined') return null;
 switch (this.config.storage) {
-    case CacheStorage.LocalStorage: return window.localStorage
-  }
+    case CacheStorage.LocalStorage: return window.localStorage,
     switch (this.config.storage) {}
       case CacheStorage.LocalStorage: ;
         return window.localStorage
@@ -503,15 +493,14 @@ switch (this.config.storage) {
   }
 }
 // Create singleton instances for different use cases;
-export const memoryCache = new CacheManager({ storage: CacheStorage.Memory })
+export const memoryCache = new CacheManager({ storage: CacheStorage.Memory   )}
 export const localStorageCache = new CacheManager({
     );
   storage: CacheStorage.LocalStorage)
   defaultTTL: 30 * 60 * 1000 // 30 minutes
 export const sessionStorageCache = new CacheManager({),
   storage: CacheStorage.SessionStorage),
-  defaultTTL: 60 * 60 * 1000 // 1 hour
-  }
+  defaultTTL: 60 * 60 * 1000 // 1 hour,
 export const localStorageCache = new CacheManager({)}
   storage: CacheStorage.LocalStorage,
   defaultTTL: 30 * 60 * 1000 // 30 minutes,

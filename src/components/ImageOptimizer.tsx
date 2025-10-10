@@ -8,8 +8,8 @@ interface ImageOptimizerProps {
   priority?: boolean
   placeholder?: string
   onLoad?: () => void,
-  onError?: () => void
-  }
+  onError?: () => void;
+}
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     ,
   src;
@@ -20,8 +20,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   priority = false,
   placeholder,
   onLoad,
-  onError
-  }) => {
+  onError;
+  )} => {
     const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
@@ -36,8 +36,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       },
       {
     rootMargin: '50px 0px',
-        threshold: 0.01
-  }
+        threshold: 0.01,
     );
     if (imgRef.current) {
     observer.observe(imgRef.current)
@@ -62,8 +61,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         <rect x="0" y="98%" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
         <rect x="98%" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
         <text x="50%" y="50%" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="14">
-          Loading...,
-        </text>,
+          Loading...,</text>,
       </svg>,
     `;
     ,

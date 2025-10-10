@@ -4,14 +4,11 @@
                       ))}
                     </ul>
               </div>
-            </div>
-          </div>
         </section>
       </div>
-      <Footer>
+      <Footer></Footer>
     </>
   ),
 };
 
 export default AiWorkflowAutomationPage;
-

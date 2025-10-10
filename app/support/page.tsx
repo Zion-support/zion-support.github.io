@@ -5,14 +5,12 @@ import { Link } from 'react-router-dom';
 import { Search, Phone, Mail, MessageCircle, Clock, CheckCircle, ArrowRight } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
-<<<<<<< HEAD
   const [searchQuery, setSearchQuery] = useState('');
 
-  const faqs = [
+  const faqs: any[] = [
     {
       question: 'How do I get started with your AI services?',
-      answer: 'Getting started is easy! Contact our team for a free consultation where we assess your needs and create a customized implementation plan.'
-    },
+      answer: 'Getting started is easy! Contact our team for a free consultation where we assess your needs and create a customized implementation plan.',,
     {
       question: 'What is your typical project timeline?',
       answer: 'Project timelines vary based on complexity, but most AI implementations take 4-12 weeks from start to finish.'
@@ -26,9 +24,7 @@ const SupportPage: React.FC = () => {
       answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern development stacks.'
     }
   ];
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
-  const supportChannels = [
+  const supportChannels: any[] = [
     {
       title: 'Email Support',
       description: 'Get help via email within 24 hours',
@@ -40,8 +36,7 @@ const SupportPage: React.FC = () => {
       description: 'Speak directly with our technical team',
       icon: Phone,
       contact: '+1 (555) 123-4567',
-      availability: 'Mon-Fri 9AM-6PM EST'
-    },
+      availability: 'Mon-Fri 9AM-6PM EST',,
     {
       title: 'Live Chat',
       description: 'Get instant help through our chat system',
@@ -56,20 +51,17 @@ const SupportPage: React.FC = () => {
   );
 
   return (
-    <>
-      <Helmet>
-      </Helmet>
+    <></>
+      <Helmet></Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Support Center
-              </h1>
+                Support Center</h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Get the help you need to make the most of your AI and IT solutions.
-              </p>
+                Get the help you need to make the most of your AI and IT solutions.</p>
               
               <div className="max-w-md mx-auto relative mb-8">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -79,9 +71,8 @@ const SupportPage: React.FC = () => {
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                />
+                /></input>
               </div>
-            </div>
 
             <div className="mb-12">
               <div className="relative max-w-2xl mx-auto">
@@ -92,9 +83,8 @@ const SupportPage: React.FC = () => {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20"
-                />
+                /></input>
               </div>
-            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               {supportChannels.map((channel, index) => (
@@ -108,7 +98,6 @@ const SupportPage: React.FC = () => {
                     <Clock className="w-4 h-4 mr-2" />
                     {channel.availability}
                   </div>
-                </div>
               ))}
             </div>
 
@@ -118,42 +107,29 @@ const SupportPage: React.FC = () => {
               </div>
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Our support team is here to help you succeed with our AI and IT solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            </div>
+              Our support team is here to help you succeed with our AI and IT solutions.</p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
 
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
               <h2 className="text-3xl font-bold text-white mb-4">Still Need Help?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Our technical team is here to help you succeed. Contact us for personalized assistance.
-              </p>
+                Our technical team is here to help you succeed. Contact us for personalized assistance.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                  Contact Support
-                </button>
+                  Contact Support</button>
                 <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300">
-                  Schedule Call
-                </button>
+                  Schedule Call</button>
               </div>
-            </div>
-          </div>
         </section>
       </div>
     </>
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Contact Support
-              </button>
+                Contact Support</button>
               <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Documentation
-              </button>
+                View Documentation</button>
             </div>
-          </div>
-        </div>
       </section>
     </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
-  );
-};
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73),;
 
 export default SupportPage;

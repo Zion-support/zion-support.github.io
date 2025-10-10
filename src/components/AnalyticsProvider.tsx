@@ -2,17 +2,17 @@ import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 interface AnalyticsContextType {
     track: (event: string, properties?: Record<string, any>) => void;
   page: (name: string, properties?: Record<string, any>) => void;
-  identify: (userId: string, traits?: Record<string, any>) => void
-  }
+  identify: (userId: string, traits?: Record<string, any>) => void;
+}
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 interface AnalyticsProviderProps {
     children: ReactNode,
-  trackingId?: string
-  }
+  trackingId?: string;
+}
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ 
   children, 
   trackingId = 'G-XXXXXXXXXX' 
-}) => {
+  )} => {
   useEffect(() => {
     // Initialize Google Analytics
     if (typeof window !== 'undefined' && trackingId !== 'G-XXXXXXXXXX') {
@@ -24,8 +24,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       // Initialize gtag
       window.dataLayer = window.dataLayer || [];
       function gtag(...args: any[]) {
-    window.dataLayer.push(args)
-  }
+    window.dataLayer.push(args),
       window.gtag = gtag;
       gtag('js', new Date());
       gtag('config', trackingId, {
@@ -71,7 +70,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     identify}
   return (
     <AnalyticsContext.Provider value={value}>
-      {children}
+      {children}</AnalyticsContext>
     </AnalyticsContext.Provider>
   );
 }
@@ -86,8 +85,7 @@ export const useAnalytics = (): AnalyticsContextType => {
 declare global {
     interface Window {
     dataLayer: any[],
-    gtag: (...args: any[]) => void
-  }
+    gtag: (...args: any[]) => void,
 }
   </AnalyticsProviderProps>
   </AnalyticsContextType>

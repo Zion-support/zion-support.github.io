@@ -1,7 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -24,7 +23,7 @@ import {
   FileText,
   Cpu,
   Link,
-  Server
+  Server;
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -32,7 +31,7 @@ import Footer from '../components/Footer';
 const AiServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const services = [
+  const services: any[] = [
     {
       id: 'ai-chatbots',
       name: 'AI-Powered Chatbots',
@@ -54,8 +53,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Customer Service',
       popular: true,
-      icon: MessageSquare
-    },
+      icon: MessageSquare,,
     {
       id: 'ai-content',
       name: 'AI Content Generation',
@@ -77,8 +75,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Content',
       popular: true,
-      icon: Brain
-    },
+      icon: Brain,,
     {
       id: 'ai-analytics',
       name: 'AI Data Analytics',
@@ -100,8 +97,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Analytics',
       popular: false,
-      icon: BarChart
-    },
+      icon: BarChart,,
     {
       id: 'ai-vision',
       name: 'AI Computer Vision',
@@ -123,8 +119,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Computer Vision',
       popular: false,
-      icon: Eye
-    },
+      icon: Eye,,
     {
       id: 'ai-voice',
       name: 'AI Voice Processing',
@@ -146,8 +141,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Voice AI',
       popular: false,
-      icon: Mic
-    },
+      icon: Mic,,
     {
       id: 'ai-automation',
       name: 'AI Workflow Automation',
@@ -169,8 +163,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Automation',
       popular: true,
-      icon: Zap
-    },
+      icon: Zap,,
     {
       id: 'ai-fraud-detection',
       name: 'AI Fraud Detection',
@@ -192,8 +185,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Security',
       popular: true,
-      icon: Shield
-    },
+      icon: Shield,,
     {
       id: 'ai-predictive-maintenance',
       name: 'AI Predictive Maintenance',
@@ -215,8 +207,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Industrial AI',
       popular: false,
-      icon: Settings
-    },
+      icon: Settings,,
     {
       id: 'ai-personalization',
       name: 'AI Personalization Engine',
@@ -238,8 +229,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Marketing',
       popular: true,
-      icon: Target
-    },
+      icon: Target,,
     {
       id: 'ai-supply-chain',
       name: 'AI Supply Chain Optimization',
@@ -261,8 +251,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Supply Chain',
       popular: false,
-      icon: Box
-    },
+      icon: Box,,
     {
       id: 'ai-healthcare-diagnostics',
       name: 'AI Healthcare Diagnostics',
@@ -284,8 +273,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Healthcare',
       popular: false,
-      icon: Heart
-    },
+      icon: Heart,,
     {
       id: 'ai-financial-modeling',
       name: 'AI Financial Modeling',
@@ -307,8 +295,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Finance',
       popular: true,
-      icon: TrendingUp
-    },
+      icon: TrendingUp,,
     {
       id: 'ai-nlp-processing',
       name: 'AI Natural Language Processing',
@@ -330,8 +317,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Language Processing',
       popular: false,
-      icon: FileText
-    },
+      icon: FileText,,
     {
       id: 'ai-robotic-process',
       name: 'AI Robotic Process Automation',
@@ -353,8 +339,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Automation',
       popular: true,
-      icon: Cpu
-    },
+      icon: Cpu,,
     {
       id: 'ai-customer-insights',
       name: 'AI Customer Insights',
@@ -376,8 +361,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Customer Analytics',
       popular: true,
-      icon: Users
-    },
+      icon: Users,,
     {
       id: 'ai-quality-assurance',
       name: 'AI Quality Assurance',
@@ -399,8 +383,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Software Testing',
       popular: false,
-      icon: CheckCircle
-    },
+      icon: CheckCircle,,
     {
       id: 'ai-energy-optimization',
       name: 'AI Energy Optimization',
@@ -422,8 +405,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Energy',
       popular: false,
-      icon: Zap
-    },
+      icon: Zap,,
     {
       id: 'ai-hr-analytics',
       name: 'AI HR Analytics',
@@ -445,8 +427,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Human Resources',
       popular: false,
-      icon: Users
-    },
+      icon: Users,,
     {
       id: 'ai-blockchain-analytics',
       name: 'AI Blockchain Analytics',
@@ -468,8 +449,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Blockchain',
       popular: false,
-      icon: Link
-    },
+      icon: Link,,
     {
       id: 'ai-edge-computing',
       name: 'AI Edge Computing',
@@ -491,8 +471,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Edge Computing',
       popular: false,
-      icon: Server
-    },
+      icon: Server,,
     {
       id: 'ai-video-analysis',
       name: 'AI Video Analysis',
@@ -517,8 +496,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Computer Vision',
       popular: true,
-      icon: Eye
-    },
+      icon: Eye,,
     {
       id: 'ai-speech-synthesis',
       name: 'AI Speech Synthesis',
@@ -543,8 +521,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Voice AI',
       popular: true,
-      icon: Mic
-    },
+      icon: Mic,,
     {
       id: 'ai-recommendation-engine',
       name: 'AI Recommendation Engine',
@@ -569,8 +546,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Personalization',
       popular: true,
-      icon: Target
-    },
+      icon: Target,,
     {
       id: 'ai-sentiment-analysis',
       name: 'AI Sentiment Analysis',
@@ -595,8 +571,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Language Processing',
       popular: true,
-      icon: Heart
-    },
+      icon: Heart,,
     {
       id: 'ai-chatbot-enterprise',
       name: 'AI Enterprise Chatbot',
@@ -621,8 +596,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Customer Service',
       popular: true,
-      icon: MessageSquare
-    },
+      icon: MessageSquare,,
     {
       id: 'ai-content-moderation',
       name: 'AI Content Moderation',
@@ -647,8 +621,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Content Moderation',
       popular: false,
-      icon: Shield
-    },
+      icon: Shield,,
     {
       id: 'ai-predictive-modeling',
       name: 'AI Predictive Modeling',
@@ -673,8 +646,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Analytics',
       popular: true,
-      icon: BarChart
-    },
+      icon: BarChart,,
     {
       id: 'ai-document-intelligence',
       name: 'AI Document Intelligence',
@@ -699,8 +671,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Document Processing',
       popular: true,
-      icon: FileText
-    },
+      icon: FileText,,
     {
       id: 'ai-conversation-analytics',
       name: 'AI Conversation Analytics',
@@ -725,8 +696,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Customer Analytics',
       popular: true,
-      icon: Users
-    },
+      icon: Users,,
     {
       id: 'ai-supply-chain-ai',
       name: 'AI Supply Chain Intelligence',
@@ -751,8 +721,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Supply Chain',
       popular: false,
-      icon: Box
-    },
+      icon: Box,,
     {
       id: 'ai-healthcare-diagnostics',
       name: 'AI Healthcare Diagnostics',
@@ -777,8 +746,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Healthcare',
       popular: false,
-      icon: Heart
-    },
+      icon: Heart,,
     {
       id: 'ai-financial-forecasting',
       name: 'AI Financial Forecasting',
@@ -803,8 +771,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Finance',
       popular: true,
-      icon: TrendingUp
-    },
+      icon: TrendingUp,,
     {
       id: 'ai-iot-analytics',
       name: 'AI IoT Analytics',
@@ -829,8 +796,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'IoT & Analytics',
       popular: false,
-      icon: Cpu
-    },
+      icon: Cpu,,
     {
       id: 'ai-conversational-ai',
       name: 'AI Conversational AI Platform',
@@ -855,8 +821,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Conversational AI',
       popular: true,
-      icon: MessageCircle
-    },
+      icon: MessageCircle,,
     {
       id: 'ai-automated-testing',
       name: 'AI Automated Testing',
@@ -881,8 +846,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Software Testing',
       popular: true,
-      icon: CheckCircle
-    },
+      icon: CheckCircle,,
     {
       id: 'ai-knowledge-management',
       name: 'AI Knowledge Management',
@@ -907,8 +871,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Knowledge Management',
       popular: false,
-      icon: FileText
-    },
+      icon: FileText,,
     {
       id: 'ai-customer-churn',
       name: 'AI Customer Churn Prediction',
@@ -933,8 +896,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Customer Analytics',
       popular: true,
-      icon: Users
-    },
+      icon: Users,,
     {
       id: 'ai-automated-reporting',
       name: 'AI Automated Reporting',
@@ -959,8 +921,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Reporting & Analytics',
       popular: true,
-      icon: BarChart
-    },
+      icon: BarChart,,
     {
       id: 'ai-voice-assistant',
       name: 'AI Voice Assistant Platform',
@@ -985,12 +946,11 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Voice AI',
       popular: true,
-      icon: Mic
-    },
+      icon: Mic,,
     {
     }
   ];
-  const categories = [
+  const categories: any[] = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'Customer Service', name: 'Customer Service', count: services.filter(s => s.category === 'Customer Service').length },
     { id: 'Content', name: 'Content', count: services.filter(s => s.category === 'Content').length },
@@ -1022,12 +982,11 @@ const AiServicesPage: React.FC = () => {
   ]
 
   const filteredServices = services.filter(service => 
-    selectedCategory === 'all' || service.category === selectedCategory
-  );
+    selectedCategory === 'all' || service.category === selectedCategory);
 
   return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI services including chatbots, content generation, analytics, computer vision, and workflow automation." />
       </Helmet>
@@ -1040,12 +999,10 @@ const AiServicesPage: React.FC = () => {
             {/* Header */}
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                AI Services
-              </h1>
+                AI Services</h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive AI solutions designed to transform your business operations. 
-                From chatbots to computer vision, we have the AI expertise you need.
-              </p>
+                From chatbots to computer vision, we have the AI expertise you need.</p>
             </div>
 
             {/* Category Filter */}
@@ -1058,14 +1015,11 @@ const AiServicesPage: React.FC = () => {
                     className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                       selectedCategory === category.id
                         ? 'bg-cyan-500 text-white'
-                        : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                    }`}
+                        : 'bg-slate-800 text-gray-300 hover: bg-slate-700',`}
                   >
-                    {category.name} ({category.count})
-                  </button>
+                    {category.name} ({category.count})</button>
                 ))}
               </div>
-            </div>
 
             {/* Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -1120,10 +1074,8 @@ const AiServicesPage: React.FC = () => {
                       to="/contact"
                       className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
                     >
-                      Get Quote
-                    </Link>
+                      Get Quote</Link>
                   </div>
-                </div>
               ))}
             </div>
 
@@ -1131,37 +1083,27 @@ const AiServicesPage: React.FC = () => {
             <div className="text-center">
               <div className="bg-slate-800/50 rounded-lg p-8">
                 <h2 className="text-2xl font-bold text-white mb-4">
-                  Ready to Transform Your Business with AI?
-                </h2>
+                  Ready to Transform Your Business with AI?</h2>
                 <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
                   Let our AI experts help you choose the right solutions for your business needs. 
-                  Get a free consultation and see how AI can transform your operations.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  Get a free consultation and see how AI can transform your operations.</p>
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link
                     to="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
-                    Get Free Consultation
-                  </Link>
+                    Get Free Consultation</Link>
                   <a
                     href="tel:+13024640950"
                     className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
-                    Call: (302) 464-0950
-                  </a>
+                    Call: (302) 464-0950</a>
                 </div>
-              </div>
-            </div>
-          </div>
         </div>
       </main>
       
       <Footer />
     </>
-  );
-};
+  ),;
 
 export default AiServicesPage;
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

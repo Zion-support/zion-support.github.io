@@ -215,16 +215,12 @@ Ready to Transform Your Advertising?
             Get a free AI advertising assessment and discover how we can boost your ROI by 300%
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center" Get Free Assessment
               href="/case-studies" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-              View Success Stories
-  ),
+              View Success Stories),
 }
-export default ServicesAdvertisingPage;
-  </p>
+export default ServicesAdvertisingPage;</p>
   </h2>
   </div>
   </section>
-  </div>
-  </div>
   </div>
   </Link>
   </div>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, ArrowRight } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
-  const openPositions = [
+  const openPositions: any[] = [
     {
       title: 'Senior AI Engineer',
       department: 'AI Solutions',
@@ -34,7 +34,7 @@ const CareersPage: React.FC = () => {
       requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills']
     }
   ];
-  const benefits = [
+  const benefits: any[] = [
     'Competitive salary and equity',
     'Comprehensive health insurance',
     'Flexible work arrangements',
@@ -43,27 +43,23 @@ const CareersPage: React.FC = () => {
     'Team building events',
     'Career growth opportunities'
   ];
-  const values = [
+  const values: any[] = [
     {
       icon: Star,
       title: 'Innovation',
-      description: 'We push the boundaries of what\'s possible with technology'
-    },
+      description: 'We push the boundaries of what\'s possible with technology',,
     {
       icon: Users,
       title: 'Collaboration',
-      description: 'We work together to achieve extraordinary results'
-    },
+      description: 'We work together to achieve extraordinary results',,
     {
       icon: Heart,
       title: 'Impact',
-      description: 'We create solutions that make a real difference'
-    },
+      description: 'We create solutions that make a real difference',,
     {
       icon: Award,
       title: 'Excellence',
-      description: 'We strive for the highest quality in everything we do'
-    }
+      description: 'We strive for the highest quality in everything we do',
   ]
 
   return (
@@ -79,11 +75,9 @@ const CareersPage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Join Our Team
-          </h1>
+            Join Our Team</h1>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Work on cutting-edge AI and IT solutions that transform businesses worldwide.
-          </p>
+            Work on cutting-edge AI and IT solutions that transform businesses worldwide.</p>
         </div>
       </section>
 
@@ -110,7 +104,6 @@ const CareersPage: React.FC = () => {
                     <Clock className="w-4 h-4" />
                     <span>{position.type}</span>
                   </div>
-                </div>
                 <p className="text-gray-300 mb-4">{position.description}</p>
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2">Requirements:</h4>
@@ -130,7 +123,6 @@ const CareersPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       <section className="py-20 px-4 bg-white/5">
@@ -147,7 +139,6 @@ const CareersPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       <section className="py-20 px-4">
@@ -164,16 +155,14 @@ const CareersPage: React.FC = () => {
           <div className="mt-8">
             <Link
               to="/contact"
-              className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
+              className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-700 hover:to-blue-700 transition-all duration-300"
             >
               Get in Touch
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
-        </div>
       </section>
     </div>
-  );
-};
+  ),;
 
 export default CareersPage;

@@ -4,7 +4,7 @@ import { Database, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Clock, Set
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const DatabaseManagementPage: React.FC = () => {
-  const features = [
+  const features: any[] = [
     {
       icon: Database,
       title: 'Database Administration',
@@ -41,8 +41,7 @@ const DatabaseManagementPage: React.FC = () => {
             Comprehensive Database Solutions</span>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Optimize your database performance and security with our comprehensive database management services. 
-            From design to deployment, we ensure your data infrastructure is robust and efficient.
-          </p>
+            From design to deployment, we ensure your data infrastructure is robust and efficient.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -65,11 +64,9 @@ const DatabaseManagementPage: React.FC = () => {
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
-                  {feature.title}
-                </h3>
+                  {feature.title}</h3>
                 <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
-                  {feature.description}
-                </p>
+                  {feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
@@ -88,7 +85,6 @@ const DatabaseManagementPage: React.FC = () => {
   );
 }
 export default DatabaseManagementPage</h2>
-  </a>
   </a>
   </p>
   </h1>

@@ -19,7 +19,7 @@ import {
   Users,
   MessageSquare,
   FileText,
-  Target
+  Target;
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -28,7 +28,7 @@ const ServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const services = [
+  const services: any[] = [
     // AI Services
     {
       icon: Brain,
@@ -195,7 +195,7 @@ const ServicesPage: React.FC = () => {
       benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization']
     },
   ];
-  const categories = [
+  const categories: any[] = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'ai', name: 'AI Services', count: services.filter(s => s.category === 'ai').length },
     { id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length },
@@ -207,11 +207,11 @@ const ServicesPage: React.FC = () => {
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
-  })
+    )}
 
   return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>Our Services - Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive range of AI, IT, and Micro SaaS services designed to transform your business." />
       </Helmet>
@@ -224,11 +224,9 @@ const ServicesPage: React.FC = () => {
             {/* Header */}
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our Services
-              </h1>
+                Our Services</h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive solutions to transform your business with cutting-edge technology
-              </p>
+                Comprehensive solutions to transform your business with cutting-edge technology</p>
             </div>
 
             {/* Search and Filter */}
@@ -242,7 +240,7 @@ const ServicesPage: React.FC = () => {
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  />
+                  /></input>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Filter className="text-gray-400 w-5 h-5" />
@@ -253,13 +251,10 @@ const ServicesPage: React.FC = () => {
                   >
                     {categories.map(category => (
                       <option key={category.id} value={category.id}>
-                        {category.name} ({category.count})
-                      </option>
+                        {category.name} ({category.count})</option>
                     ))}
                   </select>
                 </div>
-              </div>
-            </div>
 
             {/* Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -277,12 +272,9 @@ const ServicesPage: React.FC = () => {
                           <span className="text-gray-400 text-sm line-through">{service.marketPrice}</span>
                         )}
                       </div>
-                    </div>
-                  </div>
                   
                   <p className="text-gray-300 mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
+                    {service.description}</p>
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
@@ -322,10 +314,8 @@ const ServicesPage: React.FC = () => {
                       href="/contact"
                       className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
                     >
-                      Get Quote
-                    </a>
+                      Get Quote</a>
                   </div>
-                </div>
               ))}
             </div>
 
@@ -333,34 +323,26 @@ const ServicesPage: React.FC = () => {
             <div className="mt-16 text-center">
               <div className="bg-slate-800/50 rounded-lg p-8">
                 <h2 className="text-2xl font-bold text-white mb-4">
-                  Ready to Get Started?
-                </h2>
+                  Ready to Get Started?</h2>
                 <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Contact our experts for a free consultation and discover how our services can transform your business.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  Contact our experts for a free consultation and discover how our services can transform your business.</p>
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <a
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
-                    Get Free Consultation
-                  </a>
+                    Get Free Consultation</a>
                   <a
                     href="tel:+13024640950"
                     className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
-                    Call: (302) 464-0950
-                  </a>
+                    Call: (302) 464-0950</a>
                 </div>
-              </div>
-            </div>
-          </div>
         </div>
       </main>
       
       <Footer />
     </>
-  );
-};
+  ),;
 
 export default ServicesPage;

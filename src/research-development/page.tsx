@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import React, { useState } from 'react';
 const ResearchDevelopmentPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
-  const _researchAreas = [
+  const _researchAreas: any[] = [
     {
       id: 'ai',
       name: 'Artificial Intelligence',
@@ -186,7 +186,7 @@ $4},
 $4}
     ]
   }
-  const publications = [
+  const publications: any[] = [
     {
       title: 'Consensus Intelligence: A Framework for Multi-Agent Decision Making',
       authors: 'Dr. Sarah Chen, Dr. Michael Rodriguez, et al.',
@@ -220,7 +220,7 @@ $4},
       link:     ,
 $4}
   ];
-  const achievements = [
+  const achievements: any[] = [
     {
       icon: Award,
       title: '50+ Research Papers',
@@ -250,12 +250,11 @@ $4}
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Research & Development,
+              Research & Development,</h1>
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Pushing the boundaries of technology through cutting-edge research and innovation. 
-              Our R&D team is dedicated to creating the next generation of AI and IT solutions.
-            </p>
+              Our R&D team is dedicated to creating the next generation of AI and IT solutions.</p>
           </div>
           {/* Research Areas Tabs */}
           <div className="mb-12">
@@ -267,8 +266,7 @@ $4}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
                     activeTab === area.id
                       ? `${area.bgColor} ${area.color} border-2 border-current`
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
-                  }`}
+                      : 'bg-slate-800/50 text-gray-300 hover: bg-slate-700/50 border-2 border-transparent',`}
                 >
                   <area.icon className="w-5 h-5 mr-2" />
                   <span className="font-medium">{area.name}</span>
@@ -281,9 +279,9 @@ $4}
   );
 }
   const [activeTab, setActiveTab] = useState('ai');
-  const _researchAreas = [
+  const _researchAreas: any[] = [
   // TOD,
-  O: Add items
+  O: Add items,
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -299,8 +297,7 @@ $4}
       bgColo,
   r: 'bg-purple-500/10',
       descriptio,
-  n: 'Advancing the frontiers of AI and machine learning'
-    },
+  n: 'Advancing the frontiers of AI and machine learning',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -315,8 +312,7 @@ $4}
       bgColo,
   r: 'bg-blue-500/10',
       descriptio,
-  n: 'Exploring quantum algorithms and quantum advantage'
-    },
+  n: 'Exploring quantum algorithms and quantum advantage',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -331,8 +327,7 @@ $4}
       bgColo,
   r: 'bg-green-500/10',
       descriptio,
-  n: 'Developing self-managing and intelligent systems'
-    },
+  n: 'Developing self-managing and intelligent systems',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -347,8 +342,7 @@ $4}
       bgColo,
   r: 'bg-yellow-500/10',
       descriptio,
-  n: 'Researching next-generation technologies'
-    }
+  n: 'Researching next-generation technologies',
   ];
   const researchProjects = {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -383,8 +377,7 @@ $4}
         ico,
   n: Brain,
         colo,
-  r: 'text-purple-400'
-      },
+  r: 'text-purple-400',,
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -411,8 +404,7 @@ $4}
         ico,
   n: Target,
         colo,
-  r: 'text-green-400'
-      },
+  r: 'text-green-400',,
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -439,8 +431,7 @@ $4}
         ico,
   n: Microscope,
         colo,
-  r: 'text-blue-400'
-      }
+  r: 'text-blue-400',
 //     ],
     quantu,
   m: [
@@ -472,8 +463,7 @@ $4}
         ico,
   n: Atom,
         colo,
-  r: 'text-blue-400'
-      },
+  r: 'text-blue-400',,
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -500,8 +490,7 @@ $4}
         ico,
   n: Zap,
         colo,
-  r: 'text-yellow-400'
-      }
+  r: 'text-yellow-400',
 //     ],
     autonomou,
   s: [
@@ -533,8 +522,7 @@ $4}
         ico,
   n: Rocket,
         colo,
-  r: 'text-green-400'
-      },
+  r: 'text-green-400',,
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -561,8 +549,7 @@ $4}
         ico,
   n: Users,
         colo,
-  r: 'text-purple-400'
-      }
+  r: 'text-purple-400',
 //     ],
     emergin,
   g: [
@@ -594,8 +581,7 @@ $4}
         ico,
   n: Lightbulb,
         colo,
-  r: 'text-yellow-400'
-      },
+  r: 'text-yellow-400',,
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -622,13 +608,12 @@ $4}
         ico,
   n: Globe,
         colo,
-  r: 'text-blue-400'
-      }
+  r: 'text-blue-400',
 //     ]
   }
-  const publications = [
+  const publications: any[] = [
   // TOD,
-  O: Add items
+  O: Add items,
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -645,8 +630,7 @@ $4}
       impac,
   t: 'High',
       lin,
-  k: '#'
-    },
+  k: '#',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -661,8 +645,7 @@ $4}
       impac,
   t: 'High',
       lin,
-  k: '#'
-    },
+  k: '#',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -677,8 +660,7 @@ $4}
       impac,
   t: 'Medium',
       lin,
-  k: '#'
-    },
+  k: '#',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -693,12 +675,11 @@ $4}
       impac,
   t: 'High',
       lin,
-  k: '#'
-    }
+  k: '#',
   ];
-  const achievements = [
+  const achievements: any[] = [
   // TOD,
-  O: Add items
+  O: Add items,
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -708,8 +689,7 @@ $4}
       titl,
   e: '50+ Research Papers',
       descriptio,
-  n: 'Published in top-tier conferences and journals'
-    },
+  n: 'Published in top-tier conferences and journals',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -718,8 +698,7 @@ $4}
       titl,
   e: '100+ Researchers',
       descriptio,
-  n: 'World-class research team across multiple disciplines'
-    },
+  n: 'World-class research team across multiple disciplines',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -728,8 +707,7 @@ $4}
       titl,
   e: '15+ Patents',
       descriptio,
-  n: 'Innovative technologies and methodologies'
-    },
+  n: 'Innovative technologies and methodologies',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -738,8 +716,7 @@ $4}
       titl,
   e: 'Global Collaborations',
       descriptio,
-  n: 'Partnerships with leading universities and research institutions'
-    }
+  n: 'Partnerships with leading universities and research institutions',
   ];
   return (<div>Coming Soon</div>)
   )
@@ -754,7 +731,7 @@ $4}
 // Research & Development
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon,
+            Coming Soon,</p>
   </
           </div>
           {/* Research Areas Tabs */}"
@@ -771,8 +748,7 @@ $4}
                     activeTab === area.id;`
                       ? `${area.bgColor} ${area.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
-  hover:bg-slate-700/50 border-2 border-transparent'`
-                  }`}
+  hover: bg-slate-700/50 border-2 border-transparent'`,`}
 //                 >
           "
           <area.icon className="w-5 h-5 mr-2" /></area>"
@@ -785,11 +761,10 @@ $4}
                 {researchAreas.find(area => area.id === activeTab)?.description}
               </p>
             </div>
-          </div>
           {/* Research Projects */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Current Research Projects;
+              Current Research Projects;</h2>
   </
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => (
@@ -802,7 +777,6 @@ $4}
                       <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
                       <p className="text-gray-300 text-sm mb-4">{project.description}</p>
                     </div>
-                  </div>
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
                       <div className="text-sm text-gray-400 mb-1">Status</div>
@@ -810,22 +784,16 @@ $4}
                         project.status === 'Completed' ? 'text-green-400' : 
                         project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'
                       }`}>
-                        {project.status}
-                      </div>
-                    </div>
+                        {project.status}</div>
                     <div>
                       <div className="text-sm text-gray-400 mb-1">Timeline</div>
                       <div className="text-sm text-white">{project.timeline}</div>
-                    </div>
                     <div>
                       <div className="text-sm text-gray-400 mb-1">Team</div>
                       <div className="text-sm text-white">{project.team}</div>
-                    </div>
                     <div>
                       <div className="text-sm text-gray-400 mb-1">Funding</div>
                       <div className="text-sm text-white">{project.funding}</div>
-                    </div>
-                  </div>
                   <div>
                     <div className="text-sm font-semibold text-cyan-400 mb-2">Key Outcomes:</div>
                     <ul className="space-y-1">
@@ -848,8 +816,7 @@ $4}
                     <div className="flex-1"></div>"
                       <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>"
                       <p className="text-gray-300 text-sm mb-4">{project.description}</p>
-                    </div>
-                  </div>"
+                    </div>"
                   <div className="grid grid-cols-2 gap-4 mb-4"></div>
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Status</div>`
@@ -862,20 +829,15 @@ $4}
                       }`}></div>
                         {project.status}
           </div>
-                    </div>
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Timeline</div>"
                       <div className="text-sm text-white">{project.timeline}</div>
-                    </div>
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Team</div>"
                       <div className="text-sm text-white">{project.team}</div>
-                    </div>
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Funding</div>"
                       <div className="text-sm text-white">{project.funding}</div>
-                    </div>
-                  </div>
                   <div></div>"
                     <div className="text-sm font-semibold text-cyan-400 mb-2">Key,
   Outcomes:</div>"
@@ -888,14 +850,12 @@ $4}
                       ))}
                     </ul>
                   </div>
-                </div>
               ))}
             </div>
-          </div>
           {/* Publications */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Recent Publications;
+              Recent Publications;</h2>
   </
             <div className="max-w-4xl mx-auto">
               <div className="space-y-6">
@@ -911,14 +871,13 @@ $4}
                         <span className={`px-2 py-1 rounded text-xs ${
                           pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'
                         }`}>
-                          {pub.impact} Impact;
+                          {pub.impact} Impact;</span>
   </
                       </div>
                       <a
                         href={pub.link}
                         className="text-cyan-400 hover:text-cyan-300 text-sm font-medium">
-                        Read Paper →
-                      </a>
+                        Read Paper →</a>
           {/* Publications */}"
           <div className="mb-16"></div>"
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
@@ -953,15 +912,12 @@ $4}
 //                         Read Paper,
           </a>
                     </div>
-                  </div>
                 ))}
               </div>
-            </div>
-          </div>
           {/* Achievements */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Research Achievements;
+              Research Achievements;</h2>
   </
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {achievements.map((achievement, index) => (
@@ -988,16 +944,14 @@ $4}
                 </div>
               ))}
             </div>
-          </div>
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
-              Collaborate With Our Research Team;
+              Collaborate With Our Research Team;</h2>
   </
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Interested in collaborating on cutting-edge research? We welcome partnerships with 
-              universities, research institutions, and industry leaders.
-            </p>
+              universities, research institutions, and industry leaders.</p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
@@ -1049,15 +1003,10 @@ $4}
 // Email Us
           </a>
             </div>
-          </div>
-        </div>
-      </div>
       <Footer />
     </React.Fragment>
     </div>
   ),
 }
 export default ResearchDevelopmentPage;
-  </a>
-  </a>
   </a>

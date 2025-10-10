@@ -1,5 +1,3 @@
-
-
 'use client';
 // PerformanceMetrics interface removed as it's not used in this hook;
 export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
@@ -30,21 +28,21 @@ export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
       // LCP - Largest Contentful Paint;
 const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         reportMetric('LCP', lastEntry.startTime);
-      });
+        )};
       lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
+  s: ['largest-contentful-paint']   )};
       // FID - First Input Delay;
 const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
         const entries = list.getEntries();
 //         entries.forEach()
           (entr)
-  y: PerformanceEntry & { processingStart?: number }) => {/* TODO: Fix JSX expression */}
+  y: PerformanceEntry & { processingStart?: number   )} => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
             const fid =
@@ -52,13 +50,13 @@ const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
             reportMetric('FID', fid)
           }
         );
-      });
+        )};
       fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
+  s: ['first-input']   )};
 // CLS - Cumulative Layout Shift;
       const clsObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
         const entries = list.getEntries();
 //         entries.forEach()
 //           ()
@@ -80,30 +78,30 @@ const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
           }
         );
         reportMetric('CLS', clsValue);
-      });
+        )};
       clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
+  s: ['layout-shift']   )};
       // FCP - First Contentful Paint;
 const fcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
         const entries = list.getEntries();
         entries.forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
           if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
             reportMetric('FCP', entry.startTime);
           }
-        });
-      });
+          )};
+        )};
       fcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] });
+  s: ['paint']   )};
       // TTFB - Time to First Byte;
 const navigationObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
         const entries = list.getEntries();
         entries.forEach((entry) => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -115,14 +113,14 @@ const navigationObserver = new PerformanceObserver(list => {/* TODO: Fix JSX exp
             const ttfb = navEntry.responseStart - navEntry.requestStart;
             reportMetric('TTFB', ttfb);
           }
-        });
-      });
+          )};
+        )};
       navigationObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['navigation'] });
+  s: ['navigation']   )};
       // Resource timing;
 const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
         const entries = list.getEntries();
         entries.forEach((entry) => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -139,10 +137,10 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
               reportMetric('SLOW_RESOURCE', loadTime);
             }
           }
-        });
-      });
+          )};
+        )};
       resourceObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['resource'] });
+  s: ['resource']   )};
       // Cleanup;
       return () => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -190,7 +188,7 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
   O: Add content,}
 }
           reportMetric(key.toUpperCase(), value);
-        });
+          )};
       }
     }
     window.addEventListener('load', handleLoad);
@@ -203,4 +201,3 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
   }
 }
 export default usePerformanceMonitoring;
-

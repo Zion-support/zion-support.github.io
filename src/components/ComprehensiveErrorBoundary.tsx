@@ -1,3 +1,4 @@
+import React from 'react';
   children: ReactNode
   fallback?: ReactNode,
   onError?: (erro,
@@ -26,14 +27,12 @@ class ComprehensiveErrorBoundary extends Component;
 }
   private maxRetries: number,
   constructor(props: Props) {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
 class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     constructor(props: ErrorBoundaryProps) {
     super(props),
-    this.state = {// TODO: Add content
-  }
+    this.state = {// TODO: Add content,
 }
   hasErro,
   r: false,
@@ -75,7 +74,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 }
 //       error,
 //       errorInfo;)
-    });
+      )};
     if (this.props.onError) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -126,8 +125,8 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   d: this.state.errorId,
           retry_coun,
   t: this.state.retryCount,
-        })
-      });
+          )}
+        )};
     }
     // Log to console in development;
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
@@ -143,7 +142,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   O: Add content,}
 }
       this.setState({/* TODO: Fix JSX expression */})
-  g: true });
+  g: true   )};
       // Simulate retry delay;
       await new Promise(resolve => setTimeout(resolve, 1000));
       this.setState(prevState => ({/* TODO: Fix JSX expression */}
@@ -159,7 +158,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   t: prevState.retryCount + 1,
         isRetryin,
   g: false,)
-      }));
+        )});
     }
   }
   private handleReload = () => {/* TODO: Fix JSX expression */}
@@ -256,7 +255,6 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
               </details>
             )}
           </div>
-        </div>
       );
     }
     return this.props.children;

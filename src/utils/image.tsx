@@ -15,8 +15,8 @@ const Image: React.FC = () => {
   sizes?: string
   style?: React.CSSProperties
   onLoad?: () => void,
-  onError?: () => void
-  }
+  onError?: () => void;
+}
 export const Image: React.FC<ImageProps> = ({
   src,
   alt,
@@ -32,8 +32,8 @@ export const Image: React.FC<ImageProps> = ({
   style,
   onLoad,
   onError,
-  ...props
-}) => {
+  ...props;
+  )} => {
     const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const _handleLoad = useCallback(() => {
@@ -107,8 +107,7 @@ const,
 }
 export const Image: React.FC,
           <ImageProps> = ({
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
 //   src,
 //   alt,
@@ -125,9 +124,8 @@ quality = 75,
 //   onLoad,
 //   onError,
 //   ...props;
-}) => {
-    // TODO: Add content
-  }
+  )} => {
+    // TODO: Add content,
 }
   const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -157,7 +155,7 @@ quality = 75,
       width: '100%',
       height: '100%',
       objectFit: 'cover'
-    })
+      )}
   }
   if (hasError) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -192,5 +190,4 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
   )
 }
 export default Image;"`
-  </ImageProps>
   </ImageProps>

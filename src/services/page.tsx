@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 const ServicesPage: React.FC = () => {
-  const aiServices = [
+  const aiServices: any[] = [
     {
       icon: Brain,
       title: 'AI Services',
@@ -14,8 +14,7 @@ const ServicesPage: React.FC = () => {
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       price: 'Starting at $1,500/month',
       popular: true,
-      link: '/ai-services'
-    },
+      link: '/ai-services',,
     {
       icon: Zap,
       title: 'AI Automation',
@@ -23,8 +22,7 @@ const ServicesPage: React.FC = () => {
       features: ['Workflow Automation', 'Smart Scheduling', 'Process Optimization', 'Task Management'],
       price: 'Starting at $2,000/month',
       popular: false,
-      link: '/ai-automation'
-    },
+      link: '/ai-automation',,
     {
       icon: BarChart,
       title: 'AI Data Analytics',
@@ -32,8 +30,7 @@ const ServicesPage: React.FC = () => {
       features: ['Predictive Analytics', 'Data Visualization', 'Business Intelligence', 'Real-time Insights'],
       price: 'Starting at $1,800/month',
       popular: false,
-      link: '/ai-data-analytics'
-    },
+      link: '/ai-data-analytics',,
     {
       icon: MessageSquare,
       title: 'AI Customer Support',
@@ -41,8 +38,7 @@ const ServicesPage: React.FC = () => {
       features: ['Chatbots', 'Voice Assistants', 'Ticket Management', 'Sentiment Analysis'],
       price: 'Starting at $299/month',
       popular: true,
-      link: '/ai-customer-support'
-    },
+      link: '/ai-customer-support',,
     {
       icon: Target,
       title: 'AI Marketing',
@@ -50,8 +46,7 @@ const ServicesPage: React.FC = () => {
       features: ['Ad Optimization', 'Content Generation', 'Lead Scoring', 'Campaign Management'],
       price: 'Starting at $199/month',
       popular: true,
-      link: '/ai-marketing'
-    },
+      link: '/ai-marketing',,
     {
       icon: Eye,
       title: 'AI Computer Vision',
@@ -59,10 +54,9 @@ const ServicesPage: React.FC = () => {
       features: ['Object Detection', 'Image Recognition', 'Quality Control', 'Facial Recognition'],
       price: 'Starting at $1,200/month',
       popular: false,
-      link: '/ai-computer-vision'
-    }
+      link: '/ai-computer-vision',
   ];
-  const itServices = [
+  const itServices: any[] = [
     {
       icon: Database,
       title: 'Database Management',
@@ -70,8 +64,7 @@ const ServicesPage: React.FC = () => {
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Monitoring'],
       price: 'Starting at $1,000/month',
       popular: false,
-      link: '/database-management'
-    },
+      link: '/database-management',,
     {
       icon: Lock,
       title: 'Cybersecurity',
@@ -79,8 +72,7 @@ const ServicesPage: React.FC = () => {
       features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'],
       price: 'Starting at $1,500/month',
       popular: true,
-      link: '/cybersecurity'
-    },
+      link: '/cybersecurity',,
     {
       icon: Cloud,
       title: 'Cloud Services',
@@ -88,8 +80,7 @@ const ServicesPage: React.FC = () => {
       features: ['Cloud Migration', 'Infrastructure Setup', 'Monitoring', 'Cost Optimization'],
       price: 'Starting at $800/month',
       popular: true,
-      link: '/cloud-services'
-    },
+      link: '/cloud-services',,
     {
       icon: Code,
       title: 'DevOps & CI/CD',
@@ -97,8 +88,7 @@ const ServicesPage: React.FC = () => {
       features: ['CI/CD Setup', 'Container Orchestration', 'Monitoring', 'Security Scanning'],
       price: 'Starting at $1,200/month',
       popular: false,
-      link: '/devops-cicd'
-    },
+      link: '/devops-cicd',,
     {
       icon: Settings,
       title: 'System Administration',
@@ -106,8 +96,7 @@ const ServicesPage: React.FC = () => {
       features: ['Server Management', 'Performance Tuning', 'Updates', 'Troubleshooting'],
       price: 'Starting at $600/month',
       popular: false,
-      link: '/system-administration'
-    },
+      link: '/system-administration',,
     {
       icon: Globe,
       title: 'Network Solutions',
@@ -115,10 +104,9 @@ const ServicesPage: React.FC = () => {
       features: ['Network Design', 'Security Implementation', 'Monitoring', 'Optimization'],
       price: 'Starting at $900/month',
       popular: false,
-      link: '/network-solutions'
-    }
+      link: '/network-solutions',
   ];
-  const microSaasServices = [
+  const microSaasServices: any[] = [
     {
       icon: BarChart3,
       title: 'AI Analytics Dashboard',
@@ -126,8 +114,7 @@ const ServicesPage: React.FC = () => {
       features: ['Custom Dashboards', 'Real-time Data', 'Predictive Insights', 'Export Reports'],
       price: '$79/month',
       popular: true,
-      link: '/ai-analytics-dashboard'
-    },
+      link: '/ai-analytics-dashboard',,
     {
       icon: ShoppingCart,
       title: 'AI E-commerce Assistant',
@@ -135,8 +122,7 @@ const ServicesPage: React.FC = () => {
       features: ['Inventory Management', 'Order Processing', 'Customer Service', 'Analytics'],
       price: '$99/month',
       popular: true,
-      link: '/ai-ecommerce-solutions'
-    },
+      link: '/ai-ecommerce-solutions',,
     {
       icon: Smartphone,
       title: 'AI Mobile App Builder',
@@ -144,8 +130,7 @@ const ServicesPage: React.FC = () => {
       features: ['Drag & Drop Builder', 'AI Code Generation', 'App Store Publishing', 'Analytics'],
       price: '$149/month',
       popular: false,
-      link: '/ai-mobile-app-development'
-    },
+      link: '/ai-mobile-app-development',,
     {
       icon: FileText,
       title: 'AI Document Processor',
@@ -153,8 +138,7 @@ const ServicesPage: React.FC = () => {
       features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Workflow Automation'],
       price: '$59/month',
       popular: true,
-      link: '/ai-document-processing'
-    },
+      link: '/ai-document-processing',,
     {
       icon: Bot,
       title: 'AI Chatbot Builder',
@@ -162,8 +146,7 @@ const ServicesPage: React.FC = () => {
       features: ['Visual Builder', 'Multi-platform', 'Analytics', 'Custom Training'],
       price: '$49/month',
       popular: true,
-      link: '/ai-chatbot-builder'
-    },
+      link: '/ai-chatbot-builder',,
     {
       icon: Music,
       title: 'AI Content Creator',
@@ -171,32 +154,27 @@ const ServicesPage: React.FC = () => {
       features: ['Blog Writing', 'Social Media', 'Video Scripts', 'SEO Optimization'],
       price: '$39/month',
       popular: false,
-      link: '/ai-content-generation'
-    }
+      link: '/ai-content-generation',
   ];
-  const benefits = [
+  const benefits: any[] = [
     {
       icon: TrendingUp,
       title: 'Proven ROI',
-      description: 'Average 300% return on investment for our clients'
-    },
+      description: 'Average 300% return on investment for our clients',,
     {
       icon: Users,
       title: 'Expert Team',
-      description: '50+ certified professionals with 10+ years experience'
-    },
+      description: '50+ certified professionals with 10+ years experience',,
     {
       icon: Clock,
       title: '24/7 Support',
-      description: 'Round-the-clock support with guaranteed response times'
-    },
+      description: 'Round-the-clock support with guaranteed response times',,
     {
       icon: Shield,
       title: 'Fast Delivery',
-      description: 'Quick implementation with minimal downtime'
-    }
+      description: 'Quick implementation with minimal downtime',
   ];
-  const stats = [
+  const stats: any[] = [
     { label: 'Projects Completed', value: '500+' },
     { label: 'Happy Clients', value: '200+' },
     { label: 'Uptime Guarantee', value: '99.9%' },
@@ -215,10 +193,10 @@ const ServicesPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Our Services;
+              Our Services;</h1>
   </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions designed to transform your business operations and drive growth
+              Comprehensive AI and IT solutions designed to transform your business operations and drive growth</p>
   </
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -230,11 +208,9 @@ const ServicesPage: React.FC = () => {
               <Link
                 to="/contact"
                 className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                Get Free Consultation,
+                Get Free Consultation,</Link>
   </
             </div>
-          </div>
-        </div>
       </section>
       {/* Stats Section */}
       <section className="py-16 bg-white/5">
@@ -243,25 +219,21 @@ const ServicesPage: React.FC = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
-                  {stat.value}
-                </div>
+                  {stat.value}</div>
                 <div className="text-gray-300 text-sm md:text-base">
-                  {stat.label}
-                </div>
-              </div>
+                  {stat.label}</div>
             ))}
           </div>
-        </div>
       </section>
       {/* AI Services Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              AI Services,
+              AI Services,</h2>
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced artificial intelligence solutions to automate, optimize, and transform your business;
+              Advanced artificial intelligence solutions to automate, optimize, and transform your business;</p>
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -270,7 +242,7 @@ const ServicesPage: React.FC = () => {
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular;
+                      Most Popular;</span>
   </
                   </div>
                 )}
@@ -292,23 +264,21 @@ const ServicesPage: React.FC = () => {
                   <Link
                     to={service.link}
                     className="bg-cyan-500 hover: bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
-                    Learn More,
+                    Learn More,</Link>
   </
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
       {/* IT Services Section */}
       <section className="py-24 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              IT Services
+              IT Services</h2>
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Robust IT infrastructure and support services to keep your business running smoothly,
+              Robust IT infrastructure and support services to keep your business running smoothly,</p>
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -317,7 +287,7 @@ const ServicesPage: React.FC = () => {
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular;
+                      Most Popular;</span>
   </
                   </div>
                 )}
@@ -339,24 +309,21 @@ const ServicesPage: React.FC = () => {
                   <Link
                     to={service.link}
                     className="bg-blue-500 hover: bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
-                    Learn More,
+                    Learn More,</Link>
   </
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
       {/* Micro SAAS Services Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Micro SAAS Solutions,
+              Micro SAAS Solutions,</h2>
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
-            </p>
+              Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasServices.map((service, index) => (
@@ -364,7 +331,7 @@ const ServicesPage: React.FC = () => {
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular;
+                      Most Popular;</span>
   </
                   </div>
                 )}
@@ -386,23 +353,20 @@ const ServicesPage: React.FC = () => {
                   <Link
                     to={service.link}
                     className="bg-purple-500 hover: bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
-                    Learn More,
+                    Learn More,</Link>
   </
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
       {/* Benefits Section */}
       <section className="py-24 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Zion Tech Group?
-            </h2>
+              Why Choose Zion Tech Group?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We deliver exceptional results with proven expertise and cutting-edge technology,
+              We deliver exceptional results with proven expertise and cutting-edge technology,</p>
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -416,18 +380,15 @@ const ServicesPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h2>
+              Ready to Transform Your Business?</h2>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-              Contact us today to discuss how our AI and IT solutions can help your organization thrive.
-            </p>
+              Contact us today to discuss how our AI and IT solutions can help your organization thrive.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
@@ -438,11 +399,9 @@ const ServicesPage: React.FC = () => {
               <Link
                 to="/contact"
                 className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Get Free Consultation
+                Get Free Consultation</Link>
   </
             </div>
-          </div>
-        </div>
       </section>
       <Footer />
     </div>

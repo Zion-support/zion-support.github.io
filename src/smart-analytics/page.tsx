@@ -3,7 +3,7 @@ import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, Ma
 import { Link } from 'react-router-dom';
 import React from 'react';
 const SmartAnalyticsPage: React.FC = () => {
-  const features = [
+  const features: any[] = [
     {
       icon: BarChart,
       title: 'Real-time Dashboards',
@@ -32,7 +32,7 @@ iconicon: Shield,
       benefit:     ,
 $4}
   ];
-  const pricingPlans = [
+  const pricingPlans: any[] = [
       name: 'Starter',
       price: '$299',
       period: '/month',
@@ -73,28 +73,28 @@ $4}
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
-            Smart Analytics;
+            Smart Analytics;</h1>
   </
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto">
-            Transform your data into actionable insights with AI-powered analytics that drive real business results
+            Transform your data into actionable insights with AI-powered analytics that drive real business results</p>
   </
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
               className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors">
-              📞 Call: (302) 464-0950
+              📞 Call: (302) 464-0950</a>
   </
             <Link
               to="/contact"
               className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
               Get Free Consultation,
   </
-          </div>
+          </div></Link>
         </section>
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">
-            Powerful Analytics Features,
+            Powerful Analytics Features,</h2>
   </
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -117,7 +117,7 @@ $4}
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-                      Most Popular;
+                      Most Popular;</span>
   </
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -134,18 +134,16 @@ $4}
                 </ul>
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
                     plan.popular
-                      ? 'bg-cyan-600 text-white hover:bg-cyan-700'
-                      : 'bg-gray-600 text-white hover:bg-gray-700'
-                  }`}
+                      ? 'bg-cyan-600 text-white hover: bg-cyan-700'
+                      : 'bg-gray-600 text-white hover:bg-gray-700',`}
                   Get Started
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
 import { Link } from 'react-router-dom';
 const SmartAnalyticsPage: React.FC = () => {
-    const features = [],
+    const features: any[] = [],
   return (
-    {// TODO: Add content
-  }
+    {// TODO: Add content,
 }
   ico,
   n: BarChart,
@@ -154,8 +152,7 @@ const SmartAnalyticsPage: React.FC = () => {
       descriptio,
   n: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
       benefi,
-  t: 'Make decisions 10x faster'
-    },
+  t: 'Make decisions 10x faster',,
       icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
@@ -169,14 +166,13 @@ const PagePage: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
+            Page</h1>
   </
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon,
+            Coming Soon,</p>
   </
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
+            This page is under development. Please check back soon for updates.</p>
         </section>
       </main>
       <Footer />
@@ -184,10 +180,9 @@ const PagePage: React.FC = () => {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
-      benefit: '100% data protection'
-    }
+      benefit: '100% data protection',
   ];
-  const pricingPlans = [
+  const pricingPlans: any[] = [
       nam,
   e: 'Professional',
       pric,
@@ -220,8 +215,7 @@ const PagePage: React.FC = () => {
                       ? 'bg-cyan-600 text-white,
   hover:bg-cyan-700'
                       : 'bg-gray-600 text-white,
-  hover:bg-gray-700'`
-                  }`}
+  hover: bg-gray-700'`,`}
                   Get Started;
         {/* CTA Section */}
           <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
@@ -256,10 +250,6 @@ const PagePage: React.FC = () => {
 }
 export default SmartAnalyticsPage;
   </a>
-  </a>
-  </a>
-  </div>
-  </div>
   </div>
   </section>
   </p>
@@ -268,11 +258,6 @@ export default SmartAnalyticsPage;
   </p>
   </h1>
   </section>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
   </div>
   </div>
   </h2>
@@ -281,5 +266,4 @@ export default SmartAnalyticsPage;
   </a>
   </p>
   </h1>
-  </div>
   </div>

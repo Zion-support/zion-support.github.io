@@ -4,8 +4,7 @@ import { LucideIcon, ArrowRight } from 'lucide-react';
 interface ServiceCardProps {/* TODO: Fix JSX expression */}
 }
 const,
-  ServiceCard: React.FC<ServiceCardProps> = memo(({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  ServiceCard: React.FC<ServiceCardProps> = memo(({/* TODO: Fix JSX expression */}))} => {/* TODO: Fix JSX expression */}
   }
   const bgColorClasses = {/* TODO: Fix JSX expression */}
   }
@@ -71,7 +70,6 @@ const,
             </span>
           )}
         </div>
-      </div>
       "
       <div className="text-center mb-4"></div>"
         <div className="text-lg,"
@@ -80,7 +78,6 @@ const,
         </div>"
         <div className="text-xs text-gray-400">Categor,
   y: {category}</div>
-      </div>
       <a></a>
         href={href}`
         className={`${colorClasses[color as keyof typeof colorClasses]} font-medium text-sm,
@@ -98,7 +95,7 @@ const,
       </a>
     </article>
   );
-});
+  )};
 ServiceCard.displayName = 'ServiceCard';
 export default ServiceCard;"`
   </ServiceCardProps>

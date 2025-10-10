@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const _UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-  const content = [
+  const content: any[] = [
     {
       id: 'ultimate-business-intelligence-revolution',
       title: 'AI 2025: The Ultimate Business Intelligence Revolution',
@@ -67,15 +67,13 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="text-2xl">🚀</span>
             <span className="text-cyan-400 font-bold text-xl">
-              BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025,
+              BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025,</span>
   </
             <span className='text-2xl'>⚡</span>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
-            {currentContent.title}
-          </h1>
+            {currentContent.title}</h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            {currentContent.description}
-          </p>
+            {currentContent.description}</p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Link
               to="/services"
@@ -109,8 +107,7 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
                 <div key={key} className="text-center bg-white/5 rounded-xl p-4">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
                   <div className="text-sm text-gray-300 capitalize">
-                    {key.replace(/([A-Z])/g, ' $1').trim()}
-              ))}
+                    {key.replace(/([A-Z])/g, ' $1').trim()}))}
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-8">
               {currentContent.tags.map((tag) => (
@@ -163,9 +160,9 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
 }
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-  const content = [
+  const content: any[] = [
   // TOD,
-  O: Add items
+  O: Add items,
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -192,8 +189,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
         timelin,
   e: '6 months',
         adoptio,
-  n: '95%'
-      },
+  n: '95%',,
       tag,
   s: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025']
       i,
@@ -251,22 +247,13 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
 }
 export default UltimateBusinessIntelligence2025Banner;"
   </div>
-  </div>
   </button>
-  </div>
   </div>
   </span>
   </div>
-  </div>
-  </div>
-  </div>
   </svg>
-  </div>
-  </div>
   </div>
   </path>
   </div>
   </span>
-  </div>
-  </div>
   </div>

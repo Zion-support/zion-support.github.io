@@ -144,7 +144,7 @@ titl,
   s: ['Time Series DB', 'Apache Kafka', 'Apache Spark', 'Data Lakes', 'ETL Tools']
     }
   ];
-  const categories = [...new Set(iotServices.map(service => service.category))];
+  const categories: any[] = [...new Set(iotServices.map(service => service.category))];
   return (<div>Coming Soon</div>)
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
@@ -213,10 +213,9 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
                   Specialized {category.toLowerCase()} services for connected and intelligent systems;"
               <div className="grid grid-cols-1,
   md:grid-cols-2,"
-  lg:grid-cols-3 gap-8"></div>
+  lg: grid-cols-3 gap-8"></div>
                 {
-    iotServices
-  }
+    iotServices,
                   .filter(service => service.category === category)
                   .map((service, index) => ()
                     "
@@ -299,8 +298,7 @@ Ready to Connect Your World?"
               <a
                 href="tel:+13024640950" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
 // >
-//                  +1 302 464 0950
-          </a>
+//                  +1 302 464 0950</a>
 href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
                 ✉️ kleber@ziontechgroup.com,
             <div className="mt-8 text-sm text-cyan-200">

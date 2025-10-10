@@ -9,16 +9,15 @@ const LoginPage: React.FC = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
-    rememberMe: false
-  });
+    rememberMe: false,);
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
+      [name]: type === 'checkbox' ? checked : value;
+  )});
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -29,7 +28,7 @@ const LoginPage: React.FC = () => {
     // Redirect to dashboard or home page
     window.location.href = '/'
   }
-  const features = [
+  const features: any[] = [
     {
       icon: Shield,
       title: 'Secure Access',
@@ -56,16 +55,16 @@ $4}
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
               <div className="text-center mb-8">
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text">
-                  Welcome Back;
+                  Welcome Back;</h1>
   </
                 <p className="text-gray-300">
-                  Sign in to your account to access your AI and IT services;
+                  Sign in to your account to access your AI and IT services;</p>
   </
               </div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Email Address;
+                    Email Address;</label>
   </
                   <div className="relative">
                     <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -91,7 +90,7 @@ $4}
   d: '',
     rememberM,
   e: false,)
-  });
+    )};
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const _handleInputChange = (e: React.ChangeEvent,)
@@ -104,7 +103,7 @@ $4}
 }
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value;)
-    }));
+      )});
   }
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -117,9 +116,9 @@ $4}
     // Redirect to dashboard or home page;
     window.location.href = '/';
   }
-  const features = [
+  const features: any[] = [
   // TOD,
-  O: Add items
+  O: Add items,
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -129,8 +128,7 @@ $4}
       titl,
   e: 'Secure Access',
       descriptio,
-  n: 'Bank-level security with multi-factor authentication'
-    },
+  n: 'Bank-level security with multi-factor authentication',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -139,8 +137,7 @@ $4}
       titl,
   e: '24/7 Support',
       descriptio,
-  n: 'Round-the-clock support for all your needs'
-    },
+  n: 'Round-the-clock support for all your needs',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -185,10 +182,9 @@ type="email" name="email"
 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your email"
 //                     />
           </div>
-                </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Password,
+                    Password,</label>
   </
                   <div className="relative">
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -208,7 +204,6 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                       {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                     </button>
                   </div>
-                </div>
                 <div className="flex items-center justify-between">
                   <label className="flex items-center">
                     <input
@@ -223,8 +218,7 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                   <a
                     href="/forgot-password"
                     className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors">
-                    Forgot password?
-                  </a>
+                    Forgot password?</a>
                 </div>
                 <button
                   type="submit"
@@ -246,13 +240,13 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                   <a
                     href="/signup"
                     className="text-cyan-400 hover: text-cyan-300 font-medium transition-colors">
-                    Sign up here;
+                    Sign up here;</a>
   </
                 </p>
               </div>
               <div className="mt-8 pt-6 border-t border-gray-700">
                 <p className="text-center text-sm text-gray-400 mb-4">
-                  Or continue with
+                  Or continue with</p>
   </
                 <div className="grid grid-cols-2 gap-3">
                   <button className="flex items-center justify-center px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white hover:bg-slate-600 transition-colors">
@@ -271,18 +265,15 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                     Facebook,
   </
                 </div>
-              </div>
-            </div>
             {/* Right Side - Features */}
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text">
-                  Access Your AI & IT Services;
+                  Access Your AI & IT Services;</h2>
   </
                 <p className="text-xl text-gray-300 mb-8">
                   Sign in to manage your AI services, view analytics, and access all your 
-                  enterprise solutions in one place.
-                </p>
+                  enterprise solutions in one place.</p>
               </div>
               <div className="space-y-6">
                 {features.map((feature, index) => (
@@ -311,7 +302,6 @@ type="button" onClick={() => setShowPassword(!showPassword)}
           <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                     </button>
                   </div>
-                </div>
                 <div className="flex items-center justify-between">
                   <label className="flex items-center">
                     <input
@@ -328,8 +318,7 @@ type="checkbox" name="rememberMe"
                   <a
                     href="/forgot-password" className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
 // >
-//                     Forgot password?
-          </a>
+//                     Forgot password?</a>
                 </div>
                 <button
 type="submit" disabled={isLoading}
@@ -351,8 +340,7 @@ type="submit" disabled={isLoading}
                   <a
                     href="/signup" className="text-cyan-400 hover: text-cyan-300 font-medium transition-colors"
 // >
-//                     Sign up here
-          </a>
+//                     Sign up here</a>
                 </p>
               </div>"
               <div className="mt-8 pt-6 border-t border-gray-700"></div>"
@@ -377,8 +365,6 @@ type="submit" disabled={isLoading}
 // Facebook,
   </
                 </div>
-              </div>
-            </div>
             {/* Right Side - Features */}"
             <div className="space-y-8"></div>
               <div></div>"
@@ -400,17 +386,14 @@ type="submit" disabled={isLoading}
                       <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>"
                       <p className="text-gray-300">{feature.description}</p>
                     </div>
-                  </div>
                 ))}
               </div>
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-white mb-3">
-                  New to Zion Tech Group?
-                </h3>
+                  New to Zion Tech Group?</h3>
                 <p className="text-gray-300 mb-4">
                   Join thousands of businesses already using our AI and IT solutions 
-                  to transform their operations.
-                </p>
+                  to transform their operations.</p>
                 <a
                   href="/signup"
                   className="inline-flex items-center text-cyan-400 hover: text-cyan-300 font-medium transition-colors">
@@ -432,9 +415,6 @@ type="submit" disabled={isLoading}
           <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
       </div>
       <Footer />
     </React.Fragment>
@@ -444,9 +424,6 @@ type="submit" disabled={isLoading}
 export default LoginPage;
   </a>
   </button>
-  </button>
-  </button>
   </a>
   </label>
-  </HTMLInputElement>
   </HTMLInputElement>

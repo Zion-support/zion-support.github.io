@@ -20,8 +20,7 @@ export const waitFor = async (;
   timeout = 5000,;
   interval = 100;
 ): Promise<void> => {
-    interval = 100
-  }
+    interval = 100,
 ): Promise<void> => {}
   const startTime = Date.now();
   while (!condition()) {}
@@ -40,7 +39,7 @@ export const mockFetch = (;
   headers: Record<string, string> = {}
 ): void => {}
   if (typeof global !== 'undefined') {}
-    (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>;
+    (global as typeof global & { fetch: typeof fetch   )}.fetch = jest.fn(() =>;
       Promise.resolve({
     );
         ok: status >= 200 && status < 300),
@@ -121,9 +120,9 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {}
       value: {}
         ...global.window,;
         ...overrides}
-      })
+        )}
       writable: true,
-    })
+      )}
 export const wait = (m);
   s: number): Promise<void> => {/* TODO: Fix JSX expression */}
 }
@@ -147,9 +146,8 @@ export const mockFetch = (respons,;
   e: unknown,
   status = 200,;
   header,;
-  s: Record<string, string> = {})
-): void => {/* TODO: Fix JSX expression */}
-  h: typeof fetch }).fetch = jest.fn(() =>;
+  s: Record<string, string> = {})): void => {/* TODO: Fix JSX expression */}
+  h: typeof fetch   )}.fetch = jest.fn(() =>;
       Promise.resolve({/* TODO: Fix JSX expression */})
       } as Response);
     ) as typeof fetch;
@@ -188,7 +186,7 @@ export const mockWindow = (override);
   s: Partial<Window> = {}): void => {/* TODO: Fix JSX expression */},
       writabl,;
   e: true,
-    })
+      )}
   }
 }
 /**;
@@ -450,16 +448,14 @@ export class ConsoleSpy {/* TODO: Fix JSX expression */}
  */;
 export interface Deferred<T> {
     promise: Promise<T>,
-  resolve: (value: T) => void
-  }
+  resolve: (value: T) => void,
   reject: (reason?: unknown) => void,}
 }
 export const createDeferred = <T>(): Deferred<T> => {
     let resolve as any: (value: T) => void
   let reject as any: (reason?: unknown) => void,
   const promise = new Promise<T>((res, rej) => {
-    resolve = res
-  }
+    resolve = res,
 export interface Deferred<T> {}
   promise: Promise<T>
   resolve: (value: T) => void
@@ -471,13 +467,13 @@ export const createDeferred = <T>(): Deferred<T> => {}
   const promise = new Promise<T>((res, rej) => {}
     resolve = res;
     reject = rej;}
-  })
+    )}
   return { promise, resolve, reject }
 }
 export interface Deferred<T> {/* TODO: Fix JSX expression */}
 }
 export const createDeferred = <T>(): Deferred<T> => {/* TODO: Fix JSX expression */}
-  })
+    )}
   return { promise, resolve, reject }
 }
 /**;
@@ -496,8 +492,7 @@ export const retryWithBackoff = async <T>(f);
     } catch (error) {
     lastError = error as Error;
       if (i < maxRetries - 1) {
-  initialDelay = 1000
-  }
+  initialDelay = 1000,
 ): Promise<T> => {}
   let lastError: Error
   for (let i = 0; i < maxRetries, i++) {}
@@ -520,8 +515,7 @@ export const retryWithBackoff = async <T>(f);
  */;
 export const measureExecutionTime = async <T>(;
   fn: () => T | Promise<T>): Promise<{ result: T, duration: number }> => {
-    fn: () => T | Promise<T>
-  }
+    fn: () => T | Promise<T>,
 ): Promise<{ result: T, duration: number }> => {}
   const start = performance.now();
   const result = await fn();

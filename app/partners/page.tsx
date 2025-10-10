@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const PartnersPage: React.FC = () => {
-  const partners = [
+  const partners: any[] = [
 import { ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight } from 'lucide-react';
 
 interface Partner {
@@ -13,8 +13,7 @@ interface Partner {
   description: string;
   category: string;
   website: string;
-  tier: 'preferred' | 'certified' | 'strategic';
-}
+  tier: 'preferred' | 'certified' | 'strategic',
 
 const PartnersPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -38,36 +37,31 @@ const PartnersPage: React.FC = () => {
     'Co-innovation projects',
     'Global reach and scalability',
     'Certified expertise and solutions'
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
-  ];
-<<<<<<< HEAD
-  const benefits = [
+>>>>>>> cursor/analyze-improve-and-deploy-application-3150,
+];
+  const benefits: any[] = [
     {
       title: 'Certified Expertise',
       description: 'Our team holds certifications from leading technology partners',
-      icon: CheckCircle
-    },
+      icon: CheckCircle,,
     {
       title: 'Priority Support',
       description: 'Get priority access to partner resources and support channels',
-      icon: CheckCircle
-    },
+      icon: CheckCircle,,
     {
       title: 'Latest Technology',
       description: 'Access to cutting-edge tools and early release features',
-      icon: CheckCircle
-    },
+      icon: CheckCircle,,
     {
       title: 'Cost Optimization',
       description: 'Leverage partner pricing and volume discounts for your projects',
-      icon: CheckCircle
-    }
+      icon: CheckCircle,
   ];
-  const categories = ['All', 'Cloud & AI', 'Hardware & AI', 'Business Software', 'IT Management']
+  const categories: any[] = ['All', 'Cloud & AI', 'Hardware & AI', 'Business Software', 'IT Management']
 
   return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>Partners | Zion Tech Group</title>
         <meta name="description" content="Learn about our technology partnerships and how they benefit our clients with certified expertise and priority support." />
         <meta name="keywords" content="partners, technology partnerships, Microsoft, AWS, Google Cloud, NVIDIA, certified expertise" />
@@ -75,19 +69,14 @@ const PartnersPage: React.FC = () => {
 
       <Navigation />
       
-=======
-
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Our Technology Partners
-              </h1>
+                Our Technology Partners</h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                We work with leading technology companies to deliver the best solutions for our clients.
-              </p>
+                We work with leading technology companies to deliver the best solutions for our clients.</p>
             </div>
 
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -96,8 +85,7 @@ const PartnersPage: React.FC = () => {
                   key={category}
                   className="px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300"
                 >
-                  {category}
-                </button>
+                  {category}</button>
               ))}
             </div>
 
@@ -106,30 +94,23 @@ const PartnersPage: React.FC = () => {
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
                   <div className="aspect-video bg-white/10 rounded-xl mb-4 flex items-center justify-center">
                     <div className="text-4xl opacity-50">🏢</div>
-                  </div>
                   <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
                 </div>
               ))}
             </div>
-
-                  </div>
                 ))}
               </div>
-            </div>
-
-            </div>
-          </div>
         </section>
       </div>
     </>
-  const categories = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))];
-  const tiers = ['all', ...Array.from(new Set(partners.map(partner => partner.tier)))];
+  const categories: any[] = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))];
+  const tiers: any[] = ['all', ...Array.from(new Set(partners.map(partner => partner.tier)))];
 
   const filteredPartners = partners.filter(partner => {
     const matchesCategory = selectedCategory === 'all' || partner.category === selectedCategory;
     const matchesTier = selectedTier === 'all' || partner.tier === selectedTier;
     return matchesCategory && matchesTier;
-  });
+    )};
 
   const getTierColor = (tier: string) => {
     switch (tier) {
@@ -140,8 +121,7 @@ const PartnersPage: React.FC = () => {
       case 'certified':
         return 'from-green-500 to-blue-600';
       default:
-        return 'from-gray-500 to-gray-600';
-    }
+        return 'from-gray-500 to-gray-600',
   };
 
   const getTierIcon = (tier: string) => {
@@ -153,8 +133,7 @@ const PartnersPage: React.FC = () => {
       case 'certified':
         return <CheckCircle className="w-4 h-4" />;
       default:
-        return <Handshake className="w-4 h-4" />;
-    }
+        return <Handshake className="w-4 h-4" />,
   };
 
   return (
@@ -173,8 +152,7 @@ const PartnersPage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             We work with industry leaders to deliver the best AI and IT solutions. 
-            Our strategic partnerships enable us to provide comprehensive, cutting-edge technology.
-          </p>
+            Our strategic partnerships enable us to provide comprehensive, cutting-edge technology.</p>
         </div>
       </section>
 
@@ -184,8 +162,7 @@ const PartnersPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Why Partner With Us?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We offer comprehensive partnership programs that benefit both our partners and our clients
-            </p>
+              We offer comprehensive partnership programs that benefit both our partners and our clients</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -195,8 +172,7 @@ const PartnersPage: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Strategic Collaboration</h3>
               <p className="text-gray-300">
-                Work together to develop innovative solutions that benefit both organizations and their customers.
-              </p>
+                Work together to develop innovative solutions that benefit both organizations and their customers.</p>
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
@@ -205,8 +181,7 @@ const PartnersPage: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Joint Go-to-Market</h3>
               <p className="text-gray-300">
-                Leverage our combined expertise and market presence to reach new customers and expand market share.
-              </p>
+                Leverage our combined expertise and market presence to reach new customers and expand market share.</p>
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
@@ -215,11 +190,8 @@ const PartnersPage: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Certification Programs</h3>
               <p className="text-gray-300">
-                Access to training, certification, and technical resources to stay ahead of technology trends.
-              </p>
+                Access to training, certification, and technical resources to stay ahead of technology trends.</p>
             </div>
-          </div>
-        </div>
       </section>
 
       {/* Partners Grid */}
@@ -233,8 +205,7 @@ const PartnersPage: React.FC = () => {
             >
               {categories.map(category => (
                 <option key={category} value={category}>
-                  {category === 'all' ? 'All Categories' : category}
-                </option>
+                  {category === 'all' ? 'All Categories' : category}</option>
               ))}
             </select>
             <select
@@ -244,8 +215,7 @@ const PartnersPage: React.FC = () => {
             >
               {tiers.map(tier => (
                 <option key={tier} value={tier}>
-                  {tier === 'all' ? 'All Tiers' : tier.charAt(0).toUpperCase() + tier.slice(1)}
-                </option>
+                  {tier === 'all' ? 'All Tiers' : tier.charAt(0).toUpperCase() + tier.slice(1)}</option>
               ))}
             </select>
           </div>
@@ -259,9 +229,7 @@ const PartnersPage: React.FC = () => {
                   </div>
                   <div className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getTierColor(partner.tier)} flex items-center gap-1`}>
                     {getTierIcon(partner.tier)}
-                    {partner.tier.charAt(0).toUpperCase() + partner.tier.slice(1)}
-                  </div>
-                </div>
+                    {partner.tier.charAt(0).toUpperCase() + partner.tier.slice(1)}</div>
 
                 <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
                 <p className="text-gray-300 text-sm mb-4">{partner.category}</p>
@@ -278,7 +246,6 @@ const PartnersPage: React.FC = () => {
                     <ExternalLink className="w-4 h-4" />
                   </a>
                 </div>
-              </div>
             ))}
           </div>
 
@@ -296,8 +263,7 @@ const PartnersPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Partnership Tiers</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We offer different partnership levels to meet the needs of various organizations
-            </p>
+              We offer different partnership levels to meet the needs of various organizations</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -381,35 +347,26 @@ const PartnersPage: React.FC = () => {
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Become Our Partner
-            </h2>
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+              Become Our Partner</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join our partner ecosystem and help us deliver innovative AI and IT solutions to businesses worldwide.
-            </p>
+              Join our partner ecosystem and help us deliver innovative AI and IT solutions to businesses worldwide.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Apply for Partnership
                 <ArrowRight className="inline-block ml-2 w-5 h-5" />
               </button>
               <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
-          </div>
-        </div>
       </section>
     </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
-  );
-};
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73),;
 
 export default PartnersPage;

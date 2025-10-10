@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import React, { useState } from 'react';
 const SolutionsPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
-  const _solutionCategories = [
+  const _solutionCategories: any[] = [
     {
       id: 'ai',
       name: 'AI Solutions',
@@ -179,7 +179,7 @@ $4},
 $4}
     ]
   }
-  const benefits = [
+  const benefits: any[] = [
     {
       icon: Star,
       title: 'Proven Results',
@@ -209,12 +209,11 @@ $4}
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Our Solutions,
+              Our Solutions,</h1>
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Comprehensive technology solutions designed to transform your business operations 
-              and drive innovation across every aspect of your organization.
-            </p>
+              and drive innovation across every aspect of your organization.</p>
           </div>
           {/* Solution Categories Tabs */}
           <div className="mb-12">
@@ -226,8 +225,7 @@ $4}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
                     activeTab === category.id
                       ? `${category.bgColor} ${category.color} border-2 border-current`
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
-                  }`}
+                      : 'bg-slate-800/50 text-gray-300 hover: bg-slate-700/50 border-2 border-transparent',`}
                 >
                   <category.icon className="w-5 h-5 mr-2" />
                   <span className="font-medium">{category.name}</span>
@@ -240,9 +238,9 @@ $4}
   );
 }
   const [activeTab, setActiveTab] = useState('ai');
-  const _solutionCategories = [
+  const _solutionCategories: any[] = [
   // TOD,
-  O: Add items
+  O: Add items,
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -258,8 +256,7 @@ $4}
       bgColo,
   r: 'bg-purple-500/10',
       descriptio,
-  n: 'Transform your business with cutting-edge artificial intelligence'
-    },
+  n: 'Transform your business with cutting-edge artificial intelligence',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -274,8 +271,7 @@ $4}
       bgColo,
   r: 'bg-blue-500/10',
       descriptio,
-  n: 'Robust and scalable IT infrastructure solutions'
-    },
+  n: 'Robust and scalable IT infrastructure solutions',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -290,8 +286,7 @@ $4}
       bgColo,
   r: 'bg-red-500/10',
       descriptio,
-  n: 'Comprehensive security solutions for your digital assets'
-    },
+  n: 'Comprehensive security solutions for your digital assets',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -306,8 +301,7 @@ $4}
       bgColo,
   r: 'bg-yellow-500/10',
       descriptio,
-  n: 'Streamline operations with intelligent automation'
-    }
+  n: 'Streamline operations with intelligent automation',
   ];
   const solutions = {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -330,8 +324,7 @@ $4}
         ico,
   n: BarChart,
         colo,
-  r: 'text-blue-400'
-      },
+  r: 'text-blue-400',,
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -346,8 +339,7 @@ $4}
         ico,
   n: Target,
         colo,
-  r: 'text-pink-400'
-      },
+  r: 'text-pink-400',,
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -362,8 +354,7 @@ $4}
         ico,
   n: Users,
         colo,
-  r: 'text-green-400'
-      },
+  r: 'text-green-400',,
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -378,8 +369,7 @@ $4}
         ico,
   n: Zap,
         colo,
-  r: 'text-yellow-400'
-      }
+  r: 'text-yellow-400',
 //     ],
     i,
   t: [
@@ -399,8 +389,7 @@ $4}
         ico,
   n: Cloud,
         colo,
-  r: 'text-blue-400'
-      },
+  r: 'text-blue-400',,
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -415,8 +404,7 @@ $4}
         ico,
   n: Globe,
         colo,
-  r: 'text-green-400'
-      },
+  r: 'text-green-400',,
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -431,8 +419,7 @@ $4}
         ico,
   n: Zap,
         colo,
-  r: 'text-purple-400'
-      },
+  r: 'text-purple-400',,
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -447,8 +434,7 @@ $4}
         ico,
   n: BarChart,
         colo,
-  r: 'text-orange-400'
-      }
+  r: 'text-orange-400',
 //     ],
     securit,
   y: [
@@ -468,8 +454,7 @@ $4}
         ico,
   n: Shield,
         colo,
-  r: 'text-red-400'
-      },
+  r: 'text-red-400',,
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -484,8 +469,7 @@ $4}
         ico,
   n: Brain,
         colo,
-  r: 'text-purple-400'
-      },
+  r: 'text-purple-400',,
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -500,8 +484,7 @@ $4}
         ico,
   n: CheckCircle,
         colo,
-  r: 'text-green-400'
-      },
+  r: 'text-green-400',,
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -516,8 +499,7 @@ $4}
         ico,
   n: Users,
         colo,
-  r: 'text-blue-400'
-      }
+  r: 'text-blue-400',
 //     ],
     automatio,
   n: [
@@ -537,8 +519,7 @@ $4}
         ico,
   n: Zap,
         colo,
-  r: 'text-yellow-400'
-      },
+  r: 'text-yellow-400',,
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -553,8 +534,7 @@ $4}
         ico,
   n: Cloud,
         colo,
-  r: 'text-blue-400'
-      },
+  r: 'text-blue-400',,
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -569,8 +549,7 @@ $4}
         ico,
   n: Target,
         colo,
-  r: 'text-pink-400'
-      },
+  r: 'text-pink-400',,
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -585,13 +564,12 @@ $4}
         ico,
   n: BarChart,
         colo,
-  r: 'text-green-400'
-      }
+  r: 'text-green-400',
 //     ]
   }
-  const benefits = [
+  const benefits: any[] = [
   // TOD,
-  O: Add items
+  O: Add items,
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -601,8 +579,7 @@ $4}
       titl,
   e: 'Proven Results',
       descriptio,
-  n: '300% average ROI and 95% process automation for our clients'
-    },
+  n: '300% average ROI and 95% process automation for our clients',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -611,8 +588,7 @@ $4}
       titl,
   e: 'Enterprise Security',
       descriptio,
-  n: 'Bank-level security and compliance for all our solutions'
-    },
+  n: 'Bank-level security and compliance for all our solutions',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -621,8 +597,7 @@ $4}
       titl,
   e: 'Global Support',
       descriptio,
-  n: '24/7 support and services across multiple time zones'
-    },
+  n: '24/7 support and services across multiple time zones',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -631,8 +606,7 @@ $4}
       titl,
   e: 'Expert Team',
       descriptio,
-  n: 'Certified professionals with years of industry experience'
-    }
+  n: 'Certified professionals with years of industry experience',
   ];
   return (<div>Coming Soon</div>)
   )
@@ -665,8 +639,7 @@ $4}
                     activeTab === category.id;`
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
-  hover:bg-slate-700/50 border-2 border-transparent'`
-                  }`}
+  hover: bg-slate-700/50 border-2 border-transparent'`,`}
 //                 >
           "
           <category.icon className="w-5 h-5 mr-2" /></category>"
@@ -679,7 +652,6 @@ $4}
                 {solutionCategories.find(cat => cat.id === activeTab)?.description}
               </p>
             </div>
-          </div>
           {/* Solutions Grid */}
           <div className="mb-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -693,7 +665,6 @@ $4}
                       <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>
                       <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
                     </div>
-                  </div>
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
@@ -714,8 +685,7 @@ $4}
                     <div className="flex-1"></div>"
                       <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>"
                       <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
-                    </div>
-                  </div>"
+                    </div>"
                   <div className="mb-4"></div>"
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
   Features:</h4>"
@@ -730,8 +700,7 @@ $4}
                   </div>
                   <div className="flex items-center justify-between">
                     <div className={`text-lg font-bold ${solution.color}`}>
-                      {solution.pricing}
-                    </div>
+                      {solution.pricing}</div>
                     <a
                       href="/contact"
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
@@ -749,15 +718,12 @@ $4}
           <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
                     </a>
                   </div>
-                </div>
               ))}
             </div>
-          </div>
           {/* Benefits Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Why Choose Our Solutions?
-            </h2>
+              Why Choose Our Solutions?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
@@ -783,16 +749,13 @@ $4}
                 </div>
               ))}
             </div>
-          </div>
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h2>
+              Ready to Transform Your Business?</h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Get a free consultation and discover how our solutions can revolutionize your operations 
-              and drive unprecedented growth.
-            </p>
+              and drive unprecedented growth.</p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
@@ -844,16 +807,10 @@ $4}
 // Email Us
           </a>
             </div>
-          </div>
-        </div>
-      </div>
       <Footer />
     </React.Fragment>
     </div>
   ),
 }
 export default SolutionsPage;
-  </a>
-  </a>
-  </a>
   </a>

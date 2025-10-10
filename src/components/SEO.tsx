@@ -72,7 +72,7 @@ export const,
   twitterCard = defaultSEO.twitterCard,
   locale = defaultSEO.locale,
   alternateLocales = [])
-}) => {/* TODO: Fix JSX expression */}
+  )} => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   const seo = {/* TODO: Fix JSX expression */}
@@ -140,5 +140,5 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
   }
   return null;
 }
-export default SEO;`
+export default SEO;`</string>
   </SEOProps>

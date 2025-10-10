@@ -32,8 +32,7 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
    */;
   sanitizeInput(input: string): string {
     ,
-    return input
-  }
+    return input,
   sanitizeInput(input: string): string {}
     return input;
       .replace(/[<>{
@@ -80,8 +79,7 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   }
       window.crypto.getRandomValues(array);}
     } else {
-    // Fallback for Node.js environment
-  }
+    // Fallback for Node.js environment,
   generateSecureToken(length: number = 32): string {}
     const array = new Uint8Array(length);
     if (typeof window !== 'undefined' && window.crypto) {}
@@ -110,8 +108,7 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
     if (validRequests.length >= limit) {
     ,;
     // Remove old requests;
-    const validRequests = requests.filter((time: number) => time > windowStart)
-  }
+    const validRequests = requests.filter((time: number) => time > windowStart),
     if (validRequests.length >= limit) {}
       return false;}
   checkRateLimit(ke,;

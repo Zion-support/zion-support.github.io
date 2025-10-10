@@ -8,8 +8,8 @@ interface ServiceCardProps {
   price?: string
   popular?: boolean
   onSelect?: () => void,
-  className?: string
-  }
+  className?: string;
+}
 const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
@@ -18,7 +18,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   popular = false,
   onSelect,
   className = ''
-}) => {
+  )} => {
   return (
     <div className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group ${className} ${
       popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
@@ -31,8 +31,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       )}
       <div className="mb-4">
         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
-          {title}
-        </h3>
+          {title}</h3>
         <p className="text-gray-300 text-sm">{description}</p>
       </div>
       <div className="space-y-2 mb-6">
@@ -47,7 +46,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <div className="mb-6">
           <div className="text-3xl font-bold text-white mb-1">{price}</div>
           <div className="text-gray-400 text-sm">per month</div>
-        </div>
       )}
       {onSelect && (
         <button

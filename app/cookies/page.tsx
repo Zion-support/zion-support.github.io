@@ -1,13 +1,12 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info } from 'lucide-react';
 
 const CookiesPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024';
   
-  const cookieTypes = [
+  const cookieTypes: any[] = [
     {
       type: 'Essential Cookies',
       icon: Shield,
@@ -18,8 +17,7 @@ const CookiesPage: React.FC = () => {
         'Load balancing cookies',
         'User interface customization'
       ],
-      required: true
-    },
+      required: true,,
     {
       type: 'Analytics Cookies',
       icon: Database,
@@ -30,8 +28,7 @@ const CookiesPage: React.FC = () => {
         'User behavior analysis',
         'Performance monitoring'
       ],
-      required: false
-    },
+      required: false,,
     {
       type: 'Functional Cookies',
       icon: Settings,
@@ -42,8 +39,7 @@ const CookiesPage: React.FC = () => {
         'User preferences',
         'Form data storage'
       ],
-      required: false
-    },
+      required: false,,
     {
       type: 'Marketing Cookies',
       icon: Eye,
@@ -54,42 +50,32 @@ const CookiesPage: React.FC = () => {
         'Email marketing tracking',
         'Campaign performance'
       ],
-      required: false
-    }
+      required: false,
   ];
-  const purposes = [
+  const purposes: any[] = [
     {
       title: 'Website Functionality',
       description: 'Ensure the website works correctly and securely',
-      icon: Shield
-    },
+      icon: Shield,,
     {
       title: 'User Experience',
       description: 'Remember your preferences and settings',
-      icon: Settings
-    },
+      icon: Settings,,
     {
       title: 'Analytics',
       description: 'Understand how users interact with our site',
-      icon: Database
-    },
+      icon: Database,,
     {
       title: 'Marketing',
       description: 'Deliver relevant content and advertisements',
-      icon: Eye
-    }
+      icon: Eye,
   ]
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
   return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>Cookie Policy - Zion Tech Group</title>
                 </div>
-              </div>
-            </div>
-          </div>
       </div>
     </>
   );

@@ -4,10 +4,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Globe, Headphones, Shield, Zap, CheckCircle, Star,  Globe,  Headphones,  Zap } from 'lucide-react';
 const GlobalITSupportPage: React.FC = () => {
-    const features = [],
+    const features: any[] = [],
   return (
-    {// TODO: Add content
-  }
+    {// TODO: Add content,
 }
   ico,
   n: Globe,

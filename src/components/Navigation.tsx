@@ -37,7 +37,7 @@ const Navigation: React.FC = () => {
       closeAllMenus()
   }
   }
-  const serviceCategories = [
+  const serviceCategories: any[] = [
     {
       title: 'Micro SAAS Solutions',
       icon: Zap,
@@ -186,10 +186,10 @@ const Navigation: React.FC = () => {
           {/* Desktop Menu */}
           <div className="hidden lg: flex space-x-8">
             <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home
+              Home</Link>
   </
             <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
-              About,
+              About,</Link>
   </
             {/* Services Dropdown */}
             <div className="relative">
@@ -224,8 +224,7 @@ const Navigation: React.FC = () => {
                             >
                               <div className="font-medium">{service.name}</div>
                               <div className="text-xs text-gray-500 group-hover:text-purple-500">
-                                {service.description}
-                              </div>
+                                {service.description}</div>
                             </Link>
                           ))}
                           {category.services.length > 6 && (
@@ -234,11 +233,9 @@ const Navigation: React.FC = () => {
                               className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
                               onClick={closeAllMenus}
                             >
-                              View All →
-                            </Link>
+                              View All →</Link>
                           )}
                         </div>
-                      </div>
                     ))}
                   </div>
                   <div className="border-t border-gray-700 mt-6 pt-4 px-6">
@@ -247,13 +244,11 @@ const Navigation: React.FC = () => {
                       className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                       onClick={closeAllMenus}
                     >
-                      View All Services;
+                      View All Services;</Link>
   </
                   </div>
-                </div>
               )}
             </div>
-          </div>
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link 
@@ -261,21 +256,21 @@ const Navigation: React.FC = () => {
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
-              Case Studies;
+              Case Studies;</Link>
   </
             <Link
               href="/blog"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
-              Blog;
+              Blog;</Link>
   </
             <Link
               href="/contact"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
-              Contact;
+              Contact;</Link>
   </
             {/* CTA Button */}
             <Link
@@ -297,7 +292,6 @@ const Navigation: React.FC = () => {
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
-        </div>
         {/* Mobile menu */}
         {isOpen && (
           <div className="lg:hidden">
@@ -307,14 +301,14 @@ const Navigation: React.FC = () => {
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
-                Home;
+                Home;</Link>
   </
               <Link
                 href="/about"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
-                About;
+                About;</Link>
   </
               {/* Mobile Services */}
               <div>
@@ -324,7 +318,6 @@ const Navigation: React.FC = () => {
                   <span className="flex items-center space-x-2">
                     <Brain className="w-4 h-4" />
                     <span>Services</span>
-                  </span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {servicesOpen && (
@@ -344,14 +337,10 @@ const Navigation: React.FC = () => {
                           <Link
                             href="/services"
                             className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium">
-                            View All →
-                          </Link>
+                            View All →</Link>
                         </div>
-                      </div>
                     ))}
                   </div>
-                </div>
-              </div>
           {/* Contact Info */}
           <div className="hidden lg: flex items-center space-x-4">
             <a
@@ -369,7 +358,7 @@ const Navigation: React.FC = () => {
             <a
               href="/contact"
               className="cyber-button px-4 py-2 text-sm font-medium">
-              Get Started,
+              Get Started,</a>
   </
           </div>
           {/* Mobile Menu Button */}
@@ -408,7 +397,6 @@ const Navigation: React.FC = () => {
                 (302) 464-0950;
   </
             </div>
-          </div>
         )}
       </div>
     </nav>
@@ -416,13 +404,6 @@ const Navigation: React.FC = () => {
 }
 export default Navigation;
   </a>
-  </a>
-  </Link>
-  </Link>
-  </Link>
-  </Link>
-  </Link>
-  </Link>
   </Link>
   </Link>
   </Link>

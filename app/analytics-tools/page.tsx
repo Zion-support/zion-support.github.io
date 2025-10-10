@@ -3,29 +3,25 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const AnalyticsToolsPage: React.FC = () => {
-  const features = [
+  const features: any[] = [
     {
       icon: Brain,
       title: 'AI-Powered Analytics',
-      description: 'Advanced AI technology to transform your data analysis and business intelligence'
-    },
+      description: 'Advanced AI technology to transform your data analysis and business intelligence',,
     {
       icon: Zap,
       title: 'Real-Time Processing',
-      description: 'Lightning-fast data processing and real-time analytics for optimal insights'
-    },
+      description: 'Lightning-fast data processing and real-time analytics for optimal insights',,
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards for your data'
-    },
+      description: 'Bank-level security with encryption and compliance standards for your data',,
     {
       icon: Globe,
       title: 'Global Scalability',
-      description: 'Worldwide deployment and support for international business analytics'
-    }
+      description: 'Worldwide deployment and support for international business analytics',
   ];
-  const benefits = [
+  const benefits: any[] = [
     'Advanced AI-powered data analysis',
     'Real-time processing and insights',
     'Enterprise-grade security and compliance',
@@ -42,29 +38,23 @@ const AnalyticsToolsPage: React.FC = () => {
         <meta name="description" content="Professional Analytics Tools services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="analytics tools, AI solutions, IT services, Zion Tech Group, data analytics" />
       </Helmet>
-<<<<<<< HEAD
 <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Analytics Tools
+            Analytics Tools</h1>
   </
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced analytics tools. 
-            Powered by cutting-edge AI technology and industry expertise.
-          </p>
+            Powered by cutting-edge AI technology and industry expertise.</p>
       </section>
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Analytics Tools?
-            </h2>
+              Why Choose Our Analytics Tools?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our analytics tools deliver unmatched performance, security, and scalability.
-            </p>
+              Our analytics tools deliver unmatched performance, security, and scalability.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -75,16 +65,14 @@ const AnalyticsToolsPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Key Benefits,
+              Key Benefits,</h2>
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our analytics tools for your business.
-            </p>
+              Experience the power of our analytics tools for your business.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
@@ -94,17 +82,14 @@ const AnalyticsToolsPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-            Ready to Get Started?
-          </h2>
+            Ready to Get Started?</h2>
           <p className="text-xl text-purple-100 mb-8">
-            Contact our experts to discuss your analytics needs and get a customized solution.
-          </p>
+            Contact our experts to discuss your analytics needs and get a customized solution.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               <Phone className="mr-2 h-5 w-5" />
@@ -112,20 +97,14 @@ const AnalyticsToolsPage: React.FC = () => {
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Mail className="mr-2 h-5 w-5" />
-<<<<<<< HEAD
               Email Us
   </
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
           </div>
-        </div>
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
+            Ready to Get Started?</h2>
           <p className="text-xl text-purple-100 mb-8">
-            Contact our experts to discuss your analytics needs and get a customized solution.
-          </p>
+            Contact our experts to discuss your analytics needs and get a customized solution.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               <Phone className="mr-2 h-5 w-5" />
@@ -136,16 +115,10 @@ const AnalyticsToolsPage: React.FC = () => {
               Email Us
   </
           </div>
-        </div>
-      </div>
-    </div>
   ),
 };
 
 export default AnalyticsToolsPage
-  </button>
-  </button>
-  </button>
   </button>
   </section>
   </h2>

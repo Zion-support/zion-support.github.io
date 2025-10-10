@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const GreenITPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('solutions');
-  const tabs = [
+  const tabs: any[] = [
     {
       id: 'solutions',
       name: 'Green Solutions',
@@ -25,7 +25,7 @@ idid: 'certifications',
       bgColor:     ,
 $4}
   ];
-  const greenSolutions = [
+  const greenSolutions: any[] = [
       title: 'Energy-Efficient Data Centers',
       description: 'Design and implement energy-efficient data centers with renewable energy integration',
       icon: Zap,
@@ -85,7 +85,7 @@ titletitle: 'Environmental Monitoring',
         'Environmental compliance'
       impact: 'Achieve 100% environmental transparency',
       pricing: 'Starting at $600/month'
-  const benefits = [
+  const benefits: any[] = [
       icon: TrendingUp,
       title: 'Cost Savings',
       description: 'Reduce operational costs through energy efficiency and resource optimization',
@@ -113,7 +113,7 @@ titletitle: 'Environmental Monitoring',
         'Customer loyalty increase',
         'Investor confidence boost',
         'Talent attraction and retention'
-  const certifications = [
+  const certifications: any[] = [
       name: 'ISO 14001:2015',
       description: 'Environmental Management Systems',
       status:       ,
@@ -123,7 +123,7 @@ namename: 'LEED Platinum',
       description: 'Carbon Footprint Management',
       name: 'Green IT Certification',
       description: 'Sustainable IT Practices',
-  const stats = [
+  const stats: any[] = [
       value: '60%',
       label: 'Carbon Footprint Reduction',
       color:       ,
@@ -136,7 +136,7 @@ valuevalue: '50%',
 valuevalue: '100%',
       label: 'Renewable Energy Options',
       color: 'text-purple-400'
-  const caseStudies = [
+  const caseStudies: any[] = [
       company: 'TechCorp Manufacturing',
       industry: 'Manufacturing',
       challenge: 'High energy consumption in data centers',
@@ -164,12 +164,11 @@ valuevalue: '100%',
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Green IT Solutions,
+              Green IT Solutions,</h1>
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your IT infrastructure into a sustainable, environmentally friendly system 
-              that reduces costs while protecting our planet.
-            </p>
+              that reduces costs while protecting our planet.</p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center text-green-400">
                 <Leaf className="w-5 h-5 mr-2" />
@@ -200,8 +199,7 @@ valuevalue: '100%',
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
                     activeTab === tab.id
                       ? `${tab.bgColor} ${tab.color} border-2 border-current`
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
-                  }`}
+                      : 'bg-slate-800/50 text-gray-300 hover: bg-slate-700/50 border-2 border-transparent',`}
                 >
                   <tab.icon className="w-5 h-5 mr-2" />
                   <span className="font-medium">{tab.name}</span>
@@ -210,7 +208,7 @@ valuevalue: '100%',
           {activeTab === 'solutions' && (
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-                Our Green IT Solutions;
+                Our Green IT Solutions;</h2>
   </
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {greenSolutions.map((solution, index) => (
@@ -310,10 +308,9 @@ import Footer from '../components/Footer';
 const GreenITPage: React.FC = () => {
     return (
     <div>Coming Soon</div>
-  )
-  }
+  ),
   const [activeTab, setActiveTab] = useState('solutions');
-const tabs = [
+const tabs: any[] = [
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -326,8 +323,7 @@ const tabs = [
       colo,
   r: 'text-green-400',
       bgColo,
-  r: 'bg-green-500/10'
-    },
+  r: 'bg-green-500/10',,
       i,
   d: 'benefits',
       nam,
@@ -433,7 +429,7 @@ const tabs = [
   t: 'Achieve 100% environmental transparency',
       pricin,
   g: 'Starting at $600/month'
-  const benefits = [,
+  const benefits: any[] = [,
       ico,
   n: TrendingUp,
       titl,
@@ -471,7 +467,7 @@ const tabs = [
         'Customer loyalty increase',
         'Investor confidence boost',
         'Talent attraction and retention'
-  const certifications = [
+  const certifications: any[] = [
       nam,
   e: 'ISO,
   14001:2015',
@@ -491,7 +487,7 @@ const tabs = [
   e: 'Green IT Certification',
       descriptio,
   n: 'Sustainable IT Practices',
-  const stats = [
+  const stats: any[] = [
       valu,
   e: '60%',
       labe,
@@ -516,7 +512,7 @@ const tabs = [
   l: 'Renewable Energy Options',
       colo,
   r: 'text-purple-400'
-  const caseStudies = [,
+  const caseStudies: any[] = [,
       compan,
   y: 'TechCorp Manufacturing',
       industr,
@@ -598,8 +594,7 @@ const tabs = [
                     activeTab === tab.id;`
                       ? `${tab.bgColor} ${tab.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
-  hover:bg-slate-700/50 border-2 border-transparent'`
-                  }`}
+  hover: bg-slate-700/50 border-2 border-transparent'`,`}
 //                 >
           "
           <tab.icon className="w-5 h-5 mr-2" /></tab>"
@@ -713,32 +708,11 @@ Benefits of Green IT;"
 export default GreenItPage;
   </div>
   </div>
-  </div>
-  </div>
-  </div>
   </li>
   </div>
   </div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
   </h2>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
   </div>
   </div>
   </div>

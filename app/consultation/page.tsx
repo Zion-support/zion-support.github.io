@@ -7,8 +7,7 @@
         'Risk assessment',
         'Team training recommendations'
       ],
-      popular: true
-    },
+      popular: true,,
     {
       id: 'technical',
       name: 'Technical Architecture Review',
@@ -23,8 +22,7 @@
         'Technology stack optimization',
         'Migration planning'
       ],
-      popular: false
-    },
+      popular: false,,
     {
       id: 'digital',
       name: 'Digital Transformation Planning',
@@ -40,10 +38,9 @@
         'Success metrics definition'
       ],
       popular: false
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
-    }
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73,
   ];
-  const process = [
+  const process: any[] = [
     {
       step: '1',
     },
@@ -63,7 +60,7 @@
 
   return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>Consultation Services | Zion Tech Group</title>
         <meta name="description" content="Expert consultation services for AI strategy, cloud migration, and cybersecurity. Get personalized guidance for your technology needs." />
         <meta name="keywords" content="AI consultation, cloud migration, cybersecurity audit, technology consulting, IT strategy" />
@@ -74,11 +71,9 @@
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Expert Consultation Services
-              </h1>
+                Expert Consultation Services</h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Get personalized guidance and strategic insights to transform your business with cutting-edge technology.
-              </p>
+                Get personalized guidance and strategic insights to transform your business with cutting-edge technology.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
@@ -105,19 +100,13 @@
                       </span>
                     </div>
                     <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                      Get Started
-                    </button>
+                      Get Started</button>
                   </div>
-                </div>
               ))}
             </div>
 
-              </div>
-            </div>
-
       description: 'Provide continuous guidance and support throughout implementation.',
-      icon: Clock
-    }
+      icon: Clock,
   ];
 
   const selectedConsultation = consultationTypes.find(type => type.id === selectedType);
@@ -138,18 +127,15 @@
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Get expert guidance on AI strategy, technical architecture, and digital transformation. 
-            Our experienced consultants help you make informed technology decisions.
-          </p>
+            Our experienced consultants help you make informed technology decisions.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Schedule Consultation
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Download Brochure
-            </button>
+              Download Brochure</button>
           </div>
-        </div>
       </section>
 
       {/* Consultation Types */}
@@ -158,27 +144,23 @@
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Consultation Services</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the consultation type that best fits your needs
-            </p>
+              Choose the consultation type that best fits your needs</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {consultationTypes.map((type) => (
               <div
                 key={type.id}
-                className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 cursor-pointer hover:scale-105 ${
+                className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 cursor-pointer hover: scale-105 ${
                   selectedType === type.id
                     ? 'border-blue-400/50 ring-2 ring-blue-400/20'
-                    : 'border-white/20 hover:border-white/40'
-                }`}
+                    : 'border-white/20 hover:border-white/40',`}
                 onClick={() => setSelectedType(type.id)}
               >
                 {type.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </div>
-                  </div>
+                      Most Popular</div>
                 )}
 
                 <div className="text-center mb-6">
@@ -188,7 +170,6 @@
                     <span className="text-3xl font-bold text-white">{type.price}</span>
                     <span className="text-gray-400">{type.duration}</span>
                   </div>
-                </div>
 
                 <ul className="space-y-3">
                   {type.features.map((feature, index) => (
@@ -201,7 +182,6 @@
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Selected Consultation Details */}
@@ -241,18 +221,13 @@
                     <Users className="w-5 h-5 text-blue-400" />
                     <span>Team of 2-3 experts</span>
                   </div>
-                </div>
-                <button className="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
-                  Book Now
-                </button>
+                <button className="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
+                  Book Now</button>
 >>>>>>> cursor/website-audit-and-update-with-deployment-1f73
               </div>
-            </div>
-          </div>
         </section>
     </>
-  );
-};
+  ),;
 
       )}
 
@@ -262,8 +237,7 @@
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Our Process</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A structured approach to delivering exceptional consultation services
-            </p>
+              A structured approach to delivering exceptional consultation services</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -278,7 +252,6 @@
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Contact Information */}
@@ -316,35 +289,27 @@
               <p className="text-gray-300">San Francisco, CA</p>
               <p className="text-sm text-gray-400">By Appointment</p>
             </div>
-          </div>
-        </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Transform Your Business Today
-            </h2>
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+              Transform Your Business Today</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let our expert consultants help you navigate the complex world of AI and technology.
-            </p>
+              Let our expert consultants help you navigate the complex world of AI and technology.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Schedule Free Consultation
                 <ArrowRight className="inline-block ml-2 w-5 h-5" />
               </button>
               <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Case Studies
-              </button>
+                View Case Studies</button>
             </div>
-          </div>
-        </div>
       </section>
     </div>
-  );
-};
+  ),;
 
 export default ConsultationPage;
 >>>>>>> cursor/website-audit-and-update-with-deployment-1f73

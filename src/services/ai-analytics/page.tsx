@@ -4,7 +4,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AIAnalyticsPage: React.FC = () => {
-  const features = [
+  const features: any[] = [
     {
       icon: Brain,
       title: 'Predictive Analytics',
@@ -23,10 +23,9 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AIAnalyticsPage: React.FC = () => {
-    const features = [],
+    const features: any[] = [],
   return (
-    {// TODO: Add content
-  }
+    {// TODO: Add content,
 }
   ico,
   n: Brain,
@@ -82,7 +81,7 @@ ico,
         'Automated responses'
     }
   ];
-  const useCases = [
+  const useCases: any[] = [
       title: 'Sales Performance Analysis',
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
       icon: TrendingUp,
@@ -97,7 +96,7 @@ titletitle: 'Financial Forecasting',
 titletitle: 'Operational Efficiency',
       description: 'Optimize business processes and identify areas for improvement',
       color: 'text-yellow-400'
-  const pricingTiers = [
+  const pricingTiers: any[] = [
       name: 'Starter',
       price: '$1,500',
       period: '/month',
@@ -136,7 +135,7 @@ namename: 'Professional',
         'SLA guarantees'
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/10'
-  const benefits = [
+  const benefits: any[] = [
       icon: Star,
       title: '95% Accuracy',
       description:       ,
@@ -147,7 +146,7 @@ title$5: 'Actionable Insights',
 icon$5: Award,
       title: 'Proven Results',
       description: '300% average ROI for our analytics clients'
-  const useCases = [
+  const useCases: any[] = [
       title: 'Sales Performance Analysis',
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
       icon: TrendingUp,
@@ -160,12 +159,11 @@ icon$5: Award,
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              AI Analytics Services,
+              AI Analytics Services,</h1>
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your data into actionable insights with our advanced AI-powered analytics platform. 
-              Make data-driven decisions that drive growth and optimize performance.
-            </p>
+              Make data-driven decisions that drive growth and optimize performance.</p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center text-cyan-400">
                 <Brain className="w-5 h-5 mr-2" />
@@ -180,7 +178,7 @@ icon$5: Award,
           {/* Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Key Features;
+              Key Features;</h2>
   </
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
@@ -198,7 +196,7 @@ icon$5: Award,
 // AI Analytics Services;
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
+            Coming Soon;</p>
   </
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center text-cyan-400">
@@ -252,7 +250,7 @@ icon$5: Award,
                   {tier.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">
-                        Most Popular;
+                        Most Popular;</span>
   </
                   )}
                   <div className="text-center mb-6">
@@ -269,11 +267,10 @@ icon$5: Award,
                     href="/contact"
                     className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
                       tier.popular
-                        ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'
-                    }`}
+                        ? 'bg-cyan-400 text-slate-900 hover: bg-cyan-300'
+                        : 'bg-slate-700 text-white hover:bg-slate-600',`}
                   >
-                    Get Started;
+                    Get Started;</a>
   </
           {/* Benefits */}
               Why Choose Our AI Analytics?
@@ -348,11 +345,9 @@ export default AIAnalyticsPage;
                         ? 'bg-cyan-400 text-slate-900,
   hover:bg-cyan-300'
                         : 'bg-slate-700 text-white,
-  hover:bg-slate-600'`
-                    }`}
+  hover: bg-slate-600'`,`}
 //                   >
-//                     Get Started;
-          </a>
+//                     Get Started;</a>
 {/* Benefits */}
               Why Choose Our AI Analytics?
               {benefits.map((benefit, index) => ()}"
@@ -385,30 +380,13 @@ export default AiAnalyticsPage;
   </p>
   </h2>
   </div>
-  </div>
-  </div>
   </a>
   </li>
   </ul>
   </div>
   </div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
   </p>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
   </div>
   </div>
   </div>

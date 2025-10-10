@@ -3,14 +3,12 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
-}
+  fallback?: ReactNode,
 
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
-}
+  errorInfo?: ErrorInfo,
 
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -25,8 +23,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
-    })
+      errorInfo;
+  )}
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -35,11 +33,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Send error to analytics in production
     if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void   )}.gtag;
       gtag('event', 'exception', {
         description: error.message,
-        fatal: false
-      })
+        fatal: false,)
     }
   }
 
@@ -59,18 +56,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </div>
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
+              We're sorry, but something unexpected happened. Please try refreshing the page.</p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              className="bg-cyan-500 hover: bg-cyan-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
-              Refresh Page
-            </button>
+              Refresh Page</button>
           </div>
-        </div>
-      );
-    }
+      ),
 
     return this.props.children;
   }

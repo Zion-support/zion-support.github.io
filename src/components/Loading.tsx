@@ -9,9 +9,6 @@ const Loading: React.FC = () => {
           <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
           <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '0.2 s' }}></div>
           <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse" style={{ animationDelay: '0.4 s' }}></div>
-        </div>
-      </div>
-    </div>
   );
 }
 export default Loading;

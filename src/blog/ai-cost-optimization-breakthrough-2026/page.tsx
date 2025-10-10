@@ -18,15 +18,13 @@ export const metadata = {
         url: '/og-ai-cost-optimization-2026.jpg',
         width: 1200,
         height: 630,
-        alt: 'AI Cost Optimization Breakthrough 2026 - 90% Cost Reduction'
-      }]
+        alt: 'AI Cost Optimization Breakthrough 2026 - 90% Cost Reduction',]
   },
   twitter: {
     card: "summary_large_image",
     title: "AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90%",
     description: "Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains for Fortune 500 companies.",
-    images: ['/og-ai-cost-optimization-2026.jpg']
-  }
+    images: ['/og-ai-cost-optimization-2026.jpg'],
 }
 export default function AICostOptimizationBreakthrough2026() {
   return (
@@ -39,7 +37,7 @@ export default function AICostOptimizationBreakthrough2026() {
           <Link 
             to="/contact" 
             className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors">
-            Contact Us,
+            Contact Us,</Link>
   </
           </div>"
           <div className="text-center mb-8"></div>"
@@ -139,20 +137,14 @@ export default function AICostOptimizationBreakthrough2026() {
               <div className="space-x-4">
                 <a
                   href="/contact" className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover: bg-green-700 transition-colors">
-// Get Cost Assessment
-          </a>
+// Get Cost Assessment</a>
 href="/services" className="inline-block bg-white text-green-600 px-6 py-3 rounded-lg border-2 border-green-600 hover:bg-green-50 transition-colors">
-                  Explore AI Services
-  ),
+                  Explore AI Services),
 }
 export default AiCostOptimizationBreakthrough2026Page;
 export default AICostOptimizationBreakthrough2026Page;
   </div>
   </p>
   </li>
-  </li>
-  </li>
-  </li>
   </Link>
-  </div>
   </div>

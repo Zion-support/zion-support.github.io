@@ -3,30 +3,26 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const PagePage: React.FC = () => {
-    const features = [
+    const features: any[] = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-  },
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',,
     {
     icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-  },
+      description: 'Lightning-fast processing and real-time analytics for optimal results',,
     {
     icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-  },
+      description: 'Bank-level security with encryption and compliance standards',,
     {
     icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-  }
+      description: 'Worldwide deployment and support for international businesses',
     }
   ]
-const benefits = [
+const benefits: any[] = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -50,45 +46,34 @@ return (
             </h1>
             <p>
               Transform your business with our advanced page solutions.;
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
+              Powered by cutting-edge AI technology and industry expertise.</p>
             </h2>
             <p>
-              Our page solutions deliver unmatched performance, security, and scalability.
-            </p>
+              Our page solutions deliver unmatched performance, security, and scalability.</p>
           </div>
-          </div>
-        </div>
       </section>
             </h2>
             <p>
-              Experience the power of our page solutions for your business.
-            </p>
+              Experience the power of our page solutions for your business.</p>
           </div>
-          </div>
-        </div>
       </section>
               Ready to Get Started?
             </h2>
             <p>
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
+              Contact our experts to discuss your page needs and get a customized solution.</p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
                 <Phone>
-                Call Now
+                Call Now</Phone>
               </button>
               <button>
                 <Mail>
-                Email Us
+                Email Us</Mail>
               </button>
             </div>
-          </div>
-        </div>
       </section>
     </div>
   ),
 };
 
 export default PagePage;
-

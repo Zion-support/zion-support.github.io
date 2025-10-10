@@ -3,8 +3,7 @@ import { Helmet } from 'react-helmet-async';
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
 const,
-  SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */}))} => {/* TODO: Fix JSX expression */}
     },
     addres,
   s: {/* TODO: Fix JSX expression */}

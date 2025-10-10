@@ -4,10 +4,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Brain, Code, FlaskConical, Target, CheckCircle, Star,  Brain,  Code,  Target } from 'lucide-react';
 const AIResearchDevelopmentPage: React.FC = () => {
-    const features = [],
+    const features: any[] = [],
   return (
-    {// TODO: Add content
-  }
+    {// TODO: Add content,
 }
   ico,
   n: Brain,
@@ -42,8 +41,7 @@ const AIResearchDevelopmentPage: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-// AI Research & Development
-          </h1>"
+// AI Research & Development</h1>"
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse"></p>
 // Cutting-Edge AI Research and Custom Development,
           </p>"
@@ -54,8 +52,7 @@ const AIResearchDevelopmentPage: React.FC = () => {
             <a
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
-//               Start Research
-          </a>
+//               Start Research</a>
               href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
 <Brain className="w-5 h-5" />
               +1 302 464 0950,

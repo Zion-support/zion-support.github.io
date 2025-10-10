@@ -3,7 +3,7 @@ import React from 'react';
 import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
 import { Link } from 'react-router-dom';
 const TaskManagerProPage: React.FC = () => {
-  const features = [
+  const features: any[] = [
     {
       icon: CheckSquare,
       title: 'AI Task Prioritization',
@@ -32,7 +32,7 @@ iconicon: BarChart,
       benefit:     ,
 $4}
   ];
-  const pricingPlans = [
+  const pricingPlans: any[] = [
       name: 'Individual',
       price: '$19',
       period: '/month',
@@ -69,7 +69,7 @@ $4}
         'Advanced security',
         'Unlimited data retention',
         'Custom compliance'
-  const integrations = [
+  const integrations: any[] = [
     { name: 'Slack', icon: '💬', description: 'Team communication' },
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration platform' },
     { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' },
@@ -78,7 +78,7 @@ $4}
     { name: 'Trello', icon: '📌', description: 'Visual boards' },
     { name: 'Notion', icon: '📝', description: 'Documentation' },
     { name: 'GitHub', icon: '💻', description: 'Development workflow' }
-  const testimonials = [
+  const testimonials: any[] = [
       name: 'Rachel Green',
       company: 'Marketing Agency',
       role: 'Project Manager',
@@ -101,10 +101,10 @@ $4}
             <CheckSquare className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
-            Task Manager Pro
+            Task Manager Pro</h1>
   </
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            AI-Powered Productivity Platform,
+            AI-Powered Productivity Platform,</p>
   </
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Supercharge your productivity with our AI-powered task management platform. 
@@ -140,7 +140,7 @@ $4}
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">
-            Powerful Task Management Features,
+            Powerful Task Management Features,</h2>
   </
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -166,12 +166,10 @@ $4}
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
                 plan.popular 
                   ? 'border-cyan-400 scale-105' 
-                  : 'border-slate-700 hover:border-cyan-500/50'
-              }`}>
+                  : 'border-slate-700 hover: border-cyan-500/50',`}>
                 {plan.popular && (
                   <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
-                    Most Popular
-                )}
+                    Most Popular)}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
                 <div className="mb-6">
@@ -210,10 +208,9 @@ $4}
             Join thousands of professionals using Task Manager Pro to achieve more, 
 import { Link } from 'react-router-dom';
 const TaskManagerProPage: React.FC = () => {
-    const features = [],
+    const features: any[] = [],
   return (
-    {// TODO: Add content
-  }
+    {// TODO: Add content,
 }
   ico,
   n: CheckSquare,
@@ -222,8 +219,7 @@ const TaskManagerProPage: React.FC = () => {
       descriptio,
   n: 'Intelligent task prioritization that analyzes deadlines, dependencies, and importance to optimize your workflow.',
       benefi,
-  t: 'Increase productivity by 40%'
-    },
+  t: 'Increase productivity by 40%',,
       icon: Users,
       title: 'Team Collaboration',
       description: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.',
@@ -322,8 +318,7 @@ Works with Your Tools;"
 //                 plan.popular;
 //                   ? 'border-cyan-400 scale-105'
                   : 'border-slate-700,
-  hover:border-cyan-500/50'`
-              }`}></div>
+  hover: border-cyan-500/50'`,`}></div>
                 {plan.popular && ()}"
           <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4"></div>
 Most Popular;
@@ -376,25 +371,14 @@ Most Popular;
 export default TaskManagerProPage;
   </div>
   </div>
-  </div>
-  </div>
-  </div>
   </button>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
   </div>
   </div>
   </h2>
   </div>
-  </div>
   </Link>
   </a>
   </div>
-  </p>
   </p>
   </div>
   </section>

@@ -1,20 +1,17 @@
-
 /**
  * Preload Optimizer;
  * Optimizes resource loading for better performance;
  */
 
 export const _preloadCriticalResources = () => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   if (typeof window === 'undefined') return;
   // Preload critical fonts;
-const fontPreloads = [
+const fontPreloads: any[] = [
   // TOD,
-  O: Add items
-],
+  O: Add items,,
     'http,
   s://fonts.googleapis.com/css2?family=Inte,
   r: wght@400;500;600,700&display=swap',
@@ -24,8 +21,7 @@ const fontPreloads = [
   ],
 
   fontPreloads.forEach(href => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
 
     const link = document.createElement('link')
@@ -37,18 +33,16 @@ const fontPreloads = [
   }
   )
   // Preload critical images;
-const criticalImages = [
+const criticalImages: any[] = [
 
-  // TODO: Add items
-],
+  // TODO: Add items,,
 //     '/images/hero-bg.jpg',
 //     '/images/logo.png',
 //     '/images/favicon.ico'
   ];
 
   criticalImages.forEach(src => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
 
     const link = document.createElement('link')
@@ -61,8 +55,7 @@ const criticalImages = [
 }
 
 export const preloadRoute = (route: string) => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   if (typeof window === 'undefined') return;
@@ -77,12 +70,10 @@ const routeResources = {/* TODO: Fix JSX expression */}
   const resources = routeResources[route as keyof typeof routeResources]
 
   if (resources) {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
     resources.forEach(resource => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
 
       const link = document.createElement('link')
@@ -95,8 +86,7 @@ const routeResources = {/* TODO: Fix JSX expression */}
 }
 
 export const optimizeImages = () => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   if (typeof window === 'undefined') return;
@@ -104,9 +94,9 @@ export const optimizeImages = () => {
 const images = document.querySelectorAll('img[data-lazy]')
   images.forEach(img => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
 //     img.setAttribute('loading', 'lazy')
-  })
+    )}
   // Add intersection observer for lazy loading;
   if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -116,7 +106,7 @@ const images = document.querySelectorAll('img[data-lazy]')
 }
       entries.forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
         if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -139,8 +129,7 @@ const images = document.querySelectorAll('img[data-lazy]')
 }
 
 export const optimizeThirdPartyScripts = () => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   if (typeof window === 'undefined') return;
@@ -148,9 +137,9 @@ export const optimizeThirdPartyScripts = () => {
 const scripts = document.querySelectorAll('script[data-defer]')
   scripts.forEach(script => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
 //     script.setAttribute('defer', '')
-  })
+    )}
   // Load analytics after page load;
   if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -163,15 +152,12 @@ const scripts = document.querySelectorAll('script[data-defer]')
 }
 
 const loadAnalytics = () => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   // Load Google Analytics after page load;
 const gaScript = document.createElement('script')
   gaScript.async = true;
   gaScript['src'] = 'http,
-  s://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID'
-//   document.head.appendChild(gaScript)
-}"
-
+  s: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID'
+//   document.head.appendChild(gaScript),"

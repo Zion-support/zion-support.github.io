@@ -2,7 +2,7 @@ import React from 'react';
 import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare} from 'lucide-react';
 import React from 'react';
 const AISocialMediaManagerPage: React.FC = () => {
-  const features = [
+  const features: any[] = [
     {
       icon: Share2,
       title: 'AI Content Creation',
@@ -25,20 +25,20 @@ icon$5: MessageSquare,
       description:     ,
 $4}
   ];
-  const benefits = [
+  const benefits: any[] = [
     'Increase engagement by 300%',
     'Save 20+ hours per week',
     'Grow followers by 150%',
     'Boost brand awareness by 200%',
     'Improve content performance by 250%'
-  const platforms = [
+  const platforms: any[] = [
     { name: 'Facebook', icon: '📘', color: 'text-blue-500' },
     { name: 'Instagram', icon: '📷', color: 'text-pink-500' },
     { name: 'Twitter', icon: '🐦', color: 'text-blue-400' },
     { name: 'LinkedIn', icon: '💼', color: 'text-blue-600' },
     { name: 'TikTok', icon: '🎵', color: 'text-black' },
     { name: 'YouTube', icon: '📺', color: 'text-red-500' }
-  const pricing = [
+  const pricing: any[] = [
       name: 'Starter',
       price: '$29',
       period: '/month',
@@ -80,24 +80,23 @@ $4}
               AI-Powered Social Media Management;
   </
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
-              AI Social Media Manager,
+              AI Social Media Manager,</h1>
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Automate your social media presence with AI that creates, schedules, and optimizes 
-              content across all platforms to maximize engagement and grow your audience.
-            </p>
+              content across all platforms to maximize engagement and grow your audience.</p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300">
-                Watch Demo,
+                Watch Demo,</button>
   </
       {/* Platforms Section */}
       <section className="py-16 px-4 bg-slate-800/30">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              All Platforms, One Solution;
+              All Platforms, One Solution;</h2>
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Manage all your social media accounts from a single, intelligent dashboard
@@ -107,8 +106,7 @@ $4}
                 <div className="w-16 h-16 bg-slate-800/50 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-3xl">{platform.icon}</span>
                 <h3 className={`font-semibold ${platform.color}`}>
-                  {platform.name}
-                </h3>
+                  {platform.name}</h3>
             ))}
       {/* Features Section */}
       <section className="py-16 px-4">
@@ -150,8 +148,7 @@ $4}
               }`}>
                 {plan.popular && (
                   <div className="bg-pink-500 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full text-center mb-4">
-                    Most Popular
-                )}
+                    Most Popular)}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
                 <div className="mb-6">
@@ -175,36 +172,25 @@ $4}
             Ready to Get Started?
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of brands already using AI Social Media Manager to grow their presence
-              Contact Sales
-  ),
+              Contact Sales),
 }
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
-export default AISocialMediaManagerPage;
-  </p>
+export default AISocialMediaManagerPage;</p>
   </h2>
   </div>
   </section>
   </button>
   </div>
-  </div>
-  </div>
-  </div>
   </button>
   </p>
   </h3>
   </div>
-  </div>
-  </div>
   </p>
   </h3>
   </div>
-  </div>
-  </div>
   </section>
-  </div>
-  </div>
   </div>
   </p>
   </h2>
@@ -212,8 +198,6 @@ export default AISocialMediaManagerPage;
   </button>
   </div>
   </h1>
-  </div>
-  </div>
   </div>
   </section>
   </div>

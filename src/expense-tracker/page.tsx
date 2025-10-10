@@ -3,7 +3,7 @@ import React from 'react';
 import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react';
 import { Link } from 'react-router-dom';
 const ExpenseTrackerPage: React.FC = () => {
-  const features = [
+  const features: any[] = [
     {
       icon: Receipt,
       title: 'Smart Receipt Scanning',
@@ -32,7 +32,7 @@ iconicon: Shield,
       benefit:     ,
 $4}
   ];
-  const pricingPlans = [
+  const pricingPlans: any[] = [
       name: 'Personal',
       price: '$9',
       period: '/month',
@@ -69,7 +69,7 @@ $4}
         'White-label options',
         'Unlimited data retention',
         'Custom compliance rules'
-  const integrations = [
+  const integrations: any[] = [
     { name: 'QuickBooks', icon: '📊', description: 'Accounting software' },
     { name: 'Xero', icon: '💰', description: 'Cloud accounting' },
     { name: 'Sage', icon: '📈', description: 'Business management' },
@@ -78,7 +78,7 @@ $4}
     { name: 'Slack', icon: '💬', description: 'Team communication' },
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration' },
     { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' }
-  const testimonials = [
+  const testimonials: any[] = [
       name: 'Michael Johnson',
       company: 'Small Business Owner',
       role: 'CEO',
@@ -101,10 +101,10 @@ $4}
             <Receipt className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
-            AI Expense Tracker
+            AI Expense Tracker</h1>
   </
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            Smart Financial Management,
+            Smart Financial Management,</p>
   </
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Transform your expense management with AI-powered receipt scanning, automated categorization, 
@@ -140,7 +140,7 @@ $4}
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">
-            Powerful Expense Management Features,
+            Powerful Expense Management Features,</h2>
   </
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -166,12 +166,10 @@ $4}
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
                 plan.popular 
                   ? 'border-cyan-400 scale-105' 
-                  : 'border-slate-700 hover:border-cyan-500/50'
-              }`}>
+                  : 'border-slate-700 hover: border-cyan-500/50',`}>
                 {plan.popular && (
                   <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
-                    Most Popular
-                )}
+                    Most Popular)}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
                 <div className="mb-6">
@@ -210,10 +208,9 @@ $4}
             Join thousands of businesses using AI Expense Tracker to streamline financial 
 import { Link } from 'react-router-dom';
 const ExpenseTrackerPage: React.FC = () => {
-    const features = [],
+    const features: any[] = [],
   return (
-    {// TODO: Add content
-  }
+    {// TODO: Add content,
 }
   ico,
   n: Receipt,
@@ -222,8 +219,7 @@ const ExpenseTrackerPage: React.FC = () => {
       descriptio,
   n: 'AI-powered receipt scanning that automatically extracts expense data, categorizes transactions, and creates detailed reports.',
       benefi,
-  t: 'Save 8+ hours per month'
-    },
+  t: 'Save 8+ hours per month',,
       icon: TrendingUp,
       title: 'Real-time Analytics',
       description: 'Get instant insights into your spending patterns with interactive charts, budget tracking, and financial forecasting.',
@@ -322,8 +318,7 @@ Integrates with Your Tools;"
 //                 plan.popular;
 //                   ? 'border-cyan-400 scale-105'
                   : 'border-slate-700,
-  hover:border-cyan-500/50'`
-              }`}></div>
+  hover: border-cyan-500/50'`,`}></div>
                 {plan.popular && ()}"
           <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4"></div>
 Most Popular;
@@ -376,25 +371,14 @@ Most Popular;
 export default ExpenseTrackerPage;
   </div>
   </div>
-  </div>
-  </div>
-  </div>
   </button>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
   </div>
   </div>
   </h2>
   </div>
-  </div>
   </Link>
   </a>
   </div>
-  </p>
   </p>
   </div>
   </section>

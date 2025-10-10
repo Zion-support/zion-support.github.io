@@ -6,75 +6,66 @@ import { Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, P
 const CommunityPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
 
-  const communityStats = [
+  const communityStats: any[] = [
     { icon: Users, value: '5,000+', label: 'Active Members' },
     { icon: MessageCircle, value: '50+', label: 'Discussions Daily' },
     { icon: Calendar, value: '12', label: 'Events Monthly' },
     { icon: Star, value: '4.9', label: 'Average Rating' }
   ];
-  const events = [
+  const events: any[] = [
     {
       title: 'AI Development Workshop',
       date: '2024-02-15',
       time: '2:00 PM EST',
       type: 'Workshop',
       attendees: 150,
-      description: 'Learn advanced AI development techniques and best practices'
-    },
+      description: 'Learn advanced AI development techniques and best practices',,
     {
       title: 'Cloud Infrastructure Meetup',
       date: '2024-02-20',
       time: '6:00 PM EST',
       type: 'Meetup',
       attendees: 75,
-      description: 'Discuss cloud architecture and deployment strategies'
-    },
+      description: 'Discuss cloud architecture and deployment strategies',,
     {
       title: 'SaaS Business Growth Panel',
       date: '2024-02-25',
       time: '3:00 PM EST',
       type: 'Panel',
       attendees: 200,
-      description: 'Expert panel on scaling SaaS businesses'
-    }
+      description: 'Expert panel on scaling SaaS businesses',
   ];
-  const forums = [
+  const forums: any[] = [
     {
       name: 'AI Services',
       description: 'Discuss AI development, machine learning, and automation',
       posts: 1250,
-      members: 1800
-    },
+      members: 1800,,
     {
       name: 'IT Services',
       description: 'Cloud infrastructure, DevOps, and system administration',
       posts: 980,
-      members: 1200
-    },
+      members: 1200,,
     {
       name: 'Micro SaaS',
       description: 'Building and scaling micro SaaS applications',
       posts: 750,
-      members: 900
-    },
+      members: 900,,
     {
       name: 'General Discussion',
       description: 'General tech discussions and community updates',
       posts: 2100,
-      members: 3000
-    }
+      members: 3000,
   ];
-  const benefits = [
+  const benefits: any[] = [
     {
       icon: Users,
       title: 'Network with Peers',
-      description: 'Connect with like-minded developers and entrepreneurs'
-    },
+      description: 'Connect with like-minded developers and entrepreneurs',,
     {
       icon: MessageCircle,
       title: 'Expert Support',
-      description: 'Get help from our team of experts and community members'
-    },
+      description: 'Get help from our team of experts and community members',,
     {
       icon: Calendar,
       title: 'Exclusive Events',
@@ -83,13 +74,12 @@ const CommunityPage: React.FC = () => {
     {
       icon: Award,
       title: 'Recognition',
-      description: 'Showcase your projects and get community recognition'
-    }
+      description: 'Showcase your projects and get community recognition',
   ]
 
   return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>Community - Zion Tech Group</title>
         <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts. Learn, share, and grow together." />
         <meta name="keywords" content="community, developers, tech community, networking, events, forums, AI community" />
@@ -105,34 +95,28 @@ const CommunityPage: React.FC = () => {
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-white neon-text-enhanced">
-                Community
-              </h1>
+                Community</h1>
             </div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Join our vibrant community of developers, entrepreneurs, and tech enthusiasts. 
-              Connect, learn, and grow together.
-            </p>
+              Connect, learn, and grow together.</p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="#join"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
               >
-                Join Community
-              </a>
+                Join Community</a>
               <a
                 href="#events"
                 className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                View Events
-              </a>
+                View Events</a>
               <a
                 href="#forums"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
               >
-                Browse Forums
-              </a>
+                Browse Forums</a>
             </div>
-          </div>
 
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
@@ -141,7 +125,6 @@ const CommunityPage: React.FC = () => {
                 <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
                 <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>
-              </div>
             ))}
           </div>
 
@@ -160,14 +143,11 @@ const CommunityPage: React.FC = () => {
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     activeTab === tab.id
                       ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                  }`}
+                      : 'bg-slate-800 text-gray-300 hover: bg-slate-700',`}
                 >
-                  {tab.name}
-                </button>
+                  {tab.name}</button>
               ))}
             </div>
-          </div>
 
           {/* Overview Tab */}
           {activeTab === 'overview' && (
@@ -178,8 +158,7 @@ const CommunityPage: React.FC = () => {
                   Our community is a place where developers, entrepreneurs, and tech enthusiasts come together 
                   to share knowledge, collaborate on projects, and support each other's growth. Whether you're 
                   just starting out or you're a seasoned professional, you'll find value in our diverse and 
-                  welcoming community.
-                </p>
+                  welcoming community.</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-3">What You'll Find</h3>
@@ -223,9 +202,6 @@ const CommunityPage: React.FC = () => {
                       </li>
                     </ul>
                   </div>
-                </div>
-              </div>
-            </div>
           )}
 
           {/* Events Tab */}
@@ -254,13 +230,10 @@ const CommunityPage: React.FC = () => {
                               {event.attendees} attendees
                             </span>
                           </div>
-                        </div>
                         <div className="ml-6">
                           <span className="px-3 py-1 bg-cyan-600 text-white text-xs font-semibold rounded">
-                            {event.type}
-                          </span>
+                            {event.type}</span>
                         </div>
-                      </div>
                       <a
                         href="#"
                         className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 inline-flex items-center"
@@ -271,8 +244,6 @@ const CommunityPage: React.FC = () => {
                     </div>
                   ))}
                 </div>
-              </div>
-            </div>
           )}
 
           {/* Forums Tab */}
@@ -296,7 +267,6 @@ const CommunityPage: React.FC = () => {
                             {forum.members} members
                           </span>
                         </div>
-                      </div>
                       <a
                         href="#"
                         className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center"
@@ -307,8 +277,6 @@ const CommunityPage: React.FC = () => {
                     </div>
                   ))}
                 </div>
-              </div>
-            </div>
           )}
 
           {/* Benefits Tab */}
@@ -323,16 +291,12 @@ const CommunityPage: React.FC = () => {
                         <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
                           <benefit.icon className="w-6 h-6 text-white" />
                         </div>
-                      </div>
                       <div>
                         <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                         <p className="text-gray-300">{benefit.description}</p>
                       </div>
-                    </div>
                   ))}
                 </div>
-              </div>
-            </div>
           )}
 
           {/* Join Community CTA */}
@@ -340,23 +304,19 @@ const CommunityPage: React.FC = () => {
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Join Our Community?</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of developers and entrepreneurs who are already part of our vibrant community. 
-              Start connecting, learning, and growing today.
-            </p>
+              Start connecting, learning, and growing today.</p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
               >
-                Join Now
-              </a>
+                Join Now</a>
               <a
                 href="/contact"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                Learn More
-              </a>
+                Learn More</a>
             </div>
-          </div>
 
           {/* Contact Information */}
           <div className="cyber-card-enhanced p-8 mt-8">
@@ -367,30 +327,20 @@ const CommunityPage: React.FC = () => {
                 <div>
                   <div className="text-white font-semibold">Email</div>
                   <a href="mailto:community@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
-                    community@ziontechgroup.com
-                  </a>
+                    community@ziontechgroup.com</a>
                 </div>
-              </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-6 h-6 text-cyan-400" />
                 <div>
                   <div className="text-white font-semibold">Phone</div>
                   <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">
-                    +1 (302) 464-0950
-                  </a>
+                    +1 (302) 464-0950</a>
                 </div>
-              </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-6 h-6 text-cyan-400" />
                 <div>
                   <div className="text-white font-semibold">Address</div>
                   <div className="text-gray-300">364 E Main St STE 1008, Middletown, DE 19709</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </>
   );
 };

@@ -4,10 +4,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Shield, Target, Zap, Settings, CheckCircle, Star,  Shield,  Target,  Settings } from 'lucide-react';
 const AISecurityMonitorPage: React.FC = () => {
-    const features = [],
+    const features: any[] = [],
   return (
-    {// TODO: Add content
-  }
+    {// TODO: Add content,
 }
   ico,
   n: Shield,

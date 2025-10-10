@@ -13,8 +13,7 @@ const __collectPerformanceMetrics = () => {
   const paint = window.performance.getEntriesByType('paint');
   return {
     loadTime: navigation.loadEventEnd - navigation.navigationStart,
-    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
-  }
+    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
 // Helper functions
 const calculatePerformanceScore = () => {
     const metrics = performanceOptimizer.getMetrics();
@@ -32,8 +31,8 @@ interface NetworkConnection {
   effectiveType?: string;
   downlink?: number;
   rtt?: number;
-  saveData?: boolean
-  }
+  saveData?: boolean;
+}
 interface NavigatorWithConnection extends Navigator {
     connection?: NetworkConnection;
   mozConnection?: NetworkConnection;
@@ -56,8 +55,7 @@ interface SystemMetrics {
       message: string
       type: string
       severity: string,
-      timestamp: string
-  }>;
+      timestamp: string,>;
   memory: {
     used: number;
     limit: number;
@@ -201,7 +199,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   showDetails = true,
   enableExport = true,
   className = ''
-}) => {
+  )} => {
   const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
@@ -223,8 +221,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
           largestContentfulPaint: 0, // Not available in current metrics
           firstInputDelay: 0, // Not available in current metrics
-          cumulativeLayoutShift: 0, // Not available in current metrics
-        },
+          cumulativeLayoutShift: 0, // Not available in current metrics;
+},
           total: errorStats.totalErrors,
           byType: errorStats.errorsByType,
           byCategory: errorStats.errorsByCategory,
@@ -234,8 +232,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
             message: error.message,
             type: error.type,
             severity: error.severity,
-            timestamp: error.context.timestamp
-          }))
+            timestamp: error.context.timestamp,))
         memory: memoryInfo,
         network: networkInfo
       setMetrics(newMetrics)
@@ -260,7 +257,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Get memory information
   const getMemoryInfo = () => {
     if ('memory' in performance) {}
-      const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory;
+      const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number }   )}.memory;
       const used = memory.usedJSHeapSize / 1024 / 1024; // MB
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB
       const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
@@ -327,8 +324,7 @@ $4});
           <div className="flex items-center space-x-2">
             <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>
             <span className="text-sm text-gray-600">
-              {isMonitoring ? 'Monitoring' : 'Stopped'}
-            </span>
+              {isMonitoring ? 'Monitoring' : 'Stopped'}</span>
           {enableExport && (
             <button
               onClick={handleExport}
@@ -337,8 +333,7 @@ $4});
           )}
       {lastUpdate && (
         <p className="text-sm text-gray-500 mb-4">
-          Last updated: {lastUpdate.toLocaleTimeString()}
-        </p>
+          Last updated: {lastUpdate.toLocaleTimeString()}</p>
       {/* Performance Metrics */}
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance</h3>
@@ -440,7 +435,7 @@ const,
   showDetails = true,
   enableExport = true,
   className = '')
-}) => {/* TODO: Fix JSX expression */}
+  )} => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   const [metrics, setMetrics] = useState;
@@ -463,8 +458,7 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       const networkInfo = getNetworkInfo();
       const,
   newMetrics: SystemMetrics = {
-    const _networkInfo = getNetworkInfo()
-  }
+    const _networkInfo = getNetworkInfo(),
       const,
   _newMetrics: SystemMetrics = {/* TODO: Fix JSX expression */}
   e: performanceScore}
@@ -501,7 +495,7 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   y: error.severity,
             timestam,
   p: error.context.timestamp,)
-          }));
+            )});
   memor,
   y: memoryInfo,
         networ,
@@ -509,8 +503,8 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       setMetrics(newMetrics)
       setLastUpdate(new Date()),
     } catch (error) {
-    if (!isMonitoring) return
-  }
+    if (!isMonitoring) return;
+}
     const interval = setInterval(updateMetrics, refreshInterval);
     return () => clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
@@ -642,27 +636,9 @@ export default SystemMonitor</Date>
   </div>
   </div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </span>
-  </span>
-  </span>
   </span>
   </div>
   </span>
-  </span>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
   </div>
   </div>
   </div>

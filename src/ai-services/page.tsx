@@ -7,7 +7,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AIServicesPage: React.FC = () => {
-  const services = [
+  const services: any[] = [
     {
       title: 'AI Strategy & Consulting',
       description: 'Comprehensive AI strategy development and implementation consulting',
@@ -32,7 +32,7 @@ titletitle: 'AI Analytics & Insights',
       price:     ,
 $4}
   ];
-  const benefits = [
+  const benefits: any[] = [
     '300% Average ROI Increase',
     '95% Process Automation',
     '50% Cost Reduction',
@@ -48,14 +48,13 @@ $4}
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">AI Services</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Coming Soon - Advanced AI services solutions that will transform your business.
-          </p>
+            Coming Soon - Advanced AI services solutions that will transform your business.</p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us
+              Contact Us</button>
   </
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More
+              Learn More</button>
   </
       <Footer />
   ),
@@ -67,7 +66,7 @@ import { Helmet } from 'react-helmet-async';
 import { 
   Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, 
   Phone, Mail, MapPin, Clock, Users, Award, Target, BarChart,
-  Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare
+  Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare;
 } from 'lucide-react';
 export default function AIServicesPage() {
     const [activeTab, setActiveTab] = useState('overview');
@@ -75,7 +74,7 @@ export default function AIServicesPage() {
   useEffect(() => {
     setIsVisible(true)
   }, []);
-  const aiServices = [
+  const aiServices: any[] = [
     {
       id: 'ai-automation',
       title: 'AI Process Automation',
@@ -95,8 +94,7 @@ export default function AIServicesPage() {
       },
       icon: Zap,
       color: 'from-cyan-500 to-blue-600',
-      popular: true
-    },
+      popular: true,,
     {
       id: 'ai-analytics',
       title: 'AI-Powered Business Intelligence',
@@ -116,8 +114,7 @@ export default function AIServicesPage() {
       },
       icon: BarChart,
       color: 'from-purple-500 to-pink-600',
-      popular: false
-    },
+      popular: false,,
     {
       id: 'ai-customer-support',
       title: 'AI Customer Support Platform',
@@ -137,8 +134,7 @@ export default function AIServicesPage() {
       },
       icon: MessageSquare,
       color: 'from-green-500 to-emerald-600',
-      popular: true
-    },
+      popular: true,,
     {
       id: 'ai-content-generation',
       title: 'AI Content Generation Suite',
@@ -158,8 +154,7 @@ export default function AIServicesPage() {
       },
       icon: Code,
       color: 'from-orange-500 to-red-600',
-      popular: false
-    },
+      popular: false,,
     {
       id: 'ai-cybersecurity',
       title: 'AI Cybersecurity Solutions',
@@ -179,8 +174,7 @@ export default function AIServicesPage() {
       },
       icon: Shield,
       color: 'from-red-500 to-pink-600',
-      popular: true
-    },
+      popular: true,,
     {
       id: 'ai-ml-platform',
       title: 'AI/ML Development Platform',
@@ -200,10 +194,9 @@ export default function AIServicesPage() {
       },
       icon: Cpu,
       color: 'from-indigo-500 to-purple-600',
-      popular: false
-    }
+      popular: false,
   ];
-  const stats = [
+  const stats: any[] = [
     { icon: Users, value: '500+', label: 'AI Models Deployed', color: 'text-cyan-400' },
     { icon: TrendingUp, value: '300%', label: 'Average ROI', color: 'text-green-400' },
     { icon: Clock, value: '24/7', label: 'AI Monitoring', color: 'text-blue-400' },
@@ -230,8 +223,7 @@ export default function AIServicesPage() {
               </h1>
               <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Transform your business with cutting-edge AI solutions. Achieve 300% ROI, 70% cost reduction, 
-                and 90% efficiency gains with our comprehensive AI services.
-              </p>
+                and 90% efficiency gains with our comprehensive AI services.</p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
@@ -246,8 +238,6 @@ export default function AIServicesPage() {
                   Get Quote,
   </
               </div>
-            </div>
-          </div>
         </section>
         {/* Stats Section */}
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
@@ -260,10 +250,8 @@ export default function AIServicesPage() {
                   </div>
                   <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
                   <div className="text-gray-300">{stat.label}</div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
         {/* Services Section */}
         <section className="py-20">
@@ -273,8 +261,7 @@ export default function AIServicesPage() {
                 <span className="neon-text">Our AI Services</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive AI solutions designed to transform your business operations and drive unprecedented growth.
-              </p>
+                Comprehensive AI solutions designed to transform your business operations and drive unprecedented growth.</p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {aiServices.map((service, index) => (
@@ -285,7 +272,7 @@ export default function AIServicesPage() {
                     </div>
                     {service.popular && (
                       <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">
-                        Most Popular;
+                        Most Popular;</div>
   </
                     )}
                   </div>
@@ -310,40 +297,32 @@ export default function AIServicesPage() {
                           <div>
                             <div className="text-white font-semibold capitalize">{tier}</div>
                             <div className="text-sm text-gray-400">{details.features[0]}</div>
-                          </div>
                           <div className="text-right">
                             <div className="text-cyan-400 font-bold">{details.price}{details.period}</div>
-                          </div>
-                        </div>
                       ))}
                     </div>
-                  </div>
                   <div className="mt-6 flex gap-3">
                     <a
                       href="tel: +13024640950"
                       className="flex-1 cyber-button text-center py-3">
-                      Get Started
+                      Get Started</a>
   </
                     <a
                       href="mailto:kleber@ziontechgroup.com"
                       className="flex-1 bg-slate-800 text-white py-3 px-4 rounded-lg hover:bg-slate-700 transition-colors text-center">
-                      Learn More,
+                      Learn More,</a>
   </
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl lg: text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business with AI?
-            </h2>
+              Ready to Transform Your Business with AI?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join 500+ companies already using our AI solutions to achieve unprecedented growth and efficiency.
-            </p>
+              Join 500+ companies already using our AI solutions to achieve unprecedented growth and efficiency.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
@@ -358,7 +337,6 @@ export default function AIServicesPage() {
                 Email Us
   </
             </div>
-          </div>
         </section>
       </div>
     </React.Fragment>
@@ -366,14 +344,6 @@ export default function AIServicesPage() {
 }
   </a>
   </a>
-  </a>
-  </a>
-  </a>
-  </a>
   </div>
   </button>
-  </button>
-  </div>
-  </div>
-  </div>
   </div>

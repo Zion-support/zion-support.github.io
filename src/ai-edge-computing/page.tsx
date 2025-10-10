@@ -4,10 +4,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Cpu, Zap, Globe, Shield, CheckCircle, Star,  Cpu,  Zap,  Shield } from 'lucide-react';
 const AIEdgeComputingPage: React.FC = () => {
-    const features = [],
+    const features: any[] = [],
   return (
-    {// TODO: Add content
-  }
+    {// TODO: Add content,
 }
   ico,
   n: Cpu,

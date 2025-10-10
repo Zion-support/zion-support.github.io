@@ -6,9 +6,9 @@ import Footer from '../components/Footer';
 const TeamPage: React.FC = () => {
     return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>Our Team - Zion Tech Group</title>
-        <meta>
+        <meta></meta>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         <Navigation>
@@ -17,17 +17,12 @@ const TeamPage: React.FC = () => {
             <div className="max-w-4xl mx-auto"></div>
               <h1>
                 Our Team</h1>
-              </h1>
               <div className="prose prose-lg max-w-none"></div>
                 <p>
-                  Meet the experts behind our success.
-                </p>
+                  Meet the experts behind our success.</p>
                 <p>
-                  Coming soon - stay tuned to meet our team!
-                </p>
+                  Coming soon - stay tuned to meet our team!</p>
               </div>
-            </div>
-          </div>
         </main>
         <Footer />
     </>,

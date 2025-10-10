@@ -16,7 +16,6 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-  </div>
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
 
@@ -34,15 +33,15 @@ const HomePage: React.FC = () => {
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void   )}.gtag;
       gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
-      })
+        )}
     }
   }, []);
 
-  const features = [
+  const features: any[] = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -80,7 +79,7 @@ const HomePage: React.FC = () => {
       benefits: ['Strategy Planning', 'Technology Assessment', 'Implementation Support', 'Training']
     },
   ];
-  const services = [
+  const services: any[] = [
     {
       icon: Brain,
       title: 'AI Services',
@@ -134,16 +133,14 @@ const HomePage: React.FC = () => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en'
-          },
+            availableLanguage: 'en',,
           address: {
             '@type': 'PostalAddress',
             streetAddress: '364 E Main St STE 1008',
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-            addressCountry: 'US'
-          }
+            addressCountry: 'US',
         }}
       />
       <PerformanceOptimizer
@@ -167,8 +164,7 @@ const HomePage: React.FC = () => {
             <a
               href="#main-content"
               className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
-              Skip to main content
-            </a>
+              Skip to main content</a>
 
             {/* Hero Section */}
             <section id="main-content" className="relative pt-20 pb-16 overflow-hidden">
@@ -180,20 +176,16 @@ const HomePage: React.FC = () => {
                       <Sparkles className="w-4 h-4 mr-2" />
                       Trusted by 500+ Companies Worldwide
                     </div>
-                  </div>
                   <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                     <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent neon-text">
-                      Advanced AI & IT Solutions
-                    </span>
+                      Advanced AI & IT Solutions</span>
                     <br />
                     <span className="text-3xl md:text-5xl lg:text-6xl">
-                      for the Future
-                    </span>
+                      for the Future</span>
                   </h1>
                   <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                     Transform your business with cutting-edge artificial intelligence, quantum computing, 
-                    and autonomous systems. We deliver enterprise-grade solutions that drive innovation and growth.
-                  </p>
+                    and autonomous systems. We deliver enterprise-grade solutions that drive innovation and growth.</p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                     <a
                       href="/contact"
@@ -217,22 +209,15 @@ const HomePage: React.FC = () => {
                     <div className="text-center">
                       <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
                       <div className="text-sm text-gray-300">Projects Delivered</div>
-                    </div>
                     <div className="text-center">
                       <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
                       <div className="text-sm text-gray-300">Uptime Guarantee</div>
-                    </div>
                     <div className="text-center">
                       <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">24/7</div>
                       <div className="text-sm text-gray-300">Support Available</div>
-                    </div>
                     <div className="text-center">
                       <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">5★</div>
                       <div className="text-sm text-gray-300">Client Rating</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
 const HomePage: React.FC = memo(() => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -242,7 +227,7 @@ const HomePage: React.FC = memo(() => {
     setIsLoaded(true)
   }, []);
 
-  const features = [
+  const features: any[] = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -280,7 +265,7 @@ const HomePage: React.FC = memo(() => {
       benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training']
     },
   ];
-  const stats = [
+  const stats: any[] = [
     { number: '500+', label: 'Projects Completed' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' },
@@ -311,9 +296,8 @@ const HomePage: React.FC = memo(() => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               We help businesses leverage cutting-edge technology to drive growth, 
-              improve efficiency, and stay ahead of the competition.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              improve efficiency, and stay ahead of the competition.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
 
             </section>
 
@@ -322,11 +306,9 @@ const HomePage: React.FC = memo(() => {
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                    Our Core Services
-                  </h2>
+                    Our Core Services</h2>
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Comprehensive technology solutions designed to accelerate your digital transformation
-                  </p>
+                    Comprehensive technology solutions designed to accelerate your digital transformation</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {services.map((service, index) => (
@@ -357,11 +339,8 @@ const HomePage: React.FC = memo(() => {
                           <ArrowRight className="w-4 h-4" />
                         </a>
                       </div>
-                    </div>
                   ))}
                 </div>
-
-              </div>
             </section>
 
             {/* Features Section */}
@@ -369,11 +348,9 @@ const HomePage: React.FC = memo(() => {
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                    Why Choose Zion Tech Group?
-                  </h2>
+                    Why Choose Zion Tech Group?</h2>
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                    We combine cutting-edge technology with deep industry expertise to deliver exceptional results
-                  </p>
+                    We combine cutting-edge technology with deep industry expertise to deliver exceptional results</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {features.map((feature, index) => (
@@ -396,11 +373,8 @@ const HomePage: React.FC = memo(() => {
                             </div>
                           ))}
                         </div>
-                      </div>
-                    </div>
                   ))}
                 </div>
-              </div>
             </section>
 
             {/* Testimonials Section */}
@@ -408,11 +382,9 @@ const HomePage: React.FC = memo(() => {
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                    What Our Clients Say
-                  </h2>
+                    What Our Clients Say</h2>
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Don't just take our word for it. Here's what industry leaders say about our solutions.
-                  </p>
+                    Don't just take our word for it. Here's what industry leaders say about our solutions.</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   <div className="cyber-card">
@@ -422,20 +394,14 @@ const HomePage: React.FC = memo(() => {
                           <Star key={i} className="w-5 h-5 fill-current" />
                         ))}
                       </div>
-                    </div>
                     <p className="text-gray-300 mb-4">
-                      "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 300%."
-                    </p>
+                      "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 300%."</p>
                     <div className="flex items-center">
                       <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                        JS
-                      </div>
+                        JS</div>
                       <div>
                         <div className="text-white font-semibold">John Smith</div>
                         <div className="text-sm text-gray-400">CEO, TechCorp</div>
-                      </div>
-                    </div>
-                  </div>
                   <div className="cyber-card">
                     <div className="flex items-center mb-4">
                       <div className="flex text-yellow-400">
@@ -443,20 +409,14 @@ const HomePage: React.FC = memo(() => {
                           <Star key={i} className="w-5 h-5 fill-current" />
                         ))}
                       </div>
-                    </div>
                     <p className="text-gray-300 mb-4">
-                      "Outstanding service and cutting-edge technology. They delivered our project ahead of schedule."
-                    </p>
+                      "Outstanding service and cutting-edge technology. They delivered our project ahead of schedule."</p>
                     <div className="flex items-center">
                       <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                        MJ
-                      </div>
+                        MJ</div>
                       <div>
                         <div className="text-white font-semibold">Maria Johnson</div>
                         <div className="text-sm text-gray-400">CTO, InnovateLabs</div>
-                      </div>
-                    </div>
-                  </div>
                   <div className="cyber-card">
                     <div className="flex items-center mb-4">
                       <div className="flex text-yellow-400">
@@ -464,33 +424,23 @@ const HomePage: React.FC = memo(() => {
                           <Star key={i} className="w-5 h-5 fill-current" />
                         ))}
                       </div>
-                    </div>
                     <p className="text-gray-300 mb-4">
-                      "The best IT partner we've ever worked with. Their expertise in AI and cloud solutions is unmatched."
-                    </p>
+                      "The best IT partner we've ever worked with. Their expertise in AI and cloud solutions is unmatched."</p>
                     <div className="flex items-center">
                       <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                        DW
-                      </div>
+                        DW</div>
                       <div>
                         <div className="text-white font-semibold">David Wilson</div>
                         <div className="text-sm text-gray-400">VP Engineering, DataFlow</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </section>
 
             {/* CTA Section */}
             <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                  Ready to Transform Your Business?
-                </h2>
+                  Ready to Transform Your Business?</h2>
                 <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
-                  Let's discuss how our AI and IT solutions can drive your digital transformation and accelerate growth.
-                </p>
+                  Let's discuss how our AI and IT solutions can drive your digital transformation and accelerate growth.</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a
                     href="/contact"
@@ -508,7 +458,6 @@ const HomePage: React.FC = memo(() => {
                     <span>(302) 464-0950</span>
                   </a>
                 </div>
-              </div>
             </section>
 
             {/* Footer */}
@@ -525,4 +474,3 @@ const HomePage: React.FC = memo(() => {
 HomePage.displayName = 'HomePage';
 
 export default HomePage;
-

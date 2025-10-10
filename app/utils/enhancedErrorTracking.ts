@@ -7,8 +7,7 @@ export interface ErrorContext {
     component?: string;
   action?: string;
   userId?: string;
-  sessionId?: string
-  }
+  sessionId?: string,
   metadata?: Record<string>}
 }
 export interface TrackedError {
@@ -41,8 +40,7 @@ class EnhancedErrorTracker {}
     ,;
     this.sessionId = this.generateSessionId(),;
   private maxErrors = 100;
-  private sessionId: string
-  }
+  private sessionId: string,
   constructor() {}
     this.sessionId = this.generateSessionId();
     this.setupGlobalErrorHandler();}
@@ -57,8 +55,8 @@ class EnhancedErrorTracker {}
           component: 'Global'),
   }
           action: 'Uncaught Error'}
-        })
-      })
+          )}
+        )}
       window.addEventListener('unhandledrejection', event => {);
         this.trackError(new Error(event.reason), {}
   private setupGlobalErrorHandler(): void {}
@@ -67,14 +65,14 @@ class EnhancedErrorTracker {}
         this.trackError(event.error, {)}
           component: 'Global',
           action: 'Uncaught Error'}
-        })
-      })
+          )}
+        )}
       window.addEventListener('unhandledrejection', event => {)}
         this.trackError(new Error(event.reason), {}
           component: 'Global',
           action: 'Unhandled Promise Rejection'}
-        })
-      })
+          )}
+        )}
     }
   }
   public trackError(error: Error, context: ErrorContext = {}): void {
@@ -83,8 +81,7 @@ class EnhancedErrorTracker {}
       message: error.message
       stack: error.stack,
       context: {,
-        ...context
-  }
+        ...context,
   public trackError(error: Error, context: ErrorContext = {}): void {}
     if (typeof window === 'undefined') return;
     const trackedError: TrackedError = {}
@@ -100,8 +97,7 @@ class EnhancedErrorTracker {}
     this.errors.push(trackedError);
     // Keep only the most recent errors;
     if (this.errors.length > this.maxErrors) {
-    // Keep only the most recent errors
-  }
+    // Keep only the most recent errors,
     if (this.errors.length > this.maxErrors) {}
       this.errors.shift();}
     }
@@ -142,7 +138,7 @@ class EnhancedErrorTracker {}
         description: error.message,
         fatal: false,
         component: error.context.component}
-      })
+        )}
     }
   }
   public getErrors(): TrackedError[] {}
@@ -165,14 +161,13 @@ class EnhancedErrorTracker {}
       const component = error.context.component || 'Unknown')
   }
       byComponent[component] = (byComponent[component] || 0) + 1;}
-    })
+      )}
     return {
-    total: this.errors.length
-  }
+    total: this.errors.length,
     this.errors.forEach(error => {)}
       const component = error.context.component || 'Unknown';
       byComponent[component] = (byComponent[component] || 0) + 1;}
-    })
+      )}
     return {}
       total: this.errors.length,
       byComponent,;
@@ -193,11 +188,10 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
     return `${Date.now()}-${Math.random().toString(36).substring(7)}`;
   }
   private setupGlobalErrorHandler(): void {/* TODO: Fix JSX expression */}
-        })
-      })
-      window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */})
-        })
-      })
+          )}
+        )}
+      window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */}))}
+        )}
     }
   }
   public trackError(erro,;
@@ -226,8 +220,7 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
       ).gtag;
     ) {/* TODO: Fix JSX expression */}
         }
-      ).gtag('event', 'exception', {/* TODO: Fix JSX expression */})
-      })
+      ).gtag('event', 'exception', {/* TODO: Fix JSX expression */}))}
     }
   }
   public getErrors(): TrackedError[] {/* TODO: Fix JSX expression */}
@@ -237,8 +230,7 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
   public getErrorStats(): {/* TODO: Fix JSX expression */}
   } {/* TODO: Fix JSX expression */}
   byComponent: Record<string, number> = {}
-    this.errors.forEach(error => {/* TODO: Fix JSX expression */})
-    })
+    this.errors.forEach(error => {/* TODO: Fix JSX expression */}))}
     return {/* TODO: Fix JSX expression */}
     }
   }

@@ -4,8 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 </button>
             </div>
-          </div>
-        </div>
       </section>
       {/* Features Section */}
       <section className="py-20 px-4">
@@ -14,16 +12,13 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>
-              Why Choose Our Page?,
-            </h2>
+              Why Choose Our Page?,</h2>
             <p>
-              Our page solutions deliver unmatched performance, security, and scalability.
-            </p>
+              Our page solutions deliver unmatched performance, security, and scalability.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => (
@@ -33,8 +28,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-          </div>
-        </div>
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4">
@@ -43,16 +36,13 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>
-              Key Benefits
-            </h2>
+              Key Benefits</h2>
             <p>
-              Experience the power of our page solutions for your business.,
-            </p>
+              Experience the power of our page solutions for your business.,</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
             {benefits.map((benefit, index) => (
@@ -62,7 +52,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               </div>
             ))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4">
@@ -71,32 +60,26 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
             <h2>
-              Ready to Get Started?
-            </h2>
+              Ready to Get Started?</h2>
             <p>
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
+              Contact our experts to discuss your page needs and get a customized solution.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button>
                 <Phone>
-                Call Now
+                Call Now</Phone>
               </button>
               <button>
                 <Mail>
-                Email Us
+                Email Us</Mail>
               </button>
             </div>
-          </div>
-        </div>
       </section>
     </div>
   ),
 };
 
 export default PagePage;
-

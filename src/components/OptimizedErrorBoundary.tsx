@@ -1,3 +1,4 @@
+import React from 'react';
 'use client';
 interface OptimizedErrorBoundaryProps {
     children: ReactNode
@@ -10,8 +11,7 @@ interface State {
     hasError: boolean
   error: Error | null
   errorInfo: ErrorInfo | null,
-  errorId: string
-  }
+  errorId: string,
 class OptimizedErrorBoundary extends Component
   OptimizedErrorBoundaryProps,
   State
@@ -36,8 +36,8 @@ $4}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
-    });
+      errorInfo;
+  )};
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {}
     // Call custom error handler if provided
@@ -64,8 +64,7 @@ $4}
     if (
       hasError &&
       resetOnPropsChange &&
-      prevProps.children !== this.props.children
-    ) {
+      prevProps.children !== this.props.children) {
     this.resetErrorBoundary()
   }
   }
@@ -83,17 +82,16 @@ $4}
             command: string,
             action: string,
             parameters: Record<string, unknown>
-          ) => void
-  }
+          ) => void;
+}
       ).gtag;
       gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {
           error_id: this.state.errorId,
-          component_stack: errorInfo.componentStack
-        }
-      });
+          component_stack: errorInfo.componentStack,
+        )};
     }
   }
   private resetErrorBoundary = () => {
@@ -115,8 +113,8 @@ $4});
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback
-  }
+        return this.props.fallback;
+}
       return (
         <ErrorFallback
           error={this.state.error}
@@ -133,10 +131,9 @@ interface ErrorFallbackProps {
     error: Error | null
   errorInfo: ErrorInfo | null
   errorId: string,
-  onRetry: () => void
-  }
+  onRetry: () => void,
 const ErrorFallback = memo<ErrorFallbackProps>(
-  ({ error, errorInfo, errorId, onRetry }) => (
+  ({ error, errorInfo, errorId, onRetry   )} => (
     <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'>
       <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center'>
         <div className='mb-4'>
@@ -155,17 +152,14 @@ const ErrorFallback = memo<ErrorFallbackProps>(
               />
             </svg>
           </div>
-        </div>
         <h1 className='text-xl font-semibold text-gray-900 mb-2'>
           Something went wrong</span>
         <p className='text-gray-600 mb-4'>
-          We&apos;re sorry, but something unexpected happened. Please try again.
-        </p>
+          We&apos;re sorry, but something unexpected happened. Please try again.</p>
         {process.env['NODE_ENV'] === 'development' && error && (
           <details className='mb-4 text-left'>
             <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700'>
-              Error Details (Development)
-            </summary>
+              Error Details (Development)</summary>
             <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>
               <div className='mb-2'>
                 <strong>Error:</strong> {error.message}
@@ -226,7 +220,6 @@ const ErrorFallback = memo<ErrorFallbackProps>(
           <p className='mt-4 text-xs text-gray-400'>Error ID: {errorId}</p>
         )}
       </div>
-    </div>
   )
 );
 ErrorFallback.displayName = 'ErrorFallback';
@@ -244,7 +237,6 @@ ErrorFallback.displayName = 'ErrorFallback';
   ID: {errorId}</p>
         )}
       </div>
-    </div>
 //   )
 );
 ErrorFallback.displayName = 'ErrorFallback'</h1>

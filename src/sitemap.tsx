@@ -9,8 +9,7 @@ const getAllPages = () => {return [}
     { url: '/blog', priority: 0.8, changefreq: 'weekly' }];
 }
 const generateSitemap = (pages: Array<{ url: string; priority: number, changefreq: string }>) => {
-    const baseUrl = 'https:// ziontechgroup.com'
-  }
+    const baseUrl = 'https: // ziontechgroup.com',
   const sitemap = `
           <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
@@ -29,14 +28,13 @@ ${pages.map(page => `}
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
-            Sitemap
+            Sitemap</h1>
   </
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Blog Post
+            Blog Post</p>
   </
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This blog post is under development. Please check back soon for the full content.
-          </p>
+            This blog post is under development. Please check back soon for the full content.</p>
         </section>
       </main>
       <Footer />

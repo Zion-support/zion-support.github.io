@@ -20,8 +20,7 @@ export const logger = {
  */
 
 export enum LogLevel {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   DEBUG = 0,
@@ -32,8 +31,7 @@ export enum LogLevel {
 }
 
 export interface LogContext {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   component?: string;
@@ -73,8 +71,7 @@ class Logger {/* TODO: Fix JSX expression */}
    */
 
   setLogLevel(level: LogLevel): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     this.logLevel = level;
@@ -84,8 +81,7 @@ class Logger {/* TODO: Fix JSX expression */}
    */
 
   getLogLevel(): LogLevel {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     return this.logLevel;
@@ -96,8 +92,7 @@ class Logger {/* TODO: Fix JSX expression */}
 
   debug(message: string, context?: LogContext, metadata?: Record;
           <string, unknown>): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     this.log(LogLevel.DEBUG, message, context, metadata);
@@ -108,8 +103,7 @@ class Logger {/* TODO: Fix JSX expression */}
 
   info(message: string, context?: LogContext, metadata?: Record;
           <string, unknown>): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     this.log(LogLevel.INFO, message, context, metadata);
@@ -120,8 +114,7 @@ class Logger {/* TODO: Fix JSX expression */}
 
   warn(message: string, context?: LogContext, metadata?: Record;
           <string, unknown>): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     this.log(LogLevel.WARN, message, context, metadata);
@@ -138,8 +131,7 @@ class Logger {/* TODO: Fix JSX expression */}
 
     metadata?: Record<string, unknown>
   ): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     let,
@@ -170,7 +162,7 @@ class Logger {/* TODO: Fix JSX expression */}
       meta = contextOrMetadata as Record;
           <string>
     }
-    this.log(LogLevel.ERROR, message, context, { ...meta, error })
+    this.log(LogLevel.ERROR, message, context, { ...meta, error   )}
   )
   }
   /**
@@ -178,8 +170,7 @@ class Logger {/* TODO: Fix JSX expression */}
    */
 
   fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     this.log(LogLevel.FATAL, message, context, metadata);
@@ -197,8 +188,7 @@ class Logger {/* TODO: Fix JSX expression */}
 
           <string, unknown>
   ): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     // Check if we should log this level;
@@ -234,8 +224,7 @@ class Logger {/* TODO: Fix JSX expression */}
    */
 
   private formatLogEntry(entry: LogMetadata): string {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     const levelStr = this.getLevelString(entry.level || LogLevel.INFO);
@@ -249,8 +238,7 @@ class Logger {/* TODO: Fix JSX expression */}
    */
 
   private formatContext(context: LogContext): string {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     const,
@@ -272,8 +260,7 @@ class Logger {/* TODO: Fix JSX expression */}
    */
 
   private outputToConsole(level: LogLevel, message: string, entry: LogMetadata): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     if (typeof console === 'undefined') return;
@@ -307,8 +294,7 @@ class Logger {/* TODO: Fix JSX expression */}
    */
 
   private getConsoleStyles(level: LogLevel): string {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     switch (level) {/* TODO: Fix JSX expression */}
@@ -333,8 +319,7 @@ class Logger {/* TODO: Fix JSX expression */}
    */
 
   private sendToLoggingService(entry: LogMetadata): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     // In a real application, you would send this to your logging service;
@@ -351,17 +336,16 @@ class Logger {/* TODO: Fix JSX expression */}
   s: {// 'Content-Type': 'application/json'},
     //   bod)
   y: JSON.stringify(entry)
-    // }).catch(err => {/* TODO: Fix JSX expression */})
+    //   )}.catch(err => {/* TODO: Fix JSX expression */})
   service:', err);}
-    // });
+    //   )};
   }
   /**
    * Get string representation of log level;
    */
 
   private getLevelString(level: LogLevel): string {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     switch (level) {/* TODO: Fix JSX expression */}
@@ -381,10 +365,7 @@ class Logger {/* TODO: Fix JSX expression */}
       case LogLevel.FATA,
   L: return 'FATAL',,
     defaul,
-  t:
-        return 'UNKNOWN'
-    }
+  t: return 'UNKNOWN',
   }
 }
 export const logger = new Logger()`
-

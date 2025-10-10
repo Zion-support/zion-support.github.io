@@ -7,7 +7,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AICustomerSupportBotPage: React.FC = () => {
-  const features = [
+  const features: any[] = [
     {
       icon: Bot,
       title: '24/7 AI Support',
@@ -28,7 +28,7 @@ const AICustomerSupportBotPage: React.FC = () => {
       benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement']
     }
   ];
-  const pricingPlans = [
+  const pricingPlans: any[] = [
       name: 'Starter',
       price: '$149',
       period: '/month',
@@ -61,7 +61,7 @@ const AICustomerSupportBotPage: React.FC = () => {
         'White-label options',
         'API access',
         'Custom training'
-  const stats = [
+  const stats: any[] = [
     { icon: Users, value: '1,000+', label: 'Happy Customers' },
     { icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
     { icon: Clock, value: '45%', label: 'Satisfaction Increase' },
@@ -78,8 +78,7 @@ const AICustomerSupportBotPage: React.FC = () => {
           <h1 className="text-5xl font-bold text-white mb-6">AI Customer Support Bot</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands 
-            natural language and escalates complex issues to human agents seamlessly.
-          </p>
+            natural language and escalates complex issues to human agents seamlessly.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
@@ -107,8 +106,7 @@ const AICustomerSupportBotPage: React.FC = () => {
               <div key={index} className={`bg-slate-800/50 rounded-lg p-6 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {plan.popular && (
                   <div className="bg-cyan-400 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
-                    Most Popular
-                )}
+                    Most Popular)}
                 <h3 className="text-xl font-semibold text-white mb-2">{plan.name}</h3>
                 <div className="text-3xl font-bold text-white mb-1">
                   {plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
@@ -118,7 +116,7 @@ const AICustomerSupportBotPage: React.FC = () => {
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       {feature}
                 <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover: bg-cyan-600 transition-colors">
-                  Get Started
+                  Get Started</button>
   </
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Support?</h2>
@@ -139,20 +137,12 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, BarChart, Calendar, Target, ArrowRight, Phone, Mail, MapPin, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, MessageSquare, Headphones, Globe, Languages } from 'lucide-react';
 export default AICustomerSupportBotPage;
   </button>
-  </button>
   </div>
   </p>
   </div>
   </button>
   </li>
   </ul>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
   </div>
   </div>
   </div>

@@ -12,9 +12,7 @@ export const PageLoader: React.FC = () => {
         <h2 className="text-xl font-semibold text-white mb-2">Loading...</h2>
         <p className="text-gray-300">Please wait while we load the page</p>
       </div>
-    </div>
-  );
-}
+  ),
 
 export const ComponentLoader: React.FC = () => {
   return (
@@ -23,9 +21,7 @@ export const ComponentLoader: React.FC = () => {
         <Loader2 className="w-5 h-5 animate-spin" />
         <span>Loading component...</span>
       </div>
-    </div>
-  );
-}
+  ),
 
 export const ServiceCardSkeleton: React.FC = () => {
   return (
@@ -35,9 +31,7 @@ export const ServiceCardSkeleton: React.FC = () => {
       <div className="h-4 bg-slate-700 rounded mb-2"></div>
       <div className="h-4 bg-slate-700 rounded w-5/6 mb-4"></div>
       <div className="h-8 bg-slate-700 rounded w-1/2 mx-auto"></div>
-    </div>
-  );
-}
+  ),
 
 export const ContentSkeleton: React.FC = () => {
   return (
@@ -46,12 +40,9 @@ export const ContentSkeleton: React.FC = () => {
       <div className="h-4 bg-slate-700 rounded mb-2"></div>
       <div className="h-4 bg-slate-700 rounded mb-2"></div>
       <div className="h-4 bg-slate-700 rounded w-3/4"></div>
-    </div>
-  );
-}
+  ),
 
 export const LoadingSpinner: React.FC = () => (
   <div className="flex items-center justify-center p-8">
     <div className="w-8 h-8 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
-  </div>
 );

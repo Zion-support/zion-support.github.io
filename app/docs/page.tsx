@@ -7,7 +7,7 @@ const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const categories = [
+  const categories: any[] = [
     { id: 'all', name: 'All Documentation', icon: BookOpen },
     { id: 'getting-started', name: 'Getting Started', icon: Zap },
     { id: 'ai-services', name: 'AI Services', icon: Brain },
@@ -15,7 +15,7 @@ const DocsPage: React.FC = () => {
     { id: 'api', name: 'API Reference', icon: Code },
     { id: 'security', name: 'Security', icon: Shield }
   ];
-  const documentation = [
+  const documentation: any[] = [
     {
       id: 1,
       title: 'Getting Started Guide',
@@ -107,7 +107,7 @@ const DocsPage: React.FC = () => {
       ]
     }
   ];
-  const quickLinks = [
+  const quickLinks: any[] = [
     { title: 'API Reference', url: '/api', icon: Code },
     { title: 'Tutorials', url: '/tutorials', icon: BookOpen },
     { title: 'Community', url: '/community', icon: Users },
@@ -127,7 +127,7 @@ const DocsPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>Documentation - Zion Tech Group</title>
         <meta name="description" content="Complete documentation for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive guides and API references." />
         <meta name="keywords" content="documentation, API docs, guides, tutorials, developer resources, AI services, IT services" />
@@ -143,13 +143,11 @@ const DocsPage: React.FC = () => {
                 <BookOpen className="w-8 h-8 text-white" />
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-white neon-text-enhanced">
-                Documentation
-              </h1>
+                Documentation</h1>
             </div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Complete documentation for all our AI, IT, and Micro SaaS services. 
-              Find guides, API references, and best practices to help you build amazing applications.
-            </p>
+              Find guides, API references, and best practices to help you build amazing applications.</p>
           </div>
 
           {/* Search Bar */}
@@ -162,9 +160,8 @@ const DocsPage: React.FC = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              />
+              /></input>
             </div>
-          </div>
 
           {/* Quick Links */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
@@ -191,15 +188,13 @@ const DocsPage: React.FC = () => {
                   className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                  }`}
+                      : 'bg-slate-800 text-gray-300 hover: bg-slate-700',`}
                 >
                   <category.icon className="w-5 h-5" />
                   <span>{category.name}</span>
                 </button>
               ))}
             </div>
-          </div>
 
           {/* Documentation List */}
           <div className="space-y-6">
@@ -208,11 +203,9 @@ const DocsPage: React.FC = () => {
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                      {doc.title}
-                    </h3>
+                      {doc.title}</h3>
                     <p className="text-gray-300 mb-4 leading-relaxed">
-                      {doc.description}
-                    </p>
+                      {doc.description}</p>
                     <div className="flex items-center space-x-6 text-sm text-gray-400 mb-4">
                       <span className="flex items-center">
                         <FileText className="w-4 h-4 mr-1" />
@@ -227,7 +220,6 @@ const DocsPage: React.FC = () => {
                         Updated {doc.lastUpdated}
                       </span>
                     </div>
-                  </div>
                   <div className="ml-6">
                     <span className={`px-3 py-1 rounded text-xs font-semibold ${
                       doc.difficulty === 'Beginner' 
@@ -236,10 +228,8 @@ const DocsPage: React.FC = () => {
                         ? 'bg-yellow-600 text-white'
                         : 'bg-red-600 text-white'
                     }`}>
-                      {doc.difficulty}
-                    </span>
+                      {doc.difficulty}</span>
                   </div>
-                </div>
                 
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Sections:</h4>
@@ -251,7 +241,6 @@ const DocsPage: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                </div>
 
                 <div className="flex items-center justify-between">
                   <div className="flex space-x-4">
@@ -270,8 +259,6 @@ const DocsPage: React.FC = () => {
                       Download PDF
                     </a>
                   </div>
-                </div>
-              </div>
             ))}
           </div>
 
@@ -281,21 +268,19 @@ const DocsPage: React.FC = () => {
               <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
               <p className="text-gray-300 mb-6">
-                Try adjusting your search terms or browse our documentation categories.
-              </p>
+                Try adjusting your search terms or browse our documentation categories.</p>
               <button
                 onClick={() => setSearchQuery('')}
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
               >
-                Clear Search
-              </button>
+                Clear Search</button>
             </div>
           )}
 
           {/* Additional Resources */}
           <div className="cyber-card-enhanced p-8 mt-16">
             <h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
               <a
                 href="/tutorials"
                 className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
@@ -304,7 +289,6 @@ const DocsPage: React.FC = () => {
                 <div>
                   <div className="text-white font-semibold">Tutorials</div>
                   <div className="text-gray-300 text-sm">Step-by-step guides</div>
-                </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" />
               </a>
               <a
@@ -315,7 +299,6 @@ const DocsPage: React.FC = () => {
                 <div>
                   <div className="text-white font-semibold">API Reference</div>
                   <div className="text-gray-300 text-sm">Complete API documentation</div>
-                </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" />
               </a>
               <a
@@ -326,7 +309,6 @@ const DocsPage: React.FC = () => {
                 <div>
                   <div className="text-white font-semibold">Community</div>
                   <div className="text-gray-300 text-sm">Developer community</div>
-                </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" />
               </a>
               <a
@@ -337,15 +319,10 @@ const DocsPage: React.FC = () => {
                 <div>
                   <div className="text-white font-semibold">Support</div>
                   <div className="text-gray-300 text-sm">Get help and support</div>
-                </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" />
               </a>
             </div>
-          </div>
-        </div>
-      </div>
     </>
-  );
-};
+  ),;
 
 export default DocsPage;

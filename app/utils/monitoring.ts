@@ -11,8 +11,7 @@ export interface PerformanceMetrics {
   cls?: number;
   fcp?: number;
   ttfb?: number;
-  inp?: number
-  }
+  inp?: number,
 }
 export interface ErrorReport {
     message: string,
@@ -54,8 +53,8 @@ class MonitoringService {}
           const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0;
           this.reportMetric('lcp', this.metrics.lcp);
-        })
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+          )}
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint']   )}
         // First Input Delay;
         const fidObserver = new PerformanceObserver((list) => {
     const entries = list.getEntries();
@@ -63,9 +62,9 @@ class MonitoringService {}
             this.metrics.fid = (entry as any).processingStart - entry.startTime,
             this.reportMetric('fid', this.metrics.fid)
   }
-          })
-        })
-        fidObserver.observe({ entryTypes: ['first-input'] })
+            )}
+          )}
+        fidObserver.observe({ entryTypes: ['first-input']   )}
         // Cumulative Layout Shift;
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
@@ -77,9 +76,9 @@ class MonitoringService {}
               this.reportMetric('cls', clsValue)
   }
             }
-          })
-        })
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
+            )}
+          )}
+        clsObserver.observe({ entryTypes: ['layout-shift']   )}
         // First Contentful Paint;
         const fcpObserver = new PerformanceObserver(list => {
     const entries = list.getEntries();
@@ -87,12 +86,11 @@ class MonitoringService {}
             this.metrics.fcp = entry.startTime;
             this.reportMetric('fcp', entry.startTime)
   }
-          })
-        })
-        fcpObserver.observe({ entryTypes: ['paint'] })
+            )}
+          )}
+        fcpObserver.observe({ entryTypes: ['paint']   )}
       } catch (error) {
-    // Keep HEAD version
-  }
+    // Keep HEAD version,
     }
   }
   private monitorLongTasks(): void {
@@ -100,13 +98,11 @@ class MonitoringService {}
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-    // Keep HEAD version
-  }
-        })
-        longTaskObserver.observe({ entryTypes: ['longtask'] })
+    // Keep HEAD version,
+          )}
+        longTaskObserver.observe({ entryTypes: ['longtask']   )}
       } catch (error) {
-    // Long task API might not be available
-  }
+    // Long task API might not be available,
       }
     }
   }
@@ -115,14 +111,12 @@ class MonitoringService {}
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-    // Keep HEAD version
-  }
-          })
-        })
-        resourceObserver.observe({ entryTypes: ['resource'] })
+    // Keep HEAD version,
+            )}
+          )}
+        resourceObserver.observe({ entryTypes: ['resource']   )}
       } catch (_error) {
-    // Keep HEAD version
-  }
+    // Keep HEAD version,
     }
   }
   private setupErrorHandling(): void {
@@ -133,10 +127,9 @@ class MonitoringService {}
         stack: event.error?.stack,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
-        url: window.location.href
-  }
-      })
-    })
+        url: window.location.href,
+        )}
+      )}
     // Unhandled promise rejection handler;
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({}
@@ -144,14 +137,13 @@ class MonitoringService {}
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href,
-      })
-    })
+        )}
+      )}
   }
   private reportMetric(name: string, value: number): void {
     // Sample rate,
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
-      return
-  }
+      return,
     }
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
@@ -161,9 +153,8 @@ class MonitoringService {}
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
-        event_category: 'Web Vitals'
-  }
-      })
+        event_category: 'Web Vitals',
+        )}
     }
   }
   public logError(error: ErrorReport): void {
@@ -188,10 +179,9 @@ class MonitoringService {}
   }
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {}
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number }   )}.memory;
       if (memory) {
-    // Keep HEAD version
-  }
+    // Keep HEAD version,
       }
     }
   }
@@ -199,8 +189,7 @@ class MonitoringService {}
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
-    // Keep HEAD version
-  }
+    // Keep HEAD version,
       }
     }
   }

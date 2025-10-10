@@ -1,24 +1,22 @@
-'use client';
-
-/**
- * Advanced Performance Monitoring Utility
- * Tracks Core Web Vitals and custom metrics
- */
-
 interface PerformanceMetrics {
-  fcp?: number; // First Contentful Paint
-  lcp?: number; // Largest Contentful Paint
-  fid?: number; // First Input Delay
-  cls?: number; // Cumulative Layout Shift
-  ttfb?: number; // Time to First Byte
-  fmp?: number; // First Meaningful Paint
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
   customMetrics: Record<string, number>;
 }
 
 class PerformanceMonitor {
   private _metrics: PerformanceMetrics = {
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0,
     customMetrics: {}
   };
+  
   private observers: PerformanceObserver[] = [];
   private isInitialized = false;
 
@@ -42,6 +40,9 @@ class PerformanceMonitor {
     
     // Cumulative Layout Shift
     this.observeCLS();
+    
+    // Time to First Byte
+    this.observeTTFB();
   }
 
   private observePaint(name: string, metric: keyof PerformanceMetrics): void {
@@ -80,7 +81,7 @@ class PerformanceMonitor {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry) => {
+        entries.forEach((entry: any) => {
           this._metrics.fid = entry.processingStart - entry.startTime;
         });
       });
@@ -110,20 +111,32 @@ class PerformanceMonitor {
     }
   }
 
-  private setupCustomMetrics(): void {
-    // Time to First Byte
-    if (performance.timing) {
-      this._metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
-    }
-
-    // Navigation timing
-    if (performance.navigation) {
-      this.addCustomMetric('navigation_type', performance.navigation.type);
+  private observeTTFB(): void {
+    try {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        this._metrics.ttfb = navigation.responseStart - navigation.requestStart;
+      }
+    } catch (error) {
+      console.warn('Failed to observe TTFB:', error);
     }
   }
 
-  addCustomMetric(name: string, value: number): void {
-    this._metrics.customMetrics[name] = value;
+  private setupCustomMetrics(): void {
+    // Custom metrics can be added here
+    this.observeCustomMetric('page-load-time', () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      return navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
+    });
+  }
+
+  private observeCustomMetric(name: string, getValue: () => number): void {
+    try {
+      const value = getValue();
+      this._metrics.customMetrics[name] = value;
+    } catch (error) {
+      console.warn(`Failed to observe custom metric ${name}:`, error);
+    }
   }
 
   getMetrics(): PerformanceMetrics {
@@ -131,55 +144,26 @@ class PerformanceMonitor {
   }
 
   reportMetrics(): void {
-    if (typeof window === 'undefined') return;
-    
-    console.log('Performance Metrics:', this._metrics);
-    
-    // Send to analytics service
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'performance_metrics', {
-        event_category: 'performance',
-        event_label: 'web_vitals',
-        value: Math.round(this._metrics.lcp || 0),
-        custom_parameter_1: this._metrics.fcp,
-        custom_parameter_2: this._metrics.cls,
-        custom_parameter_3: this._metrics.fid
-      });
+    if (typeof window !== 'undefined' && 'console' in window) {
+      console.log('Performance Metrics:', this._metrics);
     }
   }
 
   cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
-    this.isInitialized = false;
   }
 }
 
-// Global instance
-const performanceMonitor = new PerformanceMonitor();
+// Export singleton instance
+export const performanceMonitor = new PerformanceMonitor();
 
-// Initialize on load
-if (typeof window !== 'undefined') {
-  window.addEventListener('load', () => {
-    performanceMonitor.init();
-    
-    // Report metrics after a delay to ensure all metrics are collected
-    setTimeout(() => {
-      performanceMonitor.reportMetrics();
-    }, 5000);
-  });
+// Export function for easy use
+export function measureWebVitals(): void {
+  performanceMonitor.init();
 }
 
-export const measureWebVitals = () => {
-  performanceMonitor.init();
-};
-
-export const getPerformanceMetrics = () => {
+// Export metrics getter
+export function getPerformanceMetrics(): PerformanceMetrics {
   return performanceMonitor.getMetrics();
-};
-
-export const addCustomMetric = (name: string, value: number) => {
-  performanceMonitor.addCustomMetric(name, value);
-};
-
-export default performanceMonitor;
+}

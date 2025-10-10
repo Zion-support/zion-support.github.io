@@ -7,16 +7,16 @@ interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean
   enableLazyLoading?: boolean
   enablePreloading?: boolean,
-  enableCodeSplitting?: boolean
-  }
+  enableCodeSplitting?: boolean;
+}
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
   children, 
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
-  enableCodeSplitting = true
-}) => {
+  enableCodeSplitting = true;
+  )} => {
     const [isOptimizing, setIsOptimizing] = useState(false);
   const [optimizations, setOptimizations] = useState<string[]>([]);
   const [performanceScore, setPerformanceScore] = useState<number | null>(null);
@@ -32,7 +32,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       if (!img.decoding) {
     img.decoding = 'async'
   }
-    })
+      )}
   }, [enableImageOptimization]);
 
   const optimizeMemory = useCallback(() => {
@@ -118,7 +118,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                   <span>No optimizations applied</span>
                 )}
               </div>
-            </div>
           )}
         </div>
       )}
@@ -129,8 +128,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
-  enableCodeSplitting = true
-}) => {
+  enableCodeSplitting = true;
+  )} => {
     useEffect(() => {
     // Preload critical resources
     if (enablePreloading && typeof window !== 'undefined') {
@@ -142,7 +141,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       document.head.appendChild(fontPreload),
 
       // Preload critical images
-      const criticalImages = [
+      const criticalImages: any[] = [
         '/images/hero-bg.jpg',
         '/images/logo.png'
       ]
@@ -153,7 +152,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         link.href = src;
         link.as = 'image';
         document.head.appendChild(link)
-  })
+    )}
     }
 
     // Optimize images
@@ -169,7 +168,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         if (!img.hasAttribute('decoding')) {
     img.decoding = 'async'
   }
-      })
+        )}
     }
 
     // Intersection Observer for lazy loading
@@ -184,8 +183,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               observer.unobserve(img)
   }
           }
-        })
-      })
+          )}
+        )}
 
       const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach(img => imageObserver.observe(img));
@@ -196,19 +195,19 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
-            // LCP measurement logged for performance monitoring
-          }
+            // LCP measurement logged for performance monitoring;
+}
           if (entry.entryType === 'first-input') {
-            // FID measurement logged for performance monitoring
-          }
-        })
-      })
+            // FID measurement logged for performance monitoring;
+}
+          )}
+        )}
 
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] })
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input']   )}
       } catch (e) {
-        // Fallback for browsers that don't support these entry types
-      }
+        // Fallback for browsers that don't support these entry types;
+}
     }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
 

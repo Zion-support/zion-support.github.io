@@ -8,12 +8,11 @@ interface SearchResult {
   category: string
   type: 'page' | 'service' | 'blog' | 'documentation'
   popularity?: number,
-  lastModified?: string
-  }
+  lastModified?: string;
+}
 interface SearchModalProps {
     isOpen: boolean,
-  onClose: () => void
-  }
+  onClose: () => void,
 const mockSearchResults: SearchResult[] = [
   {
     id: '1',
@@ -23,8 +22,7 @@ const mockSearchResults: SearchResult[] = [
     category: 'Micro SAAS',
     type: 'service',
     popularity: 95,
-    lastModified: '2024-01-15'
-  },
+    lastModified: '2024-01-15',,
   {
     id: '2',
     title: 'AI Workflow Automation',
@@ -33,8 +31,7 @@ const mockSearchResults: SearchResult[] = [
     category: 'AI Services',
     type: 'service',
     popularity: 88,
-    lastModified: '2024-01-10'
-  },
+    lastModified: '2024-01-10',,
   {
     id: '3',
     title: 'About Us',
@@ -43,8 +40,7 @@ const mockSearchResults: SearchResult[] = [
     category: 'Company',
     type: 'page',
     popularity: 75,
-    lastModified: '2024-01-08'
-  },
+    lastModified: '2024-01-08',,
   {
     id: '4',
     title: 'AI Customer Support',
@@ -53,8 +49,7 @@ const mockSearchResults: SearchResult[] = [
     category: 'AI Services',
     type: 'service',
     popularity: 90,
-    lastModified: '2024-01-14'
-  },
+    lastModified: '2024-01-14',,
   {
     id: '5',
     title: 'API Documentation',
@@ -63,22 +58,20 @@ const mockSearchResults: SearchResult[] = [
     category: 'Documentation',
     type: 'documentation',
     popularity: 80,
-    lastModified: '2024-01-05'
-  }
+    lastModified: '2024-01-05',
 ];
-const recentSearches = [
+const recentSearches: any[] = [
   'AI Analytics',
   'Workflow Automation',
   'Healthcare AI'
 ];
-const popularSearches = [
+const popularSearches: any[] = [
   'AI Services',
   'Quantum Computing',
   'Cybersecurity',
   'Data Analytics'
 ];
-const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
-    </SearchModalProps>const</SearchModalProps> [query, setQuery] = useState('');
+const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose   )} => {</SearchModalProps>const</SearchModalProps> [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([])</SearchResult>const</SearchResult> [isSearching, setIsSearching] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -95,8 +88,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
   } else if (e.key === 'ArrowDown') {
     e.preventDefault();
         setSelectedIndex(prev => 
-          prev < results.length - 1 ? prev + 1 : prev
-        )
+          prev < results.length - 1 ? prev + 1 : prev)
   } else if (e.key === 'ArrowUp') {
     e.preventDefault();
         setSelectedIndex(prev => prev > 0 ? prev - 1 : -1)
@@ -112,8 +104,8 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     if (!searchQuery.trim()) {
       setResults([])
       setShowSuggestions(true),
-      return
-  }
+      return;
+}
     setIsSearching(true);
     setShowSuggestions(false);
     // Simulate API call delay
@@ -127,14 +119,13 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     const sortedResults = filteredResults.sort((a, b) => {
     const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
       const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
-      return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance
-  });
+      return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance;
+  )};
     setResults(sortedResults);
     setSelectedIndex(-1);
     setIsSearching(false);
   }
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    </HTMLInputElement>const</HTMLInputElement> value = e.target.value
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {</HTMLInputElement>const</HTMLInputElement> value = e.target.value
     setQuery(value),
     searchResults(value)
   }
@@ -158,9 +149,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
         return '🏢'
       case 'Documentation':
         return '📚',
-      default:
-        return '🔍'
-  }
+      default: return '🔍',
   }
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -172,9 +161,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
         return 'text-pink-400'
       case 'documentation':
         return 'text-green-400',
-      default:
-        return 'text-gray-400'
-  }
+      default: return 'text-gray-400',
   }
   if (!isOpen) return null;
   return (
@@ -218,11 +205,9 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                       key={index}
                       onClick={() => handleSuggestionClick(search)}
                       className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors">
-                      {search}
-                    </button>
+                      {search}</button>
                   ))}
                 </div>
-              </div>
               {/* Popular Searches */}
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
@@ -234,12 +219,9 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                       key={index}
                       onClick={() => handleSuggestionClick(search)}
                       className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors">
-                      {search}
-                    </button>
+                      {search}</button>
                   ))}
                 </div>
-              </div>
-            </div>
           )}
           {/* Search Results */}
           {query && (
@@ -247,7 +229,6 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
               {isSearching ? (
                 <div className="flex items-center justify-center py-8">
                   <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400"></div>
-                </div>
               ) : results.length > 0 ? (
                 <div className="space-y-2">
                   {results.map((result, index) => (
@@ -257,8 +238,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                       className={`w-full text-left p-3 rounded-lg transition-colors ${
                         index === selectedIndex
                           ? 'bg-cyan-400/20 text-cyan-400'
-                          : 'hover:bg-slate-800/50 text-gray-300'
-                      }`}
+                          : 'hover: bg-slate-800/50 text-gray-300',`}
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
@@ -266,8 +246,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                             <span className="text-lg">{getCategoryIcon(result.category)}</span>
                             <h3 className="font-medium">{result.title}</h3>
                             <span className={`text-xs px-2 py-1 rounded ${getTypeColor(result.type)} bg-slate-800/50`}>
-                              {result.type}
-                            </span>
+                              {result.type}</span>
                           </div>
                           <p className="text-sm text-gray-400 mb-2">{result.description}</p>
                           <div className="flex items-center space-x-4 text-xs text-gray-500">
@@ -282,7 +261,6 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                               <span>Updated {result.lastModified}</span>
                             )}
                           </div>
-                        </div>
                         <ArrowRight className="w-4 h-4 text-gray-400" />
                       </div>
                     </button>
@@ -301,12 +279,8 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
             </div>
           )}
         </div>
-      </div>
-    </div>
   );
 }
 export default EnhancedSearchModal</p>
   </h3>
-  </h3>
-  </div>
   </div>

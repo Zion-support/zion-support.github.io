@@ -1,7 +1,6 @@
 import React from 'react';
 interface AccessibilitySettings {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   highContras,
   t: boolean,
@@ -41,7 +40,7 @@ const,
   enableReducedMotion = true,
   enableColorBlindSupport = true,
   enableZoomControl = true)
-}) => {/* TODO: Fix JSX expression */}
+  )} => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   const [settings, setSettings] = useState;
@@ -62,7 +61,7 @@ const,
   l: 100,
     colorBlin,
   d: 'none')
-  });
+    )};
   const [isVisible, setIsVisible] = useState(false);
   // Load settings from localStorage;
   useEffect(() => {if (savedSettings) {}
@@ -397,14 +396,6 @@ onClick={resetSettings} className="w-full mt-4 px-3 py-2 bg-red-600,"
   ),
 }
 export default EnhancedAccessibility;"`
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
   </div>
   </div>
   </div>

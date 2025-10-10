@@ -1,4 +1,3 @@
-
 'use client'
 /**
  * Performance optimization utilities for the Zion Tech Group website;
@@ -17,8 +16,7 @@
   error: (message: string, error: Error) => console.error('[ERROR]', message, error)
 }
 interface PerformanceMetrics {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   loadTime: number,,
     renderTime: number,,
@@ -33,22 +31,18 @@ interface PerformanceMetrics {
   cls?: number
   fmp?: number
   ttfb?: number
-  memory?: number
-}
+  memory?: number,
 interface OptimizationConfig {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   enableLazyLoading: boolean,,
     enableCodeSplitting: boolean,,
     enableImageOptimization: boolean,,
     enableCaching: boolean,,
-    enableCompression: boolean
-}
+    enableCompression: boolean,
 interface PerformanceConfig extends OptimizationConfig {}
 class PerformanceOptimizer {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   private,
@@ -92,8 +86,7 @@ class PerformanceOptimizer {
    */
 
   private initializePerformanceMonitoring(): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     if (typeof window === 'undefined') return;
@@ -103,7 +96,7 @@ class PerformanceOptimizer {
 }
       this.measureLoadTime();
       this.measureMemoryUsage();
-    });
+      )};
     // Monitor render performance;
     this.measureRenderTime();
   }
@@ -112,8 +105,7 @@ class PerformanceOptimizer {
    */
 
   public init(): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     this.initializePerformanceMonitoring();
@@ -123,8 +115,7 @@ class PerformanceOptimizer {
    */
 
   private measureLoadTime(): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     if (typeof window === 'undefined' || !window.performance) return;
@@ -148,8 +139,7 @@ class PerformanceOptimizer {
    */
 
   private measureRenderTime(): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     // Check if PerformanceObserver exists (may not be available in test environments)
@@ -169,10 +159,10 @@ class PerformanceOptimizer {
 }
             this.metrics.renderTime = entry.duration;
           }
-        });
-      });
+          )};
+        )};
       observer.observe({/* TODO: Fix JSX expression */})
-  s: ['measure'] });
+  s: ['measure']   )};
       this.observers.push(observer);
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -192,9 +182,9 @@ class PerformanceOptimizer {
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
         this.metrics.lcp = lastEntry.startTime;
-      })
+        )}
       observer.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] })
+  s: ['largest-contentful-paint']   )}
 //       this.observers.push(observer)
     } catch {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -219,10 +209,10 @@ class PerformanceOptimizer {
           const fidEntry = entry as PerformanceEntry & {/* TODO: Fix JSX expression */}
   t: number }
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
-        })
-      })
+          )}
+        )}
       observer.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] })
+  s: ['first-input']   )}
 //       this.observers.push(observer)
     } catch {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -246,11 +236,11 @@ class PerformanceOptimizer {
 }
             clsValue += clsEntry.value;
           }
-        })
+          )}
         this.metrics.cls = clsValue;
-      })
+        )}
       observer.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] })
+  s: ['layout-shift']   )}
 //       this.observers.push(observer)
     } catch {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -281,13 +271,12 @@ class PerformanceOptimizer {
       }
   )
       observer.observe({/* TODO: Fix JSX expression */}
-  s: ['paint'] })
+  s: ['paint']   )}
   )
 //       this.observers.push(observer)
 
     } catch {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
       // Ignore if not supported;
@@ -319,13 +308,12 @@ class PerformanceOptimizer {
       }
   )
       observer.observe({/* TODO: Fix JSX expression */}
-  s: ['navigation'] })
+  s: ['navigation']   )}
   )
 //       this.observers.push(observer)
 
     } catch {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
       // Ignore if not supported;
@@ -338,7 +326,7 @@ class PerformanceOptimizer {
   O: Add content,}
 }
       const memory = (performance as Performance & {/* TODO: Fix JSX expression */})
-  t: number } }).memory;
+  t: number }   )}.memory;
       if (memory) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -351,8 +339,7 @@ class PerformanceOptimizer {
    */
 
   private measureMemoryUsage(): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     if (typeof window === 'undefined' || !('memory' in window.performance)) return;
@@ -368,8 +355,8 @@ class PerformanceOptimizer {
   e: number,,
     jsHeapSizeLimi,
   t: number,)
-      })
-    }).memory;
+        )}
+      )}.memory;
     if (memory) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -381,8 +368,7 @@ class PerformanceOptimizer {
    */
 
   public optimizeImages(): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     if (typeof window === 'undefined') return;
@@ -422,8 +408,7 @@ class PerformanceOptimizer {
    */
 
   private supportsWebP(): boolean {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     if (typeof window === 'undefined') return false;
@@ -439,8 +424,7 @@ class PerformanceOptimizer {
    */
 
   public setupLazyLoading(): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     if (typeof window === 'undefined') return;
@@ -477,13 +461,13 @@ class PerformanceOptimizer {
               lazyObserver.unobserve(element)
             }
           }
-        });
-      });
+          )};
+        )};
       lazyElements.forEach((element) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         lazyObserver.observe(element);
-      });
+        )};
     }
     this.metrics.lazyLoading = true;
   }
@@ -492,8 +476,7 @@ class PerformanceOptimizer {
    */
 
   enableCodeSplitting(): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     if (!this.config.enableCodeSplitting) return;
@@ -506,8 +489,7 @@ class PerformanceOptimizer {
    */
 
   enableCaching(): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     if (!this.config.enableCaching) return;
@@ -518,7 +500,7 @@ class PerformanceOptimizer {
   O: Add content,}
 }
         if (process.env.NODE_ENV === 'development') {}
-      })
+        )}
       .catch((error) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -531,8 +513,7 @@ class PerformanceOptimizer {
    */
 
   getMetrics(): PerformanceMetrics {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     return { ...this.metrics }
@@ -542,8 +523,7 @@ class PerformanceOptimizer {
    */
 
   getPerformanceScore(): number {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     let score = 100;
@@ -563,8 +543,7 @@ class PerformanceOptimizer {
    */
 
   generateReport(): string {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
     const score = this.getPerformanceScore();
     return `Performance Score: ${score}`;
@@ -575,8 +554,7 @@ class PerformanceOptimizer {
    */
 
   lazyLoadImages(): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     if (typeof window === 'undefined') return;
@@ -586,7 +564,7 @@ class PerformanceOptimizer {
 }
       entries.forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
         if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -607,22 +585,20 @@ class PerformanceOptimizer {
    */
 
   addCriticalResourceHints(): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     if (typeof window === 'undefined') return;
-    const criticalResources = [
+    const criticalResources: any[] = [
   // TOD,
-  O: Add items
-],
+  O: Add items,,
       {/* TODO: Fix JSX expression */}
   n: 'anonymous' },
       {/* TODO: Fix JSX expression */}
   s: 'style' }];
     criticalResources.forEach(resource => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource.href;
@@ -630,7 +606,7 @@ class PerformanceOptimizer {
       if (resource.type) link.type = resource.type;
       if (resource.crossorigin) link.crossOrigin = resource.crossorigin;
       document.head.appendChild(link);
-    });
+      )};
     logger.info('Critical resource hints added', 'PerformanceOptimizer');
   }
   /**
@@ -638,8 +614,7 @@ class PerformanceOptimizer {
    */
 
   measurePageLoad(): PerformanceMetrics | null {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     if (typeof window === 'undefined' || !('performance' in window)) return null;
@@ -669,14 +644,13 @@ class PerformanceOptimizer {
    */
 
   reportWebVitals(metrics: PerformanceMetrics): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     logger.performance('Web Vitals reported', metrics as unknown as Record;)
           <string, unknown>, 'PerformanceOptimizer');
     // Send to analytics if available;
-    if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {/* TODO: Fix JSX expression */}
+    if (typeof window !== 'undefined' && (window as { gtag?: Function   )}.gtag) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       Object.entries(metrics).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
@@ -686,7 +660,7 @@ class PerformanceOptimizer {
   O: Add content,}
 }
           (window as unknown as {/* TODO: Fix JSX expression */})
-  g: Function }).gtag('event', 'web_vitals', {/* TODO: Fix JSX expression */}
+  g: Function   )}.gtag('event', 'web_vitals', {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 
@@ -695,7 +669,7 @@ class PerformanceOptimizer {
             metric_rating: value,
 
           < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
-          })
+            )}
   )
         }
       }
@@ -707,8 +681,7 @@ class PerformanceOptimizer {
    */
 
   public cleanup(): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     this.observers.forEach(observer => observer.disconnect());
@@ -720,8 +693,7 @@ class PerformanceOptimizer {
    */
 
   generateComprehensiveReport(): string {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     const score = this.getPerformanceScore();
@@ -738,8 +710,7 @@ Cache Hit Rate: ${metrics.cacheHitRate}%;
   Recommendations:
 
 ${
-    score
-  }
+    score,
           < 80 ? '- Consider optimizing images and enabling compression' : ''}
 ${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
 ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}`
@@ -750,8 +721,7 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
    */
 
   optimize(): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     this.optimizeImages();
@@ -767,4 +737,3 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
 // Export singleton instance;
 export const performanceOptimizer = new PerformanceOptimizer()
 export default PerformanceOptimizer;"`
-

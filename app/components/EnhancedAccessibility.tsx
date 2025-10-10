@@ -7,31 +7,29 @@ interface AccessibilitySettings {
   reducedMotion: boolean
   fontSize: 'small' | 'medium' | 'large'
   screenReader: boolean,
-  keyboardNavigation: boolean
-  }
+  keyboardNavigation: boolean,
 
 interface EnhancedAccessibilityProps {
     children: React.ReactNode;
   enableKeyboardNavigation?: boolean
   enableScreenReaderSupport?: boolean
   enableHighContrast?: boolean,
-  enableFocusManagement?: boolean
-  }
+  enableFocusManagement?: boolean;
+}
 
 const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   children,
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
-  enableFocusManagement = true
-}) => {
+  enableFocusManagement = true;
+  )} => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     reducedMotion: false,
     fontSize: 'medium',
     screenReader: false,
-    keyboardNavigation: false
-  })
+    keyboardNavigation: false,)
 
   const analytics = useAnalytics();
 
@@ -43,21 +41,18 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     setSettings(prev => ({
       ...prev,
       reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
-    }));
+      highContrast: prefersHighContrast,));
 
     // Apply initial accessibility settings
     applyAccessibilitySettings({
       ...settings,
       reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
-    })
+      highContrast: prefersHighContrast,)
 
     // Track accessibility usage
     analytics?.track('accessibility_initialized', {
       reduced_motion: prefersReducedMotion,
-      high_contrast: prefersHighContrast
-    })
+      high_contrast: prefersHighContrast,)
   }, []);
 
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
@@ -65,8 +60,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     
     // High contrast mode
     if (newSettings.highContrast) {
-      root.classList.add('high-contrast');
-    } else {
+      root.classList.add('high-contrast'), else {
       root.classList.remove('high-contrast');
     }
 
@@ -133,8 +127,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       
       // Ensure focus is visible
       if (target && target.classList) {
-        target.classList.add('focus-visible');
-      }
+        target.classList.add('focus-visible'),
     }
 
     const handleFocusOut = (event: FocusEvent) => {
@@ -142,8 +135,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       
       // Remove focus styling
       if (target && target.classList) {
-        target.classList.remove('focus-visible');
-      }
+        target.classList.remove('focus-visible'),
     }
 
     document.addEventListener('focusin', handleFocusIn);
@@ -176,8 +168,8 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     (window as any).accessibility = {
       updateSettings,
       announceToScreenReader,
-      settings
-    }
+      settings;
+}
   }, [settings]);
 
   return (
@@ -186,8 +178,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       data-font-size={settings.fontSize}
       data-screen-reader={settings.screenReader}
     >
-      {children}
-    </div>
+      {children}</div>
   );
 };
 

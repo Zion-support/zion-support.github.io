@@ -82,7 +82,6 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
                   AI predicts future trends and outcomes based on historical data patterns.
                 </p>
               </div>
-            </div>
           </section>
           {/* Pricing Section */}"
           <section className="mb-16"></section>"
@@ -129,7 +128,6 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
                 </ul>"
                 <a href="/contact" className="cyber-button w-full">Contact Sales</a>
               </div>
-            </div>
           </section>
           {/* Use Cases Section */}"
           <section className="mb-16"></section>"
@@ -160,7 +158,6 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
                 <h3 className="text-xl font-bold text-white mb-4">Operations</h3>"
                 <p className="text-gray-300">Monitor operational metrics and optimize business processes with data insights.</p>
               </div>
-            </div>
           </section>
           {/* CTA Section */}"
           <section className="text-center"></section>"
@@ -185,6 +182,5 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
         </main>
         <Footer /></Footer>
       </div>
-    </div>
   ),
 }"

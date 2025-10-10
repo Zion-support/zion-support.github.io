@@ -10,7 +10,7 @@ const AINeuralInterface: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  const features = [
+  const features: any[] = [
     {
       icon: Brain,
       title: 'Neural Signal Processing',
@@ -37,7 +37,7 @@ const AINeuralInterface: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
+  const pricingPlans: any[] = [
     {
       name: 'Research',
       price: '$2,999',
@@ -51,8 +51,7 @@ const AINeuralInterface: React.FC = () => {
         'Basic visualization',
         'Documentation access'
       ],
-      popular: false
-    },
+      popular: false,,
     {
       name: 'Medical',
       price: '$7,999',
@@ -68,8 +67,7 @@ const AINeuralInterface: React.FC = () => {
         'Patient management',
         'Integration APIs'
       ],
-      popular: true
-    },
+      popular: true,,
     {
       name: 'Enterprise',
       price: '$19,999',
@@ -86,40 +84,35 @@ const AINeuralInterface: React.FC = () => {
         'Research collaboration',
         'Training programs'
       ],
-      popular: false
-    }
+      popular: false,
   ];
 
-  const useCases = [
+  const useCases: any[] = [
     {
       title: 'Medical Rehabilitation',
       description: 'Neural interfaces for stroke recovery and motor function restoration',
       icon: Brain,
-      results: '85% improvement in motor function'
-    },
+      results: '85% improvement in motor function',,
     {
       title: 'Prosthetic Control',
       description: 'Advanced prosthetic control using neural signals for natural movement',
       icon: Target,
-      results: 'Natural prosthetic control'
-    },
+      results: 'Natural prosthetic control',,
     {
       title: 'Cognitive Enhancement',
       description: 'Neural interfaces for memory enhancement and cognitive augmentation',
       icon: Zap,
-      results: '40% cognitive improvement'
-    },
+      results: '40% cognitive improvement',,
     {
       title: 'Communication Aid',
       description: 'Neural interfaces for communication assistance in locked-in syndrome',
       icon: MessageSquare,
-      results: 'Restored communication ability'
-    }
+      results: 'Restored communication ability',
   ];
 
   return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>AI Neural Interface - Advanced Brain-Computer Interface | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered neural interface technology for medical rehabilitation, prosthetic control, and cognitive enhancement. Advanced brain-computer interface solutions." />
         <meta name="keywords" content="neural interface, brain-computer interface, BCI, neural signal processing, prosthetic control, medical AI, cognitive enhancement" />
@@ -144,13 +137,11 @@ const AINeuralInterface: React.FC = () => {
               </div>
               
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                AI Neural Interface
-              </h1>
+                AI Neural Interface</h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Revolutionary AI-powered neural interface technology for medical rehabilitation, 
-                prosthetic control, and cognitive enhancement through advanced brain-computer interfaces.
-              </p>
+                prosthetic control, and cognitive enhancement through advanced brain-computer interfaces.</p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                 <div className="flex items-center space-x-2 text-cyan-400">
@@ -165,7 +156,6 @@ const AINeuralInterface: React.FC = () => {
                   <Target className="w-5 h-5" />
                   <span className="font-semibold">Precise Control</span>
                 </div>
-              </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -183,8 +173,6 @@ const AINeuralInterface: React.FC = () => {
                   Get Quote
                 </a>
               </div>
-            </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -192,12 +180,10 @@ const AINeuralInterface: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Advanced Neural Interface Features
-              </h2>
+                Advanced Neural Interface Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our AI-powered neural interface technology provides cutting-edge solutions 
-                for medical rehabilitation, prosthetic control, and cognitive enhancement.
-              </p>
+                for medical rehabilitation, prosthetic control, and cognitive enhancement.</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -222,7 +208,6 @@ const AINeuralInterface: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Use Cases Section */}
@@ -230,12 +215,10 @@ const AINeuralInterface: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Medical & Research Applications
-              </h2>
+                Medical & Research Applications</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our neural interface technology is transforming medical rehabilitation 
-                and research across various applications and use cases.
-              </p>
+                and research across various applications and use cases.</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -250,12 +233,9 @@ const AINeuralInterface: React.FC = () => {
                   <h3 className="text-xl font-bold mb-4 text-white">{useCase.title}</h3>
                   <p className="text-gray-300 mb-4">{useCase.description}</p>
                   <div className="text-cyan-400 font-semibold text-sm">
-                    {useCase.results}
-                  </div>
-                </div>
+                    {useCase.results}</div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Pricing Section */}
@@ -263,30 +243,25 @@ const AINeuralInterface: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent">
-                Specialized Pricing Plans
-              </h2>
+                Specialized Pricing Plans</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the perfect neural interface plan for your medical or research needs. 
-                All plans include our advanced AI processing and medical-grade interfaces.
-              </p>
+                All plans include our advanced AI processing and medical-grade interfaces.</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border transition-all duration-300 hover: scale-105 hover:shadow-xl ${
                     plan.popular 
                       ? 'border-cyan-500/50 shadow-cyan-500/20' 
-                      : 'border-gray-700/50 hover:border-cyan-500/30'
-                  }`}
+                      : 'border-gray-700/50 hover:border-cyan-500/30',`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
-                    </div>
+                        Most Popular</div>
                   )}
                   
                   <div className="text-center mb-8">
@@ -296,7 +271,6 @@ const AINeuralInterface: React.FC = () => {
                       <span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
                       <span className="text-gray-400 ml-2">{plan.period}</span>
                     </div>
-                  </div>
                   
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, idx) => (
@@ -308,31 +282,26 @@ const AINeuralInterface: React.FC = () => {
                   </ul>
                   
                   <a
-                    href="tel:+13024640950"
+                    href="tel: +13024640950"
                     className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
-                        : 'bg-gradient-to-r from-gray-700 to-gray-600 text-white hover:from-gray-600 hover:to-gray-500'
-                    }`}
+                        : 'bg-gradient-to-r from-gray-700 to-gray-600 text-white hover:from-gray-600 hover:to-gray-500',`}
                   >
-                    Get Started
-                  </a>
+                    Get Started</a>
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Transform Lives with Neural Technology
-            </h2>
+              Transform Lives with Neural Technology</h2>
             <p className="text-xl text-gray-300 mb-8">
               Join leading medical institutions and researchers using our AI-powered neural interface 
-              technology to restore function and enhance human capabilities.
-            </p>
+              technology to restore function and enhance human capabilities.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
@@ -349,11 +318,9 @@ const AINeuralInterface: React.FC = () => {
                 Get Free Quote
               </a>
             </div>
-          </div>
         </section>
       </div>
     </>
-  );
-};
+  ),;
 
 export default AINeuralInterface;

@@ -1,19 +1,19 @@
+import React from 'react';
 'use client';
 interface SEOOptimizerProps {
   title: string;
   description: string;
   keywords?: string[]
   canonicalUrl?: string;
-  structuredData?: object;
-}
+  structuredData?: object,
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title,
   description,
   keywords = [],
   canonicalUrl,
-  structuredData
-}) => {
+  structuredData;
+  )} => {
   const keywordsString = keywords.join(', ');
 
   return (

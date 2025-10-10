@@ -22,24 +22,24 @@ interface FormStatus {
     phone: '',
     service: '',
     message: ''
-  })
+    )}
 
   const [status, setStatus] = useState<FormStatus>({
     type: 'idle',
     message: ''
-  })
+    )}
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
-    }));
+      [name]: value;
+  )});
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus({ type: 'loading', message: 'Sending message...' })
+    setStatus({ type: 'loading', message: 'Sending message...'   )}
 
     try {
       // Simulate API call
@@ -48,7 +48,7 @@ interface FormStatus {
       setStatus({
         type: 'success',
         message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'
-      })
+        )}
 
       // Reset form
       setFormData({
@@ -58,16 +58,16 @@ interface FormStatus {
         phone: '',
         service: '',
         message: ''
-      })
+        )}
     } catch (error) {
       setStatus({
         type: 'error',
         message: 'Sorry, there was an error sending your message. Please try again.'
-      })
+        )}
     }
   }
 
-  const services = [
+  const services: any[] = [
     'AI Solutions',
     'Web Development',
     'Mobile App Development',
@@ -84,8 +84,7 @@ interface FormStatus {
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-            Full Name
-          </label>
+            Full Name</label>
               <input
                 type="text"
                 id="name"
@@ -100,8 +99,7 @@ interface FormStatus {
 
         <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                Email Address *
-              </label>
+                Email Address *</label>
               <input
                 type="email"
                 id="email"
@@ -117,8 +115,7 @@ interface FormStatus {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                Company
-              </label>
+                Company</label>
               <input
                 type="text"
                 id="company"
@@ -132,8 +129,7 @@ interface FormStatus {
 
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                Phone Number
-              </label>
+                Phone Number</label>
               <input
                 type="tel"
                 id="phone"
@@ -144,12 +140,10 @@ interface FormStatus {
                 placeholder="+1 (555) 123-4567"
               />
             </div>
-          </div>
 
           <div>
             <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-              Service Interest
-            </label>
+              Service Interest</label>
             <select
               id="service"
               name="service"
@@ -171,12 +165,12 @@ interface FormStatus {
           >
             {status.type === 'loading' ? (
               <>
-                <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin" /></>
                 <span>Sending...</span>
               </>
             ) : (
               <>
-                <Send className="h-5 w-5" />
+                <Send className="h-5 w-5" /></>
                 <span>Send Message</span>
               </>
             )}
@@ -193,7 +187,6 @@ interface FormStatus {
                 <p className="font-semibold text-gray-900">Phone</p>
                 <p className="text-sm text-gray-600">+1 (555) 123-4567</p>
               </div>
-            </div>
 
             <div className="flex flex-col items-center space-y-2">
               <div className="p-3 bg-green-100 rounded-full">
@@ -203,7 +196,6 @@ interface FormStatus {
                 <p className="font-semibold text-gray-900">Email</p>
                 <p className="text-sm text-gray-600">hello@ziontechgroup.com</p>
               </div>
-            </div>
 
             <div className="flex flex-col items-center space-y-2">
               <div className="p-3 bg-purple-100 rounded-full">
@@ -213,9 +205,6 @@ interface FormStatus {
                 <p className="font-semibold text-gray-900">Office</p>
                 <p className="text-sm text-gray-600">New York, NY</p>
               </div>
-            </div>
-          </div>
-        </div>
     </div>
   );
 };

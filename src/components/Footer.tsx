@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear(),
-  const microSaasServices = [
+  const microSaasServices: any[] = [
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media', icon: '📱', popular: true },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'AI-powered analytics', icon: '📈', popular: true },
@@ -14,7 +14,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Content Generator', url: '/ai-content-generation', description: 'AI content creation', icon: '✍️', popular: false },
     { name: 'AI SEO Optimizer', url: '/ai-marketing', description: 'AI-driven SEO', icon: '🎯', popular: false }
   ];
-  const aiServices = [
+  const aiServices: any[] = [
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' },
@@ -38,7 +38,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Research & Development', url: '/ai-research-development', description: 'Custom AI R&D' },
     { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'AI at the edge' }
   ];
-  const itServices = [
+  const itServices: any[] = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
@@ -56,7 +56,7 @@ const Footer: React.FC = memo(() => {
     { name: 'IT Automation', url: '/it-automation', description: 'IT process automation' },
     { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }
   ];
-  const emergingTech = [
+  const emergingTech: any[] = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
     { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics' },
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
@@ -70,14 +70,14 @@ const Footer: React.FC = memo(() => {
     { name: 'Sustainability Tech', url: '/sustainability-tech', description: 'Green technology solutions' },
     { name: 'Future Technologies', url: '/future-technologies', description: 'Emerging tech solutions' }
   ];
-  const companyLinks = [
+  const companyLinks: any[] = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
     { name: 'News', url: '/news' },
     { name: 'Contact', url: '/contact' }
   ];
-  const supportLinks = [
+  const supportLinks: any[] = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
     { name: 'Support Center', url: '/support' },
@@ -85,7 +85,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' }
   ];
-  const socialLinks = [
+  const socialLinks: any[] = [
     { name: 'Facebook', url: 'https://facebook.com/ziontechgroup', icon: Facebook },
     { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
@@ -97,9 +97,8 @@ const Footer: React.FC = memo(() => {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
-    hours: 'Mon-Fri: 9AM-6PM EST'
-  }
-  const achievements = [
+    hours: 'Mon-Fri: 9AM-6PM EST',
+  const achievements: any[] = [
     { icon: Award, text: '50+ Successful Projects' },
     { icon: Users, text: '100+ Happy Clients' },
     { icon: TrendingUp, text: '300% Average ROI' },
@@ -125,8 +124,7 @@ const Footer: React.FC = memo(() => {
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, 
-              and digital transformation services. Transform your business with cutting-edge technology.
-            </p>
+              and digital transformation services. Transform your business with cutting-edge technology.</p>
             {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -142,7 +140,6 @@ const Footer: React.FC = memo(() => {
                 </a>
               ))}
             </div>
-          </div>
           {/* Micro SAAS Solutions */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
@@ -162,8 +159,7 @@ const Footer: React.FC = memo(() => {
                 <Link 
                   href="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
-                  View All AI Services →
-                </Link>
+                  View All AI Services →</Link>
               </li>
             </ul>
           </div>
@@ -186,8 +182,7 @@ const Footer: React.FC = memo(() => {
                 <Link 
                   href="/it-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
-                  View All IT Services →
-                </Link>
+                  View All IT Services →</Link>
               </li>
               <li>
                 <Link
@@ -218,7 +213,6 @@ const Footer: React.FC = memo(() => {
                     </Link>
                   ))}
                 </div>
-              </div>
               <div>
                 <h5 className="text-sm font-semibold text-blue-400 mb-2">IT Services</h5>
                 <div className="space-y-2">
@@ -232,9 +226,6 @@ const Footer: React.FC = memo(() => {
                     </Link>
                   ))}
                 </div>
-              </div>
-            </div>
-          </div>
         </div>
         {/* Contact Information */}
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
@@ -245,31 +236,21 @@ const Footer: React.FC = memo(() => {
               <div>
                 <div className="text-white font-medium">{contactInfo.phone}</div>
                 <div className="text-gray-400 text-sm">Call us anytime</div>
-              </div>
-            </div>
             <div className="flex items-center space-x-3">
               <Mail className="w-5 h-5 text-cyan-400" />
               <div>
                 <div className="text-white font-medium">{contactInfo.email}</div>
                 <div className="text-gray-400 text-sm">Email us</div>
-              </div>
-            </div>
             <div className="flex items-center space-x-3">
               <MapPin className="w-5 h-5 text-cyan-400" />
               <div>
                 <div className="text-white font-medium">Middletown, DE</div>
                 <div className="text-gray-400 text-sm">{contactInfo.address}</div>
-              </div>
-            </div>
             <div className="flex items-center space-x-3">
               <Clock className="w-5 h-5 text-cyan-400" />
               <div>
                 <div className="text-white font-medium">{contactInfo.hours}</div>
                 <div className="text-gray-400 text-sm">Business hours</div>
-              </div>
-            </div>
-          </div>
-        </div>
         {/* Company Links */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           <div>
@@ -280,8 +261,7 @@ const Footer: React.FC = memo(() => {
                   <Link 
                     href={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                    {link.name}
-                  </Link>
+                    {link.name}</Link>
                 </li>
               ))}
             </ul>
@@ -294,8 +274,7 @@ const Footer: React.FC = memo(() => {
                   <Link 
                     href={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                    {link.name}
-                  </Link>
+                    {link.name}</Link>
                 </li>
               ))}
             </ul>
@@ -321,16 +300,12 @@ const Footer: React.FC = memo(() => {
               <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all text-sm">
                 Subscribe</span>
             </div>
-          </div>
-        </div>
-      </div>
       {/* Bottom Bar */}
       <div className="border-t border-gray-700/50">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-gray-400">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </div>
+              © {currentYear} Zion Tech Group. All rights reserved.</div>
             <div className="flex space-x-6">
               <Link href="/privacy" className="text-sm text-gray-400 hover: text-cyan-400 transition-colors">
                 Privacy Policy</span>
@@ -352,20 +327,12 @@ const Footer: React.FC = memo(() => {
                 <Globe className="w-4 h-4 text-blue-400" />
                 <span>Global Reach</span>
               </div>
-            </div>
-          </div>
-        </div>
       </div>
     </footer>
   ),
-});
+  )};
 Footer.displayName = 'Footer';
 export default Footer</Link>
-  </Link>
-  </Link>
   </button>
-  </li>
-  </li>
-  </li>
   </li>
   </h4>

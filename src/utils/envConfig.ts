@@ -1,4 +1,3 @@
-
 'use client'
 /**
  * Environment Configuration Manager;
@@ -6,8 +5,7 @@
  */
 
 export interface EnvConfig {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   nodeEnv: 'development' | 'production' | 'test',,
     apiUrl: string
@@ -24,8 +22,7 @@ export interface EnvConfig {
 }
 
 class EnvironmentConfig {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   private,
@@ -38,8 +35,7 @@ class EnvironmentConfig {
     this.isInitialized = true;
   }
   private loadConfig(): EnvConfig {
-    // Safely access environment variables with defaults
-  }
+    // Safely access environment variables with defaults,
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -72,7 +68,7 @@ class EnvironmentConfig {
           <EnvConfig> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return Object.freeze({ ...this.config });
+    return Object.freeze({ ...this.config   )};
   }
   /**
    * Get a specific configuration value;
@@ -89,8 +85,7 @@ class EnvironmentConfig {
    */
 
   public isProduction(): boolean {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     return this.config.nodeEnv === 'production';
@@ -100,8 +95,7 @@ class EnvironmentConfig {
    */
 
   public isDevelopment(): boolean {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     return this.config.nodeEnv === 'development';
@@ -111,8 +105,7 @@ class EnvironmentConfig {
    */
 
   public isTest(): boolean {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     return this.config.nodeEnv === 'test';
@@ -122,8 +115,7 @@ class EnvironmentConfig {
    */
 
   public validate(requiredVars: (keyof EnvConfig)[]): {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   vali,
@@ -182,8 +174,7 @@ class EnvironmentConfig {
    */
 
   public logConfig(): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
@@ -205,7 +196,7 @@ class EnvironmentConfig {
 
         'GA Tracking ID Set': !!this.config.gaTrackingId;
 
-      });
+        )};
       console.groupEnd();
     }
   }
@@ -218,4 +209,3 @@ export const isDevelopment = () => envConfig.isDevelopment()
 export const isTest = () => envConfig.isTest()
 export const getConfig = () => envConfig.getConfig()
 export const getApiHeaders = () => envConfig.getApiHeaders()`
-

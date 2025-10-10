@@ -33,8 +33,7 @@ class EnvValidator {}
     return {
     isValid: this.errors.length === 0
       errors: this.errors,
-      warnings: this.warnings
-  }
+      warnings: this.warnings,
     return {}
       isValid: this.errors.length === 0,
       errors: this.errors,
@@ -67,7 +66,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
   }
   private validateNodeEnv(): void {}
     const nodeEnv = process.env['NODE_ENV']
-    const validEnvs = ['development', 'production', 'test']
+    const validEnvs: any[] = ['development', 'production', 'test']
     if (!nodeEnv) {}
       this.errors.push('NODE_ENV is not set');
       return;
@@ -84,8 +83,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
     if (nodeEnv === 'production') {
     if (!process.env['NEXT_PUBLIC_SITE_URL']) {
         this.warnings.push(
-    // In production, these should be set
-  }
+    // In production, these should be set,
     if (nodeEnv === 'production') {}
       if (!process.env['NEXT_PUBLIC_SITE_URL']) {}
         this.warnings.push();
@@ -103,10 +101,9 @@ class EnvValidator {/* TODO: Fix JSX expression */}
     const env = process.env['NODE_ENV'] || 'development';
     return env as 'development' | 'production' | 'test';
   getConfig(): EnvConfig {/* TODO: Fix JSX expression */}
-  failed:;
+  failed: ;
 ${
-    validation.errors.join('
-  }
+    validation.errors.join(',
 ')}`;
       );
     }
@@ -139,8 +136,7 @@ if (!validEnvs.includes(nodeEnv)) {
 export const envValidator = new EnvValidator();
 // Export convenience function;
 export function validateEnv(): EnvConfig {
-    // Export convenience function
-  }
+    // Export convenience function,
 export function validateEnv(): EnvConfig {}
   return envValidator.getConfig();
 }

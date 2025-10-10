@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react';
 const DeveloperToolsPage: React.FC = () => {
-  const _devTools = [
+  const _devTools: any[] = [
     {
       title: 'AI Code Generator',
       description: 'Generate high-quality code using advanced AI models',
@@ -68,30 +68,25 @@ $4}
         <section className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
-              Developer Tools
+              Developer Tools</h1>
   </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              AI-powered development tools that accelerate your coding workflow and improve productivity,
+              AI-powered development tools that accelerate your coding workflow and improve productivity,</p>
   </
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">60%</div>
                 <div className="text-gray-300">Productivity Boost</div>
-              </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
                 <div className="text-gray-300">Tools Available</div>
-              </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <div className="text-3xl font-bold text-purple-400 mb-2">10K+</div>
                 <div className="text-gray-300">Active Developers</div>
-              </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>
                 <div className="text-gray-300">Uptime</div>
-              </div>
-            </div>
             {/* Contact Info */}
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
               <div className="flex flex-col md: flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
@@ -108,9 +103,9 @@ $4}
     <div>Coming Soon</div>
   ),
 }
-  const _devTools = [
+  const _devTools: any[] = [
   // TOD,
-  O: Add items
+  O: Add items,
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -126,8 +121,7 @@ $4}
       benefit,
   s: ['Increase Productivity by 60%', 'Reduce Coding Time by 50%', 'Improve Code Quality', 'Learn Best Practices'],
       pric,
-  e: 'Starting at $99/month'
-    },
+  e: 'Starting at $99/month',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -142,8 +136,7 @@ $4}
       benefit,
   s: ['Ensure API Reliability', 'Reduce Testing Time by 70%', 'Improve Performance', 'Prevent Downtime'],
       pric,
-  e: 'Starting at $149/month'
-    },
+  e: 'Starting at $149/month',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -158,8 +151,7 @@ $4}
       benefit,
   s: ['Improve Database Performance', 'Reduce Query Time by 80%', 'Automate Backups', 'Prevent Data Loss'],
       pric,
-  e: 'Starting at $199/month'
-    },
+  e: 'Starting at $199/month',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -174,8 +166,7 @@ $4}
       benefit,
   s: ['Faster Deployments', 'Reduce Errors by 90%', 'Improve Collaboration', 'Scale Efficiently'],
       pric,
-  e: 'Starting at $299/month'
-    },
+  e: 'Starting at $299/month',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -190,8 +181,7 @@ $4}
       benefit,
   s: ['Improve Code Quality', 'Catch Bugs Early', 'Enforce Standards', 'Reduce Review Time'],
       pric,
-  e: 'Starting at $79/month'
-    },
+  e: 'Starting at $79/month',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -206,8 +196,7 @@ $4}
       benefit,
   s: ['Improve App Performance', 'Reduce Load Times', 'Optimize Resources', 'Enhance User Experience'],
       pric,
-  e: 'Starting at $179/month'
-    }
+  e: 'Starting at $179/month',
   ];
   return (<div>Coming Soon</div>)
   )
@@ -235,21 +224,16 @@ $4}
   md:grid-cols-4 gap-6 mb-12"></div>"
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
                 <div className="text-3xl font-bold text-cyan-400 mb-2">60%</div>"
-                <div className="text-gray-300">Productivity Boost</div>
-              </div>"
+                <div className="text-gray-300">Productivity Boost</div>"
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
                 <div className="text-3xl font-bold text-green-400 mb-2">50+</div>"
-                <div className="text-gray-300">Tools Available</div>
-              </div>"
+                <div className="text-gray-300">Tools Available</div>"
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
                 <div className="text-3xl font-bold text-purple-400 mb-2">10K+</div>"
-                <div className="text-gray-300">Active Developers</div>
-              </div>"
+                <div className="text-gray-300">Active Developers</div>"
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
                 <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>"
                 <div className="text-gray-300">Uptime</div>
-              </div>
-            </div>
             {/* Contact Info */}"
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div>"
               <div className="flex flex-col,
@@ -268,15 +252,12 @@ $4}
                   <MapPin className="w-5 h-5" /></MapPin>"
                   <span className="text-white font-medium">Middletown, DE</span>
                 </div>
-              </div>
-            </div>
-          </div>
         </section>
         {/* Tools Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Our Developer Tools;
+              Our Developer Tools;</h2>
   </
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {devTools.map((tool, index) => (
@@ -290,7 +271,6 @@ $4}
                   </div>
                   <div className="mb-6">
                     <div className="text-2xl font-bold text-green-600 mb-4">{tool.price}</div>
-                  </div>
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
@@ -318,8 +298,7 @@ $4}
                     <p className="text-gray-600 text-sm">{tool.description}</p>
                   </div>"
                   <div className="mb-6"></div>"
-                    <div className="text-2xl font-bold text-green-600 mb-4">{tool.price}</div>
-                  </div>"
+                    <div className="text-2xl font-bold text-green-600 mb-4">{tool.price}</div>"
                   <div className="mb-6"></div>"
                     <h4 className="font-semibold text-gray-900 mb-3">Key,
   Features:</h4>"
@@ -355,7 +334,7 @@ $4}
                     <a
                       href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block">
-                      Get Started Now,
+                      Get Started Now,</a>
   </
                   </div>"
                   <div className="text-center"></div>
@@ -369,33 +348,28 @@ $4}
 //                       Get Started Now,
           </a>
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
         {/* CTA Section */}
         <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Supercharge Your Development?
-            </h2>
+              Ready to Supercharge Your Development?</h2>
             <p className="text-xl text-purple-100 mb-8">
-              Join thousands of developers who have accelerated their productivity with our AI-powered tools.
-            </p>
+              Join thousands of developers who have accelerated their productivity with our AI-powered tools.</p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-                Call (302) 464-0950
+                Call (302) 464-0950</a>
   </
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors">
-                Email Us,
+                Email Us,</a>
   </
             </div>
-          </div>
         </section>
         <Footer />
       </div>
@@ -413,15 +387,12 @@ $4}
               <a
                 href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 // >
-//                 Call (302) 464-0950
-          </a>
+//                 Call (302) 464-0950</a>
               <a
                 href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
 // >
-//                 Email Us
-          </a>
+//                 Email Us</a>
             </div>
-          </div>
         </section>
       </main>
       <Footer /></Footer>
@@ -429,5 +400,4 @@ $4}
   ),
 }
 export default DeveloperToolsPage;
-  </a>
   </a>

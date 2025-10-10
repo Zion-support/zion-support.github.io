@@ -42,8 +42,7 @@ const handleKeyDown = (;
         if (document.activeElement === firstFocusable) {
           lastFocusable?.focus();) => {
   return (
-    $3
-  )
+    $3)
   }
           e.preventDefault();}
         }
@@ -79,8 +78,7 @@ export function makeKeyboardAccessible(;
   onClick: (e: Event) => void,
   options: {
     role?: string,
-    tabindex?: number
-  }
+    tabindex?: number,
   } = {}
 ): () => void {}
   const { role = 'button', tabindex = 0 } = options;
@@ -90,8 +88,7 @@ const handleKeyDown = (;
     if (e.key === 'Enter' || e.key === ' ') {
     e.preventDefault();) => {
   return (
-    $3
-  )
+    $3)
   }
       onClick(e);}
     }
@@ -114,7 +111,7 @@ export function getContrastRatio(color1: string, color2: string): number {
       c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)
   }
-    })
+      )}
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
   }
 const lum1 = getLuminance(color1);
@@ -133,8 +130,7 @@ export function meetsContrastRequirements(;
   fontSize: 'normal' | 'large' = 'normal',
 ): boolean {
     const ratio = getContrastRatio(color1, color2);
-  return fontSize === 'large' ? ratio >= 3 : ratio >= 4.5
-  }
+  return fontSize === 'large' ? ratio >= 3 : ratio >= 4.5,
 }
 /**;
  * Skip to content link helper;
@@ -156,33 +152,31 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
 skipLink.addEventListener('focus', () => {
     skipLink.style.top = '0'
   }
-  })
+    )}
 skipLink.addEventListener('blur', () => {
     skipLink.style.top = '-40px'
   }
-  })
+    )}
 return skipLink;
 }
 /**;
  * Detect if user prefers reduced motion;
  */;
 export function prefersReducedMotion(): boolean {
-    return window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  }
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches,
 }
 /**;
  * Detect if user prefers dark mode;
  */;
 export function prefersDarkMode(): boolean {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-  }
+    return window.matchMedia('(prefers-color-scheme: dark)').matches,
 }
 /**;
  * Get ARIA label for form validation error;
  */;
 export function getAriaInvalid(hasError: boolean): Record<string, string> {
   return {}
-    ...(hasError && { 'aria-describedby': generateId('error') })
+    ...(hasError && { 'aria-describedby': generateId('error')   )}
   }
 }
 /**;
@@ -211,8 +205,7 @@ const showTooltip = (;
     const triggerRect = trigger.getBoundingClientRect();
 switch (placement) {) => {
   return (
-    $3
-  )
+    $3)
   }
       case 'top':;}
         tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;
@@ -234,8 +227,7 @@ switch (placement) {) => {
   }
 const hideTooltip = (;) => {
     return (
-    $3
-  )
+    $3)
   }
     tooltip.style.display = 'none';}
   }
@@ -258,8 +250,7 @@ return () => {
 export class FocusManager {
     private previousActiveElement: HTMLElement | null = null,
 saveFocus(): void {
-    this.previousActiveElement = document.activeElement as HTMLElement
-  }
+    this.previousActiveElement = document.activeElement as HTMLElement,
   }
 restoreFocus(): void {
     if (this.previousActiveElement) {

@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
 const EnterprisePage: React.FC = () => {
-    const features = [
+    const features: any[] = [
     {
       icon: Shield,
       title: 'Enterprise Security',
@@ -43,7 +43,7 @@ const EnterprisePage: React.FC = () => {
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
   }
     ]
-const solutions = [
+const solutions: any[] = [
     {
     title: 'Enterprise Resource Planning',
       description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
@@ -69,7 +69,7 @@ const solutions = [
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
   }
     ]
-const benefits = [
+const benefits: any[] = [
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',
     'Enhance security and compliance',
@@ -83,7 +83,7 @@ const benefits = [
 
     'Provide 24/7 support and monitoring'
   ]
-const stats = [
+const stats: any[] = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
@@ -100,7 +100,6 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
@@ -108,23 +107,19 @@ return (
           <h1>
             Enterprise</h1>
             <span>
-              Solutions
-            </span>
+              Solutions</span>
           </h1>
           <p>
             Comprehensive enterprise-grade solutions designed for large-scale business operations.;
-            Transform your organization with cutting-edge technology and expert implementation.
-          </p>
+            Transform your organization with cutting-edge technology and expert implementation.</p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button>
               Get Enterprise Consultation
-              <ArrowRight>
+              <ArrowRight></ArrowRight>
             </button>
             <button>
-              View Case Studies,
-            </button>
+              View Case Studies,</button>
           </div>
-        </div>
       </section>
 
       {/* Stats Section */}
@@ -134,7 +129,6 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
@@ -146,11 +140,9 @@ return (
                   <stat />
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
-              </div>
             ))}
 
           </div>
-        </div>
       </section>
       {/* Features Section */}
       <section className="py-20 px-4">
@@ -159,16 +151,13 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>
-              Enterprise-Grade Features
-            </h2>
+              Enterprise-Grade Features</h2>
             <p>
-              Built for scale, security, and performance to meet the demands of large organizations.
-            </p>
+              Built for scale, security, and performance to meet the demands of large organizations.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
                   <feature>
@@ -182,7 +171,7 @@ return (
                     <li>
                       <CheckCircle>
 
-                      {benefit}
+                      {benefit}</CheckCircle>
                     </li>
                   ))}
                 </ul>
@@ -190,14 +179,11 @@ return (
             ))}
 
           </div>
-        </div>
       </section>
             <h2>
-              Comprehensive Solutions
-            </h2>
+              Comprehensive Solutions</h2>
             <p>
-              End-to-end enterprise solutions that address every aspect of your business operations.
-            </p>
+              End-to-end enterprise solutions that address every aspect of your business operations.</p>
           </div>
                     </li>
 
@@ -207,7 +193,6 @@ return (
             ))}
 
           </div>
-        </div>
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4">
@@ -216,13 +201,9 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
                 </button>
               </div>
-            </div>
-          </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4">
@@ -231,29 +212,23 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <h2>
-            Ready to Transform Your Enterprise?
-          </h2>
+            Ready to Transform Your Enterprise?</h2>
           <p>
-            Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.
-          </p>
+            Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.</p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button>
               Contact Enterprise Sales
-              <ArrowRight>
+              <ArrowRight></ArrowRight>
             </button>
             <button>
-              Learn More
-            </button>
+              Learn More</button>
           </div>
-        </div>
       </section>
       <Footer />
   ),
 };
 
 export default EnterprisePage;
-

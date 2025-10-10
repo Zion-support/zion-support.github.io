@@ -3,30 +3,26 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const AnalyticsTrackerPage: React.FC = () => {
-    const features = [
+    const features: any[] = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-  },
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',,
     {
     icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-  },
+      description: 'Lightning-fast processing and real-time analytics for optimal results',,
     {
     icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-  },
+      description: 'Bank-level security with encryption and compliance standards',,
     {
     icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-  }
+      description: 'Worldwide deployment and support for international businesses',
     }
   ]
-const benefits = [
+const benefits: any[] = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',;
     'Enterprise-grade security and compliance',;
@@ -67,8 +63,6 @@ return (
                 Learn More,
               </button>
             </div>
-          </div>
-        </div>
       </section>
       {/* Features Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
@@ -94,7 +88,6 @@ return (
               </div>
             ))}
           </div>
-        </div>
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section>
@@ -117,7 +110,6 @@ return (
               </div>
             ))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
@@ -139,8 +131,6 @@ return (
                 Email Us
               </button>
             </div>
-          </div>
-        </div>
       </section>
     </div>
   ),

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, Building, Users, TrendingUp } from 'lucide-react';
 
 const CaseStudiesPage: React.FC = () => {
-  const caseStudies = [
+  const caseStudies: any[] = [
     {
       title: 'AI-Powered Customer Service for E-commerce',
       client: 'ShopTech Solutions',
@@ -45,11 +45,9 @@ const CaseStudiesPage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Case Studies
-          </h1>
+            Case Studies</h1>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Discover how we've helped businesses transform with cutting-edge AI and IT solutions.
-          </p>
+            Discover how we've helped businesses transform with cutting-edge AI and IT solutions.</p>
         </div>
       </section>
 
@@ -65,8 +63,6 @@ const CaseStudiesPage: React.FC = () => {
                   <div className="text-white text-center">
                     <Building className="w-16 h-16 mx-auto mb-4" />
                     <div className="text-sm opacity-80">{study.industry}</div>
-                  </div>
-                </div>
                 
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-white mb-2">{study.title}</h3>
@@ -76,8 +72,7 @@ const CaseStudiesPage: React.FC = () => {
                   </div>
                   
                   <p className="text-gray-300 mb-4 line-clamp-3">
-                    {study.description}
-                  </p>
+                    {study.description}</p>
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Results:</h4>
@@ -96,21 +91,17 @@ const CaseStudiesPage: React.FC = () => {
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </button>
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
 
       <section className="py-20 px-4 bg-white/5">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-8">
-            Ready to Start Your Success Story?
-          </h2>
+            Ready to Start Your Success Story?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let us help you achieve similar results with our AI and IT solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            Let us help you achieve similar results with our AI and IT solutions.</p>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
@@ -126,10 +117,8 @@ const CaseStudiesPage: React.FC = () => {
               <ExternalLink className="w-5 h-5 ml-2" />
             </Link>
           </div>
-        </div>
       </section>
     </div>
-  );
-};
+  ),;
 
 export default CaseStudiesPage;

@@ -6,8 +6,7 @@ export interface AppConfig {
     app: {
     name: string,
     version: string,
-    environment: 'development' | 'production' | 'test'
-  }
+    environment: 'development' | 'production' | 'test',
   }
   api: {
     baseUrl: string,
@@ -58,8 +57,7 @@ const config: AppConfig = {
     enableLazyLoading: true,
     imageLazyLoadThreshold: 0.5,
     componentLazyLoadThreshold: 0.25,
-    cacheMaxAge: 3600000, // 1 hour in milliseconds
-  },
+    cacheMaxAge: 3600000, // 1 hour in milliseconds,,
   security: {
     enableCSP: true,
     enableHSTS: true,
@@ -86,15 +84,13 @@ return value as T;
  * Check if a feature is enabled;
  */;
 export function isFeatureEnabled(feature: keyof AppConfig['features']): boolean {
-    return config.features[feature]
-  }
+    return config.features[feature],
 }
 /**;
  * Get current environment;
  */;
 export function getEnvironment(): string {
-    return config.app.environment
-  }
+    return config.app.environment,
 }
 /**;
  * Check if running in production;

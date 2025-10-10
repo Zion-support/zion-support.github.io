@@ -4,14 +4,14 @@ interface ModernLoadingSpinnerProps {
     size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'accent';
   text?: string;
-  fullScreen?: boolean
-  }
+  fullScreen?: boolean;
+}
 const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   size = 'md',
   color = 'primary',
   text = 'Loading...',
-  fullScreen = false
-}) => {
+  fullScreen = false;
+  )} => {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
@@ -40,7 +40,6 @@ $4}
         <div className="relative">
           <div className={spinnerClasses}></div>
           <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20"></div>
-        </div>
         {text && (
           <p className="text-sm text-gray-300 animate-pulse">{text}</p>
         )}
@@ -63,15 +62,14 @@ const,
   color = 'primary',
   text = 'Loading...',
   fullScreen = false;)
-}) => {/* TODO: Fix JSX expression */}
+  )} => {/* TODO: Fix JSX expression */}
   m: 'w-4 h-4'}
     m,
   d: 'w-8 h-8',
     l,
   g: 'w-12 h-12',
     x,
-  l: 'w-16 h-16'
-  }
+  l: 'w-16 h-16',
   const colorClasses = {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -80,8 +78,7 @@ const,
     secondar,
   y: 'text-purple-400',
     accen,
-  t: 'text-pink-400'
-  }
+  t: 'text-pink-400',
   const spinnerClasses = `
     ${sizeClasses[size]}
     ${colorClasses[color]}
@@ -101,7 +98,6 @@ const,
         <div className="relative"></div>
           <div className={spinnerClasses}></div>"
           <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20"></div>
-        </div>
         {text && ()}"
           <p className="text-sm text-gray-300 animate-pulse">{text}</p>
         )}
@@ -112,5 +108,4 @@ const,
 }
 export default ModernLoadingSpinner;
 export default ModernLoadingSpinner;"`
-  </ModernLoadingSpinnerProps>
   </ModernLoadingSpinnerProps>

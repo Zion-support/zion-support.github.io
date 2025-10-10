@@ -4,7 +4,7 @@ import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Pho
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const testPagetsx: React.FC = () => {
-  const _features = [],
+  const _features: any[] = [],
   return (
     {icon: Users,
     title: 'Advanced Features',
@@ -49,7 +49,6 @@ const testPagetsx: React.FC = () => {
                 View Demo,
               </a>
             </div>
-          </div>
         </section>
         {/* Features Section */}
         <section className="py-16 px-4">
@@ -72,7 +71,6 @@ const testPagetsx: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
         {/* CTA Section */}"
         <section className="py-16 px-4 bg-gray-800"></section>"

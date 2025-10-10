@@ -1,12 +1,10 @@
-
 /**
  * Application Configuration;
  * Centralized configuration management for the Zion Tech Group application;
  */
 
 export interface AppConfig {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   ap,
@@ -40,30 +38,24 @@ export interface AppConfig {
     errorTracking: boolean,,
     performanceOptimization: boolean,,
     performance: {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   enableLazyLoading: boolean,,
     imageLazyLoadThreshold: number,,
     componentLazyLoadThreshold: number,,
     cacheMaxAge: number,,
     security: {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   enableCSP: boolean,,
     enableHSTS: boolean,,
-    enableXSSProtection: boolean
-
-}
+    enableXSSProtection: boolean,
     nam,
   e: 'Zion Tech Group',
     versio,
   n: '1.0.0',
     environmen,
-  t:
-//       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'
-  },
+  t: //       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development',,
     enableLazyLoadin,
   g: true,
     imageLazyLoadThreshol,
@@ -83,8 +75,7 @@ export interface AppConfig {
 export function getConfig,
           <T = unknown>(keyPat)
   h: string): T {
-    const keys = keyPath.split('.')
-  }
+    const keys = keyPath.split('.'),
   const __keys = keyPath.split('.');
   let,
   value: unknown = config,
@@ -123,4 +114,3 @@ export function isDevelopment(): boolean {/* TODO: Fix JSX expression */}
 }
   return config.app.environment === 'development';
 export default config;
-

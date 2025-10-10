@@ -79,7 +79,6 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
                   Manage inventory on-the-go with our mobile app for barcode scanning and real-time updates.
                 </p>
               </div>
-            </div>
           </section>
           {/* Pricing Section */}"
           <section className="mb-16"></section>"
@@ -126,7 +125,6 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
                 </ul>"
                 <a href="/contact" className="cyber-button w-full">Contact Sales</a>
               </div>
-            </div>
           </section>
           {/* Results Section */}"
           <section className="mb-16"></section>"
@@ -157,7 +155,6 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
                 <h3 className="text-xl font-bold text-white mb-2">Time Saved</h3>"
                 <p className="text-gray-300">60% reduction in inventory management time</p>
               </div>
-            </div>
           </section>
           {/* Use Cases Section */}"
           <section className="mb-16"></section>"
@@ -188,7 +185,6 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
                 <h3 className="text-xl font-bold text-white mb-4">Distribution</h3>"
                 <p className="text-gray-300">Streamline distribution center operations with AI-powered inventory management.</p>
               </div>
-            </div>
           </section>
           {/* CTA Section */}"
           <section className="text-center"></section>"
@@ -213,6 +209,5 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
         </main>
         <Footer /></Footer>
       </div>
-    </div>
   ),
 }"

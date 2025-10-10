@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
-  const dataTypes = [
+  const dataTypes: any[] = [
     {
       category: 'Personal Information',
       icon: User,
@@ -16,16 +16,14 @@ import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, 
       icon: Server,
     }
   ];
-  const purposes = [
-    {
-    }
+  const purposes: any[] = [
+    {,
   ];
-  const rights = [
+  const rights: any[] = [
     {
       title: 'Access',
       description: 'Request access to your personal data',
-      icon: Eye
-    },
+      icon: Eye,,
     {
       title: 'Rectification',
       description: 'Correct inaccurate or incomplete data',
@@ -37,19 +35,15 @@ import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, 
     {
       title: 'Portability',
       description: 'Receive your data in a structured format',
-      icon: Database
-<<<<<<< HEAD
-    },
+      icon: Database,,
     {
       title: 'Restriction',
       description: 'Limit how we process your data',
-      icon: Lock
-    },
+      icon: Lock,,
     {
       title: 'Objection',
       description: 'Object to certain types of processing',
-      icon: Shield
-    }
+      icon: Shield,
   ]
 
   const contactInfo = {
@@ -58,9 +52,7 @@ import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, 
     address: '364 E Main St STE 1008, Middletown, DE 19709'
   }
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
   return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>Privacy Policy - Zion Tech Group</title>

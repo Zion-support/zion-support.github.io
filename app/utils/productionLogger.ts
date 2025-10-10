@@ -14,8 +14,7 @@ class ProductionLogger {}
   private isProduction = process.env.NODE_ENV === 'production';
 private log(level: LogLevel, message: string, data?: unknown, context?: string): void {
     const entry: LogEntry = {,
-      level
-  }
+      level,
   private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}
     const entry: LogEntry = {}
       level,;
@@ -27,8 +26,7 @@ private log(level: LogLevel, message: string, data?: unknown, context?: string):
 // Only log in development;
     if (this.isDevelopment) {
     switch (level) {
-    // Only log in development
-  }
+    // Only log in development,
     if (this.isDevelopment) {}
       switch (level) {}
         case 'debug':;
@@ -43,8 +41,7 @@ private log(level: LogLevel, message: string, data?: unknown, context?: string):
     }
 // In production, send critical errors to monitoring service;
     if (this.isProduction && level === 'error') {
-    // In production, send critical errors to monitoring service
-  }
+    // In production, send critical errors to monitoring service,
     if (this.isProduction && level === 'error') {}
       this.sendToMonitoring(entry);
     }

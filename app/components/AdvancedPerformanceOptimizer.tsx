@@ -2,19 +2,18 @@
 import React, { useEffect, useState, useCallback } from 'react';
 interface PerformanceOptimizerProps {
     children: React.ReactNode,
-  enableOptimizations?: boolean
-  }
+  enableOptimizations?: boolean;
+}
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
-  enableOptimizations = true
-}) => {
+  enableOptimizations = true;
+  )} => {
   const [isOptimized, setIsOptimized] = useState(false);
   const [optimizationMetrics, setOptimizationMetrics] = useState({
     imagesOptimized: 0,
     scriptsOptimized: 0,
     cssOptimized: 0,
-    totalSavings: 0
-  })
+    totalSavings: 0,)
   const optimizeImages = useCallback(() => {
     if (typeof window === 'undefined') return;
     const images = document.querySelectorAll('img');
@@ -30,7 +29,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     img.setAttribute('decoding', 'async');
         optimizedCount++
   }
-    })
+      )}
     return optimizedCount;
   }, []);
   const optimizeScripts = useCallback(() => {
@@ -43,7 +42,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         script.setAttribute('defer', '');
         optimizedCount++
   }
-    })
+      )}
     return optimizedCount;
   }, []);
   const optimizeCSS = useCallback(() => {
@@ -57,7 +56,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         link.setAttribute('onload', "this.media='all'");
         optimizedCount++
   }
-    })
+      )}
     return optimizedCount;
   }, []);
   const runOptimizations = useCallback(() => {
@@ -69,8 +68,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       imagesOptimized,
       scriptsOptimized,
       cssOptimized,
-      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized
-    })
+      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized,)
     setIsOptimized(true);
   }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS]);
   useEffect(() => {
@@ -90,9 +88,9 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             console.warn('Page load time exceeded 1 second')
   }
         }
-      })
-    })
-    observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
+        )}
+      )}
+    observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint']   )}
     return () => observer.disconnect();
   }, []);
   return (
@@ -108,13 +106,11 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           padding: '10px',
           borderRadius: '5px',
           fontSize: '12px',
-          zIndex: 1000
-        }}>
+          zIndex: 1000,}>
           <div>Images: {optimizationMetrics.imagesOptimized}</div>
           <div>Scripts: {optimizationMetrics.scriptsOptimized}</div>
           <div>CSS: {optimizationMetrics.cssOptimized}</div>
           <div>Total: {optimizationMetrics.totalSavings}</div>
-        </div>
       )}
     </div>
   );

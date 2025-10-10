@@ -6,16 +6,15 @@ interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
-}
+  enableCodeSplitting?: boolean,
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
-  enableCodeSplitting = true
-}) => {
+  enableCodeSplitting = true;
+  )} => {
   // Image optimization
   useEffect(() => {
     if (!enableImageOptimization) return;
@@ -28,7 +27,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           image.src = image.dataset.src;
           image.removeAttribute('data-src');
         }
-      })
+        )}
     }
 
     // Run optimization after component mount
@@ -47,7 +46,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             const target = entry.target as HTMLElement;
             target.classList.add('loaded');
           }
-        })
+          )}
       },
       { threshold: 0.1 } )
 
@@ -96,8 +95,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             // Preload the route
             import(/* webpackChunkName: "route" */ `../app${href}/page.tsx`);
           }
-        })
-      })
+          )}
+        )}
     }
 
     const timer = setTimeout(optimizeCodeSplitting, 1000);
@@ -115,17 +114,16 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
           firstPaint: paint.find(p => p.name === 'first-paint')?.startTime || 0,
-          firstContentfulPaint: paint.find(p => p.name === 'first-contentful-paint')?.startTime || 0
-        }
+          firstContentfulPaint: paint.find(p => p.name === 'first-contentful-paint')?.startTime || 0,
 
         // Send metrics to analytics
         if (typeof window !== 'undefined' && 'gtag' in window) {
-          const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+          const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void   )}.gtag;
           gtag('event', 'performance_metrics', {
             event_category: 'performance',
             event_label: 'page_load',
             value: Math.round(metrics.domContentLoaded)
-          })
+            )}
         }
       }
     }

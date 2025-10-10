@@ -6,16 +6,15 @@ interface AccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-}
+  enableFocusManagement?: boolean,
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
-  enableFocusManagement = true
-}) => {
+  enableFocusManagement = true;
+  )} => {
   useEffect(() => {
     // Keyboard navigation enhancements
     if (enableKeyboardNavigation && typeof window !== 'undefined') {
@@ -25,8 +24,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
           if (skipLink) {
             skipLink.focus();
-            event.preventDefault();
-          }
+            event.preventDefault(),
         }
 
         // Close dropdowns with Escape key
@@ -34,7 +32,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
           openDropdowns.forEach(dropdown => {
             (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
-          })
+            )}
         }
       }
 
@@ -57,8 +55,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           if (e.shiftKey) {
             if (document.activeElement === firstFocusableElement) {
               lastFocusableElement.focus();
-              e.preventDefault();
-            }
+              e.preventDefault(),
           } else {
             if (document.activeElement === lastFocusableElement) {
               firstFocusableElement.focus();
@@ -92,8 +89,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const announcePageChange = (message: string) => {
         const liveRegion = document.getElementById('live-region');
         if (liveRegion) {
-          liveRegion.textContent = message;
-        }
+          liveRegion.textContent = message,
       }
 
       // Listen for route changes (if using React Router)
@@ -123,8 +119,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       
       const updateHighContrast = (e: MediaQueryListEvent) => {
         if (e.matches) {
-          document.documentElement.classList.add('high-contrast');
-        } else {
+          document.documentElement.classList.add('high-contrast'), else {
           document.documentElement.classList.remove('high-contrast');
         }
       }

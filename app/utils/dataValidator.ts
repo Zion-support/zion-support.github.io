@@ -53,8 +53,7 @@ export function validateURL(ur,;
   r: 'URL is required' }
   }
 try {
-    // If protocol is not required, add http: // prefix for validation
-  }
+    // If protocol is not required, add http: // prefix for validation,
     const urlToValidate = requireProtocol ? url : `http://${url}`;
     const parsed = new URL(urlToValidate);
     const isValid = requireProtocol ?;
@@ -93,8 +92,7 @@ export function validatePhoneNumber(phon);
   return {
     isValid,;
     error: isValid ? undefined : 'Invalid phone number format',
-  // More flexible phone regex that handles various formats
-  }
+  // More flexible phone regex that handles various formats,
   const phoneRegex = /^[\+]?[1]?[\s\-\.]?[(]?[0-9]{3}[)]?[\s\-\.]?[0-9]{3}[\s\-\.]?[0-9]{4,6}$/;
   const isValid = phoneRegex.test(phone);
   return {/* TODO: Fix JSX expression */}
@@ -290,8 +288,7 @@ export function validateForm<T extends Record<string, unknown>>(dat,;
   }
   return {
     isValid: Object.keys(errors).length === 0,
-    errors
-  }
+    errors,
   return {/* TODO: Fix JSX expression */}
   }
 }
@@ -312,75 +309,66 @@ export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */},
     message: 'Please enter a valid URL'}),;
   minLength: (min: number): ValidationRule<string> => ({
     ,
-    validate: (value: string) => value.length >= min
-  }
+    validate: (value: string) => value.length >= min,
     message: `Must be at least ${min} characters long`;
-  }),;
+    )},;
   maxLength: (max: number): ValidationRule<string> => ({
     ,
-    validate: (value: string) => value.length <= max
-  }
+    validate: (value: string) => value.length <= max,
     message: `Must be no more than ${max} characters long`;
-  }),;
+    )},;
   pattern: (pattern: RegExp, message: string): ValidationRule<string> => ({
     ,
     validate: (value: string) => pattern.test(value),
-    message
-  }
-  }),;
+    message,
+    )},;
   range: (min: number, max: number): ValidationRule<number> => ({
     ,
     validate: (value: number) => validateNumberRange(value, min, max),
   }
     message: `Must be between ${min} and ${max}`;
-  }),;
+    )},;
   custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
     ,
     validate: validator,
-    message
-  }
-  })
+    message,
+    )}
 }
 // Legacy class-based API for backward compatibility;
 class DataValidator {
     private static instance: DataValidator,
     messag,;
-  e: 'This field is required'
-  }
-  }),;
+  e: 'This field is required',
+    )},;
   emai,;
-  l: (): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
-  }),;
+  l: (): ValidationRule<string> => ({/* TODO: Fix JSX expression */}))},;
   ur,;
-  l: (): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
-  }),;
+  l: (): ValidationRule<string> => ({/* TODO: Fix JSX expression */}))},;
   minLengt,;
   h: (mi),
   n: number): ValidationRule<string> => ({/* TODO: Fix JSX expression */}`;
   e: `Must be at least ${min} characters long`);
-  }),;
+    )},;
   maxLengt,;
   h: (ma),
   x: number): ValidationRule<string> => ({/* TODO: Fix JSX expression */}`;
   e: `Must be no more than ${max} characters long`);
-  }),;
+    )},;
   patter,;
   n: (patter,
   n: RegExp, messag);
-  e: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
-  }),;
+  e: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */}))},;
   rang,;
   e: (mi,
   n: number, ma);
   x: number): ValidationRule<number> => ({/* TODO: Fix JSX expression */}`;
   e: `Must be between ${min} and ${max}`);
-  }),;
+    )},;
   custo,;
   m: <T>(validato,
   r: (valu),
   e: T) => boolean, messag,;
-  e: string): ValidationRule<T> => ({/* TODO: Fix JSX expression */})
-  })
+  e: string): ValidationRule<T> => ({/* TODO: Fix JSX expression */}))}
 }
 // Legacy class-based API for backward compatibility;
 class DataValidator {/* TODO: Fix JSX expression */}
@@ -490,8 +478,7 @@ export function validatePassword(passwor);
 export function sanitizeHTML(html: string): string {
     if (!html || typeof html !== 'string') return '',
 ,;
-  // First escape HTML entities
-  }
+  // First escape HTML entities,
   let clean = html.replace(/&/g, '&amp;');}</>
   clean = clean.replace(/</g, '&lt;');
   clean = clean.replace(/>/g, '&gt;');

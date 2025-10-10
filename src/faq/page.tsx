@@ -13,7 +13,7 @@ const FAQPage: React.FC = () => {
         : [...prev, index]
     )
   }
-  const faqData = [
+  const faqData: any[] = [
     {
       category: 'General Questions',
       questions: [
@@ -80,7 +80,7 @@ $4];
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
     )
-  })).filter(category => category.questions.length > 0);
+    )}).filter(category => category.questions.length > 0);
   return (
     <React.Fragment>
       <Navigation />
@@ -91,8 +91,7 @@ $4];
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Frequently Asked Questions</span>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Find answers to common questions about our AI and IT services, pricing, and support.
-            </p>
+              Find answers to common questions about our AI and IT services, pricing, and support.</p>
             {/* Search Bar */}
             <div className="max-w-md mx-auto relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -102,15 +101,14 @@ $4];
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-              />
+              /></input>
             </div>
           {/* FAQ Content */}
           <div className="max-w-4xl mx-auto">
             {filteredData.map((category, categoryIndex) => (
               <div key={categoryIndex} className="mb-12">
                 <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">
-                  {category.category}
-                </h2>
+                  {category.category}</h2>
                 <div className="space-y-4">
                   {category.questions.map((item, itemIndex) => {
                     const globalIndex = categoryIndex * 100 + itemIndex;
@@ -129,7 +127,7 @@ $4];
                         {isOpen && (
                           <div className="px-6 pb-4">
                             <p className="text-gray-300 leading-relaxed">{item.answer}</p>
-                  })}
+                    )}}
             ))}
           {/* Contact CTA */}
           <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
@@ -160,8 +158,7 @@ import Footer from '../components/Footer';
 const FAQPage: React.FC = () => {
     return (
     <div>Coming Soon</div>
-  )
-  }
+  ),
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
 const toggleItem = (inde)
@@ -171,9 +168,9 @@ const toggleItem = (inde)
         : [...prev, index]
     );
   }
-  const faqData = [
+  const faqData: any[] = [
   // TOD,
-  O: Add items
+  O: Add items,
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -301,7 +298,7 @@ const toggleItem = (inde)
 //       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
 //       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
 //     )
-  })).filter(category => category.questions.length > 0);
+    )}).filter(category => category.questions.length > 0);
   return (<div>Coming Soon</div>)
   )
           <React.Fragment>
@@ -328,7 +325,7 @@ type="text" placeholder="Search FAQs..."
   focus:border-cyan-400,
   focus:ring-2,"
   focus:ring-cyan-400/20"
-// />
+// /></input>
           </div>
           {/* FAQ Content */}"
           <div className="max-w-4xl mx-auto"></div>
@@ -363,7 +360,7 @@ type="text" placeholder="Search FAQs..."
                         {isOpen && ()}"
           <div className="px-6 pb-4"></div>"
                             <p className="text-gray-300 leading-relaxed">{item.answer}</p>
-                  })}
+                    )}}
             ))}
 {/* Contact CTA */}
           <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
@@ -390,13 +387,6 @@ export default FaqPage</div>
   </h2>
   </div>
   </a>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
   </div>
   </div>
   </div>

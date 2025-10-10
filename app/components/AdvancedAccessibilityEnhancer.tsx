@@ -1,9 +1,8 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 interface AccessibilityEnhancerProps {
-    children: React.ReactNode
-  }
-const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+    children: React.ReactNode,
+const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children   )} => {
     const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('medium');
   const [isReducedMotion, setIsReducedMotion] = useState(false);
@@ -25,8 +24,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
     // Add keyboard navigation support
     const handleKeyDown = (event: KeyboardEvent) => {
     if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation')
-  }
+        document.body.classList.add('keyboard-navigation'),
     }
     const handleMouseDown = () => {
     document.body.classList.remove('keyboard-navigation')
@@ -54,39 +52,35 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
           className="accessibility-button"
           aria-label="Toggle high contrast"
         >
-          {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
-        </button>
+          {isHighContrast ? 'Normal Contrast' : 'High Contrast'}</button>
         <div className="font-size-controls">
           <button
             onClick={() => changeFontSize('small')}
             className="accessibility-button"
             aria-label="Small font size"
           >
-            A
+            A</button>
   </
           <button
             onClick={() => changeFontSize('medium')}
             className="accessibility-button"
             aria-label="Medium font size"
           >
-            A
+            A</button>
   </
           <button
             onClick={() => changeFontSize('large')}
             className="accessibility-button"
             aria-label="Large font size"
           >
-            A
+            A</button>
   </
         </div>
-      </div>
       {children}
     </div>
   );
 };
 
 export default AdvancedAccessibilityEnhancer
-  </button>
-  </button>
   </button>
   </AccessibilityEnhancerProps>

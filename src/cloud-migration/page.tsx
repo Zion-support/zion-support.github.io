@@ -55,7 +55,7 @@ const,
   s: ['Vendor independence', 'Disaster recovery', 'Cost optimization', 'Flexibility']
     }
   ];
-  const migrationSteps = [
+  const migrationSteps: any[] = [
       titl,
   e: 'Assessment & Planning',
       descriptio,
@@ -104,7 +104,7 @@ const,
   n: TrendingUp,
       duratio,
   n: 'Ongoing'
-  const pricingPlans = [
+  const pricingPlans: any[] = [
       nam,
   e: 'Small Business',
       pric,
@@ -155,7 +155,7 @@ const,
         'Multi-cloud architecture',
         'Dedicated account manager',
         'Custom integrations'
-  const benefits = [
+  const benefits: any[] = [
       titl,
   e: 'Cost Reduction',
       descriptio,
@@ -376,7 +376,6 @@ const,
                 <ul className="space-y-3 mb-8"></ul>
                   {/* TODO: Fix JSX expression */}`
                 }`}></button>
-                </button>
 "
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></section>"
         <div className="max-w-4xl mx-auto text-center"></div>"
@@ -392,8 +391,7 @@ const,
         <p className="text-gray-300 mb-8">Coming Soon - Seamless cloud migration services</p>"
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"
   hover: bg-cyan-600 transition-colors"></a>
-          Contact Us
-  ),
+          Contact Us),
 }
 export default CloudMigrationPage;
 "`

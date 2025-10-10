@@ -17,19 +17,17 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   y: number | null,
 }
 interface PerformanceMonitorProps {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
 interface PerformanceProps {/* TODO: Fix JSX expression */}
 }
 const AdvancedPerformanceMonitor: React.FC,
           <PerformanceMonitorProps> = ({
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
 //   onMetricsUpdate,
   enableRealTimeMonitoring = true;)
-}) => {/* TODO: Fix JSX expression */}
+  )} => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   const [metrics, setMetrics] = useState;
@@ -42,7 +40,7 @@ const AdvancedPerformanceMonitor: React.FC,
     cls: null,
     ttfb: null,
     memory: null,
-  });
+    )};
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
     const,
@@ -59,14 +57,14 @@ const AdvancedPerformanceMonitor: React.FC,
 }
         const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
           const entries = list.getEntries();
           const lastEntry = _entries[_entries.length - 1];
           setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  p: _lastEntry.startTime }));
-        });
+  p: _lastEntry.startTime   )});
+          )};
         lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
+  s: ['largest-contentful-paint']   )};
         observers.push(lcpObserver);
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -82,11 +80,11 @@ const AdvancedPerformanceMonitor: React.FC,
 }
         const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
           const entries = list.getEntries();
           _entries.forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
             if ()
               entry.entryType === 'first-input' &&
               'processingStart' in entry &&
@@ -100,12 +98,12 @@ const AdvancedPerformanceMonitor: React.FC,
 //                 ...prev,
                 fi,
   d: _fidEntry.processingStart - _fidEntry.startTime,)
-              }));
+                )});
             }
-          });
-        });
+            )};
+          )};
         fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
+  s: ['first-input']   )};
         observers.push(fidObserver);
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -119,11 +117,11 @@ const AdvancedPerformanceMonitor: React.FC,
       try {const clsObserver = new PerformanceObserver(list => {}
   // TOD,
   O: Add content,
-})
+  )}
           const entries = list.getEntries();
           _entries.forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
             if ()
               entry.entryType === 'layout-shift' &&
               'hadRecentInput' in entry &&
@@ -136,13 +134,13 @@ const AdvancedPerformanceMonitor: React.FC,
 }
                 _clsValue += _clsEntry.value;
                 setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  s: _clsValue }));
+  s: _clsValue   )});
               }
             }
-          });
-        });
+            )};
+          )};
         clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
+  s: ['layout-shift']   )};
         observers.push(clsObserver);
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -161,7 +159,7 @@ const AdvancedPerformanceMonitor: React.FC,
       // Measure Memory Usage;
 const memory =
         (performance as Performance & {/* TODO: Fix JSX expression */})
-  e: number } })
+  e: number }   )}
           .memory?.usedJSHeapSize || null;
       setMetrics(prev => ({/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -171,7 +169,7 @@ const memory =
   p: _fcp,
 //         ttfb,
 //         memory;)
-      }));
+        )});
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -185,13 +183,13 @@ const memory =
 }
         try {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
           observer.disconnect();
         } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
           }
-      });
+        )};
     }
   }, []);
   const measureResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -213,7 +211,7 @@ const memory =
   n: r.duration,
       //   siz,
   e: r.transferSize,)
-      // })));
+      //   )}));
     }
   }, []);
   const measureCoreWebVitals = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -234,9 +232,9 @@ const memory =
 }
             onCLS((metri,
   c: {/* TODO: Fix JSX expression */})
-  e: number }) =>
+  e: number   )} =>
               setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  s: metric.value }))
+  s: metric.value   )})
             );
           }
           if (onFCP) {/* TODO: Fix JSX expression */}
@@ -244,9 +242,9 @@ const memory =
 }
             onFCP((metri,
   c: {/* TODO: Fix JSX expression */})
-  e: number }) =>
+  e: number   )} =>
               setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  p: metric.value }))
+  p: metric.value   )})
             );
           }
           if (onLCP) {/* TODO: Fix JSX expression */}
@@ -254,9 +252,9 @@ const memory =
 }
             onLCP((metri,
   c: {/* TODO: Fix JSX expression */})
-  e: number }) =>
+  e: number   )} =>
               setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  p: metric.value }))
+  p: metric.value   )})
             );
           }
           if (onTTFB) {/* TODO: Fix JSX expression */}
@@ -264,17 +262,17 @@ const memory =
 }
             onTTFB((metri,
   c: {/* TODO: Fix JSX expression */})
-  e: number }) =>
+  e: number   )} =>
               setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  b: metric.value }))
+  b: metric.value   )})
             );
           }
-        })
+          )}
         .catch(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
           // web-vitals not available, continue without it;
-        });
+          )};
     } catch {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -379,18 +377,16 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
             Memor,
   y:{' '}
             {
-    metrics.memory
-  }`
+    metrics.memory;
+}`
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
               : 'N/A'}
           </div>
-        </div>
         {_recommendations.length > 0 && ()}
           <div className='mt-2'></div>
             <h4>
   Recommendation,
-  s:
-            </h4>
+  s:</h4>
             <ul className='text-xs text-red-600'></ul>
 {recommendations.map((rec, index) => (}
                 <li key={index}>• {rec}</li>)

@@ -10,17 +10,16 @@ export default function HeroSection() {
           {/* Main Heading */}
           <h1 className="text-4xl md: text-6xl lg:text-7xl font-bold leading-tight">
             <span className="block holographic-text cyber-text-3d">
-              Zion Tech Group
+              Zion Tech Group</span>
   </
             <span className="block text-white mt-4">
-              Advanced AI & IT Solutions,
+              Advanced AI & IT Solutions,</span>
   </
           </h1>
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Transforming businesses through cutting-edge artificial intelligence, 
-            machine learning, and innovative IT solutions. We build the future, today.
-          </p>
+            machine learning, and innovative IT solutions. We build the future, today.</p>
           {/* Key Features */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
             <div className="cyber-card p-6 text-center">
@@ -50,18 +49,17 @@ export default function HeroSection() {
               <h3 className="text-lg font-semibold text-white mb-2">Innovation</h3>
               <p className="text-gray-400 text-sm">Leading-edge technology and digital transformation</p>
             </div>
-          </div>
           {/* CTA Buttons */}
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mt-12">
             <a
               href="#services"
               className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-              Explore Services
+              Explore Services</a>
   </
             <a
               href="#contact"
               className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">
-              Get Started,
+              Get Started,</a>
   </
           </div>
           {/* Stats */}
@@ -69,33 +67,22 @@ export default function HeroSection() {
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-cyan-400 neon-pulse">500+</div>
               <div className="text-gray-400 text-sm mt-2">Projects Completed</div>
-            </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-purple-400 neon-pulse">50+</div>
               <div className="text-gray-400 text-sm mt-2">Happy Clients</div>
-            </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-green-400 neon-pulse">99%</div>
               <div className="text-gray-400 text-sm mt-2">Success Rate</div>
-            </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-yellow-400 neon-pulse">24/7</div>
               <div className="text-gray-400 text-sm mt-2">Support</div>
-            </div>
-          </div>
-        </div>
-      </div>
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-cyan-400 rounded-full mt-2 animate-pulse"></div>
-        </div>
-      </div>
     </section>
   );
 }
 export default HeroSection;"`
   </a>
-  </a>
-  </span>
   </span>

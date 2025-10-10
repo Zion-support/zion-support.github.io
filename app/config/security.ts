@@ -51,8 +51,7 @@ export const corsConfig = {
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],;
   allowedHeaders: ['Content-Type', 'Authorization'],;
   credentials: true,
-  maxAge: 86400, // 24 hours
-  }
+  maxAge: 86400, // 24 hours,
 }
 /**;
  * Session configuration;
@@ -93,23 +92,20 @@ export function sanitizeInput(input: string): string {
  * Validate email address;
  */;
 export function validateEmail(email: string): boolean {
-    return validationPatterns.email.test(email)
-  }
+    return validationPatterns.email.test(email),
 }
 /**;
  * Validate URL;
  */;
 export function validateUrl(url: string): boolean {
-    return validationPatterns.url.test(url)
-  }
+    return validationPatterns.url.test(url),
 }
 /**;
  * Generate secure token;
  */;
 export function generateSecureToken(length: number = 32): string {
     if (typeof window !== 'undefined' && window.crypto) {
-    window.crypto.getRandomValues(array)
-  }
+    window.crypto.getRandomValues(array),
   } else {
     // Fallback for non-browser environments;
     for (let i = 0; i < length; i++) {
@@ -130,4 +126,4 @@ export default {
   validateUrl,;
   generateSecureToken,
   }
-}
+}</>

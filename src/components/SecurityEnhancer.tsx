@@ -3,8 +3,7 @@ import React from 'react';
 interface SecurityEnhancerProps {/* TODO: Fix JSX expression */}
 }
 const,
-  SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({/* TODO: Fix JSX expression */}))} => {/* TODO: Fix JSX expression */}
     }
     if (enableHTTPSRedirect) {/* TODO: Fix JSX expression */}
     }
@@ -37,21 +36,20 @@ const,
       {/* TODO: Fix JSX expression */}
   t: 'max-age=63072000; includeSubDomains, preload' }
     ];
-    headers.forEach(header => {/* TODO: Fix JSX expression */})
-    });
+    headers.forEach(header => {/* TODO: Fix JSX expression */}))};
   }
   const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */}
       }
-    });
+      )};
     // Prevent text selection (optional)
     document.addEventListener('selectstart', (e) => {/* TODO: Fix JSX expression */}
       }
-    });
+      )};
     // Prevent drag and drop;
     document.addEventListener('dragover', (e) => {/* TODO: Fix JSX expression */}
-    });
+      )};
     document.addEventListener('drop', (e) => {/* TODO: Fix JSX expression */}
-    });
+      )};
     // Prevent F12, Ctrl+Shift+I, Ctrl+U, etc.
     document.addEventListener('keydown', (e) => {/* TODO: Fix JSX expression */}
         }
@@ -68,7 +66,7 @@ const,
         if (e.ctrlKey && e.keyCode === 65) {/* TODO: Fix JSX expression */}
         }
       }
-    });
+      )};
     // Monitor for suspicious activity;
     let suspiciousActivity = 0;
     const resetSuspiciousActivity = () => {/* TODO: Fix JSX expression */}
@@ -79,7 +77,7 @@ const,
     let clickCount = 0;
     document.addEventListener('click', () => {/* TODO: Fix JSX expression */}
         }
-      });
+        )};
     }
     checkForXSS();
     // Monitor form submissions for CSRF
@@ -89,17 +87,17 @@ const,
         const formData = new FormData(form as HTMLFormElement);
         const token = formData.get('csrf_token');
         if (!token) {
-          setMetrics(prev => ({ ...prev, csrfAttempts: prev.csrfAttempts + 1 }));
-          logger.warn('Potential CSRF attempt detected', { form: form.id });
+          setMetrics(prev => ({ ...prev, csrfAttempts: prev.csrfAttempts + 1   )});
+          logger.warn('Potential CSRF attempt detected', { form: form.id   )};
         }
-      });
-    });
+        )};
+      )};
     // Track rapid keyboard input;
     let keyCount = 0;
     document.addEventListener('keydown', () => {/* TODO: Fix JSX expression */}
           }
-        });
-      });
+          )};
+        )};
     }
     checkSuspiciousCode();
     // Monitor for unusual network requests
@@ -107,8 +105,8 @@ const,
     window.fetch = async (...args) => {
       const url = args[0] as string;
       if (typeof url === 'string' && !validateURL(url)) {
-        setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
-        logger.warn('Suspicious network request blocked', { url });
+        setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1   )});
+        logger.warn('Suspicious network request blocked', { url   )};
         throw new Error('Suspicious network request blocked');
       }
       return originalFetch.apply(window, args);
@@ -138,7 +136,7 @@ const,
     }
     setSecurityWarnings(warnings);
     if (warnings.length > 0) {
-      logger.warn('Security warnings detected', { warnings });
+      logger.warn('Security warnings detected', { warnings   )};
     }
   }, []);
   // Rate limiting
@@ -148,7 +146,7 @@ const,
     const requests = JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')
       .filter((timestamp: number) => timestamp > windowStart),
     if (requests.length >= limit) {
-      logger.warn('Rate limit exceeded', { key, limit, windowMs });
+      logger.warn('Rate limit exceeded', { key, limit, windowMs   )};
       return false;
     }
     requests.push(now);
@@ -168,11 +166,11 @@ const,
   }, [monitorCSP, monitorSuspiciousActivity, validateSecurityHeaders]);
   // Security event handlers
   const handleSecurityEvent = useCallback((event: string, data: any) => {
-    logger.info('Security event', { event, data });
+    logger.info('Security event', { event, data   )};
     // Rate limit security events
     if (!rateLimit('security_events', 10, 60000)) {
-    return
-  }
+    return;
+}
     // Send to security monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'security_event', {
@@ -220,8 +218,6 @@ const,
             <div>XSS Attempts: {metrics.xssAttempts}</div>
             <div>CSRF Attempts: {metrics.csrfAttempts}</div>
             <div>Suspicious Activity: {metrics.suspiciousActivity}</div>
-          </div>
-        </div>
       )}
     </React.Fragment>
   );

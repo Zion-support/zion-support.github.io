@@ -1,3 +1,4 @@
+import React from 'react';
 'use client';
 /**;
  * Enhanced Error Reporting Utility;
@@ -126,8 +127,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     }
     // Remote logging;
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {
-    // Console logging
-  }
+    // Console logging,
     if (this.config.enableConsoleLogging) {}
       this.logToConsole(errorReport);}
     }
@@ -228,11 +228,10 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
         method: 'POST',
         headers: {}
           'Content-Type': 'application/json'}
-        })
+          )}
         body: JSON.stringify(report)})
     } catch (error) {
-    // Silently fail to avoid infinite loop
-  }
+    // Silently fail to avoid infinite loop,
       if (this.config.enableConsoleLogging) {} catch (error) {}
       // Silently fail to avoid infinite loop;
       if (this.config.enableConsoleLogging) {}
@@ -241,7 +240,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   t: ErrorReport): Promise<void> {/* TODO: Fix JSX expression */},
         bod,;
   y: JSON.stringify(report),
-      })
+        )}
     } catch (error) {/* TODO: Fix JSX expression */}
       }
     }
@@ -264,8 +263,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   } {
     return {
       totalErrors: this.errorQueue.length,
-      uniqueErrors: this.errorCount.size
-  }
+      uniqueErrors: this.errorCount.size,
   getErrorStats(): {}
     totalErrors: number
     uniqueErrors: number,
@@ -331,14 +329,13 @@ export const captureComponentError = (;
   const report = ErrorReporter.getInstance(),;
   report.reportError(error, 'high', {);
     componentName);
-  componentName: string
-  }
+  componentName: string,
 ): void => {}
   const report = ErrorReporter.getInstance();
   report.reportError(error, 'high', {)}
     componentName,;
     componentStack: errorInfo.componentStack}
-  })
+    )}
 }
 export default ErrorReporter;
 export const reportError = (erro,;
@@ -358,7 +355,7 @@ export const captureComponentError = (erro,;
   componentNam,;
   e: string;),
 ): void => {/* TODO: Fix JSX expression */}
-  })
+    )}
 }
 export default ErrorReporter;
 `;

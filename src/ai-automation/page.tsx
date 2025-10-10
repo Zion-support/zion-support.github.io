@@ -6,7 +6,7 @@ import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Pho
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AIAutomationPage: React.FC = () => {
-  const features = [
+  const features: any[] = [
     {
       icon: Settings,
       title: 'Process Automation',
@@ -32,7 +32,7 @@ const AIAutomationPage: React.FC = () => {
       benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
     }
   ];
-  const pricingPlans = [
+  const pricingPlans: any[] = [
     {
       name: 'Starter',
       price: '$1,400',
@@ -45,8 +45,7 @@ const AIAutomationPage: React.FC = () => {
         'Standard integrations',
         'Basic analytics'
       ],
-      popular: false
-    },
+      popular: false,,
     {
       name: 'Professional',
       price: '$2,800',
@@ -60,8 +59,7 @@ const AIAutomationPage: React.FC = () => {
         'Advanced analytics',
         'Workflow optimization'
       ],
-      popular: true
-    },
+      popular: true,,
     {
       name: 'Enterprise',
       price: '$5,600',
@@ -76,10 +74,9 @@ const AIAutomationPage: React.FC = () => {
         'API access',
         'Dedicated support'
       ],
-      popular: false
-    }
+      popular: false,
   ];
-  const stats = [
+  const stats: any[] = [
     { icon: Users, value: '200+', label: 'Automated Processes' },
     { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
     { icon: Clock, value: '60%', label: 'Time Saved' },
@@ -91,16 +88,14 @@ export default function AIAutomationPage() {
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl lg: text-6xl font-bold text-white mb-6">
-            AI Automation
+            AI Automation</h1>
   </
           <p className="text-xl text-gray-300 mb-8">
-            Intelligent process automation with AI-powered decision making and exception handling.
-          </p>
+            Intelligent process automation with AI-powered decision making and exception handling.</p>
           <div className="bg-slate-800/50 rounded-lg p-8">
             <h2 className="text-2xl font-bold text-white mb-4">AI-Powered Automation</h2>
             <p className="text-gray-300 mb-6">
-              Transform your business processes with intelligent automation that learns and adapts to your needs.
-            </p>
+              Transform your business processes with intelligent automation that learns and adapts to your needs.</p>
             <a
               href="/contact"
               className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
@@ -108,9 +103,6 @@ export default function AIAutomationPage() {
               Contact Us,
   </
           </div>
-        </div>
-      </div>
-    </div>
   )
   }
   </a>

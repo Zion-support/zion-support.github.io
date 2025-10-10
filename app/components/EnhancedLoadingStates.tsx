@@ -10,12 +10,11 @@ interface LoadingSpinnerProps {
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   text = 'Loading...' 
-}) => {
+  )} => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-  }
+    lg: 'w-12 h-12',
 
   return (
     <div className="flex flex-col items-center justify-center p-8">
@@ -36,7 +35,6 @@ export const PageLoader: React.FC = () => (
       <h2 className="text-xl font-semibold text-white mb-2">Zion Tech Group</h2>
       <p className="text-gray-300">Loading amazing content...</p>
     </div>
-  </div>
 );
 
 export const ServiceCardSkeleton: React.FC = () => (
@@ -48,17 +46,14 @@ export const ServiceCardSkeleton: React.FC = () => (
       <div className="h-3 bg-gray-600 rounded"></div>
       <div className="h-3 bg-gray-600 rounded"></div>
       <div className="h-3 bg-gray-600 rounded w-3/4"></div>
-    </div>
-  </div>
 );
 
 export const StatsSkeleton: React.FC = () => (
   <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-    {Array.from({ length: 4 }).map((_, index) => (
+    {Array.from({ length: 4   )}.map((_, index) => (
       <div key={index} className="text-center animate-pulse">
         <div className="h-8 bg-gray-600 rounded mb-2"></div>
         <div className="h-4 bg-gray-600 rounded w-3/4 mx-auto"></div>
-      </div>
     ))}
   </div>
 );
@@ -70,6 +65,4 @@ export const ContentSkeleton: React.FC = () => (
       <div className="h-4 bg-gray-600 rounded"></div>
       <div className="h-4 bg-gray-600 rounded"></div>
       <div className="h-4 bg-gray-600 rounded w-2/3"></div>
-    </div>
-  </div>
 );

@@ -6,8 +6,7 @@ interface SEOData {/* TODO: Fix JSX expression */}
 interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 const,
-  AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */}))} => {/* TODO: Fix JSX expression */}
     }
     const baseStructuredData = {/* TODO: Fix JSX expression */}
       },
@@ -31,14 +30,14 @@ const,
   const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
     }
     return {/* TODO: Fix JSX expression */}
-      }))
+        )})
     }
   }, [seoData, enableStructuredData]);
   const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
     }
     return {/* TODO: Fix JSX expression */}
         }
-      }))
+        )})
     }
   }, [seoData, enableStructuredData]);
   // Generate Open Graph data;
@@ -75,14 +74,14 @@ const,
   const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
     }
     return {/* TODO: Fix JSX expression */}
-      }))
+        )})
     }
   }, [seoData.breadcrumbs]);
   const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
     }
     return {/* TODO: Fix JSX expression */}
         }
-      }))
+        )})
     }
   }, [seoData.faqs]);
   const structuredData = generateStructuredData();
@@ -112,7 +111,7 @@ const,
     }
   }, [structuredData]);
   useEffect(() => {/* TODO: Fix JSX expression */}
-          });
+            )};
         }
       }
     }

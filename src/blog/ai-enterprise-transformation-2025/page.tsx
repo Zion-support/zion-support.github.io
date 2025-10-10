@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const Pagetsx: React.FC = () => {
-  const _features = [],
+  const _features: any[] = [],
   return (
     {icon: Users,
     title: 'Advanced Features',
@@ -48,7 +48,6 @@ const Pagetsx: React.FC = () => {
                 View Demo,
               </a>
             </div>
-          </div>
         </section>
         {/* Features Section */}
         <section className="py-16 px-4">
@@ -71,7 +70,6 @@ const Pagetsx: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
         {/* CTA Section */}"
         <section className="py-16 px-4 bg-gray-800"></section>"

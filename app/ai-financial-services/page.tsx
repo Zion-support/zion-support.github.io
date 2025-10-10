@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 const AiFinancialServicesPage: React.FC = () => {
   return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>AI Financial Services - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered financial services including fraud detection, risk assessment, algorithmic trading, and financial forecasting solutions." />
         <meta name="keywords" content="AI financial services, fintech AI, fraud detection, risk assessment, algorithmic trading, financial forecasting" />
@@ -14,20 +14,17 @@ const AiFinancialServicesPage: React.FC = () => {
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">
-              AI Financial Services
-            </h1>
+              AI Financial Services</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Transform your financial operations with cutting-edge AI solutions for fraud detection, 
-              risk assessment, algorithmic trading, and predictive analytics.
-            </p>
+              risk assessment, algorithmic trading, and predictive analytics.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Fraud Detection</h3>
               <p className="text-gray-300 mb-4">
-                Advanced machine learning algorithms to detect fraudulent transactions in real-time.
-              </p>
+                Advanced machine learning algorithms to detect fraudulent transactions in real-time.</p>
               <ul className="text-sm text-gray-400 space-y-2">
                 <li>• Real-time transaction monitoring</li>
                 <li>• Pattern recognition</li>
@@ -39,8 +36,7 @@ const AiFinancialServicesPage: React.FC = () => {
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Risk Assessment</h3>
               <p className="text-gray-300 mb-4">
-                Comprehensive risk analysis using AI to evaluate creditworthiness and investment risks.
-              </p>
+                Comprehensive risk analysis using AI to evaluate creditworthiness and investment risks.</p>
               <ul className="text-sm text-gray-400 space-y-2">
                 <li>• Credit scoring models</li>
                 <li>• Market risk analysis</li>
@@ -52,8 +48,7 @@ const AiFinancialServicesPage: React.FC = () => {
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Algorithmic Trading</h3>
               <p className="text-gray-300 mb-4">
-                AI-powered trading algorithms that adapt to market conditions and optimize returns.
-              </p>
+                AI-powered trading algorithms that adapt to market conditions and optimize returns.</p>
               <ul className="text-sm text-gray-400 space-y-2">
                 <li>• Automated trading strategies</li>
                 <li>• Market sentiment analysis</li>
@@ -65,8 +60,7 @@ const AiFinancialServicesPage: React.FC = () => {
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Financial Forecasting</h3>
               <p className="text-gray-300 mb-4">
-                Predictive analytics for accurate financial forecasting and trend analysis.
-              </p>
+                Predictive analytics for accurate financial forecasting and trend analysis.</p>
               <ul className="text-sm text-gray-400 space-y-2">
                 <li>• Revenue forecasting</li>
                 <li>• Market trend analysis</li>
@@ -78,8 +72,7 @@ const AiFinancialServicesPage: React.FC = () => {
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Regulatory Compliance</h3>
               <p className="text-gray-300 mb-4">
-                AI-driven compliance monitoring and reporting for financial regulations.
-              </p>
+                AI-driven compliance monitoring and reporting for financial regulations.</p>
               <ul className="text-sm text-gray-400 space-y-2">
                 <li>• Automated reporting</li>
                 <li>• Compliance monitoring</li>
@@ -91,8 +84,7 @@ const AiFinancialServicesPage: React.FC = () => {
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Customer Analytics</h3>
               <p className="text-gray-300 mb-4">
-                Deep insights into customer behavior and preferences for personalized services.
-              </p>
+                Deep insights into customer behavior and preferences for personalized services.</p>
               <ul className="text-sm text-gray-400 space-y-2">
                 <li>• Customer segmentation</li>
                 <li>• Churn prediction</li>
@@ -100,17 +92,12 @@ const AiFinancialServicesPage: React.FC = () => {
                 <li>• Lifetime value analysis</li>
               </ul>
             </div>
-          </div>
 
           <div className="text-center">
             <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-              Get Started with AI Financial Services
-            </button>
+              Get Started with AI Financial Services</button>
           </div>
-        </div>
-      </div>
     </>
-  );
-};
+  ),;
 
 export default AiFinancialServicesPage;

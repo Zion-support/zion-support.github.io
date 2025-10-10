@@ -1,4 +1,3 @@
-
 'use client'
 /**
  * Cache Manager;
@@ -6,8 +5,7 @@
  */
 
 export enum CacheStorage {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   Memory = 'memory',
@@ -16,8 +14,7 @@ export enum CacheStorage {
 }
 
 export interface CacheOptions {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   ttl?: number; // Time to live in milliseconds;
@@ -37,21 +34,17 @@ export interface CacheEntry;
 
   value: T,,
     timestamp: number,,
-    ttl: number
-}
+    ttl: number,
 export interface CacheStats {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   hits: number,,
     misses: number,,
     hitRate: number,,
     count: number,,
-    entries: number
-}
+    entries: number,
 export class CacheManager {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   private,
@@ -78,8 +71,7 @@ export class CacheManager {
    */
 
   private startCleanup(): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     if (typeof window === 'undefined') return;
@@ -94,8 +86,7 @@ export class CacheManager {
    */
 
   stopCleanup(): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     if (this.cleanupInterval) {/* TODO: Fix JSX expression */}
@@ -109,8 +100,7 @@ export class CacheManager {
    * Remove expired entries;
    */
   private cleanup(): void {
-    // Clean memory cache
-  }
+    // Clean memory cache,
     for (const [key, entry] of this.memoryCache.entries()) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -166,8 +156,7 @@ export class CacheManager {
 
   private isExpired(entry: CacheEntry,
           <unknown>, now = Date.now()): boolean {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     if (entry.ttl === Infinity) return false;
@@ -178,8 +167,7 @@ export class CacheManager {
    */
 
   private getStorageKey(key: string): string {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     return `cache_${key}`;
@@ -214,8 +202,7 @@ export class CacheManager {
       this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
 //       window.localStorage) {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
       try {/* TODO: Fix JSX expression */}
@@ -233,8 +220,7 @@ export class CacheManager {
       this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
 //       window.sessionStorage) {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
       try {/* TODO: Fix JSX expression */}
@@ -271,8 +257,7 @@ export class CacheManager {
       this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
 // window.localStorage) {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
       try {/* TODO: Fix JSX expression */}
@@ -294,8 +279,7 @@ export class CacheManager {
       this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
 //       window.sessionStorage) {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
       try {/* TODO: Fix JSX expression */}
@@ -338,8 +322,7 @@ export class CacheManager {
    */
 
   has(key: string): boolean {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     return this.get(key) !== undefined;
@@ -349,8 +332,7 @@ export class CacheManager {
    */
 
   delete(key: string): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */}
@@ -361,8 +343,7 @@ export class CacheManager {
       this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
 //       window.localStorage) {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
       localStorage.removeItem(this.getStorageKey(key));
@@ -370,8 +351,7 @@ export class CacheManager {
       this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
 //       window.sessionStorage) {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
       sessionStorage.removeItem(this.getStorageKey(key));
@@ -382,8 +362,7 @@ export class CacheManager {
    */
 
   clear(): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */}
@@ -395,8 +374,7 @@ export class CacheManager {
       this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
 //       window.localStorage) {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
       const,
@@ -418,8 +396,7 @@ export class CacheManager {
       this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
 //       window.sessionStorage) {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
       const,
@@ -438,7 +415,7 @@ export class CacheManager {
       keysToRemove.forEach(key => sessionStorage.removeItem(key))
     }
     logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */}
-  e: this.storage })
+  e: this.storage   )}
   )
   }
   /**
@@ -454,8 +431,7 @@ export class CacheManager {
 
     options: { ttl?: number } = {}
   ): T | Promise<T> {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     const cached = this.get;
@@ -475,10 +451,10 @@ export class CacheManager {
 }
       return value.then(resolvedValue => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
         this.set(key, resolvedValue, options);
         return resolvedValue;
-      });
+        )};
     }
     this.set(key, value, options)
     return value;
@@ -496,8 +472,7 @@ export class CacheManager {
 
     options: { ttl?: number } = {}
   ): Promise<T> {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     const cached = this.get;
@@ -523,8 +498,7 @@ export class CacheManager {
     fn: (...args: TArgs) => TResult,
     options: { ttl?: number, keyGenerator?: (...args: TArgs) => string } = {}
   ): (...args: TArgs) => TResult {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     const { keyGenerator, ...cacheOptions } = options;
@@ -545,8 +519,7 @@ export class CacheManager {
    */
 
   getStatistics(): CacheStats {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     const total = this.stats.hits + this.stats.misses;
@@ -567,8 +540,7 @@ export class CacheManager {
    */
 
   getStats(): {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   memorySiz,
@@ -618,8 +590,7 @@ export class CacheManager {
     }
 
     return {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   memorySiz,
@@ -630,4 +601,3 @@ export class CacheManager {
   }
 }
 export const cacheManager = new CacheManager()`
-

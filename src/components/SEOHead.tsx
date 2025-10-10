@@ -16,8 +16,7 @@ interface SEOHeadProps {/* TODO: Fix JSX expression */}
 }
 const SEOHead: React.FC,
           <SEOHeadProps> = ({
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
 const SEOHead: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -30,11 +29,10 @@ const SEOHead: React.FC<SEOProps> = ({
 //   canonical,
   noindex = false,
   nofollow = false}) => {
-    const canonicalUrl = canonical || url
-  }
+    const canonicalUrl = canonical || url;
+}
   const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
   return null;
 }
-export default SEOHead;`
-  </SEOProps>
+export default SEOHead;`</SEOProps>
   </SEOHeadProps>

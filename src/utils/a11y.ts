@@ -1,4 +1,3 @@
-
 'use client'
 /**
  * Accessibility (A11Y) Utilities;
@@ -9,8 +8,7 @@
  */
 
 export function generateId(prefix = 'a11y'): string {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
@@ -23,8 +21,7 @@ export function announceToScreenReader()
   message: string,
   priority: 'polite' | 'assertive' = 'polite'
 ): void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   if (typeof document === 'undefined') return;
@@ -55,8 +52,7 @@ export function announceToScreenReader()
  */
 
 export function trapFocus(element: HTMLElement): () => void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   const focusableElements = element.querySelectorAll;
@@ -110,13 +106,12 @@ export function trapFocus(element: HTMLElement): () => void {
  */
 
 export function isKeyboardAccessible(element: HTMLElement): boolean {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   const tabindex = element.getAttribute('tabindex');
   const role = element.getAttribute('role');
-  const isInteractive = ['button', 'link', 'input', 'select', 'textarea'].includes()
+  const isInteractive: any[] = ['button', 'link', 'input', 'select', 'textarea'].includes()
 //     element.tagName.toLowerCase()
   )
   return (<div>Coming Soon</div>)
@@ -134,8 +129,7 @@ export function makeKeyboardAccessible()
   element: HTMLElement,
   onClick: (e: Event) => void,
   options: {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
     role?: string;
@@ -171,8 +165,7 @@ export function makeKeyboardAccessible()
  */
 
 export function getContrastRatio(color1: string, color2: string): number {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   const getLuminance = (colo)
@@ -189,7 +182,7 @@ const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
           <= 0.03928;
 // ? normalized / 12.92;)
         : Math.pow((normalized + 0.055) / 1.055, 2.4);
-    });
+      )};
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
   }
   const lum1 = getLuminance(color1);
@@ -208,8 +201,7 @@ export function meetsContrastRequirements()
   level: 'AA' | 'AAA' = 'AA',
   fontSize: 'normal' | 'large' = 'normal'
 ): boolean {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   const ratio = getContrastRatio(color1, color2);
@@ -230,8 +222,7 @@ export function meetsContrastRequirements()
  */
 
 export function createSkipLink(targetId: string, text = 'Skip to main content'): HTMLAnchorElement {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   const skipLink = document.createElement('a');`
@@ -250,12 +241,12 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
   O: Add content,}
 }
     skipLink.style.top = '0';
-  });
+    )};
   skipLink.addEventListener('blur', () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     skipLink.style.top = '-40px';
-  });
+    )};
   return skipLink;
 }
 /**
@@ -263,8 +254,7 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
  */
 
 export function prefersReducedMotion(): boolean {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   if (typeof window === 'undefined') return false;
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches,
@@ -275,8 +265,7 @@ export function prefersReducedMotion(): boolean {
  */
 
 export function prefersDarkMode(): boolean {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   if (typeof window === 'undefined') return false;
   return window.matchMedia('(prefers-color-scheme: dark)').matches,
@@ -287,8 +276,7 @@ export function prefersDarkMode(): boolean {
  */
 
 export function getAriaInvalid(hasError: boolean): {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   'aria-invalid': boolean;
@@ -313,8 +301,7 @@ export function createAccessibleTooltip()
   content: string,
   placement: 'top' | 'bottom' | 'left' | 'right' = 'top'
 ): () => void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   const tooltipId = generateId('tooltip');
@@ -384,8 +371,7 @@ export function createAccessibleTooltip()
  */
 
 export class FocusManager {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   private,
@@ -420,4 +406,3 @@ export class FocusManager {
 }
 }
 export default undefined;"`
-

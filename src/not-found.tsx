@@ -1,42 +1,36 @@
 import { Home, Phone } from 'lucide-react';
 export default function NotFound() {
-  const popularPages = [
+  const popularPages: any[] = [
     {
       title: 'Home',
       description: 'Return to our homepage',
       href: '/',
-      icon: '🏠'
-    },
+      icon: '🏠',,
     {
       title: 'AI Services',
       description: 'Explore our comprehensive AI and IT solutions',
       href: '/services',
-      icon: '🤖'
-    },
+      icon: '🤖',,
     {
       title: 'Blog & Insights',
       description: 'Read about latest AI trends and innovations',
       href: '/blog',
-      icon: '📚'
-    },
+      icon: '📚',,
     {
       title: 'About Us',
       description: 'Learn about Zion Tech Group and our mission',
       href: '/about',
-      icon: '🏢'
-    },
+      icon: '🏢',,
     {
       title: 'Case Studies',
       description: 'See our success stories and client results',
       href: '/case-studies',
-      icon: '📊'
-    },
+      icon: '📊',,
     {
       title: 'Contact Us',
       description: 'Get in touch with our AI experts',
       href: '/contact',
-      icon: '📞'
-    },
+      icon: '📞',,
   ];
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
@@ -44,19 +38,17 @@ export default function NotFound() {
         {/* Error Code */}
         <div className="mb-8">
           <h1 className="text-9xl font-bold text-white/20 mb-4">
-            404;
+            404;</h1>
   </
           <div className="text-6xl mb-4">🔍</div>
-        </div>
         {/* Error Message */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Page Not Found;
+            Page Not Found;</h2>
   </
           <p className="text-lg text-gray-600">
             The page you're looking for doesn't exist or has been moved. 
-            Don't worry, let's get you back on track!
-          </p>
+            Don't worry, let's get you back on track!</p>
         </div>
         {/* Popular Pages */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
@@ -67,11 +59,9 @@ export default function NotFound() {
               className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-left">
               <div className="text-3xl mb-3">{page.icon}</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                {page.title}
-              </h3>
+                {page.title}</h3>
               <p className="text-gray-600 text-sm">
-                {page.description}
-              </p>
+                {page.description}</p>
             </Link>
           ))}
         </div>
@@ -90,11 +80,8 @@ export default function NotFound() {
             Contact Support
   </
         </div>
-      </div>
-    </div>
   ),
 }
-  </Link>
   </Link>
   </h2>
   </h1>

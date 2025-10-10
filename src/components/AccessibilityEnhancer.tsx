@@ -1,14 +1,11 @@
 import React, { useEffect } from 'react';
 interface AccessibilityEnhancerProps {
-    children: React.ReactNode
-  }
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-    </AccessibilityEnhancerProps>useEffect</AccessibilityEnhancerProps>(() => {
+    children: React.ReactNode,
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children   )} => {</AccessibilityEnhancerProps>useEffect</AccessibilityEnhancerProps>(() => {
     // Add keyboard navigation support
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation')
-  }
+        document.body.classList.add('keyboard-navigation'),
     }
     const handleMouseDown = () => {
     document.body.classList.remove('keyboard-navigation')
@@ -19,8 +16,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       style.textContent = `
         .keyboard-navigation *:focus {
           outline: 2 px solid #06 b6 d4 !important,
-          outline-offset: 2 px !important
-  }
+          outline-offset: 2 px !important,
       `;
       document.head.appendChild(style);
     }
@@ -46,14 +42,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           link.setAttribute('target', '_blank');
           link.setAttribute('rel', 'noopener noreferrer');
         }
-      });
+        )};
       // Add ARIA labels to images
       const images = document.querySelectorAll('img: not([alt])'),
       images.forEach(img => {
     if (!img.getAttribute('alt')) {
           img.setAttribute('alt', '')
   }
-      });
+        )};
       // Add ARIA labels to form inputs
       const inputs = document.querySelectorAll('input: not([aria-label])'),
       inputs.forEach(input => {
@@ -61,7 +57,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         if (label && !input.getAttribute('aria-label')) {
     input.setAttribute('aria-label', label.textContent?.trim() || '')
   }
-      });
+        )};
       // Add skip links
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
@@ -84,8 +80,7 @@ interface AccessibilitySettings {
     highContrast: boolean
   reducedMotion: boolean
   fontSize: 'small' | 'medium' | 'large',
-  focusVisible: boolean
-  }
+  focusVisible: boolean,
 const AccessibilityEnhancer: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
@@ -174,8 +169,8 @@ const AccessibilityEnhancer: React.FC = () => {
   }, []);
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
-    return null
-  }
+    return null;
+}
   return (
     <div className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs z-50">
       <div className="mb-2 font-bold">Accessibility Settings</div>
@@ -184,7 +179,7 @@ const AccessibilityEnhancer: React.FC = () => {
           <input
             type="checkbox"
             checked={settings.highContrast}
-            onChange={(e) => setSettings(prev => ({ ...prev, highContrast: e.target.checked }))}
+            onChange={(e) => setSettings(prev => ({ ...prev, highContrast: e.target.checked   )})}
             className="rounded"
           />
           <span>High Contrast</span>
@@ -193,7 +188,7 @@ const AccessibilityEnhancer: React.FC = () => {
           <input
             type="checkbox"
             checked={settings.reducedMotion}
-            onChange={(e) => setSettings(prev => ({ ...prev, reducedMotion: e.target.checked }))}
+            onChange={(e) => setSettings(prev => ({ ...prev, reducedMotion: e.target.checked   )})}
             className="rounded"
           />
           <span>Reduced Motion</span>
@@ -202,7 +197,7 @@ const AccessibilityEnhancer: React.FC = () => {
           <label className="block mb-1">Font Size:</label>
           <select
             value={settings.fontSize}
-            onChange={(e) => setSettings(prev => ({ ...prev, fontSize: e.target.value as any }))}
+            onChange={(e) => setSettings(prev => ({ ...prev, fontSize: e.target.value as any   )})}
             className="bg-gray-700 text-white rounded px-2 py-1">
             <option value="small">Small</option>
             <option value="medium">Medium</option>
@@ -213,13 +208,12 @@ const AccessibilityEnhancer: React.FC = () => {
           <input
             type="checkbox"
             checked={settings.focusVisible}
-            onChange={(e) => setSettings(prev => ({ ...prev, focusVisible: e.target.checked }))}
+            onChange={(e) => setSettings(prev => ({ ...prev, focusVisible: e.target.checked   )})}
             className="rounded"
           />
           <span>Focus Visible</span>
         </label>
       </div>
-    </div>
   );
 }
 export default AccessibilityEnhancer</AccessibilitySettings>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react';
 const MicroSAASPage: React.FC = () => {
-  const _microSAASServices = [
+  const _microSAASServices: any[] = [
     // AI-Powered Developer Tools
     {
       title: 'AI Code Review Assistant Pro',
@@ -16,8 +16,7 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Custom AI Models', 'OpenAI Codex'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       link: 'https://ziontechgroup.com/ai-code-review',
-      popular: true
-    },
+      popular: true,,
     {
       title: 'AI Test Generation Suite',
       description: 'Intelligent automated test generation with coverage analysis, performance testing, and regression testing automation.',
@@ -1664,7 +1663,7 @@ $4},
       contactInfo:     ,
 $4}
   ];
-  /* const realEstateSaaS = [
+  /* const realEstateSaaS: any[] = [
     {
       title: 'AI Property Valuation Platform',
       description: 'Advanced property valuation using machine learning and real estate data analysis.',
@@ -3369,11 +3368,10 @@ $4},
       contactInfo:     ,
 $4}
   ];
-  const categories = [
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    }
+  const categories: any[] = [
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
   ]; */
-  /* const categories = [
+  /* const categories: any[] = [
     { name: 'All', count: microSAASServices.length },
     { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
     { name: 'Marketing', count: microSAASServices.filter(s => s.category === 'Marketing').length },
@@ -3408,7 +3406,7 @@ $4}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
-            Micro SAAS Solutions,
+            Micro SAAS Solutions,</h1>
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
@@ -3416,9 +3414,8 @@ import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin } fro
 const MicroSAASPage: React.FC = () => {
     return (
     <div>Coming Soon</div>
-  )
-  }
-  const _microSAASServices = [
+  ),
+  const _microSAASServices: any[] = [
   // TOD,
   O: Add items;
 ]
@@ -3476,8 +3473,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Jest', 'Cypress', 'Selenium', 'Custom AI Models', 'GitHub Actions'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -3501,8 +3497,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Marketing & SEO Tools;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -3527,8 +3522,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Google Search Console API', 'Ahrefs API', 'OpenAI GPT', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -3552,8 +3546,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Twitter API', 'Instagram API', 'LinkedIn API', 'OpenAI GPT', 'React'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -3577,8 +3570,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['SendGrid', 'Mailchimp API', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -3602,8 +3594,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Business Intelligence & Analytics;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -3628,8 +3619,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['React', 'D3.js', 'Python', 'TensorFlow', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -3653,8 +3643,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Python', 'Salesforce API', 'HubSpot API', 'Custom AI Models'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -3678,8 +3667,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Finance & Accounting Tools;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -3704,8 +3692,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Stripe API', 'QuickBooks API', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -3729,8 +3716,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Python', 'Pandas', 'NumPy', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -3754,8 +3740,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['OCR', 'Machine Learning', 'React Native', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Healthcare & Wellness;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -3780,8 +3765,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Health APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -3805,8 +3789,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Wearable APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -3830,8 +3813,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Education & Learning;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -3856,8 +3838,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Speech Recognition', 'Machine Learning', 'React', 'Node.js', 'MongoDB'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -3881,8 +3862,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -3906,8 +3886,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI E-commerce & Retail;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -3932,8 +3911,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Custom ML Models'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -3957,8 +3935,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Python', 'React', 'Node.js', 'Redis'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -3982,8 +3959,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Python', 'Web Scraping', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Legal & Compliance;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -4008,8 +3984,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Real Estate & Property Management;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -4034,8 +4009,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'GIS Integration'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI HR & Recruitment;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -4060,8 +4034,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4085,8 +4058,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Calendar APIs', 'React', 'Node.js', 'MongoDB', 'WebRTC'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4110,8 +4082,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Finance & Accounting;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -4136,8 +4107,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4161,8 +4131,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['OCR', 'Workflow Engine', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4186,8 +4155,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series Analysis'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Project Management;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -4212,8 +4180,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4237,8 +4204,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Customer Service;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -4263,8 +4229,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4288,8 +4253,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Sales & CRM;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -4314,8 +4278,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4339,8 +4302,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Healthcare & Wellness;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -4365,8 +4327,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Medical AI', 'NLP', 'React', 'Node.js', 'HIPAA Compliance'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4390,8 +4351,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Security & Compliance;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -4416,8 +4376,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'SIEM', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4441,8 +4400,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Productivity & Automation;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -4467,8 +4425,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4492,8 +4449,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Email APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4517,8 +4473,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Analytics & Reporting;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -4543,8 +4498,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Python', 'PostgreSQL', 'D3.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4568,8 +4522,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Social Media APIs', 'NLP', 'React', 'Node.js', 'MongoDB'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Development & DevOps;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -4594,8 +4547,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Static Analysis', 'Machine Learning', 'React', 'Node.js', 'Git Integration'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4619,8 +4571,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['CI/CD', 'Docker', 'Kubernetes', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Communication & Collaboration;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -4645,8 +4596,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'WebSocket'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4670,8 +4620,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['WebRTC', 'Audio Processing', 'React', 'Node.js', 'WebSocket'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Marketing & Advertising;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -4696,8 +4645,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Ad APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4721,8 +4669,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI E-commerce & Retail;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -4747,8 +4694,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4772,8 +4718,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Optimization Algorithms'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Education & Training;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -4798,8 +4743,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'LMS Integration'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4823,8 +4767,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Legal & Compliance;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -4849,8 +4792,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4874,8 +4816,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Compliance APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Real Estate & Property;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -4900,8 +4841,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment Processing'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4925,8 +4865,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Web Scraping', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Agriculture & Environment;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -4951,8 +4890,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4976,8 +4914,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Transportation & Logistics;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -5002,8 +4939,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['GPS Tracking', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5027,8 +4963,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization Algorithms'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Entertainment & Media;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -5053,8 +4988,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5078,8 +5012,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'Video Processing', 'React', 'Node.js', 'FFmpeg'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Gaming & Entertainment;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -5104,8 +5037,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Game Engines', 'Machine Learning', 'React', 'Node.js', 'Unity/Unreal'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5129,8 +5061,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Analytics', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Research & Development;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -5155,8 +5086,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5180,8 +5110,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Energy & Utilities;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -5206,8 +5135,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5231,8 +5159,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['IoT', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Manufacturing & Industrial;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -5257,8 +5184,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5282,8 +5208,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Optimization', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Insurance & Risk Management;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -5308,8 +5233,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'NLP', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5333,8 +5257,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Government & Public Sector;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -5359,8 +5282,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5384,8 +5306,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Non-Profit & Social Impact;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -5410,8 +5331,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5435,8 +5355,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Matching Algorithms'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Travel & Hospitality;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -5461,8 +5380,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Travel APIs', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5486,8 +5404,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Revenue Management', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Sports & Fitness;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -5512,8 +5429,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5537,8 +5453,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Nutrition APIs', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Beauty & Fashion;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -5563,8 +5478,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'AR/VR', 'Machine Learning', 'React', 'WebGL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5588,8 +5502,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Home & Lifestyle;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -5614,8 +5527,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'MQTT'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5639,8 +5551,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Voice APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Pets & Animals;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -5665,8 +5576,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Health APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5690,8 +5600,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Processing'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Education & Learning;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -5716,8 +5625,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Conferencing'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5741,8 +5649,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Music & Audio;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -5767,8 +5674,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Web Audio API'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5792,8 +5698,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'FFmpeg'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Art & Design;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -5818,8 +5723,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'Canvas API'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5843,8 +5747,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'SVG Generation'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Dating & Relationships;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -5869,8 +5772,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'NLP', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5894,8 +5796,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Parenting & Family;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -5920,8 +5821,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Expert Systems'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5945,8 +5845,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Senior Care & Aging;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -5971,8 +5870,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5996,8 +5894,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Cognitive APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Accessibility & Inclusion;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -6022,8 +5919,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Computer Vision', 'React', 'Node.js', 'Accessibility APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6047,8 +5943,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Translation APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Emergency & Crisis Management;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -6073,8 +5968,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'Emergency APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6098,8 +5992,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Communication APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Space & Astronomy;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -6124,8 +6017,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Orbital Mechanics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6149,8 +6041,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Ocean & Marine;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -6175,8 +6066,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6200,8 +6090,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Weather APIs', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Archaeology & History;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -6226,8 +6115,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6251,8 +6139,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['OCR', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Psychology & Mental Health;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -6277,8 +6164,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6302,8 +6188,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Philosophy & Ethics;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -6328,8 +6213,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6353,8 +6237,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Spirituality & Religion;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -6379,8 +6262,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6404,8 +6286,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Future & Innovation;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -6430,8 +6311,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Data Science', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6455,8 +6335,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Simulation', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Consciousness & AI Ethics;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -6481,8 +6360,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Ethics AI', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6506,8 +6384,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Ethics AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Time & Space;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -6532,8 +6409,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6557,8 +6433,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Quantum & Advanced Physics;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -6583,8 +6458,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Quantum Computing', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6608,8 +6482,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Multiverse & Parallel Realities;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -6634,8 +6507,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Advanced Physics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6659,8 +6531,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Advanced AI', 'Consciousness', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Transcendence & Enlightenment;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -6685,8 +6556,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Consciousness AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6710,8 +6580,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Advanced AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Universal Consciousness;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -6736,8 +6605,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Universal AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6761,8 +6629,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Cosmic AI', 'Universal Consciousness', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Infinite Possibilities;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -6787,8 +6654,7 @@ const MicroSAASPage: React.FC = () => {
   s: ['Infinite AI', 'Unlimited Potential', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6812,10 +6678,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    }
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
   ];
-const realEstateSaaS = [
+const realEstateSaaS: any[] = [
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6839,8 +6704,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Real Estate APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6864,8 +6728,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Agriculture & Food Tech;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -6890,8 +6753,7 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6915,8 +6777,7 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Transportation & Logistics;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -6941,8 +6802,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Maps API', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6966,8 +6826,7 @@ const realEstateSaaS = [
   s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Energy & Sustainability;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -6992,8 +6851,7 @@ const realEstateSaaS = [
   s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7017,8 +6875,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Environmental APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Entertainment & Media;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -7043,8 +6900,7 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7068,8 +6924,7 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'Audio Processing', 'Machine Learning', 'React', 'FFmpeg'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Security & Surveillance;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -7094,8 +6949,7 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'Facial Recognition', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7119,8 +6973,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Real-time Processing', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Research & Development;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -7145,8 +6998,7 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7170,8 +7022,7 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7195,8 +7046,7 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Real Estate & Property;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -7221,8 +7071,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Zillow API', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7246,8 +7095,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI HR & Recruitment;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -7272,8 +7120,7 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7297,8 +7144,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Project Management;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -7323,8 +7169,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7348,8 +7193,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Workflow Engine'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Supply Chain & Logistics;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -7374,8 +7218,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Python', 'PostgreSQL', 'Redis', 'Custom ML Models'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7399,8 +7242,7 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Agriculture & Food Tech;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -7425,8 +7267,7 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7450,8 +7291,7 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Energy & Sustainability;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -7476,8 +7316,7 @@ const realEstateSaaS = [
   s: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'Time Series DB'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7501,8 +7340,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Gaming & Entertainment;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -7527,8 +7365,7 @@ const realEstateSaaS = [
   s: ['Unity', 'Unreal Engine', 'Machine Learning', 'Python', 'C#'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7552,8 +7389,7 @@ const realEstateSaaS = [
   s: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Transportation & Mobility;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -7578,8 +7414,7 @@ const realEstateSaaS = [
   s: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7603,8 +7438,7 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Research & Development;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -7629,8 +7463,7 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7654,8 +7487,7 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Personal Productivity;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -7680,8 +7512,7 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7705,8 +7536,7 @@ const realEstateSaaS = [
   s: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9449,8 +9279,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Browser Extension', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9474,8 +9303,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9499,8 +9327,7 @@ const realEstateSaaS = [
   s: ['NLP', 'Gmail API', 'Outlook API', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI HR & Recruitment;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -9525,8 +9352,7 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9550,8 +9376,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9575,8 +9400,7 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Customer Service & Support;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -9601,8 +9425,7 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9626,8 +9449,7 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9651,8 +9473,7 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Sales & CRM;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -9677,8 +9498,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9702,8 +9522,7 @@ const realEstateSaaS = [
   s: ['Speech Recognition', 'NLP', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9727,8 +9546,7 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Project Management;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -9753,8 +9571,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9778,8 +9595,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9803,8 +9619,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Security & Compliance;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -9829,8 +9644,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'SIEM', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9854,8 +9668,7 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9879,8 +9692,7 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Quality Assurance & Testing;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -9905,8 +9717,7 @@ const realEstateSaaS = [
   s: ['Selenium', 'Cypress', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9930,8 +9741,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Code Analysis', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9955,8 +9765,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Monitoring Tools', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Content & Media;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -9981,8 +9790,7 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'NLP', 'Video Processing', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -10006,8 +9814,7 @@ const realEstateSaaS = [
   s: ['Audio Processing', 'Speech Recognition', 'NLP', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -10031,8 +9838,7 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'DALL-E', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Research & Development;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -10057,8 +9863,7 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -10082,8 +9887,7 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'Patent APIs', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -10107,8 +9911,7 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'Web Scraping', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Personal & Lifestyle;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -10133,8 +9936,7 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Banking APIs', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -10158,8 +9960,7 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'Voice Recognition', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -10183,8 +9984,7 @@ const realEstateSaaS = [
   s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     // AI Gaming & Entertainment;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -10209,8 +10009,7 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'Machine Learning', 'Unity', 'Unreal Engine', 'React'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -10234,8 +10033,7 @@ const realEstateSaaS = [
   s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Audio APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+  t: kleber@ziontechgroup.com | +1 302 464 0950',,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -10259,10 +10057,9 @@ const realEstateSaaS = [
   s: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
-    }
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
   ];
-const categories = [
+const categories: any[] = [
     {/* TODO: Fix JSX expression */}
   t: microSAASServices.length },
     {/* TODO: Fix JSX expression */}
@@ -10325,27 +10122,22 @@ const categories = [
 // Micro SAAS Solutions
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon,
+            Coming Soon,</p>
   </
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
               <div className="text-gray-300">Applications</div>
-            </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-green-400 mb-2">$49</div>
               <div className="text-gray-300">Starting Price</div>
-            </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
               <div className="text-gray-300">Support</div>
-            </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>
               <div className="text-gray-300">Uptime</div>
-            </div>
-          </div>
           {/* Contact Info */}
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
@@ -10362,17 +10154,13 @@ const categories = [
             </div>"
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
               <div className="text-3xl font-bold text-green-400 mb-2">$49</div>"
-              <div className="text-gray-300">Starting Price</div>
-            </div>"
+              <div className="text-gray-300">Starting Price</div>"
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
               <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>"
-              <div className="text-gray-300">Support</div>
-            </div>"
+              <div className="text-gray-300">Support</div>"
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
               <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>"
               <div className="text-gray-300">Uptime</div>
-            </div>
-          </div>
           {/* Contact Info */}"
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div>"
             <div className="flex flex-col,
@@ -10391,15 +10179,12 @@ const categories = [
                 <MapPin className="w-5 h-5" /></MapPin>"
                 <span className="text-white font-medium">Middletown, DE</span>
               </div>
-            </div>
-          </div>
-        </div>
       </section>
       {/* Services Grid */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Choose Your Perfect AI Tools;
+            Choose Your Perfect AI Tools;</h2>
   </
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSAASServices.map((service, index) => (
@@ -10415,9 +10200,7 @@ const categories = [
                     <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                   </div>
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
-                    {service.category}
-                  </div>
-                </div>
+                    {service.category}</div>
                 <div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -10429,7 +10212,7 @@ const categories = [
                     ))}
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-500">
-                        +{service.features.length - 4} more features;
+                        +{service.features.length - 4} more features;</li>
   </
                     )}
                   </ul>
@@ -10466,8 +10249,7 @@ const categories = [
                   </div>"
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block"></div>
                     {service.category}
-                  </div>
-                </div>"
+                  </div>"
                 <div className="mb-6"></div>"
                   <h4 className="font-semibold text-gray-900 mb-3">Key,
   Features:</h4>"
@@ -10501,7 +10283,7 @@ const categories = [
                   <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
                   <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                      <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded"></span>
                 </div>"
                 <div className="mb-6"></div>"
                   <h4 className="font-semibold text-gray-900 mb-3">Technologie,
@@ -10513,14 +10295,13 @@ const categories = [
                       </span>
                     ))}
                   </div>
-                </div>
                 <div className="text-center">
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block">
-                    Get Started Now,
+                    Get Started Now,</a>
   </
-                  <p className="text-xs text-gray-500 mt-2">
+                  <p className="text-xs text-gray-500 mt-2"></p>
                 </div>"
                 <div className="text-center"></div>
                   <a></a>
@@ -10536,30 +10317,26 @@ const categories = [
                     {service.contactInfo}
                   </p>
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
+            Ready to Transform Your Business?</h2>
           <p className="text-xl text-purple-100 mb-8">
-            Get started with our micro SAAS solutions today and see the difference AI can make.
-          </p>
+            Get started with our micro SAAS solutions today and see the difference AI can make.</p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-              Call (302) 464-0950
+              Call (302) 464-0950</a>
   </
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors">
-              Email Us,
+              Email Us,</a>
   </
       {/* CTA Section */}"
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>"
@@ -10574,20 +10351,16 @@ const categories = [
             <a
               href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 // >
-//               Call (302) 464-0950
-          </a>
+//               Call (302) 464-0950</a>
             <a
               href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
 // >
-//               Email Us
-          </a>
+//               Email Us</a>
           </div>
-        </div>
       </section>
     </div>
   ),
 }
 export default MicroSAASPage;"`
-  </a>
   </a>
   </p>

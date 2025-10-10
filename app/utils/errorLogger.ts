@@ -13,8 +13,7 @@ export interface ErrorLogEntry {
     timestamp: string,
   severity: ErrorSeverity,
   message: string,
-  error?: Error
-  }
+  error?: Error,
 export interface ErrorLogEntry {}
   timestamp: string;
   severity: ErrorSeverity;
@@ -65,8 +64,7 @@ class ErrorLogger {}
     }
     // Send to external logging service in production;
     if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {
-    // Console logging in development
-  }
+    // Console logging in development,
     if (process.env['NODE_ENV'] === 'development') {}
       this.logToConsole(entry);}
     }
@@ -133,10 +131,9 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
       }
       await fetch(endpoint, {
     method: 'POST'),
-        headers: {)
-  }
+        headers: {),
           'Content-Type': 'application/json'})
-        })
+          )}
         body: JSON.stringify({
     )
           ...entry;)
@@ -158,8 +155,8 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
                 stack: entry.error.stack}
               }
             : undefined;
-        })
-      })
+          )}
+        )}
     } catch (error) {}
       // Silently fail to avoid infinite loop}
   private async sendToExternalService(entr);
@@ -170,8 +167,8 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   y: JSON.stringify({/* TODO: Fix JSX expression */}
               }
             : undefined;);
-        })
-      })
+          )}
+        )}
     } catch (error) {/* TODO: Fix JSX expression */}
       }
   }

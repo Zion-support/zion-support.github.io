@@ -1,4 +1,3 @@
-
 'use client'
 /**
  * Form Validation Utilities;
@@ -6,22 +5,17 @@
  */
 
 export interface ValidationRule<T = unknown> {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   validate: (value: T) => boolean,,
-    message: string
-}
+    message: string,
 export interface ValidationResult {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   valid: boolean,,
-    errors: string[]
-}
+    errors: string[],
 export interface FieldValidation {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   [fieldName: string]: ValidationRule[],
 
@@ -31,8 +25,7 @@ export interface FieldValidation {
  */
 
 export const _validationRules = {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   /**
@@ -41,21 +34,19 @@ export const _validationRules = {
 
   required: (message = 'This field is required'): ValidationRule,
           <string> => ({
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
 
 //     message;
-  }),
+    )},
   /**
    * Validate email format;
    */
 
   email: (message = 'Please enter a valid email address'): ValidationRule,
           <string> => ({
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   validat,
@@ -67,42 +58,39 @@ export const _validationRules = {
       return emailRegex.test(value);
     },
 //     message;
-  }),
+    )},
   /**
    * Validate minimum length;
    */
 
   minLength: (min: number, message?: string): ValidationRule;
           <string> => ({
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   validate: (value: string) => value.length >= min,
     message: message || `Must be at least ${min} characters`
 
-  }),
+    )},
   /**
    * Validate maximum length;
    */
 
   maxLength: (max: number, message?: string): ValidationRule;
           <string> => ({
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   validate: (value: string) => value.length,
 
           <= max,
     messag,`
   e: message || `Must be no more than ${max} characters`
-  }),
+    )},
   /**
    * Validate phone number (US format)
    */
 
   phoneUS: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   validat,
@@ -114,15 +102,14 @@ export const _validationRules = {
       return phoneRegex.test(value.replace(/\s/g, ''));
     },
 //     message;
-  }),
+    )},
   /**
    * Validate URL format;
    */
 
   url: (message = 'Please enter a valid URL'): ValidationRule,
           <string> => ({
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   validat,
@@ -142,34 +129,32 @@ export const _validationRules = {
       }
     },
 //     message;
-  }),
+    )},
   /**
    * Validate number range;
    */
 
   numberRange: (min: number, max: number, message?: string): ValidationRule;
           <number> => ({
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   validate: (value: number) => value >= min && value,
 
           <= max,
     messag,`
   e: message || `Must be between ${min} and ${max}`
-  }),
+    )},
   /**
    * Validate pattern match;
    */
 
   pattern: (regex: RegExp, message = 'Invalid format'): ValidationRule<string> => ({
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   validate: (value: string) => regex.test(value),
 
 //     message;
-  }),
+    )},
   /**
    * Validate custom condition;
    */
@@ -177,13 +162,12 @@ export const _validationRules = {
   m: 
 
           <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   validate: validator,
 //     message;
 
-  }),
+    )},
   /**
    * Validate password strength;
    */
@@ -209,28 +193,26 @@ export const _validationRules = {
       return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength;
     },
 // message;
-  }),
+    )},
   /**
    * Validate matching fields (e.g., password confirmation)
    */
 
   matches: (otherFieldValue: string, fieldName: string): ValidationRule,
           <string> => ({
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   validate: (value: string) => value === otherFieldValue,
     message: `Must match ${fieldName}`
 
-  }),
+    )},
   /**
    * Validate file size;
    */
 
   fileSize: (maxSizeInMB: number, message?: string): ValidationRule;
           <File> => ({
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   validat,
@@ -244,14 +226,13 @@ export const _validationRules = {
     },
     messag,`
   e: message || `File size must not exceed ${maxSizeInMB}MB`
-  }),
+    )},
   /**
    * Validate file type;
    */
 
   fileType: (allowedTypes: string[], message?: string): ValidationRule<File> => ({
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   validate: (file: File) => allowedTypes.includes(file.type),
     message: message || `File type must be one of: ${allowedTypes.join(', ')}`
@@ -297,8 +278,7 @@ export function validateForm;
   validationSchema: Record,
           <keyof T, ValidationRule[]>
 ): Record<keyof T, ValidationResult> {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   const results = {} as Record;
@@ -325,8 +305,7 @@ export function isFormValid;
   validationResults: Record,
           <keyof T, ValidationResult>
 ): boolean {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   return Object.values(validationResults).every(result => result.valid);
@@ -340,8 +319,7 @@ export function getFormErrors;
   validationResults: Record,
           <keyof T, ValidationResult>
 ): Record<keyof T, string[]> {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   const errors = {} as Record;
@@ -363,8 +341,7 @@ export function getFormErrors;
  */
 
 export function sanitizeInput(input: string): string {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   return input;
@@ -384,8 +361,7 @@ export function debounce;
     func: T,
   wait: number): (...args: Parameters,
           <T>) => void {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   let,
@@ -412,5 +388,4 @@ export function debounce;
     }
     timeout = setTimeout(later, wait)
   }
-}"`
-
+}"`</>

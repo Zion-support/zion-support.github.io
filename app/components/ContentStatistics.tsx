@@ -7,61 +7,52 @@ const ContentStatistics: React.FC = () => {
     clients: 0,
     projects: 0,
     satisfaction: 0,
-    years: 0
-  })
+    years: 0,)
 
   const targetCounters = {
     clients: 500,
     projects: 1000,
     satisfaction: 99,
-    years: 10
-  }
+    years: 10,
 
-  const statistics = [
+  const statistics: any[] = [
     {
       icon: Users,
       value: counters.clients,
       label: 'Happy Clients',
       suffix: '+',
-      color: 'text-cyan-400'
-    },
+      color: 'text-cyan-400',,
     {
       icon: Award,
       value: counters.projects,
       label: 'Projects Completed',
       suffix: '+',
-      color: 'text-purple-400'
-    },
+      color: 'text-purple-400',,
     {
       icon: TrendingUp,
       value: counters.satisfaction,
       label: 'Client Satisfaction',
       suffix: '%',
-      color: 'text-green-400'
-    },
+      color: 'text-green-400',,
     {
       icon: Clock,
       value: counters.years,
       label: 'Years Experience',
       suffix: '+',
-      color: 'text-yellow-400'
-    }
+      color: 'text-yellow-400',
   ];
-  const achievements = [
+  const achievements: any[] = [
     {
       icon: Brain,
     },
     {
       icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
-      description: 'Serving clients across 50+ countries'
-    },
+      description: 'Serving clients across 50+ countries',,
     {
       icon: Zap,
       title: 'Performance',
-      description: '99.9% uptime and lightning-fast response'
-    }
+      description: '99.9% uptime and lightning-fast response',
   ]
 
   useEffect(() => {
@@ -80,23 +71,13 @@ const ContentStatistics: React.FC = () => {
             }
           }
           return prev;
-        })
+          )}
       }, 16);
-    })
+      )}
 
     return () => {
       timers.forEach(timer => clearInterval(timer));
     }
-=======
-    };
-
-    // Start animations with slight delays
-    Object.keys(targetCounters).forEach((key, index) => {
-      setTimeout(() => {
-        animateCounter(key as keyof typeof targetCounters);
-      }, index * 100);
-    });
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
   }, []);
 
   return (
@@ -107,10 +88,6 @@ const ContentStatistics: React.FC = () => {
             </div>
           ))}
         </div>
-
-        </div>
-      </div>
-    </div>
   );
 };
 

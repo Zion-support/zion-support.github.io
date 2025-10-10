@@ -4,14 +4,12 @@ import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
-}
+  fallback?: ReactNode,
 
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
-}
+  errorInfo?: ErrorInfo,
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -27,9 +25,9 @@ class ErrorBoundary extends Component<Props, State> {
     // Log error for monitoring in production
     if (process.env.NODE_ENV === 'production') {
       // In production, you would send this to an error reporting service
-      // Example: errorReportingService.captureException(error, { extra: errorInfo })
+      // Example: errorReportingService.captureException(error, { extra: errorInfo   )}
     }
-    this.setState({ error, errorInfo })
+    this.setState({ error, errorInfo   )}
   }
 
   handleReload = () => {
@@ -54,22 +52,18 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
             
             <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
+              Oops! Something went wrong</h1>
             
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.
-            </p>
+              We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.</p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer mb-2">
-                  Error Details (Development)
-                </summary>
+                  Error Details (Development)</summary>
                 <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">
                   {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
+                  {this.state.errorInfo?.componentStack}</pre>
               </details>
             )}
 
@@ -84,7 +78,7 @@ class ErrorBoundary extends Component<Props, State> {
               
               <button
                 onClick={this.handleGoHome}
-                className="flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+                className="flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover: bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
               >
                 <Home className="w-4 h-4" />
                 <span>Go Home</span>
@@ -93,8 +87,7 @@ class ErrorBoundary extends Component<Props, State> {
 
             <div className="mt-6 pt-6 border-t border-white/20">
               <p className="text-sm text-gray-400 mb-3">
-                Still having trouble? Contact our support team:
-              </p>
+                Still having trouble? Contact our support team:</p>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
@@ -102,10 +95,7 @@ class ErrorBoundary extends Component<Props, State> {
                 kleber@ziontechgroup.com
               </a>
             </div>
-          </div>
-        </div>
-      );
-    }
+      ),
     return this.props.children;
   }
 };

@@ -1,12 +1,10 @@
-
 /**
  * Security Configuration;
  * Defines security headers and policies for the application;
  */
 
 export const _securityHeaders = {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   // Content Security Policy,
@@ -143,8 +141,7 @@ export function validateUrl(ur)
  * Generate secure token;
 export function generateSecureToken(lengt)
   h: number = 32): string {
-    const array = new Uint8Array(length)
-  }
+    const array = new Uint8Array(length),
 export function generateSecureToken(_lengt)
   h: number = 32): string {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -172,5 +169,4 @@ export default {securityHeaders}
   sanitizeInput,
   validateEmail,
   validateUrl,
-  generateSecureToken;"
-
+  generateSecureToken;"</>

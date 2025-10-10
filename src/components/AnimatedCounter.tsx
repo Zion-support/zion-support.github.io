@@ -4,14 +4,14 @@ interface AnimatedCounterProps {
   duration?: number
   prefix?: string
   suffix?: string,
-  className?: string
-  }
+  className?: string;
+}
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps>end</AnimatedCounterProps>,
   duration = 2000,
   prefix = '',
   suffix = '',
   className = ''
-}) => {
+  )} => {
     const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const counterRef = useRef<HTMLDivElement>(null)</HTMLDivElement>useEffect</HTMLDivElement>(() => {

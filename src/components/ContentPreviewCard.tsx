@@ -1,7 +1,6 @@
 import React from 'react';
 interface ContentPreviewCardProps {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   i,
   d: string,
@@ -46,7 +45,7 @@ const,
   featured = false,
 //   stats,
 //   excerpt;)
-}) => {if (num >= 1000) {}
+  )} => {if (num >= 1000) {}
   // TOD,
   O: Add content,
 }
@@ -89,7 +88,6 @@ const,
         <div className="text-center text-white"></div>"
           <div className="text-6xl mb-2">{image}</div>"
           <div className="text-sm font-medium opacity-90">{category}</div>
-        </div>
         {/* Featured Badge */}
         {featured && ()}"
           <div className="absolute top-4 left-4"></div>"
@@ -106,8 +104,6 @@ const,
                 {formatNumber(stats.views)}
               </div>"
               <div className="text-xs text-white opacity-90">views</div>
-            </div>
-          </div>
         )}
         {/* Read Time Badge */}"
         <div className="absolute bottom-4 left-4"></div>"
@@ -115,7 +111,6 @@ const,
             {readTime}
           </span>
         </div>
-      </div>
       {/* Content */}"
       <div className="p-6"></div>"
         <div className="mb-3"></div>"
@@ -146,8 +141,6 @@ const,
                 </svg>"
                 <span className="text-green-600 font-medium">{stats.engagement}% engagement</span>
               </div>
-            </div>
-          </div>
         )}
         {/* Date and CTA */}"
         <div className="flex items-center justify-between"></div>"
@@ -163,7 +156,6 @@ const,
             </svg>
           </Link>
         </div>
-      </div>
     </article>
   );
 }

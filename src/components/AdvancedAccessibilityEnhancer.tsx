@@ -3,22 +3,21 @@ import React, { useEffect, useState, useCallback } from 'react';
 interface AdvancedAccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
 }
 const,
-  AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-  });
+  AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({/* TODO: Fix JSX expression */}))} => {/* TODO: Fix JSX expression */}
+    )};
   // Detect user preferences;
   useEffect(() => {/* TODO: Fix JSX expression */}
-    }));
+      )});
     // Listen for changes in user preferences;
     const motionQuery = window.matchMedia('(prefers-reduced-motio)
   n: reduce)')
     const contrastQuery = window.matchMedia('(prefers-contras)
   t: high)'),
     const handleMotionChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
-  n: e.matches }));
+  n: e.matches   )});
     }
     const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
-  t: e.matches }));
+  t: e.matches   )});
     }
     motionQuery.addEventListener('change', handleMotionChange);
     contrastQuery.addEventListener('change', handleContrastChange);
@@ -78,21 +77,20 @@ const,
     }
     // Apply focus trap to modals;
     const modals = document.querySelectorAll('[role="dialog"]');
-    modals.forEach(modal => {/* TODO: Fix JSX expression */})
-    });
+    modals.forEach(modal => {/* TODO: Fix JSX expression */}))};
   }, []);
   // ARIA labels enhancement;
   const enhanceARIALabels = useCallback(() => {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
         button.setAttribute('aria-label', `Button ${index + 1}`);
       }
-    });
+      )};
     // Add ARIA labels to images;
     const images = document.querySelectorAll('im)
   g: not([alt])'),
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}`
       img.setAttribute('alt', `Image ${index + 1}`);
-    });
+      )};
     // Add ARIA labels to form inputs;
     const inputs = document.querySelectorAll('inpu)
   t: not([aria-label]):not([aria-labelledby])'),
@@ -101,7 +99,7 @@ const,
       } else {/* TODO: Fix JSX expression */}`
         input.setAttribute('aria-label', `Input ${index + 1}`);
       }
-    });
+      )};
   }, []);
   // Skip links;
   const addSkipLinks = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -114,8 +112,8 @@ const,
     const skipLinksContainer = document.createElement('div');
     skipLinksContainer.className = 'skip-links';
     skipLinksContainer.setAttribute('aria-label', 'Skip links');
-    skipLinks.forEach(({ href, text }) => {/* TODO: Fix JSX expression */}
-    });
+    skipLinks.forEach(({ href, text   )} => {/* TODO: Fix JSX expression */}
+      )};
     document.body.insertBefore(skipLinksContainer, document.body.firstChild);
   }, []);
   // Color contrast checking;
@@ -162,5 +160,4 @@ const,
   }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation]);
   return null;
 }
-export default AdvancedAccessibilityEnhancer;"`
-  </AdvancedAccessibilityEnhancerProps>
+export default AdvancedAccessibilityEnhancer;"`</AdvancedAccessibilityEnhancerProps>

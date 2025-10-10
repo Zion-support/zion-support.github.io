@@ -1,3 +1,4 @@
+import React from 'react';
 // Real Micro SAAS Services for Zion Tech Group;
 // Comprehensive list of innovative, real-world micro SAAS solutions;
 export interface MicroSaasService {
@@ -29,15 +30,13 @@ export interface MicroSaasService {
     languages: string[]
     frameworks: string[]
     databases: string[],
-    cloudProviders: string[]
-  }
+    cloudProviders: string[],
   }
   pricing: {
     monthly: number,
     yearly: number,
     enterprise: number,
-    features: string[]
-  }
+    features: string[],
   }
 }
 export const microSaasServices: MicroSaasService[] = [
@@ -1025,7 +1024,7 @@ export const microSaasServices: MicroSaasService[] = [
   }
 ]
 // Service categories for filtering and organization;
-export const serviceCategories = [
+export const serviceCategories: any[] = [
   'All',
   'Productivity',
   'Content & Marketing',

@@ -8,16 +8,14 @@ export enum LogLevel {
   INFO = 1,;
   WARN = 2,;
   ERROR = 3,;
-  FATAL = 4
-  }
+  FATAL = 4,
 }
 export interface LogContext {
     userId?: string;
   sessionId?: string;
   component?: string;
   action?: string;
-  [key: string]: unknown
-  }
+  [key: string]: unknown,
 }
 class Logger {
     private logLevel: LogLevel = LogLevel.INFO,
@@ -31,12 +29,10 @@ class Logger {
   }> = []
   setLogLevel(level: LogLevel): void {
     ,
-    this.logLevel = level
-  }
+    this.logLevel = level,
   }
 getLogLevel(): LogLevel {
-    return this.logLevel
-  }
+    return this.logLevel,
   }
 debug(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
     </string></<<<string>this</string></string>.log(LogLevel.DEBUG, message, context, metadata)
@@ -60,8 +56,7 @@ error(message: string,),;
     let meta: Record<string, unknown> | undefined;
     // Handle different parameter combinations;
     if (errorOrContextOrMetadata instanceof Error) {
-      error = errorOrContextOrMetadata
-  }
+      error = errorOrContextOrMetadata,
       context = typeof contextOrMetadata === 'string' ? { action: contextOrMetadata } : contextOrMetadata;
       meta = metadata;
     } else if (typeof errorOrContextOrMetadata === 'string') {}
@@ -125,7 +120,7 @@ class Logger {/* TODO: Fix JSX expression */}
       meta = contextOrMetadata as Record<string>
     } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */}
     }
-this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack })
+this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack   )}
   }
 fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
     </string></<<<string>this</string></string>.log(LogLevel.FATAL, message, context, metadata)
@@ -162,8 +157,7 @@ this.logs.push(logEntry);
       case LogLevel.WARN: break,
       case LogLevel.ERROR: break,
       case LogLevel.FATAL:,;
-        break
-  }
+        break,
     }
   }
 getLogs(level?: LogLevel): Array<{
@@ -261,10 +255,10 @@ getLogs(level?: LogLevel): Array<{
   }
     //   headers: {// 'Content-Type': 'application/json'})
     //   body: JSON.stringify(entry),
-    // }).catch(err => {
+    //   )}.catch(err => {
     )
   }
-    //   // })
+    //   //   )}
   }
 exportLogs(): string {
     return JSON.stringify(this.logs, null, 2)
@@ -278,8 +272,8 @@ export const logger = new Logger();
   s: {// 'Content-Type': 'application/json'},;
     //   bod,;
   y: JSON.stringify(entry),
-    // }).catch(err => {/* TODO: Fix JSX expression */})
-    //   // })
+    //   )}.catch(err => {/* TODO: Fix JSX expression */})
+    //   //   )}
   }
   /**;
    * Get string representation of log level;

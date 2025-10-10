@@ -16,7 +16,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   prefix = '',
   suffix = '',
   className = ''
-}) => {
+  )} => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -49,8 +49,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 
   return (
     <span className={className}>
-      {prefix}{count.toLocaleString()}{suffix}
-    </span>
+      {prefix}{count.toLocaleString()}{suffix}</span>
   );
 };
 

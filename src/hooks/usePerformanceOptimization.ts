@@ -1,5 +1,3 @@
-
-
 'use client';
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -9,11 +7,9 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
     firstContentfulPaint: number,,
     largestContentfulPaint: number,,
     cumulativeLayoutShift: number,,
-    firstInputDelay: number
-}
+    firstInputDelay: number,
 export const _usePerformanceOptimization = () => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   const measurePerformance = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -29,8 +25,7 @@ export const _usePerformanceOptimization = () => {
     const paintEntries = performance.getEntriesByType('paint');
     const,
   metrics: PerformanceMetrics = {
-    const _paintEntries = performance.getEntriesByType('paint')
-  }
+    const _paintEntries = performance.getEntriesByType('paint'),
     const,
   _metrics: PerformanceMetrics = {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -52,20 +47,20 @@ export const _usePerformanceOptimization = () => {
     // Measure LCP;
 const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       if (lastEntry) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         metrics.largestContentfulPaint = lastEntry.startTime;
-    });
+      )};
     lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
+  s: ['largest-contentful-paint']   )};
 // Measure CLS;
     const clsObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
       for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -80,7 +75,7 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
           clsValue += layoutShiftEntry.value || 0;
       metrics.cumulativeLayoutShift = clsValue;
     clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
+  s: ['layout-shift']   )};
 // Measure FID;
     const fidObserver = new PerformanceObserver(list => {const fidEntry = entry as PerformanceEntry & {}
   // TOD,
@@ -90,7 +85,7 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
         metrics.firstInputDelay =)
           (fidEntry.processingStart || 0) - entry.startTime;
     fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
+  s: ['first-input']   )};
     // Cleanup observers after a delay;
     setTimeout(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -110,7 +105,7 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
 }
       entries.forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
         if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -122,10 +117,10 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
   const preloadCriticalResources = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
+    const criticalResources: any[] = ['/fonts/inter-var.woff2', '/css/critical.css'];
     criticalResources.forEach(resource => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+  )}
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
@@ -160,4 +155,3 @@ if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}
   return {measurePerformance}
     optimizeImages,
     preloadCriticalResources;
-

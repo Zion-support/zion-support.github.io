@@ -1,4 +1,3 @@
-
 'use client';
 // Performance optimization utilities;
 // Debounce utility for performance;
@@ -8,14 +7,12 @@ export const _debounce =
     func: T,
   wait: number): ((...args: Parameters,
           <T>) => void) => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   let timeout: NodeJS.Timeout
   return (...args: Parameters,
           <T>) => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
 // Throttle utility for performance
 export const throttle = 
@@ -24,8 +21,7 @@ export const throttle =
     func: T,
   limit: number): ((...args: Parameters,
           <T>) => void) => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   let,
@@ -50,8 +46,7 @@ export const useIntersectionObserver = ()
   callback: (entries: IntersectionObserverEntry[]) => void,
   _options: IntersectionObserverInit = {}
 ) => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   const observer = useMemo()
@@ -65,15 +60,14 @@ export const useIntersectionObserver = ()
             rootMargi,
   n: '50px',
 //             ...options;)
-          })
+            )}
         : null,
 //     [callback, options]
   )
   const observe = useCallback()
 
     (element: Element | null) => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
       if (observer && element) {/* TODO: Fix JSX expression */}
@@ -175,7 +169,7 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
 //         lcp,
         ttf,
   b: navigation?.responseStart - navigation?.requestStart,)
-      });
+        )};
     }
     // Monitor performance after page load;
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
@@ -188,20 +182,20 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
     if ('web-vitals' in window) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB   )} => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         getCLS((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  s: metric.value })));
+  s: metric.value   )}));
         getFID((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  d: metric.value })));
+  d: metric.value   )}));
         getFCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  p: metric.value })));
+  p: metric.value   )}));
         getLCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  p: metric.value })));
+  p: metric.value   )}));
         getTTFB((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  b: metric.value })));
-      });
+  b: metric.value   )}));
+        )};
     }
     return () => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -243,7 +237,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
   e: memory.totalJSHeapSize,
           jsHeapSizeLimi,
   t: memory.jsHeapSizeLimit,)
-        });
+          )};
       }
     }
     const interval = setInterval(updateMemoryInfo, 5000);
@@ -320,7 +314,7 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
 }
           imageSize += size;
         }
-      });
+        )};
       setBundleSize({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -328,7 +322,7 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
 //         jsSize,
 //         cssSize,
 //         imageSize;)
-      });
+        )};
     }
     // Calculate after page load;
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
@@ -358,4 +352,3 @@ export default {/* TODO: Fix JSX expression */}
 //   preloadCriticalResources,
 //   useBundleSizeMonitoring;
 }
-

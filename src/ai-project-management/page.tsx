@@ -79,7 +79,6 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
                   Advanced metrics and KPIs to track team productivity and project success rates.
                 </p>
               </div>
-            </div>
           </section>
           {/* Pricing Section */}"
           <section className="mb-16"></section>"
@@ -126,7 +125,6 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
                 </ul>"
                 <a href="/contact" className="cyber-button w-full">Contact Sales</a>
               </div>
-            </div>
           </section>
           {/* Benefits Section */}"
           <section className="mb-16"></section>"
@@ -157,7 +155,6 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
                 <h3 className="text-xl font-bold text-white mb-2">Team Productivity</h3>"
                 <p className="text-gray-300">85% increase in team productivity</p>
               </div>
-            </div>
           </section>
           {/* CTA Section */}"
           <section className="text-center"></section>"
@@ -182,6 +179,5 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
         </main>
         <Footer /></Footer>
       </div>
-    </div>
   ),
 }"

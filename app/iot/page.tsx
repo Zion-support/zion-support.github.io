@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
 const IoTPage: React.FC = () => {
-    const iotServices = [
+    const iotServices: any[] = [
     {
       title: 'IoT Device Management Platform',
       description: 'Comprehensive IoT device management and monitoring platform for connected devices.',
@@ -137,10 +137,10 @@ const IoTPage: React.FC = () => {
   }
     }
   ]
-const categories = [...new Set(iotServices.map(service => service.category))]
+const categories: any[] = [...new Set(iotServices.map(service => service.category))]
 return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>IoT Services - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -153,7 +153,6 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
           <div className="absolute inset-0 bg-black opacity-30"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-green-600/50 to-teal-800/50"></div>
@@ -161,20 +160,14 @@ return (
             <div className="text-center"></div>
               <h1>
                 IoT Solutions</h1>
-              </h1>
               <p>
-                Connect, monitor, and optimize your world with intelligent Internet of Things solutions
-              </p>
+                Connect, monitor, and optimize your world with intelligent Internet of Things solutions</p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
-                  Explore IoT Solutions
-                </button>
+                  Explore IoT Solutions</button>
                 <button>
-                  Schedule IoT Consultation,
-                </button>
+                  Schedule IoT Consultation,</button>
               </div>
-            </div>
-          </div>
         </section>
         {/* Key Benefits */}
         <section className="py-20 px-4">
@@ -183,16 +176,13 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
               <h2>
-                Why Choose Our IoT Services?,
-              </h2>
+                Why Choose Our IoT Services?,</h2>
               <p>
-                End-to-end IoT solutions with proven expertise in connectivity, security, and analytics
-              </p>
+                End-to-end IoT solutions with proven expertise in connectivity, security, and analytics</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               <div className="text-center"></div>
@@ -219,8 +209,6 @@ return (
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Custom Solutions</h3>
                 <p className="text-gray-600">Tailored IoT solutions for your specific needs</p>
               </div>
-            </div>
-          </div>
         </section>
         {/* Services by Category */}
         {
@@ -232,16 +220,13 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
               <div className="text-center mb-12"></div>
                 <h2>
-                  {category} Solutions
-                </h2>
+                  {category} Solutions</h2>
                 <p>
-                  Specialized {category.toLowerCase()} solutions powered by IoT technology
-                </p>
+                  Specialized {category.toLowerCase()} solutions powered by IoT technology</p>
               </div>
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
                 {
@@ -260,8 +245,6 @@ return (
                         </div>
                         <div className="text-sm text-green-600 font-semibold"></div>
                           Save up to 40% vs market rates</div>
-                        </div>
-                      </div>
                       <div className="mb-4"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                         <ul>
@@ -271,7 +254,7 @@ return (
                             <li>
                               <CheckCircle>
 
-                              {feature}
+                              {feature}</CheckCircle>
                             </li>
                           ))}
 
@@ -285,12 +268,10 @@ return (
   }
                             <span>
 
-                              {tech}
-                            </span>
+                              {tech}</span>
                           ))}
 
                         </div>
-                      </div>
                       <div className="mb-6"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
                         <ul>
@@ -300,20 +281,18 @@ return (
                             <li>
                               <Star>
 
-                              {benefit}
+                              {benefit}</Star>
                             </li>
                           ))}
 
                         </ul>
                       </div>
                       <button>
-                        Get IoT Quote
-                      </button>
+                        Get IoT Quote</button>
                     </div>
 
                   ))}
               </div>
-            </div>
           </section>
         ))}
 {/* IoT Capabilities Showcase */}
@@ -323,16 +302,13 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
               <h2>
-                Our IoT Capabilities
-              </h2>
+                Our IoT Capabilities</h2>
               <p>
-                Comprehensive IoT technologies and methodologies for connected solutions,
-              </p>
+                Comprehensive IoT technologies and methodologies for connected solutions,</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"></div>
@@ -365,8 +341,6 @@ return (
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Data Visualization</h3>
                 <p className="text-gray-600">Real-time dashboards and analytics for IoT data insights</p>
               </div>
-            </div>
-          </div>
         </section>
         {/* Contact Section */}
         <section className="py-20 px-4">
@@ -375,27 +349,21 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
         </section>
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
             <h2>
-              Ready to Connect Your World?
-            </h2>
+              Ready to Connect Your World?</h2>
             <p>
-              Contact our IoT experts for a free consultation and custom IoT strategy development
-            </p>
+              Contact our IoT experts for a free consultation and custom IoT strategy development</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a>
-                📞 +1 302 464 0950
-              </a>
+                📞 +1 302 464 0950</a>
               <a>
-                ✉️ kleber@ziontechgroup.com,
-              </a>
+                ✉️ kleber@ziontechgroup.com,</a>
             </div>
             <div className="mt-8 text-sm text-green-200"></div>
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
-          </div>
         </section>
       </div>
     </>
@@ -403,4 +371,3 @@ return (
 };
 
 export default IoTPage;
-

@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
 const FiveGImplementationPage: React.FC = () => {
-  const features = [
+  const features: any[] = [
     {
       icon: Wifi,
       title: '5G Network Design',
@@ -43,7 +43,7 @@ const FiveGImplementationPage: React.FC = () => {
   ]
   return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>5G Network Implementation - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
         <meta name="keywords" content="5G implementation, network design, ultra-low latency, IoT connectivity, wireless infrastructure" />
@@ -59,17 +59,13 @@ const FiveGImplementationPage: React.FC = () => {
               5G Network <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Implementation</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems.
-            </p>
+              Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-                Get Started
-              </button>
+                Get Started</button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Schedule Demo
-              </button>
+                Schedule Demo</button>
             </div>
-          </div>
         </section>
         
         {/* Features Section */}
@@ -77,11 +73,9 @@ const FiveGImplementationPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Advanced 5G Features
-              </h2>
+                Advanced 5G Features</h2>
               <p className="text-xl text-gray-300">
-                Cutting-edge 5G technology for the next generation of connectivity
-              </p>
+                Cutting-edge 5G technology for the next generation of connectivity</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -104,7 +98,6 @@ const FiveGImplementationPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
         
         {/* CTA Section */}
@@ -112,26 +105,18 @@ const FiveGImplementationPage: React.FC = () => {
           <div className="max-w-7xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6">
-                Ready to Implement 5G?
-              </h2>
+                Ready to Implement 5G?</h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your 5G implementation needs and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                Contact our experts to discuss your 5G implementation needs and get started today.</p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-                  Contact Us
-                </button>
+                  Contact Us</button>
                 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                  Learn More
-                </button>
+                  Learn More</button>
               </div>
-            </div>
-          </div>
         </section>
       </div>
     </>
-  );
-};
+  ),;
 
 export default FiveGImplementationPage;
-

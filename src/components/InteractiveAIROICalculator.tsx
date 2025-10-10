@@ -20,8 +20,7 @@ const,
             <div className='space-y-6'>
               <div>
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
-                  Current Annual Cost ($)
-                </label>
+                  Current Annual Cost ($)</label>
                 <input
                   type='number'
                   value={currentCost}
@@ -30,7 +29,7 @@ const,
   focus:ring-2,
   focus:ring-blue-500,
   focus:border-transparent'
-// />
+// /></input>
           </div>
 Expected Efficiency Gain (%)
                   type='range'
@@ -62,7 +61,5 @@ Expected Efficiency Gain (%)
     </section>
   );
 export default InteractiveAIROICalculator</div>
-  </div>
-  </div>
   </h2>
   </div>

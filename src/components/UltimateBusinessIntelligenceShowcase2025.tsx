@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 const _UltimateBusinessIntelligenceShowcase2025 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const content = [
+  const content: any[] = [
     {
       id: 'ultimate-business-intelligence-revolution',
       title: 'AI 2025: The Ultimate Business Intelligence Revolution',
@@ -45,7 +45,7 @@ readingTimereadingTime: '45 min read',
       tags: ['Implementation', 'Guide', '30,000% ROI', 'Roadmap', 'Best Practices']
     }
   ];
-  const categories = [
+  const categories: any[] = [
     { id: 'all', name: 'All Content' },
     { id: 'blog', name: 'Blog Posts' },
     { id: 'case-study', name: 'Case Studies' },
@@ -80,28 +80,23 @@ readingTimereadingTime: '45 min read',
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === category.id
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
-              }`}
+                  : 'bg-white/10 text-gray-300 hover: bg-white/20',`}
             >
-              {category.name}
-            </button>
+              {category.name}</button>
           ))}
         {/* Content Grid */}
           {filteredContent.map((item) => (
               {/* Badge */}
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                 <span className="text-green-400 font-semibold text-sm">
-                  {item.featured ? 'FEATURED' : 'NEW'}
-                </span>
+                  {item.featured ? 'FEATURED' : 'NEW'}</span>
                 <span className="text-gray-400 text-sm">{item.type}</span>
               {/* Title */}
               <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                {item.title}
-              </h3>
+                {item.title}</h3>
               {/* Description */}
               <p className="text-gray-300 mb-6 text-sm leading-relaxed">
-                {item.description}
-              </p>
+                {item.description}</p>
               {/* Metrics */}
                     {item.metrics.roi}
                   <div className="text-gray-400 text-xs">ROI</div>
@@ -144,9 +139,9 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
   O: Add content,}
 }
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const content = [
+  const content: any[] = [
   // TOD,
-  O: Add items
+  O: Add items,
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -175,8 +170,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
         accurac,
   y: '99.9%',
         timelin,
-  e: '12 months'
-      },
+  e: '12 months',,
       readingTim,
   e: '35 min read',
       feature,

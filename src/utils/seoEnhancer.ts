@@ -2,8 +2,7 @@
 // This file contains utility functions and configurations
 
 interface SEOConfig {
-    title: string
-  }
+    title: string,
   description: string;
   keywords: string[];
   canonicalUrl: string;
@@ -23,14 +22,12 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
   config: SEOConfig,}
   constructor(confi)
   g: SEOConfig) {
-    this.config = config
-  }
+    this.config = config,
     this.init();
   }
 
   private init(): void {
-    // Initialize SEO enhancements
-  }
+    // Initialize SEO enhancements,
     this.updateMetaTags();
   }
 
@@ -58,4 +55,3 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
 }
 
 export default SEOEnhancer;"
-

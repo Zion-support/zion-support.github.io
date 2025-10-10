@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Code, Database, Zap, Shield, Globe, Cpu, BarChart, Users, Settings, ArrowRight, CheckCircle, Star, ExternalLink } from 'lucide-react';
 
 const ApiPage: React.FC = () => {
-  const apiEndpoints = [
+  const apiEndpoints: any[] = [
     {
       category: 'AI Services',
       endpoints: [
@@ -17,13 +17,11 @@ const ApiPage: React.FC = () => {
             request: {
               message: "Hello, how can I help you?",
               model: "gpt-4",
-              temperature: 0.7
-            },
+              temperature: 0.7,,
             response: {
               response: "Hello! I'm here to help you with any questions or tasks you might have.",
               confidence: 0.95,
-              tokens_used: 25
-            }
+              tokens_used: 25,
           }
         },
         {
@@ -40,8 +38,7 @@ const ApiPage: React.FC = () => {
             response: {
               trend: "increasing",
               forecast: [6, 7, 8],
-              confidence: 0.88
-            }
+              confidence: 0.88,
           }
         },
         {
@@ -54,13 +51,11 @@ const ApiPage: React.FC = () => {
               prompt: "Write a blog post about AI",
               type: "blog_post",
               length: "medium",
-              style: "professional"
-            },
+              style: "professional",,
             response: {
               content: "Artificial Intelligence is revolutionizing...",
               word_count: 500,
-              readability_score: 8.2
-            }
+              readability_score: 8.2,
           }
         }
       ]
@@ -78,8 +73,7 @@ const ApiPage: React.FC = () => {
             response: {
               status: "healthy",
               uptime: "99.9%",
-              last_check: "2024-01-15T10:30:00Z"
-            }
+              last_check: "2024-01-15T10:30:00Z",
           }
         },
         {
@@ -96,8 +90,7 @@ const ApiPage: React.FC = () => {
             response: {
               vulnerabilities: [],
               score: 95,
-              recommendations: ["Keep SSL certificates updated"]
-            }
+              recommendations: ["Keep SSL certificates updated"],
           }
         }
       ]
@@ -119,8 +112,7 @@ const ApiPage: React.FC = () => {
               visitors: 15420,
               conversions: 234,
               revenue: 12500,
-              growth_rate: 12.5
-            }
+              growth_rate: 12.5,
           }
         },
         {
@@ -137,34 +129,30 @@ const ApiPage: React.FC = () => {
             response: {
               message_id: "msg_123456",
               status: "sent",
-              delivery_time: "2024-01-15T10:30:15Z"
-            }
+              delivery_time: "2024-01-15T10:30:15Z",
           }
         }
       ]
     }
   ];
-  const authenticationMethods = [
+  const authenticationMethods: any[] = [
     {
       name: 'API Key',
       description: 'Simple API key authentication',
       example: 'Authorization: Bearer sk-1234567890abcdef',
-      security: 'High'
-    },
+      security: 'High',,
     {
       name: 'OAuth 2.0',
       description: 'Industry-standard OAuth 2.0 flow',
       example: 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
-      security: 'Very High'
-    },
+      security: 'Very High',,
     {
       name: 'JWT Token',
       description: 'JSON Web Token authentication',
       example: 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
-      security: 'High'
-    }
+      security: 'High',
   ];
-  const rateLimits = [
+  const rateLimits: any[] = [
     { tier: 'Free', requests: '1,000/month', burst: '10/minute' },
     { tier: 'Pro', requests: '50,000/month', burst: '100/minute' },
     { tier: 'Enterprise', requests: 'Unlimited', burst: '1,000/minute' }
@@ -172,7 +160,7 @@ const ApiPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>API Reference - Zion Tech Group</title>
         <meta name="description" content="Complete API reference for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive API documentation." />
         <meta name="keywords" content="API, documentation, AI API, IT services API, micro SaaS API, developer tools" />
@@ -184,33 +172,27 @@ const ApiPage: React.FC = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text-enhanced">
-              API Reference
-            </h1>
+              API Reference</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Comprehensive API documentation for all Zion Tech Group services. 
-              Build powerful applications with our AI, IT, and Micro SaaS APIs.
-            </p>
+              Build powerful applications with our AI, IT, and Micro SaaS APIs.</p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="#getting-started"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
               >
-                Get Started
-              </a>
+                Get Started</a>
               <a
                 href="#authentication"
                 className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                Authentication
-              </a>
+                Authentication</a>
               <a
                 href="#endpoints"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
               >
-                View Endpoints
-              </a>
+                View Endpoints</a>
             </div>
-          </div>
 
           {/* Quick Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
@@ -218,23 +200,18 @@ const ApiPage: React.FC = () => {
               <Code className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">50+</div>
               <div className="text-gray-300">API Endpoints</div>
-            </div>
             <div className="cyber-card-enhanced p-6 text-center">
               <Zap className="w-8 h-8 text-green-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">99.9%</div>
               <div className="text-gray-300">Uptime SLA</div>
-            </div>
             <div className="cyber-card-enhanced p-6 text-center">
               <Shield className="w-8 h-8 text-purple-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">256-bit</div>
               <div className="text-gray-300">SSL Encryption</div>
-            </div>
             <div className="cyber-card-enhanced p-6 text-center">
               <Globe className="w-8 h-8 text-orange-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">24/7</div>
               <div className="text-gray-300">Support</div>
-            </div>
-          </div>
 
           {/* Getting Started */}
           <section id="getting-started" className="mb-16">
@@ -242,8 +219,7 @@ const ApiPage: React.FC = () => {
             <div className="cyber-card-enhanced p-8">
               <h3 className="text-xl font-semibold text-white mb-4">1. Get Your API Key</h3>
               <p className="text-gray-300 mb-6">
-                Sign up for a free account and get your API key from the dashboard.
-              </p>
+                Sign up for a free account and get your API key from the dashboard.</p>
               
               <h3 className="text-xl font-semibold text-white mb-4">2. Make Your First Request</h3>
               <div className="bg-slate-800 rounded-lg p-4 mb-6">
@@ -254,14 +230,12 @@ const ApiPage: React.FC = () => {
   -d '{
     "message": "Hello, world!",
     "model": "gpt-4"
-  }'`}
-                </pre>
+  }'`}</pre>
               </div>
 
               <h3 className="text-xl font-semibold text-white mb-4">3. Explore the Documentation</h3>
               <p className="text-gray-300">
-                Browse our comprehensive API documentation to discover all available endpoints and features.
-              </p>
+                Browse our comprehensive API documentation to discover all available endpoints and features.</p>
             </div>
           </section>
 
@@ -277,14 +251,11 @@ const ApiPage: React.FC = () => {
                     <code className="text-green-400 text-sm">{method.example}</code>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-400">Security Level:</span>
+                    <span className="text-sm text-gray-400">Security Level: </span>
                     <span className={`text-sm font-semibold ${
-                      method.security === 'Very High' ? 'text-green-400' : 'text-yellow-400'
-                    }`}>
-                      {method.security}
-                    </span>
+                      method.security === 'Very High' ? 'text-green-400' : 'text-yellow-400',`}>
+                      {method.security}</span>
                   </div>
-                </div>
               ))}
             </div>
           </section>
@@ -313,7 +284,6 @@ const ApiPage: React.FC = () => {
                   </tbody>
                 </table>
               </div>
-            </div>
           </section>
 
           {/* API Endpoints */}
@@ -336,11 +306,9 @@ const ApiPage: React.FC = () => {
                                 ? 'bg-green-600 text-white' 
                                 : 'bg-blue-600 text-white'
                             }`}>
-                              {endpoint.method}
-                            </span>
+                              {endpoint.method}</span>
                             <code className="text-cyan-400 font-mono">{endpoint.path}</code>
                           </div>
-                        </div>
                         <p className="text-gray-300 mb-4">{endpoint.description}</p>
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -359,19 +327,13 @@ const ApiPage: React.FC = () => {
                             <div className="bg-slate-800 rounded p-3">
                               <div className="text-xs text-gray-400 mb-2">Request:</div>
                               <pre className="text-green-400 text-xs overflow-x-auto">
-                                {JSON.stringify(endpoint.example.request, null, 2)}
-                              </pre>
+                                {JSON.stringify(endpoint.example.request, null, 2)}</pre>
                               <div className="text-xs text-gray-400 mb-2 mt-3">Response:</div>
                               <pre className="text-blue-400 text-xs overflow-x-auto">
-                                {JSON.stringify(endpoint.example.response, null, 2)}
-                              </pre>
+                                {JSON.stringify(endpoint.example.response, null, 2)}</pre>
                             </div>
-                          </div>
-                        </div>
-                      </div>
                     ))}
                   </div>
-                </div>
               ))}
             </div>
           </section>
@@ -404,7 +366,6 @@ const ApiPage: React.FC = () => {
                   View on Packagist <ExternalLink className="w-4 h-4 inline ml-1" />
                 </a>
               </div>
-            </div>
           </section>
 
           {/* Support */}
@@ -412,34 +373,27 @@ const ApiPage: React.FC = () => {
             <div className="cyber-card-enhanced p-8 text-center">
               <h2 className="text-2xl font-bold text-white mb-4">Need Help?</h2>
               <p className="text-gray-300 mb-6">
-                Our developer support team is here to help you integrate our APIs successfully.
-              </p>
+                Our developer support team is here to help you integrate our APIs successfully.</p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a
                   href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
                 >
-                  Contact Support
-                </a>
+                  Contact Support</a>
                 <a
                   href="/docs"
                   className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
-                  View Documentation
-                </a>
+                  View Documentation</a>
                 <a
                   href="/community"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
                 >
-                  Join Community
-                </a>
+                  Join Community</a>
               </div>
-            </div>
           </section>
         </div>
-      </div>
     </>
-  );
-};
+  ),;
 
 export default ApiPage;

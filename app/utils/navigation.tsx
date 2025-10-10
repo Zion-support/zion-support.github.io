@@ -1,8 +1,7 @@
 'use client';
 export const useRouter = (;) => {
     return (
-    $3
-  )
+    $3)
   }
   const push = useCallback((url: string) => {
     ,

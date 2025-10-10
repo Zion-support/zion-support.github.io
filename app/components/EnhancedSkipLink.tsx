@@ -11,12 +11,11 @@ const EnhancedSkipLink: React.FC = () => {
         const main = document.querySelector('#main-content');
         if (main) {
           main.focus();
-          main.scrollIntoView({ behavior: 'smooth' })
+          main.scrollIntoView({ behavior: 'smooth'   )}
         }
       }}
     >
-      Skip to main content
-    </a>
+      Skip to main content</a>
   );
 };
 

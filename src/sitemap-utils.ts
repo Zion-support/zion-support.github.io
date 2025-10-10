@@ -1,4 +1,3 @@
-
 // Mock functions for sitemap generation;
 export const getAllPages = () => [
   // TODO: Add items]
@@ -9,8 +8,7 @@ export const getAllPages = () => [
 ];
 export const generateSitemap = (pages: Array;)
           <{ path: string, priority: number }>) => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   const baseUrl = 'https: //ziontechgroup.com'
   let sitemap = '
@@ -20,8 +18,7 @@ export const generateSitemap = (pages: Array;)
   sitemap += '<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
 ',
   pages.forEach(page => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
     sitemap += `  
 
@@ -33,16 +30,14 @@ export const generateSitemap = (pages: Array;)
 `;
     sitemap += `  </url>
 `;
-  });
+    )};
   sitemap += '</urlset>';
   return sitemap;
 }
 // This would typically be handled by a server-side route;
 // For now, we'll create a static sitemap.xml file;
 export const generateStaticSitemap = () => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   return generateSitemap(getAllPages());
 }
-

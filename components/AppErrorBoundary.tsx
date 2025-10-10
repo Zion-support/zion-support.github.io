@@ -1,8 +1,8 @@
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 interface ErrorFallbackProps {
     error: Error,
-  resetError: () => void
-  }
+  resetError: () => void;
+}
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -26,12 +26,10 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
           <div className="ml-3">
             <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>
           </div>
-        </div>
         <div className="mb-4">
           <p className="text-sm text-gray-600 mb-2">An unexpected error occurred:</p>
           <pre className="text-xs bg-gray-100 p-2 rounded overflow-auto max-h-32 text-gray-800">
-            {error.message}
-          </pre>
+            {error.message}</pre>
         </div>
         <div className="flex space-x-3">
           <button
@@ -43,17 +41,16 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
             className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500">
             Reload page</span>
         </div>
-      </div>
     </div>
   ),
 }
 interface AppErrorBoundaryProps {
-    children: ReactNode
-  }
+    children: ReactNode;
+}
 interface AppErrorBoundaryState {
     hasError: boolean,
-  error: Error | undefined
-  }
+  error: Error | undefined;
+}
 export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {
   constructor(props: AppErrorBoundaryProps) {
     super(props),
@@ -66,8 +63,8 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
     if (process.env['NODE_ENV'] === 'development') {
       console.error('Error caught by boundary:', error, errorInfo)
   }
-    // Here you could send error to monitoring service
-  }
+    // Here you could send error to monitoring service;
+}
   resetError = () => {
     this.setState({ hasError: false, error: undefined })
   }
@@ -77,7 +74,6 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
     }
     return this.props.children;
   }
-}
-  </button>
+}</ErrorFallback>
   </button>
   </path>

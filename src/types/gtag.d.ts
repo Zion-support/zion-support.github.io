@@ -1,11 +1,9 @@
-
 /**
  * Google Analytics gtag types;
  */
 
 interface GtagEvent {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 
 }
   event_category?: string;
@@ -22,9 +20,7 @@ interface Window {/* TODO: Fix JSX expression */}
 
   command: GtagCommand,
     targetId: string | Date,
-config?: GtagEvent
-  ) => void
+config?: GtagEvent) => void
 
   dataLayer?: unknown[]
 }
-

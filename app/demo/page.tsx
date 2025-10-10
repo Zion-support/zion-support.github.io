@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const DemoPage: React.FC = () => {
-  const demos = [
+  const demos: any[] = [
     {
       title: 'AI Analytics Dashboard',
       description: 'See how our AI analytics can transform your business intelligence',
@@ -29,7 +29,7 @@ const DemoPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></>
         <title>Demo - Zion Tech Group | See Our AI Solutions in Action</title>
         <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
         <meta name="keywords" content="demo, AI demo, technology demo, interactive demo, AI solutions demo" />
@@ -46,8 +46,7 @@ const DemoPage: React.FC = () => {
                 See Our <span className="text-cyan-400">Solutions</span> in Action
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Experience our AI and IT solutions through interactive demos. See how our technology can transform your business.
-              </p>
+                Experience our AI and IT solutions through interactive demos. See how our technology can transform your business.</p>
             </div>
 
             {/* Demo Cards */}
@@ -79,34 +78,26 @@ const DemoPage: React.FC = () => {
             <div className="text-center">
               <div className="bg-slate-800/50 rounded-lg p-8">
                 <h2 className="text-2xl font-bold text-white mb-4">
-                  Ready to See More?
-                </h2>
+                  Ready to See More?</h2>
                 <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Schedule a personalized demo with our experts to see how our solutions can work for your specific business needs.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  Schedule a personalized demo with our experts to see how our solutions can work for your specific business needs.</p>
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <a
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
-                    Schedule Demo
-                  </a>
+                    Schedule Demo</a>
                   <a
                     href="tel:+13024640950"
                     className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
-                    Call: (302) 464-0950
-                  </a>
+                    Call: (302) 464-0950</a>
                 </div>
-              </div>
-            </div>
-          </div>
         </div>
       </main>
       
       <Footer />
     </>
-  );
-};
+  ),;
 
 export default DemoPage;

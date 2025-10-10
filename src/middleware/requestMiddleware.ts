@@ -1,4 +1,3 @@
-
 'use client';
 /**
  * Request Middleware System;
@@ -6,12 +5,10 @@
  */
 export type NextFunction = () => Promise<unknown> | unknown;
 export interface MiddlewareContext {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   request: {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   url: string,,
     method: string,,
@@ -20,37 +17,32 @@ export interface MiddlewareContext {
     body?: unknown,
   }
   response?: {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   status: number
     data?: unknown
     headers?: Record,
           <string>
-  metadata: Record<string>
-}
+  metadata: Record<string>,
 export type Middleware = ()
   context: MiddlewareContext,
   next: NextFunction) => Promise
           <unknown> | unknown
  * Middleware executor,
 export class MiddlewareExecutor {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   private middlewares: Middleware[] = []
    * Add middleware to the chain,
   use(middleware: Middleware): this {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
     this.middlewares.push(middleware);
     return this;
    * Execute middleware chain;
   async execute(context: MiddlewareContext): Promise,
           <unknown> {
-    let index = 0
-  }
+    let index = 0,
     const next = async () => {if (index >= this.middlewares.length) {}
   // TODO: Add content,
 }
@@ -63,13 +55,11 @@ export const loggingMiddleware: Middleware = async (context, next) => {
     const startTime = Date.now()
   }
 export const _loggingMiddleware: Middleware = async (context, next) => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   const _startTime = Date.now();
   logger.info('Request started', 'RequestMiddleware', {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   component: 'RequestMiddleware'}
   /**
@@ -79,8 +69,7 @@ export const _loggingMiddleware: Middleware = async (context, next) => {
     let index = 0,
     const next = async (): Promise<unknown> => {
       if (index >= this.middlewares.length) {
-        return context.response?.data
-  }
+        return context.response?.data,
       const middleware = this.middlewares[index++];
       return await middleware(context, next);
     }
@@ -95,11 +84,9 @@ export const loggingMiddleware: Middleware = async (context, next) => {
   logger.info('Request started', 'RequestMiddleware', {
     component: 'RequestMiddleware',
     method: context.request.method,
-    url: context.request.url
-  });
+    url: context.request.url,);
   try {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
     const result = await next();
     const duration = Date.now() - startTime;
@@ -113,18 +100,15 @@ export const loggingMiddleware: Middleware = async (context, next) => {
       url: context.request.url,
       status: context.response?.status,
       duration;
-    return result
-  } catch (error) {logger.error('Request failed', error as Error, 'RequestMiddleware', {}
+    return result, catch (error) {logger.error('Request failed', error as Error, 'RequestMiddleware', {}
     throw error;
  * Authentication middleware;
 export const authMiddleware: Middleware = async (context, next) => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   const token = getAuthToken();
   if (token) {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   } catch (error) {
     const duration = Date.now() - startTime;
@@ -132,8 +116,7 @@ export const authMiddleware: Middleware = async (context, next) => {
       component: 'RequestMiddleware',
       method: context.request.method,
       url: context.request.url,
-      duration
-    });
+      duration,);
     throw error;
   }
 }
@@ -146,35 +129,30 @@ export const authMiddleware: Middleware = async (context, next) => {
     context.request.headers['Authorization'] = `Bearer ${token}`;
  * Get authentication token from storage;
 function getAuthToken(): string | null {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   if (typeof window === 'undefined') return null;
   return localStorage.getItem('authToken');
  * Error handling middleware;
 export const errorHandlingMiddleware: Middleware = async (context, next) => {
-    // Transform error into a standardized format
-  }
+    // Transform error into a standardized format,
     const standardError = {message: error instanceof Error ? error.message : 'Unknown error'}
       status: context.response?.status || 500,
       method: context.request.method,
     logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   component: 'ErrorHandlingMiddleware',
 ...standardError;
     throw standardError;
  * Rate limiting middleware;
 export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Middleware => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   const requests = new Map;
           <string, number[]>();
   return async (context, next) => {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
     const key = context.request.url;
     const now = Date.now();
@@ -183,8 +161,7 @@ export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Midd
 const validTimestamps = timestamps.filter(t => now - t;
           < windowMs);
     if (validTimestamps.length >= maxRequests) {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
 /**
  * Rate limiting middleware
@@ -202,8 +179,7 @@ export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Midd
     validTimestamps.push(now);
     requests.set(key, validTimestamps);
  * Caching middleware;
-export const cachingMiddleware = (ttl: number): Middleware => {// TODO: Add content
-  }
+export const cachingMiddleware = (ttl: number): Middleware => {// TODO: Add content,
 }
   const cache = new Map;
           <string, { data: unknown, timestamp: number }>();
@@ -211,14 +187,12 @@ if (context.request.method !== 'GET') {
     const cached = cache.get(key)
   }
     if (cached && Date.now() - cached.timestamp < ttl) {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
-      logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key });
+      logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key   )};
       return cached.data;
     cache.set(key, {
-    // TODO: Add content
-  }
+    // TODO: Add content,
     return await next();
   }
 }
@@ -234,14 +208,14 @@ export const cachingMiddleware = (ttl: number): Middleware => {
     const key = context.request.url;
     const cached = cache.get(key);
     if (cached && Date.now() - cached.timestamp < ttl) {
-      logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key });
+      logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key   )};
       return cached.data;
     }
     const result = await next();
     cache.set(key, {
       data: result,
       timestamp: Date.now()
-    });
+      )};
     return result;
   }
 }
@@ -249,22 +223,18 @@ export const cachingMiddleware = (ttl: number): Middleware => {
       timestamp: Date.now()
  * Retry middleware,
 export const retryMiddleware = (maxRetries: number, delay: number): Middleware => {
-    let lastError: Error | null = null
-  }
+    let lastError: Error | null = null,
     for (let attempt = 0; attempt;
           <= maxRetries; attempt++) {
-    lastError = error as Error
-  }
+    lastError = error as Error,
         if (attempt < maxRetries) {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
 //           logger.warn()
             `Request failed, retrying (${attempt + 1}/${maxRetries})`,
 //             'RetryMiddleware',
             {
-    // TODO: Add content
-  }
+    // TODO: Add content,
 }
   component: 'RetryMiddleware'),
           await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt)));
@@ -283,8 +253,7 @@ export const transformRequestMiddleware = ()
   }
  * Create default middleware chain;
 export function createDefaultMiddlewareChain(): MiddlewareExecutor {
-    // TODO: Add content
-  }
+    // TODO: Add content,
   }
 }
 /**
@@ -340,6 +309,4 @@ export default {MiddlewareExecutor}
   transformRequestMiddleware,
   transformResponseMiddleware,
 
-  createDefaultMiddlewareChain
-}
-
+  createDefaultMiddlewareChain,
