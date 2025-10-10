@@ -1,13 +1,8 @@
 'use client';
 
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-=======
-import React, { useState, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
 import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
 
 interface BlogPost {
@@ -20,13 +15,8 @@ interface BlogPost {
   readTime: string;
   category: string;
   tags: string[];
-<<<<<<< HEAD
   image: string;
   featured: boolean;
-=======
-  featured: boolean;
-  image: string;
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
 }
 
 const BlogPage: React.FC = () => {
