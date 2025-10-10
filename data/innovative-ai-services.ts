@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface InnovativeAIService {id: string;
   name: string;
   tagline: string;
@@ -52,12 +51,10 @@ export interface InnovativeAIService {id: string;
     mobile: string;
     email: string}
     address: string;
-=======
 export interface InnovativeAIService {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced computer vision AI',
       'Real - time decision making',
       'Multi - sensor fusion',
@@ -69,7 +66,6 @@ export interface InnovativeAIService {/* TODO: Fix JSX expression */}
       'Emergency response systems',
       'Performance analytics',
     ],
-<<<<<<< HEAD
     popular: true;
     website: string}
   }
@@ -87,7 +83,6 @@ export const innovativeAIServices: InnovativeAIService[] = [,
     price: '$2, 999',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     websit,
@@ -120,7 +115,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       "World's first quantum - enhanced AI with human - like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI within 6 months. Advanced neural signal processing with quantum encryption.",
     feature,
   s: [,
@@ -135,20 +129,16 @@ export const,
       'Compliance with medical standards',
       '24 / 7 quantum AI support',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
-=======
     popula,
   r: true,
     ico,
   n: '',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Neuralink ($10)000+/month)',
       'Kernel ($50)000+/month)',
       'Synchron',
     ],
-<<<<<<< HEAD
     marketSize: '$1 && 1.5B BCI market'
     growthRate: '300% annual growth'
     variant: 'quantum-neural-advanced'
@@ -165,7 +155,6 @@ export const,
     category: 'Quantum AI & Neuroscience',
     real_service: true;
     technology: [,
-=======
     marketSiz,
   e: '$1 && 1.5B BCI market',
     growthRat,
@@ -197,7 +186,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing',
       'Neural Networks',
       'Brain - Computer Interface',
@@ -226,7 +214,6 @@ export const,
       'Kernel ($50) 000+/month)',
       'Synchron',
     ],
-<<<<<<< HEAD
     market_size: '$1.5B BCI market'
     growth_rate: '300% annual growth'
     variant: 'quantum - neural - advanced'
@@ -252,7 +239,6 @@ export const,
     price: '$4, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$1.5B BCI market',
     growth_rat,
@@ -300,7 +286,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enterprise - grade autonomous driving platform with advanced AI, computer vision, and safety systems. Enable commercial fleets to operate autonomously with 99.99% safety record.',
     feature,
   s: [,
@@ -315,7 +300,6 @@ export const,
       'Emergency response systems',
       'Performance analytics',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - blue - 600 to - cyan - 700'
@@ -330,7 +314,6 @@ export const,
     category: 'Autonomous Transportation',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -358,7 +341,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Computer Vision',
       'Deep Learning',
       'LIDAR',
@@ -388,7 +370,6 @@ export const,
       'Cruise ($100) 000+/month)',
       'Tesla FSD',
     ],
-<<<<<<< HEAD
     market_size: '$556B autonomous vehicle market'
     growth_rate: '250% annual growth'
     variant: 'ai - futuristic'
@@ -412,7 +393,6 @@ export const,
     price: '$3, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$556B autonomous vehicle market',
     growth_rat,
@@ -457,7 +437,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI - powered drug discovery and genetic engineering platform. Accelerate drug development by 10x while reducing costs by 90%. Advanced protein folding and drug interaction modeling.',
     feature,
   s: [,
@@ -472,7 +451,6 @@ export const,
       'API for research integration',
       'Multi - omics data analysis',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - emerald - 600 to - teal - 700'
@@ -487,7 +465,6 @@ export const,
     category: 'Biotechnology & AI',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -515,7 +492,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Machine Learning',
       'Bioinformatics',
       'Computational Biology',
@@ -544,7 +520,6 @@ export const,
       'Recursion ($2B+ funding)',
       'Atomwise',
     ],
-<<<<<<< HEAD
     market_size: '$150B AI in healthcare'
     growth_rate: '250% annual growth'
     variant: 'holographic - matrix'
@@ -568,7 +543,6 @@ export const,
     price: '$7, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$150B AI in healthcare',
     growth_rat,
@@ -613,7 +587,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum AI - powered algorithmic trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and profit generation.',
     feature,
   s: [,
@@ -628,7 +601,6 @@ export const,
       'Performance analytics',
       'API for integration',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - yellow - 600 to - orange - 700'
@@ -643,7 +615,6 @@ export const,
     category: 'Quantum Finance',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -671,7 +642,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing',
       'AI / ML',
       'High - Frequency Trading',
@@ -700,7 +670,6 @@ export const,
       'Two Sigma ($60B+ AUM)',
       'Citadel',
     ],
-<<<<<<< HEAD
     market_size: '$15T algorithmic trading'
     growth_rate: '150% annual growth'
     variant: 'quantum - cyberpunk'
@@ -724,7 +693,6 @@ export const,
     price: '$5, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$15T algorithmic trading',
     growth_rat,
@@ -769,7 +737,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Complete space mission management and satellite operations platform. Enable commercial space companies to operate like NASA with advanced mission planning and satellite tracking.',
     feature,
   s: [,
@@ -784,7 +751,6 @@ export const,
       'Regulatory compliance tools',
       'Multi - satellite operations',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - cyan - 600 to - blue - 700'
@@ -799,7 +765,6 @@ export const,
     category: 'Space Technology',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -827,7 +792,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Orbital Mechanics',
       'Satellite Technology',
       'AI / ML',
@@ -856,7 +820,6 @@ export const,
       'OneWeb ($50 / month)',
       'Planet Labs',
     ],
-<<<<<<< HEAD
     market_size: '$469B space economy'
     growth_rate: '400% annual growth'
     variant: 'quantum - space'
@@ -881,7 +844,6 @@ export const,
     price: '$2, 499',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$469B space economy',
     growth_rat,
@@ -927,7 +889,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Complete AI - powered metaverse development platform with virtual world creation, AI NPCs, and immersive experiences. Build the next generation of digital worlds.',
     feature,
   s: [,
@@ -942,7 +903,6 @@ export const,
       'Monetization tools',
       'Cross - platform support',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - pink - 600 to - purple - 700'
@@ -957,7 +917,6 @@ export const,
     category: 'Metaverse & Virtual Reality',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -985,7 +944,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI / ML',
       '3D Graphics',
       'Virtual Reality',
@@ -1014,7 +972,6 @@ export const,
       'Roblox ($500+/month)',
       'Decentraland',
     ],
-<<<<<<< HEAD
     market_size: '$800B metaverse market'
     growth_rate: '300% annual growth'
     variant: 'holographic - neural'
@@ -1038,7 +995,6 @@ export const,
     price: '$3, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$800B metaverse market',
     growth_rat,
@@ -1083,7 +1039,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced quantum AI robotics platform for industrial automation, precision manufacturing, and autonomous systems. Revolutionize manufacturing with quantum - enhanced robotics.',
     feature,
   s: [,
@@ -1098,7 +1053,6 @@ export const,
       'Analytics dashboard',
       'Integration APIs',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - indigo - 600 to - purple - 700'
@@ -1113,7 +1067,6 @@ export const,
     category: 'Quantum Robotics',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1141,7 +1094,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing',
       'AI / ML',
       'Robotics',
@@ -1162,7 +1114,6 @@ export const,
       'Quality control',
       'Research robotics',
     ],
-<<<<<<< HEAD
     roi: '400% ROI within 18 months through increased efficiency and reduced errors',
     competitors: ['ABB ($50) 000+/month)', 'KUKA ($100) 000+/month)', 'FANUC'],
     market_size: '$200B industrial robotics'
@@ -1189,7 +1140,6 @@ export const,
     price: '$2, 999',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: '400% ROI within 18 months through increased efficiency and reduced errors',
     competitor,
@@ -1239,7 +1189,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Next - generation quantum - resistant cybersecurity platform with AI - powered threat detection, quantum encryption, and advanced security analytics.',
     feature,
   s: [,
@@ -1254,7 +1203,6 @@ export const,
       'Automated response',
       'Integration APIs',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - red - 600 to - orange - 700'
@@ -1269,7 +1217,6 @@ export const,
     category: 'Quantum Cybersecurity',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1297,7 +1244,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing',
       'AI / ML',
       'Cybersecurity',
@@ -1326,7 +1272,6 @@ export const,
       'Palo Alto Networks ($10000+/month)',
       'SentinelOne',
     ],
-<<<<<<< HEAD
     market_size: '$200B cybersecurity market'
     growth_rate: '180% annual growth'
     variant: 'quantum - cyberpunk'
@@ -1350,7 +1295,6 @@ export const,
     price: '$4, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$200B cybersecurity market',
     growth_rat,
@@ -1395,7 +1339,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum - secured internet infrastructure with quantum key distribution, quantum networks, and ultra - secure communications.',
     feature,
   s: [,
@@ -1410,7 +1353,6 @@ export const,
       'Integration APIs',
       '24 / 7 support',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - green - 600 to - emerald - 700'
@@ -1425,7 +1367,6 @@ export const,
     category: 'Quantum Internet',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1453,7 +1394,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing',
       'Quantum Networks',
       'Quantum Key Distribution',
@@ -1482,7 +1422,6 @@ export const,
       'Security providers',
       'Network equipment vendors',
     ],
-<<<<<<< HEAD
     market_size: '$100B quantum internet market'
     growth_rate: '400% annual growth'
     variant: 'quantum - entanglement'
@@ -1518,7 +1457,6 @@ export const,
     price: '$3, 499',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$100B quantum internet market',
     growth_rat,
@@ -1583,7 +1521,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced quantum AI logistics platform for supply chain optimization, route planning, and inventory management with unprecedented efficiency.',
     feature,
   s: [,
@@ -1598,7 +1535,6 @@ export const,
       'Mobile applications',
       '24 / 7 support',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - blue - 600 to - indigo - 700'
@@ -1613,7 +1549,6 @@ export const,
     category: 'Quantum Logistics',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1641,7 +1576,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing',
       'AI / ML',
       'Supply Chain Management',
@@ -1670,7 +1604,6 @@ export const,
       'Oracle ($8000+/month)',
       'Manhattan Associates',
     ],
-<<<<<<< HEAD
     market_size: '$300B supply chain management'
     growth_rate: '200% annual growth'
     variant: 'quantum - matrix'
@@ -1702,7 +1635,6 @@ export const,
   }
 ];
     reviews: 34;
-=======
     market_siz,
   e: '$300B supply chain management',
     growth_rat,
@@ -1761,12 +1693,10 @@ export const,
 ];
     review,
   s: 34,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
   }
 ];
-<<<<<<< HEAD
   id: string, name: string;
   tagline: string, price: string;
   period: string, description: string;
@@ -1789,7 +1719,6 @@ export const,
   launchDate: string, customers: number;
   rating: number;
   reviews: number;
-=======
   i,
   d: string, nam,
   e: string,
@@ -1849,7 +1778,6 @@ export const,
   g: number,
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export interface InnovativeAIService {/* TODO: Fix JSX expression */}
@@ -1857,14 +1785,12 @@ export interface InnovativeAIService {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -1877,7 +1803,6 @@ export interface InnovativeAIService {/* TODO: Fix JSX expression */}
   g: number;
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 export const,
   innovativeAIServices: InnovativeAIService[] = [,
@@ -1904,7 +1829,6 @@ export const,
       'Compliance with medical standards',
       '24/7 quantum AI support'
     ],
-<<<<<<< HEAD
     popular: true, icon: '',
     color: 'from-purple-600 to-indigo-700', textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-ai-brain-computer-interface', marketPosition: 'Revolutionary technology surpassing Neuralink and Kernel with quantum AI capabilities',
@@ -1926,7 +1850,6 @@ export const,
     launchDate: '2024-12-01', customers: 15;
     rating: 4.9;
     reviews: 8;
-=======
     popula,
   r: true, ico,
   n: '',
@@ -1980,7 +1903,6 @@ export const,
   g: 4.9,
     review,
   s: 8,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'autonomous-vehicle-ai-platform', nam,
@@ -2006,7 +1928,6 @@ export const,
       'Emergency response systems',
       'Performance analytics'
     ],
-<<<<<<< HEAD
     popular: true, icon: '',
     color: 'from-blue-600 to-cyan-700', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform', marketPosition: 'Competitive with Waymo and Cruise but more affordable and accessible for commercial use',
@@ -2029,7 +1950,6 @@ export const,
     launchDate: '2024-10-15', customers: 25;
     rating: 4.8;
     reviews: 12;
-=======
     popula,
   r: true, ico,
   n: '',
@@ -2084,7 +2004,6 @@ export const,
   g: 4.8,
     review,
   s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'biotech-ai-platform', nam,
@@ -2109,7 +2028,6 @@ export const,
       'API for research integration',
       'Multi-omics data analysis'
     ],
-<<<<<<< HEAD
     popular: true, icon: '',
     color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/biotech-ai', marketPosition: 'Accessible alternative to Insitro and Recursion with comprehensive research tools',
@@ -2136,7 +2054,6 @@ export const,
     launchDate: '2024-09-01', customers: 45;
     rating: 4.7;
     reviews: 23;
-=======
     popula,
   r: true, ico,
   n: '',
@@ -2195,7 +2112,6 @@ export const,
   g: 4.7,
     review,
   s: 23,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'quantum-financial-trading-platform', nam,
@@ -2220,7 +2136,6 @@ export const,
       'Performance analytics',
       'API for integration'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-yellow-600 to-orange-700',
@@ -2244,7 +2159,6 @@ export const,
     launchDate: '2024-11-01', customers: 18;
     rating: 4.9;
     reviews: 9;
-=======
     popula,
   r: true,
     ico,
@@ -2300,7 +2214,6 @@ export const,
   g: 4.9,
     review,
   s: 9,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'space-technology-platform', nam,
@@ -2325,7 +2238,6 @@ export const,
       'Regulatory compliance tools',
       'Multi-satellite operations'
     ],
-<<<<<<< HEAD
     popular: true, icon: '',
     color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/space-technology',
@@ -2347,7 +2259,6 @@ export const,
     launchDate: '2024-08-15', customers: 32;
     rating: 4.8;
     reviews: 16;
-=======
     popula,
   r: true, ico,
   n: '',
@@ -2401,7 +2312,6 @@ export const,
   g: 4.8,
     review,
   s: 16,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'metaverse-ai-development-platform', nam,
@@ -2427,7 +2337,6 @@ export const,
       'Monetization tools',
       'Cross-platform support'
     ],
-<<<<<<< HEAD
     popular: true, icon: '',
     color: 'from-pink-600 to-purple-700', textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/metaverse-ai-development-platform', marketPosition: 'Comprehensive metaverse platform competing with Meta and Roblox',
@@ -2448,7 +2357,6 @@ export const,
     launchDate: '2024-07-01', customers: 78;
     rating: 4.6;
     reviews: 42;
-=======
     popula,
   r: true, ico,
   n: '',
@@ -2501,7 +2409,6 @@ export const,
   g: 4.6,
     review,
   s: 42,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'quantum-robotics-platform', nam,
@@ -2519,7 +2426,6 @@ export const,
       'Quantum AI decision making', 'Precision robotics control', 'Industrial automation', 'Predictive maintenance', 'Quality control systems', 'Safety monitoring', 'Performance optimization', 'Remote operation',
       'Analytics dashboard', 'Integration APIs'
     ],
-<<<<<<< HEAD
     popular: true, icon: '',
     color: 'from-indigo-600 to-purple-700', textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-robotics', marketPosition: 'Quantum-enhanced robotics platform competing with ABB and KUKA',
@@ -2653,7 +2559,6 @@ export const,
     customers: 67;
     rating: 4.7;
     reviews: 34;
-=======
     popula,
   r: true, ico,
   n: '',
@@ -2936,7 +2841,6 @@ export const,
   g: 4.7,
     review,
   s: 34,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 ];

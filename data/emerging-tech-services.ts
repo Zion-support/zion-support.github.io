@@ -1,13 +1,11 @@
 
       'Quantum-secured space communication',
-<<<<<<< HEAD
     id: 'quantum - space - communications',
     name: 'Quantum Space Communications',
     tagline: 'Revolutionary quantum - secured space communication network',
     price: '$75, 999',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'quantum - space - communications',
     nam,
@@ -20,7 +18,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       "World's first quantum - secured space communication network that provides unhackable communication between Earth, satellites, and space stations. Enables secure space exploration and commercial space operations.",
     feature,
   s: [,
@@ -35,12 +32,9 @@
       'Advanced space analytics dashboard',
       '24 / 7 quantum space operations center',
     ],
-<<<<<<< HEAD
     popular: true;
-=======
     popula,
   r: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum communication',
       'Satellite technology',
       'React',
@@ -75,7 +69,6 @@
       'Basic satellite networks',
       'Manual space operations',
     ],
-<<<<<<< HEAD
     market_size: '$350B space market, quantum segment growing 500% annually',
     growth_rate: '500% annual growth'
     variant: 'quantum - space'
@@ -92,7 +85,6 @@
     customers: 15;
     rating: 5 && 5.0;
     reviews: 12;
-=======
     market_siz,
   e: '$350B space market, quantum segment growing 500% annually',
     growth_rat,
@@ -124,7 +116,6 @@
   g: 5 && 5.0,
     review,
   s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
       'Quantum computing drug simulation',
       'Predictive drug efficacy modeling',
@@ -136,12 +127,9 @@
       'Regulatory compliance automation',
       '24 / 7 AI drug discovery operations',
     ],
-<<<<<<< HEAD
     popular: true;
-=======
     popula,
   r: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI algorithms',
       'Quantum computing',
       'Machine learning',
@@ -166,7 +154,6 @@
   e: 'http,
   s://ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
     real_implementation: true;
     implementation_details: unknown;
       'Comprehensive AI biotech drug discovery platform with quantum computing capabilities, advanced drug modeling, and automated development processes.',
@@ -174,7 +161,6 @@
     customers: 8;
     rating: 4 && 4.9;
     reviews: 6;
-=======
     real_implementatio,
   n: true,
     implementation_detail,
@@ -188,7 +174,6 @@
   g: 4 && 4.9,
     review,
   s: 6,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
       'Fully autonomous manufacturing',
       'AI - powered quality control',
@@ -201,12 +186,9 @@
       'Energy optimization',
       '24 / 7 autonomous operations',
     ],
-<<<<<<< HEAD
     popular: true;
-=======
     popula,
   r: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI algorithms',
       'Robotics',
       'IoT sensors',
@@ -227,7 +209,6 @@
   e: 'http,
   s://ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
     real_implementation: true;
     implementation_details: unknown;
       'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.',
@@ -323,7 +304,6 @@ export const emergingTechServices: EmergingTechService[] = [,
     price: '$15, 999',
     period: '/month',
     description: unknown;
-=======
     real_implementatio,
   n: true,
     implementation_detail,
@@ -526,7 +506,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum AI platform that optimizes energy grids, manages renewable energy sources, and predicts energy demand with unprecedented accuracy. Enables smart cities and sustainable energy systems.',
     feature,
   s: [,
@@ -541,7 +520,6 @@ export const,
       'API for utility integration',
       '24 / 7 energy operations center',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - green - 600 to - emerald - 700'
@@ -556,7 +534,6 @@ export const,
     category: 'Quantum Energy & Sustainability',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -584,7 +561,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum computing',
       'AI algorithms',
       'IoT sensors',
@@ -618,7 +594,6 @@ export const,
       'Traditional energy management (Siemens) GE)',
       'No direct quantum energy competitors',
     ],
-<<<<<<< HEAD
     market_size: unknown;
       '$200B energy management market, smart grid segment growing 300% annually',
     growth_rate: '300% annual growth'
@@ -645,7 +620,6 @@ export const,
     price: '$6, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: unknown,
       '$200B energy management market, smart grid segment growing 300% annually',
@@ -693,7 +667,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive metaverse development platform with AI - powered content generation, virtual reality experiences, and immersive 3D environments. Enables businesses to create engaging virtual worlds.',
     feature,
   s: [,
@@ -708,7 +681,6 @@ export const,
       'API for custom integrations',
       '24 / 7 metaverse support',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - purple - 600 to - pink - 700'
@@ -723,7 +695,6 @@ export const,
     category: 'Metaverse & AR / VR',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -752,7 +723,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI content generation',
       '3D graphics engines',
       'Virtual reality',
@@ -791,7 +761,6 @@ export const,
       'VRChat',
       'AltspaceVR',
     ],
-<<<<<<< HEAD
     market_size: '$800B metaverse market, 400% annual growth',
     growth_rate: '400% annual growth'
     variant: 'ai - futuristic'
@@ -817,7 +786,6 @@ export const,
     price: '$9, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$800B metaverse market, 400% annual growth',
     growth_rat,
@@ -864,7 +832,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced quantum AI platform that optimizes supply chains, logistics operations, and transportation networks with unprecedented efficiency. Reduces costs and improves delivery times.',
     feature,
   s: [,
@@ -879,7 +846,6 @@ export const,
       'API for system integration',
       '24 / 7 logistics operations',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - orange - 600 to - red - 700'
@@ -894,7 +860,6 @@ export const,
     category: 'Quantum Logistics & Supply Chain',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -923,7 +888,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum computing',
       'AI algorithms',
       'IoT sensors',
@@ -960,7 +924,6 @@ export const,
       'JDA Software',
       'Blue Yonder',
     ],
-<<<<<<< HEAD
     market_size: '$30B supply chain management market, 20% annual growth',
     growth_rate: '20% annual growth'
     variant: 'quantum - advanced'
@@ -977,7 +940,6 @@ export const,
     customers: 35;
     rating: 4 && 4.7;
     reviews: 19;
-=======
     market_siz,
   e: '$30B supply chain management market, 20% annual growth',
     growth_rat,
@@ -1009,20 +971,17 @@ export const,
   g: 4 && 4.7,
     review,
   s: 19,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
       'Quantum-resistant encryption',
       'AI-powered threat detection',
       'Real-time security monitoring',
   // Advanced Cybersecurity & Threat Intelligence;
-<<<<<<< HEAD
     id: 'quantum - cybersecurity - suite',
     name: 'Quantum Cybersecurity Suite',
     tagline: 'Quantum - resistant cybersecurity with AI - powered threat detection',
     price: '$11, 999',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'quantum - cybersecurity - suite',
     nam,
@@ -1035,7 +994,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Next - generation cybersecurity platform combining quantum - resistant encryption, AI - powered threat detection, and advanced security analytics. Protects against current and future cyber threats.',
     feature,
   s: [,
@@ -1050,7 +1008,6 @@ export const,
       'API for system integration',
       '24 / 7 security operations center',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - red - 600 to - pink - 700'
@@ -1065,7 +1022,6 @@ export const,
     category: 'Quantum Cybersecurity',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1094,7 +1050,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum - resistant cryptography',
       'AI algorithms',
       'Machine learning',
@@ -1131,7 +1086,6 @@ export const,
       'Carbon Black',
       'Cylance',
     ],
-<<<<<<< HEAD
     market_size: '$200B cybersecurity market, 15% annual growth',
     growth_rate: '15% annual growth'
     variant: 'quantum - cyberpunk'
@@ -1156,7 +1110,6 @@ export const,
     price: '$19, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$200B cybersecurity market, 15% annual growth',
     growth_rat,
@@ -1202,7 +1155,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum AI trading platform that processes market data at quantum speeds, enabling algorithmic trading with unprecedented accuracy and execution speed.',
     feature,
   s: [,
@@ -1217,7 +1169,6 @@ export const,
       'Performance analytics',
       'API for integration',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - yellow - 600 to - orange - 700'
@@ -1232,7 +1183,6 @@ export const,
     category: 'Quantum Financial Trading',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1261,7 +1211,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum computing',
       'AI algorithms',
       'High - frequency trading',
@@ -1298,7 +1247,6 @@ export const,
       'Bridgewater Associates',
       'AQR Capital',
     ],
-<<<<<<< HEAD
     market_size: '$15T algorithmic trading market, 150% annual growth',
     growth_rate: '150% annual growth'
     variant: 'quantum - advanced'
@@ -1324,7 +1272,6 @@ export const,
     price: '$7, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$15T algorithmic trading market, 150% annual growth',
     growth_rat,
@@ -1371,7 +1318,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive AI - powered IoT platform that manages smart city infrastructure, monitors environmental conditions, and optimizes urban services. Enables sustainable and efficient cities.',
     feature,
   s: [,
@@ -1386,7 +1332,6 @@ export const,
       'API for city systems',
       '24 / 7 smart city operations',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - teal - 600 to - cyan - 700'
@@ -1401,7 +1346,6 @@ export const,
     category: 'AI IoT & Smart Cities',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1430,7 +1374,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'IoT sensors',
       'AI algorithms',
       'Machine learning',
@@ -1467,7 +1410,6 @@ export const,
       'Microsoft CityNext',
       'Oracle Smart Cities',
     ],
-<<<<<<< HEAD
     market_size: '$400B smart city market, 300% annual growth',
     growth_rate: '300% annual growth'
     variant: 'ai - futuristic'
@@ -1492,7 +1434,6 @@ export const,
     price: '$75, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$400B smart city market, 300% annual growth',
     growth_rat,
@@ -1538,7 +1479,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       "World's first quantum - secured space communication network that provides unhackable communication between Earth, satellites, and space stations. Enables secure space exploration and commercial space operations.",
     feature,
   s: [,
@@ -1553,7 +1493,6 @@ export const,
       'Advanced space analytics dashboard',
       '24 / 7 quantum space operations center',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - indigo - 600 to - purple - 700'
@@ -1568,7 +1507,6 @@ export const,
     category: 'Quantum Space Technology',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1596,7 +1534,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum communication',
       'Satellite technology',
       'React',
@@ -1631,7 +1568,6 @@ export const,
       'Basic satellite networks',
       'Manual space operations',
     ],
-<<<<<<< HEAD
     market_size: '$350B space market, quantum segment growing 500% annually',
     growth_rate: '500% annual growth'
     variant: 'quantum - space'
@@ -1656,7 +1592,6 @@ export const,
     price: '$125, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$350B space market, quantum segment growing 500% annually',
     growth_rat,
@@ -1702,7 +1637,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Breakthrough AI platform that accelerates drug discovery by 1000x through quantum computing, machine learning, and advanced biotechnology. Perfect for pharmaceutical companies and research institutions.',
     feature,
   s: [,
@@ -1717,7 +1651,6 @@ export const,
       'Regulatory compliance automation',
       '24 / 7 AI drug discovery operations',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - green - 600 to - blue - 700'
@@ -1732,7 +1665,6 @@ export const,
     category: 'AI & Biotech',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1760,7 +1692,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI algorithms',
       'Quantum computing',
       'Machine learning',
@@ -1796,7 +1727,6 @@ export const,
       'Basic AI drug tools',
       'Manual research methods',
     ],
-<<<<<<< HEAD
     market_size: '$1.5T pharmaceutical market, AI segment growing 600% annually',
     growth_rate: '600% annual growth'
     variant: 'ai - futuristic'
@@ -1822,7 +1752,6 @@ export const,
     price: '$55, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$1.5T pharmaceutical market, AI segment growing 600% annually',
     growth_rat,
@@ -1870,7 +1799,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary autonomous AI factory platform that operates manufacturing facilities without human intervention. Achieves 24 / 7 production with 99.99% efficiency and zero downtime.',
     feature,
   s: [,
@@ -1885,7 +1813,6 @@ export const,
       'Energy optimization',
       '24 / 7 autonomous operations',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - orange - 600 to - red - 700'
@@ -1900,7 +1827,6 @@ export const,
     category: 'AI & Autonomous Manufacturing',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1928,7 +1854,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI algorithms',
       'Robotics',
       'IoT sensors',
@@ -1965,7 +1890,6 @@ export const,
       'Basic automation',
       'Manual production processes',
     ],
-<<<<<<< HEAD
     market_size: '$12T manufacturing market, AI segment growing 350% annually',
     growth_rate: '350% annual growth'
     variant: 'ai - futuristic'
@@ -2040,7 +1964,6 @@ export const emergingTechServices: EmergingTechService[] = [,
     price: '$12,999',
     period: '/month',
     description: 'Revolutionary quantum internet platform providing unhackable communication channels, quantum key distribution, and post-quantum cryptography. Enables secure government, military, and enterprise communications.',
-=======
     market_siz,
   e: '$12T manufacturing market, AI segment growing 350% annually',
     growth_rat,
@@ -2199,7 +2122,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'Revolutionary quantum internet platform providing unhackable communication channels, quantum key distribution, and post-quantum cryptography. Enables secure government, military, and enterprise communications.',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum key distribution (QKD)',
       'Post-quantum cryptography algorithms',
       'Quantum entanglement-based security',
@@ -2211,7 +2133,6 @@ export const,
       'API for enterprise integration',
       '24/7 quantum security operations',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-indigo-600 to-purple-700'
@@ -2224,7 +2145,6 @@ export const,
     category: 'Quantum Internet & Security',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -2250,7 +2170,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum computing',
       'QKD protocols',
       'Post-quantum cryptography',
@@ -2277,7 +2196,6 @@ export const,
       'Critical infrastructure protection',
       'Defense intelligence',
     ],
-<<<<<<< HEAD
     roi: 'Prevents cyber attacks worth $6M+ annually, 500% ROI through security cost avoidance',
     competitors: ['Traditional cybersecurity (Palo Alto) CrowdStrike)No direct quantum internet competitors'];
     marketSize: '$150B cybersecurity market, quantum segment growing 400% annually',
@@ -2324,7 +2242,6 @@ export const,
   customers: number;
   rating: number;
   reviews: number;
-=======
     ro,
   i: 'Prevents cyber attacks worth $6M+ annually, 500% ROI through security cost avoidance',
     competitor,
@@ -2413,13 +2330,11 @@ export const,
   g: number;
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ;
 export const,
   emergingTechServices: EmergingTechService[] = [;
   // Quantum Internet & Communication Services;
-<<<<<<< HEAD
   {
     id: 'quantum-internet-security-platform';
     name: 'Quantum Internet Security Platform';
@@ -2462,7 +2377,6 @@ export const,
     customers: 35;
     rating: 4.8;
     reviews: 28;
-=======
   {/* TODO: Fix JSX expression */}
   t: 'quantum-advanced'}
     contactInf,
@@ -2489,7 +2403,6 @@ export const,
   g: 4.8,
     review,
   s: 28,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 export interface EmergingTechService {/* TODO: Fix JSX expression */}
   }
@@ -2499,7 +2412,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   }
 ];
 ;
-<<<<<<< HEAD
     realImplementation: true;
     implementationDetails:,
       'Fully functional AI robotics platform with computer vision, predictive maintenance, and multi-robot coordination. Includes robotic operations center and 24/7 support.'
@@ -2515,7 +2427,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     price: '$15,999'
     period: '/month',
     description:,
-=======
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2542,7 +2453,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum AI platform that optimizes energy grids, manages renewable energy sources, and predicts energy demand with unprecedented accuracy. Enables smart cities and sustainable energy systems.'
     feature,
   s: [;
@@ -2557,7 +2467,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'API for utility integration'
       '24/7 energy operations center'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -2565,7 +2474,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     link: 'https://ziontechgroup.com/quantum-energy-optimization',
     marketPosition: 'First-to-market quantum energy optimization platform. Competes with traditional energy management but offers quantum-level efficiency.',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -2581,7 +2489,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   n: 'First-to-market quantum energy optimization platform. Competes with traditional energy management but offers quantum-level efficiency.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Utility companies, Smart cities, Renewable energy providers, Industrial facilities, Government energy agencies, Energy trading companies'
     trialDay,
   s: 10;
@@ -2610,17 +2517,13 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Energy trading platforms'
       'Government systems'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Smart grid optimization'
       'Renewable energy management'
       'Energy demand forecasting'
       'Carbon reduction'
-<<<<<<< HEAD
       'Energy trading',
       'Smart city energy',
     ],
@@ -2652,7 +2555,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     price: '$6,999'
     period: '/month',
     description:,
-=======
       'Energy trading'
       'Smart city energy'
     ]
@@ -2706,7 +2608,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive metaverse development platform with AI-powered content generation, virtual reality experiences, and immersive 3D environments. Enables businesses to create engaging virtual worlds.'
     feature,
   s: [;
@@ -2721,7 +2622,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'API for custom integrations'
       '24/7 metaverse support'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-pink-700'
@@ -2730,7 +2630,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     marketPosition:,
       'Competes with Unity ($40/month), Unreal Engine (free + royalties), and Roblox Studio (free). Our advantage: AI-powered content generation and metaverse-specific features.',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -2748,7 +2647,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   advantage: AI-powered content generation and metaverse-specific features.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Gaming companies, Real estate firms, Educational institutions, Event organizers, Marketing agencies, Entertainment companies'
     trialDay,
   s: 21;
@@ -2779,17 +2677,13 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'E-commerce systems'
       'Learning management systems'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Virtual real estate tours'
       'Virtual events and conferences'
       'Educational simulations'
       'Gaming experiences'
-<<<<<<< HEAD
       'Virtual shopping',
       'Virtual training',
     ],
@@ -2824,7 +2718,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     price: '$9,999'
     period: '/month',
     description:,
-=======
       'Virtual shopping'
       'Virtual training'
     ]
@@ -2881,7 +2774,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced quantum AI platform that optimizes supply chains, logistics operations, and transportation networks with unprecedented efficiency. Reduces costs and improves delivery times.'
     feature,
   s: [;
@@ -2896,7 +2788,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'API for system integration'
       '24/7 logistics operations'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-orange-600 to-red-700'
@@ -2905,7 +2796,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     marketPosition:,
       'Competes with SAP SCM ($50K+), Oracle SCM ($75K+), and Manhattan Associates ($100K+). Our advantage: Quantum AI optimization and lower cost.',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -2923,7 +2813,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   advantage: Quantum AI optimization and lower cost.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Logistics companies, E-commerce businesses, Manufacturing companies, Retail chains, Transportation companies, Supply chain managers'
     trialDay,
   s: 14;
@@ -2952,17 +2841,13 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Manufacturing systems'
       'Retail systems'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Route optimization'
       'Supply chain optimization'
       'Inventory management'
       'Demand forecasting'
-<<<<<<< HEAD
       'Transportation optimization',
       'Warehouse automation',
     ],
@@ -2997,7 +2882,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     price: '$11,999'
     period: '/month',
     description:,
-=======
       'Transportation optimization'
       'Warehouse automation'
     ]
@@ -3054,7 +2938,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Next-generation cybersecurity platform combining quantum-resistant encryption, AI-powered threat detection, and advanced security analytics. Protects against current and future cyber threats.'
     feature,
   s: [;
@@ -3069,7 +2952,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'API for system integration'
       '24/7 security operations center'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-red-600 to-pink-700'
@@ -3078,7 +2960,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     marketPosition:,
       'Competes with CrowdStrike ($8.99/user/month), Palo Alto Networks ($50K+), and SentinelOne ($6/user/month). Our advantage: Quantum-resistant encryption and AI threat detection.',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -3096,7 +2977,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   advantage: Quantum-resistant encryption and AI threat detection.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enterprise companies, Government agencies, Financial institutions, Healthcare providers, Educational institutions, Critical infrastructure'
     trialDay,
   s: 14;
@@ -3125,17 +3005,13 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Vulnerability scanners'
       'Compliance tools'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Threat detection and response'
       'Vulnerability management'
       'Incident response'
       'Security monitoring'
-<<<<<<< HEAD
       'Compliance reporting',
       'Security training',
     ],
@@ -3170,7 +3046,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     price: '$19,999'
     period: '/month',
     description:,
-=======
       'Compliance reporting'
       'Security training'
     ]
@@ -3227,7 +3102,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum AI trading platform that processes market data at quantum speeds, enabling algorithmic trading with unprecedented accuracy and execution speed.'
     feature,
   s: [;
@@ -3242,7 +3116,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Performance analytics'
       'API for integration'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-yellow-600 to-orange-700'
@@ -3251,7 +3124,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     marketPosition:,
       'Competes with Renaissance Technologies ($100B+ AUM), Two Sigma ($60B+ AUM), and Citadel ($50B+ AUM). Our advantage: Accessible quantum AI technology for smaller firms.',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -3269,7 +3141,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   advantage: Accessible quantum AI technology for smaller firms.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions, High-frequency traders'
     trialDay,
   s: 7;
@@ -3298,17 +3169,13 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Portfolio management systems'
       'Regulatory reporting'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Algorithmic trading'
       'High-frequency trading'
       'Portfolio optimization'
       'Risk management'
-<<<<<<< HEAD
       'Market analysis',
       'Trading automation',
     ],
@@ -3343,7 +3210,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     price: '$7,999'
     period: '/month',
     description:,
-=======
       'Market analysis'
       'Trading automation'
     ]
@@ -3400,7 +3266,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive AI-powered IoT platform that manages smart city infrastructure, monitors environmental conditions, and optimizes urban services. Enables sustainable and efficient cities.'
     feature,
   s: [;
@@ -3415,7 +3280,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'API for city systems'
       '24/7 smart city operations'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-teal-600 to-cyan-700'
@@ -3424,7 +3288,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     marketPosition:,
       'Competes with Cisco Smart Cities ($100K+), Siemens City Performance ($150K+), and IBM Smart Cities ($200K+). Our advantage: AI-powered intelligence and lower cost.',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -3442,7 +3305,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   advantage: AI-powered intelligence and lower cost.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'City governments, Municipalities, Urban planners, Infrastructure companies, Utility companies, Transportation authorities'
     trialDay,
   s: 21;
@@ -3471,17 +3333,13 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Environmental monitoring'
       'Citizen services'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Smart city management'
       'Environmental monitoring'
       'Traffic optimization'
       'Energy optimization'
-<<<<<<< HEAD
       'Waste management',
       'Public safety',
     ],
@@ -3517,7 +3375,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     description:,
       "World's first quantum-secured space communication network that provides unhackable communication between Earth, satellites, and space stations. Enables secure space exploration and commercial space operations."
     features: [;
-=======
       'Waste management'
       'Public safety'
     ]
@@ -3576,7 +3433,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   n: "World's first quantum-secured space communication network that provides unhackable communication between Earth, satellites, and space stations. Enables secure space exploration and commercial space operations.",
   feature,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum-secured space communication'
       'Satellite quantum key distribution'
       'Interplanetary communication protocols'
@@ -3588,7 +3444,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Advanced space analytics dashboard'
       '24/7 quantum space operations center'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-indigo-600 to-purple-700'
@@ -3596,7 +3451,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     link: 'https://ziontechgroup.com/quantum-space-communications',
     marketPosition: 'First-to-market quantum space communication network. Traditional space communication lacks quantum security capabilities.',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -3612,7 +3466,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   n: 'First-to-market quantum space communication network. Traditional space communication lacks quantum security capabilities.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Space agencies, Satellite companies, Space exploration companies, Government agencies, Commercial space operators'
     trialDay,
   s: 60;
@@ -3650,7 +3503,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Space research'
       'Space security'
     ]
-<<<<<<< HEAD
     roi: 'Space organizations report 600% ROI through enhanced communication security and operational efficiency.'
     competitors: [
       'Traditional space communication'
@@ -3679,7 +3531,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     price: '$125,999'
     period: '/month',
     description:,
-=======
     ro,
   i: 'Space organizations report 600% ROI through enhanced communication security and operational efficiency.'
     competitor,
@@ -3731,7 +3582,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Breakthrough AI platform that accelerates drug discovery by 1000x through quantum computing, machine learning, and advanced biotechnology. Perfect for pharmaceutical companies and research institutions.'
     feature,
   s: [;
@@ -3746,7 +3596,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Regulatory compliance automation'
       '24/7 AI drug discovery operations'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-600 to-blue-700'
@@ -3754,7 +3603,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     link: 'https://ziontechgroup.com/ai-biotech-drug-discovery',
     marketPosition: 'Advanced AI-powered drug discovery platform. Traditional drug discovery methods are slow and expensive.',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -3770,7 +3618,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   n: 'Advanced AI-powered drug discovery platform. Traditional drug discovery methods are slow and expensive.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Pharmaceutical companies, Biotech companies, Research institutions, Government agencies, Healthcare organizations'
     trialDay,
   s: 90;
@@ -3809,7 +3656,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Regulatory compliance'
       'Biotech research'
     ]
-<<<<<<< HEAD
     roi: 'Pharmaceutical companies report 1000% ROI through accelerated drug discovery and reduced development costs.'
     competitors: [
       'Traditional drug discovery'
@@ -3839,7 +3685,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     period: '/month'
     description: 'Revolutionary autonomous AI factory platform that operates manufacturing facilities without human intervention. Achieves 24/7 production with 99.99% efficiency and zero downtime.'
     features: [;
-=======
     ro,
   i: 'Pharmaceutical companies report 1000% ROI through accelerated drug discovery and reduced development costs.'
     competitor,
@@ -3893,7 +3738,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   n: 'Revolutionary autonomous AI factory platform that operates manufacturing facilities without human intervention. Achieves 24/7 production with 99.99% efficiency and zero downtime.'
     feature,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Fully autonomous manufacturing'
       'AI-powered quality control'
       'Predictive maintenance automation'
@@ -3905,7 +3749,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Energy optimization'
       '24/7 autonomous operations'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-orange-600 to-red-700'
@@ -3913,7 +3756,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     link: 'https://ziontechgroup.com/autonomous-ai-factory',
     marketPosition: 'Advanced autonomous AI factory platform. Traditional manufacturing lacks full automation and AI optimization.',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -3929,7 +3771,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   n: 'Advanced autonomous AI factory platform. Traditional manufacturing lacks full automation and AI optimization.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Manufacturing companies, Industrial companies, Automotive companies, Electronics companies, Consumer goods companies'
     trialDay,
   s: 45;
@@ -3969,7 +3810,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Energy optimization'
       'Production planning'
     ]
-<<<<<<< HEAD
     roi: 'Manufacturing companies report 400% ROI through increased production efficiency and reduced operational costs.'
     competitors: [
       'Traditional manufacturing'
@@ -4009,7 +3849,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     customers: 35;
     rating: 4.8;
     reviews: 28;
-=======
     ro,
   i: 'Manufacturing companies report 400% ROI through increased production efficiency and reduced operational costs.'
     competitor,
@@ -4081,7 +3920,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   g: 4.8;
     review,
   s: 28,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export interface EmergingTechService {/* TODO: Fix JSX expression */}
@@ -4089,14 +3927,12 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -4109,13 +3945,11 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   g: number;
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ;
 export const,
   emergingTechServices: EmergingTechService[] = [;
   // Quantum Internet & Communication Services;
-<<<<<<< HEAD
   {
     id: 'quantum-internet-security-platform';
     name: 'Quantum Internet Security Platform';
@@ -4595,7 +4429,6 @@ export const,
     customers: 35;
     rating: 4.8;
     reviews: 28;
-=======
   {/* TODO: Fix JSX expression */}
   t: 'quantum-advanced'}
     contactInf,
@@ -4899,12 +4732,10 @@ export const,
   g: 4.8;
     review,
   s: 28,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
   }
 ];
-<<<<<<< HEAD
 export interface EmergingTechService {id: string;
   name: string;
   tagline: string;
@@ -4965,10 +4796,8 @@ export interface EmergingTechService {id: string;
       'Space analytics tools',
     ],
     useCases: [}
-=======
 export interface EmergingTechService {/* TODO: Fix JSX expression */}
   s: [}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Satellite communication'
       'Space exploration'
       'Interplanetary missions'
@@ -4976,7 +4805,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Space research'
       'Space security'
     ]
-<<<<<<< HEAD
     roi: 'Space organizations report 600% ROI through enhanced communication security and operational efficiency.'
     competitors: [,
       'Traditional space communication',
@@ -4999,7 +4827,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     customers: 15;
     rating: 5 && 5.0;
     reviews: 12;
-=======
     ro,
   i: 'Space organizations report 600% ROI through enhanced communication security and operational efficiency.'
     competitor,
@@ -5039,7 +4866,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   g: 5 && 5.0,
     review,
   s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
       'Quantum computing drug simulation',
       'Predictive drug efficacy modeling',
@@ -5051,7 +4877,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Regulatory compliance automation',
       '24 / 7 AI drug discovery operations',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     marketPosition: 'Advanced AI-powered drug discovery platform. Traditional drug discovery methods are slow and expensive.',
@@ -5062,7 +4887,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     category: 'AI & Biotech',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -5082,7 +4906,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   e: true;
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI algorithms',
       'Quantum computing',
       'Machine learning',
@@ -5109,17 +4932,14 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Drug efficacy prediction'
       'Regulatory compliance'
       'Biotech research'
-<<<<<<< HEAD
     ],
     roi: 'Pharmaceutical companies report 1000% ROI through accelerated drug discovery and reduced development costs.',
     competitors: [,
-=======
     ]
     ro,
   i: 'Pharmaceutical companies report 1000% ROI through accelerated drug discovery and reduced development costs.'
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Traditional drug discovery',
       'Basic AI drug tools',
       'Manual research methods',
@@ -5134,7 +4954,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
     real_implementation: true;
     implementation_details: unknown;
       'Comprehensive AI biotech drug discovery platform with quantum computing capabilities, advanced drug modeling, and automated development processes.',
@@ -5142,7 +4961,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     customers: 8;
     rating: 4 && 4.9;
     reviews: 6;
-=======
     real_implementatio,
   n: true,
     implementation_detail,
@@ -5156,7 +4974,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   g: 4 && 4.9,
     review,
   s: 6,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
       'Fully autonomous manufacturing',
       'AI - powered quality control',
@@ -5169,7 +4986,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Energy optimization',
       '24 / 7 autonomous operations',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     marketPosition: 'Advanced autonomous AI factory platform. Traditional manufacturing lacks full automation and AI optimization.',
@@ -5180,7 +4996,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     category: 'AI & Autonomous Manufacturing',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -5200,7 +5015,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   e: true;
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI algorithms',
       'Robotics',
       'IoT sensors',
@@ -5229,7 +5043,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Energy optimization'
       'Production planning'
     ]
-<<<<<<< HEAD
     roi: 'Manufacturing companies report 400% ROI through increased production efficiency and reduced operational costs.'
     competitors: [
       'Traditional manufacturing'
@@ -5290,7 +5103,6 @@ export const emergingTechServices: EmergingTechService[] = [
     customers: 35;
     rating: 4.8;
     reviews: 28;
-=======
     ro,
   i: 'Manufacturing companies report 400% ROI through increased production efficiency and reduced operational costs.'
     competitor,
@@ -5417,7 +5229,6 @@ export const,
   g: 4.8,
     review,
   s: 28,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ;
 'Quantum-secured space communication',' i,

@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 
-<<<<<<< HEAD
 const ServiceWorkerRegistration: React.FC = () => {,
   useEffect(() => {,
     if ('serviceWorker' in navigator) {,
@@ -16,7 +15,6 @@ const ServiceWorkerRegistration: React.FC = () => {,
                   if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                     // New content is available, notify user;
                     if (confirm('New content is available. Reload to update?')) {
-=======
 const ServiceWorkerRegistration: React.FC = () => {}
   useEffect(() => {}
     if ('serviceWorker' in navigator) {}
@@ -32,7 +30,6 @@ const ServiceWorkerRegistration: React.FC = () => {}
                   if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {}
                     // New content is available, notify user
                     if (confirm('New content is available. Reload to update?')) {}
->>>>>>> origin/merge-error-fixes
                       window.location.reload();
                     }
                   }
@@ -42,15 +39,12 @@ const ServiceWorkerRegistration: React.FC = () => {}
           })
           .catch((registrationError) => {
 
-<<<<<<< HEAD
 
       // Listen for service worker messages;
       navigator.serviceWorker.addEventListener('message', (event) => {
-=======
 }
       // Listen for service worker messages
       navigator.serviceWorker.addEventListener('message', (event) => {}
->>>>>>> origin/merge-error-fixes
         if (event.data && event.data.type === 'CACHE_UPDATED') {
 }
         }

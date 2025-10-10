@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -169,15 +166,10 @@ const footerLinks = [
   '/cybersecurity',
   '/it-infrastructure',
   '/custom-development',
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 #!/usr/bin/env node;
 // Sitemap URLs from the website;
-=======
 #!/usr/bin/env node
 // Sitemap URLs from the website
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
 const sitemapUrls = [
   // Main Pages;
   '/',
@@ -261,7 +253,6 @@ const sitemapUrls = [
 const existingPages = [
   // Main pages;
   '/',
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   '/about',
   '/team',
   '/careers',
@@ -277,7 +268,6 @@ const existingPages = [
   '/support',
   '/docs',
   '/api-docs',
-<<<<<<< HEAD
   '/status',
   '/health',
   '/help',
@@ -296,7 +286,6 @@ const existingPages = [
 
 // Combine all links
 const allLinks = [...new Set([...navigationLinks, ...footerLinks])];
-=======
   '/demo',
   '/consultation',
   '/pricing',
@@ -382,7 +371,6 @@ const allLinks = [...new Set([...navigationLinks, ...footerLinks])];
 
 // Find missing pages;
 const missingPages = sitemapUrls.filter(url => !existingPages.includes(url));
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
 
 // Check which pages exist
 const missingPages = [];
@@ -410,12 +398,10 @@ const unlinkedPages = existingPages
   .map(p => p.replace(/^\//, ''))
   .filter(p => p !== '' && !linkedPages.has(p));
 
-<<<<<<< HEAD
 console.log('\n=== UNLINKED PAGES ===');
 console.log(`Unlinked pages: ${unlinkedPages.length}`);
 unlinkedPages.forEach(page => console.log(page));
 
-<<<<<<< HEAD
 // Generate report
 const report = {
   totalLinksChecked: allLinks.length,
@@ -424,7 +410,6 @@ const report = {
   unlinkedPages: unlinkedPages.length,
   missingPagesList: missingPages,
   unlinkedPagesList: unlinkedPages
-=======
 // Categorize missing pages;
 const missingByCategory = {
   'Main Pages': missingPages.filter(p => ['/faq', '/partners', '/solutions', '/research-development', '/request-quote', '/green-it'].includes(p)),
@@ -434,12 +419,10 @@ const missingByCategory = {
   'Marketplace Pages': missingPages.filter(p => p.startsWith('/marketplace') || ['/talent', '/equipment', '/it-onsite-services'].includes(p)),
   'Company Pages': missingPages.filter(p => ['/help', '/security'].includes(p)),
   'Auth Pages': missingPages.filter(p => ['/login', '/signup'].includes(p))
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
 };
 
 fs.writeFileSync('/workspace/missing-pages-report.json', JSON.stringify(report, null, 2));
 console.log('\nReport saved to missing-pages-report.json');
-=======
 console.log('\n=== SUMMARY ===');
 console.log(`Total sitemap URLs: ${sitemapUrls.length}`);
 console.log(`Total existing pages: ${existingPages.length}`);
@@ -462,10 +445,6 @@ console.log('\n=== MISSING PAGES BY CATEGORY ===');
 Object.entries(missingByCategory).forEach(([category, pages]) => {
     console.log(`\n${category}:`);
     pages.forEach(page => console.log(`  ${page}`));
-<<<<<<< HEAD
   }
 });`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-=======
 });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233

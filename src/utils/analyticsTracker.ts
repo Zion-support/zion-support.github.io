@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Enhanced Analytics Tracker
@@ -56,7 +55,6 @@ class AnalyticsTracker {
     };
     if (this.isInitialized) {
     } else {
-=======
 
 'use client'
 /**
@@ -146,12 +144,10 @@ class AnalyticsTracker {// TODO: Add content;}
     } else {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       this.queue.push(track);
     }
   }
   /**
-<<<<<<< HEAD
    * Track page views
    */
   trackPageView(path: string): void {
@@ -169,7 +165,6 @@ class AnalyticsTracker {// TODO: Add content;}
     };
     if (this.isInitialized) {
     } else {
-=======
    * Track performance metrics;
    */
 
@@ -206,12 +201,10 @@ class AnalyticsTracker {// TODO: Add content;}
     } else {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       this.queue.push(track);
     }
   }
   /**
-<<<<<<< HEAD
    * Track performance metrics
    */
   trackPerformance(metrics: PerformanceMetrics): void {
@@ -294,7 +287,6 @@ $4});
     };
     if (this.isInitialized) {
     } else {
-=======
    * Track user timing;
    */
 
@@ -331,12 +323,10 @@ $4});
     } else {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       this.queue.push(track);
     }
   }
 }
-<<<<<<< HEAD
 // Export singleton instance
 export const analyticsTracker = new AnalyticsTracker();
 // Auto-initialize when window is available
@@ -345,7 +335,6 @@ if (typeof window !== 'undefined') {
     analyticsTracker.initialize();
   } else {
     window.addEventListener('load', () => {
-=======
 // Export singleton instance;
 export const analyticsTracker = new AnalyticsTracker();
 // Auto-initialize when window is available;
@@ -362,15 +351,11 @@ if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
     window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       analyticsTracker.initialize();
     });
   }
 }
-<<<<<<< HEAD
 export default analyticsTracker;
-=======
 
 export default analyticsTracker;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

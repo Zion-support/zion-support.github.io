@@ -135,14 +135,11 @@ const functionsToRemove = [
 
 const _functionsDir = path.join(process.cwd(), 'netlify', 'functions');
 
-<<<<<<< HEAD
 function shouldRemoveFunction(filename) {
   // Keep essential functions;
   if (essentialFunctions.includes(filename)) {
     return false;
-=======
 function shouldRemoveFunction(filename) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   
   // Remove functions that match any of the patterns;
@@ -159,7 +156,6 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
   let _keptCount = 0;
 
 
-<<<<<<< HEAD
   files.forEach(file => {)
     if (file.endsWith('.js') || file.endsWith('.ts')) {
       if (shouldRemoveFunction(file)) {
@@ -173,12 +169,10 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
         }
       } else {
         keptCount++;
-=======
   files.forEach(file => {/* TODO: Fix JSX expression */})
         } catch (error) {/* TODO: Fix JSX expression */}
         }
       } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
   });

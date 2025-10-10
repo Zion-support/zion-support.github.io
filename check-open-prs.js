@@ -3,7 +3,6 @@ import https from 'https';
 import fs from 'fs';
 
 //GitHub API configuration;
-<<<<<<< HEAD
 const options = {
   hostname: 'api.github.com',
   path: '/repos/Zion-Holdings/zion.app/pulls?state=open',
@@ -18,13 +17,11 @@ const options = {
 )
   res.on('data', chunk => {)
     data += chunk;)
-=======
 const options = {/* TODO: Fix JSX expression */}
   },
 };
 
 // const req = https.get(options, res => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   });
 
   res.on('end', () => {/* TODO: Fix JSX expression */}
@@ -39,11 +36,8 @@ const options = {/* TODO: Fix JSX expression */}
   });
 });
 
-<<<<<<< HEAD
 req.on('error', error => {)
-=======
 req.on('error', error => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   //   });
 
 req.end();

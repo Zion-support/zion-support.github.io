@@ -1,19 +1,15 @@
-<<<<<<< HEAD
 'use client';
 import React, { useEffect, useState, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Lazy load components for better performance
-<<<<<<< HEAD
 const HomePage = lazy(() => import('./page'));
 
 // Import enhancement utilities
 import {Routes, Route} from 'react-router-dom';
-=======
 const HomePage = lazy(() => import('../app/page'));
 
 // Import enhancement utilities
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 import PerformanceEnhancer from './utils/performanceEnhancer';
 import SEOEnhancer from './utils/seoEnhancer';
 import AccessibilityEnhancer from './utils/accessibilityEnhancer';
@@ -48,10 +44,7 @@ import AIMLPlatformPage from './ai-ml-platform/page';
 
 const _HomePage = lazy(() => import('../app/page'));
 
-<<<<<<< HEAD
-=======
 // Import components
-=======
 import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
@@ -85,8 +78,6 @@ const PrivacyPage = lazy(() => import('./privacy/page'));
 const TermsPage = lazy(() => import('./terms/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
 const NotFoundPage = lazy(() => import('./not-found'));
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
 // Loading component
 const LoadingSpinner: React.FC = () => (
@@ -116,10 +107,8 @@ import AILeadGenerationPage from './ai-lead-generation/page';
 import AIDocumentProcessingPage from './ai-document-processing/page';
 
 // IT Services Pages
-<<<<<<< HEAD
 // Micro SAAS Pages
 
-=======
 import ITServicesPage from './it-services/page';
 import ITInfrastructurePage from './it-infrastructure/page';
 import CybersecurityPage from './cybersecurity/page';
@@ -134,8 +123,6 @@ import AIChatbotBuilderPage from './ai-chatbot-builder/page';
 import AIEmailMarketingPage from './ai-email-marketing/page';
 import AIWritingAssistantPage from './ai-writing-assistant/page';
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 // Specialized Solutions Pages
 import QuantumComputingPage from './quantum-computing/page';
 import AutonomousSystemsPage from './autonomous-systems/page';
@@ -143,7 +130,6 @@ import BlockchainWeb3Page from './blockchain-web3/page';
 import IoTEdgeComputingPage from './iot-edge-computing/page';
 import BusinessIntelligencePage from './business-intelligence/page';
 import RoboticsPage from './robotics/page';
-<<<<<<< HEAD
 
 // Company Pages
 
@@ -153,12 +139,9 @@ import RoboticsPage from './robotics/page';
 
 
 // Additional Pages
-=======
-=======
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
 
 // Company Pages
 import TeamPage from './team/page';
@@ -222,13 +205,10 @@ import RoboticsPage from './robotics/page';
 import TeamPage from './team/page';
 import CareersPage from './careers/page';
 import NewsPage from './news/page';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 import PricingPage from './pricing/page';
 import DemoPage from './demo/page';
 import ConsultationPage from './consultation/page';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 // AI Services
 
 // Additional AI Services
@@ -238,9 +218,6 @@ import ConsultationPage from './consultation/page';
 
 import AIProjectManagerPage from './ai-project-manager/page';
 
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 // Support Pages
 
 // AI Services Pages
@@ -248,10 +225,6 @@ import AIProjectManagerPage from './ai-project-manager/page';
 import AICustomerSupportBotPage from './ai-customer-support-bot/page';
 import AIAutomationPage from './ai-automation/page';
 import AIMLPlatformPage from './ai-ml-platform/page';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
@@ -306,35 +279,26 @@ const App: React.FC = () => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-<<<<<<< HEAD
             availableLanguage:           ,
 $4},
-=======
             availableLanguage: 'en'
           },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           address: {
             '@type': 'PostalAddress',
             streetAddress: '364 E Main St STE 1008',
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-<<<<<<< HEAD
             addressCountry:           ,
 $4}
-=======
             addressCountry: 'US'
           }
         },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         robots: 'index, follow',
         language: 'en',
         author: 'Zion Tech Group',
         publisher: 'Zion Tech Group'
-<<<<<<< HEAD
-=======
       });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
       // Initialize accessibility enhancer
       const accessibilityEnhancer = new AccessibilityEnhancer({
@@ -345,10 +309,7 @@ $4}
         enableReducedMotion: true,
         enableColorBlindSupport: true,
         enableVoiceControl: true
-<<<<<<< HEAD
-=======
       });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
       // Initialize security enhancer
       const securityEnhancer = new SecurityEnhancer({
@@ -361,10 +322,7 @@ $4}
         enablePermissionsPolicy: true,
         enableCORS: true,
         enableSecureCookies: true
-<<<<<<< HEAD
-=======
       });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
       // Initialize UX enhancer
       const uxEnhancer = new UserExperienceEnhancer({
@@ -378,10 +336,7 @@ $4}
         enablePushNotifications: false,
         enableDarkMode: true,
         enableAnimations: true
-<<<<<<< HEAD
-=======
       });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
       setEnhancers({
         performance: performanceEnhancer,
@@ -389,17 +344,13 @@ $4}
         accessibility: accessibilityEnhancer,
         security: securityEnhancer,
         ux: uxEnhancer
-<<<<<<< HEAD
-=======
       });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
       // Optimize for Core Web Vitals
       seoEnhancer.optimizeForCoreWebVitals();
 
       // Generate reports (for development)
       if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
         // Reports generated silently in development
 
       setIsInitialized(true);
@@ -407,7 +358,6 @@ $4}
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
       // Continue even if enhancers fail
-=======
         // Reports are available but not logged to console
         performanceEnhancer.getMetrics();
         accessibilityEnhancer.generateReport();
@@ -420,17 +370,12 @@ $4}
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 
   if (!isInitialized) {
     return <LoadingSpinner />;
 
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     <Router>
       <Routes>
         {/* Main Pages */}
@@ -500,20 +445,14 @@ $4}
         <Route path="/case-studies" element={<CaseStudiesPage />} />
         
         {/* AI Services Routes */}
-<<<<<<< HEAD
-=======
         <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
         <Route path="/ai-customer-support-bot" element={<AICustomerSupportBotPage />} />
         <Route path="/ai-automation" element={<AIAutomationPage />} />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         <Route path="/ai-ml-platform" element={<AIMLPlatformPage />} />
         
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
-<<<<<<< HEAD
-=======
-=======
     <ErrorBoundary>
       <div className="App">
         <Navigation />
@@ -554,18 +493,13 @@ $4}
         <Footer />
       </div>
     </ErrorBoundary>
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
   );
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
 // 404 Page Component
 const NotFoundPage: React.FC = () => (
   <div className="min-h-screen flex items-center justify-center">
-<<<<<<< HEAD
-=======
     <div className="text-center">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       <h1 className="text-6xl font-bold text-cyan-400 mb-4">404</h1>
       <h2 className="text-2xl font-semibold text-white mb-4">Page Not Found</h2>
       <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
@@ -575,11 +509,8 @@ const NotFoundPage: React.FC = () => (
       >
         Go Home
       </a>
-<<<<<<< HEAD
-=======
     </div>
   </div>
 );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
 export default App;

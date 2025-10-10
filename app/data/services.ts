@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory,
   GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard,
@@ -559,7 +558,6 @@ export const specializedServices = [
     freeTrial: '30 days',
   }
 ];
-=======
 export interface Service {
   id: string;
   name: string;
@@ -1413,4 +1411,3 @@ export const contactInfo = {
   website: 'https://ziontechgroup.com',
   hours: 'Mon-Fri: 9AM-6PM EST'
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

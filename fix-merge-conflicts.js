@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -17,11 +13,9 @@ function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-<<<<<<< HEAD
     // Remove merge conflict markers and keep the HEAD version
     
     // Clean up any remaining conflict markers
-=======
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -30,7 +24,6 @@ import { execSync } from 'child_process';
 
 // Function to recursively find all files with merge conflicts
 function findFilesWithConflicts(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-=======
     // Check if file has merge conflict markers
     if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
       console.log(`Fixing merge conflicts in: ${filePath}`);
@@ -76,7 +69,6 @@ function findFilesWithConflicts(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']
 
 // Function to find all TypeScript/JavaScript files
 function findSourceFiles(dir) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
   const files = [];
   
   function traverse(currentDir) {
@@ -87,7 +79,6 @@ function findSourceFiles(dir) {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-<<<<<<< HEAD
         // Skip node_modules and other common directories
         if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
           traverse(fullPath);
@@ -169,8 +160,6 @@ additionalFiles.forEach(filePath => {
 });
 
 console.log('\n🎉 All fixes completed!');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-=======
         // Skip node_modules and other build directories
         if (!['node_modules', '.next', 'dist', 'build', '.git'].includes(item)) {
           traverse(fullPath);
@@ -220,4 +209,3 @@ try {
 }
 
 console.log('\nDone!');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc

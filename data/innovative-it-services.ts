@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export interface InnovativeITService {id: string;
   name: string;
   tagline: string;
@@ -38,7 +37,6 @@ export interface InnovativeITService {id: string;
     price: '$599',
     period: '/month',
     description: unknown;
-=======
 export interface InnovativeITService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
@@ -56,7 +54,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive zero trust security platform that provides continuous verification, micro - segmentation, and advanced threat detection for modern enterprises.',
     feature,
   s: [,
@@ -71,7 +68,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Compliance reporting',
       'Real - time monitoring',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - red - 500 to - pink - 600'
@@ -86,7 +82,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     category: 'IT & Cybersecurity',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -115,7 +110,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Zero Trust Architecture',
       'Machine Learning',
       'AI',
@@ -155,7 +149,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Okta',
       'CyberArk',
     ],
-<<<<<<< HEAD
     market_size: '$45B cybersecurity market'
     growth_rate: '110% annual growth'
     variant: 'cyberpunk'
@@ -179,7 +172,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     price: '$299',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$45B cybersecurity market',
     growth_rat,
@@ -224,7 +216,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance.',
     feature,
   s: [,
@@ -239,7 +230,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'IoT integration',
       '5G optimization',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - blue - 500 to - cyan - 600'
@@ -254,7 +244,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     category: 'IT & Edge Computing',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -283,7 +272,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Edge Computing',
       'IoT',
       '5G',
@@ -324,7 +312,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'FogHorn',
       'ClearBlade',
     ],
-<<<<<<< HEAD
     market_size: '$15B edge computing market'
     growth_rate: '180% annual growth'
     variant: 'quantum'
@@ -348,7 +335,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     price: '$999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$15B edge computing market',
     growth_rat,
@@ -393,7 +379,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Cloud - based quantum computing service that provides access to quantum processors for research, optimization, and machine learning applications.',
     feature,
   s: [,
@@ -408,7 +393,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Documentation and tutorials',
       'Expert support',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - purple - 500 to - indigo - 600'
@@ -423,7 +407,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     category: 'IT & Quantum Computing',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -452,7 +435,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing',
       'Quantum Algorithms',
       'Python',
@@ -492,7 +474,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Rigetti',
       'D - Wave',
     ],
-<<<<<<< HEAD
     market_size: '$8B quantum computing market'
     growth_rate: '250% annual growth'
     variant: 'quantum - advanced'
@@ -517,7 +498,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     price: '$399',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$8B quantum computing market',
     growth_rat,
@@ -563,7 +543,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive blockchain platform for enterprises, providing secure, scalable, and compliant blockchain solutions for various business applications.',
     feature,
   s: [,
@@ -578,7 +557,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Integration services',
       '24 / 7 support',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - green - 500 to - emerald - 600'
@@ -593,7 +571,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     category: 'IT & Blockchain',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -622,7 +599,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Blockchain',
       'Smart Contracts',
       'Solidity',
@@ -664,7 +640,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Quorum',
       'Multichain',
     ],
-<<<<<<< HEAD
     market_size: '$19B blockchain market'
     growth_rate: '160% annual growth'
     variant: 'quantum - blockchain'
@@ -689,7 +664,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     price: '$199',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$19B blockchain market',
     growth_rat,
@@ -735,7 +709,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive DevOps platform that automates the entire software development lifecycle, from code commit to production deployment.',
     feature,
   s: [,
@@ -750,7 +723,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Team collaboration',
       'Analytics and reporting',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
       'CI/CD',
@@ -766,7 +738,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     category: 'IT & DevOps',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -796,7 +767,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'CI / CD',
       'Kubernetes',
       'Docker',
@@ -838,7 +808,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'GitHub Actions',
       'Azure DevOps',
     ],
-<<<<<<< HEAD
     market_size: '$12B DevOps market'
     growth_rate: '130% annual growth'
     variant: 'cyberpunk'
@@ -912,7 +881,6 @@ export const innovativeITServices: InnovativeITService[] = [,
     customers: 2500;
     rating: 4.7;
     reviews: 1250;
-=======
     market_siz,
   e: '$12B DevOps market',
     growth_rat,
@@ -1081,7 +1049,6 @@ export const,
   g: 4.7,
     review,
   s: 1250,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 export interface InnovativeITService {/* TODO: Fix JSX expression */}
   }
@@ -1091,7 +1058,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   }
 ];
 ;
-<<<<<<< HEAD
     realImplementation: true;
     implementationDetails:,
       'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'
@@ -1106,7 +1072,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     price: '$299',
     period: '/month',
     description:,
-=======
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1133,7 +1098,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance.'
     feature,
   s: [;
@@ -1148,7 +1112,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'IoT integration'
       '5G optimization'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-500 to-cyan-600'
@@ -1162,7 +1125,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     category: 'IT & Edge Computing'
     realService: true;
     technology: [;
-=======
     popula,
   r: true;
     ico,
@@ -1190,7 +1152,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   e: true;
     technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Edge Computing'
       'IoT'
       '5G'
@@ -1231,12 +1192,10 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'FogHorn'
       'ClearBlade'
     ]
-<<<<<<< HEAD
     marketSize: '$15B edge computing market'
     growthRate: '180% annual growth',
     variant: 'quantum',
     contactInfo: targetAudience: unknown;
-=======
     marketSiz,
   e: '$15B edge computing market'
     growthRat,
@@ -1246,7 +1205,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     contactInf,
   o: targetAudienc,
   e: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Research institutions, Pharmaceutical companies, Financial services, Logistics companies, Technology companies, Universities'
     trialDay,
   s: 7;
@@ -1288,7 +1246,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Rigetti'
       'D-Wave'
     ]
-<<<<<<< HEAD
     marketSize: '$8B quantum computing market'
     growthRate: '250% annual growth',
     variant: 'quantum-advanced',
@@ -1301,7 +1258,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     realService: true;
     technology: [;
     integrations: [;
-=======
     marketSiz,
   e: '$8B quantum computing market'
     growthRat,
@@ -1327,7 +1283,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   y: [;
     integration,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Ethereum'
       'Hyperledger'
       'Corda'
@@ -1357,7 +1312,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Quorum'
       'Multichain'
     ]
-<<<<<<< HEAD
     marketSize: '$19B blockchain market'
     growthRate: '160% annual growth',
     variant: 'quantum-blockchain',
@@ -1370,7 +1324,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     realService: true;
     technology: [;
     integrations: [;
-=======
     marketSiz,
   e: '$19B blockchain market'
     growthRat,
@@ -1396,7 +1349,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   y: [;
     integration,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'GitHub'
       'GitLab'
       'Bitbucket'
@@ -1416,22 +1368,18 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Monitoring'
       'Security'
     ]
-<<<<<<< HEAD
     roi: 'Average customer sees 250% ROI within 6 months through improved development velocity and reduced deployment time.'
     competitors: [
-=======
     ro,
   i: 'Average customer sees 250% ROI within 6 months through improved development velocity and reduced deployment time.'
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'GitLab'
       'Jenkins'
       'CircleCI'
       'GitHub Actions'
       'Azure DevOps'
     ]
-<<<<<<< HEAD
     marketSize: '$12B DevOps market'
     growthRate: '130% annual growth'
     variant: 'cyberpunk'
@@ -1458,7 +1406,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     customers: 2500;
     rating: 4.7;
     reviews: 1250;
-=======
     marketSiz,
   e: '$12B DevOps market'
     growthRat,
@@ -1511,7 +1458,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   g: 4.7;
     review,
   s: 1250,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export interface InnovativeITService {/* TODO: Fix JSX expression */}
@@ -1519,7 +1465,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -1571,7 +1516,6 @@ export const innovativeITServices: InnovativeITService[] = [;
     customers: 2500;
     rating: 4.7;
     reviews: 1250;
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -1614,7 +1558,6 @@ export const,
   g: 4.7,
     review,
   s: 1250,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
   }

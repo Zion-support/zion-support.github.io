@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Data Validation Utility
@@ -28,7 +27,6 @@ export class ValidationError extends Error {
     public field: string,
     public errors: string[]
   ) {
-=======
 
 'use client'
 /**
@@ -76,13 +74,11 @@ export class ValidationError extends Error {/* TODO: Fix JSX expression */}
   ) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     super(message);
     this.name = 'ValidationError';
   }
 }
 /**
-<<<<<<< HEAD
  * Validate email address
  */
 export function validateEmail(email: string): boolean {
@@ -96,7 +92,6 @@ export function validateURL(url: string): boolean {
     const parsed = new URL(url);
     return parsed.protocol === 'http:' || parsed.protocol === 'https:';
   } catch {
-=======
  * Validate email address;
  */
 
@@ -120,32 +115,26 @@ export function validateURL(url: string): boolean {// TODO: Add content;}
   } catch {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return false;
   }
 }
 /**
  * Validate phone number (US format)
  */
-<<<<<<< HEAD
 export function validatePhoneNumber(phone: string): boolean {
-=======
 
 export function validatePhoneNumber(phone: string): boolean {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
   return phoneRegex.test(phone);
 }
 /**
-<<<<<<< HEAD
  * Validate string length
  */
 export function validateStringLength(value: string, min: number, max?: number): boolean {
   if (max !== undefined) {
     return value.length >= min && value.length <= max;
-=======
  * Validate string length;
  */
 
@@ -157,17 +146,14 @@ export function validateStringLength(value: string, min: number, max?: number): 
 }
     return value.length >= min && value.length;
           <= max;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   return value.length >= min;
 }
 /**
-<<<<<<< HEAD
  * Validate number range
  */
 export function validateNumberRange(value: number, min: number, max: number): boolean {
   return value >= min && value <= max;
-=======
  * Validate number range;
  */
 
@@ -176,12 +162,10 @@ export function validateNumberRange(value: number, min: number, max: number): bo
 }
   return value >= min && value;
           <= max;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 /**
  * Validate credit card number (basic Luhn algorithm)
  */
-<<<<<<< HEAD
 export function validateCreditCard(cardNumber: string): boolean {
   const cleaned = cardNumber.replace(/\s/g, '');
   if (!/^\d+$/.test(cleaned)) return false;
@@ -190,7 +174,6 @@ export function validateCreditCard(cardNumber: string): boolean {
   for (let i = cleaned.length - 1; i >= 0; i--) {
     let digit = parseInt(cleaned[i], 10);
     if (isEven) {
-=======
 
 export function validateCreditCard(cardNumber: string): boolean {// TODO: Add content;}
 
@@ -216,7 +199,6 @@ export function validateCreditCard(cardNumber: string): boolean {// TODO: Add co
     let digit = parseInt(cleaned[i], 10)
     if (isEven) {/* TODO: Fix JSX expression */}
   }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       digit *= 2;
       if (digit > 9) digit -= 9;
     }
@@ -226,7 +208,6 @@ export function validateCreditCard(cardNumber: string): boolean {// TODO: Add co
   return sum % 10 === 0;
 }
 /**
-<<<<<<< HEAD
  * Validate date
  */
 export function validateDate(value: unknown): boolean {
@@ -246,7 +227,6 @@ export function validateDateRange(date: Date, min?: Date, max?: Date): boolean {
   if (!validateDate(date)) return false;
   const time = date.getTime();
   if (min && time < min.getTime()) return false;
-=======
  * Validate date;
  */
 
@@ -280,19 +260,16 @@ export function validateDateRange(date: Date, min?: Date, max?: Date): boolean {
   const time = date.getTime();
   if (min && time;)
           < min.getTime()) return false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   if (max && time > max.getTime()) return false;
   return true;
 }
 /**
-<<<<<<< HEAD
  * Sanitize HTML to prevent XSS
  */
 export function sanitizeHTML(html: string): string {
   // Remove script tags
   let clean = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
   // Remove event handlers
-=======
  * Sanitize HTML to prevent XSS;
  */
 
@@ -313,13 +290,11 @@ let clean = html.replace(/
           <script[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
 
   // Remove event handlers;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   clean = clean.replace(/on\w+="[^"]*"/gi, '');
   clean = clean.replace(/on\w+='[^']*'/gi, '');
   return clean;
 }
 /**
-<<<<<<< HEAD
  * Create custom validator
  */
 export function createCustomValidator<T>(
@@ -339,7 +314,6 @@ export function createCustomValidator<T>(
  */
 function validateFieldRule(value: unknown, rule: FieldRule): boolean {
   switch (rule.type) {
-=======
  * Create custom validator;
  */
 export function createCustomValidator;
@@ -374,21 +348,18 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {// TODO: A
   switch (rule.type) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     case 'required':
       if (value === null || value === undefined) return false;
       if (typeof value === 'string' && value.trim() === '') return false;
       if (Array.isArray(value) && value.length === 0) return false;
       return true;
     case 'email':
-<<<<<<< HEAD
       return typeof value === 'string' && validateEmail(value);
     case 'url':
       return typeof value === 'string' && validateURL(value);
     case 'number':
       if (typeof value !== 'number') return false;
       if (rule.min !== undefined && value < rule.min) return false;
-=======
       return typeof value === 'string' && validateEmail(value)
     case 'url':
       return typeof value === 'string' && validateURL(value)
@@ -396,7 +367,6 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {// TODO: A
       if (typeof value !== 'number') return false;
       if (rule.min !== undefined && value;)
           < rule.min) return false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       if (rule.max !== undefined && value > rule.max) return false;
       return true;
     case 'string':
@@ -405,18 +375,14 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {// TODO: A
       if (rule.maxLength !== undefined && value.length > rule.maxLength) return false;
       return true;
     case 'custom':
-<<<<<<< HEAD
       return rule.custom ? rule.custom(value) : true;
     default:
-=======
       return rule.custom ? rule.custom(value) : true,
   default:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       return true;
   }
 }
 /**
-<<<<<<< HEAD
  * Validate form data
  */
 export function validateForm<T extends Record<string, unknown>>(
@@ -460,7 +426,6 @@ export function validateForm<T extends Record<string, unknown>>(
 export const ValidationRulesBuilder = {
   required: <T>(): ValidationRule<T> => ({
     validate: (value: T) => {
-=======
  * Validate form data;
  */
 export function validateForm<T extends Record<string, unknown>>()
@@ -549,13 +514,11 @@ export const ValidationRulesBuilder = {// TODO: Add content;}
   e: T) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       if (value === null || value === undefined) return false;
       if (typeof value === 'string' && value.trim() === '') return false;
       if (Array.isArray(value) && value.length === 0) return false;
       return true;
     },
-<<<<<<< HEAD
     message:   ,
 $4}),
   email: (): ValidationRule<string> => ({
@@ -593,7 +556,6 @@ class DataValidator {
   private constructor() {}
   static getInstance(): DataValidator {
     if (!DataValidator.instance) {
-=======
     messag,
   e: 'This field is required'
   }),
@@ -698,7 +660,6 @@ class DataValidator {/* TODO: Fix JSX expression */}
     if (!DataValidator.instance) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       DataValidator.instance = new DataValidator();
     }
     return DataValidator.instance;
@@ -712,20 +673,16 @@ class DataValidator {/* TODO: Fix JSX expression */}
   isDate = validateDate;
   isDateInRange = validateDateRange;
   sanitizeHTML = sanitizeHTML;
-<<<<<<< HEAD
   isRequired(value: unknown): boolean {
-=======
   isRequired(valu,)
   e: unknown): boolean {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     if (value === null || value === undefined) return false;
     if (typeof value === 'string' && value.trim() === '') return false;
     if (Array.isArray(value) && value.length === 0) return false;
     return true;
   }
-<<<<<<< HEAD
   isArray(value: unknown): value is unknown[] {
     return Array.isArray(value);
   }
@@ -738,7 +695,6 @@ class DataValidator {/* TODO: Fix JSX expression */}
   rules = ValidationRulesBuilder;
 }
 export const dataValidator = DataValidator.getInstance();
-=======
   isArray(valu,)
   e: unknown): value is unknown[] {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -767,4 +723,3 @@ export const dataValidator = DataValidator.getInstance()"`
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

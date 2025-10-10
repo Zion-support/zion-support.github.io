@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import { Brain, Cpu, Shield, Globe, Users, Award, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Phone, Mail, MapPin, Clock, Star, Zap, Database, Cloud, Code, Smartphone, Settings, Lock, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react';
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -15,7 +10,6 @@ import SEOOptimizer from '../components/SEOOptimizer';
 const ServicesPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
-=======
 import {
   Brain,
   Cloud,
@@ -92,20 +86,17 @@ import {
 const ServicesPage: React.FC = () => {,
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeTab, setActiveTab] = useState('overview');
->>>>>>> origin/main
 
   useEffect(() => {
     setIsLoaded(true);
   }, []);
 
-<<<<<<< HEAD
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe },
     { id: 'ai', name: 'AI Services', icon: Brain },
     { id: 'it', name: 'IT Services', icon: Cpu },
     { id: 'industry', name: 'Industry Solutions', icon: Building },
     { id: 'advanced', name: 'Advanced Tech', icon: Zap }
-=======
   const serviceCategories = [
     {
       id: 'ai-services'
@@ -218,16 +209,12 @@ const ServicesPage: React.FC = () => {,
         }
       ]
     }
->>>>>>> origin/main
   ];
 
   const allServices = [
     // AI Services
     {
-<<<<<<< HEAD
       icon: TrendingUp;
-=======
-<<<<<<< HEAD
       id: 'ai-analytics',
       name: 'AI Analytics Platform',
       category: 'ai',
@@ -488,7 +475,6 @@ const ServicesPage: React.FC = () => {,
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '15+', label: 'Years Experience', icon: Award },
     { number: '24/7', label: 'Support Available', icon: Clock }
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Cloud, Shield, Code, BarChart, Users, Zap, Target, CheckCircle, ArrowRight, Globe, Database, Smartphone, Settings, Lock, TrendingUp, Star, Award, Phone, Mail } from 'lucide-react';
@@ -598,12 +584,10 @@ const ServicesPage: React.FC = () => {
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
     { name: 'Database Management', url: '/database-management', description: 'Database management' },
     { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT consulting' }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   ];
 
   return (
     <>
-<<<<<<< HEAD
       <SEOOptimizer
         title="Our Services - Zion Tech Group"
         description="Comprehensive AI and IT services including analytics, automation, cloud migration, cybersecurity, and industry-specific solutions. Transform your business with our cutting-edge technology."
@@ -642,9 +626,7 @@ const ServicesPage: React.FC = () => {
                   <div className="text-gray-300 text-sm">{stat.label}</div>
                 </div>
               ))}
-=======
       icon: TrendingUp,
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
       title: 'Proven Results',
       description: 'Our clients see 40% improvement in efficiency',
       stat: '40%',
@@ -718,7 +700,6 @@ const ServicesPage: React.FC = () => {
   ];
 
   if (!isLoaded) {
-<<<<<<< HEAD
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white">);
@@ -730,7 +711,6 @@ const ServicesPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center"></div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Our Services</h1><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business.</p>
               From cutting-edge AI platforms to robust IT infrastructure, we've got you covered.</p>
-=======
     return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">)
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>)
       </div>)
@@ -749,7 +729,6 @@ const ServicesPage: React.FC = () => {
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">,
               Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business.
               From cutting-edge AI platforms to robust IT infrastructure, we've got you covered.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
             <div className="flex flex-wrap justify-center gap-4"></div>
               <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"></div>
@@ -764,11 +743,9 @@ const ServicesPage: React.FC = () => {
                 <Zap className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">Micro SAAS</span>
               </div>
->>>>>>> origin/main
             </div>
           </section>
 
-<<<<<<< HEAD
           {/* Category Filter */}
           <section className="mb-16">
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -861,11 +838,9 @@ const ServicesPage: React.FC = () => {
             </div>
           </section>
         </main>
-<<<<<<< HEAD
       </div>
       
       <Footer />
-=======
       <Helmet>
         <title>Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI and IT services to transform your business operations." />
@@ -997,37 +972,27 @@ const ServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
 
         <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     </>
   );
 };
 
 export default ServicesPage;
-<<<<<<< HEAD
-=======
       {/* Benefits */}
       <section className="py-20">
-<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Why Choose Our Services?<p className="text-lg text-gray-300 max-w-3xl mx-auto">Proven expertise and enterprise-grade solutions that deliver measurable business value<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
               <div key={index} className="text-center group">
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-=======
         <div className="container mx-auto px-4"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Why Choose Our Services?</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Proven expertise and enterprise-grade solutions that deliver measurable business value</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
               <div key={index} className="text-center group"></div>
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <benefit.icon className="w-10 h-10 text-white" />
-=======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Why Choose Our Services?
             </h2>
@@ -1041,7 +1006,6 @@ export default ServicesPage;
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300">,
                   <benefit.icon className="w-10 h-10 text-white" />,
                 </div>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <div className="text-4xl font-bold text-white mb-2">{benefit.stat}</div>
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3><p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
               </div>
@@ -1052,12 +1016,9 @@ export default ServicesPage;
 
       {/* Service Categories */}
       <section className="py-20 bg-slate-800/50">
-<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Service Categories<p className="text-lg text-gray-300 max-w-3xl mx-auto">Comprehensive solutions across AI, IT, and Micro SAAS domains<div className="space-y-16">{serviceCategories.map((category, categoryIndex) => (</div>
-=======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Our Service Categories;
             </h2>,
@@ -1067,17 +1028,14 @@ export default ServicesPage;
           </div>
           <div className="space-y-16">
             {serviceCategories.map((category, categoryIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={categoryIndex} className="bg-slate-800/50 rounded-lg p-8">
                 <div className="flex items-center space-x-4 mb-8">
                   <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center`}>
                     <category.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
-<<<<<<< HEAD
                     <h3 className="text-3xl font-bold text-white mb-2">{category.title}<p className="text-gray-300 text-lg">{category.description}<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{category.services.map((service, serviceIndex) => (</div>
                     <div key={serviceIndex} className="bg-slate-700/50 rounded-lg p-6 hover:bg-slate-600/50 transition-all duration-300 relative">{service.popular && (<div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">Popular</div>
-=======
         <div className="container mx-auto px-4"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Service Categories</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Comprehensive solutions across AI, IT, and Micro SAAS domains</p><div className="space-y-16">{serviceCategories.map((category, categoryIndex) => (</div>
@@ -1089,9 +1047,7 @@ export default ServicesPage;
                   <div></div>
                     <h3 className="text-3xl font-bold text-white mb-2">{category.title}</h3><p className="text-gray-300 text-lg">{category.description}</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{category.services.map((service, serviceIndex) => (</div>
                     <div key={serviceIndex} className="bg-slate-700/50 rounded-lg p-6 hover:bg-slate-600/50 transition-all duration-300 relative">{service.popular && (</div><div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">Popular</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         </div>
-=======
                     <h3 className="text-3xl font-bold text-white mb-2">{category.title}</h3>
                     <p className="text-gray-300 text-lg">{category.description}</p>
                   </div>
@@ -1103,35 +1059,23 @@ export default ServicesPage;
                         <div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">,
                           Popular;
                         </div>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                       )}
                       <h4 className="text-xl font-bold text-white mb-3">{service.name}<p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-<<<<<<< HEAD
                       <div className="space-y-2 mb-4">
-<<<<<<< HEAD
-=======
                       <div className="space-y-2 mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         <h5 className="text-sm font-semibold text-cyan-400">Key Features:<ul className="space-y-1">{service.features.map((feature, featureIndex) => (</ul>
-=======
                         <h5 className="text-sm font-semibold text-cyan-400">Key Features: </h5>,
                         <ul className="space-y-1">,
                           {service.features.map((feature, featureIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                             <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
                               <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
                               <span>{feature}</span>
                             </li>
                           ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <div className="text-lg font-bold text-cyan-400 mb-4">{service.price}<button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all">Learn More</button>
-=======
                         <div className="text-lg font-bold text-cyan-400 mb-4">{service.price}</div><button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all">Learn More</button>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       </button>
                     </div>
-=======
                         </ul>
                       </div>
                       <div className="text-lg font-bold text-cyan-400 mb-4">{service.price}</div>
@@ -1139,7 +1083,6 @@ export default ServicesPage;
                         Learn More;
                       </button>,
                     </div>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   ))}
                 </div>
               </div>
@@ -1150,14 +1093,11 @@ export default ServicesPage;
 
       {/* Technologies */}
       <section className="py-20">
-<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Technologies We Work With<p className="text-lg text-gray-300 max-w-3xl mx-auto">We work with the latest and most reliable technologies in the industry<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">{technologies.map((tech, index) => (</div>
               <div key={index} className="bg-slate-800/50 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300">
                 <div className="text-white font-medium text-sm">{tech.name}<div className="text-gray-400 text-xs mt-1">{tech.category}</div>
-=======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Technologies We Work With;
             </h2>
@@ -1170,14 +1110,11 @@ export default ServicesPage;
               <div key={index} className="bg-slate-800/50 rounded-lg p-4 text-center hover: bg-slate-700/50 transition-all duration-300">,
                 <div className="text-white font-medium text-sm">{tech.name}</div>
                 <div className="text-gray-400 text-xs mt-1">{tech.category}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
         <div className="container mx-auto px-4"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Technologies We Work With</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">We work with the latest and most reliable technologies in the industry</p><div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">{technologies.map((tech, index) => (</div>
               <div key={index} className="bg-slate-800/50 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300"></div>
                 <div className="text-white font-medium text-sm">{tech.name}</div><div className="text-gray-400 text-xs mt-1">{tech.category}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
             ))}
           </div>
@@ -1186,24 +1123,18 @@ export default ServicesPage;
 
       {/* Process */}
       <section className="py-20 bg-slate-800/50">
-<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Implementation Process<p className="text-lg text-gray-300 max-w-3xl mx-auto">A proven methodology that ensures successful implementation</p>
-=======
         <div className="container mx-auto px-4"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Implementation Process</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">A proven methodology that ensures successful implementation</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
           </div>
           <div className="max-w-4xl mx-auto"></div>
             <div className="relative"></div>
               <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600">{process.map((step, index) => (</div>
-<<<<<<< HEAD
                 </div><div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-=======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Our Implementation Process;
             </h2>
@@ -1216,18 +1147,15 @@ export default ServicesPage;
               <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600"></div>,
               {process.map((step, index) => (
                 <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
                     <div className="bg-slate-800/50 p-6 rounded-lg">
                       <div className="text-cyan-400 font-bold text-lg mb-2">Step {step.step}<h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
                       <p className="text-gray-300 mb-2">{step.description}<div className="text-sm text-cyan-400 font-medium">{step.duration}</div>
-=======
                 </div><div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}></div>
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}></div>
                     <div className="bg-slate-800/50 p-6 rounded-lg"></div>
                       <div className="text-cyan-400 font-bold text-lg mb-2">Step {step.step}</div><h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
                       <p className="text-gray-300 mb-2">{step.description}</p><div className="text-sm text-cyan-400 font-medium">{step.duration}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     </div>
                   </div>
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900"></div><div className="w-1/2">))}</div>
@@ -1238,25 +1166,19 @@ export default ServicesPage;
 
       {/* Contact Section */}
       <section className="py-20">
-<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-8 lg: p-12">
             <div className="text-center mb-8">
-<<<<<<< HEAD
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Ready to Transform Your Business?<p className="text-xl text-cyan-100 mb-8">Get in touch with our experts to discuss your project requirements</p>
-=======
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-cyan-100 mb-8">
                 Get in touch with our experts to discuss your project requirements;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
         <div className="container mx-auto px-4"></section>
           <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-8 lg:p-12"></div>
             <div className="text-center mb-8"></div>
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2><p className="text-xl text-cyan-100 mb-8">Get in touch with our experts to discuss your project requirements</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8"></div>
@@ -1277,17 +1199,11 @@ export default ServicesPage;
                 <p className="text-cyan-100">364 E Main St STE 1008</p><br >Middletown DE 19709</br>
               </div>
             </div>
-<<<<<<< HEAD
             <div className="text-center">
-<<<<<<< HEAD
-=======
             <div className="text-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <button className="bg-white text-cyan-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300">Get Started Today</button>
-=======
               <button className="bg-white text-cyan-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300">
                 Get Started Today;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </button>
             </div>
           </div>
@@ -1298,6 +1214,3 @@ export default ServicesPage;
 };
 
 export default ServicesPage;
->>>>>>> origin/main
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233

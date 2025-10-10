@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -31,7 +30,6 @@
     email: string;
     address: string;
     website: string;
-=======
   i,
   d: string;
   nam,
@@ -93,7 +91,6 @@
   s: string;
     websit,
   e: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
       mobil,
   e: '+1 302 464 0950',
@@ -105,7 +102,6 @@
   e: 'http,
   s://ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
     real_implementation: true;
     implementation_details: unknown;
       'AI - powered education platform with personalized learning algorithms and adaptive curriculum generation.',
@@ -349,7 +345,6 @@ export interface InnovativeAIService2025 {;
   customers: number;
   rating: number;
   reviews: number;
-=======
     real_implementatio,
   n: true,
     implementation_detail,
@@ -767,13 +762,11 @@ export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */}
   g: number;
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ;
 export const,
   innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
   // AI Consciousness & Emotional Intelligence;
-<<<<<<< HEAD
   {
     id: 'ai-consciousness-evolution';
     name: 'AI Consciousness Evolution Platform';
@@ -1045,7 +1038,6 @@ export interface InnovativeAIService2025 {;
   customers: number;
   rating: number;
   reviews: number;
-=======
   {/* TODO: Fix JSX expression */}
   t: 'ai-consciousness-advanced'}
     contactInf,
@@ -1226,13 +1218,11 @@ export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */}
   g: number;
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ;
 export const,
   innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
   // AI Consciousness & Emotional Intelligence;
-<<<<<<< HEAD
   {
     id: 'ai-consciousness-evolution';
     name: 'AI Consciousness Evolution Platform';
@@ -1451,7 +1441,6 @@ export const,
     customers: 156;
     rating: 4.8;
     reviews: 89;
-=======
   {/* TODO: Fix JSX expression */}
   t: 'ai-consciousness-advanced'}
     contactInf,
@@ -1590,7 +1579,6 @@ export const,
   g: 4.8;
     review,
   s: 89,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 i,

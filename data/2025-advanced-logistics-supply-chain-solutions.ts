@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -31,7 +30,6 @@
     email: string;
     address: string;
     website: string;
-=======
   i,
   d: string;
   nam,
@@ -94,7 +92,6 @@
   s: string;
     websit,
   e: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   real_implementatio,
   n: boolean;
@@ -109,7 +106,6 @@
   review,
   s: number;
 ;
-<<<<<<< HEAD
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] =
   [
       id: 'ai - powered - supply - chain - optimization',
@@ -118,7 +114,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       price: '$1, 299',
       period: '/month',
       description: unknown;
-=======
 export const,
   advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] =,
   [
@@ -134,7 +129,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Advanced AI - powered supply chain optimization platform that uses machine learning to optimize inventory, demand forecasting, and logistics operations.',
       feature,
   s: [,
@@ -149,7 +143,6 @@ export const,
         'Custom algorithms',
         'Compliance tools',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: ''
       color: 'from - blue - 600 via - indigo - 600 to - purple - 600'
@@ -164,7 +157,6 @@ export const,
       category: 'Logistics & Supply Chain',
       real_service: true;
       technology: [,
-=======
       popula,
   r: true,
       ico,
@@ -192,7 +184,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI / ML',
       ],
       integration,
@@ -203,7 +194,6 @@ export const,
   s: [,
         'Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management',
       ],
-<<<<<<< HEAD
       roi: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.',
       competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'],
       market_size: '$45B supply chain management market'
@@ -229,7 +219,6 @@ export const,
       price: '$2, 999',
       period: '/month',
       description: unknown;
-=======
       ro,
   i: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.',
       competitor,
@@ -278,7 +267,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Revolutionary quantum logistics optimization platform that leverages quantum computing to solve complex routing, scheduling, and optimization problems.',
       feature,
   s: [,
@@ -293,7 +281,6 @@ export const,
         'Custom models',
         'Performance analytics',
       ],
-<<<<<<< HEAD
       popular: false;
       icon: ''
       color: 'from - purple - 600 via - violet - 600 to - indigo - 600'
@@ -308,7 +295,6 @@ export const,
       category: 'Logistics & Supply Chain',
       real_service: true;
       technology: [,
-=======
       popula,
   r: false,
       ico,
@@ -336,7 +322,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Quantum Computing, Logistics Optimization, Route Planning, Scheduling, Quantum Algorithms',
       ],
       integration,
@@ -353,7 +338,6 @@ export const,
   s: [,
         'IBM Quantum, Google Quantum, Microsoft Azure Quantum, D - Wave, Rigetti',
       ],
-<<<<<<< HEAD
       market_size: '$8B quantum computing market'
       growth_rate: '65% annual growth'
       variant: 'quantum - logistics'
@@ -378,7 +362,6 @@ export const,
       price: '$799',
       period: '/month',
       description: unknown;
-=======
       market_siz,
   e: '$8B quantum computing market',
       growth_rat,
@@ -424,7 +407,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Advanced IoT - based fleet management platform that provides real - time monitoring, predictive maintenance, and optimization for vehicle fleets.',
       feature,
   s: [,
@@ -439,7 +421,6 @@ export const,
         'Custom dashboards',
         'Compliance tools',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: ''
       color: 'from - green - 600 via - emerald - 600 to - teal - 600'
@@ -454,7 +435,6 @@ export const,
       category: 'Logistics & Supply Chain',
       real_service: true;
       technology: [,
-=======
       popula,
   r: true,
       ico,
@@ -482,7 +462,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'IoT Sensors, GPS Tracking, Predictive Analytics, Fleet Management, Real - time Monitoring',
       ],
       integration,
@@ -499,7 +478,6 @@ export const,
   s: [,
         'Verizon Connect, Geotab, Samsara, Fleet Complete, Trimble',
       ],
-<<<<<<< HEAD
       market_size: '$30B fleet management market'
       growth_rate: '32% annual growth'
       variant: 'iot - futuristic'
@@ -524,7 +502,6 @@ export const,
       price: '$899',
       period: '/month',
       description: unknown;
-=======
       market_siz,
   e: '$30B fleet management market',
       growth_rat,
@@ -570,7 +547,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Advanced blockchain - based supply chain transparency platform that provides end - to - end visibility, traceability, and compliance across global supply chains.',
       feature,
   s: [,
@@ -585,7 +561,6 @@ export const,
         'Audit trails',
         'Performance monitoring',
       ],
-<<<<<<< HEAD
       popular: false;
       icon: ''
       color: 'from - indigo - 600 via - purple - 600 to - pink - 600'
@@ -600,7 +575,6 @@ export const,
       category: 'Logistics & Supply Chain',
       real_service: true;
       technology: [,
-=======
       popula,
   r: false,
       ico,
@@ -628,7 +602,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Blockchain, Supply Chain Management, Smart Contracts, Traceability, Distributed Ledger',
       ],
       integration,
@@ -645,7 +618,6 @@ export const,
   s: [,
         'IBM Food Trust, VeChain, WaltonChain, OriginTrail, Provenance',
       ],
-<<<<<<< HEAD
       market_size: '$22B blockchain supply chain market'
       growth_rate: '45% annual growth'
       variant: 'blockchain - futuristic'
@@ -662,7 +634,6 @@ export const,
       customers: 89;
       rating: 4 && 4.6;
       reviews: 56;
-=======
       market_siz,
   e: '$22B blockchain supply chain market',
       growth_rat,
@@ -694,7 +665,6 @@ export const,
   g: 4 && 4.6,
       review,
   s: 56,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
         'Automated picking',
         'Smart routing',
@@ -707,7 +677,6 @@ export const,
         'Custom workflows',
         'Compliance tools',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: ''
       color: 'from - orange - 600 via - amber - 600 to - yellow - 600'
@@ -722,7 +691,6 @@ export const,
       category: 'Logistics & Supply Chain',
       real_service: true;
       technology: [,
-=======
       popula,
   r: true,
       ico,
@@ -750,7 +718,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Machine Learning, Warehouse Automation, Robotics, Predictive Analytics, AI / ML',
       ],
       integration,
@@ -767,7 +734,6 @@ export const,
   s: [,
         'Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore',
       ],
-<<<<<<< HEAD
       market_size: '$28B warehouse automation market'
       growth_rate: '38% annual growth'
       variant: 'ai - supply - chain - enterprise'
@@ -779,7 +745,6 @@ export const,
       },
       real_implementation: true;
       implementation_details: unknown;
-=======
       market_siz,
   e: '$28B warehouse automation market',
       growth_rat,
@@ -802,12 +767,10 @@ export const,
   n: true,
       implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Production - ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launch_dat,
   e: '2025 - 02 - 18',
         'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
-<<<<<<< HEAD
       launchDate: '2025-02-18',      customers: 178;
       rating: 4 && 4.8;
       reviews: 112;
@@ -849,7 +812,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       price: '$1,099'
       period: '/month',
       description:,
-=======
       launchDat,
   e: '2025-02-18',      customer,
   s: 178,
@@ -901,7 +863,6 @@ export const,
   d: '/month'
       descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Advanced AI-powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.'
       feature,
   s: [;
@@ -916,7 +877,6 @@ export const,
         'Custom workflows'
         'Compliance tools'
       ]
-<<<<<<< HEAD
       popular: true;
       icon: ''
       color: 'from-orange-600 via-amber-600 to-yellow-600'
@@ -930,7 +890,6 @@ export const,
       category: 'Logistics & Supply Chain',
       realService: true;
       technology: [,
-=======
       popula,
   r: true;
       ico,
@@ -957,7 +916,6 @@ export const,
   e: true;
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Machine Learning, Warehouse Automation, Robotics, Predictive Analytics, AI/ML'
       ]
       integration,
@@ -968,7 +926,6 @@ export const,
   s: [,
         'Warehouse automation, Picking optimization, Inventory management, Performance monitoring, Cost optimization'
       ]
-<<<<<<< HEAD
       roi: 'Improve picking efficiency by 40%. Reduce labor costs by 30%. Increase throughput by 35%.',
       competitors: [,
         'Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore'
@@ -987,7 +944,6 @@ export const,
       customers: 178;
       rating: 4.8;
       reviews: 112;
-=======
       ro,
   i: 'Improve picking efficiency by 40%. Reduce labor costs by 30%. Increase throughput by 35%.'
       competitor,
@@ -1024,13 +980,11 @@ export const,
   g: 4.8,
       review,
   s: 112,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   ];    feature,
   s: [;
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'
       'Custom algorithmsCompliance tools'
-<<<<<<< HEAD
   ];    features: [;
       'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration',
       'Custom algorithms_compliance tools',
@@ -1044,7 +998,6 @@ export const,
     popular: false, icon: '',
     ];,
     popular: true, icon: ''
-=======
   ];    feature,
   s: [;
       'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration'
@@ -1069,7 +1022,6 @@ export const,
     popula,
   r: true, ico,
   n: '',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 ];
 ;,
 ;,
@@ -1079,7 +1031,6 @@ export const,
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'
       'Custom algorithmsCompliance tools'
     ];
-<<<<<<< HEAD
     technology: ['Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML'];
     integrations: ['ERP systems, WMS platforms, TMS solutions, E-commerce platforms, Analytics tools'];
     useCases: ['Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'];
@@ -1102,7 +1053,6 @@ export const,
     customers: 34;
     rating: 4.9;
     reviews: 23;
-=======
     technolog,
   y: ['Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML'];
     integration,
@@ -1149,7 +1099,6 @@ export const,
   g: 4.9,
     review,
   s: 23,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'iot-fleet-management-platform',
@@ -1176,7 +1125,6 @@ export const,
       'Custom dashboards',
       'Compliance tools'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-600 via-emerald-600 to-teal-600'
@@ -1208,7 +1156,6 @@ export const,
     customers: 234;
     rating: 4.7;
     reviews: 145;
-=======
     popula,
   r: true,
     ico,
@@ -1272,7 +1219,6 @@ export const,
   g: 4.7,
     review,
   s: 145,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'blockchain-supply-chain-transparency',
@@ -1299,7 +1245,6 @@ export const,
       'Audit trails',
       'Performance monitoring'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-indigo-600 via-purple-600 to-pink-600'
@@ -1331,7 +1276,6 @@ export const,
     customers: 89;
     rating: 4.6;
     reviews: 56;
-=======
     popula,
   r: false,
     ico,
@@ -1395,7 +1339,6 @@ export const,
   g: 4.6,
     review,
   s: 56,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-powered-warehouse-automation',
@@ -1422,7 +1365,6 @@ export const,
       'Custom workflows',
       'Compliance tools'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-orange-600 via-amber-600 to-yellow-600'
@@ -1454,7 +1396,6 @@ export const,
     customers: 178;
     rating: 4.8;
     reviews: 112;
-=======
     popula,
   r: true,
     ico,
@@ -1518,7 +1459,6 @@ export const,
   g: 4.8,
     review,
   s: 112,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */}
@@ -1526,7 +1466,6 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expr
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -1750,7 +1689,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     customers: 178;
     rating: 4.8;
     reviews: 112;
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -1901,7 +1839,6 @@ export const,
   g: 4.8;
     review,
   s: 112,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 ;

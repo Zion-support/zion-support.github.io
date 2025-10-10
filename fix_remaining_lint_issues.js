@@ -5,7 +5,6 @@ import { fileURLToPath } from 'url';
 
 
 // Function to fix remaining lint issues in a file;
-<<<<<<< HEAD
 function fixRemainingLintIssues(filePath) {
   try {
     // Skip if not a source file;
@@ -72,20 +71,17 @@ function fixRemainingLintIssues(filePath) {
         param1 === 'apiKey' ||)
         param1 === 'PROD_DOMAIN')
       ) {
-=======
 function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
     }
 
     // Fix,
   1: Add underscore prefix to unused parameters;
     content = content.replace(/(\w+):\s*(\w+)\s*=\s*[^,)]+\)\s*=>/g, (match, param1, param2) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         return match.replace(param1, `_${param1}`);
       }
       return match;
     });
 
-<<<<<<< HEAD
     // Fix 2: Comment out unused variable declarations;
     for (let i = 0; i < lines.length; i++) {
 
@@ -265,16 +261,13 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
             fixedLines.push('// ' + line);
             modified = true;
             continue;
-=======
     // Fix,
   2: Comment out unused variable declarations;
     for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         }
       }
 
-<<<<<<< HEAD
       // Fix 3: Add underscore prefix to unused function parameters;
       if (line.includes('function') && line.includes('(') && line.includes(')')) {
         if (paramMatch) {
@@ -335,22 +328,17 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
                 'PROD_DOMAIN',
               ].includes(p)
             ) {
-=======
       // Fix,
   3: Add underscore prefix to unused function parameters;
       if (line.includes('function') && line.includes('(') && line.includes(')')) {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               return `_${p}`;
             }
             return p;
           });
-<<<<<<< HEAD
           if (fixedParams.join(', ') !== params.join(', ')) {
             fixedLines.push(line.replace()
                 paramMatch[0])
-=======
           if (fixedParams.join(', ') !== params.join(', ')) {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 `function ${line.match(/function\s+(\w+)/)?.[1]}(${fixedParams.join(', ')})`
               )
             );
@@ -365,46 +353,37 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
 
     content = fixedLines.join('\n');
 
-<<<<<<< HEAD
     // Fix 4: Remove unused imports;
     if (content.includes('import { useContext }') && !content.includes('useContext(')) {
       content = content.replace(/,\s*useContext/g, '');
       content = content.replace(/useContext,\s*/g, '');
       if (content.includes('import { useContext }')) {
-=======
     // Fix,
   4: Remove unused imports;
     if (content.includes('import { useContext }') && !content.includes('useContext(')) {/* TODO: Fix JSX expression */}
       if (content.includes('import { useContext }')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         content = content.replace(/import { useContext } from 'react';\n?/g, '');
       }
       modified = true;
     }
 
-<<<<<<< HEAD
     // Fix 5: Remove unused lazy imports;
     if (content.includes('lazy') && !content.includes('lazy(')) {,
       content = content.replace(/,\s*lazy/g, '');
       content = content.replace(/lazy,\s*/g, '');
       if (content.includes('import { lazy }')) {
-=======
     // Fix,
   5: Remove unused lazy imports;
     if (content.includes('lazy') && !content.includes('lazy(')) {/* TODO: Fix JSX expression */}
       if (content.includes('import { lazy }')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         content = content.replace(/import { lazy } from 'react';\n?/g, '');
       }
       modified = true;
     }
 
-<<<<<<< HEAD
     // Fix 6: Add proper TypeScript types instead of any;
-=======
     // Fix,
   6: Add proper TypeScript types instead of any;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     content = content.replace(/:\s*any\b/g, ': unknown');
     if (content.includes(': unknown')) {/* TODO: Fix JSX expression */}
     }
@@ -418,7 +397,6 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Function to recursively fix remaining lint issues;
-<<<<<<< HEAD
 function fixAllRemainingLintIssues(_dir) {
   try {
     for (const file of files) {
@@ -428,9 +406,7 @@ function fixAllRemainingLintIssues(_dir) {
           // Skip certain directories;
           if (['node_modules', '.git', 'dist', '.next', 'media', '__tests__'].includes(file)) {
             continue;
-=======
 function fixAllRemainingLintIssues(_dir) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
           fixedCount += fixAllRemainingLintIssues(filePath);
         } else if ()
@@ -450,8 +426,5 @@ function fixAllRemainingLintIssues(_dir) {/* TODO: Fix JSX expression */}
   }
 }
 
-<<<<<<< HEAD
 // Main execution;
-=======
 // Main execution;`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -6,17 +6,12 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 export default function AIInventoryManagementPage() {
-<<<<<<< HEAD
   return(<div><Helmet>
-=======
   return (
-<<<<<<< HEAD
     <div></div><Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <title>AI Inventory Management Solutions - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI-powered inventory management with predictive analytics, automated reordering, and real-time optimization. Starting at $149/month." />
         <meta name="keywords" content="AI inventory management, inventory optimization, supply chain management, predictive analytics, automated reordering" />
-<<<<<<< HEAD
         <link rel="canonical" href="https://ziontechgroup.com/ai-inventory-management" />
       </Helmet>
 
@@ -25,9 +20,7 @@ export default function AIInventoryManagementPage() {
 
         <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
           <section className="text-center mb-16">
-<<<<<<< HEAD
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text">AI Inventory Management<p className="text-xl text-cyan-400 mb-8 font-medium">Intelligent inventory optimization powered by AI<p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Revolutionize your inventory management with AI that predicts demand, optimizes stock levels, and automates reordering to reduce costs by 40% while eliminating stockouts.</p>
-=======
         <link rel="canonical" href="https: //ziontechgroup.com/ai-inventory-management" />
       </Helmet>,
 ,
@@ -44,34 +37,25 @@ export default function AIInventoryManagementPage() {
             </p>,
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">,
               Revolutionize your inventory management with AI that predicts demand, optimizes stock levels, and automates reordering to reduce costs by 40% while eliminating stockouts.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text">AI Inventory Management</h1><p className="text-xl text-cyan-400 mb-8 font-medium">Intelligent inventory optimization powered by AI</p><p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Revolutionize your inventory management with AI that predicts demand, optimizes stock levels, and automates reordering to reduce costs by 40% while eliminating stockouts.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
           </section>
 
           {/* Features Grid */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features</h2>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="cyber-card p-6 energy-pulse">
                 <div className="text-4xl mb-4 text-center">🔮<h3 className="text-xl font-bold text-white mb-4 text-center">Demand Forecasting<p className="text-gray-300 text-center">AI predicts future demand with 95% accuracy using historical data, seasonality, and market trends.</p>
-=======
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
               <div className="cyber-card p-6 energy-pulse">,
                 <div className="text-4xl mb-4 text-center">🔮</div>,
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Demand Forecasting</h3>,
                 <p className="text-gray-300 text-center">,
                   AI predicts future demand with 95% accuracy using historical data, seasonality, and market trends.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></section>
               <div className="cyber-card p-6 energy-pulse"></div>
                 <div className="text-4xl mb-4 text-center">🔮</div><h3 className="text-xl font-bold text-white mb-4 text-center">Demand Forecasting</h3><p className="text-gray-300 text-center">AI predicts future demand with 95% accuracy using historical data, seasonality, and market trends.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </p>
               </div>
 
@@ -99,7 +83,6 @@ export default function AIInventoryManagementPage() {
                 <div className="text-4xl mb-4 text-center">📱</div><h3 className="text-xl font-bold text-white mb-4 text-center">Mobile Access</h3><p className="text-gray-300 text-center">Manage inventory on-the-go with our mobile app for barcode scanning and real-time updates.</p>
                 </p>
               </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Inventory Management Solutions - Zion Tech Group</title>
@@ -128,28 +111,21 @@ export default function AIInventoryManagementPage() {
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             </div>
           </section>
 
           {/* Features Section */}
           <section className="mb-16">
-<<<<<<< HEAD
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="cyber-card p-8 text-center">
-=======
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></section>
               <div className="cyber-card p-8 text-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3 className="text-2xl font-bold text-white mb-4">Small Business</h3>
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$149</div><span className="text-lg">/month</span>
                 <ul className="text-gray-300 space-y-3 mb-8">
                   <li>Up to 1,000 SKUs<li>Basic forecasting</li>
                   <li>Email alerts<li>Standard reporting<li>Email support<a href="/contact" className="cyber-button w-full">Get Started</a>
-=======
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
               <div className="cyber-card p-8 text-center">,
                 <h3 className="text-2xl font-bold text-white mb-4">Small Business</h3>,
@@ -162,7 +138,6 @@ export default function AIInventoryManagementPage() {
                   <li>Email support</li>
                 </ul>
                 <a href="/contact" className="cyber-button w-full">Get Started</a>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </div>
 
               <div className="cyber-card p-8 text-center border-2 border-cyan-400"></div>
@@ -187,15 +162,12 @@ export default function AIInventoryManagementPage() {
           {/* Results Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Proven Results</h2>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="cyber-card p-6 text-center">
                 <div className="text-4xl font-bold text-cyan-400 mb-4">40%<h3 className="text-xl font-bold text-white mb-2">Cost Reduction<p className="text-gray-300">40% reduction in inventory costs</p>
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></section>
               <div className="cyber-card p-6 text-center"></div>
                 <div className="text-4xl font-bold text-cyan-400 mb-4">40%</div><h3 className="text-xl font-bold text-white mb-2">Cost Reduction</h3><p className="text-gray-300">40% reduction in inventory costs</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
 
               <div className="cyber-card p-6 text-center"></div>
@@ -206,19 +178,14 @@ export default function AIInventoryManagementPage() {
                 <div className="text-4xl font-bold text-pink-400 mb-4">80%</div><h3 className="text-xl font-bold text-white mb-2">Stockout Reduction</h3><p className="text-gray-300">80% reduction in stockouts</p>
               </div>
 
-<<<<<<< HEAD
               <div className="cyber-card p-6 text-center">
-<<<<<<< HEAD
                 <div className="text-4xl font-bold text-yellow-400 mb-4">60%<h3 className="text-xl font-bold text-white mb-2">Time Saved<p className="text-gray-300">60% reduction in inventory management time</p>
-=======
               <div className="cyber-card p-6 text-center"></div>
                 <div className="text-4xl font-bold text-yellow-400 mb-4">60%</div><h3 className="text-xl font-bold text-white mb-2">Time Saved</h3><p className="text-gray-300">60% reduction in inventory management time</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
             </div>
           </section>
 
-=======
                 <div className="text-4xl font-bold text-yellow-400 mb-4">60%</div>
                 <h3 className="text-xl font-bold text-white mb-2">Time Saved</h3>
                 <p className="text-gray-300">60% reduction in inventory management time</p>,
@@ -226,19 +193,15 @@ export default function AIInventoryManagementPage() {
             </div>,
           </section>,
 ,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           {/* Use Cases Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Perfect For</h2>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="cyber-card p-6 text-center">
                 <div className="text-4xl mb-4">🛍️<h3 className="text-xl font-bold text-white mb-4">E-commerce<p className="text-gray-300">Optimize inventory for online retail with demand forecasting and automated reordering.</p>
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></section>
               <div className="cyber-card p-6 text-center"></div>
                 <div className="text-4xl mb-4">🛍️</div><h3 className="text-xl font-bold text-white mb-4">E-commerce</h3><p className="text-gray-300">Optimize inventory for online retail with demand forecasting and automated reordering.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
 
               <div className="cyber-card p-6 text-center"></div>
@@ -249,15 +212,10 @@ export default function AIInventoryManagementPage() {
                 <div className="text-4xl mb-4">🏪</div><h3 className="text-xl font-bold text-white mb-4">Retail</h3><p className="text-gray-300">Optimize store inventory levels and reduce carrying costs with intelligent forecasting.</p>
               </div>
 
-<<<<<<< HEAD
               <div className="cyber-card p-6 text-center">
-<<<<<<< HEAD
                 <div className="text-4xl mb-4">🚚<h3 className="text-xl font-bold text-white mb-4">Distribution<p className="text-gray-300">Streamline distribution center operations with AI-powered inventory management.</p>
-=======
               <div className="cyber-card p-6 text-center"></div>
                 <div className="text-4xl mb-4">🚚</div><h3 className="text-xl font-bold text-white mb-4">Distribution</h3><p className="text-gray-300">Streamline distribution center operations with AI-powered inventory management.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
             <h2 className="text-3xl font-bold text-white text-center mb-12">Key Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
@@ -279,12 +237,10 @@ export default function AIInventoryManagementPage() {
                 <BarChart className="w-12 h-12 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-3">Analytics Dashboard</h3>
                 <p className="text-gray-300">Comprehensive insights and performance metrics</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               </div>
             </div>
           </section>
 
-=======
                 <div className="text-4xl mb-4">🚚</div>
                 <h3 className="text-xl font-bold text-white mb-4">Distribution</h3>
                 <p className="text-gray-300">Streamline distribution center operations with AI-powered inventory management.</p>
@@ -292,27 +248,19 @@ export default function AIInventoryManagementPage() {
             </div>,)
           </section>,)
 ),
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           {/* CTA Section */}
-<<<<<<< HEAD
           <section className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Optimize Your Inventory Today</h2><p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join 3,000+ businesses using our AI inventory management system to reduce costs and eliminate stockouts.</p>
             </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <a href="tel:+13024640950" className="cyber-button">📞 Call: (302) 464-0950<a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">Get Free Demo</a>
-=======
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a href="tel:+13024640950" className="cyber-button">
                 📞 Call: (302) 464-0950;
               </a>
               <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
                 Get Free Demo;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
             </div>
           </section>
@@ -321,7 +269,6 @@ export default function AIInventoryManagementPage() {
         <Footer />
       </div>,
     </div>,
-=======
           <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your Inventory?</h2>
             <p className="text-xl text-blue-100 mb-8">Let our AI solutions streamline your inventory management</p>
@@ -340,6 +287,5 @@ export default function AIInventoryManagementPage() {
       
       <Footer />
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 }

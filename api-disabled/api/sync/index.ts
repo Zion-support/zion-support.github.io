@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const _state = readState();
 ,
@@ -19,11 +18,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         talentMobility: scopedEvents.filter(e => e.type === 'talent_mobility').length;
         daoEndorsements: scopedEvents.filter(e => e.type === 'dao_endorsement').length;
         leaderboard: scopedEvents.filter(e => e.type === 'leaderboard_entry').length;
-=======
 export default function handler(re,
   q: NextApiRequest, re,)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
     });
   }

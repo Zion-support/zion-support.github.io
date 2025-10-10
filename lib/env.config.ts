@@ -3,7 +3,6 @@
  * Centralizes all environment variables with validation and type safety;
  */
 
-<<<<<<< HEAD
 interface EnvConfig {
   // App Configuration;
   NODE_ENV: 'development' | 'production' | 'test';
@@ -37,12 +36,10 @@ class EnvironmentConfig {
   private constructor() {,
     this.config = this.loadConfig();
     this.validate();
-=======
 interface EnvConfig {/* TODO: Fix JSX expression */}
 }
 
 class EnvironmentConfig {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   public static getInstance(): EnvironmentConfig {/* TODO: Fix JSX expression */}
@@ -50,14 +47,11 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     return EnvironmentConfig.instance;
   }
 
-<<<<<<< HEAD
   private getEnvVar(key: string, defaultValue?: string): string {
     if (typeof process !== 'undefined' && process.env) {
       // Check both regular and NEXT_PUBLIC_ prefixed versions;
-=======
   private getEnvVar(ke,)
   y: string, defaultValue?: string): string {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       return process.env[key] || process.env[`NEXT_PUBLIC_${key}`] || defaultValue || '';
     }
     return defaultValue || '';
@@ -68,7 +62,6 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   e: boolean = false): boolean {/* TODO: Fix JSX expression */}
   }
 
-<<<<<<< HEAD
   private getNumberEnvVar(key: string, defaultValue: number): number {,
     const _value = this.getEnvVar(key);
     //     const parsed = parseInt(value, 10);
@@ -113,7 +106,6 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     // Validate URLs;
     if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {
       errors.push(`Invalid APP_URL: ${this.config.APP_URL}`);
-=======
   private getNumberEnvVar(ke,
   y: string, defaultValu,)
   e: number): number {/* TODO: Fix JSX expression */}
@@ -130,7 +122,6 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     // Validate URLs;
     if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {/* TODO: Fix JSX expression */}`
   APP_URL: ${this.config.APP_URL}`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     if (this.config.API_BASE_URL && !this.isValidUrl(this.config.API_BASE_URL)) {/* TODO: Fix JSX expression */}`
@@ -138,7 +129,6 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     }
 
     // Validate timeout;
-<<<<<<< HEAD
     if (this.config.API_TIMEOUT < 0) {
       errors.push(`API_TIMEOUT must be positive: ${this.config.API_TIMEOUT}`);
     }
@@ -147,30 +137,25 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
       //       // In production, we might want to throw, but in development just warn;
       if (this.config.NODE_ENV === 'production') {
         throw new Error(`Environment validation failed: ${errors.join(', ')}`);
-=======
     if (this.config.API_TIMEOUT < 0) {/* TODO: Fix JSX expression */}`
   positive: ${this.config.API_TIMEOUT}`);
     }
 
     if (errors.length > 0) {/* TODO: Fix JSX expression */}`
   failed: ${errors.join(', ')}`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
   }
 
-<<<<<<< HEAD
   private isValidUrl(url: string): boolean {,
     try {,
       new URL(url);
       return true;
     } catch {
       return false;
-=======
   private isValidUrl(ur,)
   l: string): boolean {/* TODO: Fix JSX expression */}
     } catch {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 
@@ -188,12 +173,9 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   }
 
   // Convenience getters;
-<<<<<<< HEAD
   public getAppUrl(): string {
     return this.config.APP_URL;
-=======
   public getAppUrl(): string {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   public getApiBaseUrl(): string {/* TODO: Fix JSX expression */}

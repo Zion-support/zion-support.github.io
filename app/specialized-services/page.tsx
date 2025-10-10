@@ -234,14 +234,10 @@ const SpecializedServicesPage: React.FC = () => {
     { label: 'Average ROI', value: '400%', icon: DollarSign }
   ];
 
-<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Navigation />
-<<<<<<< HEAD
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
         <section className="text-center mb-16">
@@ -255,9 +251,7 @@ const SpecializedServicesPage: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">{stats.map((stat, index) => (</section>
               <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                 <stat.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-<<<<<<< HEAD
                 <div className="text-3xl font-bold text-white mb-2 neon-text">{stat.value}<div className="text-gray-300">{stat.label}</div>
-=======
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -278,10 +272,7 @@ const SpecializedServicesPage: React.FC = () => {
                 <stat.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
                 <div className="text-3xl font-bold text-white mb-2 neon-text">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
                 <div className="text-3xl font-bold text-white mb-2 neon-text">{stat.value}</div><div className="text-gray-300">{stat.label}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
             ))}
           </div>
@@ -289,20 +280,14 @@ const SpecializedServicesPage: React.FC = () => {
 
         {/* Specialized Services Grid */}
         <section className="mb-16">
-<<<<<<< HEAD
-<<<<<<< HEAD
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Advanced Technology Solutions<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{specializedServices.map((service, index) => (</div>
-=======
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
             Advanced Technology Solutions;
           </h2>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
             {specializedServices.map((service, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Advanced Technology Solutions</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{specializedServices.map((service, index) => (</section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <article key={index} className={`cyber-card p-8 hover:scale-105 transition-all duration-300 ${service.borderColor}`}>
                 <div className="flex items-center mb-6"></div>
                   <div className={`w-16 h-16 ${service.bgColor} rounded-xl flex items-center justify-center mr-4`}></div>
@@ -312,18 +297,12 @@ const SpecializedServicesPage: React.FC = () => {
                     <h3 className="text-xl font-bold text-white mb-2 neon-text">{service.title}</h3><div className={`text-sm font-semibold ${service.color}`}>{service.category}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                 </p>
 
-<<<<<<< HEAD
                 <div className="mb-6">
-<<<<<<< HEAD
-=======
                 <div className="mb-6"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Features:<ul className="space-y-2">{service.features.map((feature, featureIndex) => (</ul>
-=======
                   <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Features: </h4>,
                   <ul className="space-y-2">,
                     {service.features.map((feature, featureIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{feature}</CheckCircle>
                       </CheckCircle>
@@ -331,18 +310,12 @@ const SpecializedServicesPage: React.FC = () => {
                   </ul>
                 </div>
 
-<<<<<<< HEAD
                 <div className="mb-6">
-<<<<<<< HEAD
-=======
                 <div className="mb-6"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <h4 className="text-sm font-semibold text-pink-400 mb-3">Benefits:<ul className="space-y-2">{service.benefits.map((benefit, benefitIndex) => (</ul>
-=======
                   <h4 className="text-sm font-semibold text-pink-400 mb-3">Benefits: </h4>,
                   <ul className="space-y-2">,
                     {service.benefits.map((benefit, benefitIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <ArrowRight className="w-4 h-4 text-pink-400 mr-2 flex-shrink-0" >{benefit}</ArrowRight>
                       </ArrowRight>
@@ -350,18 +323,13 @@ const SpecializedServicesPage: React.FC = () => {
                   </ul>
                 </div>
 
-<<<<<<< HEAD
                 <div className="text-center">
-<<<<<<< HEAD
                   <div className={`text-lg font-bold mb-4 neon-text ${service.color}`}>{service.price}<a
-=======
                 <div className="text-center"></div>
                   <div className={`text-lg font-bold mb-4 neon-text ${service.color}`}>{service.price}</div><a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     href="/contact"
                     className={`px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
                   >Learn More</a>
-=======
                   <div className={`text-lg font-bold mb-4 neon-text ${service.color}`}>
                     {service.price}
                   </div>
@@ -370,7 +338,6 @@ const SpecializedServicesPage: React.FC = () => {
                     className={`px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
                   >
                     Learn More;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   </a>
                 </div>
               </article>
@@ -380,11 +347,8 @@ const SpecializedServicesPage: React.FC = () => {
 
         {/* Business Apps Section */}
         <section className="mb-16">
-<<<<<<< HEAD
-<<<<<<< HEAD
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Business Applications<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{businessApps.map((app, index) => (</div>
               <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-=======
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
             Business Applications;
           </h2>,
@@ -392,27 +356,19 @@ const SpecializedServicesPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
             {businessApps.map((app, index) => (
               <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Business Applications</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{businessApps.map((app, index) => (</section>
               <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <app.icon className={`w-16 h-16 ${app.color} mx-auto mb-4`} />
                 <h3 className="text-xl font-bold text-white mb-3 neon-text">{app.title}</h3><p className="text-gray-300 mb-4">{app.description}</p><ul className="space-y-2 mb-6">{app.features.map((feature, featureIndex) => (</ul>
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{feature}</CheckCircle>
                     </CheckCircle>
                   ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className={`text-2xl font-bold mb-4 neon-text ${app.color}`}>{app.price}<a
-=======
                 <div className={`text-2xl font-bold mb-4 neon-text ${app.color}`}>{app.price}</div><a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   href="/contact"
                   className={`px-6 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${app.color} border border-current hover:bg-current hover:text-slate-900`}
                 >Get Started</a>
-=======
                 </ul>
 
                 <div className={`text-2xl font-bold mb-4 neon-text ${app.color}`}>
@@ -423,7 +379,6 @@ const SpecializedServicesPage: React.FC = () => {
                   className={`px-6 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${app.color} border border-current hover:bg-current hover:text-slate-900`}
                 >
                   Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 </a>
               </div>
             ))}
@@ -432,16 +387,13 @@ const SpecializedServicesPage: React.FC = () => {
 
         {/* Why Choose Us Section */}
         <section className="mb-16">
-<<<<<<< HEAD
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Why Choose Our Specialized Solutions?</h2>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></section>
             <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
               <Brain className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
-<<<<<<< HEAD
               <h3 className="text-xl font-bold text-white mb-3 neon-text">Cutting-Edge Technology<p className="text-gray-300">We leverage the latest technologies including quantum computing, AI, and blockchain to deliver innovative solutions.</p>
-=======
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
             Why Choose Our Specialized Solutions?
           </h2>
@@ -452,18 +404,15 @@ const SpecializedServicesPage: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-3 neon-text">Cutting-Edge Technology</h3>,
               <p className="text-gray-300">,
                 We leverage the latest technologies including quantum computing, AI, and blockchain to deliver innovative solutions.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </p>
             </div>
 
             <div className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">
-=======
               <h3 className="text-xl font-bold text-white mb-3 neon-text">Cutting-Edge Technology</h3><p className="text-gray-300">We leverage the latest technologies including quantum computing, AI, and blockchain to deliver innovative solutions.</p>
               </p>
             </div>
 
             <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <Shield className="w-16 h-16 text-green-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-3 neon-text">Proven Expertise</h3><p className="text-gray-300">Our team has deep expertise in specialized technologies with a track record of successful implementations.</p>
               </p>
@@ -489,12 +438,8 @@ const SpecializedServicesPage: React.FC = () => {
 
             <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
               <DollarSign className="w-16 h-16 text-green-400 mx-auto mb-4" />
-<<<<<<< HEAD
-<<<<<<< HEAD
               <h3 className="text-xl font-bold text-white mb-3 neon-text">ROI Focused<p className="text-gray-300">Our solutions are designed to deliver measurable ROI and long-term business value.</p>
-=======
               <h3 className="text-xl font-bold text-white mb-3 neon-text">ROI Focused</h3><p className="text-gray-300">Our solutions are designed to deliver measurable ROI and long-term business value.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </p>
             </div>
           </div>
@@ -502,10 +447,8 @@ const SpecializedServicesPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="text-center">
-<<<<<<< HEAD
           <div className="cyber-card p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Explore Specialized Solutions?<p className="text-xl text-gray-300 mb-8">Contact our specialized solutions team to discuss your unique requirements and discover how we can help.</p>
-=======
               <h3 className="text-xl font-bold text-white mb-3 neon-text">ROI Focused</h3>
               <p className="text-gray-300">
                 Our solutions are designed to deliver measurable ROI and long-term business value.
@@ -522,25 +465,20 @@ const SpecializedServicesPage: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Contact our specialized solutions team to discuss your unique requirements and discover how we can help.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a;
-=======
           <div className="cyber-card p-12 max-w-4xl mx-auto"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Explore Specialized Solutions?</h2><p className="text-xl text-gray-300 mb-8">Contact our specialized solutions team to discuss your unique requirements and discover how we can help.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-<<<<<<< HEAD
               >Discuss Your Project<a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >Call +1 302 464 0950</a>
-=======
               >
                 Discuss Your Project;
               </a>
@@ -549,7 +487,6 @@ const SpecializedServicesPage: React.FC = () => {
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 Call +1 302 464 0950;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
             </div>
           </div>

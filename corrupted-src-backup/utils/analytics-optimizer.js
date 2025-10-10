@@ -3,7 +3,6 @@
  * Advanced analytics tracking with performance optimization and privacy compliance;
  */
 
-<<<<<<< HEAD
 class AnalyticsOptimizer {
   constructor() {
     this.config = {
@@ -13,9 +12,7 @@ class AnalyticsOptimizer {
       flushInterval: 30000, // 30 seconds;
       maxRetries: 3;
       retryDelay: 1000;
-=======
 class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
 
     this.eventQueue = [];
@@ -38,22 +35,18 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
     return userId;
   }
 
-<<<<<<< HEAD
   setupEventListeners() {
     // Track page visibility changes;
     document.addEventListener('visibilitychange', () => {
       this.track('page_visibility', {)
         hidden: document.hidden),
         timestamp: Date.now(),
-=======
   setupEventListeners() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     });
 
     // Track scroll depth;
     let _maxScrollDepth = 0;
-<<<<<<< HEAD
     window.addEventListener('scroll')
       this.throttle(() => {
         const scrollDepth = Math.round(
@@ -64,17 +57,14 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
           this.track('scroll_depth', {)
             depth: scrollDepth),
             maxDepth: maxScrollDepth),
-=======
     window.addEventListener('scroll',)
       this.throttle(() => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           });
         }
       }, 1000)
     );
 
     // Track click events;
-<<<<<<< HEAD
     document.addEventListener('click', event => {
       const _element = event.target;)
       this.track('click', {)
@@ -83,27 +73,21 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
         className: element.className),
         text: element.textContent?.substring(0, 100),
         href: element.href;
-=======
     document.addEventListener('click', event => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     });
 
     // Track form submissions;
-<<<<<<< HEAD
     document.addEventListener('submit', event => {)
       this.track('form_submit', {)
         formId: event.target.id;,)
         formClass: event.target.className),
         action: event.target.action),
-=======
     document.addEventListener('submit', event => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     });
   }
 
-<<<<<<< HEAD
   setupPerformanceTracking() {
     // Track Core Web Vitals;
     if ('web-vitals' in window) {
@@ -113,15 +97,12 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
         getFCP(metric => this.trackWebVital('FCP', metric));
         getLCP(metric => this.trackWebVital('LCP', metric));
         getTTFB(metric => this.trackWebVital('TTFB', metric));
-=======
   setupPerformanceTracking() {/* TODO: Fix JSX expression */}
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
 
     // Track page load performance;
-<<<<<<< HEAD
     window.addEventListener('load', () => {
       const _perfData = performance.getEntriesByType('navigation')[0];
       if (perfData) {
@@ -130,15 +111,12 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
           loadComplete: perfData.loadEventEnd - perfData.loadEventStart;,)
           domInteractive: perfData.domInteractive - perfData.navigationStart),
           totalLoadTime: perfData.loadEventEnd - perfData.navigationStart),
-=======
     window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         });
       }
     });
 
     // Track resource loading;
-<<<<<<< HEAD
     const observer = new PerformanceObserver(list => {)
       list.getEntries().forEach(entry => {)
         this.track('resource_load', {)
@@ -146,9 +124,7 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
           duration: entry.duration;,)
           size: entry.transferSize),
           type: entry.initiatorType),
-=======
     const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         });
       });
     });
@@ -156,7 +132,6 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
   s: ['resource'] });
   }
 
-<<<<<<< HEAD
   setupErrorTracking() {
     // Track JavaScript errors;
     window.addEventListener('error', event => {
@@ -166,42 +141,33 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
         lineno: event.lineno;,)
         colno: event.colno),
         stack: event.error?.stack),
-=======
   setupErrorTracking() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     });
 
     // Track unhandled promise rejections;
-<<<<<<< HEAD
     window.addEventListener('unhandledrejection', event => {)
       this.track('unhandled_rejection', {)
         reason: event.reason?.message || 'Unknown rejection'),
         stack: event.reason?.stack),
-=======
     window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     });
 
     // Track fetch errors;
     const _originalFetch = window.fetch;
-<<<<<<< HEAD
     window.fetch = (...args) => {
       return originalFetch(...args).catch(error => {)
         this.track('fetch_error', {)
           url: args[0]),
           error: error.message),
-=======
     window.fetch = (...args) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         });
         throw error;
       });
     };
   }
 
-<<<<<<< HEAD
   setupUserBehaviorTracking() {
     // Track time on page;
     let _timeOnPage = 0;
@@ -210,14 +176,11 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
       this.track('time_on_page', {)
         seconds: timeOnPage / 1000),
         minutes: Math.round(timeOnPage / 60000),
-=======
   setupUserBehaviorTracking() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }, 10000); // Track every 10 seconds;
     // Track mouse movement patterns;
     let _mouseMovements = 0;
-<<<<<<< HEAD
     document.addEventListener('mousemove')
       this.throttle(() => {
         mouseMovements++;
@@ -225,10 +188,8 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
           this.track('mouse_activity', {)
             movements: mouseMovements),
             timestamp: Date.now(),
-=======
     document.addEventListener('mousemove',)
       this.throttle(() => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           });
         }
       }, 1000)
@@ -236,7 +197,6 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
 
     // Track keyboard activity;
     let _keystrokes = 0;
-<<<<<<< HEAD
     document.addEventListener('keydown')
       this.throttle(() => {
         keystrokes++;
@@ -244,17 +204,14 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
           this.track('keyboard_activity', {)
             keystrokes: keystrokes),
             timestamp: Date.now(),
-=======
     document.addEventListener('keydown',)
       this.throttle(() => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           });
         }
       }, 1000)
     );
   }
 
-<<<<<<< HEAD
   setupPrivacyCompliance() {
     // Check for privacy settings;
     if (localStorage.getItem('privacy_mode') === 'true') {
@@ -288,7 +245,6 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
         language: navigator.language;
         screenResolution: `${screen.width}x${screen.height}`,
         viewportSize: `${window.innerWidth}x${window.innerHeight}`,
-=======
   setupPrivacyCompliance() {/* TODO: Fix JSX expression */}
     }
 
@@ -305,14 +261,12 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
   n: `${screen.width}x${screen.height}`,
         viewportSiz,`
   e: `${window.innerWidth}x${window.innerHeight}`,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
     };
 
     this.eventQueue.push(event);
 
     // Process immediately if batch is full;
-<<<<<<< HEAD
     if (this.eventQueue.length >= this.config.batchSize) {
       this.flush();
     }
@@ -335,7 +289,6 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
       pageViews: this.pageViews;,)
       referrer: document.referrer),
       title: document.title),
-=======
     if (this.eventQueue.length >= this.config.batchSize) {/* TODO: Fix JSX expression */}
     }
   }
@@ -345,7 +298,6 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
   }
 
   trackPageView(page = window.location.pathname) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
   }
 
@@ -357,7 +309,6 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
     }, this.config.flushInterval);
   }
 
-<<<<<<< HEAD
   async flush() {
     if (this.eventQueue.length === 0) return;
 
@@ -378,14 +329,12 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
       sessionId: this.sessionId;
       userId: this.userId;
       timestamp: Date.now(),
-=======
   async flush() {/* TODO: Fix JSX expression */}
     } catch (error) {/* TODO: Fix JSX expression */}
     }
   }
 
   async sendEvents(events) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
 
     // Send to multiple analytics services;
@@ -394,21 +343,17 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
     await Promise.allSettled(promises);
   }
 
-<<<<<<< HEAD
   async sendToGoogleAnalytics(payload) {
     if (typeof gtag !== 'undefined') {
       payload.events.forEach(event => {)
         gtag('event', event.event, {)
           custom_parameters: event.properties),
-=======
   async sendToGoogleAnalytics(payload) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         });
       });
     }
   }
 
-<<<<<<< HEAD
   async sendToCustomEndpoint(payload) {
     try {
       const response = await fetch('/api/analytics', {)
@@ -417,12 +362,10 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
           'Content-Type': 'application/json'),
         })
         body: JSON.stringify(payload),
-=======
   async sendToCustomEndpoint(payload) {/* TODO: Fix JSX expression */}
         },
         bod,
   y: JSON.stringify(payload),
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
 
       if (!response.ok) {/* TODO: Fix JSX expression */}`
@@ -442,7 +385,6 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
   }
 
   // Analytics insights and reporting;
-<<<<<<< HEAD
   getSessionData() {
     return {
       sessionId: this.sessionId;
@@ -462,42 +404,34 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
         : 0;
       firstPaint: this.getFirstPaint(),
       memoryUsage: this.getMemoryUsage(),
-=======
   getSessionData() {/* TODO: Fix JSX expression */}
     };
   }
 
   getPerformanceMetrics() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }
 
   getFirstPaint() {/* TODO: Fix JSX expression */}
   }
 
-<<<<<<< HEAD
   getMemoryUsage() {
     if ('memory' in performance) {
       return {
         used: performance.memory.usedJSHeapSize;
         total: performance.memory.totalJSHeapSize;
         limit: performance.memory.jsHeapSizeLimit;
-=======
   getMemoryUsage() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
     return null;
   }
 
   // Privacy controls;
-<<<<<<< HEAD
   enableTracking() {
     this.config.trackingEnabled = true;
     localStorage.setItem('analytics_consent', 'true');
-=======
   enableTracking() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   disableTracking() {/* TODO: Fix JSX expression */}

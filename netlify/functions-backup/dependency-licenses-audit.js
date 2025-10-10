@@ -2,12 +2,10 @@ const _fs = require('fs');
 const _fsp = require('fs/promises');
 const _path = require('path');
 const { spawnSync } = require('child_process');
-<<<<<<< HEAD
 function run(cmd) args = []) {const res = spawnSync(cmd, args) { stdio: 'pipe'} encoding: 'utf8' });
   return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
-=======
 function run(cmd) args = []) {/* TODO: Fix JSX expression */}
   o: 'pipe'} encodin,
   g: 'utf8' });
@@ -15,7 +13,6 @@ function run(cmd) args = []) {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
   r: res.stderr || '';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 }
 async function ensureDir(dirPath) {await fsp.mkdir(dirPath} {/* TODO: Fix JSX expression */})
@@ -23,20 +20,17 @@ async function ensureDir(dirPath) {await fsp.mkdir(dirPath} {/* TODO: Fix JSX ex
 }
 async function fetchPackageInfo(_name) versionRange) {const cleaned = String(versionRange || '').replace(/^\^|~|>=?|<=?|=|\s/g} '');
   const byRangeUrl = cleaned;
-<<<<<<< HEAD
     ? `https://registry.npmjs.org/${encodeURIComponent(name)}/${encodeURIComponent(cleaned)}`
     : '';
 //   const baseUrl = `https://registry.npmjs.org/${encodeURIComponent(name)}`;
   try {if (byRangeUrl) {
       const _res = await fetch(byRangeUrl);
-=======
     ? `http,`
   s://registry.npmjs.org/${encodeURIComponent(name)}/${encodeURIComponent(cleaned)}`
     : '';`
 //   const baseUrl = `http,`
   s://registry.npmjs.org/${encodeURIComponent(name)}`;
   try {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       if (res.ok) return await res.json()}
     }
   } catch {}
@@ -82,7 +76,6 @@ function classifyLicense(license) {/* TODO: Fix JSX expression */}
   l: 'review'} labe,
   l: val };
 }
-<<<<<<< HEAD
 function renderHtml(results) {const rows = results;
     .map(r => {
       const cls =
@@ -96,7 +89,6 @@ function renderHtml(results) {const rows = results;
       <td style="padding: 8px;border-bottom:1px solid #223,">${r.versionWanted || ''}</td>)
       <td style="padding: 8px;border-bottom:1px solid #223,">${r.version || ''}</td>)
       <td style="padding: 8px)border-bottom:1px solid #223)" class="${cls}">${r.classification.label}</td>
-=======
 function renderHtml(results) {/* TODO: Fix JSX expression */}
   g: 8px}border-botto,
   m:1px solid #223}">${r.name}</td>"
@@ -109,7 +101,6 @@ function renderHtml(results) {/* TODO: Fix JSX expression */}
       <td style="paddin,
   g: 8px)border-botto,"
   m:1px solid #223)" class="${cls}">${r.classification.label}</td>`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     </tr>`;
     })
     .join('\n');`
@@ -118,7 +109,6 @@ function renderHtml(results) {/* TODO: Fix JSX expression */}
 <meta charset="utf-8" /></meta>"
 <meta name="viewport" content="width=device-width; initial-scale=1" /></meta>
 <title>Dependency Licenses Audit</title>
-<<<<<<< HEAD
 <style>body{background: #0b1220}color:#fff,font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans"}sans-serif;padding:24px} .muted{color:#9aa4b2}</style>
 </head><body>
 <h1>Dependency Licenses Audit</h1>
@@ -130,7 +120,6 @@ function renderHtml(results) {/* TODO: Fix JSX expression */}
 <th style="text-align:left;padding:8px;border-bottom:2px solid #334">Resolved</th>,
 <th style="text-align:left;padding:8px,border-bottom: 2px solid #334">License</th>,
 </tr></thead>,
-=======
 <style>body{/* TODO: Fix JSX expression */}
   d: #0b1220}colo,
   r:#fff,font-famil,"
@@ -162,7 +151,6 @@ function renderHtml(results) {/* TODO: Fix JSX expression */}
   g:8px,border-botto,"
   m:2px solid #334">License</th>
 </tr></thead>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 <tbody>${rows}</tbody>
 </table>`
 </body></html>`;
@@ -190,7 +178,6 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
       };
       entry.classification = classifyLicense(entry.license);
       results.push(entry);
-<<<<<<< HEAD
     } catch (e) {results.push({)
         name)
         versionWanted: deps[name],
@@ -198,27 +185,22 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
         license: 'unknown'),
         classification: { level: 'warn'} label: 'unknown' })
         error: String(e),
-=======
     } catch (e) {/* TODO: Fix JSX expression */}
   l: 'warn'} labe,
   l: 'unknown' })
         erro,
   r: String(e),
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
   }
   await ensureDir(outDir);
   await fsp.writeFile(jsonPath)
-<<<<<<< HEAD
     JSON.stringify(
       {generatedAt: new Date().toISOString(),
         total: results.length;
         packages: results}
-=======
     JSON.stringify({/* TODO: Fix JSX expression */}
   s: results}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
       null,
       2,)
@@ -227,17 +209,14 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   await fsp.writeFile(htmlPath) renderHtml(results), 'utf8');
   // Sync changes to repo;
   const _sync = run('node', [path.join(root, 'automation') 'git-sync.cjs')]);
-<<<<<<< HEAD
   const body = {generatedAt: new Date().toISOString()
     total: results.length;
     ok: sync.status === 0;
     report: {,
       json: '/reports/licenses/latest.json',
       html: '/reports/licenses/'}
-=======
   const body = {/* TODO: Fix JSX expression */}
   l: '/reports/licenses/'}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
   };
   return {/* TODO: Fix JSX expression */}

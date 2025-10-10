@@ -1,6 +1,5 @@
 "use client";
 
-<<<<<<< HEAD
 export default function GlobalError({)
   error)
   reset)
@@ -8,7 +7,6 @@ export default function GlobalError({)
   error: Error & { digest?: string };)
     reset: () => void;
 }) {
-<<<<<<< HEAD
   return (
     <html>
       <body>
@@ -19,7 +17,6 @@ export default function GlobalError({)
               className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
             ></button>
               Try again</button>
-=======
   return(<html>
       <body>)
         <div className="min-h-screen bg-gray-50 flex items-center justify-center">)
@@ -30,8 +27,6 @@ export default function GlobalError({)
               className="px-4 py-2 bg-blue-600 text-white rounded hover: bg-blue-700"
             >
               Try again;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
 import { useEffect } from 'react';
 
 export default function GlobalError({
@@ -57,7 +52,6 @@ export default function GlobalError({
               className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
             >
               Try again
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01af
             </button>
           </div>
         </div>

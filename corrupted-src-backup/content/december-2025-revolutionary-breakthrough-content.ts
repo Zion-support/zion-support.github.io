@@ -1,5 +1,4 @@
 // December 2025 Revolutionary Breakthrough Content - Latest AI consciousness and superintelligence breakthroughs;
-<<<<<<< HEAD
 export interface RevolutionaryBreakthroughContent {
   id: string;
   slug?: string;
@@ -21,16 +20,13 @@ export interface RevolutionaryBreakthroughContent {
     savings: string;
     accuracy: string;
     roi: string;
-=======
 export interface RevolutionaryBreakthroughContent {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
   consciousnessLevel?: string;
   transcendenceLevel?: string;
   superintelligenceLevel?: string;
 }
 
-<<<<<<< HEAD
 export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthroughContent[] = [
   {
     id: 'quantum-ai-transcendence-revolution-2025',
@@ -54,11 +50,9 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
       savings: '$1.2B+ annual savings',
       accuracy: '99.99% consciousness accuracy',
       roi: '10,000x ROI',
-=======
 export const,
   december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthroughContent[] = [
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     consciousnessLeve,
   l: 'Transcendent',
@@ -67,7 +61,6 @@ export const,
     superintelligenceLeve,
   l: 'Infinite',
   },
-<<<<<<< HEAD
   {
     id: 'artificial-superintelligence-breakthrough-2025'
     slug: 'ai-2025-december-artificial-superintelligence-breakthrough'
@@ -89,9 +82,7 @@ export const,
       savings: '$2.5B+ annual savings',
       accuracy: '99.99% superintelligence accuracy',
       roi: '25,000x ROI',
-=======
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     consciousnessLeve,
   l: 'Superintelligent',

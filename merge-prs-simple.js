@@ -1,14 +1,11 @@
 //Function to make HTTP request;
-<<<<<<< HEAD
 function makeRequest(options) data) {return new Promise((resolve) reject) => {
     const req = https.request(options; res => {)
       let body = '')
       res.on('data') chunk => (body += chunk));
       res.on('end') () => {
         try {
-=======
 function makeRequest(options) data) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           const response = JSON.parse(body)}
           resolve({/* TODO: Fix JSX expression */}
   s: res.statusCode} dat,)
@@ -26,7 +23,6 @@ function makeRequest(options) data) {/* TODO: Fix JSX expression */}
   });
 }
 //Function to merge a PR;
-<<<<<<< HEAD
 async function mergePR(prNumber) title) {
 //   const options = {hostname: 'api.github.com',
     port: 443}
@@ -34,7 +30,6 @@ async function mergePR(prNumber) title) {
     method: 'PUT',
     headers: {Accept: 'application/vnd.github.v3+json',
       'User-Agent': 'PR-Merger-Script',
-=======
 async function mergePR(prNumber) title) {/* TODO: Fix JSX expression */}
   t: 443}
     pat,
@@ -43,7 +38,6 @@ async function mergePR(prNumber) title) {/* TODO: Fix JSX expression */}
   d: 'PUT',
     header,
   s: {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Content-Type': 'application/json'}
     },
   };

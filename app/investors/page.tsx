@@ -23,46 +23,34 @@ import {}
 
 const InvestorsPage: React.FC = () => {}
   const metrics = [
-<<<<<<< HEAD
     {
       icon: DollarSign;
-=======
     {}
       icon: DollarSign,
->>>>>>> origin/merge-error-fixes
       value: '$50M+',
       label: 'Total Funding Raised',
       description: 'Series A and B rounds completed',
     },
-<<<<<<< HEAD
     {
       icon: TrendingUp;
-=======
     {}
       icon: TrendingUp,
->>>>>>> origin/merge-error-fixes
       value: '300%',
       label: 'Revenue Growth',
       description: 'Year-over-year growth rate',
     },
-<<<<<<< HEAD
     {
       icon: Users;
-=======
     {}
       icon: Users,
->>>>>>> origin/merge-error-fixes
       value: '500+',
       label: 'Enterprise Clients',
       description: 'Fortune 500 companies served',
     },
-<<<<<<< HEAD
     {
       icon: Globe;
-=======
     {}
       icon: Globe,
->>>>>>> origin/merge-error-fixes
       value: '25+',
       label: 'Countries',
       description: 'Global market presence',
@@ -97,67 +85,49 @@ const InvestorsPage: React.FC = () => {}
   ];
 
   const highlights = [
-<<<<<<< HEAD
     {
       icon: Award;
-=======
     {}
       icon: Award,
->>>>>>> origin/merge-error-fixes
       title: 'Industry Recognition',
       description: 'Named "AI Company of the Year" by TechCrunch',
     },
-<<<<<<< HEAD
     {
       icon: Shield;
-=======
     {}
       icon: Shield,
->>>>>>> origin/merge-error-fixes
       title: 'Financial Stability',
       description: 'Strong balance sheet with 24+ months runway',
     },
-<<<<<<< HEAD
     {
       icon: Zap;
-=======
     {}
       icon: Zap,
->>>>>>> origin/merge-error-fixes
       title: 'Rapid Growth',
       description: 'Consistent 300%+ revenue growth year-over-year',
     },
-<<<<<<< HEAD
     {
       icon: Target;
-=======
     {}
       icon: Target,
->>>>>>> origin/merge-error-fixes
       title: 'Market Leadership',
       description: 'Leading position in enterprise AI solutions',
     }
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-<<<<<<< HEAD
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-=======
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
       <Navigation />)
       {/* Hero Section */})
       <section className="relative py-20 overflow-hidden">)
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -171,41 +141,32 @@ const InvestorsPage: React.FC = () => {}
 ,
       {/* Metrics Section */}
       <section className="py-16 bg-white/5">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
-=======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-16"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Company Metrics;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Strong financial performance and market position;
             </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
             {metrics.map((metric, index) => (
-=======
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {metrics.map((metric, index) => (}
->>>>>>> origin/merge-error-fixes
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-=======
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {metrics.map((metric, index) => (</div>
               <div key={index} className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <metric.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">{metric.value}</div>
@@ -219,20 +180,16 @@ const InvestorsPage: React.FC = () => {}
 
       {/* Investors Section */}
       <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
-=======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-16"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Investors;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Backed by leading venture capital firms and strategic investors;
             </p>
-<<<<<<< HEAD
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
@@ -241,20 +198,15 @@ const InvestorsPage: React.FC = () => {}
                 key={index}
                 className="cyber-card p-8 hover: scale-105 transition-all duration-300 text-center",
               >,
-=======
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<<<<<<< HEAD
             {investors.map((investor, index) => (</div>
-=======
             {investors.map((investor, index) => (}
->>>>>>> origin/merge-error-fixes
               <div
                 key={index}
                 className="cyber-card p-8 hover:scale-105 transition-all duration-300 text-center"
               ></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <div className="text-6xl mb-4">{investor.logo}</div>
                 <h3 className="text-2xl font-bold text-white mb-2">{investor.name}</h3>
                 <div className="text-cyan-400 font-semibold mb-3">{investor.type}</div>
@@ -267,41 +219,32 @@ const InvestorsPage: React.FC = () => {}
 
       {/* Highlights Section */}
       <section className="py-16 bg-white/5">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
-=======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-16"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Investment Highlights;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Key factors that make Zion Tech Group an attractive investment opportunity;
             </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
             {highlights.map((highlight, index) => (
-=======
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {highlights.map((highlight, index) => (}
->>>>>>> origin/merge-error-fixes
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-=======
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {highlights.map((highlight, index) => (</div>
               <div key={index} className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <highlight.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{highlight.title}</h3>
@@ -314,11 +257,8 @@ const InvestorsPage: React.FC = () => {}
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-=======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Investment Opportunities;
           </h2>

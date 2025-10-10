@@ -7,52 +7,42 @@
 export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 export interface UsePerformanceOptions {
   componentName: string;
   trackRenderTime?: boolean;
   trackMemoryUsage?: boolean;
   slowRenderThreshold?: number; // in milliseconds;
-=======
 export interface UsePerformanceOptions {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
 /**
  * Hook for monitoring component performance;
  */
-<<<<<<< HEAD
 export const usePerformance = (options: UsePerformanceOptions) => {,
   const {,
     componentName;
     trackRenderTime = true,
     trackMemoryUsage = false,
     slowRenderThreshold = 16, // 60fps threshold;
-=======
 export const usePerformance = (option,)
   s: UsePerformanceOptions) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   } = options;
 
   const _mountTimeRef = useRef<number>(0);
   const _renderStartTimeRef = useRef<number>(0);
 
   // Track component mount time;
-<<<<<<< HEAD
   useEffect(() => {
     mountTimeRef.current = performance.now();
 
     return () => {
       //       const mountDuration = performance.now() - mountTimeRef.current;
-=======
   useEffect(() => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       analytics.trackPerformance(`${componentName}_mount_time`, mountDuration);
     };
   }, [componentName]);
 
   // Track render performance;
-<<<<<<< HEAD
   const trackRender = useCallback(() => {
     if (!trackRenderTime) return;
 
@@ -76,7 +66,6 @@ export const usePerformance = (option,)
       }
 
       // Send to analytics;
-=======
   const trackRender = useCallback(() => {/* TODO: Fix JSX expression */}
       };
 
@@ -85,7 +74,6 @@ export const usePerformance = (option,)
       }
 
       // Send to analytics;`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       analytics.trackPerformance(`${componentName}_render_time`, renderTime);
 
       if (isSlowRender) {/* TODO: Fix JSX expression */}
@@ -93,16 +81,13 @@ export const usePerformance = (option,)
     });
   }, [componentName, trackRenderTime, slowRenderThreshold, trackMemoryUsage]);
 
-<<<<<<< HEAD
   return {
     trackRender,
     getMetrics: (): PerformanceMetrics => ({
       renderTime: performance.now() - renderStartTimeRef.current;
       componentMountTime: performance.now() - mountTimeRef.current;
       isSlowRender: false;
-=======
   return {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }),
   };
 };
@@ -110,7 +95,6 @@ export const usePerformance = (option,)
 /**
  * Hook for monitoring page load performance;
  */
-<<<<<<< HEAD
 export const usePageLoadPerformance = () => {
   useEffect(() => {
     const trackPageLoad = () => {
@@ -130,47 +114,39 @@ export const usePageLoadPerformance = () => {
 
           // Track each metric;
           Object.entries(metrics).forEach(([key, value]) => {
-=======
 export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */}
           };
 
           // Track each metric;
           Object.entries(metrics).forEach(([key, value]) => {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             analytics.trackPerformance(`page_load_${key}`, value);
           });
 
           // Track overall page load performance;
-<<<<<<< HEAD
           analytics.track('page_load_complete',)
             'performance')
             'complete')
             undefined)
             metrics.totalLoadTime;
-=======
           analytics.track('page_load_complete',
             'performance',
             'complete',
             undefined,
             metrics.totalLoadTime;)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           );
         }
       }
     };
 
     // Track immediately if page is already loaded;
-<<<<<<< HEAD
     if (document.readyState === 'complete') {
       trackPageLoad();
     } else {
       // Wait for load event;
       window.addEventListener('load', trackPageLoad);
       return () => window.removeEventListener('load', trackPageLoad);
-=======
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }, []);
 };
@@ -178,7 +154,6 @@ export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */}
 /**
  * Hook for monitoring resource loading performance;
  */
-<<<<<<< HEAD
 export const useResourcePerformance = () => {
   useEffect(() => {
     const observer = new PerformanceObserver(list => {)
@@ -186,9 +161,7 @@ export const useResourcePerformance = () => {
         if (entry.entryType === 'resource') {
           const _resourceEntry = entry as PerformanceResourceTiming;
           analytics.trackPerformance(
-=======
 export const useResourcePerformance = () => {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             `resource_${resourceEntry.name.split('.').pop()}`,
             resourceEntry.duration,
             'ms'
@@ -207,15 +180,12 @@ export const useResourcePerformance = () => {/* TODO: Fix JSX expression */}`
 /**
  * Hook for monitoring long tasks;
  */
-<<<<<<< HEAD
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
     const observer = performanceOptimizer.monitorLongTasks(entries => {)
       entries.forEach(entry => {)
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
-=======
 export const useLongTaskMonitoring = () => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     });
 

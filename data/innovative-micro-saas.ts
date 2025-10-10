@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -27,7 +26,6 @@
   growthRate: string;
   variant: string;
     website: string;
-=======
   i,
   d: string;
   nam,
@@ -82,7 +80,6 @@
   t: string;
     websit,
   e: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
       'React',
       'Node && Node.js',
@@ -98,7 +95,6 @@
   e: 'http,
   s://ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
     real_implementation: true;
     implementation_details: unknown;
     customers: 3200;
@@ -111,7 +107,6 @@
     price: '$149',
     period: '/month',
     description: unknown;
-=======
     real_implementatio,
   n: true,
     implementation_detail,
@@ -135,7 +130,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Platform for creating and deploying smart contracts to automate business processes, payments, and agreements without intermediaries.',
     feature,
   s: [,
@@ -150,7 +144,6 @@
       'Mobile app',
       'Expert support',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - green - 500 to - emerald - 600'
@@ -165,7 +158,6 @@
     category: 'Micro SaaS & Blockchain',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -194,7 +186,6 @@
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Blockchain',
       'Smart Contracts',
       'Solidity',
@@ -224,7 +215,6 @@
       'Payment automation',
       'Voting systems',
     ],
-<<<<<<< HEAD
     roi: 'Average customer sees 400% ROI within 6 months through reduced costs and improved efficiency.',
     competitors: ['OpenLaw', 'Clause', 'Agrello', 'Lexon', 'Monax'],
     market_size: '$1.2B smart contract market'
@@ -252,7 +242,6 @@
     price: '$89',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Average customer sees 400% ROI within 6 months through reduced costs and improved efficiency.',
     competitor,
@@ -303,7 +292,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced feedback analysis platform that uses AI to automatically categorize, analyze, and extract insights from customer feedback across multiple channels.',
     feature,
   s: [,
@@ -318,7 +306,6 @@
       'API access',
       'Mobile app',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - purple - 500 to - pink - 600'
@@ -333,7 +320,6 @@
     category: 'Micro SaaS & Customer Experience',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -362,7 +348,6 @@
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Natural Language Processing',
       'Machine Learning',
       'Sentiment Analysis',
@@ -412,7 +397,6 @@
   e: 'http,
   s://ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
     real_implementation: true;
     implementation_details: unknown;
       'Complete feedback analysis platform with AI - powered insights, real - time processing, and comprehensive analytics.',
@@ -429,7 +413,6 @@
     price: '$59',
     period: '/month',
     description: unknown;
-=======
     real_implementatio,
   n: true,
     implementation_detail,
@@ -458,7 +441,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Intelligent social media scheduling platform that uses AI to optimize posting times, generate content ideas, and automate social media management.',
     feature,
   s: [,
@@ -473,7 +455,6 @@
       'Mobile app',
       'API integration',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
       'AI/ML',
@@ -489,7 +470,6 @@
     category: 'Micro SaaS & Marketing',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -519,7 +499,6 @@
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI / ML',
       'Social Media APIs',
       'React',
@@ -560,7 +539,6 @@
       'Sprout Social',
       'Agorapulse',
     ],
-<<<<<<< HEAD
     market_size: '$4.2B social media management market'
     growth_rate: '180% annual growth'
     variant: 'ai - futuristic'
@@ -586,7 +564,6 @@
     price: '$129',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$4.2B social media management market',
     growth_rat,
@@ -633,7 +610,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Smart project management platform that uses AI to optimize resource allocation, predict project timelines, and automate project workflows.',
     feature,
   s: [,
@@ -648,7 +624,6 @@
       'Mobile app',
       'Analytics dashboard',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
       'AI/ML',
@@ -664,7 +639,6 @@
     category: 'Micro SaaS & Project Management',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -694,7 +668,6 @@
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI / ML',
       'Project Management',
       'React',
@@ -736,7 +709,6 @@
   e: 'http,
   s://ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
     real_implementation: true;
     implementation_details: unknown;
       'Complete project management platform with AI - powered planning, resource optimization, and comprehensive collaboration features.',
@@ -769,7 +741,6 @@
   launchDate: string, customers: number;
   rating: number;
   reviews: number;
-=======
     real_implementatio,
   n: true,
     implementation_detail,
@@ -847,7 +818,6 @@
   g: number,
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 export const,
   innovativeMicroSaas: InnovativeMicroSaas[] = [,
@@ -866,7 +836,6 @@ export const,
       'AI-powered data extractionMulti-format support (PDF, images) emails)Automatic validationIntegration with accounting softwareReal-time processingCustom workflow automationAnalytics and reportingMobile app access'
       'API for developers24/7 support'
     ];
-<<<<<<< HEAD
     popular: true, icon: '',
     color: 'from-blue-500 to-indigo-600', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-powered-invoice-processor',
@@ -889,7 +858,6 @@ export const,
     customers: 3200;
     rating: 4.8;
     reviews: 1600;
-=======
     popula,
   r: true, ico,
   n: '',
@@ -945,7 +913,6 @@ export const,
   g: 4.8,
     review,
   s: 1600,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
   }
@@ -953,14 +920,12 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
 ;
       'AI-powered sentiment analysis',
       'Multi-channel feedback collection',
-<<<<<<< HEAD
     id: 'ai - powered - customer - feedback - analyzer'
     name: 'AI - Powered Customer Feedback Analyzer',
     tagline: 'Transform feedback into actionable insights',
     price: '$89',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'ai - powered - customer - feedback - analyzer',
     nam,
@@ -973,7 +938,6 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced feedback analysis platform that uses AI to automatically categorize, analyze, and extract insights from customer feedback across multiple channels.',
     feature,
   s: [,
@@ -988,7 +952,6 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
       'API access',
       'Mobile app',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - purple - 500 to - pink - 600'
@@ -1003,7 +966,6 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
     category: 'Micro SaaS & Customer Experience',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1032,7 +994,6 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Natural Language Processing',
       'Machine Learning',
       'Sentiment Analysis',
@@ -1072,7 +1033,6 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
       'GetFeedback',
       'SurveyGizmo',
     ],
-<<<<<<< HEAD
     market_size: '$3.5B feedback management market'
     growth_rate: '160% annual growth'
     variant: 'ai - futuristic'
@@ -1097,7 +1057,6 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
     price: '$59',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$3.5B feedback management market',
     growth_rat,
@@ -1143,7 +1102,6 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Intelligent social media scheduling platform that uses AI to optimize posting times, generate content ideas, and automate social media management.',
     feature,
   s: [,
@@ -1158,7 +1116,6 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
       'Mobile app',
       'API integration',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
       'AI/ML',
@@ -1174,7 +1131,6 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
     category: 'Micro SaaS & Marketing',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1204,7 +1160,6 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI / ML',
       'Social Media APIs',
       'React',
@@ -1245,7 +1200,6 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
       'Sprout Social',
       'Agorapulse',
     ],
-<<<<<<< HEAD
     market_size: '$4.2B social media management market'
     growth_rate: '180% annual growth'
     variant: 'ai - futuristic'
@@ -1270,7 +1224,6 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
     price: '$129',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$4.2B social media management market',
     growth_rat,
@@ -1316,7 +1269,6 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Smart project management platform that uses AI to optimize resource allocation, predict project timelines, and automate project workflows.',
     feature,
   s: [,
@@ -1331,7 +1283,6 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
       'Mobile app',
       'Analytics dashboard',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
       'AI/ML',
@@ -1347,7 +1298,6 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
     category: 'Micro SaaS & Project Management',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1377,7 +1327,6 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI / ML',
       'Project Management',
       'React',
@@ -1407,7 +1356,6 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
       'Risk management',
       'Reporting',
     ],
-<<<<<<< HEAD
     roi: 'Average customer sees 300% ROI within 4 months through improved project efficiency and team productivity.',
     competitors: ['Asana', 'Monday.com', 'ClickUp', 'Trello', 'Basecamp'],
     market_size: '$5.8B project management market'
@@ -1451,7 +1399,6 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
   launchDate: string, customers: number;
   rating: number;
   reviews: number;
-=======
     ro,
   i: 'Average customer sees 300% ROI within 4 months through improved project efficiency and team productivity.',
     competitor,
@@ -1551,7 +1498,6 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
   g: number,
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 export const,
   innovativeMicroSaas: InnovativeMicroSaas[] = [,
@@ -1570,7 +1516,6 @@ export const,
       'AI-powered data extractionMulti-format support (PDF, images) emails)Automatic validationIntegration with accounting softwareReal-time processingCustom workflow automationAnalytics and reportingMobile app access'
       'API for developers24/7 support'
     ];
-<<<<<<< HEAD
     popular: true, icon: '',
     color: 'from-blue-500 to-indigo-600', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-powered-invoice-processor',
@@ -1601,7 +1546,6 @@ export const,
     price: '$149',
     period: '/month',
     description:,
-=======
     popula,
   r: true, ico,
   n: '',
@@ -1671,7 +1615,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Platform for creating and deploying smart contracts to automate business processes, payments, and agreements without intermediaries.'
     feature,
   s: [;
@@ -1686,7 +1629,6 @@ export const,
       'Mobile app'
       'Expert support'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-500 to-emerald-600'
@@ -1700,7 +1642,6 @@ export const,
     category: 'Micro SaaS & Blockchain'
     realService: true;
     technology: [;
-=======
     popula,
   r: true;
     ico,
@@ -1728,7 +1669,6 @@ export const,
   e: true;
     technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Blockchain'
       'Smart Contracts'
       'Solidity'
@@ -1749,18 +1689,14 @@ export const,
       'MetaMask'
       'WalletConnect'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Legal agreements'
       'Real estate transactions'
       'Insurance claims'
       'Supply chain tracking'
       'Payment automation'
-<<<<<<< HEAD
       'Voting systems',
     ],
     roi: 'Average customer sees 400% ROI within 6 months through reduced costs and improved efficiency.',
@@ -1787,7 +1723,6 @@ export const,
     price: '$89',
     period: '/month',
     description:,
-=======
       'Voting systems'
     ]
     ro,
@@ -1837,7 +1772,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced feedback analysis platform that uses AI to automatically categorize, analyze, and extract insights from customer feedback across multiple channels.'
     feature,
   s: [;
@@ -1852,7 +1786,6 @@ export const,
       'API access'
       'Mobile app'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-500 to-pink-600'
@@ -1866,7 +1799,6 @@ export const,
     category: 'Micro SaaS & Customer Experience'
     realService: true;
     technology: [;
-=======
     popula,
   r: true;
     ico,
@@ -1894,7 +1826,6 @@ export const,
   e: true;
     technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Natural Language Processing'
       'Machine Learning'
       'Sentiment Analysis'
@@ -1924,22 +1855,18 @@ export const,
       'Quality assurance'
       'Competitive analysis'
     ]
-<<<<<<< HEAD
     roi: 'Average customer sees 250% ROI within 4 months through improved customer satisfaction and product decisions.'
     competitors: [
-=======
     ro,
   i: 'Average customer sees 250% ROI within 4 months through improved customer satisfaction and product decisions.'
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Qualtrics'
       'SurveyMonkey'
       'Typeform'
       'GetFeedback'
       'SurveyGizmo'
     ]
-<<<<<<< HEAD
     marketSize: '$3.5B feedback management market'
     growthRate: '160% annual growth'
     variant: 'ai-futuristic'
@@ -1962,7 +1889,6 @@ export const,
     price: '$59',
     period: '/month',
     description:,
-=======
     marketSiz,
   e: '$3.5B feedback management market'
     growthRat,
@@ -2006,7 +1932,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Intelligent social media scheduling platform that uses AI to optimize posting times, generate content ideas, and automate social media management.'
     feature,
   s: [;
@@ -2021,7 +1946,6 @@ export const,
       'Mobile app'
       'API integration'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-pink-500 to-rose-600'
@@ -2035,7 +1959,6 @@ export const,
     category: 'Micro SaaS & Marketing'
     realService: true;
     technology: [;
-=======
     popula,
   r: true;
     ico,
@@ -2063,7 +1986,6 @@ export const,
   e: true;
     technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI/ML'
       'Social Media APIs'
       'React'
@@ -2094,22 +2016,18 @@ export const,
       'Analytics'
       'Content planning'
     ]
-<<<<<<< HEAD
     roi: 'Average customer sees 200% ROI within 3 months through improved engagement and time savings.'
     competitors: [
-=======
     ro,
   i: 'Average customer sees 200% ROI within 3 months through improved engagement and time savings.'
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Buffer'
       'Hootsuite'
       'Later'
       'Sprout Social'
       'Agorapulse'
     ]
-<<<<<<< HEAD
     marketSize: '$4.2B social media management market'
     growthRate: '180% annual growth'
     variant: 'ai-futuristic'
@@ -2132,7 +2050,6 @@ export const,
     price: '$129',
     period: '/month',
     description:,
-=======
     marketSiz,
   e: '$4.2B social media management market'
     growthRat,
@@ -2176,7 +2093,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Smart project management platform that uses AI to optimize resource allocation, predict project timelines, and automate project workflows.'
     feature,
   s: [;
@@ -2191,7 +2107,6 @@ export const,
       'Mobile app'
       'Analytics dashboard'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-orange-500 to-yellow-600'
@@ -2205,7 +2120,6 @@ export const,
     category: 'Micro SaaS & Project Management'
     realService: true;
     technology: [;
-=======
     popula,
   r: true;
     ico,
@@ -2233,7 +2147,6 @@ export const,
   e: true;
     technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI/ML'
       'Project Management'
       'React'
@@ -2254,18 +2167,14 @@ export const,
       'Zapier'
       'Webhooks'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Project planning'
       'Resource management'
       'Team collaboration'
       'Progress tracking'
       'Risk management'
-<<<<<<< HEAD
       'Reporting',
     ],
     roi: 'Average customer sees 300% ROI within 4 months through improved project efficiency and team productivity.',
@@ -2313,7 +2222,6 @@ export const,
     customers: 3200;
     rating: 4.8;
     reviews: 1600;
-=======
       'Reporting'
     ]
     ro,
@@ -2403,7 +2311,6 @@ export const,
   g: 4.8,
     review,
   s: 1600,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
@@ -2411,7 +2318,6 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -2635,7 +2541,6 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     customers: 3200;
     rating: 4.8;
     reviews: 1600;
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -2786,7 +2691,6 @@ export const,
   g: 4.8;
     review,
   s: 1600,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
   i,
@@ -2847,14 +2751,12 @@ export const,
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -2867,7 +2769,6 @@ export const,
   g: number;
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ;
 i,

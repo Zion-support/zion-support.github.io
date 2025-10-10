@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 exports.handler = async function (event, context) {
   try {
     //     // Todo summary simulation;
@@ -32,7 +31,6 @@ exports.handler = async function (event, context) {
         error: 'Internal server error',)
         message: error.message),
         function: 'todo-summary-runner'),
-=======
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
       },
       bod,
@@ -45,7 +43,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }),
     };
   }

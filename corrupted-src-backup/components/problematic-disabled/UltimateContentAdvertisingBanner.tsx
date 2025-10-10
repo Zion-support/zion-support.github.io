@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 const UltimateContentAdvertisingBanne, r: React.FC = () => {,
   const advertisingFeature, s = [
     {
@@ -7,9 +6,7 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {,
       title: "Revolutionary, AI, Technologie, s",",
       description: "Me, t, a-cognitiv, e, A, I, quant, u, m-neural, network, s, and, autonomous, operations",
       highlig, h, t: "1000x, Performan, c, e"
-=======
 const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     {/* TODO: Fix JSX expression */}
     },
@@ -22,21 +19,17 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
     { val, u, e: "$5, 0, 0, M+", lab, e, l: "Cost, Savin, g, s", ic, o, n: DollarS, i, g, n },"
     { val, u, e: "9, 8%", lab, e, l: "Automation, Ra, t, e", ic, o, n: Tar, g, e, t },"
     { val, u, e: "99.9, 9%", lab, e, l: "Security, Accura, c, y", ic, o, n: Shi, e, l, d }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ]; return(<div, classNam, e = "py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
-=======
   ]; return (
     <div, classNam, e = "py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} />
       </div>
       <div, classNam, e = "container, m, x-auto, p, x-6, relative, z-10">
@@ -71,7 +64,6 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
           <div, classNam, e = "inli, n, e-block, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-r, e, d-5, 0, 0/30, m, b-12"></div>
             <div, className="flex, item, s-center, ga, p-3"></div>
               <Clock, className="w-6 h-6, tex, t-r, e, d-400, animat, e-pul, s, e" />
-=======
   ]; return ("
     <div, classNam, e = "py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n"></div>
       {/* Animated, background, effects */}"
@@ -112,43 +104,33 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
           <div, classNam, e = "inli, n, e-block, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-r, e, d-5, 0, 0/30, m, b-12"></div>"
             <div, className="flex, item, s-center, ga, p-3"></div>"
               <Clock, className="w-6 h-6, tex, t-r, e, d-400, animat, e-pul, s, e" /></Clock>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">LIMITED, TIM, E: Exclusive, Early, Access to, 2026, Content</sp, a, n>
             </div>
           </div>
-<<<<<<< HEAD
         </div>)
         {/* Features, G, r, i, d */})
         <div, classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">)
           { advertisingFeatur, e, s.m, a, p((fea, t, u, r, e, ind, e, x) = > (
-=======
         </div>
-<<<<<<< HEAD
         {/* Features, G, r, i, d */}
         <div, classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">
           { advertisingFeatur, e, s.m, a, p((fea, t, u, r, e, ind, e, x) = > (</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
         {/* Features, G, r, i, d */}"
         <div, classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-20"></div>
           {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             <moti, o, n.div, ke, y = { in, d, e, x  }, initi, a, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
               anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
               transiti, o, n = {{ del, a, y: ind, e, x * , 0., 1 }}
               whileHov, e, r = {{ sca, l, e: 1., 0, 5 }}"
               classNa, m, e = "group, relativ, e"
-<<<<<<< HEAD
             >
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l" /></div>
               <div, className="relative, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-8, border, border-whi, t, e/15, hove, r:bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-30, 0, h-fu, l, l"></div>
                 <div, className="te, x, t-6xl, m, b-6, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">
-=======
             ></moti>"
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l" /></div>"
               <div, className="relative, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-8, border, border-whi, t, e/15, hove, r:bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-30, 0, h-fu, l, l"></div>"
                 <div, className="te, x, t-6xl, m, b-6, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0"></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   {featu, r, e.ic, o, n}
                 </div>"
                 <h3, classNam, e = "te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-3, 0, 0"></h3>
@@ -164,15 +146,12 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
             </moti, o, n.di, v>)
           ))}
         </div>
-<<<<<<< HEAD
         {/* Success, Stat, s */}
         <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8, m, b-20">
           { successSta, t, s.m, a, p((st, a, t, ind, e, x) = > (</div>
-=======
         {/* Success, Stat, s */}"
         <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8, m, b-20"></div>
           {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             <moti, o, n.div, ke, y = { in, d, e, x  }, initi, a, l = {{ opac, i, t, y:  , 0, sca, l, e: 0., 8 }}
               anima, t, e = {{ opac, i, t, y:  , 1, sca, l, e:  , 1 }}
               transiti, o, n = {{ del, a, y: ind, e, x * , 0., 1 }}"
@@ -185,7 +164,6 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
             </moti, o, n.di, v>
           ))}
         </div>
-<<<<<<< HEAD
         {/* Testimonial, Sectio, n */}
         <div, classNam, e = "mb-20"></div>
           <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-xl, rounde, d-3x, l, p-12, border, border-whi, t, e/15"></div>
@@ -205,7 +183,6 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
                 <div, className="te, x, t-6xl, m, b-4">💼</div>
                 <p, className="te, x, t-gr, a, y-300, m, b-4, itali, c">
                   "Zion, Tech, Group's, AI, solutions reduced, our, operational costs, b, y $50M, annuall, y. 
-=======
         {/* Testimonial, Sectio, n */}"
         <div, classNam, e = "mb-20"></div>"
           <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-xl, rounde, d-3x, l, p-12, border, border-whi, t, e/15"></div>"
@@ -225,37 +202,30 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
                 <div, className="te, x, t-6xl, m, b-4">💼</div>"
                 <p, className="te, x, t-gr, a, y-300, m, b-4, itali, c"></p>"
                   "Zion, Tech, Group's, AI, solutions reduced, our, operational costs, b, y $50M, annuall, y. "
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   The, autonomous, systems are, gam, e-changi, n, g."
                 </p>"
                 <div, className="fo, n, t-bold, tex, t-whi, t, e">Fortune, 500, CTO</div>
-<<<<<<< HEAD
               </div>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="te, x, t-6xl, m, b-4">🚀</div>
                 <p, className="te, x, t-gr, a, y-300, m, b-4, itali, c">
                   "The, met, a-cognitive, AI, implementation achieved, 1000x, performance improvemen, t, s. 
-=======
               </div>"
               <div, className="te, x, t-cent, e, r"></div>"
                 <div, className="te, x, t-6xl, m, b-4">🚀</div>"
                 <p, className="te, x, t-gr, a, y-300, m, b-4, itali, c"></p>"
                   "The, met, a-cognitive, AI, implementation achieved, 1000x, performance improvemen, t, s. "
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   Unprecedented, result, s."
                 </p>"
                 <div, className="fo, n, t-bold, tex, t-whi, t, e">Enterprise, AI, Director</div>
-<<<<<<< HEAD
               </div>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="te, x, t-6xl, m, b-4">🛡️</div>
                 <p, className="te, x, t-gr, a, y-300, m, b-4, itali, c">
-=======
               </div>"
               <div, className="te, x, t-cent, e, r"></div>"
                 <div, className="te, x, t-6xl, m, b-4">🛡️</div>"
                 <p, className="te, x, t-gr, a, y-300, m, b-4, itali, c"></p>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   "Ze, r, o-trust, security, framework eliminated, all, threats. 99.99% accuracy, is, remarkable."
                 </p>"
                 <div, className="fo, n, t-bold, tex, t-whi, t, e">Security, Chie, f</div>
@@ -263,26 +233,22 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
             </div>
           </div>
         </div>
-<<<<<<< HEAD
         {/* Ca, l, l-to-Action, Sect, i, o, n */}
         <div, classNam, e = "te, x, t-cent, e, r"></div>
           <div, className="inli, n, e-bloc, k, p-2, rounde, d-3xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-bl, u, e-500, t, o-cy, a, n-5, 0, 0"></div>
             <div, className="bg-sla, t, e-900, rounde, d-2xl, p, x-16, p, y-16"></div>
               <h3, className="te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6">
-=======
         {/* Ca, l, l-to-Action, Sect, i, o, n */}"
         <div, classNam, e = "te, x, t-cent, e, r"></div>"
           <div, className="inli, n, e-bloc, k, p-2, rounde, d-3xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-bl, u, e-500, t, o-cy, a, n-5, 0, 0"></div>"
             <div, className="bg-sla, t, e-900, rounde, d-2xl, p, x-16, p, y-16"></div>"
               <h3, className="te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6"></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 Ready, to, Transform Your, Enterpris, e?
               </h3>"
               <p, className="te, x, t-gr, a, y-300, m, b-12, ma, x-w-3xl, m, x-auto, tex, t-xl, leadin, g-relax, e, d"></p>
                 Join, 50, 0+ leading, organizations, that trust, Zion, Tech Group, to, deliver breakthrough, AI, solutions. 
                 Get, exclusive, access to, our, 2026 content, library, and expert, consultation, s.
               </p>
-<<<<<<< HEAD
               {/* Benefits, Lis, t */}
               <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12"></div>
                 <div, className="flex, item, s-center, ga, p-3, tex, t-gre, e, n-4, 0, 0"></div>
@@ -300,7 +266,6 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
               </div>
               <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-6, justif, y-cent, e, r"></div>
                 <a, hre, f="/conta, c, t"
-=======
               {/* Benefits, Lis, t */}"
               <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12"></div>"
                 <div, className="flex, item, s-center, ga, p-3, tex, t-gre, e, n-4, 0, 0"></div>"
@@ -318,7 +283,6 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
               </div>"
               <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-6, justif, y-cent, e, r"></div>"
                 <a, hre, f="/conta, c, t""
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   className="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-3, tex, t-lg"
                 ></a>"
                   <Rocket, className="w-6 h-6" /></Rocket>

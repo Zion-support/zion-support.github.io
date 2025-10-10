@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 interface SEOHeadProps {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 const SEOHead: React.FC<SEOHeadProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of advanced AI and IT solutions that transform businesses and drive innovation across industries.',
@@ -60,7 +59,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
 ),
       {/* Structured Data */}
       <script type="application/ld+json">
-=======
 const,
   SEOHead: React.FC<SEOHeadProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -113,7 +111,6 @@ const,
       <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>
       {/* Structured Data */}"
       <script type="application/ld+json"></script>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>

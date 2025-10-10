@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
-<<<<<<< HEAD
   return(<div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-purp, l, e-950, t, o-sla, t, e-9, 5, 0">";
-=======
   return (
     <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-purp, l, e-950, t, o-sla, t, e-9, 5, 0">";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <article, className="container, m, x-auto, p, x-6, p, y-16, ma, x-w-4, x, l">";
         {/* Head, e, r */}
         <header, className="mb-12">";
@@ -14,13 +10,10 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <span, className="te, x, t-gr, a, y-4, 0, 0">•</sp, a, n>";
             <span, className="te, x, t-gr, a, y-400, tex, t-sm">Octobe, r, 1, 20, 2, 5</sp, a, n>";
           </d, i, v>
-<<<<<<< HEAD
           <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l;
   g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
-=======
           <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l
   g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"</h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
             AI-Powered, DevOps, Automation Revolut, i, o;
   n: 10x, Faster, Deployments with, Zero, Downtime;
@@ -60,7 +53,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
           <section, className="mb-12">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">The, AI, DevOps Architectu, r, e</h2>
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">
-<<<<<<< HEAD
               Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, laye, r;
   s: </p>,
             <div, className="spa, c, e-y-6">
@@ -73,7 +65,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, layer, s: </p>),
             <div, className="spa, c, e-y-6">";
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";
-=======
               Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, laye, r
   s: </p>
             <div, className="spa, c, e-y-6"></section>
@@ -86,7 +77,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, layer, s: </p>
             <div, className="spa, c, e-y-6">";</section>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, b-3">🤖 Autonomous, C, I/CD, Agent, s</h3>";
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";
                   AI, agents, autonomously manage, your, entire CI/CD, pipelin, e—from, code, commit to, production, deployment. They, intelligently, orchestrate buil, d, s, run, smart, test selecti, o, n (reducing, test, time by, 7, 5%), perform, automated, security sca, n, s, and, execute, progressive deployments, with, automatic rollback, on, anomaly detecti, o, n. Deploy, with, confidence 24/7, without, human oversig, h, t.
@@ -116,7 +106,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-cy, a, n-300, m, b-3">📊 Re, a, l-Time, Intelligence, Dashboard</h3>";
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";
-=======
 export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {/* TODO: Fix JSX expression */}
         {/* Head, e, r */}
         <header, className="mb-12">";"
@@ -207,41 +196,33 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-cy, a, n-300, m, b-3">📊 Re, a, l-Time, Intelligence, Dashboard</h3>";"
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   Unified, observability, platform powered, by, AI that, correlates, data across, log, s, metri, c, s, and, traces, to provide, instant, root cause, analysi, s. Natural, language, interface lets, you, ask questions, lik, e "Why, was, API latency, high, at 3, P, M?" and, get, immediate, actionable, insights, with remediation, recommendation, s.";
                 </p>
               </d, i, v>
             </d, i, v>
-<<<<<<< HEAD
           </secti, o, n>
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/20">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Re, a, l-World, Impac, t: FinTech, Success, Story</h2>"
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">
-<<<<<<< HEAD
               A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platform: </p>,
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">"
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">
-=======
               A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platform: </p>
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">"</section>
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-300, m, b-2">12x, Faste, r</d, i, v>
                 <p, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Deployment, Velocit, y</p>
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/20">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Re, a, l-World, Impac, t: FinTech, Success, Story</h2>";
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
-<<<<<<< HEAD
               A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platfor;
   m: </p>,
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">";
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">";
-=======
               A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platfor
   m: </p>
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">";</section>
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-300, m, b-2">12x, Faste, r</d, i, v>";
                 <p, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Deployment, Velocit, y</p>";
               </d, i, v>
@@ -251,7 +232,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               </d, i, v>
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">";</div>
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-300, m, b-2">$2, 4, M</d, i, v>";
-=======
           </secti, o, n>"
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/20"></section>"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Re, a, l-World, Impac, t: FinTech, Success, Story</h2>""
@@ -278,14 +258,12 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               </d, i, v>"
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">";"
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-300, m, b-2">$2, 4, M</d, i, v>";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <p, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Annual, Saving, s</p>";
               </d, i, v>
             </d, i, v>"
             <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";
               The, company, went from, 1, release per, week, to 12, per, day, reduced, production, incidents by, 9, 6%, and, cut, infrastructure costs, by, 82%—all, while, eliminating on-call, burden, for their, DevOps, team.
             </p>
-<<<<<<< HEAD
           </secti, o, n>
           <section, className="mb-12">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Implementation, Roadma, p</h2>
@@ -298,7 +276,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <div, className="spa, c, e-y-6">";</section>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, b-3">Phas, e, 1: Assessme, n, t & Quick, Win, s (Wee, k, 1-2)</h3>";
-=======
           </secti, o, n>"
           <section, className="mb-12"></section>"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Implementation, Roadma, p</h2>"
@@ -311,12 +288,10 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <div, className="spa, c, e-y-6">";"
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, b-3">Phas, e, 1: Assessme, n, t & Quick, Win, s (Wee, k, 1-2)</h3>";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <ul, className="te, x, t-gr, a, y-300, spac, e-y-2, m, l-6, lis, t-di, s, c">";
                   <li>Audit, current, DevOps pipeline, and, identify automation, opportunitie, s</li>
                   <li>Deploy, A, I-powered, monitoring, and alerti, n, g</li>
                   <li>Implement, intelligent, log analysis, and, anomaly detecti, o, n</li>
-<<<<<<< HEAD
                   <li>Expec, t, e;
   d: 40% reduction, in, alert noi, s, e, 3x, faster, incident respon, s, e</li>
                 </ul>
@@ -326,7 +301,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                 <ul, className="te, x, t-gr, a, y-300, spac, e-y-2, m, l-6, lis, t-di, s, c">
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-pi, n, k-300, m, b-3">Phas, e, 2: Automated, Deploymen, t (Wee, k, 3-6)</h3>";
-=======
                   <li>Expec, t, e,
   d: 40% reduction, in, alert noi, s, e, 3x, faster, incident respon, s, e</li>
                 </ul>
@@ -336,12 +310,10 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                 <ul, className="te, x, t-gr, a, y-300, spac, e-y-2, m, l-6, lis, t-di, s, c"></ul>"
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-pi, n, k-300, m, b-3">Phas, e, 2: Automated, Deploymen, t (Wee, k, 3-6)</h3>";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <ul, className="te, x, t-gr, a, y-300, spac, e-y-2, m, l-6, lis, t-di, s, c">";
                   <li>Implement, autonomous, CI/CD, with, progressive deployment, strategie, s</li>
                   <li>Enable, A, I-powered, test, selection and, optimizatio, n</li>
                   <li>Deploy, automated, rollback and, canary, analysis</li>
-<<<<<<< HEAD
                   <li>Expec, t, e;
   d: 5x, faster, deployments, 90% reduction, in, failed releas, e, s</li>
                 </ul>
@@ -351,7 +323,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                 <ul, className="te, x, t-gr, a, y-300, spac, e-y-2, m, l-6, lis, t-di, s, c">
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-bl, u, e-300, m, b-3">Phas, e, 3: Se, l, f-Healing, Infrastructur, e (Wee, k, 7-10)</h3>";
-=======
                   <li>Expec, t, e,
   d: 5x, faster, deployments, 90% reduction, in, failed releas, e, s</li>
                 </ul>
@@ -361,21 +332,16 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                 <ul, className="te, x, t-gr, a, y-300, spac, e-y-2, m, l-6, lis, t-di, s, c"></ul>"
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-bl, u, e-300, m, b-3">Phas, e, 3: Se, l, f-Healing, Infrastructur, e (Wee, k, 7-10)</h3>";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <ul, className="te, x, t-gr, a, y-300, spac, e-y-2, m, l-6, lis, t-di, s, c">";
                   <li>Activate, predictive, failure prevention, model, s</li>
                   <li>Deploy, autonomous, healing agents, across, infrastructure</li>
                   <li>Implement, intelligent, resource optimizati, o, n</li>
-<<<<<<< HEAD
                   <li>Expec, t, e;
-=======
                   <li>Expec, t, e,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   d: 99.99% upti, m, e, 80% cost, reductio, n</li>
                 </ul>
               </d, i, v>
             </d, i, v>
-<<<<<<< HEAD
           </secti, o, n>
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Key, Technologie, s & Integratio, n, s</h2>
@@ -385,7 +351,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">";</section>
               <d, i, v>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, b-4">AI/ML, Stac, k</h3>";
-=======
           </secti, o, n>"
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30"></section>"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Key, Technologie, s & Integratio, n, s</h2>"
@@ -395,7 +360,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">";
               <d, i, v></d>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, b-4">AI/ML, Stac, k</h3>";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <ul, className="te, x, t-gr, a, y-300, spac, e-y-2">";
                   <li>• Ti, m, e-series, forecastin, g (Proph, e, t, LS, T, M)</li>
                   <li>• Anomaly, detectio, n (Isolation, Fores, t, Autoencode, r, s)</li>
@@ -416,19 +380,15 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                 </ul>
               </d, i, v>
             </d, i, v>
-<<<<<<< HEAD
           </secti, o, n>
           <section, className="mb-12">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">ROI, Calculato, r</h2>
             <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/20"></section>
               <p, className="te, x, t-gr, a, y-300, m, b-6">
-<<<<<<< HEAD
                 For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d: </p>,
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">"
-=======
                 For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d: </p>
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">"</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <d, i, v>
                   <h4, className="te, x, t-lg, fon, t-bold, tex, t-purp, l, e-300, m, b-3">Cost, Saving, s (Annu, a, l)</h4>
                   <ul, className="te, x, t-gr, a, y-300, spac, e-y-2">
@@ -440,13 +400,10 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">ROI, Calculato, r</h2>";
             <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/20">";</section>
               <p, className="te, x, t-gr, a, y-300, m, b-6">";
-<<<<<<< HEAD
                 For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d: </p>,
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">";
-=======
                 For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d: </p>
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <d, i, v>
                   <h4, className="te, x, t-lg, fon, t-bold, tex, t-purp, l, e-300, m, b-3">Cost, Saving, s (Annu, a, l)</h4>";
                   <ul, className="te, x, t-gr, a, y-300, spac, e-y-2">";
@@ -454,7 +411,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
   n: $1.6M</li>,
                     <li>• Reduced, incident, response: $80, 0, K</li>
                     <li>• Eliminated, manual, processes: $60, 0, K</li>
-=======
           </secti, o, n>"
           <section, className="mb-12"></section>"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">ROI, Calculato, r</h2>"
@@ -486,7 +442,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
   e: $80, 0, K</li>
                     <li>• Eliminated, manual, processe,
   s: $60, 0, K</li>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     <li, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, t-2">Tot, a, l: $3M+ annual, l, y</li>";
                   </ul>
                 </d, i, v>
@@ -495,15 +450,12 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                   <ul, className="te, x, t-gr, a, y-300, spac, e-y-2">";
                     <li>• 80% time, saved, on deploymen, t, s</li>
                     <li>• 95% reduction, in, toil and, manual, work</li>
-<<<<<<< HEAD
                     <li>• Zero, o, n-call, burden, from infrastructure, issue, s</li>
                     <li, className="te, x, t-xl, fon, t-bold, tex, t-pi, n, k-300, m, t-2">RO;
   I: 8, 5, 0% in, Year, 1</li>"
-=======
                     <li>• Zero, o, n-call, burden, from infrastructure, issue, s</li>"
                     <li, className="te, x, t-xl, fon, t-bold, tex, t-pi, n, k-300, m, t-2">RO,"
   I: 8, 5, 0% in, Year, 1</li>""
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     <li, className="te, x, t-xl, fon, t-bold, tex, t-pi, n, k-300, m, t-2">R, O, I: 8, 5, 0% in, Year, 1</li>";
                   </ul>
                 </d, i, v>
@@ -514,17 +466,13 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Getted, Today</h2>";"
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
               Transform, your, DevOps operations, with, AI-powered, automatio, n. Our, team, of experts, will, help you, design, and implement, a, custom solution, tailored, to your, infrastructure, and business, need, s.
-<<<<<<< HEAD
             </p>
-<<<<<<< HEAD
             <div, className="flex, fle, x-co, l, s;
   m: fl, e, x-row, ga, p-4">"
               <a, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove;
-=======
             <div, className="flex, fle, x-co, l, s
   m: fl, e, x-row, ga, p-4">"</section>
               <a, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
   r:sca, l, e-105, shado, w-xl">"
                 Schedule, Consultatio, n;
               </a>
@@ -534,7 +482,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                 Schedule, Consultatio, n;
               </a>
               <a, titl, e="Internal, lin, k" hr, e, f="/de, m, o" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hov, e;
-=======
             </p>"
             <div, className="flex, fle, x-co, l, s,"
   m: fl, e, x-row, ga, p-4">""
@@ -549,7 +496,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                 Schedule, Consultatio, n;
               </a>"
               <a, titl, e="Internal, lin, k" hr, e, f="/de, m, o" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hov, e,"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r: bg-whi, t, e/20, tex, t-white, fon, t-semibold, rounde, d-xl, border, border-whi, t, e/20, transitio, n-a, l, l">";
                 Request, Dem, o;
               </a>

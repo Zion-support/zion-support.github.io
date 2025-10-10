@@ -1,12 +1,10 @@
 
-<<<<<<< HEAD
     id: 'finops - scheduler - optimizer'
     name: 'FinOps Scheduler Optimizer',
     tagline: 'Rightsizing & schedules with IaC exports',
     price: '$99',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'finops - scheduler - optimizer',
     nam,
@@ -19,7 +17,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.',
     feature,
   s: [,
@@ -28,7 +25,6 @@
       'IaC export',
       'Alerting',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - emerald - 600 to - teal - 700'
@@ -63,7 +59,6 @@
     price: '$79',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -131,7 +126,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Collects slow queries and proposes safe index changes with before / after impact analysis.',
     feature,
   s: [,
@@ -140,7 +134,6 @@
       'Impact simulation',
       'Capacity forecast',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - indigo - 600 to - violet - 700'
@@ -462,7 +455,6 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 40;
 		rating: 4.7}
 		reviews: 18}
-=======
     popula,
   r: false,
     ico,
@@ -1031,7 +1023,6 @@ export const,
   g: 4.7}
 		review,
   s: 18}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 	};
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
@@ -1045,7 +1036,6 @@ export const,
 	}
 ];
 ;
-<<<<<<< HEAD
 // const contact = {;
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
@@ -1087,7 +1077,6 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 40;
 		rating: 4.7}
 		reviews: 18}
-=======
 // const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
@@ -1100,7 +1089,6 @@ export const,
   g: 4.7}
 		review,
   s: 18}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 	};
 	{/* TODO: Fix JSX expression */}
   g: 4.6}

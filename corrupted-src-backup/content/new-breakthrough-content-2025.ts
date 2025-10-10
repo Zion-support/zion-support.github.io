@@ -2,7 +2,6 @@ export interface BreakthroughContent {/* TODO: Fix JSX expression */}
   };
 }
 
-<<<<<<< HEAD
 export const newBreakthroughContent2025: BreakthroughContent[] = [
   {
     id: 'ai-platform-optimization-2025'
@@ -60,14 +59,12 @@ Protect your AI systems with next-generation quantum security frameworks.
       savings: '$2.8B protected',
       accuracy: 'Zero breaches',
       roi: '500%',
-=======
 export const,
   newBreakthroughContent2025: BreakthroughContent[] = [
   {/* TODO: Fix JSX expression */}
     },
   },
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
   },
 ];

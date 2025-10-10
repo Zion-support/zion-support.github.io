@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 'use client';
 import { Helmet } from 'react-helmet-async';
-=======
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 
 export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression */}
 }

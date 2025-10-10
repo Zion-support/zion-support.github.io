@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -611,7 +610,6 @@ export interface ComprehensiveInnovativeService {;
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup.com',
-=======
   i,
   d: string;
   nam,
@@ -1572,12 +1570,10 @@ export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const,
   comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [;
   // AI & Machine Learning Services;
-<<<<<<< HEAD
   {
     id: 'ai-content-generation-platform';
     name: 'AI Content Generation Platform';
@@ -1622,7 +1618,6 @@ export const,
       'Renewable energy management_energy optimization_grid integration_sustainability reporting_predictive maintenance',
     ]}
     market_advantage: 'Advanced AI energy platform with comprehensive sustainability features',
-=======
   {/* TODO: Fix JSX expression */}
     ]}
     capabilitie,
@@ -1631,7 +1626,6 @@ export const,
     ]}
     market_advantag,
   e: 'Advanced AI energy platform with comprehensive sustainability features'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export default comprehensiveInnovativeServices;
@@ -1641,7 +1635,6 @@ export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -1651,7 +1644,6 @@ export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   benefits: string[];
   capabilities: string[];
   marketAdvantage: string;
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -1670,7 +1662,6 @@ export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   s: string[];
   marketAdvantag,
   e: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ;
 export default comprehensiveInnovativeServices;

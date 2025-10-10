@@ -6,16 +6,12 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
     }
-<<<<<<< HEAD
   ]; return(<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
-=======
   ]; return (<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
       transiti, o, n = {/* TODO: Fix JSX expression */}
   n: , 0., 6 }}"
       classNa, m, e = "relative, overflo, w-hidden, rounde, d-2xl, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-90, 0, p-8, m, d: p-12, shado, w-2xl, m, y-12"
-<<<<<<< HEAD
     >
       {/* Animated, background, effe, c, t */}
       <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-pi, n, k-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, animat, e-pul, s, e" />
@@ -31,7 +27,6 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
             <Sparkles, classNam, e = "w-8 h-8, tex, t-yell, o, w-4, 0, 0" />
           </moti, o, n.d, i, v>
           <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-white, tex, t-cent, e, r">
-=======
     ></moti>
       {/* Animated, background, effe, c, t */}"
       <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-pi, n, k-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, animat, e-pul, s, e" /></div>
@@ -48,7 +43,6 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
             <Sparkles, classNam, e = "w-8 h-8, tex, t-yell, o, w-4, 0, 0" /></Sparkles>
           </moti, o, n.d, i, v>"
           <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-white, tex, t-cent, e, r"></h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             Fresh, AI, Insights for, October, 2025;
           </h2>
           <moti, o, n.div, animat, e={{ rota, t, e: -3, 6, 0 }}
@@ -61,30 +55,23 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
         <p, className="te, x, t-lg, m, d: te, x, t-xl, tex, t-purp, l, e-200, tex, t-center, m, b-10, ma, x-w-3xl, m, x-au, t, o"></p>
           Explore, the, latest breakthrough, technologies, transforming industries, worldwid, e. 
           Our, expert, team shares, cuttin, g-edge, insights, you can, implement, today.
-<<<<<<< HEAD
         </p>)
         {/* Articles, G, r, i, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">)
           { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (
-=======
         </p>
-<<<<<<< HEAD
         {/* Articles, G, r, i, d */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">
           { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
         {/* Articles, G, r, i, d */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8"></div>
           {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             <moti, o, n.div, ke, y = { artic, l, e.s, l, u, g  }, initi, a, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
               anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
               transiti, o, n = {/* TODO: Fix JSX expression */}
   n: , 0., 5, del, a, y: ind, e, x * 0., 1 }}
               whileHov, e, r = {{ sca, l, e: 1., 0, 5 }}"
               classNa, m, e = "relative, grou, p"
-<<<<<<< HEAD
             >
               <Link, t, o={`/bl, o, g/${artic, l, e.slug}`}>
                 <div, className="relative, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6 h-full, border, border-whi, t, e/20, hove, r: bord, e, r-whi, t, e/40, transitio, n-all, duratio, n-3, 0, 0"  > {/* Highlight, Ba, d, g, e */}</div>
@@ -95,7 +82,6 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
                     <artic, l, e.icon, classNam, e = "w-7 h-7, tex, t-whi, t, e"</div>
                   {/* Conte, n, t */}
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">
-=======
             ></moti>
               <Link, t, o={`/bl, o, g/${artic, l, e.slug}`}></Link>"
                 <div, className="relative, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6 h-full, border, border-whi, t, e/20, hove, r: bord, e, r-whi, t, e/40, transitio, n-all, duratio, n-3, 0, 0"  > {/* Highlight, Ba, d, g, e */}`
@@ -106,40 +92,33 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
                     <artic, l, e.icon, classNam, e = "w-7 h-7, tex, t-whi, t, e"</div></artic>
                   {/* Conte, n, t */}"
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s"></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     {artic, l, e.t, i, t, l, e}
                   </h3>"
                   <p, classNam, e = "te, x, t-purp, l, e-200, tex, t-sm, m, b-4"></p>
                     {artic, l, e.description}
                   </p>
-<<<<<<< HEAD
                   {/* Read, More, Link */}
                   <div, className="flex, item, s-center, tex, t-purp, l, e-300, grou, p-hov, e, r: te, x, t-purp, l, e-100, transitio, n-colo, r, s"></div>
                     <span, className="te, x, t-sm, fon, t-semibo, l, d">Read, Articl, e</sp, a, n>
                     <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m" />
-=======
                   {/* Read, More, Link */}"
                   <div, className="flex, item, s-center, tex, t-purp, l, e-300, grou, p-hov, e, r: te, x, t-purp, l, e-100, transitio, n-colo, r, s"></div>"
                     <span, className="te, x, t-sm, fon, t-semibo, l, d">Read, Articl, e</sp, a, n>"
                     <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m" /></Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   </div>
                 </div>
               </Li, n, k>
             </moti, o, n.d, i, v>)
           ))}
         </div>
-<<<<<<< HEAD
         {/* CTA, Sectio, n */}
         <div, classNam, e = "te, x, t-cent, e, r"></div>
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-center, justif, y-cent, e, r"></div>
             <Link, t, o="/bl, o, g"
-=======
         {/* CTA, Sectio, n */}"
         <div, classNam, e = "te, x, t-cent, e, r"></div>"
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-center, justif, y-cent, e, r"></div>"
             <Link, t, o="/bl, o, g""
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               className="group, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r:fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-bold, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-xl, transitio, n-all, duratio, n-300, flex, items-center, ga, p-2"
             ></Link>
               <sp, a, n>Explore, All, Articles</sp, a, n>"
@@ -147,17 +126,13 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
             </Li, n, k>"
             <Link, t, o="/conta, c, t""
               className="px-8, p, y-4, b, g-whi, t, e/10, hove, r:bg-whi, t, e/20, backdro, p-bl, u, r-lg, tex, t-white, fon, t-bold, rounde, d-xl, borde, r-2, borde, r-whi, t, e/30, hove, r:bord, e, r-whi, t, e/50, transitio, n-all, duratio, n-3, 0, 0"
-<<<<<<< HEAD
             >
               Get, Expert, Consultation;
             </Li, n, k>
           </div>
           <p, className="mt-6, tex, t-purp, l, e-300, tex, t-sm">
-<<<<<<< HEAD
             💡 <stro, n, g>Jo, i, n , 1, 0,0, 0, 0+ tech, leader, s</stro, n, g> staying, ahead, with our, insight, s;
-=======
             💡</p> <stro, n, g>Jo, i, n , 1, 0,0, 0, 0+ tech, leader, s</stro, n, g> staying, ahead, with our, insight, s
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           </p>
         </div>
       </div>
@@ -167,7 +142,6 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
           <moti, o, n.div, ke, y = { , i  }, classNa, m, e = "absolut, e, w-2 h-2, b, g-purp, l, e-4, 0, 0/30, rounde, d-fu, l, l"
             sty, l, e={{}
               le, f, t: `${Ma, t, h.ran, d, o, m() * 10, 0}%`,
-=======
             ></Link>
               Get, Expert, Consultation;
             </Li, n, k>
@@ -183,7 +157,6 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
           <moti, o, n.div, ke, y = { , i  }, classNa, m, e = "absolut, e, w-2 h-2, b, g-purp, l, e-4, 0, 0/30, rounde, d-fu, l, l"
             sty, l, e={/* TODO: Fix JSX expression */}`
               le, f, t: `${Ma, t, h.ran, d, o, m() * 10, 0}%`,`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               t, o, p: `${Ma, t, h.rand, o, m() * 10, 0}%`,
             }}
             anima, t, e = {/* TODO: Fix JSX expression */}

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -31,7 +30,6 @@
     email: string;
     address: string;
     website: string;
-=======
   i,
   d: string;
   nam,
@@ -94,7 +92,6 @@
   s: string;
     websit,
   e: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
         'AI-powered molecular modeling and simulation',
   real_implementatio,
@@ -113,7 +110,6 @@
 export const,
   advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] =;
   [
-<<<<<<< HEAD
     // AI - Powered Drug Discovery Platform;
       id: 'ai - drug - discovery - platform',
       name: 'AI - Powered Drug Discovery Platform',
@@ -121,7 +117,6 @@ export const,
       price: '$2, 999',
       period: '/month',
       description: unknown;
-=======
     // AI - Powered Drug Discovery Platform,
       i,
   d: 'ai - drug - discovery - platform',
@@ -135,7 +130,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Advanced AI platform that accelerates drug discovery through molecular modeling, target identification, and predictive analytics, reducing development time and costs significantly.',
       feature,
   s: [,
@@ -150,15 +144,12 @@ export const,
         'Mobile research app',
         'API for research institutions',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: '',
-=======
       popula,
   r: true,
       ico,
   n: '',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Python, TensorFlow, PyTorch, React, Node && Node.js, Molecular dynamics, Bioinformatics',
       ],
       integration,
@@ -169,7 +160,6 @@ export const,
   s: [,
         'Drug discovery identification, Molecular modeling, Clinical trial optimization, Drug repurposing'
       ]
-<<<<<<< HEAD
       roi: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.',
       competitors: [,
         'Schrdinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia',
@@ -190,7 +180,6 @@ export const,
       category: 'AI Drug Discovery & Biotech',
       real_service: true;
       technology: [,
-=======
       ro,
   i: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.'
       competitor,
@@ -229,7 +218,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Python, TensorFlow, PyTorch, React, Node.js, Molecular dynamics, Bioinformatics',
       ],
       integration,
@@ -246,7 +234,6 @@ export const,
   s: [,
         'Schrdinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia',
       ],
-<<<<<<< HEAD
       market_size: '$45.8B AI drug discovery market'
       growth_rate: '35% annual growth'
       variant: 'ai - drug - discovery - enterprise'
@@ -271,7 +258,6 @@ export const,
       price: '$1, 499',
       period: '/month',
       description: unknown;
-=======
       market_siz,
   e: '$45.8B AI drug discovery market',
       growth_rat,
@@ -317,7 +303,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Comprehensive precision medicine platform that combines genomic analysis, AI - powered diagnostics, and personalized treatment recommendations for improved patient outcomes.',
       feature,
   s: [,
@@ -332,15 +317,12 @@ export const,
         'Mobile patient app',
         'API for healthcare providers',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: '',
-=======
       popula,
   r: true,
       ico,
   n: '',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Python, TensorFlow, React, Node && Node.js, Bioinformatics tools, Cloud computing',
       ],
       integration,
@@ -351,7 +333,6 @@ export const,
   s: [,
         'Personalized medicine, Disease risk assessment, Treatment optimization, Clinical research, Population health'
       ]
-<<<<<<< HEAD
       roi: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.',
       competitors: [,
         '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics',
@@ -372,7 +353,6 @@ export const,
       category: 'Precision Medicine & Genomics',
       real_service: true;
       technology: [,
-=======
       ro,
   i: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.'
       competitor,
@@ -411,7 +391,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Python, TensorFlow, React, Node.js, Bioinformatics tools, Cloud computing',
       ],
       integration,
@@ -428,7 +407,6 @@ export const,
   s: [,
         '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics',
       ],
-<<<<<<< HEAD
       market_size: '$78.6B precision medicine market'
       growth_rate: '28% annual growth'
       variant: 'precision - medicine - enterprise'
@@ -445,7 +423,6 @@ export const,
       customers: 45;
       rating: 4 && 4.8;
       reviews: 23;
-=======
       market_siz,
   e: '$78.6B precision medicine market',
       growth_rat,
@@ -477,19 +454,16 @@ export const,
   g: 4 && 4.8,
       review,
   s: 23,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
         'AI-powered image analysis and diagnosis',
         'Multi-modality support (X-ray, MRI, CT) Ultrasound)',
     // AI - Powered Medical Imaging Analysis;
-<<<<<<< HEAD
       id: 'ai - medical - imaging - analysis'
       name: 'AI - Powered Medical Imaging Analysis Platform',
       tagline: 'Advanced medical imaging analysis with AI and deep learning',
       price: '$899',
       period: '/month',
       description: unknown;
-=======
       i,
   d: 'ai - medical - imaging - analysis',
       nam,
@@ -502,7 +476,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Advanced AI platform that provides automated medical image analysis, diagnosis assistance, and clinical decision support for radiologists and healthcare providers.',
       feature,
   s: [,
@@ -517,22 +490,18 @@ export const,
         'Advanced analytics and insights',
         'Compliance and audit tools',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: '',
-=======
       popula,
   r: true,
       ico,
   n: '',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Python, TensorFlow, PyTorch, React, Node && Node.js, Medical imaging libraries',
       ],
       integration,
   s: [,
         'PACS systems, DICOM, EHR systems, Medical devices, Cloud platforms'
       ]
-<<<<<<< HEAD
       useCases: [,
       color: 'from - purple - 600 to - pink - 600',
       text_color: 'text - purple - 400',
@@ -546,7 +515,6 @@ export const,
       category: 'AI Medical Imaging & Diagnostics',
       real_service: true;
       technology: [,
-=======
       useCase,
   s: [,
       colo,
@@ -573,7 +541,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Python, TensorFlow, PyTorch, React, Node.js, Medical imaging libraries',
       ],
       integration,
@@ -584,7 +551,6 @@ export const,
   s: [,
         'Medical imaging analysis, Diagnosis assistance, Clinical decision support, Research collaboration, Quality assurance',
       ],
-<<<<<<< HEAD
       roi: 'Healthcare providers report 400% ROI through improved diagnostic accuracy and workflow efficiency.',
       competitors: ['Aidoc, Zebra Medical, Arterys, Enlitic, Infervision'],
       market_size: '$32.1B AI medical imaging market'
@@ -612,7 +578,6 @@ export const,
       price: '$399',
       period: '/month',
       description: unknown;
-=======
       ro,
   i: 'Healthcare providers report 400% ROI through improved diagnostic accuracy and workflow efficiency.',
       competitor,
@@ -663,7 +628,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Integrated digital health platform that provides telemedicine, remote patient monitoring, health analytics, and patient engagement tools for modern healthcare delivery.',
       feature,
   s: [,
@@ -678,15 +642,12 @@ export const,
         'Billing and insurance integration',
         'API for healthcare applications',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: '',
-=======
       popula,
   r: true,
       ico,
   n: '',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'React, Node && Node.js, WebRTC, Python, TensorFlow, PostgreSQL, Redis',
       ],
       integration,
@@ -697,7 +658,6 @@ export const,
   s: [,
         'Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management',
       ],
-<<<<<<< HEAD
       roi: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.',
       competitors: ['Teladoc, Amwell, Doxy && Doxy.me, MDLive, PlushCare'],
       marketSize: '$185 && 185.6B digital health market'
@@ -716,7 +676,6 @@ export const,
       category: 'Digital Health & Telemedicine',
       real_service: true;
       technology: [,
-=======
       ro,
   i: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.',
       competitor,
@@ -753,7 +712,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'React, Node.js, WebRTC, Python, TensorFlow, PostgreSQL, Redis',
       ],
       integration,
@@ -764,7 +722,6 @@ export const,
   s: [,
         'Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management',
       ],
-<<<<<<< HEAD
       roi: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.',
       competitors: ['Teladoc, Amwell, Doxy.me, MDLive, PlushCare'],
       market_size: '$185.6B digital health market'
@@ -792,7 +749,6 @@ export const,
       price: '$1, 999',
       period: '/month',
       description: unknown;
-=======
       ro,
   i: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.',
       competitor,
@@ -843,7 +799,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Advanced clinical trial platform that uses AI to optimize trial design, patient recruitment, data collection, and analysis for faster, more efficient clinical research.',
       feature,
   s: [,
@@ -858,15 +813,12 @@ export const,
         'Mobile data collection app',
         'API for research platforms',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: '',
-=======
       popula,
   r: true,
       ico,
   n: '',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Clinical trial software',
       ],
       integration,
@@ -875,7 +827,6 @@ export const,
   s: [,
         'Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management'
       ]
-<<<<<<< HEAD
       roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.',
       competitors: [,
         'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel',
@@ -896,7 +847,6 @@ export const,
       category: 'Clinical Research & Trials',
       real_service: true;
       technology: [,
-=======
       ro,
   i: 'Research organizations report 400% ROI through faster trial completion and improved data quality.'
       competitor,
@@ -935,7 +885,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Python, TensorFlow, React, Node.js, PostgreSQL, Clinical trial software',
       ],
       integration,
@@ -950,7 +899,6 @@ export const,
   s: [,
         'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel',
       ],
-<<<<<<< HEAD
       market_size: '$67.2B clinical trial market'
       growth_rate: '18% annual growth'
       variant: 'clinical - trial - enterprise'
@@ -962,7 +910,6 @@ export const,
       },
       real_implementation: true;
       implementation_details: unknown;
-=======
       market_siz,
   e: '$67.2B clinical trial market',
       growth_rat,
@@ -985,7 +932,6 @@ export const,
   n: true,
       implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Advanced clinical trial platform with AI - powered optimization, patient recruitment, and data management.',
       launch_dat,
   e: '2024 - 11 - 01',

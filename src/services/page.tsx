@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 
 
 
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-<<<<<<< HEAD
 const ServicesPage: React.FC = () => {
 import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car} from 'lucide-react';
 
@@ -111,7 +107,6 @@ icon$5: Clock,
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
           Contact Us
         </a>
-=======
 import SEOOptimizer from '../components/SEOOptimizer';
 const ServicesPage: React.FC = () => {import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car,  Brain,  Zap,  BarChart,  Database,  Lock,  BarChart3,  ShoppingCart,  TrendingUp,  Users,  Clock } from 'lucide-react';
 
@@ -248,16 +243,12 @@ const ServicesPage: React.FC = () => {import { CheckCircle, Star, Zap, Shield, C
   hover:bg-cyan-600 transition-colors"></a>
 // Contact Us;
           </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       </div>
   );
 };
 
-<<<<<<< HEAD
 export default ServicesPage;
-=======
 
 export default ServicesPage;
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Star, TrendingUp, Clock, Shield, Zap, Brain } from 'lucide-react';
@@ -8,7 +7,6 @@ const DynamicContentShowcase: React.FC = () => {,
 
   const tabs = [
     {
-<<<<<<< HEAD
       id: 'ai-solutions',
       title: 'AI Solutions',
       icon: Brain,
@@ -16,7 +14,6 @@ const DynamicContentShowcase: React.FC = () => {,
       bgColor: 'bg-purple-500/10',
       content: {,
     title: 'Revolutionary AI Solutions',
-=======
       id: 'ai-solutions'
       title: 'AI Solutions'
       icon: Brain;
@@ -24,7 +21,6 @@ const DynamicContentShowcase: React.FC = () => {,
       bgColor: 'bg-purple-500/10'
       content: {
         title: 'Revolutionary AI Solutions',
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
         description: 'Transform your business with cutting-edge artificial intelligence technologies',
         features: [,
           { name: 'Machine Learning Models', description: 'Custom ML models for your specific needs', icon: '🧠' },
@@ -40,7 +36,6 @@ const DynamicContentShowcase: React.FC = () => {,
       }
     },
     {
-<<<<<<< HEAD
       id: 'it-services',
       title: 'IT Services',
       icon: Shield,
@@ -48,7 +43,6 @@ const DynamicContentShowcase: React.FC = () => {,
       bgColor: 'bg-blue-500/10',
       content: {,
     title: 'Enterprise IT Solutions',
-=======
       id: 'it-services'
       title: 'IT Services'
       icon: Shield;
@@ -56,7 +50,6 @@ const DynamicContentShowcase: React.FC = () => {,
       bgColor: 'bg-blue-500/10'
       content: {
         title: 'Enterprise IT Solutions',
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
         description: 'Comprehensive IT services to keep your business running smoothly',
         features: [,
           { name: 'Cloud Infrastructure', description: 'Scalable and secure cloud solutions', icon: '☁️' },
@@ -72,7 +65,6 @@ const DynamicContentShowcase: React.FC = () => {,
       }
     },
     {
-<<<<<<< HEAD
       id: 'digital-transformation',
       title: 'Digital Transformation',
       icon: Zap,
@@ -80,7 +72,6 @@ const DynamicContentShowcase: React.FC = () => {,
       bgColor: 'bg-green-500/10',
       content: {,
     title: 'Digital Transformation',
-=======
       id: 'digital-transformation'
       title: 'Digital Transformation'
       icon: Zap;
@@ -88,7 +79,6 @@ const DynamicContentShowcase: React.FC = () => {,
       bgColor: 'bg-green-500/10'
       content: {
         title: 'Digital Transformation',
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
         description: 'Modernize your business processes with our digital transformation services',
         features: [,
           { name: 'Process Automation', description: 'Streamline workflows with intelligent automation', icon: '⚙️' },
@@ -107,7 +97,6 @@ const DynamicContentShowcase: React.FC = () => {,
 
   const currentTab = tabs[activeTab];
 
-<<<<<<< HEAD
   return (
     <section className="py-16" aria-labelledby="showcase-heading">
       <div className="container mx-auto px-4"></section>
@@ -117,7 +106,6 @@ const DynamicContentShowcase: React.FC = () => {,
                 onClick={() =>setActiveTab(index)}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-all duration-300 ${
                   activeTab === index
-=======
   return(<section className="py-16" aria-labelledby="showcase-heading">
       <div className="container mx-auto px-4">)
         <h2 id="showcase-heading" className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">)
@@ -133,7 +121,6 @@ const DynamicContentShowcase: React.FC = () => {,
                 onClick={() => setActiveTab(index)}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-all duration-300 ${}
                   activeTab === index;}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     ? `${tab.bgColor} ${tab.color} border-2 border-current`
                     : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white',
                 }`}
@@ -147,15 +134,12 @@ const DynamicContentShowcase: React.FC = () => {,
           </div>
 
           {/* Tab Content */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 cyber-card">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">{/* Content */}</div>
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{currentTab.content.title}<p className="text-gray-300 text-lg mb-8 leading-relaxed">{currentTab.content.description}<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">{currentTab.content.features.map((feature, index) => (</div>
                     <div key={index} className="bg-slate-700/50 rounded-lg p-4 hover:bg-slate-700/70 transition-colors">
                       <div className="flex items-start space-x-3">
-=======
           <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md: p-12 cyber-card">,
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">,
               {/* Content */}
@@ -171,15 +155,12 @@ const DynamicContentShowcase: React.FC = () => {,
                   {currentTab.content.features.map((feature, index) => (
                     <div key={index} className="bg-slate-700/50 rounded-lg p-4 hover: bg-slate-700/70 transition-colors">,
                       <div className="flex items-start space-x-3">,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
           <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 cyber-card"></div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">{/* Content */}</div>
               <div></div>
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{currentTab.content.title}</h3><p className="text-gray-300 text-lg mb-8 leading-relaxed">{currentTab.content.description}</p><div className="grid grid-cols-1 sm:grid-cols-2 gap-4">{currentTab.content.features.map((feature, index) => (</div>
                     <div key={index} className="bg-slate-700/50 rounded-lg p-4 hover:bg-slate-700/70 transition-colors"></div>
                       <div className="flex items-start space-x-3"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         <span className="text-2xl">{feature.icon}</span>
                         <div></div>
                           <h4 className="font-semibold text-white mb-1">{feature.name}<p className="text-gray-400 text-sm">{feature.description}</p>
@@ -202,13 +183,10 @@ const DynamicContentShowcase: React.FC = () => {,
                   ))}
                 </div>
 
-<<<<<<< HEAD
                 <div className="pt-6">
                   <a;
-=======
                 <div className="pt-6"></div>
                   <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     href={`/${currentTab.id}`}
                     className={`inline-flex items-center space-x-2 ${currentTab.color} hover:opacity-80 transition-opacity font-medium`}
                   >
@@ -219,7 +197,6 @@ const DynamicContentShowcase: React.FC = () => {,
               </div>
             </div>
           </div>
-=======
 import React from 'react';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 
@@ -294,15 +271,11 @@ const DynamicContentShowcase: React.FC = () => {
               </a>
             </div>
           ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         </div>
       </div>
     </section>
   );
 };
 
-<<<<<<< HEAD
 export default DynamicContentShowcase;
-=======
 export default DynamicContentShowcase;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

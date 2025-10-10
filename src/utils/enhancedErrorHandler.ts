@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Enhanced Error Handling System
@@ -635,7 +634,6 @@ export {
   type ErrorContext,
   type ErrorHandlerConfig
 };
-=======
 
 'use client'
 /**
@@ -1319,4 +1317,3 @@ export {/* TODO: Fix JSX expression */}
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

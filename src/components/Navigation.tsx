@@ -1,21 +1,15 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail, MapPin, ChevronDown, ChevronUp } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Phone, Mail, MapPin, ChevronDown } from 'lucide-react';
-=======
 import React, { useState, useEffect, memo } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
 
 const Navigation: React.FC = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
-<<<<<<< HEAD
   const [isScrolled, setIsScrolled] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
@@ -339,8 +333,6 @@ import { Menu, X, Phone, MapPin, ChevronDown } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
@@ -751,4 +743,3 @@ const Navigation: React.FC = () => {
 
 Navigation.displayName = 'Navigation';
 export default Navigation;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

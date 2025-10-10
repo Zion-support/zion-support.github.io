@@ -1,8 +1,6 @@
 'use client';
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
-<<<<<<< HEAD
 interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
@@ -53,10 +51,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 };
 
 export default PerformanceOptimizer;
-=======
 import React, { useEffect, useState, useCallback } from 'react';
 
-<<<<<<< HEAD
 interface PerformanceMetrics {
   lcp: number;,
     fid: number;
@@ -79,7 +75,6 @@ export const PerformanceOptimizer: React.FC = () => {,
     serviceWorker: false;
     optimized: false;
   const collectWebVitals = useCallback(() => {
-=======
 interface PerformanceMetrics {}
   lcp: number;
   fid: number;
@@ -103,23 +98,17 @@ export const PerformanceOptimizer: React.FC = () => {}
     optimized: false
 
   const collectWebVitals = useCallback(() => {}
->>>>>>> origin/merge-error-fixes
     if (typeof window === 'undefined') return;
 
-<<<<<<< HEAD
     // Collect Core Web Vitals
-<<<<<<< HEAD
     const vitals: PerformanceMetrics = {,
     lcp: 0,
-=======
     const vitals: PerformanceMetrics = {}
       lcp: 0,
->>>>>>> origin/merge-error-fixes
       fid: 0,
       cls: 0,
       fcp: 0,
       ttfb: 0,
-=======
     // Collect Core Web Vitals;
     const vitals: PerformanceMetrics = {
       lcp: 0;
@@ -127,29 +116,22 @@ export const PerformanceOptimizer: React.FC = () => {}
       cls: 0;
       fcp: 0;
       ttfb: 0;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
     };
 
-<<<<<<< HEAD
     // LCP - Largest Contentful Paint;
     const lcpObserver = new PerformanceObserver((list) => {
-=======
     // LCP - Largest Contentful Paint
     const lcpObserver = new PerformanceObserver((list) => {}
->>>>>>> origin/merge-error-fixes
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       vitals.lcp = lastEntry.startTime;
 
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-<<<<<<< HEAD
     // FID - First Input Delay;
     const fidObserver = new PerformanceObserver((list) => {
-=======
     // FID - First Input Delay
     const fidObserver = new PerformanceObserver((list) => {}
->>>>>>> origin/merge-error-fixes
       const entries = list.getEntries();
       entries.forEach((entry) => {}
         vitals.fid = entry.processingStart - entry.startTime;
@@ -157,13 +139,10 @@ export const PerformanceOptimizer: React.FC = () => {}
 
     fidObserver.observe({ entryTypes: ['first-input'] });
 
-<<<<<<< HEAD
     // CLS - Cumulative Layout Shift;
     const clsObserver = new PerformanceObserver((list) => {
-=======
     // CLS - Cumulative Layout Shift
     const clsObserver = new PerformanceObserver((list) => {}
->>>>>>> origin/merge-error-fixes
       let clsValue = 0;
       for (const entry of list.getEntries()) {}
         if (!(entry as any).hadRecentInput) {}
@@ -174,13 +153,10 @@ export const PerformanceOptimizer: React.FC = () => {}
 
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
-<<<<<<< HEAD
     // FCP - First Contentful Paint;
     const fcpObserver = new PerformanceObserver((list) => {
-=======
     // FCP - First Contentful Paint
     const fcpObserver = new PerformanceObserver((list) => {}
->>>>>>> origin/merge-error-fixes
       const entries = list.getEntries();
       entries.forEach((entry) => {}
         vitals.fcp = entry.startTime;
@@ -188,13 +164,10 @@ export const PerformanceOptimizer: React.FC = () => {}
 
     fcpObserver.observe({ entryTypes: ['paint'] });
 
-<<<<<<< HEAD
     // TTFB - Time to First Byte;
     const ttfbObserver = new PerformanceObserver((list) => {
-=======
     // TTFB - Time to First Byte
     const ttfbObserver = new PerformanceObserver((list) => {}
->>>>>>> origin/merge-error-fixes
       const entries = list.getEntries();
       entries.forEach((entry) => {}
         vitals.ttfb = entry.responseStart - entry.requestStart;
@@ -203,7 +176,6 @@ export const PerformanceOptimizer: React.FC = () => {}
     ttfbObserver.observe({ entryTypes: ['navigation'] });
 
     setOptimizationStatus(prev => ({ ...prev, preloaded: 1 }));
-=======
 
 interface PerformanceOptimizerProps {/* TODO: Fix JSX expression */}
 }
@@ -325,7 +297,6 @@ const,
   s: ['largest-contentful-paint'] });
 
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }, []);
 
   const preloadCriticalResources = useCallback(() => {}
@@ -337,16 +308,10 @@ const,
       '/js/critical.js'
     ];
 
-<<<<<<< HEAD
     criticalResources.forEach(resource => {)
-<<<<<<< HEAD
     const link = document.createElement('link');
-=======
-=======
     criticalResources.forEach(resource => {)}
->>>>>>> origin/merge-error-fixes
       const link = document.createElement('link');
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       link.rel = 'preload';
       link.href = resource;
       link.as = resource.endsWith('.css') ? 'style' : 'script';
@@ -355,13 +320,10 @@ const,
     setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }));
   }, []);
 
-<<<<<<< HEAD
   const setupCodeSplitting = () => {
     // This would be handled by Next.js dynamic imports;
-=======
   const setupCodeSplitting = () => {}
     // This would be handled by Next.js dynamic imports
->>>>>>> origin/merge-error-fixes
     setOptimizationStatus(prev => ({ ...prev, codeSplit: true }));
   };
 
@@ -375,16 +337,10 @@ const,
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' }
     ];
 
-<<<<<<< HEAD
     hints.forEach(hint => {)
-<<<<<<< HEAD
     const link = document.createElement('link');
-=======
-=======
     hints.forEach(hint => {)}
->>>>>>> origin/merge-error-fixes
       const link = document.createElement('link');
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       link.rel = hint.rel;
       link.href = hint.href;
       document.head.appendChild(link);
@@ -416,11 +372,7 @@ const,
   // This component doesn't render anything visible;
   return null;
 };
-<<<<<<< HEAD
 </OptimizationStatus>
 export default PerformanceOptimizer;</OptimizationStatus>
->>>>>>> origin/main
-=======
 
 export default PerformanceOptimizer;"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

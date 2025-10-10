@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface RevOpsContent {
   id: string;
   title: string;
@@ -14,9 +13,7 @@ export interface RevOpsContent {
   highlights: string[];
   metrics: {,
     [key: string]: string;
-=======
 export interface RevOpsContent {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
   icon?: string;
   gradient?: string;
@@ -25,7 +22,6 @@ export interface RevOpsContent {/* TODO: Fix JSX expression */}
   };
 }
 
-<<<<<<< HEAD
 export const octoberNewestRevOpsContent: RevOpsContent[] = [
   {
     id: 'ai-revops-automation-2025'
@@ -92,7 +88,6 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       winRate: '+42%',
       velocity: '3.2x',
       roi: '704%',
-=======
 export const,
   octoberNewestRevOpsContent: RevOpsContent[] = [
   {/* TODO: Fix JSX expression */}
@@ -102,7 +97,6 @@ export const,
     },
   },
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
   },
 ];

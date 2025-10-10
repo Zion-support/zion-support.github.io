@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -92,7 +91,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
 ,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-=======
   i,
   d: string;
   nam,
@@ -249,14 +247,12 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 ];
 ;
   }
 ];
 ;
-<<<<<<< HEAD
     realImplementation: true;
     implementationDetails:,
       'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'
@@ -272,7 +268,6 @@ export const,
     price: '$3,500'
     period: '/month',
     description:,
-=======
     realImplementatio,
   n: true,
     implementationDetail,
@@ -299,7 +294,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI-powered sales platform that provides intelligent lead scoring, sales forecasting, and performance optimization to help sales teams increase conversion rates and accelerate revenue growth.'
     feature,
   s: [;
@@ -314,14 +308,12 @@ export const,
       'Advanced sales reporting'
       'Real-time sales monitoring'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-orange-500 to-red-600'
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-sales-intelligence-platform',
     marketPosition:,
-=======
     popula,
   r: true;
     ico,
@@ -335,7 +327,6 @@ export const,
   s://ziontechgroup.com/ai-sales-intelligence-platform'
     marketPositio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Leading AI-powered sales intelligence platform with intelligent optimization, forecasting, and comprehensive sales analytics.'
     targetAudienc,
   e: [;
@@ -371,17 +362,13 @@ export const,
       'Analytics tools'
       'Business applications'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Lead scoring'
       'Sales forecasting'
       'Performance optimization'
       'Pipeline management'
-<<<<<<< HEAD
       'Revenue acceleration',
     ],
     roi: 'Sales teams report 400% ROI with 50% improvement in conversion rates and 40% increase in revenue.',
@@ -409,7 +396,6 @@ export const,
     price: '$2,500'
     period: '/month',
     description:,
-=======
       'Revenue acceleration'
     ]
     ro,
@@ -459,7 +445,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI-powered customer service platform that automates customer support, provides intelligent responses, and optimizes customer experience to improve satisfaction and reduce support costs.'
     feature,
   s: [;
@@ -474,14 +459,12 @@ export const,
       'Integration with support tools'
       'Advanced customer service analytics'
     ]
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-purple-500 to-pink-600'
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-customer-service-platform',
     marketPosition:,
-=======
     popula,
   r: false;
     ico,
@@ -495,7 +478,6 @@ export const,
   s://ziontechgroup.com/ai-customer-service-platform'
     marketPositio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI-powered customer service platform with intelligent automation, support optimization, and comprehensive customer experience management.'
     targetAudienc,
   e: [;
@@ -531,17 +513,13 @@ export const,
       'Knowledge base systems'
       'Social media platforms'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Customer support automation'
       'Chatbot implementation'
       'Ticket management'
       'Customer experience optimization'
-<<<<<<< HEAD
       'Support analytics',
     ],
     roi: 'Customer service teams report 350% ROI with 60% reduction in support costs and 45% improvement in customer satisfaction.',
@@ -569,7 +547,6 @@ export const,
     price: '$3,200'
     period: '/month',
     description:,
-=======
       'Support analytics'
     ]
     ro,
@@ -619,7 +596,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI-powered HR platform that automates recruitment, optimizes workforce management, and provides intelligent insights to improve employee engagement and organizational performance.'
     feature,
   s: [;
@@ -634,14 +610,12 @@ export const,
       'Advanced HR reporting'
       'Comprehensive workforce analytics'
     ]
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-teal-500 to-cyan-600'
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/ai-hr-management-platform',
     marketPosition:,
-=======
     popula,
   r: false;
     ico,
@@ -655,7 +629,6 @@ export const,
   s://ziontechgroup.com/ai-hr-management-platform'
     marketPositio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI-powered HR management platform with intelligent automation, workforce optimization, and comprehensive HR analytics.'
     targetAudienc,
   e: [;
@@ -691,17 +664,13 @@ export const,
       'Performance management tools'
       'Learning platforms'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Recruitment automation'
       'Workforce planning'
       'Performance management'
       'Talent development'
-<<<<<<< HEAD
       'HR analytics',
     ],
     roi: 'HR teams report 320% ROI with 50% improvement in recruitment efficiency and 40% increase in employee engagement.',
@@ -729,7 +698,6 @@ export const,
     price: '$4,500'
     period: '/month',
     description:,
-=======
       'HR analytics'
     ]
     ro,
@@ -779,7 +747,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI-powered financial platform that provides intelligent financial analysis, risk assessment, and optimization to help organizations make better financial decisions and improve profitability.'
     feature,
   s: [;
@@ -794,14 +761,12 @@ export const,
       'Advanced financial reporting'
       'Comprehensive financial insights'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-500 to-green-600'
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/ai-financial-analytics-platform',
     marketPosition:,
-=======
     popula,
   r: true;
     ico,
@@ -815,7 +780,6 @@ export const,
   s://ziontechgroup.com/ai-financial-analytics-platform'
     marketPositio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Leading AI-powered financial analytics platform with intelligent analysis, risk management, and comprehensive financial optimization.'
     targetAudienc,
   e: [;
@@ -851,17 +815,13 @@ export const,
       'Trading platforms'
       'Risk management tools'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Financial analysis'
       'Risk management'
       'Financial forecasting'
       'Cost optimization'
-<<<<<<< HEAD
       'Performance monitoring',
     ],
     roi: 'Finance teams report 450% ROI with 60% improvement in financial decision-making and 50% reduction in financial risks.',
@@ -889,7 +849,6 @@ export const,
     price: '$2,800'
     period: '/month',
     description:,
-=======
       'Performance monitoring'
     ]
     ro,
@@ -939,7 +898,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI-powered project management platform that provides intelligent planning, resource optimization, and performance monitoring to help teams deliver projects on time and within budget.'
     feature,
   s: [;
@@ -954,14 +912,12 @@ export const,
       'Advanced project reporting'
       'Comprehensive project insights'
     ]
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-indigo-500 to-purple-600'
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-project-management-platform',
     marketPosition:,
-=======
     popula,
   r: false;
     ico,
@@ -975,7 +931,6 @@ export const,
   s://ziontechgroup.com/ai-project-management-platform'
     marketPositio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI-powered project management platform with intelligent planning, optimization, and comprehensive project analytics.'
     targetAudienc,
   e: [;
@@ -1011,17 +966,13 @@ export const,
       'Resource management systems'
       'Communication tools'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Project planning'
       'Resource optimization'
       'Risk management'
       'Performance monitoring'
-<<<<<<< HEAD
       'Team collaboration',
     ],
     roi: 'Project teams report 350% ROI with 50% improvement in project delivery and 40% reduction in project costs.',
@@ -1052,7 +1003,6 @@ export const,
     customers: 38;
     rating: 4.7;
     reviews: 26;
-=======
       'Team collaboration'
     ]
     ro,
@@ -1111,7 +1061,6 @@ export const,
   g: 4.7;
     review,
   s: 26,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
@@ -1119,7 +1068,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -1146,7 +1094,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'Advanced AI-powered sales platform that provides intelligent lead scoring, sales forecasting, and performance optimization to help sales teams increase conversion rates and accelerate revenue growth.'
     features: [,
     marketPosition:,
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -1192,7 +1139,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   s: [,
     marketPositio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Leading AI-powered sales intelligence platform with intelligent optimization, forecasting, and comprehensive sales analytics.'
     targetAudienc,
   e: [;
@@ -1228,7 +1174,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'Analytics tools'
       'Business applications'
     ]
-<<<<<<< HEAD
     useCases: [
   // AI Customer Service Platform;
     id: 'ai-customer-service-platform',
@@ -1240,7 +1185,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'Advanced AI-powered customer service platform that automates customer support, provides intelligent responses, and optimizes customer experience to improve satisfaction and reduce support costs.'
     features: [,
     marketPosition:,
-=======
     useCase,
   s: [,
   // AI Customer Service Platform,
@@ -1260,7 +1204,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   s: [,
     marketPositio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI-powered customer service platform with intelligent automation, support optimization, and comprehensive customer experience management.'
     targetAudienc,
   e: [;
@@ -1296,7 +1239,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'Knowledge base systems'
       'Social media platforms'
     ]
-<<<<<<< HEAD
     useCases: [
   // AI HR Management Platform;
     id: 'ai-hr-management-platform',
@@ -1308,7 +1250,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'Advanced AI-powered HR platform that automates recruitment, optimizes workforce management, and provides intelligent insights to improve employee engagement and organizational performance.'
     features: [,
     marketPosition:,
-=======
     useCase,
   s: [,
   // AI HR Management Platform,
@@ -1328,7 +1269,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   s: [,
     marketPositio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI-powered HR management platform with intelligent automation, workforce optimization, and comprehensive HR analytics.'
     targetAudienc,
   e: [;
@@ -1364,7 +1304,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'Performance management tools'
       'Learning platforms'
     ]
-<<<<<<< HEAD
     useCases: [
   // AI Financial Analytics Platform;
     id: 'ai-financial-analytics-platform',
@@ -1376,7 +1315,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'Advanced AI-powered financial platform that provides intelligent financial analysis, risk assessment, and optimization to help organizations make better financial decisions and improve profitability.'
     features: [,
     marketPosition:,
-=======
     useCase,
   s: [,
   // AI Financial Analytics Platform,
@@ -1396,7 +1334,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   s: [,
     marketPositio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Leading AI-powered financial analytics platform with intelligent analysis, risk management, and comprehensive financial optimization.'
     targetAudienc,
   e: [;
@@ -1432,7 +1369,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'Trading platforms'
       'Risk management tools'
     ]
-<<<<<<< HEAD
     useCases: [
   // AI Project Management Platform;
     id: 'ai-project-management-platform',
@@ -1444,7 +1380,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'Advanced AI-powered project management platform that provides intelligent planning, resource optimization, and performance monitoring to help teams deliver projects on time and within budget.'
     features: [,
     marketPosition:,
-=======
     useCase,
   s: [,
   // AI Project Management Platform,
@@ -1464,7 +1399,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   s: [,
     marketPositio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI-powered project management platform with intelligent planning, optimization, and comprehensive project analytics.'
     targetAudienc,
   e: [;
@@ -1498,22 +1432,18 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'Collaboration platforms'
       'Time tracking tools'
       'Resource management systems'
-<<<<<<< HEAD
       'Communication tools',
     ],
     useCases: [,
-=======
       'Communication tools'
     ]
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ;
 export const,
   innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
   // AI Business Intelligence Suite;
-<<<<<<< HEAD
   {
     id: 'ai-business-intelligence-suite';
     name: 'AI Business Intelligence Suite';
@@ -1560,7 +1490,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
     customers: 38;
     rating: 4.7;
     reviews: 26;
-=======
   {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 export const,
@@ -1585,7 +1514,6 @@ export const,
   g: 4.7,
     review,
   s: 26,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 ;

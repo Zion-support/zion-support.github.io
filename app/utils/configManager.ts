@@ -4,7 +4,6 @@
  * Configuration Manager;
  * Centralized configuration management with environment-based settings;
  */
-<<<<<<< HEAD
 
 export type Environment = 'development' | 'staging' | 'production' | 'test'
 
@@ -158,7 +157,6 @@ class ConfigManager {
 // Export singleton instance;
 export const configManager = new ConfigManager()
 export default configManager;
-=======
 export type Environment = 'development' | 'staging' | 'production' | 'test';
 export interface AppConfig {/* TODO: Fix JSX expression */}
   };
@@ -456,4 +454,3 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
 // Export singleton instance;
 export const configManager = ConfigManager.getInstance();
 export default ConfigManager;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

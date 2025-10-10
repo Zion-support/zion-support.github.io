@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export interface Q4Service {id: string;
   name: string;
   tagline: string;
@@ -35,12 +34,10 @@ export interface Q4Service {id: string;
     email: string;
     address: string}
     website: string}
-=======
 export interface Q4Service {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   real_implementatio,
   n: boolean;
@@ -50,7 +47,6 @@ export interface Q4Service {/* TODO: Fix JSX expression */}
   rating?: number;
   reviews?: number;
 const contact =
-<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup && ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -58,7 +54,6 @@ const contact =
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
-=======
   mobil,
   e: '+1 302 464 0950',
   emai,
@@ -74,13 +69,11 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
       'Affiliate programs',
       'Influencer tracking',
       'Partnership analytics',
     ],
-<<<<<<< HEAD
     roi: 'Increase attributed sales 1025% with optimized partnerships.',
     competitors: ['Refersion', 'LeadDyno', 'Tapfiliate'],
     marketSize: '$1.5B affiliate software'
@@ -109,7 +102,6 @@ const contact =
     price: '$29',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Increase attributed sales 1025% with optimized partnerships.',
     competitor,
@@ -163,23 +155,19 @@ const contact =
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Upload audio and receive punctuated transcripts, speaker diarization, show notes, and SEO - optimized summaries.',
     feature,
   s: [,
       'Multi - speaker diarization',
-<<<<<<< HEAD
     customers: 120;
     rating: 4.7;
     reviews: 48;
-=======
     customer,
   s: 120,
     ratin,
   g: 4.7,
     review,
   s: 48,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'podcast-transcription-studio',
@@ -202,7 +190,6 @@ const contact =
       'Export to SRT, VTT, DOCX',
       'Podcast platform integrations',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - cyan - 600 to - blue - 700'
@@ -257,7 +244,6 @@ const contact =
     customers: 60;
     rating: 4.6;
     reviews: 22;
-=======
     popula,
   r: false,
     ico,
@@ -365,7 +351,6 @@ const contact =
   g: 4.6,
     review,
   s: 22,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'micro-crm-local-business',
@@ -388,7 +373,6 @@ const contact =
       'Mobile-friendly PWA',
       'Basic reporting',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -451,7 +435,6 @@ const contact =
     customers: 210;
     rating: 4.5;
     reviews: 77;
-=======
     popula,
   r: true,
     ico,
@@ -573,7 +556,6 @@ const contact =
   g: 4.5,
     review,
   s: 77,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'returns-automation-saas',
@@ -596,7 +578,6 @@ const contact =
       'Email/SMS notifications',
       'Analytics on reasons and cost',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-amber-600 to-orange-700',
@@ -650,7 +631,6 @@ const contact =
     customers: 95;
     rating: 4.6;
     reviews: 35;
-=======
     popula,
   r: false,
     ico,
@@ -757,7 +737,6 @@ const contact =
   g: 4.6,
     review,
   s: 35,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'it-helpdesk-for-msps',
@@ -780,7 +759,6 @@ const contact =
       'RMM and network tool integrations',
       'Billing export and time tracking',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -871,7 +849,6 @@ export const real2025Q4Additions = [{id: 'ai - governed - rag - platform',
     price: '$249',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -1011,7 +988,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Low - latency personalization rules and ML scoring at the edge with audience definitions, A / B tests, and analytics.',
     feature,
   s: [,
@@ -1021,7 +997,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Privacy - first scoring',
       'Dashboards and exports',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     technology: ['Next.js', 'Node.js', 'PostgreSQL'],
@@ -1045,7 +1020,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 120;
     rating: 4.7;
     reviews: 48;
-=======
     popula,
   r: true,
     ico,
@@ -1089,7 +1063,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.7,
     review,
   s: 48,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'podcast-transcription-studio',
@@ -1111,7 +1084,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Export to SRT, VTT, DOCX',
       'Podcast platform integrations',
     ],
-<<<<<<< HEAD
     popular: false;
       'Competitive with Otter and Descript; better show notes and SEO summary pipeline.',
     target_audience: 'Podcasters, media teams, agencies',
@@ -1133,7 +1105,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 60;
     rating: 4 && 4.6;
     reviews: 22;
-=======
     popula,
   r: false,
       'Competitive with Otter and Descript; better show notes and SEO summary pipeline.',
@@ -1174,7 +1145,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4 && 4.6,
     review,
   s: 22,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
       'Contact management and segmentation',
       'Pipelines and kanban views',
@@ -1183,7 +1153,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Mobile-friendly PWA',
       'Basic reporting',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     integrations: ['Gmail', 'Outlook', 'Stripe'],
@@ -1201,7 +1170,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 210;
     rating: 4 && 4.5;
     reviews: 77;
-=======
     popula,
   r: true,
     ico,
@@ -1235,7 +1203,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4 && 4.5,
     review,
   s: 77,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
       'Customer returns portal',
       'Prepaid label generation',
@@ -1244,7 +1211,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Email / SMS notifications',
       'Analytics on reasons and cost',
     ],
-<<<<<<< HEAD
     popular: false;
     integrations: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],
     use_cases: ['Returns portal', 'Exchange workflows', 'Refund automation'],
@@ -1261,7 +1227,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 95;
     rating: 4 && 4.6;
     reviews: 35;
-=======
     popula,
   r: false,
     integration,
@@ -1293,7 +1258,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4 && 4.6,
     review,
   s: 35,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
       'Inbox and portal ticket intake',
       'Auto - routing, SLAs, and escalations',
@@ -1302,7 +1266,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'RMM and network tool integrations',
       'Billing export and time tracking',
     ],
-<<<<<<< HEAD
     popular: true;
     integrations: ['Zendesk', 'Freshdesk', 'Datadog', 'Grafana'],
     use_cases: ['IT support', 'SLA management', 'Client reporting'],
@@ -1319,7 +1282,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 70;
     rating: 4 && 4.5;
     reviews: 28;
-=======
     popula,
   r: true,
     integration,
@@ -1351,7 +1313,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4 && 4.5,
     review,
   s: 28,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
 ];
 export const real2025Q4Additions = [
@@ -1362,14 +1323,12 @@ export const real2025Q4Additions = [
       'Observability and cost caps',
       'SDKs for Node / Python',
     ],
-<<<<<<< HEAD
     popular: true;
       'Pipelines, policies, eval harness, cost and latency budgets.',
     launch_date: '2025 - 03 - 01'
     customers: 18;
     rating: 4 && 4.8;
     reviews: 11;
-=======
     popula,
   r: true,
       'Pipelines, policies, eval harness, cost and latency budgets.',
@@ -1381,7 +1340,6 @@ export const real2025Q4Additions = [
   g: 4 && 4.8,
     review,
   s: 11,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
       'Audience builder and traits',
       'Edge functions and KV cache',
@@ -1389,7 +1347,6 @@ export const real2025Q4Additions = [
       'Privacy - first scoring',
       'Dashboards and exports',
     ],
-<<<<<<< HEAD
     popular: true;
 export const real2025Q4Additions = [{id: 'ai-governed-rag-platform',
     name: 'AI-Governed RAG Platform',
@@ -1427,7 +1384,6 @@ export const real2025Q4Additions = [{id: 'ai-governed-rag-platform',
     customers: 18;
     rating: 4.8;
     reviews: 11;
-=======
     popula,
   r: true,
 export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
@@ -1475,7 +1431,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.8,
     review,
   s: 11,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'edge-personalization-engine',
@@ -1495,7 +1450,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'A/B and holdout testsPrivacy-first scoring',
       'Dashboards and exports'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     color: 'from-emerald-600 to-teal-700',
@@ -1541,7 +1495,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     price: '$199',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -1630,7 +1583,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Spin up ephemeral environments per PR with seed data, smoke tests, screenshots, and teardown policies.',
     feature,
   s: [,
@@ -1652,7 +1604,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     market_positio,
   n: unknown;
       'Faster than DIY scripts, comparable to Uffizzi / Gitpod previews.',
-<<<<<<< HEAD
     target_audience: 'Platform and app teams'
     trial_days: 14;
     setup_time: '13 days',
@@ -1680,7 +1631,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     price: '$129',
     period: '/month',
     description: unknown;
-=======
     target_audienc,
   e: 'Platform and app teams',
     trial_day,
@@ -1734,7 +1684,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Stream logs to detect anomalies, regressions, and hotspots with LLM summaries and remediation hints.',
     feature,
   s: [,
@@ -1756,7 +1705,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     market_positio,
   n: unknown;
       'Adds AI summaries to classic log alerts, vendor - agnostic ingestion.',
-<<<<<<< HEAD
     target_audience: 'SREs and platform teams'
     trial_days: 7;
     setup_time: 'Same day',
@@ -1784,7 +1732,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     price: '$99',
     period: '/month',
     description: unknown;
-=======
     target_audienc,
   e: 'SREs and platform teams',
     trial_day,
@@ -1838,7 +1785,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Lightweight feature flags with policy checks, approvals, change logs, and automatic rollbacks based on SLOs.',
     feature,
   s: [,
@@ -1848,7 +1794,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'SDKs and edge eval',
       'Experiments and cohorts',
     ],
-<<<<<<< HEAD
     icon: '',
     technology: ['Edge runtime, KV/Redis, Next.js'],
     integrations: ['Shopify, Stripe, Segment'],
@@ -1865,7 +1810,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 42;
     rating: 4.6;
     reviews: 23;
-=======
     ico,
   n: '',
     technolog,
@@ -1898,7 +1842,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.6,
     review,
   s: 23,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'devx-preview-environments',
@@ -1918,7 +1861,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Smoke tests and screenshotsSecrets and policies as code',
       'Cost and TTL controls'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-300',
@@ -1944,7 +1886,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 27;
     rating: 4.7;
     reviews: 16;
-=======
     ico,
   n: '',
     colo,
@@ -1996,7 +1937,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.7,
     review,
   s: 16,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'real-time-log-anomaly-guard',
@@ -2016,7 +1956,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'LLM summaries and hintsSlack/Email alerts and tickets',
       'Dashboards and exports'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-rose-600 to-red-700',
     textColor: 'text-rose-300',
@@ -2042,7 +1981,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 33;
     rating: 4.5;
     reviews: 19;
-=======
     ico,
   n: '',
     colo,
@@ -2094,7 +2032,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.5,
     review,
   s: 19,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'governed-feature-flags',
@@ -2114,7 +2051,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'SLO-based rollbacksSDKs and edge eval',
       'Experiments and cohorts'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
@@ -2154,7 +2090,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     price: '$79',
     period: '/month',
     description: unknown;
-=======
     ico,
   n: '',
     colo,
@@ -2234,7 +2169,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Compose, schedule, and monitor outbound sequences with domain warm - up, safety guardrails, and reply intent scoring.',
     feature,
   s: [,
@@ -2244,7 +2178,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Blacklist monitoring',
       'CRM sync',
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from - fuchsia - 600 to - pink - 700',
     text_color: 'text - fuchsia - 300',
@@ -2277,7 +2210,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     price: '$299',
     period: '/month',
     description: unknown;
-=======
     ico,
   n: '',
     colo,
@@ -2342,7 +2274,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Define and enforce data contracts with compatibility checks, lineage, owners, and alerting integrated with CI / CD.',
     feature,
   s: [,
@@ -2352,7 +2283,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Alerts and SLOs',
       'CI / CD integrations',
     ],
-<<<<<<< HEAD
     icon: '',
     category: 'Developer Tools',
     realService: true;
@@ -2371,7 +2301,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 21;
     rating: 4.6;
     reviews: 12;
-=======
     ico,
   n: '',
     categor,
@@ -2408,7 +2337,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.6,
     review,
   s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'email-sequence-copilot',
@@ -2428,7 +2356,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Reply intent and routingBlacklist monitoring',
       'CRM sync'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-fuchsia-600 to-pink-700',
     textColor: 'text-fuchsia-300',
@@ -2454,7 +2381,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 38;
     rating: 4.5;
     reviews: 20;
-=======
     ico,
   n: '',
     colo,
@@ -2506,7 +2432,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.5,
     review,
   s: 20,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'data-contracts-guardrails',
@@ -2526,7 +2451,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Lineage and ownershipAlerts and SLOs',
       'CI/CD integrations'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-sky-600 to-indigo-700',
     textColor: 'text-sky-300',
@@ -2568,7 +2492,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     price: '$4, 500',
     period: '/fixed',
     description: unknown;
-=======
     ico,
   n: '',
     colo,
@@ -2650,7 +2573,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   d: '/fixed',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Done - with - you SSO rollout for SaaS teams, including IdP app, mappings, SCIM, test plans, and enterprise - ready documentation.',
     feature,
   s: [,
@@ -2659,7 +2581,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Security test plans',
       'Customer enablement kit',
     ],
-<<<<<<< HEAD
     icon: '',
     category: 'Data & Analytics',
     realService: true;
@@ -2678,7 +2599,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 12;
     rating: 4.6;
     reviews: 9;
-=======
     ico,
   n: '',
     categor,
@@ -2715,7 +2635,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.6,
     review,
   s: 9,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'managed-sso-fast-track',
@@ -2734,7 +2653,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Okta/Entra app configsSAML/OIDC + SCIM',
       'Security test plansCustomer enablement kit'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-300',
@@ -2774,7 +2692,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     price: '$149',
     period: '/month',
     description: unknown;
-=======
     ico,
   n: '',
     colo,
@@ -2854,7 +2771,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Connect CRM to compute forecast hygiene, risk scores, and next - best actions with weekly reports and alerts.',
     feature,
   s: [,
@@ -2863,7 +2779,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Next - best action copilot',
       'Reporting and dashboards',
     ],
-<<<<<<< HEAD
     icon: '',
     category: 'Enterprise IT',
     realService: true;
@@ -2882,7 +2797,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 9;
     rating: 4.7;
     reviews: 7;
-=======
     ico,
   n: '',
     categor,
@@ -2919,7 +2833,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.7,
     review,
   s: 7,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-sales-pipeline-insights',
@@ -2938,7 +2851,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Risk scoring and hygiene checksStage SLAs and alerts',
       'Next-best action copilotReporting and dashboards'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
@@ -2990,7 +2902,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 14;
     rating: 4.5;
     reviews: 10;
-=======
     ico,
   n: '',
     colo,
@@ -3094,7 +3005,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.5,
     review,
   s: 10,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'secure-webhook-relay',
@@ -3114,7 +3024,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Retries and backoffFan-out and transformations',
       'Audit logs and RBAC'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
@@ -3123,7 +3032,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     targetAudience: 'Developers and platform teams',
     trialDays: 14;
     setupTime: 'Same day',
-=======
     ico,
   n: '',
     colo,
@@ -3141,14 +3049,12 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   s: 14,
     setupTim,
   e: 'Same day',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Signature verification and secrets',
       'Replay and DLQs',
       'Retries and backoff',
       'Fan - out and transformations',
       'Audit logs and RBAC',
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300',
@@ -3193,7 +3099,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 31;
     rating: 4.6;
     reviews: 18;
-=======
     ico,
   n: '',
     colo,
@@ -3282,7 +3187,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.6,
     review,
   s: 18,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'managed-postgres-ha-lite',
@@ -3302,7 +3206,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Automated backups and PITRFailover drills and runbooks',
       'Index and bloat maintenancePerformance dashboards'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
@@ -3311,7 +3214,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     targetAudience: 'SMBs and startups',
     trialDays: 7;
     setupTime: '35 days',
-=======
     ico,
   n: '',
     colo,
@@ -3329,13 +3231,11 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   s: 7,
     setupTim,
   e: '35 days',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated backups and PITR',
       'Failover drills and runbooks',
       'Index and bloat maintenance',
       'Performance dashboards',
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
@@ -3365,7 +3265,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     mobile: string, email: string;
     address: string;
     website: string;
-=======
     ico,
   n: '',
     colo,
@@ -3425,7 +3324,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   s: string,
     websit,
   e: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
   realImplementatio,
   n: boolean, implementationDetails?: string,
@@ -3435,11 +3333,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   reviews?: number;
 }
 const contact =
-<<<<<<< HEAD
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
-=======
   mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
@@ -3448,7 +3344,6 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const,
   realQ4Services2025: RealQ4Service[] = [,
@@ -3466,7 +3361,6 @@ export const,
   s: [,
 			'Multi-channel attribution and cookie-less trackingFraud rules, device fingerprinting, IP reputation checksCustomizable commission structures and tiersAutomated payouts and tax form collectionShareable links, coupons, and influencer codesPartner portal and real-time analytics'
 		];
-<<<<<<< HEAD
 		popular: true, icon: '',
 		color: 'from-violet-600 to-fuchsia-700', textColor: 'text-fuchsia-400',
 		link: 'https://ziontechgroup.com/services/affiliate-marketing-hub',
@@ -3482,7 +3376,6 @@ export const,
 		implementationDetails: 'Server-side tracking with webhook ingestion and fraud-scoring pipeline.', launchDate: '2025-10-01',
 		customers: 120, rating: 4.7;
 		reviews: 48;
-=======
 		popula,
   r: true, ico,
   n: '',
@@ -3525,7 +3418,6 @@ export const,
   g: 4.7,
 		review,
   s: 48,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 	};
 		i,
   d: 'podcast-transcription-studio', nam,
@@ -3541,7 +3433,6 @@ export const,
   s: [,
 			'Multi-speaker diarizationTimestamps and filler removalChapter detection and show notesEmbeddings and semantic searchExport to SRT, VTT, DOCXPodcast platform integrations'
 		];
-<<<<<<< HEAD
 		popular: false, icon: '',
 		color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
 		link: 'https://ziontechgroup.com/services/podcast-transcription-studio',
@@ -3606,7 +3497,6 @@ export const,
     launchDate: '2025-10-05', customers: 95;
 		rating: 4.6;
 		reviews: 35;
-=======
 		popula,
   r: false, ico,
   n: '',
@@ -3766,7 +3656,6 @@ export const,
   g: 4.6,
 		review,
   s: 35,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 	};
 		i,
   d: 'it-helpdesk-for-msps', nam,
@@ -3782,7 +3671,6 @@ export const,
   s: [,
 			'Inbox and portal ticket intakeAuto-routing, SLAs, and escalationsPublic/private knowledge baseClient portal with reportsRMM and network tool integrationsBilling export and time tracking'
 		];
-<<<<<<< HEAD
 		popular: true, icon: '',
 		color: 'from-blue-600 to-indigo-700', textColor: 'text-indigo-400',
 		link: 'https://ziontechgroup.com/services/it-helpdesk-for-msps',
@@ -3860,7 +3748,6 @@ export const real2025Q4Additions = [{id: 'ai-governed-rag-platform', name: 'AI-G
 ];
     rating: 4 && 4.6;
     reviews: 9;
-=======
 		popula,
   r: true, ico,
   n: '',
@@ -4010,7 +3897,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4 && 4.6,
     review,
   s: 9,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 const contact =
@@ -4047,7 +3933,6 @@ export const,
       'Shareable links, coupons, and influencer codes',
       'Partner portal and real-time analytics',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-violet-600 to-fuchsia-700'
@@ -4063,7 +3948,6 @@ export const,
     technology: ['Next.js', 'Node.js', 'PostgreSQL', 'Redis'],
     integrations: ['Shopify', 'WooCommerce', 'Stripe', 'PayPal'],
     useCases: [,
-=======
     popula,
   r: true,
     ico,
@@ -4094,12 +3978,10 @@ export const,
   s: ['Shopify', 'WooCommerce', 'Stripe', 'PayPal'],
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Affiliate programs',
       'Influencer tracking',
       'Partnership analytics',
     ],
-<<<<<<< HEAD
     roi: 'Increase attributed sales 1025% with optimized partnerships.',
     competitors: ['Refersion', 'LeadDyno', 'Tapfiliate'],
     marketSize: '$1.5B affiliate software'
@@ -4112,7 +3994,6 @@ export const,
     customers: 120;
     rating: 4.7;
     reviews: 48;
-=======
     ro,
   i: 'Increase attributed sales 1025% with optimized partnerships.',
     competitor,
@@ -4137,7 +4018,6 @@ export const,
   g: 4.7,
     review,
   s: 48,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'podcast-transcription-studio',
@@ -4160,7 +4040,6 @@ export const,
       'Export to SRT, VTT, DOCX',
       'Podcast platform integrations',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-cyan-600 to-blue-700',
@@ -4187,7 +4066,6 @@ export const,
     customers: 60;
     rating: 4.6;
     reviews: 22;
-=======
     popula,
   r: false,
     ico,
@@ -4241,7 +4119,6 @@ export const,
   g: 4.6,
     review,
   s: 22,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'micro-crm-local-business',
@@ -4264,7 +4141,6 @@ export const,
       'Mobile-friendly PWA',
       'Basic reporting',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -4292,7 +4168,6 @@ export const,
     customers: 210;
     rating: 4.5;
     reviews: 77;
-=======
     popula,
   r: true,
     ico,
@@ -4347,7 +4222,6 @@ export const,
   g: 4.5,
     review,
   s: 77,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'returns-automation-saas',
@@ -4370,7 +4244,6 @@ export const,
       'Email/SMS notifications',
       'Analytics on reasons and cost',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-amber-600 to-orange-700',
@@ -4397,7 +4270,6 @@ export const,
     customers: 95;
     rating: 4.6;
     reviews: 35;
-=======
     popula,
   r: false,
     ico,
@@ -4451,7 +4323,6 @@ export const,
   g: 4.6,
     review,
   s: 35,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'it-helpdesk-for-msps',
@@ -4474,7 +4345,6 @@ export const,
       'RMM and network tool integrations',
       'Billing export and time tracking',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -4542,7 +4412,6 @@ export const real2025Q4Additions = [{id: 'ai-governed-rag-platform',
     customers: 18;
     rating: 4.8;
     reviews: 11;
-=======
     popula,
   r: true,
     ico,
@@ -4647,7 +4516,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.8,
     review,
   s: 11,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'edge-personalization-engine',
@@ -4667,7 +4535,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'A/B and holdout testsPrivacy-first scoring',
       'Dashboards and exports'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     color: 'from-emerald-600 to-teal-700',
@@ -4694,7 +4561,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 42;
     rating: 4.6;
     reviews: 23;
-=======
     popula,
   r: true,
     ico,
@@ -4748,7 +4614,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.6,
     review,
   s: 23,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'devx-preview-environments',
@@ -4768,7 +4633,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Smoke tests and screenshotsSecrets and policies as code',
       'Cost and TTL controls'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-300',
@@ -4794,7 +4658,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 27;
     rating: 4.7;
     reviews: 16;
-=======
     ico,
   n: '',
     colo,
@@ -4846,7 +4709,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.7,
     review,
   s: 16,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'real-time-log-anomaly-guard',
@@ -4866,7 +4728,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'LLM summaries and hintsSlack/Email alerts and tickets',
       'Dashboards and exports'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-rose-600 to-red-700',
     textColor: 'text-rose-300',
@@ -4892,7 +4753,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 33;
     rating: 4.5;
     reviews: 19;
-=======
     ico,
   n: '',
     colo,
@@ -4944,7 +4804,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.5,
     review,
   s: 19,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'governed-feature-flags',
@@ -4964,7 +4823,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'SLO-based rollbacksSDKs and edge eval',
       'Experiments and cohorts'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
@@ -4990,7 +4848,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 21;
     rating: 4.6;
     reviews: 12;
-=======
     ico,
   n: '',
     colo,
@@ -5042,7 +4899,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.6,
     review,
   s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'email-sequence-copilot',
@@ -5062,7 +4918,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Reply intent and routingBlacklist monitoring',
       'CRM sync'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-fuchsia-600 to-pink-700',
     textColor: 'text-fuchsia-300',
@@ -5088,7 +4943,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 38;
     rating: 4.5;
     reviews: 20;
-=======
     ico,
   n: '',
     colo,
@@ -5140,7 +4994,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.5,
     review,
   s: 20,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'data-contracts-guardrails',
@@ -5160,7 +5013,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Lineage and ownershipAlerts and SLOs',
       'CI/CD integrations'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-sky-600 to-indigo-700',
     textColor: 'text-sky-300',
@@ -5186,7 +5038,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 12;
     rating: 4.6;
     reviews: 9;
-=======
     ico,
   n: '',
     colo,
@@ -5238,7 +5089,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.6,
     review,
   s: 9,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'managed-sso-fast-track',
@@ -5257,7 +5107,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Okta/Entra app configsSAML/OIDC + SCIM',
       'Security test plansCustomer enablement kit'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-300',
@@ -5283,7 +5132,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 9;
     rating: 4.7;
     reviews: 7;
-=======
     ico,
   n: '',
     colo,
@@ -5335,7 +5183,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.7,
     review,
   s: 7,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-sales-pipeline-insights',
@@ -5354,7 +5201,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Risk scoring and hygiene checksStage SLAs and alerts',
       'Next-best action copilotReporting and dashboards'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
@@ -5380,7 +5226,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 14;
     rating: 4.5;
     reviews: 10;
-=======
     ico,
   n: '',
     colo,
@@ -5432,7 +5277,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.5,
     review,
   s: 10,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'secure-webhook-relay',
@@ -5452,7 +5296,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Retries and backoffFan-out and transformations',
       'Audit logs and RBAC'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
@@ -5478,7 +5321,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 31;
     rating: 4.6;
     reviews: 18;
-=======
     ico,
   n: '',
     colo,
@@ -5530,7 +5372,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.6,
     review,
   s: 18,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'managed-postgres-ha-lite',
@@ -5550,7 +5391,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Automated backups and PITRFailover drills and runbooks',
       'Index and bloat maintenancePerformance dashboards'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
@@ -5579,7 +5419,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   }
 ];
     reviews: 9;
-=======
     ico,
   n: '',
     colo,
@@ -5635,7 +5474,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
 ];
     review,
   s: 9,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export interface Q4Service,

@@ -2,7 +2,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   const githubToken = process.env.GITHUB_TOKEN || ''}
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
   const githubBranch = process.env.GIT_BRANCH || 'main'
-<<<<<<< HEAD
   async function commitJson(path)
         data) {if(!githubToken,
         return { ok: false;
@@ -18,7 +17,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
         { headers })
-=======
   async function commitJson(path,)
         data) {/* TODO: Fix JSX expression */}
   n: 'no_token' };
@@ -33,13 +31,11 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
         { headers },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       );
       if (getRes.ok) {/* TODO: Fix JSX expression */}
         sha = j.sha}
       }
     } catch {}
-<<<<<<< HEAD
     const body = {
       message: `chore: update OG preview validation report (${new Date().toISOString()})`,
       content: Buffer.from(JSON.stringify(data, null)
@@ -62,7 +58,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         return {statusCode: 200),
       body: JSON.stringify({ ok: false),
         error: 'No base URL' });
-=======
     const body = {/* TODO: Fix JSX expression */}`
   e: update OG preview validation report (${new Date().toISOString()})`,
       conten,
@@ -84,7 +79,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   if (!baseUrl,
         return {/* TODO: Fix JSX expression */})
   r: 'No base URL' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   try {/* TODO: Fix JSX expression */}
     const html = await res.text()}
@@ -102,7 +96,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   r:card')}
     };
     let _imageStatus = null;
-<<<<<<< HEAD
     if (fields['og: image']) {const imgUrl = /^https?:\/\//i.test(fields['og:image'])
         ? fields['og:image']
         : baseUrl +,
@@ -117,7 +110,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         };
       } catch (e) {imageStatus = { ok: false;
         error: String(e;),
-=======
     if (fields['o,)
   g: image']) {/* TODO: Fix JSX expression */}
         const _head = await fetch(imgUrl} {/* TODO: Fix JSX expression */})
@@ -126,19 +118,16 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   e: head.headers.get('content-type')}
         };
       } catch (e) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
       }
     }
     const _issues = [];
-<<<<<<< HEAD
     if (!fields['og:title']) issues.push({ code: 'og:title.missing' });
     if (!fields['og: description']),
       issues.push({ code: 'og:description.missing' });
     if (!fields['og:image']) issues.push({ code: 'og:image.missing' });
     if(imageStatus && !imageStatus.ok)
         issues.push({code: 'og:image.unreachable'} detail: imageStatus;),
-=======
     if (!fields['o,)
   g:title']) issues.push({/* TODO: Fix JSX expression */})
   g:title.missing' });
@@ -153,13 +142,11 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         issues.push({/* TODO: Fix JSX expression */}
   g:image.unreachable'} detai,
   l: imageStatus;)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     const report = {/* TODO: Fix JSX expression */}
       issues}
     };
 //     const commit = await commitJson('data/reports/og-preview.json') report);
-<<<<<<< HEAD
     return {statusCode: 200;
       body: JSON.stringify({ ok: true),
         report),
@@ -170,17 +157,14 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),
-=======
     return {/* TODO: Fix JSX expression */}
       });
     };
   } catch (e) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
-<<<<<<< HEAD
 exports.handler = async function(event, context) {const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/) '');' const githubToken = process.env.GITHUB_TOKEN || ''}' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const githubBranch = process.env.GIT_BRANCH || 'main' async function commitJson(path)
         data) {' if(!githubToken)
         return { ok: false),
@@ -208,7 +192,6 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
         body: JSON.stringify({ok: false),
         error: String(e;),
       }) }; } };'
-=======
 exports.handler = async function(event, context) {const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/) '');' const githubToken = process.env.GITHUB_TOKEN || ''}' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const githubBranch = process.env.GIT_BRANCH || 'main' async function commitJson(path,)
         data) {/* TODO: Fix JSX expression */}
   n: 'no_token' }; const headers = {/* TODO: Fix JSX expression */}`
@@ -248,4 +231,3 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
         issues }; ' const commit = await commitJson('data/reports/og-preview.json') report); return {/* TODO: Fix JSX expression */}
       }) }; } catch (e) {/* TODO: Fix JSX expression */}
       }) }; } };'"`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

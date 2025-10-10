@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 'use client';
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -129,7 +127,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       return () => document.removeEventListener('focusin', handleFocusIn);
     }
   }, [enableFocusManagement]);
-=======
 
 import React, { useEffect, useState } from 'react';
 
@@ -146,20 +143,15 @@ interface AccessibilitySettings {
 
 const AccessibilityEnhancer: React.FC = () => {,
   const [settings, setSettings] = useState<AccessibilitySettings>({
-<<<<<<< HEAD
     highContrast: false,
     reducedMotion: false,
     fontSize: 'medium',
-<<<<<<< HEAD
     focusVisible: true,
     screenReader: false,
     keyboardNavigation: true,
     colorBlind: false,
     dyslexia: false
-=======
     focusVisible: true
->>>>>>> cursor/fix-errors-and-merge-to-main-1d1a
-=======
     highContrast: false;
     reducedMotion: false;
     fontSize: 'medium'
@@ -169,7 +161,6 @@ const AccessibilityEnhancer: React.FC = () => {,
     colorBlind: false;
     dyslexia: false;
     focusVisible: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   });
 
   useEffect(() => {
@@ -233,15 +224,11 @@ const AccessibilityEnhancer: React.FC = () => {,
       root.classList.remove('focus-visible');
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     // Screen reader optimizations
-=======
   // Screen reader optimizations;
   useEffect(() => {
     const root = document.documentElement;
     
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
     if (settings.screenReader) {
       root.classList.add('screen-reader-optimized');
     } else {
@@ -272,11 +259,9 @@ const AccessibilityEnhancer: React.FC = () => {,
     // Store settings in localStorage;
     localStorage.setItem('accessibility-settings', JSON.stringify(settings));
   }, [settings]);
-=======
     // Store settings in localStorage
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   }, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-1d1a
 
   // Add CSS for accessibility features;
   useEffect(() => {
@@ -397,7 +382,6 @@ const AccessibilityEnhancer: React.FC = () => {,
 
     return () => {
       document.head.removeChild(style);
-=======
 import React, { useEffect } from 'react';
 
 const AccessibilityEnhancer: React.FC = () => {
@@ -410,13 +394,9 @@ const AccessibilityEnhancer: React.FC = () => {
           button.setAttribute('aria-label', `Button ${index + 1}`);
         }
       });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }, []);
->>>>>>> origin/main
 
-<<<<<<< HEAD
-=======
     const addFocusManagement = () => {
       // Add focus management for better keyboard navigation
       const focusableElements = document.querySelectorAll(
@@ -573,7 +553,6 @@ const AccessibilityEnhancer: React.FC = () => {
     };
   }, []);
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   return null;
 };
 

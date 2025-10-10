@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
@@ -133,4 +131,3 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
 }
 
 export default ErrorBoundary;"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -1,11 +1,8 @@
 #!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 import { execSync } from 'child_process';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Function to process a file;
 function processFile(filePath) {
   try {
@@ -27,7 +24,6 @@ function processFile(filePath) {
       // Add missing closing divs before the last closing brace;
       if (lastBraceIndex > 0) {
         content = beforeBrace + missingDivsStr + afterBrace;
-=======
 // Common JSX syntax fixes
 const fixes = [
   // Fix unclosed h1 tags
@@ -77,10 +73,8 @@ function fixFile(filePath) {
       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         modified = true;
         console.log(`Applied ${fix.description} to ${filePath}`);
-=======
 // Function to process a file;
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
@@ -91,13 +85,10 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Fix missing closing tags by counting opening and closing divs;
     if (openDivs > closeDivs) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
-<<<<<<< HEAD
     }
 
     // Fix malformed Helmet tags;
-<<<<<<< HEAD
     if (content.includes('<Helmet>') && !content.includes('</Helmet>')) {
       content = content.replace(/<Helmet>/g, '<div>');
       content = content.replace(/<\/Helmet>/g, '</div>');
@@ -110,13 +101,10 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       modified = true;
     }
 
-=======
     });
     
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
     if (modified) {
       fs.writeFileSync(filePath, content);
-=======
 import { glob } from 'glob';
 
 // Common JSX syntax error patterns and their fixes
@@ -222,9 +210,7 @@ function fixFile(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
->>>>>>> cursor/fix-errors-and-merge-to-main-33bd
       return true;
-=======
     if (content.includes('<Helmet>') && !content.includes('</Helmet>')) {/* TODO: Fix JSX expression */}
     }
 
@@ -233,29 +219,21 @@ function fixFile(filePath) {
     }
 
     if (modified) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     return false;
-<<<<<<< HEAD
   } catch (error) {
-<<<<<<< HEAD
     console.error(`Error processing ${filePath}:`, error.message);
-=======
     console.error(`Error fixing ${filePath}:`, error.message);
->>>>>>> cursor/fix-errors-and-merge-to-main-33bd
     return false;
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Main execution;
 async function main() {
   // Find all TypeScript/JavaScript files in app directory;
   files.forEach(file => {)
     if (processFile(file)) {
       fixedCount++;
-=======
 function findTsxFiles(dir) {
   const files = [];
   const items = fs.readdirSync(dir);
@@ -268,12 +246,10 @@ function findTsxFiles(dir) {
       files.push(...findTsxFiles(fullPath));
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       files.push(fullPath);
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
     }
   }
   
   return files;
-=======
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
@@ -286,7 +262,6 @@ async function main() {/* TODO: Fix JSX expression */}
     })
   });
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
 // Main execution
@@ -303,7 +278,6 @@ tsxFiles.forEach(file => {
 
 console.log(`✅ Fixed ${fixedCount} files`);
 console.log('🎉 JSX syntax fixes completed!');
-=======
 // Find all TypeScript/JSX files
 const files = await glob('app/**/*.{tsx,ts}', { cwd: process.cwd() });
 
@@ -317,4 +291,3 @@ files.forEach(file => {
 });
 
 console.log(`Fixed ${fixedCount} files`);
->>>>>>> cursor/fix-errors-and-merge-to-main-33bd

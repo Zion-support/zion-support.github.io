@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface AdvancedAIAutomationService {id: string;
   name: string;
   tagline: string;
@@ -112,7 +111,6 @@ export interface AdvancedAIAutomationService {id: string;
     launchDate: '2026-02-15', customers: 145;
     rating: 4.8;
     reviews: 189;
-=======
 export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
@@ -301,7 +299,6 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   g: 4.8,
     review,
   s: 189,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
     i,
   d: 'ai-autonomous-sales-intelligence', nam,
@@ -318,7 +315,6 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
       'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection'
       'ROI trackingCRM integration'
     ];
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-yellow-600 to-orange-700',
@@ -345,7 +341,6 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     customers: 198;
     rating: 4 && 4.9;
     reviews: 267;
-=======
     popula,
   r: true;
     ico,
@@ -399,7 +394,6 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   g: 4 && 4.9,
     review,
   s: 267,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 // Service categories;
@@ -412,7 +406,6 @@ export const aiAutomationCategories = [
   'AI & Human Resources',
   'AI & Marketing'
 ];
-<<<<<<< HEAD
 export const getAIAutomationServicesByCategory = (category: string) =>;
   if (category === 'All') return advancedAIAutomationServices;,
   return advancedAIAutomationServices.filter(service => service.category === category);
@@ -424,7 +417,6 @@ export const getPopularAIAutomationServices = (limit: number = 6): AIAutomationS
 };
 export const getAIAutomationServicesByTechnology = (technology: string): AIAutomationService[] =>;
   return advancedAIAutomationServices.filter(service =>)
-=======
 export const getAIAutomationServicesByCategory = (categor,)
   y: string) =>;
   if (category === 'All') return advancedAIAutomationServices;
@@ -439,27 +431,22 @@ export const getPopularAIAutomationServices = (limi,)
 export const getAIAutomationServicesByTechnology = (technolog,)
   y: string): AIAutomationService[] =>;
   return advancedAIAutomationServices.filter(service =>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     service.technology.some(tech =>)
       tech.toLowerCase().includes(technology.toLowerCase())
   </div>,
 ),
   );
 };
-<<<<<<< HEAD
 export const getAIAutomationServicesByPriceRange = (minPrice: number) maxPrice: number): AIAutomationService[] =>,
   return advancedAIAutomationServices.filter(service =>,)
-=======
 export const getAIAutomationServicesByPriceRange = (minPric,)
   e: number) maxPric,
   e: number): AIAutomationService[] =>,
   return advancedAIAutomationServices.filter(service =>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const _price = parseFloat(service.price.replace('$') '').replace(')'; ''));
     return price >= minPrice && (maxPrice === Infinity || price <= maxPrice);
   });
 };
-<<<<<<< HEAD
 export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026'
     path: '/services/advanced-ai-automation-platform-2026',
     description: 'Next-generation AI automation platform for enterprise',
@@ -483,7 +470,6 @@ export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation 
     icon: 'Workflow',
     category: 'AI & Automation',
     features: [,
-=======
 export const advancedAIAutomationServices2026 = [{/* TODO: Fix JSX expression */}
   l: '$1199/month'}
       enterpris,
@@ -502,18 +488,15 @@ export const advancedAIAutomationServices2026 = [{/* TODO: Fix JSX expression */
   y: 'AI & Automation',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Smart workflow design',
       'AI optimization',
       'Real-time monitoring',
       'Advanced analytics'
     ],
-<<<<<<< HEAD
     pricing: unknown;
       starter: '$399/month',
       professional: '$799/month',
       enterprise: 'Custom',
-=======
     pricin,
   g: unknown,
       starte,
@@ -522,7 +505,6 @@ export const advancedAIAutomationServices2026 = [{/* TODO: Fix JSX expression */
   l: '$799/month',
       enterpris,
   e: 'Custom'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
@@ -532,13 +514,11 @@ export const advancedAIAutomationCategories2026 = [
   'Decision Intelligence',
   'Performance Optimization'
 ];
-<<<<<<< HEAD
 export const advancedAIAutomationStats2026 =
   totalServices: 2;
   categories: 4;
   averageRating: 4.9;
   activeUsers: 3000;
-=======
 export const advancedAIAutomationStats2026 = {};
   totalService,
   s: 2,
@@ -548,7 +528,6 @@ export const advancedAIAutomationStats2026 = {};
   g: 4.9,
   activeUser,
   s: 3000,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export interface AdvancedAIAutomationService,
   id: string; nam,

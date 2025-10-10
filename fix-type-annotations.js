@@ -7,13 +7,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix malformed type annotations;
-<<<<<<< HEAD
 function fixTypeAnnotations(content) {
   // Fix malformed type annotations with comments inside;
   content = content.replace(
-=======
 function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     /\{\/\*\/\s*([^}]+)\s*\/\*\/\}/g,
     (match, body) => {/* TODO: Fix JSX expression */}
       return `{ ${body.trim()} }`;
@@ -21,7 +18,6 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
   );
 
   // Fix specific patterns we've seen;
-<<<<<<< HEAD
   content = content.replace(/\{\/\*\/\s*usedJSHeapSize:\s*number\s*\/\*\/\}/g)
     '{ usedJSHeapSize: number }'
   );
@@ -32,7 +28,6 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
 
   // Fix variable name issues;
   content = content.replace(
-=======
   content = content.replace(/\{/* TODO: Fix JSX expression */}
   e:\s*number\s*\/\*\/\}/g,
     '{/* TODO: Fix JSX expression */}
@@ -47,7 +42,6 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
 
   // Fix variable name issues;
   content = content.replace()
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     /const _memory = \([^)]+\)\.memory;\s*memoryUsage = memory\?/g,
     'const _memory = (performance as {/* TODO: Fix JSX expression */})
   e: number } }).memory;\n          memoryUsage = _memory?.'
@@ -57,7 +51,6 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
 }
 
 // Function to process a single file;
-<<<<<<< HEAD
 function processFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -71,9 +64,7 @@ function processFile(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       modified = true;
-=======
 function processFile(filePath) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     return modified;
@@ -84,7 +75,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Function to find all TypeScript/JavaScript files;
-<<<<<<< HEAD
 function findSourceFiles(dir) {
   const files = [];
   
@@ -104,11 +94,9 @@ function findSourceFiles(dir) {
         // Check for TypeScript/JavaScript files;
         if (/\.(ts|tsx|js|jsx)$/.test(item)) {
           files.push(fullPath);
-=======
 function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
         }
       } else if (stat.isFile()) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
       }
     }

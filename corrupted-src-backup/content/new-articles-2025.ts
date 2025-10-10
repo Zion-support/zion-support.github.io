@@ -1,7 +1,6 @@
 export interface NewArticle {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 export const newArticles2025: NewArticle[] = [
   {
     id: 'ai-automation-2025'
@@ -24,12 +23,10 @@ export const newArticles2025: NewArticle[] = [
     link: '/blog/quantum-computing-breakthrough',
     readTime: '12 min read',
     tags: ['Quantum Computing', 'AI', 'Breakthrough', 'Technology'],
-=======
 export const,
   newArticles2025: NewArticle[] = [
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
 ];

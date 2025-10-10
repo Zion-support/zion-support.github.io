@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect, useCallback } from 'react';
 
 interface PerformanceMetrics {
@@ -50,7 +49,6 @@ export const usePerformance = () => {
     optimize,
   };
 };
-=======
 
 
 'use client';
@@ -196,4 +194,3 @@ export const _usePerformance = () => {// TODO: Add content;}
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

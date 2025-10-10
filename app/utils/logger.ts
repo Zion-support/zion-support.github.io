@@ -1,6 +1,5 @@
 'use client'
 /**
-<<<<<<< HEAD
  * Advanced Logging System;
  * Provides structured logging with multiple levels and context;
  */
@@ -70,7 +69,6 @@ class Logger {
     } else if (typeof errorOrContextOrMetadata === 'object') {
       context = errorOrContextOrMetadata;
       meta = contextOrMetadata as Record<string, unknown>
-=======
  * Enhanced Logger Utility;
  * Provides structured logging with different levels and contexts;
  */
@@ -124,12 +122,10 @@ class Logger {/* TODO: Fix JSX expression */}
   t: errorOrContextOrMetadata };
       meta = contextOrMetadata as Record<string, unknown>;
     } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack })
   }
-<<<<<<< HEAD
 
   fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
     this.log(LogLevel.FATAL, message, context, metadata)
@@ -186,7 +182,6 @@ class Logger {/* TODO: Fix JSX expression */}
   }> {
     if (level !== undefined) {
       return this.logs.filter(log => log.level === level)
-=======
   /**
    * Log a fatal error message;
    */
@@ -255,14 +250,12 @@ class Logger {/* TODO: Fix JSX expression */}
    */
   private getConsoleStyles(leve,)
   l: LogLevel): string {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     return [...this.logs]
   }
   /**
    * Send log entry to external logging service;
    */
-<<<<<<< HEAD
   private sendToLoggingService(entry: LogMetadata): void {,
     // In a real application, you would send this to your logging service;
     // For example: Sentry, LogRocket, DataDog, etc.
@@ -282,7 +275,6 @@ class Logger {/* TODO: Fix JSX expression */}
 
 // Export singleton instance;
 export const logger = new Logger()
-=======
   private sendToLoggingService(entr,)
   y: LogMetadata): void {/* TODO: Fix JSX expression */}
   s: {// 'Content-Type': 'application/json'},
@@ -300,4 +292,3 @@ export const logger = new Logger()
   }
 }
 export const logger = new Logger();`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -98,15 +98,12 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
     >
-<<<<<<< HEAD
       {/* Placeholder */})
       {!isLoaded && ()
         <img;)
-=======
       {/* Placeholder */}
       {!isLoaded && (</div>
         <img
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           src={generatePlaceholder()}
           alt=""
           className="absolute inset-0 w-full h-full object-cover animate-pulse"

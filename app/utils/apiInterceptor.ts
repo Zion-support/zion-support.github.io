@@ -1,6 +1,5 @@
 /**
  * API Interceptor Utility;
-<<<<<<< HEAD
  * Provides request/response interceptors for API calls;
  */
 
@@ -112,7 +111,6 @@ class APIInterceptor {
 export const apiInterceptor = new APIInterceptor();
 
 export default APIInterceptor;
-=======
  * Centralized API request handling with error handling, retry logic, and caching;
  */
 // ErrorHandler class definition;
@@ -368,4 +366,3 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
 export const apiInterceptor = APIInterceptor.getInstance();
 export default APIInterceptor;
 `
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

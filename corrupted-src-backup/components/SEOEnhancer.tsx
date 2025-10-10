@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Discover cutting-edge technology solutions for modern businesses.',
@@ -35,17 +34,14 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
 
       return () => {
         document.head.removeChild(script);
-=======
 const,
   SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
   }, [structuredData]);
 
   // Default structured data for organization;
-<<<<<<< HEAD
   const defaultStructuredData = {
     '@context': 'https: //schema.org',
     '@type': 'Organization',
@@ -59,7 +55,6 @@ const,
       telephone: '+1-555-0123',
       contactType: 'customer service',
       availableLanguage: 'English',
-=======
   const defaultStructuredData = {/* TODO: Fix JSX expression */}
   o: `${window.location.origin}/logo.png`,
     sameA,
@@ -68,13 +63,11 @@ const,
   s://twitter.com/ziontechgroup'],
     contactPoin,
   t: {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
   };
 
   //   const finalStructuredData = structuredData || defaultStructuredData;
 
-<<<<<<< HEAD
   return(<>)
       <Helmet>)
         {/* Basic Meta Tags */})
@@ -127,7 +120,6 @@ const,
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         {/* Structured Data */}
-=======
   return (<>
       <Helmet></Helmet>
         {/* Basic Meta Tags */}
@@ -192,7 +184,6 @@ const,
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>"
         <link rel="manifest" href="/site.webmanifest" /></link>
         {/* Structured Data */}"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
       </Helmet>
       {children}

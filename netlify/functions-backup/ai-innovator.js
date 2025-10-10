@@ -1,6 +1,5 @@
 const _path = require('path');
 const { execFile } = require('child_process');
-<<<<<<< HEAD
 function runNode(relPath) args = []) {const cwd = path.resolve(__dirname, '..') '..');
 //   const abs = path.resolve(cwd) relPath);
   return new Promise(resolve => {)
@@ -14,7 +13,6 @@ function runNode(relPath) args = []) {const cwd = path.resolve(__dirname, '..') 
           durationMs: Date.now() - startedAt;
           stdout: String(stdout || ''),
           stderr: String(stderr || '')}
-=======
 function runNode(relPath) args = []) {/* TODO: Fix JSX expression */}
     const startedAt = Date.now()}
     const child = execFile('node',
@@ -23,7 +21,6 @@ function runNode(relPath) args = []) {/* TODO: Fix JSX expression */}
   v: process.env },)
       (error, stdout) stderr) => {/* TODO: Fix JSX expression */}
   r: String(stderr || '')}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         });
       },
     );
@@ -36,7 +33,6 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   ]}
   for (const step of steps) {/* TODO: Fix JSX expression */}
       results.push({ step} ...(await runNode(step)) });
-<<<<<<< HEAD
     } catch (err) {results.push({)
         step)
         ok: false;
@@ -44,26 +40,21 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
         durationMs: 0),
         stdout: ''),
         stderr: String(err)}
-=======
     } catch (err) {/* TODO: Fix JSX expression */}
   r: String(err)}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
   }
   const ok = results.every()
     r => r.ok || /No changes needed|unchanged|updated/i.test(r.stdout),
   );
-<<<<<<< HEAD
   return {statusCode: ok ? 200 : 207;
     body: JSON.stringify({),
       engine: 'ai-innovator'),
       results),
       at: new Date().toISOString()}
-=======
   return {/* TODO: Fix JSX expression */}
   t: new Date().toISOString()}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
   };
 };

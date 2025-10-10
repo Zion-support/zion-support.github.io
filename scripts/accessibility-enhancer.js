@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node;
 /**
  * Accessibility Enhancement Script;
  * Enhances accessibility for better user experience;
  */
 
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -16,7 +13,6 @@ const __dirname = path.dirname(__filename);
 
 console.log('♿ Starting accessibility enhancements...');
 
-<<<<<<< HEAD
 // Create accessibility improvements for the main HTML file
 const indexPath = path.join(__dirname, '../dist/index.html');
 if (fs.existsSync(indexPath)) {
@@ -260,7 +256,6 @@ if (fs.existsSync(indexPath)) {
 
 // Create accessibility statement
 const accessibilityStatement = `# Accessibility Statement
-=======
 // 1. Generate accessibility report;
 function generateAccessibilityReport() {
   console.log('📊 Generating accessibility report...');
@@ -499,15 +494,12 @@ function generateAccessibilityTestingGuide() {
       "Test with accessibility testing tools"
     ]
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
 
 ## Our Commitment
 Zion Tech Group is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.
 
-<<<<<<< HEAD
 ## Conformance Status
 This website is partially conformant with WCAG 2.1 level AA. Partially conformant means that some parts of the content do not fully conform to the accessibility standard.
-=======
 // Run all accessibility enhancements;
 async function runAccessibilityEnhancements() {
   try {
@@ -522,7 +514,6 @@ async function runAccessibilityEnhancements() {
     process.exit(1);
   }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
 
 ## Accessibility Features
 - Skip to main content links

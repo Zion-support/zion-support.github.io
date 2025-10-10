@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 exports.handler = async function (event, context) {
   try {
     // Basic implementation - replace with actual logic;
@@ -19,12 +18,10 @@ exports.handler = async function (event, context) {
         error: 'ultrafast_orchestrator function failed'),
         message: error.message),
         timestamp: new Date().toISOString(),
-=======
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
       })
     };
   } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       })
     };
   }

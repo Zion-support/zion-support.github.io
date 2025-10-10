@@ -6,21 +6,16 @@ import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import EnhancedSEOHead from './components/EnhancedSEOHead';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function RootLayout({
   children,
 }: {)
     children: React.ReactNode;
-=======
 export default function RootLayout({)
   children)
 }: {
   children: React.ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
 }) {
   return(<html lang="en" className="dark">
-=======
 export default function RootLayout({)}
   children,
 }: {}
@@ -28,7 +23,6 @@ export default function RootLayout({)}
 }) {}
   return (
     <html lang="en" className="dark">
->>>>>>> origin/merge-error-fixes
       <head>
         <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossOrigin="" />
         <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossOrigin="" />
@@ -40,7 +34,6 @@ export default function RootLayout({)}
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="format-detection" content="telephone=no,address=no,email=no" />
-<<<<<<< HEAD
         <meta name="color-scheme" content="dark light" >{/* Preconnect to external domains */}</meta>
         </meta><link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" >{/* Fonts */}<link
@@ -48,7 +41,6 @@ export default function RootLayout({)}
           rel="stylesheet"
         >{/* Structured Data */}</link>
         </link><script
-=======
         <meta name="color-scheme" content="dark light" />
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https: //fonts.googleapis.com" />,
@@ -62,9 +54,7 @@ export default function RootLayout({)}
 ,
         {/* Structured Data */}
         <script;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           type="application/ld+json"
-<<<<<<< HEAD
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({,
               '@context': 'https://schema.org',
@@ -74,7 +64,6 @@ export default function RootLayout({)}
               logo: 'https://ziontechgroup.com/logo.webp'
               description: 'Leading provider of AI and IT solutions for modern enterprises'
               address: {
-=======
           dangerouslySetInnerHTML={{}
             __html: JSON.stringify({)}
               '@context': 'https://schema.org',
@@ -84,7 +73,6 @@ export default function RootLayout({)}
               logo: 'https://ziontechgroup.com/logo.webp',
               description: 'Leading provider of AI and IT solutions for modern enterprises',
               address: {}
->>>>>>> origin/merge-error-fixes
                 '@type': 'PostalAddress',
                 streetAddress: '364 E Main St STE 1008',
                 addressLocality: 'Middletown',
@@ -107,13 +95,10 @@ export default function RootLayout({)}
                 'https: //youtube.com/@ziontechgroup',
                 'https: //github.com/ziontechgroup',
               ],
-<<<<<<< HEAD
               service: [,
                 {,
-=======
               service: [
                 {}
->>>>>>> origin/merge-error-fixes
                   '@type': 'Service',
                   name: 'AI Services',
                   description: 'Advanced artificial intelligence solutions',
@@ -123,25 +108,19 @@ export default function RootLayout({)}
                   name: 'IT Services',
                   description: 'Comprehensive IT support and infrastructure',
                 },
-<<<<<<< HEAD
-<<<<<<< HEAD
                 {
-=======
                 {}
->>>>>>> origin/merge-error-fixes
                   '@type': 'Service',
                   name: 'Digital Transformation',)
     description: 'Business modernization and process automation',
                 },
               ],
-=======
                 {)
                   '@type': 'Service',)
                   name: 'Digital Transformation',)
                   description: 'Business modernization and process automation'),
                 })
               ])
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             }),
           }}
         />

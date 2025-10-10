@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 interface AccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
   children;
   enableKeyboardNavigation = true,
@@ -24,16 +23,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
       const _handleChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange);
-=======
 const,
   AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     return undefined;
   }, [enableHighContrast]);
 
-<<<<<<< HEAD
   useEffect(() => {
     // Check for reduced motion preference;
     if (enableReducedMotion) {
@@ -43,14 +39,11 @@ const,
       const _handleChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange);
-=======
   useEffect(() => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     return undefined;
   }, [enableReducedMotion]);
 
-<<<<<<< HEAD
   useEffect(() => {
     // Keyboard navigation support;
     if (enableKeyboardNavigation) {
@@ -61,27 +54,21 @@ const,
           if (skipLink) {,
             skipLink.focus();
             e.preventDefault();
-=======
   useEffect(() => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         }
 
         // Escape key handling;
-<<<<<<< HEAD
         if (e.key === 'Escape') {
           const _activeElement = document.activeElement as HTMLElement;
           if (activeElement && activeElement.blur) {
             activeElement.blur();
-=======
         if (e.key === 'Escape') {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         }
       };
 
       // Focus management;
-<<<<<<< HEAD
       const handleFocusIn = (e: FocusEvent) => {
         setFocusVisible(true);
         const _target = e.target as HTMLElement;
@@ -91,9 +78,7 @@ const,
           const _announcement = target.getAttribute('aria-label');
           if (announcement) {,
             announceToScreenReader(announcement);
-=======
       const handleFocusIn = (e: FocusEvent) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         }
       };
@@ -111,7 +96,6 @@ const,
     return undefined;
   }, [enableKeyboardNavigation, enableScreenReaderSupport]);
 
-<<<<<<< HEAD
   useEffect(() => {
     // Apply accessibility styles;
     const _root = document.documentElement;
@@ -120,10 +104,8 @@ const,
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
-=======
   useEffect(() => {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     if (isReducedMotion) {/* TODO: Fix JSX expression */}
@@ -136,7 +118,6 @@ const,
   }, [isHighContrast, isReducedMotion, focusVisible]);
 
   // Announce to screen reader;
-<<<<<<< HEAD
   const announceToScreenReader = (message: string) => {,
     if (enableScreenReaderSupport) {,
       const _announcement = document.createElement('div');
@@ -149,88 +130,68 @@ const,
 
       setTimeout(() => {
         document.body.removeChild(announcement);
-=======
   const announceToScreenReader = (messag,)
   e: string) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }, 1000);
     }
   };
 
-<<<<<<< HEAD
   return(<div;
-=======
   return (<div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       className={`accessibility-enhancer ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}
       role="main""
       aria-label="Main content"
     >
-<<<<<<< HEAD
-<<<<<<< HEAD
       {/* Skip to main content link */})
       <a;)
         href="#main-content")
         className="skip-link")
         onClick={e => {)
-=======
       {/* Skip to main content link */}</div>
       <a
         href="#main-content"
         className="skip-link"
         onClick={e => {
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           e.preventDefault();
           const _main = document.querySelector('main') || document.querySelector('#main-content');
           if (main) {}
             (main as HTMLElement).focus();}
             (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
-=======
       {/* Skip to main content link */}
       <a></a>"
         href="#main-content""
         className="skip-link"
         onClick={/* TODO: Fix JSX expression */})
   r: 'smooth' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         }}
       >
         Skip to main content;
       </a>
 
-<<<<<<< HEAD
       {/* Accessibility controls */}
-<<<<<<< HEAD
       <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls">
         <button;
-=======
       <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls"></div>
         <button
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           onClick={() => setIsHighContrast(!isHighContrast)}
           className="accessibility-toggle"
-=======
       {/* Accessibility controls */}"
       <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls"></div>
         <button></button>
           onClick={() => setIsHighContrast(!isHighContrast)}"
           className="accessibility-toggle"`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
         >
           {isHighContrast ? '🔆' : '🌙'} High Contrast;
         </button>
 
-<<<<<<< HEAD
         <button;
           onClick={() => setIsReducedMotion(!isReducedMotion)}
           className="accessibility-toggle"
-=======
         <button></button>
           onClick={() => setIsReducedMotion(!isReducedMotion)}"
           className="accessibility-toggle"`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           aria-label={`${isReducedMotion ? 'Disable' : 'Enable'} reduced motion`}
         >
           {isReducedMotion ? '🏃' : '🚶'} Motion;

@@ -1,12 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 const ITInfrastructurePage: React.FC = () => {,
   return(<>,)
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>,)
     </>,)
-=======
 const ITInfrastructurePage: React.FC = () => {
   return (
     <>
@@ -69,7 +67,6 @@ const ITInfrastructurePage: React.FC = () => {
         </div>
       </div>
     </>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, memo, useCallback } from 'react';
 
 interface PerformanceOptimizerProps {
@@ -25,7 +24,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
         threshold: 0.01
       });
 
-<<<<<<< HEAD
   const preloadCriticalResources = () => {
     const criticalResources = [
       {
@@ -87,12 +85,9 @@ $4}
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
         setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
-<<<<<<< HEAD
-=======
       // Observe all lazy images
       document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
-=======
       } catch (error) {
         // Service Worker registration failed - handled silently in production
       }
@@ -115,7 +110,6 @@ $4});
             }
           }
         }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
       });
     }
   }, []);
@@ -278,8 +272,6 @@ $4});
 PerformanceOptimizer.displayName = 'PerformanceOptimizer';
 
 export default PerformanceOptimizer;
->>>>>>> origin/main
-=======
 'use client';
 
 
@@ -480,4 +472,3 @@ const,
 };
 
 export default PerformanceOptimizer;"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

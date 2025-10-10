@@ -56,18 +56,15 @@ const Breadcrumb: React.FC = () => {
     }))
   };
 
-<<<<<<< HEAD
   return(<>)
       <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3">)
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,)
           <ol className="flex items-center space-x-2 text-sm">),
-=======
   return (
     <>
       <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
           <ol className="flex items-center space-x-2 text-sm">
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             {breadcrumbs.map((item, index) => (
               <li key={item.href} className="flex items-center">
                 {index > 0 && (

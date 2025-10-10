@@ -27,7 +27,6 @@ const filesToFix = [
 function createBasicComponent(filePath) {/* TODO: Fix JSX expression */}
 interface ${componentName}Props {/* TODO: Fix JSX expression */}
 }
-<<<<<<< HEAD
 const ${componentName}: React.FC<${componentName}Props> = ({ 
   className = '', 
   children;
@@ -36,12 +35,10 @@ const ${componentName}: React.FC<${componentName}Props> = ({
     <div className={\`${componentName.toLowerCase()}-component \${className}\`}>
       {children || (
         <div className="p-4 text-center text-gray-600">
-=======
 const ${componentName}: React.FC<${componentName}Props> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     <div className={\`${componentName.toLowerCase()}-component \${className}\`}></div>
       {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           <h3 className="text-lg font-semibold mb-2">${componentName}</h3>
           <p>Component placeholder - implementation needed</p>
         </div>
@@ -51,7 +48,6 @@ const ${componentName}: React.FC<${componentName}Props> = ({/* TODO: Fix JSX exp
 };
 export default ${componentName};`
 `;
-<<<<<<< HEAD
   } else if (isTs) {
     return `//${componentName} - TypeScript definitions and utilities;
 export interface ${componentName}Config {
@@ -62,29 +58,24 @@ export const default${componentName}Config: ${componentName}Config = {
 };
 export default {
   default${componentName}Config;
-=======
   } else if (isTs) {/* TODO: Fix JSX expression */}`
     return `//${componentName} - TypeScript definitions and utilities;
 export interface ${componentName}Config {/* TODO: Fix JSX expression */}
 }
 export const default${componentName}Confi,
   g: ${componentName}Config = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export default {/* TODO: Fix JSX expression */}
   default${componentName}Config;
 };`
 `;
-<<<<<<< HEAD
   } else {
     return `//${componentName} - JavaScript module;
 export const ${componentName} = {
   //Module implementation;
-=======
   } else {/* TODO: Fix JSX expression */}`
     return `//${componentName} - JavaScript module;
 export const ${componentName} = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export default ${componentName};`
 `;
@@ -93,11 +84,8 @@ export default ${componentName};`
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
     }
     // Check if file has severe corruption;
-<<<<<<< HEAD
     if (
-=======
     if ()
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       content.includes('<< HEAD') ||
       content.includes('import, Reac, t') ||
       content.includes('con, s, t') ||

@@ -9,25 +9,19 @@ const aicrmassistantPage: React.FC = () => {
         <meta name="keywords" content="ai crm assistant, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Crm Assistant<p className="text-xl text-gray-300 mb-8">Professional ai crm assistant services powered by advanced AI and cutting-edge technology.</p>
-=======
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
               Ai Crm Assistant;
             </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional ai crm assistant services powered by advanced AI and cutting-edge technology.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <div className="container mx-auto px-4 py-16"></div>
           <div className="max-w-4xl mx-auto text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Crm Assistant</h1><p className="text-xl text-gray-300 mb-8">Professional ai crm assistant services powered by advanced AI and cutting-edge technology.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12"></div>
@@ -45,37 +39,25 @@ const aicrmassistantPage: React.FC = () => {
               </div>
             </div>
 
-<<<<<<< HEAD
             <div className="space-y-4">
               <a;
-=======
             <div className="space-y-4"></div>
               <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 href="/contact"
                 className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
-<<<<<<< HEAD
               >Get Started Today</a>
-=======
               >
                 Get Started Today;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
-<<<<<<< HEAD
               <div>
                 <a;
-=======
               <div></div>
                 <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   href="/"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
-<<<<<<< HEAD
                 >← Back to Home</a>
-=======
                 >
                   ← Back to Home;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 </a>
               </div>
             </div>

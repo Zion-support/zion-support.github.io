@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 ];      phone: '+1 302 464 0950'
   id: string;
   name: string;
@@ -344,7 +343,6 @@ export interface ComprehensiveService {,
     customers: 950;
     rating: 4.9;
     reviews: 520;
-=======
 ];      phon,
   e: '+1 302 464 0950'
   i,
@@ -1035,7 +1033,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   g: 4.9;
     review,
   s: 520,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export interface ComprehensiveService {/* TODO: Fix JSX expression */}
@@ -1043,7 +1040,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     addres,
   s: string}
   };
-<<<<<<< HEAD
   trialDays: number;
   setupTime: string;
   competitors: string[];
@@ -1052,7 +1048,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   customers: number;
   rating: number;
   reviews: number;
-=======
   trialDay,
   s: number;
   setupTim,
@@ -1069,13 +1064,11 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   g: number;
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ;
 export const,
   comprehensiveRealServices: ComprehensiveService[] = [;
   // AI & Machine Learning Services;
-<<<<<<< HEAD
   {,
     id: 'ai-content-factory-pro';
     name: 'AI Content Factory Pro';
@@ -1425,7 +1418,6 @@ export const,
       phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
   {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/ai-content-factory-pro'}
     contac,
@@ -1697,7 +1689,6 @@ export const,
   l: 'kleber@ziontechgroup.com';
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
     trialDay,
   s: 60;
@@ -1720,7 +1711,6 @@ export const,
 export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   }
 ];
-<<<<<<< HEAD
     phone: string;
     email: string;
     address: string;
@@ -1734,7 +1724,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     tagline: unknown;
       'Enterprise - grade AI content generation with brand voice consistency',
     description: unknown;
-=======
     phon,
   e: string;
     emai,
@@ -1759,7 +1748,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Enterprise - grade AI content generation with brand voice consistency',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI - powered content creation platform that generates high - quality, SEO - optimized content while maintaining your brand voice across all channels. Features include multi - language support, plagiarism detection, and advanced analytics.',
     pric,
   e: '$49',
@@ -1790,7 +1778,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Google Analytics',
       'SEMrush',
     ],
-<<<<<<< HEAD
     compliance: ['GDPR', 'CCPA', 'SOC2', 'ISO 27001'],
     contact: unknown;
       phone: '+1 302 464 0950',
@@ -1807,7 +1794,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     name: 'AI Content Factory Pro',
     tagline: 'Enterprise-grade AI content generation with brand voice consistency',
     description:,
-=======
     complianc,
   e: ['GDPR', 'CCPA', 'SOC2', 'ISO 27001'],
     contac,
@@ -1838,7 +1824,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: 'Enterprise-grade AI content generation with brand voice consistency'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI-powered content creation platform that generates high-quality, SEO-optimized content while maintaining your brand voice across all channels. Features include multi-language support, plagiarism detection, and advanced analytics.'
     pric,
   e: '$49'
@@ -1853,13 +1838,11 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Team collaboration with version control'
       'Analytics dashboard with performance metrics'
       'API access for enterprise integrations'
-<<<<<<< HEAD
       'Custom AI model training for industry-specific content',
     ],
     category: 'AI & Content Creation',
     marketSize: '$15.2B',
     targetAudience:,
-=======
       'Custom AI model training for industry-specific content'
     ]
     categor,
@@ -1868,7 +1851,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: '$15.2B'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Marketing agencies, content creators, enterprise businesses, e-commerce companies'
     competitiveAdvantag,
   e: 'Industry-leading AI accuracy, comprehensive SEO integration, enterprise-grade collaboration tools, and custom model training capabilities'
@@ -1880,17 +1862,13 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Email marketing campaigns'
       'Technical documentation and whitepapers'
     ]
-<<<<<<< HEAD
     integrations: [
-=======
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'WordPress'
       'Shopify'
       'HubSpot'
       'Mailchimp'
-<<<<<<< HEAD
       'Google Analytics',
       'SEMrush',
     ],
@@ -1918,7 +1896,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     price: '$199',
     period: '/month',
     features: [,
-=======
       'Google Analytics'
       'SEMrush'
     ]
@@ -1967,7 +1944,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   d: '/month'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated customer health scoring',
       'Intelligent engagement workflows',
       'Real - time customer sentiment analysis',
@@ -1990,16 +1966,13 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Upsell and cross-sell optimization'
       'Customer onboarding automation'
       'Customer health monitoring'
-<<<<<<< HEAD
       'Customer success team productivity',
     ],
     integrations: [,
-=======
       'Customer success team productivity'
     ]
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Salesforce',
       'HubSpot',
       'Pipedrive',
@@ -2007,7 +1980,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Zendesk',
       'Slack',
     ],
-<<<<<<< HEAD
     compliance: ['GDPR', 'CCPA', 'SOC2', 'ISO 27001'],
     contact: unknown;
       phone: '+1 302 464 0950',
@@ -2032,7 +2004,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     price: '$299',
     period: '/month',
     features: [,
-=======
     complianc,
   e: ['GDPR', 'CCPA', 'SOC2', 'ISO 27001'],
     contac,
@@ -2076,7 +2047,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   d: '/month'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated compliance monitoring',
       'Regulatory reporting automation',
       'Fraud detection with 95% accuracy',
@@ -2099,16 +2069,13 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Fraud detection and prevention'
       'Compliance monitoring and reporting'
       'Market risk management'
-<<<<<<< HEAD
       'Operational risk assessment',
     ],
     integrations: [,
-=======
       'Operational risk assessment'
     ]
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Fiserv',
       'Jack Henry',
       'FIS',
@@ -2116,7 +2083,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Salesforce',
       'Oracle',
     ],
-<<<<<<< HEAD
     contact: unknown;
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -2140,7 +2106,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     price: '$399',
     period: '/month',
     features: [,
-=======
     contac,
   t: unknown,
       phon,
@@ -2182,7 +2147,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   d: '/month'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Medical image analysis with 96% accuracy',
       'Diagnostic support and recommendations',
       'Patient data analytics and insights',
@@ -2206,16 +2170,13 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Pathology slide analysis'
       'Cardiology imaging support'
       'Oncology diagnostic assistance'
-<<<<<<< HEAD
       'Emergency department support',
     ],
     integrations: [,
-=======
       'Emergency department support'
     ]
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Epic',
       'Cerner',
       'Allscripts',
@@ -2223,7 +2184,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Siemens',
       'Philips',
     ],
-<<<<<<< HEAD
     compliance: ['HIPAA', 'FDA', 'CE Mark', 'SOC2', 'ISO 27001', 'ISO 13485'],
     contact: unknown;
       phone: '+1 302 464 0950',
@@ -2233,7 +2193,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 60;
     setup_time: '4 - 6 weeks',
     competitors: [,
-=======
     complianc,
   e: ['HIPAA', 'FDA', 'CE Mark', 'SOC2', 'ISO 27001', 'ISO 13485'],
     contac,
@@ -2251,13 +2210,11 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: '4 - 6 weeks',
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'IBM Watson Health',
       'Google Health',
       'Microsoft Healthcare',
       'Philips',
     ],
-<<<<<<< HEAD
     roi: 'Average customer sees 600% ROI through improved diagnostic accuracy'
     launch_date: '2024 - 01 - 30'
     customers: 850;
@@ -2273,7 +2230,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     price: '$149',
     period: '/month',
     features: [,
-=======
     ro,
   i: 'Average customer sees 600% ROI through improved diagnostic accuracy',
     launch_dat,
@@ -2300,7 +2256,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   d: '/month'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Dynamic pricing optimization',
       'Customer behavior analysis',
       'Personalized marketing campaigns',
@@ -2321,16 +2276,13 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Pricing strategy optimization'
       'Customer experience personalization'
       'Marketing campaign optimization'
-<<<<<<< HEAD
       'Inventory and supply chain optimization',
     ],
     integrations: [,
-=======
       'Inventory and supply chain optimization'
     ]
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Shopify',
       'WooCommerce',
       'Magento',
@@ -2338,7 +2290,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Salesforce',
       'Klaviyo',
     ],
-<<<<<<< HEAD
     compliance: ['GDPR', 'CCPA', 'PCI DSS', 'SOC2', 'ISO 27001'],
     contact: unknown;
       phone: '+1 302 464 0950',
@@ -2363,7 +2314,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     price: '$249',
     period: '/month',
     features: [,
-=======
     complianc,
   e: ['GDPR', 'CCPA', 'PCI DSS', 'SOC2', 'ISO 27001'],
     contac,
@@ -2407,7 +2357,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   d: '/month'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated incident response and remediation',
       'Behavioral analytics and anomaly detection',
       'Vulnerability assessment and management',
@@ -2430,16 +2379,13 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Incident response automation'
       'Compliance monitoring and reporting'
       'Vulnerability management'
-<<<<<<< HEAD
       'Security operations optimization',
     ],
     integrations: [,
-=======
       'Security operations optimization'
     ]
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Splunk',
       'ServiceNow',
       'Jira',
@@ -2447,7 +2393,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Microsoft 365',
       'Google Workspace',
     ],
-<<<<<<< HEAD
     compliance: ['SOC2', 'ISO 27001', 'NIST', 'GDPR', 'HIPAA', 'PCI DSS'],
     contact: unknown;
       phone: '+1 302 464 0950',
@@ -2472,7 +2417,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     price: '$179',
     period: '/month',
     features: [,
-=======
     complianc,
   e: ['SOC2', 'ISO 27001', 'NIST', 'GDPR', 'HIPAA', 'PCI DSS'],
     contac,
@@ -2516,7 +2460,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   d: '/month'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated data pipeline orchestration',
       'AI - powered data quality monitoring',
       'Real - time data processing and streaming',
@@ -2540,16 +2483,13 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Data quality management'
       'Real-time analytics'
       'Machine learning operations'
-<<<<<<< HEAD
       'Data governance and compliance',
     ],
     integrations: [,
-=======
       'Data governance and compliance'
     ]
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Snowflake',
       'Databricks',
       'AWS',
@@ -2557,7 +2497,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Azure',
       'Tableau',
     ],
-<<<<<<< HEAD
     compliance: ['SOC2', 'ISO 27001', 'GDPR', 'CCPA', 'HIPAA'],
     contact: unknown;
       phone: '+1 302 464 0950',
@@ -2582,7 +2521,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     price: '$129',
     period: '/month',
     features: [,
-=======
     complianc,
   e: ['SOC2', 'ISO 27001', 'GDPR', 'CCPA', 'HIPAA'],
     contac,
@@ -2626,7 +2564,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   d: '/month'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated resume screening',
       'Interview scheduling and coordination',
       'Candidate assessment and scoring',
@@ -2649,16 +2586,13 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Interview process optimization'
       'Diversity and inclusion initiatives'
       'Employee onboarding automation'
-<<<<<<< HEAD
       'Performance management and tracking',
     ],
     integrations: [,
-=======
       'Performance management and tracking'
     ]
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Workday',
       'BambooHR',
       'Greenhouse',
@@ -2666,7 +2600,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Slack',
       'Microsoft Teams',
     ],
-<<<<<<< HEAD
     compliance: ['EEOC', 'OFCCP', 'GDPR', 'CCPA', 'SOC2', 'ISO 27001'],
     contact: unknown;
       phone: '+1 302 464 0950',
@@ -2691,7 +2624,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     price: '$199',
     period: '/month',
     features: [,
-=======
     complianc,
   e: ['EEOC', 'OFCCP', 'GDPR', 'CCPA', 'SOC2', 'ISO 27001'],
     contac,
@@ -2735,7 +2667,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   d: '/month'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Risk identification and assessment',
       'Compliance monitoring and reporting',
       'Contract template management',
@@ -2767,23 +2698,19 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'PracticePanther'
       'LexisNexis'
       'Westlaw'
-<<<<<<< HEAD
       'DocuSign',
     ],
     compliance: [,
-=======
       'DocuSign'
     ]
     complianc,
   e: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'SOC2',
       'ISO 27001',
       'GDPR',
       'CCPA',
       'Attorney - client privilege',
     ],
-<<<<<<< HEAD
     contact: unknown;
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -2807,7 +2734,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     price: '$299',
     period: '/month',
     features: [,
-=======
     contac,
   t: unknown,
       phon,
@@ -2849,7 +2775,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   d: '/month'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Predictive maintenance with 94% accuracy',
       'Production optimization and scheduling',
       'Quality control and defect detection',
@@ -2875,7 +2800,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Supply chain optimization',
       'Energy consumption reduction',
     ],
-<<<<<<< HEAD
     integrations: ['SAP', 'Oracle', 'Siemens', 'Rockwell', 'GE Digital', 'PTC'],
     compliance: ['ISO 9001', 'ISO 14001', 'OHSAS 18001', 'SOC2', 'ISO 27001'],
     contact: unknown;
@@ -2891,7 +2815,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     customers: 950;
     rating: 4 && 4.9;
     reviews: 520;
-=======
     integration,
   s: ['SAP', 'Oracle', 'Siemens', 'Rockwell', 'GE Digital', 'PTC'],
     complianc,
@@ -2921,7 +2844,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   g: 4 && 4.9,
     review,
   s: 520,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
 ];      phon,
   e: '+1 302 464 0950'
@@ -2940,7 +2862,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
 export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   }
 ];
-<<<<<<< HEAD
   id: string, name: string;
   tagline: string, description: string;
   price: string, period: string;
@@ -3211,7 +3132,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     launchDate: '2024-01-10', customers: 950;
     rating: 4.9;
     reviews: 520;
-=======
   i,
   d: string, nam,
   e: string,
@@ -3761,7 +3681,6 @@ export const,
   g: 4.9,
     review,
   s: 520,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 ;

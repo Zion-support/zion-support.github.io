@@ -1,14 +1,11 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { BarChart, TrendingUp, Users, Target, Zap, CheckCircle, ArrowRight, Star, Award, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, Lock, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Phone, Mail, MapPin, Eye, Sparkles, Globe, Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-=======
 import React, { lazy } from 'react';
 import { CheckCircle, TrendingUp } from 'lucide-react';
->>>>>>> origin/main
 
 const Navigation = lazy(() => import('../components/Navigation'))
 const Footer = lazy(() => import('../components/Footer'))
@@ -21,7 +18,6 @@ const AIAnalyticsPage: React.FC = () => {
 
   const features = [
     {
-<<<<<<< HEAD
       icon: Brain;
       title: 'AI-Powered Insights',
       description: 'Get intelligent insights and recommendations powered by advanced machine learning algorithms.',
@@ -41,7 +37,6 @@ const AIAnalyticsPage: React.FC = () => {
     },
     {
       icon: TrendingUp;
-=======
       icon: BarChart,
       title: 'Real-time Analytics',
       description: 'Get instant insights with real-time data processing and visualization',
@@ -60,14 +55,11 @@ const AIAnalyticsPage: React.FC = () => {
       benefits: ['Drag-and-drop builder', 'Custom widgets', 'Role-based views']
     },
     {
-<<<<<<< HEAD
       icon: Database,
       title: 'Data Integration',
       description: 'Seamlessly connect with 100+ data sources and platforms',
       benefits: ['API integrations', 'Database connections', 'File uploads']
-=======
       icon: TrendingUp,
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
       title: 'Performance Tracking',
       description: 'Track KPIs and performance metrics with advanced analytics and benchmarking.',
       benefits: ['KPI monitoring', 'Goal tracking', 'Benchmarking', 'Performance alerts']
@@ -79,10 +71,8 @@ const AIAnalyticsPage: React.FC = () => {
       description: 'Track sales performance, pipeline health, and revenue trends.',
       icon: TrendingUp;
       metrics: ['Revenue tracking', 'Sales forecasting', 'Pipeline analysis', 'Conversion rates']
->>>>>>> origin/main
     },
     {
-<<<<<<< HEAD
       title: 'Marketing Analytics',
       description: 'Measure marketing campaign effectiveness and ROI.',
       icon: Target;
@@ -99,7 +89,6 @@ const AIAnalyticsPage: React.FC = () => {
       description: 'Monitor financial health and profitability.',
       icon: BarChart;
       metrics: ['Revenue analysis', 'Cost tracking', 'Profit margins', 'Cash flow']
-=======
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards',
@@ -110,12 +99,10 @@ const AIAnalyticsPage: React.FC = () => {
       title: 'Automated Reports',
       description: 'Generate and schedule automated reports for stakeholders',
       benefits: ['Scheduled reports', 'Email delivery', 'Custom formats']
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
     }
   ]
   const pricingPlans = [
     {
-<<<<<<< HEAD
       name: 'Starter'
       price: '$29',
       period: '/month',
@@ -123,7 +110,6 @@ const AIAnalyticsPage: React.FC = () => {
       features: [,
         'Up to 5 dashboards',
         'Basic AI insights',
-=======
       name: 'Starter',
       price: '$299',
       period: '/month',
@@ -131,13 +117,11 @@ const AIAnalyticsPage: React.FC = () => {
       features: [
         'Up to 5 data sources',
         'Basic dashboards',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
         'Standard reports',
         'Email support',
         '1GB data storage',
         'Real-time processing'
       ],
-<<<<<<< HEAD
       popular: false;
     },
     {
@@ -148,7 +132,6 @@ const AIAnalyticsPage: React.FC = () => {
       features: [,
         'Up to 25 dashboards',
         'Advanced AI insights',
-=======
       cta: 'Start Free Trial',
       popular: false
     },
@@ -160,7 +143,6 @@ const AIAnalyticsPage: React.FC = () => {
       features: [
         'Up to 25 data sources',
         'Advanced dashboards',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
         'Custom reports',
         'Priority support',
         '10GB data storage',
@@ -168,7 +150,6 @@ const AIAnalyticsPage: React.FC = () => {
         'API access',
         'Team collaboration'
       ],
-<<<<<<< HEAD
       popular: true;
     },
     {
@@ -187,7 +168,6 @@ const AIAnalyticsPage: React.FC = () => {
         'Dedicated account manager'
       ],
       popular: false;
-=======
       cta: 'Start Free Trial',
       popular: true
     },
@@ -208,9 +188,7 @@ const AIAnalyticsPage: React.FC = () => {
       ],
       cta: 'Contact Sales',
       popular: false
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
     }
-<<<<<<< HEAD
   ];
 
   const useCases = [
@@ -308,7 +286,6 @@ const AIAnalyticsPage: React.FC = () => {
               <div className="cyber-card p-6 text-center">
                 <div className="text-3xl font-bold text-pink-400 neon-text mb-2">300%</div>
                 <div className="text-gray-300">ROI Increase</div>
-=======
   ]
   const integrations = [
     { name: 'Google Analytics', icon: '📊' },
@@ -320,7 +297,6 @@ const AIAnalyticsPage: React.FC = () => {
     { name: 'Facebook Ads', icon: '📱' },
     { name: 'Google Ads', icon: '🔍' }
   ]
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation >{/* Hero Section */}</Navigation>
@@ -331,7 +307,6 @@ const AIAnalyticsPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="cyber-button px-8 py-4 text-lg" aria-label="Start Free Trial" tabIndex="0">Start Free Trial<button className="cyber-button-outline px-8 py-4 text-lg" aria-label="View Demo" tabIndex="0">View Demo</button>
-=======
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       {/* Hero Section */}
@@ -350,21 +325,17 @@ const AIAnalyticsPage: React.FC = () => {
               </button>
               <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="View Demo" tabIndex="0">
                 View Demo;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </button>
             </div>,
           </div>,
 ,
           {/* Stats */}
-<<<<<<< HEAD
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">
             <div className="text-center">
               <div className="text-4xl font-bold text-cyan-400 mb-2">95%<div className="text-gray-300">Faster Insights</div>
-=======
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"></div>
             <div className="text-center"></div>
               <div className="text-4xl font-bold text-cyan-400 mb-2">95%</div><div className="text-gray-300">Faster Insights</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </div>
             <div className="text-center"></div>
               <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div><div className="text-gray-300">Integrations</div>
@@ -372,20 +343,15 @@ const AIAnalyticsPage: React.FC = () => {
             <div className="text-center"></div>
               <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div><div className="text-gray-300">Uptime</div>
             </div>
-<<<<<<< HEAD
             <div className="text-center">
-<<<<<<< HEAD
               <div className="text-4xl font-bold text-cyan-400 mb-2">24/7<div className="text-gray-300">Real-time Data</div>
-=======
             <div className="text-center"></div>
               <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div><div className="text-gray-300">Real-time Data</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </div>
           </div>
         </div>
       </section>
 
-=======
               <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
               <div className="text-gray-300">Real-time Data</div>
             </div>,
@@ -393,31 +359,24 @@ const AIAnalyticsPage: React.FC = () => {
         </div>,
       </section>,
 ,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       {/* Features Section */}
       <section className="py-16 px-4">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features<p className="text-xl text-gray-300">Everything you need to understand your business data<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
-=======
             <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
             <p className="text-xl text-gray-300">Everything you need to understand your business data</p>)
           </div>)
 )
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">),
             {features.map((feature, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="cyber-card p-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-=======
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2><p className="text-xl text-gray-300">Everything you need to understand your business data</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="cyber-card p-6"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <feature.icon className="w-6 h-6 text-white" />
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p><ul className="space-y-2" role="list">{feature.benefits.map((benefit, idx) => (</ul>
@@ -434,28 +393,22 @@ const AIAnalyticsPage: React.FC = () => {
 
       {/* Analytics Types Section */}
       <section className="py-16 px-4 bg-slate-800/50">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Analytics Coverage<p className="text-xl text-gray-300">Track every aspect of your business with specialized analytics<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{analyticsTypes.map((type, index) => (</div>
-=======
             <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Analytics Coverage</h2>
             <p className="text-xl text-gray-300">Track every aspect of your business with specialized analytics</p>
           </div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,
             {analyticsTypes.map((type, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="cyber-card p-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
-=======
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Analytics Coverage</h2><p className="text-xl text-gray-300">Track every aspect of your business with specialized analytics</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{analyticsTypes.map((type, index) => (</div>
               <div key={index} className="cyber-card p-6"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <type.icon className="w-6 h-6 text-white" />
                 <h3 className="text-xl font-semibold text-white mb-3">{type.title}</h3>
                 <p className="text-gray-300 mb-4">{type.description}</p><ul className="space-y-1" role="list">{type.metrics.map((metric, idx) => (<li key={idx} className="text-sm text-gray-400" style={{ color: "#9CA3AF" }}>• {metric}</li>
@@ -469,32 +422,22 @@ const AIAnalyticsPage: React.FC = () => {
 
       {/* Integrations Section */}
       <section className="py-16 px-4">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-4">Seamless Integrations<p className="text-xl text-gray-300">Connect with your favorite tools and platforms<div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">{integrations.map((integration, index) => (</div>
-=======
             <h2 className="text-4xl font-bold text-white mb-4">Seamless Integrations</h2>
             <p className="text-xl text-gray-300">Connect with your favorite tools and platforms</p>
           </div>
 
           <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-8 gap-6">,
             {integrations.map((integration, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="cyber-card p-4 text-center">
                 <div className="text-3xl mb-2">{integration.icon}<div className="text-sm text-gray-300">{integration.name}</div>
-<<<<<<< HEAD
-=======
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Seamless Integrations</h2><p className="text-xl text-gray-300">Connect with your favorite tools and platforms</p><div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">{integrations.map((integration, index) => (</div>
               <div key={index} className="cyber-card p-4 text-center"></div>
                 <div className="text-3xl mb-2">{integration.icon}</div><div className="text-sm text-gray-300">{integration.name}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
               </div>
               <div className="cyber-card p-6 text-center">
                 <div className="text-3xl font-bold text-green-400 neon-text mb-2">24/7</div>
@@ -503,7 +446,6 @@ const AIAnalyticsPage: React.FC = () => {
             </div>
           </section>
 
-<<<<<<< HEAD
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
@@ -678,15 +620,11 @@ const AIAnalyticsPage: React.FC = () => {
         </main>
       </div>
       
-=======
       {/* Pricing Section */}
       <section className="py-16 px-4 bg-slate-800/50">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-4">Simple, Transparent Pricing<p className="text-xl text-gray-300">Choose the plan that fits your analytics needs<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>{plan.popular && (</div>
-=======
             <h2 className="text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
             <p className="text-xl text-gray-300">Choose the plan that fits your analytics needs</p>
           </div>
@@ -695,13 +633,11 @@ const AIAnalyticsPage: React.FC = () => {
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
                 {plan.popular && (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold"><span className="sr-only">Screen reader: </span>
                       Most Popular;
                     </span>,
                   </div>,
-=======
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2><p className="text-xl text-gray-300">Choose the plan that fits your analytics needs</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div><div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>{plan.popular && (</div>
@@ -710,7 +646,6 @@ const AIAnalyticsPage: React.FC = () => {
                       Most Popular
                     </span>
                   </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 )}
                 <div className="text-center mb-6"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3><div className="text-4xl font-bold text-cyan-400 mb-2">{plan.price}</div>
@@ -720,18 +655,15 @@ const AIAnalyticsPage: React.FC = () => {
                     </CheckCircle>
                   ))}
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
-<<<<<<< HEAD
                   plan.popular
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`} aria-label="Get Started" tabIndex="0">Get Started</button>
-=======
                   plan.popular;
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover: from-cyan-600 hover:to-purple-700',}
                     : 'bg-slate-700 text-white hover:bg-slate-600'}
                 }`} aria-label="Get Started" tabIndex="0">
                   Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 </button>
               </div>
             ))}
@@ -744,34 +676,24 @@ const AIAnalyticsPage: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center"></section>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Data?</h2><p className="text-xl text-gray-300 mb-8">Join thousands of businesses using AI analytics to make smarter decisions and drive growth.</p>
           </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <button className="cyber-button px-8 py-4 text-lg" aria-label="Start Free Trial" tabIndex="0">Start Free Trial<button className="cyber-button-outline px-8 py-4 text-lg" aria-label="Contact Sales" tabIndex="0">Contact Sales</button>
-=======
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="cyber-button px-8 py-4 text-lg" aria-label="Start Free Trial" tabIndex="0">
               Start Free Trial;
             </button>
             <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="Contact Sales" tabIndex="0">
               Contact Sales;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </button>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       <Footer />,
     </div>,
-=======
->>>>>>> origin/main
       <Footer />
     </>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
   );
 };
 

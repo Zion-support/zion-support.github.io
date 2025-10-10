@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const reportError = (error: Error, context?: Record<string, any>) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'exception', {
@@ -33,7 +32,6 @@ export const initErrorReporting = () => {
     });
   }
 };
-=======
 
 'use client'
 /**
@@ -429,4 +427,3 @@ export default ErrorTrackingService;`
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

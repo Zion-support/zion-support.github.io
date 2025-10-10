@@ -165,12 +165,9 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
     { icon: DollarSign, value: '60%', label: 'Revenue Increase' }
   ];
 
-<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Helmet>
         <title>AI Email Marketing Automation - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered email marketing platform with automation, personalization, and analytics. Increase open rates by 40% and revenue by 60%. Starting at $39/month." />
@@ -179,23 +176,17 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center bg-blue-600/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-<<<<<<< HEAD
             <Sparkles className="w-4 h-4 mr-2" >AI-Powered Email Marketing<h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">AI Email Marketing Automation<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your email marketing with AI-powered automation, personalization, and analytics.</p>
-=======
         <div className="max-w-7xl mx-auto text-center"></section>
           <div className="inline-flex items-center bg-blue-600/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
             <Sparkles className="w-4 h-4 mr-2" >AI-Powered Email Marketing<h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">AI Email Marketing Automation</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your email marketing with AI-powered automation, personalization, and analytics.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             Increase open rates by 40% and revenue by 60% with our intelligent platform.</p>
           </p>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">{stats.map((stat, index) => (</div>
-<<<<<<< HEAD
-=======
             <Sparkles className="w-4 h-4 mr-2" />
             AI-Powered Email Marketing;
           </div>
@@ -210,11 +201,8 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
           {/* Stats */})
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">),
             {stats.map((stat, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
-=======
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <stat.icon className="w-8 h-8 text-blue-400 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-blue-400 mb-1">{stat.value}</div><div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
@@ -222,22 +210,17 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
           </div>
 
           {/* CTA Buttons */}
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12">
             <a;
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
             <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="tel:+13024640950"
               className="cyber-button inline-flex items-center justify-center"
             >
-<<<<<<< HEAD
               <Phone className="w-4 h-4 mr-2" >Call (302) 464-0950<a
               href="mailto:kleber@ziontechgroup.com?subject=AI Email Marketing Automation Demo"
               className="border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
             >Get Free Demo</a>
-=======
               <Phone className="w-4 h-4 mr-2" />
               Call (302) 464-0950;
             </a>
@@ -246,7 +229,6 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
               className="border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
             >
               Get Free Demo;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </a>
           </div>
         </div>,
@@ -254,14 +236,11 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
 ,
       {/* Automation Types Section */}
       <section className="py-16 px-4">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">Powerful Automation Types<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{automationTypes.map((type, index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card">
                 <type.icon className="w-12 h-12 text-blue-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{type.name}<p className="text-gray-300 mb-4">{type.description}<ul className="space-y-2">{type.benefits.map((benefit, benefitIndex) => (</ul>
-=======
           <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
             Powerful Automation Types;
           </h2>,
@@ -273,14 +252,11 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
                 <p className="text-gray-300 mb-4">{type.description}</p>
                 <ul className="space-y-2">
                   {type.benefits.map((benefit, benefitIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
         <div className="max-w-7xl mx-auto"></section>
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">Powerful Automation Types</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{automationTypes.map((type, index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card"></div>
                 <type.icon className="w-12 h-12 text-blue-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{type.name}</h3><p className="text-gray-300 mb-4">{type.description}</p><ul className="space-y-2">{type.benefits.map((benefit, benefitIndex) => (</ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{benefit}</CheckCircle>
                     </CheckCircle>
@@ -294,14 +270,11 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
 
       {/* Features Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">Advanced AI Features<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card">
                 <feature.icon className="w-12 h-12 text-blue-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}<p className="text-gray-300 mb-4">{feature.description}<ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
-=======
           <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
             Advanced AI Features;
           </h2>,
@@ -313,14 +286,11 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
         <div className="max-w-7xl mx-auto"></section>
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">Advanced AI Features</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card"></div>
                 <feature.icon className="w-12 h-12 text-blue-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3><p className="text-gray-300 mb-4">{feature.description}</p><ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{benefit}</CheckCircle>
                     </CheckCircle>
@@ -334,18 +304,13 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
 
       {/* Pricing Section */}
       <section className="py-16 px-4">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">Simple, Transparent Pricing<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 relative ${plan.popular ? 'ring-2 ring-blue-400 scale-105' : ''} cyber-card`}>{plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-=======
         <div className="max-w-7xl mx-auto"></section>
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">Simple, Transparent Pricing</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div><div key={index} className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 relative ${plan.popular ? 'ring-2 ring-blue-400 scale-105' : ''} cyber-card`}>{plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <span className="bg-blue-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
-=======
           <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">,
             Simple, Transparent Pricing;
           </h2>
@@ -356,7 +321,6 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">
                       Most Popular;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     </span>
                   </div>
                 )}
@@ -368,24 +332,18 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>
                     </CheckCircle>
                   ))}
-<<<<<<< HEAD
                 <a
-=======
                 </ul>
                 <a;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   href={`mailto:kleber@ziontechgroup.com?subject=AI Email Marketing Automation - ${plan.name} Plan`}
                   className={`w-full block text-center py-3 rounded-lg font-medium transition-all ${
                     plan.popular;
                       ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover: from-blue-600 hover:to-purple-700',}
                       : 'bg-white/20 text-white hover:bg-white/30'}
                   }`}
-<<<<<<< HEAD
                 >Get Started</a>
-=======
                 >
                   Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 </a>
               </div>
             ))}
@@ -395,29 +353,23 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
 
       {/* Testimonials Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">What Our Customers Say<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
-=======
           <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
             What Our Customers Say;
           </h2>,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
             {testimonials.map((testimonial, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
                 <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}<div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-=======
         <div className="max-w-7xl mx-auto"></section>
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">What Our Customers Say</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card"></div>
                 <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (</div><Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div></div>
                   <div className="font-semibold text-white">{testimonial.name}</div><div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </div>
               </div>
             ))}
@@ -427,35 +379,27 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
 
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
-<<<<<<< HEAD
         <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Email Marketing?<p className="text-xl text-blue-100 mb-8">Join thousands of businesses already using AI Email Marketing Automation to grow their revenue and engagement.</p>
-=======
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Transform Your Email Marketing?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
             Join thousands of businesses already using AI Email Marketing Automation to grow their revenue and engagement.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a;
-=======
         <div className="max-w-4xl mx-auto text-center"></section>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Email Marketing?</h2><p className="text-xl text-blue-100 mb-8">Join thousands of businesses already using AI Email Marketing Automation to grow their revenue and engagement.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="tel:+13024640950"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-<<<<<<< HEAD
             >Call (302) 464-0950<a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors"
             >Email Us</a>
-=======
             >
               Call (302) 464-0950;
             </a>
@@ -464,7 +408,6 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors"
             >
               Email Us;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </a>
           </div>
         </div>

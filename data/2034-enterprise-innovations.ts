@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   id: string;
   name: string;
   description: string;
@@ -26,7 +25,6 @@
     id: 'ai - autonomous - devops - platform',
     name: 'AI Autonomous DevOps Platform',
     description: unknown;
-=======
   i,
   d: string,
   nam,
@@ -81,7 +79,6 @@
   e: 'AI Autonomous DevOps Platform',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Next - generation DevOps platform that uses AI to autonomously manage, optimize, and operate enterprise development and operations.',
     categor,
   y: 'DevOps & AI',
@@ -125,7 +122,6 @@
       'CI / CD pipelines',
       'Cloud orchestration',
     ],
-<<<<<<< HEAD
     market_size: '$28.9B by 2035',
     competitors: ['GitLab', 'Jenkins', 'CircleCI'],
     competitive_advantage: 'Only fully autonomous AI - powered DevOps platform'
@@ -135,7 +131,6 @@
     documentation: 'Comprehensive DevOps implementation guides',
     api: true;
     sdk: true;
-=======
     market_siz,
   e: '$28.9B by 2035',
     competitor,
@@ -154,7 +149,6 @@
   i: true,
     sd,
   k: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI-powered security',
     integration,
   s: [,
@@ -170,7 +164,6 @@
     securit,
   y: [,
       'AI - powered security',
-<<<<<<< HEAD
     integrations: [
       'GitHub'
       'GitLab'
@@ -181,7 +174,6 @@
     ],
     compliance: ['SOC 2', 'ISO 27001', 'GDPR', 'DevOps best practices']
     security: [,
-=======
     integration,
   s: [,
       'GitHub'
@@ -195,7 +187,6 @@
   e: ['SOC 2', 'ISO 27001', 'GDPR', 'DevOps best practices']
     securit,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated compliance',
       'Access controls',
     ],
@@ -209,18 +200,15 @@
   e: 'http,
   s://ziontechgroup.com / ai - autonomous - devops - platform',
   },
-<<<<<<< HEAD
     id: 'quantum - edge - computing - orchestrator',
     name: 'Quantum Edge Computing Orchestrator',
     description: unknown;
-=======
     i,
   d: 'quantum - edge - computing - orchestrator',
     nam,
   e: 'Quantum Edge Computing Orchestrator',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced platform that orchestrates edge computing resources using quantum algorithms for optimal performance and resource allocation.',
     categor,
   y: 'Edge Computing & Quantum',
@@ -265,7 +253,6 @@
       'Quantum routing',
       'Edge security',
     ],
-<<<<<<< HEAD
     market_size: '$35.7B by 2035',
     competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Edge TPU'],
     competitive_advantage: unknown;
@@ -277,7 +264,6 @@
     api: true;
     sdk: true;
     integrations: [,
-=======
     market_siz,
   e: '$35.7B by 2035',
     competitor,
@@ -299,7 +285,6 @@
   k: true,
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AWS IoT',
       'Azure IoT',
       'Google Cloud IoT',
@@ -320,18 +305,15 @@
   e: 'http,
   s://ziontechgroup.com / quantum - edge - computing - orchestrator',
   },
-<<<<<<< HEAD
     id: 'ai - powered - it - operations - center',
     name: 'AI - Powered IT Operations Center',
     description: unknown;
-=======
     i,
   d: 'ai - powered - it - operations - center',
     nam,
   e: 'AI - Powered IT Operations Center',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Intelligent IT operations platform that uses AI to autonomously monitor, manage, and optimize enterprise IT infrastructure.',
     categor,
   y: 'IT Operations & AI',
@@ -375,7 +357,6 @@
       'Predictive analytics',
       'Real - time processing',
     ],
-<<<<<<< HEAD
     market_size: '$42.1B by 2035',
     competitors: ['ServiceNow', 'BMC', 'IBM'],
     competitive_advantage: unknown;
@@ -387,7 +368,6 @@
     api: true;
     sdk: true;
     integrations: [,
-=======
     market_siz,
   e: '$42.1B by 2035',
     competitor,
@@ -409,7 +389,6 @@
   k: true,
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'ServiceNow',
       'Jira',
       'Slack',
@@ -431,18 +410,15 @@
   e: 'http,
   s://ziontechgroup.com / ai - powered - it - operations - center',
   },
-<<<<<<< HEAD
     id: 'quantum - blockchain - infrastructure',
     name: 'Quantum Blockchain Infrastructure Platform',
     description: unknown;
-=======
     i,
   d: 'quantum - blockchain - infrastructure',
     nam,
   e: 'Quantum Blockchain Infrastructure Platform',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary blockchain platform that integrates quantum computing for enhanced security, scalability, and performance.',
     categor,
   y: 'Blockchain & Quantum',
@@ -486,7 +462,6 @@
       'Cross - chain protocols',
       'Advanced cryptography',
     ],
-<<<<<<< HEAD
     market_size: '$52.3B by 2035',
     competitors: ['Ethereum', 'Hyperledger', 'Corda'],
     competitive_advantage: unknown;
@@ -498,7 +473,6 @@
     api: true;
     sdk: true;
     integrations: [,
-=======
     market_siz,
   e: '$52.3B by 2035',
     competitor,
@@ -520,7 +494,6 @@
   k: true,
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Ethereum',
       'Bitcoin',
       'Hyperledger',
@@ -539,7 +512,6 @@
       'Blockchain security',
       'Smart contract security',
     ],
-<<<<<<< HEAD
     scalability: 'Unlimited blockchain transactions'
     uptime: '99 && 99.99% blockchain platform availability'
     contact: '+1 302 464 0950',
@@ -552,7 +524,6 @@
     uptime: '99.999% data center platform availability',
     contact: '+1 302 464 0950',
     website: 'https://ziontechgroup.com/ai-autonomous-data-center',
-=======
     scalabilit,
   y: 'Unlimited blockchain transactions',
     uptim,
@@ -574,24 +545,20 @@
     websit,
   e: 'http,
   s://ziontechgroup.com/ai-autonomous-data-center'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
     websit,
   e: 'http,
   s://ziontechgroup.com / quantum - blockchain - infrastructure',
   },
-<<<<<<< HEAD
     id: 'ai - autonomous - data - center',
     name: 'AI Autonomous Data Center Platform',
     description: unknown;
-=======
     i,
   d: 'ai - autonomous - data - center',
     nam,
   e: 'AI Autonomous Data Center Platform',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Next - generation data center management platform that uses AI to autonomously operate and optimize enterprise data centers.',
     categor,
   y: 'Data Center & AI',
@@ -635,7 +602,6 @@
       'Predictive analytics',
       'Real - time monitoring',
     ],
-<<<<<<< HEAD
     market_size: '$38.9B by 2035',
     competitors: ['VMware', 'Microsoft', 'Dell'],
     competitive_advantage: unknown;
@@ -647,7 +613,6 @@
     api: true;
     sdk: true;
     integrations: [,
-=======
     market_siz,
   e: '$38.9B by 2035',
     competitor,
@@ -669,7 +634,6 @@
   k: true,
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'VMware',
       'Microsoft Hyper - V',
       'Dell EMC',
@@ -702,7 +666,6 @@
       'HPE'
       'Custom hardware'
     ]
-<<<<<<< HEAD
     compliance: [
       'Data center standards'
       'Energy efficiency',
@@ -713,7 +676,6 @@
     uptime: '99.999% data center platform availability',
     contact: '+1 302 464 0950',
     website: 'https://ziontechgroup.com/ai-autonomous-data-center',
-=======
     complianc,
   e: [,
       'Data center standards'
@@ -731,13 +693,11 @@
     websit,
   e: 'http,
   s://ziontechgroup.com/ai-autonomous-data-center'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
       'Data center standards',
       'Energy efficiency',
       'Security compliance',
     ],
-<<<<<<< HEAD
     security: ['AI - powered security', 'Physical security', 'Access controls'],
     scalability: 'Unlimited data center management',
     uptime: '99 && 99.999% data center platform availability',
@@ -755,7 +715,6 @@
   security: string[], scalability: string;
   uptime: string, contact: string;
   website: string;
-=======
     securit,
   y: ['AI - powered security', 'Physical security', 'Access controls'],
     scalabilit,
@@ -802,7 +761,6 @@
   t: string,
   websit,
   e: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
     securit,
   y: ['AI-powered security', 'Physical security', 'Access controls'],
@@ -819,7 +777,6 @@
 ];      'Advanced AI algorithmsIoT sensorsMachine learning systemsAutomation frameworksPredictive analyticsReal-time monitoring'
 ];      'Advanced AI algorithmsIoT sensorsMachine learning systemsAutomation frameworksPredictive analyticsReal-time monitoring'
     ];
-<<<<<<< HEAD
     marketSize: '$38 && 38.9B by 2035',
     website: 'https://ziontechgroup.com / ai - autonomous - data - center',
   },
@@ -846,7 +803,6 @@
     uptime: '99.999% data center platform availability',
     contact: '+1 302 464 0950',
     website: 'https://ziontechgroup.com/ai-autonomous-data-center',
-=======
     marketSiz,
   e: '$38 && 38.9B by 2035'
     websit,
@@ -897,7 +853,6 @@
     websit,
   e: 'http,
   s://ziontechgroup.com/ai-autonomous-data-center'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export interface EnterpriseService2034 {/* TODO: Fix JSX expression */}
@@ -906,7 +861,6 @@ export interface EnterpriseService2034 {/* TODO: Fix JSX expression */}
   e: string}
 }
 ;
-<<<<<<< HEAD
 export const enterprise2034Services: EnterpriseService2034[] = [;
   {
     id: 'quantum-zero-trust-architecture';
@@ -922,17 +876,14 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
     ];
     useCases: [,
       'Financial institutionsHealthcare organizationsGovernment agenciesDefense contractorsTechnology companiesCritical infrastructure',
-=======
 export const,
   enterprise2034Services: EnterpriseService2034[] = [;
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ]}
     technolog,
   y: [}
       'Quantum cryptographyZero trust architectureAI threat detectionBehavioral analyticsQuantum key distributionAdvanced authentication'
     ];
-<<<<<<< HEAD
     marketSize: '$45.6B by 2035';
     competitors: ['Palo Alto NetworksCrowdStrikeSentinelOne'];
     competitiveAdvantage: 'Only platform combining quantum computing with zero trust architecture';
@@ -964,7 +915,6 @@ export const,
     ];
     useCases: [,
       'Software development companiesIT departmentsDevOps teamsCloud providersEnterprise organizationsStartups and scale-ups',
-=======
     marketSiz,
   e: '$45.6B by 2035';
     competitor,
@@ -1000,13 +950,11 @@ export const,
   s://ziontechgroup.com/quantum-zero-trust-architecture'
   };
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ]}
     technolog,
   y: [}
       'Advanced AI algorithmsMachine learning systemsAutomation frameworksMonitoring toolsCI/CD pipelinesCloud orchestration'
     ];
-<<<<<<< HEAD
     marketSize: '$28.9B by 2035';
     competitors: ['GitLabJenkinsCircleCI'];
     competitiveAdvantage: 'Only fully autonomous AI-powered DevOps platform';
@@ -1038,7 +986,6 @@ export const,
     ];
     useCases: [,
       'IoT deployments5G networksSmart citiesIndustrial automationAutonomous vehiclesEdge data centers',
-=======
     marketSiz,
   e: '$28.9B by 2035';
     competitor,
@@ -1074,13 +1021,11 @@ export const,
   s://ziontechgroup.com/ai-autonomous-devops-platform'
   };
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ]}
     technolog,
   y: [}
       'Quantum algorithmsEdge computing frameworksAI orchestrationReal-time analyticsQuantum routingEdge security'
     ];
-<<<<<<< HEAD
     marketSize: '$35.7B by 2035';
     competitors: ['AWS GreengrassAzure IoT EdgeGoogle Edge TPU'];
     competitiveAdvantage: 'Only platform using quantum computing for edge orchestration';
@@ -1112,7 +1057,6 @@ export const,
     ];
     useCases: [,
       'Enterprise IT departmentsData centersCloud providersManaged service providersLarge organizationsCritical infrastructure',
-=======
     marketSiz,
   e: '$35.7B by 2035';
     competitor,
@@ -1148,13 +1092,11 @@ export const,
   s://ziontechgroup.com/quantum-edge-computing-orchestrator'
   };
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ]}
     technolog,
   y: [}
       'Advanced AI algorithmsMachine learning systemsMonitoring toolsAutomation frameworksPredictive analyticsReal-time processing'
     ];
-<<<<<<< HEAD
     marketSize: '$42.1B by 2035';
     competitors: ['ServiceNowBMCIBM'];
     competitiveAdvantage: 'Only fully AI-powered autonomous IT operations platform';
@@ -1186,7 +1128,6 @@ export const,
     ];
     useCases: [,
       'Financial institutionsSupply chain companiesHealthcare organizationsGovernment agenciesCryptocurrency platformsEnterprise blockchain',
-=======
     marketSiz,
   e: '$42.1B by 2035';
     competitor,
@@ -1222,13 +1163,11 @@ export const,
   s://ziontechgroup.com/ai-powered-it-operations-center'
   };
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ]}
     technolog,
   y: [}
       'Quantum cryptographyBlockchain frameworksSmart contractsQuantum consensusCross-chain protocolsAdvanced cryptography'
     ];
-<<<<<<< HEAD
     marketSize: '$52.3B by 2035';
     competitors: ['EthereumHyperledgerCorda'];
     competitiveAdvantage: 'Only platform combining quantum computing with blockchain';
@@ -1282,7 +1221,6 @@ export const,
     website: 'https://ziontechgroup.com/ai-autonomous-data-center',
     contact: '+1 302 464 0950'}
     website: 'https://ziontechgroup.com / ai - autonomous - data - center',
-=======
     marketSiz,
   e: '$52.3B by 2035';
     competitor,
@@ -1327,7 +1265,6 @@ export const,
     websit,
   e: 'http,
   s://ziontechgroup.com / ai - autonomous - data - center'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 export interface EnterpriseService2034 {/* TODO: Fix JSX expression */}
   t: string}
@@ -1338,7 +1275,6 @@ export interface EnterpriseService2034 {/* TODO: Fix JSX expression */}
 export interface EnterpriseService2034 {/* TODO: Fix JSX expression */}
   }
 ];
-<<<<<<< HEAD
 export const enterprise2034Services: EnterpriseService2034[] = [;
   {
     id: 'quantum-zero-trust-architecture';
@@ -1354,17 +1290,14 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
     ];
     useCases: [,
       'Financial institutionsHealthcare organizationsGovernment agenciesDefense contractorsTechnology companiesCritical infrastructure',
-=======
 export const,
   enterprise2034Services: EnterpriseService2034[] = [;
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ]}
     technolog,
   y: [}
       'Quantum cryptographyZero trust architectureAI threat detectionBehavioral analyticsQuantum key distributionAdvanced authentication'
     ];
-<<<<<<< HEAD
     marketSize: '$45.6B by 2035';
     competitors: ['Palo Alto NetworksCrowdStrikeSentinelOne'];
     competitiveAdvantage: 'Only platform combining quantum computing with zero trust architecture';
@@ -1396,7 +1329,6 @@ export const,
     ];
     useCases: [,
       'Software development companiesIT departmentsDevOps teamsCloud providersEnterprise organizationsStartups and scale-ups',
-=======
     marketSiz,
   e: '$45.6B by 2035';
     competitor,
@@ -1432,13 +1364,11 @@ export const,
   s://ziontechgroup.com/quantum-zero-trust-architecture'
   };
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ]}
     technolog,
   y: [}
       'Advanced AI algorithmsMachine learning systemsAutomation frameworksMonitoring toolsCI/CD pipelinesCloud orchestration'
     ];
-<<<<<<< HEAD
     marketSize: '$28.9B by 2035';
     competitors: ['GitLabJenkinsCircleCI'];
     competitiveAdvantage: 'Only fully autonomous AI-powered DevOps platform';
@@ -1470,7 +1400,6 @@ export const,
     ];
     useCases: [,
       'IoT deployments5G networksSmart citiesIndustrial automationAutonomous vehiclesEdge data centers',
-=======
     marketSiz,
   e: '$28.9B by 2035';
     competitor,
@@ -1506,13 +1435,11 @@ export const,
   s://ziontechgroup.com/ai-autonomous-devops-platform'
   };
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ]}
     technolog,
   y: [}
       'Quantum algorithmsEdge computing frameworksAI orchestrationReal-time analyticsQuantum routingEdge security'
     ];
-<<<<<<< HEAD
     marketSize: '$35.7B by 2035';
     competitors: ['AWS GreengrassAzure IoT EdgeGoogle Edge TPU'];
     competitiveAdvantage: 'Only platform using quantum computing for edge orchestration';
@@ -1544,7 +1471,6 @@ export const,
     ];
     useCases: [,
       'Enterprise IT departmentsData centersCloud providersManaged service providersLarge organizationsCritical infrastructure',
-=======
     marketSiz,
   e: '$35.7B by 2035';
     competitor,
@@ -1580,13 +1506,11 @@ export const,
   s://ziontechgroup.com/quantum-edge-computing-orchestrator'
   };
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ]}
     technolog,
   y: [}
       'Advanced AI algorithmsMachine learning systemsMonitoring toolsAutomation frameworksPredictive analyticsReal-time processing'
     ];
-<<<<<<< HEAD
     marketSize: '$42.1B by 2035';
     competitors: ['ServiceNowBMCIBM'];
     competitiveAdvantage: 'Only fully AI-powered autonomous IT operations platform';
@@ -1618,7 +1542,6 @@ export const,
     ];
     useCases: [,
       'Financial institutionsSupply chain companiesHealthcare organizationsGovernment agenciesCryptocurrency platformsEnterprise blockchain',
-=======
     marketSiz,
   e: '$42.1B by 2035';
     competitor,
@@ -1654,13 +1577,11 @@ export const,
   s://ziontechgroup.com/ai-powered-it-operations-center'
   };
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ]}
     technolog,
   y: [}
       'Quantum cryptographyBlockchain frameworksSmart contractsQuantum consensusCross-chain protocolsAdvanced cryptography'
     ];
-<<<<<<< HEAD
     marketSize: '$52.3B by 2035';
     competitors: ['EthereumHyperledgerCorda'];
     competitiveAdvantage: 'Only platform combining quantum computing with blockchain';
@@ -1692,7 +1613,6 @@ export const,
     ];
     useCases: [,
       'Enterprise data centersCloud providersColocation facilitiesEdge data centersGovernment facilitiesFinancial institutions',
-=======
     marketSiz,
   e: '$52.3B by 2035';
     competitor,
@@ -1728,13 +1648,11 @@ export const,
   s://ziontechgroup.com/quantum-blockchain-infrastructure'
   };
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ]}
     technolog,
   y: [}
       'Advanced AI algorithmsIoT sensorsMachine learning systemsAutomation frameworksPredictive analyticsReal-time monitoring'
     ];
-<<<<<<< HEAD
     marketSize: '$38.9B by 2035';
     competitors: ['VMwareMicrosoftDell'];
     competitiveAdvantage: 'Only fully autonomous AI-powered data center platform';
@@ -1751,7 +1669,6 @@ export const,
     uptime: '99.999% data center platform availability';
     contact: '+1 302 464 0950';
     website: 'https://ziontechgroup.com/ai-autonomous-data-center',
-=======
     marketSiz,
   e: '$38.9B by 2035';
     competitor,
@@ -1785,23 +1702,19 @@ export const,
     websit,
   e: 'http,
   s://ziontechgroup.com/ai-autonomous-data-center'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
   }
 ];
   }
 ];
-<<<<<<< HEAD
     contact: '+1 302 464 0950',
     website: 'https://ziontechgroup.com / ai - autonomous - data - center',
-=======
     contac,
   t: '+1 302 464 0950',
     websit,
   e: 'http,
   s://ziontechgroup.com / ai - autonomous - data - center'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ;
 i,

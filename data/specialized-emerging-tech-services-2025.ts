@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -55,7 +54,6 @@ const contact =
       'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications',
       'Advanced pattern recognitionCustom neuromorphic algorithms',
       benefits: [,
-=======
   i,
   d: string;
   nam,
@@ -157,7 +155,6 @@ const contact =
       'Advanced pattern recognitionCustom neuromorphic algorithms'
       benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Energy efficiency',
         'Cognitive capabilities',
         'Real - time learning',
@@ -170,7 +167,6 @@ const contact =
         'Hardware integration',
         'Custom algorithms',
       ],
-<<<<<<< HEAD
       market_advantage: unknown;
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
     },
@@ -178,7 +174,6 @@ const contact =
     features: [;
       'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications',
       'Advanced pattern recognition_custom neuromorphic algorithms',
-=======
       market_advantag,
   e: unknown,
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
@@ -189,7 +184,6 @@ const contact =
   s: [;
       'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications'
       'Advanced pattern recognition_custom neuromorphic algorithms'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ],
     popula,
   r: true, ico,
@@ -200,7 +194,6 @@ const contact =
   }
 ];
 ;
-<<<<<<< HEAD
     popular: true, icon: '',
     color: 'from - pink - 600 to - rose - 600', text_color: 'text - pink - 400',
     link: 'https://ziontechgroup.com / neuromorphic - computing - platform', market_position: 'Advanced neuromorphic platform competing with Intel Loihi ($1000 / month) and IBM TrueNorth ($800 / month)',
@@ -218,7 +211,6 @@ const contact =
     rating: 4.8, reviews: 34;
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'],
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
-=======
     popula,
   r: true, ico,
   n: '',
@@ -266,7 +258,6 @@ const contact =
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'],
     marketAdvantag,
   e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */}
@@ -274,7 +265,6 @@ export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -298,7 +288,6 @@ const contact = {,
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup.com',
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -344,12 +333,10 @@ const contact = {/* TODO: Fix JSX expression */}
   websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const,
   specializedEmergingTechServices: SpecializedEmergingTechService[] = [;
   // AR/VR & Metaverse Services;
-<<<<<<< HEAD
   {
     id: 'ar-vr-metaverse-platform';
     name: 'AR/VR Metaverse Platform';
@@ -642,7 +629,6 @@ export const,
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing']}
     capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']}
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
-=======
   {/* TODO: Fix JSX expression */}
   i: 'Average 400% ROI through increased engagement and conversion rates'}
     competitor,
@@ -841,7 +827,6 @@ export const,
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']}
     marketAdvantag,
   e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
     ];

@@ -4,7 +4,6 @@ import path from 'path';
 import { readdir } from 'fs/promises';
 
 // Function to fix malformed Netlify function syntax;
-<<<<<<< HEAD
 function fixNetlifyFunction(content) {
   // Remove malformed function signatures and fix syntax;
   let fixed = content;
@@ -20,12 +19,10 @@ function fixNetlifyFunction(content) {
     // Remove duplicate exports and malformed code;
     .replace(/\/\/ exports\.handler = .*$/gm, '')
     // Fix missing commas in arrays and objects;
-=======
 function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
     .replace(/(\w+)\s*}\s*(\w+)/g, '$1,\n        $2')
     // Fix malformed JSON.stringify calls;
     .replace(/JSON\.stringify\(\{/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     .replace(/(\w+)\s*}\s*\)/g, '$1\n      })')
     .replace(/(\w+)\s*\)\s*}/g, '$1\n      }')
     // Clean up extra whitespace and newlines;
@@ -33,7 +30,6 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
     .replace(/\s+$/gm, '');
 
   // Ensure proper function structure;
-<<<<<<< HEAD
   if (!fixed.includes('exports.handler = async function')) {
     return content; // Skip if no proper function found;
   }
@@ -55,7 +51,6 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
         error: 'Function failed'),
         message: error.message),
         timestamp: new Date().toISOString(),
-=======
   if (!fixed.includes('exports.handler = async function')) {/* TODO: Fix JSX expression */}
   }
 
@@ -67,7 +62,6 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
         `exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
     ${body}
   } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }),
       header,
   s: {'Content-Type': 'application/json'}
@@ -82,12 +76,9 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
 }
 
 // Main function to process all Netlify functions;
-<<<<<<< HEAD
 async function main() {
-=======
 async function main() {/* TODO: Fix JSX expression */}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   const _functionsDir = 'netlify/functions';
   const _pattern = path.join(functionsDir, '*.js');
 
@@ -97,7 +88,6 @@ async function main() {/* TODO: Fix JSX expression */}
   let _fixedCount = 0;
   let _errorCount = 0;
   
-<<<<<<< HEAD
   files.forEach(filePath => {)
     try {)
       const _content = fs.readFileSync(filePath, 'utf8');
@@ -106,10 +96,8 @@ async function main() {/* TODO: Fix JSX expression */}
       if (content !== fixed) {
         fs.writeFileSync(filePath, fixed, 'utf8');
         // console.log(`✅ Fixed: ${path.basename(filePath)}`);
-=======
   files.forEach(filePath => {/* TODO: Fix JSX expression */})`
   d: ${path.basename(filePath)}`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         fixedCount++;
       } else {/* TODO: Fix JSX expression */}`
   d: ${path.basename(filePath)} (no changes needed)`);

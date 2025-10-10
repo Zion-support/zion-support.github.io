@@ -7,11 +7,8 @@ interface LoadingProps {
   fullScreen?: boolean;
 }
 
-<<<<<<< HEAD
 const Loading: React.FC<LoadingProps>= ({
-=======
 const Loading: React.FC<LoadingProps> = ({,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   size = 'md',
   text = 'Loading...',
   fullScreen = false;
@@ -46,15 +43,12 @@ const Loading: React.FC<LoadingProps> = ({,
   );
 
   if (fullScreen) {
-<<<<<<< HEAD
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">{content}</div>
       </div>
-=======
     return(<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">)
         {content})
       </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
     );
   }
 

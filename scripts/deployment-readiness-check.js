@@ -9,7 +9,6 @@ const { execSync } = require('child_process');
 const _path = require('path');
 
 // Colors for console output;
-<<<<<<< HEAD
 const colors = {
   reset: '\x1b[0m'
   red: '\x1b[31m',
@@ -17,9 +16,7 @@ const colors = {
   yellow: '\x1b[33m',
   blue: '\x1b[34m',
   cyan: '\x1b[36m',
-=======
 const colors = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 
 class DeploymentReadinessChecker {/* TODO: Fix JSX expression */}
@@ -93,7 +90,6 @@ class DeploymentReadinessChecker {/* TODO: Fix JSX expression */}
 }
 
 // Define all checks;
-<<<<<<< HEAD
 function setupChecks(checker) {
   // Check 1: Package.json exists and is valid;
   checker.addCheck('Package.json Validation', async () => {
@@ -116,7 +112,6 @@ function setupChecks(checker) {
       return {
         success: false;
         message: error.message;
-=======
 function setupChecks(checker) {/* TODO: Fix JSX expression */}
         };
       }
@@ -125,12 +120,10 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
   e: `${pkg.name}@${pkg.version}`
       };
     } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
   });
 
-<<<<<<< HEAD
   // Check 2: Dependencies installed;
   checker.addCheck('Dependencies Check', async () => {
     try {
@@ -148,7 +141,6 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
       return {
         success: false;
         message: error.message;
-=======
   // Check,
   2: Dependencies installed;
   checker.addCheck('Dependencies Check', async () => {/* TODO: Fix JSX expression */}
@@ -157,12 +149,10 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
       return {/* TODO: Fix JSX expression */}
       };
     } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
   });
 
-<<<<<<< HEAD
   // Check 3: Linting;
   checker.addCheck('Linting', async () => {
     try {
@@ -175,7 +165,6 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
       return {
         success: false;
         message: 'Linting failed. Run: pnpm run lint:fix',
-=======
   // Check,
   3: Linting;
   checker.addCheck('Linting', async () => {/* TODO: Fix JSX expression */}
@@ -183,12 +172,10 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
       return {/* TODO: Fix JSX expression */}
       };
     } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
   });
 
-<<<<<<< HEAD
   // Check 4: Type checking;
   checker.addCheck('Type Checking', async () => {
     try {
@@ -201,7 +188,6 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
       return {
         success: false;
         message: 'Type checking failed',
-=======
   // Check,
   4: Type checking;
   checker.addCheck('Type Checking', async () => {/* TODO: Fix JSX expression */}
@@ -209,12 +195,10 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
       return {/* TODO: Fix JSX expression */}
       };
     } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
   });
 
-<<<<<<< HEAD
   // Check 5: Tests;
   checker.addCheck('Test Suite', async () => {
     try {
@@ -229,7 +213,6 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
       return {
         success: false;
         message: 'Tests failed',
-=======
   // Check,
   5: Tests;
   checker.addCheck('Test Suite', async () => {/* TODO: Fix JSX expression */}
@@ -240,12 +223,10 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
   e: `${passedTests} tests passed`
       };
     } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
   });
 
-<<<<<<< HEAD
   // Check 6: Build;
   checker.addCheck('Build Process', async () => {
     try {
@@ -256,7 +237,6 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
         return {
           success: false;
           message: 'Build completed but dist folder not found',
-=======
   // Check,
   6: Build;
   checker.addCheck('Build Process', async () => {/* TODO: Fix JSX expression */}
@@ -264,13 +244,11 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
       
       // Check if dist folder exists;
       if (!fs.existsSync('dist')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         };
       }
       
       // Check dist size;
 //       const stats = fs.statSync('dist');
-<<<<<<< HEAD
       return {
         success: true;
         message: 'Build successful',
@@ -279,16 +257,13 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
       return {
         success: false;
         message: 'Build failed',
-=======
       return {/* TODO: Fix JSX expression */}
       };
     } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
   });
 
-<<<<<<< HEAD
   // Check 7: Environment variables (warning only),
   checker.addCheck('Environment Variables', async () => {
     const _requiredEnvVars = ['NODE_ENV'];
@@ -321,7 +296,6 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
         success: true;
         severity: 'warning',
         message: 'Security vulnerabilities found. Run: pnpm audit',
-=======
   // Check,
   7: Environment variables (warning only)
   checker.addCheck('Environment Variables', async () => {/* TODO: Fix JSX expression */}`
@@ -340,12 +314,10 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
       return {/* TODO: Fix JSX expression */}
       };
     } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
   });
 
-<<<<<<< HEAD
   // Check 9: Git status;
   checker.addCheck('Git Status', async () => {
     try {
@@ -368,7 +340,6 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
         success: true;
         severity: 'warning',
         message: 'Git status check failed',
-=======
   // Check,
   9: Git status;
   checker.addCheck('Git Status', async () => {/* TODO: Fix JSX expression */}
@@ -381,12 +352,10 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
       return {/* TODO: Fix JSX expression */}
       };
     } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
   });
 
-<<<<<<< HEAD
   // Check 10: Branch check;
   checker.addCheck('Git Branch', async () => {
     try {
@@ -411,7 +380,6 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
         success: true;
         severity: 'warning',
         message: 'Could not determine current branch',
-=======
   // Check,
   10: Branch check;
   checker.addCheck('Git Branch', async () => {/* TODO: Fix JSX expression */}
@@ -428,19 +396,15 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
   e: `On ${branch} branch`
       };
     } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
   });
 }
 
 // Main execution;
-<<<<<<< HEAD
 async function main() {
-=======
 async function main() {/* TODO: Fix JSX expression */}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   const _checker = new DeploymentReadinessChecker();
   setupChecks(checker);
   
@@ -450,11 +414,8 @@ async function main() {/* TODO: Fix JSX expression */}
 }
 
 // Run the checker;
-<<<<<<< HEAD
 main().catch(error => {)
 //   process.exit(1);
 });
-=======
 main().catch(error => {/* TODO: Fix JSX expression */})
 });`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -2,7 +2,6 @@ impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-<<<<<<< HEAD
 const EnterpriseAITransformationSuccessStrategie, s = () => { 
   return(:src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx;
     <>
@@ -54,7 +53,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {
 
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight"></h1>
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">
-<<<<<<< HEAD
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">
   Enterprise AI Transformation Success Strategies;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mt-2 text-4xl">
@@ -62,14 +60,12 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {
         <Header />,
 ,
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
-=======
   Enterprise AI Transformation Success Strategies</h1>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mt-2 text-4xl"></span>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark"></div>
         <Header />
 
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <Head, e, r />
         <article, className='container, m, x-auto, p, x-6, p, y-20'>
           <Link, t, o='/bl, o, g'
@@ -83,14 +79,12 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {
             </div>
 
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
-<<<<<<< HEAD
               Enterprise, AI, Transformation Success, Strategie, s;
               <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, m, t-2, tex, t-4, x, l'>
                 A, Comprehensive, 2025 Playbo, o, k;
 :src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx;
             <div, classNam, e = 'flex, item, s-center, ga, p-4, m, b-12'>
               <div, className='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-500, flex, items-center, justif, y-cent, e, r'>
-=======
               Enterprise, AI, Transformation Success, Strategie, s</h1>
               <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, m, t-2, tex, t-4, x, l'>
                 A, Comprehensive, 2025 Playbo, o, k
@@ -98,7 +92,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {
 :src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx</span>
             <div, classNam, e = 'flex, item, s-center, ga, p-4, m, b-12'></div>
               <div, className='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-500, flex, items-center, justif, y-cent, e, r'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Users, className='w-6 h-6, tex, t-whi, t, e' />
               </div>
                 <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'></div>
@@ -111,7 +104,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {
                   <p, className='mb-4'>
                     Enterprise, AI, transformation is, no, longer option, a, l—it's a{' '}</p>
                     <strong, className='te, x, t-whi, t, e'>
-=======
 const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX expression */}
                 { val, u, e: '$2., 9, T', lab, e, l: 'AI, Business, Value 2, 0, 2, 5' },
                 { val, u, e: '10, x', lab, e, l: 'Average, R, O, I' },
@@ -121,7 +113,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                   <p, className='mb-4'></p>
                     Enterprise, AI, transformation is, no, longer option, a, l—it's a{' '}
                     <strong, className='te, x, t-whi, t, e'></strong>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       competitive, imperativ, e;
                     </stro, n, g>
                     . In, 20, 2, 5, companies, that, successfully implement, AI, are;
@@ -132,50 +123,38 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                       40% cost, reduction, s;
                     </str, o, n, g>
                     , a, n, d{' '}
-<<<<<<< HEAD
                     <strong, classNam, e = 'te, x, t-gre, e, n-4, 0, 0'>
                       transformative, business, growth;
                     </stro, n, g>
                     . Howe, v, e, r,{' '}
                     <strong, classNam, e = 'te, x, t-r, e, d-4, 0, 0'>
-=======
                     <strong, classNam, e = 'te, x, t-gre, e, n-4, 0, 0'></strong>
                       transformative, business, growth;
                     </stro, n, g>
                     . Howe, v, e, r,{' '}
                     <strong, classNam, e = 'te, x, t-r, e, d-4, 0, 0'></strong>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       73% of, AI, initiatives still, fai, l;
                     </stro, n, g>{' '}
                     to, deliver, expected val, u, e.
                 <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'></h2>
-<<<<<<< HEAD
                   <Target, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
-<<<<<<< HEAD
                   The, 7, Pillars of, AI, Success;
                 <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
-=======
                   The, 7, Pillars of, AI, Success
                 <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'></h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <Target, className='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
-=======
                   <Target, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' /></Target>
                   The, 7, Pillars of, AI, Success;
                 <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'></h2>
                   <Target, className='w-8 h-8, tex, t-purp, l, e-4, 0, 0' /></Target>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   The, 7, Pillars of, AI, Success;
                     <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
                     ></div>
                       <div, className='flex, item, s-start, ga, p-4'></div>
                         <div, className='te, x, t-4, x, l'>{pill, a, r.ic, o, n}</div>
                         <div, classNam, e = 'fl, e, x-1'></div>
-<<<<<<< HEAD
                           <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
-=======
                           <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                             {pill, a, r.pill, a, r}
                           </h3>
                           <p, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'></p>
@@ -193,7 +172,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                         'MLOps, fully, operational',
                         'Governance, framework, implemented',
                       ],
-<<<<<<< HEAD
                     },)
                         '50+ models, in, productio, n',)
                         'AI-first, operating, model',)
@@ -207,7 +185,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                           { pha, s, e.mileston, e, s.m, a, p((miles, t, o, n, e, mInd, e, x) = > (
                             <li, ke, y = { mIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
                               <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
-=======
                     },
                         '50+ models, in, productio, n',
                         'AI-first, operating, model',
@@ -221,7 +198,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                           {/* TODO: Fix JSX expression */}
                             <li, ke, y = { mIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
                               <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                         '40% reduction, in, inventory co, s, t, s',
                         '28% increase, in, customer lifetime, valu, e',
                         '18% revenue, growth, attributed to, A, I',
@@ -237,16 +213,13 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                         '$180M, in, inventory optimizati, o, n',
                       ],
                     },
-<<<<<<< HEAD
                   ].m, a, p((sto, r, y, ind, e, x) => (
                     <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-8, border, border-purp, l, e-5, 0, 0/30'
                     ></div>
                       <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'>
-=======
                   ].m, a, p((sto, r, y, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-8, border, border-purp, l, e-5, 0, 0/30'
                     ></div>
                       <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                         {sto, r, y.company}
                       </h3>
                       <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-4'></p>
@@ -254,7 +227,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                       </p>
                       <div, className='grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-4'></div>
                         <div, className='bg-whi, t, e/10, rounde, d-l, g, p-3'></div>
-<<<<<<< HEAD
                           <div, className='te, x, t-lg, fon, t-bold, tex, t-cy, a, n-4, 0, 0'>
                             {sto, r, y.invest, m, e, n, t}
                           </div>
@@ -265,7 +237,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                         { sto, r, y.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > (
                           <li, ke, y = { hIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
                             <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
-=======
                           <div, className='te, x, t-lg, fon, t-bold, tex, t-cy, a, n-4, 0, 0'></div>
                             {sto, r, y.invest, m, e, n, t}
                           </div>
@@ -276,12 +247,10 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                         {/* TODO: Fix JSX expression */}
                           <li, ke, y = { hIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
                             <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-4'></div>
                 <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-4'></div>
                   <Link, t, o='/conta, c, t'
                     className='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-500, tex, t-white, fon, t-bold, rounde, d-lg, hove, r:fr, o, m-purp, l, e-600, hove, r:to-cy, a, n-600, transitio, n-a, l, l'
-<<<<<<< HEAD
                   >
                     Schedule, AI, Assessment;
                     <Rocket, classNam, e='w-5 h-5' />
@@ -291,7 +260,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                 <Users className=" />">
             <div></div>
                 <Users className="w-6 h-6 text-white" />
-=======
                   ></Link>
                     Schedule, AI, Assessment;
                     <Rocket, classNam, e='w-5 h-5' /></Rocket>
@@ -301,7 +269,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                 <Users className=" />">
             <div></div>"
                 <Users className="w-6 h-6 text-white" /></Users>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   </div>
               <div>Dr. Sarah Chen</div>
               <div></div>
@@ -309,7 +276,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
   </div>
   </div>
             {/* Key Metrics */};
-<<<<<<< HEAD
             <div>
               {[
               {[
@@ -319,7 +285,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                 { value="73%", label="Initiatives That Fail" }"
               ].map((metric, index) => (</div>
                 <div>{metric.value}</div>
-=======
             <div></div>
               {/* TODO: Fix JSX expression */}"
                 { value="$2.9T", label="AI Business Value 2025" },""
@@ -327,23 +292,18 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                 { value="40%", label="Cost Reduction" },""
                 { value="73%", label="Initiatives That Fail" }")
               ].map((metric, index) => (<div>{metric.value}</div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <div></div>
                   <div>{metric.label}</div>
   </div>)
               ))}
   </div>
             {/* Content */}
-<<<<<<< HEAD
-<<<<<<< HEAD
 :src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx;
             <div>
             <div className="prose prose-invert prose-lg max-w-none space-y-8 text-zion-slate-light">
-=======
 :src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx
             <div></div>
             <div className="prose prose-invert prose-lg max-w-none space-y-8 text-zion-slate-light"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <section >
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3"></h2>
                   <TrendingUp className="w-8 h-8 text-green-400 ,>
@@ -377,7 +337,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                   <Target className=" />">
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3"></h2>
                   <Target className="w-8 h-8 text-purple-400" />
-=======
 :src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx;
             <div></div>"
             <div className="prose prose-invert prose-lg max-w-none space-y-8 text-zion-slate-light"></div>
@@ -414,14 +373,12 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                   <Target className=" />">"
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3"></h2>"
                   <Target className="w-8 h-8 text-purple-400" /></Target>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   The 7 Pillars of AI Success;
                 </h2>
                 <div></div>
                       <div>{pillar.icon}</div>
                         <div></div>
                       <div>{pillar.icon}</div>
-<<<<<<< HEAD
                         <div></div>
                 <h2 className="text-3xl font-bold text-white mb-6">📈 Implementation Roadmap</h2>
                           <span className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-lg text-sm font-semibold">
@@ -430,18 +387,14 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                           <span className="px-4 py-2 bg-green-500/20 text-green-300 rounded-lg text-sm font-semibold"></span>
                     <div></div>
                         <h3 className="text-2xl font-bold text-white">{phase.phase}</h3>
-<<<<<<< HEAD
                         <div>
                         <h4 className="text-white font-semibold mb-2">Key Milestones: </h4>,
                         <ul className="space-y-2>,
-=======
                         <div></div>
                         <h4 className="text-white font-semibold mb-2">Key Milestones: </h4>
                         <ul className="space-y-2>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                           {phase.milestones.map((milestone, mIndex) => ("
                             <li key={mIndex} className="flex items-start gap-2">
-=======
                         <div></div>"
                 <h2 className="text-3xl font-bold text-white mb-6">📈 Implementation Roadmap</h2>"
                           <span className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-lg text-sm font-semibold"></span>
@@ -456,13 +409,10 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                         <ul className="space-y-2></ul>
                           {/* TODO: Fix JSX expression */}"
                             <li key={mIndex} className="flex items-start gap-2"></li>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1 " />>>
                             <li,"
   key: {mIndex} className="flex items-start gap-2"></li>"
                               <CheckCircle className=" />" />>
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <div>
                         <h4 className="text-white font-semibold mb-2">Key Milestones: </h4>,
                         <ul className="space-y-2">,
@@ -478,7 +428,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                       <div>
                         <h4 className="text-white font-semibold mb-2">Key Milestones: </h4>,
                         <ul className="space-y-2">,
-=======
                       <div></div>
                         <h4 className="text-white font-semibold mb-2">Key Milestones: </h4>
                         <ul className="space-y-2">
@@ -494,11 +443,9 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                       <div></div>
                         <h4 className="text-white font-semibold mb-2">Key Milestones: </h4>
                         <ul className="space-y-2">
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                           {phase.milestones.map((milestone, mIndex) => (
                             <li key={mIndex} className="flex items-start gap-2">
                               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-=======
                       <div></div>"
                         <h4 className="text-white font-semibold mb-2">Key,
   Milestones: </h4>"
@@ -520,7 +467,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                           {/* TODO: Fix JSX expression */}"
                             <li key={mIndex} className="flex items-start gap-2"></li>"
                               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" /></CheckCircle>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                               <span>{milestone}</span>
                             </li>
                           ))}
@@ -533,7 +479,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
 
               <section ></section>"
                 <h2 className="text-3xl font-bold text-white mb-6">💡 Real-World Success Stories</h2>
-<<<<<<< HEAD
                 <div>
                   {[
                     {
@@ -607,7 +552,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                     }
                   ].map((story, index) => (
   </section>
-=======
                 <div></div>
                   {/* TODO: Fix JSX expression */}
                     },
@@ -616,7 +560,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                     {/* TODO: Fix JSX expression */}
                     }
                   ].map((story, index) => (</div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                         <div>{story.value}</div>
                           <div></div>
                           <div>Return on Investment</div>
@@ -630,14 +573,12 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                           <li,"
   key: {hIndex} className="flex items-start gap-2"></li>"
                             <CheckCircle className=" />" />>
-<<<<<<< HEAD
                           <li key: {hIndex} className="flex items-start gap-2">
                             <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                     <div></div>
                         <div>{story.investment}</div>;"
                           <div></div>
                       <h3 className="text-2xl font-bold text-white mb-2">{story.company}</h3>
-=======
                           <li,"
   key: {hIndex} className="flex items-start gap-2"></li>"
                             <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" /></CheckCircle>
@@ -645,7 +586,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                         <div>{story.investment}</div>;"
                           <div></div>"
                       <h3 className="text-2xl font-bold text-white mb-2">{story.company}</h3>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       <p className="text-zion-slate-light mb-4">{story.industry}</p>"
                       <div></div>
                           <div>Investment</div>
@@ -669,7 +609,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                   ))}
   </div>
               </section>
-<<<<<<< HEAD
 
               <section className="bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-purple-500/50">
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3"></h2>
@@ -691,19 +630,16 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                     <Rocket className="w-5 h-5 ">
                     <Rocket className=" />">
                     <Rocket className="w-5 h-5" />
-<<<<<<< HEAD
                   </Link>,
                   <Link to="/services">,
   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-zion-cyan/30 hover:bg-white/20 transition-all>",
               <section className="bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-purple-500/50">,
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">,
-=======
                   </Link>
                   <Link to="/services">
   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-zion-cyan/30 hover:bg-white/20 transition-all>"
               <section className="bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-purple-500/50">
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3"></h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <Rocket className=" />,"
   Start Your AI Transformation Journey;
                 </h2>
@@ -721,7 +657,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                   </Link>,
                   <Link to="/services">,
   className= " />,
-=======
 "
               <section className="bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-purple-500/50"></section>"
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3"></h2>"
@@ -770,7 +705,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                   </Link>"
                   <Link to="/services"></Link>"
   className= " />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 

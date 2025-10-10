@@ -4,7 +4,6 @@ import { glob } from 'glob';
 //Comprehensive TypeScript/JSX fixes;
 const fixes = [
   //Fix object literal syntax issues;
-<<<<<<< HEAD
   {
     pattern: /(\w+)\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacement: '$1 = { $2 }, $3',
@@ -166,7 +165,6 @@ const fixes = [
   //Fix useCallback hooks;
   {
     pattern:
-=======
   {/* TODO: Fix JSX expression */}
   n: /(\w+)\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacemen,
@@ -319,25 +317,20 @@ const fixes = [
   },
   //Fix useCallback hooks;
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       /const\s+(\w+)\s*=\s*useCallback\s*\(\s*\([^)]*\)\s*=>\s*{\s*([^}]+)}\s*,\s*\[([^\]]+)\]\s*\)\s*(\w+)/g,
     replacemen,
   t: 'const $1 = useCallback(() => { $2 }, [$3]); $4',
   },
   //Fix useMemo hooks;
-<<<<<<< HEAD
   {
     pattern:
-=======
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       /const\s+(\w+)\s*=\s*useMemo\s*\(\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*,\s*\[([^\]]+)\]\s*\)\s*(\w+)/g,
     replacemen,
   t: 'const $1 = useMemo(() => { $2 }, [$3]); $4',
   },
 ];
 
-<<<<<<< HEAD
 function fixFile(filePath) {
   try {
     fixes.forEach(fix => {)
@@ -345,9 +338,7 @@ function fixFile(filePath) {
       if (newContent !== content) {
         content = newContent;
         modified = true;
-=======
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     });
 
@@ -359,7 +350,6 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 }
 
 //Main function;
-<<<<<<< HEAD
 async function main() {
   //Find all TypeScript/TSX files;
   //   let fixedCount = 0;
@@ -367,14 +357,12 @@ async function main() {
     if (fixFile(file)) {
       fixedCount++;
     }
-=======
 async function main() {/* TODO: Fix JSX expression */}
 }
   //Find all TypeScript/TSX files;
   //   let fixedCount = 0;
   files.forEach(file => {/* TODO: Fix JSX expression */}
     })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   });
 
   //   }

@@ -1,15 +1,12 @@
-<<<<<<< HEAD
 /**
  * Comprehensive tests for validation utilities
  */
 
 import { describe, it, expect, beforeEach } from '@jest/globals';
 
-<<<<<<< HEAD
 describe('validation', () => {
   beforeEach(() => {
     // Setup before each test;
-=======
 import {
   isValidEmail,
   isValidPhone,
@@ -35,7 +32,6 @@ describe('Email Validation', () => {
     expect(isValidEmail('test@example.com')).toBe(true);
     expect(isValidEmail('user.name+tag@example.co.uk')).toBe(true);
     expect(isValidEmail('test123@test-domain.com')).toBe(true);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   });
 
   test('rejects invalid email addresses', () => {
@@ -210,12 +206,10 @@ describe('Async Validation', () => {
     const result = await validateAsync(asyncValidator, 'test');
     expect(result.isValid).toBe(false);
     expect(result.error).toContain('Validation failed');
-=======
 import { describe, it, expect } from '@jest/globals';
 
 describe('Validation', () => {
   it('should pass basic test', () => {
     expect(true).toBe(true);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
   });
 });

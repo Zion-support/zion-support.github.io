@@ -1,7 +1,6 @@
 
       'SOC 2 Type II, ISO 27001, Quantum Security Standards, Enterprise Security Protocols',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-ai-orchestrator',
     id: 'quantum - ai - orchestrator',
     name: 'Quantum AI Orchestrator',
@@ -15,7 +14,6 @@
       currency: 'USD',
       trial_days: 14;
       setup_time: '1 week',
-=======
     lin,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/quantum-ai-orchestrator',
@@ -42,7 +40,6 @@
   s: 14,
       setup_tim,
   e: '1 week',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -74,7 +71,6 @@
       'Research institutions',
       'Government agencies',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'Leading quantum AI orchestration platform. Competes with IBM Quantum, Google Quantum, and D - Wave. Our advantage: AI integration and enterprise focus.',
     competitors: ['IBM Quantum, Google Quantum, D - Wave, Rigetti, IonQ'],
@@ -83,7 +79,6 @@
     ],
     real_implementation: true;
     implementation_details: unknown;
-=======
     market_positio,
   n: unknown,
       'Leading quantum AI orchestration platform. Competes with IBM Quantum, Google Quantum, and D - Wave. Our,
@@ -98,7 +93,6 @@
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Production - ready quantum AI platform with enterprise - grade security, real - time processing, and comprehensive API ecosystem. Includes mobile management app.',
     ro,
   i: 'Enterprise customers see 400% ROI through operational optimization and cost reduction. Average payback,
@@ -116,18 +110,14 @@
   s: [,
       'Enterprise systems, Cloud platforms, Financial platforms, Healthcare systems, Government networks',
     ],
-<<<<<<< HEAD
     support: unknown;
-=======
     suppor,
   t: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '24 / 7 enterprise support, dedicated quantum consultants, implementation specialists, and ongoing optimization.',
     complianc,
   e: [,
       'SOC 2 Type II, ISO 27001, Quantum Security Standards, Enterprise Security Protocols',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com / quantum - ai - orchestrator'
   id: string;
   name: string;
@@ -160,7 +150,6 @@
       currency: 'USD',
       trial_days: 21;
       setup_time: '3 days',
-=======
     lin,
   k: 'http,
   s://ziontechgroup.com / quantum - ai - orchestrator',
@@ -223,7 +212,6 @@
   s: 21,
       setup_tim,
   e: '3 days',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -261,7 +249,6 @@
       'Government agencies',
       'Startups and scale - ups',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'Leading autonomous DevOps platform. Competes with GitLab, Jenkins, and CircleCI. Our advantage: Full autonomy and AI - powered optimization.',
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'],
@@ -270,7 +257,6 @@
     ],
     real_implementation: true;
     implementation_details: unknown;
-=======
     market_positio,
   n: unknown,
       'Leading autonomous DevOps platform. Competes with GitLab, Jenkins, and CircleCI. Our,
@@ -285,7 +271,6 @@
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Production - ready autonomous platform with enterprise - grade security, comprehensive monitoring, and seamless integration with existing DevOps tools.',
     ro,
   i: 'Companies see 300% ROI through reduced DevOps costs and improved system reliability. Average payback,
@@ -303,7 +288,6 @@
   s: [,
       'GitHub, GitLab, AWS, Azure, GCP, Kubernetes, Docker, Terraform, Monitoring tools',
     ],
-<<<<<<< HEAD
     support: unknown;
       '24 / 7 support, dedicated DevOps consultants, implementation specialists, and ongoing optimization.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
@@ -332,7 +316,6 @@
       currency: 'USD',
       trial_days: 30;
       setup_time: '1 week',
-=======
     suppor,
   t: unknown,
       '24 / 7 support, dedicated DevOps consultants, implementation specialists, and ongoing optimization.',
@@ -386,7 +369,6 @@
   s: 30,
       setup_tim,
   e: '1 week',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -418,7 +400,6 @@
       'E - commerce businesses',
       'Educational institutions',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'Leading AI - powered zero - trust security platform. Competes with CrowdStrike, Palo Alto Networks, and Fortinet. Our advantage: AI integration and zero - trust architecture.',
     competitors: ['CrowdStrike, Palo Alto Networks, Fortinet, Cisco, Symantec'],
@@ -427,7 +408,6 @@
     ],
     real_implementation: true;
     implementation_details: unknown;
-=======
     market_positio,
   n: unknown,
       'Leading AI - powered zero - trust security platform. Competes with CrowdStrike, Palo Alto Networks, and Fortinet. Our,
@@ -442,7 +422,6 @@
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enterprise - grade security platform with real - time threat detection, automated response, and comprehensive compliance features. Includes mobile security app.',
     ro,
   i: 'Organizations see 400% ROI through reduced security incidents and automated compliance. Average payback,
@@ -460,7 +439,6 @@
   s: [,
       'SIEM systems, EDR platforms, Identity providers, Cloud platforms, Security tools',
     ],
-<<<<<<< HEAD
     support: unknown;
       '24 / 7 security operations center, dedicated security consultants, incident response team, and ongoing optimization.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'],
@@ -488,7 +466,6 @@
       currency: 'USD',
       trial_days: 60;
       setup_time: '1 month',
-=======
     suppor,
   t: unknown,
       '24 / 7 security operations center, dedicated security consultants, incident response team, and ongoing optimization.',
@@ -540,7 +517,6 @@
   s: 60,
       setup_tim,
   e: '1 month',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -572,12 +548,9 @@
       'Investment firms',
       'Research institutions',
     ],
-<<<<<<< HEAD
     market_position: unknown;
-=======
     market_positio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'First - to - market space mining AI platform. No direct competitors in AI - powered space mining. Positioned as the industry standard for space resource extraction.',
     competitor,
   s: [,
@@ -588,15 +561,12 @@
   k: [,
       'AI / ML, Space Technology, Python, Satellite Data, Robotics, Autonomous Systems, Space Communications',
     ],
-<<<<<<< HEAD
     real_implementation: true;
     implementation_details: unknown;
-=======
     real_implementatio,
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Production - ready space mining platform with satellite integration, autonomous fleet management, and comprehensive resource analysis tools.',
     ro,
   i: 'Space companies report 1000% ROI through optimized operations and increased resource discovery. Average payback,
@@ -614,18 +584,14 @@
   s: [,
       'Satellite systems, Space vehicles, Ground stations, Government networks, Market data platforms',
     ],
-<<<<<<< HEAD
     support: unknown;
-=======
     suppor,
   t: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '24 / 7 space operations support, dedicated space consultants, regulatory assistance, and ongoing optimization.',
     complianc,
   e: [,
       'Space regulations, International space law, Safety protocols, Environmental standards',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com / space - mining - ai'
     icon: ''
     color: 'from - purple - 500 to - indigo - 600'
@@ -651,7 +617,6 @@
       currency: 'USD',
       trial_days: 45;
       setup_time: '2 weeks',
-=======
     lin,
   k: 'http,
   s://ziontechgroup.com / space - mining - ai',
@@ -699,7 +664,6 @@
   s: 45,
       setup_tim,
   e: '2 weeks',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -731,33 +695,27 @@
       'Government labs',
       'Academic researchers',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'Leading DNA computing platform. Competes with traditional supercomputers and quantum computers. Our advantage: Biological problem specialization.',
     competitors: [,
-=======
     market_positio,
   n: unknown,
       'Leading DNA computing platform. Competes with traditional supercomputers and quantum computers. Our,
   advantage: Biological problem specialization.',
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Traditional supercomputers, Quantum computers, Cloud computing platforms',
     ],
     tech_stac,
   k: [,
       'DNA Computing, Bioinformatics, Python, Molecular Biology, Advanced Algorithms, Research Tools',
     ],
-<<<<<<< HEAD
     real_implementation: true;
     implementation_details: unknown;
-=======
     real_implementatio,
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Production - ready DNA computing platform with comprehensive bioinformatics tools, research collaboration features, and seamless integration with existing research workflows.',
     ro,
   i: 'Research institutions report 800% ROI through accelerated discoveries and reduced computational costs. Average payback,
@@ -775,18 +733,14 @@
   s: [,
       'Research databases, Laboratory systems, Academic networks, Government research platforms',
     ],
-<<<<<<< HEAD
     support: unknown;
-=======
     suppor,
   t: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '24 / 7 research support, dedicated bioinformatics consultants, implementation specialists, and ongoing optimization.',
     complianc,
   e: [,
       'Research ethics, Laboratory safety, Data privacy, International research standards',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com / dna - computing - platform'
     icon: ''
     color: 'from - teal - 500 to - cyan - 600'
@@ -812,7 +766,6 @@
       currency: 'USD',
       trial_days: 21;
       setup_time: '1 week',
-=======
     lin,
   k: 'http,
   s://ziontechgroup.com / dna - computing - platform',
@@ -860,7 +813,6 @@
   s: 21,
       setup_tim,
   e: '1 week',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -892,7 +844,6 @@
       'Real estate companies',
       'Entertainment companies',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'Leading metaverse development platform. Competes with Roblox, Unity, and Unreal Engine. Our advantage: AI integration and business focus.',
     competitors: ['Roblox, Unity, Unreal Engine, Decentraland, The Sandbox'],
@@ -901,7 +852,6 @@
     ],
     real_implementation: true;
     implementation_details: unknown;
-=======
     market_positio,
   n: unknown,
       'Leading metaverse development platform. Competes with Roblox, Unity, and Unreal Engine. Our,
@@ -916,7 +866,6 @@
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Production - ready metaverse platform with comprehensive creation tools, AI - powered content generation, and seamless deployment across multiple platforms.',
     ro,
   i: 'Businesses see 300% ROI through virtual presence and new revenue streams. Average payback,
@@ -934,18 +883,14 @@
   s: [,
       'Social media, E - commerce platforms, Payment systems, Analytics tools, Marketing platforms',
     ],
-<<<<<<< HEAD
     support: unknown;
-=======
     suppor,
   t: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '24 / 7 support, dedicated metaverse consultants, content creation assistance, and ongoing optimization.',
     complianc,
   e: [,
       'Content moderation, Privacy regulations, Payment compliance, Platform guidelines',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com / metaverse - development - platform'
     icon: ''
     color: 'from - blue - 500 to - indigo - 600'
@@ -971,7 +916,6 @@
       currency: 'USD',
       trial_days: 30;
       setup_time: '2 weeks',
-=======
     lin,
   k: 'http,
   s://ziontechgroup.com / metaverse - development - platform',
@@ -1019,7 +963,6 @@
   s: 30,
       setup_tim,
   e: '2 weeks',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -1051,7 +994,6 @@
       'Food delivery services',
       'Healthcare organizations',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'Leading AI - powered logistics platform. Competes with Flexport, Convoy, and FourKites. Our advantage: Full AI integration and autonomous operations.',
     competitors: ['Flexport, Convoy, FourKites, Project44, ClearMetal'],
@@ -1060,7 +1002,6 @@
     ],
     real_implementation: true;
     implementation_details: unknown;
-=======
     market_positio,
   n: unknown,
       'Leading AI - powered logistics platform. Competes with Flexport, Convoy, and FourKites. Our,
@@ -1075,7 +1016,6 @@
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Production - ready logistics platform with real - time optimization, autonomous operations, and comprehensive analytics. Includes mobile apps for drivers and customers.',
     ro,
   i: 'Companies see 400% ROI through cost reduction and improved efficiency. Average payback,
@@ -1093,18 +1033,14 @@
   s: [,
       'E - commerce platforms, ERP systems, WMS, TMS, Payment systems, Analytics tools',
     ],
-<<<<<<< HEAD
     support: unknown;
-=======
     suppor,
   t: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '24 / 7 logistics support, dedicated consultants, implementation specialists, and ongoing optimization.',
     complianc,
   e: [,
       'Transportation regulations, Safety standards, Environmental compliance, International trade laws',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com / autonomous - logistics - ai'
     icon: ''
     color: 'from - orange - 500 to - red - 600'
@@ -1130,7 +1066,6 @@
       currency: 'USD',
       trial_days: 30;
       setup_time: '2 weeks',
-=======
     lin,
   k: 'http,
   s://ziontechgroup.com / autonomous - logistics - ai',
@@ -1178,7 +1113,6 @@
   s: 30,
       setup_tim,
   e: '2 weeks',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -1210,7 +1144,6 @@
       'Financial institutions',
       'Wealth management firms',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'Leading quantum financial platform. Competes with Bloomberg, Thomson Reuters, and FactSet. Our advantage: Quantum computing integration.',
     competitors: ['Bloomberg, Thomson Reuters, FactSet, Refinitiv, S & P Global'],
@@ -1219,7 +1152,6 @@
     ],
     real_implementation: true;
     implementation_details: unknown;
-=======
     market_positio,
   n: unknown,
       'Leading quantum financial platform. Competes with Bloomberg, Thomson Reuters, and FactSet. Our,
@@ -1234,7 +1166,6 @@
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Production - ready financial platform with quantum computing integration, real - time data processing, and comprehensive financial tools. Includes mobile trading app.',
     ro,
   i: 'Financial institutions see 500% ROI through improved trading performance and risk reduction. Average payback,
@@ -1252,18 +1183,14 @@
   s: [,
       'Trading platforms, Market data providers, Banking systems, Compliance tools, Analytics platforms',
     ],
-<<<<<<< HEAD
     support: unknown;
-=======
     suppor,
   t: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '24 / 7 financial support, dedicated financial consultants, implementation specialists, and ongoing optimization.',
     complianc,
   e: [,
       'Financial regulations, Trading compliance, Risk management standards, International financial laws',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com / quantum - financial - platform'
     icon: ''
     color: 'from - green - 500 to - emerald - 600'
@@ -1281,7 +1208,6 @@
       currency: 'USD',
       trialDays: 60;
       setupTime: '1 month',
-=======
     lin,
   k: 'http,
   s://ziontechgroup.com / quantum - financial - platform',
@@ -1316,7 +1242,6 @@
   s: 60,
       setupTim,
   e: '1 month'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     feature,
   s: [;
@@ -1329,7 +1254,6 @@
       'Clinical decision support'
       'Telemedicine integration'
       'Compliance automation'
-<<<<<<< HEAD
       'Research collaboration tools',
     ],
     benefits: [,
@@ -1339,7 +1263,6 @@
     tagline: unknown;
       'AI - powered medical diagnostics with 99.9% accuracy for early disease detection',
     description: unknown;
-=======
       'Research collaboration tools'
     ]
     benefit,
@@ -1354,12 +1277,10 @@
       'AI - powered medical diagnostics with 99.9% accuracy for early disease detection',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, early disease detection, and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.',
     categor,
   y: 'Healthcare & Biotechnology',
       'Improve diagnostic accuracy by 99 && 99.9%',
-<<<<<<< HEAD
     id: 'ai - healthcare - diagnostic',
     name: 'AI Healthcare Diagnostic Platform',
     tagline: unknown;
@@ -1373,7 +1294,6 @@
       currency: 'USD',
       trial_days: 60;
       setup_time: '1 month',
-=======
     i,
   d: 'ai - healthcare - diagnostic',
     nam,
@@ -1398,7 +1318,6 @@
   s: 60,
       setup_tim,
   e: '1 month',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -1423,7 +1342,6 @@
     ],
       'FDA approval, HIPAA, GDPR, Medical device regulations, Clinical standards',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-healthcare-diagnostic'
     icon: ''
     color: 'from-blue-500 to-indigo-600'
@@ -1432,7 +1350,6 @@
     customers: 350;
     rating: 4.9;
     reviews: 189;
-=======
     lin,
   k: 'http,
   s://ziontechgroup.com/ai-healthcare-diagnostic',
@@ -1450,7 +1367,6 @@
   g: 4.9,
     review,
   s: 189,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
     ];
@@ -1462,7 +1378,6 @@
   e: [;
       'AI research institutionsTech companies developing AGIGovernment research labsEthics committeesAI safety organizationsAcademic researchers'
     ],
-<<<<<<< HEAD
     marketPosition: 'First-to-market AI consciousness platform. No direct competitors in consciousness development. Positioned as the industry standard for ethical AI consciousness.',
     competitors: ['None - First to marketGeneral AI platforms (OpenAI) Anthropic)'],
     techStack: ['Advanced Neural Networks, Consciousness Frameworks, Ethical AI, Python, TensorFlow, PyTorch, Quantum Computing Integration'],
@@ -1495,7 +1410,6 @@
       currency: 'USD',
       trial_days: 60;
       setup_time: '1 month',
-=======
     marketPositio,
   n: 'First-to-market AI consciousness platform. No direct competitors in consciousness development. Positioned as the industry standard for ethical AI consciousness.'
     competitor,
@@ -1558,7 +1472,6 @@
   s: 60,
       setup_tim,
   e: '1 month',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -1595,33 +1508,27 @@
       'Insurance companies',
       'Government health agencies',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'Leading AI healthcare diagnostic platform. Competes with IBM Watson Health, Google Health, and Microsoft Healthcare. Our advantage: Specialized diagnostic accuracy.',
     competitors: [,
-=======
     market_positio,
   n: unknown,
       'Leading AI healthcare diagnostic platform. Competes with IBM Watson Health, Google Health, and Microsoft Healthcare. Our,
   advantage: Specialized diagnostic accuracy.',
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'IBM Watson Health, Google Health, Microsoft Healthcare, GE Healthcare, Siemens Healthineers',
     ],
     tech_stac,
   k: [,
       'AI / ML, Medical Imaging, Python, TensorFlow, Medical Databases, Cloud Infrastructure, Security Protocols',
     ],
-<<<<<<< HEAD
     real_implementation: true;
     implementation_details: unknown;
-=======
     real_implementatio,
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Production - ready healthcare platform with FDA approval, comprehensive diagnostic tools, and seamless integration with existing healthcare systems.',
     ro,
   i: 'Healthcare organizations see 600% ROI through improved patient outcomes and reduced costs. Average payback,
@@ -1639,18 +1546,14 @@
   s: [,
       'EHR systems, Medical devices, Imaging equipment, Laboratory systems, Telemedicine platforms',
     ],
-<<<<<<< HEAD
     support: unknown;
-=======
     suppor,
   t: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '24 / 7 medical support, dedicated healthcare consultants, implementation specialists, and ongoing optimization.',
     complianc,
   e: [,
       'FDA approval, HIPAA, GDPR, Medical device regulations, Clinical standards',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com / ai - healthcare - diagnostic'
     icon: ''
     color: 'from - blue - 500 to - indigo - 600'
@@ -1679,7 +1582,6 @@
   popular: boolean, launchDate: string;
   customers: number, rating: number;
   reviews: number;
-=======
     lin,
   k: 'http,
   s://ziontechgroup.com / ai - healthcare - diagnostic',
@@ -1749,7 +1651,6 @@
   g: number,
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ];      'Medical imaging analysis_disease diagnosis_treatment planning_patient monitoring_drug discovery_clinical research'
     ];
@@ -1762,7 +1663,6 @@
     ico,
   n: '';
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
-<<<<<<< HEAD
     color: 'from - blue - 500 to - indigo - 600'
     popular: true;
     launch_date: '2025 - 02 - 15'
@@ -1771,7 +1671,6 @@
     reviews: 189;
     rating: 4.9;
     reviews: 189;
-=======
     colo,
   r: 'from - blue - 500 to - indigo - 600'
     popula,
@@ -1788,7 +1687,6 @@
   g: 4.9,
     review,
   s: 189,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 export interface InnovativeAIService {/* TODO: Fix JSX expression */}
   }
@@ -1797,7 +1695,6 @@ export interface InnovativeAIService {/* TODO: Fix JSX expression */}
 ;
   }
 ];
-<<<<<<< HEAD
 export interface InnovativeAIService {;
   id: string;
   name: string;
@@ -2278,7 +2175,6 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
 ];
     rating: 4.9;
     reviews: 189;
-=======
 export interface InnovativeAIService {/* TODO: Fix JSX expression */}
   s: number}
     setupTim,
@@ -3032,7 +2928,6 @@ export const,
   g: 4.9,
     review,
   s: 189,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 'SOC 2 Type II, ISO 27001, Quantum Security Standards, Enterprise Security Protocols', ],' lin,

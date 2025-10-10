@@ -2,7 +2,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   const githubToken = process.env.GITHUB_TOKEN || ''}
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
   const githubBranch = process.env.GIT_BRANCH || 'main'
-<<<<<<< HEAD
   async function commitJson(path)
         data) {if(!githubToken,
         return { ok: false;
@@ -18,7 +17,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
         { headers })
-=======
   async function commitJson(path,)
         data) {/* TODO: Fix JSX expression */}
   n: 'no_token' };
@@ -33,13 +31,11 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
         { headers },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       );
       if (getRes.ok) {/* TODO: Fix JSX expression */}
         sha = j.sha}
       }
     } catch {}
-<<<<<<< HEAD
     const body = {
       message: `chore: update a11y quickscan report (${new Date().toISOString()})`,
       content: Buffer.from(JSON.stringify(data, null)
@@ -62,7 +58,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         return {statusCode: 200),
       body: JSON.stringify({ ok: false),
         error: 'No base URL' });
-=======
     const body = {/* TODO: Fix JSX expression */}`
   e: update a11y quickscan report (${new Date().toISOString()})`,
       conten,
@@ -84,26 +79,21 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   if (!baseUrl,
         return {/* TODO: Fix JSX expression */})
   r: 'No base URL' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   try {/* TODO: Fix JSX expression */}
     const issues = []}
     if (!/<html[^>]*\slang=/i.test(html))
-<<<<<<< HEAD
       issues.push({)
         code: html.lang.missing),
         message: 'Missing lang attribute on html element'}
-=======
       issues.push({/* TODO: Fix JSX expression */}
   e: 'Missing lang attribute on html element'})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     if (!/<title>[^<]+<\/title>/i.test(html))
       issues.push({/* TODO: Fix JSX expression */}
   e: 'head.title.missing'} messag,)
   e: 'Missing <title>' });
     const _imgs = Array.from(html.matchAll(/<img\b[^>]*>/gi)).map(m => m[0]);
-<<<<<<< HEAD
     for (const tag of imgs) {if (!/\salt=/.test(tag))
         issues.push({)
           code: 'img.alt.missing'),
@@ -150,7 +140,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),
-=======
     for (const tag of imgs) {/* TODO: Fix JSX expression */}
         tag}
         });
@@ -188,12 +177,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       });
     };
   } catch (e) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
-<<<<<<< HEAD
 exports.handler = async function(event, context) {const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/) '');' const githubToken = process.env.GITHUB_TOKEN || ''}' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const githubBranch = process.env.GIT_BRANCH || 'main' async function commitJson(path)
         data) {' if(!githubToken)
         return { ok: false),
@@ -223,7 +210,6 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
         body: JSON.stringify({ok: false),
         error: String(e;),
       }) }; } };'
-=======
 exports.handler = async function(event, context) {const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/) '');' const githubToken = process.env.GITHUB_TOKEN || ''}' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const githubBranch = process.env.GIT_BRANCH || 'main' async function commitJson(path,)
         data) {/* TODO: Fix JSX expression */}
   n: 'no_token' }; const headers = {/* TODO: Fix JSX expression */}`
@@ -263,4 +249,3 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
   y: issues.length > 10 ? 'high' : issues.length > 0 ? 'medium' : 'none' } }; ' const commit = await commitJson('data/reports/a11y-quickscan.json') report); return {/* TODO: Fix JSX expression */}
       }) }; } catch (e) {/* TODO: Fix JSX expression */}
       }) }; } };'"`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

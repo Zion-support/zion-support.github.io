@@ -4,7 +4,6 @@
  * Applies security headers and implements security policies;
  */
 
-<<<<<<< HEAD
 export function middleware(request: NextRequest) {
   const _response = NextResponse.next();
 
@@ -70,7 +69,6 @@ export function middleware(request: NextRequest) {
   // Handle preflight requests;
   if (request.method === 'OPTIONS') {
     return new NextResponse(null, { status: 204, headers: response.headers });
-=======
 export function middleware(reques,)
   t: NextRequest) {/* TODO: Fix JSX expression */}
   };
@@ -86,13 +84,11 @@ export function middleware(reques,)
   // Handle preflight requests;
   if (request.method === 'OPTIONS') {/* TODO: Fix JSX expression */}
   s: response.headers });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   return response;
 }
 
-<<<<<<< HEAD
 export const config = {
   matcher: [
     /*
@@ -104,7 +100,5 @@ export const config = {
      */,
     '/((?!_next/static|_next/image|favicon.ico|public/).*)',
   ],
-=======
 export const config = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };

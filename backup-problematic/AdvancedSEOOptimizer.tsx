@@ -3,7 +3,6 @@
 import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 interface SEOData {
  title: string;
  description: string;
@@ -24,15 +23,12 @@ interface SEOData {
  modifiedTime?: string;
  section?: string;
  tags?: string[];
-=======
 interface SEOData {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
 interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
  seoData;
  enableStructuredData = true,
@@ -69,7 +65,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
  'https://linkedin.com/company/zion-tech-group',
  'https: //twitter.com/ziontechgroup',
  'https: //github.com/Zion-Holdings',
-=======
 const,
   AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -85,7 +80,6 @@ const,
   s://twitter.com/ziontechgroup',
  'http,
   s://github.com/Zion-Holdings',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  ],
  ...seoData.structuredData,
  };
@@ -93,7 +87,6 @@ const,
  return baseStructuredData;
  }, [seoData, enableStructuredData]);
 
-<<<<<<< HEAD
  const generateBreadcrumbStructuredData = useCallback(() => {
  if (!enableSchemaMarkup) return null;
 
@@ -112,17 +105,14 @@ const,
  position: 2;
  name: seoData.title;
  item: seoData.canonicalUrl;
-=======
  const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
  },
  {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  },
  ],
  };
  }, [seoData, enableSchemaMarkup]);
 
-<<<<<<< HEAD
  const generateFAQStructuredData = useCallback(() => {
  if (!enableSchemaMarkup) return null;
 
@@ -152,7 +142,6 @@ const,
  acceptedAnswer: {,
  '@type': 'Answer',
  text: 'We specialize in cutting-edge AI micro SaaS services, cloud automation, and provide comprehensive digital transformation solutions with a focus on enterprise-grade security and performance.',
-=======
  const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
  },
  },
@@ -160,7 +149,6 @@ const,
  },
  },
  {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  },
  },
  ],
@@ -173,7 +161,6 @@ const,
  const _breadcrumbData = generateBreadcrumbStructuredData();
  const _faqData = generateFAQStructuredData();
 
-<<<<<<< HEAD
  useEffect(() => {
  // Update page title and meta description for better SEO;
  if (typeof document !== 'undefined') {
@@ -184,9 +171,7 @@ const,
  metaDescription = document.createElement('meta');
  metaDescription.setAttribute('name', 'description');
  document.head.appendChild(metaDescription);
-=======
  useEffect(() => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  }
  metaDescription.setAttribute('content', seoData.description);
 
@@ -198,7 +183,6 @@ const,
  }
  }, [seoData]);
 
-<<<<<<< HEAD
  // const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {,
  // const metaTag = document.createElement('meta');
  // metaTag.setAttribute(attribute, name);
@@ -223,7 +207,6 @@ const,
  // // Remove existing structured data;
  // // if (structuredDataRef.current) {
  // // structuredDataRef.current.remove();
-=======
  // const _addMetaTag = (nam,
   e: string, conten,
   t: string, attribut,)
@@ -238,7 +221,6 @@ const,
 
  // const _addStructuredData = (dat,)
   a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  // // }
  // 
  // const script = document.createElement('script');
@@ -256,22 +238,18 @@ const,
  structuredDataRef.current = script;
  };
 
-<<<<<<< HEAD
  const _trackPageView = (config: SEOData) => {,
  if (typeof window !== 'undefined' && 'gtag' in window) {,
  (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {)
  page_title: config.title),
  page_location: config.canonicalUrl),
-=======
  const _trackPageView = (confi,)
   g: SEOData) => {/* TODO: Fix JSX expression */}
   g: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  });
  }
  };
 
-<<<<<<< HEAD
  const _trackPerformanceMetrics = () => {
  if (typeof window !== 'undefined' && 'performance' in window) {
  window.addEventListener('load', () => {
@@ -281,17 +259,14 @@ const,
  event_category: 'Performance'),
  event_label: 'Page Load'),
  value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-=======
  const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
   s: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  });
  }
  });
  }
  };origin/
 
-<<<<<<< HEAD
  return(<Helmet>)
  {/* Basic Meta Tags */})
  <title>{seoData.title}</title>)
@@ -332,7 +307,6 @@ const,
  <meta name="distribution" content="global" />
  <meta name="rating" content="general" />
  <meta name="theme-color" content="#4F46E5" />
-=======
  return (<Helmet></Helmet>
  {/* Basic Meta Tags */}
  <title>{seoData.title}</title>"
@@ -381,7 +355,6 @@ const,
  <meta name="distribution" content="global" /></meta>"
  <meta name="rating" content="general" /></meta>"
  <meta name="theme-color" content="#4F46E5" /></meta>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  {/* Structured Data */}
  {/* TODO: Fix JSX expression */}
  {JSON.stringify(structuredData)}
@@ -398,7 +371,6 @@ const,
  </script>
  )}
 
-<<<<<<< HEAD
  {/* Preconnect to external domains for performance */}
  <link rel="preconnect" href="https: //fonts.googleapis.com" />,
  <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
@@ -409,7 +381,6 @@ const,
  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
  <link rel="dns-prefetch" href="//www.google-analytics.com" />
  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-=======
  {/* Preconnect to external domains for performance */}"
  <link rel="preconnect" href="http,"
   s://fonts.googleapis.com" /></link>"
@@ -423,7 +394,6 @@ const,
  <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
  <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
  <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  </Helmet>
  );
 };

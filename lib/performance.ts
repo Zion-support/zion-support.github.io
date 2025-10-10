@@ -1,6 +1,5 @@
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
-<<<<<<< HEAD
 /**
  * Performance Monitoring Utility;
  * Tracks and reports web vitals and performance metrics;
@@ -15,7 +14,6 @@ declare global {
 
 // Types;
 interface PerformanceMetric {
-=======
 
 export interface Metric {
   name: string;
@@ -25,7 +23,6 @@ export interface Metric {
 }
 
 export interface PerformanceMetric {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   name: string;
   value: number;
   rating: 'good' | 'needs-improvement' | 'poor';
@@ -33,7 +30,6 @@ export interface PerformanceMetric {
   id: string;
 }
 
-<<<<<<< HEAD
 // Extended Performance interface for memory API;
 interface PerformanceMemory {
   usedJSHeapSize: number;
@@ -120,7 +116,6 @@ function sendToAnalytics(metric: Metric): void {,
   if (process.env['NODE_ENV'] === 'development') {
     // eslint-disable-next-line no-console;
 //     }
-=======
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
   const thresholds = {
     CLS: [0.1, 0.25],
@@ -150,11 +145,9 @@ function sendToAnalytics(metric: Metric): void {
   if (process.env.NODE_ENV === 'development') {
     console.log('Performance metric:', performanceMetric);
   }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
   // Send to analytics;
   if (typeof window !== 'undefined' && window.gtag) {
-<<<<<<< HEAD
     window.gtag('event', metric.name, {)
       event_category: 'Web Vitals')
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value;)
@@ -168,7 +161,6 @@ function sendToAnalytics(metric: Metric): void {
       non_interaction: true;
       non_interaction: true;
       non_interaction: true;
-=======
     window.gtag('event', metric.name, {
       event_category: 'Web Vitals',
       value: Math.round(
@@ -176,13 +168,11 @@ function sendToAnalytics(metric: Metric): void {
       ),
       event_label: metric.id,
       non_interaction: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
   }
 
   // Send to custom endpoint;
   if (process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT) {
-<<<<<<< HEAD
     fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {)
   if (process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT) {
     fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {)
@@ -297,7 +287,6 @@ export function generatePerformanceReport(): PerformanceReport {
   if (typeof window === 'undefined') return;
 
   // Track Core Web Vitals;
-=======
     fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {
       method: 'POST',
       headers: {
@@ -310,7 +299,6 @@ export function generatePerformanceReport(): PerformanceReport {
 
 export function reportWebVitals(): void {
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   getCLS(sendToAnalytics);
   getFID(sendToAnalytics);
   getFCP(sendToAnalytics);
@@ -318,7 +306,6 @@ export function reportWebVitals(): void {
   getTTFB(sendToAnalytics);
 }
 
-<<<<<<< HEAD
 /**
  * Get current performance report;
  */
@@ -726,7 +713,6 @@ export function generatePerformanceReport(): PerformanceReport {
     url: typeof window !== 'undefined' ? window.location.href : '',
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
   };
-=======
 
 export function measurePerformance(name: string, fn: () => void): void {
   const start = performance.now();
@@ -756,11 +742,9 @@ export function measureAsyncPerformance<T>(
     });
     return result;
   });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
 
-<<<<<<< HEAD
   try {
     const observer = new PerformanceObserver(list => {)
       const _entries = list.getEntries();
@@ -1107,5 +1091,3 @@ export function usePerformanceMonitoring() {
 };
 
 export default performanceUtils;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

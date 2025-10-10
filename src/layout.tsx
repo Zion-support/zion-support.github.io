@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import Analytics from './components/Analytics';
-=======
 
 
 
@@ -11,13 +9,11 @@ import Footer from '../components/Footer';
 
 import Analytics from './components/Analytics';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-<<<<<<< HEAD
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
@@ -56,7 +52,6 @@ export default function RootLayout({
       addressCountry: 'US',
     offers: [
       {
-=======
 
   const address = {
     '@type': 'PostalAddress',
@@ -70,13 +65,11 @@ export default function RootLayout({
 ]
       {// TODO: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         '@type': 'Offer',
         category: 'AI Solutions',
         description: 'Enterprise AI solutions, digital transformation, and cloud services',
         price: '1500',
         priceCurrency: 'USD',
-<<<<<<< HEAD
         priceSpecification: {
           '@type': 'PriceSpecification',
           billingIncrement:         ,
@@ -178,10 +171,8 @@ $4]
       </body>
     </html>
   );
-<<<<<<< HEAD
 
 export default RootLayout;
-=======
         priceSpecification: {// TODO: Add content;}
 }
           '@type': 'PriceSpecification',
@@ -198,7 +189,4 @@ export default RootLayout;
 export default SrcPage;
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc

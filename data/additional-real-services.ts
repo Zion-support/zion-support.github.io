@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export interface AdditionalRealService {id: string;
   name: string;
   tagline: string;
@@ -25,7 +24,6 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     tagline: 'Intelligent automation for modern businesses',
     price: '$79 / month',
     description: unknown;
-=======
 export interface AdditionalRealService {/* TODO: Fix JSX expression */}
   e: string}
     emai,
@@ -52,7 +50,6 @@ export const,
   e: '$79 / month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive AI - powered automation platform that streamlines business processes and increases efficiency.',
     feature,
   s: [,
@@ -62,7 +59,6 @@ export const,
       'Custom workflows',
       'Analytics dashboard',
     ],
-<<<<<<< HEAD
     link: '/services / ai - automation - suite'
     category: 'AI & Automation'
     real_implementation: true;
@@ -97,7 +93,6 @@ export const,
 }
 }
     address: string;
-=======
     lin,
   k: '/services / ai - automation - suite',
     categor,
@@ -166,7 +161,6 @@ export const,
 }
     addres,
   s: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 export const,
   additionalEnhancedServices: AdditionalRealService[] = [;
@@ -188,14 +182,12 @@ export const,
       'Custom workflows'
       'Analytics dashboard'
     ]
-<<<<<<< HEAD
     link: '/services/ai-automation-suite'
     category: 'AI & Automation'
     realImplementation: true;
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
     lin,
   k: '/services/ai-automation-suite'
     categor,
@@ -209,7 +201,6 @@ export const,
   l: 'kleber@ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
     i,
@@ -230,7 +221,6 @@ export const,
       'Scalable architecture'
       'Security compliance'
     ]
-<<<<<<< HEAD
     link: '/services/data-warehouse-solution'
     category: 'Data & Analytics'
     realImplementation: true;
@@ -246,7 +236,6 @@ export const,
     tagline: 'Enterprise - grade data management and analytics',
     price: '$149 / month',
     description: unknown;
-=======
     lin,
   k: '/services/data-warehouse-solution'
     categor,
@@ -276,7 +265,6 @@ export const,
   e: '$149 / month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Scalable data warehouse solution with advanced analytics and business intelligence capabilities.',
     feature,
   s: [,
@@ -286,7 +274,6 @@ export const,
       'Scalable architecture',
       'Security compliance',
     ],
-<<<<<<< HEAD
     link: '/services / data - warehouse - solution'
     category: 'Data & Analytics'
     real_implementation: true;
@@ -336,7 +323,6 @@ export const,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-=======
     lin,
   k: '/services / data - warehouse - solution',
     categor,
@@ -420,13 +406,11 @@ export const,
   l: "kleber@ziontechgroup.com"
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
 ;
 ];
-<<<<<<< HEAD
     id: "ai-automation-suite"
     name: "AI Automation Suite",
     tagline: "Intelligent automation for modern businesses",
@@ -446,7 +430,6 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-=======
     i,"
   d: "ai-automation-suite",
     nam,"
@@ -479,7 +462,6 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   },
     i,
@@ -501,7 +483,6 @@ export const,
       'Embeddable widgets',
       'Export CSV/Sheets'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -528,7 +509,6 @@ export const,
     customers: 55;
     rating: 4.5;
     reviews: 18;
-=======
     popula,
   r: false,
     ico,
@@ -582,7 +562,6 @@ export const,
   g: 4.5,
     review,
   s: 18,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'event-management-dashboard',
@@ -603,7 +582,6 @@ export const,
       'Speaker and agenda planner',
       'Post-event feedback analytics'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -638,7 +616,6 @@ export const,
     period: '/month',
     description: 'Tracks product usage and support sentiment to flag churn risks in Slack with next-best-action playbooks.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -707,13 +684,11 @@ export const,
   n: 'Tracks product usage and support sentiment to flag churn risks in Slack with next-best-action playbooks.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Usage anomaly detection',
       'Sentiment from tickets/reviews',
       'Playbooks and tasks',
       'Owner assignment'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-amber-600 to-orange-700'
@@ -740,7 +715,6 @@ export const,
     customers: 28;
     rating: 4.5;
     reviews: 15;
-=======
     popula,
   r: false,
     ico,
@@ -794,7 +768,6 @@ export const,
   g: 4.5,
     review,
   s: 15,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'subscription-revenue-analytics',
@@ -815,7 +788,6 @@ export const,
       'CSV/Stripe imports',
       'Board-ready reports'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-fuchsia-600 to-pink-700',
@@ -842,7 +814,6 @@ export const,
     customers: 22;
     rating: 4.6;
     reviews: 12;
-=======
     popula,
   r: true,
     ico,
@@ -896,7 +867,6 @@ export const,
   g: 4.6,
     review,
   s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'iso-27001-evidence-kit',
@@ -917,7 +887,6 @@ export const,
       'Exceptions and approvals',
       'Audit-ready exports'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-indigo-600 to-blue-700'
@@ -944,7 +913,6 @@ export const,
       customers: 18;
       rating: 4.5;
       reviews: 10;
-=======
     popula,
   r: false,
     ico,
@@ -998,7 +966,6 @@ export const,
   g: 4.5,
       review,
   s: 10,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'api-changelog-notifier',
@@ -1019,7 +986,6 @@ export const,
       'Deprecation timelines',
       'Email/Slack/webhook alerts'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -1046,7 +1012,6 @@ export const,
     customers: 30;
     rating: 4.6;
     reviews: 14;
-=======
     popula,
   r: false,
     ico,
@@ -1100,7 +1065,6 @@ export const,
   g: 4.6,
     review,
   s: 14,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'runbook-generator',
@@ -1121,7 +1085,6 @@ export const,
       'Step validation checklists',
       'On-call links and owners'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-sky-600 to-blue-700',
@@ -1148,7 +1111,6 @@ export const,
       customers: 26;
       rating: 4.5;
       reviews: 11;
-=======
     popula,
   r: false,
     ico,
@@ -1202,7 +1164,6 @@ export const,
   g: 4.5,
       review,
   s: 11,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'incident-timeline-composer',
@@ -1223,7 +1184,6 @@ export const,
       'Customer comms templates',
       'Postmortem export'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-rose-600 to-pink-700'
@@ -1250,7 +1210,6 @@ export const,
     customers: 19;
     rating: 4.5;
     reviews: 9;
-=======
     popula,
   r: false,
     ico,
@@ -1304,7 +1263,6 @@ export const,
   g: 4.5,
     review,
   s: 9,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ad-creative-generator',
@@ -1325,7 +1283,6 @@ export const,
       'Headlines and copy suggestions',
       'Performance tips and tags'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-violet-600 to-purple-700'
@@ -1352,7 +1309,6 @@ export const,
     customers: 33;
     rating: 4.6;
     reviews: 13;
-=======
     popula,
   r: true,
     ico,
@@ -1406,7 +1362,6 @@ export const,
   g: 4.6,
     review,
   s: 13,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'cloud-cost-optimizer-pro',
@@ -1428,7 +1383,6 @@ export const,
       "Scalable architecture","
       "Security compliance"
     ],
-<<<<<<< HEAD
     link: "/services/data-warehouse-solution"
     category: "Data & Analytics"
     realImplementation: true;
@@ -1437,7 +1391,6 @@ export const,
     customers: 90;
     rating: 4.6;
     reviews: 54;
-=======
     lin,"
   k: "/services/data-warehouse-solution",
     categor,"
@@ -1454,7 +1407,6 @@ export const,
   g: 4.6,
     review,
   s: 54,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'database-performance-monitor',
@@ -1475,7 +1427,6 @@ export const,
       'Connection pool tuning',
       'Capacity forecasting'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-indigo-700'
@@ -1502,7 +1453,6 @@ export const,
     customers: 60;
     rating: 4.6;
     reviews: 38;
-=======
     popula,
   r: true,
     ico,
@@ -1556,7 +1506,6 @@ export const,
   g: 4.6,
     review,
   s: 38,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'api-documentation-generator',
@@ -1577,7 +1526,6 @@ export const,
       'Changelogs and versions',
       'Full-text search and themes'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -1604,7 +1552,6 @@ export const,
     customers: 110;
     rating: 4.7;
     reviews: 81;
-=======
     popula,
   r: true,
     ico,
@@ -1658,7 +1605,6 @@ export const,
   g: 4.7,
     review,
   s: 81,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'email-deliverability-monitor',
@@ -1679,7 +1625,6 @@ export const,
       'Blocklist monitoring',
       'Domain reputation score'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-indigo-600 to-blue-700',
@@ -1706,7 +1651,6 @@ export const,
     customers: 45;
     rating: 4.5;
     reviews: 22;
-=======
     popula,
   r: false,
     ico,
@@ -1760,7 +1704,6 @@ export const,
   g: 4.5,
     review,
   s: 22,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'gdpr-dsar-automation',
@@ -1781,7 +1724,6 @@ export const,
       'Data discovery connectors',
       'Audit logs and exports'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-rose-600 to-fuchsia-700'
@@ -1808,7 +1750,6 @@ export const,
     customers: 33;
     rating: 4.6;
     reviews: 19;
-=======
     popula,
   r: false,
     ico,
@@ -1862,7 +1803,6 @@ export const,
   g: 4.6,
     review,
   s: 19,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'api-security-scanner',
@@ -1883,7 +1823,6 @@ export const,
       'OWASP API Top 10 checks',
       'CI pipeline integration'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-red-600 to-pink-700'
@@ -1910,7 +1849,6 @@ export const,
     customers: 52;
     rating: 4.5;
     reviews: 28;
-=======
     popula,
   r: true,
     ico,
@@ -1964,7 +1902,6 @@ export const,
   g: 4.5,
     review,
   s: 28,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'api-observability-starter',
@@ -1987,7 +1924,6 @@ export const,
       'Exporters for popular backends',
       'Auto-ingest OpenAPI metadata'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-indigo-600 to-blue-700'
@@ -2022,7 +1958,6 @@ export const,
     period: '/month',
     description: 'Publish service status and SLOs with incident posts and subscriber alerts. Pull metrics from providers and APM tools.',
     features: [,
-=======
     popula,
   r: false,
     ico,
@@ -2091,13 +2026,11 @@ export const,
   n: 'Publish service status and SLOs with incident posts and subscriber alerts. Pull metrics from providers and APM tools.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Custom branded status pages',
       'SLO dashboards',
       'Incident posts & timelines',
       'Subscriber notifications'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-teal-600 to-emerald-700'
@@ -2124,7 +2057,6 @@ export const,
     customers: 75;
     rating: 4.6;
     reviews: 35;
-=======
     popula,
   r: false,
     ico,
@@ -2178,7 +2110,6 @@ export const,
   g: 4.6,
     review,
   s: 35,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'uptime-slo-monitor',
@@ -2199,7 +2130,6 @@ export const,
       'Error budget policy',
       'Burn rate alerts'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -2226,7 +2156,6 @@ export const,
     customers: 130;
     rating: 4.7;
     reviews: 64;
-=======
     popula,
   r: true,
     ico,
@@ -2280,7 +2209,6 @@ export const,
   g: 4.7,
     review,
   s: 64,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'webhook-relay-replay',
@@ -2301,7 +2229,6 @@ export const,
       'Replay & DLQ',
       'Traffic mirroring'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-sky-600 to-cyan-700'
@@ -2328,7 +2255,6 @@ export const,
     customers: 58;
     rating: 4.6;
     reviews: 27;
-=======
     popula,
   r: false,
     ico,
@@ -2382,7 +2308,6 @@ export const,
   g: 4.6,
     review,
   s: 27,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'feature-flags-edge',
@@ -2403,7 +2328,6 @@ export const,
       'SDKs and audit logs',
       'Kill switches'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-fuchsia-600 to-pink-700'
@@ -2430,7 +2354,6 @@ export const,
     customers: 42;
     rating: 4.5;
     reviews: 23;
-=======
     popula,
   r: false,
     ico,
@@ -2484,7 +2407,6 @@ export const,
   g: 4.5,
     review,
   s: 23,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'sso-in-a-box',
@@ -2505,7 +2427,6 @@ export const,
       'Branding & JIT',
       'User/role sync'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-green-700'
@@ -2532,7 +2453,6 @@ export const,
     customers: 150;
     rating: 4.8;
     reviews: 96;
-=======
     popula,
   r: true,
     ico,
@@ -2586,7 +2506,6 @@ export const,
   g: 4.8,
     review,
   s: 96,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'vector-search-starter',
@@ -2607,7 +2526,6 @@ export const,
       'SDKs and relevance tuning',
       'Observability and quotas'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-cyan-600 to-blue-700',
@@ -2634,7 +2552,6 @@ export const,
     customers: 70;
     rating: 4.6;
     reviews: 33;
-=======
     popula,
   r: false,
     ico,
@@ -2688,7 +2605,6 @@ export const,
   g: 4.6,
     review,
   s: 33,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'data-quality-monitor',
@@ -2709,7 +2625,6 @@ export const,
       'Anomaly alerts',
       'Dashboard and lineage hints'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-amber-600 to-orange-700'
@@ -2736,7 +2651,6 @@ export const,
     customers: 39;
     rating: 4.5;
     reviews: 20;
-=======
     popula,
   r: false,
     ico,
@@ -2790,7 +2704,6 @@ export const,
   g: 4.5,
     review,
   s: 20,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'data-pipeline-observability',
@@ -2811,7 +2724,6 @@ export const,
       'Predictive failure alerts',
       'Dashboards & reports'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-700 to-indigo-700'
@@ -2838,7 +2750,6 @@ export const,
     customers: 44;
     rating: 4.6;
     reviews: 26;
-=======
     popula,
   r: true,
     ico,
@@ -2892,7 +2803,6 @@ export const,
   g: 4.6,
     review,
   s: 26,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-guardrails-suite',
@@ -2913,7 +2823,6 @@ export const,
       'Eval and red team runs',
       'Audit and exceptions'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-rose-600 to-red-700'
@@ -2940,7 +2849,6 @@ export const,
     customers: 36;
     rating: 4.5;
     reviews: 18;
-=======
     popula,
   r: true,
     ico,
@@ -2994,7 +2902,6 @@ export const,
   g: 4.5,
     review,
   s: 18,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-sales-automation',
@@ -3015,7 +2922,6 @@ export const,
       'Meeting prep copilot',
       'Pipeline analytics'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -3042,7 +2948,6 @@ export const,
     customers: 66;
     rating: 4.5;
     reviews: 31;
-=======
     popula,
   r: false,
     ico,
@@ -3096,7 +3001,6 @@ export const,
   g: 4.5,
     review,
   s: 31,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'synthetic-data-generator',
@@ -3117,7 +3021,6 @@ export const,
       'Utility and drift reports',
       'REST API & SDKs (Python/JS)'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-indigo-600 to-purple-700',
@@ -3144,7 +3047,6 @@ export const,
     customers: 25;
     rating: 4.6;
     reviews: 12;
-=======
     popula,
   r: true,
     ico,
@@ -3198,7 +3100,6 @@ export const,
   g: 4.6,
     review,
   s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'email-parsing-routing-api',
@@ -3219,7 +3120,6 @@ export const,
       'Webhook delivery with retries & DLQ',
       'Inspector and secure replays'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -3246,7 +3146,6 @@ export const,
     customers: 18;
     rating: 4.5;
     reviews: 9;
-=======
     popula,
   r: false,
     ico,
@@ -3300,7 +3199,6 @@ export const,
   g: 4.5,
     review,
   s: 9,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'kubernetes-cost-analyzer',
@@ -3321,7 +3219,6 @@ export const,
       'Binpacking recommendations',
       'Chargeback/showback reports'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -3348,7 +3245,6 @@ export const,
     customers: 22;
     rating: 4.6;
     reviews: 11;
-=======
     popula,
   r: true,
     ico,
@@ -3402,7 +3298,6 @@ export const,
   g: 4.6,
     review,
   s: 11,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'cloud-landing-zone',
@@ -3423,7 +3318,6 @@ export const,
       'Audit logging & SIEM hooks',
       'Budgets & anomaly alerts'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-sky-600 to-blue-700'
@@ -3450,7 +3344,6 @@ export const,
     customers: 14;
     rating: 4.7;
     reviews: 8;
-=======
     popula,
   r: true,
     ico,
@@ -3504,7 +3397,6 @@ export const,
   g: 4.7,
     review,
   s: 8,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'security-headers-scanner',
@@ -3525,7 +3417,6 @@ export const,
       'PR annotations & diffs',
       'Alerting & weekly reports'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-rose-600 to-fuchsia-700'
@@ -3552,7 +3443,6 @@ export const,
     customers: 10;
     rating: 4.5;
     reviews: 6;
-=======
     popula,
   r: false,
     ico,
@@ -3606,7 +3496,6 @@ export const,
   g: 4.5,
     review,
   s: 6,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'frontend-bundle-analyzer-ci',
@@ -3627,7 +3516,6 @@ export const,
       'Actionable suggestions',
       'Dashboards & trends'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-amber-600 to-orange-700'
@@ -3654,7 +3542,6 @@ export const,
     customers: 12;
     rating: 4.5;
     reviews: 7;
-=======
     popula,
   r: false,
     ico,
@@ -3708,7 +3595,6 @@ export const,
   g: 4.5,
     review,
   s: 7,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 's3-to-snowflake-ingestion',
@@ -3729,7 +3615,6 @@ export const,
       'Backfills & reprocess',
       'Lineage & monitoring'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-blue-700 to-indigo-700'
@@ -3756,7 +3641,6 @@ export const,
     customers: 9;
     rating: 4.4;
     reviews: 5;
-=======
     popula,
   r: false,
     ico,
@@ -3810,7 +3694,6 @@ export const,
   g: 4.4,
     review,
   s: 5,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'visual-regression-monitor',
@@ -3831,7 +3714,6 @@ export const,
       'Baselines & environments',
       'Alerting & history'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-violet-600 to-purple-700'
@@ -3866,7 +3748,6 @@ export const,
     period: '/month',
     description: 'Proxy and transform streams with tokenization and masking policies to safely replicate data to non-production systems.',
     features: [,
-=======
     popula,
   r: false,
     ico,
@@ -3935,13 +3816,11 @@ export const,
   n: 'Proxy and transform streams with tokenization and masking policies to safely replicate data to non-production systems.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Tokenization & masking policies',
       'Format-preserving encryption',
       'Schema-aware transforms',
       'Audit logs & approvals'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -3968,7 +3847,6 @@ export const,
     customers: 13;
     rating: 4.6;
     reviews: 6;
-=======
     popula,
   r: true,
     ico,
@@ -4022,7 +3900,6 @@ export const,
   g: 4.6,
     review,
   s: 6,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-meeting-notes-agent',
@@ -4043,7 +3920,6 @@ export const,
       'Summaries & highlights',
       'CRM/PM sync'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -4078,7 +3954,6 @@ export const,
     period: '/month',
     description: 'Define and validate compliance policies as code across cloud resources and IaC with CI quality gates and evidence reports.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -4147,13 +4022,11 @@ export const,
   n: 'Define and validate compliance policies as code across cloud resources and IaC with CI quality gates and evidence reports.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Policy packs (SOC2) ISO)',
       'CI gates & PR comments',
       'Evidence reports',
       'Drift detection'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-indigo-700'
@@ -4180,7 +4053,6 @@ export const,
     customers: 17;
     rating: 4.6;
     reviews: 8;
-=======
     popula,
   r: true,
     ico,
@@ -4234,7 +4106,6 @@ export const,
   g: 4.6,
     review,
   s: 8,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'pdf-render-api',
@@ -4257,7 +4128,6 @@ export const,
       'Storage destinations (S3/GCS/Azure)',
       'Usage analytics and quotas'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-pink-700',
@@ -4284,7 +4154,6 @@ export const,
     customers: 75;
     rating: 4.7;
     reviews: 28;
-=======
     popula,
   r: true,
     ico,
@@ -4338,7 +4207,6 @@ export const,
   g: 4.7,
     review,
   s: 28,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'invoice-ocr-extraction-api',
@@ -4361,7 +4229,6 @@ export const,
       'CSV/JSON export and webhooks',
       'Native integrations (Xero/QuickBooks)'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -4388,7 +4255,6 @@ export const,
     customers: 29;
     rating: 4.6;
     reviews: 9;
-=======
     popula,
   r: true,
     ico,
@@ -4442,7 +4308,6 @@ export const,
   g: 4.6,
     review,
   s: 9,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'log-archive-search',
@@ -4465,7 +4330,6 @@ export const,
       'Alerting and dashboards',
       'PII redaction and tokenization'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -4492,7 +4356,6 @@ export const,
     customers: 21;
     rating: 4.5;
     reviews: 7;
-=======
     popula,
   r: false,
     ico,
@@ -4546,7 +4409,6 @@ export const,
   g: 4.5,
     review,
   s: 7,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'gdpr-privacyops-suite',
@@ -4568,7 +4430,6 @@ export const,
       'Retention rules with defensible deletion',
       'Evidence export for auditors'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-fuchsia-700'
@@ -4595,7 +4456,6 @@ export const,
     customers: 18;
     rating: 4.6;
     reviews: 11;
-=======
     popula,
   r: true,
     ico,
@@ -4649,7 +4509,6 @@ export const,
   g: 4.6,
     review,
   s: 11,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-code-review-copilot',
@@ -4671,7 +4530,6 @@ export const,
       'PR comments and SARIF outputs',
       'Risk heatmaps and trends'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -4698,7 +4556,6 @@ export const,
     customers: 42;
     rating: 4.5;
     reviews: 29;
-=======
     popula,
   r: false,
     ico,
@@ -4752,7 +4609,6 @@ export const,
   g: 4.5,
     review,
   s: 29,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'm365-security-hardening-kit',
@@ -4773,7 +4629,6 @@ export const,
       'Auto-remediation playbooks',
       'Executive reporting'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -4800,7 +4655,6 @@ export const,
     customers: 15;
     rating: 4.4;
     reviews: 8;
-=======
     popula,
   r: true,
     ico,
@@ -4854,7 +4708,6 @@ export const,
   g: 4.4,
     review,
   s: 8,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-customer-qa-benchmark',
@@ -4875,7 +4728,6 @@ export const,
       'RAG source attribution validation',
       'Compliance and brand guardrails'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-indigo-600 to-violet-700',
@@ -4910,7 +4762,6 @@ export const,
     period: '/month',
     description: 'Advanced platform combining quantum computing principles with AI to solve complex optimization problems and accelerate machine learning.',
     features: [,
-=======
     popula,
   r: false,
     ico,
@@ -4979,14 +4830,12 @@ export const,
   n: 'Advanced platform combining quantum computing principles with AI to solve complex optimization problems and accelerate machine learning.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum-inspired algorithms',
       'AI model acceleration',
       'Optimization solvers',
       'Real-time analytics',
       'API integration'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-indigo-600 to-purple-700'
@@ -5013,7 +4862,6 @@ export const,
     customers: 15;
     rating: 4.8;
     reviews: 8;
-=======
     popula,
   r: true,
     ico,
@@ -5067,7 +4915,6 @@ export const,
   g: 4.8,
     review,
   s: 8,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-cybersecurity-sentinel',
@@ -5089,7 +4936,6 @@ export const,
       'Threat intelligence',
       'Compliance reporting'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-red-600 to-orange-700'
@@ -5116,7 +4962,6 @@ export const,
     customers: 45;
     rating: 4.7;
     reviews: 32;
-=======
     popula,
   r: true,
     ico,
@@ -5170,7 +5015,6 @@ export const,
   g: 4.7,
     review,
   s: 32,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'autonomous-devops-orchestrator',
@@ -5192,7 +5036,6 @@ export const,
       'Cost management',
       'Multi-cloud orchestration'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-green-600 to-teal-700'
@@ -5219,7 +5062,6 @@ export const,
     customers: 28;
     rating: 4.6;
     reviews: 19;
-=======
     popula,
   r: false,
     ico,
@@ -5273,7 +5115,6 @@ export const,
   g: 4.6,
     review,
   s: 19,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'blockchain-enterprise-platform',
@@ -5295,7 +5136,6 @@ export const,
       'Scalability solutions',
       'Integration APIs'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -5322,7 +5162,6 @@ export const,
     customers: 22;
     rating: 4.5;
     reviews: 15;
-=======
     popula,
   r: true,
     ico,
@@ -5376,7 +5215,6 @@ export const,
   g: 4.5,
     review,
   s: 15,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-content-intelligence-suite',
@@ -5398,7 +5236,6 @@ export const,
       'Multi-language support',
       'Brand voice consistency'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-purple-600 to-pink-700'
@@ -5425,7 +5262,6 @@ export const,
     customers: 67;
     rating: 4.4;
     reviews: 41;
-=======
     popula,
   r: false,
     ico,
@@ -5479,7 +5315,6 @@ export const,
   g: 4.4,
     review,
   s: 41,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'iot-enterprise-platform',
@@ -5501,7 +5336,6 @@ export const,
       'Automation workflows',
       'Security & compliance'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-teal-600 to-green-700'
@@ -5528,7 +5362,6 @@ export const,
     customers: 38;
     rating: 4.6;
     reviews: 25;
-=======
     popula,
   r: true,
     ico,
@@ -5582,7 +5415,6 @@ export const,
   g: 4.6,
     review,
   s: 25,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-customer-success-platform',
@@ -5604,7 +5436,6 @@ export const,
       'Success playbooks',
       'Analytics dashboard'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -5639,7 +5470,6 @@ export const,
     period: '/month',
     description: 'Advanced cryptographic solutions designed to protect against quantum computing threats while maintaining high performance.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -5708,14 +5538,12 @@ export const,
   n: 'Advanced cryptographic solutions designed to protect against quantum computing threats while maintaining high performance.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Post-quantum cryptography',
       'Quantum key distribution',
       'Hybrid encryption',
       'Performance optimization',
       'Compliance standards'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-indigo-600 to-blue-700'
@@ -5742,7 +5570,6 @@ export const,
     customers: 18;
     rating: 4.8;
     reviews: 12;
-=======
     popula,
   r: false,
     ico,
@@ -5796,7 +5623,6 @@ export const,
   g: 4.8,
     review,
   s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-supply-chain-optimizer',
@@ -5818,7 +5644,6 @@ export const,
       'Risk assessment',
       'Real-time analytics'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-orange-600 to-red-700'
@@ -5845,7 +5670,6 @@ export const,
     customers: 41;
     rating: 4.6;
     reviews: 28;
-=======
     popula,
   r: true,
     ico,
@@ -5899,7 +5723,6 @@ export const,
   g: 4.6,
     review,
   s: 28,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'autonomous-financial-advisor',
@@ -5921,7 +5744,6 @@ export const,
       'Goal-based planning',
       'Real-time monitoring'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -5948,7 +5770,6 @@ export const,
     customers: 35;
     rating: 4.7;
     reviews: 22;
-=======
     popula,
   r: true,
     ico,
@@ -6002,7 +5823,6 @@ export const,
   g: 4.7,
     review,
   s: 22,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-consciousness-evolution-platform',
@@ -6024,7 +5844,6 @@ export const,
       'Self-awareness algorithms',
       'Ethical decision making'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-violet-600 to-purple-700'
@@ -6051,7 +5870,6 @@ export const,
     customers: 8;
     rating: 4.9;
     reviews: 5;
-=======
     popula,
   r: true,
     ico,
@@ -6105,7 +5923,6 @@ export const,
   g: 4.9,
     review,
   s: 5,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'quantum-space-technology-suite',
@@ -6127,7 +5944,6 @@ export const,
       'Quantum communications',
       'Mission planning'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-indigo-600 to-blue-700'
@@ -6154,7 +5970,6 @@ export const,
     customers: 12;
     rating: 4.7;
     reviews: 8;
-=======
     popula,
   r: false,
     ico,
@@ -6208,7 +6023,6 @@ export const,
   g: 4.7,
     review,
   s: 8,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'autonomous-manufacturing-ai',
@@ -6230,7 +6044,6 @@ export const,
       'Supply chain automation',
       'Real-time analytics'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-orange-600 to-red-700'
@@ -6257,7 +6070,6 @@ export const,
     customers: 31;
     rating: 4.6;
     reviews: 24;
-=======
     popula,
   r: true,
     ico,
@@ -6311,7 +6123,6 @@ export const,
   g: 4.6,
     review,
   s: 24,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'biotech-ai-research-platform',
@@ -6333,7 +6144,6 @@ export const,
       'Clinical trial optimization',
       'Personalized medicine'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -6360,7 +6170,6 @@ export const,
     customers: 19;
     rating: 4.8;
     reviews: 15;
-=======
     popula,
   r: true,
     ico,
@@ -6414,7 +6223,6 @@ export const,
   g: 4.8,
     review,
   s: 15,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'metaverse-enterprise-platform',
@@ -6436,7 +6244,6 @@ export const,
       'Virtual meetings',
       'Integration APIs'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-purple-600 to-pink-700'
@@ -6463,7 +6270,6 @@ export const,
     customers: 26;
     rating: 4.5;
     reviews: 18;
-=======
     popula,
   r: false,
     ico,
@@ -6517,7 +6323,6 @@ export const,
   g: 4.5,
     review,
   s: 18,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'quantum-financial-trading-platform',
@@ -6539,7 +6344,6 @@ export const,
       'Market prediction',
       'High-frequency trading'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-green-700'
@@ -6566,7 +6370,6 @@ export const,
     customers: 15;
     rating: 4.9;
     reviews: 12;
-=======
     popula,
   r: true,
     ico,
@@ -6620,7 +6423,6 @@ export const,
   g: 4.9,
     review,
   s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-autonomous-vehicle-platform',
@@ -6642,7 +6444,6 @@ export const,
       'Predictive maintenance',
       'Real-time tracking'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-blue-600 to-cyan-700'
@@ -6677,7 +6478,6 @@ export const,
     period: '/month',
     description: 'Advanced cybersecurity platform that implements quantum-resistant encryption algorithms and prepares organizations for the quantum computing threat.',
     features: [,
-=======
     popula,
   r: false,
     ico,
@@ -6746,14 +6546,12 @@ export const,
   n: 'Advanced cybersecurity platform that implements quantum-resistant encryption algorithms and prepares organizations for the quantum computing threat.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Post-quantum cryptography',
       'Quantum-resistant algorithms',
       'Threat detection',
       'Compliance frameworks',
       'Migration tools'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-red-600 to-pink-700'
@@ -6780,7 +6578,6 @@ export const,
     customers: 28;
     rating: 4.7;
     reviews: 20;
-=======
     popula,
   r: true,
     ico,
@@ -6834,7 +6631,6 @@ export const,
   g: 4.7,
     review,
   s: 20,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'enterprise-data-governance-platform',
@@ -6856,7 +6652,6 @@ export const,
       'Privacy controls',
       'Audit reporting'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -6883,7 +6678,6 @@ export const,
     customers: 34;
     rating: 4.5;
     reviews: 22;
-=======
     popula,
   r: false,
     ico,
@@ -6937,7 +6731,6 @@ export const,
   g: 4.5,
     review,
   s: 22,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-powered-hr-analytics-suite',
@@ -6959,7 +6752,6 @@ export const,
       'Diversity metrics',
       'Recruitment optimization'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-pink-700'
@@ -6986,7 +6778,6 @@ export const,
     customers: 47;
     rating: 4.6;
     reviews: 31;
-=======
     popula,
   r: true,
     ico,
@@ -7040,7 +6831,6 @@ export const,
   g: 4.6,
     review,
   s: 31,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'cloud-migration-automation-platform',
@@ -7062,7 +6852,6 @@ export const,
       'Security compliance',
       'Multi-cloud support'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -7089,7 +6878,6 @@ export const,
     customers: 29;
     rating: 4.7;
     reviews: 19;
-=======
     popula,
   r: true,
     ico,
@@ -7143,7 +6931,6 @@ export const,
   g: 4.7,
     review,
   s: 19,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'digital-transformation-consulting',
@@ -7165,7 +6952,6 @@ export const,
       'Process optimization',
       'Implementation support'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-orange-600 to-red-700'
@@ -7192,7 +6978,6 @@ export const,
     customers: 12;
     rating: 4.9;
     reviews: 8;
-=======
     popula,
   r: false,
     ico,
@@ -7246,7 +7031,6 @@ export const,
   g: 4.9,
     review,
   s: 8,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-ethics-compliance-framework',
@@ -7268,7 +7052,6 @@ export const,
       'Transparency tools',
       'Audit frameworks'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -7295,7 +7078,6 @@ export const,
     customers: 18;
     rating: 4.8;
     reviews: 12;
-=======
     popula,
   r: true,
     ico,
@@ -7349,7 +7131,6 @@ export const,
   g: 4.8,
     review,
   s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'edge-computing-optimization-platform',
@@ -7371,7 +7152,6 @@ export const,
       'Resource allocation',
       'Performance monitoring'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-teal-600 to-green-700'
@@ -7398,7 +7178,6 @@ export const,
     customers: 25;
     rating: 4.5;
     reviews: 17;
-=======
     popula,
   r: false,
     ico,
@@ -7452,7 +7231,6 @@ export const,
   g: 4.5,
     review,
   s: 17,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'zero-trust-security-implementation',
@@ -7474,7 +7252,6 @@ export const,
       'Threat detection',
       'Compliance reporting'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-red-600 to-orange-700'
@@ -7501,7 +7278,6 @@ export const,
     customers: 36;
     rating: 4.7;
     reviews: 25;
-=======
     popula,
   r: true,
     ico,
@@ -7555,7 +7331,6 @@ export const,
   g: 4.7,
     review,
   s: 25,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-powered-customer-experience-platform',
@@ -7577,7 +7352,6 @@ export const,
       'Omnichannel support',
       'Experience optimization'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-pink-600 to-purple-700'
@@ -7604,7 +7378,6 @@ export const,
     customers: 53;
     rating: 4.6;
     reviews: 38;
-=======
     popula,
   r: true,
     ico,
@@ -7658,7 +7431,6 @@ export const,
   g: 4.6,
     review,
   s: 38,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-sales-agent-suite',
@@ -7679,7 +7451,6 @@ export const,
       'Calendar booking and routing',
       'Compliance and opt-out handling'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-indigo-600 to-blue-700'
@@ -7712,7 +7483,6 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-=======
     popula,
   r: true,
     ico,
@@ -7776,7 +7546,6 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];

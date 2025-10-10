@@ -7,17 +7,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix unused variables by prefixing with underscore;
-<<<<<<< HEAD
 function fixUnusedVariables(content) {
   // Fix unused variables in destructuring assignments;
   content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {
     const fixedVars = vars.split(',').map(v => {)
       const trimmed = v.trim();
       if (trimmed && !trimmed.startsWith('_') && !trimmed.includes(':')) {
-=======
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
   content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         return `_${trimmed}`;
       }
       return trimmed;
@@ -26,13 +23,10 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
   });
 
   // Fix unused variables in function parameters;
-<<<<<<< HEAD
   content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {
     return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9_$]*)\b/g, (varName) => {
       if (varName !== 'function' && varName !== 'async' && !varName.startsWith('_')) {
-=======
   content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         return `_${varName}`;
       }
       return varName;
@@ -40,13 +34,10 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
   });
 
   // Fix arrow function parameters;
-<<<<<<< HEAD
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {
     return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9_$]*)\b/g, (varName) => {
       if (varName !== 'function' && varName !== 'async' && !varName.startsWith('_')) {
-=======
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         return `_${varName}`;
       }
       return varName;
@@ -57,7 +48,6 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
 }
 
 // Function to fix console statements;
-<<<<<<< HEAD
 function fixConsoleStatements(content) {
   // Comment out console statements;
   content = content.replace(/console\.(log|warn|error|info)\([^)]*\);?/g, '// $&');
@@ -77,7 +67,6 @@ function fixJSXErrors(content) {
   content = content.replace(/<div([^>]*)>(?!.*<\/div>)/gs, (match, attrs) => {
     if (!content.includes('</div>')) {
       return match + '</div>';
-=======
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
 }
 
@@ -87,17 +76,13 @@ function fixAnyTypes(content) {/* TODO: Fix JSX expression */}
 
 // Function to fix JSX parsing errors;
 function fixJSXErrors(content) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     return match;
   });
 
   // Fix JSX expressions with multiple parent elements;
-<<<<<<< HEAD
   content = content.replace(/<>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>/gs, (match) => {
-=======
   content = content.replace(/<>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>/gs, (match) => {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return `<div>${match.replace(/<>\s*|<\/>/g, '')}</div>`;
   });
 
@@ -105,7 +90,6 @@ function fixJSXErrors(content) {/* TODO: Fix JSX expression */}
 }
 
 // Function to remove unused imports;
-<<<<<<< HEAD
 function removeUnusedImports(content) {
   // This is a simplified version - in practice, you'd need a more sophisticated AST parser;
   const lines = content.split('\n');
@@ -124,13 +108,11 @@ function removeUnusedImports(content) {
   const filteredLines = lines.filter(line => {)
     if (line.trim().startsWith('import')) {
       // Extract imported names;
-=======
 function removeUnusedImports(content) {/* TODO: Fix JSX expression */}
   }
   
   // Filter import lines;
   const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       const importMatch = line.match(/import\s*{([^}]+)}/);
       if (importMatch) {/* TODO: Fix JSX expression */}
       }
@@ -143,7 +125,6 @@ function removeUnusedImports(content) {/* TODO: Fix JSX expression */}
 }
 
 // Function to process a single file;
-<<<<<<< HEAD
 function processFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -160,9 +141,7 @@ function processFile(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       modified = true;
-=======
 function processFile(filePath) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     return modified;
@@ -173,7 +152,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Function to find all TypeScript/JavaScript files;
-<<<<<<< HEAD
 function findSourceFiles(dir) {
   const files = [];
   
@@ -193,11 +171,9 @@ function findSourceFiles(dir) {
         // Check for TypeScript/JavaScript files;
         if (/\.(ts|tsx|js|jsx)$/.test(item)) {
           files.push(fullPath);
-=======
 function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
         }
       } else if (stat.isFile()) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
       }
     }

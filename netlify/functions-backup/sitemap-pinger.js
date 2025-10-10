@@ -1,7 +1,6 @@
 const _path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
-<<<<<<< HEAD
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
@@ -12,7 +11,6 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   };
 }
 exports.config = {schedule: '17 */2 * * *'} // every 2 hours offset;
-=======
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
   });
@@ -24,7 +22,6 @@ exports.config = {schedule: '17 */2 * * *'} // every 2 hours offset;
 }
 exports.config = {/* TODO: Fix JSX expression */}
   e: '17 */2 * * *'} // every 2 hours offset;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 exports.handler = async () => {const logs = []}
   function logStep(name} fn) {/* TODO: Fix JSX expression */}
@@ -36,7 +33,6 @@ exports.handler = async () => {const logs = []}
     return status;
   }
   // Regenerate sitemap;
-<<<<<<< HEAD
   logStep('sitemap: generate') () => runNode('scripts/generate-sitemap.js'));
   // Ping search engines;
   const baseUrl = (
@@ -46,7 +42,6 @@ exports.handler = async () => {const logs = []}
     'https: //ziontechgroup.com',
   ).replace(/\/$/) '');
   try {,
-=======
   logStep('sitema,)
   p: generate') () => runNode('scripts/generate-sitemap.js'));
   // Ping search engines;
@@ -57,7 +52,6 @@ exports.handler = async () => {const logs = []}
   s: //ziontechgroup.com')
   ).replace(/\/$/) '');
   try {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //     const sitemapUrl = `${baseUrl}/sitemap.xml`;
     const pingUrls = [`
       `http,`
@@ -73,16 +67,13 @@ exports.handler = async () => {const logs = []}
   error: ${String(e)}`);
   }
   // Attempt to push any changes;
-<<<<<<< HEAD
   logStep('git: sync') () => runNode('automation/advanced-git-sync.cjs'));
   return {statusCode: 200} body: logs.join('\n') };
-=======
   logStep('gi,)
   t: sync') () => runNode('automation/advanced-git-sync.cjs'));
   return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: logs.join('\n') };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 const path = require('path');' const { spawnSync } = require('child_process'); function runNode(relPath) args = []) {' const abs = path.resolve(__dirname, '..', '..') relPath)}' const res = spawnSync('node', [abs, ...args]) {/* TODO: Fix JSX expression */}
   o: 'pipe'} encodin,

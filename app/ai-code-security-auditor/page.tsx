@@ -698,97 +698,82 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
   const [isAnalyzing, setIsAnalyzing] = useState(false);
 
   const securityIssues = [
-<<<<<<< HEAD
     {
       id: 1;
       type: 'SQL Injection'
       severity: 'High'
       file: 'user-controller.js'
       line: 45;
-=======
     {}
       id: 1,
       type: 'SQL Injection',
       severity: 'High',
       file: 'user-controller.js',
       line: 45,
->>>>>>> origin/merge-error-fixes
       description: 'Potential SQL injection vulnerability in user authentication query',
       recommendation: 'Use parameterized queries or prepared statements',
       status: 'Open',
     },
-<<<<<<< HEAD
     {
       id: 2;
       type: 'XSS Vulnerability'
       severity: 'Medium'
       file: 'dashboard.html'
       line: 23;
-=======
     {}
       id: 2,
       type: 'XSS Vulnerability',
       severity: 'Medium',
       file: 'dashboard.html',
       line: 23,
->>>>>>> origin/merge-error-fixes
       description: 'Unescaped user input in HTML output',
       recommendation: 'Sanitize user input before rendering',
       status: 'Open',
     },
-<<<<<<< HEAD
     {
       id: 3;
       type: 'Hardcoded Password'
       severity: 'Critical'
       file: 'config.js'
       line: 12;
-=======
     {}
       id: 3,
       type: 'Hardcoded Password',
       severity: 'Critical',
       file: 'config.js',
       line: 12,
->>>>>>> origin/merge-error-fixes
       description: 'Hardcoded database password found',
       recommendation: 'Use environment variables for sensitive data',
       status: 'Fixed',
     },
-<<<<<<< HEAD
     {
       id: 4;
       type: 'Insecure Random'
       severity: 'Medium'
       file: 'auth-service.js'
       line: 67;
-=======
     {}
       id: 4,
       type: 'Insecure Random',
       severity: 'Medium',
       file: 'auth-service.js',
       line: 67,
->>>>>>> origin/merge-error-fixes
       description: 'Using Math.random() for cryptographic purposes',
       recommendation: 'Use crypto.randomBytes() for secure random generation',
       status: 'Open',
     },
-<<<<<<< HEAD
     {
       id: 5;
       type: 'Missing CSRF Protection'
       severity: 'High'
       file: 'api-routes.js'
       line: 89;
-=======
     {}
       id: 5,
       type: 'Missing CSRF Protection',
       severity: 'High',
       file: 'api-routes.js',
       line: 89,
->>>>>>> origin/merge-error-fixes
       description: 'API endpoints lack CSRF protection',
       recommendation: 'Implement CSRF tokens for state-changing operations',
       status: 'Open',
@@ -835,13 +820,10 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
   ];
 
   const pricingPlans = [
-<<<<<<< HEAD
     {
       name: "Developer"
-=======
     {}
       name: "Developer",
->>>>>>> origin/merge-error-fixes
       price: "$49",
       period: "/month",
       description: "Perfect for individual developers and small projects",
@@ -854,13 +836,10 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       ],
       popular: false;
     },
-<<<<<<< HEAD
     {
       name: "Team"
-=======
     {}
       name: "Team",
->>>>>>> origin/merge-error-fixes
       price: "$149",
       period: "/month",
       description: "Ideal for development teams and growing companies",
@@ -875,13 +854,10 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       ],
       popular: true;
     },
-<<<<<<< HEAD
     {
       name: "Enterprise"
-=======
     {}
       name: "Enterprise",
->>>>>>> origin/merge-error-fixes
       price: "$399",
       period: "/month",
       description: "For large organizations with complex security needs",
@@ -901,13 +877,10 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
 
   const handleStartScan = () => {}
     setIsScanning(true);
-<<<<<<< HEAD
     // Simulate scanning process;
     setTimeout(() => {
-=======
     // Simulate scanning process
     setTimeout(() => {}
->>>>>>> origin/merge-error-fixes
       setScanResults(securityIssues);
       setIsScanning(false);
     }, 3000);
@@ -917,7 +890,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
     if (!codeContent.trim()) return;
 
     setIsAnalyzing(true);
-<<<<<<< HEAD
     // Simulate code analysis;
     setTimeout(() => {
       setVulnerabilities([)
@@ -927,7 +899,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
           line: 15),
           description: 'Unescaped user input detected'),
           recommendation: 'Use proper input sanitization',
-=======
     // Simulate code analysis
     setTimeout(() => {}
       setVulnerabilities([)
@@ -937,7 +908,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
           line: 15,
           description: 'Unescaped user input detected',
           recommendation: 'Use proper input sanitization'
->>>>>>> origin/merge-error-fixes
         }
       ]);
       setIsAnalyzing(false);
@@ -954,12 +924,9 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
     }
   };
 
-<<<<<<< HEAD
   return(<div className={`min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 ${className}`}>
-=======
   return (
     <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 ${className}`}></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Helmet>
         <title>AI Code Security Auditor Pro - Automated Security Analysis | Zion Tech Group</title>
         <meta name="description" content="Automated code security analysis with AI Code Security Auditor Pro. Detect vulnerabilities, ensure compliance, and get auto-fix suggestions for your codebase." />
@@ -968,16 +935,10 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       </Helmet>,)
 ),
       {/* Hero Section */}
-<<<<<<< HEAD
       <div className="relative py-20 overflow-hidden">
-<<<<<<< HEAD
-=======
       <div className="relative py-20 overflow-hidden"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-=======
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
 
         <div className="container mx-auto px-4 relative z-10"></div>
           <div className="text-center mb-16"></div>
@@ -999,11 +960,8 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
               Protect your applications with comprehensive security analysis powered by advanced AI.
             </p>
 
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/25">
                 <span className="relative z-10">Start Free Scan</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -1017,13 +975,10 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
             </div>,
 ,
             {/* Stats */}
-<<<<<<< HEAD
             <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-=======
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"></div>
               <div className="text-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <div className="text-3xl font-bold text-red-400 mb-2">99.9%</div>
                 <div className="text-gray-400">Detection Rate</div>
               </div>
@@ -1045,39 +1000,33 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       </div>,
 ,
       {/* Security Scanner Interface */}
-<<<<<<< HEAD
       <div className="py-20 bg-gradient-to-br from-slate-800 via-red-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Security Scanner;
-=======
       <div className="py-20 bg-gradient-to-br from-slate-800 via-red-900 to-slate-800"></div>
         <div className="container mx-auto px-4"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Security Scanner
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Upload your code or connect your repository for instant security analysis;
             </p>
           </div>
-<<<<<<< HEAD
 ,
           <div className="max-w-6xl mx-auto">,
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">,
               {/* Code Input Section */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-=======
 
           <div className="max-w-6xl mx-auto"></div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Code Input Section */}</div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center"></h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <Code className="w-8 h-8 text-red-400 mr-3" />
                   Code Analysis;
                 </h3>
@@ -1088,15 +1037,12 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Upload Code Files;
                     </label>
-<<<<<<< HEAD
                     <div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover: border-red-400 transition-colors cursor-pointer">,
                       <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />,
                       <p className="text-gray-400">Click to upload or drag and drop</p>,
-=======
                     <div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover:border-red-400 transition-colors cursor-pointer"></div>
                       <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
                       <p className="text-gray-400">Click to upload or drag and drop</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       <p className="text-gray-500 text-sm">JS, TS, Python, Java, C++, etc.</p>
                     </div>
                   </div>
@@ -1144,17 +1090,14 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                 </h3>
 
                 <div className="space-y-4">
-<<<<<<< HEAD
                   {vulnerabilities.length > 0 ? (
                     vulnerabilities.map((vuln, index) => (</div>
                       <div key={index} className="bg-white/5 rounded-lg p-4 border border-white/10"></div>
                         <div className="flex items-center justify-between mb-2"></div>
-=======
                   {vulnerabilities.length > 0 ? (}
                     vulnerabilities.map((vuln, index) => (
                       <div key={index} className="bg-white/5 rounded-lg p-4 border border-white/10">
                         <div className="flex items-center justify-between mb-2">
->>>>>>> origin/merge-error-fixes
                           <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getSeverityColor(vuln.severity)}`}>
                             {vuln.severity}
                           </span>
@@ -1180,38 +1123,32 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       </div>
 
       {/* Security Issues Dashboard */}
-<<<<<<< HEAD
       <div className="py-20 bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Security Dashboard;
-=======
       <div className="py-20 bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>
         <div className="container mx-auto px-4"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Security Dashboard
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Monitor and manage security issues across your codebase;
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="max-w-6xl mx-auto">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
               <div className="flex items-center justify-between mb-6">,
                 <h3 className="text-2xl font-bold text-white">Security Issues</h3>,
                 <button;
-=======
           <div className="max-w-6xl mx-auto"></div>
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
               <div className="flex items-center justify-between mb-6"></div>
                 <h3 className="text-2xl font-bold text-white">Security Issues</h3>
                 <button
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   onClick={handleStartScan}
                   disabled={isScanning}
                   className="bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold py-2 px-6 rounded-lg hover: from-red-600 hover:to-orange-700 transition-all duration-300 disabled:opacity-50"
@@ -1231,24 +1168,18 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
               </div>
 
               <div className="space-y-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
                 {securityIssues.map((issue) => (
                   <div key={issue.id} className="bg-white/5 rounded-lg p-4 border border-white/10 hover: bg-white/10 transition-colors">,
                     <div className="flex items-center justify-between mb-2">,
                       <div className="flex items-center space-x-3">,
-=======
                 {securityIssues.map((issue) => (</div>
                   <div key={issue.id} className="bg-white/5 rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-colors"></div>
                     <div className="flex items-center justify-between mb-2"></div>
                       <div className="flex items-center space-x-3"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
                 {securityIssues.map((issue) => (}
                   <div key={issue.id} className="bg-white/5 rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-colors">
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center space-x-3">
->>>>>>> origin/merge-error-fixes
                         <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getSeverityColor(issue.severity)}`}>
                           {issue.severity}
                         </span>
@@ -1274,24 +1205,20 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       </div>
 
       {/* Features Section */}
-<<<<<<< HEAD
       <div className="py-20 bg-gradient-to-br from-slate-800 via-red-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Security Features;
-=======
       <div className="py-20 bg-gradient-to-br from-slate-800 via-red-900 to-slate-800"></div>
         <div className="container mx-auto px-4"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Security Features
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive security analysis tools for modern development;
             </p>
-<<<<<<< HEAD
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">,
@@ -1300,22 +1227,17 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                 <div className="w-12 h-12 bg-gradient-to-r from-red-400 to-orange-600 rounded-lg flex items-center justify-center mb-4">,
                   <feature.icon className="w-6 h-6 text-white" />,
                 </div>,
-=======
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-<<<<<<< HEAD
             {features.map((feature, index) => (</div>
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-red-400/50 transition-all duration-300 transform hover:scale-105"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-red-400 to-orange-600 rounded-lg flex items-center justify-center mb-4"></div>
-=======
             {features.map((feature, index) => (}
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-red-400/50 transition-all duration-300 transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-r from-red-400 to-orange-600 rounded-lg flex items-center justify-center mb-4">
->>>>>>> origin/merge-error-fixes
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-400 mb-4">{feature.description}</p>
                 <div className="flex items-center justify-between"></div>
@@ -1329,44 +1251,35 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       </div>
 
       {/* Pricing Section */}
-<<<<<<< HEAD
       <div className="py-20 bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Security Plans;
-=======
       <div className="py-20 bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>
         <div className="container mx-auto px-4"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Security Plans
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the security plan that fits your development needs;
             </p>
-<<<<<<< HEAD
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">,
             {pricingPlans.map((plan, index) => (
-=======
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-<<<<<<< HEAD
             {pricingPlans.map((plan, index) => (</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-red-400/50 ring-2 ring-red-400/30' : 'border-white/10'}`}>
                 {plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-=======
             {pricingPlans.map((plan, index) => (}
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-red-400/50 ring-2 ring-red-400/30' : 'border-white/10'}`}>
                 {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
->>>>>>> origin/merge-error-fixes
                     <span className="bg-gradient-to-r from-red-400 to-orange-600 text-white text-sm font-bold px-4 py-2 rounded-full">
                       Most Popular;
                     </span>
@@ -1391,17 +1304,14 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                   ))}
                 </ul>
 
-<<<<<<< HEAD
                 <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular;
                     ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover: from-red-600 hover:to-orange-700 transform hover:scale-105',}
                     : 'bg-white/10 text-white hover:bg-white/20'}
-=======
                 <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                   plan.popular
                     ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700 transform hover:scale-105'
                     : 'bg-white/10 text-white hover:bg-white/20'
->>>>>>> origin/merge-error-fixes
                 }`}>
                   {plan.popular ? 'Get Started' : 'Choose Plan'}
                 </button>
@@ -1412,19 +1322,16 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       </div>
 
       {/* Contact Section */}
-<<<<<<< HEAD
       <div className="py-20 bg-gradient-to-br from-slate-800 via-red-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Secure Your Code Today;
-=======
       <div className="py-20 bg-gradient-to-br from-slate-800 via-red-900 to-slate-800"></div>
         <div className="container mx-auto px-4"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Secure Your Code Today
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Contact our security experts to discuss your code security needs;
@@ -1448,17 +1355,14 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                       kleber@ziontechgroup.com;
                     </a>
                   </div>
-<<<<<<< HEAD
                   <div className="flex items-start">
                     <MapPin className="w-5 h-5 text-red-400 mr-3 mt-1" />,
                     <div className="text-gray-300">,
                       <div>364 E Main St STE 1008</div>,
-=======
                   <div className="flex items-start"></div>
                     <MapPin className="w-5 h-5 text-red-400 mr-3 mt-1" />
                     <div className="text-gray-300"></div>
                       <div>364 E Main St STE 1008</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       <div>Middletown, DE 19709</div>
                     </div>
                   </div>

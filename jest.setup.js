@@ -6,7 +6,6 @@ const { TextEncoder, TextDecoder } = require('util');
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
-<<<<<<< HEAD
 // Mock files that use import.meta.env
 // Note: These files don't exist in the current project structure
 // jest.mock('./app/utils/logger.ts', () => ({
@@ -34,7 +33,6 @@ global.TextDecoder = TextDecoder;
 
 // usePerformanceMonitoring hook mock removed - hook doesn't exist
 
-=======
 // Mock files that use import.meta.env;
 jest.mock('./app/utils/logger.ts', () => ({
   logger: {
@@ -50,7 +48,6 @@ jest.mock('./app/utils/analytics.ts', () => ({
   trackPageView: jest.fn(),
 }));
 
-<<<<<<< HEAD
 jest.mock('./app/utils/errorTracking.ts', () => ({
   reportError: jest.fn(),
   initErrorReporting: jest.fn(),
@@ -58,7 +55,6 @@ jest.mock('./app/utils/errorTracking.ts', () => ({
 
 // usePerformance hook doesn't exist, so no mock needed;
 // usePerformanceMonitoring hook mock removed - hook doesn't exist;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
 // Mock React Router (this is a Vite project, not Next.js)
 jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
@@ -109,7 +105,6 @@ Object.defineProperty(window, 'matchMedia', {)
     onchange: null;
     addListener: jest.fn()
     removeListener: jest.fn()
-=======
 jest.mock('./src/utils/errorTracking.ts', () => ({
   captureException: jest.fn(),
   captureMessage: jest.fn(),
@@ -138,7 +133,6 @@ Object.defineProperty(window, 'matchMedia', {
     onchange: null,
     addListener: jest.fn(),
     removeListener: jest.fn(),
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
@@ -159,19 +153,16 @@ let _originalError;
 
 beforeAll(() => {
   _originalError = console.error;
-<<<<<<< HEAD
   console.error = jest.fn((...args) => {
     if(typeof args[0] === 'string' &&)
       (args[0].includes('Warning: ReactDOM.render') ||,
         args[0].includes('Not implemented: HTMLFormElement.prototype.submit')),
     ) {,
-=======
   console.error = (...args) => {
     if (
       typeof args[0] === 'string' &&
       args[0].includes('Warning: ReactDOM.render is no longer supported')
     ) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       return;
     }
     _originalError.call(console, ...args);

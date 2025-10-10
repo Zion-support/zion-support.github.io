@@ -1,6 +1,5 @@
 import React from 'react';
 impo, r, t { Sparkl, e, s, Z, a, p, Rock, e, t, St, a, r, ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
-<<<<<<< HEAD
 export interface FeaturedItem {
   title: string;
   category: string;
@@ -21,11 +20,9 @@ export interface UnifiedPromotionalBannerProps {
   animat, e, d?: boolean;
   bad, g, e?: string;
   date ?  : str, i, n, g;
-=======
 export interface FeaturedItem {/* TODO: Fix JSX expression */}
  }
 export interface UnifiedPromotionalBannerProps {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  }
 const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -33,7 +30,6 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
   };
   // Icon selection const IconCompone n t = {/* TODO: Fix JSX expression */}
   }[ic, o, n];
-<<<<<<< HEAD
   // Varia n t-specific styles const variantClass e s = {
     defau, l, t: 'py-8 p, x-, 6',
     premi, u, m: 'py-12, p, x-, 8',
@@ -41,40 +37,32 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
     compa, c, t: 'py-6, p, x-, 4',
     me, g, a: 'py-20, p, x-1, 2',
   }; const visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return(<div, classNam, e = { `
-=======
   // Varia n t-specific styles const variantClass e s = {/* TODO: Fix JSX expression */}
   }; const visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return (<div, classNam, e = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl;
         ${variantClass, e, s[varia, n, t]} 
         ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r:sca, l, e-[1.0, 1]'  : '' }
         ${classNa, m, e}
       `}
-<<<<<<< HEAD
     >
-<<<<<<< HEAD
       {/* Header, Sectio, n */})
       <div, classNam, e = 'm, a, x-w-7xl, m, x-au, t, o'>)
         {/* Badge, and, Date */})
         {  (bad, g, e || d, a, t, e) && (
-=======
       {/* Header, Sectio, n */}</div>
       <div, classNam, e = 'm, a, x-w-7xl, m, x-au, t, o'>
         {/* Badge, and, Date */}
         {  (bad, g, e || d, a, t, e) && (</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           <div, classNam, e = 'flex, item, s-center, ga, p-3, m, b-4'>
             {bad, g, e && (</div>
               <span, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-sm, fon, t-semibo, l, d'>
                 {IconCompone, n, t  &&</span> <IconComponent, className='w-4 h-4' / >   }
-=======
     ></div>
       {/* Header, Sectio, n */}
       <div, classNam, e = 'm, a, x-w-7xl, m, x-au, t, o'></div>
         {/* Badge, and, Date */}
         {/* TODO: Fix JSX expression */}
                 {IconCompone, n, t  && <IconComponent, className='w-4 h-4' / >   }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 {bad, g, e}
               </span>)
             )}
@@ -83,7 +71,6 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
             )}
           </d, i, v > )}
         {/* Tit, l, e */}
-<<<<<<< HEAD
         <h2, classNam, e = { `
           fo, n, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transpare, n, t;
           ${
@@ -95,10 +82,8 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
                    ? 'te, x, t-xl, m, d:te, x, t-2, x, l'
                   : 'te, x, t-2xl, m, d : te, x, t-3, x, l'
            }
-=======
         <h2, classNam, e = {/* TODO: Fix JSX expression */}
            }`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         `}
         ></h2>
           {title}
@@ -113,7 +98,6 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
         {/* TODO: Fix JSX expression */}
                }`
           `}
-<<<<<<< HEAD
           >
             { visibleIte, m, s.m, a, p((it, e, m, ind, e, x) = > (</div>
               <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className='group, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, hove, r: bg-whi, t, e/10, border, border-whi, t, e/10, rounde, d-l, g, p-4, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg'
@@ -124,7 +108,6 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
                   </div>
                   <div, classNam, e = 'fl, e, x-1, mi, n-w-0'></div>
                     <div, className='te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1'>
-=======
           ></div>
             {/* TODO: Fix JSX expression */}
               <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className='group, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, hove, r: bg-whi, t, e/10, border, border-whi, t, e/10, rounde, d-l, g, p-4, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg'
@@ -135,7 +118,6 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
                   </div>
                   <div, classNam, e = 'fl, e, x-1, mi, n-w-0'></div>
                     <div, className='te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1'></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       {it, e, m.category}
                     </div>
                     <div, className='te, x, t-sm, fon, t-bold, tex, t-white, m, b-1, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colors, lin, e-cla, m, p-2'></div>
@@ -153,14 +135,10 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
           </div>
         )}
         {/* CTA, Butto, n */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' > <Link, t, o = { ctaL, i, n, k }, className={ `}
               inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl;
-=======
         <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' ></div> <Link, t, o = { ctaL, i, n, k }, className={ `
               inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               ${ 
                 varia, n, t === 'compa, c, t'
                   ? 'px-6, p, y-3, tex, t-sm'
@@ -168,12 +146,10 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
                      ? 'px-10, p, y-5, tex, t-lg'
                      : 'te, x, t-ba, s, e'
                }
-=======
         <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' > <Link, t, o = { ctaL, i, n, k }, className={/* TODO: Fix JSX expression */}
               inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl;
               ${/* TODO: Fix JSX expression */}
                }`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             `}
            > {ctaTe, x, t}`
             <ArrowRight, classNam, e = { `${varia, n, t === 'compa, c, t'  ? 'w-4 h-4'  : 'w-5 h-5' }`}
@@ -181,11 +157,8 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
           </Li, n, k>
           {/* TODO: Fix JSX expression */}
             <Link, t, o = { ctaL, i, n, k   }, classNa, m, e = 'te, x, t-purp, l, e-300, hove, r: te, x, t-purp, l, e-200, fon, t-semibold, transitio, n-colors, tex, t-sm'
-<<<<<<< HEAD
             >
-=======
             ></Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               +{featuredIte, m, s.leng, t, h - showC, o, u, n, t} more, breakthroug, h;
               { featuredIte, m, s.leng, t, h - showCou, n, t !== 1  ? 's'  : '' }
             </Li, n, k>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import { Link } from 'react-router-dom';
@@ -6,7 +5,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AiCostOptimizationBreakthrough2026Page: React.FC = () => {
-=======
 import React from 'react';
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
@@ -35,7 +33,6 @@ export const metadata = {
   }
 };
 export default function AICostOptimizationBreakthrough2026() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -166,11 +163,8 @@ href="/services" className="inline-block bg-white text-green-600 px-6 py-3 round
   );
 };
 
-<<<<<<< HEAD
 
 export default AiCostOptimizationBreakthrough2026Page;
 
 
-=======
 export default AICostOptimizationBreakthrough2026Page;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc

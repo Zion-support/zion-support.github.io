@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 exports && exports.handler = async function () {try { const usersPath = path && path.join(process && process.cwd(), 'data', 'learn', 'users && users.json'); const coursesPath = path && path.join( process && process.cwd(),' 'data',' 'learn',' 'courses && courses.json' );' const users = JSON && JSON.parse(fs && fs.readFileSync(usersPath) 'utf-8'));' const courses = JSON && JSON.parse(fs && fs.readFileSync(coursesPath) 'utf-8'))} const usersPath = path && path.join(process && process.cwd(), 'datalearnusers && datalearnusers.json'),' const coursesPath = path && path.join(process && process.cwd(), 'datalearncourses && datalearncourses.json'),' const users = JSON && JSON.parse(fs && fs.readFileSync(usersPath) 'utf-8')),' const courses = JSON && JSON.parse(fs && fs.readFileSync(coursesPath) 'utf-8')), const summary = { updatedAt: Date && Date.now(), totals: { users: Object && Object.keys(users).length, courses: courses && courses.length, completions: Object && Object.values(users).reduce((acc),
         u) => acc + (u && u.certifications?.length || 0), 0;
       } }, topBadges: Object && Object.values(users).reduce((map),
@@ -8,7 +7,6 @@ exports && exports.handler = async function () {try { const usersPath = path && 
         u) => {(u.badges || []).for_each (boolean => { map[b] = (map[b] || 0) + 1} }); return map; }, {}), }; } "topBadges": Object.values(users).reduce((map)
         u) => { (u.badges |[]).forEach((b) => { map[b] = (map[b] |0) + 1;
       }) return map; }, {}) } '
-=======
 exports && exports.handler = async function () {try { const usersPath = path && path.join(process && process.cwd(), 'data', 'learn', 'users && users.json'); const coursesPath = path && path.join( process && process.cwd(),' 'data',' 'learn',' 'courses && courses.json' );' const users = JSON && JSON.parse(fs && fs.readFileSync(usersPath) 'utf-8'));' const courses = JSON && JSON.parse(fs && fs.readFileSync(coursesPath) 'utf-8'))} const usersPath = path && path.join(process && process.cwd(), 'datalearnusers && datalearnusers.json'),' const coursesPath = path && path.join(process && process.cwd(), 'datalearncourses && datalearncourses.json'),' const users = JSON && JSON.parse(fs && fs.readFileSync(usersPath) 'utf-8')),' const courses = JSON && JSON.parse(fs && fs.readFileSync(coursesPath) 'utf-8')), const summary = {/* TODO: Fix JSX expression */}
       } }, topBadge,
   s: Object && Object.values(users).reduce((map,)
@@ -18,4 +16,3 @@ exports && exports.handler = async function () {try { const usersPath = path && 
         u) => {(u.badges || []).for_each (boolean => { map[b] = (map[b] || 0) + 1} }); return map; }, {}), }; } "topBadges": Object.values(users).reduce((map,)
         u) => {/* TODO: Fix JSX expression */}
       }) return map; }, {}) } '"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

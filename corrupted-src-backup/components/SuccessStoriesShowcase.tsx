@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
   const, storie, s = [
     {
@@ -39,7 +38,6 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
         "Sub-100ms detection",
         "95% fewer false positives"
       ],
-<<<<<<< HEAD
       color: "from-purple-500 to-pink-500",
         </div>,
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">,
@@ -49,7 +47,6 @@ key={index}
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover: scale-105 transition-all duration-300",
             >,
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}>
-=======
       color: "from-purple-500 to-pink-500"
         </div>
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
@@ -59,12 +56,10 @@ key={index}
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"
             ></div>
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <div className="flex items-center gap-3 mb-4">
                   {story.icon}</div>
                   <div></div>
                     <h3 className="font-bold text-xl">{story.company}</h3>
-=======
 const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -79,12 +74,10 @@ key={index}
                   {story.icon}
                   <div></div>"
                     <h3 className="font-bold text-xl">{story.company}</h3>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     <p className="text-sm opacity-90">{story.industry}</p>
                   </div>
                 </div>"
                 <div className="text-3xl font-bold">{story.result}</div>
-<<<<<<< HEAD
               </div>
               <div className="p-6"></div>
                 <p className="text-gray-600 mb-6">{story.description}</p>
@@ -101,7 +94,6 @@ key={index}
             </div>
             View All Success Stories;
             <Link className="w-6 h-6" />
-=======
               </div>"
               <div className="p-6"></div>"
                 <p className="text-gray-600 mb-6">{story.description}</p>"
@@ -118,7 +110,6 @@ key={index}
             </div>
             View All Success Stories;"
             <Link className="w-6 h-6" /></Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           </Link>
         </div>
       </div>

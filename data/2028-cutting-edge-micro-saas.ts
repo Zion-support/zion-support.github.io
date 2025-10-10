@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -14,7 +13,6 @@
     email: string;
 export interface CuttingEdgeMicroSaas2028 {;,
     address: string}
-=======
   i,
   d: string;
   nam,
@@ -41,7 +39,6 @@ export interface CuttingEdgeMicroSaas2028 {;,
   l: string;
 export interface CuttingEdgeMicroSaas2028 {/* TODO: Fix JSX expression */}
   s: string}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
   i,
   d: string;
@@ -68,7 +65,6 @@ export interface CuttingEdgeMicroSaas2028 {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
-<<<<<<< HEAD
       address: "364 E Main St STE 1008 Middletown DE 19709",
     }
   }
@@ -107,7 +103,6 @@ export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [,
 ];
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-=======
       addres,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
@@ -177,12 +172,10 @@ export const,
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
 ;
-<<<<<<< HEAD
     id: "2028-cutting-edge-micro-saas"
     name: "2028 Cutting-Edge Micro SAAS Platform",
     tagline: "Cutting-edge micro SAAS for 2028",
@@ -211,7 +204,6 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-=======
     i,"
   d: "2028-cutting-edge-micro-saas",
     nam,"
@@ -260,7 +252,6 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];

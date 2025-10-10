@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   id: string;
   name: string;
   description: string;
@@ -19,7 +18,6 @@
     category: 'AI & Computing',
     price: '$8,999/month'
     features: [;
-=======
   i,
   d: string,
   nam,
@@ -60,7 +58,6 @@
   e: '$8,999/month'
     feature,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Brain-inspired architecture'
       'Spiking neural networks'
       'Event-driven processing'
@@ -84,19 +81,15 @@
       'Robotics'
       'Sensor networks'
     ]
-<<<<<<< HEAD
     targetAudience: [
-=======
     targetAudienc,
   e: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'IoT companies'
       'Robotics manufacturers'
       'Edge computing providers'
       'Sensor manufacturers'
       'Autonomous vehicle companies'
     ]
-<<<<<<< HEAD
     marketSize: '$14.2B by 2027'
     competitiveAdvantage: 'Most advanced neuromorphic computing platform'
     implementationTime: '4-6 weeks',
@@ -111,7 +104,6 @@
     category: 'Biotechnology',
     price: '$15,999/month'
     features: [;
-=======
     marketSiz,
   e: '$14.2B by 2027'
     competitiveAdvantag,
@@ -139,7 +131,6 @@
   e: '$15,999/month'
     feature,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'DNA design automation'
       'Genetic circuit engineering'
       'Protein design'
@@ -188,7 +179,6 @@
       'Biotechnology'
       'AI'
       'Genetic Engineering'
-<<<<<<< HEAD
   use_cases: string[];
   target_audience: string[];
   market_size: string;
@@ -199,7 +189,6 @@
     id: 'synthetic - biology - platform',
     name: 'Synthetic Biology Platform',
     description: unknown;
-=======
   use_case,
   s: string[];
   target_audienc,
@@ -220,7 +209,6 @@
   e: 'Synthetic Biology Platform',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary platform for designing, building, and testing synthetic biological systems using AI and advanced genetic engineering.',
     categor,
   y: 'Biotechnology',
@@ -259,15 +247,12 @@
       'Research institutions',
       'Environmental companies',
     ],
-<<<<<<< HEAD
     market_size: '$22.8B by 2027',
     competitive_advantage: unknown;
-=======
     market_siz,
   e: '$22.8B by 2027',
     competitive_advantag,
   e: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Most comprehensive synthetic biology platform with AI integration',
     implementation_tim,
   e: '8 - 12 weeks',
@@ -285,18 +270,15 @@
       'Research',
     ],
   },
-<<<<<<< HEAD
     id: 'quantum - sensors - network',
     name: 'Quantum Sensors Network',
     description: unknown;
-=======
     i,
   d: 'quantum - sensors - network',
     nam,
   e: 'Quantum Sensors Network',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced network of quantum sensors for ultra - precise measurements in various fields including navigation, medical imaging, and environmental monitoring.',
     categor,
   y: 'Quantum Technology',
@@ -330,18 +312,15 @@
     target_audienc,
   e: [,
       'Most comprehensive synthetic biology platform with AI integration',
-<<<<<<< HEAD
     implementation_time: '8 - 12 weeks'
     roi: '1500% within 24 months'
     tags: [
-=======
     implementation_tim,
   e: '8 - 12 weeks',
     ro,
   i: '1500% within 24 months',
     tag,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Synthetic Biology'
       'Biotechnology',
       'AI',
@@ -349,7 +328,6 @@
       'Research',
     ],
   }
-<<<<<<< HEAD
     id: 'quantum-sensors-network',
     name: 'Quantum Sensors Network',
     description:,
@@ -357,7 +335,6 @@
     category: 'Quantum Technology',
     price: '$9,999/month'
     features: [;
-=======
     i,
   d: 'quantum-sensors-network'
     nam,
@@ -371,7 +348,6 @@
   e: '$9,999/month'
     feature,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum entanglement sensors'
       'Ultra-precise measurements'
       'Real-time data processing'
@@ -393,31 +369,25 @@
       'Environmental monitoring'
       'Navigation systems'
       'Scientific research'
-<<<<<<< HEAD
       'Industrial inspection',
     ],
     targetAudience: [,
-=======
       'Industrial inspection'
     ]
     targetAudienc,
   e: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Medical device companies',
       'Environmental monitoring firms',
       'Navigation companies',
       'Research institutions',
       'Industrial companies',
     ],
-<<<<<<< HEAD
     market_size: '$16.5B by 2027',
     competitive_advantage: unknown;
-=======
     market_siz,
   e: '$16.5B by 2027',
     competitive_advantag,
   e: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Only quantum sensors network with multi - application support',
     implementation_tim,
   e: '6 - 8 weeks',
@@ -435,18 +405,15 @@
       'Navigation',
     ],
   },
-<<<<<<< HEAD
     id: 'brain - computer - interface',
     name: 'Brain - Computer Interface Platform',
     description: unknown;
-=======
     i,
   d: 'brain - computer - interface',
     nam,
   e: 'Brain - Computer Interface Platform',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced platform for direct communication between the human brain and computers, enabling new forms of human - computer interaction.',
     categor,
   y: 'Neural Technology',
@@ -477,15 +444,12 @@
       'Gaming and entertainment',
       'Communication aids',
     ],
-<<<<<<< HEAD
     target_audience: [;
     tags: [
-=======
     target_audienc,
   e: [;
     tag,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Technology'
       'Sensors'
       'Medical Imaging'
@@ -493,7 +457,6 @@
       'Navigation',
     ],
   }
-<<<<<<< HEAD
     id: 'brain-computer-interface',
     name: 'Brain-Computer Interface Platform',
     description:,
@@ -501,7 +464,6 @@
     category: 'Neural Technology',
     price: '$19,999/month'
     features: [;
-=======
     i,
   d: 'brain-computer-interface'
     nam,
@@ -515,7 +477,6 @@
   e: '$19,999/month'
     feature,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Neural signal processing'
       'Thought-to-text conversion'
       'Brain-controlled devices'
@@ -537,30 +498,25 @@
       'Medical rehabilitation'
       'Research applications'
       'Gaming and entertainment'
-<<<<<<< HEAD
       'Communication aids',
     ],
     targetAudience: [,
-=======
       'Communication aids'
     ]
     targetAudienc,
   e: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Medical device companies',
       'Research institutions',
       'Assistive technology firms',
       'Gaming companies',
       'Healthcare providers',
     ],
-<<<<<<< HEAD
     market_size: '$28.9B by 2027'
     competitive_advantage: 'Most advanced brain - computer interface platform',
     implementation_time: '10 - 12 weeks',
     roi: '2000% within 30 months',
     link: 'https://ziontechgroup.com / services / brain - computer - interface',
     tags: [,
-=======
     market_siz,
   e: '$28.9B by 2027',
     competitive_advantag,
@@ -574,7 +530,6 @@
   s://ziontechgroup.com / services / brain - computer - interface',
     tag,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Brain - Computer Interface',
       'Neural Technology',
       'Medical',
@@ -582,18 +537,15 @@
       'Research',
     ],
   },
-<<<<<<< HEAD
     id: 'quantum - internet - security',
     name: 'Quantum Internet Security Platform',
     description: unknown;
-=======
     i,
   d: 'quantum - internet - security',
     nam,
   e: 'Quantum Internet Security Platform',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Next - generation security platform that uses quantum cryptography to create unhackable communications and data protection systems.',
     categor,
   y: 'Cybersecurity',
@@ -632,15 +584,12 @@
       'Military organizations',
       'Critical infrastructure',
     ],
-<<<<<<< HEAD
     market_size: '$25.4B by 2027',
     competitive_advantage: unknown;
-=======
     market_siz,
   e: '$25.4B by 2027',
     competitive_advantag,
   e: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Only quantum internet security platform with global coverage',
     implementation_tim,
   e: '4 - 6 weeks',
@@ -658,18 +607,15 @@
       'Financial',
     ],
   },
-<<<<<<< HEAD
     id: 'autonomous - robotics - platform',
     name: 'Autonomous Robotics Platform',
     description: unknown;
-=======
     i,
   d: 'autonomous - robotics - platform',
     nam,
   e: 'Autonomous Robotics Platform',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced platform for developing, deploying, and managing autonomous robots with AI - powered decision making and learning capabilities.',
     categor,
   y: 'Robotics & AI',
@@ -700,15 +646,12 @@
       'Service robots',
       'Exploration robots',
     ],
-<<<<<<< HEAD
     target_audience: [;
     tags: [
-=======
     target_audienc,
   e: [;
     tag,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Brain-Computer Interface'
       'Neural Technology'
       'Medical'
@@ -724,15 +667,12 @@
       'Service providers',
       'Research institutions',
     ],
-<<<<<<< HEAD
     market_size: '$19.8B by 2027',
     competitive_advantage: unknown;
-=======
     market_siz,
   e: '$19.8B by 2027',
     competitive_advantag,
   e: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Most advanced autonomous robotics platform with AI learning',
     implementation_tim,
   e: '5 - 7 weeks',
@@ -744,18 +684,15 @@
     tag,
   s: ['Robotics', 'AI', 'Automation', 'Manufacturing', 'Logistics'],
   },
-<<<<<<< HEAD
     id: 'quantum - materials - discovery',
     name: 'Quantum Materials Discovery Platform',
     description: unknown;
-=======
     i,
   d: 'quantum - materials - discovery',
     nam,
   e: 'Quantum Materials Discovery Platform',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary platform that uses quantum computing and AI to discover new materials with unprecedented properties for various applications.',
     categor,
   y: 'Materials Science',
@@ -794,15 +731,12 @@
       'Medical device companies',
       'Energy companies',
     ],
-<<<<<<< HEAD
     market_size: '$21.3B by 2027',
     competitive_advantage: unknown;
-=======
     market_siz,
   e: '$21.3B by 2027',
     competitive_advantag,
   e: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Only quantum materials discovery platform with AI integration',
     implementation_tim,
   e: '8 - 10 weeks',
@@ -820,18 +754,15 @@
       'Innovation',
     ],
   },
-<<<<<<< HEAD
     id: 'quantum - financial - modeling',
     name: 'Quantum Financial Modeling Platform',
     description: unknown;
-=======
     i,
   d: 'quantum - financial - modeling',
     nam,
   e: 'Quantum Financial Modeling Platform',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced financial modeling platform that uses quantum computing for ultra - accurate predictions, risk assessment, and portfolio optimization.',
     categor,
   y: 'Financial Technology',
@@ -870,15 +801,12 @@
       'Insurance companies',
       'Regulatory bodies',
     ],
-<<<<<<< HEAD
     market_size: '$18.9B by 2027',
     competitive_advantage: unknown;
-=======
     market_siz,
   e: '$18.9B by 2027',
     competitive_advantag,
   e: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Only quantum financial modeling platform with real - time analysis',
     implementation_tim,
   e: '6 - 8 weeks',
@@ -896,18 +824,15 @@
       'Modeling',
     ],
   },
-<<<<<<< HEAD
     id: 'quantum - climate - modeling',
     name: 'Quantum Climate Modeling Platform',
     description: unknown;
-=======
     i,
   d: 'quantum - climate - modeling',
     nam,
   e: 'Quantum Climate Modeling Platform',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary platform that uses quantum computing for ultra - accurate climate modeling, weather prediction, and environmental analysis.',
     categor,
   y: 'Environmental Technology',
@@ -946,7 +871,6 @@
       'Insurance companies',
       'Energy companies',
     ],
-<<<<<<< HEAD
   id: string, name: string;
   description: string, category: string;
   price: string, features: string[],
@@ -963,7 +887,6 @@
     category: 'Environmental Technology',
     price: '$10,999/month'
     features: [;
-=======
   i,
   d: string, nam,
   e: string,
@@ -1001,7 +924,6 @@
   e: '$10,999/month'
     feature,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum climate simulation'
       'Weather prediction'
       'Environmental modeling'
@@ -1033,14 +955,12 @@
       'Insurance companies'
       'Energy companies'
     ]
-<<<<<<< HEAD
     marketSize: '$17.6B by 2027'
     competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions'
     implementationTime: '7-9 weeks'
     roi: '800% within 18 months'
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling'
     tags: [
-=======
     marketSiz,
   e: '$17.6B by 2027'
     competitiveAdvantag,
@@ -1054,7 +974,6 @@
   s://ziontechgroup.com/services/quantum-climate-modeling'
     tag,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Climate Modeling'
       'Quantum Computing'
       'Environmental'
@@ -1071,7 +990,6 @@
   };
 ];      'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies'
     ];
-<<<<<<< HEAD
     marketSize: '$17 && 17.6B by 2027'
     competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions'
     implementationTime: '7-9 weeks'
@@ -1085,7 +1003,6 @@
     roi: '800% within 18 months',
     link: 'https://ziontechgroup.com / services / quantum - climate - modeling',
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'],
-=======
     marketSiz,
   e: '$17 && 17.6B by 2027'
     competitiveAdvantag,
@@ -1113,7 +1030,6 @@
   s://ziontechgroup.com / services / quantum - climate - modeling',
     tag,
   s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'],
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
     lin,
   k: 'http,
@@ -1136,7 +1052,6 @@ export interface Service {/* TODO: Fix JSX expression */}
   s: string[]}
 }
 ;
-<<<<<<< HEAD
 export const emergingTech2027Services: Service[] = [;
   {,
     id: 'quantum-machine-learning';
@@ -1387,7 +1302,6 @@ export const emergingTech2027Services: Service[] = [;
     roi: '800% within 18 months';
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling'}
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']}
-=======
 export const,
   emergingTech2027Services: Service[] = [;
   {/* TODO: Fix JSX expression */}
@@ -1439,7 +1353,6 @@ export const,
   s://ziontechgroup.com/services/quantum-climate-modeling'}
     tag,
   s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 ;

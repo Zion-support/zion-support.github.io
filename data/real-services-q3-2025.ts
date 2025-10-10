@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -51,7 +50,6 @@ const contact =
   website: 'https://ziontechgroup.com'}}
 export const realServicesQ32025: Q3Service[] = [,
   {  reviews?: number;
-=======
   i,
   d: string;
   nam,
@@ -89,7 +87,6 @@ const contact =
 export const,
   realServicesQ32025: Q3Service[] = [,
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 const contact =
   mobil,
@@ -102,7 +99,6 @@ const contact =
   e: 'http,
   s://ziontechgroup.com'
 const contact =
-<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   address: '364 E Main St STE 1008 Middletown DE 19709'
 // const contact = {;
@@ -110,7 +106,6 @@ const contact =
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup && ziontechgroup.com',
-=======
   mobil,
   e: '+1 302 464 0950',
   addres,
@@ -120,13 +115,11 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 };
 export const,
   realServicesQ32025: Q3Service[] = [,
 }
-<<<<<<< HEAD
 export const realServicesQ32025: Q3Service[] = [,
     id: 'subscription-analytics-revenue-optimization',
     name: 'Subscription Analytics & Revenue Optimization',
@@ -144,7 +137,6 @@ export const realServicesQ32025: Q3Service[] = [,
     price: '$599',
     period: '/month',
     description:,
-=======
 export const,
   realServicesQ32025: Q3Service[] = [,
     i,
@@ -173,7 +165,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.'
     feature,
   s: [;
@@ -184,13 +175,11 @@ export const,
       'Revenue forecasting models'
       'Weekly executive summaries'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
-=======
     popula,
   r: true;
     ico,
@@ -202,7 +191,6 @@ export const,
     lin,
   k: 'http,
   s://ziontechgroup.com/services/subscription-analytics-revenue-optimization'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Churn and retention analysis',
       'Cohort and funnel dashboards',
       'Price testing and packaging experiments',
@@ -223,7 +211,6 @@ export const,
       'Price testing and packaging experimentsRevenue leakage detection',
       'Revenue forecasting modelsWeekly executive summaries'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     link: 'https://ziontechgroup && ziontechgroup.com/services/subscription-analytics-revenue-optimization',
@@ -370,7 +357,6 @@ export const,
     customers: 10;
     rating: 4 && 4.8;
     reviews: 12;
-=======
     popula,
   r: true,
     ico,
@@ -652,14 +638,12 @@ export const,
   g: 4 && 4.8,
     review,
   s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Reviews widget integration',
       'Email / SMS post - purchase triggers',
       'Photo / video UGC capture',
       'Moderation and syndication',
       'Conversion impact reporting',
     ],
-<<<<<<< HEAD
     icon: '',
     id: 'subscription-analytics-revenue-optimization', name: 'Subscription Analytics & Revenue Optimization',
     tagline: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth',
@@ -693,7 +677,6 @@ export const,
     price: '$1,200'
     period: '/project',
     description:,
-=======
     ico,
   n: '',
     i,
@@ -755,7 +738,6 @@ export const,
   d: '/project'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.'
       'Reviews widget integration',
       'Email / SMS post - purchase triggers',
@@ -774,7 +756,6 @@ export const,
       'Sales analytics and email hooks'
       '1-week launch plan'
     ]
-<<<<<<< HEAD
     icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
@@ -801,7 +782,6 @@ export const,
     price: '$299',
     period: '/month',
     description:,
-=======
     ico,
   n: '',
     colo,
@@ -852,7 +832,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments.'
     feature,
   s: [;
@@ -862,7 +841,6 @@ export const,
       'Reporting and recommendations'
       'Sitemap and crawl improvements'
     ]
-<<<<<<< HEAD
     icon: ''
     color: 'from-purple-600 to-pink-600'
     textColor: 'text-purple-200',
@@ -894,7 +872,6 @@ export const,
     price: '$999',
     period: '/project',
     description:,
-=======
     ico,
   n: '',
     colo,
@@ -951,7 +928,6 @@ export const,
   d: '/project'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'We implement reviews and UGC collection across your storefront with on-brand widgets, post-purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift.'
     feature,
   s: [;
@@ -961,7 +937,6 @@ export const,
       'Moderation and syndication'
       'Conversion impact reporting'
     ]
-<<<<<<< HEAD
     icon: '';
     color: 'from-amber-600 to-rose-600'
     textColor: 'text-amber-200'
@@ -982,7 +957,6 @@ export const,
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
     contactInfo: contact;
   },];    contactInfo: contact;
-=======
     ico,
   n: '';
     colo,
@@ -1022,14 +996,12 @@ export const,
   contactInfo: contact,
   },];    contactInf,
   o: contact,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
       'Churn and retention analysisCohort and funnel dashboards',
       'Price testing and packaging experimentsRevenue leakage detection',
       'Revenue forecasting modelsWeekly executive summaries'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -1050,7 +1022,6 @@ export const,
     customers: 24;
     rating: 4.9;
     reviews: 31;
-=======
     popula,
   r: true,
     ico,
@@ -1091,7 +1062,6 @@ export const,
   g: 4.9,
     review,
   s: 31,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
   },
     i,
@@ -1099,7 +1069,6 @@ export const,
     nam,
   e: 'Digital Product Commerce Stack',
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
@@ -1111,7 +1080,6 @@ export const,
     customers: 12;
     rating: 4.8;
     reviews: 18;
-=======
     ico,
   n: '',
     colo,
@@ -1135,7 +1103,6 @@ export const,
   g: 4.8,
     review,
   s: 18,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
   },
     i,
@@ -1143,7 +1110,6 @@ export const,
     nam,
   e: 'WordPress Internal Linking Automation',
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-purple-600 to-pink-600',
     textColor: 'text-purple-200',
@@ -1156,7 +1122,6 @@ export const,
     customers: 30;
     rating: 4.7;
     reviews: 22;
-=======
     ico,
   n: '',
     colo,
@@ -1182,7 +1147,6 @@ export const,
   g: 4.7,
     review,
   s: 22,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
   },
     i,
@@ -1190,7 +1154,6 @@ export const,
     nam,
   e: 'Ecommerce Reviews & UGC Activation',
     ],
-<<<<<<< HEAD
     icon: ''
     color: 'from-amber-600 to-rose-600'
     textColor: 'text-amber-200'
@@ -1202,7 +1165,6 @@ export const,
     customers: 10;
     rating: 4.8;
     reviews: 12;
-=======
     ico,
   n: '',
     colo,
@@ -1226,7 +1188,6 @@ export const,
   g: 4.8,
     review,
   s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
   }
 ];
@@ -1253,7 +1214,6 @@ export const,
       'Price testing and packaging experimentsRevenue leakage detection',
       'Revenue forecasting modelsWeekly executive summaries'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -1271,7 +1231,6 @@ export const,
     technology: ['dbt', 'Snowflake/BigQuery', 'Segment/GA4', 'Python'],
     integrations: ['Stripe', 'Paddle', 'Chargebee', 'Lemon Squeezy'],
     useCases: [,
-=======
     popula,
   r: true,
     ico,
@@ -1306,12 +1265,10 @@ export const,
   s: ['Stripe', 'Paddle', 'Chargebee', 'Lemon Squeezy'],
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Reduce churn',
       'Price optimization',
       'Board-ready revenue KPIs',
     ],
-<<<<<<< HEAD
     roi: '310% ARR lift from churn reduction and pricing wins.',
     competitors: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics'],
     technology: ['dbtSnowflake/BigQuery', 'Segment/GA4Python'],
@@ -1329,7 +1286,6 @@ export const,
     contactInfo: contact;
     contactInfo: contact;
     contactInfo: contact;
-=======
     ro,
   i: '310% ARR lift from churn reduction and pricing wins.',
     competitor,
@@ -1362,7 +1318,6 @@ export const,
   o: contact,
     contactInf,
   o: contact,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'digital-product-commerce-stack',
@@ -1398,7 +1353,6 @@ export const,
       'EU/US tax and compliance guidanceStorefront templates and checkout',
       'Sales analytics and email hooks1-week launch plan'
     ],
-<<<<<<< HEAD
     icon: ''
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-300',
@@ -1427,7 +1381,6 @@ export const,
     contactInfo: contact;
     contactInfo: contact;
     contactInfo: contact;
-=======
     ico,
   n: '',
     colo,
@@ -1483,7 +1436,6 @@ export const,
   o: contact,
     contactInf,
   o: contact,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'wordpress-internal-linking-automation',
@@ -1518,7 +1470,6 @@ export const,
       'Click-through rate experimentsReporting and recommendations',
       'Sitemap and crawl improvements'
     ],
-<<<<<<< HEAD
     icon: ''
     color: 'from-purple-600 to-pink-600'
     textColor: 'text-purple-200',
@@ -1534,7 +1485,6 @@ export const,
     technology: ['WordPress', 'GA4', 'Looker Studio'],
     integrations: ['Link Whisper', 'Yoast/RankMath', 'Search Console'],
     useCases: [,
-=======
     ico,
   n: '',
     colo,
@@ -1566,12 +1516,10 @@ export const,
   s: ['Link Whisper', 'Yoast/RankMath', 'Search Console'],
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Boost organic traffic',
       'Fix site structure',
       'Improve crawl and CTR',
     ],
-<<<<<<< HEAD
     roi: '525% organic uplift in 812 weeks on content libraries.',
     competitors: ['Link Whisper', 'Internal Link Juicer'],
     technology: ['WordPressGA4', 'Looker Studio'],
@@ -1586,7 +1534,6 @@ export const,
     contactInfo: contact;
     contactInfo: contact;
     contactInfo: contact;
-=======
     ro,
   i: '525% organic uplift in 812 weeks on content libraries.',
     competitor,
@@ -1613,7 +1560,6 @@ export const,
   o: contact,
     contactInf,
   o: contact,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'reviews-ugc-activation',
@@ -1648,7 +1594,6 @@ export const,
       'Photo/video UGC captureModeration and syndication',
       'Conversion impact reporting'
     ],
-<<<<<<< HEAD
     icon: ''
     color: 'from-amber-600 to-rose-600'
     textColor: 'text-amber-200'
@@ -1678,7 +1623,6 @@ export const,
     contactInfo: contact;
   },];    contactInfo: contact;
     contactInfo: contact;
-=======
     ico,
   n: '',
     colo,
@@ -1736,7 +1680,6 @@ export const,
   o: contact;
     contactInf,
   o: contact,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
   }

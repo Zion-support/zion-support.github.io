@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -31,7 +30,6 @@
     email: string;
     address: string;
     website: string;
-=======
   i,
   d: string;
   nam,
@@ -94,7 +92,6 @@
   s: string;
     websit,
   e: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
       mobil,
   e: '+1 302 464 0950',
@@ -106,7 +103,6 @@
   e: 'http,
   s://ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
     real_implementation: true;
     implementation_details: unknown;
       'Cloud - based blockchain platform with multi - chain support and enterprise features.',
@@ -942,7 +938,6 @@ export interface InnovativeITService2025 {;
   customers: number;
   rating: number;
   reviews: number;
-=======
     real_implementatio,
   n: true,
     implementation_detail,
@@ -2618,13 +2613,11 @@ export interface InnovativeITService2025 {/* TODO: Fix JSX expression */}
   g: number;
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ;
 export const,
   innovativeITServicesEnhanced2025: InnovativeITService[] = [;
   // Quantum Cloud Infrastructure Platform;
-<<<<<<< HEAD
   {
     id: 'quantum-cloud-infrastructure';
     name: 'Quantum Cloud Infrastructure Platform';
@@ -3688,7 +3681,6 @@ export interface InnovativeITService2025 {;
   customers: number;
   rating: number;
   reviews: number;
-=======
   {/* TODO: Fix JSX expression */}
   t: 'quantum-cloud-enterprise'}
     contactInf,
@@ -4373,13 +4365,11 @@ export interface InnovativeITService2025 {/* TODO: Fix JSX expression */}
   g: number;
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ;
 export const,
   innovativeITServicesEnhanced2025: InnovativeITService[] = [;
   // Quantum Cloud Infrastructure Platform;
-<<<<<<< HEAD
   {
     id: 'quantum-cloud-infrastructure';
     name: 'Quantum Cloud Infrastructure Platform';
@@ -5390,7 +5380,6 @@ export const,
     customers: 123;
     rating: 4.8;
     reviews: 52;
-=======
   {/* TODO: Fix JSX expression */}
   t: 'quantum-cloud-enterprise'}
     contactInf,
@@ -6033,7 +6022,6 @@ export const,
   g: 4.8;
     review,
   s: 52,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 i,

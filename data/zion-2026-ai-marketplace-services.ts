@@ -1,5 +1,4 @@
 export type Zion2026AIMarketplaceService =
-<<<<<<< HEAD
   id: string;
   name: string;
   description: string;
@@ -35,7 +34,6 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
       yearly: 2999;
       enterprise: 9999;
       currency: 'USD',
-=======
   i,
   d: string;
   nam,
@@ -103,7 +101,6 @@ export const,
   e: 9999,
       currenc,
   y: 'USD'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -162,7 +159,6 @@ export const,
       'Custom development',
       'Ongoing maintenance'
     ],
-<<<<<<< HEAD
     contactInfo: unknown;
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -179,7 +175,6 @@ export const,
       yearly: 1999;
       enterprise: 7999;
       currency: 'USD',
-=======
     contactInf,
   o: unknown,
       phon,
@@ -211,7 +206,6 @@ export const,
   e: 7999,
       currenc,
   y: 'USD'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -270,7 +264,6 @@ export const,
       'Training and documentation',
       'Ongoing support'
     ],
-<<<<<<< HEAD
     contactInfo: unknown;
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -287,7 +280,6 @@ export const,
       yearly: 1499;
       enterprise: 5999;
       currency: 'USD',
-=======
     contactInf,
   o: unknown,
       phon,
@@ -319,7 +311,6 @@ export const,
   e: 5999,
       currenc,
   y: 'USD'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -378,7 +369,6 @@ export const,
       'Compliance guidance',
       'Ongoing maintenance'
     ],
-<<<<<<< HEAD
     contactInfo: unknown;
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -395,7 +385,6 @@ export const,
       yearly: 999;
       enterprise: 3999;
       currency: 'USD',
-=======
     contactInf,
   o: unknown,
       phon,
@@ -427,7 +416,6 @@ export const,
   e: 3999,
       currenc,
   y: 'USD'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -486,7 +474,6 @@ export const,
       'Training and documentation',
       'Ongoing support'
     ],
-<<<<<<< HEAD
     contactInfo: unknown;
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -503,7 +490,6 @@ export const,
       yearly: 3999;
       enterprise: 14999;
       currency: 'USD',
-=======
     contactInf,
   o: unknown,
       phon,
@@ -535,7 +521,6 @@ export const,
   e: 14999,
       currenc,
   y: 'USD'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -594,13 +579,11 @@ export const,
       'Training and certification',
       'Ongoing development support'
     ],
-<<<<<<< HEAD
     contactInfo: unknown;
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
     contactInf,
   o: unknown,
       phon,
@@ -612,7 +595,6 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];

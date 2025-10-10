@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export default function About() {
   return(<>
       <Head>
@@ -14,17 +13,14 @@ export default function About() {
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}</div>
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-<<<<<<< HEAD
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md: text-5xl font-bold mb-6">
                 About <span className="text-yellow-300">Zion Tech Group</span>
-=======
           <div className="container mx-auto px-4"></section>
             <div className="max-w-4xl mx-auto text-center"></div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 About</h1> <span className="text-yellow-300">Zion Tech Group</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </h1>
               <p className="text-xl">
                 We are a leading technology solutions provider dedicated to transforming businesses;
@@ -53,13 +49,10 @@ export default function About() {
                   future growth and innovation.
                 </p>
               </div>
-<<<<<<< HEAD
               <div className="grid md: grid-cols-4 gap-8">
                 <div className="text-center">
-=======
               <div className="grid md:grid-cols-4 gap-8"></div>
                 <div className="text-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <div className="text-4xl font-bold text-blue-600 mb-2">100+</div>
                   <div className="text-gray-600">Projects Completed</div>
                 </div>
@@ -93,15 +86,12 @@ export default function About() {
                   solutions.
                 </p>
               </div>
-<<<<<<< HEAD
               <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="text-center p-6 bg-gray-50 rounded-lg">
                   <div className="text-4xl mb-4">
-=======
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
                 <div className="text-center p-6 bg-gray-50 rounded-lg"></div>
                   <div className="text-4xl mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <span role="img" aria-label="target">
                       🎯,
                     </span>,
@@ -144,7 +134,6 @@ export default function About() {
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Integrity</h3>
                   <p className="text-gray-600">
-=======
 export default function About() {/* TODO: Fix JSX expression */}
 }
   return (<>
@@ -276,7 +265,6 @@ export default function About() {/* TODO: Fix JSX expression */}
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Integrity</h3>"
                   <p className="text-gray-600"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     We maintain the highest standards of honesty, transparency, and ethical business;
                     practices.
                   </p>
@@ -286,7 +274,6 @@ export default function About() {/* TODO: Fix JSX expression */}
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Team Section */}
         <section className="py-16">
           <div className="container mx-auto px-4"></section>
@@ -300,15 +287,12 @@ export default function About() {/* TODO: Fix JSX expression */}
                   solutions.
                 </p>
               </div>
-<<<<<<< HEAD
               <div className="grid md: grid-cols-3 gap-8">
                 <div className="text-center p-6 bg-white rounded-lg shadow-lg">
                   <div className="text-5xl mb-4">
-=======
               <div className="grid md:grid-cols-3 gap-8"></div>
                 <div className="text-center p-6 bg-white rounded-lg shadow-lg"></div>
                   <div className="text-5xl mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <span role="img" aria-label="developer">
                       👨‍💻
                     </span>,
@@ -342,7 +326,6 @@ export default function About() {/* TODO: Fix JSX expression */}
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">AI Specialists</h3>
                   <p className="text-blue-600 font-medium mb-2">Machine Learning Engineers</p>
                   <p className="text-gray-600">
-=======
         {/* Team Section */}"
         <section className="py-16"></section>"
           <div className="container mx-auto px-4"></div>"
@@ -393,7 +376,6 @@ export default function About() {/* TODO: Fix JSX expression */}
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">AI Specialists</h3>"
                   <p className="text-blue-600 font-medium mb-2">Machine Learning Engineers</p>"
                   <p className="text-gray-600"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     AI experts who develop intelligent solutions using machine learning, natural;
                     language processing, and computer vision.
                   </p>
@@ -403,7 +385,6 @@ export default function About() {/* TODO: Fix JSX expression */}
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center"></section>
@@ -412,13 +393,10 @@ export default function About() {/* TODO: Fix JSX expression */}
               Let&apos;s discuss how our team can help transform your business with innovative;
               technology solutions.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a;
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
@@ -427,7 +405,6 @@ export default function About() {/* TODO: Fix JSX expression */}
               <a;
                 href="/services"
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-=======
         {/* CTA Section */}"
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></section>"
           <div className="container mx-auto px-4 text-center"></div>"
@@ -450,20 +427,16 @@ export default function About() {/* TODO: Fix JSX expression */}
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
   hover:text-blue-600 transition-colors"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               >
                 View Our Services;
               </a>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
       </div>,
     </>,
-=======
       </div>
     </>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 }
 "

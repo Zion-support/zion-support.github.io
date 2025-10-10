@@ -2,7 +2,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   const githubToken = process.env.GITHUB_TOKEN || ''}
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
   const githubBranch = process.env.GIT_BRANCH || 'main'
-<<<<<<< HEAD
   async function commitJson(path)
         data) {if(!githubToken,
         return { ok: false;
@@ -18,7 +17,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
         { headers })
-=======
   async function commitJson(path,)
         data) {/* TODO: Fix JSX expression */}
   n: 'no_token' };
@@ -33,13 +31,11 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
         { headers },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       );
       if (getRes.ok) {/* TODO: Fix JSX expression */}
         sha = j.sha}
       }
     } catch {}
-<<<<<<< HEAD
     const body = {
       message: `chore: update 404 redirect suggestions (${new Date().toISOString()})`,
       content: Buffer.from(JSON.stringify(data, null)
@@ -67,7 +63,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const _res = await fetch(url);
     if(!res.ok)
         throw new Error('Failed to fetch sitemap: ' + res.status;),
-=======
     const body = {/* TODO: Fix JSX expression */}`
   e: update 404 redirect suggestions (${new Date().toISOString()})`,
       conten,
@@ -91,12 +86,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   r: 'No base URL' });
     };
   async function fetchSitemap() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     const xml = await res.text(),
     const urls = Array.from(xml.matchAll(/<loc>([^<]+)<\/loc>/gi)).map(m => m[1]})
     );
-<<<<<<< HEAD
     return urls.slice(0)
         100);
   }
@@ -142,7 +135,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),
-=======
     return urls.slice(0,)
         100);
   }
@@ -170,12 +162,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       });
     };
   } catch (e) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
-<<<<<<< HEAD
 exports.handler = async function(event, context) {const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/) '');' const githubToken = process.env.GITHUB_TOKEN || ''}' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const githubBranch = process.env.GIT_BRANCH || 'main' async function commitJson(path)
         data) {' if(!githubToken)
         return { ok: false),
@@ -206,7 +196,6 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
         body: JSON.stringify({ok: false),
         error: String(e;),
       }) }; } };'
-=======
 exports.handler = async function(event, context) {const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/) '');' const githubToken = process.env.GITHUB_TOKEN || ''}' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const githubBranch = process.env.GIT_BRANCH || 'main' async function commitJson(path,)
         data) {/* TODO: Fix JSX expression */}
   n: 'no_token' };' const headers = {/* TODO: Fix JSX expression */}`
@@ -236,4 +225,3 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
       };' const commit = await commitJson('data/reports/redirect-suggestions.json') report); return {/* TODO: Fix JSX expression */}
       }) }; } catch (e) {/* TODO: Fix JSX expression */}
       }) }; } };'`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

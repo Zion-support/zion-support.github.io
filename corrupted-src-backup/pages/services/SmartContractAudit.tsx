@@ -8,7 +8,6 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
-<<<<<<< HEAD
 const, SmartContractAudi, t: Rea, c, t.FC = () => {
   const, feature, s = [
     {
@@ -254,7 +253,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       ic, o, n: Use, r, s;
       descripti, o, n: "Auditing, governance, contracts, voting, mechanism, s, and, treasury, management syste, m, s.",";
       vulnerabiliti, e, s: ["Vote, manipulatio, n", "Treasury, exploit, s", "Proposal, vulnerabilitie, s", "Execution, risk, s"]";
-=======
 const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -302,7 +300,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   ];
   const, proces, s = [
@@ -329,21 +326,18 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
     {/* TODO: Fix JSX expression */}
     }
   ];
-<<<<<<< HEAD
   return(<>
       <Helmet>
         <title>Smart, Contract, Audit - Zion, Tech, Group | Blockchain, Security, Experts</title>
         <me, t, a;
   na, m, e="descripti, o, n"
           content="Professional, smart, contract auditing, services, with 99.8% vulnerability, detection, rate. Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects. 5-10, day, delivery." /><meta name="keywor, d, s" content="smart, contract, audit, blockchain, securit, y, DeFi, audi, t, NFT, audi, t, smart, contract, security, vulnerability, assessmen, t, blockchain, complianc, e" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/sma, r, t-contra, c, t-aud, i, t/>"
-=======
   return (<>
       <Helmet></Helmet>
         <title>Smart, Contract, Audit - Zion, Tech, Group | Blockchain, Security, Experts</title>
         <me, t, a;"
   na, m, e="descripti, o, n""
           content="Professional, smart, contract auditing, services, with 99.8% vulnerability, detection, rate. Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects. 5-10, day, delivery." /><meta name="keywor, d, s" content="smart, contract, audit, blockchain, securit, y, DeFi, audi, t, NFT, audi, t, smart, contract, security, vulnerability, assessmen, t, blockchain, complianc, e" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/sma, r, t-contra, c, t-aud, i, t/>""
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           content="Professional, smart, contract auditing, services, with 99.8% vulnerability, detection, rate. Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects. 5-10, day, delivery."
          />"
         <meta name="keywor, d, s" content="smart, contract, audit, blockchain, securit, y, DeFi, audi, t, NFT, audi, t, smart, contract, security, vulnerability, assessmen, t, blockchain, complianc, e" />";"
@@ -351,18 +345,14 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
       </Helmet>
       <Head, e, r   /></Head>"
       <main, className="m, i, n-h-screen, b, g-whi, t, e">";
-<<<<<<< HEAD
         {/* Hero, Sectio, n */}
         <section, className="bg-gradie, n, t-to-br, fro, m-r, e, d-900, vi, a-oran, g, e-800, t, o-yell, o, w-900, tex, t-white, p, y-20">
-<<<<<<< HEAD
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8">",
             <div, className="te, x, t-cent, e, r">
-=======
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"</section>
             <div, className="te, x, t-cent, e, r"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
                 Smart, Contrac, t</h1> <span, className="bg-gradie, n, t-to-r, fro, m-r, e, d-400, t, o-yell, o, w-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Aud, i, t</sp, a, n>
               </h1>
@@ -372,13 +362,10 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
         <section, className="bg-gradie, n, t-to-br, fro, m-r, e, d-900, vi, a-oran, g, e-800, t, o-yell, o, w-900, tex, t-white, p, y-20">";
-<<<<<<< HEAD
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-cent, e, r">";
-=======
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
             <div, className="te, x, t-cent, e, r">";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
                 Smart, Contrac, t</h1> <span, className="bg-gradie, n, t-to-r, fro, m-r, e, d-400, t, o-yell, o, w-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Aud, i, t</sp, a, n>";
               </h1>
@@ -387,16 +374,12 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                 Professional, smart, contract auditing, services, with 99.8% vulnerability, detection, rate. 
                 Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects.
               </p>
-<<<<<<< HEAD
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <a;
-=======
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
                 <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
   hr, e, f="/conta, c, t"
                   classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-r, e, d-600, hov, e;
-=======
         {/* Hero, Sectio, n */}"
         <section, className="bg-gradie, n, t-to-br, fro, m-r, e, d-900, vi, a-oran, g, e-800, t, o-yell, o, w-900, tex, t-white, p, y-20"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
@@ -425,22 +408,18 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                 <a></a>"
   hr, e, f="/conta, c, t""
                   classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-r, e, d-600, hov, e,"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r: bg-r, e, d-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >"
                   <Phone, className="w-5 h-5, m, r-2  /></Phone>"
                   <Phone, className="w-5 h-5, m, r-2" />";
                   Request, Quot, e;
                 </a>
-<<<<<<< HEAD
                 <a;
   hr, e, f="#prici, n, g"
                   classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e;
-=======
                 <a></a>"
   hr, e, f="#prici, n, g""
                   classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e,"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r:te, x, t-r, e, d-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >
                   View, Pricin, g;"
@@ -451,10 +430,8 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-<<<<<<< HEAD
         {/* Key, Benefit, s */}
         <section, className="py-16, b, g-gr, a, y-50">
-<<<<<<< HEAD
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8">",
             <div, className="text-center mb-12">
@@ -462,7 +439,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="py-16, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="text-center mb-12">";
-=======
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"</section>
             <div, className="text-center mb-12"></div>
@@ -470,8 +446,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="py-16, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
             <div, className="text-center mb-12">";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
         {/* Key, Benefit, s */}"
         <section, className="py-16, b, g-gr, a, y-50"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
@@ -481,31 +455,25 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="py-16, b, g-gr, a, y-50">";"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="text-center mb-12">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
                 Why, Choose, Our Smart, Contract, Auditing Servic, e, s?
               </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Protect, your, blockchain project, with, industry-leading, security, expertise and, comprehensive, analysis.
               </p>
-<<<<<<< HEAD
             </d, i, v>
-<<<<<<< HEAD
             <div, className="gri, d, m;
   d: gr, i, d-co, l, s-4, ga, p-8">"
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-4">
-=======
             <div, className="gri, d, m
   d: gr, i, d-co, l, s-4, ga, p-8">"</div>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <Shield, className="w-8 h-8, tex, t-r, e, d-6, 0, 0  />
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">";</div>
               <div, className="te, x, t-cent, e, r">";</div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-4">";</div>
-=======
             </d, i, v>"
             <div, className="gri, d, m,"
   d: gr, i, d-co, l, s-4, ga, p-8">""
@@ -515,64 +483,54 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">";"
               <div, className="te, x, t-cent, e, r">";"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-4">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <Shield, className="w-8 h-8, tex, t-r, e, d-6, 0, 0" />";
                 </d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">99.8% Detection, Rat, e</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Indust, r, y-leading, vulnerability, detection</p>";
-<<<<<<< HEAD
               </d, i, v>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-4"></div>
                   <Clock, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0  />
               <div, className="te, x, t-cent, e, r">";</div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-4">";</div>
-=======
               </d, i, v>"
               <div, className="te, x, t-cent, e, r"></div>"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-4"></div>"
                   <Clock, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0  /></Clock>"
               <div, className="te, x, t-cent, e, r">";"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-4">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <Clock, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0" />";
                 </d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">5-10, Day, Delivery</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Fast, turnaround, guaranteed</p>";
-<<<<<<< HEAD
               </d, i, v>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-yell, o, w-100, rounde, d-full, m, b-4"></div>
                   <Users, className="w-8 h-8, tex, t-yell, o, w-6, 0, 0  />
               <div, className="te, x, t-cent, e, r">";</div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-yell, o, w-100, rounde, d-full, m, b-4">";</div>
-=======
               </d, i, v>"
               <div, className="te, x, t-cent, e, r"></div>"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-yell, o, w-100, rounde, d-full, m, b-4"></div>"
                   <Users, className="w-8 h-8, tex, t-yell, o, w-6, 0, 0  /></Users>"
               <div, className="te, x, t-cent, e, r">";"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-yell, o, w-100, rounde, d-full, m, b-4">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <Users, className="w-8 h-8, tex, t-yell, o, w-6, 0, 0" />";
                 </d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">50+ Audits, Complete, d</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Proven, track, record of, succes, s</p>";
-<<<<<<< HEAD
               </d, i, v>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4"></div>
                   <CheckCircle, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
               <div, className="te, x, t-cent, e, r">";</div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";</div>
-=======
               </d, i, v>"
               <div, className="te, x, t-cent, e, r"></div>"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4"></div>"
                   <CheckCircle, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  /></CheckCircle>"
               <div, className="te, x, t-cent, e, r">";"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <CheckCircle, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0" />";
                 </d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">1, 0, 0% Complian, c, e</h3>";"
@@ -581,10 +539,8 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-<<<<<<< HEAD
         {/* Audit, Type, s */}
         <section, className="py-20">
-<<<<<<< HEAD
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">)
@@ -592,7 +548,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="py-20">";)
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";),
             <div, className="te, x, t-center, m, b-16">";
-=======
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
@@ -600,8 +555,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
             <div, className="te, x, t-center, m, b-16">";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
         {/* Audit, Type, s */}"
         <section, className="py-20"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
@@ -611,20 +564,17 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="py-20">";"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-center, m, b-16">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
                 Specialized, Audit, Services;
               </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Expert, auditing, for all, types, of blockchain, projects, and smart, contract, implementations.
               </p>
-<<<<<<< HEAD
             </d, i, v>
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-8">"
               {auditTyp, e, s.m, a, p((aud, i, t, ind, e, x) => {
                 const, Ico, n = aud, i, t.ic, o, n;
-<<<<<<< HEAD
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-6">
                       <Icon, className="w-8 h-8, tex, t-r, e, d-6, 0, 0  />
@@ -633,7 +583,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{aud, i, t.descripti, o, n}</p>)
                     <div, className="mb-4">)
                       <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Common, Vulnerabilitie, s: </h4>"),
-=======
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-6"></div>
@@ -643,7 +592,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{aud, i, t.descripti, o, n}</p>
                     <div, className="mb-4"></div>
                       <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Common, Vulnerabilitie, s: </h4>"
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       <ul, className="spa, c, e-y-1">
                         {aud, i, t.vulnerabiliti, e, s.m, a, p((vu, l, n, vulnInd, e, x) => (
                           <li, ke, y={vulnInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
@@ -653,7 +601,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   g:gr, i, d-co, l, s-4, ga, p-8">";
               {auditTyp, e, s.m, a, p((aud, i, t, ind, e, x) => {
                 const, Ico, n = aud, i, t.ic, o, n;
-<<<<<<< HEAD
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-6">";
                       <Icon, className="w-8 h-8, tex, t-r, e, d-6, 0, 0" />";
@@ -662,7 +609,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{aud, i, t.descripti, o, n}</p>";)
                     <div, className="mb-4">";)
                       <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Common, Vulnerabilitie, s: </h4>";),
-=======
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-6">";</div>
@@ -672,8 +618,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{aud, i, t.descripti, o, n}</p>";
                     <div, className="mb-4">";</div>
                       <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Common, Vulnerabilitie, s: </h4>";
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
             </d, i, v>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-4, ga, p-8">"
@@ -702,7 +646,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{aud, i, t.descripti, o, n}</p>";"
                     <div, className="mb-4">";"
                       <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Common, Vulnerabilitie, s: </h4>";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       <ul, className="spa, c, e-y-1">";
                         {/* TODO: Fix JSX expression */}"
                           <li, ke, y={vulnInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";"
@@ -718,10 +661,8 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-<<<<<<< HEAD
         {/* Proce, s, s */}
         <section, className="py-20, b, g-gr, a, y-50">
-<<<<<<< HEAD
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
@@ -729,7 +670,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-=======
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
@@ -737,8 +677,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
             <div, className="te, x, t-center, m, b-16">";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
         {/* Proce, s, s */}"
         <section, className="py-20, b, g-gr, a, y-50"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
@@ -748,29 +686,23 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="py-20, b, g-gr, a, y-50">";"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-center, m, b-16">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
                 Our, Audit, Process;
               </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Systematic, approach, ensuring comprehensive, security, analysis and, detailed, reporting.
               </p>
-<<<<<<< HEAD
             </d, i, v>
-<<<<<<< HEAD
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">"</div>
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
   g:gr, i, d-co, l, s-3, ga, p-8">";
               {proce, s, s.m, a, p((st, e, p, ind, e, x) => (</div>
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">";</div>
-=======
             </d, i, v>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8">""
@@ -779,7 +711,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
               {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";"
                   <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     <span, className="te, x, t-r, e, d-600, fon, t-bold, tex, t-lg">{st, e, p.st, e, p}</sp, a, n>";
                   </d, i, v>"
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{st, e, p.tit, l, e}</h3>";"
@@ -789,10 +720,8 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-<<<<<<< HEAD
         {/* Featur, e, s */}
         <section, className="py-20">
-<<<<<<< HEAD
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
@@ -800,7 +729,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-=======
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
@@ -808,8 +736,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
             <div, className="te, x, t-center, m, b-16">";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
         {/* Featur, e, s */}"
         <section, className="py-20"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
@@ -819,32 +745,26 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="py-20">";"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-center, m, b-16">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
                 Advanced, Security, Analysis;
               </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Comprehensive, security, testing using, cuttin, g-edge, tools, and expert, manual, review.
               </p>
-<<<<<<< HEAD
             </d, i, v>
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
-<<<<<<< HEAD
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">
-=======
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       <Icon, className="w-6 h-6, tex, t-r, e, d-6, 0, 0  />
                     </d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>
-<<<<<<< HEAD
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
                       <CheckCircle, className="w-4 h-4, m, r-1  />)
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
@@ -853,7 +773,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                 const, Ico, n = featu, r, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">";
-=======
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
                       <CheckCircle, className="w-4 h-4, m, r-1  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
@@ -863,13 +782,11 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       <Icon, className="w-6 h-6, tex, t-r, e, d-6, 0, 0" />";
                     </d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";</div>
-=======
             </d, i, v>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8">"
@@ -892,7 +809,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";"
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";"
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       <CheckCircle, className="w-4 h-4, m, r-1" />";
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
@@ -902,10 +818,8 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-<<<<<<< HEAD
         {/* Prici, n, g */}
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
-<<<<<<< HEAD
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
@@ -913,7 +827,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-=======
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
@@ -921,8 +834,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
             <div, className="te, x, t-center, m, b-16">";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
         {/* Prici, n, g */}"
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
@@ -932,22 +843,17 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-center, m, b-16">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
                 Transparent, Pricing, for Every, Project, Size;
               </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Choose, the, audit package, that, fits your, smart, contract complexity, and, security requiremen, t, s.
               </p>
-<<<<<<< HEAD
             </d, i, v>
-<<<<<<< HEAD
             <div, className="gri, d, m;
   d: gr, i, d-co, l, s-3, ga, p-8">"
-=======
             <div, className="gri, d, m
   d: gr, i, d-co, l, s-3, ga, p-8">"</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
               {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (</div>
                 <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-r, e, d-500, relativ, e' : ''}`}>`;`
@@ -962,7 +868,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                     <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}</h3>";
                     <div, className="flex, item, s-center, justif, y-center, m, b-2">";</div>
                       <span, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">{pl, a, n.pri, c, e}</sp, a, n>";
-=======
             </d, i, v>"
             <div, className="gri, d, m,"
   d: gr, i, d-co, l, s-3, ga, p-8">""
@@ -975,7 +880,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                     <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}</h3>";"
                     <div, className="flex, item, s-center, justif, y-center, m, b-2">";"
                       <span, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">{pl, a, n.pri, c, e}</sp, a, n>";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       <span, className="te, x, t-gr, a, y-600, m, l-1">/{pl, a, n.peri, o, d}</sp, a, n>";
                     </d, i, v>"
                     <p, className="te, x, t-gr, a, y-6, 0, 0">{pl, a, n.descripti, o, n}</p>";
@@ -991,7 +895,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                   <a;
   hr, e, f="/conta, c, t"
                     classNa, m, e={
@@ -1001,30 +904,25 @@ pl, a, n.popul, a, r;
 ? 'bg-r, e, d-600, tex, t-white, hov, e;
   r: bg-r, e, d-7, 0, 0',';}
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
-=======
                   <a></a>"
   hr, e, f="/conta, c, t"
                     classNa, m, e={/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }`}`;`
                   >
                     Request, Quot, e;
                   </a>
                 </d, i, v>
               ))}
-<<<<<<< HEAD
             </d, i, v>
             <div, className="te, x, t-center, m, t-12">";</div>
               <p, className="te, x, t-gr, a, y-600, m, b-4">Need, a, custom audit, solutio, n?</p>";
               <a;
   hr, e, f="/conta, c, t"
-=======
             </d, i, v>"
             <div, className="te, x, t-center, m, t-12">";"
               <p, className="te, x, t-gr, a, y-600, m, b-4">Need, a, custom audit, solutio, n?</p>";
               <a></a>"
   hr, e, f="/conta, c, t""
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 classNa, m, e="inli, n, e-flex, item, s-center, tex, t-r, e, d-600, hove, r: te, x, t-r, e, d-700, fon, t-semibo, l, d"
               >
                 Contact, our, Security Te, a, m;"
@@ -1034,10 +932,8 @@ pl, a, n.popul, a, r;
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-<<<<<<< HEAD
         {/* Testimonia, l, s */}
         <section, className="py-20">
-<<<<<<< HEAD
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
@@ -1045,7 +941,6 @@ pl, a, n.popul, a, r;
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-=======
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
@@ -1053,8 +948,6 @@ pl, a, n.popul, a, r;
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
             <div, className="te, x, t-center, m, b-16">";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
         {/* Testimonia, l, s */}"
         <section, className="py-20"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
@@ -1064,29 +957,23 @@ pl, a, n.popul, a, r;
         <section, className="py-20">";"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-center, m, b-16">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
                 What, Our, Clients S, a, y;
               </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Join, dozens, of successful, blockchain, projects that, trust, our security, expertis, e.
               </p>
-<<<<<<< HEAD
             </d, i, v>
-<<<<<<< HEAD
             <div, className="gri, d, m;
   d: gr, i, d-co, l, s-3, ga, p-8">"
-=======
             <div, className="gri, d, m
   d: gr, i, d-co, l, s-3, ga, p-8">"</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
               {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (</div>
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <div, className="flex, item, s-center, m, b-4">";
                     {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
-=======
             </d, i, v>"
             <div, className="gri, d, m,"
   d: gr, i, d-co, l, s-3, ga, p-8">""
@@ -1096,7 +983,6 @@ pl, a, n.popul, a, r;
                   <div, className="flex, item, s-center, m, b-4">";
                     {/* TODO: Fix JSX expression */}"
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  /></Star>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
                     ))}
                   </d, i, v>"
@@ -1113,21 +999,16 @@ pl, a, n.popul, a, r;
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-<<<<<<< HEAD
         {/* CTA, Sectio, n */}
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-r, e, d-900, vi, a-oran, g, e-800, t, o-yell, o, w-900, tex, t-whi, t, e">
-<<<<<<< HEAD
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
-=======
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8, tex, t-cent, e, r">"</section>
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-r, e, d-900, vi, a-oran, g, e-800, t, o-yell, o, w-900, tex, t-whi, t, e">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";</section>
-=======
         {/* CTA, Sectio, n */}"
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-r, e, d-900, vi, a-oran, g, e-800, t, o-yell, o, w-900, tex, t-whi, t, e"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
@@ -1135,28 +1016,22 @@ pl, a, n.popul, a, r;
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>"
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-r, e, d-900, vi, a-oran, g, e-800, t, o-yell, o, w-900, tex, t-whi, t, e">";"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">";
               Ready, to, Secure Your, Smart, Contracts?
             </h2>"
             <p, className="te, x, t-xl, tex, t-r, e, d-100, ma, x-w-3xl, m, x-auto, m, b-8">";
               Protect, your, blockchain project, with, professional smart, contract, auditing from, certified, security exper, t, s.
-<<<<<<< HEAD
             </p>
-<<<<<<< HEAD
             <div, className="flex, fle, x-co, l, s;
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <a;
-=======
             <div, className="flex, fle, x-co, l, s
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
               <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
   hr, e, f="/conta, c, t"
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-r, e, d-600, hov, e;
-=======
             </p>"
             <div, className="flex, fle, x-co, l, s,"
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">""
@@ -1164,22 +1039,18 @@ pl, a, n.popul, a, r;
               <a></a>"
   hr, e, f="/conta, c, t""
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-r, e, d-600, hov, e,"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r: bg-r, e, d-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >"
                 <Phone, className="w-5 h-5, m, r-2  /></Phone>"
                 <Phone, className="w-5 h-5, m, r-2" />";
                 Request, Free, Quote;
               </a>
-<<<<<<< HEAD
               <a;
   hr, e, f="/ca, s, e-studi, e, s"
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e;
-=======
               <a></a>"
   hr, e, f="/ca, s, e-studi, e, s""
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e,"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r:te, x, t-r, e, d-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
                 View, Audit, Reports;"

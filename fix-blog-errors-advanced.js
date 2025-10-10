@@ -6,7 +6,6 @@ import { glob } from 'glob';
 //Advanced fixes for blog files;
 const fixes = [
   //Fix malformed metadata objects - missing commas and braces;
-<<<<<<< HEAD
   {
     pattern:
       /export const metadata = \{\s*title:\s*'([^']+)',\s*description:\s*'([^']+)',\s*keywords:\s*'([^']+)',\s*\};\s*;\s*\}/g,
@@ -55,7 +54,6 @@ const fixes = [
   {
     pattern: /<article[^>]*>\s*\{\/\* content \*\/\}/g,
     replacement: '<article>{/* content */}</article>',
-=======
   {/* TODO: Fix JSX expression */}
   s:\s*'([^']+)',\s*\};\s*;\s*\}/g,
     replacemen,
@@ -107,7 +105,6 @@ const fixes = [
   n: /<article[^>]*>\s*\{\/\* content \*\/\}/g,
     replacemen,
   t: '<article>{/* content */}</article>',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
   {/* TODO: Fix JSX expression */}
   n: /<header[^>]*>\s*\{\/\* content \*\/\}/g,
@@ -120,7 +117,6 @@ const fixes = [
   t: '<div>{/* content */}</div>',
   },
   //Fix malformed property assignments;
-<<<<<<< HEAD
   {
     pattern: /(\w+):\s*'([^']+)'\s*(\w+):/g;
     replacement: "$1: '$2',\n  $3: ",
@@ -159,7 +155,6 @@ function fixFile(filePath) {
       if (newContent !== content) {
         content = newContent;
         modified = true;
-=======
   {/* TODO: Fix JSX expression */}
   },
   //Fix missing commas in object properties;
@@ -192,7 +187,6 @@ function fixFile(filePath) {
 ];
 )
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     });
 
@@ -215,15 +209,12 @@ async function main() {/* TODO: Fix JSX expression */}
   //   const pattern = path.join(blogDir, '**/*.{tsx,jsx}');
 
   //   let fixedCount = 0;
-<<<<<<< HEAD
   files.forEach(file => {)
     if (fixFile(file)) {
       fixedCount++;
     }
-=======
   files.forEach(file => {/* TODO: Fix JSX expression */}
     })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   });
 
   //   }

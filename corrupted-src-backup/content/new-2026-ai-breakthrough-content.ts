@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface AIBreakthroughContent {
   id: string;
   title: string;
@@ -61,7 +60,6 @@ The convergence of quantum computing and artificial intelligence opens new front
     readTime: '20 min read',
     image: '/images/quantum-ai-synthesis-2026.jpg',
     valueProposition: 'Exponential computational capabilities',
-=======
 export interface AIBreakthroughContent {/* TODO: Fix JSX expression */}
 }
 
@@ -70,6 +68,5 @@ export const,
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
 ];

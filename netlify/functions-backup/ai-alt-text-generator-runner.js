@@ -1,7 +1,6 @@
 const _path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
-<<<<<<< HEAD
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
@@ -9,7 +8,6 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
-=======
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
   });
@@ -17,7 +15,6 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   t: res.stdout || ''}
     stder,
   r: res.stderr || '';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 }
 exports.handler = async () => {const logs = []}
@@ -29,12 +26,9 @@ exports.handler = async () => {const logs = []}
     logs.push(`exit=${status}`);
     return status;
   }
-<<<<<<< HEAD
   logStep('automation: ai-alt-text-generator') () =>,
-=======
   logStep('automatio,)
   n: ai-alt-text-generator') () =>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     runNode('automation/ai-alt-text-generator.cjs'),
   );
   logStep('gi,)

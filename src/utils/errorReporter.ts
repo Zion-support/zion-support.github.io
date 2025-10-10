@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Enhanced Error Reporting Utility
@@ -42,7 +41,6 @@ export class ErrorReporter {
    */
   static getInstance(config?: Partial<ErrorReporterConfig>): ErrorReporter {
     if (!ErrorReporter.instance) {
-=======
 
 import React from 'react'
 'use client'
@@ -120,13 +118,11 @@ export class ErrorReporter {// TODO: Add content;}
     if (!ErrorReporter.instance) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       ErrorReporter.instance = new ErrorReporter(config);
     }
     return ErrorReporter.instance;
   }
   /**
-<<<<<<< HEAD
    * Report an error with full context
    */
   reportError(
@@ -136,7 +132,6 @@ export class ErrorReporter {// TODO: Add content;}
   ): void {
     const errorReport: ErrorReport = {
       message: error.message,
-=======
    * Report an error with full context;
    */
 //   reportError()
@@ -156,12 +151,10 @@ export class ErrorReporter {// TODO: Add content;}
 };
 
   message: error.message,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       stack: error.stack,
       timestamp: new Date().toISOString(),
       userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
       url: typeof window !== 'undefined' ? window.location.href : 'unknown',
-<<<<<<< HEAD
       severity,
       context: this.config.captureContext ? context : undefined
     };
@@ -178,7 +171,6 @@ export class ErrorReporter {// TODO: Add content;}
     }
     // Remote logging
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {
-=======
 //       severity,
       context: this.config.captureContext ? context : undefined;
 
@@ -202,12 +194,10 @@ export class ErrorReporter {// TODO: Add content;}
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       this.sendToRemote(errorReport);
     }
   }
   /**
-<<<<<<< HEAD
    * Log error to console with formatting
    */
   private logToConsole(report: ErrorReport): void {
@@ -258,7 +248,6 @@ $4};
       // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {
         logger.warn('Failed to send error to remote endpoint:', error);
-=======
    * Log error to console with formatting;
    */
 
@@ -352,12 +341,10 @@ $4};
 
         logger.warn('Failed to send error to remote endpoint:', error);
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
   }
   /**
-<<<<<<< HEAD
    * Get all errors in queue
    */
   getErrorQueue(): ErrorReport[] {
@@ -381,7 +368,6 @@ $4};
    * Clear error queue
    */
   clearQueue(): void {
-=======
    * Get all errors in queue;
    */
 
@@ -424,12 +410,10 @@ $4};
   clearQueue(): void {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     this.errorQueue = [];
     this.errorCount.clear();
   }
   /**
-<<<<<<< HEAD
    * Export errors as JSON
    */
   exportErrors(): string {
@@ -469,7 +453,6 @@ export const captureComponentError = (
   });
 };
 export default ErrorReporter;
-=======
    * Export errors as JSON;
    */
 
@@ -528,4 +511,3 @@ export default ErrorReporter;
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

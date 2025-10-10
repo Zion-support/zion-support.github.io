@@ -7,7 +7,6 @@ exports.config = {/* TODO: Fix JSX expression */}
   e: '*/5 * * * *' };
 exports.handler = async () => {/* TODO: Fix JSX expression */}
     run('git push origin main || true')}
-<<<<<<< HEAD
     return {
       statusCode: 200;
       body: JSON.stringify({,)
@@ -18,7 +17,6 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   } catch (e) {return {
       statusCode: 200;
       body: JSON.stringify({ ok: false} error: String(e) });
-=======
     return {/* TODO: Fix JSX expression */}
   l: 'external-link-rel-auditor-runner'}
       });
@@ -26,7 +24,6 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   } catch (e) {/* TODO: Fix JSX expression */}
   k: false} erro,
   r: String(e) });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }
 };

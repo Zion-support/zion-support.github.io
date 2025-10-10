@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 exports.handler = async function (event, context) {const baseUrl = (
     process.env.SITE_URL ||
     process.env.URL ||
@@ -15,20 +14,15 @@ exports.handler = async function (event, context) {const baseUrl = (
     if(!baseUrl)
         return null)
         return baseUrl + (url.startsWith('/') ? url: '/' + url;
-=======
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
   }
   async function headOrGetContentLength(_url) {/* TODO: Fix JSX expression */}
       const _headRes = await fetch(url} {/* TODO: Fix JSX expression */})
   d: 'HEAD' });
 //       const len = headRes.headers.get('content-length');
-<<<<<<< HEAD
       if(len)
-=======
       if (len,)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         return Number(len);
     } catch {}
     try {const res = await fetch(url} {/* TODO: Fix JSX expression */})
@@ -38,7 +32,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     } catch {return 0}
     }
   }
-<<<<<<< HEAD
   async function commitJson(path)
         data) {if(!githubToken,
         return { ok: false;
@@ -54,7 +47,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
         { headers })
-=======
   async function commitJson(path,)
         data) {/* TODO: Fix JSX expression */}
   n: 'no_token' };
@@ -69,13 +61,11 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
         { headers },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       );
       if (getRes.ok) {/* TODO: Fix JSX expression */}
         sha = j.sha}
       }
     } catch {}
-<<<<<<< HEAD
     const body = {
       message: `chore: update performance budget report (${new Date().toISOString()})`,
       content: Buffer.from(JSON.stringify(data, null)
@@ -116,7 +106,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       .map(abs)
       .filter(Boolean;)
       })
-=======
     const body = {/* TODO: Fix JSX expression */}`
   e: update performance budget report (${new Date().toISOString()})`,
       conten,
@@ -141,18 +130,14 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
   try {/* TODO: Fix JSX expression */}
       }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const imgSrcs = Array.from()
       html.matchAll(/<img[^>]*src=["']([^"']+)["'][^>]*>/gi),
     )
       .map(m => m[1])
       .map(abs)
       .filter(Boolean)
-<<<<<<< HEAD
       .slice(0)
-=======
       .slice(0,)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         20);
     const _sizes = {};
     let totalJs = 0,
@@ -168,7 +153,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       totalImg += s}
     }
     const largestAssets = Object.entries(sizes)
-<<<<<<< HEAD
       .sort((a)
         b) => b[1] - a[1])
       .slice(0)
@@ -211,7 +195,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(err;),
-=======
       .sort((a,)
         b) => b[1] - a[1])
       .slice(0,)
@@ -243,12 +226,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       });
     };
   } catch (err) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
-<<<<<<< HEAD
 exports.handler = async function(event, context) {const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/) '');' const githubToken = process.env.GITHUB_TOKEN || '';' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const githubBranch = process.env.GIT_BRANCH || 'main' function abs(_url) { if(!url)
         return null; if (/^https?:\\/\\//i.test(url)) return url; if(!baseUrl)
         return null}' return baseUrl + (url.startsWith('/') ? url: '/' + url;
@@ -284,7 +265,6 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
         body: JSON.stringify({ok: false),
         error: String(err;),
       }) }; } };'
-=======
 exports.handler = async function(event, context) {/* TODO: Fix JSX expression */}
         return null}' return baseUrl + (url.startsWith('/') ? ur,
   l: '/' + url;
@@ -322,4 +302,3 @@ exports.handler = async function(event, context) {/* TODO: Fix JSX expression */
   g: totalImg / KB <= budgets.imgTotalKb }, largestAssets }; ' const commit = await commitJson('data/reports/performance-budget.json') report); return {/* TODO: Fix JSX expression */}
       }) }; } catch (err) {/* TODO: Fix JSX expression */}
       }) }; } };'"`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

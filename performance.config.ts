@@ -3,7 +3,6 @@
  * Comprehensive performance monitoring and optimization settings;
  */
 
-<<<<<<< HEAD
 export const performanceConfig = {
   // Core Web Vitals thresholds;
   webVitals: {,
@@ -76,7 +75,6 @@ export const performanceConfig = {
     reportInterval: 30000, // 30 seconds;
     enableLongTaskDetection: true;
     enableMemoryMonitoring: true;
-=======
 export const performanceConfig = {/* TODO: Fix JSX expression */}
     },
     fi,
@@ -121,7 +119,6 @@ export const performanceConfig = {/* TODO: Fix JSX expression */}
 
   // Monitoring,
   monitoring: {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
 };
 

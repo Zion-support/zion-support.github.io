@@ -2,7 +2,6 @@ impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-<<<<<<< HEAD
 export default function HyperPersonalizedCustomerExperience20, 2, 5() {  
   return(:src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx;
     <>
@@ -47,11 +46,8 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
             Back, to, Blog;
 :src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx;
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-ro, s, e-400, t, o-purp, l, e-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'>
-<<<<<<< HEAD
               Hyp, e, r-Personalized, AI, Customer Experien, c, e: T, h, e $3.2B, Revenue, Engine;
-=======
               Hyp, e, r-Personalized, AI, Customer Experien, c, e: T, h, e $3.2B, Revenue, Engine</h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <li, classNam, e='flex, item, s-start, ga, p-3'>
                   <Users, classNam, e='h-6 w-6, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
                   <sp, a, n>
@@ -61,11 +57,8 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
             </div>
 
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-ro, s, e-400, t, o-purp, l, e-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'>
-<<<<<<< HEAD
               Hyp, e, r-Personalized, AI, Customer Experien, c, e: T, h, e $3.2B, Revenue, Engine;
-=======
               Hyp, e, r-Personalized, AI, Customer Experien, c, e: T, h, e $3.2B, Revenue, Engine</h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <li, className='flex, item, s-start, ga, p-3'>
                   <Users, className='h-6 w-6, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
                   <sp, a, n>
@@ -107,22 +100,18 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
 
             <section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-pi, n, k-3, 0, 0'>
-<<<<<<< HEAD
                 Enterprise, Success, Stories;
           <div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-=======
                 Enterprise, Success, Stories</h2>
           <div></section>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3"></h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Heart className="h-8 w-8 text-pink-400 ,>
   Customer Experience Impact;
               </h2>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Sparkles className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0 ">
-<<<<<<< HEAD
                   <span><strong>97.8% Satisfaction: </strong> AI creates experiences so personalized they feel magical</span>,)
                 </li>,)
                 <li className="flex items-start gap-3">,)
@@ -141,7 +130,6 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
 :src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx;
                   <Sparkles className=" />,
                   <span><strong>97.8% Satisfaction: </strong> AI creates experiences so personalized they feel magical</span>,"
-=======
                   <span></span><strong>97.8% Satisfaction: </strong> AI creates experiences so personalized they feel magical</span>,
                 </li>
                 <li className="flex items-start gap-3">
@@ -160,7 +148,6 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
 :src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx
                   <Sparkles className=" />
                   <span></span><strong>97.8% Satisfaction: </strong> AI creates experiences so personalized they feel magical</span>,"
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </li>"
                 <li className="flex items-start gap-3">
                   <TrendingUp className=" />
@@ -201,13 +188,10 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
                 Implementation, Roadma, p;
               </h2>
 
-<<<<<<< HEAD
 :src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx;
               <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-pi, n, k-5, 0, 0/20'>
-=======
 :src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx
               <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-pi, n, k-5, 0, 0/20'></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0'>
                   Phas, e, 1: Foundati, o, n (Month, s, 1-, 2)
                 </h3>
@@ -235,21 +219,18 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
               <div></div>
                 <h3 className="text-2xl font-bold mb-4 text-rose-300">3. Real-Time Experience Orchestration</h3>
                 <p className="text-gray-300 mb-4">,"
-<<<<<<< HEAD
   AI agents dynamically compose personalized experiences across all channels based on predicted customer intent;
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-rose-300">3. Real-Time Experience Orchestration</h3>
                 <p className="text-gray-300 mb-4">,"
   AI agents dynamically compose personalized experiences across all channels based on predicted customer intent;
               <div>
-=======
   AI agents dynamically compose personalized experiences across all channels based on predicted customer intent</p>
               <div></div>
                 <h3 className="text-2xl font-bold mb-4 text-rose-300">3. Real-Time Experience Orchestration</h3>
                 <p className="text-gray-300 mb-4">,"
   AI agents dynamically compose personalized experiences across all channels based on predicted customer intent</p>
               <div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3 className="text-2xl font-bold mb-4 text-rose-300">4. Conversational AI Integration</h3>
                 <p className="text-gray-300 mb-4"></p>
                   <h3 className="text-2xl font-bold mb-4 text-pink-300">Leading E-Commerce Platform</h3>
@@ -310,9 +291,7 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">,
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />,
   );
-=======
 export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
   </div>
   </div>
@@ -333,7 +312,6 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: 
 </article>
 
               <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-pi, n, k-5, 0, 0/20'></div>
-<<<<<<< HEAD
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0'>
                   Phas, e, 2: Pil, o, t (Month, s, 3-, 4)
                 </h3>
@@ -348,7 +326,6 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: 
                     Validate, business, impact through, controlled, experiments;
                   </li>
                   <li>
-=======
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0'></h3>
                   Phas, e, 2: Pil, o, t (Month, s, 3-, 4)
                 </h3>
@@ -363,41 +340,29 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: 
                     Validate, business, impact through, controlled, experiments;
                   </li>
                   <li></li>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     Refine, models, based on, performance, and customer, feedbac, k;
                   </li>
                 </ul>
               </div>
 
               <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-pi, n, k-5, 0, 0/20'></div>
-<<<<<<< HEAD
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0'>
-=======
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0'></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   Phas, e, 3: Sca, l, e (Month, s, 5-1, 2)
                 </h3>
                 <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'></ul>
               <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'></p>
                 The, competitive, advantage is, overwhelmin, g: 12x, higher, engageme, n, t, 89% lower, chur, n, a, n, d $3.2B+ in, incremental, revenue.
                 With, average, ROI exceeding, 7x, within 18, month, s, the, business, case is, irrefutabl, e. The, question, is not, whether, to deploy, A, I-powered, personalizatio, n, but, how, quickly you, can, implement it, before, competitors capture, your, customers' hear, t, s.
-<<<<<<< HEAD
-<<<<<<< HEAD
                 Schedule, Your, CX Transformation, Assessmen, t;
-=======
                 Schedule, Your, CX Transformation, Assessmen, t</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <ArrowLeft, classNam, e='ml-2 h-5 w-5, rotat, e-1, 8, 0' />
               <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>
                 The, competitive, advantage is, overwhelmin, g: 12x, higher, engageme, n, t, 89% lower, chur, n, a, n, d $3.2B+ in, incremental, revenue.
                 With, average, ROI exceeding, 7x, within 18, month, s, the, business, case is, irrefutabl, e. The, question, is not, whether, to deploy, A, I-powered, personalizatio, n, but, how, quickly you, can, implement it, before, competitors capture, your, customers' hear, t, s.
-<<<<<<< HEAD
                 Schedule, Your, CX Transformation, Assessmen, t;
-=======
                 Schedule, Your, CX Transformation, Assessmen, t</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <ArrowLeft, className='ml-2 h-5 w-5, rotat, e-1, 8, 0' />
-=======
                 Schedule, Your, CX Transformation, Assessmen, t;
                 <ArrowLeft, classNam, e='ml-2 h-5 w-5, rotat, e-1, 8, 0' /></ArrowLeft>
               <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'></p>
@@ -405,4 +370,3 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: 
                 With, average, ROI exceeding, 7x, within 18, month, s, the, business, case is, irrefutabl, e. The, question, is not, whether, to deploy, A, I-powered, personalizatio, n, but, how, quickly you, can, implement it, before, competitors capture, your, customers' hear, t, s.
                 Schedule, Your, CX Transformation, Assessmen, t;
                 <ArrowLeft, className='ml-2 h-5 w-5, rotat, e-1, 8, 0' /></ArrowLeft>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const revolutionaryITInfrastructure2025Services = [{name: 'Revolutionary Cloud Infrastructure 2025'
     path: '/services/revolutionary-cloud-infrastructure-2025',
     description: 'Next-generation cloud infrastructure and management',
@@ -22,7 +21,6 @@ export const revolutionaryITInfrastructure2025Services = [{name: 'Revolutionary 
     icon: 'Code',
     category: 'DevOps',
     features: [,
-=======
 export const revolutionaryITInfrastructure2025Services = [{/* TODO: Fix JSX expression */}
   l: '$599/month'}
       enterpris,
@@ -41,18 +39,15 @@ export const revolutionaryITInfrastructure2025Services = [{/* TODO: Fix JSX expr
   y: 'DevOps',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated deployment',
       'Intelligent testing',
       'Performance monitoring',
       'Security scanning'
     ],
-<<<<<<< HEAD
     pricing: unknown;
       starter: '$399/month',
       professional: '$799/month',
       enterprise: 'Custom',
-=======
     pricin,
   g: unknown,
       starte,
@@ -61,7 +56,6 @@ export const revolutionaryITInfrastructure2025Services = [{/* TODO: Fix JSX expr
   l: '$799/month',
       enterpris,
   e: 'Custom'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
@@ -71,13 +65,11 @@ export const revolutionaryITCategories2025 = [
   'Security & Compliance',
   'Performance Optimization'
 ];
-<<<<<<< HEAD
 export const revolutionaryITStats2025 =
   totalServices: 2;
   categories: 4;
   averageRating: 4.8;
   activeUsers: 1800;
-=======
 export const revolutionaryITStats2025 = {};
   totalService,
   s: 2,
@@ -87,7 +79,6 @@ export const revolutionaryITStats2025 = {};
   g: 4.8,
   activeUser,
   s: 1800,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const revolutionaryITInfrastructure2025Services = [ nam,
   e: 'Revolutionary Cloud Infrastructure 2025',' pat,

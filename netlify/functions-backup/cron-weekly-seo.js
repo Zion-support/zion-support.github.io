@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const { upsert_file } = require ('./_lib / github'); ursor/fix-website-loading-errors-and-merge-6662; async function scorePage() {const html = await resp && resp.text(} } const ms = Date && Date.now() - t0; ' const title = (html && html.match(/<title>(.*?)<\/title>/i) || [])[1] || '';' ' const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i && i.test(html)' const h1Count = (html && html.match(/<h1[^>]*>/gi) || []).length; const score =; (title ? 20 : 0) +; (hasMetaDesc ? 20 : 0) +; Math && Math.min(60)
         h1Count * 10) -; Math && Math.min(20)
         Math && Math.floor(ms / 500))return {url, ms, title, hasMetaDesc, h1Count, "score": Math && Math.max(0)
@@ -34,7 +33,6 @@ const { upsert_file } = require ('./_lib / github'); ursor/fix-website-loading-e
         score;
       } } catch (e) {return { url,
         error: e.message || String(e); score: 0 } } } exports.handler = async function() { try { '
-=======
 const { upsert_file } = require ('./_lib / github'); ursor/fix-website-loading-errors-and-merge-6662; async function scorePage() {const html = await resp && resp.text(} } const ms = Date && Date.now() - t0; ' const title = (html && html.match(/<title>(.*?)<\/title>/i) || [])[1] || '';' ' const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i && i.test(html)' const h1Count = (html && html.match(/<h1[^>]*>/gi) || []).length; const score =; (title ? 20 : 0) +; (hasMetaDesc ? 20 : 0) +; Math && Math.min(60,)
         h1Count * 10) -; Math && Math.min(20,)
         Math && Math.floor(ms / 500))return {/* TODO: Fix JSX expression */}"
@@ -64,4 +62,3 @@ const { upsert_file } = require ('./_lib / github'); ursor/fix-website-loading-e
       }) }; } };async function scorePage(url) {/* TODO: Fix JSX expression */}
       } } catch (e) {/* TODO: Fix JSX expression */}
   e: 0 } } } exports.handler = async function() {/* TODO: Fix JSX expression */}"`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

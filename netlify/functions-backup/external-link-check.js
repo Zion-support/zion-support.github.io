@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 exports.handler = async function (event, context) {try {
 //     // External link check logic;
     const timestamp = new Date().toISOString()}
@@ -24,7 +23,6 @@ exports.handler = async function (event, context) {try {
         error: 'External link check function failed'),
         message: error.message),
         timestamp: new Date().toISOString()}
-=======
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
     const timestamp = new Date().toISOString()}
     const result = {/* TODO: Fix JSX expression */}
@@ -36,18 +34,15 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }
     return {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
-<<<<<<< HEAD
         brokenLinks: 3;
         fixedLinks: 3;
       }) }; ' return result; } catch (error) {' // console.error('❌ external-link-check failed: ') error;
       } return { statusCode: 500, body: JSON.stringify({' error: 'External link check function failed'} message: error.message),
         timestamp: new Date().toISOString() }) }; } };'
-=======
         brokenLink,
   s: 3,
         fixedLink,
@@ -58,4 +53,3 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   e: error.message,
         timestam,
   p: new Date().toISOString() }) }; } };'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

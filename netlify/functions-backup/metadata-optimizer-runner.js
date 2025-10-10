@@ -1,7 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('metadata-optimizer-runner function triggered')}
     // Metadata optimization simulation;
-<<<<<<< HEAD
     const result = {
       statusCode: 200;
       headers: {,
@@ -16,19 +15,16 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
           status: 'active',
           metadataOptimized: 0;
           lastOptimization: new Date().toISOString()}
-=======
     const result = {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}
       },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   n: new Date().toISOString()}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         },
       }),
     };
     return result;
-<<<<<<< HEAD
 //   } catch (error) {// console.error('Error in metadata-optimizer-runner: ') error;
       }
     return {
@@ -40,7 +36,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       body: JSON.stringify({error: 'Internal server error'),
         message: error.message),
         function: 'metadata-optimizer-runner'}
-=======
 //   } catch (error) {/* TODO: Fix JSX expression */}
       }
     return {/* TODO: Fix JSX expression */}
@@ -49,16 +44,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   n: 'metadata-optimizer-runner'})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
-<<<<<<< HEAD
         timestamp: new Date().toISOString(),' function: 'metadata-optimizer-runner',' source: event.source || 'unknown', optimization: {' status: 'active', metadataOptimized: 0;
         lastOptimization: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in metadata-optimizer-runner: ') error;
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'metadata-optimizer-runner' }) }; } };'
-=======
         timestam,
   p: new Date().toISOString(),' functio,
   n: 'metadata-optimizer-runner',' sourc,
@@ -71,4 +63,3 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   r: 'Internal server error'} messag,)
   e: error.message)' functio,
   n: 'metadata-optimizer-runner' }) }; } };'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

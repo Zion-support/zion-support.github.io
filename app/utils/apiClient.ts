@@ -1,5 +1,4 @@
 /**
-<<<<<<< HEAD
  * API Client Utility;
  * Provides a centralized API client with error handling and caching;
  */
@@ -48,20 +47,16 @@ class APIClient {}
     const url = `${this.baseURL}${endpoint}`;
     const cacheKey = apiCache.generateKey(url, body);
 
-<<<<<<< HEAD
     // Check cache for GET requests;
     if (method === 'GET' && cache) {
-=======
     // Check cache for GET requests
     if (method === 'GET' && cache) {}
->>>>>>> origin/merge-error-fixes
       const cachedData = apiCache.get(cacheKey);
       if (cachedData) {}
         return cachedData;
       }
     }
 
-<<<<<<< HEAD
     try {
       const response = await fetch(url, {)
         method)
@@ -81,7 +76,6 @@ class APIClient {}
 
       // Cache successful GET requests;
       if (method === 'GET' && cache && response.ok) {
-=======
     try {}
       const response = await fetch(url, {)}
         method,
@@ -102,14 +96,12 @@ class APIClient {}
 
       // Cache successful GET requests
       if (method === 'GET' && cache && response.ok) {}
->>>>>>> origin/merge-error-fixes
         apiCache.set(cacheKey, apiResponse, cacheTTL);
       }
 
       return apiResponse;
     } catch (error) {}
       throw new Error(`API request failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
-=======
  * Enhanced API Client with retry logic, caching, and error handling;
  */
 export interface ApiClientConfig {/* TODO: Fix JSX expression */}
@@ -310,7 +302,6 @@ class ApiClient {/* TODO: Fix JSX expression */}
   s: 1 });
       return response.status === 200;
     } catch {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 
@@ -334,7 +325,6 @@ class ApiClient {/* TODO: Fix JSX expression */}
     return this.makeRequest<T>(endpoint, { ...config, method: 'DELETE' });
   }
 
-<<<<<<< HEAD
   // Set base URL;
   setBaseURL(baseURL: string): void {,
     this.baseURL = baseURL;
@@ -347,7 +337,6 @@ class ApiClient {/* TODO: Fix JSX expression */}
 
   // Clear cache;
   clearCache(): void {
-=======
   // Set base URL
   setBaseURL(baseURL: string): void {}
     this.baseURL = baseURL;
@@ -360,17 +349,14 @@ class ApiClient {/* TODO: Fix JSX expression */}
 
   // Clear cache
   clearCache(): void {}
->>>>>>> origin/merge-error-fixes
     apiCache.clear();
   }
 }
-<<<<<<< HEAD
 
 // Create singleton instance;
 export const apiClient = new APIClient();
 
 export default APIClient;
-=======
 // Create default instance;
 const apiClient = new ApiClient({/* TODO: Fix JSX expression */}
   })
@@ -379,4 +365,3 @@ const apiClient = new ApiClient({/* TODO: Fix JSX expression */}
 export { apiClient };
 export default ApiClient;
 `
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

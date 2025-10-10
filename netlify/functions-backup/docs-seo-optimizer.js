@@ -1,7 +1,6 @@
 const _path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
-<<<<<<< HEAD
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
@@ -12,7 +11,6 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   };
 }
 exports.config = {// Keep docs and SEO fresh frequently;
-=======
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
   });
@@ -23,7 +21,6 @@ exports.config = {// Keep docs and SEO fresh frequently;
   };
 }
 exports.config = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   schedule: '*/30 * * * *'}
 };
 exports.handler = async () => {const logs = []}

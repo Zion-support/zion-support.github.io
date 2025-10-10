@@ -1,6 +1,5 @@
 
 export const cuttingEdgeITServices2025 = [
-<<<<<<< HEAD
 export const cuttingEdgeITServices2025 = [{id: 'quantum-cloud-infrastructure-platform',
     name: 'Quantum Cloud Infrastructure Platform',
     description:,
@@ -20,24 +19,20 @@ export const cuttingEdgeITServices2025 = [{id: 'quantum-cloud-infrastructure-pla
         price: 399}
         period: 'month',
         features: [}
-=======
 export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   e: 399}
         perio,
   d: 'month'
         feature,
   s: [}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Basic quantum infrastructure'
           'Standard security protocols'
           'Email support'
         ]
       }
-<<<<<<< HEAD
       professional: price: 999;
         period: 'month'
         features: [
-=======
       professiona,
   l: pric,
   e: 999;
@@ -45,18 +40,15 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   d: 'month'
         feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Advanced quantum features'
           'Enhanced security protocols'
           'Priority support',
           'Performance optimization',
         ],
       }
-<<<<<<< HEAD
       enterprise: price: 2499;
         period: 'month'
         features: [
-=======
       enterpris,
   e: pric,
   e: 2499;
@@ -64,7 +56,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   d: 'month'
         feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Full quantum platform'
           'Custom security protocols'
           'Dedicated specialists',
@@ -72,20 +63,16 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
         ],
       }
     }
-<<<<<<< HEAD
     category: 'Quantum IT'
     tags: [
-=======
     categor,
   y: 'Quantum IT'
     tag,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing'
       'Cloud Infrastructure'
       'Security'
       'Performance'
-<<<<<<< HEAD
       'Scalability',
     ],
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform',
@@ -94,7 +81,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
     }
     marketSize: '$22.1B',
     targetAudience:,
-=======
       'Scalability'
     ]
     websit,
@@ -110,7 +96,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   e: '$22.1B'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Cloud providers, enterprises, financial institutions, government agencies, research institutions'
     competitiveAdvantag,
   e: 'First quantum-enhanced cloud infrastructure, quantum-resistant security, real-time optimization'
@@ -122,17 +107,13 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'Research computing platforms'
       'Enterprise cloud migration'
     ]
-<<<<<<< HEAD
     integrations: [
-=======
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AWS'
       'Azure'
       'Google Cloud'
       'Kubernetes'
-<<<<<<< HEAD
       'Docker',
       'Terraform',
     ],
@@ -141,7 +122,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
     id: 'edge-computing-orchestration-platform',
     name: 'Edge Computing Orchestration Platform',
     description:,
-=======
       'Docker'
       'Terraform'
     ]
@@ -154,7 +134,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   e: 'Edge Computing Orchestration Platform'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced platform for managing and orchestrating edge computing resources across distributed networks, enabling real-time processing and low-latency applications.'
     feature,
   s: [;
@@ -169,12 +148,10 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'Edge-to-cloud synchronization'
       'Performance optimization algorithms'
     ]
-<<<<<<< HEAD
     pricing: starter: unknown;
         price: 299;
         period: 'month'
         features: [
-=======
     pricin,
   g: starte,
   r: unknown;
@@ -184,17 +161,14 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   d: 'month'
         feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Basic edge orchestration'
           'Standard monitoring',
           'Email support',
         ],
       }
-<<<<<<< HEAD
       professional: price: 799;
         period: 'month'
         features: [
-=======
       professiona,
   l: pric,
   e: 799;
@@ -202,18 +176,15 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   d: 'month'
         feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Advanced orchestration'
           'AI model deployment'
           'Priority support',
           'Performance optimization',
         ],
       }
-<<<<<<< HEAD
       enterprise: price: 1999;
         period: 'month'
         features: [
-=======
       enterpris,
   e: pric,
   e: 1999;
@@ -221,7 +192,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   d: 'month'
         feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Full edge platform'
           'Custom AI models'
           'Dedicated specialists',
@@ -229,20 +199,16 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
         ],
       }
     }
-<<<<<<< HEAD
     category: 'Edge Computing'
     tags: [
-=======
     categor,
   y: 'Edge Computing'
     tag,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Edge Computing'
       'Orchestration'
       'Real-time Processing'
       'AI Deployment'
-<<<<<<< HEAD
       'Low Latency',
     ],
     website: 'https://ziontechgroup.com/edge-computing-orchestration-platform',
@@ -251,7 +217,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
     }
     marketSize: '$18.7B',
     targetAudience:,
-=======
       'Low Latency'
     ]
     websit,
@@ -267,7 +232,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   e: '$18.7B'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'IoT companies, telecommunications providers, manufacturing companies, smart city developers'
     competitiveAdvantag,
   e: 'Advanced edge orchestration, AI model deployment, real-time optimization'
@@ -287,29 +251,23 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'AI Frameworks'
       'Cloud Platforms'
     ]
-<<<<<<< HEAD
     compliance: [
-=======
     complianc,
   e: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'IoT Security Standards'
       'Edge Computing Protocols',
       'Data Privacy Regulations',
     ],
   }
-<<<<<<< HEAD
     id: 'zero-trust-security-platform',
     name: 'Zero Trust Security Platform',
     description:,
-=======
     i,
   d: 'zero-trust-security-platform'
     nam,
   e: 'Zero Trust Security Platform'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive zero-trust security platform that implements advanced authentication, authorization, and monitoring across all network resources and applications.'
     feature,
   s: [;
@@ -324,12 +282,10 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'Automated security responses'
       'Comprehensive audit logging'
     ]
-<<<<<<< HEAD
     pricing: starter: unknown;
         price: 499;
         period: 'month'
         features: [
-=======
     pricin,
   g: starte,
   r: unknown;
@@ -339,17 +295,14 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   d: 'month'
         feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Basic zero-trust features'
           'Standard authentication',
           'Email support',
         ],
       }
-<<<<<<< HEAD
       professional: price: 1299;
         period: 'month'
         features: [
-=======
       professiona,
   l: pric,
   e: 1299;
@@ -357,18 +310,15 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   d: 'month'
         feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Advanced security features'
           'Behavioral analytics'
           'Priority support',
           'Custom policies',
         ],
       }
-<<<<<<< HEAD
       enterprise: price: 2999;
         period: 'month'
         features: [
-=======
       enterpris,
   e: pric,
   e: 2999;
@@ -376,7 +326,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   d: 'month'
         feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Full security platform'
           'Custom security policies'
           'Dedicated specialists',
@@ -384,20 +333,16 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
         ],
       }
     }
-<<<<<<< HEAD
     category: 'Cybersecurity'
     tags: [
-=======
     categor,
   y: 'Cybersecurity'
     tag,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Zero Trust'
       'Security'
       'Authentication'
       'IAM'
-<<<<<<< HEAD
       'Threat Detection',
     ],
     website: 'https://ziontechgroup.com/zero-trust-security-platform',
@@ -406,7 +351,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
     }
     marketSize: '$31.2B',
     targetAudience:,
-=======
       'Threat Detection'
     ]
     websit,
@@ -422,7 +366,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   e: '$31.2B'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enterprises, government agencies, financial institutions, healthcare organizations, educational institutions'
     competitiveAdvantag,
   e: 'Comprehensive zero-trust platform, behavioral analytics, automated threat response'
@@ -434,17 +377,13 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'Healthcare data protection'
       'Remote workforce security'
     ]
-<<<<<<< HEAD
     integrations: [
-=======
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Active Directory'
       'LDAP'
       'SAML'
       'OAuth'
-<<<<<<< HEAD
       'SIEM Systems',
       'Security Tools',
     ],
@@ -453,7 +392,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
     id: 'blockchain-enterprise-platform',
     name: 'Blockchain Enterprise Platform',
     description:,
-=======
       'SIEM Systems'
       'Security Tools'
     ]
@@ -466,7 +404,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   e: 'Blockchain Enterprise Platform'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enterprise-grade blockchain platform that enables secure, transparent, and efficient business processes through distributed ledger technology and smart contracts.'
     feature,
   s: [;
@@ -481,12 +418,10 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'Multi-party workflow automation'
       'Comprehensive reporting and analytics'
     ]
-<<<<<<< HEAD
     pricing: starter: unknown;
         price: 599;
         period: 'month'
         features: [
-=======
     pricin,
   g: starte,
   r: unknown;
@@ -496,17 +431,14 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   d: 'month'
         feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Basic blockchain features'
           'Standard smart contracts',
           'Email support',
         ],
       }
-<<<<<<< HEAD
       professional: price: 1499;
         period: 'month'
         features: [
-=======
       professiona,
   l: pric,
   e: 1499;
@@ -514,18 +446,15 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   d: 'month'
         feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Advanced blockchain features'
           'Custom smart contracts'
           'Priority support',
           'Performance optimization',
         ],
       }
-<<<<<<< HEAD
       enterprise: price: 3499;
         period: 'month'
         features: [
-=======
       enterpris,
   e: pric,
   e: 3499;
@@ -533,7 +462,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   d: 'month'
         feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Full blockchain platform'
           'Custom development'
           'Dedicated specialists',
@@ -541,20 +469,16 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
         ],
       }
     }
-<<<<<<< HEAD
     category: 'Blockchain'
     tags: [
-=======
     categor,
   y: 'Blockchain'
     tag,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Blockchain'
       'Smart Contracts'
       'Distributed Ledger'
       'Enterprise'
-<<<<<<< HEAD
       'Automation',
     ],
     website: 'https://ziontechgroup.com/blockchain-enterprise-platform',
@@ -563,7 +487,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
     }
     marketSize: '$19.9B',
     targetAudience:,
-=======
       'Automation'
     ]
     websit,
@@ -579,7 +502,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   e: '$19.9B'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Financial institutions, supply chain companies, healthcare organizations, government agencies, manufacturing companies'
     competitiveAdvantag,
   e: 'Enterprise-grade blockchain platform, smart contract automation, legacy system integration'
@@ -599,29 +521,23 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'Supply Chain Tools'
       'Legacy Systems'
     ]
-<<<<<<< HEAD
     compliance: [
-=======
     complianc,
   e: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Blockchain Standards'
       'Financial Regulations',
       'Data Privacy Laws',
     ],
   }
-<<<<<<< HEAD
     id: 'ai-powered-devops-platform',
     name: 'AI-Powered DevOps Platform',
     description:,
-=======
     i,
   d: 'ai-powered-devops-platform'
     nam,
   e: 'AI-Powered DevOps Platform'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Intelligent DevOps platform that leverages artificial intelligence to automate development, testing, deployment, and monitoring processes for faster and more reliable software delivery.'
     feature,
   s: [;
@@ -636,12 +552,10 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'Automated security scanning'
       'Comprehensive analytics and reporting'
     ]
-<<<<<<< HEAD
     pricing: starter: unknown;
         price: 399;
         period: 'month'
         features: [
-=======
     pricin,
   g: starte,
   r: unknown;
@@ -651,17 +565,14 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   d: 'month'
         feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Basic AI DevOps features'
           'Standard automation',
           'Email support',
         ],
       }
-<<<<<<< HEAD
       professional: price: 999;
         period: 'month'
         features: [
-=======
       professiona,
   l: pric,
   e: 999;
@@ -669,18 +580,15 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   d: 'month'
         feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Advanced AI features'
           'Custom automation'
           'Priority support',
           'Performance optimization',
         ],
       }
-<<<<<<< HEAD
       enterprise: price: 2499;
         period: 'month'
         features: [
-=======
       enterpris,
   e: pric,
   e: 2499;
@@ -688,7 +596,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   d: 'month'
         feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Full AI DevOps platform'
           'Custom development'
           'Dedicated specialists',
@@ -696,7 +603,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
         ],
       }
     }
-<<<<<<< HEAD
     category: 'DevOps',
     tags: ['AI DevOps', 'Automation', 'CI/CD', 'Monitoring', 'Performance']
     website: 'https://ziontechgroup.com/ai-powered-devops-platform',
@@ -705,7 +611,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
     }
     marketSize: '$25.6B',
     targetAudience:,
-=======
     categor,
   y: 'DevOps'
     tag,
@@ -723,7 +628,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   e: '$25.6B'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies'
     competitiveAdvantag,
   e: 'AI-powered DevOps automation, predictive monitoring, intelligent incident response'
@@ -746,12 +650,9 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'Azure'
       'Google Cloud'
     ]
-<<<<<<< HEAD
     compliance: [
-=======
     complianc,
   e: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'DevOps Best Practices'
       'Security Standards',
       'Quality Assurance Protocols',
@@ -759,7 +660,6 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   }
 export const cuttingEdgeITServices2025 = [
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
-<<<<<<< HEAD
     id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
     description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',
     features: [,
@@ -769,7 +669,6 @@ export const cuttingEdgeITServices2025 = [
     target_audience: unknown;
       'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies',
     competitive_advantage: unknown;
-=======
     i,
   d: 'quantum-cloud-infrastructure-platform', nam,
   e: 'Quantum Cloud Infrastructure Platform',
@@ -786,7 +685,6 @@ export const cuttingEdgeITServices2025 = [
       'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies',
     competitive_advantag,
   e: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI - powered DevOps automation, predictive monitoring, intelligent incident response',
     use_case,
   s: [,
@@ -818,7 +716,6 @@ export const cuttingEdgeITServices2025 = [
 ];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation'
 ];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation'
     ];
-<<<<<<< HEAD
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
 ;,
@@ -842,7 +739,6 @@ export const cuttingEdgeITServices2025 = [,
         price: 399;
         period: 'month'}
         features: ['Basic quantum infrastructureStandard security protocolsEmail support']}
-=======
     integration,
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
     complianc,
@@ -862,7 +758,6 @@ export const cuttingEdgeITServices2025 = [
   d: 'month'}
         feature,
   s: ['Basic quantum infrastructureStandard security protocolsEmail support']}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
       professiona,
   l: {/* TODO: Fix JSX expression */}
@@ -877,7 +772,6 @@ export const cuttingEdgeITServices2025 = [
   s: ['Full quantum platformCustom security protocolsDedicated specialists24/7 support']}
       }
     };
-<<<<<<< HEAD
     category: 'Quantum IT';
     tags: ['Quantum ComputingCloud InfrastructureSecurityPerformanceScalability'];
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform';
@@ -889,7 +783,6 @@ export const cuttingEdgeITServices2025 = [
     targetAudience: 'Cloud providers, enterprises, financial institutions, government agencies, research institutions';
     competitiveAdvantage: 'First quantum-enhanced cloud infrastructure, quantum-resistant security, real-time optimization';
     useCases: [
-=======
     categor,
   y: 'Quantum IT';
     tag,
@@ -911,7 +804,6 @@ export const cuttingEdgeITServices2025 = [
   e: 'First quantum-enhanced cloud infrastructure, quantum-resistant security, real-time optimization';
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'High-security cloud deploymentsFinancial services infrastructureGovernment cloud systemsResearch computing platformsEnterprise cloud migration'
     ];
     integration,
@@ -919,7 +811,6 @@ export const cuttingEdgeITServices2025 = [
     complianc,
   e: ['SOC2ISO 27001FedRAMPQuantum Security Standards'],
   };
-<<<<<<< HEAD
   {;
     id: 'edge-computing-orchestration-platform';
     name: 'Edge Computing Orchestration Platform',,
@@ -933,12 +824,10 @@ export const cuttingEdgeITServices2025 = [
         price: 299;
         period: 'month'}
         features: ['Basic edge orchestrationStandard monitoringEmail support']}
-=======
   {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
   s: ['Basic edge orchestrationStandard monitoringEmail support']}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
       professiona,
   l: {/* TODO: Fix JSX expression */}
@@ -953,7 +842,6 @@ export const cuttingEdgeITServices2025 = [
   s: ['Full edge platformCustom AI modelsDedicated specialists24/7 support']}
       }
     };
-<<<<<<< HEAD
     category: 'Edge Computing';
     tags: ['Edge ComputingOrchestrationReal-time ProcessingAI DeploymentLow Latency'];
     website: 'https://ziontechgroup.com/edge-computing-orchestration-platform';
@@ -965,7 +853,6 @@ export const cuttingEdgeITServices2025 = [
     targetAudience: 'IoT companies, telecommunications providers, manufacturing companies, smart city developers';
     competitiveAdvantage: 'Advanced edge orchestration, AI model deployment, real-time optimization';
     useCases: [
-=======
     categor,
   y: 'Edge Computing';
     tag,
@@ -987,7 +874,6 @@ export const cuttingEdgeITServices2025 = [
   e: 'Advanced edge orchestration, AI model deployment, real-time optimization';
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'IoT device managementSmart city infrastructureManufacturing automationAutonomous vehicle systemsReal-time analytics platforms'
     ];
     integration,
@@ -995,7 +881,6 @@ export const cuttingEdgeITServices2025 = [
     complianc,
   e: ['IoT Security StandardsEdge Computing ProtocolsData Privacy Regulations'],
   };
-<<<<<<< HEAD
   {;
     id: 'zero-trust-security-platform';
     name: 'Zero Trust Security Platform',,
@@ -1009,12 +894,10 @@ export const cuttingEdgeITServices2025 = [
         price: 499;
         period: 'month'}
         features: ['Basic zero-trust featuresStandard authenticationEmail support']}
-=======
   {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
   s: ['Basic zero-trust featuresStandard authenticationEmail support']}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
       professiona,
   l: {/* TODO: Fix JSX expression */}
@@ -1029,7 +912,6 @@ export const cuttingEdgeITServices2025 = [
   s: ['Full security platformCustom security policiesDedicated specialists24/7 support']}
       }
     };
-<<<<<<< HEAD
     category: 'Cybersecurity';
     tags: ['Zero TrustSecurityAuthenticationIAMThreat Detection'];
     website: 'https://ziontechgroup.com/zero-trust-security-platform';
@@ -1041,7 +923,6 @@ export const cuttingEdgeITServices2025 = [
     targetAudience: 'Enterprises, government agencies, financial institutions, healthcare organizations, educational institutions';
     competitiveAdvantage: 'Comprehensive zero-trust platform, behavioral analytics, automated threat response';
     useCases: [
-=======
     categor,
   y: 'Cybersecurity';
     tag,
@@ -1063,7 +944,6 @@ export const cuttingEdgeITServices2025 = [
   e: 'Comprehensive zero-trust platform, behavioral analytics, automated threat response';
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enterprise security implementationGovernment security complianceFinancial services securityHealthcare data protectionRemote workforce security'
     ];
     integration,
@@ -1071,7 +951,6 @@ export const cuttingEdgeITServices2025 = [
     complianc,
   e: ['SOC2ISO 27001FedRAMPHIPAAPCI DSS'],
   };
-<<<<<<< HEAD
   {;
     id: 'blockchain-enterprise-platform';
     name: 'Blockchain Enterprise Platform',,
@@ -1085,12 +964,10 @@ export const cuttingEdgeITServices2025 = [
         price: 599;
         period: 'month'}
         features: ['Basic blockchain featuresStandard smart contractsEmail support']}
-=======
   {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
   s: ['Basic blockchain featuresStandard smart contractsEmail support']}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
       professiona,
   l: {/* TODO: Fix JSX expression */}
@@ -1105,7 +982,6 @@ export const cuttingEdgeITServices2025 = [
   s: ['Full blockchain platformCustom developmentDedicated specialists24/7 support']}
       }
     };
-<<<<<<< HEAD
     category: 'Blockchain';
     tags: ['BlockchainSmart ContractsDistributed LedgerEnterpriseAutomation'];
     website: 'https://ziontechgroup.com/blockchain-enterprise-platform';
@@ -1117,7 +993,6 @@ export const cuttingEdgeITServices2025 = [
     targetAudience: 'Financial institutions, supply chain companies, healthcare organizations, government agencies, manufacturing companies';
     competitiveAdvantage: 'Enterprise-grade blockchain platform, smart contract automation, legacy system integration';
     useCases: [
-=======
     categor,
   y: 'Blockchain';
     tag,
@@ -1139,7 +1014,6 @@ export const cuttingEdgeITServices2025 = [
   e: 'Enterprise-grade blockchain platform, smart contract automation, legacy system integration';
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Supply chain transparencyFinancial transaction processingHealthcare data managementGovernment record keepingManufacturing process tracking'
     ];
     integration,
@@ -1147,7 +1021,6 @@ export const cuttingEdgeITServices2025 = [
     complianc,
   e: ['Blockchain StandardsFinancial RegulationsData Privacy Laws'],
   };
-<<<<<<< HEAD
   {;
     id: 'ai-powered-devops-platform';
     name: 'AI-Powered DevOps Platform',,
@@ -1161,12 +1034,10 @@ export const cuttingEdgeITServices2025 = [
         price: 399;
         period: 'month'}
         features: ['Basic AI DevOps featuresStandard automationEmail support']}
-=======
   {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
   s: ['Basic AI DevOps featuresStandard automationEmail support']}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
       professiona,
   l: {/* TODO: Fix JSX expression */}
@@ -1181,7 +1052,6 @@ export const cuttingEdgeITServices2025 = [
   s: ['Full AI DevOps platformCustom developmentDedicated specialists24/7 support']}
       }
     };
-<<<<<<< HEAD
     category: 'DevOps';
     tags: ['AI DevOpsAutomationCI/CDMonitoringPerformance'];
     website: 'https://ziontechgroup.com/ai-powered-devops-platform';
@@ -1193,7 +1063,6 @@ export const cuttingEdgeITServices2025 = [
     targetAudience: 'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies';
     competitiveAdvantage: 'AI-powered DevOps automation, predictive monitoring, intelligent incident response';
     useCases: [
-=======
     categor,
   y: 'DevOps';
     tag,
@@ -1215,7 +1084,6 @@ export const cuttingEdgeITServices2025 = [
   e: 'AI-powered DevOps automation, predictive monitoring, intelligent incident response';
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
     ];
     integration,

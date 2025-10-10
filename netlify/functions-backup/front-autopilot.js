@@ -2,7 +2,6 @@ exports.config = {/* TODO: Fix JSX expression */}
   e: '*/2 * * * *' };
 exports.handler = async function () {/* TODO: Fix JSX expression */}
   const { execSync } = require('child_process');
-<<<<<<< HEAD
   try {// Homepage enhancements;
     execSync('node automation/homepage-updater.cjs || true', {)
       stdio: inherit),
@@ -30,7 +29,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     });
     // Commit and push;
     execSync(
-=======
   try {/* TODO: Fix JSX expression */}
   l: true}
     });
@@ -56,13 +54,11 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     });
     // Commit and push;
     execSync()
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(front-autopilot): refresh front + homepage [skip ci]" || true) && (git push origin main || true)',
       {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true },
     );
-<<<<<<< HEAD
     return {statusCode: 200;
       body: JSON.stringify({ ok: true),
         task: 'front-autopilot' });
@@ -71,17 +67,14 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),
-=======
     return {/* TODO: Fix JSX expression */}
   k: 'front-autopilot' });
     };
   } catch (e) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
-<<<<<<< HEAD
 exports.config = { schedule: '*/2 * * * *' }; exports.handler = async function() {' const { execSync } = require('child_process'); try {// Homepage enhancements' execSync('node automation/homepage-updater.cjs || true') { stdio: 'inherit'} shell: true;
       });' execSync('node automation/homepage-auto-advertiser.cjs || true') {stdio: 'inherit'} shell: true;
       }); // Front index enhancements' execSync('node automation/front-index-directory-builder.cjs || true') {stdio: 'inherit'} shell: true;
@@ -96,7 +89,6 @@ exports.config = { schedule: '*/2 * * * *' }; exports.handler = async function()
         body: JSON.stringify({ok: false),
         error: String(e;),
       }) }; } };'
-=======
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/2 * * * *' }; exports.handler = async function() {' const { execSync } = require('child_process'); try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
@@ -125,4 +117,3 @@ exports.config = {/* TODO: Fix JSX expression */}
       }); ' return {/* TODO: Fix JSX expression */}
   k: 'front-autopilot' }) }; } catch (e) {/* TODO: Fix JSX expression */}
       }) }; } };'"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

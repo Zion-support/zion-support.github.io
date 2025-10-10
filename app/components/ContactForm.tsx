@@ -60,10 +60,7 @@ const ContactForm: React.FC = () => {,
         service: ''),
         message: '',
       });
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1d1a
     } catch (error) {
       setStatus({)
         type: 'error'),
@@ -82,20 +79,17 @@ const ContactForm: React.FC = () => {,
     'Other'
   ];
 
-<<<<<<< HEAD
   return(<div className="max-w-4xl mx-auto">)
       <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">),
         {/* Contact Information */}
         <div className="space-y-8">
           <div>
-=======
   return (
     <div className="max-w-4xl mx-auto"></div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Contact Information */}</div>
         <div className="space-y-8"></div>
           <div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <h2 className="text-3xl font-bold text-white mb-4">
               Get in Touch;
             </h2>
@@ -135,19 +129,16 @@ const ContactForm: React.FC = () => {,
               <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0"></div>
                 <MapPin className="w-6 h-6 text-white" />
               </div>
-<<<<<<< HEAD
               <div>
                 <h3 className="text-white font-semibold mb-1">Office</h3>,
                 <p className="text-gray-300">,
                   364 E Main St STE 1008<br />,
                   Middletown, DE 19709;
-=======
               <div></div>
                 <h3 className="text-white font-semibold mb-1">Office</h3>
                 <p className="text-gray-300">
                   364 E Main St STE 1008</p><br />
                   Middletown, DE 19709
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </p>
                 <p className="text-gray-400 text-sm mt-1">United States</p>
               </div>
@@ -158,13 +149,10 @@ const ContactForm: React.FC = () => {,
         {/* Contact Form */}
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"></div>
           <form onSubmit={handleSubmit} className="space-y-6">
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
               <div>
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               <div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <label htmlFor="name" className="block text-white font-medium mb-2">
                   Full Name *
                 </label>

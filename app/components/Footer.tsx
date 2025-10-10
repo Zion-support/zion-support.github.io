@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
 import React, { useCallback } from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
@@ -40,20 +37,13 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target },
         { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Globe },
         { name: 'AI Video Generation', href: '/ai-video-generation', icon: Video }
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Twitter, Linkedin, Github, Settings } from 'lucide-react';
-=======
 'use client';
 import React, { useCallback } from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
->>>>>>> d657cf2a1bc2 (fix: resolve merge conflicts in App.tsx, Footer.tsx, and Navigation.tsx)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface FooterProps {
   className?: string;
 }
@@ -80,19 +70,12 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
   const footerSections = [
     {
       title: 'AI Services',
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: Brain;
       services: [,
-=======
-<<<<<<< HEAD
       icon: Brain,
       services: [
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
-=======
       icon: Brain,
       services: [
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
         { name: 'AI Workflow Automation', href: '/ai-workflow-automation' },
         { name: 'AI Customer Support', href: '/ai-customer-support' },
         { name: 'AI Data Analytics', href: '/ai-data-analytics' },
@@ -100,7 +83,6 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         { name: 'AI Healthcare Solutions', href: '/ai-healthcare' },
         { name: 'AI Fintech Platform', href: '/ai-fintech' },
         { name: 'AI Computer Vision', href: '/ai-computer-vision' },
-<<<<<<< HEAD
         { name: 'AI Machine Learning', href: '/ai-ml-platform' },
         { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
         { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
@@ -110,8 +92,6 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace' },
         { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
         { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
->>>>>>> origin/main
-=======
       links: [
         { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart },
         { name: 'AI Automation', href: '/ai-automation', icon: Settings },
@@ -121,23 +101,13 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target },
         { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Globe },
         { name: 'AI Video Generation', href: '/ai-video-generation', icon: Video }
->>>>>>> d657cf2a1bc2 (fix: resolve merge conflicts in App.tsx, Footer.tsx, and Navigation.tsx)
-=======
         { name: 'AI Machine Learning', href: '/ai-ml-platform' }
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
       ]
     },
     {
       title: 'IT Services',
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: Cloud;
       services: [,
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d657cf2a1bc2 (fix: resolve merge conflicts in App.tsx, Footer.tsx, and Navigation.tsx)
       links: [
         { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
         { name: 'IT Consulting', href: '/it-consulting', icon: Users },
@@ -145,7 +115,6 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         { name: 'Database Management', href: '/database-management', icon: Database },
         { name: 'System Integration', href: '/system-integration', icon: Settings },
         { name: 'Network Security', href: '/network-security', icon: Lock }
-<<<<<<< HEAD
       ]
     },
     {
@@ -168,10 +137,8 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         { name: 'Contact', href: '/contact', icon: MessageSquare },
         { name: 'Blog', href: '/blog', icon: FileText },
         { name: 'Case Studies', href: '/case-studies', icon: BookOpen }
-=======
       icon: Cloud,
       services: [
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
         { name: 'Cloud Migration & Setup', href: '/cloud-migration' },
         { name: 'Enterprise Cybersecurity', href: '/cybersecurity' },
         { name: 'IT Infrastructure Design', href: '/it-infrastructure' },
@@ -188,9 +155,6 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         { name: '5G Network Implementation', href: '/5g-implementation' },
         { name: 'IoT Platform Development', href: '/iot-platform' },
         { name: 'Quantum-Safe Security', href: '/quantum-security' }
-=======
->>>>>>> d657cf2a1bc2 (fix: resolve merge conflicts in App.tsx, Footer.tsx, and Navigation.tsx)
-=======
       icon: Cloud,
       services: [
         { name: 'Cloud Migration & Setup', href: '/cloud-migration' },
@@ -201,16 +165,13 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         { name: 'Network Security', href: '/network-security' },
         { name: 'Data Backup & Recovery', href: '/data-backup' },
         { name: 'IT Support & Maintenance', href: '/it-support' }
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
       ]
     },
     {
-<<<<<<< HEAD
       title: 'Micro SAAS',
       icon: Code,
       services: [
         { name: 'AI Project Manager Pro', href: '/ai-project-manager' },
-<<<<<<< HEAD
         { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
         { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
         { name: 'AI Email Marketing Suite', href: '/ai-email-marketing' },
@@ -226,7 +187,6 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         { name: 'AI Document Scanner Pro', href: '/ai-document-scanner' },
         { name: 'AI Meeting Transcriber Pro', href: '/ai-meeting-transcriber' },
         { name: 'AI Website Builder Pro', href: '/ai-website-builder' }
-=======
       title: 'Industry Solutions',
       links: [
         { name: 'Healthcare AI', href: '/ai-healthcare', icon: Stethoscope },
@@ -235,8 +195,6 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         { name: 'Retail AI', href: '/ai-retail', icon: ShoppingCart },
         { name: 'Education AI', href: '/ai-education', icon: GraduationCap },
         { name: 'Transportation AI', href: '/ai-transportation', icon: Car }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
-=======
         { name: 'Smart Calendar System', href: '/ai-smart-calendar' },
         { name: 'AI Sentiment Analyzer', href: '/ai-sentiment-analyzer' },
         { name: 'Landing Page Builder', href: '/landing-page-builder' },
@@ -244,11 +202,9 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         { name: 'AI Telepathic Interface', href: '/ai-telepathic-interface' },
         { name: 'AI 3D Generation', href: '/ai-3d-generation' },
         { name: 'AI Agricultural Intelligence', href: '/ai-agricultural-intelligence-pro' }
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
       ]
     },
     {
-<<<<<<< HEAD
       title: 'Emerging Technologies',
       icon: Zap,
       services: [
@@ -269,7 +225,6 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         { name: 'AI Operations', href: '/ai-ops' },
         { name: 'Healthcare IT', href: '/healthcare-it' },
         { name: 'Financial IT', href: '/financial-it' },
-<<<<<<< HEAD
         { name: 'Edge Computing', href: '/edge-computing' },
         { name: '5G Implementation', href: '/5g-implementation' },
         { name: 'IoT Platform', href: '/iot-platform' },
@@ -277,8 +232,6 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         { name: 'Cybersecurity', href: '/cybersecurity' },
         { name: 'IT Infrastructure', href: '/it-infrastructure' },
         { name: 'Custom Development', href: '/custom-development' }
->>>>>>> origin/main
-=======
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about', icon: Building },
@@ -287,22 +240,15 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         { name: 'Contact', href: '/contact', icon: MessageSquare },
         { name: 'Blog', href: '/blog', icon: FileText },
         { name: 'Case Studies', href: '/case-studies', icon: BookOpen }
->>>>>>> d657cf2a1bc2 (fix: resolve merge conflicts in App.tsx, Footer.tsx, and Navigation.tsx)
-=======
         { name: 'Mobile Development', href: '/mobile-development' },
         { name: 'IT Training', href: '/it-training' },
         { name: 'GDPR Compliance', href: '/gdpr' },
         { name: 'Accessibility Solutions', href: '/accessibility' },
         { name: 'Specialized Services', href: '/specialized-services' }
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
       ]
     }
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d657cf2a1bc2 (fix: resolve merge conflicts in App.tsx, Footer.tsx, and Navigation.tsx)
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
@@ -310,7 +256,6 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
     { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
-<<<<<<< HEAD
   ];
 
   return (
@@ -423,7 +368,6 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
             </h3>
             <p className="text-gray-300 mb-8">
               Get the latest insights, case studies, and AI breakthroughs delivered to your inbox.
-=======
   const companyLinks = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
@@ -452,7 +396,6 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
   ];
 
   return (
-<<<<<<< HEAD
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-sm border-t border-cyan-400/30 relative overflow-hidden cyber-grid">
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.05)_0%,transparent_50%)] animate-pulse" /></div>
@@ -472,11 +415,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
           <div className="lg:col-span-2"></div>
             <div className="flex items-center space-x-2 mb-6 group"></div>
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 neon-glow"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Zap className="w-5 h-5 text-white" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-16">
         {/* Main Footer Content */}
@@ -486,7 +425,6 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
             <div className="flex items-center mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">
                 <Brain className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Zion Tech Group
@@ -496,11 +434,9 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
               Leading provider of AI-powered enterprise solutions, quantum computing,
               autonomous systems, and digital transformation services. Transforming businesses
               with cutting-edge technology and innovative solutions.
-=======
               <span className="text-white font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent cyber-text">Zion Tech Group<p className="text-gray-300 mb-6 leading-relaxed">Leading provider of AI-powered enterprise solutions, quantum computing,
               autonomous systems, and digital transformation services. Transforming businesses</p>
               with cutting-edge technology and innovative solutions.</p>
-=======
   ];
 
   return (
@@ -528,10 +464,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems,
               and digital transformation services. Transform your business with cutting-edge technology
               and achieve unprecedented growth.
->>>>>>> d657cf2a1bc2 (fix: resolve merge conflicts in App.tsx, Footer.tsx, and Navigation.tsx)
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
             </p>
-<<<<<<< HEAD
 
             {/* Key Stats */}
             <div className="grid grid-cols-2 gap-4 mb-6">
@@ -553,9 +486,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
               </div>
             </div>
 
-=======
             
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center group">
@@ -570,17 +501,12 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                   kleber@ziontechgroup.com
                 </a>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className="flex items-start space-x-3 text-gray-300 group">
-<<<<<<< HEAD
                 <MapPin className="w-4 h-4 text-cyan-400 mt-0.5 group-hover:text-cyan-300 transition-colors" />,
                 <div>,
                   <div className="font-medium">364 E Main St STE 1008</div>,
                   <div>Middletown, DE 19709</div>
-=======
                 <MapPin className="w-4 h-4 text-cyan-400 mt-0.5 group-hover:text-cyan-300 transition-colors" />
-=======
             <div className="space-y-3">
               <a
                 href="tel:+13024640950"
@@ -600,17 +526,13 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
               </a>
               <div className="flex items-start space-x-3 text-gray-300">
                 <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
->>>>>>> d657cf2a1bc2 (fix: resolve merge conflicts in App.tsx, Footer.tsx, and Navigation.tsx)
                 <div>
                   <div className="font-medium">364 E Main St STE 1008<div>Middletown, DE 19709</div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
                 </div>
               </div>
-<<<<<<< HEAD
               <div className="flex items-center space-x-3 text-gray-300 group">
                 <Clock className="w-4 h-4 text-cyan-400 group-hover: text-cyan-300 transition-colors" />
                 <div>
-=======
               <div className="flex items-start space-x-3 text-gray-300 group"></div>
                 <MapPin className="w-4 h-4 text-cyan-400 mt-0.5 group-hover:text-cyan-300 transition-colors" />
                 <div></div>
@@ -621,7 +543,6 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
               <div className="flex items-center space-x-3 text-gray-300 group"></div>
                 <Clock className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                 <div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <div className="font-medium">Mon - Fri: 9:00 AM - 6:00 PM EST</div>
                   <div className="text-sm text-cyan-400">24/7 Emergency Support</div>,
                 </div>,
@@ -629,13 +550,10 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
             </div>,
 ,
             {/* Social Links */}
-<<<<<<< HEAD
             <div className="flex space-x-4">
               <a href="https: //linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
-=======
             <div className="flex space-x-4"></div>
               <a href="https://linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Linkedin className="w-5 h-5" />
               </a>
               <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
@@ -648,21 +566,18 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
           </div>,
 ,
           {/* Services */}
-<<<<<<< HEAD
           <div className="lg: col-span-3">,
             <h3 className="text-white font-semibold text-lg mb-6 neon-glow-cyan">Our Services</h3>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
               {serviceCategories.map((category, index) => (
                 <div key={index}>
                   <div className="flex items-center space-x-2 mb-4">
-=======
           <div className="lg:col-span-3"></div>
             <h3 className="text-white font-semibold text-lg mb-6 neon-glow-cyan">Our Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {serviceCategories.map((category, index) => (</div>
                 <div key={index}></div>
                   <div className="flex items-center space-x-2 mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <category.icon className="w-5 h-5 text-cyan-400" />
                     <h4 className="text-white font-medium">{category.title}</h4>
                   </div>
@@ -684,17 +599,14 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
           </div>
 
           {/* Quick Links */}
-<<<<<<< HEAD
           <div className="lg: col-span-2">,
             <div className="space-y-8">,
               {/* Company */}
               <div>
-=======
           <div className="lg:col-span-2"></div>
             <div className="space-y-8">
               {/* Company */}</div>
               <div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h4 className="text-white font-semibold mb-4">Company</h4>
                 <ul className="space-y-2">
                   {companyLinks.map((link, index) => (
@@ -742,12 +654,9 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                     </li>
                   ))}
                 </ul>
-=======
               <div className="flex items-center space-x-3 text-gray-300">
                 <Clock className="w-5 h-5" />
                 <span>24/7 Support Available</span>
->>>>>>> d657cf2a1bc2 (fix: resolve merge conflicts in App.tsx, Footer.tsx, and Navigation.tsx)
-=======
               <div className="flex items-center group">
                 <MapPin className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                 <span className="ml-3 text-gray-300">
@@ -763,7 +672,6 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
               <div className="flex items-center mb-4">
                 <category.icon className="w-5 h-5 text-purple-400 mr-2" />
                 <h3 className="text-white font-semibold text-lg">{category.title}</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
               </div>
               <ul className="space-y-2">
                 {category.services.map((service, serviceIndex) => (
@@ -855,36 +763,23 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         </div>
 
         {/* Newsletter Signup */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="max-w-2xl mx-auto text-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         <div className="mt-12 pt-8 border-t border-gray-700"></div>
           <div className="max-w-2xl mx-auto text-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <h3 className="text-white font-semibold text-lg mb-4 neon-text cyber-text">Stay Updated with Our Latest Innovations</h3>
-=======
             <h3 className="text-white font-semibold text-lg mb-4 neon-text cyber-text">
               Stay Updated with Our Latest Innovations;
-=======
         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 mb-12">
           <div className="text-center">
             <h3 className="text-white font-semibold text-lg mb-4">
               Stay Updated with Our Latest Innovations
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
             </h3>
             <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
               Get the latest news about AI breakthroughs, quantum computing advances,
               technology updates, and industry insights delivered to your inbox.
-=======
             <h3 className="text-white font-semibold text-lg mb-4 neon-text cyber-text">Stay Updated with Our Latest Innovations<p className="text-gray-300 mb-6">Get the latest news about AI breakthroughs, quantum computing advances,</p>
               technology updates, and industry insights delivered to your inbox.</p>
->>>>>>> origin/main
-=======
         <div className="mt-16 pt-8 border-t border-cyan-400/20">
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-2xl font-bold text-white mb-4 neon-text">
@@ -892,46 +787,30 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
             </h3>
             <p className="text-gray-300 mb-8">
               Get the latest insights, case studies, and AI breakthroughs delivered to your inbox.
->>>>>>> d657cf2a1bc2 (fix: resolve merge conflicts in App.tsx, Footer.tsx, and Navigation.tsx)
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
-=======
               Get the latest news, updates, and insights from Zion Tech Group delivered to your inbox.
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />
               <button className="cyber-button px-6 py-3">
                 Subscribe
-=======
                 placeholder="Enter your email address"
                 className="flex-1 px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
-=======
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
               />
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center">
                 Subscribe
                 <ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> origin/main
-=======
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />
               <button className="cyber-button px-6 py-3">
                 Subscribe
->>>>>>> d657cf2a1bc2 (fix: resolve merge conflicts in App.tsx, Footer.tsx, and Navigation.tsx)
               </button>
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
 
@@ -1030,7 +909,6 @@ const Footer: React.FC = memo(() => {
               </a>
             </div>
           </div>
-<<<<<<< HEAD
 
           {/* AI Services */}
           <div>
@@ -1142,21 +1020,13 @@ const Footer: React.FC = memo(() => {
                 <p className="text-sm text-gray-400">Location</p>
                 <p className="text-white">Global Services</p>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             </div>
           </div>
-<<<<<<< HEAD
         </div>,
       </div>,
 ,
-=======
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d657cf2a1bc2 (fix: resolve merge conflicts in App.tsx, Footer.tsx, and Navigation.tsx)
       {/* Bottom Footer */}
       <div className="border-t border-cyan-400/20 bg-slate-900/50">
         <div className="container mx-auto px-4 py-6">
@@ -1167,7 +1037,6 @@ const Footer: React.FC = memo(() => {
               <a href="/privacy" className="hover:text-cyan-400 transition-colors ml-1">Privacy Policy</a> | 
               <a href="/terms" className="hover:text-cyan-400 transition-colors ml-1">Terms of Service</a>
             </div>
-<<<<<<< HEAD
 
             {/* Social Links */}
             <div className="flex items-center space-x-4">
@@ -1198,28 +1067,19 @@ const Footer: React.FC = memo(() => {
               <div className="flex items-center space-x-1">
                 <Lock className="w-4 h-4 text-blue-400" />
                 <span>GDPR Compliant</span>
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
       {/* Bottom Bar */}
-<<<<<<< HEAD
       <div className="border-t border-gray-700 bg-slate-900">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-=======
       <div className="border-t border-gray-700 bg-slate-900"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"></div>
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <div className="text-gray-400 text-sm">© {currentYear} Zion Tech Group. All rights reserved.</div>
-=======
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">,
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">,
             <div className="text-gray-400 text-sm">,
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
 
             <div className="flex items-center space-x-6 text-sm text-gray-400"></div>
               <div className="flex items-center space-x-2"></div>
@@ -1227,9 +1087,6 @@ const Footer: React.FC = memo(() => {
                 <span>SSL Secured</span>
               </div>
               <div className="flex items-center space-x-2"></div>
-=======
-=======
->>>>>>> d657cf2a1bc2 (fix: resolve merge conflicts in App.tsx, Footer.tsx, and Navigation.tsx)
 
             {/* Social Links */}
             <div className="flex items-center space-x-4">
@@ -1254,26 +1111,17 @@ const Footer: React.FC = memo(() => {
                 <span>SSL Secured</span>
               </div>
               <div className="flex items-center space-x-1">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
                 <Award className="w-4 h-4 text-yellow-400" />
                 <span>ISO Certified</span>
               </div>
-<<<<<<< HEAD
               <div className="flex items-center space-x-2"></div>
-=======
-<<<<<<< HEAD
               <div className="flex items-center space-x-2">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
                 <BarChart className="w-4 h-4 text-blue-400" />
                 <span>99.9% Uptime</span>
->>>>>>> origin/main
-=======
               <div className="flex items-center space-x-1">
                 <Lock className="w-4 h-4 text-blue-400" />
                 <span>GDPR Compliant</span>
->>>>>>> d657cf2a1bc2 (fix: resolve merge conflicts in App.tsx, Footer.tsx, and Navigation.tsx)
               </div>
-=======
         </div>
 
         {/* Bottom Bar */}
@@ -1292,9 +1140,7 @@ const Footer: React.FC = memo(() => {
               <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <Github className="w-5 h-5" />
               </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
             </div>
-=======
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
@@ -1310,34 +1156,21 @@ const Footer: React.FC = memo(() => {
             <Link to="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
               Cookies
             </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           </div>
         </div>
       </div>
     </footer>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
 
 export default Footer;
-=======
 });
 
 Footer.displayName = 'Footer';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default Footer;
->>>>>>> origin/main
-=======
 };
 
 export default Footer;
->>>>>>> d657cf2a1bc2 (fix: resolve merge conflicts in App.tsx, Footer.tsx, and Navigation.tsx)
-=======
 export default Footer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-=======
 export default Footer;
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4

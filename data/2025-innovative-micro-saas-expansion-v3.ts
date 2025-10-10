@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -602,7 +601,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     launchDate: '2023-10-01', customers: 34;
     rating: 4.9;
     reviews: 28;
-=======
   i,
   d: string;
   nam,
@@ -1855,7 +1853,6 @@ export const,
   g: 4.9;
     review,
   s: 28,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */}
@@ -1863,7 +1860,6 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -1877,7 +1873,6 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */}
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup.com',
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -1897,12 +1892,10 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */}
   websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const,
   innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = [;
   // AI-Powered Business Intelligence & Analytics;
-<<<<<<< HEAD
   {
     id: 'ai-business-intelligence-platform';
     name: 'AI Business Intelligence Platform';
@@ -2658,7 +2651,6 @@ export interface InnovativeMicroSaasService {;
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup.com',
-=======
   {/* TODO: Fix JSX expression */}
   g: 4.9}
     review,
@@ -2808,12 +2800,10 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */}
   websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const,
   innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = [;
   // AI-Powered Business Intelligence & Analytics;
-<<<<<<< HEAD
   {
     id: 'ai-business-intelligence-platform';
     name: 'AI Business Intelligence Platform';
@@ -3514,7 +3504,6 @@ export const,
     customers: 34;
     rating: 4.9}
     reviews: 28}
-=======
   {/* TODO: Fix JSX expression */}
   g: 4.9}
     review,
@@ -3621,7 +3610,6 @@ export const,
   g: 4.9}
     review,
   s: 28}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 i,

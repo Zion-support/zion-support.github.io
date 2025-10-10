@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import { Link } from 'react-router-dom';
 import {
@@ -79,11 +78,8 @@ export default function TeamPage() {
       education: 'MS Computer Science, MIT',
       achievements: ['Forbes 30 Under 30', 'AI Innovation Award 2023', 'TechCrunch Disrupt Speaker'],
       social: {,
-<<<<<<< HEAD
     linkedin: 'https://linkedin.com/in/klebersantos',
-=======
         linkedin: 'https://linkedin.com/in/klebersantos',
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
         twitter: 'https://twitter.com/klebersantos',
         email: 'kleber@ziontechgroup.com',
       },
@@ -102,11 +98,8 @@ export default function TeamPage() {
       education: 'PhD Computer Science, Stanford',
       achievements: ['IEEE Fellow', 'Nature AI Research Award', 'Turing Award Nominee'],
       social: {,
-<<<<<<< HEAD
     linkedin: 'https://linkedin.com/in/sarahchen',
-=======
         linkedin: 'https://linkedin.com/in/sarahchen',
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
         twitter: 'https://twitter.com/sarahchen',
         github: 'https://github.com/sarahchen',
       },
@@ -125,11 +118,8 @@ export default function TeamPage() {
       education: 'BS Computer Engineering, UC Berkeley',
       achievements: ['Google Engineering Excellence Award', 'Microsoft MVP', 'Open Source Contributor'],
       social: {,
-<<<<<<< HEAD
     linkedin: 'https://linkedin.com/in/michaelrodriguez',
-=======
         linkedin: 'https://linkedin.com/in/michaelrodriguez',
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
         twitter: 'https://twitter.com/michaelrod',
         github: 'https://github.com/michaelrod',
       },
@@ -148,11 +138,8 @@ export default function TeamPage() {
       education: 'PhD Machine Learning, Carnegie Mellon',
       achievements: ['ACL Outstanding Paper Award', 'CVPR Best Paper', 'NeurIPS Spotlight'],
       social: {,
-<<<<<<< HEAD
     linkedin: 'https://linkedin.com/in/emilywatson',
-=======
         linkedin: 'https://linkedin.com/in/emilywatson',
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
         twitter: 'https://twitter.com/emilywatson',
         github: 'https://github.com/emilywatson',
       },
@@ -171,11 +158,8 @@ export default function TeamPage() {
       education: 'MBA, Wharton School',
       achievements: ['Product of the Year Award', 'UX Excellence Award', 'Forbes Product Leader'],
       social: {,
-<<<<<<< HEAD
     linkedin: 'https://linkedin.com/in/davidkim',
-=======
         linkedin: 'https://linkedin.com/in/davidkim',
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
         twitter: 'https://twitter.com/davidkim',
         email: 'david@ziontechgroup.com',
       },
@@ -194,11 +178,8 @@ export default function TeamPage() {
       education: 'PhD Statistics, Harvard',
       achievements: ['Data Science Excellence Award', 'Kaggle Grandmaster', 'TEDx Speaker'],
       social: {,
-<<<<<<< HEAD
     linkedin: 'https://linkedin.com/in/lisawang',
-=======
         linkedin: 'https://linkedin.com/in/lisawang',
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
         twitter: 'https://twitter.com/lisawang',
         github: 'https://github.com/lisawang',
       },
@@ -282,7 +263,6 @@ export default function TeamPage() {
     { number: '99%', label: 'Client Satisfaction', icon: Star }
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
       <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -290,7 +270,6 @@ export default function TeamPage() {
           <div className="max-w-4xl mx-auto text-center"></div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Meet Our Team</h1><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">World-class experts in AI, quantum computing, and enterprise technology</p>
               working together to transform your business.</p>
-=======
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 lg: py-32 overflow-hidden">
@@ -303,7 +282,6 @@ export default function TeamPage() {
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">,
               World-class experts in AI, quantum computing, and enterprise technology;
               working together to transform your business.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
             <div className="flex flex-wrap justify-center gap-4"></div>
               <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"></div>
@@ -323,7 +301,6 @@ export default function TeamPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Stats Section */}
       <section className="py-20">
         <div className="container mx-auto px-4"></section>
@@ -331,9 +308,7 @@ export default function TeamPage() {
               <div key={index} className="text-center group"></div>
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                   <stat.icon className="w-10 h-10 text-white" />
-<<<<<<< HEAD
                 <div className="text-4xl font-bold text-white mb-2">{stat.number}<div className="text-gray-300 font-medium">{stat.label}</div>
-=======
       {/* Stats Section */})
       <section className="py-20">)
         <div className="container mx-auto px-4">)
@@ -345,11 +320,7 @@ export default function TeamPage() {
                 </div>,
                 <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 font-medium">{stat.label}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
                 <div className="text-4xl font-bold text-white mb-2">{stat.number}</div><div className="text-gray-300 font-medium">{stat.label}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users, Award, Linkedin, Mail, MapPin, Calendar, GraduationCap, Briefcase, Star, CheckCircle } from 'lucide-react';
@@ -458,26 +429,21 @@ const TeamPage: React.FC = () => {
                 <div className="text-gray-400 text-sm">
                   {achievement.description}
                 </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Leadership Team */}
       <section className="py-20 bg-slate-800/50">
-<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Leadership Team<p className="text-lg text-gray-300 max-w-3xl mx-auto">Meet the visionary leaders driving innovation and growth at Zion Tech Group<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{teamMembers.map((member) => (</div>
               <div key={member.id} className="bg-slate-800/50 rounded-lg p-8 text-center group hover:bg-slate-700/50 transition-all duration-300">
                 <div className="w-32 h-32 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-4xl font-bold text-white">{member.name.split(' ').map(n => n[0]).join('')}<h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
                 <p className="text-cyan-400 font-medium mb-3">{member.role}<p className="text-gray-300 text-sm mb-4">{member.bio}</p>
-=======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Leadership Team;
             </h2>
@@ -496,8 +462,6 @@ const TeamPage: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
                 <p className="text-cyan-400 font-medium mb-3">{member.role}</p>
                 <p className="text-gray-300 text-sm mb-4">{member.bio}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
         <div className="container mx-auto px-4"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Leadership Team</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Meet the visionary leaders driving innovation and growth at Zion Tech Group</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{teamMembers.map((member) => (</div>
@@ -505,7 +469,6 @@ const TeamPage: React.FC = () => {
                 <div className="w-32 h-32 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
                   <span className="text-4xl font-bold text-white">{member.name.split(' ').map(n => n[0]).join('')}</span><h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
                 <p className="text-cyan-400 font-medium mb-3">{member.role}</p><p className="text-gray-300 text-sm mb-4">{member.bio}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
 
                 <div className="space-y-2 mb-6"></div>
                   <div className="text-sm text-gray-400"></div>
@@ -516,26 +479,20 @@ const TeamPage: React.FC = () => {
                   </div>
                 </div>
 
-<<<<<<< HEAD
                 <div className="mb-6">
-<<<<<<< HEAD
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Expertise:<div className="flex flex-wrap justify-center gap-2">{member.expertise.slice(0, 3).map((skill, index) => (<span key={index} className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">{skill}</span>
-=======
                 <div className="mb-6"></div>
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Expertise:<div className="flex flex-wrap justify-center gap-2">{member.expertise.slice(0, 3).map((skill, index) => (</div><span key={index} className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">{skill}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       </span>
                     ))}
                   <div className="flex justify-center space-x-4">{member.social.linkedin && (</div>
                     <a href={member.social.linkedin} className="text-gray-400 hover:text-cyan-400 transition-colors">
                       <Linkedin className="w-5 h-5" />
                     </a>
-=======
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Expertise: </h4>,
                   <div className="flex flex-wrap justify-center gap-2">,
                     {member.expertise.slice(0, 3).map((skill, index) => (
                       <span key={index} className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">
-=======
       {/* Team Members */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -568,20 +525,17 @@ const TeamPage: React.FC = () => {
                   <div className="flex flex-wrap gap-2">
                     {member.expertise.map((skill, skillIndex) => (
                       <span key={skillIndex} className="px-3 py-1 bg-cyan-400/20 text-cyan-300 text-xs rounded-full">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                         {skill}
                       </span>
                     ))}
                   </div>
                 </div>
 
-<<<<<<< HEAD
                 <div className="flex justify-center space-x-4">
                   {member.social.linkedin && (
                     <a href={member.social.linkedin} className="text-gray-400 hover: text-cyan-400 transition-colors">,
                       <Linkedin className="w-5 h-5" />,
                     </a>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   )}
                   {member.social.twitter && (
                     <a href={member.social.twitter} className="text-gray-400 hover: text-cyan-400 transition-colors">,
@@ -598,7 +552,6 @@ const TeamPage: React.FC = () => {
                       <Mail className="w-5 h-5" />,
                     </a>,
                   )}
-=======
                 <div className="flex space-x-4">
                   <a
                     href={member.linkedin}
@@ -616,7 +569,6 @@ const TeamPage: React.FC = () => {
                     <Mail className="w-4 h-4 mr-2" />
                     Email
                   </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 </div>
               </div>
             ))}
@@ -624,25 +576,19 @@ const TeamPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Departments */}
       <section className="py-20">
-<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Departments<p className="text-lg text-gray-300 max-w-3xl mx-auto">Organized teams working together to deliver exceptional results<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{departments.map((dept, index) => (</div>
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center group hover:bg-slate-700/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-=======
         <div className="container mx-auto px-4"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Departments</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Organized teams working together to deliver exceptional results</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{departments.map((dept, index) => (</div>
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center group hover:bg-slate-700/50 transition-all duration-300"></div>
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <dept.icon className="w-8 h-8 text-white" />
-=======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Our Departments;
             </h2>
@@ -656,7 +602,6 @@ const TeamPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">,
                   <dept.icon className="w-8 h-8 text-white" />,
                 </div>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <h3 className="text-xl font-bold text-white mb-2">{dept.name}</h3>
                 <p className="text-gray-300 text-sm mb-4">{dept.description}</p><div className="text-cyan-400 font-medium mb-4">{dept.members} Members</div>
                 <div className="space-y-1">{dept.specialties.map((specialty, specIndex) => (</div><div key={specIndex} className="text-xs text-gray-400">{specialty}</div>
@@ -671,16 +616,13 @@ const TeamPage: React.FC = () => {
 
       {/* Values */}
       <section className="py-20 bg-slate-800/50">
-<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Values<p className="text-lg text-gray-300 max-w-3xl mx-auto">The principles that guide everything we do and shape our culture<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{values.map((value, index) => (</div>
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <value.icon className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-3">{value.title}<p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
-=======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Our Values;
             </h2>
@@ -696,8 +638,6 @@ const TeamPage: React.FC = () => {
                 </div>,
                 <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
         <div className="container mx-auto px-4"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Values</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">The principles that guide everything we do and shape our culture</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{values.map((value, index) => (</div>
@@ -705,7 +645,6 @@ const TeamPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                   <value.icon className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3><p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
             ))}
           </div>
@@ -714,35 +653,25 @@ const TeamPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
-<<<<<<< HEAD
         <div className="container mx-auto px-4 text-center">
-<<<<<<< HEAD
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Join Our Team<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">We're always looking for talented individuals who share our passion for AI and technology.</p>
-=======
         <div className="container mx-auto px-4 text-center"></section>
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Join Our Team</h2><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">We're always looking for talented individuals who share our passion for AI and technology.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             Join us in building the future.</p>
-=======
           <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
             Join Our Team;
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
             We're always looking for talented individuals who share our passion for AI and technology.
             Join us in building the future.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link;
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               to="/careers"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
             >
-<<<<<<< HEAD
               <Briefcase className="w-5 h-5 mr-2" >View Open Positions</Briefcase>
             </Briefcase>
             <Link
@@ -751,7 +680,6 @@ const TeamPage: React.FC = () => {
             >
               <MessageSquare className="w-5 h-5 mr-2" >Contact Us</MessageSquare>
             </MessageSquare>
-=======
               <Briefcase className="w-5 h-5 mr-2" />
               View Open Positions;
             </Link>
@@ -762,14 +690,12 @@ const TeamPage: React.FC = () => {
               <MessageSquare className="w-5 h-5 mr-2" />
               Contact Us;
             </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </div>
         </div>
       </section>,
     </div>,
   );
 }
-=======
       {/* Join Our Team */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-4xl mx-auto text-center">
@@ -803,4 +729,3 @@ const TeamPage: React.FC = () => {
 };
 
 export default TeamPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

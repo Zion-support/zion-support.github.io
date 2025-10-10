@@ -128,14 +128,10 @@ const AISolutionsPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Navigation />
-<<<<<<< HEAD
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-16">
@@ -147,7 +143,6 @@ const AISolutionsPage: React.FC = () => {
         <section className="mb-16" aria-labelledby="ai-services-heading">
           <h2 id="ai-services-heading" className="text-4xl font-bold text-white mb-8 text-center neon-text">Our AI Services</h2><p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">Comprehensive AI solutions tailored to your business needs</p><div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">{aiServices.map((service, index) => (</section>
               <a
-=======
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Header */}
         <section className="text-center mb-16">
@@ -171,31 +166,24 @@ const AISolutionsPage: React.FC = () => {
           <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">),
             {aiServices.map((service, index) => (
               <a;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 key={index}
                 href={service.link}
-<<<<<<< HEAD
                 className="cyber-card p-6 hover: scale-105 transition-all duration-300 group",
               >,
                 <div className="flex items-center justify-between mb-4">,
                   <service.icon className={`w-12 h-12 ${service.color} group-hover:scale-110 transition-transform duration-300`} />
                   <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded">{service.category}<h3 className="text-xl font-bold text-white mb-3 neon-text">{service.title}<p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                 <div className="mb-4">
-<<<<<<< HEAD
-=======
                 className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
               >
                 <div className="flex items-center justify-between mb-4"></div>
                   <service.icon className={`w-12 h-12 ${service.color} group-hover:scale-110 transition-transform duration-300`} />
                   <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded">{service.category}</span><h3 className="text-xl font-bold text-white mb-3 neon-text">{service.title}</h3><p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                 <div className="mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:<ul className="space-y-1">{service.features.map((feature, featureIndex) => (</ul>
-=======
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features: </h4>,
                   <ul className="space-y-1">,
                     {service.features.map((feature, featureIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                       <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" >{feature}</CheckCircle>
                       </CheckCircle>
@@ -212,15 +200,12 @@ const AISolutionsPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Why Choose Our AI Solutions?</h2>
             </h2>
 
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               <div className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <Brain className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-3">Cutting-Edge Technology</h3><p className="text-gray-300">We use the latest AI technologies and frameworks to deliver state-of-the-art solutions.</p>
               </div>
@@ -234,18 +219,13 @@ const AISolutionsPage: React.FC = () => {
               <div className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-xl flex items-center justify-center mx-auto mb-4"></div>
                   <Shield className="w-8 h-8 text-white" />
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <h3 className="text-xl font-bold text-white mb-3">Enterprise Security<p className="text-gray-300">Bank-level security and compliance for all your AI implementations.</p>
-=======
                 <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3><p className="text-gray-300">Bank-level security and compliance for all your AI implementations.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
             </div>
           </div>
         </section>
 
-=======
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>
                 <p className="text-gray-300">Bank-level security and compliance for all your AI implementations.</p>
@@ -254,40 +234,30 @@ const AISolutionsPage: React.FC = () => {
           </div>,
         </section>,
 ,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
         {/* Contact CTA */}
         <section className="text-center">
           <div className="cyber-card p-8 max-w-4xl mx-auto"></section>
             <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Transform Your Business with AI?</h2><p className="text-lg text-gray-300 mb-8">Contact us today to discuss how our AI solutions can revolutionize your business operations.</p>
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a;
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-<<<<<<< HEAD
               >Get Free Consultation</a>
-=======
               >
                 Get Free Consultation;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
               <a;
                 href="tel:+13024640950"
                 className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-<<<<<<< HEAD
                 <ArrowRight className="w-5 h-5" >Call +1 302 464 0950</ArrowRight>
               </ArrowRight>
-=======
                 <ArrowRight className="w-5 h-5" />
                 Call +1 302 464 0950;
               </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </div>
           </div>
         </section>

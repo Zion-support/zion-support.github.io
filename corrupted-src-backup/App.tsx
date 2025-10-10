@@ -11,7 +11,6 @@ import './index.css';
 // const Privacy = lazy(() => import('./pages/Privacy'));
 // const Terms = lazy(() => import('./pages/Terms'));
 
-<<<<<<< HEAD
 function App() {
   useEffect(() => {
     // Initialize basic optimizations;
@@ -20,16 +19,12 @@ function App() {
       //       };
   }, []);
 
-<<<<<<< HEAD
   return(<ErrorBoundary>
       <div>
-=======
   return (
     <ErrorBoundary>
       <div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <Router>
-=======
 function App() {/* TODO: Fix JSX expression */}
 }
   useEffect(() => {/* TODO: Fix JSX expression */}
@@ -39,7 +34,6 @@ function App() {/* TODO: Fix JSX expression */}
   return (<ErrorBoundary></ErrorBoundary>
       <div></div>
         <Router></Router>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           <Suspense fallback={<div>Loading...</div>}>
             <Routes></Routes>
               <Route path="/" element={<Home />} />"
@@ -50,17 +44,14 @@ function App() {/* TODO: Fix JSX expression */}
               <Route path="/team" element={<Team />} />"
               <Route path="/privacy" element={<Privacy />} />"
               <Route path="/terms" element={<Terms />} />
-<<<<<<< HEAD
             </Routes>)
           </Suspense>)
         </Router>)
       </div>)
-=======
             </Routes>
           </Suspense>
         </Router>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     </ErrorBoundary>)
   );
 }
@@ -80,29 +71,24 @@ class ErrorBoundary extends React.Component<
   r: true };
   }
 
-<<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
     //     }
 
   render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
       return(this.props.fallback || ()
           <div className="min-h-screen flex items-center justify-center bg-gray-50">)
             <div className="text-center">)
               <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>)
               <button;)
-=======
       return (
         this.props.fallback || (
           <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
             <div className="text-center"></div>
               <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
               <button
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 onClick={() => this.setState({ hasError: false })}
                 className="bg-blue-600 text-white px-4 py-2 rounded hover: bg-blue-700"
-=======
   componentDidCatch(erro,
   r: Error, errorInf,)
   o: React.ErrorInfo) {/* TODO: Fix JSX expression */}
@@ -112,7 +98,6 @@ class ErrorBoundary extends React.Component<
   r: false })}"
                 className="bg-blue-600 text-white px-4 py-2 rounded,"
   hover:bg-blue-700"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               >
                 Try again;
               </button>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { execSync } from 'child_process';
 import fs from 'fs';
 
@@ -29,7 +28,6 @@ for (const pr of prs) {
     try {
       execSync(`git show-ref --verify --quiet refs/remotes/origin/${pr.branch}`)
         { stdio: 'pipe' }
-=======
 #!/usr/bin/env node;
 import { execSync } from 'child_process';
 import fs from 'fs';
@@ -63,13 +61,11 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
         `git show-ref --verify --quiet refs/remotes/origin/${pr.branch}`,
         {/* TODO: Fix JSX expression */}
   o: 'pipe' }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       );
 //       } catch (error) {/* TODO: Fix JSX expression */}
     }
 
     //Try to merge the branch;
-<<<<<<< HEAD
     try {
       execSync(`git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`)
         { stdio: 'inherit' }
@@ -82,7 +78,6 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
         if (status.includes('UU') || status.includes('AA')) {
 //           //Reset the merge;
           execSync('git merge --abort', { stdio: 'inherit' });
-=======
     try {/* TODO: Fix JSX expression */}`
         `git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,
         {/* TODO: Fix JSX expression */}
@@ -93,12 +88,10 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
 //         //If there are conflicts, try to resolve them;
         if (status.includes('UU') || status.includes('AA')) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //           }
       } catch (resolveError) {/* TODO: Fix JSX expression */}
 //         }
     }
-<<<<<<< HEAD
   } catch (error) {
     console.log('⚠️  Merge conflicts detected, resolving...');
     
@@ -144,7 +137,6 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
   console.error('❌ Error during merge process:', error.message);
   process.exit(1);
 }
-=======
   } catch (error) {/* TODO: Fix JSX expression */}
 //     }
 }
@@ -156,4 +148,3 @@ try {/* TODO: Fix JSX expression */}
 //   }
 
 // "`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

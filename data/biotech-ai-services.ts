@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export interface BiotechAIService {id: string;
   name: string;
   tagline: string;
@@ -31,12 +30,10 @@ export interface BiotechAIService {id: string;
     email: string;
     address: string}
     website: string}
-=======
 export interface BiotechAIService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
       'Machine Learning',
       'Bioinformatics',
@@ -55,7 +52,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   e: 'http,
   s://ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
     real_implementation: true;
     implementation_details: unknown;
     customers: 120;
@@ -68,7 +64,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     price: '$4, 999',
     period: '/month',
     description: unknown;
-=======
     real_implementatio,
   n: true,
     implementation_detail,
@@ -92,7 +87,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI - powered genetic engineering platform that enables precise gene editing, synthetic biology, and genetic optimization. Create new organisms and optimize existing ones.',
     feature,
   s: [,
@@ -107,7 +101,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Mobile app',
       'API for lab integration',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - blue - 600 to - indigo - 700'
@@ -122,7 +115,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     category: 'Biotech AI',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -151,7 +143,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI Gene Editing',
       'Synthetic Biology',
       'Machine Learning',
@@ -177,7 +168,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Medical research',
       'Industrial biotechnology',
     ],
-<<<<<<< HEAD
     roi: 'Revolutionize genetic engineering with AI precision. ROI through innovation and new product development.',
     competitors: ['Manual methods', 'Basic tools'],
     market_size: '$50B genetic engineering market'
@@ -203,7 +193,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     price: '$2, 999',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Revolutionize genetic engineering with AI precision. ROI through innovation and new product development.',
     competitor,
@@ -252,7 +241,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI platform that designs novel proteins for therapeutic, industrial, and research applications. Create proteins with specific functions and properties.',
     feature,
   s: [,
@@ -267,7 +255,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Mobile app',
       'API for integration',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - purple - 600 to - pink - 700'
@@ -282,7 +269,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     category: 'Biotech AI',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -311,7 +297,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI Protein Design',
       'Machine Learning',
       'Bioinformatics',
@@ -337,7 +322,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Biomaterials',
       'Drug delivery',
     ],
-<<<<<<< HEAD
     roi: 'Design novel proteins faster and more efficiently. ROI through new product development and research acceleration.',
     competitors: ['Basic tools', 'Manual design'],
     market_size: '$30B protein engineering market'
@@ -363,7 +347,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     price: '$3, 499',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Design novel proteins faster and more efficiently. ROI through new product development and research acceleration.',
     competitor,
@@ -412,7 +395,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI platform that optimizes clinical trial design, patient recruitment, and data analysis. Reduce trial costs by 40% and accelerate completion by 60%.',
     feature,
   s: [,
@@ -427,7 +409,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Regulatory tools',
       'Collaboration platform',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - green - 600 to - emerald - 700'
@@ -442,7 +423,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     category: 'Biotech AI',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -471,7 +451,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI Optimization',
       'Clinical Trials',
       'Machine Learning',
@@ -497,7 +476,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Compliance monitoring',
       'Performance tracking',
     ],
-<<<<<<< HEAD
     roi: 'Reduce trial costs by 40% and accelerate completion by 60%. ROI through efficiency gains and faster approvals.',
     competitors: ['Basic tools', 'Manual management'],
     market_size: '$45B clinical trial market'
@@ -523,7 +501,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     price: '$2, 499',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Reduce trial costs by 40% and accelerate completion by 60%. ROI through efficiency gains and faster approvals.',
     competitor,
@@ -572,7 +549,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI platform that discovers and validates biomarkers for disease diagnosis, prognosis, and treatment response. Accelerate biomarker research by 10x.',
     feature,
   s: [,
@@ -587,7 +563,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Research database',
       'Analytics dashboard',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - cyan - 600 to - blue - 700'
@@ -602,7 +577,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     category: 'Biotech AI',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -631,7 +605,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI Discovery',
       'Biomarkers',
       'Machine Learning',
@@ -657,7 +630,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Personalized medicine',
       'Research discovery',
     ],
-<<<<<<< HEAD
     roi: 'Accelerate biomarker discovery by 10x. ROI through research acceleration and new diagnostic development.',
     competitors: ['Manual methods', 'Basic tools'],
     market_size: '$25B biomarker market'
@@ -683,7 +655,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     price: '$3, 999',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Accelerate biomarker discovery by 10x. ROI through research acceleration and new diagnostic development.',
     competitor,
@@ -732,7 +703,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI platform that enables personalized medicine through genomic analysis, drug response prediction, and treatment optimization. Transform healthcare with precision medicine.',
     feature,
   s: [,
@@ -747,7 +717,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Healthcare integration',
       'Analytics dashboard',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - indigo - 600 to - purple - 700'
@@ -762,7 +731,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     category: 'Biotech AI',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -791,7 +759,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI Genomics',
       'Personalized Medicine',
       'Machine Learning',
@@ -817,7 +784,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Clinical trials',
       'Healthcare research',
     ],
-<<<<<<< HEAD
     roi: 'Improve treatment outcomes and reduce healthcare costs. ROI through better patient outcomes and cost savings.',
     competitors: ['Basic analysis', 'Limited tools'],
     market_size: '$60B personalized medicine market'
@@ -843,7 +809,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     price: '$2, 999',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Improve treatment outcomes and reduce healthcare costs. ROI through better patient outcomes and cost savings.',
     competitor,
@@ -892,7 +857,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI platform that discovers new therapeutic uses for existing drugs. Accelerate drug development by finding new applications for approved medications.',
     feature,
   s: [,
@@ -907,7 +871,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'API for integration',
       'Analytics dashboard',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - orange - 600 to - red - 700'
@@ -922,7 +885,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     category: 'Biotech AI',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -951,7 +913,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI Repurposing',
       'Drug Discovery',
       'Machine Learning',
@@ -977,7 +938,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Faster approval',
       'Research discovery',
     ],
-<<<<<<< HEAD
     roi: 'Accelerate drug development and reduce costs by 80%. ROI through faster time - to - market and cost savings.',
     competitors: ['Manual research', 'Basic tools'],
     market_size: '$20B drug repurposing market'
@@ -1004,7 +964,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     price: '$1, 999',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Accelerate drug development and reduce costs by 80%. ROI through faster time - to - market and cost savings.',
     competitor,
@@ -1054,7 +1013,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive AI - powered bioinformatics platform that analyzes genomic, proteomic, and metabolomic data. Accelerate biological research with advanced computational tools.',
     feature,
   s: [,
@@ -1069,7 +1027,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Real - time analysis',
       'Advanced algorithms',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - teal - 600 to - cyan - 700'
@@ -1084,7 +1041,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     category: 'Biotech AI',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1113,7 +1069,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI Bioinformatics',
       'Multi - omics',
       'Machine Learning',
@@ -1139,7 +1094,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Data processing',
       'Statistical analysis',
     ],
-<<<<<<< HEAD
     roi: 'Accelerate biological research and data analysis. ROI through research efficiency and discovery acceleration.',
     competitors: ['Basic tools', 'Manual analysis'],
     market_size: '$35B bioinformatics market'
@@ -1165,7 +1119,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     price: '$4, 499',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Accelerate biological research and data analysis. ROI through research efficiency and discovery acceleration.',
     competitor,
@@ -1214,7 +1167,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI platform that optimizes biomanufacturing processes, improves yield, and reduces costs. Transform bioproduction with intelligent optimization.',
     feature,
   s: [,
@@ -1229,7 +1181,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Analytics dashboard',
       'Automation tools',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - gray - 600 to - slate - 700'
@@ -1244,7 +1195,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     category: 'Biotech AI',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1273,7 +1223,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI Optimization',
       'Biomanufacturing',
       'Machine Learning',
@@ -1299,7 +1248,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Automation',
       'Performance monitoring',
     ],
-<<<<<<< HEAD
     roi: 'Improve yield by 30% and reduce costs by 25%. ROI through efficiency gains and cost savings.',
     competitors: ['Basic optimization', 'Manual processes'],
     market_size: '$40B biomanufacturing market'
@@ -1374,7 +1322,6 @@ export const biotechAIServices: BiotechAIService[] = [,
     customers: 90;
     rating: 4.9;
     reviews: 45;
-=======
     ro,
   i: 'Improve yield by 30% and reduce costs by 25%. ROI through efficiency gains and cost savings.',
     competitor,
@@ -1546,7 +1493,6 @@ export const,
   g: 4.9,
     review,
   s: 45,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 export interface BiotechAIService {/* TODO: Fix JSX expression */}
   }
@@ -1556,7 +1502,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   }
 ];
 ;
-<<<<<<< HEAD
     realImplementation: true;
     implementationDetails:,
       'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.'
@@ -1571,7 +1516,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     price: '$4,999'
     period: '/month',
     description:,
-=======
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1598,7 +1542,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI-powered genetic engineering platform that enables precise gene editing, synthetic biology, and genetic optimization. Create new organisms and optimize existing ones.'
     feature,
   s: [;
@@ -1613,7 +1556,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Mobile app'
       'API for lab integration'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -1621,7 +1563,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     link: 'https://ziontechgroup.com/ai-genetic-engineering',
     marketPosition: 'Revolutionary technology with no direct competitors. Traditional genetic engineering uses manual methods. Our advantage: AI precision and comprehensive tools.',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -1638,7 +1579,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   advantage: AI precision and comprehensive tools.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Biotech companies, Research institutions, Agricultural companies, Pharmaceutical companies, Academic labs, Government agencies'
     trialDay,
   s: 30;
@@ -1658,18 +1598,14 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Research databases'
       'Regulatory platforms'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Gene editing'
       'Synthetic biology'
       'Genetic optimization'
       'Agricultural improvement'
       'Medical research'
-<<<<<<< HEAD
       'Industrial biotechnology',
     ],
     roi: 'Revolutionize genetic engineering with AI precision. ROI through innovation and new product development.',
@@ -1680,7 +1616,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     contactInfo: marketPosition: unknown;
       'Revolutionary technology with no direct competitors. Basic protein design tools exist but lack AI capabilities. Our advantage: AI-powered design and comprehensive features.',
     targetAudience:,
-=======
       'Industrial biotechnology'
     ]
     ro,
@@ -1700,7 +1635,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   advantage: AI-powered design and comprehensive features.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Biotech companies, Pharmaceutical companies, Research institutions, Industrial biotech, Academic labs, Food companies'
     trialDay,
   s: 30;
@@ -1720,18 +1654,14 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Research platforms'
       'Analytical tools'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Therapeutic proteins'
       'Industrial enzymes'
       'Research tools'
       'Food proteins'
       'Biomaterials'
-<<<<<<< HEAD
       'Drug delivery',
     ],
     roi: 'Design novel proteins faster and more efficiently. ROI through new product development and research acceleration.',
@@ -1742,7 +1672,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     contactInfo: marketPosition: unknown;
       'Revolutionary technology with no direct competitors. Traditional trial management uses basic tools. Our advantage: AI optimization and comprehensive features.',
     targetAudience:,
-=======
       'Drug delivery'
     ]
     ro,
@@ -1762,7 +1691,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   advantage: AI optimization and comprehensive features.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Pharmaceutical companies, Biotech companies, Clinical research organizations, Hospitals, Research institutions, Regulatory agencies'
     trialDay,
   s: 30;
@@ -1782,18 +1710,14 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Analytical tools'
       'Healthcare systems'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Trial optimization'
       'Patient recruitment'
       'Data analysis'
       'Risk management'
       'Compliance monitoring'
-<<<<<<< HEAD
       'Performance tracking',
     ],
     roi: 'Reduce trial costs by 40% and accelerate completion by 60%. ROI through efficiency gains and faster approvals.',
@@ -1804,7 +1728,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     contactInfo: marketPosition: unknown;
       'Revolutionary technology with no direct competitors. Basic biomarker research uses manual methods. Our advantage: AI discovery and comprehensive analysis.',
     targetAudience:,
-=======
       'Performance tracking'
     ]
     ro,
@@ -1824,7 +1747,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   advantage: AI discovery and comprehensive analysis.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Pharmaceutical companies, Biotech companies, Research institutions, Hospitals, Diagnostic companies, Academic labs'
     trialDay,
   s: 30;
@@ -1844,18 +1766,14 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Analytical tools'
       'Data sources'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Disease diagnosis'
       'Treatment response'
       'Prognosis prediction'
       'Drug development'
       'Personalized medicine'
-<<<<<<< HEAD
       'Research discovery',
     ],
     roi: 'Accelerate biomarker discovery by 10x. ROI through research acceleration and new diagnostic development.',
@@ -1866,7 +1784,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     contactInfo: marketPosition: unknown;
       'Revolutionary technology with no direct competitors. Basic personalized medicine uses limited analysis. Our advantage: AI-powered precision and comprehensive features.',
     targetAudience:,
-=======
       'Research discovery'
     ]
     ro,
@@ -1886,7 +1803,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   advantage: AI-powered precision and comprehensive features.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Hospitals, Healthcare systems, Pharmaceutical companies, Biotech companies, Research institutions, Insurance companies'
     trialDay,
   s: 30;
@@ -1906,18 +1822,14 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Laboratory systems'
       'Clinical platforms'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Treatment optimization'
       'Drug selection'
       'Risk assessment'
       'Preventive medicine'
       'Clinical trials'
-<<<<<<< HEAD
       'Healthcare research',
     ],
     roi: 'Improve treatment outcomes and reduce healthcare costs. ROI through better patient outcomes and cost savings.',
@@ -1928,7 +1840,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     contactInfo: marketPosition: unknown;
       'Revolutionary technology with no direct competitors. Basic repurposing uses manual research. Our advantage: AI discovery and comprehensive analysis.',
     targetAudience:,
-=======
       'Healthcare research'
     ]
     ro,
@@ -1948,7 +1859,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   advantage: AI discovery and comprehensive analysis.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Pharmaceutical companies, Biotech companies, Research institutions, Academic labs, Government agencies, Healthcare organizations'
     trialDay,
   s: 30;
@@ -1968,18 +1878,14 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Analytical tools'
       'Market data'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'New indications'
       'Combination therapy'
       'Rare diseases'
       'Cost reduction'
       'Faster approval'
-<<<<<<< HEAD
       'Research discovery',
     ],
     roi: 'Accelerate drug development and reduce costs by 80%. ROI through faster time-to-market and cost savings.',
@@ -1990,7 +1896,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     contactInfo: marketPosition: unknown;
       'Revolutionary technology with no direct competitors. Basic bioinformatics tools exist but lack AI capabilities. Our advantage: AI-powered analysis and comprehensive features.',
     targetAudience:,
-=======
       'Research discovery'
     ]
     ro,
@@ -2010,7 +1915,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   advantage: AI-powered analysis and comprehensive features.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Research institutions, Academic labs, Biotech companies, Pharmaceutical companies, Healthcare organizations, Government agencies'
     trialDay,
   s: 30;
@@ -2030,18 +1934,14 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Cloud platforms'
       'Data sources'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Genomic analysis'
       'Proteomic analysis'
       'Metabolomic analysis'
       'Research discovery'
       'Data processing'
-<<<<<<< HEAD
       'Statistical analysis',
     ],
     roi: 'Accelerate biological research and data analysis. ROI through research efficiency and discovery acceleration.',
@@ -2052,7 +1952,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     contactInfo: marketPosition: unknown;
       'Revolutionary technology with no direct competitors. Traditional biomanufacturing uses basic optimization. Our advantage: AI optimization and comprehensive features.',
     targetAudience:,
-=======
       'Statistical analysis'
     ]
     ro,
@@ -2072,7 +1971,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   advantage: AI optimization and comprehensive features.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Biotech companies, Pharmaceutical companies, Food companies, Chemical companies, Research institutions, Manufacturing companies'
     trialDay,
   s: 30;
@@ -2092,18 +1990,14 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Automation systems'
       'Monitoring tools'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Process optimization'
       'Yield improvement'
       'Quality control'
       'Cost reduction'
       'Automation'
-<<<<<<< HEAD
       'Performance monitoring',
     ],
     roi: 'Improve yield by 30% and reduce costs by 25%. ROI through efficiency gains and cost savings.',
@@ -2134,7 +2028,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     customers: 90;
     rating: 4.9;
     reviews: 45;
-=======
       'Performance monitoring'
     ]
     ro,
@@ -2193,7 +2086,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   g: 4.9;
     review,
   s: 45,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export interface BiotechAIService {/* TODO: Fix JSX expression */}
@@ -2201,7 +2093,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -2253,7 +2144,6 @@ export const biotechAIServices: BiotechAIService[] = [;
     customers: 90;
     rating: 4.9;
     reviews: 45;
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -2296,7 +2186,6 @@ export const,
   g: 4.9,
     review,
   s: 45,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
   }

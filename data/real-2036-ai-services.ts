@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export const real2036AIServices = [{id: 'ai-emotion-intelligence-platform',
     name: 'AI Emotion Intelligence Platform',
     tagline: 'Advanced emotional AI understanding',
@@ -19,10 +18,8 @@ export const real2036AIServices = [{id: 'ai-emotion-intelligence-platform',
     icon: '',
     marketPrice: '$5,000-8,000/month'
     benefits: [}
-=======
 export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   s: [}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enhanced customer experience'
       'Better emotional understanding'
       'Improved human-AI interaction'
@@ -36,12 +33,10 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Human resources'
     ]
   }
-<<<<<<< HEAD
     id: 'ai-creativity-orchestrator',
     name: 'AI Creativity Orchestrator',
     tagline: 'Intelligent creative collaboration',
     description:,
-=======
     i,
   d: 'ai-creativity-orchestrator'
     nam,
@@ -50,7 +45,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent creative collaboration'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI platform for orchestrating creative processes, generating innovative ideas, and facilitating human-AI creative collaboration. Features idea generation, creative workflow management, and artistic collaboration tools.'
     pric,
   e: '$2,999'
@@ -65,13 +59,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Innovation management'
       'Creative analytics'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Creative AI',
     icon: '',
     marketPrice: '$4,000-7,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -82,30 +74,24 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$4,000-7,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enhanced creativity'
       'Faster innovation cycles'
       'Better collaboration'
       'Creative process optimization'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Marketing campaigns'
       'Product design'
       'Content creation',
       'Research and development',
     ],
   }
-<<<<<<< HEAD
     id: 'ai-dream-interpreter-platform',
     name: 'AI Dream Interpreter Platform',
     tagline: 'Intelligent dream analysis',
     description:,
-=======
     i,
   d: 'ai-dream-interpreter-platform'
     nam,
@@ -114,7 +100,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent dream analysis'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Innovative AI platform for analyzing and interpreting dreams using advanced pattern recognition, psychological insights, and symbolic analysis. Features dream pattern analysis, psychological interpretation, and dream journaling.'
     pric,
   e: '$1,999'
@@ -129,13 +114,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Pattern recognition'
       'Psychological insights'
     ]
-<<<<<<< HEAD
     popular: false;
     category: 'Psychological AI',
     icon: '',
     marketPrice: '$3,000-5,000/month'
     benefits: [;
-=======
     popula,
   r: false;
     categor,
@@ -146,30 +129,24 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$3,000-5,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Dream understanding'
       'Psychological insights'
       'Self-reflection tools'
       'Mental health awareness'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Mental health support'
       'Psychological research'
       'Personal development',
       'Therapeutic applications',
     ],
   }
-<<<<<<< HEAD
     id: 'ai-content-factory-pro',
     name: 'AI Content Factory Pro',
     tagline: 'Professional content generation',
     description:,
-=======
     i,
   d: 'ai-content-factory-pro'
     nam,
@@ -178,7 +155,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Professional content generation'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Professional-grade AI content generation platform for creating high-quality, engaging content across all media types. Features multi-format content creation, brand voice consistency, and content optimization.'
     pric,
   e: '$4,999'
@@ -193,13 +169,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Content analytics'
       'Automated publishing'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Content AI',
     icon: '',
     marketPrice: '$6,000-10,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -210,30 +184,24 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$6,000-10,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '10x faster content creation'
       'Consistent brand voice'
       'SEO-optimized content'
       'Scalable content production'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Marketing content'
       'Blog writing'
       'Social media content',
       'Product descriptions',
     ],
   }
-<<<<<<< HEAD
     id: 'ai-customer-intelligence-platform',
     name: 'AI Customer Intelligence Platform',
     tagline: 'Deep customer understanding',
     description:,
-=======
     i,
   d: 'ai-customer-intelligence-platform'
     nam,
@@ -242,7 +210,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Deep customer understanding'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI platform for deep customer intelligence, behavior analysis, and predictive customer insights. Features customer journey mapping, predictive analytics, and personalized recommendations.'
     pric,
   e: '$5,999'
@@ -257,13 +224,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Customer segmentation'
       'Predictive modeling'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Customer AI',
     icon: '',
     marketPrice: '$7,000-12,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -274,30 +239,24 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$7,000-12,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Deep customer insights'
       'Predictive customer behavior'
       'Personalized experiences'
       'Improved customer retention'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'E-commerce optimization'
       'Customer service'
       'Marketing campaigns',
       'Product development',
     ],
   }
-<<<<<<< HEAD
     id: 'ai-autonomous-marketing-platform',
     name: 'AI Autonomous Marketing Platform',
     tagline: 'Self-optimizing marketing',
     description:,
-=======
     i,
   d: 'ai-autonomous-marketing-platform'
     nam,
@@ -306,7 +265,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Self-optimizing marketing'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary AI platform for autonomous marketing operations, campaign optimization, and performance maximization. Features autonomous campaign management, real-time optimization, and predictive marketing strategies.'
     pric,
   e: '$6,999'
@@ -321,13 +279,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Automated A/B testing'
       'ROI optimization'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Marketing AI',
     icon: '',
     marketPrice: '$8,000-15,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -338,30 +294,24 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$8,000-15,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Autonomous marketing operations'
       'Maximum ROI optimization'
       'Real-time performance improvement'
       'Scalable marketing automation'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Digital advertising'
       'Email marketing'
       'Social media marketing',
       'Content marketing',
     ],
   }
-<<<<<<< HEAD
     id: 'ai-autonomous-research-assistant',
     name: 'AI Autonomous Research Assistant',
     tagline: 'Intelligent research automation',
     description:,
-=======
     i,
   d: 'ai-autonomous-research-assistant'
     nam,
@@ -370,7 +320,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent research automation'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI research assistant that autonomously conducts research, analyzes data, and generates insights. Features automated research workflows, data analysis, and insight generation.'
     pric,
   e: '$3,499'
@@ -385,13 +334,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Data synthesis'
       'Report generation'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Research AI',
     icon: '',
     marketPrice: '$4,500-7,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -402,30 +349,24 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$4,500-7,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated research processes'
       'Faster insight generation'
       'Comprehensive data analysis'
       'Scalable research operations'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Market research'
       'Academic research'
       'Business intelligence',
       'Competitive analysis',
     ],
   }
-<<<<<<< HEAD
     id: 'ai-autonomous-decision-engine',
     name: 'AI Autonomous Decision Engine',
     tagline: 'Intelligent decision automation',
     description:,
-=======
     i,
   d: 'ai-autonomous-decision-engine'
     nam,
@@ -434,7 +375,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent decision automation'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI decision engine that autonomously makes complex decisions based on data analysis, predictive modeling, and business rules. Features decision automation, risk assessment, and outcome prediction.'
     pric,
   e: '$7,999'
@@ -449,13 +389,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Predictive modeling'
       'Decision analytics'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Decision AI',
     icon: '',
     marketPrice: '$10,000-18,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -466,30 +404,24 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$10,000-18,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated decision making'
       'Risk reduction'
       'Faster decision cycles'
       'Data-driven decisions'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Financial decisions'
       'Operational decisions'
       'Strategic planning',
       'Risk management',
     ],
   }
-<<<<<<< HEAD
     id: 'ai-autonomous-ecosystem-manager',
     name: 'AI Autonomous Ecosystem Manager',
     tagline: 'Intelligent ecosystem orchestration',
     description:,
-=======
     i,
   d: 'ai-autonomous-ecosystem-manager'
     nam,
@@ -498,7 +430,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent ecosystem orchestration'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary AI platform for managing and orchestrating complex business ecosystems, partnerships, and integrations. Features ecosystem mapping, relationship management, and autonomous optimization.'
     pric,
   e: '$8,999'
@@ -513,13 +444,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Integration management'
       'Ecosystem analytics'
     ]
-<<<<<<< HEAD
     popular: false;
     category: 'Ecosystem AI',
     icon: '',
     marketPrice: '$12,000-20,000/month'
     benefits: [;
-=======
     popula,
   r: false;
     categor,
@@ -530,30 +459,24 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$12,000-20,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Ecosystem optimization'
       'Partnership maximization'
       'Integration efficiency'
       'Scalable ecosystem management'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Business partnerships'
       'Platform ecosystems'
       'Supply chain management',
       'Digital transformation',
     ],
   }
-<<<<<<< HEAD
     id: 'ai-autonomous-vehicle-ai',
     name: 'AI Autonomous Vehicle AI',
     tagline: 'Next-generation vehicle intelligence',
     description:,
-=======
     i,
   d: 'ai-autonomous-vehicle-ai'
     nam,
@@ -562,7 +485,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Next-generation vehicle intelligence'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI platform for autonomous vehicle operations, navigation, and safety systems. Features autonomous navigation, safety monitoring, and intelligent traffic management.'
     pric,
   e: '$9,999'
@@ -577,13 +499,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Predictive maintenance'
       'Safety systems'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Vehicle AI',
     icon: '',
     marketPrice: '$15,000-25,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -594,18 +514,14 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$15,000-25,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enhanced vehicle safety'
       'Autonomous operation'
       'Traffic optimization'
       'Predictive maintenance'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Autonomous vehicles'
       'Fleet management'
       'Traffic optimization',
@@ -613,13 +529,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     ],
   }
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Emotional AI',
     icon: '',
     marketPrice: '$5,000-8,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -630,18 +544,14 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$5,000-8,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enhanced customer experience'
       'Better emotional understanding'
       'Improved human-AI interaction'
       'Emotional intelligence development'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Customer service'
       'Mental health support'
       'Education technology',
@@ -652,7 +562,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     ]
   }
 ];
-<<<<<<< HEAD
 export const real2036AIServices = [{id: 'ai-emotion-intelligence-platform',
     name: 'AI Emotion Intelligence Platform',
     tagline: 'Advanced emotional AI understanding',
@@ -672,10 +581,8 @@ export const real2036AIServices = [{id: 'ai-emotion-intelligence-platform',
     icon: '',
     marketPrice: '$5,000-8,000/month'
     benefits: [}
-=======
 export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   s: [}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enhanced customer experience'
       'Better emotional understanding'
       'Improved human-AI interaction'
@@ -689,12 +596,10 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Human resources'
     ]
   }
-<<<<<<< HEAD
     id: 'ai-creativity-orchestrator',
     name: 'AI Creativity Orchestrator',
     tagline: 'Intelligent creative collaboration',
     description:,
-=======
     i,
   d: 'ai-creativity-orchestrator'
     nam,
@@ -703,7 +608,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent creative collaboration'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI platform for orchestrating creative processes, generating innovative ideas, and facilitating human-AI creative collaboration. Features idea generation, creative workflow management, and artistic collaboration tools.'
     pric,
   e: '$2,999'
@@ -718,13 +622,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Innovation management'
       'Creative analytics'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Creative AI',
     icon: '',
     marketPrice: '$4,000-7,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -735,30 +637,24 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$4,000-7,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enhanced creativity'
       'Faster innovation cycles'
       'Better collaboration'
       'Creative process optimization'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Marketing campaigns'
       'Product design'
       'Content creation',
       'Research and development',
     ],
   }
-<<<<<<< HEAD
     id: 'ai-dream-interpreter-platform',
     name: 'AI Dream Interpreter Platform',
     tagline: 'Intelligent dream analysis',
     description:,
-=======
     i,
   d: 'ai-dream-interpreter-platform'
     nam,
@@ -767,7 +663,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent dream analysis'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Innovative AI platform for analyzing and interpreting dreams using advanced pattern recognition, psychological insights, and symbolic analysis. Features dream pattern analysis, psychological interpretation, and dream journaling.'
     pric,
   e: '$1,999'
@@ -782,13 +677,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Pattern recognition'
       'Psychological insights'
     ]
-<<<<<<< HEAD
     popular: false;
     category: 'Psychological AI',
     icon: '',
     marketPrice: '$3,000-5,000/month'
     benefits: [;
-=======
     popula,
   r: false;
     categor,
@@ -799,30 +692,24 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$3,000-5,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Dream understanding'
       'Psychological insights'
       'Self-reflection tools'
       'Mental health awareness'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Mental health support'
       'Psychological research'
       'Personal development',
       'Therapeutic applications',
     ],
   }
-<<<<<<< HEAD
     id: 'ai-content-factory-pro',
     name: 'AI Content Factory Pro',
     tagline: 'Professional content generation',
     description:,
-=======
     i,
   d: 'ai-content-factory-pro'
     nam,
@@ -831,7 +718,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Professional content generation'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Professional-grade AI content generation platform for creating high-quality, engaging content across all media types. Features multi-format content creation, brand voice consistency, and content optimization.'
     pric,
   e: '$4,999'
@@ -846,13 +732,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Content analytics'
       'Automated publishing'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Content AI',
     icon: '',
     marketPrice: '$6,000-10,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -863,30 +747,24 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$6,000-10,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '10x faster content creation'
       'Consistent brand voice'
       'SEO-optimized content'
       'Scalable content production'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Marketing content'
       'Blog writing'
       'Social media content',
       'Product descriptions',
     ],
   }
-<<<<<<< HEAD
     id: 'ai-customer-intelligence-platform',
     name: 'AI Customer Intelligence Platform',
     tagline: 'Deep customer understanding',
     description:,
-=======
     i,
   d: 'ai-customer-intelligence-platform'
     nam,
@@ -895,7 +773,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Deep customer understanding'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI platform for deep customer intelligence, behavior analysis, and predictive customer insights. Features customer journey mapping, predictive analytics, and personalized recommendations.'
     pric,
   e: '$5,999'
@@ -910,13 +787,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Customer segmentation'
       'Predictive modeling'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Customer AI',
     icon: '',
     marketPrice: '$7,000-12,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -927,30 +802,24 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$7,000-12,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Deep customer insights'
       'Predictive customer behavior'
       'Personalized experiences'
       'Improved customer retention'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'E-commerce optimization'
       'Customer service'
       'Marketing campaigns',
       'Product development',
     ],
   }
-<<<<<<< HEAD
     id: 'ai-autonomous-marketing-platform',
     name: 'AI Autonomous Marketing Platform',
     tagline: 'Self-optimizing marketing',
     description:,
-=======
     i,
   d: 'ai-autonomous-marketing-platform'
     nam,
@@ -959,7 +828,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Self-optimizing marketing'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary AI platform for autonomous marketing operations, campaign optimization, and performance maximization. Features autonomous campaign management, real-time optimization, and predictive marketing strategies.'
     pric,
   e: '$6,999'
@@ -974,13 +842,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Automated A/B testing'
       'ROI optimization'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Marketing AI',
     icon: '',
     marketPrice: '$8,000-15,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -991,30 +857,24 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$8,000-15,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Autonomous marketing operations'
       'Maximum ROI optimization'
       'Real-time performance improvement'
       'Scalable marketing automation'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Digital advertising'
       'Email marketing'
       'Social media marketing',
       'Content marketing',
     ],
   }
-<<<<<<< HEAD
     id: 'ai-autonomous-research-assistant',
     name: 'AI Autonomous Research Assistant',
     tagline: 'Intelligent research automation',
     description:,
-=======
     i,
   d: 'ai-autonomous-research-assistant'
     nam,
@@ -1023,7 +883,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent research automation'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI research assistant that autonomously conducts research, analyzes data, and generates insights. Features automated research workflows, data analysis, and insight generation.'
     pric,
   e: '$3,499'
@@ -1038,13 +897,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Data synthesis'
       'Report generation'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Research AI',
     icon: '',
     marketPrice: '$4,500-7,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -1055,30 +912,24 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$4,500-7,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated research processes'
       'Faster insight generation'
       'Comprehensive data analysis'
       'Scalable research operations'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Market research'
       'Academic research'
       'Business intelligence',
       'Competitive analysis',
     ],
   }
-<<<<<<< HEAD
     id: 'ai-autonomous-decision-engine',
     name: 'AI Autonomous Decision Engine',
     tagline: 'Intelligent decision automation',
     description:,
-=======
     i,
   d: 'ai-autonomous-decision-engine'
     nam,
@@ -1087,7 +938,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent decision automation'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI decision engine that autonomously makes complex decisions based on data analysis, predictive modeling, and business rules. Features decision automation, risk assessment, and outcome prediction.'
     pric,
   e: '$7,999'
@@ -1102,13 +952,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Predictive modeling'
       'Decision analytics'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Decision AI',
     icon: '',
     marketPrice: '$10,000-18,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -1119,30 +967,24 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$10,000-18,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated decision making'
       'Risk reduction'
       'Faster decision cycles'
       'Data-driven decisions'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Financial decisions'
       'Operational decisions'
       'Strategic planning',
       'Risk management',
     ],
   }
-<<<<<<< HEAD
     id: 'ai-autonomous-ecosystem-manager',
     name: 'AI Autonomous Ecosystem Manager',
     tagline: 'Intelligent ecosystem orchestration',
     description:,
-=======
     i,
   d: 'ai-autonomous-ecosystem-manager'
     nam,
@@ -1151,7 +993,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent ecosystem orchestration'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary AI platform for managing and orchestrating complex business ecosystems, partnerships, and integrations. Features ecosystem mapping, relationship management, and autonomous optimization.'
     pric,
   e: '$8,999'
@@ -1166,13 +1007,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Integration management'
       'Ecosystem analytics'
     ]
-<<<<<<< HEAD
     popular: false;
     category: 'Ecosystem AI',
     icon: '',
     marketPrice: '$12,000-20,000/month'
     benefits: [;
-=======
     popula,
   r: false;
     categor,
@@ -1183,30 +1022,24 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$12,000-20,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Ecosystem optimization'
       'Partnership maximization'
       'Integration efficiency'
       'Scalable ecosystem management'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Business partnerships'
       'Platform ecosystems'
       'Supply chain management',
       'Digital transformation',
     ],
   }
-<<<<<<< HEAD
     id: 'ai-autonomous-vehicle-ai',
     name: 'AI Autonomous Vehicle AI',
     tagline: 'Next-generation vehicle intelligence',
     description:,
-=======
     i,
   d: 'ai-autonomous-vehicle-ai'
     nam,
@@ -1215,7 +1048,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Next-generation vehicle intelligence'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI platform for autonomous vehicle operations, navigation, and safety systems. Features autonomous navigation, safety monitoring, and intelligent traffic management.'
     pric,
   e: '$9,999'
@@ -1230,13 +1062,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Predictive maintenance'
       'Safety systems'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Vehicle AI',
     icon: '',
     marketPrice: '$15,000-25,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -1247,13 +1077,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$15,000-25,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enhanced vehicle safety'
       'Autonomous operation'
       'Traffic optimization'
       'Predictive maintenance'
     ]
-<<<<<<< HEAD
     useCases: [
 export const real2036AIServices = [{id: 'ai - emotion - intelligence - platform'
     name: 'AI Emotion Intelligence Platform',
@@ -1290,7 +1118,6 @@ export const real2036AIServices = [{id: 'ai - emotion - intelligence - platform'
     name: 'AI Creativity Orchestrator',
     tagline: 'Intelligent creative collaboration',
     description: unknown;
-=======
     useCase,
   s: [,
 export const real2036AIServices = [{/* TODO: Fix JSX expression */}
@@ -1304,7 +1131,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent creative collaboration',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI platform for orchestrating creative processes, generating innovative ideas, and facilitating human - AI creative collaboration. Features idea generation, creative workflow management, and artistic collaboration tools.',
     pric,
   e: '$2, 999',
@@ -1319,13 +1145,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Innovation management',
       'Creative analytics',
     ],
-<<<<<<< HEAD
     popular: true;
     category: 'Creative AI',
     icon: '',
     market_price: '$4, 000 - 7, 000 / month',
     benefits: [,
-=======
     popula,
   r: true,
     categor,
@@ -1336,7 +1160,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$4, 000 - 7, 000 / month',
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enhanced creativity',
       'Faster innovation cycles',
       'Better collaboration',
@@ -1350,12 +1173,10 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Research and development',
     ],
   },
-<<<<<<< HEAD
     id: 'ai - dream - interpreter - platform',
     name: 'AI Dream Interpreter Platform',
     tagline: 'Intelligent dream analysis',
     description: unknown;
-=======
     i,
   d: 'ai - dream - interpreter - platform',
     nam,
@@ -1364,7 +1185,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent dream analysis',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Innovative AI platform for analyzing and interpreting dreams using advanced pattern recognition, psychological insights, and symbolic analysis. Features dream pattern analysis, psychological interpretation, and dream journaling.',
     pric,
   e: '$1, 999',
@@ -1379,13 +1199,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Pattern recognition',
       'Psychological insights',
     ],
-<<<<<<< HEAD
     popular: false;
     category: 'Psychological AI',
     icon: '',
     market_price: '$3, 000 - 5, 000 / month',
     benefits: [,
-=======
     popula,
   r: false,
     categor,
@@ -1396,7 +1214,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$3, 000 - 5, 000 / month',
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Dream understanding',
       'Psychological insights',
       'Self - reflection tools',
@@ -1410,12 +1227,10 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Therapeutic applications',
     ],
   },
-<<<<<<< HEAD
     id: 'ai - content - factory - pro',
     name: 'AI Content Factory Pro',
     tagline: 'Professional content generation',
     description: unknown;
-=======
     i,
   d: 'ai - content - factory - pro',
     nam,
@@ -1424,7 +1239,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Professional content generation',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Professional - grade AI content generation platform for creating high - quality, engaging content across all media types. Features multi - format content creation, brand voice consistency, and content optimization.',
     pric,
   e: '$4, 999',
@@ -1439,13 +1253,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Content analytics',
       'Automated publishing',
     ],
-<<<<<<< HEAD
     popular: true;
     category: 'Content AI',
     icon: '',
     market_price: '$6, 000 - 10, 000 / month',
     benefits: [,
-=======
     popula,
   r: true,
     categor,
@@ -1456,7 +1268,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$6, 000 - 10, 000 / month',
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '10x faster content creation',
       'Consistent brand voice',
       'SEO - optimized content',
@@ -1470,12 +1281,10 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Product descriptions',
     ],
   },
-<<<<<<< HEAD
     id: 'ai - customer - intelligence - platform',
     name: 'AI Customer Intelligence Platform',
     tagline: 'Deep customer understanding',
     description: unknown;
-=======
     i,
   d: 'ai - customer - intelligence - platform',
     nam,
@@ -1484,7 +1293,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Deep customer understanding',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI platform for deep customer intelligence, behavior analysis, and predictive customer insights. Features customer journey mapping, predictive analytics, and personalized recommendations.',
     pric,
   e: '$5, 999',
@@ -1499,13 +1307,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Customer segmentation',
       'Predictive modeling',
     ],
-<<<<<<< HEAD
     popular: true;
     category: 'Customer AI',
     icon: '',
     market_price: '$7, 000 - 12, 000 / month',
     benefits: [,
-=======
     popula,
   r: true,
     categor,
@@ -1516,7 +1322,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$7, 000 - 12, 000 / month',
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Deep customer insights',
       'Predictive customer behavior',
       'Personalized experiences',
@@ -1530,12 +1335,10 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Product development',
     ],
   },
-<<<<<<< HEAD
     id: 'ai - autonomous - marketing - platform',
     name: 'AI Autonomous Marketing Platform',
     tagline: 'Self - optimizing marketing',
     description: unknown;
-=======
     i,
   d: 'ai - autonomous - marketing - platform',
     nam,
@@ -1544,7 +1347,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Self - optimizing marketing',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary AI platform for autonomous marketing operations, campaign optimization, and performance maximization. Features autonomous campaign management, real - time optimization, and predictive marketing strategies.',
     pric,
   e: '$6, 999',
@@ -1559,13 +1361,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Automated A / B testing',
       'ROI optimization',
     ],
-<<<<<<< HEAD
     popular: true;
     category: 'Marketing AI',
     icon: '',
     market_price: '$8, 000 - 15, 000 / month',
     benefits: [,
-=======
     popula,
   r: true,
     categor,
@@ -1576,7 +1376,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$8, 000 - 15, 000 / month',
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Autonomous marketing operations',
       'Maximum ROI optimization',
       'Real - time performance improvement',
@@ -1590,12 +1389,10 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Content marketing',
     ],
   },
-<<<<<<< HEAD
     id: 'ai - autonomous - research - assistant',
     name: 'AI Autonomous Research Assistant',
     tagline: 'Intelligent research automation',
     description: unknown;
-=======
     i,
   d: 'ai - autonomous - research - assistant',
     nam,
@@ -1604,7 +1401,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent research automation',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI research assistant that autonomously conducts research, analyzes data, and generates insights. Features automated research workflows, data analysis, and insight generation.',
     pric,
   e: '$3, 499',
@@ -1619,13 +1415,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Data synthesis',
       'Report generation',
     ],
-<<<<<<< HEAD
     popular: true;
     category: 'Research AI',
     icon: '',
     market_price: '$4, 500 - 7, 000 / month',
     benefits: [,
-=======
     popula,
   r: true,
     categor,
@@ -1636,7 +1430,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$4, 500 - 7, 000 / month',
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated research processes',
       'Faster insight generation',
       'Comprehensive data analysis',
@@ -1650,12 +1443,10 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Competitive analysis',
     ],
   },
-<<<<<<< HEAD
     id: 'ai - autonomous - decision - engine',
     name: 'AI Autonomous Decision Engine',
     tagline: 'Intelligent decision automation',
     description: unknown;
-=======
     i,
   d: 'ai - autonomous - decision - engine',
     nam,
@@ -1664,7 +1455,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent decision automation',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI decision engine that autonomously makes complex decisions based on data analysis, predictive modeling, and business rules. Features decision automation, risk assessment, and outcome prediction.',
     pric,
   e: '$7, 999',
@@ -1679,13 +1469,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Predictive modeling',
       'Decision analytics',
     ],
-<<<<<<< HEAD
     popular: true;
     category: 'Decision AI',
     icon: '',
     market_price: '$10, 000 - 18, 000 / month',
     benefits: [,
-=======
     popula,
   r: true,
     categor,
@@ -1696,7 +1484,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$10, 000 - 18, 000 / month',
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated decision making',
       'Risk reduction',
       'Faster decision cycles',
@@ -1710,12 +1497,10 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Risk management',
     ],
   },
-<<<<<<< HEAD
     id: 'ai - autonomous - ecosystem - manager',
     name: 'AI Autonomous Ecosystem Manager',
     tagline: 'Intelligent ecosystem orchestration',
     description: unknown;
-=======
     i,
   d: 'ai - autonomous - ecosystem - manager',
     nam,
@@ -1724,7 +1509,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent ecosystem orchestration',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary AI platform for managing and orchestrating complex business ecosystems, partnerships, and integrations. Features ecosystem mapping, relationship management, and autonomous optimization.',
     pric,
   e: '$8, 999',
@@ -1739,13 +1523,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Integration management',
       'Ecosystem analytics',
     ],
-<<<<<<< HEAD
     popular: false;
     category: 'Ecosystem AI',
     icon: '',
     market_price: '$12, 000 - 20, 000 / month',
     benefits: [,
-=======
     popula,
   r: false,
     categor,
@@ -1756,7 +1538,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$12, 000 - 20, 000 / month',
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Ecosystem optimization',
       'Partnership maximization',
       'Integration efficiency',
@@ -1770,12 +1551,10 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Digital transformation',
     ],
   },
-<<<<<<< HEAD
     id: 'ai - autonomous - vehicle - ai',
     name: 'AI Autonomous Vehicle AI',
     tagline: 'Next - generation vehicle intelligence',
     description: unknown;
-=======
     i,
   d: 'ai - autonomous - vehicle - ai',
     nam,
@@ -1784,7 +1563,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: 'Next - generation vehicle intelligence',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI platform for autonomous vehicle operations, navigation, and safety systems. Features autonomous navigation, safety monitoring, and intelligent traffic management.',
     pric,
   e: '$9, 999',
@@ -1799,13 +1577,11 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Predictive maintenance',
       'Safety systems',
     ],
-<<<<<<< HEAD
     popular: true;
     category: 'Vehicle AI',
     icon: '',
     market_price: '$15, 000 - 25, 000 / month',
     benefits: [,
-=======
     popula,
   r: true,
     categor,
@@ -1816,7 +1592,6 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   e: '$15, 000 - 25, 000 / month',
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enhanced vehicle safety',
       'Autonomous operation',
       'Traffic optimization',
@@ -1845,7 +1620,6 @@ export const real2036AIServices = [
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
 export const real2036AIServices = [
-<<<<<<< HEAD
   {;
     id: 'ai-emotion-intelligence-platform';
     name: 'AI Emotion Intelligence Platform';
@@ -2053,7 +1827,6 @@ export const real2036AIServices = [
       'Enhanced vehicle safetyAutonomous operationTraffic optimizationPredictive maintenance',
     ];,
     useCases: [}
-=======
   {/* TODO: Fix JSX expression */}
   s: [}
       'Customer serviceMental health supportEducation technologyHuman resources'
@@ -2101,7 +1874,6 @@ export const real2036AIServices = [
   };
   {/* TODO: Fix JSX expression */}
   s: [}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]}
   }
@@ -2111,7 +1883,6 @@ export const real2036AIServices = [
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
 export const real2036AIServices = [
-<<<<<<< HEAD
   {;
     id: 'ai-emotion-intelligence-platform';
     name: 'AI Emotion Intelligence Platform';
@@ -2319,7 +2090,6 @@ export const real2036AIServices = [
       'Enhanced vehicle safetyAutonomous operationTraffic optimizationPredictive maintenance',
     ];,
     useCases: [}
-=======
   {/* TODO: Fix JSX expression */}
   s: [}
       'Customer serviceMental health supportEducation technologyHuman resources'
@@ -2367,7 +2137,6 @@ export const real2036AIServices = [
   };
   {/* TODO: Fix JSX expression */}
   s: [}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]}
   }

@@ -6,7 +6,6 @@
     `(m, a, x-wid, t, h: 1024, p, x) ${siz, e, s.tab, l, e, t}`,
     siz, e, s.deskt, o, p,
   ].jo, i, n(', ');
-<<<<<<< HEAD
 export const getOptimizedUrl = (
   s, r, c: st, r, i, n, g,
   optio, n, s: { ,
@@ -33,7 +32,6 @@ export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > {
             const imag, e = ent, r, y.target, as, HTMLImageElement; if (image.datas, e, t.sr, c) {
               image.s, r, c = image.datas, e, t.s, r, c;
               }, if() { image['src']s, e, t = image.datas, e, t['src']s, e, t;
-=======
 export const getOptimizedUrl = (s, r, c: st, r, i, n, g,
   optio, n, s: {/* TODO: Fix JSX expression */}
    } = {},)
@@ -43,7 +41,6 @@ export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > {/*
       },
 export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > {/* TODO: Fix JSX expression */}
               }, if() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
              }, image.classLi, s, t.a, d, d('loa, d, e, d');
             observ, e, r.unobser, v, e(image);
         rootMarg, i, n: '5, 0, p, x', // Start loading 50px before entering viewport;
@@ -58,7 +55,6 @@ export const preloadImage = (s, r, c: st, r, i, n, g,
         wid, t, h: i, m, g.naturalWi, d, t, h,
         heig, h, t: i, m, g.naturalHei, g, h, t,
        });
-<<<<<<< HEAD
 export const isFormatSupported = asy, n, c(form, a, t: 'we, b, p' | 'av, i, f')
 ): Promi, s, e<boolean> => {
   if (typeof, windo, w = == 'undefi, n, e, d') return, fals, e; const testImage, s = {
@@ -99,7 +95,6 @@ export const createPictureElement = (
 export const getOptimalQualit, y = (): number = > {
   if (typeof, navigato, r === 'undefin, e, d' || !('connecti, o, n' in, navigat, o, r)) {
     return, 8, 0; // Default qualit y;
-=======
 export const isFormatSupported = asy, n, c (form, a, t: 'we, b, p' | 'av, i, f',)
 ): Promi, s, e<boolean> => {/* TODO: Fix JSX expression */}
   }; return, new, Promise(resol, v, e = > {/* TODO: Fix JSX expression */})
@@ -113,7 +108,6 @@ export const getBestFormat = as, y, n, c (): Promi, s, e<'av, i, f' | 'we, b, p'
     a, l, t: str, i, n, g;
   },
 ): vo, i, d = > {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   const connectio, n = (navigator, as, any).connecti, o, n; const effectiveTyp, e = connecti, o, n?.effectiveTy, p, e; swit, c, h (effectiveT, y, p, e) {/* TODO: Fix JSX expression */}

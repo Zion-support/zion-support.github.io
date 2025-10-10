@@ -7,7 +7,6 @@ import { Helmet } from 'react-helmet-async';
 
 // Meta tags utilities;
 export const seoUtils = {/* content */}
-<<<<<<< HEAD
   // Generate structured data for organization;
   generateOrganizationSchema: () => ({/* content */}
     "@context": "https: //schema.org",
@@ -68,7 +67,6 @@ export const seoUtils = {/* content */}
     "image": {/* content */}
       "url": article.image || "https: //zion.app/logo.png",
     }
-=======
   // Generate structured data for organization,
   generateOrganizationSchema: () => ({/* content */}
     "@context": "http,"
@@ -148,14 +146,12 @@ export const seoUtils = {/* content */}
       "url": article.image || "http,"
   s://zion.app/logo.png"
     })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   })
 });
 };
 
 // Sitemap generation utilities;
 export const sitemapUtils = {/* content */}
-<<<<<<< HEAD
   // Generate sitemap entries;
   generateSitemapEntry: (url: string, lastmod?: string, changefreq?: string, priority?: string) => {/* content */}
     return {/* content */}
@@ -172,7 +168,6 @@ export const sitemapUtils = {/* content */}
 Allow: /,
 ,
 Sitemap: ${sitemapUrl}`;
-=======
   // Generate sitemap entries,
   generateSitemapEntry: (ur,)
   l: string, lastmod?: string, changefreq?: string, priority?: string) => {/* content */}
@@ -198,13 +193,11 @@ Allo,
 
 Sitema,`
   p: ${sitemapUrl}`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 };
 
 // URL optimization utilities;
 export const urlUtils = {/* content */}
-<<<<<<< HEAD
   // Generate canonical URL;
   generateCanonicalUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
     return `${baseUrl}${path}`;
@@ -217,7 +210,6 @@ export const urlUtils = {/* content */}
 
   // Generate Twitter Card URL;
   generateTwitterUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
-=======
   // Generate canonical URL,
   generateCanonicalUrl: (pat,
   h: string, baseUr,
@@ -239,22 +231,18 @@ export const urlUtils = {/* content */}
   h: string, baseUr,
   l: string = 'http,)
   s://zion.app') => {/* content */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return `${baseUrl}${path}`;
   }
 };
 
 // Content optimization utilities;
 export const contentOptimization = {/* content */}
-<<<<<<< HEAD
   // Extract keywords from content;
   extractKeywords: (content: string, minLength: number = 3): string[] => {/* content */}
-=======
   // Extract keywords from content,
   extractKeywords: (conten,
   t: string, minLengt,)
   h: number = 3): string[] => {/* content */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const words = content.toLowerCase()
       .replace(/[^\w\s]/g, '')
       .split(/\s+/)
@@ -271,42 +259,33 @@ export const contentOptimization = {/* content */}
       .map(([word]) => word);
   },
 
-<<<<<<< HEAD
   // Generate meta description;
   generateMetaDescription: (content: string, maxLength: number = 160): string => {/* content */}
-=======
   // Generate meta description,
   generateMetaDescription: (conten,
   t: string, maxLengt,)
   h: number = 160): string => {/* content */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const _cleanContent = content.replace(/<[^>]*>/g, '').trim();
     if (cleanContent.length <= maxLength) return cleanContent;
     
     return cleanContent.substring(0, maxLength - 3) + '...';
   },
 
-<<<<<<< HEAD
   // Generate title tag;
   generateTitle: (pageTitle: string, siteName: string = 'Zion Tech Group', separator: string = ' | '): string => {/* content */}
-=======
   // Generate title tag,
   generateTitle: (pageTitl,
   e: string, siteNam,
   e: string = 'Zion Tech Group', separato,)
   r: string = ' | '): string => {/* content */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return pageTitle ? `${pageTitle}${separator}${siteName}` : siteName;
   }
 };
 
 // Performance SEO utilities;
 export const performanceSEO = {/* content */}
-<<<<<<< HEAD
   // Preload critical resources;
-=======
   // Preload critical resources,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   preloadCriticalResources: () => {/* content */}
     const criticalResources = [
       {/* TODO: Fix JSX expression */}
@@ -327,12 +306,10 @@ export const performanceSEO = {/* content */}
     });
   },
 
-<<<<<<< HEAD
   // Optimize images for SEO;
   optimizeImageSEO: (src: string, alt: string, width?: number, height?: number): {/* content */}
     src: string;
     alt: string;
-=======
   // Optimize images for SEO,
   optimizeImageSEO: (sr,
   c: string, al,)
@@ -341,7 +318,6 @@ export const performanceSEO = {/* content */}
   c: string;
     al,
   t: string;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     width?: number;
     height?: number;
     loadin,
@@ -353,26 +329,21 @@ export const performanceSEO = {/* content */}
       alt,
       width,
       height,
-<<<<<<< HEAD
       loading: 'lazy' as const;
-=======
       loadin,
   g: 'lazy' as const;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }
 };
 
 // Analytics and tracking utilities;
 export const analyticsUtils = {/* content */}
-<<<<<<< HEAD
   // Track page views;
   trackPageView: (url: string, title: string) => {/* content */}
     if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
       (window as typeof window & { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', {/* content */})
         page_title: title),
         page_location: url;
-=======
   // Track page views,
   trackPageView: (ur,
   l: string, titl,)
@@ -384,33 +355,27 @@ export const analyticsUtils = {/* content */}
   e: title,
         page_locatio,
   n: url;)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
   },
 
-<<<<<<< HEAD
   // Track custom events;
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {/* content */}
-=======
   // Track custom events,
   trackEvent: (eventNam,)
   e: string, parameters?: Record<string, unknown>) => {/* content */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {/* content */}
       (window as Window & {/* TODO: Fix JSX expression */})
   g: Function }).gtag('event', eventName, parameters);
     }
   },
 
-<<<<<<< HEAD
   // Track conversion events;
   trackConversion: (conversionId: string, value?: number) => {/* content */}
     if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
       (window as typeof window & { gtag: Function }).gtag('event', 'conversion', {/* content */})
         send_to: conversionId),
         value: value;
-=======
   // Track conversion events,
   trackConversion: (conversionI,)
   d: string, value?: number) => {/* content */}
@@ -421,7 +386,6 @@ export const analyticsUtils = {/* content */}
   o: conversionId,
         valu,
   e: value;)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
   }
@@ -429,7 +393,6 @@ export const analyticsUtils = {/* content */}
 
 // Core Web Vitals tracking;
 export const coreWebVitals = {/* content */}
-<<<<<<< HEAD
   // Track Core Web Vitals;
   trackCoreWebVitals: () => {/* content */}
     if (typeof window === 'undefined') return;
@@ -440,7 +403,6 @@ export const coreWebVitals = {/* content */}
         metric_value: Math.round(metric.value),
         metric_id: metric.id;
         metric_delta: metric.delta;
-=======
   // Track Core Web Vitals,
   trackCoreWebVitals: () => {/* content */}
     if (typeof window === 'undefined') return;
@@ -457,7 +419,6 @@ export const coreWebVitals = {/* content */}
   d: metric.id,
         metric_delt,
   a: metric.delta;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
 
@@ -491,19 +452,15 @@ export const SEOComponent = ({/* content */}
   structuredData?: Record<string, unknown>;)
 }) => {/* content */}
 //   const siteName = 'Zion Tech Group';
-<<<<<<< HEAD
 //   const siteUrl = 'https: //zion.app';
-=======
 //   const siteUrl = 'http,
   s://zion.app';`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //   const defaultImage = `${siteUrl}/images/og-default.jpg`;
   `
 //   const fullTitle = title ? `${title} | ${siteName}` : siteName;`
 //   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;`
 //   const fullImage = image ? `${siteUrl}${image}` : defaultImage;
 
-<<<<<<< HEAD
   return(<div> </div><Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -521,7 +478,6 @@ export const SEOComponent = ({/* content */}
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullImage} />
-=======
   return (<div> </div><Helmet></Helmet>
       <title>{fullTitle}</title>"
       <meta name="description" content={description} /></meta>"
@@ -549,7 +505,6 @@ export const SEOComponent = ({/* content */}
   r:description" content={description} /></meta>"
       <meta name="twitte,"
   r:image" content={fullImage} /></meta>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       {/* Structured Data */}
       {/* TODO: Fix JSX expression */})
           {JSON.stringify(structuredData)}
@@ -568,11 +523,8 @@ export const initializeSEO = () => {/* content */}
   coreWebVitals.trackCoreWebVitals();
   
   // Set up meta tags;
-<<<<<<< HEAD
   if (typeof document !== 'undefined') {/* content */}
-=======
   if (typeof document !== 'undefined') {/* content */}"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //     const viewport = document.querySelector('meta[name="viewport"]');
     if (!viewport) {/* content */}
       const _meta = document.createElement('meta');

@@ -1,5 +1,4 @@
 export type ZionEmergingTechService2029 =
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -57,7 +56,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     period: '/month',
     description: 'Comprehensive space technology platform that enables businesses and governments to manage satellite operations, space missions, and space-based data collection with AI-powered optimization.',
     features: [,
-=======
   i,
   d: string;
   nam,
@@ -167,7 +165,6 @@ export const,
   n: 'Comprehensive space technology platform that enables businesses and governments to manage satellite operations, space missions, and space-based data collection with AI-powered optimization.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI-powered satellite orbit optimization',
       'Real-time space debris tracking',
       'Satellite constellation management',
@@ -186,7 +183,6 @@ export const,
       'Enable new space-based business models',
       'Contribute to space exploration advancement'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-indigo-700',
@@ -235,7 +231,6 @@ export const,
     period: '/month',
     description: 'Revolutionary biotechnology platform that combines AI and synthetic biology to enable rapid design, testing, and production of biological systems for healthcare, agriculture, and industrial applications.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -329,7 +324,6 @@ export const,
   n: 'Revolutionary biotechnology platform that combines AI and synthetic biology to enable rapid design, testing, and production of biological systems for healthcare, agriculture, and industrial applications.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI-powered DNA sequence design',
       'Synthetic biology workflow automation',
       'Biological system simulation',
@@ -348,7 +342,6 @@ export const,
       'Enable new therapeutic approaches',
       'Create sustainable industrial processes'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-600 to-teal-700',
@@ -397,7 +390,6 @@ export const,
     period: '/month',
     description: 'Comprehensive renewable energy platform that uses AI to optimize energy production, distribution, and consumption while managing smart grids for maximum efficiency and sustainability.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -491,7 +483,6 @@ export const,
   n: 'Comprehensive renewable energy platform that uses AI to optimize energy production, distribution, and consumption while managing smart grids for maximum efficiency and sustainability.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI-powered energy production optimization',
       'Smart grid load balancing',
       'Renewable energy forecasting',
@@ -510,7 +501,6 @@ export const,
       'Improve grid stability by 60%',
       'Accelerate clean energy transition'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-yellow-500 to-orange-600',
@@ -559,7 +549,6 @@ export const,
     period: '/month',
     description: 'Revolutionary robotics platform that combines AI, computer vision, and advanced automation to enable intelligent robots that can learn, adapt, and perform complex tasks in various industries.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -653,7 +642,6 @@ export const,
   n: 'Revolutionary robotics platform that combines AI, computer vision, and advanced automation to enable intelligent robots that can learn, adapt, and perform complex tasks in various industries.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI-powered robot learning and adaptation',
       'Computer vision and object recognition',
       'Autonomous navigation and path planning',
@@ -672,7 +660,6 @@ export const,
       'Improve product quality by 80%',
       'Enable 24/7 autonomous operations'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-gray-600 to-slate-700',
@@ -721,7 +708,6 @@ export const,
     period: '/month',
     description: 'Revolutionary quantum internet platform that enables unhackable communications, quantum key distribution, and quantum networking for governments, financial institutions, and critical infrastructure.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -815,7 +801,6 @@ export const,
   n: 'Revolutionary quantum internet platform that enables unhackable communications, quantum key distribution, and quantum networking for governments, financial institutions, and critical infrastructure.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum key distribution (QKD)',
       'Quantum internet protocols',
       'Quantum network management',
@@ -834,7 +819,6 @@ export const,
       'Protect against quantum attacks',
       'Enable quantum internet applications'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-cyan-700',
@@ -883,7 +867,6 @@ export const,
     period: '/month',
     description: 'Cutting-edge materials science platform that combines AI, nanotechnology, and advanced simulation to design and develop revolutionary materials for aerospace, electronics, healthcare, and energy applications.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -977,7 +960,6 @@ export const,
   n: 'Cutting-edge materials science platform that combines AI, nanotechnology, and advanced simulation to design and develop revolutionary materials for aerospace, electronics, healthcare, and energy applications.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI-powered material design',
       'Nanotechnology simulation and modeling',
       'Material property prediction',
@@ -996,7 +978,6 @@ export const,
       'Enable breakthrough material properties',
       'Create sustainable material solutions'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-pink-700',
@@ -1045,7 +1026,6 @@ export const,
     period: '/month',
     description: 'Comprehensive autonomous transportation platform that enables businesses and cities to deploy and manage autonomous vehicles, optimize traffic flow, and create intelligent transportation systems.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -1139,7 +1119,6 @@ export const,
   n: 'Comprehensive autonomous transportation platform that enables businesses and cities to deploy and manage autonomous vehicles, optimize traffic flow, and create intelligent transportation systems.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Autonomous vehicle fleet management',
       'AI-powered traffic optimization',
       'Smart city transportation',
@@ -1158,7 +1137,6 @@ export const,
       'Enhance safety by 90%',
       'Enable new mobility services'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-600 to-emerald-700',
@@ -1207,7 +1185,6 @@ export const,
     period: '/month',
     description: 'Advanced digital twin platform that creates virtual replicas of physical systems, enabling real-time monitoring, predictive maintenance, and optimization of complex industrial processes.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -1301,7 +1278,6 @@ export const,
   n: 'Advanced digital twin platform that creates virtual replicas of physical systems, enabling real-time monitoring, predictive maintenance, and optimization of complex industrial processes.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Real-time digital twin creation',
       'AI-powered simulation and modeling',
       'Predictive maintenance',
@@ -1320,7 +1296,6 @@ export const,
       'Enable virtual testing and validation',
       'Optimize operational efficiency'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-indigo-600 to-purple-700',
@@ -1369,7 +1344,6 @@ export const,
     period: '/month',
     description: 'Comprehensive edge computing platform that brings AI and analytics to the edge of networks, enabling real-time processing, reduced latency, and improved privacy for IoT applications.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -1463,7 +1437,6 @@ export const,
   n: 'Comprehensive edge computing platform that brings AI and analytics to the edge of networks, enabling real-time processing, reduced latency, and improved privacy for IoT applications.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI-powered edge processing',
       'Real-time IoT analytics',
       'Edge device management',
@@ -1482,7 +1455,6 @@ export const,
       'Reduce bandwidth costs by 70%',
       'Enable real-time AI applications'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-cyan-700',
@@ -1531,7 +1503,6 @@ export const,
     period: '/month',
     description: 'Revolutionary metaverse platform that enables businesses to create immersive virtual experiences, virtual events, and digital twins for training, collaboration, and entertainment.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -1625,7 +1596,6 @@ export const,
   n: 'Revolutionary metaverse platform that enables businesses to create immersive virtual experiences, virtual events, and digital twins for training, collaboration, and entertainment.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '3D world creation and management',
       'Virtual reality and augmented reality',
       'Avatar customization and management',
@@ -1644,7 +1614,6 @@ export const,
       'Reduce travel and event costs',
       'Generate new revenue streams'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-pink-700',
@@ -1688,7 +1657,6 @@ export const,
 ];
 export const getServicesByCategory = (category: string) =>;
   return zionEmergingTechServices2029.filter(service => service.category === category);,
-=======
     popula,
   r: true,
     ico,
@@ -1772,12 +1740,10 @@ export const getServicesByCategory = (category: string) =>;
 export const getServicesByCategory = (categor,)
   y: string) =>;
   return zionEmergingTechServices2029.filter(service => service.category === category);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const getPopularServices = () =>
   return zionEmergingTechServices2029.filter(service => service.popular);
 };
-<<<<<<< HEAD
 export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>;
   return zionEmergingTechServices2029.filter(service => //     const starterPrice = service.pricing.starter;,)
     return starterPrice >= minPrice && starterPrice <= maxPrice),
@@ -1786,7 +1752,6 @@ export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>;
 export const getServicesByTechnology = (technology: string) =>;
   return zionEmergingTechServices2029.filter(service =>),
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())),
-=======
 export const getServicesByPriceRange = (minPric,)
   e: number) maxPric,
   e: number) =>;
@@ -1799,7 +1764,6 @@ export const getServicesByTechnology = (technolog,)
   y: string) =>;
   return zionEmergingTechServices2029.filter(service =>)
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 export type ZionEmergingTechService2029 = i,

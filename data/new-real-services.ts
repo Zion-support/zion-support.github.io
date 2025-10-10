@@ -8,7 +8,6 @@
       'SDKs for JS, Python, Go',
       'Grafana and Datadog exporters',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     link: 'https://ziontechgroup && ziontechgroup.com/llm-observability-suite',
@@ -496,7 +495,6 @@
     reviews: 7;
     rating: 4.6;
     reviews: 7;
-=======
     popula,
   r: true,
     ico,
@@ -1455,7 +1453,6 @@
   g: 4.6,
     review,
   s: 7,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
     i,
   d: 'ai - fraud - detection - lite'
@@ -1473,7 +1470,6 @@
   s: [;
       'Graph - based anomaly detection_explainability reports_risk scoring APIWorkflow actions and webhooks'
     ];
-<<<<<<< HEAD
     popular: false;
     icon: '',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-fraud-detection-lite',
@@ -1955,7 +1951,6 @@
     real_service: true;
     technology: ['Next.js', 'OpenTelemetry', 'PostgreSQL', 'ClickHouse'],
     integrations: [,
-=======
     popula,
   r: false;
     ico,
@@ -2895,14 +2890,12 @@
   y: ['Next.js', 'OpenTelemetry', 'PostgreSQL', 'ClickHouse'],
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'OpenAI - compatible',
       'LangChain',
       'LlamaIndex',
       'Datadog',
       'Grafana',
     ],
-<<<<<<< HEAD
     use_cases: ['LLM app monitoring', 'Cost control', 'Policy compliance'],
     roi: 'Cut LLM cost 2045% while improving reliability',
     competitors: ['Langfuse', 'Arize', 'Weights & Biases'],
@@ -2924,7 +2917,6 @@
     price: '$129',
     period: '/month',
     description: unknown;
-=======
     use_case,
   s: ['LLM app monitoring', 'Cost control', 'Policy compliance'],
     ro,
@@ -2965,7 +2957,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automate prospect research, write context - aware messages, and schedule follow - ups across email and LinkedIn. Built - in A / B testing and domain warmup best practices.',
     feature,
   s: [,
@@ -2976,7 +2967,6 @@
       'SPF / DKIM / DMARC checks',
       'Inbox rotation support',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - violet - 600 to - fuchsia - 700'
@@ -3013,7 +3003,6 @@
     price: '$399',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -3083,7 +3072,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps - friendly with automatic fix PRs and evidence collection for audits.',
     feature,
   s: [,
@@ -3093,7 +3081,6 @@
       'Evidence collection and reports',
       'SOC2 / ISO 27001 export',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
       'Policy engine plus cloud/K8s scanners and fix generators.',
@@ -3133,7 +3120,6 @@
     description: unknown;
       'Monitor data pipelines end - to - end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -3209,13 +3195,11 @@
   d: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Freshness and volume checks',
       'Schema drift detection',
       'SLA and SLO tracking',
       'Incident routing to Slack / Teams',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - blue - 600 to - indigo - 700'
@@ -3251,7 +3235,6 @@
     price: '$149',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -3320,7 +3303,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero - downtime via traffic shadowing.',
     feature,
   s: [,
@@ -3329,7 +3311,6 @@
       'Anomaly and abuse detection',
       'Zero - downtime deploys with shadow traffic',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - cyan - 600 to - sky - 700'
@@ -3366,7 +3347,6 @@
     price: '$129',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -3436,7 +3416,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Turn product usage into insights with automatic funnel detection, LLM - based querying, and anomaly alerts. Works alongside Amplitude / GA4.',
     feature,
   s: [,
@@ -3445,7 +3424,6 @@
       'Retention and churn signals',
       'Anomaly alerts to Slack / Teams',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - purple - 600 to - indigo - 700'
@@ -3481,7 +3459,6 @@
     price: '$99',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -3550,7 +3527,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi - channel widgets with brand controls.',
     feature,
   s: [,
@@ -3559,7 +3535,6 @@
       'Secure human handoff',
       'Analytics and CSAT tracking',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - rose - 600 to - orange - 700'
@@ -3595,7 +3570,6 @@
     description: unknown;
       'Proactive optimization for AWS / Azure / GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -3666,13 +3640,11 @@
   P: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Rightsizing recommendations',
       'Anomaly detection',
       'Savings plan / RIs planning',
       'Tag hygiene and showback',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - amber - 600 to - yellow - 700',
@@ -3707,7 +3679,6 @@
     price: '$179',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -3775,7 +3746,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Centralize PII with field - level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.',
     feature,
   s: [,
@@ -3784,7 +3754,6 @@
       'Consent enforcement',
       'Audit trail and reporting',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - slate - 600 to - gray - 700'
@@ -3820,7 +3789,6 @@
     price: '$159',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -3889,7 +3857,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.',
     feature,
   s: [,
@@ -3898,7 +3865,6 @@
       'Risk scoring API',
       'Workflow actions and webhooks',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - pink - 600 to - rose - 700'
@@ -3933,7 +3899,6 @@
     price: '$199',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -4001,7 +3966,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Production - grade PostgreSQL with high availability, automated backups, point - in - time recovery, and performance tuning insights.',
     feature,
   s: [,
@@ -4010,7 +3974,6 @@
       'Slow query insights and indexing',
       'Encryption and access controls',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - blue - 600 to - indigo - 700'
@@ -4045,7 +4008,6 @@
     price: '$79',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -4113,7 +4075,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Real - user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.',
     feature,
   s: [,
@@ -4122,7 +4083,6 @@
       'Error tracking and sourcemaps',
       'A / B test impact analysis',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - amber - 600 to - yellow - 700',
@@ -4156,7 +4116,6 @@
     price: '$99',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -4223,7 +4182,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.',
     feature,
   s: [,
@@ -4232,7 +4190,6 @@
       'Programmatic pages',
       'Internal linking graph',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - emerald - 600 to - teal - 700'
@@ -4266,7 +4223,6 @@
     price: '$59',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -4333,7 +4289,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.',
     feature,
   s: [,
@@ -4342,7 +4297,6 @@
       'Signature verification',
       'Fan - out and transformations',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - cyan - 600 to - sky - 700'
@@ -4376,7 +4330,6 @@
     price: '$49',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -4443,7 +4396,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Serverless HTML - to - PDF rendering with page numbers, headers / footers, and safe fonts. Great for invoices and reports.',
     feature,
   s: [,
@@ -4452,7 +4404,6 @@
       'Brand - safe fonts',
       'Webhook on completion',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - slate - 600 to - gray - 700'
@@ -4487,7 +4438,6 @@
     price: '$99',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -4555,7 +4505,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Easy OpenTelemetry - based tracing, RED metrics, and error analytics with exporters to your stack.',
     feature,
   s: [,
@@ -4564,7 +4513,6 @@
       'Error analytics',
       'Exporters to APMs',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - purple - 600 to - indigo - 700'
@@ -4598,7 +4546,6 @@
     price: '$149',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -4665,7 +4612,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Offer SSO and SCIM to your customers with a managed gateway, branding, and test harnesses.',
     feature,
   s: [,
@@ -4674,7 +4620,6 @@
       'Branding and mapping',
       'Customer sandbox',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - emerald - 600 to - teal - 700'
@@ -4708,7 +4653,6 @@
     price: '$129',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -4775,7 +4719,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Discover hardware, software, and services across networks with agentless scans and sync to CMDB.',
     feature,
   s: [,
@@ -4784,7 +4727,6 @@
       'Change tracking',
       'CMDB integrations',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - sky - 600 to - blue - 700'
@@ -4818,7 +4760,6 @@
     price: '$129',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -4885,7 +4826,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Streamline vendor assessments with standardized questionnaires, evidence requests, and continuous security monitoring.',
     feature,
   s: [,
@@ -4894,7 +4834,6 @@
       'Continuous monitoring',
       'Risk scoring',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - rose - 600 to - orange - 700'
@@ -4921,7 +4860,6 @@
     customers: 6;
     rating: 4 && 4.5;
     reviews: 3;
-=======
     popula,
   r: true,
     ico,
@@ -4975,7 +4913,6 @@
   g: 4 && 4.5,
     review,
   s: 3,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'llm-observability-suite', nam,
@@ -4992,7 +4929,6 @@
   s: [,
       'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
     ];
-<<<<<<< HEAD
     popular: true, icon: '',
     color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/llm-observability-suite', marketPosition: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
@@ -5137,7 +5073,6 @@
     price: '$59',
     period: '/month',
     description:,
-=======
     popula,
   r: true, ico,
   n: '',
@@ -5413,26 +5348,22 @@
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.'
     feature,
   s: [;
 ];
-<<<<<<< HEAD
 ]
 // const contact = {;
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup.com',
-=======
 ],
 // const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const,
   newRealServices: EnhancedRealMicroSaasService[] = [;
@@ -5441,7 +5372,6 @@ export const,
     review,
   s: 22}
   };
-<<<<<<< HEAD
   {;
     id: 'ai-sales-email-copilot';
     name: 'AI Sales Email Copilot';
@@ -6107,7 +6037,6 @@ export const,
     customers: 6;
     rating: 4.5}
     reviews: 3}
-=======
   {/* TODO: Fix JSX expression */}
   g: 4.7}
     review,
@@ -6197,7 +6126,6 @@ export const,
   g: 4.5}
     review,
   s: 3}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 'Prompt and response tracing',' 'Cost and token analytics',' 'Automatic PII redaction',' 'Offline and online evals',' 'Guardrail policy engine',' 'Drift and performance alerts',' 'SDKs for JS, Python, Go',' 'Grafana and Datadog exporters', ], popula,

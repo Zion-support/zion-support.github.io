@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Cookie, Settings, Shield, Eye, Database, CheckCircle } from 'lucide-react';
@@ -92,20 +91,14 @@ const CookiesPage: React.FC = () => {,
     }
   ];
 
-<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Navigation />
-<<<<<<< HEAD
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-16">
-<<<<<<< HEAD
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Cookie Policy<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">This policy explains how we use cookies and similar technologies on our website to enhance your experience.<div className="text-sm text-gray-400">Last updated: {lastUpdated}</div>
-=======
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Header */}
         <section className="text-center mb-16">
@@ -117,10 +110,7 @@ const CookiesPage: React.FC = () => {,
           </p>,
           <div className="text-sm text-gray-400">,
             Last updated: {lastUpdated}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Cookie Policy</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">This policy explains how we use cookies and similar technologies on our website to enhance your experience.</p><div className="text-sm text-gray-400">Last updated: {lastUpdated}</section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           </div>
         </section>
 
@@ -132,49 +122,34 @@ const CookiesPage: React.FC = () => {,
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Cookie Types */}
         <section className="mb-16">
-<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Types of Cookies We Use<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{cookieTypes.map((cookieType, index) => (</div>
-=======
         {/* Cookie Types */})
         <section className="mb-16">)
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Types of Cookies We Use</h2>)
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">),
             {cookieTypes.map((cookieType, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="cyber-card p-6">
                 <div className="flex items-center mb-4">
-=======
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Types of Cookies We Use</h2><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{cookieTypes.map((cookieType, index) => (</section>
               <div key={index} className="cyber-card p-6"></div>
                 <div className="flex items-center mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <cookieType.icon className="w-8 h-8 text-cyan-400 mr-3" />
                   <h3 className="text-xl font-bold text-white">{cookieType.title}</h3>
                   {cookieType.necessary && (
-<<<<<<< HEAD
                     <span className="ml-auto bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium">Necessary</span>
-=======
                     <span className="ml-auto bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium">
                       Necessary;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     </span>
                   )}
                 <p className="text-gray-300 mb-4">{cookieType.description}</p>
-<<<<<<< HEAD
                 <div>
-<<<<<<< HEAD
-=======
                 <div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Examples:<ul className="space-y-1">{cookieType.examples.map((example, exampleIndex) => (</ul>
-=======
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Examples: </h4>,
                   <ul className="space-y-1">,
                     {cookieType.examples.map((example, exampleIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                       <li key={exampleIndex} className="flex items-start text-sm text-gray-300">
                         <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0">{example}</span>
                       </span>
@@ -201,16 +176,13 @@ const CookiesPage: React.FC = () => {,
                       <td className="py-3">
                         <span className={`px-2 py-1 rounded text-xs font-medium ${
                           cookie.type === 'Essential' ? 'bg-green-500/20 text-green-400' :
-<<<<<<< HEAD
                           cookie.type === 'Analytics' ? 'bg-blue-500/20 text-blue-400' :
                           'bg-purple-500/20 text-purple-400'
                         }`}>{cookie.type}</span>
-=======
                           cookie.type === 'Analytics' ? 'bg-blue-500/20 text-blue-400' :}
                           'bg-purple-500/20 text-purple-400'}
                         }`}>
                           {cookie.type}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                         </span>
                       </td>
                     </tr>
@@ -225,15 +197,12 @@ const CookiesPage: React.FC = () => {,
         <section className="mb-16">
           <div className="cyber-card p-8"></section>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Managing Your Cookie Preferences</h2>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4">Browser Settings<p className="text-gray-300 mb-4">Most web browsers allow you to control cookies through their settings preferences. You can set your browser to refuse cookies or delete certain cookies.</p>
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
               <div></div>
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4">Browser Settings</h3><p className="text-gray-300 mb-4">Most web browsers allow you to control cookies through their settings preferences. You can set your browser to refuse cookies or delete certain cookies.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </p>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-start">
@@ -252,41 +221,29 @@ const CookiesPage: React.FC = () => {,
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                     <span>Edge: Settings → Cookies and site permissions</span>
                   </li>
-<<<<<<< HEAD
                 </ul>
               </div>
-<<<<<<< HEAD
               <div>
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4">Cookie Consent<p className="text-gray-300 mb-4">When you first visit our website, you'll see a cookie consent banner where you can choose which types of cookies to accept.</p>
-=======
                 </ul>,
               </div>,
               <div>,
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4">Cookie Consent</h3>,
                 <p className="text-gray-300 mb-4">,
                   When you first visit our website, you'll see a cookie consent banner where you can choose which types of cookies to accept.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
               <div></div>
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4">Cookie Consent</h3><p className="text-gray-300 mb-4">When you first visit our website, you'll see a cookie consent banner where you can choose which types of cookies to accept.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </p>
                 <div className="space-y-3"></div>
                   <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg"></div>
                     <span className="text-white">Essential Cookies</span><span className="text-green-400 text-sm">Always Active</span>
                   </div>
-<<<<<<< HEAD
                   <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
-<<<<<<< HEAD
                     <span className="text-white">Analytics Cookies<button className="text-cyan-400 hover:text-cyan-300 text-sm">Manage</button>
-=======
                     <span className="text-white">Analytics Cookies</span>
                     <button className="text-cyan-400 hover: text-cyan-300 text-sm">Manage</button>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
                   <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg"></div>
                     <span className="text-white">Analytics Cookies</span><button className="text-cyan-400 hover:text-cyan-300 text-sm">Manage</button>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   </div>
                   <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg"></div>
                     <span className="text-white">Marketing Cookies</span><button className="text-cyan-400 hover:text-cyan-300 text-sm">Manage</button>
@@ -302,15 +259,12 @@ const CookiesPage: React.FC = () => {,
           <div className="cyber-card p-8"></section>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Third-Party Cookies</h2><p className="text-gray-300 mb-6">Some cookies on our site are set by third-party services that appear on our pages. We have no control over these cookies.</p>
             </p>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Google Analytics<p className="text-gray-300 text-sm mb-2">We use Google Analytics to understand how visitors interact with our website.<a href="https://policies.google.com/privacy" className="text-cyan-400 hover:text-cyan-300 text-sm">Google Privacy Policy →</a>
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               <div></div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Google Analytics</h3><p className="text-gray-300 text-sm mb-2">We use Google Analytics to understand how visitors interact with our website.</p><a href="https://policies.google.com/privacy" className="text-cyan-400 hover:text-cyan-300 text-sm">Google Privacy Policy →</a>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </a>
               </div>
               <div></div>
@@ -323,22 +277,16 @@ const CookiesPage: React.FC = () => {,
 ,
         {/* Contact Information */}
         <section className="mb-16">
-<<<<<<< HEAD
           <div className="cyber-card p-8">
-<<<<<<< HEAD
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Questions About Cookies?<p className="text-gray-300 mb-6">If you have any questions about our use of cookies or this Cookie Policy, please contact us:</p>
-=======
           <div className="cyber-card p-8"></section>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Questions About Cookies?</h2><p className="text-gray-300 mb-6">If you have any questions about our use of cookies or this Cookie Policy, please contact us:</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               <div></div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Zion Tech Group</h3>
-<<<<<<< HEAD
                 <div className="space-y-2 text-gray-300">
                   <p>364 E Main St STE 1008<p>Middletown, DE 19709<p>United States</p>
-=======
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Questions About Cookies?</h2>
             <p className="text-gray-300 mb-6">
               If you have any questions about our use of cookies or this Cookie Policy, please contact us: </p>
@@ -349,11 +297,8 @@ const CookiesPage: React.FC = () => {,
                   <p>364 E Main St STE 1008</p>,
                   <p>Middletown, DE 19709</p>
                   <p>United States</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
                 <div className="space-y-2 text-gray-300"></div>
                   <p>364 E Main St STE 1008</p><p>Middletown, DE 19709</p><p>United States</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </div>
               </div>
               <div></div>
@@ -374,7 +319,6 @@ const CookiesPage: React.FC = () => {,
 };
 
 export default CookiesPage;
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import Header from "../components/Header";
@@ -468,4 +412,3 @@ const CookiesPage: React.FC = () => {
 };
 
 export default CookiesPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

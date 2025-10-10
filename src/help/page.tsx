@@ -1,22 +1,15 @@
-<<<<<<< HEAD
 import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users} from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
 
 
 import { Link } from 'react-router-dom';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
 const HelpPage: React.FC = () => {
-<<<<<<< HEAD
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
 
@@ -295,7 +288,6 @@ questionquestion: 'Is there a free trial available?',
                 Email Us
       <Footer />
     </>
-=======
   return (
     <div>Coming Soon</div>
 
@@ -328,7 +320,6 @@ const categories = [
   r: 'text-red-400',
       bgColo,
   r: 'bg-red-500/10',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
       i,
   d: 'technical',

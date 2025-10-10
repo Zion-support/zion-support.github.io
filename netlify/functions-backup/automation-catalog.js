@@ -3,7 +3,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     } catch {return null}
     }
   }
-<<<<<<< HEAD
   function listAutomationScripts() {const dir = path.join(process.cwd(), 'automation');
     const _items = [];
     try {
@@ -16,18 +15,15 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
           items.push({ type: script),
         name),
         path: `automation/${name}` });
-=======
   function listAutomationScripts() {/* TODO: Fix JSX expression */}
       }
         if (stat.isFile() && /\.(cjs|js|mjs|ts)$/.test(name)) {/* TODO: Fix JSX expression */}
   h: `automation/${name}` });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
       }
     } catch {}
     return items;
   }
-<<<<<<< HEAD
   function listNetlifyFunctions() {const manifest = readJson(path.join()
         process.cwd(),
         'netlify',
@@ -40,18 +36,15 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       type: function),
         name: fn),
         href: `/.netlify/functions/${fn}`;
-=======
   function listNetlifyFunctions() {/* TODO: Fix JSX expression */}
     if (!manifest || !Array.isArray(manifest.functions)) return []}
     return manifest.functions.map(fn => ({/* TODO: Fix JSX expression */}`
   f: `/.netlify/functions/${fn}`;)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }));
   }
   const catalog = {/* TODO: Fix JSX expression */}
   s: listAutomationScripts()}
   };
-<<<<<<< HEAD
   return {statusCode: 200;
         headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(catalog);
@@ -64,7 +57,6 @@ exports.handler = async function(event, context) {const fs = require('fs');' con
         path: `automation/${name}` }); } } } catch {} return items; } function listNetlifyFunctions() {' const manifest = readJson(path.join(process.cwd(), 'netlify', 'functions', 'functions-manifest.json')); if (!manifest || !Array.isArray(manifest.functions)) return []}' return manifest.functions.map((fn) => ({ type: 'function'} name: fn;
         href: `/.netlify/functions/${fn}` })); } const catalog = {generatedAt: new Date().toISOString(), functions: listNetlifyFunctions()} scripts: listAutomationScripts() }; return {statusCode: 200}' headers: { 'Content-Type': 'application/json' }; body: JSON.stringify(catalog;),
       }; };'
-=======
   return {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
     bod,
@@ -84,4 +76,3 @@ exports.handler = async function(event, context) {const fs = require('fs');' con
   s: { 'Content-Type': 'application/json' }; bod,
   y: JSON.stringify(catalog;
       }; };')`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

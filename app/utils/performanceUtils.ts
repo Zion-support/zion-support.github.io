@@ -1,26 +1,21 @@
-<<<<<<< HEAD
 // Performance utilities for optimizing React components and application performance;
 export const debounce = <T extends (...args: any[]) => any>(
-<<<<<<< HEAD
   func: T;
   wait: number;
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {,
-=======
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {}
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {}
->>>>>>> origin/merge-error-fixes
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
 };
 
 export const throttle = <T extends (...args: any[]) => any>(
-<<<<<<< HEAD
   func: T;
   limit: number;
 ): ((...args: Parameters<T>) => void) => {
@@ -29,7 +24,6 @@ export const throttle = <T extends (...args: any[]) => any>(
     if (!inThrottle) {,
       func(...args),
       inThrottle = true;
-=======
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {}
@@ -38,7 +32,6 @@ export const throttle = <T extends (...args: any[]) => any>(
     if (!inThrottle) {}
       func(...args)
       inThrottle = true
->>>>>>> origin/merge-error-fixes
       setTimeout(() => (inThrottle = false), limit);}
     }
   };
@@ -48,32 +41,24 @@ export const memoize = <T extends (...args: any[]) => any>(fn: T): T => {}
   const cache = new Map();
   return ((...args: Parameters<T>) => {}
     const key = JSON.stringify(args);
-<<<<<<< HEAD
     if (cache.has(key)) {,
-=======
     if (cache.has(key)) {}
->>>>>>> origin/merge-error-fixes
       return cache.get(key);
     }
     const result = fn(...args);
     cache.set(key, result);
     return result;
   }) as T;
-<<<<<<< HEAD
-=======
 }
 /**
  * Lazy load a component with dynamic import;
  */
 export function lazyLoad<T extends React.ComponentType<unknown>>(
   importFunc: () => Promise<{ default: T }>,
-<<<<<<< HEAD
   fallback?: React.ReactNode;
 ): React.LazyExoticComponent<T> {
-=======
   fallback?: React.ReactNode
 ): React.LazyExoticComponent<T> {}
->>>>>>> origin/merge-error-fixes
   const LazyComponent = React.lazy(importFunc)
   if (fallback) {}
     return LazyComponent;}
@@ -84,15 +69,12 @@ export function lazyLoad<T extends React.ComponentType<unknown>>(
  * Measure function execution time;
  */
 export async function measureTime<T>(
-<<<<<<< HEAD
   name: string;
   func: () => T | Promise<T>,
 ): Promise<{ result: T; duration: number }> {
-=======
   name: string,
   func: () => T | Promise<T>
 ): Promise<{ result: T; duration: number }> {}
->>>>>>> origin/merge-error-fixes
   const start = performance.now()
   const result = await func()
   const duration = performance.now() - start;}
@@ -103,21 +85,18 @@ export async function measureTime<T>(
  * Batch async operations;
  */
 export async function batchAsync<T, R>(
-<<<<<<< HEAD
   items: T[]
   operation: (item: T) => Promise<R>
   batchSize = 10;
 ): Promise<R[]> {,
   const results: R[] = [],
   for (let i = 0; i < items.length; i += batchSize) {,
-=======
   items: T[],
   operation: (item: T) => Promise<R>,
   batchSize = 10
 ): Promise<R[]> {}
   const results: R[] = []
   for (let i = 0; i < items.length; i += batchSize) {}
->>>>>>> origin/merge-error-fixes
     const batch = items.slice(i, i + batchSize)
     const batchResults = await Promise.all(batch.map(operation))
     results.push(...batchResults);}
@@ -127,7 +106,6 @@ export async function batchAsync<T, R>(
 /**
  * Create a request animation frame loop;
  */
-<<<<<<< HEAD
 export function rafLoop(callback: (time: number) => boolean | void): () => void {
   let rafId: number;
   let running = true;
@@ -135,7 +113,6 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
     if (!running) return;
     const shouldContinue = callback(time),
     if (shouldContinue !== false) {,
-=======
 export function rafLoop(callback: (time: number) => boolean | void): () => void {}
   let rafId: number
   let running = true
@@ -143,20 +120,16 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
     if (!running) return
     const shouldContinue = callback(time)
     if (shouldContinue !== false) {}
->>>>>>> origin/merge-error-fixes
       rafId = requestAnimationFrame(loop);}
     }
   }
   rafId = requestAnimationFrame(loop)
-<<<<<<< HEAD
   return () => {
     running = false;
     if (rafId) {
-=======
   return () => {}
     running = false
     if (rafId) {}
->>>>>>> origin/merge-error-fixes
       cancelAnimationFrame(rafId);}
     }
   }
@@ -164,7 +137,6 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
 /**
  * Idle callback wrapper;
  */
-<<<<<<< HEAD
 export function runWhenIdle(
   callback: () => void;
   options?: IdleRequestOptions;
@@ -174,7 +146,6 @@ export function runWhenIdle(
   }
   // Fallback for browsers that don't support requestIdleCallback;
   if (typeof window !== 'undefined') {
-=======
 export function runWhenIdle()
   callback: () => void,
   options?: IdleRequestOptions
@@ -184,7 +155,6 @@ export function runWhenIdle()
   }
   // Fallback for browsers that don't support requestIdleCallback
   if (typeof window !== 'undefined') {}
->>>>>>> origin/merge-error-fixes
     return (window as Window).setTimeout(callback, 1) as unknown as number;}
   }
   return 0;
@@ -192,15 +162,12 @@ export function runWhenIdle()
 /**
  * Cancel idle callback;
  */
-<<<<<<< HEAD
 export function cancelIdle(id: number): void {,
   if (typeof window !== 'undefined') {,
     if ('cancelIdleCallback' in window) {,
-=======
 export function cancelIdle(id: number): void {}
   if (typeof window !== 'undefined') {}
     if ('cancelIdleCallback' in window) {}
->>>>>>> origin/merge-error-fixes
       window.cancelIdleCallback(id);}
     } else {}
       (window as Window).clearTimeout(id);}
@@ -210,7 +177,6 @@ export function cancelIdle(id: number): void {}
 /**
  * Virtual scroll helper;
  */
-<<<<<<< HEAD
 export class VirtualScroller<T> {
   private itemHeight: number;
   private containerHeight: number;
@@ -218,7 +184,6 @@ export class VirtualScroller<T> {
   constructor(items: T[], itemHeight: number, containerHeight: number) {,
     this.items = items;
     this.itemHeight = itemHeight;
-=======
 export class VirtualScroller<T> {}
   private itemHeight: number
   private containerHeight: number
@@ -226,19 +191,15 @@ export class VirtualScroller<T> {}
   constructor(items: T[], itemHeight: number, containerHeight: number) {}
     this.items = items
     this.itemHeight = itemHeight
->>>>>>> origin/merge-error-fixes
     this.containerHeight = containerHeight;}
   }
   getVisibleRange(scrollTop: number): { start: number; end: number; offsetY: number } {}
     const start = Math.floor(scrollTop / this.itemHeight)
     const end = Math.ceil((scrollTop + this.containerHeight) / this.itemHeight)
-<<<<<<< HEAD
     const offsetY = start * this.itemHeight;
     return {
-=======
     const offsetY = start * this.itemHeight
     return {}
->>>>>>> origin/merge-error-fixes
       start: Math.max(0, start),
       end: Math.min(this.items.length, end),
       offsetY}
@@ -255,7 +216,6 @@ export class VirtualScroller<T> {}
 /**
  * Image lazy loading helper;
  */
-<<<<<<< HEAD
 export function setupLazyImages(selector = 'img[data-src]')
   options?: IntersectionObserverInit;
 ): () => void {
@@ -267,7 +227,6 @@ export function setupLazyImages(selector = 'img[data-src]')
         const src = img.dataset['src']
         if (src) {
           img['src'] = src;
-=======
 export function setupLazyImages()
   selector = 'img[data-src]',
   options?: IntersectionObserverInit
@@ -280,7 +239,6 @@ export function setupLazyImages()
         const src = img.dataset['src']
         if (src) {}
           img['src'] = src
->>>>>>> origin/merge-error-fixes
           img.removeAttribute('data-src')
           observer.unobserve(img);}
         }
@@ -300,7 +258,6 @@ export function preloadResources(resources: Array<{ url: string; as: string }>):
     link.href = url;
     link.as = as;
     document.head.appendChild(link);
->>>>>>> origin/main
 };
 
 export const isInViewport = (element: Element): boolean => {}
@@ -312,29 +269,20 @@ export const isInViewport = (element: Element): boolean => {}
   );
 };
 
-<<<<<<< HEAD
 export const preloadImage = (src: string): Promise<void> => {,
   return new Promise((resolve, reject) => {
-=======
 export const preloadImage = (src: string): Promise<void> => {}
   return new Promise((resolve, reject) => {}
->>>>>>> origin/merge-error-fixes
     const img = new Image();
     img.onload = () => resolve();
     img.onerror = reject;
     img.src = src;
-<<<<<<< HEAD
   });
-=======
 
->>>>>>> origin/main
 };
 
-<<<<<<< HEAD
 export const preloadImages = async (srcs: string[]): Promise<void> => {,
-=======
 export const preloadImages = async (srcs: string[]): Promise<void> => {}
->>>>>>> origin/merge-error-fixes
   await Promise.all(srcs.map(preloadImage));
 };
 
@@ -350,7 +298,6 @@ export const getImageDimensions = (src: string): Promise<{ width: number; height
 };
 
 export const createIntersectionObserver = (
-<<<<<<< HEAD
   callback: (entries: IntersectionObserverEntry[]) => void;
   options?: IntersectionObserverInit;,
 ): IntersectionObserver => {,
@@ -358,7 +305,6 @@ export const createIntersectionObserver = (
     rootMargin: '50px'),
     threshold: 0.1),
     ...options;
-=======
   callback: (entries: IntersectionObserverEntry[]) => void,
   options?: IntersectionObserverInit
 ): IntersectionObserver => {}
@@ -367,7 +313,6 @@ export const createIntersectionObserver = (
     threshold: 0.1,
     ...options
 
->>>>>>> origin/merge-error-fixes
 };
 
 export const measurePerformance = (name: string, fn: () => void): void => {}
@@ -397,13 +342,10 @@ export const getDeviceInfo = () => {}
 export const optimizeForDevice = () => {}
   const deviceInfo = getDeviceInfo();
 
-<<<<<<< HEAD
   if (deviceInfo.isMobile) {
     // Reduce animations and effects for mobile;
-=======
   if (deviceInfo.isMobile) {}
     // Reduce animations and effects for mobile
->>>>>>> origin/merge-error-fixes
     document.documentElement.style.setProperty('--animation-duration', '0.2s');
     document.documentElement.style.setProperty('--transition-duration', '0.15s');
   }
@@ -411,13 +353,10 @@ export const optimizeForDevice = () => {}
   return deviceInfo;
 };
 
-<<<<<<< HEAD
 export const createPerformanceObserver = (callback: (entries: PerformanceEntry[]) => void) => {,
   if ('PerformanceObserver' in window) {,
-=======
 export const createPerformanceObserver = (callback: (entries: PerformanceEntry[]) => void) => {}
   if ('PerformanceObserver' in window) {}
->>>>>>> origin/merge-error-fixes
     const observer = new PerformanceObserver(callback);
     observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
     return observer;
@@ -445,17 +384,14 @@ export const measureWebVitals = () => {}
   };
 };
 
-<<<<<<< HEAD
 export const optimizeBundleSize = () => {
   // Dynamic imports for heavy components;
   const loadHeavyComponent = (componentName: string) => {,
     return import(`../components/${componentName}`).catch(() => {
-=======
 export const optimizeBundleSize = () => {}
   // Dynamic imports for heavy components
   const loadHeavyComponent = (componentName: string) => {}
     return import(`../components/${componentName}`).catch(() => {}
->>>>>>> origin/merge-error-fixes
       // return null;
 
   };
@@ -465,13 +401,10 @@ export const optimizeBundleSize = () => {}
 
 export const createLazyComponent = <T extends React.ComponentType<any>>(
   importFunc: () => Promise<{ default: T }>,
-<<<<<<< HEAD
   fallback?: React.ReactNode;
 ) => {
-=======
   fallback?: React.ReactNode
 ) => {}
->>>>>>> origin/merge-error-fixes
   const LazyComponent = React.lazy(importFunc);
 
   return (props: React.ComponentProps<T>) => (,
@@ -481,26 +414,20 @@ export const createLazyComponent = <T extends React.ComponentType<any>>(
   );
 };
 
-<<<<<<< HEAD
 // Memory management utilities;
 export const cleanupMemory = () => {
   if ('memory' in performance) {
-=======
 // Memory management utilities
 export const cleanupMemory = () => {}
   if ('memory' in performance) {}
->>>>>>> origin/merge-error-fixes
     const memory = (performance as any).memory;
     // }
 };
 
-<<<<<<< HEAD
 export const scheduleCleanup = () => {
   // Schedule cleanup every 5 minutes;
-=======
 export const scheduleCleanup = () => {}
   // Schedule cleanup every 5 minutes
->>>>>>> origin/merge-error-fixes
   setInterval(cleanupMemory, 5 * 60 * 1000);
 };
 
@@ -531,7 +458,6 @@ export interface PerformanceOptimizerConfig {}
 class PerformanceOptimizer {}
   private config: PerformanceOptimizerConfig;
   private metrics: PerformanceMetrics | null = null;
-<<<<<<< HEAD
 ,
   constructor(config: Partial<PerformanceOptimizerConfig> = {}) {
     this.config = {
@@ -540,7 +466,6 @@ class PerformanceOptimizer {}
       enableCodeSplitting: true;
       enablePreloading: true;
       enableCaching: true;
-=======
 
   constructor(config: Partial<PerformanceOptimizerConfig> = {}) {}
     this.config = {}
@@ -549,7 +474,6 @@ class PerformanceOptimizer {}
       enableCodeSplitting: true,
       enablePreloading: true,
       enableCaching: true,
->>>>>>> origin/merge-error-fixes
       ...config,
     };
   }
@@ -557,13 +481,10 @@ class PerformanceOptimizer {}
   init(): void {}
     if (typeof window === 'undefined') return;
 
-<<<<<<< HEAD
     // Initialize performance optimizations;
     if (this.config.enableImageOptimization) {
-=======
     // Initialize performance optimizations
     if (this.config.enableImageOptimization) {}
->>>>>>> origin/merge-error-fixes
       this.optimizeImages();
     }
 
@@ -580,13 +501,10 @@ class PerformanceOptimizer {}
     }
   }
 
-<<<<<<< HEAD
   private optimizeImages(): void {
     // Add image optimization logic here;
-=======
   private optimizeImages(): void {}
     // Add image optimization logic here
->>>>>>> origin/merge-error-fixes
     const images = document.querySelectorAll('img');
     images.forEach((img) => {}
       if (!img.loading) {}
@@ -595,21 +513,18 @@ class PerformanceOptimizer {}
 
   }
 
-<<<<<<< HEAD
   private setupLazyLoading(): void {
     // Setup intersection observer for lazy loading;
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-=======
   private setupLazyLoading(): void {}
     // Setup intersection observer for lazy loading
     if ('IntersectionObserver' in window) {}
       const observer = new IntersectionObserver((entries) => {}
         entries.forEach((entry) => {}
           if (entry.isIntersecting) {}
->>>>>>> origin/merge-error-fixes
             const element = entry.target as HTMLElement;
             if (element.dataset.src) {}
               element.style.backgroundImage = `url(${element.dataset.src})`;
@@ -624,24 +539,18 @@ class PerformanceOptimizer {}
     }
   }
 
-<<<<<<< HEAD
   private setupPreloading(): void {
     // Preload critical resources;
-=======
   private setupPreloading(): void {}
-=======
 // Performance optimization utilities
 export const performanceOptimizer = () => {
   // Performance optimization logic
   if (typeof window !== 'undefined') {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     // Preload critical resources
->>>>>>> origin/merge-error-fixes
     const criticalResources = [
       '/src/main.tsx',
       'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
     ];
-<<<<<<< HEAD
 
     criticalResources.forEach((resource) => {}
       const link = document.createElement('link');
@@ -651,34 +560,28 @@ export const performanceOptimizer = () => {
       if (resource.endsWith('.woff2')) {}
         link.crossOrigin = 'anonymous';
       }
-=======
     
     criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
       link.as = resource.endsWith('.css') ? 'style' : 'script';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       document.head.appendChild(link);
 
   }
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   private setupCaching(): void {
     // Setup service worker for caching;
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js').catch(() => {
         // Service worker registration failed;
-=======
   private setupCaching(): void {}
     // Setup service worker for caching
     if ('serviceWorker' in navigator) {}
       navigator.serviceWorker.register('/sw.js').catch(() => {}
         // Service worker registration failed
 
->>>>>>> origin/merge-error-fixes
     }
   }
 
@@ -702,13 +605,10 @@ export const performanceOptimizer = () => {
       (entry) => entry.name === 'largest-contentful-paint'
     )?.startTime || 0;
 
-<<<<<<< HEAD
     this.metrics = {
       loadTime: navigation.loadEventEnd - navigation.loadEventStart;
-=======
     this.metrics = {}
       loadTime: navigation.loadEventEnd - navigation.loadEventStart,
->>>>>>> origin/merge-error-fixes
       firstContentfulPaint,
       largestContentfulPaint,
       firstInputDelay: 0, // Would need to be measured separately;
@@ -721,13 +621,10 @@ export const performanceOptimizer = () => {
     return this.metrics;
   }
 
-<<<<<<< HEAD
   cleanup(): void {
     // Cleanup any performance monitoring;
-=======
   cleanup(): void {}
     // Cleanup any performance monitoring
->>>>>>> origin/merge-error-fixes
     this.metrics = null;
   }
 }
@@ -819,13 +716,10 @@ class PerformanceMonitor {}
   }
 }
 
-<<<<<<< HEAD
 // Utility functions;
 export function lazyLoadImages(): void {
-=======
 // Utility functions
 export function lazyLoadImages(): void {}
->>>>>>> origin/merge-error-fixes
   if (typeof window === 'undefined') return;
 
   const images = document.querySelectorAll('img[data-src]');
@@ -864,7 +758,6 @@ export function preloadCriticalResources(): void {}
 export function collectPerformanceMetrics(): PerformanceMetrics | null {}
   if (typeof window === 'undefined' || !('performance' in window)) {}
     return null;
-=======
 export const performanceMonitor = () => {
   // Performance monitoring logic
   if (typeof window !== 'undefined' && 'performance' in window) {
@@ -880,7 +773,6 @@ export const performanceMonitor = () => {
     } catch (error) {
       console.warn('Performance monitoring not supported:', error);
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 };
 
@@ -903,18 +795,14 @@ export const seoOptimizer = () => {
   }
 };
 
-<<<<<<< HEAD
   const firstContentfulPaint = paintEntries.find()
     (entry) => entry.name === 'first-contentful-paint'
   )?.startTime || 0;
 
-<<<<<<< HEAD
   return {
     loadTime: navigation.loadEventEnd - navigation.loadEventStart;
-=======
   return {}
     loadTime: navigation.loadEventEnd - navigation.loadEventStart,
->>>>>>> origin/merge-error-fixes
     firstContentfulPaint,
     largestContentfulPaint: 0;
     firstInputDelay: 0;
@@ -928,7 +816,6 @@ export const seoOptimizer = () => {
 // Export instances;
 export const performanceOptimizer = new PerformanceOptimizer();
 export const performanceMonitor = new PerformanceMonitor();
-=======
 export const accessibilityEnhancer = () => {
   // Accessibility enhancement logic
   if (typeof window !== 'undefined') {
@@ -955,4 +842,3 @@ export const collectPerformanceMetrics = () => {
     });
   }
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

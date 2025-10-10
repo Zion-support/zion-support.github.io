@@ -12,7 +12,6 @@ interface AccessibilityIssue {/* TODO: Fix JSX expression */}
 interface AccessibilityReport {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 class AccessibilityEnhancer {
   private config: AccessibilityConfig;
   private issues: AccessibilityIssue[] = [];
@@ -26,10 +25,8 @@ class AccessibilityEnhancer {
       enableFocusManagement: true;
       enableARIALabels: true;
       ...config,
-=======
 class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   g: Partial<AccessibilityConfig> = {}) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }
 
@@ -42,87 +39,66 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   /**
    * Setup keyboard navigation;
    */
-<<<<<<< HEAD
   private setupKeyboardNavigation(): void {
     if (!this.config.enableKeyboardNavigation) return;
 
     // Add keyboard event listeners;
     document.addEventListener('keydown', e => {)
       this.handleKeyboardNavigation(e);
-=======
   private setupKeyboardNavigation(): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
 
     // Make all interactive elements focusable;
     const interactiveElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]')
     );
-<<<<<<< HEAD
     interactiveElements.forEach(element => {)
       if (!element.hasAttribute('tabindex')) {
         element.setAttribute('tabindex', '0');
       }
-=======
     interactiveElements.forEach(element => {/* TODO: Fix JSX expression */}
       })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
   }
 
   /**
    * Handle keyboard navigation;
    */
-<<<<<<< HEAD
   private handleKeyboardNavigation(e: KeyboardEvent): void {,
-=======
   private handleKeyboardNavigation(e: KeyboardEvent): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const { key, target } = e;
     const _element = target as HTMLElement;
 
     // Skip to main content;
-<<<<<<< HEAD
     if (key === 'Tab' && e.shiftKey && element.id === 'skip-to-main') {
       e.preventDefault();
       const _main = document.querySelector('main') || document.querySelector('#main');
       if (main) {
         (main as HTMLElement).focus();
-=======
     if (key === 'Tab' && e.shiftKey && element.id === 'skip-to-main') {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
 
     // Escape key to close modals;
-<<<<<<< HEAD
     if (key === 'Escape') {
       const _modal = document.querySelector('.modal[aria-hidden="false"]');
       if (modal) {
         this.closeModal(modal as HTMLElement);
-=======
     if (key === 'Escape') {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
 
     // Arrow keys for menu navigation;
-<<<<<<< HEAD
     if (['ArrowDown', 'ArrowUp', 'ArrowLeft', 'ArrowRight'].includes(key)) {
       this.handleArrowNavigation(e);
-=======
     if (['ArrowDown', 'ArrowUp', 'ArrowLeft', 'ArrowRight'].includes(key)) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 
   /**
    * Handle arrow key navigation;
    */
-<<<<<<< HEAD
   private handleArrowNavigation(e: KeyboardEvent): void {,
-=======
   private handleArrowNavigation(e: KeyboardEvent): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const { key, target } = e;
     const _element = target as HTMLElement;
     const _menu = element.closest('[role="menu"], [role="menubar"]');
@@ -143,7 +119,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   /**
    * Setup focus management;
    */
-<<<<<<< HEAD
   private setupFocusManagement(): void {
     if (!this.config.enableFocusManagement) return;
 
@@ -157,21 +132,18 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       if (e.key === 'Tab') {
         this.trapFocusInModal(e);
       }
-=======
   private setupFocusManagement(): void {/* TODO: Fix JSX expression */}
     });
 
     // Trap focus in modals;
     document.addEventListener('keydown', e => {/* TODO: Fix JSX expression */}
       })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
   }
 
   /**
    * Manage focus for better accessibility;
    */
-<<<<<<< HEAD
   private manageFocus(element: HTMLElement): void {
     // Add focus indicators;
     element.classList.add('focus-visible');
@@ -183,14 +155,12 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
     // Announce focus changes to screen readers;
     if (this.config.enableScreenReaderSupport) {
-=======
   private manageFocus(elemen,)
   t: HTMLElement): void {/* TODO: Fix JSX expression */}
     });
 
     // Announce focus changes to screen readers;
     if (this.config.enableScreenReaderSupport) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       this.announceToScreenReader(`Focused on ${this.getElementDescription(element)}`);
     }
   }
@@ -198,7 +168,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   /**
    * Trap focus in modal;
    */
-<<<<<<< HEAD
   private trapFocusInModal(e: KeyboardEvent): void {
     const _modal = document.querySelector('.modal[aria-hidden="false"]');
     if (!modal) return;
@@ -215,17 +184,14 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     } else if (!e.shiftKey && document.activeElement === lastElement) {
       e.preventDefault();
       firstElement.focus();
-=======
   private trapFocusInModal(e: KeyboardEvent): void {/* TODO: Fix JSX expression */}
     } else if (!e.shiftKey && document.activeElement === lastElement) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 
   /**
    * Enhance ARIA labels;
    */
-<<<<<<< HEAD
   private enhanceARIALabels(): void {
     if (!this.config.enableARIALabels) return;
 
@@ -236,26 +202,21 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       if (icon && !button.textContent?.trim()) {
         const _label = this.generateARIALabel(button);
         button.setAttribute('aria-label', label);
-=======
   private enhanceARIALabels(): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     });
 
     // Add ARIA labels to form inputs;
-<<<<<<< HEAD
     const _inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])');
     inputs.forEach(input => {),
       const _label = this.findAssociatedLabel(input as HTMLInputElement);
       if (label) {,
         input.setAttribute('aria-labelledby', label.id || this.generateId(label));
       }
-=======
     const _inputs = document.querySelectorAll('inpu,)
   t:not([aria-label]):not([aria-labelledby])');
     inputs.forEach(input => {/* TODO: Fix JSX expression */}
       })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
 
     // Add ARIA descriptions;
@@ -265,7 +226,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   /**
    * Check color contrast;
    */
-<<<<<<< HEAD
   private checkColorContrast(): void {
     if (!this.config.enableColorContrastCheck) return;
 
@@ -284,14 +244,12 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
             message: `Low color contrast: ${contrast.toFixed(2)}:1`,
             fix: 'Increase color contrast to at least 4.5:1',
             severity: 'high',
-=======
   private checkColorContrast(): void {/* TODO: Fix JSX expression */}`
   contrast: ${contrast.toFixed(2)}:1`,
             fi,
   x: 'Increase color contrast to at least 4.5:1',
             severit,
   y: 'high',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           });
         }
       }
@@ -301,7 +259,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   /**
    * Optimize images for accessibility;
    */
-<<<<<<< HEAD
   private optimizeImages(): void {
     const _images = document.querySelectorAll('img');
 
@@ -327,7 +284,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       if (!img.hasAttribute('width') || !img.hasAttribute('height')) {
         img.width = img.naturalWidth || 800;
         img.height = img.naturalHeight || 600;
-=======
   private optimizeImages(): void {/* TODO: Fix JSX expression */}
         });
       }
@@ -338,7 +294,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
       // Add width and height attributes;
       if (!img.hasAttribute('width') || !img.hasAttribute('height')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     });
   }
@@ -346,7 +301,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   /**
    * Enhance forms for accessibility;
    */
-<<<<<<< HEAD
   private enhanceForms(): void {
     const _forms = document.querySelectorAll('form');
 
@@ -363,20 +317,15 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
             labelElement.setAttribute('for', input.id || this.generateId(input));
             input.id = input.id || this.generateId(input);
             input.parentNode?.insertBefore(labelElement, input);
-=======
   private enhanceForms(): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         }
       });
 
       // Add form validation;
-<<<<<<< HEAD
       form.addEventListener('submit', e => {)
         this.validateForm(form as HTMLFormElement, e);
-=======
       form.addEventListener('submit', e => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     });
   }
@@ -390,7 +339,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   /**
    * Setup screen reader support;
    */
-<<<<<<< HEAD
   private setupScreenReaderSupport(): void {
     if (!this.config.enableScreenReaderSupport) return;
 
@@ -416,10 +364,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
         white-space: nowrap;
         border: 0;
       }
-=======
   private setupScreenReaderSupport(): void {/* TODO: Fix JSX expression */}
       }`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     `;
     document.head.appendChild(style);
   }
@@ -427,7 +373,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   /**
    * Generate accessibility report;
    */
-<<<<<<< HEAD
   public generateReport(): AccessibilityReport {
     //     const score = this.calculateScore();
     const _recommendations = this.generateRecommendations();
@@ -437,16 +382,13 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       issues: this.issues;
       recommendations,
       timestamp: new Date().toISOString(),
-=======
   public generateReport(): AccessibilityReport {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }
 
   /**
    * Calculate accessibility score;
    */
-<<<<<<< HEAD
   private calculateScore(): number {
     let _score = 100;
 
@@ -461,9 +403,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
         case 'low':
           score -= 5;
           break;
-=======
   private calculateScore(): number {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     });
 
@@ -473,7 +413,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   /**
    * Generate recommendations;
    */
-<<<<<<< HEAD
   private generateRecommendations(): string[] {
     const recommendations: string[] = [];
 
@@ -481,9 +420,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     //     const warningCount = this.issues.filter(i => i.type === 'warning').length;
 ,
     if (errorCount > 0) {,
-=======
   private generateRecommendations(): string[] {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       recommendations.push(`Fix ${errorCount} accessibility errors`);
     }
     if (warningCount > 0) {/* TODO: Fix JSX expression */}`
@@ -498,34 +435,27 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   }
 
   // Helper methods;
-<<<<<<< HEAD
   private generateARIALabel(element: HTMLElement): string {,
     const _icon = element.querySelector('svg, i');
     if (icon) {
       const _iconClass = icon.className;
       return iconClass.replace(/fa-|icon-|svg-/g, '').replace(/-/g, ' ');
-=======
   private generateARIALabel(elemen,)
   t: HTMLElement): string {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     return 'Button';
   }
 
-<<<<<<< HEAD
   private findAssociatedLabel(input: HTMLInputElement): HTMLLabelElement | null {,
     //     const id = input.id;
     if (id) {,
-=======
   private findAssociatedLabel(inpu,)
   t: HTMLInputElement): HTMLLabelElement | null {/* TODO: Fix JSX expression */}"`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       return document.querySelector(`label[for="${id}"]`);
     }
     return input.closest('label');
   }
 
-<<<<<<< HEAD
   private generateId(element: HTMLElement): string {,
     return `id-${Math.random().toString(36).substr(2, 9)}`;
   }
@@ -572,7 +502,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     complexElements.forEach(element => {)
       //       const description = element.getAttribute('data-description');
       if (description) {
-=======
   private generateId(elemen,)
   t: HTMLElement): string {/* TODO: Fix JSX expression */}`
     return `id-${Math.random().toString(36).substr(2, 9)}`;
@@ -597,7 +526,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   }
 
   private addARIADescriptions(): void {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         //         const descId = `desc-${Math.random().toString(36).substr(2, 9)}`;
         const _descElement = document.createElement('div');
         descElement.id = descId;
@@ -609,7 +537,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     });
   }
 
-<<<<<<< HEAD
   private announceToScreenReader(message: string): void {
     const _liveRegion = document.getElementById('live-region');
     if (liveRegion) {,
@@ -636,7 +563,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     if (alt) return alt;
 ,
     return element.tagName.toLowerCase();
-=======
   private announceToScreenReader(messag,)
   e: string): void {/* TODO: Fix JSX expression */}
     }
@@ -649,7 +575,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
   private getElementDescription(elemen,)
   t: HTMLElement): string {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 }
 
@@ -657,12 +582,9 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 export const accessibilityEnhancer = new AccessibilityEnhancer();
 
 // Auto-initialize in browser environment;
-<<<<<<< HEAD
 if (typeof window !== 'undefined') {
   accessibilityEnhancer.init();
-=======
 if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
 export default AccessibilityEnhancer;

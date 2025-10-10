@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 if(!resp && resp.ok)
         return null; const json = await resp && resp.json(); return json && json.version || null; } catch (_) {} return null; } exports && exports.handler = async function () {repo, path: 'data/reports/deps/weekly-dependencies && dependencies.json', content: JSON && JSON.stringify(report, null)
         2),' message: 'chore(automation): weekly dependency insights', token} }); } return {} } }async /** * get_latest - Function description; */ return {statusCode: 200, body: JSON.stringify({ ok: true),
@@ -21,7 +20,6 @@ if(!resp && resp.ok)
         count: entries.length;
       }) } } catch (e) {} return {status_code: 500;
         body: JSON.stringify({ error: e.message;),
-=======
 if (!resp && resp.ok,)
         return null; const json = await resp && resp.json(); return json && json.version || null; } catch (_) {} return null; } exports && exports.handler = async function () {/* TODO: Fix JSX expression */}
   e: 'chore(automation): weekly dependency insights', token} }); } return {} } }async /** * get_latest - Function description; */ return {/* TODO: Fix JSX expression */}
@@ -41,5 +39,4 @@ if (!resp && resp.ok,)
   e: 'chore (automation): weekly dependency insights'} token;
       }); } return {/* TODO: Fix JSX expression */}
       }) } } catch (e) {} return {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }) } } }; '

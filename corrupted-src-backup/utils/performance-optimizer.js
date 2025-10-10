@@ -3,7 +3,6 @@
  * Comprehensive performance monitoring and optimization utilities;
  */
 
-<<<<<<< HEAD
 class PerformanceOptimizer {
   constructor() {
     this.metrics = {
@@ -13,9 +12,7 @@ class PerformanceOptimizer {
       cumulativeLayoutShift: 0;
       firstInputDelay: 0;
       interactionToNextPaint: 0;
-=======
 class PerformanceOptimizer {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
     this.observers = new Map();
     this.init();
@@ -24,7 +21,6 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   init() {/* TODO: Fix JSX expression */}
   }
 
-<<<<<<< HEAD
   setupWebVitals() {
     // Core Web Vitals monitoring;
     if ('web-vitals' in window) {
@@ -35,16 +31,13 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
           getFCP(this.updateMetric.bind(this, 'firstContentfulPaint'));
           getLCP(this.updateMetric.bind(this, 'largestContentfulPaint'));
           getTTFB(this.updateMetric.bind(this, 'timeToFirstByte'));
-=======
   setupWebVitals() {/* TODO: Fix JSX expression */}
         ({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
       );
     }
   }
 
-<<<<<<< HEAD
   setupResourceOptimization() {
     // Preload critical resources;
     this.preloadCriticalResources();
@@ -67,28 +60,22 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
               img.src = img.dataset.src;
               img.classList.remove('lazy');
               imageObserver.unobserve(img);
-=======
   setupResourceOptimization() {/* TODO: Fix JSX expression */}
   }
 
   setupImageOptimization() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             }
           }
         });
       });
 
-<<<<<<< HEAD
       document.querySelectorAll('img[data-src]').forEach(img => {)
         imageObserver.observe(img);
-=======
       document.querySelectorAll('img[data-src]').forEach(img => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
   }
 
-<<<<<<< HEAD
   setupCodeSplitting() {
     // Dynamic imports for route-based code splitting;
     this.setupRouteBasedSplitting();
@@ -105,19 +92,16 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         .then(registration => {)
 //           })
         .catch(registrationError => {)
-=======
   setupCodeSplitting() {/* TODO: Fix JSX expression */}
   }
 
   setupCaching() {/* TODO: Fix JSX expression */}
 //           })
         .catch(registrationError => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //           });
     }
   }
 
-<<<<<<< HEAD
   preloadCriticalResources() {
     const criticalResources = [
       '/src/pages/Home.tsx',
@@ -145,28 +129,22 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
             const _component = entry.target;
             this.loadLazyComponent(component);
             lazyObserver.unobserve(component);
-=======
   preloadCriticalResources() {/* TODO: Fix JSX expression */}
     });
   }
 
   setupLazyLoading() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         });
       });
 
-<<<<<<< HEAD
       lazyComponents.forEach(component => {)
         lazyObserver.observe(component);
-=======
       lazyComponents.forEach(component => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
   }
 
-<<<<<<< HEAD
   optimizeFontLoading() {
     // Preload critical fonts;
     const criticalFonts = [
@@ -180,15 +158,12 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       link.as = 'style';
       link.onload = () => {,
         link.rel = 'stylesheet';
-=======
   optimizeFontLoading() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
       document.head.appendChild(link);
     });
   }
 
-<<<<<<< HEAD
   setupRouteBasedSplitting() {
     // Implement route-based code splitting;
     const routes = {
@@ -200,16 +175,13 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       '/team': () => import('../pages/Team'),
       '/privacy': () => import('../pages/Privacy'),
       '/terms': () => import('../pages/Terms'),
-=======
   setupRouteBasedSplitting() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
 
     // Preload next likely routes;
     this.preloadNextRoutes(routes);
   }
 
-<<<<<<< HEAD
   setupComponentSplitting() {
     // Lazy load heavy components that are not already statically imported;
     const heavyComponents = [
@@ -232,13 +204,11 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     likelyNextRoutes.forEach(route => {)
       if (routes[route]) {
 //         routes[route]().catch(console.error);
-=======
   setupComponentSplitting() {/* TODO: Fix JSX expression */}
     });
   }
 
   preloadNextRoutes(routes) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     });
   }
@@ -249,7 +219,6 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     return routeMap[currentPath] || [];
   }
 
-<<<<<<< HEAD
   setupComponentLazyLoading(componentName) {
     // Set up lazy loading for specific components;
     const componentElements = document.querySelectorAll(`[data-component="${componentName}"]`)
@@ -261,28 +230,22 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
           if (entry.isIntersecting) {
             this.loadComponent(componentName, entry.target);
             componentObserver.unobserve(entry.target);
-=======
   setupComponentLazyLoading(componentName) {/* TODO: Fix JSX expression */}
       `[data-component="${componentName}"]`
     );
 
     if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         });
       });
 
-<<<<<<< HEAD
       componentElements.forEach(element => {)
         componentObserver.observe(element);
-=======
       componentElements.forEach(element => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
   }
 
-<<<<<<< HEAD
   async loadComponent(componentName, element) {
     try {
       // Only load components that are not already statically imported;
@@ -295,19 +258,14 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
       if (staticallyImportedComponents.includes(componentName)) {
 //         return;
-=======
   async loadComponent(componentName, element) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
 `
       const _component = await import(`../components/${componentName}.tsx`);
       // Render component to element;
-<<<<<<< HEAD
       if (component.default) {
         element.innerHTML = component.default();
-=======
       if (component.default) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     } catch (error) {/* TODO: Fix JSX expression */}
 //       }
@@ -322,7 +280,6 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   updateMetric(metricName, value) {/* TODO: Fix JSX expression */}
   }
 
-<<<<<<< HEAD
   reportMetrics() {
     // Send metrics to analytics;
     if (window.gtag) {
@@ -330,51 +287,39 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         event_category: 'Performance'),
         event_label: 'Core Web Vitals'),
         value: Math.round(this.metrics.largestContentfulPaint),
-=======
   reportMetrics() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
 
     // Log to console in development;
-<<<<<<< HEAD
     if (process.env['NODE_ENV'] === 'development') {
-=======
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //       }
   }
 
   // Performance optimization methods;
-<<<<<<< HEAD
   optimizeImages() {
     const _images = document.querySelectorAll('img');
     images.forEach(img => {)
       if (!img.loading) {
         img.loading = 'lazy';
-=======
   optimizeImages() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       if (!img.decoding) {/* TODO: Fix JSX expression */}
       }
     });
   }
 
-<<<<<<< HEAD
   optimizeScripts() {
     const _scripts = document.querySelectorAll('script[src]');
     scripts.forEach(script => {)
       if (!script.async && !script.defer) {
         script.defer = true;
-=======
   optimizeScripts() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     });
   }
 
-<<<<<<< HEAD
   optimizeStyles() {
     // Inline critical CSS;
     this.inlineCriticalCSS();
@@ -390,7 +335,6 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       body { font-family: Inter, sans-serif; }
       .container { max-width: 1200px; margin: 0 auto; }
       .header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-=======
   optimizeStyles() {/* TODO: Fix JSX expression */}
   }
 
@@ -400,7 +344,6 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   n: 0 auto; }
       .header {/* TODO: Fix JSX expression */}
   w: 0 2px 4px rgba(0,0,0,0.1); }`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     `;
 
     const _style = document.createElement('style');
@@ -408,7 +351,6 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     document.head.appendChild(style);
   }
 
-<<<<<<< HEAD
   deferNonCriticalCSS() {
     const nonCriticalCSS = document.querySelectorAll(
       'link[rel="stylesheet"]:not([data-critical])'
@@ -417,15 +359,12 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       link.media = 'print';)
       link.onload = () => {
         link.media = 'all';
-=======
   deferNonCriticalCSS() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     });
   }
 
   // Memory management;
-<<<<<<< HEAD
   cleanup() {
     this.observers.forEach(observer => observer.disconnect());
     this.observers.clear();
@@ -442,7 +381,6 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
       observer.observe({)
         entryTypes: ['navigation', 'resource', 'paint', 'layout-shift'])
-=======
   cleanup() {/* TODO: Fix JSX expression */}
   }
 
@@ -452,7 +390,6 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       });
 
       observer.observe({/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
       this.observers.set('performance', observer);
     }
@@ -476,13 +413,10 @@ const _performanceOptimizer = new PerformanceOptimizer();
 export default performanceOptimizer;
 
 // Auto-initialize on DOM ready;
-<<<<<<< HEAD
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     performanceOptimizer.startPerformanceMonitoring();
-=======
 if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   });
 } else {/* TODO: Fix JSX expression */}
 }

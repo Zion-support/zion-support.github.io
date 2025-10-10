@@ -1,18 +1,14 @@
 // const path = require('path');
 // Fix setupTests.tsx - remove extra closing brace;
-<<<<<<< HEAD
 try {
 //   const setupTestsPath = './app/setupTests.tsx';
-=======
 try {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   // Remove the extra }); at line 34;
   content = content.replace(/  }\)\),\n}\);\n\n\/\/ Mock requestAnimationFrame/, '  })),\n});\n\n// Mock requestAnimationFrame');
   fs.writeFileSync(setupTestsPath, content);
 //   } catch (err) {/* TODO: Fix JSX expression */}
 //   }
 // Fix enhancedErrorHandler.ts - fix optional chaining;
-<<<<<<< HEAD
 try {
 //   const errorHandlerPath = './app/utils/enhancedErrorHandler.ts';
   // Fix the optional chaining syntax;
@@ -24,19 +20,16 @@ try {
 try {
 //   const errorBoundaryPath = './app/components/ErrorBoundary.tsx';
 //   const errorBoundaryContent = `'use client';
-=======
 try {/* TODO: Fix JSX expression */}
 //   } catch (err) {/* TODO: Fix JSX expression */}
 //   }
 // Fix ErrorBoundary.tsx - recreate with complete content;
 try {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 import { FileWarning } from 'lucide-react';
 interface Props {/* TODO: Fix JSX expression */}
 }
 interface State {/* TODO: Fix JSX expression */}
 }
-<<<<<<< HEAD
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
     super(props);
@@ -52,7 +45,6 @@ class ErrorBoundary extends Component<Props, State> {
       (window as any).gtag('event', 'exception', {)
         description: error.message),
         fatal: false;
-=======
 class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
   r: false };
   }
@@ -65,7 +57,6 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
 //       }
     if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
     this.setState({ errorInfo });
@@ -76,7 +67,6 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   }
   render() {/* TODO: Fix JSX expression */}
       }
-<<<<<<< HEAD
       return(<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="mb-6">
@@ -98,7 +88,6 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               <Link;
                 href="/"
                 className="block w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 px-6 rounded-lg transition-colors"
-=======
       return (<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>"
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>"
             <div className="mb-6"></div>"
@@ -122,12 +111,10 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 href="/""
                 className="block w-full bg-gray-100,"
   hover:bg-gray-200 text-gray-700 font-semibold py-3 px-6 rounded-lg transition-colors"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               >
                 Go to Homepage;
               </Link>
             </div>
-<<<<<<< HEAD
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm font-semibold text-gray-700 hover:text-gray-900">
@@ -135,9 +122,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 </summary>,
                 <div className="mt-2 p-4 bg-gray-50 rounded border border-gray-200">,
                   <p className="text-xs text-red-600 font-mono break-all">,
-=======
             {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     {this.state.error.toString()}
                   </p>
                   {/* TODO: Fix JSX expression */}
@@ -160,7 +145,6 @@ export default ErrorBoundary;
 //   } catch (err) {/* TODO: Fix JSX expression */}
 //   }
 // Fix src/components/PerformanceMonitor.tsx;
-<<<<<<< HEAD
 try {
 //   const perfMonitorPath = './src/components/PerformanceMonitor.tsx';
   // Remove merge conflict markers;
@@ -176,19 +160,16 @@ try {
 //   const closeComments = (content.match(/\*\//g) || []).length;
   if (openComments > closeComments) {
     content += '\n*/\n';
-=======
 try {/* TODO: Fix JSX expression */}
 //   } catch (err) {/* TODO: Fix JSX expression */}
 //   }
 // Fix src/utils/analytics.ts;
 try {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   fs.writeFileSync(analyticsPath, content);
 //   } catch (err) {/* TODO: Fix JSX expression */}
 //   }
 // Fix src/utils/errorHandler.ts;
-<<<<<<< HEAD
 try {
 //   const errorHandlerPath = './src/utils/errorHandler.ts';
   // Remove merge conflict markers;
@@ -198,24 +179,19 @@ try {
 //   const closeComments = (content.match(/\*\//g) || []).length;
   if (openComments > closeComments) {
     content += '\n*/\n';
-=======
 try {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   fs.writeFileSync(errorHandlerPath, content);
 //   } catch (err) {/* TODO: Fix JSX expression */}
 //   }
 // Fix App.tsx;
-<<<<<<< HEAD
 try {
 //   const appPath = './App.tsx';
   // Remove merge conflict markers;
   content = content.replace(/^  content = content.replace(/^)
   fs.writeFileSync(appPath, content);
 //   } catch (err) {
-=======
 try {/* TODO: Fix JSX expression */}
 //   } catch (err) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //   }
 // "`

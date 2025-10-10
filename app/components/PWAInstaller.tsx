@@ -60,22 +60,16 @@ const PWAInstaller: React.FC = () => {,
   if (isInstalled || !showInstallButton) {
     return null;
   }
-<<<<<<< HEAD
 </BeforeInstallPromptEvent>
   return (</BeforeInstallPromptEvent>
-<<<<<<< HEAD
     <div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
-=======
 
   return(<div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       <div className="flex items-start space-x-3">
         <div className="flex-shrink-0">
-=======
     <div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm"></div>
       <div className="flex items-start space-x-3"></div>
         <div className="flex-shrink-0"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">📱</div>
           </div>
         </div>
@@ -84,15 +78,11 @@ const PWAInstaller: React.FC = () => {,
           <h3 className="text-sm font-semibold mb-1">Install App</h3><p className="text-xs text-white/90 mb-3">Install Zion Tech Group app for a better experience with offline access and faster loading.</p>
           </p>
 
-<<<<<<< HEAD
           <div className="flex space-x-2">
             <button;
-=======
           <div className="flex space-x-2"></div>
             <button
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               onClick={handleInstallClick}
-<<<<<<< HEAD
               className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover:bg-white/90 transition-colors duration-200"
             >Install<button
               onClick={() =>setShowInstallButton(false)}
@@ -106,7 +96,6 @@ const PWAInstaller: React.FC = () => {,
         </button>
       </div>
     </div>
-=======
               className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover: bg-white/90 transition-colors duration-200")
             >)
               Install;)
@@ -129,7 +118,6 @@ const PWAInstaller: React.FC = () => {,
         </button>,
       </div>,
     </div>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   );
 };
 

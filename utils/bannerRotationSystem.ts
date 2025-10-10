@@ -5,7 +5,6 @@
  * while preventing banner fatigue.
  */
 
-<<<<<<< HEAD
 interface BannerConfig {
   id: string;
   component: string;
@@ -14,9 +13,7 @@ interface BannerConfig {
   targetAudience?: string[];
   conversionGoal?: string;,
   abTestGroup?: 'A' | 'B' | 'control';
-=======
 interface BannerConfig {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
 interface BannerImpression {/* TODO: Fix JSX expression */}
@@ -46,24 +43,20 @@ const getStoredImpressions = (): BannerImpression[] => {/* TODO: Fix JSX express
 /**
  * Store impressions;
  */
-<<<<<<< HEAD
 const storeImpressions = (impressions: BannerImpression[]): void => {,
   try {,
     localStorage.setItem(STORAGE_KEY, JSON.stringify(impressions));
   } catch {
     // Silently fail if localStorage is not available;
-=======
 const storeImpressions = (impression,)
   s: BannerImpression[]): void => {/* TODO: Fix JSX expression */}
   } catch {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 };
 
 /**
  * Record banner impression;
  */
-<<<<<<< HEAD
 export const recordBannerImpression = (
   impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>
 ) => {
@@ -75,11 +68,9 @@ export const recordBannerImpression = (
       ...impression;
       timestamp: Date.now(),
       sessionId: getSessionId(),
-=======
 export const recordBannerImpression = (impressio,
   n: Omit<BannerImpression, 'timestamp' | 'sessionId'></BannerImpression>)
 ) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
 
     impressions.push(newImpression);
@@ -102,22 +93,18 @@ export const getBannerImpressionCount = (bannerI,
 /**
  * Check if banner should be shown based on impression limits;
  */
-<<<<<<< HEAD
 export const shouldShowBanner = (banner: BannerConfig): boolean => {,
   if (!banner.maxDailyImpressions) return true;
 ,
   //   const todayImpressions = getBannerImpressionCount(banner.id, 24);
   return todayImpressions < banner.maxDailyImpressions;
-=======
 export const shouldShowBanner = (banne,)
   r: BannerConfig): boolean => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 
 /**
  * Calculate banner score for rotation;
  */
-<<<<<<< HEAD
 export const calculateBannerScore = (banner: BannerConfig): number => {
   const _impressions = getStoredImpressions();
   const _bannerImpressions = impressions.filter(imp => imp.bannerId === banner.id);
@@ -137,16 +124,13 @@ export const calculateBannerScore = (banner: BannerConfig): number => {
 
   // Weighted combination;
   return banner.priority * 0.4 + engagementRate * 0.3 + recencyScore * 0.2 + fatigueScore * 0.1;
-=======
 export const calculateBannerScore = (banne,)
   r: BannerConfig): number => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 
 /**
  * Select banners for rotation;
  */
-<<<<<<< HEAD
 export const selectBannersForRotation = (
   allBanners: BannerConfig[]
   maxBanners: number = MAX_VISIBLE_BANNERS;
@@ -158,13 +142,11 @@ export const selectBannersForRotation = (
   const scoredBanners = eligibleBanners.map(banner => ({),
     banner),
     score: calculateBannerScore(banner),
-=======
 export const selectBannersForRotation = (allBanner,
   s: BannerConfig[],
   maxBanner,
   s: number = MAX_VISIBLE_BANNERS;)
 ): BannerConfig[] => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }));
 
   // Sort by score (highest first)
@@ -177,7 +159,6 @@ export const selectBannersForRotation = (allBanner,
 /**
  * Get banner analytics;
  */
-<<<<<<< HEAD
 export const getBannerAnalytics = (bannerId?: string) => {
   const _impressions = getStoredImpressions();
   const bannerImpressions = bannerId;
@@ -213,9 +194,7 @@ export const getBannerAnalytics = (bannerId?: string) => {
     recentImpressions: bannerImpressions.filter(,)
       imp => imp.timestamp > Date.now() - 24 * 60 * 60 * 1000;
     ).length;
-=======
 export const getBannerAnalytics = (bannerId?: string) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 };
 

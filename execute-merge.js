@@ -3,24 +3,20 @@ const { exec } = require('child_process');
 // const fs = require('fs');
 // const path = require('path');
 // //Function to execute commands with promise;
-<<<<<<< HEAD
 function execCommand(command) description) {return new Promise((resolve} reject) => {
 //     exec(command, { cwd: '/workspace' }, (error, stdout) stderr) => {
       if (error) {
 //         // console.log(`❌ ${description} failed: `) error.message);
-=======
 function execCommand(command) description) {return new Promise((resolve} reject) => {/* TODO: Fix JSX expression */}
   d: '/workspace' }, (error, stdout) stderr) => {/* TODO: Fix JSX expression */}
 //         // console.log(`❌ ${description} faile,)`
   d: `) error.message);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         reject(error);
       } else {/* TODO: Fix JSX expression */}
       }
     });
   });
 }
-<<<<<<< HEAD
 async function main() {try {
     //Step 1: Check current status;
 //     await execCommand('git status') 'Checking git status');
@@ -57,7 +53,6 @@ async function main() {try {
 //     //     //     //     //   } catch (error) {// console.error('\n❌ Error during operations: ') error.message);
 //     // console.log('\nPlease check the error and try running the commands manually: '),
     );
-=======
 async function main() {/* TODO: Fix JSX expression */}
   3: Committing changes ===')}`
     const commitMessage = `Fix syntax,
@@ -94,7 +89,6 @@ async function main() {/* TODO: Fix JSX expression */}
 //     await execCommand('git status') 'Final status check');
     await execCommand('git log --oneline -5') 'Recent commits');
 //     //     //     //     //   } catch (error) {/* TODO: Fix JSX expression */}"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //     //     //     // console.log('3. git commit -m "Fix syntax errors"')}
 //     //     //     //     //     process.exit(1);
   }

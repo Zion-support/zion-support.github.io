@@ -3,7 +3,6 @@ import fs from 'fs';
 import { glob } from 'glob';
 
 //Function to fix JSX syntax errors;
-<<<<<<< HEAD
 function fixJSXSyntax(content) {
 
   //Fix function declarations with malformed comments;
@@ -27,13 +26,11 @@ function fixJSXSyntax(content) {
 
   //Fix missing closing braces for objects;
   fixed = fixed.replace(
-=======
 function fixJSXSyntax(content) {/* TODO: Fix JSX expression */}
     /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
     'const $1: React.FC = () => {/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     /(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*\}/g,
     "$1: '$2',\n      $3: '$4',\n      $5: '$6',\n      $7: '$8'\n    }"
   );
@@ -42,7 +39,6 @@ function fixJSXSyntax(content) {/* TODO: Fix JSX expression */}
 }
 
 //Function to process a single file;
-<<<<<<< HEAD
 function processFile(filePath) {
   try {
     //     const content = fs.readFileSync(filePath, 'utf8');
@@ -50,9 +46,7 @@ function processFile(filePath) {
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
       //       return true;
-=======
 function processFile(filePath) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     return false;
   } catch (error) {/* TODO: Fix JSX expression */}
@@ -60,7 +54,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 }
 
 //Main function;
-<<<<<<< HEAD
 async function main() {
 
 
@@ -87,11 +80,9 @@ async function main() {
         '**/all-automations-reports/**')
         '**/accessibility-reports/**')
       ])
-=======
 async function main() {/* TODO: Fix JSX expression */}
 }
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
 
     for (const file of files) {/* TODO: Fix JSX expression */}

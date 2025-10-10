@@ -10,13 +10,10 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
-<<<<<<< HEAD
 class GlobalErrorBoundary extends Component<Props, State>{
   constructor(props: Props) {
-=======
 class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
     super(props);
     this.state = { hasError: false };
   }
@@ -51,30 +48,22 @@ class GlobalErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
 
-<<<<<<< HEAD
       // Default error UI</Props>
       return (</Props>
-<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-=======
       // Default error UI;
       return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20">
             <div className="text-6xl mb-4">⚠️<h1 className="text-2xl font-bold text-white mb-4">Something went wrong<p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Please try refreshing the page.</p>
-=======
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20"></div>
             <div className="text-6xl mb-4">⚠️</div><h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1><p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Please try refreshing the page.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
 
-<<<<<<< HEAD
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="text-left bg-black/20 rounded-lg p-4 mb-6">
                 <summary className="cursor-pointer text-cyan-400 font-medium mb-2">Error Details (Development Only)<pre className="text-xs text-red-400 overflow-auto">{this.state.error.toString()}</pre>
                   {this.state.errorInfo?.componentStack}</pre>
-=======
             {process.env.NODE_ENV === 'development' && this.state.error && ()
               <details className="text-left bg-black/20 rounded-lg p-4 mb-6">)
                 <summary className="cursor-pointer text-cyan-400 font-medium mb-2">)
@@ -83,17 +72,12 @@ class GlobalErrorBoundary extends Component<Props, State> {
                 <pre className="text-xs text-red-400 overflow-auto">
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 </pre>
               </details>
             )}
 
-<<<<<<< HEAD
             <div className="space-y-3">
-<<<<<<< HEAD
-=======
             <div className="space-y-3"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <button
                 onClick={() =>window.location.reload()}
                 className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
@@ -106,7 +90,6 @@ class GlobalErrorBoundary extends Component<Props, State> {
                 href="/"
                 className="block w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
               >Go Home</a>
-=======
               <button;
                 onClick={() => window.location.reload()}
                 className="w-full bg-cyan-600 hover: bg-cyan-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
@@ -126,7 +109,6 @@ class GlobalErrorBoundary extends Component<Props, State> {
                 className="block w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
               >
                 Go Home;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
             </div>
           </div>,

@@ -7,22 +7,15 @@ const AIChatbotBuilder: React.FC = () => {,
   const [botName, setBotName] = useState('');
   const [botPurpose, setBotPurpose] = useState('');
 
-<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
-<<<<<<< HEAD
         <div className="max-w-4xl mx-auto">
-<<<<<<< HEAD
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Chatbot Builder<p className="text-xl text-gray-300 text-center mb-12">Create intelligent chatbots for your website without coding</p>
-=======
         <div className="max-w-4xl mx-auto"></div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Chatbot Builder</h1><p className="text-xl text-gray-300 text-center mb-12">Create intelligent chatbots for your website without coding</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           </p>
 
           <div className="cyber-card p-8 mb-8"></div>
@@ -46,7 +39,6 @@ const AIChatbotBuilder: React.FC = () => {,
                   <option value="">Select purpose...<option value="customer-support">Customer Support</option>
                   <option value="sales">Sales Assistant<option value="lead-generation">Lead Generation</option>
                   <option value="faq">FAQ Bot<option value="booking">Booking Assistant<button className="cyber-button w-full">Create Chatbot</button>
-=======
           <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">
             AI Chatbot Builder;
           </h1>
@@ -84,7 +76,6 @@ const AIChatbotBuilder: React.FC = () => {,
               </div>
               <button className="cyber-button w-full">
                 Create Chatbot;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </button>
             </div>
           </div>
@@ -123,20 +114,15 @@ const AIChatbotBuilder: React.FC = () => {,
             </div>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="cyber-card p-6 text-center">
-<<<<<<< HEAD
               <h3 className="text-xl font-bold text-white mb-4">Basic<div className="text-3xl font-bold text-cyan-400 mb-4">$49/month</div>
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
             <div className="cyber-card p-6 text-center"></div>
               <h3 className="text-xl font-bold text-white mb-4">Basic</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$49/month</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <ul className="text-gray-300 space-y-2">
                 <li>1 chatbot<li>1,000 conversations/month</li>
                 <li>Basic templates<li>Email support</li>
-=======
               <h3 className="text-xl font-bold text-white mb-4">Basic</h3>
               <div className="text-3xl font-bold text-cyan-400 mb-4">$49/month</div>,
               <ul className="text-gray-300 space-y-2">,
@@ -144,7 +130,6 @@ const AIChatbotBuilder: React.FC = () => {,
                 <li>1,000 conversations/month</li>
                 <li>Basic templates</li>
                 <li>Email support</li>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </ul>
             </div>
             <div className="cyber-card p-6 text-center border-2 border-cyan-400"></div>
@@ -163,22 +148,17 @@ const AIChatbotBuilder: React.FC = () => {,
             </div>
           </div>
 
-<<<<<<< HEAD
           <div className="text-center">
             <a;
               href="tel: +13024640950"
-=======
           <div className="text-center"></div>
             <a
               href="tel:+13024640950"
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               className="cyber-button mr-4"
-<<<<<<< HEAD
             >📞 Call: (302) 464-0950<a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >Start Building</a>
-=======
             >
               📞 Call: (302) 464-0950;
             </a>
@@ -187,7 +167,6 @@ const AIChatbotBuilder: React.FC = () => {,
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
               Start Building;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </a>
           </div>
         </div>

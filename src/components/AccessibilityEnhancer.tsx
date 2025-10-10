@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -93,7 +92,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   }, []);
 
   return <>{children}</>;
-=======
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilitySettings {
@@ -259,7 +257,6 @@ const AccessibilityEnhancer: React.FC = () => {
       </div>
     </div>
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 
 export default AccessibilityEnhancer;

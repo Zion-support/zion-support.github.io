@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -12,25 +10,19 @@ const MicroSaasPage: React.FC = () => {
         <link rel="canonical" href="https: //ziontechgroup.com/micro-saas" />
       </Helmet>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
-<<<<<<< HEAD
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">AI-Powered Micro SAAS<p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">Transform your business with our comprehensive suite of AI-powered Micro SAAS solutions.</p>
-=======
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               AI-Powered Micro SAAS;
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your business with our comprehensive suite of AI-powered Micro SAAS solutions.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"></div>
           <div className="text-center"></div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">AI-Powered Micro SAAS</h1><p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">Transform your business with our comprehensive suite of AI-powered Micro SAAS solutions.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
           </div>
         </div>
@@ -40,18 +32,15 @@ const MicroSaasPage: React.FC = () => {
 };
 
 export default MicroSaasPage;
-=======
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Lock, Download, Play, Code, Database, Cloud, Smartphone, Settings, FileText, Calendar, PieChart, TrendingDown, Activity, ExternalLink, ChevronRight, Crown, Rocket, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, Home, Heart, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, Building, ShoppingCart, CreditCard, Gamepad2, Music, Video, Camera, Palette, Bot } from 'lucide-react';
 import { Link } from 'react-router-dom';
-=======
 'use client';
 
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Lock, Download, Play, Code, Database, Cloud, Smartphone, Settings, FileText, Calendar, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, ExternalLink, ChevronRight, Crown, Rocket, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, Home, Heart, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, Building, ShoppingCart, CreditCard, Gamepad2, Music, Video, Camera, Palette, Bot, Search as SearchIcon, FileText as FileTextIcon } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
 
 const MicroSAASPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -59,7 +48,6 @@ const MicroSAASPage: React.FC = () => {
   const [sortBy, setSortBy] = useState('popularity');
 
   const microSAASServices = [
-<<<<<<< HEAD
     {
       id: 'ai-content-generator',
       name: 'AI Content Generator',
@@ -119,7 +107,6 @@ const MicroSAASPage: React.FC = () => {
       rating: 4.5,
       users: 1650,
       color: 'from-indigo-400 to-purple-500'
-=======
     {
       id: 'ai-project-manager',
       name: 'AI Project Manager Pro',
@@ -179,12 +166,10 @@ const MicroSAASPage: React.FC = () => {
       features: ['Threat detection', 'Vulnerability scanning', 'Compliance monitoring', 'Incident response'],
       icon: Shield,
       color: 'from-indigo-500 to-purple-500'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
     },
     {
       id: 'inventory-manager',
       name: 'Smart Inventory Manager',
-<<<<<<< HEAD
       description: 'Track inventory levels with AI-powered demand forecasting and reorder alerts.',
       icon: Package,
       category: 'business',
@@ -217,7 +202,6 @@ const MicroSAASPage: React.FC = () => {
       rating: 4.7,
       users: 1400,
       color: 'from-amber-400 to-orange-500'
-=======
       description: 'AI-powered inventory management with demand forecasting and automated reordering.',
       category: 'inventory',
       price: '$34/month',
@@ -226,12 +210,10 @@ const MicroSAASPage: React.FC = () => {
       features: ['Demand forecasting', 'Automated reordering', 'Stock optimization', 'Multi-location support'],
       icon: Database,
       color: 'from-pink-500 to-rose-500'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
     }
   ];
 
   const categories = [
-<<<<<<< HEAD
     { id: 'all', name: 'All Services', icon: Globe },
     { id: 'ai', name: 'AI Tools', icon: Brain },
     { id: 'finance', name: 'Finance', icon: DollarSign },
@@ -240,7 +222,6 @@ const MicroSAASPage: React.FC = () => {
     { id: 'business', name: 'Business', icon: Briefcase },
     { id: 'support', name: 'Support', icon: MessageSquare },
     { id: 'analytics', name: 'Analytics', icon: BarChart }
-=======
     { id: 'all', name: 'All Services', count: microSAASServices.length },
     { id: 'ai-tools', name: 'AI Tools', count: microSAASServices.filter(s => s.category === 'ai-tools').length },
     { id: 'analytics', name: 'Analytics', count: microSAASServices.filter(s => s.category === 'analytics').length },
@@ -248,7 +229,6 @@ const MicroSAASPage: React.FC = () => {
     { id: 'content', name: 'Content', count: microSAASServices.filter(s => s.category === 'content').length },
     { id: 'security', name: 'Security', count: microSAASServices.filter(s => s.category === 'security').length },
     { id: 'inventory', name: 'Inventory', count: microSAASServices.filter(s => s.category === 'inventory').length }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
   ];
 
   const filteredServices = useMemo(() => {
@@ -270,15 +250,12 @@ const MicroSAASPage: React.FC = () => {
     // Sort services
     switch (sortBy) {
       case 'price-low':
-<<<<<<< HEAD
         return filtered.sort((a, b) => a.price - b.price);
       case 'price-high':
         return filtered.sort((a, b) => b.price - a.price);
-=======
         return filtered.sort((a, b) => parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', '')));
       case 'price-high':
         return filtered.sort((a, b) => parseInt(b.price.replace('$', '')) - parseInt(a.price.replace('$', '')));
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
       case 'rating':
         return filtered.sort((a, b) => b.rating - a.rating);
       case 'users':
@@ -287,7 +264,6 @@ const MicroSAASPage: React.FC = () => {
         return filtered;
     }
   }, [searchTerm, selectedCategory, sortBy]);
-<<<<<<< HEAD
 
   const handlePhoneClick = () => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -297,13 +273,10 @@ const MicroSAASPage: React.FC = () => {
       });
     }
   };
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Micro SaaS Solutions - Zion Tech Group</title>
         <meta name="description" content="Discover powerful micro SaaS solutions designed to streamline your business operations and boost productivity." />
         <meta name="keywords" content="micro saas, saas solutions, business tools, productivity software, AI tools" />
@@ -465,7 +438,6 @@ const MicroSAASPage: React.FC = () => {
                   Get Custom Quote
                 </Link>
               </div>
-=======
         <title>Micro SaaS Services - Zion Tech Group</title>
         <meta name="description" content="Discover our collection of micro SaaS services designed to streamline your business operations." />
       </Helmet>
@@ -588,7 +560,6 @@ const MicroSAASPage: React.FC = () => {
                 <Mail className="w-5 h-5 mr-2" />
                 Get Free Quote
               </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
             </div>
           </div>
         </div>
@@ -598,4 +569,3 @@ const MicroSAASPage: React.FC = () => {
 };
 
 export default MicroSAASPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

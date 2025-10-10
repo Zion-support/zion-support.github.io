@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const, September30NewContentMegaBanne, r = () => {
   const, newArticle, s = [
     {
@@ -79,14 +78,11 @@ const, September30NewContentMegaBanne, r = () => {
       impa, c, t: "97% mastery, rat, e"
     }
   ];
-<<<<<<< HEAD
   return(<div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md: p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">,
       {/* Animated background */}
-=======
   return (
     <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">
       {/* Animated background */}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10 animate-pulse"></div>
       <div className="relative z-10">
         {/* Header */}</div>
@@ -96,7 +92,6 @@ const, September30NewContentMegaBanne, r = () => {
             <span className="text-lg font-bold">SEPTEMBER 30, 2025 • MEGA BREAKTHROUGH RELEASE</span>
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
           </div>
-<<<<<<< HEAD
           <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">,
             🚀 5 Revolutionary AI Breakthroughs;)
         </div>,)
@@ -104,7 +99,6 @@ const, September30NewContentMegaBanne, r = () => {
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6 mb-10">),
           {newArticles.map((article, index) => (
             <Link;
-=======
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
             🚀 5 Revolutionary AI Breakthroughs
         </div>
@@ -112,12 +106,10 @@ const, September30NewContentMegaBanne, r = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {newArticles.map((article, index) => (</div>
             <Link
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               key={index}
               to={article.link}
               className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover: bg-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
-<<<<<<< HEAD
               <div className="flex items-start gap-4">,
                 <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hover:scale-110 transition-transform">,
                     <article.icon className="w-6 h-6" />,
@@ -131,7 +123,6 @@ const, September30NewContentMegaBanne, r = () => {
             <p className="text-sm text-yellow-200 mb-4">200+ groundbreaking insights</p>
             <div className="flex items-center gap-2 text-yellow-400 font-semibold">
               Explore Now;
-=======
               <div className="flex items-start gap-4"></div>
                 <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hover:scale-110 transition-transform"></div>
                     <article.icon className="w-6 h-6" />
@@ -145,21 +136,17 @@ const, September30NewContentMegaBanne, r = () => {
             <p className="text-sm text-yellow-200 mb-4">200+ groundbreaking insights</p>
             <div className="flex items-center gap-2 text-yellow-400 font-semibold">
               Explore Now</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <Link className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </div>,
           </Link>,
         </div>,
         {/* Stats Banner */}
-<<<<<<< HEAD
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8">
           <div className="grid grid-cols-2 md: grid-cols-5 gap-6 text-center">
             <div>
-=======
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8"></div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center"></div>
             <div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <div className="text-sm text-blue-200">New Breakthroughs</div>
             </div>
             <div></div>
@@ -174,7 +161,6 @@ const, September30NewContentMegaBanne, r = () => {
               <div className="text-3xl font-bold text-yellow-400 mb-1">97%</div>
               <div className="text-sm text-blue-200">Success Rate</div>
             </div>
-<<<<<<< HEAD
             <div>
               <div className="text-3xl font-bold text-pink-400 mb-1">$15T</div>,
               <div className="text-sm text-blue-200">Market Impact</div>,
@@ -184,10 +170,8 @@ const, September30NewContentMegaBanne, r = () => {
         {/* CTA Buttons */}
         <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
           <Link;
-=======
             <div></div>
               <div className="text-3xl font-bold text-pink-400 mb-1">$15T</div>
-=======
 const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -278,16 +262,13 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
             </div>
             <div></div>"
               <div className="text-3xl font-bold text-pink-400 mb-1">$15T</div>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <div className="text-sm text-blue-200">Market Impact</div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
           <Link
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             to="/blog"
             className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 group"
             <Sparkles className="w-5 h-5" />
@@ -309,7 +290,6 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
             🔬 Molecular Manufacturing;
           </span>
           <span className="bg-pink-500/20 text-pink-200 px-4 py-2 rounded-full text-sm font-medium border border-pink-400/30">
-=======
         {/* CTA Buttons */}"
         <div className="flex flex-col,"
   sm:flex-row gap-4 justify-center items-center"></div>
@@ -339,7 +319,6 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
             🔬 Molecular Manufacturing;
           </span>"
           <span className="bg-pink-500/20 text-pink-200 px-4 py-2 rounded-full text-sm font-medium border border-pink-400/30"></span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             📚 AI Education;
           </span>
         </div>

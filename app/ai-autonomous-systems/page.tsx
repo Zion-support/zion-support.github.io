@@ -155,30 +155,23 @@ const AIAutonomousSystemsPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation >{/* Hero Section */}</Navigation>
       </Navigation><section className="pt-24 pb-16 px-4">
-<<<<<<< HEAD
-=======
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-cyan-400/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-=======
         <div className="container mx-auto max-w-6xl"></section>
           <div className="text-center mb-16"></div>
             <div className="inline-flex items-center space-x-2 bg-cyan-400/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <Settings className="w-4 h-4" />
               <span>Self-Managing AI Systems</span>
             </div>
-<<<<<<< HEAD
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Autonomous</h1> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Systems</span><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build intelligent systems that operate independently, make decisions autonomously, and adapt to changing</p>
               environments without human intervention.</p>
@@ -193,8 +186,6 @@ const AIAutonomousSystemsPage: React.FC = () => {
 
           {/* Capabilities */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">{capabilities.map((capability, index) => (</div>
-<<<<<<< HEAD
-=======
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,
               AI Autonomous <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Systems</span>,
             </h1>,
@@ -216,13 +207,10 @@ const AIAutonomousSystemsPage: React.FC = () => {
           {/* Capabilities */})
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-16">),
             {capabilities.map((capability, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-cyan-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
-=======
               <div key={index} className="text-center"></div>
                 <div className="w-16 h-16 bg-cyan-400/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <capability.icon className="w-8 h-8 text-cyan-400" />
                 <div className="text-3xl font-bold text-cyan-400 mb-2">{capability.metric}</div><div className="text-gray-300">{capability.description}</div>
               </div>
@@ -233,21 +221,16 @@ const AIAutonomousSystemsPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-16 px-4">
-<<<<<<< HEAD
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-6">Autonomous AI Capabilities<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our autonomous systems platform provides the intelligence and capabilities needed for</p>
-=======
         <div className="container mx-auto max-w-6xl"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-6">Autonomous AI Capabilities</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Our autonomous systems platform provides the intelligence and capabilities needed for</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               truly independent operation.<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-colors"></div>
                 <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4"></div>
                   <feature.icon className="w-6 h-6 text-cyan-400" />
-=======
             <h2 className="text-4xl font-bold text-white mb-6">
               Autonomous AI Capabilities;
             </h2>
@@ -263,7 +246,6 @@ const AIAutonomousSystemsPage: React.FC = () => {
                 <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4">,
                   <feature.icon className="w-6 h-6 text-cyan-400" />,
                 </div>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p><ul className="space-y-2">{feature.benefits.map((benefit, idx) => (</ul>
                     <li key={idx} className="flex items-center text-sm text-gray-300">
@@ -279,22 +261,17 @@ const AIAutonomousSystemsPage: React.FC = () => {
 
       {/* Applications Section */}
       <section className="py-16 px-4 bg-slate-800/30">
-<<<<<<< HEAD
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-6">Autonomous System Applications<p className="text-xl text-gray-300 max-w-3xl mx-auto">Discover how autonomous AI systems are transforming industries and enabling new possibilities.<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{applications.map((app, index) => (</div>
               <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover:border-purple-400/40 transition-colors">
                 <div className="w-12 h-12 bg-purple-400/10 rounded-lg flex items-center justify-center mb-4">
-=======
         <div className="container mx-auto max-w-6xl"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-6">Autonomous System Applications</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Discover how autonomous AI systems are transforming industries and enabling new possibilities.</p><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{applications.map((app, index) => (</div>
               <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover:border-purple-400/40 transition-colors"></div>
                 <div className="w-12 h-12 bg-purple-400/10 rounded-lg flex items-center justify-center mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <app.icon className="w-6 h-6 text-purple-400" />
-=======
             <h2 className="text-4xl font-bold text-white mb-6">
               Autonomous System Applications;
             </h2>
@@ -309,7 +286,6 @@ const AIAutonomousSystemsPage: React.FC = () => {
                 <div className="w-12 h-12 bg-purple-400/10 rounded-lg flex items-center justify-center mb-4">,
                   <app.icon className="w-6 h-6 text-purple-400" />,
                 </div>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <h3 className="text-xl font-semibold text-white mb-3">{app.title}</h3>
                 <p className="text-gray-300 mb-4">{app.description}</p><div className="space-y-2">{app.useCases.map((useCase, idx) => (</div>
                     <div key={idx} className="flex items-center text-sm text-purple-300"></div>
@@ -325,23 +301,18 @@ const AIAutonomousSystemsPage: React.FC = () => {
 
       {/* Pricing Section */}
       <section className="py-16 px-4">
-<<<<<<< HEAD
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-6">Autonomous Systems Plans<p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the right plan for your autonomous system needs.<div className="grid md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
-=======
         <div className="container mx-auto max-w-6xl"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-6">Autonomous Systems Plans</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the right plan for your autonomous system needs.</p><div className="grid md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div><div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 plan.popular
                   ? 'border-cyan-400/40 ring-2 ring-cyan-400/20'
                   : 'border-gray-600/50'
               }`}>{plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
-=======
             <h2 className="text-4xl font-bold text-white mb-6">
               Autonomous Systems Plans;
             </h2>
@@ -361,7 +332,6 @@ const AIAutonomousSystemsPage: React.FC = () => {
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">
                       Most Popular;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     </span>
                   </div>
                 )}
@@ -372,18 +342,15 @@ const AIAutonomousSystemsPage: React.FC = () => {
                     </CheckCircle>
                   ))}
                 <a href="/contact" className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-colors ${
-<<<<<<< HEAD
                   plan.popular
                     ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
                     : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'
                 }`}>Get Started</a>
-=======
                   plan.popular;
                     ? 'bg-cyan-400 text-slate-900 hover: bg-cyan-300',}
                     : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'}
                 }`}>
                   Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 </a>
               </div>
             ))}
@@ -396,16 +363,11 @@ const AIAutonomousSystemsPage: React.FC = () => {
         <div className="container mx-auto max-w-4xl text-center"></section>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Autonomous Systems?</h2><p className="text-xl text-gray-300 mb-8">Start building intelligent systems that operate independently and adapt to your needs.</p>
           </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <a href="/contact" className="cyber-button px-8 py-4 text-lg">Start Building</a>
               <ArrowRight className="w-5 h-5 ml-2" />
             <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">Schedule Demo</a>
-=======
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a href="/contact" className="cyber-button px-8 py-4 text-lg">
               Start Building;
@@ -413,7 +375,6 @@ const AIAutonomousSystemsPage: React.FC = () => {
             </a>
             <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">
               Schedule Demo;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </a>
           </div>
         </div>

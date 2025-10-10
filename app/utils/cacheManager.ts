@@ -3,20 +3,16 @@
  * Cache Manager;
  * Provides in-memory and localStorage caching with TTL support;
  */
-<<<<<<< HEAD
 export enum CacheStorage {}
   Memory = 'memory',
   LocalStorage = 'localStorage',
   SessionStorage = 'sessionStorage'
 }
 
-<<<<<<< HEAD
 export interface CacheOptions {
   ttl?: number; // Time to live in milliseconds;
-=======
 export interface CacheOptions {}
   ttl?: number; // Time to live in milliseconds
->>>>>>> origin/merge-error-fixes
   storage?: CacheStorage;
   compress?: boolean;
 }
@@ -42,7 +38,6 @@ export interface CacheStats {}
 
 export class CacheManager<T = unknown> {}
   private cache: Map<string, CacheEntry<T>> = new Map();
-<<<<<<< HEAD
   private stats: CacheStats = {
     hits: 0;
     misses: 0;
@@ -56,7 +51,6 @@ export class CacheManager<T = unknown> {}
     this.config = {
       storage: config.storage || CacheStorage.Memory;
       defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes;
-=======
   private stats: CacheStats = {}
     hits: 0,
     misses: 0,
@@ -70,22 +64,18 @@ export class CacheManager<T = unknown> {}
     this.config = {}
       storage: config.storage || CacheStorage.Memory,
       defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes
->>>>>>> origin/merge-error-fixes
     };
   }
 
   /**
    * Set a value in the cache;
    */
-<<<<<<< HEAD
   set(key: string, value: T, ttl?: number): void {
     const entry: CacheEntry<T> = {
       value;
-=======
   set(key: string, value: T, ttl?: number): void {}
     const entry: CacheEntry<T> = {}
       value,
->>>>>>> origin/merge-error-fixes
       timestamp: Date.now(),
       ttl: ttl || this.config.defaultTTL;
     };
@@ -93,15 +83,11 @@ export class CacheManager<T = unknown> {}
     this.cache.set(key, entry);
     this.stats.entries = this.cache.size;
 
-<<<<<<< HEAD
     // Save to persistent storage if needed;
     if (this.config.storage !== CacheStorage.Memory) {
-=======
     // Save to persistent storage if needed
     if (this.config.storage !== CacheStorage.Memory) {}
->>>>>>> origin/merge-error-fixes
       this.saveToStorage();
-=======
 export enum CacheStorage {/* TODO: Fix JSX expression */}
 }
 export interface CacheOptions {/* TODO: Fix JSX expression */}
@@ -182,12 +168,10 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     ) {/* TODO: Fix JSX expression */}
       } catch (error) {/* TODO: Fix JSX expression */}
       }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 
   /**
-<<<<<<< HEAD
    * Get a value from the cache;
    */
   get(key: string): T | null {}
@@ -199,13 +183,10 @@ export class CacheManager {/* TODO: Fix JSX expression */}
       return null;
     }
 
-<<<<<<< HEAD
     // Check if entry has expired;
     if (Date.now() - entry.timestamp > entry.ttl) {
-=======
     // Check if entry has expired
     if (Date.now() - entry.timestamp > entry.ttl) {}
->>>>>>> origin/merge-error-fixes
       this.cache.delete(key);
       this.stats.misses++;
       this.stats.entries = this.cache.size;
@@ -215,7 +196,6 @@ export class CacheManager {/* TODO: Fix JSX expression */}
 
     this.stats.hits++;
     this.updateHitRate();
-=======
    * Get cache entry;
    */
   get<T>(ke,)
@@ -249,17 +229,14 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     }
     this.stats.hits++;`
     performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return entry.value;
   }
 
   /**
-<<<<<<< HEAD
    * Check if a key exists in the cache;
    */
   has(key: string): boolean {}
     const entry = this.cache.get(key);
-<<<<<<< HEAD
 ,
     if (!entry) {,
       return false;
@@ -267,7 +244,6 @@ export class CacheManager {/* TODO: Fix JSX expression */}
 
     // Check if entry has expired;
     if (Date.now() - entry.timestamp > entry.ttl) {
-=======
 
     if (!entry) {}
       return false;
@@ -275,7 +251,6 @@ export class CacheManager {/* TODO: Fix JSX expression */}
 
     // Check if entry has expired
     if (Date.now() - entry.timestamp > entry.ttl) {}
->>>>>>> origin/merge-error-fixes
       this.cache.delete(key);
       this.stats.entries = this.cache.size;
       return false;
@@ -292,15 +267,11 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     if (deleted) {}
       this.stats.entries = this.cache.size;
 
-<<<<<<< HEAD
       // Save to persistent storage if needed;
       if (this.config.storage !== CacheStorage.Memory) {,
-=======
       // Save to persistent storage if needed
       if (this.config.storage !== CacheStorage.Memory) {}
->>>>>>> origin/merge-error-fixes
         this.saveToStorage();
-=======
    * Check if key exists and is not expired;
    */
   has(ke,)
@@ -331,10 +302,8 @@ export class CacheManager {/* TODO: Fix JSX expression */}
       window.localStorage;)
     ) {/* TODO: Fix JSX expression */}
         }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
-<<<<<<< HEAD
     return deleted;
   }
 
@@ -345,13 +314,10 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     this.cache.clear();
     this.stats.entries = 0;
 
-<<<<<<< HEAD
     // Clear persistent storage if needed;
     if (this.config.storage !== CacheStorage.Memory) {
-=======
     // Clear persistent storage if needed
     if (this.config.storage !== CacheStorage.Memory) {}
->>>>>>> origin/merge-error-fixes
       this.clearStorage();
     }
   }
@@ -388,31 +354,24 @@ export class CacheManager {/* TODO: Fix JSX expression */}
       if (now - entry.timestamp > entry.ttl) {}
         this.cache.delete(key);
         cleaned++;
-=======
     if (this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
       window.sessionStorage;)
     ) {/* TODO: Fix JSX expression */}
         }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
-<<<<<<< HEAD
 
     this.stats.entries = this.cache.size;
 
-<<<<<<< HEAD
     // Save to persistent storage if needed;
     if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {
-=======
     // Save to persistent storage if needed
     if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {}
->>>>>>> origin/merge-error-fixes
       this.saveToStorage();
     }
 
     return cleaned;
-=======
     logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */})
   e: this.storage });
   }
@@ -437,17 +396,14 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     }
     this.set(key, value, options);
     return value;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   /**
-<<<<<<< HEAD
    * Update hit rate;
    */
   private updateHitRate(): void {}
     const total = this.stats.hits + this.stats.misses;
     this.stats.hitRate = total > 0 ? this.stats.hits / total : 0;
-=======
    * Get or set with async function;
    */
   async getOrSetAsync<T>(ke,
@@ -488,11 +444,9 @@ export class CacheManager {/* TODO: Fix JSX expression */}
    */
   getStatistics(): CacheStats {/* TODO: Fix JSX expression */}
     };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   /**
-<<<<<<< HEAD
    * Save cache to persistent storage;
    */
   private saveToStorage(): void {}
@@ -529,7 +483,6 @@ export class CacheManager {/* TODO: Fix JSX expression */}
         }
       }
     } catch (error) {}
-=======
    * Get cache count;
    */
   getStats(): {/* TODO: Fix JSX expression */}
@@ -540,7 +493,6 @@ export class CacheManager {/* TODO: Fix JSX expression */}
       if (window.sessionStorage) {/* TODO: Fix JSX expression */}
           }
         }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
   }
 
@@ -565,33 +517,27 @@ export class CacheManager {/* TODO: Fix JSX expression */}
   private getStorage(): Storage | null {}
     if (typeof window === 'undefined') return null;
 
-<<<<<<< HEAD
     switch (this.config.storage) {
       case CacheStorage.LocalStorage: return window.localStorage;
-=======
     switch (this.config.storage) {}
       case CacheStorage.LocalStorage:
         return window.localStorage;
->>>>>>> origin/merge-error-fixes
       case CacheStorage.SessionStorage:
         return window.sessionStorage;
       default:,
         return null;
     }
-<<<<<<< HEAD
   }
 }
 
 // Create singleton instances for different use cases;
 export const memoryCache = new CacheManager({ storage: CacheStorage.Memory });
-<<<<<<< HEAD
 export const localStorageCache = new CacheManager({)
   storage: CacheStorage.LocalStorage)
   defaultTTL: 30 * 60 * 1000 // 30 minutes;
 export const sessionStorageCache = new CacheManager({)
   storage: CacheStorage.SessionStorage),
   defaultTTL: 60 * 60 * 1000 // 1 hour;
-=======
 export const localStorageCache = new CacheManager({)}
   storage: CacheStorage.LocalStorage,
   defaultTTL: 30 * 60 * 1000 // 30 minutes
@@ -600,9 +546,7 @@ export const sessionStorageCache = new CacheManager({)}
   storage: CacheStorage.SessionStorage,
   defaultTTL: 60 * 60 * 1000 // 1 hour
 
->>>>>>> origin/merge-error-fixes
 export default CacheManager;
-=======
     return {/* TODO: Fix JSX expression */}
     };
   }
@@ -610,4 +554,3 @@ export default CacheManager;
 export const cacheManager = new CacheManager();
 export default CacheManager;
 `
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

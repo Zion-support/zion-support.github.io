@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import { ArrowRight, X, Zap, Brain, Cpu, Shield, Star, TrendingUp, Users, Award } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
@@ -40,7 +38,6 @@ const ContentPromotionBanner: React.FC = () => {
       cta: 'See Results',
       href: '/case-studies',
       color: 'from-yellow-400 to-orange-600'
-=======
 import { X, Sparkles, ArrowRight, Star, Zap } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {,
@@ -73,18 +70,13 @@ const ContentPromotionBanner: React.FC = () => {,
       cta: "Book Now"
       link: "/consultation",
       color: "from-green-500 to-emerald-600",
-<<<<<<< HEAD
       icon: Zap;
-=======
       icon: Zap
->>>>>>> origin/main
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-<<<<<<< HEAD
       setCurrentPromo((prev) => (prev + 1) % promotions.length);
     }, 5000);
 
@@ -154,7 +146,6 @@ const ContentPromotionBanner: React.FC = () => {,
             />
           ))}
         </div>
-=======
       setCurrentBanner((prev) => (prev + 1) % banners.length);
     }, 5000);
 
@@ -165,22 +156,17 @@ const ContentPromotionBanner: React.FC = () => {,
 
   const currentBannerData = banners[currentBanner];
 
-<<<<<<< HEAD
   return(<div className={`relative bg-gradient-to-r ${currentBannerData.color} text-white py-3 px-4 transition-all duration-500`}>
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <currentBannerData.icon className="w-5 h-5 animate-pulse" />
           <div>
-<<<<<<< HEAD
             <span className="font-semibold text-sm sm:text-base">{currentBannerData.title}<span className="hidden sm:inline ml-2 text-sm opacity-90">{currentBannerData.description}</span>
-=======
             <span className="font-semibold text-sm sm: text-base">,
               {currentBannerData.title}
             </span>
             <span className="hidden sm: inline ml-2 text-sm opacity-90">,
               {currentBannerData.description}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
   return (
     <div className={`relative bg-gradient-to-r ${currentBannerData.color} text-white py-3 px-4 transition-all duration-500`}></div>
       <div className="container mx-auto flex items-center justify-between"></div>
@@ -188,27 +174,22 @@ const ContentPromotionBanner: React.FC = () => {,
           <currentBannerData.icon className="w-5 h-5 animate-pulse" />
           <div></div>
             <span className="font-semibold text-sm sm:text-base">{currentBannerData.title}</span><span className="hidden sm:inline ml-2 text-sm opacity-90">{currentBannerData.description}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </span>
           </div>
         </div>
 
-<<<<<<< HEAD
         <div className="flex items-center space-x-2">
           <a;)
             href={currentBannerData.link})
             className="bg-white/20 hover: bg-white/30 text-white px-4 py-1 rounded-full text-sm font-medium transition-all duration-300 flex items-center space-x-1",)
           >),
-=======
         <div className="flex items-center space-x-2"></div>
           <a
             href={currentBannerData.link}
             className="bg-white/20 hover:bg-white/30 text-white px-4 py-1 rounded-full text-sm font-medium transition-all duration-300 flex items-center space-x-1"
           >
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <span>{currentBannerData.cta}</span>
             <ArrowRight className="w-3 h-3" />
-<<<<<<< HEAD
           <button
             onClick={() =>setIsVisible(false)}
             className="text-white/80 hover:text-white transition-colors p-1"
@@ -225,7 +206,6 @@ const ContentPromotionBanner: React.FC = () => {,
             onClick={() =>setCurrentBanner(index)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
               index === currentBanner ? 'bg-white' : 'bg-white/50'
-=======
           </a>
 
           <button;
@@ -246,13 +226,10 @@ const ContentPromotionBanner: React.FC = () => {,
             onClick={() => setCurrentBanner(index)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${}
               index === currentBanner ? 'bg-white' : 'bg-white/50'}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             }`}
             aria-label={`Go to banner ${index + 1}`}
           /></button>
         ))}</button>
->>>>>>> origin/main
-=======
 import React from 'react';
 import { Star, Zap, ArrowRight } from 'lucide-react';
 
@@ -279,14 +256,10 @@ const ContentPromotionBanner: React.FC = () => {
             Explore Now <ArrowRight className="w-4 h-4 ml-2" />
           </a>
         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default ContentPromotionBanner;
-=======
 export default ContentPromotionBanner;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

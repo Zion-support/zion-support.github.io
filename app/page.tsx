@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import React, { Suspense } from 'react';
@@ -108,10 +107,7 @@ import {
   Network as NetworkIcon
 } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Interface definitions
-=======
 // Type definitions;
 interface MicroSAASService {
   name: string;
@@ -124,7 +120,6 @@ interface MicroSAASService {
   link?: string;
 }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
 interface AIService {
   name: string;
   description: string;
@@ -154,13 +149,10 @@ const microSAASServices = [
     price: "$99/mo",
     features: ["Smart Scheduling", "Risk Prediction", "Team Optimization", "Progress Tracking"],
     category: "Productivity",
-<<<<<<< HEAD
     popular: true
-=======
     popular: true,
     icon: BarChart,
     link: "https://ziontechgroup.com/ai-project-manager-pro",
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   },
   {
     name: "AI Analytics Dashboard",
@@ -454,7 +446,6 @@ const microSAASServices = [
     name: "AI Quantum Financial Oracle",
     description: "Revolutionary quantum-powered financial prediction platform with 99.7% accuracy in market forecasting",
     price: "$2,999/mo",
-<<<<<<< HEAD
     features: ["Quantum Market Analysis", "Risk-Free Predictions", "Real-time Trading Signals", "Portfolio Optimization"],
     category: "Finance",
     popular: true,
@@ -520,7 +511,6 @@ const microSAASServices = [
     popular: true,
     icon: Zap,
     link: "https://ziontechgroup.com/ai-energy-grid-management-pro"
-=======
     features: ["Quantum Algorithms", "Real-time Predictions", "Risk Assessment", "Portfolio Optimization"],
     category: "Finance"
     popular: true;
@@ -586,7 +576,6 @@ const microSAASServices = [
     popular: true;
     icon: Zap;
     link: "https://ziontechgroup.com/ai-energy-grid-management-pro",
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   },
   {
     name: "AI Drug Discovery Pro",
@@ -630,7 +619,6 @@ const microSAASServices = [
   },
   {
     name: "AI Legal Research Pro",
-<<<<<<< HEAD
     description: "Advanced legal research platform with AI-powered case analysis and precedent discovery",
     price: "$399/mo",
     features: ["Case Analysis", "Precedent Discovery", "Legal Research", "Document Review"],
@@ -668,7 +656,6 @@ const microSAASServices = [
     popular: true,
     icon: Factory,
     link: "https://ziontechgroup.com/ai-manufacturing"
-=======
     description: "Advanced legal research and case analysis with AI-powered document review and precedent finding",
     price: "$799/mo",
     features: ["Case Research", "Document Analysis", "Precedent Finding", "Legal Writing"],
@@ -736,13 +723,11 @@ const microSAASServices = [
     popular: true;
     icon: Globe;
     link: "https://ziontechgroup.com/ai-content-delivery-network",
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   },
   {
     name: "AI Logistics Optimizer",
     description: "Intelligent logistics management with route optimization and supply chain analytics",
     price: "$299/mo",
-<<<<<<< HEAD
     features: ["Route Optimization", "Supply Chain Analytics", "Fleet Management", "Demand Forecasting"],
     category: "Logistics",
     popular: true,
@@ -768,7 +753,6 @@ const microSAASServices = [
     popular: true,
     icon: Music,
     link: "https://ziontechgroup.com/ai-voice-cloning-studio"
-=======
     features: ["API Gateway", "Rate Limiting", "Security Policies", "Performance Analytics"],
     category: "API Management"
     popular: true;
@@ -804,7 +788,6 @@ const microSAASServices = [
     popular: true;
     icon: Cloud;
     link: "https://ziontechgroup.com/ai-cloud-infrastructure",
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   },
   {
     name: "AI Code Security Auditor",
@@ -2418,7 +2401,6 @@ const testimonials: Testimonial[] = [
     avatar: "SJ",
   },
   {
-<<<<<<< HEAD
     name: "AI Mental Health Companion",
     description: "AI-powered mental health support with 24/7 availability and personalized care",
     price: "$149/mo",
@@ -2617,7 +2599,6 @@ const testimonials: Testimonial[] = [
     popular: true,
     icon: Brain,
     link: "https://ziontechgroup.com/ai-quantum-financial-oracle"
-=======
     name: "Michael Chen",
     role: "CEO",
     company: "InnovateLabs",
@@ -2654,7 +2635,6 @@ const stats: Stat[] = [,
     number: "300%",
     label: "Average ROI",
     icon: TrendingUp;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   }
 ];
 
@@ -2740,7 +2720,6 @@ const aiServices: AIService[] = [,
     link: "https://ziontechgroup.com/ai-supply-chain-optimization-pro",
   },
   {
-<<<<<<< HEAD
     name: "AI Autonomous Systems Platform",
     description: "Next-generation autonomous systems with self-learning capabilities and real-time decision making",
     price: "$6,500/mo",
@@ -2759,7 +2738,6 @@ const aiServices: AIService[] = [,
     enterprise: true,
     icon: Building,
     link: "https://ziontechgroup.com/ai-smart-city-management"
-=======
     name: "AI Neural Network Architecture Designer",
     description: "Automated neural network design and optimization for custom AI model development",
     price: "$3,500/mo",
@@ -2848,7 +2826,6 @@ const aiServices: AIService[] = [,
     enterprise: true;
     icon: Building;
     link: "https://ziontechgroup.com/ai-smart-city-management",
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   },
   {
     name: "AI Quantum Machine Learning Platform",
@@ -3633,21 +3610,18 @@ const itServices: ITService[] = [,
   },
   {
     name: "AI IT Operations (AIOps)",
-<<<<<<< HEAD
     description: "AI-powered IT operations with intelligent monitoring and automated incident response",
     price: "$2,800/mo",
     features: ["Intelligent Monitoring", "Automated Incident Response", "Predictive Maintenance", "Performance Optimization"],
     category: "AIOps",
     icon: Brain,
     link: "https://ziontechgroup.com/ai-ops"
-=======
     description: "AI-powered IT operations with intelligent monitoring, automation, and incident response",
     price: "$3,200/mo",
     features: ["Intelligent Monitoring", "Automated Response", "Predictive Analytics", "Root Cause Analysis"],
     category: "AI Operations",
     icon: Brain;
     link: "https://ziontechgroup.com/ai-ops",
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   },
   {
     name: "Healthcare IT Solutions",
@@ -3655,13 +3629,10 @@ const itServices: ITService[] = [,
     price: "$3,500/mo",
     features: ["HIPAA Compliance", "Medical Data Security", "Electronic Health Records", "Telemedicine Platform"],
     category: "Healthcare IT",
-<<<<<<< HEAD
     icon: Heart,
     link: "https://ziontechgroup.com/healthcare-it"
-=======
     icon: Stethoscope;
     link: "https://ziontechgroup.com/healthcare-it",
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   },
   {
     name: "Financial Services IT",
@@ -3692,21 +3663,18 @@ const itServices: ITService[] = [,
   },
   {
     name: "IoT Platform Development",
-<<<<<<< HEAD
     description: "Comprehensive IoT solutions with device management and data analytics",
     price: "$2,200/mo",
     features: ["Device Management", "Data Analytics", "Security Monitoring", "Scalable Architecture"],
     category: "IoT Development",
     icon: Settings,
     link: "https://ziontechgroup.com/iot-platform"
-=======
     description: "Comprehensive IoT platform with device management, data processing, and analytics",
     price: "$3,800/mo",
     features: ["Device Management", "Data Processing", "Real-time Analytics", "Fleet Management"],
     category: "IoT Solutions",
     icon: Globe;
     link: "https://ziontechgroup.com/iot-platform",
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   },
   {
     name: "Quantum Computing Infrastructure",
@@ -3763,7 +3731,6 @@ const itServices: ITService[] = [,
     link: "https://ziontechgroup.com/ai-data-center-management",
   },
   {
-<<<<<<< HEAD
     name: "Quantum Computing Infrastructure",
     description: "Quantum computing infrastructure setup and optimization for advanced computing needs",
     price: "$8,500/mo",
@@ -3798,7 +3765,6 @@ const itServices: ITService[] = [,
     category: "Robotics",
     icon: Settings,
     link: "https://ziontechgroup.com/digital-transformation-consulting"
-=======
     name: "Cybersecurity Operations Center",
     description: "24/7 cybersecurity monitoring with threat detection, incident response, and compliance",
     price: "$7,200/mo",
@@ -3851,7 +3817,6 @@ const itServices: ITService[] = [,
     category: "Consulting",
     icon: Settings;
     link: "https://ziontechgroup.com/digital-transformation-consulting",
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   },
   {
     name: "AI-Powered IT Operations (AIOps)",
@@ -4573,7 +4538,6 @@ const ServiceCardSkeleton = () => (
     <div className="h-4 bg-gray-700 rounded mb-2"></div>
     <div className="h-4 bg-gray-700 rounded mb-4"></div>
     <div className="h-6 bg-gray-700 rounded"></div>
-=======
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -4586,15 +4550,12 @@ const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 // Preload critical components
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     setTimeout(() => {
       // Preload components after initial render
-=======
 // Dynamically import heavy components for better performance;
 const ContentPromotionBanner = lazy(() => import('../src/components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('../src/components/ContentCarousel'));
@@ -4602,20 +4563,14 @@ const DynamicContentShowcase = lazy(() => import('../src/components/DynamicConte
 const ContentStatistics = lazy(() => import('../src/components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('../src/components/ContentNewsletterSignup'));
 
-=======
 const EnhancedServicesShowcase = lazy(() => import('./components/EnhancedServicesShowcase'));
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
 
 // Preload critical components with better timing
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     setTimeout(() => {
-<<<<<<< HEAD
       // Preload components here
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01af
-=======
       // Preload components after initial render
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
     }, 100);
   }
 };
@@ -4626,8 +4581,6 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   </div>
 );
 // Stats data
@@ -4653,20 +4606,13 @@ const stats = [
     icon: Globe
   }
 ];
-=======
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01af
 
-<<<<<<< HEAD
 const HomePage: React.FC = () => {
-<<<<<<< HEAD
-=======
   const [isLoading, setIsLoading] = useState(true);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-=======
 const HomePage: React.FC = () => {
   const services = [
     {
@@ -4734,33 +4680,26 @@ const HomePage: React.FC = () => {
       rating: 5
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
 
-<<<<<<< HEAD
   useEffect(() => {
-<<<<<<< HEAD
     setIsLoaded(true);
     const timer = setTimeout(() => setIsVisible(true), 100);
     preloadComponents();
-=======
     // Simulate loading time
     const timer = setTimeout(() => {
       setIsLoading(false);
       preloadComponents();
     }, 1000);
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return () => clearTimeout(timer);
   }, []);
 
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-<<<<<<< HEAD
       (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
-=======
       (window as any).gtag('event', 'phone_click', {
         event_category: 'contact',
         event_label: 'header_phone'
@@ -4774,12 +4713,10 @@ const HomePage: React.FC = () => {
       (window as any).gtag('event', 'email_click', {
         event_category: 'contact',
         event_label: 'header_email'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
       });
     }
   }, []);
 
-<<<<<<< HEAD
   const microSAASServices = [
     {
       title: 'AI Project Manager',
@@ -4912,8 +4849,6 @@ const HomePage: React.FC = () => {
       color: 'text-purple-400'
     }
   ];
-=======
->>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOHead 
@@ -4950,11 +4885,6 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
-<<<<<<< HEAD
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
           {/* Hero Section */}
           <section
@@ -5048,10 +4978,7 @@ const HomePage: React.FC = () => {
                     <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                       Learn More →
                     </a>
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
       {/* Services Section */}
-<<<<<<< HEAD
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
@@ -5068,7 +4995,6 @@ const HomePage: React.FC = () => {
                   <div className="text-center mb-4">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
                       <service.icon className="w-8 h-8 text-white" />
-=======
       <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">,
@@ -5096,7 +5022,6 @@ const HomePage: React.FC = () => {
                   <div className="text-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300">,
                       {service.icon && <service.icon className="w-6 h-6 text-white" />}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">{service.name}</h3>
                     <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
@@ -5108,26 +5033,20 @@ const HomePage: React.FC = () => {
                             {feature}
                           </div>
                       ))}
-<<<<<<< HEAD
-=======
                       {service.features.length > 3 && (
                         <div className="text-xs text-gray-400">
                           +{service.features.length - 3} more features;
                         </div>
                       )}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     </div>
                     
                     <div className="text-center">
                       <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-<<<<<<< HEAD
                       <button className="neon-button-ultra text-sm">
-=======
                       <button;
                         className="text-cyan-400 hover: text-cyan-300 font-medium text-sm transition-colors",
                         onClick={() => service.link && window.open(service.link, '_blank')}
                       >
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                         Learn More →
                       </button>
                     </div>
@@ -5138,13 +5057,11 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* AI Services */}
-<<<<<<< HEAD
           <div className="mb-24">
             <h3 className="text-3xl font-bold text-white mb-12 text-center">Enterprise AI Solutions</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {aiServices.map((service, index) => (
                 <div key={index} className={`holographic-advanced p-6 hover:scale-105 transition-all duration-300 group cursor-pointer ${service.enterprise ? 'ring-2 ring-purple-400/30' : ''}`} onClick={() => window.open(service.link, '_blank')}>
-=======
           <div className="mb-16">
             <h3 className="text-2xl md: text-3xl font-bold text-white mb-8 text-center">Enterprise AI Solutions</h3>,
             <p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto">,
@@ -5155,7 +5072,6 @@ const HomePage: React.FC = () => {
                 <div key={index} className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-6 hover: shadow-lg transition-all duration-300 group relative ${,}
                   service.enterprise ? 'border-purple-400/20 hover:border-purple-400/40 hover:shadow-purple-400/10' : 'border-blue-400/20 hover:border-blue-400/40 hover:shadow-blue-400/10'}
                 }`}>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   {service.enterprise && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">
@@ -5163,18 +5079,13 @@ const HomePage: React.FC = () => {
                       </span>
                     </div>
                   )}
-<<<<<<< HEAD
                   <div className="text-center mb-4">
-<<<<<<< HEAD
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-400/25">
-=======
                   <div className="text-center mb-4"></div>
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-400/25"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">{service.name}</h3>
-=======
                     <div className={`w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300 ${,}
                       service.enterprise ? 'bg-gradient-to-r from-purple-400 to-pink-600' : 'bg-gradient-to-r from-blue-400 to-cyan-600'}
                     }`}>
@@ -5183,17 +5094,12 @@ const HomePage: React.FC = () => {
                     <h3 className={`text-lg font-bold text-white mb-3 group-hover: transition-colors ${,}
                       service.enterprise ? 'group-hover:text-purple-400' : 'group-hover:text-blue-400'}
                     }`}>{service.name}</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                     
                     <div className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
                         <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-<<<<<<< HEAD
-=======
                         <div key={featureIndex} className="flex items-center text-sm text-gray-300"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                           <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                           {feature}
                         </div>
@@ -5203,7 +5109,6 @@ const HomePage: React.FC = () => {
                     <div className="text-center"></div>
                       <div className="text-2xl font-bold text-purple-400 mb-2">{service.price}</div>
                       <button className="neon-button-enhanced text-sm">
-=======
                           <CheckCircle className={`w-4 h-4 mr-2 flex-shrink-0 ${}
                             service.enterprise ? 'text-purple-400' : 'text-blue-400'}
                           }`} />
@@ -5227,7 +5132,6 @@ const HomePage: React.FC = () => {
                         }`}
                         onClick={() => service.link && window.open(service.link, '_blank')}
                       >
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                         Learn More →
                       </button>
                     </div>
@@ -5238,12 +5142,8 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* IT Services */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className="mb-24">
-=======
           <div className="mb-24"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <h3 className="text-3xl font-bold text-white mb-12 text-center">IT Infrastructure Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {itServices.map((service, index) => (
@@ -5253,7 +5153,6 @@ const HomePage: React.FC = () => {
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">{service.name}</h3>
-=======
           <div className="mb-16">
             <h3 className="text-2xl md: text-3xl font-bold text-white mb-8 text-center">IT Infrastructure Services</h3>,
             <p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto">,
@@ -5267,7 +5166,6 @@ const HomePage: React.FC = () => {
                       <service.icon className="w-6 h-6 text-white" />,
                     </div>,
                     <h3 className="text-lg font-bold text-white mb-3 group-hover:text-green-400 transition-colors">{service.name}</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                     
                     <div className="space-y-2 mb-6">
@@ -5277,26 +5175,20 @@ const HomePage: React.FC = () => {
                           {feature}
                         </div>
                       ))}
-<<<<<<< HEAD
-=======
                       {service.features.length > 3 && (
                         <div className="text-xs text-gray-400">
                           +{service.features.length - 3} more features;
                         </div>
                       )}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     </div>
                     
                     <div className="text-center"></div>
                       <div className="text-2xl font-bold text-green-400 mb-2">{service.price}</div>
-<<<<<<< HEAD
                       <button className="neon-button text-sm">
-=======
                       <button;
                         className="text-green-400 hover: text-green-300 font-medium text-sm transition-colors",
                         onClick={() => service.link && window.open(service.link, '_blank')}
                       >
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                         Learn More →
                       </button>
                     </div>
@@ -5311,13 +5203,10 @@ const HomePage: React.FC = () => {
 
       {/* AI Services Section */}
       <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
-=======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-16"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Enterprise AI Solutions;
             </h2>
@@ -5340,21 +5229,17 @@ const HomePage: React.FC = () => {
                     <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                       Enterprise;
                     </span>
->>>>>>> origin/main
                   </div>
                 )}
                 
-<<<<<<< HEAD
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover: scale-110 transition-transform duration-300">,
                     <service.icon className="w-8 h-8 text-white" />,
                   </div>,
-=======
                 <div className="text-center"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"></div>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">{service.name}</h3>
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                   
@@ -5383,13 +5268,10 @@ const HomePage: React.FC = () => {
 
       {/* IT Services Section */}
       <section className="py-16 bg-white/5">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
-=======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-16"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               IT Infrastructure Services;
             </h2>,
@@ -5404,19 +5286,16 @@ const HomePage: React.FC = () => {
                 key={index} 
                 className="cyber-card p-6 hover: scale-105 transition-all duration-300 group cursor-pointer",
                 onClick={() => window.open(service.link, '_blank')}
-<<<<<<< HEAD
               >
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300">,
                     <service.icon className="w-6 h-6 text-white" />,
                   </div>,
-=======
               ></div>
                 <div className="text-center"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <h3 className="text-lg font-bold text-white mb-3 group-hover:text-green-400 transition-colors">{service.name}</h3>
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">{service.description}</p>
                   
@@ -5444,19 +5323,16 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-<<<<<<< HEAD
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-20"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Client Success Stories
-=======
       <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Client Success Stories;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Hear from our satisfied clients who have transformed their businesses with our AI solutions.
@@ -5493,8 +5369,6 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
       {/* Stats Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -5544,10 +5418,8 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       <Footer />,
     </div>,
-=======
   // Testimonials data
   const testimonials = [
     {
@@ -5718,7 +5590,6 @@ const HomePage: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300">
               Don't just take our word for it - hear from our satisfied clients.
-=======
       {/* Testimonials Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -5726,12 +5597,10 @@ const HomePage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Don't just take our word for it. Here's what our clients have to say about our services.
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.id}
@@ -5751,7 +5620,6 @@ const HomePage: React.FC = () => {
                     <h4 className="text-white font-semibold">{testimonial.name}</h4>
                     <p className="text-gray-400">{testimonial.role}, {testimonial.company}</p>
                   </div>
-=======
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
                 <div className="flex items-center mb-4">
@@ -5763,7 +5631,6 @@ const HomePage: React.FC = () => {
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-gray-400 text-sm">{testimonial.role}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
                 </div>
               </div>
             ))}
@@ -5774,7 +5641,6 @@ const HomePage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
@@ -5799,9 +5665,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
       {/* Lazy loaded components */}
       <Suspense fallback={<ServiceCardSkeleton />}>
         <ContentPromotionBanner />
@@ -5823,7 +5687,6 @@ const HomePage: React.FC = () => {
         <ContentNewsletterSignup />
       </Suspense>
       
-=======
         {/* Enhanced Services Section */}
         <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <div className="cyber-card p-8 text-center">
@@ -5854,23 +5717,15 @@ const HomePage: React.FC = () => {
       </main>
 
       {/* Footer */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01af
       <Footer />
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 
-<<<<<<< HEAD
 HomePage.displayName = 'HomePage';
 
 export default HomePage;
-=======
 export default HomePage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
-=======
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
@@ -5894,4 +5749,3 @@ export default HomePage;
 };
 
 export default HomePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4

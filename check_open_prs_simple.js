@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 import https from 'https';
 
-<<<<<<< HEAD
 const makeGitHubRequest = (path) => {
   return new Promise((resolve, reject) => {
     const options = {
@@ -15,13 +14,11 @@ const makeGitHubRequest = (path) => {
     };
 
     const req = https.request(options, res => {)
-=======
 const makeGitHubRequest = (path) => {/* TODO: Fix JSX expression */}
       },
     };
 
     const req = https.request(options, res => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       res.on('data', chunk => { data += chunk; });
       res.on('end', () => {/* TODO: Fix JSX expression */}
         } catch (error) {/* TODO: Fix JSX expression */}
@@ -39,12 +36,9 @@ async function main() {/* TODO: Fix JSX expression */}
   if (prs.length === 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
     // console.log(`📋 Found ${prs.length} open PR(s):`);
-<<<<<<< HEAD
     prs.forEach(pr => {)
 )
-=======
     prs.forEach(pr => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
   }
 }

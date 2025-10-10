@@ -1,5 +1,4 @@
 // Accessibility utilities and components;
-<<<<<<< HEAD
 export const accessibilityUtils = {
   // Focus management;
   trapFocus: element => {,
@@ -15,9 +14,7 @@ export const accessibilityUtils = {
           if (document.activeElement === firstElement) {
             lastElement.focus();
             e.preventDefault();
-=======
 export const accessibilityUtils = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         } else {/* TODO: Fix JSX expression */}
           }
@@ -26,7 +23,6 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
     });
   },
 
-<<<<<<< HEAD
   // Screen reader announcements;
   announceToScreenReader: message => {,
     const _announcement = document.createElement('div');
@@ -52,7 +48,6 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
       const [rs, gs, bs] = [r, g, b].map(c => {)
         c = c / 255;)
         return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
-=======
   // Screen reader announcements,
   announceToScreenReader: message => {/* TODO: Fix JSX expression */}
     }, 1000);
@@ -60,7 +55,6 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
 
   // Color contrast checker,
   checkColorContrast: (foreground, background) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
 
       return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
@@ -70,14 +64,11 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
     //     const l2 = getLuminance(background);
     //     const ratio = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
 
-<<<<<<< HEAD
     return {
       ratio,
       meetsAA: ratio >= 4.5;
       meetsAAA: ratio >= 7;
-=======
     return {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   },
 };

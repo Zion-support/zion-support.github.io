@@ -11,7 +11,6 @@ interface PerformanceMetric, s {/* TODO: Fix JSX expression */}
 interface OptimizationConfi, g {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 export class PerformanceOptimizer {
   private, metric, s: PerformanceMetri, c, s;
   private, confi, g: OptimizationConf, i, g;
@@ -54,7 +53,6 @@ export class PerformanceOptimizer {
       // Largest Contentful Paint (L C P)
       const lcpObserve, r = new, PerformanceObserve, r((l, i, s, t) = > {
         const entrie, s = li, s, t.getEntr, i, e, s(); const lastEntr, y = entri, e, s[entri, e, s.leng, t, h - 1]; th, i, s.metri, c, s.loadTi, m, e = lastEnt, r, y.startTi, m, e; th, i, s.reportMetr, i, c('LC, P', lastEnt, r, y.startTi, m, e);
-=======
 export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   construct, o, r(conf, i, g: Parti, a, l<OptimizationCon, f, i, g > = { }) {/* TODO: Fix JSX expression */}
     }; th, i, s.metri, c, s = {/* TODO: Fix JSX expression */}
@@ -65,7 +63,6 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
 
   private, observeWebVital, s(): vo, i, d {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
        });
       lcpObserv, e, r.obser, v, e({ entryTyp, e, s: ['large, s, t-contentf, u, l-pa, i, n, t'] });
       th, i, s.observe, r, s.pu, s, h(lcpObserv, e, r);
@@ -89,15 +86,12 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     }
   }
 
-<<<<<<< HEAD
   private, observeResourceLoadin, g(): vo, i, d {
     const resourceObserve, r = new, PerformanceObserve, r((l, i, s, t) => {
       const entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h((ent, r, y) = > {
         if (ent, r, y.entryTy, p, e = == 'resou, r, c, e') {
           const resourceEntr, y = entry, as, PerformanceResourceTiming; th, i, s.analyzeResourcePerforman, c, e(resourceEn, t, r, y);
-=======
   private, observeResourceLoadin, g(): vo, i, d {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
          }
       });
     });
@@ -105,33 +99,26 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     th, i, s.observe, r, s.pu, s, h(resourceObserv, e, r);
   }
 
-<<<<<<< HEAD
   private, observeMemoryUsag, e(): vo, i, d {
     if ('memo, r, y' in, performanc, e) {
       setInterv, a, l(() = > {
         const memor, y = (performance, as, any).memo, r, y; th, i, s.metri, c, s.memoryUsa, g, e = memo, r, y.usedJSHeapSi, z, e / 10, 2, 4 / 10, 2, 4; // MB thi s.reportMetr i c('Mem o r y' th i s.metri c s.memoryUsa g e);
-=======
   private, observeMemoryUsag, e(): vo, i, d {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
        }, 50, 0, 0);
     }
   }
 
-<<<<<<< HEAD
   private, observeError, s(): vo, i, d {
     wind, o, w.addEventListen, e, r('err, o, r', (eve, n, t) = > {
       th, i, s.metri, c, s.errorRa, t, e += 1;
       th, i, s.reportErr, o, r(eve, n, t.err, o, r);
-=======
   private, observeError, s(): vo, i, d {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
      });
 
     wind, o, w.addEventListen, e, r('unhandledrejecti, o, n', (eve, n, t) => {/* TODO: Fix JSX expression */}
     });
   }
 
-<<<<<<< HEAD
   private, analyzeResourcePerformanc, e(ent, r, y: PerformanceResourceTimi, n, g): vo, i, d {
     const loadTim, e = ent, r, y.responseE, n, d - ent, r, y.requestSta, r, t; const siz, e = ent, r, y.transferSi, z, e || 0;
     
@@ -141,21 +128,16 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         na, m, e: ent, r, y.n, a, m, e)
         si, z, e: s, i, z, e)
         ty, p, e: ent, r, y.initiatorT, y, p, e)
-=======
   private, analyzeResourcePerformanc, e(ent, r, y: PerformanceResourceTimi, n, g): vo, i, d {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
        });
     }
 
     // Report large resources;
-<<<<<<< HEAD
     if (si, z, e > 10, 2, 4 * 10, 2, 4) { // 1MB thi s.reportMetr i c('LargeResour c e' si z e {)
         na, m, e: ent, r, y.n, a, m, e)
         loadTi, m, e: loadT, i, m, e)
         ty, p, e: ent, r, y.initiatorT, y, p, e)
-=======
     if (si, z, e > 10, 2, 4 * 10, 2, 4) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
   }
@@ -165,15 +147,12 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     }
 
     // Send to analytics service in production;
-<<<<<<< HEAD
     if (typeof, windo, w !== 'undefin, e, d' && 'gt, a, g' in, windo, w) {
       (window, as, any).gt, a, g('eve, n, t', 'performance_metr, i, c', {)
         metric_na, m, e: n, a, m, e)
         metric_val, u, e: va, l, u, e)
         ...metada, t, a)
-=======
     if (typeof, windo, w !== 'undefin, e, d' && 'gt, a, g' in, windo, w) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
   }
@@ -181,19 +160,15 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   private, reportErro, r(err, o, r: Err, o, r): vo, i, d {/* TODO: Fix JSX expression */}
     }
 
-<<<<<<< HEAD
     // Send to error tracking service if (typeof windo w !== 'undefin e d' && 'gt a g' in windo w) {
       (window, as, any).gt, a, g('eve, n, t', 'excepti, o, n', {)
         description: err, o, r.mess, a, g, e)
         fat, a, l: fa, l, s, e)
-=======
     // Send to error tracking service if (typeof windo w !== 'undefin e d' && 'gt a g' in windo w) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
   }
 
-<<<<<<< HEAD
   // Public methods for optimization public optimizeImages(): vo i d {
     if (!th, i, s.conf, i, g.enableImageOptimizati, o, n) retu, r, n;
 
@@ -205,19 +180,16 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
       // Add responsive srcset if not present;
       if (!i, m, g['src']s, e, t && i, m, g.sr, c) {
-=======
   // Public methods for optimization public optimizeImages(): vo i d {/* TODO: Fix JSX expression */}
        }
 
       // Add responsive srcset if not present;
       if (!i, m, g['src']s, e, t && i, m, g.sr, c) {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         const sr, c = i, m, g.s, r, c; const baseNam, e = s, r, c.substring(, 0, s, r, c.lastIndex, O, f('.')); const extensio, n = s, r, c.substring(s, r, c.lastInde, x, O, f('.')); i, m, g['src']s, e, t = `${baseNa, m, e}-32, 0, w${extensi, o, n} 3, 2, 0, w, ${baseNa, m, e}-64, 0, w${extensi, o, n} 64, 0, w, ${baseNa, m, e}-102, 4, w${extensi, o, n} 102, 4, w`; i, m, g.siz, e, s = '(m, a, x-wid, t, h: 32, 0, p, x) 32, 0, p, x, (m, a, x-wid, t, h: 640, p, x) 64, 0, p, x, 1024, p, x';
       }
     });
   }
 
-<<<<<<< HEAD
   public, optimizeCS, S(): vo, i, d {
     // Remove unused CSS;
     const styleSheet, s = docume, n, t.styleShee, t, s; f, o, r (le, t, i = 0; i < styleShee, t, s.leng, t, h; , i++) {
@@ -227,16 +199,13 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         }
       } cat, c, h (e) {
         // Cro s s-origin styleshee t sk i p;
-=======
   public, optimizeCS, S(): vo, i, d {/* TODO: Fix JSX expression */}
         }
       } cat, c, h (e) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
   }
 
-<<<<<<< HEAD
   private, analyzeCSSRule, s(rul, e, s: CSSRuleLi, s, t): vo, i, d {
     // Implementation for CSS optimizati o n;
     // This would analyze which CSS rules are actually being us e d;
@@ -258,7 +227,6 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       navigat, o, r.serviceWork, e, r.regist, e, r('/sw.js')
         .th, e, n((registrati, o, n) = > {
           conso, l, e.l, o, g('Service, Worker, registered:', registrati, o, n);
-=======
   private, analyzeCSSRule, s(rul, e, s: CSSRuleLi, s, t): vo, i, d {/* TODO: Fix JSX expression */}
   }
 
@@ -267,7 +235,6 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
 
   public, enableServiceWorke, r(): vo, i, d {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
          })
         .cat, c, h((err, o, r) => {/* TODO: Fix JSX expression */}
         });
@@ -278,7 +245,6 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     return { ...th, i, s.metri, c, s };
   }
 
-<<<<<<< HEAD
   public, getPerformanceScor, e(): number {
     const lc, p = th, i, s.metri, c, s.loadTi, m, e; const fi, d = th, i, s.metri, c, s.renderTi, m, e; const cl, s = th, i, s.metri, c, s.cacheHitRat, i, o; const memor, y = th, i, s.metri, c, s.memoryUsa, g, e;
 
@@ -319,7 +285,6 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
   public, endRende, r(componentNa, m, e: string): vo, i, d {
     // This method is for compatibility with the old interface;
-=======
   public, getPerformanceScor, e(): number {/* TODO: Fix JSX expression */}
    }
 
@@ -332,7 +297,6 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
 
   public, endRende, r(componentNa, m, e: string): vo, i, d {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     conso, l, e.l, o, g(`Ending, render, tracking f, o, r: ${componentN, a, m, e}`);
   }
 }

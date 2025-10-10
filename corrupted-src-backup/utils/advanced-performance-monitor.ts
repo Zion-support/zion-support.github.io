@@ -9,7 +9,6 @@ interface PerformanceData {/* TODO: Fix JSX expression */}
 interface PerformanceThresholds {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 class AdvancedPerformanceMonitor {
   private data: PerformanceData[] = [];
   private thresholds: PerformanceThresholds;
@@ -24,10 +23,8 @@ class AdvancedPerformanceMonitor {
       cumulativeLayoutShift: 0.1;
       firstInputDelay: 100;
       ...thresholds,
-=======
 class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
   s: Partial<PerformanceThresholds> = {}) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }
 
@@ -53,7 +50,6 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
   /**
    * Get performance summary;
    */
-<<<<<<< HEAD
   public getPerformanceSummary(): {
     averageLoadTime: number;
     averageFCP: number;
@@ -70,10 +66,8 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
         averageCLS: 0;
         averageFID: 0;
         performanceScore: 0;
-=======
   public getPerformanceSummary(): {/* TODO: Fix JSX expression */}
   } {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
 
@@ -86,7 +80,6 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
     const _avgFID = this.data.reduce((sum, d) => sum + d.firstInputDelay, 0) / this.data.length;
 
     // Calculate performance score (0-100)
-<<<<<<< HEAD
     const performanceScore = this.calculatePerformanceScore({)
       loadTime: avgLoadTime;)
       firstContentfulPaint: avgFCP;)
@@ -102,19 +95,16 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
       averageCLS: avgCLS;
       averageFID: avgFID;
       performanceScore,
-=======
     const performanceScore = this.calculatePerformanceScore({/* TODO: Fix JSX expression */})
     });
 
     return {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }
 
   /**
    * Setup Performance Observer;
    */
-<<<<<<< HEAD
   private setupPerformanceObserver(): void {
     if (!('PerformanceObserver' in window)) return;
 
@@ -128,13 +118,11 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
     try {
       this.observer.observe({)
         entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'layout-shift'])
-=======
   private setupPerformanceObserver(): void {/* TODO: Fix JSX expression */}
       });
     });
 
     try {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     } catch (error) {/* TODO: Fix JSX expression */}
       //       }
@@ -143,7 +131,6 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
   /**
    * Setup Web Vitals monitoring;
    */
-<<<<<<< HEAD
   private setupWebVitals(): void {
     if (typeof window === 'undefined') return;
 
@@ -171,7 +158,6 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
         });
       })
       .catch(error => {)
-=======
   private setupWebVitals(): void {/* TODO: Fix JSX expression */}
       .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
         });
@@ -189,7 +175,6 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
         });
       })
       .catch(error => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         //         });
   }
 
@@ -215,15 +200,12 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
   /**
    * Handle performance entry;
    */
-<<<<<<< HEAD
   private handlePerformanceEntry(entry: PerformanceEntry): void {,
     const data: Partial<PerformanceData> = {,
       timestamp: Date.now(),
       url: window.location.href;
-=======
   private handlePerformanceEntry(entr,)
   y: PerformanceEntry): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
 
     switch (entry.entryType) {/* TODO: Fix JSX expression */}
@@ -239,20 +221,16 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
         break;
     }
 
-<<<<<<< HEAD
     if (Object.keys(data).length > 2) {
       // More than just timestamp and url;
       this.addPerformanceData(data as PerformanceData);
-=======
     if (Object.keys(data).length > 2) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 
   /**
    * Update metric;
    */
-<<<<<<< HEAD
   private updateMetric(metric: keyof PerformanceData, value: unknown): void {
     const _latestData = this.data[this.data.length - 1];
     if (latestData && Date.now() - latestData.timestamp < 1000) {,
@@ -272,12 +250,10 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
         memoryUsage: 0;
         networkInfo: null;
         [metric]: value,
-=======
   private updateMetric(metri,
   c: keyof PerformanceData, valu,)
   e: unknown): void {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       } as PerformanceData);
     }
   }
@@ -285,17 +261,14 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
   /**
    * Add performance data;
    */
-<<<<<<< HEAD
   private addPerformanceData(data: PerformanceData): void {
     this.data.push(data);
 
     // Keep only last 100 entries to prevent memory issues;
     if (this.data.length > 100) {,
       this.data = this.data.slice(-100);
-=======
   private addPerformanceData(dat,)
   a: PerformanceData): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     // Check thresholds and log warnings;
@@ -305,7 +278,6 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
   /**
    * Check performance thresholds;
    */
-<<<<<<< HEAD
   private checkThresholds(data: PerformanceData): void {
     const warnings: string[] = [];
 ,
@@ -326,7 +298,6 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
     }
     if (data.firstInputDelay > this.thresholds.firstInputDelay) {
       warnings.push(`FID ${data.firstInputDelay}ms exceeds threshold ${this.thresholds.firstInputDelay}ms`)
-=======
   private checkThresholds(dat,)
   a: PerformanceData): void {/* TODO: Fix JSX expression */}
       warnings.push(`Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`);
@@ -345,7 +316,6 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
     }
     if (data.firstInputDelay > this.thresholds.firstInputDelay) {/* TODO: Fix JSX expression */}`
         `FID ${data.firstInputDelay}ms exceeds threshold ${this.thresholds.firstInputDelay}ms`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       );
     }
 
@@ -356,7 +326,6 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
   /**
    * Calculate performance score;
    */
-<<<<<<< HEAD
   private calculatePerformanceScore(metrics: {)
     loadTime: number;)
     firstContentfulPaint: number;)
@@ -390,26 +359,21 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
     else if (metrics.firstInputDelay > 100) score -= 5;
 
     return Math.max(0, Math.min(100, score));
-=======
   private calculatePerformanceScore(metric,
   s: {/* TODO: Fix JSX expression */})
   }): number {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   /**
    * Export performance data;
    */
-<<<<<<< HEAD
   public exportData(): string {
     return JSON.stringify({)
         data: this.data),
         summary: this.getPerformanceSummary(),
         thresholds: this.thresholds;
         timestamp: new Date().toISOString(),
-=======
   public exportData(): string {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
       null,
       2;

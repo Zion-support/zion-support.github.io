@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const logger = {
   debug: (message: string, ...args: any[]) => {
     if (process.env.NODE_ENV === 'development') {
@@ -15,7 +14,6 @@ export const logger = {
     console.error(`[ERROR] ${message}`, error, ...args);
   },
 };
-=======
 
 /**
  * Enhanced Logger Utility;
@@ -362,4 +360,3 @@ export const logger = new Logger()`
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

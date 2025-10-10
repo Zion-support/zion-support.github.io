@@ -2,7 +2,6 @@ import fs from 'fs';
 import { fileURLToPath } from 'url';
 
 
-<<<<<<< HEAD
 function processFile(filePath) {
   try {
     // Determine correct relative paths based on file location;
@@ -23,17 +22,14 @@ function processFile(filePath) {
     } else {
       utilsPath = './utils/';
       typesPath = './types/';
-=======
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     } else if (isInComponents) {/* TODO: Fix JSX expression */}
     } else if (isInApp) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     // Fix import paths;
     const replacements = [
-<<<<<<< HEAD
       {
         pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g;
         replacement: `import Link from '${utilsPath}link';`,
@@ -45,7 +41,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       {
         pattern: /import\s+dynamic\s+from\s+'\.\/utils\/dynamic';/g;
         replacement: `import dynamic from '${utilsPath}dynamic';`,
-=======
       {/* TODO: Fix JSX expression */}
   t: `import Link from '${utilsPath}link';`,
       },
@@ -54,7 +49,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       },
       {/* TODO: Fix JSX expression */}`
   t: `import dynamic from '${utilsPath}dynamic';`,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
       {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*useRouter\s*}\s+from\s+'\.\/utils\/navigation';/g,
@@ -93,13 +87,10 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     });
 
     // Fix MetadataRoute namespace issue;
-<<<<<<< HEAD
     if (content.includes('MetadataRoute.')) {
       content = content.replace(/MetadataRoute\./g, 'MetadataRoute.');
       modified = true;
-=======
     if (content.includes('MetadataRoute.')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     if (modified) {/* TODO: Fix JSX expression */}
@@ -109,7 +100,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   }
 }
 
-<<<<<<< HEAD
 function processDirectory(dirPath) {
 
   items.forEach(item => {)
@@ -119,10 +109,8 @@ function processDirectory(dirPath) {
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
         totalFixed++;
-=======
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
   });
@@ -130,8 +118,5 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
   return totalFixed;
 }
 
-<<<<<<< HEAD
 // Process the app directory;
-=======
 // Process the app directory;`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

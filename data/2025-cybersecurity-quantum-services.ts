@@ -1,6 +1,5 @@
 
 export interface CybersecurityQuantumService;
-<<<<<<< HEAD
 export interface CybersecurityQuantumService {;
   id: string;
   name: string;
@@ -26,7 +25,6 @@ export interface CybersecurityQuantumService {;
       trial_days: 30;
       setup_time: '1 - 2 weeks',
       enterprise: 'Custom pricing'}
-=======
 export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   s: number}
     setupTim,
@@ -56,7 +54,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   e: '1 - 2 weeks',
       enterpris,
   e: 'Custom pricing'}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -88,7 +85,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       'Technology companies',
       'Critical infrastructure',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'Leading quantum - resistant encryption platform. Competes with RSA ($1000 - 5000 / user), Thales ($500 - 2000 / user), and Entrust ($200 - 1000 / user). Our advantage: Quantum - resistant algorithms and hybrid security.',
     competitors: ['RSA, Thales, Entrust, Gemalto, Utimaco'],
@@ -97,7 +93,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     ],
     real_implementation: true;
     implementation_details: unknown;
-=======
     market_positio,
   n: unknown,
       'Leading quantum - resistant encryption platform. Competes with RSA ($1000 - 5000 / user), Thales ($500 - 2000 / user), and Entrust ($200 - 1000 / user). Our,
@@ -112,7 +107,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Production - ready quantum - resistant encryption platform with enterprise - grade security, comprehensive API, and mobile SDK. Includes admin dashboard and compliance tools.',
     ro,
   i: 'Organizations achieve 500% ROI through reduced security risks and compliance cost savings.',
@@ -129,18 +123,14 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   s: [,
       'Active Directory, LDAP, SAML, OAuth, Custom enterprise systems',
     ],
-<<<<<<< HEAD
     support: unknown;
-=======
     suppor,
   t: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '24 / 7 technical support, security consulting, custom development, and dedicated security manager.',
     complianc,
   e: [,
       'SOC 2 Type II, ISO 27001, FIPS 140 - 2, Common Criteria, FedRAMP',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com / quantum - resistant - encryption - platform'
     icon: ''
     color: 'from - red - 500 to - orange - 600'
@@ -149,7 +139,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     customers: 650;
     rating: 4 && 4.9;
     reviews: 480;
-=======
     lin,
   k: 'http,
   s://ziontechgroup.com / quantum - resistant - encryption - platform',
@@ -167,7 +156,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   g: 4 && 4.9,
     review,
   s: 480,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
       'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8 && 8.99-15/user), SentinelOne ($4 && 4.99-8 && 8.99/user), and Carbon Black ($6 && 6.27-8 && 8.57/user). Our,
   advantage: Autonomous threat hunting and AI intelligence.',
@@ -177,12 +165,10 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   k: [,
       'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch',
     ],
-<<<<<<< HEAD
     realImplementation: true;
     implementationDetails: 'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.'
     roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.'
     useCases: [;
-=======
     realImplementatio,
   n: true,
     implementationDetail,
@@ -191,22 +177,18 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   i: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.'
     useCase,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced persistent threat detection'
       'Malware analysis and classification'
       'Network security monitoring'
       'Endpoint threat detection'
       'Security incident investigation'
-<<<<<<< HEAD
       'Threat intelligence sharing',
     ],
     integrations: [,
-=======
       'Threat intelligence sharing'
     ]
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'SIEM systems, EDR platforms, Firewalls, IDS/IPS, Custom security tools'
     ]
     suppor,
@@ -215,7 +197,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   e: [,
       'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-threat-hunting-platform',
     id: 'ai - powered - threat - hunting - platform',
     name: 'AI - Powered Threat Hunting Platform',
@@ -230,7 +211,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       trial_days: 21;
       setup_time: '1 - 2 weeks',
       enterprise: 'Custom pricing',
-=======
     lin,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/ai-powered-threat-hunting-platform',
@@ -259,7 +239,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   e: '1 - 2 weeks',
       enterpris,
   e: 'Custom pricing',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -291,7 +270,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       'Government agencies',
       'Financial institutions',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'Leading AI - powered threat hunting platform. Competes with CrowdStrike ($8.99 - 15 / user), SentinelOne ($4.99 - 8.99 / user), and Carbon Black ($6.27 - 8.57 / user). Our advantage: Autonomous threat hunting and AI intelligence.',
     competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace'],
@@ -300,7 +278,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     ],
     real_implementation: true;
     implementation_details: unknown;
-=======
     market_positio,
   n: unknown,
       'Leading AI - powered threat hunting platform. Competes with CrowdStrike ($8.99 - 15 / user), SentinelOne ($4.99 - 8.99 / user), and Carbon Black ($6.27 - 8.57 / user). Our,
@@ -315,7 +292,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Production - ready threat hunting platform with real - time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.',
     ro,
   i: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.',
@@ -332,18 +308,14 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   s: [,
       'SIEM systems, EDR platforms, Firewalls, IDS / IPS, Custom security tools',
     ],
-<<<<<<< HEAD
     support: unknown;
-=======
     suppor,
   t: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '24 / 7 security support, threat hunting training, custom development, and dedicated security manager.',
     complianc,
   e: [,
       'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com / ai - powered - threat - hunting - platform'
     icon: ''
     color: 'from - purple - 500 to - indigo - 600'
@@ -360,7 +332,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     implementationDetails: 'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.'
     roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.'
     useCases: [;
-=======
     lin,
   k: 'http,
   s://ziontechgroup.com / ai - powered - threat - hunting - platform',
@@ -391,13 +362,11 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   i: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.'
     useCase,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Secure remote access'
       'Application access control'
       'Cloud security'
       'Compliance management'
       'Identity governance'
-<<<<<<< HEAD
       'Risk management',
     ],
     integrations: [,
@@ -419,7 +388,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       trial_days: 21;
       setup_time: '1 - 2 weeks',
       enterprise: 'Custom pricing',
-=======
       'Risk management'
     ]
     integration,
@@ -458,7 +426,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   e: '1 - 2 weeks',
       enterpris,
   e: 'Custom pricing',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -490,7 +457,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       'Educational institutions',
       'Remote workforces',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'Leading zero - trust platform. Competes with Zscaler ($5 - 15 / user), Palo Alto Prisma ($7 - 15 / user), and Cloudflare Access ($3 - 7/user). Our advantage: AI - powered risk assessment and continuous verification.',
     competitors: [,
@@ -499,7 +465,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     tech_stack: ['OpenAI GPT - 4, React, Node.js, PostgreSQL, Redis, Kubernetes'],
     real_implementation: true;
     implementation_details: unknown;
-=======
     market_positio,
   n: unknown,
       'Leading zero - trust platform. Competes with Zscaler ($5 - 15 / user), Palo Alto Prisma ($7 - 15 / user), and Cloudflare Access ($3 - 7/user). Our,
@@ -514,7 +479,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Production - ready zero - trust platform with enterprise - grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.',
     ro,
   i: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.',
@@ -531,7 +495,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   s: [,
       'Active Directory, LDAP, SAML, OAuth, Custom identity providers',
     ],
-<<<<<<< HEAD
     support: unknown;
       '24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'],
@@ -560,7 +523,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       trial_days: 30;
       setup_time: '2 - 4 weeks',
       enterprise: 'Custom pricing',
-=======
     suppor,
   t: unknown,
       '24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.',
@@ -614,7 +576,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   e: '2 - 4 weeks',
       enterpris,
   e: 'Custom pricing',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -646,11 +607,9 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       'Research institutions',
       'Critical infrastructure',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'First - to - market quantum key distribution network. No direct competitors in commercial QKD space. Traditional competitors: Classical encryption providers. Our advantage: Quantum entanglement security.',
     competitors: [,
-=======
     market_positio,
   n: unknown,
       'First - to - market quantum key distribution network. No direct competitors in commercial QKD space. Traditional,
@@ -658,22 +617,18 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   advantage: Quantum entanglement security.',
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Classical encryption providers, Quantum computing companies',
     ],
     tech_stac,
   k: [,
       'Quantum hardware, Quantum protocols, Python, C++, Custom quantum software',
     ],
-<<<<<<< HEAD
     real_implementation: true;
     implementation_details: unknown;
-=======
     real_implementatio,
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Production - ready quantum key distribution network with quantum hardware, network infrastructure, and comprehensive monitoring. Includes quantum network management tools.',
     ro,
   i: 'Organizations achieve unlimited ROI through unbreakable security and future - proof communications.',
@@ -690,18 +645,14 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   s: [,
       'Custom quantum protocols, Classical encryption systems, Network infrastructure',
     ],
-<<<<<<< HEAD
     support: unknown;
-=======
     suppor,
   t: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum experts, implementation consulting, custom protocol development, and 24 / 7 technical support.',
     complianc,
   e: [,
       'Highest security standards, Government security requirements, Industry - specific standards',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com / quantum - key - distribution - network'
     icon: ''
     color: 'from - purple - 500 to - pink - 600'
@@ -718,7 +669,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     implementationDetails: 'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.'
     roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.'
     useCases: [;
-=======
     lin,
   k: 'http,
   s://ziontechgroup.com / quantum - key - distribution - network',
@@ -751,28 +701,23 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   i: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.'
     useCase,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Application security testing'
       'Network vulnerability assessment'
       'Cloud security scanning'
       'Compliance auditing'
       'Penetration testing'
-<<<<<<< HEAD
       'Security monitoring',
     ],
     integrations: [,
-=======
       'Security monitoring'
     ]
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'
     ]
     suppor,
   t: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
-<<<<<<< HEAD
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment'
     icon: ''
@@ -782,7 +727,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     customers: 2500;
     rating: 4.8;
     reviews: 1900;
-=======
     complianc,
   e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     lin,
@@ -802,7 +746,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   g: 4.8,
     review,
   s: 1900,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
     ];
@@ -811,7 +754,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     suppor,
   t: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
-<<<<<<< HEAD
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
     id: 'ai - powered - vulnerability - assessment',
@@ -827,7 +769,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       trial_days: 14;
       setup_time: '1 - 3 days',
       enterprise: 'Custom pricing',
-=======
     complianc,
   e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     lin,
@@ -858,7 +799,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   e: '1 - 3 days',
       enterpris,
   e: 'Custom pricing',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -890,14 +830,12 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       'Security consultants',
       'Penetration testers',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'Leading AI - powered vulnerability assessment platform. Competes with Nessus ($2, 190 - 6) 570 / year), Qualys ($2, 000 - 5) 000 / year), and Rapid7 ($2, 000 - 8) 000 / year). Our advantage: AI intelligence and automated remediation.',
     competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix'],
     tech_stack: ['OpenAI GPT - 4, TensorFlow, React, Node.js, PostgreSQL, Redis'],
     real_implementation: true;
     implementation_details: unknown;
-=======
     market_positio,
   n: unknown,
       'Leading AI - powered vulnerability assessment platform. Competes with Nessus ($2, 190 - 6) 570 / year), Qualys ($2, 000 - 5) 000 / year), and Rapid7 ($2, 000 - 8) 000 / year). Our,
@@ -910,7 +848,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Production - ready vulnerability assessment platform with AI - powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.',
     ro,
   i: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.',
@@ -927,7 +864,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   s: [,
       'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools',
     ],
-<<<<<<< HEAD
     support: unknown;
       '24 / 7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
@@ -975,7 +911,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     reviews: 1900;
     rating: 4.8;
     reviews: 1900;
-=======
     suppor,
   t: unknown,
       '24 / 7 technical support, security consulting, custom development, and dedicated success manager.',
@@ -1079,7 +1014,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   g: 4.8,
     review,
   s: 1900,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   }
@@ -1088,7 +1022,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
 ;
   }
 ];
-<<<<<<< HEAD
 export interface CybersecurityQuantumService {;
   id: string;
   name: string;
@@ -1355,7 +1288,6 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 ];
     rating: 4.8;
     reviews: 1900;
-=======
 export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   e: string}
     enterpris,
@@ -1768,7 +1700,6 @@ export const,
   g: 4.8,
     review,
   s: 1900,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export interface CybersecurityQuantumService export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}

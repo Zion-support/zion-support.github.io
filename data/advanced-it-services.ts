@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -38,7 +37,6 @@ export const advancedITServices: AdvancedITService[] = [
     period: '/month',
     description: 'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical-quantum workflows for enterprise applications.',
     features: [,
-=======
   i,
   d: string;
   nam,
@@ -115,7 +113,6 @@ export const,
   n: 'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical-quantum workflows for enterprise applications.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum computing resources',
       'Quantum algorithm library',
       'Hybrid classical-quantum workflows',
@@ -127,7 +124,6 @@ export const,
       'API for integration',
       '24/7 quantum support'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-indigo-700',
@@ -166,7 +162,6 @@ export const,
     price: '$1, 999',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -243,7 +238,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real - time applications.',
     feature,
   s: [,
@@ -258,15 +252,12 @@ export const,
       'Integration tools',
       '24 / 7 support',
     ],
-<<<<<<< HEAD
     popular: true;
     website: string;
-=======
     popula,
   r: true,
     websit,
   e: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   realImplementatio,
   n: boolean;
@@ -281,7 +272,6 @@ export const,
   review,
   s: number;
 ;
-<<<<<<< HEAD
 export const advancedITServices: AdvancedITService[] = [
     id: 'quantum - cloud - platform',
     name: 'Quantum Cloud Platform',
@@ -289,7 +279,6 @@ export const advancedITServices: AdvancedITService[] = [
     price: '$9, 999',
     period: '/month',
     description: unknown;
-=======
 export const,
   advancedITServices: AdvancedITService[] = [,
     i,
@@ -304,7 +293,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical - quantum workflows for enterprise applications.',
     feature,
   s: [,
@@ -319,7 +307,6 @@ export const,
       'API for integration',
       '24 / 7 quantum support',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - blue - 600 to - indigo - 700'
@@ -334,7 +321,6 @@ export const,
     category: 'Quantum Computing',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -362,7 +348,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing',
       'Cloud Infrastructure',
       'Quantum Algorithms',
@@ -392,7 +377,6 @@ export const,
       'AWS Braket ($5000+/month)',
       'Google Quantum AI',
     ],
-<<<<<<< HEAD
     market_size: '$500M quantum computing market'
     growth_rate: '500% annual growth'
     variant: 'quantum - cloud'
@@ -416,7 +400,6 @@ export const,
     price: '$1, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$500M quantum computing market',
     growth_rat,
@@ -461,7 +444,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real - time applications.',
     feature,
   s: [,
@@ -476,7 +458,6 @@ export const,
       'Integration tools',
       '24 / 7 support',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - green - 600 to - emerald - 700'
@@ -491,7 +472,6 @@ export const,
     category: 'Edge Computing',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -519,7 +499,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Edge Computing',
       'AI / ML',
       'IoT',
@@ -541,7 +520,6 @@ export const,
       'Edge AI',
       'Smart manufacturing',
     ],
-<<<<<<< HEAD
     roi: '300% ROI within 6 months through reduced latency and improved performance',
     competitors: ['AWS Greengrass ($1000+/month)', 'Azure IoT Edge ($2000+/month)', 'Google Cloud IoT'],
     marketSize: '$50B edge computing market'
@@ -566,7 +544,6 @@ export const,
     price: '$3, 999',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: '300% ROI within 6 months through reduced latency and improved performance',
     competitor,
@@ -614,7 +591,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enterprise - grade zero trust security platform implementing the latest security principles with continuous verification, micro - segmentation, and advanced threat detection.',
     feature,
   s: [,
@@ -629,7 +605,6 @@ export const,
       'Security dashboard',
       '24/7 security support'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-red-600 to-orange-700'
@@ -642,7 +617,6 @@ export const,
     category: 'Cybersecurity',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -668,7 +642,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Zero Trust Architecture',
       'AI / ML',
       'Identity Management',
@@ -698,7 +671,6 @@ export const,
       'CrowdStrike ($5000+/month)',
       'Zscaler',
     ],
-<<<<<<< HEAD
     market_size: '$30B zero trust market'
     growth_rate: '200% annual growth'
     variant: 'zero - trust - futuristic'
@@ -721,7 +693,6 @@ export const,
     price: '$5,999'
     period: '/month',
     description:,
-=======
     market_siz,
   e: '$30B zero trust market',
     growth_rat,
@@ -765,7 +736,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI-powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and performance.'
     feature,
   s: [;
@@ -780,7 +750,6 @@ export const,
       'Migration dashboard'
       '24/7 support'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -788,7 +757,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-powered-cloud-migration',
     marketPosition: 'AI-enhanced cloud migration competing with Accenture and Deloitte',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -804,7 +772,6 @@ export const,
   n: 'AI-enhanced cloud migration competing with Accenture and Deloitte'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enterprises, Government agencies, Financial institutions, Healthcare organizations'
     trialDay,
   s: 30;
@@ -837,20 +804,16 @@ export const,
       'Performance improvement'
       'Security enhancement'
     ]
-<<<<<<< HEAD
     roi: '600% ROI within 12 months through cost savings and performance improvements'
     competitors: [
-=======
     ro,
   i: '600% ROI within 12 months through cost savings and performance improvements'
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Accenture ($50000+/month)'
       'Deloitte ($40000+/month)'
       'AWS Migration Hub'
     ]
-<<<<<<< HEAD
     marketSize: '$15B cloud migration market'
     growthRate: '200% annual growth'
     variant: 'ai-migration-futuristic'
@@ -874,7 +837,6 @@ export const,
     price: '$2, 499',
     period: '/month',
     description: unknown;
-=======
     marketSiz,
   e: '$15B cloud migration market'
     growthRat,
@@ -919,7 +881,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary AI - powered DevOps platform that automates deployment, testing, and monitoring while providing intelligent insights and optimization recommendations.',
     feature,
   s: [,
@@ -934,7 +895,6 @@ export const,
       'Mobile applications',
       '24 / 7 support',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - purple - 600 to - pink - 700'
@@ -949,7 +909,6 @@ export const,
     category: 'DevOps & Automation',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -977,7 +936,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI / ML',
       'DevOps',
       'CI / CD',
@@ -1001,7 +959,6 @@ export const,
       'Performance monitoring',
       'Security automation',
     ],
-<<<<<<< HEAD
     roi: '350% ROI within 6 months through automation and performance improvements',
     competitors: ['GitLab ($99+/month)', 'GitHub Actions ($1000+/month)', 'Jenkins'],
     marketSize: '$8B DevOps market'
@@ -1026,7 +983,6 @@ export const,
     price: '$4, 999',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: '350% ROI within 6 months through automation and performance improvements',
     competitor,
@@ -1074,7 +1030,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Complete enterprise blockchain platform providing secure, scalable, and compliant blockchain solutions for business applications, smart contracts, and decentralized systems.',
     feature,
   s: [,
@@ -1089,7 +1044,6 @@ export const,
       'Mobile applications',
       '24 / 7 support',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-yellow-600 to-orange-700'
@@ -1128,7 +1082,6 @@ export const,
     price: '$15, 999',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -1205,7 +1158,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum - enhanced data center providing unprecedented performance, security, and efficiency through quantum computing integration and AI optimization.',
     feature,
   s: [,
@@ -1220,7 +1172,6 @@ export const,
       '24 / 7 support',
       'Quantum support team',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - cyan - 600 to - blue - 700'
@@ -1235,7 +1186,6 @@ export const,
     category: 'Data Center & Infrastructure',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1263,7 +1213,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing',
       'AI / ML',
       'Data Center Infrastructure',
@@ -1293,7 +1242,6 @@ export const,
       'Azure ($40000+/month)',
       'Google Cloud ($45000+/month)',
     ],
-<<<<<<< HEAD
     market_size: '$200B data center market'
     growth_rate: '150% annual growth'
     variant: 'quantum - infrastructure'
@@ -1317,7 +1265,6 @@ export const,
     price: '$2, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$200B data center market',
     growth_rat,
@@ -1362,7 +1309,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI - powered network security platform providing real - time threat detection, automated response, and intelligent security analytics for enterprise networks.',
     feature,
   s: [,
@@ -1377,7 +1323,6 @@ export const,
       'Security dashboard',
       '24 / 7 security support',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - indigo - 600 to - purple - 700'
@@ -1392,7 +1337,6 @@ export const,
     category: 'Network Security',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1420,7 +1364,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI / ML',
       'Network Security',
       'Threat Intelligence',
@@ -1450,7 +1393,6 @@ export const,
       'Palo Alto Networks ($10000+/month)',
       'Fortinet ($5000+/month)',
     ],
-<<<<<<< HEAD
     market_size: '$25B network security market'
     growth_rate: '180% annual growth'
     variant: 'ai - network - futuristic'
@@ -1474,7 +1416,6 @@ export const,
     price: '$3, 499',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$25B network security market',
     growth_rat,
@@ -1519,7 +1460,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum - enhanced IoT platform providing secure, intelligent, and scalable IoT solutions with quantum encryption and AI - powered analytics.',
     feature,
   s: [,
@@ -1534,7 +1474,6 @@ export const,
       'Mobile applications',
       '24 / 7 support',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - green - 600 to - teal - 700'
@@ -1549,7 +1488,6 @@ export const,
     category: 'Quantum IoT',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1577,7 +1515,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing',
       'IoT',
       'AI / ML',
@@ -1607,7 +1544,6 @@ export const,
       'Azure IoT ($2000+/month)',
       'Google Cloud IoT ($1500+/month)',
     ],
-<<<<<<< HEAD
     market_size: '$100B IoT market'
     growth_rate: '250% annual growth'
     variant: 'quantum - iot - futuristic'
@@ -1631,7 +1567,6 @@ export const,
     price: '$5, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$100B IoT market',
     growth_rat,
@@ -1676,7 +1611,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI - powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and performance.',
     feature,
   s: [,
@@ -1691,7 +1625,6 @@ export const,
       'Migration dashboard',
       '24 / 7 support',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -1733,7 +1666,6 @@ export const,
     customers: 89;
     rating: 4 && 4.8;
     reviews: 45;
-=======
     popula,
   r: true,
     ico,
@@ -1816,7 +1748,6 @@ export const,
   g: 4 && 4.8,
     review,
   s: 45,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 ;
@@ -1833,7 +1764,6 @@ export interface AdvancedITService {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -2229,7 +2159,6 @@ export const advancedITServices: AdvancedITService[] = [;
     customers: 89;
     rating: 4.8;
     reviews: 45;
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -2488,7 +2417,6 @@ export const,
   g: 4.8;
     review,
   s: 45,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 export interface AdvancedITService {/* TODO: Fix JSX expression */}
   }

@@ -1,10 +1,8 @@
-<<<<<<< HEAD:app/sitemap.ts
 // sitemap file;
 // This file is under development;
 export default function sitemap() {
   return null;
 }
-=======
 
 
 export default function sitemap(): MetadataRoute.Sitemap {const _baseUrl = 'https://ziontechgroup.com'}
@@ -54,4 +52,3 @@ export default function sitemap(): MetadataRoute.Sitemap {const _baseUrl = 'http
 }
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174:src/sitemap.ts

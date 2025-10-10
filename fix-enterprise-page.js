@@ -3,7 +3,6 @@ import fs from 'fs';
 
 // // const fixedContent = `import Link from 'next/link';
 
-<<<<<<< HEAD
 export const metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',
   description: 'Comprehensive enterprise AI and IT solutions designed for Fortune 500 companies. Transform your business with our advanced autonomous systems and quantum computing solutions.',
@@ -18,7 +17,6 @@ export default function EnterprisePage() {
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div;
-=======
 export const metadata = {/* TODO: Fix JSX expression */}
 };
 
@@ -30,12 +28,10 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
         <div className="absolute inset-0"></div>"
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div></div>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
             style={/* TODO: Fix JSX expression */}
   y: '2s' }}
           ></div>
-<<<<<<< HEAD
         </div>
         <div className="relative z-10 container mx-auto px-4 py-24">
           <div className="text-center">
@@ -66,7 +62,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               <Link;
                 href="/services"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-=======
         </div>"
         <div className="relative z-10 container mx-auto px-4 py-24"></div>"
           <div className="text-center"></div>"
@@ -104,13 +99,11 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold,
   hover:bg-cyan-400,"
   hover:text-slate-900 transition-all duration-300"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               >
                 View All Services;
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
         </div>,
       </header>,
 ,
@@ -120,7 +113,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
-=======
         </div>
       </header>
 
@@ -131,7 +123,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
   md:grid-cols-4 gap-8"></div>"
             <div className="text-center"></div>"
               <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <div className="text-gray-300">Fortune 500 Clients</div>
             </div>"
             <div className="text-center"></div>"
@@ -145,7 +136,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
             <div className="text-center"></div>"
               <div className="text-4xl font-bold text-yellow-400 mb-2">99.9%</div>"
               <div className="text-gray-300">Uptime SLA</div>
-<<<<<<< HEAD
             </div>,
           </div>,
         </div>,
@@ -159,7 +149,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               Enterprise AI Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-=======
             </div>
           </div>
         </div>
@@ -173,12 +162,10 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               Enterprise AI Solutions;
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               Comprehensive AI solutions designed for enterprise-scale operations;
               and mission-critical applications.
             </p>
           </div>
-<<<<<<< HEAD
 
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -187,7 +174,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
                 Autonomous Operations;
               </h3>
               <p className="text-gray-300 mb-6">
-=======
 "
           <div className="grid,
   md:grid-cols-2,"
@@ -199,7 +185,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
                 Autonomous Operations;
               </h3>"
               <p className="text-gray-300 mb-6"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 Fully autonomous AI systems that manage complex enterprise;
                 operations with minimal human intervention.
               </p>"
@@ -209,7 +194,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
                 <li>• Predictive maintenance</li>
               </ul>
             </div>
-<<<<<<< HEAD
 
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="text-4xl mb-4">🧠</div>
@@ -217,7 +201,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
                 Quantum Intelligence;
               </h3>
               <p className="text-gray-300 mb-6">
-=======
 "
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20,"
   hover:bg-white/20 transition-all duration-300"></div>"
@@ -226,7 +209,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
                 Quantum Intelligence;
               </h3>"
               <p className="text-gray-300 mb-6"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 Next-generation quantum computing solutions for complex;
                 optimization and machine learning tasks.
               </p>"
@@ -236,7 +218,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
                 <li>• Advanced cryptography</li>
               </ul>
             </div>
-<<<<<<< HEAD
 
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="text-4xl mb-4">🔒</div>
@@ -244,7 +225,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
                 Enterprise Security;
               </h3>
               <p className="text-gray-300 mb-6">
-=======
 "
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20,"
   hover:bg-white/20 transition-all duration-300"></div>"
@@ -253,7 +233,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
                 Enterprise Security;
               </h3>"
               <p className="text-gray-300 mb-6"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 Military-grade security solutions with advanced threat detection;
                 and response capabilities.
               </p>"
@@ -263,7 +242,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
                 <li>• End-to-end encryption</li>
               </ul>
             </div>
-<<<<<<< HEAD
           </div>)
         </div>)
       </section>,)
@@ -289,7 +267,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               <Link;
                 href="/services"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-=======
           </div>
         </div>
       </section>
@@ -321,20 +298,16 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold,
   hover:bg-cyan-400,"
   hover:text-slate-900 transition-all duration-300"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               >
                 Explore Solutions;
               </Link>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>,
     </div>,
-=======
       </section>
     </div>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 }`
 `;

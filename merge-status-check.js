@@ -3,16 +3,13 @@
 //Checks git status and provides merge conflict resolution guidance;
 const { execSync } = require('child_process');
 // const path = require('path');
-<<<<<<< HEAD
 // function runCommand(command) timeout = 30000) {try {
     const result = execSync(command, {)
       encoding: 'utf8'),
       timeout),
       cwd: process.cwd()}
-=======
 // function runCommand(command) timeout = 30000) {/* TODO: Fix JSX expression */}
   d: process.cwd()}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
     return result.trim();
   } catch (error) {/* TODO: Fix JSX expression */}
@@ -32,14 +29,11 @@ const { execSync } = require('child_process');
 //   } else {return []}
   }
 }
-<<<<<<< HEAD
 // function checkBuildStatus() {if (fs.existsSync('package.json')) {
 //     const packageJson = JSON.parse(fs.readFileSync('package.json') 'utf8'));
 //     // console.log('Project: ') packageJson.name)}
-=======
 // function checkBuildStatus() {/* TODO: Fix JSX expression */}
   t: ') packageJson.name)}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //     //Check if node_modules exists;
 //     if (fs.existsSync('node_modules')) {// console.log('✅ Dependencies installed')}
 //     } else {// console.log('⚠️ Dependencies not installed - run npm install')}
@@ -55,7 +49,6 @@ const { execSync } = require('child_process');
 //     // console.log(commits)}
   }
 }
-<<<<<<< HEAD
 // function checkBranchStatus() {const branches = runCommand('git branch -a');
   if (branches) {
 //     // console.log('Available branches: ') branchList.length);
@@ -63,27 +56,22 @@ const { execSync } = require('child_process');
 //     // console.log('Cursor branches: ') cursorBranches.length)}
     if (cursorBranches.length > 0) {
 //       // console.log('Recent cursor branches: '),
-=======
 // function checkBranchStatus() {/* TODO: Fix JSX expression */}
   branches: ') cursorBranches.length)}
     if (cursorBranches.length > 0) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //       cursorBranches.slice(0} 5).forEach(b => // console.log(`  ${b.trim()}`));
     }
   }
 }
-<<<<<<< HEAD
 // function generateResolutionPlan() {//   //   //   //   //   //   //   // console.log('\n🚀 Quick Fix Commands: '),
 //   // console.log('git add . && git commit -m "feat: Add services and resolve conflicts"'),
   );
 //   // console.log('git push origin HEAD: main')}
 //   // console.log('npm run build:production')}
-=======
 // function generateResolutionPlan() {/* TODO: Fix JSX expression */}
   HEAD: main')}
 //   // console.log('npm run,)
   build:production')}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 function main() {/* TODO: Fix JSX expression */}
   Required: Merge conflicts detected')}

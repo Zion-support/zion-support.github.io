@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -99,7 +98,6 @@ const contact =
   launchDate: string, customers: number;
   rating: number;
   reviews: number;
-=======
   i,
   d: string;
   nam,
@@ -312,7 +310,6 @@ const contact =
   g: number,
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 const contact =
   mobil,
@@ -321,7 +318,6 @@ const contact =
   addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi-cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.',
-<<<<<<< HEAD
   website: 'https://ziontechgroup.com',
 }
 ;
@@ -334,7 +330,6 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [;
     price: '$399',
     period: '/month',
     description: unknown;
-=======
   websit,
   e: 'http,
   s://ziontechgroup.com'
@@ -356,7 +351,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi - cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.',
       'Infrastructure as Code (IaC) automation',
       'Multi - cloud management and orchestration',
@@ -369,7 +363,6 @@ export const,
       'Custom automation workflows',
       'Advanced analytics and reporting',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - blue - 600 to - indigo - 600'
@@ -384,7 +377,6 @@ export const,
     category: 'Cloud Infrastructure & DevOps',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -413,7 +405,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Terraform',
       'Kubernetes',
       'Docker',
@@ -438,7 +429,6 @@ export const,
       'Cost optimization',
       'Security compliance',
     ],
-<<<<<<< HEAD
     roi: 'Organizations report 200% ROI through reduced infrastructure costs and improved operational efficiency.',
     competitors: ['Terraform Cloud', 'AWS CloudFormation', 'Pulumi', 'Ansible'],
     market_size: '$45.2B cloud infrastructure market'
@@ -451,7 +441,6 @@ export const,
     customers: 89;
     rating: 4 && 4.8;
     reviews: 45;
-=======
     ro,
   i: 'Organizations report 200% ROI through reduced infrastructure costs and improved operational efficiency.',
     competitor,
@@ -475,12 +464,10 @@ export const,
   g: 4 && 4.8,
     review,
   s: 45,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
       'AI-powered threat detection and analysis',
       'Real-time security monitoring and alerting',
   // Cybersecurity & Threat Intelligence;
-<<<<<<< HEAD
     id: 'ai - cybersecurity - threat - intelligence',
     name: 'AI Cybersecurity Threat Intelligence Platform',
     tagline: unknown;
@@ -488,7 +475,6 @@ export const,
     price: '$299',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'ai - cybersecurity - threat - intelligence',
     nam,
@@ -502,7 +488,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Intelligent cybersecurity platform that uses AI to detect, analyze, and respond to security threats in real - time. Features include threat hunting, incident response automation, and security analytics.',
     feature,
   s: [,
@@ -517,7 +502,6 @@ export const,
       'Advanced threat hunting capabilities',
       'Comprehensive security reporting',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - red - 600 to - pink - 600'
@@ -532,7 +516,6 @@ export const,
     category: 'Cybersecurity & Threat Intelligence',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -561,7 +544,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Python',
       'TensorFlow',
       'React',
@@ -585,7 +567,6 @@ export const,
       'Security monitoring',
       'Compliance reporting',
     ],
-<<<<<<< HEAD
     roi: 'Organizations see 300% ROI through improved security posture and reduced breach risks.',
     competitors: ['CrowdStrike', 'Palo Alto Networks', 'Symantec', 'McAfee'],
     market_size: '$20.1B cybersecurity market'
@@ -608,7 +589,6 @@ export const,
     price: '$249',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Organizations see 300% ROI through improved security posture and reduced breach risks.',
     competitor,
@@ -648,7 +628,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive data engineering platform that uses AI to automate data pipeline creation, optimize data processing, and provide intelligent analytics. Features include ETL automation, data quality monitoring, and real - time analytics.',
     feature,
   s: [,
@@ -663,7 +642,6 @@ export const,
       'Advanced analytics and visualization',
       'API for custom integrations',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - green - 600 to - emerald - 600'
@@ -678,7 +656,6 @@ export const,
     category: 'Data Engineering & Analytics',
     real_service: true;
     technology: [,
-=======
     popula,
   r: false,
     ico,
@@ -707,7 +684,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Python',
       'Apache Airflow',
       'Apache Kafka',
@@ -732,7 +708,6 @@ export const,
       'Real - time analytics',
       'Data governance',
     ],
-<<<<<<< HEAD
     roi: 'Data teams report 250% ROI through improved pipeline efficiency and data quality.',
     competitors: ['Apache Airflow', 'DataFactory', 'Fivetran', 'Talend'],
     market_size: '$28.5B data engineering market'
@@ -755,7 +730,6 @@ export const,
     price: '$199',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Data teams report 250% ROI through improved pipeline efficiency and data quality.',
     competitor,
@@ -795,7 +769,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced API management platform that uses AI to optimize API performance, monitor usage patterns, and provide intelligent insights. Features include API design automation, performance optimization, and developer experience enhancement.',
     feature,
   s: [,
@@ -810,7 +783,6 @@ export const,
       'Real - time monitoring and alerting',
       'Advanced reporting and analytics',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - purple - 600 to - indigo - 600'
@@ -826,7 +798,6 @@ export const,
     real_service: true;
     technology: ['Node.js', 'React', 'Python', 'PostgreSQL', 'Redis', 'Docker'],
     integrations: [,
-=======
     popula,
   r: false,
     ico,
@@ -857,7 +828,6 @@ export const,
   y: ['Node.js', 'React', 'Python', 'PostgreSQL', 'Redis', 'Docker'],
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Kubernetes',
       'Docker',
       'AWS',
@@ -873,7 +843,6 @@ export const,
       'Security management',
       'Analytics and monitoring',
     ],
-<<<<<<< HEAD
     roi: 'Organizations report 200% ROI through improved API performance and developer productivity.',
     competitors: ['Kong', 'Apigee', 'AWS API Gateway', 'Azure API Management'],
     market_size: '$15.8B API management market'
@@ -896,7 +865,6 @@ export const,
     price: '$179',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Organizations report 200% ROI through improved API performance and developer productivity.',
     competitor,
@@ -936,7 +904,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced network monitoring platform that uses AI to detect network issues, optimize performance, and provide predictive maintenance. Features include real - time monitoring, automated troubleshooting, and network analytics.',
     feature,
   s: [,
@@ -951,7 +918,6 @@ export const,
       'Mobile app for network administrators',
       'API for custom integrations',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - cyan - 600 to - blue - 600'
@@ -967,7 +933,6 @@ export const,
     technology: ['Python', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'SNMP'],
     integrations: ['Cisco', 'Juniper', 'HP', 'Dell', 'VMware', 'Hyper - V'],
     use_cases: [,
-=======
     popula,
   r: false,
     ico,
@@ -999,14 +964,12 @@ export const,
   s: ['Cisco', 'Juniper', 'HP', 'Dell', 'VMware', 'Hyper - V'],
     use_case,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Network monitoring',
       'Performance optimization',
       'Issue resolution',
       'Security monitoring',
       'Capacity planning',
     ],
-<<<<<<< HEAD
     roi: 'Organizations see 250% ROI through reduced network downtime and improved performance.',
     competitors: ['SolarWinds', 'PRTG', 'Nagios', 'Zabbix'],
     market_size: '$12.3B network monitoring market'
@@ -1029,7 +992,6 @@ export const,
     price: '$159',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Organizations see 250% ROI through reduced network downtime and improved performance.',
     competitor,
@@ -1069,7 +1031,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced database optimization platform that uses AI to improve database performance, automate tuning, and provide intelligent recommendations. Features include query optimization, performance monitoring, and automated maintenance.',
     feature,
   s: [,
@@ -1084,7 +1045,6 @@ export const,
       'Automated maintenance scheduling',
       'Advanced reporting and insights',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - orange - 600 to - red - 600'
@@ -1099,7 +1059,6 @@ export const,
     category: 'Database Management & Optimization',
     real_service: true;
     technology: [,
-=======
     popula,
   r: false,
     ico,
@@ -1128,7 +1087,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Python',
       'React',
       'Node && Node.js',
@@ -1162,7 +1120,6 @@ export const,
       'Redgate SQL Monitor',
       'Idera SQL Diagnostic Manager',
     ],
-<<<<<<< HEAD
     market_size: '$8.9B database management market'
     growth_rate: '15% annual growth'
     contact_info: contact;
@@ -1182,7 +1139,6 @@ export const,
     price: '$129',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$8.9B database management market',
     growth_rat,
@@ -1217,7 +1173,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive IT service management platform that uses AI to automate service requests, optimize workflows, and improve user experience. Features include ticket automation, knowledge management, and service analytics.',
     feature,
   s: [,
@@ -1232,7 +1187,6 @@ export const,
       'Mobile app for users and agents',
       'API for custom integrations',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - teal - 600 to - cyan - 600'
@@ -1246,7 +1200,6 @@ export const,
     category: 'IT Service Management',
     real_service: true;
     technology: [,
-=======
     popula,
   r: false,
     ico,
@@ -1274,7 +1227,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'React',
       'Node && Node.js',
       'Python',
@@ -1308,7 +1260,6 @@ export const,
       'Freshservice',
       'Zendesk',
     ],
-<<<<<<< HEAD
     market_size: '$18.5B IT service management market'
     growth_rate: '20% annual growth'
     contact_info: contact;
@@ -1328,7 +1279,6 @@ export const,
     price: '$199',
     period: '/month',
     description:,
-=======
     market_siz,
   e: '$18.5B IT service management market',
     growth_rat,
@@ -1363,7 +1313,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced backup and disaster recovery platform that uses AI to optimize backup strategies, automate recovery processes, and ensure business continuity. Features include intelligent backup scheduling, automated testing, and recovery orchestration.'
     feature,
   s: [;
@@ -1378,7 +1327,6 @@ export const,
       'Comprehensive recovery analytics'
       'API for custom integrations'
     ]
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-gray-600 to-slate-600'
@@ -1392,7 +1340,6 @@ export const,
     category: 'Backup & Disaster Recovery'
     realService: true;
     technology: [;
-=======
     popula,
   r: false;
     ico,
@@ -1420,7 +1367,6 @@ export const,
   e: true;
     technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Python'
       'React'
       'Node.js'
@@ -1437,17 +1383,13 @@ export const,
       'Hyper-V'
       'Docker'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Backup automation'
       'Disaster recovery'
       'Data protection'
       'Business continuity'
-<<<<<<< HEAD
       'Compliance management',
     ],
     roi: 'Organizations report 400% ROI through improved data protection and reduced downtime.',
@@ -1473,7 +1415,6 @@ export const,
 ];
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>;
   return specializedITSolutions2026.filter(solution => solution.category === category),
-=======
       'Compliance management'
     ]
     ro,
@@ -1516,7 +1457,6 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>;
 export const getSpecializedITSolutions2026ByCategory = (categor,)
   y: string) =>;
   return specializedITSolutions2026.filter(solution => solution.category === category)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   ),
 }
 export const getPopularSpecializedITSolutions2026 = () =>
@@ -1527,26 +1467,22 @@ export const getPopularSpecializedITSolutions2026 = () => {/* TODO: Fix JSX expr
 ];
   return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => solution && solution.popular);
 };
-<<<<<<< HEAD
 export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number)
   maxPrice: number),
 ) =>,
   return specializedITSolutions2026 && specializedITSolutions2026.filter(solution =>,)
-=======
 export const getSpecializedITSolutions2026ByPriceRange = (minPric,)
   e: number)
   maxPric,
   e: number)
 ) =>
   return specializedITSolutions2026 && specializedITSolutions2026.filter(solution =>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const _price = parseInt(solution && solution.price.replace('$') ''));
     return price >= minPrice && price <= maxPrice;
   })
 };    return price >= minPrice && price <= maxPrice;
   })
 }
-<<<<<<< HEAD
     id: 'cloud-infrastructure-automation', name: 'Cloud Infrastructure Automation Platform',
     tagline: 'Automate cloud infrastructure deployment and management with intelligent orchestration', price: '$399',
     period: '/month',
@@ -1757,7 +1693,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric,)
 ];
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
   return specializedITSolutions2026.filter(solution => solution.category === category),
-=======
     i,
   d: 'cloud-infrastructure-automation', nam,
   e: 'Cloud Infrastructure Automation Platform',
@@ -2234,33 +2169,26 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
 export const getSpecializedITSolutions2026ByCategory = (categor,)
   y: string) =>,
   return specializedITSolutions2026.filter(solution => solution.category === category)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const getPopularSpecializedITSolutions2026 = () =>
   return specializedITSolutions2026.filter(solution => solution.popular)
 };
-<<<<<<< HEAD
 export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number) maxPrice: number) =>,
   return specializedITSolutions2026.filter(solution =>,)
-=======
 export const getSpecializedITSolutions2026ByPriceRange = (minPric,)
   e: number) maxPric,
   e: number) =>,
   return specializedITSolutions2026.filter(solution =>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const _price = parseInt(solution.price.replace('$') ''));
     return price >= minPrice && price <= maxPrice;
   })
 };
 ;
-<<<<<<< HEAD
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>: unknown;
   return specializedITSolutions2026.filter(,)
-=======
 export const getSpecializedITSolutions2026ByCategory = (categor,)
   y: string) =>: unknown;
   return specializedITSolutions2026.filter ()
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     solution => solution.category === category);
 }
 ;
@@ -2268,17 +2196,14 @@ export const getPopularSpecializedITSolutions2026 = () =>: unknown;
   return specializedITSolutions2026.filter (solution => solution.popular);
 }
 ;
-<<<<<<< HEAD
 export const getSpecializedITSolutions2026ByPriceRange = (min_price: number)
   max_price: number) =>: unknown;
   return specializedITSolutions2026.filter(solution =>),
-=======
 export const getSpecializedITSolutions2026ByPriceRange = (min_pric,)
   e: number)
   max_pric,
   e: number) =>: unknown,
   return specializedITSolutions2026.filter (solution =>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const _price = parse_int (solution.price.replace ('$') ''));
     return price >= min_price && price <= max_price;
   });
@@ -2292,14 +2217,11 @@ export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   })
 };
 ;
-<<<<<<< HEAD
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>: unknown;
   return specializedITSolutions2026.filter(,)
-=======
 export const getSpecializedITSolutions2026ByCategory = (categor,)
   y: string) =>: unknown;
   return specializedITSolutions2026.filter ()
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     solution => solution.category === category);
 }
 export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
@@ -2307,14 +2229,12 @@ export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -2327,24 +2247,20 @@ export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   g: number;
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ;
 export const getPopularSpecializedITSolutions2026 = () =>: unknown;
   return specializedITSolutions2026.filter (solution => solution.popular);
 }
 ;
-<<<<<<< HEAD
 export const getSpecializedITSolutions2026ByPriceRange = (min_price: number)
   max_price: number) =>: unknown;
   return specializedITSolutions2026.filter(solution =>),
-=======
 export const getSpecializedITSolutions2026ByPriceRange = (min_pric,)
   e: number)
   max_pric,
   e: number) =>: unknown,
   return specializedITSolutions2026.filter (solution =>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const _price = parse_int (solution.price.replace ('$') ''));
     return price >= min_price && price <= max_price;
   });

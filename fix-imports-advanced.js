@@ -6,7 +6,6 @@ import { fileURLToPath } from 'url';
 function getRelativePath(fromPath, toPath) {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 function processFile(filePath) {
   try {
     // Calculate relative paths based on file location;
@@ -16,15 +15,12 @@ function processFile(filePath) {
     } else if (isInComponents) {
       utilsPath = '../utils/';
       typesPath = '../types/';
-=======
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     } else if (isInComponents) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     // Define replacements with dynamic paths;
     const replacements = [
-<<<<<<< HEAD
       {
         pattern: /import\s+Link\s+from\s+'next\/link';/g;
         replacement: `import Link from '${utilsPath}link';`,
@@ -36,7 +32,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       {
         pattern: /import\s+dynamic\s+from\s+'next\/dynamic';/g;
         replacement: `import dynamic from '${utilsPath}dynamic';`,
-=======
       {/* TODO: Fix JSX expression */}
   t: `import Link from '${utilsPath}link';`,
       },
@@ -45,7 +40,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       },
       {/* TODO: Fix JSX expression */}`
   t: `import dynamic from '${utilsPath}dynamic';`,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
       {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*useRouter\s*}\s+from\s+'next\/navigation';/g,
@@ -77,13 +71,10 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
         replacemen,`
   t: `import type { Metadata } from '${typesPath}next';`,
       },
-<<<<<<< HEAD
       {
         pattern: /'use client';/g;
         replacement: "// 'use client'; // Removed for Vite compatibility",
-=======
       {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
     ];
 
@@ -98,7 +89,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   }
 }
 
-<<<<<<< HEAD
 function processDirectory(dirPath) {
 
   items.forEach(item => {)
@@ -108,10 +98,8 @@ function processDirectory(dirPath) {
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
         totalFixed++;
-=======
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
   });
@@ -119,8 +107,5 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
   return totalFixed;
 }
 
-<<<<<<< HEAD
 // Process the app directory;
-=======
 // Process the app directory;`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

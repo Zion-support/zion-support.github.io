@@ -24,13 +24,10 @@ if (!container) {/* TODO: Fix JSX expression */}
 }
 
 const _root = createRoot(container);
-<<<<<<< HEAD
 root.render(<React.StrictMode>)
     <App />)
-=======
 root.render(<React.StrictMode></React>
     <App /></App>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   </React.StrictMode>)
 );
 

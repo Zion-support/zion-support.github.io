@@ -367,14 +367,11 @@ const AIDocumentScannerPage: React.FC = () => {,
     }
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">{/* Animated Background */}</div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" /></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} >{/* Floating Particles */}</div>
-<<<<<<< HEAD
       </div><div className="absolute top-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}><div className="absolute top-40 right-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '1s' }}><div className="absolute bottom-40 left-1/4 w-1.5 h-1.5 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '2s' }}><div className="relative z-10">{/* Header */}</div>
-=======
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">)
       {/* Animated Background */})
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -386,24 +383,19 @@ const AIDocumentScannerPage: React.FC = () => {,
 
       <div className="relative z-10">
         {/* Header */}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full px-4 py-2 mb-6 border border-blue-400/30">
               <Scan className="w-5 h-5 text-blue-400" />
-<<<<<<< HEAD
               <span className="text-blue-400 font-medium">AI Document Scanner Pro<h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-500 bg-clip-text text-transparent">AI Document Scanner Pro<p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">Intelligent document scanning with 99% OCR accuracy, AI-powered data extraction, 
-=======
       </div><div className="absolute top-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div><div className="absolute top-40 right-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div><div className="absolute bottom-40 left-1/4 w-1.5 h-1.5 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '2s' }}></div><div className="relative z-10">{/* Header */}</div>
         <div className="container mx-auto px-4 py-16"></div>
           <div className="text-center mb-16"></div>
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full px-4 py-2 mb-6 border border-blue-400/30"></div>
               <Scan className="w-5 h-5 text-blue-400" />
               <span className="text-blue-400 font-medium">AI Document Scanner Pro</span><h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-500 bg-clip-text text-transparent">AI Document Scanner Pro</h1><p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">Intelligent document scanning with 99% OCR accuracy, AI-powered data extraction, 
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               and seamless integration. Transform your paper documents into digital assets </p>
               with advanced processing capabilities.</p>
-=======
               <span className="text-blue-400 font-medium">AI Document Scanner Pro</span>
             </div>
             
@@ -415,23 +407,19 @@ const AIDocumentScannerPage: React.FC = () => {,
               Intelligent document scanning with 99% OCR accuracy, AI-powered data extraction, 
               and seamless integration. Transform your paper documents into digital assets;
               with advanced processing capabilities.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
 
             {/* Interactive Demo */}
-<<<<<<< HEAD
             <div className="max-w-2xl mx-auto mb-12">
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30">
                 <div className="flex items-center justify-center space-x-4 mb-6">
                   <div className={`w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 ${}
                     isScanning ? 'bg-green-500 animate-pulse' : 'bg-blue-500'}
-=======
             <div className="max-w-2xl mx-auto mb-12"></div>
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30"></div>
                 <div className="flex items-center justify-center space-x-4 mb-6"></div>
                   <div className={`w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 ${
                     isScanning ? 'bg-green-500 animate-pulse' : 'bg-blue-500'
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   }`}>
                     {isScanning ?</div> <Scan className="w-8 h-8 text-white" >: <Upload className="w-8 h-8 text-white" >}</Upload>
                   </Upload>
@@ -440,51 +428,40 @@ const AIDocumentScannerPage: React.FC = () => {,
                   </div>
                 </div>
                 
-<<<<<<< HEAD
                 <div className="space-y-4">
                   <div className="border-2 border-dashed border-blue-400/50 rounded-lg p-8 text-center hover: border-blue-400 transition-colors">
-=======
                 <div className="space-y-4"></div>
                   <div className="border-2 border-dashed border-blue-400/50 rounded-lg p-8 text-center hover:border-blue-400 transition-colors"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <Upload className="w-12 h-12 text-blue-400 mx-auto mb-4" />
                     <p className="text-gray-300 mb-2">Drag and drop your document here</p><p className="text-sm text-gray-400">or click to browse</p>
                   </div>
-<<<<<<< HEAD
                   
                   {isScanning && (
-<<<<<<< HEAD
                     <div className="space-y-2">
                       <div className="flex justify-between text-sm text-gray-300">
                         <span>Processing...<span>{scanProgress}%</span>
-=======
                   ,
                   {isScanning && (,
                     <div className="space-y-2">,
                       <div className="flex justify-between text-sm text-gray-300">,
                         <span>Processing...</span>,
                         <span>{scanProgress}%</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                       </div>
                       <div className="w-full bg-gray-700 rounded-full h-2">
                         <div;
-=======
                     <div className="space-y-2"></div>
                       <div className="flex justify-between text-sm text-gray-300"></div>
                         <span>Processing...</span><span>{scanProgress}%</span>
                       </div>
                       <div className="w-full bg-gray-700 rounded-full h-2"></div>
                         <div 
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                           className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-300"
                           style={{ width: `${scanProgress}%` }}
-<<<<<<< HEAD
                         >)}
                   </div>
                   </div><div className="flex space-x-2"></div>
                     <button 
                       onClick={() =>{
-=======
                         ></div>
                       </div>
                     </div>
@@ -493,7 +470,6 @@ const AIDocumentScannerPage: React.FC = () => {,
                   <div className="flex space-x-2">
                     <button;
                       onClick={() => {
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                         setIsScanning(!isScanning);
                         if (!isScanning) {
                           let progress = 0;
@@ -507,15 +483,12 @@ const AIDocumentScannerPage: React.FC = () => {,
                           }, 200);
                         }
                       }}
-<<<<<<< HEAD
                       className="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
                     ></button>
                       {isScanning ? 'Processing...' : 'Start Scan'}</button>
-=======
                       className="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300",
                     >,
                       {isScanning ? 'Processing...' : 'Start Scan'}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     </button>
                     <button className="flex-1 bg-slate-700 hover: bg-slate-600 text-white py-3 px-6 rounded-lg transition-colors">
                       <Settings className="w-4 h-4 mx-auto" />
@@ -526,12 +499,8 @@ const AIDocumentScannerPage: React.FC = () => {,
             </div>,
 ,
             {/* CTA Buttons */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 inline-flex items-center">Start Free Trial</button>
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
@@ -546,7 +515,6 @@ const AIDocumentScannerPage: React.FC = () => {,
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-blue-400/20 hover:border-blue-400/40 transition-all duration-300 group"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                   <feature.icon className="w-6 h-6 text-white" />
-=======
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 inline-flex items-center">
                 Start Free Trial;
@@ -566,7 +534,6 @@ const AIDocumentScannerPage: React.FC = () => {,
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">,
                   <feature.icon className="w-6 h-6 text-white" />,
                 </div>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <h3 className="text-xl font-semibold mb-2 text-white">{feature.title}</h3>
                 <p className="text-gray-300 mb-3">{feature.description}</p><div className="text-blue-400 font-semibold text-sm">{feature.stats}</div>
               </div>
@@ -574,20 +541,15 @@ const AIDocumentScannerPage: React.FC = () => {,
           </div>
 
           {/* Use Cases */}
-<<<<<<< HEAD
           <div className="mb-20">
-<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Real-World Use Cases<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{useCases.map((useCase, index) => (</div>
                 <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 group">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-=======
           <div className="mb-20"></div>
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Real-World Use Cases</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{useCases.map((useCase, index) => (</div>
                 <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 group"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <useCase.icon className="w-6 h-6 text-white" />
-=======
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Real-World Use Cases;
             </h2>
@@ -598,7 +560,6 @@ const AIDocumentScannerPage: React.FC = () => {,
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">,
                     <useCase.icon className="w-6 h-6 text-white" />,
                   </div>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   <h3 className="text-xl font-semibold mb-3 text-white">{useCase.title}</h3>
                   <p className="text-gray-300 mb-4 text-sm">{useCase.description}</p><div className="space-y-1">{useCase.benefits.map((benefit, benefitIndex) => (</div>
                       <div key={benefitIndex} className="flex items-center text-sm text-purple-400"></div>
@@ -613,26 +574,20 @@ const AIDocumentScannerPage: React.FC = () => {,
           </div>
 
           {/* Capabilities */}
-<<<<<<< HEAD
           <div className="mb-20">
-<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Powerful Capabilities<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{capabilities.map((category, index) => (</div>
-=======
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Powerful Capabilities;
             </h2>
             
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,
               {capabilities.map((category, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-blue-400/20">
                   <h3 className="text-xl font-semibold mb-4 text-blue-400">{category.category}<ul className="space-y-2">{category.items.map((item, itemIndex) => (</ul>
-=======
           <div className="mb-20"></div>
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Powerful Capabilities</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{capabilities.map((category, index) => (</div>
                 <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-blue-400/20"></div>
                   <h3 className="text-xl font-semibold mb-4 text-blue-400">{category.category}</h3><ul className="space-y-2">{category.items.map((item, itemIndex) => (</ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       <li key={itemIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         <span className="text-sm">{item}</span>
@@ -645,19 +600,14 @@ const AIDocumentScannerPage: React.FC = () => {,
           </div>
 
           {/* Pricing */}
-<<<<<<< HEAD
           <div className="mb-20">
-<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Simple, Transparent Pricing<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
-=======
           <div className="mb-20"></div>
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Simple, Transparent Pricing</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div><div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   plan.popular ? 'border-blue-400 shadow-lg shadow-blue-400/25' : 'border-gray-600'
                 }`}>{plan.popular && (</div>
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                       <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
-=======
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Simple, Transparent Pricing;
             </h2>
@@ -671,7 +621,6 @@ const AIDocumentScannerPage: React.FC = () => {,
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                       </div>
                     </div>
                   )}
@@ -686,18 +635,15 @@ const AIDocumentScannerPage: React.FC = () => {,
                       </li>
                     ))}
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-<<<<<<< HEAD
                     plan.popular 
                       ? 'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white' 
                       : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'
                   }`}>{plan.cta}</button>
-=======
                     plan.popular;
                       ? 'bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-600 hover:to-purple-700 text-white' ,}
                       : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'}
                   }`}>
                     {plan.cta}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   </button>
                 </div>
               ))}
@@ -705,28 +651,22 @@ const AIDocumentScannerPage: React.FC = () => {,
           </div>
 
           {/* Testimonials */}
-<<<<<<< HEAD
           <div className="mb-20">
-<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">What Our Users Say<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
-=======
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               What Our Users Say;
             </h2>
             
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
               {testimonials.map((testimonial, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-blue-400/20">
                   <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                   <div className="flex items-center">
-=======
           <div className="mb-20"></div>
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">What Our Users Say</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-blue-400/20"></div>
                   <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (</div><Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                   <div className="flex items-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-3">{testimonial.avatar}</div>
                     </div>
                     <div></div>
@@ -742,19 +682,14 @@ const AIDocumentScannerPage: React.FC = () => {,
           <div className="text-center bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-12 border border-blue-400/30"></div>
             <h2 className="text-3xl font-bold mb-4 text-white">Ready to Digitize Your Documents?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of businesses that have transformed their document processing with AI Document Scanner Pro.</p>
             </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center">Start Your Free Trial</button>
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center">
                 <Phone className="w-5 h-5 mr-2" >Contact Sales</Phone>
               </Phone>
-=======
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center">
                 Start Your Free Trial;
@@ -764,7 +699,6 @@ const AIDocumentScannerPage: React.FC = () => {,
                 <Phone className="w-5 h-5 mr-2" />
                 Contact Sales;
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </div>
           </div>
         </div>

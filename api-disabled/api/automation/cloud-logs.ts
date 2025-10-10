@@ -11,7 +11,6 @@ async function fetchFromGitHub(): Promise<any[]> {/* TODO: Fix JSX expression */
     const _files = (await resp.json()) as Array<{/* TODO: Fix JSX expression */}
   e: string}>;
     const _jsonFiles = files.filter((f) => f.type === 'file' && f.name.endsWith('.json'));
-<<<<<<< HEAD
     const results: unknown[] = [];
     ,
     for (const f of jsonFiles.slice(-50).reverse()) {,
@@ -22,7 +21,6 @@ async function fetchFromGitHub(): Promise<any[]> {/* TODO: Fix JSX expression */
         results.push({id: j.id || f.name, file: f.name, generatedAt: j.generatedAt, insights: j.insights});
       } catch {
         // ignore;
-=======
     const,
   results: unknown[] = [];
     
@@ -33,7 +31,6 @@ async function fetchFromGitHub(): Promise<any[]> {/* TODO: Fix JSX expression */
         results.push({/* TODO: Fix JSX expression */})
   s: j.insights});
       } catch {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
     
@@ -42,7 +39,6 @@ async function fetchFromGitHub(): Promise<any[]> {/* TODO: Fix JSX expression */
   }
 }
 
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
 //   const dir = path.join(process.cwd(), 'automation_logs');
   
@@ -55,24 +51,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return { id: json.id || f, file: f, generated_at: json.generated_at, insights: json.insights };
       } catch {
         return { id: f, file: f };
-=======
 export default async function handler(re,
   q: NextApiRequest, re,)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   s: json.insights };
       } catch {/* TODO: Fix JSX expression */}
   e: f };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     });
     
     return res.status(200).json({ logs });
-<<<<<<< HEAD
   } catch {
     // fall through to GitHub;
-=======
   } catch {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   
 //   const remote = await fetchFromGitHub();

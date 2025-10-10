@@ -5,7 +5,6 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "rea, c, t-helm, e, t-asy, n, c";';
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';
-<<<<<<< HEAD
 const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
   return(<>
       <Helmet>
@@ -27,7 +26,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
               Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management;</p>
           <div, className="te, x, t-center, m, b-16">";</div>
             <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6">";</div>
-=======
 const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           {/* Head, e, r */}"
           <div, className="te, x, t-center, m, b-16"></div>"
@@ -41,7 +39,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
               Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management;"
           <div, className="te, x, t-center, m, b-16">";"
             <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <Users, className="w-1, 0, h-10, tex, t-whi, t, e" />";
             </d, i, v>"
             <h1, className="te, x, t-4xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6">";
@@ -50,7 +47,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
             <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-auto, m, b-8">";
               Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management;
               and, automated, reminders. Streamline, your, practice with, intelligent, scheduling.
-<<<<<<< HEAD
             </p>
             <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-2xl, m, x-au, t, o">";</div>
               <div, className="flex, item, s-center, justif, y-center, m, b-4">";</div>
@@ -59,17 +55,13 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
               <p, className="te, x, t-gr, a, y-600, m, b-6">Perfect, for, hospitals, clini, c, s, and, private, practices looking, to, modernize their, appointment, system.</p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
               <p, className="te, x, t-gr, a, y-600, m, b-6">Perfect, for, hospitals, clini, c, s, and, private, practices looking, to, modernize their, appointment, system.</p>";
-<<<<<<< HEAD
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <a;
   hr, e, f="te;
-=======
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
                 <a
   hr, e, f="te
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
   l: +130246409, 5, 0" 
-=======
             </p>"
             <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-2xl, m, x-au, t, o">";"
               <div, className="flex, item, s-center, justif, y-center, m, b-4">";"
@@ -82,18 +74,14 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 <a></a>"
   hr, e, f="te,"
   l: +130246409, 5, 0" "
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   classNa, m, e="bg-gre, e, n-600, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gre, e, n-700, transitio, n-colors, tex, t-cent, e, r"
                 >
                   Ca, l, l +1, 302, 464 09, 5, 0;
                 </a>
-<<<<<<< HEAD
                 <a;
   hr, e, f="mail, t, o: kleb, e, r@ziontechgro, u, p.c, o, m" 
-=======
                 <a></a>"
   hr, e, f="mail, t, o: kleb, e, r@ziontechgro, u, p.c, o, m" "
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   classNa, m, e="bord, e, r-2, borde, r-gre, e, n-600, tex, t-gre, e, n-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gre, e, n-50, transitio, n-colors, tex, t-cent, e, r"
                 >
                   Email, U, s;
@@ -101,11 +89,9 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
               </d, i, v>
             </d, i, v>
           </d, i, v>
-<<<<<<< HEAD
           {/* Featur, e, s */}
           <section, className="mb-16">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Key, Feature, s</h2>
-<<<<<<< HEAD
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">
@@ -117,7 +103,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
   g:gr, i, d-co, l, s-3, ga, p-8">";
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";
                 <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">"</section>
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6"></div>
@@ -129,8 +114,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
   g:gr, i, d-co, l, s-3, ga, p-8">";</section>
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";</div>
                 <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
           {/* Featur, e, s */}"
           <section, className="mb-16"></section>"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Key, Feature, s</h2>"
@@ -145,102 +128,86 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
   g:gr, i, d-co, l, s-3, ga, p-8">";"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";"
                 <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <Calendar, className="w-6 h-6, tex, t-gre, e, n-6, 0, 0" />";
                 </d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">Virtual, Consultation, s</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Conduct, secure, video consultations, with, integrated telemedicine, capabilitie, s.</p>";
-<<<<<<< HEAD
               </d, i, v>
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6"></div>
                 <div, className="bg-bl, u, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4"></div>
                   <Users, className="w-6 h-6, tex, t-bl, u, e-6, 0, 0  />
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";</div>
                 <div, className="bg-bl, u, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";</div>
-=======
               </d, i, v>"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6"></div>"
                 <div, className="bg-bl, u, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4"></div>"
                   <Users, className="w-6 h-6, tex, t-bl, u, e-6, 0, 0  /></Users>"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";"
                 <div, className="bg-bl, u, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <Users, className="w-6 h-6, tex, t-bl, u, e-6, 0, 0" />";
                 </d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">Patient, Data, Storage</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Secu, r, e, HIP, A, A-compliant, storage, for patient, records, and medical, historie, s.</p>";
-<<<<<<< HEAD
               </d, i, v>
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6"></div>
                 <div, className="bg-purp, l, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4"></div>
                   <Bell, className="w-6 h-6, tex, t-purp, l, e-6, 0, 0  />
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";</div>
                 <div, className="bg-purp, l, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";</div>
-=======
               </d, i, v>"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6"></div>"
                 <div, className="bg-purp, l, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4"></div>"
                   <Bell, className="w-6 h-6, tex, t-purp, l, e-6, 0, 0  /></Bell>"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";"
                 <div, className="bg-purp, l, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <Bell, className="w-6 h-6, tex, t-purp, l, e-6, 0, 0" />";
                 </d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">Automated, Reminder, s</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Send, SMS, and email, reminders, to reduce, n, o-shows, by, up to, 4, 0%.</p>";
-<<<<<<< HEAD
               </d, i, v>
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6"></div>
                 <div, className="bg-oran, g, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4"></div>
                   <CreditCard, className="w-6 h-6, tex, t-oran, g, e-6, 0, 0  />
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";</div>
                 <div, className="bg-oran, g, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";</div>
-=======
               </d, i, v>"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6"></div>"
                 <div, className="bg-oran, g, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4"></div>"
                   <CreditCard, className="w-6 h-6, tex, t-oran, g, e-6, 0, 0  /></CreditCard>"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";"
                 <div, className="bg-oran, g, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <CreditCard, className="w-6 h-6, tex, t-oran, g, e-6, 0, 0" />";
                 </d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">Payment, Integratio, n</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Accept, payments, online with, integrated, billing and, insurance, processing.</p>";
-<<<<<<< HEAD
               </d, i, v>
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6"></div>
                 <div, className="bg-indi, g, o-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4"></div>
                   <Calendar, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0  />
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";</div>
                 <div, className="bg-indi, g, o-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";</div>
-=======
               </d, i, v>"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6"></div>"
                 <div, className="bg-indi, g, o-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4"></div>"
                   <Calendar, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0  /></Calendar>"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";"
                 <div, className="bg-indi, g, o-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <Calendar, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0" />";
                 </d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">Calendar, Syn, c</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Sync, with, Google Calend, a, r, Outlo, o, k, and, other, calendar applicatio, n, s.</p>";
-<<<<<<< HEAD
               </d, i, v>
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6"></div>
                 <div, className="bg-r, e, d-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4"></div>
                   <Shield, className="w-6 h-6, tex, t-r, e, d-6, 0, 0  />
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";</div>
                 <div, className="bg-r, e, d-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";</div>
-=======
               </d, i, v>"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6"></div>"
                 <div, className="bg-r, e, d-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4"></div>"
                   <Shield, className="w-6 h-6, tex, t-r, e, d-6, 0, 0  /></Shield>"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";"
                 <div, className="bg-r, e, d-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <Shield, className="w-6 h-6, tex, t-r, e, d-6, 0, 0" />";
                 </d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">HIPAA, Complianc, e</h3>";"
@@ -248,7 +215,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
               </d, i, v>
             </d, i, v>
           </secti, o, n>
-<<<<<<< HEAD
           {/* Prici, n, g */}
           <section, className="mb-16">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Pricing, Plan, s</h2>
@@ -259,7 +225,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 <ul, className="spa, c, e-y-3, m, b-8">
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
-=======
           {/* Prici, n, g */}"
           <section, className="mb-16"></section>"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Pricing, Plan, s</h2>"
@@ -270,7 +235,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 <ul, className="spa, c, e-y-3, m, b-8"></ul>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  /></CheckCircle>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     Up, to, 5 provide, r, s;
                   </li>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
@@ -280,7 +244,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  /></CheckCircle>
                     Basic, telemedicin, e;
-<<<<<<< HEAD
                   </li>
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
@@ -292,7 +255,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-600, m, b-6">$49/mon, t, h</d, i, v>";
                 <ul, className="spa, c, e-y-3, m, b-8">";
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">";
-=======
                   </li>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  /></CheckCircle>"
@@ -304,7 +266,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-600, m, b-6">$49/mon, t, h</d, i, v>";"
                 <ul, className="spa, c, e-y-3, m, b-8">";"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3" />";
                     Up, to, 5 provide, r, s;
                   </li>"
@@ -321,28 +282,22 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                     Email, suppor, t;
                   </li>
                 </ul>
-<<<<<<< HEAD
                 <a;
   hr, e, f="te;
   l: +130246409, 5, 0" 
-=======
                 <a></a>"
   hr, e, f="te,"
   l: +130246409, 5, 0" "
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   classNa, m, e="w-full, b, g-gre, e, n-600, tex, t-white, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gre, e, n-700, transitio, n-colors, tex, t-center, bloc, k"
                 >
                   Gette, d;
                 </a>
-<<<<<<< HEAD
               </d, i, v>
               <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-600, t, o-te, a, l-600, rounde, d-lg, shado, w-l, g, p-8, tex, t-white, relativ, e">";</div>
                 <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";</div>
-=======
               </d, i, v>"
               <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-600, t, o-te, a, l-600, rounde, d-lg, shado, w-l, g, p-8, tex, t-white, relativ, e">";"
                 <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <span, className="bg-yell, o, w-400, tex, t-gr, a, y-900, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">Most, Popula, r</sp, a, n>";
                 </d, i, v>"
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Medium, Practic, e</h3>"
@@ -390,18 +345,14 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                     Priority, suppor, t;
                   </li>
                 </ul>
-<<<<<<< HEAD
                 <a;
   hr, e, f="t, e, l: +130246409, 5, 0" 
-=======
                 <a></a>"
   hr, e, f="t, e, l: +130246409, 5, 0" "
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   classNa, m, e="w-full, b, g-white, tex, t-gre, e, n-600, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-colors, tex, t-center, bloc, k"
                 >
                   Gette, d;
                 </a>
-<<<<<<< HEAD
               </d, i, v>
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-8"></div>
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">Enterpri, s, e</h3>
@@ -409,7 +360,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 <ul, className="spa, c, e-y-3, m, b-8">
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
-=======
               </d, i, v>"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-8"></div>"
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">Enterpri, s, e</h3>"
@@ -417,7 +367,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 <ul, className="spa, c, e-y-3, m, b-8"></ul>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  /></CheckCircle>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     Unlimited, provider, s;
                   </li>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
@@ -431,7 +380,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  /></CheckCircle>
                     Dedicated, suppor, t;
-<<<<<<< HEAD
                   </li>
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
@@ -440,7 +388,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-600, m, b-6">Cust, o, m</d, i, v>";
                 <ul, className="spa, c, e-y-3, m, b-8">";
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">";
-=======
                   </li>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  /></CheckCircle>"
@@ -449,7 +396,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-600, m, b-6">Cust, o, m</d, i, v>";"
                 <ul, className="spa, c, e-y-3, m, b-8">";"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3" />";
                     Unlimited, provider, s;
                   </li>"
@@ -470,13 +416,10 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                     Whi, t, e-label, option, s;
                   </li>
                 </ul>
-<<<<<<< HEAD
                 <a;
   hr, e, f="mail, t, o: kleb, e, r@ziontechgro, u, p.c, o, m" 
-=======
                 <a></a>"
   hr, e, f="mail, t, o: kleb, e, r@ziontechgro, u, p.c, o, m" "
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   classNa, m, e="w-full, b, g-gre, e, n-600, tex, t-white, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gre, e, n-700, transitio, n-colors, tex, t-center, bloc, k"
                 >
                   Contact, Sale, s;
@@ -484,7 +427,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
               </d, i, v>
             </d, i, v>
           </secti, o, n>
-<<<<<<< HEAD
           {/* Contact, Sectio, n */}
           <section, className="bg-white, rounde, d-xl, shado, w-l, g, p-8">";
             <div, className="te, x, t-cent, e, r">";</section>
@@ -492,19 +434,15 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
               <p, className="te, x, t-lg, tex, t-gr, a, y-600, m, b-8">";
                 Contact, us, today for, a, free consultation, and, to discuss, your, appointment scheduling, need, s.
               </p>
-<<<<<<< HEAD
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <a;
   hr, e, f="te;
-=======
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
                 <a
   hr, e, f="te
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
   l: +130246409, 5, 0" 
-=======
           {/* Contact, Sectio, n */}"
           <section, className="bg-white, rounde, d-xl, shado, w-l, g, p-8">";"
             <div, className="te, x, t-cent, e, r">";"
@@ -517,18 +455,14 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 <a></a>"
   hr, e, f="te,"
   l: +130246409, 5, 0" "
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   classNa, m, e="bg-gre, e, n-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, hove, r: bg-gre, e, n-700, transitio, n-colors, tex, t-cent, e, r"
                 >
                   Ca, l, l +1, 302, 464 09, 5, 0;
                 </a>
-<<<<<<< HEAD
                 <a;
   hr, e, f="mail, t, o: kleb, e, r@ziontechgro, u, p.c, o, m" 
-=======
                 <a></a>"
   hr, e, f="mail, t, o: kleb, e, r@ziontechgro, u, p.c, o, m" "
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   classNa, m, e="bord, e, r-2, borde, r-gre, e, n-600, tex, t-gre, e, n-600, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, hove, r: bg-gre, e, n-50, transitio, n-colors, tex, t-cent, e, r"
                 >
                   Email, U, s;

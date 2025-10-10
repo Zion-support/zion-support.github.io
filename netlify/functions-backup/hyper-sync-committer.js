@@ -2,7 +2,6 @@ exports.handler = async function (event, context) {const githubToken = process.e
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
   const githubBranch = process.env.GIT_BRANCH || 'main'
   const path = 'automation/hyper-sync-heartbeat.txt'
-<<<<<<< HEAD
   function json(res)
         status = 200) {
     return {
@@ -23,7 +22,6 @@ exports.handler = async function (event, context) {const githubToken = process.e
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
         { headers })
-=======
   function json(res,)
         status = 200) {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
@@ -42,7 +40,6 @@ exports.handler = async function (event, context) {const githubToken = process.e
       }?ref=${/* TODO: Fix JSX expression */}
       }`,
         { headers },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       );
       if (res.ok) {/* TODO: Fix JSX expression */}
         return json.sha}
@@ -59,7 +56,6 @@ exports.handler = async function (event, context) {const githubToken = process.e
     };`
 //     const bodyStr = `Hyper sync heartbeat at ${new Date().toISOString()}\n`;
 //     const sha = await getCurrentSha(headers);
-<<<<<<< HEAD
     const body = {
       message: `chore(sync): hyper-sync heartbeat (${new Date().toISOString()})`,
       content: Buffer.from(bodyStr).toString('base64'),
@@ -71,7 +67,6 @@ exports.handler = async function (event, context) {const githubToken = process.e
       {method: 'PUT', headers)
         body: JSON.stringify(body;),
       })
-=======
     const body = {/* TODO: Fix JSX expression */}`
   e: `chore(sync): hyper-sync heartbeat (${new Date().toISOString()})`,
       conten,
@@ -85,7 +80,6 @@ exports.handler = async function (event, context) {const githubToken = process.e
       }`,
       {/* TODO: Fix JSX expression */}
       },)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     );
 //     const ok = res.ok;
     let _text = '';
@@ -95,7 +89,6 @@ exports.handler = async function (event, context) {const githubToken = process.e
   y: text };
   }
   try {const result = await commitText()}
-<<<<<<< HEAD
     return json({)
       ok: result.ok;)
       status: result.status;)
@@ -127,7 +120,6 @@ exports.handler = async function(event, context) {const githubToken = process.en
       }); } catch (err) {return json({ ok: false),
         error: String(err;),
       }; 500); } };'
-=======
     return json({/* TODO: Fix JSX expression */})
     });
   } catch (err) {/* TODO: Fix JSX expression */}
@@ -155,4 +147,3 @@ exports.handler = async function(event, context) {const githubToken = process.en
   y: text }; } try {const result = await commitText()} return json({/* TODO: Fix JSX expression */})
       }); } catch (err) {/* TODO: Fix JSX expression */}
       }; 500); } };'`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

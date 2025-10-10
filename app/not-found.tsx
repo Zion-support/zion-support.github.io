@@ -1,7 +1,5 @@
 'use client';
-<<<<<<< HEAD
 export default NotFoundPage;
-=======
 import React from 'react';
 import { Home, ArrowLeft, Search, Phone, Mail, Brain, Cloud, Shield, Code, BarChart, Users, Zap, Target, CheckCircle, ArrowRight, Globe, Database, Smartphone, Settings, Lock, TrendingUp, Star, Award, Phone as PhoneIcon, Mail as MailIcon } from 'lucide-react';
 
@@ -127,4 +125,3 @@ export default function NotFoundPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

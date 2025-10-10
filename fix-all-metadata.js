@@ -16,7 +16,6 @@ const filesToFix = [
 ];
 
 // // Function to process a single file;
-<<<<<<< HEAD
 function processFile(filePath) {
   try {
     // Extract metadata information before removing it;
@@ -31,10 +30,8 @@ function processFile(filePath) {
         metadata = {
           title: 'Zion Tech Group',
           description: 'Advanced AI and IT Solutions',
-=======
 function processFile(filePath) {/* TODO: Fix JSX expression */}
       } catch (e) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         };
       }
     }
@@ -43,7 +40,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/export const metadata = \{[\s\S]*?\};/g, '');
 
     // Remove any remaining broken metadata lines;
-<<<<<<< HEAD
     for (let i = 0; i < lines.length; i++) {
 
       // Skip broken metadata lines;
@@ -53,12 +49,10 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       }
 
       if(skipUntilSemicolon &&)
-=======
     for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
       }
 
       if (skipUntilSemicolon &&)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         (line.trim() === '};' ||
           line.trim() === '}' ||
           line.includes('const ') ||
@@ -78,7 +72,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
 
     // Fix function declarations;
-<<<<<<< HEAD
     content = content.replace(
       /export default function (\w+)\(\) \{/,
       'const $1: React.FC = () => {'
@@ -88,24 +81,19 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (!content.includes('export default') && content.includes('const ')) {,
       //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,
       if (componentName) {,
-=======
     content = content.replace()
       /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
         modified = true;
       }
     }
 
     // Update Helmet with extracted metadata;
-<<<<<<< HEAD
     if (metadata.title || metadata.description) {
       //       const helmetMatch = content.match(/(<Helmet>[\s\S]*?<\/Helmet>)/);
       if (helmetMatch) {
         const newHelmet = `<Helmet>
-=======
     if (metadata.title || metadata.description) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         <title>${metadata.title || 'Zion Tech Group'}</title>
         <meta name="description" content="${metadata.description || 'Advanced AI and IT Solutions'}" /></meta>
         ${/* TODO: Fix JSX expression */}"`
@@ -128,15 +116,12 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Process all files;
-<<<<<<< HEAD
 filesToFix.forEach(file => {)
   if (processFile(file)) {
     fixedCount++;
   }
-=======
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
   })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 });
 
 // "`

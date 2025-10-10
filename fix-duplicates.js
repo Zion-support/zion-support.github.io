@@ -8,7 +8,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix duplicate function declarations;
-<<<<<<< HEAD
 function fixDuplicateDeclarations(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -32,7 +31,6 @@ function fixDuplicateDeclarations(filePath) {
       
       for (const line of lines) {
         openBraces += (line.match(/{/g) || []).length;
-=======
 function fixDuplicateDeclarations(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
       return `const ${name}: React.FC = () => {/* TODO: Fix JSX expression */}
@@ -45,7 +43,6 @@ function fixDuplicateDeclarations(filePath) {/* TODO: Fix JSX expression */}
     
     // Fix missing closing braces in simple cases;
     content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         closeBraces += (line.match(/}/g) || []).length;
       }
       
@@ -56,26 +53,20 @@ function fixDuplicateDeclarations(filePath) {/* TODO: Fix JSX expression */}
     });
     
     // Fix missing semicolons;
-<<<<<<< HEAD
     content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {
       if (!match.endsWith(';')) {
         return match + ';';
-=======
     content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       return match;
     });
     
     // Only write if content changed;
-<<<<<<< HEAD
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed duplicates in: ${filePath}`);
-=======
     if (content !== originalContent) {/* TODO: Fix JSX expression */}`
   in: ${filePath}`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       return true;
     }
     
@@ -87,7 +78,6 @@ function fixDuplicateDeclarations(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Function to find all TypeScript/JavaScript files;
-<<<<<<< HEAD
 function findFiles(dir) {
   const files = [];
   
@@ -102,20 +92,15 @@ function findFiles(dir) {
         if (stat.isDirectory()) {
           if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
             walkDir(fullPath);
-=======
 function findFiles(dir) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         } else if (stat.isFile()) {/* TODO: Fix JSX expression */}
           }
         }
       }
-<<<<<<< HEAD
     } catch (error) {
       // Skip directories that can't be read;
-=======
     } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
   

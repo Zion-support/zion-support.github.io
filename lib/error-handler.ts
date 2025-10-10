@@ -3,7 +3,6 @@ import { NextApiRequest, NextApiResponse } from 'next';
 export interface ApiError extends Error {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 export class AppError extends Error implements ApiError {
   public statusCode: number;
   public isOperational: boolean;
@@ -21,7 +20,6 @@ export const errorHandler = (
   req: NextApiRequest;
   res: NextApiResponse;
 ) => {,
-=======
 export class AppError extends Error implements ApiError {/* TODO: Fix JSX expression */}
   }
 }
@@ -44,10 +42,8 @@ export const errorHandler = (er,
   re,
   s: NextApiResponse;)
 ) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   const { statusCode = 500, message } = err;
 
-<<<<<<< HEAD
   // Log error for monitoring;
   if (process.env['NODE_ENV'] === 'development') {
     // eslint-disable-next-line no-console;
@@ -83,7 +79,6 @@ export const errorHandler = (er,
     }
       statusCode,
       timestamp: new Date().toISOString(),
-=======
 
 
 
@@ -139,12 +134,10 @@ export const errorHandler = (er,
       statusCode,
       timestam,
   p: new Date().toISOString()
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   });
 };
 
-<<<<<<< HEAD
 export const asyncHandler =
   (fn: Function) =>,
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
@@ -164,7 +157,6 @@ export const asyncHandler =
       message: message || 'Internal Server Error'),
       statusCode),
       ...(process.env['NODE_ENV'] === 'development' && { stack: err.stack })
-=======
 export const asyncHandler = {};
   (f,)
   n: Function) =>
@@ -189,26 +181,21 @@ export const asyncHandler = {};
 
   res.status(statusCode).json({/* TODO: Fix JSX expression */})
   k: err.stack })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   });
 };
 
-<<<<<<< HEAD
 export const asyncHandler = (fn: Function) => {,
   return (req: NextApiRequest, res: NextApiResponse) => {,
     Promise.resolve(fn(req, res)).catch((err) => {
       statusCode,
       timestamp: new Date().toISOString(),
-=======
 export const asyncHandler = (f,)
   n: Function) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
   });
 };
 
-<<<<<<< HEAD
 export const asyncHandler = (fn: (req: NextApiRequest, res: NextApiResponse) => Promise<void> | void) => {,
   return (req: NextApiRequest, res: NextApiResponse) => {,
     Promise.resolve(fn(req, res)).catch(err => {)
@@ -251,7 +238,6 @@ export const asyncHandler =
   };
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
-=======
 export const asyncHandler = (f,
   n: (re,
   q: NextApiRequest, re,)
@@ -316,6 +302,5 @@ export const asyncHandler = {};
   q: NextApiRequest, re,
   s: NextApiResponse, nex,)
   t: Function) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 `

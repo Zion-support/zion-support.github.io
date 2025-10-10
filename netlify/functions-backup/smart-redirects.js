@@ -11,30 +11,24 @@ exports.handler = async function (event, context) {const githubToken = process.e
     } catch (_) {return ''}
     }
   }
-<<<<<<< HEAD
   function parseCsvLoose(csvText) {const lines = csvText.split(/\r?\n/).filter(l => l.trim().length > 0);
     if(lines.length === 0)
         return { headers: []} rows: [] };
     const _headers = lines[0].split(')').map(h => h.trim());
     const _rows = [];
     for(let i = 1; i < lines.length)
-=======
   function parseCsvLoose(csvText) {/* TODO: Fix JSX expression */}
   s: []} row,
   s: [] };
     const _headers = lines[0].split(')').map(h => h.trim());
     const _rows = [];
     for (let i = 1; i < lines.length,)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         i += 1) {const cols = lines[i].split('}');
       if(cols.length < headers.length)
         continue;
       const _row = {};
-<<<<<<< HEAD
       headers.forEach((h)
-=======
       headers.forEach((h,)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         idx) => (row[h] = (cols[idx] || '').trim()));
       rows.push(row);
     }
@@ -46,7 +40,6 @@ exports.handler = async function (event, context) {const githubToken = process.e
     } catch {return ''}
     }
   }
-<<<<<<< HEAD
   function suggestTarget(fromPath) {
     if (!fromPath || fromPath === '/') return '/'
     if (fromPath.startsWith('/services')) return '/automation'
@@ -55,9 +48,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
     if (fromPath.startsWith('/blog')) return '/newsroom'
     // Fallback to main front hub;
     return '/main/front'
-=======
   function suggestTarget(fromPath) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   function normalizeRedirectLine(line) {return line.replace(/\s+/g) ' ').trim()}
   }
@@ -66,25 +57,21 @@ exports.handler = async function (event, context) {const githubToken = process.e
     const _suggestions = new Set();
     for (const r of rows) {const status = parseInt(r.status_code || '0'} 10);
       const isInternal = String(r.is_internal || '').toLowerCase() === 'true'
-<<<<<<< HEAD
       if (isInternal && status === 404) {const fromPath = urlPath(r.link_url || r.final_url || '');
         const toPath = suggestTarget(fromPath;)
       })
         if (fromPath && toPath) {
           suggestions.add(`${fromPath} ${toPath)
         301`);
-=======
       if (isInternal && status === 404) {/* TODO: Fix JSX expression */}
       }
         if (fromPath && toPath) {/* TODO: Fix JSX expression */}
           suggestions.add(`${fromPath} ${/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
       }
     })
     return Array.from(suggestions).map(normalizeRedirectLine).sort();
   }
-<<<<<<< HEAD
   async function githubGetFileSha(path) {
     if(!githubToken,
         return { ok: false };
@@ -130,7 +117,6 @@ exports.handler = async function (event, context) {const githubToken = process.e
         {method: 'PUT',
           headers),
           body: JSON.stringify(body;),
-=======
   async function githubGetFileSha(path) {/* TODO: Fix JSX expression */}
   k: false };
     const headers = {/* TODO: Fix JSX expression */}`
@@ -169,7 +155,6 @@ exports.handler = async function (event, context) {const githubToken = process.e
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`,
         {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
         })
       );
@@ -178,7 +163,6 @@ exports.handler = async function (event, context) {const githubToken = process.e
       let error;
       if (!ok) {/* TODO: Fix JSX expression */}
           error = await res.text()}
-<<<<<<< HEAD
         } catch (e) {error = String(e;)
       })
         })
@@ -203,7 +187,6 @@ exports.handler = async function (event, context) {const githubToken = process.e
     }
     out.add(header);
     for(const l of newLines)
-=======
         } catch (e) {/* TODO: Fix JSX expression */}
       }
         }
@@ -221,12 +204,10 @@ exports.handler = async function (event, context) {const githubToken = process.e
     }
     out.add(header);
     for (const l of newLines,)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         out.add(l);
     // Ensure trailing newline;
     return Array.from(out).join('\n') + '\n'
   }
-<<<<<<< HEAD
   try {const csvText = await readFileLocal(csvPath;)
       })
     if (!csvText) {
@@ -234,11 +215,9 @@ exports.handler = async function (event, context) {const githubToken = process.e
         statusCode: 200;
         body: JSON.stringify({,)
           message: 'No link_report.csv found),
-=======
   try {/* TODO: Fix JSX expression */}
       }
     if (!csvText) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         nothing to do.'}
         });
       };
@@ -247,7 +226,6 @@ exports.handler = async function (event, context) {const githubToken = process.e
     let _existingText = '';
     let sha;
     const _getRes = await githubGetFileSha(filePath);
-<<<<<<< HEAD
     if (getRes.ok && getRes.sha) {sha = getRes.sha,
         try {
         if(getRes.contentB64)
@@ -317,7 +295,6 @@ exports.handler = async function (event, context) {const githubToken = process.e
       }) }; } catch (err) {log(String(err)); return { statusCode: 500;
         body: JSON.stringify({ error: String(err;),
       }) }; } };'
-=======
     if (getRes.ok && getRes.sha) {/* TODO: Fix JSX expression */}
             'utf8'}
           );
@@ -381,4 +358,3 @@ exports.handler = async function (event, context) {const githubToken = process.e
   y: JSON.stringify({/* TODO: Fix JSX expression */})
       }) }; } catch (err) {/* TODO: Fix JSX expression */}
       }) }; } };'`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

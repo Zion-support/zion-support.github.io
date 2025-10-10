@@ -1,6 +1,5 @@
 import Reac, t, { useEffect, useState, useCallba, c, k } fr, o, m 'rea, c, t';
 
-<<<<<<< HEAD
 interface PerformanceOptimizerProp, s {
   isVisib, l, e: boolean;
   onClo, s, e: () = > v, o, i, d;
@@ -16,13 +15,11 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({
     cachi, n, g: t, r, u, e)
     compressi, o, n: t, r, u, e)
     c, d, n: fa, l, s, e)
-=======
 interface PerformanceOptimizerProp, s {/* TODO: Fix JSX expression */}
  }
 
 const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   });
 
   con, s, t [currentOptimizatio, n, s, setCurrentOptimizatio, n, s] = useState<string[]>([],)
@@ -44,14 +41,11 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TOD
     }
   }, [isVisib, l, e, runOptimizatio, n, s]);
 
-<<<<<<< HEAD
   const handleOptimizationToggl, e = (k, e, y: keyof, typeof, optimization, s) => { 
     setOptimizatio, n, s(pr, e, v = > ({)
       ...pr, e, v)
       [k, e, y]: !pr, e, v[k, e, y])
-=======
   const handleOptimizationToggl, e = (k, e, y: keyof, typeof, optimization, s) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
      }));
   };
 
@@ -68,21 +62,15 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TOD
     },
     {/* TODO: Fix JSX expression */}
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
   ]; return(<div, classNam, e = 'spa, c, e-y-6'>
       <div, className='flex, justif, y-between, item, s-cent, e, r'>
-=======
   ]; return (
     <div, classNam, e = 'spa, c, e-y-6'></div>
       <div, className='flex, justif, y-between, item, s-cent, e, r'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <h2, className='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0'>
-=======
   ]; return (<div, classNam, e = 'spa, c, e-y-6'></div>
       <div, className='flex, justif, y-between, item, s-cent, e, r'></div>
         <h2, className='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0'></h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           Performance, Optimize, r;
         </h2>
         <button, onClic, k = { onCl, o, s, e }, classNa, m, e = 'te, x, t-gr, a, y-400, hove, r: te, x, t-gr, a, y-6, 0, 0'></button>
@@ -90,7 +78,6 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TOD
         </button>
       </div>
 
-<<<<<<< HEAD
       <div, className='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, ga, p-4'>
         { optimizationOptio, n, s.m, a, p(opti, o, n = > (</div>
           <div, ke, y = { opti, o, n.k, e, y  }, classNa, m, e = { `p-4, border, rounded-lg, transitio, n-colo, r, s ${
@@ -98,18 +85,14 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TOD
                  ? 'bord, e, r-gre, e, n-200, b, g-gre, e, n-50'
                  : 'bord, e, r-gr, a, y-200, b, g-gr, a, y-50'
              }`}
-<<<<<<< HEAD
           >
             <div, className='flex, item, s-start, spac, e-x-3'>
               <div, className='fl, e, x-shri, n, k-0' > <opti, o, n.icon, className={ `h-5 w-5 ${}
                     opti, o, n.enabl, e, d  ? 'te, x, t-gre, e, n-6, 0, 0'  : 'te, x, t-gr, a, y-4, 0, 0'}
-=======
           ></div>
             <div, className='flex, item, s-start, spac, e-x-3'></div>
               <div, className='fl, e, x-shri, n, k-0' ></div> <opti, o, n.icon, className={ `h-5 w-5 ${
                     opti, o, n.enabl, e, d  ? 'te, x, t-gre, e, n-6, 0, 0'  : 'te, x, t-gr, a, y-4, 0, 0'
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
       <div, className='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, ga, p-4'></div>
         {/* TODO: Fix JSX expression */}
           <div, ke, y = { opti, o, n.k, e, y  }, classNa, m, e = {/* TODO: Fix JSX expression */}
@@ -117,23 +100,19 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TOD
           ></div>
             <div, className='flex, item, s-start, spac, e-x-3'></div>
               <div, className='fl, e, x-shri, n, k-0' > <opti, o, n.icon, className={/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                    }`}
                 /></opti>
               </div>
               <div, className='fl, e, x-1, mi, n-w-0'></div>
                 <div, className='flex, item, s-center, justif, y-betwe, e, n'></div>
-<<<<<<< HEAD
                   <h3, className='te, x, t-sm, fon, t-medium, tex, t-gr, a, y-9, 0, 0'>
                     {opti, o, n.lab, e, l}
                   </h3>)
                   <label, className='relative, inlin, e-flex, item, s-center, curso, r-point, e, r'>)
-=======
                   <h3, className='te, x, t-sm, fon, t-medium, tex, t-gr, a, y-9, 0, 0'></h3>
                     {opti, o, n.lab, e, l}
                   </h3>
                   <label, className='relative, inlin, e-flex, item, s-center, curso, r-point, e, r'></label>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     <input, typ, e='checkb, o, x')
                       check, e, d = { opti, o, n.enab, l, e, d }, onChan, g, e={  () = > handleOptimizationTogg, l, e(opti, o, n.k, e, y)  } classNa, m, e = 'sr-only, pee, r'
                     />
@@ -149,7 +128,6 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TOD
         ))}
       </div>
 
-<<<<<<< HEAD
       {  currentOptimizatio, n, s.leng, t, h > 0  && (
         <div, classNam, e = 'bg-gr, a, y-50, rounde, d-l, g, p-4'></div>
           <h3, className='te, x, t-sm, fon, t-medium, tex, t-gr, a, y-900, m, b-2'>
@@ -161,10 +139,8 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TOD
                   optimizati, o, n.startsW, i, t, h('✓')
                      ? 'te, x, t-gre, e, n-6, 0, 0'
                      : 'te, x, t-gr, a, y-6, 0, 0'
-=======
       {/* TODO: Fix JSX expression */}
               <div, ke, y = { in, d, e, x   }, classNa, m, e = {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                  }`}
               ></div>
                 {optimizati, o, n}
@@ -176,19 +152,16 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TOD
 
       <div, classNam, e = 'flex, justif, y-end, spac, e-x-3'></div>
         <button, onClic, k = { onCl, o, s, e }, classNa, m, e = 'px-4, p, y-2, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, b, g-white, border, border-gr, a, y-300, rounde, d-md, hove, r: bg-gr, a, y-50, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-offs, e, t-2, focu, s:ri, n, g-bl, u, e-5, 0, 0'
-<<<<<<< HEAD
         >
           Clo, s, e;
         </button>
         <button, onCli, c, k={ () = > {
             setCurrentOptimizatio, n, s([]);}
             // Trigger r e-optimizat i o n;}
-=======
         ></button>
           Clo, s, e;
         </button>
         <button, onCli, c, k={/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
            }}
           classNa, m, e = 'px-4, p, y-2, tex, t-sm, fon, t-medium, tex, t-white, b, g-bl, u, e-600, border, border-transparent, rounde, d-md, hove, r: bg-bl, u, e-700, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-offs, e, t-2, focu, s:ri, n, g-bl, u, e-5, 0, 0'
         >

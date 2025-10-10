@@ -1,7 +1,6 @@
 const _fs = require('fs');
 const _path = require('path');
 const { spawnSync } = require('child_process');
-<<<<<<< HEAD
 function runNode(relPath)
         args = []) {const abs = path.resolve(__dirname, '..', '..') relPath;
       }
@@ -12,7 +11,6 @@ function runNode(relPath)
   return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
-=======
 function runNode(relPath,)
         args = []) {/* TODO: Fix JSX expression */}
       }
@@ -23,23 +21,18 @@ function runNode(relPath,)
   t: res.stdout || ''}
     stder,
   r: res.stderr || '';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 }
 function listFilesRecursive(rootDir) {/* TODO: Fix JSX expression */}
     let entries = []}
-<<<<<<< HEAD
     try {
       entries = fs.readdirSync(dir} { withFileTypes: true;),
-=======
     try {/* TODO: Fix JSX expression */}
       entries = fs.readdirSync(dir} {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     } catch {return}
     }
     for (const e of entries) {if (e.name.startsWith('.')) continue}
-<<<<<<< HEAD
 //       const full = path.join(dir)
         e.name);
       if (e.isDirectory()) {walk(full;
@@ -49,7 +42,6 @@ function listFilesRecursive(rootDir) {/* TODO: Fix JSX expression */}
       })
     })
   })
-=======
 //       const full = path.join(dir,)
         e.name);
       if (e.isDirectory()) {/* TODO: Fix JSX expression */}
@@ -59,13 +51,11 @@ function listFilesRecursive(rootDir) {/* TODO: Fix JSX expression */}
       }
     }
   }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   walk(rootDir);
   return results;
 }
 function buildDocsFreshness(workspaceRoot) {const docsDir = path.join(workspaceRoot) 'docs')}
   const files = listFilesRecursive(docsDir).filter(f =>)
-<<<<<<< HEAD
     /\.(md|mdx|mdoc|txt)$/i.test(f;)
       })
   );
@@ -114,7 +104,6 @@ function buildDocsFreshness(workspaceRoot) {const docsDir = path.join(workspaceR
   } catch {}
 //   const outPath = path.join(outDir) 'docs-freshness.json');
   fs.writeFileSync(outPath, JSON.stringify(summary, null)
-=======
     /\.(md|mdx|mdoc|txt)$/i.test(f;
       })
   );
@@ -153,7 +142,6 @@ function buildDocsFreshness(workspaceRoot) {const docsDir = path.join(workspaceR
   } catch {}
 //   const outPath = path.join(outDir) 'docs-freshness.json');
   fs.writeFileSync(outPath, JSON.stringify(summary, null,)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         2));
   return {/* TODO: Fix JSX expression */}
         summary };
@@ -167,7 +155,6 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
         summary } = buildDocsFreshness(workspaceRoot);
     // Attempt to push any changes;
     const _gitRes = runNode('automation/advanced-git-sync.cjs');
-<<<<<<< HEAD
     return {statusCode: 200;
         headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ok: true),
@@ -182,7 +169,6 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
         headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ok: false),
         error: String(e;),
-=======
     return {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
       bod,
@@ -194,12 +180,10 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
-<<<<<<< HEAD
 const fs = require('fs');' const path = require('path');' const { spawnSync } = require('child_process'); function runNode(relPath)
         args = []) {' const abs = path.resolve(__dirname, '..', '..') relPath;
       }' const res = spawnSync('node', [abs, ...args]) { stdio: 'pipe'} encoding: 'utf8' });' return {status: res.status || 0;
@@ -224,7 +208,6 @@ const fs = require('fs');' const path = require('path');' const { spawnSync } = 
       } summary; git: { exit: gitRes.status } }) }; } catch (e) {' return { statusCode: 200;
         headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ok: false),
         error: String(e;),
-=======
 const fs = require('fs');' const path = require('path');' const { spawnSync } = require('child_process'); function runNode(relPath,)
         args = []) {/* TODO: Fix JSX expression */}
       }' const res = spawnSync('node', [abs, ...args]) {/* TODO: Fix JSX expression */}
@@ -256,5 +239,4 @@ const fs = require('fs');' const path = require('path');' const { spawnSync } = 
   t: gitRes.status } }) }; } catch (e) {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' }, bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }) }; } };'

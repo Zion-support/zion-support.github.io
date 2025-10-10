@@ -1,18 +1,13 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-
-=======
-
 #!/usr/bin/env node
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+#!/usr/bin/env node
+
+
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -86,10 +81,8 @@ filesToFix.forEach(filePath => {)
   
   const description = `Coming Soon - Advanced ${title.toLowerCase()} solutions`;
   
-=======
 // Get all TypeScript errors
 function getTypeScriptErrors() {
->>>>>>> origin/merge-error-fixes
   try {
     const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' });
     return output.split('\n').filter(line => line.includes('error TS'));
@@ -201,7 +194,6 @@ function main() {
 }
 
 main();
-=======
 
 // Function to fix common syntax errors in a file
 function fixSyntaxErrors(filePath) {
@@ -362,4 +354,3 @@ try {
 }
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

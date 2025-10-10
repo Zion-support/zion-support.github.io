@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 'use client';
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import EnhancedSearchModal from '../../src/components/EnhancedSearchModal';
@@ -70,15 +68,11 @@ import {
   Sprout, 
   Scale
 } from 'lucide-react';
-=======
 import React, { memo, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Briefcase } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
-<<<<<<< HEAD
 const Navigation: React.FC = () => {,
-=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { Menu, X, Phone, Mail, MapPin, ChevronDown, Zap, Brain, Cpu, Shield, Globe, Code, Database, Cloud, Bot, Target, BarChart, Settings, Users, Award, Lock, Smartphone, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Star, CheckCircle, ArrowRight, Atom } from 'lucide-react';
 
@@ -87,17 +81,12 @@ interface NavigationProps {
 }
 
 const Navigation: React.FC<NavigationProps> = ({ className = '' }) => {
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
-=======
 const Navigation: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
-<<<<<<< HEAD
-=======
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false);
@@ -108,12 +97,10 @@ const Navigation: React.FC = () => {
       }
     };
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
-<<<<<<< HEAD
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -146,16 +133,12 @@ const Navigation: React.FC = () => {
 
   const navigationItems = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: 'Micro SAAS Solutions'
       icon: Zap;
       color: 'text-cyan-400'
-=======
       title: 'Micro SAAS Solutions',
       icon: Zap,
       color: 'text-cyan-400',
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
       bgColor: 'bg-cyan-500/10',
       services: [
         { name: 'AI Project Manager Pro', href: '/ai-project-manager' },
@@ -189,10 +172,8 @@ const Navigation: React.FC = () => {
       icon: Cloud,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
-<<<<<<< HEAD
       hoverColor: 'hover:bg-blue-500/20',
       services: [,
-=======
       name: 'AI Services',
       href: '/ai-services',
       icon: Brain,
@@ -216,14 +197,12 @@ const Navigation: React.FC = () => {
       ]
     },
     {
-<<<<<<< HEAD
       title: 'IT Services',
       icon: Cloud,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       hoverColor: 'hover:bg-blue-500/20',
       services: [
-<<<<<<< HEAD
         { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration and optimization', icon: Cloud },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Advanced security solutions', icon: Shield },
         { name: 'DevOps & CI/CD', path: '/devops', description: 'Streamlined development workflows', icon: Settings },
@@ -250,8 +229,6 @@ const Navigation: React.FC = () => {
         { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud infrastructure' },
         { name: 'Networking', path: '/networking', description: 'Network infrastructure' },
         { name: 'Security', path: '/security', description: 'Security solutions' }
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
         { name: 'Quantum Computing Infrastructure', path: '/quantum-computing-infrastructure', description: 'Quantum computing setup', icon: '⚛️', popular: true },
         { name: '5G Network Implementation', path: '/5g-implementation', description: '5G network deployment', icon: '📶', popular: true },
         { name: 'Metaverse Platform Development', path: '/metaverse-development', description: 'Metaverse solutions', icon: '🥽', popular: true },
@@ -264,8 +241,6 @@ const Navigation: React.FC = () => {
         { name: 'Data Lake & Warehouse Modernization', path: '/data-modernization', description: 'Modern data solutions', icon: '🗄️', popular: true },
         { name: 'Multi-Cloud Management Platform', path: '/multi-cloud-management', description: 'Multi-cloud management', icon: '☁️', popular: true },
         { name: 'Hybrid Cloud Architecture', path: '/hybrid-cloud-architecture', description: 'Hybrid cloud solutions', icon: '🌐', popular: true }
->>>>>>> origin/main
-=======
       services: [
         { name: 'Cloud Migration & Setup', href: '/cloud-migration' },
         { name: 'Cybersecurity Solutions', href: '/cybersecurity' },
@@ -275,7 +250,6 @@ const Navigation: React.FC = () => {
         { name: 'Network Security', href: '/network-security' },
         { name: 'Data Backup & Recovery', href: '/data-backup' },
         { name: 'IT Support & Maintenance', href: '/it-support' }
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
       ]
     },
     {
@@ -283,13 +257,9 @@ const Navigation: React.FC = () => {
       icon: Sparkles,
       color: 'text-pink-400',
       bgColor: 'bg-pink-500/10',
-<<<<<<< HEAD
       hoverColor: 'hover:bg-pink-500/20',
-<<<<<<< HEAD
       services: [,
-=======
       services: [
-<<<<<<< HEAD
         { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '100+ AI-powered tools' },
         { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent customer management' },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'Business intelligence' },
@@ -364,8 +334,6 @@ const Navigation: React.FC = () => {
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices and edge solutions', icon: '🌐' },
         { name: 'Robotics Solutions', path: '/robotics', description: 'Intelligent robotic solutions', icon: '🦾' },
         { name: 'Business Apps', path: '/business-apps', description: 'Custom business applications', icon: '📱' }
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
         { name: 'Quantum Computing Solutions', path: '/quantum-computing-infrastructure', description: 'Quantum computing infrastructure', icon: '⚛️', popular: true },
         { name: '5G & Edge Computing', path: '/5g-implementation', description: '5G and edge solutions', icon: '📶', popular: true },
         { name: 'Metaverse & Web3', path: '/metaverse-development', description: 'Metaverse and Web3', icon: '🥽', popular: true },
@@ -375,8 +343,6 @@ const Navigation: React.FC = () => {
         { name: 'Cybersecurity & Zero Trust', path: '/zero-trust-architecture', description: 'Advanced security', icon: '🛡️', popular: true },
         { name: 'Data & Analytics', path: '/real-time-data-platform', description: 'Data and analytics', icon: '📊', popular: true },
         { name: 'Cloud & Hybrid', path: '/multi-cloud-management', description: 'Cloud solutions', icon: '☁️', popular: true }
->>>>>>> origin/main
-=======
       name: 'IT Services',
       href: '/it-services',
       icon: Cpu,
@@ -413,8 +379,6 @@ const Navigation: React.FC = () => {
         { name: 'AR/VR Development', href: '/ar-vr', icon: Gamepad2, price: '$1,999/month' },
         { name: 'Machine Learning', href: '/machine-learning', icon: Brain, price: '$799/month' },
         { name: 'Deep Learning', href: '/deep-learning', icon: Cpu, price: '$1,299/month' }
->>>>>>> d657cf2a1bc2 (fix: resolve merge conflicts in App.tsx, Footer.tsx, and Navigation.tsx)
-=======
       services: [
         { name: 'Quantum Computing Solutions', href: '/ai-quantum-computing' },
         { name: '5G Implementation', href: '/5g-implementation' },
@@ -424,13 +388,10 @@ const Navigation: React.FC = () => {
         { name: 'AR/VR Development', href: '/ar-vr-development' },
         { name: 'Autonomous Systems', href: '/autonomous-systems' },
         { name: 'Smart City Solutions', href: '/smart-city-solutions' }
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
       ]
     }
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const mainNavItems = [
     { name: 'Home', path: '/', icon: '🏠' },
     { name: 'About', path: '/about', icon: '👥' },
@@ -439,7 +400,6 @@ const Navigation: React.FC = () => {
     { name: 'Case Studies', path: '/case-studies', icon: '📊' },
     { name: 'Blog', path: '/blog', icon: '📝' },
     { name: 'Contact', path: '/contact', icon: '📞' }
-=======
   const mainLinks = [
     { name: 'Home', path: '/', icon: Home },
     { name: 'About', path: '/about', icon: Users },
@@ -448,7 +408,6 @@ const Navigation: React.FC = () => {
     { name: 'Blog', path: '/blog', icon: MessageSquare },
     { name: 'Pricing', path: '/pricing', icon: BarChart },
     { name: 'Contact', path: '/contact', icon: Phone }
->>>>>>> origin/main
   ];
 
   return (
@@ -468,10 +427,8 @@ const Navigation: React.FC = () => {
               </span>
             </Link>
 
-<<<<<<< HEAD
             {/* Services Dropdown */}
             <div className="relative">
-=======
 
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -550,36 +507,25 @@ const Navigation: React.FC = () => {
             
             {/* AI Services Dropdown */}
             <div className="relative group">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <button
                 className="flex items-center text-white hover:text-cyan-400 transition-colors"
                 onMouseEnter={() => setAiServicesOpen(true)}
                 onMouseLeave={() => setAiServicesOpen(false)}
               >
-<<<<<<< HEAD
                 <Brain className="w-4 h-4" />
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {mainNavItems.map((item) => (
-=======
             {/* Desktop Navigation */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="hidden lg:flex items-center space-x-8"></div>
-=======
             <div className="hidden lg:flex items-center space-x-8">
->>>>>>> origin/main
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
-=======
             <div className="hidden lg:flex items-center space-x-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
               <Link
                 to="/"
                 className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
                 onClick={closeAllMenus}
-=======
                 AI Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
@@ -726,11 +672,9 @@ const Navigation: React.FC = () => {
                 to="/"
                 className="block text-white hover:text-cyan-400 transition-colors py-2"
                 onClick={() => setIsOpen(false)}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               >
                 Home
               </Link>
-<<<<<<< HEAD
               <Link
                 to="/about"
                 className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
@@ -738,7 +682,6 @@ const Navigation: React.FC = () => {
               >
                 About
               </Link>
-<<<<<<< HEAD
             ))}
 
             {/* Services Dropdown */}
@@ -775,7 +718,6 @@ const Navigation: React.FC = () => {
                           </Link>
                         </div>
                       </div>
-=======
               
               <div>
                 <button
@@ -808,7 +750,6 @@ const Navigation: React.FC = () => {
                       >
                         {service.name}
                       </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     ))}
                   </div>
                 </div>
@@ -870,7 +811,6 @@ const Navigation: React.FC = () => {
                 ))}
               </div>
 
-<<<<<<< HEAD
               {/* Services */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white mb-3 neon-text">Services</h3>
@@ -890,7 +830,6 @@ const Navigation: React.FC = () => {
                         >
                           {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-2" />} {service.name}
                         </Link>
-=======
               
               <div className="relative">
                 <button
@@ -930,15 +869,11 @@ const Navigation: React.FC = () => {
                               ))}
                             </ul>
                           </div>
-<<<<<<< HEAD
                           <div className="space-y-2">
-<<<<<<< HEAD
                             {category.services.slice(0, 6).map((service, serviceIndex) => (
                               <Link;
-=======
                             {category.services.slice(0, 6).map((service, serviceIndex) => (</div>
                               <Link
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                                 key={serviceIndex}
                                 to={service.path}
                                 className="block px-3 py-2 text-sm text-gray-300 hover: bg-cyan-400/20 hover:text-cyan-400 rounded-lg transition-colors",
@@ -949,23 +884,18 @@ const Navigation: React.FC = () => {
                             ))}
                           </div>
                         </div>
->>>>>>> origin/main
                       ))}
                     </div>
-<<<<<<< HEAD
                     <div className="border-t border-cyan-400/20 mt-6 pt-4 px-6">
                       <Link;
-=======
                     <div className="border-t border-cyan-400/20 mt-6 pt-4 px-6"></div>
                       <Link
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         to="/services"
                         className="block w-full text-center bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-700 hover:to-purple-700 transition-all",
                         onClick={closeAllMenus}
                       >
                         View All Services;
                       </Link>
-=======
                         ))}
                       </div>
                       <div className="border-t border-cyan-400/20 mt-6 pt-4 px-6">
@@ -977,7 +907,6 @@ const Navigation: React.FC = () => {
                           View All Services
                         </Link>
                       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
                     </div>
                   </div>
                 )}
@@ -994,7 +923,6 @@ const Navigation: React.FC = () => {
                 to="/blog"
                 className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
                 onClick={closeAllMenus}
-=======
               <Link
                 to="/micro-saas"
                 className="block text-white hover:text-cyan-400 transition-colors py-2"
@@ -1015,7 +943,6 @@ const Navigation: React.FC = () => {
                 to="/blog"
                 className="block text-white hover:text-cyan-400 transition-colors py-2"
                 onClick={() => setIsOpen(false)}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               >
                 Blog
               </Link>
@@ -1027,8 +954,6 @@ const Navigation: React.FC = () => {
                 Pricing
               </Link>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
               {/* Contact Info */}
               <div className="space-y-4 pt-4 border-t border-gray-700">
                 <h3 className="text-lg font-semibold text-white mb-3 neon-text">Contact</h3>
@@ -1058,7 +983,6 @@ const Navigation: React.FC = () => {
                   Get Started
                 </a>
               </div>
-=======
               {/* Search Button */}
               <button
                 onClick={() => setIsSearchOpen(true)}
@@ -1084,7 +1008,6 @@ const Navigation: React.FC = () => {
                 Get Started
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
->>>>>>> origin/main
             </div>
 
             {/* Mobile Menu Button */}
@@ -1112,17 +1035,13 @@ const Navigation: React.FC = () => {
                   </Link>
                 ))}
                 
-<<<<<<< HEAD
                 {/* Mobile Services */}
-<<<<<<< HEAD
                 <div>
                   <button;
                     className="text-white hover: text-cyan-400 transition-colors duration-200 font-medium flex items-center space-x-2 py-2",
-=======
                 <div></div>
                   <button
                     className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium flex items-center space-x-2 py-2"
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     onClick={() => setServicesOpen(!servicesOpen)}
                   >
                     <Settings className="w-4 h-4" />
@@ -1139,13 +1058,10 @@ const Navigation: React.FC = () => {
                             <span className="text-cyan-400 font-medium text-sm">{category.title}</span>
                           </div>
                           <div className="ml-6 space-y-1">
-<<<<<<< HEAD
                             {category.services.slice(0, 3).map((service, serviceIndex) => (
                               <Link;
-=======
                             {category.services.slice(0, 3).map((service, serviceIndex) => (</div>
                               <Link
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                                 key={serviceIndex}
                                 to={service.path}
                                 className="block text-gray-300 hover: text-cyan-400 text-sm py-1",
@@ -1156,7 +1072,6 @@ const Navigation: React.FC = () => {
                             ))}
                           </div>
                         </div>
-=======
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled
@@ -1303,15 +1218,11 @@ const Navigation: React.FC = () => {
                             {subItem.price}
                           </span>
                         </a>
->>>>>>> d657cf2a1bc2 (fix: resolve merge conflicts in App.tsx, Footer.tsx, and Navigation.tsx)
                       ))}
                     </div>
                   )}
                 </div>
-<<<<<<< HEAD
                 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
                 {/* Mobile CTA */}
                 <Link
                   to="/contact"
@@ -1329,7 +1240,6 @@ const Navigation: React.FC = () => {
       {/* Search Modal */}
       <EnhancedSearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </>
-=======
               ))}
 
               {/* Mobile Contact Info */}
@@ -1356,7 +1266,6 @@ const Navigation: React.FC = () => {
                 >
                   Get Started
                 </a>
-=======
               <div className="pt-4 border-t border-white/10">
                 <a
                   href="tel:+13024640950"
@@ -1373,26 +1282,18 @@ const Navigation: React.FC = () => {
                 >
                   Get Started
                 </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               </div>
             </div>
           </div>
         )}
       </div>
     </nav>
->>>>>>> d657cf2a1bc2 (fix: resolve merge conflicts in App.tsx, Footer.tsx, and Navigation.tsx)
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default Navigation;
 export default Navigation;
-=======
 export default Navigation;
->>>>>>> origin/main
-=======
 Navigation.displayName = 'Navigation';
 
 export default Navigation;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

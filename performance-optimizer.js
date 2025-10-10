@@ -1,6 +1,5 @@
 //Performance optimizations;
 // //Optimize images;
-<<<<<<< HEAD
 const optimizeImages = () => {
   //   //Add image optimization logic here;
 };
@@ -13,7 +12,6 @@ const optimizeCSS = () => {
 //Optimize JavaScript;
 const optimizeJS = () => {
   //   //Add JS optimization logic here;
-=======
 const optimizeImages = () => {/* TODO: Fix JSX expression */}
 };
 
@@ -23,7 +21,6 @@ const optimizeCSS = () => {/* TODO: Fix JSX expression */}
 
 //Optimize JavaScript;
 const optimizeJS = () => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 
 // Run optimizations;

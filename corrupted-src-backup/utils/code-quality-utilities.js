@@ -1,19 +1,15 @@
 // Code quality utilities and configurations;
-<<<<<<< HEAD
 export const codeQualityUtils = {
   // Type checking utilities;
   validateTypes: (value, expectedType) => {
     //     const actualType = typeof value;
     if (actualType !== expectedType) {
-=======
 export const codeQualityUtils = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       throw new Error(`Expected ${expectedType}, got ${actualType}`);
     }
     return true;
   },
 
-<<<<<<< HEAD
   // Deep object comparison;
   deepEqual: (obj1, obj2) => {
     if (obj1 === obj2) return true;
@@ -29,10 +25,8 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
       for (const key of keys1) {
         if (!keys2.includes(key)) return false;
         if (!deepEqual(obj1[key], obj2[key])) return false;
-=======
   // Deep object comparison,
   deepEqual: (obj1, obj2) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
 
       return true;
@@ -41,7 +35,6 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
     return false;
   },
 
-<<<<<<< HEAD
   // Debounce utility;
   debounce: (func, wait) => {
     let timeout;
@@ -49,17 +42,14 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
       const later = () => {
         clearTimeout(timeout);
         func(...args);
-=======
   // Debounce utility,
   debounce: (func, wait) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
       clearTimeout(timeout);
       timeout = setTimeout(later, wait);
     };
   },
 
-<<<<<<< HEAD
   // Throttle utility;
   throttle: (func, limit) => {
     let inThrottle;
@@ -68,15 +58,12 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
         func.apply(this, args);
         inThrottle = true;
         setTimeout(() => (inThrottle = false), limit);
-=======
   // Throttle utility,
   throttle: (func, limit) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     };
   },
 
-<<<<<<< HEAD
   // Memoization;
   memoize: fn => {
     const _cache = new Map();
@@ -84,10 +71,8 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
       //       const key = JSON.stringify(args);
       if (cache.has(key)) {,
         return cache.get(key);
-=======
   // Memoization,
   memoize: fn => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       //       const result = fn.apply(this, args);
       cache.set(key, result);

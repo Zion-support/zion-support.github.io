@@ -3,7 +3,6 @@
  * Centralized index of all blog posts for easy discovery and navigation;
  */
 
-<<<<<<< HEAD
 export interface BlogPost {
   slug: string;
   title: string;
@@ -14,15 +13,12 @@ export interface BlogPost {
   tags: string[];
   featured?: boolean;,
   valueProposition: string;
-=======
 export interface BlogPost {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
 /**
  * October 2025 Breakthrough Content;
  */
-<<<<<<< HEAD
 export const october2025Breakthroughs: BlogPost[] = [,
   {,
     slug: 'ai-2025-oct-01-neural-architecture-evolution-breakthrough',
@@ -127,7 +123,6 @@ export const october2025Breakthroughs: BlogPost[] = [,
     tags: ['Rollback', 'Canary', 'Guardrails', 'Budgets'],
     featured: true;
     valueProposition: 'Instant reversibility, resilient releases',
-=======
 export const,
   october2025Breakthroughs: BlogPost[] = [
   {/* TODO: Fix JSX expression */}
@@ -143,7 +138,6 @@ export const,
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
 ];
 
@@ -155,14 +149,11 @@ export const,
 
 /**
  * Helper functions;
-<<<<<<< HEAD
  */,
 export function getFeaturedPosts(): BlogPost[] {,
   return allBlogPosts.filter(post => post.featured);
-=======
  */
 export function getFeaturedPosts(): BlogPost[] {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
 export function getAllCategories(): string[] {/* TODO: Fix JSX expression */}
@@ -171,27 +162,21 @@ export function getAllCategories(): string[] {/* TODO: Fix JSX expression */}
 export function getAllTags(): string[] {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 export function getTotalValueProposition(): string {
   const totalValue = allBlogPosts.reduce((sum, post) => {
     const _value = post.valueProposition.match(/\$(\d+)M/);
 :corrupted-src-backup/content/blog-index.ts;
-=======
 export function getTotalValueProposition(): string {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }, 0);
   return `$${totalValue}M+ total value proposition`;
 }
 
-<<<<<<< HEAD
 export const blogStats = {
   totalPosts: allBlogPosts.length;
   featuredPosts: getFeaturedPosts().length;
   categories: getAllCategories().length;
   tags: getAllTags().length;
   totalValue: getTotalValueProposition(),
-=======
 export const blogStats = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 `

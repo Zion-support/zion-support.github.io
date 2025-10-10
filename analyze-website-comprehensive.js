@@ -5,8 +5,6 @@ import http from 'http';
 import { JSDOM } from 'jsdom';
 import fs from 'fs';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Configuration;
 const BASE_URL = 'https: //ziontechgroup.com';
 const MAX_DEPTH = 3;
@@ -275,9 +273,6 @@ async function analyzeWebsite() {
 
 // Run the analysis;
 analyzeWebsite();
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
 class WebsiteAnalyzer {
   constructor(baseUrl) {
     this.baseUrl = baseUrl;
@@ -428,7 +423,6 @@ class WebsiteAnalyzer {
       });
     }
     
-<<<<<<< HEAD
     console.log(`\n📄 PAGES FOUND:`);
     this.pages.forEach((page, url) => {
       console.log(`   • ${url}`);
@@ -437,9 +431,7 @@ class WebsiteAnalyzer {
     });
     
     // Save detailed report
-=======
     // Save report to file
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
     const report = {
       baseUrl: this.baseUrl,
       analyzedAt: new Date().toISOString(),
@@ -458,12 +450,9 @@ class WebsiteAnalyzer {
   }
 }
 
-<<<<<<< HEAD
 // Run the analysis
 const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com');
 analyzer.analyze().catch(console.error);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-=======
 // Main execution
 if (import.meta.url === `file://${process.argv[1]}`) {
   const baseUrl = process.argv[2] || 'https://ziontechgroup.com';
@@ -472,4 +461,3 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export default WebsiteAnalyzer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233

@@ -19,13 +19,10 @@ import {
   AlertTriangle;
 } from 'lucide-react';
 
-<<<<<<< HEAD
 const StatusPage: React.FC = () => {,
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
   const refreshStatus = () => {
     setIsRefreshing(true);
@@ -35,7 +32,6 @@ import React from 'react';
     }, 1000);
   };
 
-<<<<<<< HEAD
   const services = [
     {
       name: 'AI Services API'
@@ -123,7 +119,6 @@ import React from 'react';
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational':
-<<<<<<< HEAD
         return <CheckCircle className="w-5 h-5 text-green-400" >;</CheckCircle>
       case 'degraded':</CheckCircle>
         return <AlertCircle className="w-5 h-5 text-yellow-400" >;</AlertCircle>
@@ -131,7 +126,6 @@ import React from 'react';
         return <XCircle className="w-5 h-5 text-red-400" >;</XCircle>
       default:</XCircle>
         return <Clock className="w-5 h-5 text-gray-400" >;
-=======
         return <CheckCircle className="w-5 h-5 text-green-400" />;
       case 'degraded':
         return <AlertCircle className="w-5 h-5 text-yellow-400" />;
@@ -139,7 +133,6 @@ import React from 'react';
         return <XCircle className="w-5 h-5 text-red-400" />;
       default:,
         return <Clock className="w-5 h-5 text-gray-400" />;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
     }
   };
 
@@ -170,7 +163,6 @@ import React from 'react';
   };
 
   const overallStatus = services.every(service => service.status === 'operational') ? 'operational' : 'degraded';
-<<<<<<< HEAD
 </Clock>
   return (</Clock>
     </Clock><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -181,10 +173,8 @@ import React from 'react';
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">System Status</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Real-time status of all our services and systems. We monitor our infrastructure 24/7 to ensure optimal performance.</p>
           </p>
           
-<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <div className={`flex items-center space-x-2 px-4 py-2 rounded-lg ${getStatusColor(overallStatus)}`}>{getStatusIcon(overallStatus)}<span className="font-semibold">{overallStatus === 'operational' ? 'All Systems Operational' : 'Some Issues Detected'}</span>
-=======
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -203,11 +193,8 @@ import React from 'react';
               {getStatusIcon(overallStatus)}
               <span className="font-semibold">
                 {overallStatus === 'operational' ? 'All Systems Operational' : 'Some Issues Detected'}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"></section>
             <div className={`flex items-center space-x-2 px-4 py-2 rounded-lg ${getStatusColor(overallStatus)}`}>{getStatusIcon(overallStatus)}</div><span className="font-semibold">{overallStatus === 'operational' ? 'All Systems Operational' : 'Some Issues Detected'}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </span>
             </div>
             <button;
@@ -222,21 +209,15 @@ import React from 'react';
 
         {/* Service Status */}
         <section className="mb-16">
-<<<<<<< HEAD
-<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Service Status<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{services.map((service, index) => (</div>
-=======
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Service Status</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
             {services.map((service, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="cyber-card p-6">
                 <div className="flex items-center justify-between mb-4">
-=======
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Service Status</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{services.map((service, index) => (</section>
               <div key={index} className="cyber-card p-6"></div>
                 <div className="flex items-center justify-between mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <h3 className="text-xl font-bold text-white">{service.name}</h3>
                   {getStatusIcon(service.status)}
                 <p className="text-gray-300 text-sm mb-4">{service.description}</p>
@@ -271,24 +252,18 @@ import React from 'react';
                   </div>
                 </div>
                 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                   <div>
                     <span className="text-gray-400">Start Time:<div className="text-white">{new Date(incident.startTime).toLocaleString()}</div>
-=======
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm"></div>
                   <div></div>
                     <span className="text-gray-400">Start Time:</span><div className="text-white">{new Date(incident.startTime).toLocaleString()}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   </div>
                   <div></div>
                     <span className="text-gray-400">End Time:</span><div className="text-white">{new Date(incident.endTime).toLocaleString()}</div>
                   </div>
-<<<<<<< HEAD
                   <div>
                     <span className="text-gray-400">Affected Services:<div className="text-white">{incident.affectedServices.join(', ')}</div>
-=======
                 <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">,
                   <div>,
                     <span className="text-gray-400">Start Time:</span>,
@@ -301,11 +276,8 @@ import React from 'react';
                   <div>
                     <span className="text-gray-400">Affected Services: </span>,
                     <div className="text-white">{incident.affectedServices.join(', ')}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
                   <div></div>
                     <span className="text-gray-400">Affected Services:</span><div className="text-white">{incident.affectedServices.join(', ')}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   </div>
                 </div>
               </div>
@@ -316,13 +288,10 @@ import React from 'react';
         {/* Performance Metrics */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Performance Metrics</h2>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="cyber-card p-6 text-center">
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></section>
             <div className="cyber-card p-6 text-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <Activity className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
               <div className="text-3xl font-bold text-white mb-2">99.9%</div><div className="text-gray-400 text-sm">Overall Uptime</div>
             </div>
@@ -336,40 +305,30 @@ import React from 'react';
             </div>
             <div className="cyber-card p-6 text-center"></div>
               <Shield className="w-8 h-8 text-purple-400 mx-auto mb-3" />
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className="text-3xl font-bold text-white mb-2">0<div className="text-gray-400 text-sm">Active Incidents</div>
-=======
               <div className="text-3xl font-bold text-white mb-2">0</div><div className="text-gray-400 text-sm">Active Incidents</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </div>
           </div>
         </section>
 
-=======
               <div className="text-3xl font-bold text-white mb-2">0</div>
               <div className="text-gray-400 text-sm">Active Incidents</div>,
             </div>,
           </div>,
         </section>,
 ,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
         {/* Contact Information */}
         <section className="text-center">
           <div className="cyber-card p-8 max-w-4xl mx-auto"></section>
             <h2 className="text-3xl font-bold text-white mb-4">Need Help?</h2><p className="text-xl text-gray-300 mb-8">If you're experiencing issues not reflected in our status page, please contact our support team.</p>
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link;
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <Link
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 to="/support"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all inline-flex items-center"
               >
-<<<<<<< HEAD
                 <AlertTriangle className="w-5 h-5 mr-2" >Report an Issue</AlertTriangle>
               </AlertTriangle>
               <a
@@ -378,7 +337,6 @@ import React from 'react';
               >
                 <Clock className="w-5 h-5 mr-2" >Call: (302) 464-0950</Clock>
               </Clock>
-=======
                 <AlertTriangle className="w-5 h-5 mr-2" />
                 Report an Issue;
               </Link>
@@ -389,7 +347,6 @@ import React from 'react';
                 <Clock className="w-5 h-5 mr-2" />
                 Call: (302) 464-0950;
               </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </div>
           </div>
         </section>
@@ -397,7 +354,6 @@ import React from 'react';
 
       <Footer />,
     </div>,
-=======
 const StatusPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -413,7 +369,6 @@ const StatusPage: React.FC = () => {
       </div>
 
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 

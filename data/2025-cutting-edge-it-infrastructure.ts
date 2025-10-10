@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -31,7 +30,6 @@
     email: string;
     address: string;
     website: string;
-=======
   i,
   d: string;
   nam,
@@ -94,7 +92,6 @@
   s: string;
     websit,
   e: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
         'Quantum-resistant encryption algorithms',
         'Zero-trust security architecture',
@@ -114,7 +111,6 @@
 export const,
   cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] =;
   [
-<<<<<<< HEAD
     // Quantum - Secure Cloud Infrastructure;
       id: 'quantum - secure - cloud - infrastructure',
       name: 'Quantum - Secure Cloud Infrastructure Platform',
@@ -123,7 +119,6 @@ export const,
       price: '$4, 999',
       period: '/month',
       description: unknown;
-=======
     // Quantum - Secure Cloud Infrastructure,
       i,
   d: 'quantum - secure - cloud - infrastructure',
@@ -138,7 +133,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Revolutionary cloud infrastructure platform featuring quantum - resistant encryption, zero - trust architecture, and autonomous security management for enterprise - grade applications.',
       feature,
   s: [,
@@ -153,7 +147,6 @@ export const,
         '99.999% uptime guarantee',
         '24 / 7 security monitoring',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: ''
       color: 'from - blue - 600 to - indigo - 600'
@@ -168,7 +161,6 @@ export const,
       category: 'Cloud Infrastructure & Security',
       real_service: true;
       technology: [,
-=======
       popula,
   r: true,
       ico,
@@ -197,7 +189,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Kubernetes, Docker, Terraform, Ansible, Python, Go, Rust, Quantum APIs',
       ],
       integration,
@@ -206,7 +197,6 @@ export const,
   s: [,
         'Enterprise applications, Government systems, Financial platforms, Healthcare systems, Defense applications',
       ],
-<<<<<<< HEAD
       roi: 'Enterprises report 800% ROI through reduced security incidents and operational costs.',
       competitors: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'],
       market_size: '$397.4B cloud computing market'
@@ -234,7 +224,6 @@ export const,
       price: '$2, 999',
       period: '/month',
       description: unknown;
-=======
       ro,
   i: 'Enterprises report 800% ROI through reduced security incidents and operational costs.',
       competitor,
@@ -285,7 +274,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Advanced edge computing platform that orchestrates distributed computing resources across global edge locations with AI - powered optimization and real - time performance monitoring.',
       feature,
   s: [,
@@ -300,7 +288,6 @@ export const,
         'Cost optimization analytics',
         'API for edge application development',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: '',
         'Content delivery, IoT applications, Gaming platforms, Video streaming, E-commerce optimization',
@@ -324,7 +311,6 @@ export const,
       real_service: true;
       technology: ['Kubernetes, Docker, Python, Go, Rust, AI / ML, Edge APIs'],
       integrations: [,
-=======
       popula,
   r: true,
       ico,
@@ -369,14 +355,12 @@ export const,
   y: ['Kubernetes, Docker, Python, Go, Rust, AI / ML, Edge APIs'],
       integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'AWS, Azure, GCP, Cloudflare, Fastly, Akamai, CDN providers',
       ],
       use_case,
   s: [,
         'Content delivery, IoT applications, Gaming platforms, Video streaming, E - commerce optimization',
       ],
-<<<<<<< HEAD
       roi: 'Companies report 500% ROI through improved performance and reduced bandwidth costs.',
       competitors: ['AWS CloudFront, Cloudflare, Fastly, Akamai'],
       market_size: '$67.8B edge computing market'
@@ -405,7 +389,6 @@ export const,
       price: '$1, 999',
       period: '/month',
       description: unknown;
-=======
       ro,
   i: 'Companies report 500% ROI through improved performance and reduced bandwidth costs.',
       competitor,
@@ -457,7 +440,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Revolutionary DevOps platform that autonomously manages software development, testing, deployment, and operations using advanced AI and machine learning algorithms.',
       feature,
   s: [,
@@ -472,7 +454,6 @@ export const,
         'GitOps workflow automation',
         'Real - time collaboration tools',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: '',
         'Software development, CI/CD pipelines, Infrastructure automation, Monitoring and alerting, Security automation',
@@ -495,7 +476,6 @@ export const,
       category: 'DevOps & Automation',
       real_service: true;
       technology: [,
-=======
       popula,
   r: true,
       ico,
@@ -538,7 +518,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Kubernetes, Docker, Jenkins, GitLab CI, Python, Go, AI / ML, Terraform',
       ],
       integration,
@@ -549,7 +528,6 @@ export const,
   s: [,
         'Software development, CI / CD pipelines, Infrastructure automation, Monitoring and alerting, Security automation',
       ],
-<<<<<<< HEAD
       roi: 'Development teams report 600% ROI through faster deployments and reduced operational overhead.',
       competitors: ['GitLab, GitHub Enterprise, Azure DevOps, Jenkins'],
       market_size: '$8.2B DevOps market'
@@ -577,7 +555,6 @@ export const,
       price: '$3, 499',
       period: '/month',
       description: unknown;
-=======
       ro,
   i: 'Development teams report 600% ROI through faster deployments and reduced operational overhead.',
       competitor,
@@ -628,7 +605,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Enterprise - grade blockchain platform featuring scalable infrastructure, AI - powered consensus mechanisms, and automated smart contract management for business applications.',
       feature,
   s: [,
@@ -643,7 +619,6 @@ export const,
         'Performance analytics dashboard',
         '24 / 7 blockchain monitoring',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: '',
         'IBM Blockchain Platform, AWS Managed Blockchain, Azure Blockchain Service',
@@ -664,7 +639,6 @@ export const,
       category: 'Blockchain & Distributed Systems',
       real_service: true;
       technology: [,
-=======
       popula,
   r: true,
       ico,
@@ -703,7 +677,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Hyperledger Fabric, Ethereum, Solidity, Python, Go, AI / ML, Kubernetes',
       ],
       integration,
@@ -720,7 +693,6 @@ export const,
   s: [,
         'IBM Blockchain Platform, AWS Managed Blockchain, Azure Blockchain Service',
       ],
-<<<<<<< HEAD
       market_size: '$19.9B blockchain market'
       growth_rate: '87% annual growth'
       variant: 'blockchain - enterprise'
@@ -745,7 +717,6 @@ export const,
       price: '$5, 999',
       period: '/month',
       description: unknown;
-=======
       market_siz,
   e: '$19.9B blockchain market',
       growth_rat,
@@ -791,7 +762,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Revolutionary networking platform featuring quantum encryption, AI - powered traffic optimization, and autonomous network management for ultra - secure, high - performance communications.',
       feature,
   s: [,
@@ -806,7 +776,6 @@ export const,
         'Performance analytics',
         '24 / 7 network monitoring',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: ''
       color: 'from - indigo - 600 to - purple - 600'
@@ -821,7 +790,6 @@ export const,
       category: 'Quantum Networking & Security',
       real_service: true;
       technology: [,
-=======
       popula,
   r: true,
       ico,
@@ -850,7 +818,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Quantum APIs, Python, Go, Rust, AI / ML, Network protocols, Quantum hardware',
       ],
       integration,
@@ -859,7 +826,6 @@ export const,
   s: [,
         'Government communications, Defense networks, Financial trading, Healthcare systems, Research networks',
       ],
-<<<<<<< HEAD
       roi: 'Organizations report 1000% ROI through improved security and network performance.',
       competitors: ['Cisco, Juniper, Arista, Huawei'],
       market_size: '$25.3B quantum computing market'
@@ -873,7 +839,6 @@ export const,
       },
       real_implementation: true;
       implementation_details: unknown;
-=======
       ro,
   i: 'Organizations report 1000% ROI through improved security and network performance.',
       competitor,
@@ -900,12 +865,10 @@ export const,
   n: true,
       implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra - secure communications.',
       launch_dat,
   e: '2025 - 02 - 01',
         'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.',
-<<<<<<< HEAD
       launchDate: '2025-02-01'
       customers: 6;
       rating: 4 && 4.9;
@@ -1082,7 +1045,6 @@ export interface CuttingEdgeITInfrastructureService {;
   customers: number;
   rating: number;
   reviews: number;
-=======
       launchDat,
   e: '2025-02-01',
       customer,
@@ -1351,13 +1313,11 @@ export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression
   g: number;
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ;
 export const,
   cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [;
   // Quantum-Secure Cloud Infrastructure;
-<<<<<<< HEAD
   {
     id: 'quantum-secure-cloud-infrastructure';
     name: 'Quantum-Secure Cloud Infrastructure Platform';
@@ -1569,7 +1529,6 @@ export const,
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com',
-=======
   {/* TODO: Fix JSX expression */}
   t: 'quantum-cloud-enterprise'}
     contactInf,
@@ -1695,7 +1654,6 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
     realImplementatio,
   n: true;
@@ -1724,14 +1682,12 @@ export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -1744,13 +1700,11 @@ export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression
   g: number;
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ;
 export const,
   cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [;
   // Quantum-Secure Cloud Infrastructure;
-<<<<<<< HEAD
   {
     id: 'quantum-secure-cloud-infrastructure';
     name: 'Quantum-Secure Cloud Infrastructure Platform';
@@ -1969,7 +1923,6 @@ export const,
     customers: 6;
     rating: 4.9;
     reviews: 4;
-=======
   {/* TODO: Fix JSX expression */}
   t: 'quantum-cloud-enterprise'}
     contactInf,
@@ -2108,7 +2061,6 @@ export const,
   g: 4.9;
     review,
   s: 4,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 ;

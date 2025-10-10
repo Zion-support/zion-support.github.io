@@ -2,8 +2,6 @@
  * Security Headers Configuration;
  * Comprehensive security headers for production applications;
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface SecurityHeadersConfig {
   contentSecurityPolicy?: string;
   strictTransportSecurity?: string;
@@ -15,7 +13,6 @@ export interface SecurityHeadersConfig {
 export const defaultSecurityHeaders: SecurityHeadersConfig = {
   // Content Security Policy;
   contentSecurityPolicy: [,
-=======
 export interface SecurityHeadersConfig {}
   contentSecurityPolicy?: string
   strictTransportSecurity?: string
@@ -27,7 +24,6 @@ export interface SecurityHeadersConfig {}
 export const defaultSecurityHeaders: SecurityHeadersConfig = {}
   // Content Security Policy
   contentSecurityPolicy: [
->>>>>>> origin/merge-error-fixes
     "default-src 'self'",
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",
     "style-src 'self' 'unsafe-inline'",
@@ -63,12 +59,9 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
 /**
  * Get security headers as key-value pairs;
  */
-<<<<<<< HEAD
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
-=======
 export function getSecurityHeaders()
   customConfig?: Partial<SecurityHeadersConfig>
->>>>>>> origin/merge-error-fixes
 ): Record<string, string> {}
   const config = { ...defaultSecurityHeaders, ...customConfig }
   const headers: Record<string, string> = {}
@@ -92,7 +85,6 @@ export function getSecurityHeaders()
   }
   if (config.permissionsPolicy) {}
     headers['Permissions-Policy'] = config.permissionsPolicy;}
-=======
 export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */}
 }
 export const,
@@ -118,32 +110,25 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
   if (config.referrerPolicy) {/* TODO: Fix JSX expression */}
   }
   if (config.permissionsPolicy) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   return headers;
 }
 /**
  * Get security headers in Next.js format;
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
 ): Array<{ key: string; value: string }> {
-=======
 export function getNextSecurityHeaders()
   customConfig?: Partial<SecurityHeadersConfig>
 ): Array<{ key: string; value: string }> {}
->>>>>>> origin/merge-error-fixes
   const headers = getSecurityHeaders(customConfig)
   return Object.entries(headers).map(([key, value]) => ({}
     key,
     value}
   }))
-=======
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
 ): Array<{/* TODO: Fix JSX expression */}
   e: string }> {/* TODO: Fix JSX expression */}
   }));
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 export default defaultSecurityHeaders;

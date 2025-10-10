@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface InnovativeITService2024 {id: string;
   name: string;
   tagline: string;
@@ -88,7 +87,6 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     customers: 950;
     rating: 4.8;
     reviews: 520;
-=======
 export interface InnovativeITService2024 {/* TODO: Fix JSX expression */}
   s: string}
     websit,
@@ -194,7 +192,6 @@ export const,
   g: 4.8,
     review,
   s: 520,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export interface InnovativeITService2024,

@@ -1,5 +1,4 @@
 // Meta tags configuration;
-<<<<<<< HEAD
 export const metaTags = {
   title: 'Bolt.new Zion App - Advanced Web Development Solutions',
   description: 'Professional web development services with cutting-edge technology and innovative solutions.',
@@ -19,12 +18,10 @@ export const metaTags = {
     title: 'Bolt.new Zion App - Advanced Web Development Solutions',
     description: 'Professional web development services with cutting-edge technology and innovative solutions.',
     image: 'https://bolt.new.zion.app/og-image.jpg',
-=======
 export const metaTags = {/* TODO: Fix JSX expression */}
   },
   twitte,
   r: {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
 };
 

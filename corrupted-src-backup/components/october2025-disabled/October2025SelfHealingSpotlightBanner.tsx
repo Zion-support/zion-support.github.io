@@ -1,18 +1,14 @@
 
-<<<<<<< HEAD
 export default function October2025SelfHealingSpotlightBann, e, r() { 
-<<<<<<< HEAD
   return(<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, tex, t-white, p, y-12, p, x-4'>
       <div, className='m, a, x-w-6xl, m, x-au, t, o'>
         <div, className='flex, fle, x-col, m, d: fl, e, x-row, item, s-center, ga, p-8'>
           <div, className='fl, e, x-1'>
-=======
   return (
     <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, tex, t-white, p, y-12, p, x-4'></div>
       <div, className='m, a, x-w-6xl, m, x-au, t, o'></div>
         <div, className='flex, fle, x-col, m, d: fl, e, x-row, item, s-center, ga, p-8'></div>
           <div, className='fl, e, x-1'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <div, className='inli, n, e-block, b, g-r, e, d-500, tex, t-white, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, m, b-3, animat, e-boun, c, e'>
               🔥 H, O, T - JUST, PUBLISHED, TODAY;
             </div>
@@ -82,7 +78,5 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
         </div>)
       </div>)
     </d, i, v > );
-=======
 export default function October2025SelfHealingSpotlightBann, e, r() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  }

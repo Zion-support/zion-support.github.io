@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 interface SEOProps {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 const EnhancedSEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions, offering cutting-edge technology services, enterprise software development, and digital transformation solutions.',
@@ -22,17 +21,14 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
   canonical,
 }) => {
   const _location = useLocation();
-=======
 const,
   EnhancedSEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   //   const currentUrl = url || `${window.location.origin}${location.pathname}`;
   //   const canonicalUrl = canonical || currentUrl;
   //   const currentTime = new Date().toISOString();
 
   // Generate structured data;
-<<<<<<< HEAD
   const structuredData = {
     '@context': 'https: //schema.org',
     '@type': 'Organization',
@@ -44,7 +40,6 @@ const,
       'https://linkedin.com/company/zion-tech-group',
       'https: //twitter.com/ziontechgroup',
       'https: //github.com/zion-tech-group',
-=======
   const structuredData = {/* TODO: Fix JSX expression */}`
   o: `${window.location.origin}/images/logo.png`,
     sameA,
@@ -55,12 +50,10 @@ const,
   s://twitter.com/ziontechgroup',
       'http,
   s://github.com/zion-tech-group',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ],
     contactPoin,
   t: {/* TODO: Fix JSX expression */}
     },
-<<<<<<< HEAD
     address: {
       '@type': 'PostalAddress'
       streetAddress: '123 Tech Street',
@@ -68,15 +61,12 @@ const,
       addressRegion: 'CA',
       postalCode: '94105',
       addressCountry: 'US',
-=======
     addres,
   s: {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
   };
 
   // Add article structured data if type is article;
-<<<<<<< HEAD
   if (type === 'article') {
     const articleData = {
       '@context': 'https: //schema.org',
@@ -101,7 +91,6 @@ const,
       mainEntityOfPage: {,
         '@type': 'WebPage',
         '@id': currentUrl,
-=======
   if (type === 'article') {/* TODO: Fix JSX expression */}
       },
       publishe,
@@ -115,7 +104,6 @@ const,
   d: modifiedTime || currentTime,
       mainEntityOfPag,
   e: {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
     };
 
@@ -129,34 +117,27 @@ const,
   }
 
   // Track page view;
-<<<<<<< HEAD
   useEffect(() => {
     // Google Analytics tracking;
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {)
         page_title: title),
         page_location: currentUrl),
-=======
   useEffect(() => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
 
     // Custom analytics tracking;
-<<<<<<< HEAD
     if (typeof window !== 'undefined' && (window as any).analytics) {
       (window as any).analytics.track('Page Viewed', {)
         title)
         url: currentUrl),
         type),
-=======
     if (typeof window !== 'undefined' && (window as any).analytics) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
   }, [title, currentUrl, type]);
 
-<<<<<<< HEAD
   return(<Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -240,7 +221,6 @@ const,
                 item: currentUrl;),
               })
             ])
-=======
   return (<Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -324,7 +304,6 @@ const,
               {/* TODO: Fix JSX expression */}
               },
             ],
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           })}
         </script>
       )}

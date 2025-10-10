@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export interface SpaceTechService {id: string;
   name: string;
   tagline: string;
@@ -43,7 +42,6 @@ export interface SpaceTechService {id: string;
     price: '$5, 999',
     period: '/month',
     description: unknown;
-=======
 export interface SpaceTechService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
@@ -71,7 +69,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.',
     feature,
   s: [,
@@ -86,7 +83,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Regulatory compliance tools',
       'Multi - satellite operations',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - cyan - 600 to - blue - 700'
@@ -101,7 +97,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     category: 'Space Technology',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -130,7 +125,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Orbital Mechanics',
       'Satellite Tracking',
       'Space Weather',
@@ -157,7 +151,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Regulatory compliance',
       'Performance optimization',
     ],
-<<<<<<< HEAD
     roi: 'Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams.',
     competitors: ['SpaceX Starlink', 'OneWeb', 'Basic satellite services'],
     market_size: '$469B space economy'
@@ -184,7 +177,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     price: '$3, 999',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams.',
     competitor,
@@ -234,7 +226,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced satellite constellation management system that optimizes large networks of satellites for maximum coverage, efficiency, and performance. Manage thousands of satellites like SpaceX and OneWeb.',
     feature,
   s: [,
@@ -249,7 +240,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Mobile management app',
       'API for integration',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - blue - 600 to - indigo - 700'
@@ -264,7 +254,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     category: 'Space Technology',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -293,7 +282,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI Optimization',
       'Satellite Networks',
       'Machine Learning',
@@ -319,7 +307,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Traffic management',
       'Efficiency optimization',
     ],
-<<<<<<< HEAD
     roi: 'Optimize satellite operations and reduce operational costs by 40%. ROI through efficiency gains and improved service quality.',
     competitors: ['Traditional satellite management', 'Basic monitoring tools'],
     market_size: '$150B satellite services market'
@@ -346,7 +333,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     price: '$2, 499',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Optimize satellite operations and reduce operational costs by 40%. ROI through efficiency gains and improved service quality.',
     competitor,
@@ -396,7 +382,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced space debris monitoring system that tracks orbital debris and provides collision avoidance recommendations. Protect your satellites and ensure safe space operations.',
     feature,
   s: [,
@@ -411,7 +396,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'API for satellite integration',
       '24 / 7 monitoring service',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - green - 600 to - emerald - 700'
@@ -426,7 +410,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     category: 'Space Technology',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -455,7 +438,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI Risk Assessment',
       'Debris Tracking',
       'Machine Learning',
@@ -481,7 +463,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Research analysis',
       'Safety planning',
     ],
-<<<<<<< HEAD
     roi: 'Protect valuable satellites and reduce insurance costs by 30%. ROI through risk mitigation and asset protection.',
     competitors: ['Basic debris tracking', 'Manual monitoring'],
     market_size: '$50B space safety market'
@@ -507,7 +488,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     price: '$1, 999',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Protect valuable satellites and reduce insurance costs by 30%. ROI through risk mitigation and asset protection.',
     competitor,
@@ -556,7 +536,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced space weather forecasting system that predicts solar storms, radiation events, and other space weather phenomena that can impact satellite operations and communications.',
     feature,
   s: [,
@@ -571,7 +550,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Mobile app',
       'API for integration',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - yellow - 600 to - orange - 700'
@@ -586,7 +564,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     category: 'Space Technology',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -615,7 +592,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI Forecasting',
       'Space Weather',
       'Machine Learning',
@@ -641,7 +617,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Research analysis',
       'Safety planning',
     ],
-<<<<<<< HEAD
     roi: 'Prevent satellite damage and reduce operational disruptions. ROI through risk mitigation and operational continuity.',
     competitors: ['Basic weather data', 'Manual monitoring'],
     market_size: '$30B space weather market'
@@ -667,7 +642,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     price: '$4, 999',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Prevent satellite damage and reduce operational disruptions. ROI through risk mitigation and operational continuity.',
     competitor,
@@ -716,7 +690,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced orbital launch coordination platform that manages complex launch sequences, orbital insertions, and mission timing. Coordinate launches like SpaceX and NASA with precision.',
     feature,
   s: [,
@@ -731,7 +704,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Mobile app',
       'API for integration',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - red - 600 to - pink - 700'
@@ -746,7 +718,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     category: 'Space Technology',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -775,7 +746,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Launch Coordination',
       'Orbital Mechanics',
       'Precision Timing',
@@ -801,7 +771,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Mission tracking',
       'Performance analysis',
     ],
-<<<<<<< HEAD
     roi: 'Improve launch success rates and reduce mission costs by 25%. ROI through operational efficiency and mission success.',
     competitors: ['Basic coordination', 'Manual planning'],
     market_size: '$20B launch services market'
@@ -827,7 +796,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     price: '$3, 499',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Improve launch success rates and reduce mission costs by 25%. ROI through operational efficiency and mission success.',
     competitor,
@@ -876,7 +844,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced ground station network management system that coordinates global networks of ground stations for satellite communications, tracking, and control.',
     feature,
   s: [,
@@ -891,7 +858,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       '24 / 7 monitoring',
       'Automated failover',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - emerald - 600 to - teal - 700'
@@ -906,7 +872,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     category: 'Space Technology',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -935,7 +900,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Network Management',
       'Global Coordination',
       'AI Optimization',
@@ -961,7 +925,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Failover management',
       'Global coordination',
     ],
-<<<<<<< HEAD
     roi: 'Optimize ground station operations and reduce network costs by 35%. ROI through efficiency gains and improved reliability.',
     competitors: ['Basic management', 'Manual coordination'],
     market_size: '$25B ground station market'
@@ -987,7 +950,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     price: '$1, 499',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Optimize ground station operations and reduce network costs by 35%. ROI through efficiency gains and improved reliability.',
     competitor,
@@ -1036,7 +998,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive space research data platform that provides access to satellite imagery, space weather data, and research findings with AI - powered analysis and insights.',
     feature,
   s: [,
@@ -1051,7 +1012,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Real - time updates',
       'Advanced search',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - purple - 600 to - indigo - 700'
@@ -1066,7 +1026,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     category: 'Space Technology',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1095,7 +1054,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Data Analytics',
       'AI Analysis',
       'Satellite Data',
@@ -1121,7 +1079,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Scientific discovery',
       'Data exploration',
     ],
-<<<<<<< HEAD
     roi: 'Accelerate research and discovery through comprehensive data access and AI analysis. ROI through research efficiency and insights.',
     competitors: ['Basic data access', 'Manual research'],
     market_size: '$15B space research market'
@@ -1147,7 +1104,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     price: '$2, 999',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Accelerate research and discovery through comprehensive data access and AI analysis. ROI through research efficiency and insights.',
     competitor,
@@ -1196,7 +1152,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary space commerce platform that enables trading of satellite capacity, launch services, and space assets in a secure, blockchain - powered marketplace.',
     feature,
   s: [,
@@ -1211,7 +1166,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Real - time trading',
       'Compliance tools',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - violet - 600 to - purple - 700'
@@ -1226,7 +1180,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     category: 'Space Technology',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1255,7 +1208,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Blockchain',
       'Smart Contracts',
       'Trading Platform',
@@ -1281,7 +1233,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Insurance trading',
       'Market making',
     ],
-<<<<<<< HEAD
     roi: 'Create new revenue streams through space asset trading and reduce transaction costs by 50%.',
     competitors: ['Manual contracts', 'Traditional procurement'],
     market_size: '$100B space services market'
@@ -1307,7 +1258,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     price: '$299',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Create new revenue streams through space asset trading and reduce transaction costs by 50%.',
     competitor,
@@ -1356,7 +1306,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive space education platform that provides interactive courses, simulations, and training for space technology, operations, and careers.',
     feature,
   s: [,
@@ -1371,7 +1320,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Community forums',
       'Real - time updates',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - indigo - 600 to - blue - 700'
@@ -1386,7 +1334,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     category: 'Space Technology',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1415,7 +1362,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Interactive Learning',
       'Virtual Reality',
       'AI Tutoring',
@@ -1441,7 +1387,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Academic learning',
       'Personal development',
     ],
-<<<<<<< HEAD
     roi: 'Accelerate space education and career development through interactive learning. ROI through skill development and career advancement.',
     competitors: ['Basic education', 'Traditional courses'],
     market_size: '$8B space education market'
@@ -1517,7 +1462,6 @@ export const spaceTechServices: SpaceTechService[] = [,
     customers: 500;
     rating: 4.9;
     reviews: 250;
-=======
     ro,
   i: 'Accelerate space education and career development through interactive learning. ROI through skill development and career advancement.',
     competitor,
@@ -1690,7 +1634,6 @@ export const,
   g: 4.9,
     review,
   s: 250,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 export interface SpaceTechService {/* TODO: Fix JSX expression */}
   }
@@ -1700,7 +1643,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   }
 ];
 ;
-<<<<<<< HEAD
     realImplementation: true;
     implementationDetails:,
       'Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance.'
@@ -1715,7 +1657,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     price: '$3,999'
     period: '/month',
     description:,
-=======
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1742,7 +1683,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced satellite constellation management system that optimizes large networks of satellites for maximum coverage, efficiency, and performance. Manage thousands of satellites like SpaceX and OneWeb.'
     feature,
   s: [;
@@ -1757,7 +1697,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Mobile management app'
       'API for integration'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -1765,7 +1704,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     link: 'https://ziontechgroup.com/satellite-constellation',
     marketPosition: 'Revolutionary technology with no direct competitors. Traditional satellite management uses basic tools. Our advantage: AI-powered optimization and large-scale management.',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -1782,7 +1720,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   advantage: AI-powered optimization and large-scale management.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Satellite operators, Internet service providers, Telecommunications companies, Government agencies, Research institutions'
     trialDay,
   s: 30;
@@ -1802,18 +1739,14 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Telecom systems'
       'Monitoring tools'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Constellation management'
       'Coverage optimization'
       'Performance monitoring'
       'Maintenance planning'
       'Traffic management'
-<<<<<<< HEAD
       'Efficiency optimization',
     ],
     roi: 'Optimize satellite operations and reduce operational costs by 40%. ROI through efficiency gains and improved service quality.',
@@ -1824,7 +1757,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     contactInfo: marketPosition: unknown;
       'Revolutionary technology with no direct competitors. Basic debris tracking exists but lacks AI-powered risk assessment. Our advantage: Comprehensive monitoring and avoidance.',
     targetAudience:,
-=======
       'Efficiency optimization'
     ]
     ro,
@@ -1844,7 +1776,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   advantage: Comprehensive monitoring and avoidance.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Satellite operators, Space agencies, Launch providers, Insurance companies, Research institutions'
     trialDay,
   s: 30;
@@ -1864,18 +1795,14 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Insurance platforms'
       'Research databases'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Debris monitoring'
       'Collision avoidance'
       'Risk assessment'
       'Insurance underwriting'
       'Research analysis'
-<<<<<<< HEAD
       'Safety planning',
     ],
     roi: 'Protect valuable satellites and reduce insurance costs by 30%. ROI through risk mitigation and asset protection.',
@@ -1886,7 +1813,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     contactInfo: marketPosition: unknown;
       'Revolutionary technology with no direct competitors. Basic space weather data exists but lacks predictive capabilities. Our advantage: AI-powered forecasting and impact assessment.',
     targetAudience:,
-=======
       'Safety planning'
     ]
     ro,
@@ -1906,7 +1832,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   advantage: AI-powered forecasting and impact assessment.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Satellite operators, Telecommunications companies, Power grid operators, Aviation companies, Research institutions'
     trialDay,
   s: 30;
@@ -1926,18 +1851,14 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Telecom systems'
       'Aviation systems'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Weather forecasting'
       'Impact assessment'
       'Risk mitigation'
       'Operational planning'
       'Research analysis'
-<<<<<<< HEAD
       'Safety planning',
     ],
     roi: 'Prevent satellite damage and reduce operational disruptions. ROI through risk mitigation and operational continuity.',
@@ -1948,7 +1869,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     contactInfo: marketPosition: unknown;
       'Revolutionary technology with no direct competitors. Basic launch coordination exists but lacks precision timing. Our advantage: Advanced coordination and optimization.',
     targetAudience:,
-=======
       'Safety planning'
     ]
     ro,
@@ -1968,7 +1888,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   advantage: Advanced coordination and optimization.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Launch providers, Space agencies, Satellite operators, Government agencies, Research institutions'
     trialDay,
   s: 30;
@@ -1988,18 +1907,14 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Mission control'
       'Satellite networks'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Launch coordination'
       'Mission planning'
       'Timing optimization'
       'Trajectory planning'
       'Mission tracking'
-<<<<<<< HEAD
       'Performance analysis',
     ],
     roi: 'Improve launch success rates and reduce mission costs by 25%. ROI through operational efficiency and mission success.',
@@ -2010,7 +1925,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     contactInfo: marketPosition: unknown;
       'Revolutionary technology with no direct competitors. Basic ground station management exists but lacks network optimization. Our advantage: Global coordination and optimization.',
     targetAudience:,
-=======
       'Performance analysis'
     ]
     ro,
@@ -2030,7 +1944,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   advantage: Global coordination and optimization.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Satellite operators, Telecommunications companies, Space agencies, Research institutions, Commercial space companies'
     trialDay,
   s: 30;
@@ -2050,18 +1963,14 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Monitoring tools'
       'Control systems'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Network management'
       'Traffic optimization'
       'Performance monitoring'
       'Maintenance planning'
       'Failover management'
-<<<<<<< HEAD
       'Global coordination',
     ],
     roi: 'Optimize ground station operations and reduce network costs by 35%. ROI through efficiency gains and improved reliability.',
@@ -2072,7 +1981,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     contactInfo: marketPosition: unknown;
       'Revolutionary technology with no direct competitors. Basic data access exists but lacks AI analysis. Our advantage: Comprehensive data and AI-powered insights.',
     targetAudience:,
-=======
       'Global coordination'
     ]
     ro,
@@ -2092,7 +2000,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   advantage: Comprehensive data and AI-powered insights.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Researchers, Educational institutions, Government agencies, Space companies, Media organizations, Students'
     trialDay,
   s: 30;
@@ -2112,18 +2019,14 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Media systems'
       'Government databases'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Research analysis'
       'Educational content'
       'Media reporting'
       'Policy development'
       'Scientific discovery'
-<<<<<<< HEAD
       'Data exploration',
     ],
     roi: 'Accelerate research and discovery through comprehensive data access and AI analysis. ROI through research efficiency and insights.',
@@ -2134,7 +2037,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     contactInfo: marketPosition: unknown;
       'Revolutionary technology with no direct competitors. Traditional space services use manual contracts. Our advantage: Automated trading and secure marketplace.',
     targetAudience:,
-=======
       'Data exploration'
     ]
     ro,
@@ -2154,7 +2056,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   advantage: Automated trading and secure marketplace.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Satellite operators, Launch providers, Space companies, Investors, Insurance companies, Government agencies'
     trialDay,
   s: 30;
@@ -2174,18 +2075,14 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Financial systems'
       'Compliance platforms'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Asset trading'
       'Service procurement'
       'Capacity trading'
       'Investment trading'
       'Insurance trading'
-<<<<<<< HEAD
       'Market making',
     ],
     roi: 'Create new revenue streams through space asset trading and reduce transaction costs by 50%.',
@@ -2196,7 +2093,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     contactInfo: marketPosition: unknown;
       'Revolutionary technology with no direct competitors. Basic space education exists but lacks interactivity. Our advantage: Interactive courses and real-world simulations.',
     targetAudience:,
-=======
       'Market making'
     ]
     ro,
@@ -2216,7 +2112,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   advantage: Interactive courses and real-world simulations.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Students, Professionals, Space enthusiasts, Educational institutions, Companies, Government agencies'
     trialDay,
   s: 30;
@@ -2236,18 +2131,14 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Career platforms'
       'Social networks'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Space education'
       'Career training'
       'Skill development'
       'Professional certification'
       'Academic learning'
-<<<<<<< HEAD
       'Personal development',
     ],
     roi: 'Accelerate space education and career development through interactive learning. ROI through skill development and career advancement.',
@@ -2278,7 +2169,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     customers: 500;
     rating: 4.9;
     reviews: 250;
-=======
       'Personal development'
     ]
     ro,
@@ -2337,7 +2227,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   g: 4.9;
     review,
   s: 250,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export interface SpaceTechService {/* TODO: Fix JSX expression */}
@@ -2345,7 +2234,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -2397,7 +2285,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     customers: 500;
     rating: 4.9;
     reviews: 250;
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -2440,7 +2327,6 @@ export const,
   g: 4.9,
     review,
   s: 250,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
   }

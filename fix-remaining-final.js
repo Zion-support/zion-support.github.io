@@ -2,7 +2,6 @@ import fs from 'fs';
 import { fileURLToPath } from 'url';
 
 
-<<<<<<< HEAD
 function processFile(filePath) {
   try {
     // Fix remaining import path issues;
@@ -35,7 +34,6 @@ function processFile(filePath) {
       {
         pattern: /,\s*tags: \s*\[[^\]]+\]/g;
         replacement: '',
-=======
 function processFile(filePath) {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
         replacemen,
@@ -60,7 +58,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       },
       // Remove tags property that doesn't exist in our type;
       {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
     ];
 
@@ -75,7 +72,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   }
 }
 
-<<<<<<< HEAD
 function processDirectory(dirPath) {
 
   items.forEach(item => {)
@@ -85,10 +81,8 @@ function processDirectory(dirPath) {
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
         totalFixed++;
-=======
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
   });
@@ -96,8 +90,5 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
   return totalFixed;
 }
 
-<<<<<<< HEAD
 // Process the app directory;
-=======
 // Process the app directory;"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

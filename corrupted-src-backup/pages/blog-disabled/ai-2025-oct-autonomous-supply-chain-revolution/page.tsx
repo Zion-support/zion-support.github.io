@@ -2,7 +2,6 @@ impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-<<<<<<< HEAD
 export default function AutonomousSupplyChainRevolution20, 2, 5() {  
   return(:src/pages/blog/ai-2025-oct-autonomous-supply-chain-revolution/page.tsx;
     <>
@@ -47,22 +46,16 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
             Back, to, Blog;
 :src/pages/blog/ai-2025-oct-autonomous-supply-chain-revolution/page.tsx;
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-te, a, l-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'>
-<<<<<<< HEAD
               Autonomous, AI, Supply Cha, i, n: T, h, e $1.8B, Efficiency, Revolution;
-=======
               Autonomous, AI, Supply Cha, i, n: T, h, e $1.8B, Efficiency, Revolution</h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <li, classNam, e='flex, item, s-start, ga, p-3'>
                   <Globe, classNam, e='h-6 w-6, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
               <span, className='te, x, t-gr, a, y-4, 0, 0'>Octo, b, e, r , 1, 20, 2, 5</sp, a, n>
             </div>
 
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-te, a, l-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'>
-<<<<<<< HEAD
               Autonomous, AI, Supply Cha, i, n: T, h, e $1.8B, Efficiency, Revolution;
-=======
               Autonomous, AI, Supply Cha, i, n: T, h, e $1.8B, Efficiency, Revolution</h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <li, className='flex, item, s-start, ga, p-3'>
                   <Globe, className='h-6 w-6, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
                   <sp, a, n>
@@ -76,7 +69,6 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0 ">
-<<<<<<< HEAD
                   <span><strong>99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -95,7 +87,6 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
 :src/pages/blog/ai-2025-oct-autonomous-supply-chain-revolution/page.tsx;
                   <TrendingUp className=" />,
                   <span><strong>99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,"
-=======
                   <span></span><strong>99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,
                 </li>
                 <li className="flex items-start gap-3">
@@ -114,7 +105,6 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
 :src/pages/blog/ai-2025-oct-autonomous-supply-chain-revolution/page.tsx
                   <TrendingUp className=" />
                   <span></span><strong>99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,"
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </li>"
                 <li className="flex items-start gap-3">
                   <Zap className=" />
@@ -143,7 +133,6 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
-<<<<<<< HEAD
                   <span><strong>99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -158,7 +147,6 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
                   <Globe className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />,)
           <div>,)
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">),
-=======
                   <span></span><strong>99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,
                 </li>
                 <li className="flex items-start gap-3">
@@ -173,14 +161,12 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
                   <Globe className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
           <div></div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3"></h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Package className=" />,"
   Transformational Impact;
               </h2>
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <TrendingUp className=" />">
-<<<<<<< HEAD
                   <span><strong>99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -190,7 +176,6 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
                 <li className="flex items-start gap-3">
                   <DollarSign className=" />">
                   <span><strong>$1.8B+ Total Value: </strong> Average annual savings and revenue gains for enterprise deployments</span>
-=======
                   <span></span><strong>99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,
                 </li>
                 <li className="flex items-start gap-3">
@@ -200,7 +185,6 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
                 <li className="flex items-start gap-3">
                   <DollarSign className=" />">
                   <span></span><strong>$1.8B+ Total Value: </strong> Average annual savings and revenue gains for enterprise deployments</span>,
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </li>
                 <li className="flex items-start gap-3">
                   <Globe className=" />">
@@ -212,7 +196,6 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
-<<<<<<< HEAD
                   <span><strong>99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -226,7 +209,6 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
                 <li className="flex items-start gap-3">
                   <Globe className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
                   <span><strong>$450M+ Disruption Prevention: </strong> Predictive risk management prevents costly supply chain failures</span>)
-=======
                   <span></span><strong>99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,
                 </li>
                 <li className="flex items-start gap-3">
@@ -240,7 +222,6 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
                 <li className="flex items-start gap-3">
                   <Globe className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
                   <span></span><strong>$450M+ Disruption Prevention: </strong> Predictive risk management prevents costly supply chain failures</span>,
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </li>
               </ul>,
             </div>,
@@ -262,17 +243,14 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
                   1. Predictive, Demand, Intelligence;
                 </h3>
                 <p, className='te, x, t-gr, a, y-300, m, b-4'>
-<<<<<<< HEAD
                   Advanced, ML, models analyze, historical, pattern, s, market, trend, s)
                   external, signal, s, and, emerging, indicators to, forecast, demand;
                   with, 9, 9.2% accuracy, at, SKU-locati, o, n-week, granularit, y. Deep, learning, captures complex, seasonal, patterns, promotional, effect, s, and, market, dynamics that, traditional, forecasting;
                   methods, mis, s.
-=======
                   Advanced, ML, models analyze, historical, pattern, s, market, trend, s,
                   external, signal, s, and, emerging, indicators to, forecast, demand
                   with, 9, 9.2% accuracy, at, SKU-locati, o, n-week, granularit, y. Deep, learning, captures complex, seasonal, patterns, promotional, effect, s, and, market, dynamics that, traditional, forecasting
                   methods, mis, s.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
 
             <section, classNam, e = 'mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-bl, u, e-3, 0, 0'>
@@ -312,13 +290,10 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
                 </ul>
               </div>
 
-<<<<<<< HEAD
 :src/pages/blog/ai-2025-oct-autonomous-supply-chain-revolution/page.tsx;
               <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-bl, u, e-5, 0, 0/20'>
-=======
 :src/pages/blog/ai-2025-oct-autonomous-supply-chain-revolution/page.tsx
               <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-bl, u, e-5, 0, 0/20'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-cy, a, n-3, 0, 0'>
                   Phas, e, 2: Pilot, Deploymen, t (Month, s, 4-, 6)
                 </h3>
@@ -390,19 +365,16 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
   </div>
               <div></div>
                 <h3 className="text-2xl font-bold mb-4 text-cyan-300">Phase 3: Scale (Months 7-12)</h3>
-<<<<<<< HEAD
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">,
               <div>,
                 <h3 className="text-2xl font-bold mb-4 text-cyan-300">Phase 3: Scale (Months 7-12)</h3>,
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">,
                   <li >Roll out across all product categories and geographies</li>,
-=======
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
               <div></div>
                 <h3 className="text-2xl font-bold mb-4 text-cyan-300">Phase 3: Scale (Months 7-12)</h3>
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
                   <li >Roll out across all product categories and geographies</li>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <li >Activate advanced capabilities: risk management, logistics optimization</li>,
                   <li >Integrate autonomous decision-making into operational workflows</li>
                   <li >Establish continuous improvement and monitoring processes</li>
@@ -447,9 +419,7 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">,
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />,
   );
-=======
 export default function AutonomousSupplyChainRevolution20, 2, 5() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
   </div>
   </div>

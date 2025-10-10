@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import {Phone, Mail, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, CheckCircle, TrendingUp, Users, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Bot, Music, Video, CreditCard, Car, Train, Home, Heart, GraduationCap, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Mail as MailIcon} from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -708,8 +704,6 @@ $4}}
 
         <Footer />
   );
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, CheckCircle, TrendingUp, Users, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Bot, Music, Video, CreditCard, Car, Train, Home, Heart, GraduationCap } from 'lucide-react';
@@ -1272,7 +1266,6 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-=======
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
@@ -1330,7 +1323,6 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network particle-system">
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
       {/* Navigation */}
       <Navigation />
       
@@ -1646,6 +1638,5 @@ const HomePage: React.FC = () => {
     </div>
   );
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
 export default HomePage;

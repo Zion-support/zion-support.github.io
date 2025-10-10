@@ -7,7 +7,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix lint warnings in a file;
-<<<<<<< HEAD
 function fixLintWarnings(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -16,9 +15,7 @@ function fixLintWarnings(filePath) {
     // Fix unused variables by prefixing with underscore;
     content = content.replace(/const (\w+) = /g, (match, varName) => {
       if (varName.startsWith('_')) return match;
-=======
 function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       return `const _${varName} = `;
     });
     
@@ -31,12 +28,9 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/import { Link } from 'react-router-dom';/g, '');
     
     // Fix console statements in test files;
-<<<<<<< HEAD
     if (filePath.includes('setupTests') || filePath.includes('test')) {
       content = content.replace(/console\.(log|warn|error|info)\([^)]*\);?/g, '');
-=======
     if (filePath.includes('setupTests') || filePath.includes('test')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     
     // Fix any types;
@@ -47,13 +41,10 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/let _\w+ = [^;]+;\s*\n/g, '');
     
     // Fix specific patterns;
-<<<<<<< HEAD
     if (filePath.includes('main.tsx')) {
       content = content.replace(/const registration = /g, 'const _registration = ');
       content = content.replace(/const registrationError = /g, 'const _registrationError = ');
-=======
     if (filePath.includes('main.tsx')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     
     if (filePath.includes('offline/page.tsx')) {/* TODO: Fix JSX expression */}
@@ -85,7 +76,6 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Function to find all files that need lint fixing;
-<<<<<<< HEAD
 function findFilesToFix(dir) {
   const files = [];
   
@@ -100,10 +90,8 @@ function findFilesToFix(dir) {
         walkDir(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         files.push(fullPath);
-=======
 function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
   }

@@ -5,7 +5,6 @@
       "Easy integration","
       "Affordable pricing"
     ];
-<<<<<<< HEAD
     link: "/services/2029-practical-business-solution", category: "Practical Business Solutions 2029",
     realImplementation: true;
     contactInfo: unknown;
@@ -50,7 +49,6 @@
     email: string;
     website: string;
     address: string;
-=======
     lin,"
   k: "/services/2029-practical-business-solution", categor,"
   y: "Practical Business Solutions 2029",
@@ -142,7 +140,6 @@
   e: string;
     addres,
   s: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 export const,
   practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] =;
@@ -165,7 +162,6 @@ export const,
         'Easy integration'
         'Affordable pricing'
       ]
-<<<<<<< HEAD
       link: '/services/2029-practical-business-solution'
       category: 'Practical Business Solutions 2029'
       realImplementation: true;
@@ -241,7 +237,6 @@ export interface PracticalBusinessSolution2029 {,
     category: "Practical Business Solutions 2029",
     realImplementation: true;
     contactInfo: unknown}
-=======
       lin,
   k: '/services/2029-practical-business-solution'
       categor,
@@ -363,14 +358,12 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
 export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}
   o: unknown}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
 ;
 export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}
   };
-<<<<<<< HEAD
 export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] =
   [
       id: '2029-practical-business-solution'
@@ -379,7 +372,6 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
       price: '$299/month',
       description: 'Practical business solution platform that provides real-world solutions for 2029.',
       features: [,
-=======
 export const,
   practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] =,
   [
@@ -395,14 +387,12 @@ export const,
   n: 'Practical business solution platform that provides real-world solutions for 2029.',
       feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Practical solutions',
         'Business applications',
         'Real-world use cases',
         'Easy integration',
         'Affordable pricing',
       ],
-<<<<<<< HEAD
       link: '/services/2029-practical-business-solution'
       category: 'Practical Business Solutions 2029'
       realImplementation: true;
@@ -416,7 +406,6 @@ export const,
       "Practical solutions"
       "Business applications"
       "Real-world use cases"
-=======
       lin,
   k: '/services/2029-practical-business-solution',
       categor,
@@ -438,7 +427,6 @@ export const,
       "Practical solutions""
       "Business applications""
       "Real-world use cases""
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       "Easy integration"
   i,
   d: string;
@@ -467,7 +455,6 @@ export const,
 }"
       "Affordable pricing"
     ],
-<<<<<<< HEAD
     link: "/services/2029-practical-business-solution"
     category: "Practical Business Solutions 2029"
     realImplementation: true;
@@ -485,7 +472,6 @@ export const,
     mobile: string;
     email: string}
     address: string}
-=======
     lin,"
   k: "/services/2029-practical-business-solution",
     categor,"
@@ -517,12 +503,10 @@ export const,
   l: string}
     addres,
   s: string}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 }"
       "Affordable pricing"
     ];
-<<<<<<< HEAD
     link: "/services / 2029 - practical - business - solution", category: "Practical Business Solutions 2029",
     real_implementation: true;
     contact_info: unknown;
@@ -548,7 +532,6 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com"}
       address: "364 E Main St STE 1008 Middletown DE 19709"    }
-=======
     lin,"
   k: "/services / 2029 - practical - business - solution", categor,"
   y: "Practical Business Solutions 2029",
@@ -564,7 +547,6 @@ export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"    }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
     }

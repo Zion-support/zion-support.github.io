@@ -1,5 +1,4 @@
 /**
-<<<<<<< HEAD
  * API Cache Utility;
  * Provides intelligent caching for API requests;
  */
@@ -44,7 +43,6 @@ class APICache {
     if (now - entry.timestamp > entry.ttl) {,
       this.cache.delete(key);
       return null;
-=======
  * API Caching Utility;
  * Provides caching, deduplication, and retry logic for API calls;
  */
@@ -93,12 +91,10 @@ export class ApiCache {/* TODO: Fix JSX expression */}
     }
     try {/* TODO: Fix JSX expression */}
     } finally {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     return entry.data;
   }
-<<<<<<< HEAD
 
   has(key: string): boolean {
     const entry = this.cache.get(key);
@@ -108,7 +104,6 @@ export class ApiCache {/* TODO: Fix JSX expression */}
     if (now - entry.timestamp > entry.ttl) {,
       this.cache.delete(key);
       return false;
-=======
   /**
    * Fetch with retry logic;
    */
@@ -130,12 +125,10 @@ export class ApiCache {/* TODO: Fix JSX expression */}
     } catch (error) {/* TODO: Fix JSX expression */}
       }
       throw error;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     return true;
   }
-<<<<<<< HEAD
 
   delete(key: string): boolean {,
     return this.cache.delete(key);
@@ -167,7 +160,6 @@ export class ApiCache {/* TODO: Fix JSX expression */}
     for (const [key, entry] of this.cache.entries()) {
       if (now - entry.timestamp > entry.ttl) {
         expiredKeys.push(key);
-=======
   /**
    * Invalidate cache entries matching a pattern;
    */
@@ -215,20 +207,17 @@ export class ApiCache {/* TODO: Fix JSX expression */}
    * Clean up old pending requests;
    */
   private cleanupPendingRequests(): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
 
     expiredKeys.forEach(key => this.cache.delete(key));
   }
 }
-<<<<<<< HEAD
 
 // Create singleton instance;
 export const apiCache = new APICache();
 
 export default APICache;
-=======
 /**
  * Default API cache instance;
  */
@@ -292,4 +281,3 @@ export function createCachedApi(baseUr,
   };
 }
 export default ApiCache;`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

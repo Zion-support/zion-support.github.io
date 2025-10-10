@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const revolutionary2027MicroSaasServices = [{name: 'Revolutionary 2027 Micro-SaaS Platform'
     path: '/services/revolutionary-2027-micro-saas-platform',
     description: 'Next-generation 2027 micro-SaaS development and deployment',
@@ -22,7 +21,6 @@ export const revolutionary2027MicroSaasServices = [{name: 'Revolutionary 2027 Mi
     icon: 'BarChart3',
     category: 'Analytics',
     features: [,
-=======
 export const revolutionary2027MicroSaasServices = [{/* TODO: Fix JSX expression */}
   l: '$799/month'}
       enterpris,
@@ -41,18 +39,15 @@ export const revolutionary2027MicroSaasServices = [{/* TODO: Fix JSX expression 
   y: 'Analytics',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Predictive analytics',
       'AI-powered insights',
       'Advanced reporting',
       'Performance monitoring'
     ],
-<<<<<<< HEAD
     pricing: unknown;
       starter: '$199/month',
       professional: '$399/month',
       enterprise: 'Custom',
-=======
     pricin,
   g: unknown,
       starte,
@@ -61,7 +56,6 @@ export const revolutionary2027MicroSaasServices = [{/* TODO: Fix JSX expression 
   l: '$399/month',
       enterpris,
   e: 'Custom'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
@@ -71,13 +65,11 @@ export const revolutionary2027MicroSaasCategories = [
   'User Management',
   'Revenue Optimization'
 ];
-<<<<<<< HEAD
 export const revolutionary2027MicroSaasStats =
   totalServices: 2;
   categories: 4;
   averageRating: 4.9;
   activeUsers: 2500;
-=======
 export const revolutionary2027MicroSaasStats = {};
   totalService,
   s: 2,
@@ -87,7 +79,6 @@ export const revolutionary2027MicroSaasStats = {};
   g: 4.9,
   activeUser,
   s: 2500,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const revolutionary2027MicroSaasServices = [ nam,
   e: 'Revolutionary 2027 Micro-SaaS Platform',' pat,

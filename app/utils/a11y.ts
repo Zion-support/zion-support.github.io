@@ -1,5 +1,4 @@
 /**
-<<<<<<< HEAD
  * Accessibility utilities for enhanced user experience;
  */
 
@@ -13,7 +12,6 @@ export interface A11yOptions {}
 export class A11yManager {}
   private options: A11yOptions;
   private liveRegion: HTMLElement | null = null;
-<<<<<<< HEAD
 ,
   constructor(options: A11yOptions = {}) {
     this.options = {
@@ -22,7 +20,6 @@ export class A11yManager {}
       keyboardNavigation: true;
       screenReaderSupport: true;
       ...options;
-=======
 
   constructor(options: A11yOptions = {}) {}
     this.options = {}
@@ -31,7 +28,6 @@ export class A11yManager {}
       keyboardNavigation: true,
       screenReaderSupport: true,
       ...options
->>>>>>> origin/merge-error-fixes
     };
 
     this.initializeLiveRegion();
@@ -50,13 +46,10 @@ export class A11yManager {}
   /**
    * Announce changes to screen readers;
    */
-<<<<<<< HEAD
   announce(message: string): void {,
     if (this.liveRegion && this.options.announceChanges) {,
-=======
   announce(message: string): void {}
     if (this.liveRegion && this.options.announceChanges) {}
->>>>>>> origin/merge-error-fixes
       this.liveRegion.textContent = message;
     }
   }
@@ -64,13 +57,10 @@ export class A11yManager {}
   /**
    * Set focus to an element;
    */
-<<<<<<< HEAD
   focus(element: HTMLElement | null): void {,
     if (element && this.options.focusManagement) {,
-=======
   focus(element: HTMLElement | null): void {}
     if (element && this.options.focusManagement) {}
->>>>>>> origin/merge-error-fixes
       element.focus();
     }
   }
@@ -80,30 +70,24 @@ export class A11yManager {}
    */
   trapFocus(container: HTMLElement): void {}
     if (!this.options.focusManagement) return;
-<<<<<<< HEAD
 ,
     const focusableElements = container.querySelectorAll(,)
-=======
 
     const focusableElements = container.querySelectorAll()
->>>>>>> origin/merge-error-fixes
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
 
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-<<<<<<< HEAD
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {,
         if (e.shiftKey) {,
           if (document.activeElement === firstElement) {,
-=======
     const handleKeyDown = (e: KeyboardEvent) => {}
       if (e.key === 'Tab') {}
         if (e.shiftKey) {}
           if (document.activeElement === firstElement) {}
->>>>>>> origin/merge-error-fixes
             lastElement.focus();
             e.preventDefault();
           }
@@ -123,19 +107,16 @@ export class A11yManager {}
   /**
    * Add keyboard navigation support;
    */
-<<<<<<< HEAD
   addKeyboardNavigation(element: HTMLElement): void {,
     if (!this.options.keyboardNavigation) return;
 ,
     element.addEventListener('keydown', (e) => {
       switch (e.key) {
-=======
   addKeyboardNavigation(element: HTMLElement): void {}
     if (!this.options.keyboardNavigation) return;
 
     element.addEventListener('keydown', (e) => {}
       switch (e.key) {}
->>>>>>> origin/merge-error-fixes
         case 'Enter':
         case ' ':
           e.preventDefault();
@@ -151,13 +132,10 @@ export class A11yManager {}
   /**
    * Enhance button accessibility;
    */
-<<<<<<< HEAD
   enhanceButton(button: HTMLButtonElement): void {,
     if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {,
-=======
   enhanceButton(button: HTMLButtonElement): void {}
     if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {}
->>>>>>> origin/merge-error-fixes
       button.setAttribute('aria-label', 'Button');
     }
 
@@ -167,11 +145,8 @@ export class A11yManager {}
   /**
    * Enhance form field accessibility;
    */
-<<<<<<< HEAD
   enhanceFormField(field: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement): void {,
-=======
   enhanceFormField(field: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement): void {}
->>>>>>> origin/merge-error-fixes
     const label = document.querySelector(`label[for="${field.id}"]`);
 
     if (!label && !field.getAttribute('aria-label')) {}
@@ -186,11 +161,8 @@ export class A11yManager {}
   /**
    * Create accessible modal;
    */
-<<<<<<< HEAD
   createAccessibleModal(modal: HTMLElement): void {,
-=======
   createAccessibleModal(modal: HTMLElement): void {}
->>>>>>> origin/merge-error-fixes
     modal.setAttribute('role', 'dialog');
     modal.setAttribute('aria-modal', 'true');
 
@@ -213,13 +185,10 @@ export class A11yManager {}
   }
 }
 
-<<<<<<< HEAD
 // Utility functions;
 export const a11yUtils = {
-=======
 // Utility functions
 export const a11yUtils = {}
->>>>>>> origin/merge-error-fixes
   /**
    * Check if element is visible to screen readers;
    */
@@ -233,19 +202,16 @@ export const a11yUtils = {}
   /**
    * Get accessible name for element;
    */
-<<<<<<< HEAD
   getAccessibleName(element: HTMLElement): string {
     return element.getAttribute('aria-label') ||,
            element.getAttribute('aria-labelledby') ||,
            element.textContent?.trim() ||,
            element.getAttribute('title') ||,
-=======
   getAccessibleName(element: HTMLElement): string {}
     return element.getAttribute('aria-label') ||
            element.getAttribute('aria-labelledby') ||
            element.textContent?.trim() ||
            element.getAttribute('title') ||
->>>>>>> origin/merge-error-fixes
            '';
   },
 
@@ -256,19 +222,16 @@ export const a11yUtils = {}
     const tabIndex = element.getAttribute('tabindex');
     if (tabIndex === '-1') return false;
 
-<<<<<<< HEAD
     if(element instanceof HTMLButtonElement ||)
         element instanceof HTMLInputElement ||)
         element instanceof HTMLSelectElement ||)
         element instanceof HTMLTextAreaElement ||),
         element instanceof HTMLAnchorElement) {,
-=======
     if (element instanceof HTMLButtonElement ||
         element instanceof HTMLInputElement ||
         element instanceof HTMLSelectElement ||
         element instanceof HTMLTextAreaElement ||
         element instanceof HTMLAnchorElement) {}
->>>>>>> origin/merge-error-fixes
       return !element.disabled;
     }
 
@@ -277,7 +240,6 @@ export const a11yUtils = {}
 };
 
 export default A11yManager;
-=======
  * Accessibility (A11Y) Utilities;
  * Provides helpers for improving web accessibility;
  */
@@ -465,4 +427,3 @@ export class FocusManager {/* TODO: Fix JSX expression */}
   }
 }
 `
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

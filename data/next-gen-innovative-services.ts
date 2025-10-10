@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   // Quantum AI & Advanced Computing;
     id: 'quantum-ai-brain-computer-interface'
     name: 'Quantum AI Brain-Computer Interface',
     period: '/month',
     description: unknown;
-=======
 export const,
   nextGenInnovativeServices: NextGenInnovativeService[] = [,
   // Quantum AI & Advanced Computing,
@@ -16,7 +14,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.',
     feature,
   s: [,
@@ -50,7 +47,6 @@ export const,
       'Quantum neural signal processing_real - time brain activity monitoringAI - powered cognitive enhancement_neural pattern recognition_secure quantum encryption_multi - modal interface support_advanced analytics dashboardAPI for research integration',
       'Compliance with medical standards24 / 7 quantum AI support'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
       'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.',
@@ -69,7 +65,6 @@ export const,
     setupTime: '2-4 weeks',
     category: 'Quantum AI & Neuroscience',
     realService: true;
-=======
     popula,
   r: true,
     ico,
@@ -108,7 +103,6 @@ export const,
   y: 'Quantum AI & Neuroscience',
     realServic,
   e: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing',
       'Neural Networks',
       'Brain - Computer Interface',
@@ -130,7 +124,6 @@ export const,
       'AI development',
       'Defense applications',
     ],
-<<<<<<< HEAD
     roi: '1000% ROI within 6 months through breakthrough discoveries and patents'
     technology: ['Quantum ComputingNeural NetworksBrain-Computer InterfaceAI/MLQuantum Encryption']
     technology: ['Quantum ComputingNeural NetworksBrain-Computer InterfaceAI/MLQuantum Encryption']
@@ -191,7 +184,6 @@ export interface NextGenInnovativeService {;
   customers: number;
   rating: number;
   reviews: number;
-=======
     ro,
   i: '1000% ROI within 6 months through breakthrough discoveries and patents',
     technolog,
@@ -276,7 +268,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: number,
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
   i,
   d: string;
@@ -336,7 +327,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -365,7 +355,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     period: '/month'
     description: 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.'
     features: [
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -418,12 +407,10 @@ export const,
   n: 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum neural signal processing'
       'Real-time brain activity monitoring'
       'AI-powered cognitive enhancement'
       'Neural pattern recognition'
-<<<<<<< HEAD
       'Secure quantum encryption',
       'Multi-modal interface support',
       'Advanced analytics dashboard',
@@ -453,7 +440,6 @@ export const,
     category: 'Quantum AI & Neuroscience'
     realService: true;
     technology: [;
-=======
       'Secure quantum encryption'
       'Multi-modal interface support'
       'Advanced analytics dashboard'
@@ -506,7 +492,6 @@ export const,
   e: true;
     technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing'
       'Neural Networks'
       'Brain-Computer Interface'
@@ -520,17 +505,13 @@ export const,
       'Cloud platforms'
       'Data analysis tools'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Medical research'
       'Cognitive enhancement'
       'Neural rehabilitation'
       'AI development'
-<<<<<<< HEAD
       'Defense applications',
     ],
     roi: '1000% ROI within 6 months through breakthrough discoveries and patents',
@@ -651,7 +632,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     customers: 15;
     rating: 4.9;
     reviews: 8;
-=======
       'Defense applications'
     ]
     ro,
@@ -760,7 +740,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4.9,
     review,
   s: 8,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
   // Space Technology Platform;
     i,
@@ -792,7 +771,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',
       'Regulatory compliance toolsMulti-satellite operations'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     color: 'from-cyan-600 to-blue-700',
@@ -811,7 +789,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     setupTime: '4-6 weeks',
     category: 'Space Technology',
     realService: true;
-=======
     popula,
   r: true,
     ico,
@@ -849,7 +826,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   y: 'Space Technology',
     realServic,
   e: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Satellite Technology',
       'Orbital Mechanics',
       'Space Weather',
@@ -872,7 +848,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Launch coordination',
       'Space research',
     ],
-<<<<<<< HEAD
     roi: '500% ROI through operational efficiency and mission success rates'
     technology: ['Satellite TechnologyOrbital MechanicsSpace WeatherAI/MLCloud Computing']
     technology: ['Satellite TechnologyOrbital MechanicsSpace WeatherAI/MLCloud Computing']
@@ -909,7 +884,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     description:,
       'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.'
     features: [
-=======
     ro,
   i: '500% ROI through operational efficiency and mission success rates',
     technolog,
@@ -982,12 +956,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Satellite mission planning'
       'Orbital mechanics calculations'
       'Real-time satellite tracking'
       'Space weather monitoring'
-<<<<<<< HEAD
       'Launch vehicle integration',
       'Ground station management',
       'Space debris tracking',
@@ -1014,7 +986,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     category: 'Space Technology'
     realService: true;
     technology: [;
-=======
       'Launch vehicle integration'
       'Ground station management'
       'Space debris tracking'
@@ -1062,7 +1033,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true;
     technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Satellite Technology'
       'Orbital Mechanics'
       'Space Weather'
@@ -1077,17 +1047,13 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Ground stations'
       'Launch providers'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Satellite operations'
       'Mission planning'
       'Space infrastructure'
       'Launch coordination'
-<<<<<<< HEAD
       'Space research',
     ],
     roi: '500% ROI through operational efficiency and mission success rates',
@@ -1122,7 +1088,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     period: '/month',
     description: 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.',
     features: [,
-=======
       'Space research'
     ]
     ro,
@@ -1191,7 +1156,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   n: 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Satellite mission planning',
       'Orbital mechanics calculations',
       'Real-time satellite tracking',
@@ -1210,7 +1174,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',
       'Regulatory compliance toolsMulti-satellite operations'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -1228,7 +1191,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     category: 'Space Technology',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1266,7 +1228,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Satellite Technology',
       'Orbital Mechanics',
       'Space Weather',
@@ -1289,7 +1250,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Launch coordination',
       'Space research',
     ],
-<<<<<<< HEAD
     roi: '500% ROI through operational efficiency and mission success rates',
     competitors: ['SpaceX Starlink ($99/month)', 'OneWeb ($50/month)'],    marketSize: '$469B space economy',    technology: ['Satellite TechnologyOrbital MechanicsSpace WeatherAI/MLCloud Computing']
     technology: ['Satellite TechnologyOrbital MechanicsSpace WeatherAI/MLCloud Computing']
@@ -1333,7 +1293,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     customers: 8;
     rating: 4.8;
     reviews: 12;
-=======
     ro,
   i: '500% ROI through operational efficiency and mission success rates',
     competitor,
@@ -1417,7 +1376,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4.8,
     review,
   s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
   // Biotech AI Platform;
     i,
@@ -1449,7 +1407,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard',
       'API for research integrationMulti-omics data analysis'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     color: 'from-emerald-600 to-teal-700',
@@ -1468,7 +1425,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     setupTime: '2-3 weeks',
     category: 'Biotech & Healthcare AI',
     realService: true;
-=======
     popula,
   r: true,
     ico,
@@ -1506,7 +1462,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   y: 'Biotech & Healthcare AI',
     realServic,
   e: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing',
       'Bioinformatics',
       'Genomics',
@@ -1527,7 +1482,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Personalized medicine',
       'Disease research',
     ],
-<<<<<<< HEAD
     roi: '1000% ROI through accelerated drug development and patent generation'
     technology: ['AI/MLQuantum ComputingBioinformaticsGenomicsDrug Discovery']
     technology: ['AI/MLQuantum ComputingBioinformaticsGenomicsDrug Discovery']
@@ -1563,7 +1517,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     period: '/month'
     description: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.'
     features: [
-=======
     ro,
   i: '1000% ROI through accelerated drug development and patent generation',
     technolog,
@@ -1635,12 +1588,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   n: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI drug discovery algorithms'
       'Genetic sequence analysis'
       'Protein folding prediction'
       'Drug interaction modeling'
-<<<<<<< HEAD
       'Clinical trial optimization',
       'Regulatory compliance tools',
       'Research collaboration platform',
@@ -1667,7 +1618,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     category: 'Biotech & Healthcare AI'
     realService: true;
     technology: [;
-=======
       'Clinical trial optimization'
       'Regulatory compliance tools'
       'Research collaboration platform'
@@ -1715,7 +1665,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true;
     technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI/ML'
       'Quantum Computing'
       'Bioinformatics'
@@ -1729,17 +1678,13 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Clinical trial systems'
       'Regulatory databases'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Drug discovery'
       'Genetic research'
       'Clinical trials'
       'Personalized medicine'
-<<<<<<< HEAD
       'Disease research',
     ],
     roi: '1000% ROI through accelerated drug development and patent generation',
@@ -1774,7 +1719,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     period: '/month',
     description: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.',
     features: [,
-=======
       'Disease research'
     ]
     ro,
@@ -1843,7 +1787,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   n: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI drug discovery algorithms',
       'Genetic sequence analysis',
       'Protein folding prediction',
@@ -1862,7 +1805,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard',
       'API for research integrationMulti-omics data analysis'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -1880,7 +1822,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     category: 'Biotech & Healthcare AI',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1918,7 +1859,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI/ML',
       'Quantum Computing',
       'Bioinformatics',
@@ -1940,7 +1880,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Personalized medicine',
       'Disease research',
     ],
-<<<<<<< HEAD
     roi: '1000% ROI through accelerated drug development and patent generation',
     competitors: ['Insitro ($100M+ funding)', 'Recursion ($2B+ funding)'],    marketSize: '$150B AI in healthcare',    technology: ['AI/MLQuantum ComputingBioinformaticsGenomicsDrug Discovery']
     technology: ['AI/MLQuantum ComputingBioinformaticsGenomicsDrug Discovery']
@@ -1984,7 +1923,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     customers: 25;
     rating: 4.7;
     reviews: 18;
-=======
     ro,
   i: '1000% ROI through accelerated drug development and patent generation',
     competitor,
@@ -2068,7 +2006,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4.7,
     review,
   s: 18,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
   // Quantum Financial Trading Platform;
     i,
@@ -2097,7 +2034,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance',
       'Performance analyticsAPI for integration'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     color: 'from-yellow-600 to-orange-700',
@@ -2116,7 +2052,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     setupTime: '3-4 weeks',
     category: 'Quantum Finance & Trading',
     realService: true;
-=======
     popula,
   r: true,
     ico,
@@ -2154,7 +2089,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   y: 'Quantum Finance & Trading',
     realServic,
   e: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing',
       'AI / ML',
       'Algorithmic Trading',
@@ -2182,7 +2116,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: [,
       'Renaissance Technologies ($100B+ AUM)',
       'Two Sigma ($60B+ AUM)',
-<<<<<<< HEAD
     technology: ['Quantum ComputingAI/MLAlgorithmic TradingHigh-Frequency TradingBlockchain']
     technology: ['Quantum ComputingAI/MLAlgorithmic TradingHigh-Frequency TradingBlockchain']
     integrations: ['Trading platformsMarket data feedsRisk management systemsPortfolio systems']
@@ -2217,7 +2150,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     period: '/month'
     description: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.'
     features: [
-=======
     technolog,
   y: ['Quantum ComputingAI/MLAlgorithmic TradingHigh-Frequency TradingBlockchain'],
     technolog,
@@ -2286,12 +2218,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   n: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum AI trading algorithms'
       'Nanosecond execution speed'
       'Real-time market analysis'
       'Risk management tools'
-<<<<<<< HEAD
       'Portfolio optimization',
       'Multi-asset trading',
       'Advanced backtesting',
@@ -2318,7 +2248,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     category: 'Quantum Finance & Trading'
     realService: true;
     technology: [;
-=======
       'Portfolio optimization'
       'Multi-asset trading'
       'Advanced backtesting'
@@ -2366,7 +2295,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true;
     technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing'
       'AI/ML'
       'Algorithmic Trading'
@@ -2388,7 +2316,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Market analysis'
       'High-frequency trading'
     ]
-<<<<<<< HEAD
     roi: '1000%+ ROI through superior trading performance and market timing'
     competitors: [,
       'Renaissance Technologies ($100B+ AUM)',
@@ -2424,7 +2351,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     period: '/month',
     description: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.',
     features: [,
-=======
     ro,
   i: '1000%+ ROI through superior trading performance and market timing'
     competitor,
@@ -2494,7 +2420,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   n: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum AI trading algorithms',
       'Nanosecond execution speed',
       'Real-time market analysis',
@@ -2513,7 +2438,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance',
       'Performance analyticsAPI for integration'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-yellow-600 to-orange-700'
@@ -2531,7 +2455,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     category: 'Quantum Finance & Trading',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -2569,7 +2492,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing',
       'AI/ML',
       'Algorithmic Trading',
@@ -2597,7 +2519,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: [,
       'Renaissance Technologies ($100B+ AUM)',
       'Two Sigma ($60B+ AUM)',
-<<<<<<< HEAD
     ],    marketSize: '$15T algorithmic trading',    technology: ['Quantum ComputingAI/MLAlgorithmic TradingHigh-Frequency TradingBlockchain']
     technology: ['Quantum ComputingAI/MLAlgorithmic TradingHigh-Frequency TradingBlockchain']
     integrations: ['Trading platformsMarket data feedsRisk management systemsPortfolio systems']
@@ -2640,7 +2561,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     customers: 12;
     rating: 4.9;
     reviews: 15;
-=======
     ],    marketSiz,
   e: '$15T algorithmic trading',    technolog,
   y: ['Quantum ComputingAI/MLAlgorithmic TradingHigh-Frequency TradingBlockchain'],
@@ -2721,7 +2641,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4.9,
     review,
   s: 15,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
   // Autonomous Vehicle AI Platform;
     i,
@@ -2750,7 +2669,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management',
       'Performance analyticsAPI for integration'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     color: 'from-blue-600 to-indigo-700',
@@ -2769,7 +2687,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     setupTime: '4-6 weeks',
     category: 'Autonomous Vehicles & Robotics',
     realService: true;
-=======
     popula,
   r: true,
     ico,
@@ -2807,7 +2724,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   y: 'Autonomous Vehicles & Robotics',
     realServic,
   e: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Computer Vision',
       'AI / ML',
       'Robotics',
@@ -2829,7 +2745,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Logistics automation',
       'Smart cities',
     ],
-<<<<<<< HEAD
     roi: '800% ROI through operational efficiency and safety improvements'
     technology: ['Computer VisionAI/MLRoboticsSensor FusionEdge Computing']
     technology: ['Computer VisionAI/MLRoboticsSensor FusionEdge Computing']
@@ -2866,7 +2781,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     description:,
       'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.'
     features: [
-=======
     ro,
   i: '800% ROI through operational efficiency and safety improvements',
     technolog,
@@ -2939,12 +2853,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced computer vision'
       'Real-time decision making'
       'Sensor fusion algorithms'
       'Path planning & navigation'
-<<<<<<< HEAD
       'Obstacle detection & avoidance',
       'Traffic prediction',
       'Safety systems',
@@ -2971,7 +2883,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     category: 'Autonomous Vehicles & Robotics'
     realService: true;
     technology: [;
-=======
       'Obstacle detection & avoidance'
       'Traffic prediction'
       'Safety systems'
@@ -3019,7 +2930,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true;
     technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Computer Vision'
       'AI/ML'
       'Robotics'
@@ -3033,17 +2943,13 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Robotics hardware'
       'Fleet management systems'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Self-driving cars'
       'Autonomous drones'
       'Industrial robotics'
       'Logistics automation'
-<<<<<<< HEAD
       'Smart cities',
     ],
     roi: '800% ROI through operational efficiency and safety improvements',
@@ -3078,7 +2984,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     period: '/month',
     description: 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.',
     features: [,
-=======
       'Smart cities'
     ]
     ro,
@@ -3147,7 +3052,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   n: 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced computer vision',
       'Real-time decision making',
       'Sensor fusion algorithms',
@@ -3166,7 +3070,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management',
       'Performance analyticsAPI for integration'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -3184,7 +3087,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     category: 'Autonomous Vehicles & Robotics',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -3222,7 +3124,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Computer Vision',
       'AI/ML',
       'Robotics',
@@ -3244,7 +3145,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Logistics automation',
       'Smart cities',
     ],
-<<<<<<< HEAD
     roi: '800% ROI through operational efficiency and safety improvements',
     competitors: ['Waymo ($1B+ investment)', 'Tesla Autopilot ($12)000)'],    marketSize: '$2.5T autonomous vehicle market',    technology: ['Computer VisionAI/MLRoboticsSensor FusionEdge Computing']
     technology: ['Computer VisionAI/MLRoboticsSensor FusionEdge Computing']
@@ -3288,7 +3188,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     customers: 18;
     rating: 4.8;
     reviews: 22;
-=======
     ro,
   i: '800% ROI through operational efficiency and safety improvements',
     competitor,
@@ -3372,7 +3271,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4.8,
     review,
   s: 22,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
   // Quantum Cybersecurity Platform;
     i,
@@ -3400,7 +3298,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment',
       'Security automationAPI for integration'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     color: 'from-red-600 to-pink-700',
@@ -3410,7 +3307,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     setupTime: '2-3 weeks',
     category: 'Quantum Cybersecurity',
     realService: true;
-=======
     popula,
   r: true,
     ico,
@@ -3429,7 +3325,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   y: 'Quantum Cybersecurity',
     realServic,
   e: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing',
       'AI / ML',
       'Cryptography',
@@ -3457,7 +3352,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: [,
       'Palo Alto Networks ($1) 000+/month)',
       'CrowdStrike ($500+/month)',
-<<<<<<< HEAD
     technology: ['Quantum ComputingAI/MLCryptographyThreat DetectionBlockchain']
     technology: ['Quantum ComputingAI/MLCryptographyThreat DetectionBlockchain']
     integrations: ['SIEM systemsFirewallsIdentity providersCompliance platforms']
@@ -3492,7 +3386,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     period: '/month'
     description: 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.'
     features: [
-=======
     technolog,
   y: ['Quantum ComputingAI/MLCryptographyThreat DetectionBlockchain'],
     technolog,
@@ -3561,12 +3454,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   n: 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum-resistant encryption'
       'AI threat detection'
       'Real-time monitoring'
       'Advanced analytics'
-<<<<<<< HEAD
       'Incident response',
       'Compliance tools',
       'Threat intelligence',
@@ -3593,7 +3484,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     category: 'Quantum Cybersecurity'
     realService: true;
     technology: [;
-=======
       'Incident response'
       'Compliance tools'
       'Threat intelligence'
@@ -3641,7 +3531,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true;
     technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing'
       'AI/ML'
       'Cryptography'
@@ -3663,7 +3552,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Compliance'
       'Risk management'
     ]
-<<<<<<< HEAD
     roi: '600% ROI through security improvements and risk reduction'
     competitors: [,
       'Palo Alto Networks ($1)000+/month)',
@@ -3699,7 +3587,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     period: '/month',
     description: 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.',
     features: [,
-=======
     ro,
   i: '600% ROI through security improvements and risk reduction'
     competitor,
@@ -3769,7 +3656,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   n: 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum-resistant encryption',
       'AI threat detection',
       'Real-time monitoring',
@@ -3788,7 +3674,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment',
       'Security automationAPI for integration'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-red-600 to-pink-700'
@@ -3806,7 +3691,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     category: 'Quantum Cybersecurity',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -3844,7 +3728,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing',
       'AI/ML',
       'Cryptography',
@@ -3872,7 +3755,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: [,
       'Palo Alto Networks ($1)000+/month)',
       'CrowdStrike ($500+/month)',
-<<<<<<< HEAD
     ],    marketSize: '$200B cybersecurity market',    technology: ['Quantum ComputingAI/MLCryptographyThreat DetectionBlockchain']
     technology: ['Quantum ComputingAI/MLCryptographyThreat DetectionBlockchain']
     integrations: ['SIEM systemsFirewallsIdentity providersCompliance platforms']
@@ -3915,7 +3797,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     customers: 35;
     rating: 4.9;
     reviews: 28;
-=======
     ],    marketSiz,
   e: '$200B cybersecurity market',    technolog,
   y: ['Quantum ComputingAI/MLCryptographyThreat DetectionBlockchain'],
@@ -3996,7 +3877,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4.9,
     review,
   s: 28,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
   // Metaverse AI Development Platform;
     i,
@@ -4025,7 +3905,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support',
       'API for integrationDeveloper tools'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     color: 'from-purple-600 to-pink-700',
@@ -4044,7 +3923,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     setupTime: '2-3 weeks',
     category: 'Metaverse & Virtual Reality',
     realService: true;
-=======
     popula,
   r: true,
     ico,
@@ -4082,7 +3960,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   y: 'Metaverse & Virtual Reality',
     realServic,
   e: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '3D Graphics',
       'Real - time Rendering',
       'Blockchain',
@@ -4102,7 +3979,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Education',
       'Entertainment',
     ],
-<<<<<<< HEAD
     roi: '700% ROI through user engagement and monetization'
     technology: ['AI/MLVR/AR3D GraphicsReal-time RenderingBlockchain']
     technology: ['AI/MLVR/AR3D GraphicsReal-time RenderingBlockchain']
@@ -4139,7 +4015,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     description:,
       'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.'
     features: [
-=======
     ro,
   i: '700% ROI through user engagement and monetization',
     technolog,
@@ -4212,12 +4087,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI content generation'
       'Virtual world building'
       'Real-time interactions'
       'Avatar customization'
-<<<<<<< HEAD
       'Social features',
       'Monetization tools',
       'Analytics dashboard',
@@ -4244,7 +4117,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     category: 'Metaverse & Virtual Reality'
     realService: true;
     technology: [;
-=======
       'Social features'
       'Monetization tools'
       'Analytics dashboard'
@@ -4292,7 +4164,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true;
     technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI/ML'
       'VR/AR'
       '3D Graphics'
@@ -4306,17 +4177,13 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Social media'
       'Payment systems'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Virtual worlds'
       'Gaming experiences'
       'Social platforms'
       'Education'
-<<<<<<< HEAD
       'Entertainment',
     ],
     roi: '700% ROI through user engagement and monetization',
@@ -4351,7 +4218,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     period: '/month',
     description: 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.',
     features: [,
-=======
       'Entertainment'
     ]
     ro,
@@ -4420,7 +4286,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   n: 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI content generation',
       'Virtual world building',
       'Real-time interactions',
@@ -4439,7 +4304,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support',
       'API for integrationDeveloper tools'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-pink-700'
@@ -4457,7 +4321,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     category: 'Metaverse & Virtual Reality',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -4495,7 +4358,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI/ML',
       'VR/AR',
       '3D Graphics',
@@ -4517,7 +4379,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Education',
       'Entertainment',
     ],
-<<<<<<< HEAD
     roi: '700% ROI through user engagement and monetization',
     competitors: ['Meta Horizon ($30/month)', 'Roblox ($25/month)'],    marketSize: '$800B metaverse market',    technology: ['AI/MLVR/AR3D GraphicsReal-time RenderingBlockchain']
     technology: ['AI/MLVR/AR3D GraphicsReal-time RenderingBlockchain']
@@ -4561,7 +4422,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     customers: 45;
     rating: 4.7;
     reviews: 32;
-=======
     ro,
   i: '700% ROI through user engagement and monetization',
     competitor,
@@ -4645,7 +4505,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4.7,
     review,
   s: 32,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
   // Quantum Internet Security Platform;
     i,
@@ -4674,7 +4533,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics',
       'API for integration24/7 monitoring'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     color: 'from-green-600 to-emerald-700',
@@ -4693,7 +4551,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     setupTime: '3-4 weeks',
     category: 'Quantum Internet & Security',
     realService: true;
-=======
     popula,
   r: true,
     ico,
@@ -4731,7 +4588,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   y: 'Quantum Internet & Security',
     realServic,
   e: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing',
       'AI / ML',
       'Network Security',
@@ -4753,7 +4609,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Compliance',
       'Performance monitoring',
     ],
-<<<<<<< HEAD
     roi: '800% ROI through security improvements and operational efficiency'
     technology: ['Quantum ComputingAI/MLNetwork SecurityCryptographyInternet Protocols']
     technology: ['Quantum ComputingAI/MLNetwork SecurityCryptographyInternet Protocols']
@@ -4789,7 +4644,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     period: '/month'
     description: 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.'
     features: [
-=======
     ro,
   i: '800% ROI through security improvements and operational efficiency',
     technolog,
@@ -4861,12 +4715,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   n: 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum key distribution'
       'AI threat monitoring'
       'Real-time protection'
       'Network security'
-<<<<<<< HEAD
       'Data encryption',
       'Threat intelligence',
       'Compliance tools',
@@ -4893,7 +4745,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     category: 'Quantum Internet & Security'
     realService: true;
     technology: [;
-=======
       'Data encryption'
       'Threat intelligence'
       'Compliance tools'
@@ -4941,7 +4792,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true;
     technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing'
       'AI/ML'
       'Network Security'
@@ -4955,17 +4805,13 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Security tools'
       'Monitoring systems'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Network security'
       'Data protection'
       'Threat detection'
       'Compliance'
-<<<<<<< HEAD
       'Performance monitoring',
     ],
     roi: '800% ROI through security improvements and operational efficiency',
@@ -5000,7 +4846,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     period: '/month',
     description: 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.',
     features: [,
-=======
       'Performance monitoring'
     ]
     ro,
@@ -5069,7 +4914,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   n: 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum key distribution',
       'AI threat monitoring',
       'Real-time protection',
@@ -5088,7 +4932,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics',
       'API for integration24/7 monitoring'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -5106,7 +4949,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     category: 'Quantum Internet & Security',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -5144,7 +4986,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing',
       'AI/ML',
       'Network Security',
@@ -5166,7 +5007,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Compliance',
       'Performance monitoring',
     ],
-<<<<<<< HEAD
     roi: '800% ROI through security improvements and operational efficiency',
     competitors: ['Cloudflare ($20/month)', 'Akamai ($100+/month)'],    marketSize: '$150B internet security market',    technology: ['Quantum ComputingAI/MLNetwork SecurityCryptographyInternet Protocols']
     technology: ['Quantum ComputingAI/MLNetwork SecurityCryptographyInternet Protocols']
@@ -5210,7 +5050,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     customers: 22;
     rating: 4.8;
     reviews: 19;
-=======
     ro,
   i: '800% ROI through security improvements and operational efficiency',
     competitor,
@@ -5294,7 +5133,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4.8,
     review,
   s: 19,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
   // AI - Powered Legal Contract Analyzer;
     i,
@@ -5328,7 +5166,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration',
       'API for integrationMobile app support'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     color: 'from-indigo-600 to-purple-700',
@@ -5347,7 +5184,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     setupTime: '1-2 weeks',
     category: 'AI Legal Services',
     realService: true;
-=======
     popula,
   r: true,
     ico,
@@ -5385,7 +5221,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   y: 'AI Legal Services',
     realServic,
   e: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Natural Language Processing',
       'Legal Tech',
       'Document Analysis',
@@ -5406,7 +5241,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Risk assessment',
       'Document analysis',
     ],
-<<<<<<< HEAD
     roi: '500% ROI through time savings and improved accuracy'
     technology: ['AI/MLNatural Language ProcessingLegal TechDocument AnalysisCloud Computing']
     technology: ['AI/MLNatural Language ProcessingLegal TechDocument AnalysisCloud Computing']
@@ -5443,7 +5277,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     description:,
       'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.'
     features: [
-=======
     ro,
   i: '500% ROI through time savings and improved accuracy',
     technolog,
@@ -5516,12 +5349,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI contract analysis'
       'Risk assessment'
       'Compliance checking'
       'Legal research'
-<<<<<<< HEAD
       'Document comparison',
       'Clause extraction',
       'Legal analytics',
@@ -5548,7 +5379,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     category: 'AI Legal Services'
     realService: true;
     technology: [;
-=======
       'Document comparison'
       'Clause extraction'
       'Legal analytics'
@@ -5596,7 +5426,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true;
     technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI/ML'
       'Natural Language Processing'
       'Legal Tech'
@@ -5610,17 +5439,13 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'E-signature platforms'
       'CRM systems'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Contract review'
       'Legal research'
       'Compliance checking'
       'Risk assessment'
-<<<<<<< HEAD
       'Document analysis',
     ],
     roi: '500% ROI through time savings and improved accuracy',
@@ -5655,7 +5480,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     period: '/month',
     description: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.',
     features: [,
-=======
       'Document analysis'
     ]
     ro,
@@ -5724,7 +5548,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   n: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI contract analysis',
       'Risk assessment',
       'Compliance checking',
@@ -5743,7 +5566,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration',
       'API for integrationMobile app support'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-indigo-600 to-purple-700'
@@ -5761,7 +5583,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     category: 'AI Legal Services',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -5799,7 +5620,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI/ML',
       'Natural Language Processing',
       'Legal Tech',
@@ -5821,7 +5641,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Risk assessment',
       'Document analysis',
     ],
-<<<<<<< HEAD
     roi: '500% ROI through time savings and improved accuracy',
     competitors: ['DocuSign ($25/month)', 'ContractPodAi ($500+/month)'],    marketSize: '$25B legal tech market',    technology: ['AI/MLNatural Language ProcessingLegal TechDocument AnalysisCloud Computing']
     technology: ['AI/MLNatural Language ProcessingLegal TechDocument AnalysisCloud Computing']
@@ -5867,7 +5686,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     description: unknown;
-=======
     ro,
   i: '500% ROI through time savings and improved accuracy',
     competitor,
@@ -5955,7 +5773,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   r: 'text-blue-400',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary IoT platform that combines quantum security with AI edge computing. Secure billions of devices with real - time AI processing and quantum encryption.',
     feature,
   s: [,
@@ -5974,7 +5791,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Consumer devices',
       'Security systems',
     ],
-<<<<<<< HEAD
     roi: '600% ROI through security improvements and operational efficiency',
     link: 'https://ziontechgroup.com/quantum-iot-platform',
     marketPosition: 'First quantum IoT platform. 100x more secure than traditional solutions.',
@@ -6031,7 +5847,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     real_service: true;
     technology["Quantum Computing", "Neural Networks", "Brain - Computer Interface", "AI / ML", "Quantum Encryption"],
     integrations["Research APIs", "Medical devices", "Cloud platforms", "Data analysis tools"],
-=======
     ro,
   i: '600% ROI through security improvements and operational efficiency',
     lin,
@@ -6143,12 +5958,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true,"
     technology["Quantum Computing", "Neural Networks", "Brain - Computer Interface", "AI / ML", "Quantum Encryption"],"
     integrations["Research APIs", "Medical devices", "Cloud platforms", "Data analysis tools"],"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     use_cases["Medical research", "Cognitive enhancement", "Neural rehabilitation", "AI development", "Defense applications"],
     ro,"
   i: "1000% ROI within 6 months through breakthrough discoveries and patents","
     competitors["Neuralink ($10) 000+/month)", "Kernel ($50) 000+/month)"],
-<<<<<<< HEAD
     market_size: "$1.5B BCI market"
     growth_rate: "300% annual growth"
     variant: "quantum - ai - futuristic"
@@ -6164,7 +5977,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     customers: 15;
     rating: 4 && 4.9;
     reviews: 8,,
-=======
     market_siz,"
   e: "$1.5B BCI market",
     growth_rat,"
@@ -6195,7 +6007,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4 && 4.9,
     review,
   s: 8,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 },
   // Space Technology Platform;
     i,"
@@ -6220,7 +6031,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       "Mission analytics dashboard","
       "Regulatory compliance tools","
       "Multi - satellite operations" ],
-<<<<<<< HEAD
     popular: true;
     icon: ""
     color: "from - cyan - 600 to - blue - 700"
@@ -6234,7 +6044,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     real_service: true;
     technology["Satellite Technology", "Orbital Mechanics", "Space Weather", "AI / ML", "Cloud Computing"],
     integrations["SpaceX APIs", "NASA data", "Weather services", "Ground stations", "Launch providers"],
-=======
     popula,
   r: true,
     ico,"
@@ -6260,12 +6069,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true,"
     technology["Satellite Technology", "Orbital Mechanics", "Space Weather", "AI / ML", "Cloud Computing"],"
     integrations["SpaceX APIs", "NASA data", "Weather services", "Ground stations", "Launch providers"],"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     use_cases["Satellite operations", "Mission planning", "Space infrastructure", "Launch coordination", "Space research"],
     ro,"
   i: "500% ROI through operational efficiency and mission success rates","
     competitors["SpaceX Starlink ($99 / month)", "OneWeb ($50 / month)"],
-<<<<<<< HEAD
     market_size: "$469B space economy"
     growth_rate: "400% annual growth"
     variant: "space - futuristic"
@@ -6281,7 +6088,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     customers: 8;
     rating: 4 && 4.8;
     reviews: 12,,
-=======
     market_siz,"
   e: "$469B space economy",
     growth_rat,"
@@ -6312,7 +6118,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4 && 4.8,
     review,
   s: 12,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 },
   // Biotech AI Platform;
     i,"
@@ -6337,7 +6142,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       "Advanced analytics dashboard","
       "API for research integration","
       "Multi - omics data analysis" ],
-<<<<<<< HEAD
     popular: true;
     icon: ""
     color: "from - emerald - 600 to - teal - 700"
@@ -6351,7 +6155,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     real_service: true;
     technology["AI / ML", "Quantum Computing", "Bioinformatics", "Genomics", "Drug Discovery"],
     integrations["Research databases", "Lab equipment", "Clinical trial systems", "Regulatory databases"],
-=======
     popula,
   r: true,
     ico,"
@@ -6377,12 +6180,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true,"
     technology["AI / ML", "Quantum Computing", "Bioinformatics", "Genomics", "Drug Discovery"],"
     integrations["Research databases", "Lab equipment", "Clinical trial systems", "Regulatory databases"],"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     use_cases["Drug discovery", "Genetic research", "Clinical trials", "Personalized medicine", "Disease research"],
     ro,"
   i: "1000% ROI through accelerated drug development and patent generation","
     competitors["Insitro ($100M+ funding)", "Recursion ($2B+ funding)"],
-<<<<<<< HEAD
     market_size: "$150B AI in healthcare"
     growth_rate: "250% annual growth"
     variant: "biotech - futuristic"
@@ -6398,7 +6199,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     customers: 25;
     rating: 4 && 4.7;
     reviews: 18,,
-=======
     market_siz,"
   e: "$150B AI in healthcare",
     growth_rat,"
@@ -6429,7 +6229,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4 && 4.7,
     review,
   s: 18,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 },
   // Quantum Financial Trading Platform;
     i,"
@@ -6454,7 +6253,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       "Regulatory compliance","
       "Performance analytics","
       "API for integration" ],
-<<<<<<< HEAD
     popular: true;
     icon: ""
     color: "from - yellow - 600 to - orange - 700"
@@ -6468,7 +6266,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     real_service: true;
     technology["Quantum Computing", "AI / ML", "Algorithmic Trading", "High - Frequency Trading", "Blockchain"],
     integrations["Trading platforms", "Market data feeds", "Risk management systems", "Portfolio systems"],
-=======
     popula,
   r: true,
     ico,"
@@ -6494,12 +6291,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true,"
     technology["Quantum Computing", "AI / ML", "Algorithmic Trading", "High - Frequency Trading", "Blockchain"],"
     integrations["Trading platforms", "Market data feeds", "Risk management systems", "Portfolio systems"],"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     use_cases["Algorithmic trading", "Portfolio optimization", "Risk management", "Market analysis", "High - frequency trading"],
     ro,"
   i: "1000%+ ROI through superior trading performance and market timing","
     competitors["Renaissance Technologies ($100B+ AUM)", "Two Sigma ($60B+ AUM)"],
-<<<<<<< HEAD
     market_size: "$15T algorithmic trading"
     growth_rate: "150% annual growth"
     variant: "quantum - finance - futuristic"
@@ -6515,7 +6310,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     customers: 12;
     rating: 4 && 4.9;
     reviews: 15,,
-=======
     market_siz,"
   e: "$15T algorithmic trading",
     growth_rat,"
@@ -6546,7 +6340,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4 && 4.9,
     review,
   s: 15,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 },
   // Autonomous Vehicle AI Platform;
     i,"
@@ -6571,7 +6364,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       "Fleet management","
       "Performance analytics","
       "API for integration" ],
-<<<<<<< HEAD
     popular: true;
     icon: ""
     color: "from - blue - 600 to - indigo - 700"
@@ -6585,7 +6377,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     real_service: true;
     technology["Computer Vision", "AI / ML", "Robotics", "Sensor Fusion", "Edge Computing"],
     integrations["Vehicle systems", "Drone platforms", "Robotics hardware", "Fleet management systems"],
-=======
     popula,
   r: true,
     ico,"
@@ -6611,12 +6402,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true,"
     technology["Computer Vision", "AI / ML", "Robotics", "Sensor Fusion", "Edge Computing"],"
     integrations["Vehicle systems", "Drone platforms", "Robotics hardware", "Fleet management systems"],"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     use_cases["Self - driving cars", "Autonomous drones", "Industrial robotics", "Logistics automation", "Smart cities"],
     ro,"
   i: "800% ROI through operational efficiency and safety improvements","
     competitors["Waymo ($1B+ investment)", "Tesla Autopilot ($12) 000)"],
-<<<<<<< HEAD
     market_size: "$2.5T autonomous vehicle market"
     growth_rate: "200% annual growth"
     variant: "autonomous - futuristic"
@@ -6632,7 +6421,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     customers: 18;
     rating: 4 && 4.8;
     reviews: 22,,
-=======
     market_siz,"
   e: "$2.5T autonomous vehicle market",
     growth_rat,"
@@ -6663,7 +6451,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4 && 4.8,
     review,
   s: 22,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 },
   // Quantum Cybersecurity Platform;
     i,"
@@ -6688,7 +6475,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       "Vulnerability assessment","
       "Security automation","
       "API for integration" ],
-<<<<<<< HEAD
     popular: true;
     icon: ""
     color: "from - red - 600 to - pink - 700"
@@ -6702,7 +6488,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     real_service: true;
     technology["Quantum Computing", "AI / ML", "Cryptography", "Threat Detection", "Blockchain"],
     integrations["SIEM systems", "Firewalls", "Identity providers", "Compliance platforms"],
-=======
     popula,
   r: true,
     ico,"
@@ -6728,12 +6513,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true,"
     technology["Quantum Computing", "AI / ML", "Cryptography", "Threat Detection", "Blockchain"],"
     integrations["SIEM systems", "Firewalls", "Identity providers", "Compliance platforms"],"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     use_cases["Data protection", "Threat detection", "Incident response", "Compliance", "Risk management"],
     ro,"
   i: "600% ROI through security improvements and risk reduction","
     competitors["Palo Alto Networks ($1) 000+/month)", "CrowdStrike ($500+/month)"],
-<<<<<<< HEAD
     market_size: "$200B cybersecurity market"
     growth_rate: "180% annual growth"
     variant: "quantum - security - futuristic"
@@ -6749,7 +6532,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     customers: 35;
     rating: 4 && 4.9;
     reviews: 28,,
-=======
     market_siz,"
   e: "$200B cybersecurity market",
     growth_rat,"
@@ -6780,7 +6562,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4 && 4.9,
     review,
   s: 28,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 },
   // Metaverse AI Development Platform;
     i,"
@@ -6805,7 +6586,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       "Multi - platform support","
       "API for integration","
       "Developer tools" ],
-<<<<<<< HEAD
     popular: true;
     icon: ""
     color: "from - purple - 600 to - pink - 700"
@@ -6819,7 +6599,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     real_service: true;
     technology["AI / ML", "VR / AR", "3D Graphics", "Real - time Rendering", "Blockchain"],
     integrations["VR headsets", "Gaming platforms", "Social media", "Payment systems"],
-=======
     popula,
   r: true,
     ico,"
@@ -6845,12 +6624,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true,"
     technology["AI / ML", "VR / AR", "3D Graphics", "Real - time Rendering", "Blockchain"],"
     integrations["VR headsets", "Gaming platforms", "Social media", "Payment systems"],"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     use_cases["Virtual worlds", "Gaming experiences", "Social platforms", "Education", "Entertainment"],
     ro,"
   i: "700% ROI through user engagement and monetization","
     competitors["Meta Horizon ($30 / month)", "Roblox ($25 / month)"],
-<<<<<<< HEAD
     market_size: "$800B metaverse market"
     growth_rate: "300% annual growth"
     variant: "metaverse - futuristic"
@@ -6866,7 +6643,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     customers: 45;
     rating: 4 && 4.7;
     reviews: 32,,
-=======
     market_siz,"
   e: "$800B metaverse market",
     growth_rat,"
@@ -6897,7 +6673,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4 && 4.7,
     review,
   s: 32,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 },
   // Quantum Internet Security Platform;
     i,"
@@ -6922,7 +6697,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       "Performance analytics","
       "API for integration","
       "24 / 7 monitoring" ],
-<<<<<<< HEAD
     popular: true;
     icon: ""
     color: "from - green - 600 to - emerald - 700"
@@ -6936,7 +6710,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     real_service: true;
     technology["Quantum Computing", "AI / ML", "Network Security", "Cryptography", "Internet Protocols"],
     integrations["Network equipment", "Cloud platforms", "Security tools", "Monitoring systems"],
-=======
     popula,
   r: true,
     ico,"
@@ -6962,12 +6735,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true,"
     technology["Quantum Computing", "AI / ML", "Network Security", "Cryptography", "Internet Protocols"],"
     integrations["Network equipment", "Cloud platforms", "Security tools", "Monitoring systems"],"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     use_cases["Network security", "Data protection", "Threat detection", "Compliance", "Performance monitoring"],
     ro,"
   i: "800% ROI through security improvements and operational efficiency","
     competitors["Cloudflare ($20 / month)", "Akamai ($100+/month)"],
-<<<<<<< HEAD
     market_size: "$150B internet security market"
     growth_rate: "200% annual growth"
     variant: "quantum - internet - futuristic"
@@ -6983,7 +6754,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     customers: 22;
     rating: 4 && 4.8;
     reviews: 19,,
-=======
     market_siz,"
   e: "$150B internet security market",
     growth_rat,"
@@ -7014,7 +6784,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4 && 4.8,
     review,
   s: 19,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 },
   // AI - Powered Legal Contract Analyzer;
     i,"
@@ -7039,7 +6808,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       "Team collaboration","
       "API for integration","
       "Mobile app support" ],
-<<<<<<< HEAD
     popular: true;
     icon: ""
     color: "from - indigo - 600 to - purple - 700"
@@ -7053,7 +6821,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     real_service: true;
     technology["AI / ML", "Natural Language Processing", "Legal Tech", "Document Analysis", "Cloud Computing"],
     integrations["Document management systems", "Legal databases", "E - signature platforms", "CRM systems"],
-=======
     popula,
   r: true,
     ico,"
@@ -7079,12 +6846,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true,"
     technology["AI / ML", "Natural Language Processing", "Legal Tech", "Document Analysis", "Cloud Computing"],"
     integrations["Document management systems", "Legal databases", "E - signature platforms", "CRM systems"],"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     use_cases["Contract review", "Legal research", "Compliance checking", "Risk assessment", "Document analysis"],
     ro,"
   i: "500% ROI through time savings and improved accuracy","
     competitors["DocuSign ($25 / month)", "ContractPodAi ($500+/month)"],
-<<<<<<< HEAD
     market_size: "$25B legal tech market"
     growth_rate: "150% annual growth"
     variant: "ai - legal - futuristic"
@@ -7100,7 +6865,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     customers: 65;
     rating: 4 && 4.6;
     reviews: 45,,
-=======
     market_siz,"
   e: "$25B legal tech market",
     growth_rat,"
@@ -7131,7 +6895,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4 && 4.6,
     review,
   s: 45,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 },
   // Quantum IoT Platform;
     i,"
@@ -7156,7 +6919,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       "API for integration","
       "Mobile app support","
       "Cloud dashboard" ],
-<<<<<<< HEAD
     popular: true;
     icon: ""
     color: "from - blue - 600 to - cyan - 700"
@@ -7170,7 +6932,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     real_service: true;
     technology["Quantum Computing", "AI / ML", "IoT", "Edge Computing", "Blockchain"],
     integrations["IoT devices", "Cloud platforms", "Security tools", "Analytics platforms"],
-=======
     popula,
   r: true,
     ico,"
@@ -7196,12 +6957,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true,"
     technology["Quantum Computing", "AI / ML", "IoT", "Edge Computing", "Blockchain"],"
     integrations["IoT devices", "Cloud platforms", "Security tools", "Analytics platforms"],"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     use_cases["Smart cities", "Industrial IoT", "Healthcare monitoring", "Consumer devices", "Security systems"],
     ro,"
   i: "600% ROI through security improvements and operational efficiency","
     competitors["AWS IoT ($5 / month)", "Microsoft Azure IoT ($25 / month)"],
-<<<<<<< HEAD
     market_size: "$1.5T IoT market"
     growth_rate: "250% annual growth"
     variant: "quantum - iot - futuristic"
@@ -7228,7 +6987,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
 ],
     rating: 4.7;
     reviews: 26;
-=======
     market_siz,"
   e: "$1.5T IoT market",
     growth_rat,"
@@ -7278,7 +7036,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4.7,
     review,
   s: 26,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ]
     i,
@@ -7316,7 +7073,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Quantum device securityAI edge computingReal-time processingDevice managementData analyticsSecurity monitoringScalability toolsAPI for integration',
       'Mobile app supportCloud dashboard'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-cyan-700'
@@ -7348,7 +7104,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     category: 'Quantum IoT & Edge Computing'
     realService: true;
     technology: [;
-=======
     popula,
   r: true,
     ico,
@@ -7413,7 +7168,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: true;
     technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing'
       'AI/ML'
       'IoT'
@@ -7425,7 +7179,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'IoT devices'
       'Cloud platforms'
       'Security tools'
-<<<<<<< HEAD
       'Analytics platforms',
     ],
     useCases: [,
@@ -7434,7 +7187,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics',    trial_days: 30;
     setup_time: '2 - 3 weeks',
     category: 'Quantum IoT & Edge Computing',
-=======
       'Analytics platforms'
     ]
     useCase,
@@ -7448,7 +7200,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: '2 - 3 weeks',
     categor,
   y: 'Quantum IoT & Edge Computing',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing',
       'AI / ML',
       'IoT',
@@ -7468,7 +7219,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Consumer devices',
       'Security systems',
     ],
-<<<<<<< HEAD
     roi: '600% ROI through security improvements and operational efficiency',
     link: 'https://ziontechgroup.com/quantum-iot-platform',
     marketPosition: 'First quantum IoT platform. 100x more secure than traditional solutions.',    link: 'https://ziontechgroup.com/quantum-iot-platform',
@@ -7514,7 +7264,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     customers: 38;
     rating: 4.7;
     reviews: 26;
-=======
     ro,
   i: '600% ROI through security improvements and operational efficiency',
     lin,
@@ -7611,12 +7360,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4.7,
     review,
   s: 26;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 ;
 export const,
   nextGenInnovativeServices: NextGenInnovativeService[] = [;
   // Quantum AI & Advanced Computing;
-<<<<<<< HEAD
   {
     id: 'quantum-ai-brain-computer-interface';
     name: 'Quantum AI Brain-Computer Interface';
@@ -8058,7 +7805,6 @@ export const,
   }
 ];
     reviews: 26;
-=======
   {/* TODO: Fix JSX expression */}
   t: 'quantum-ai-futuristic'}
     contactInf,
@@ -8341,7 +8087,6 @@ export const,
 ];
     review,
   s: 26,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 ];export const,
   nextGenInnovativeServices: NextGenInnovativeService[] = [;
@@ -8351,7 +8096,6 @@ export const,
 export const,
   nextGenInnovativeServices: NextGenInnovativeService[] = [;
   // Quantum AI & Advanced Computing;
-<<<<<<< HEAD
   {
     id: "quantum-ai-brain-computer-interface",
     name: "Quantum AI Brain-Computer Interface",
@@ -8858,7 +8602,6 @@ export const,
     customers: 38;
     rating: 4.7;
     reviews: 26;
-=======
   {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"}
 },
@@ -9041,7 +8784,6 @@ export const,
   g: 4.7,
     review,
   s: 26,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ],
   }

@@ -1,6 +1,5 @@
 #!/usr/bin/env node;
 //Function to close duplicate PRs;
-<<<<<<< HEAD
 async function closeDuplicatePRs() {
   try {
 //     //Get all open PRs;
@@ -26,7 +25,6 @@ async function closeDuplicatePRs() {
             body: JSON.stringify({,)
               state: 'closed'),
               body: `This PR has been automatically closed as it was a duplicate. The main fixes have already been merged into the main branch.\n\n**Reason for closure:** Duplicate PR with merge conflicts or draft status.\n\n**Status:** ✅ All critical fixes have been successfully merged.`),
-=======
 async function closeDuplicatePRs() {/* TODO: Fix JSX expression */}
 }
   try {/* TODO: Fix JSX expression */}
@@ -35,7 +33,6 @@ async function closeDuplicatePRs() {/* TODO: Fix JSX expression */}
             },
             bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             }),
           }
         );

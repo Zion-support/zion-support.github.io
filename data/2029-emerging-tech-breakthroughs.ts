@@ -5,7 +5,6 @@
       "Advanced features""
       "Expert insights"
     ];
-<<<<<<< HEAD
     link: "/services / 2029 - emerging - tech - breakthrough", category: "Emerging Tech Breakthroughs 2029",
     real_implementation: true;
     contact_info: unknown;
@@ -26,7 +25,6 @@ export interface EmergingTechBreakthrough2029 {;
     mobile: string;
     email: string}
     address: string}
-=======
     lin,"
   k: "/services / 2029 - emerging - tech - breakthrough", categor,"
   y: "Emerging Tech Breakthroughs 2029",
@@ -42,7 +40,6 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 export const,
   emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =;
@@ -65,7 +62,6 @@ export const,
         'Advanced features'
         'Expert insights'
       ]
-<<<<<<< HEAD
       link: '/services/2029-emerging-tech-breakthrough'
       category: 'Emerging Tech Breakthroughs 2029'
       realImplementation: true;
@@ -117,7 +113,6 @@ export interface EmergingTechBreakthrough2029 {;
     category: "Emerging Tech Breakthroughs 2029",
     realImplementation: true;
     contactInfo: unknown}
-=======
       lin,
   k: '/services/2029-emerging-tech-breakthrough'
       categor,
@@ -196,7 +191,6 @@ export const,
       "Advanced features",
 export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
   o: unknown}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
@@ -209,7 +203,6 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
       "Future capabilities"
 export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
   };
-<<<<<<< HEAD
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =
   [
       id: '2029-emerging-tech-breakthrough'
@@ -218,7 +211,6 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       price: '$899/month',
       description: 'Advanced platform showcasing emerging technology breakthroughs and innovations for 2029.',
       features: [,
-=======
 export const,
   emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =,
   [
@@ -234,14 +226,12 @@ export const,
   n: 'Advanced platform showcasing emerging technology breakthroughs and innovations for 2029.',
       feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Emerging tech breakthroughs',
         'Innovation platform',
         'Future capabilities',
         'Advanced features',
         'Expert insights',
       ],
-<<<<<<< HEAD
       link: '/services/2029-emerging-tech-breakthrough'
       category: 'Emerging Tech Breakthroughs 2029'
       realImplementation: true;
@@ -255,7 +245,6 @@ export const,
       "Emerging tech breakthroughs"
       "Innovation platform"
       "Future capabilities"
-=======
       lin,
   k: '/services/2029-emerging-tech-breakthrough',
       categor,
@@ -277,7 +266,6 @@ export const,
       "Emerging tech breakthroughs""
       "Innovation platform""
       "Future capabilities""
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       "Advanced features"
   i,
   d: string;
@@ -304,7 +292,6 @@ export const,
   s: string}
   }
 }
-<<<<<<< HEAD
 export interface EmergingTechBreakthrough2029 {;
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [
     id: "2029-emerging-tech-breakthrough"
@@ -330,12 +317,10 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com"}
       address: "364 E Main St STE 1008 Middletown DE 19709",
-=======
 export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ;    }

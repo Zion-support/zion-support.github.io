@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { FileText, Shield, AlertTriangle, CheckCircle, Phone } from 'lucide-react';
@@ -170,20 +169,14 @@ const TermsPage: React.FC = () => {,
     }
   ];
 
-<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Navigation />
-<<<<<<< HEAD
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-16">
-<<<<<<< HEAD
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Terms of Service<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Please read these terms carefully before using our services. By using our services, you agree to be bound by these terms.<div className="text-sm text-gray-400">Last updated: {lastUpdated}</div>
-=======
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Header */})
         <section className="text-center mb-16">)
@@ -195,10 +188,7 @@ const TermsPage: React.FC = () => {,
           </p>
           <div className="text-sm text-gray-400">
             Last updated: {lastUpdated}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Terms of Service</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Please read these terms carefully before using our services. By using our services, you agree to be bound by these terms.</p><div className="text-sm text-gray-400">Last updated: {lastUpdated}</section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           </div>
         </section>
 
@@ -232,22 +222,16 @@ const TermsPage: React.FC = () => {,
 
         {/* Contact Information */}
         <section className="mb-16">
-<<<<<<< HEAD
           <div className="cyber-card p-8">
-<<<<<<< HEAD
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Us<p className="text-gray-300 mb-6">If you have any questions about these Terms of Service, please contact us:</p>
-=======
           <div className="cyber-card p-8"></section>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Us</h2><p className="text-gray-300 mb-6">If you have any questions about these Terms of Service, please contact us:</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               <div></div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Zion Tech Group</h3>
-<<<<<<< HEAD
                 <div className="space-y-2 text-gray-300">
                   <p>364 E Main St STE 1008<p>Middletown, DE 19709<p>United States</p>
-=======
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Us</h2>
             <p className="text-gray-300 mb-6">
               If you have any questions about these Terms of Service, please contact us: </p>
@@ -258,11 +242,8 @@ const TermsPage: React.FC = () => {,
                   <p>364 E Main St STE 1008</p>,
                   <p>Middletown, DE 19709</p>
                   <p>United States</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
                 <div className="space-y-2 text-gray-300"></div>
                   <p>364 E Main St STE 1008</p><p>Middletown, DE 19709</p><p>United States</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </div>
               </div>
               <div></div>
@@ -287,7 +268,6 @@ const TermsPage: React.FC = () => {,
 
       <Footer />
     </div>
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FileText, Shield, AlertTriangle, Users, Globe, Mail, Phone, CheckCircle, XCircle, Clock } from 'lucide-react';
@@ -415,7 +395,6 @@ const TermsPage: React.FC = () => {
         </main>
       </div>
     </>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 

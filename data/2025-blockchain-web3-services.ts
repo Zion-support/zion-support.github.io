@@ -1,7 +1,6 @@
 
       'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis',
     ],
-<<<<<<< HEAD
     realImplementation: true;
 export interface BlockchainWeb3Service;
 export interface BlockchainWeb3Service {;
@@ -22,13 +21,11 @@ export interface BlockchainWeb3Service {;
     implementationDetails: 'Production-ready DeFi optimization platform with real-time monitoring, automated execution, and comprehensive analytics. Includes mobile app and institutional API.'
     roi: 'Users achieve 200-400% ROI through optimized yields and reduced risks compared to manual DeFi strategies.',
     useCases: [}
-=======
     realImplementatio,
   n: true,
 export interface BlockchainWeb3Service;
 export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   s: [}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Yield farming optimization'
       'Liquidity provision strategies'
       'Staking optimization'
@@ -46,7 +43,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   e: [,
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-defi-yield-optimizer',
     id: 'ai - powered - defi - yield - optimizer',
     name: 'AI - Powered DeFi Yield Optimizer',
@@ -61,7 +57,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
       trial_days: 14;
       setup_time: '1 - 3 days',
       enterprise: 'Custom pricing'}
-=======
     lin,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/ai-powered-defi-yield-optimizer',
@@ -90,7 +85,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   e: '1 - 3 days',
       enterpris,
   e: 'Custom pricing'}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -122,33 +116,27 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
       'Retail crypto investors',
       'DeFi protocol developers',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'Leading AI - powered DeFi optimization platform. Competes with Yearn Finance (free), Harvest Finance (free), and Beefy Finance (free). Our advantage: AI optimization and risk management.',
     competitors: [,
-=======
     market_positio,
   n: unknown,
       'Leading AI - powered DeFi optimization platform. Competes with Yearn Finance (free), Harvest Finance (free), and Beefy Finance (free). Our,
   advantage: AI optimization and risk management.',
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Yearn Finance, Harvest Finance, Beefy Finance, Convex Finance, Curve Finance',
     ],
     tech_stac,
   k: [,
       'OpenAI GPT - 4, TensorFlow, Solidity, React, Node.js, PostgreSQL, Redis',
     ],
-<<<<<<< HEAD
     real_implementation: true;
     implementation_details: unknown;
-=======
     real_implementatio,
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Production - ready DeFi optimization platform with real - time monitoring, automated execution, and comprehensive analytics. Includes mobile app and institutional API.',
     ro,
   i: 'Users achieve 200 - 400% ROI through optimized yields and reduced risks compared to manual DeFi strategies.',
@@ -165,18 +153,14 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   s: [,
       'MetaMask, WalletConnect, Uniswap, Curve, Aave, Compound, Custom DeFi protocols',
     ],
-<<<<<<< HEAD
     support: unknown;
-=======
     suppor,
   t: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '24 / 7 technical support, DeFi strategy consulting, custom development, and dedicated account manager.',
     complianc,
   e: [,
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com / ai - powered - defi - yield - optimizer'
     icon: ''
     color: 'from - green - 500 to - emerald - 600'
@@ -185,7 +169,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     customers: 8500;
     rating: 4 && 4.9;
     reviews: 6200;
-=======
     lin,
   k: 'http,
   s://ziontechgroup.com / ai - powered - defi - yield - optimizer',
@@ -203,7 +186,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   g: 4 && 4.9,
     review,
   s: 6200,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
       'Leading NFT intelligence platform. Competes with NFTGo ($99-299/month), Nifty Gateway (free), and OpenSea Pro ($0-2 && 2.5%). Our,
   advantage: AI-powered valuation and predictive analytics.',
@@ -213,12 +195,10 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   k: [,
       'OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Web3 && Web3.js',
     ],
-<<<<<<< HEAD
     realImplementation: true;
     implementationDetails: 'Production-ready NFT intelligence platform with real-time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.'
     roi: 'NFT investors achieve 300% ROI through improved decision-making and optimized portfolio management.'
     useCases: [;
-=======
     realImplementatio,
   n: true,
     implementationDetail,
@@ -227,22 +207,18 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   i: 'NFT investors achieve 300% ROI through improved decision-making and optimized portfolio management.'
     useCase,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'NFT investment research'
       'Portfolio optimization'
       'Market trend analysis'
       'Rarity and value assessment'
       'Trading strategy development'
-<<<<<<< HEAD
       'Brand NFT strategy',
     ],
     integrations: [,
-=======
       'Brand NFT strategy'
     ]
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'OpenSea, Rarible, Foundation, Ethereum, Polygon, Solana, Custom NFT platforms'
     ]
     suppor,
@@ -251,7 +227,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   e: [,
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup && ziontechgroup.com/nft-marketplace-intelligence-platform',
     id: 'nft - marketplace - intelligence - platform',
     name: 'NFT Marketplace Intelligence Platform',
@@ -266,7 +241,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
       trial_days: 7;
       setup_time: 'Immediate',
       enterprise: 'Custom pricing',
-=======
     lin,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/nft-marketplace-intelligence-platform',
@@ -295,7 +269,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   e: 'Immediate',
       enterpris,
   e: 'Custom pricing',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -327,7 +300,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
       'Investment firms',
       'Content creators',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'Leading NFT intelligence platform. Competes with NFTGo ($99 - 299 / month), Nifty Gateway (free), and OpenSea Pro ($0 - 2.5%). Our advantage: AI - powered valuation and predictive analytics.',
     competitors: ['NFTGo, Nifty Gateway, OpenSea Pro, Rarible, Foundation'],
@@ -336,7 +308,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     ],
     real_implementation: true;
     implementation_details: unknown;
-=======
     market_positio,
   n: unknown,
       'Leading NFT intelligence platform. Competes with NFTGo ($99 - 299 / month), Nifty Gateway (free), and OpenSea Pro ($0 - 2.5%). Our,
@@ -351,7 +322,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Production - ready NFT intelligence platform with real - time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.',
     ro,
   i: 'NFT investors achieve 300% ROI through improved decision - making and optimized portfolio management.',
@@ -368,18 +338,14 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   s: [,
       'OpenSea, Rarible, Foundation, Ethereum, Polygon, Solana, Custom NFT platforms',
     ],
-<<<<<<< HEAD
     support: unknown;
-=======
     suppor,
   t: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '24 / 7 technical support, NFT strategy consulting, custom analytics, and dedicated success manager.',
     complianc,
   e: [,
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com / nft - marketplace - intelligence - platform'
     icon: ''
     color: 'from - pink - 500 to - rose - 600'
@@ -388,7 +354,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     customers: 3200;
     rating: 4 && 4.7;
     reviews: 2100;
-=======
     lin,
   k: 'http,
   s://ziontechgroup.com / nft - marketplace - intelligence - platform',
@@ -406,7 +371,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   g: 4 && 4.7,
     review,
   s: 2100,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
       'Leading blockchain supply chain platform. Competes with IBM Food Trust ($0 && 0.01-0 && 0.10/transaction), SAP Blockchain ($500-2000/user), and Oracle Blockchain ($1000-5000/user). Our,
   advantage: Multi-industry focus and IoT integration.',
@@ -418,12 +382,10 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   k: [,
       'Hyperledger Fabric, Ethereum, Polygon, React, Node && Node.js, PostgreSQL, IoT platforms',
     ],
-<<<<<<< HEAD
     realImplementation: true;
     implementationDetails: 'Production-ready blockchain platform with IoT integration, mobile applications, and comprehensive analytics. Includes hardware integration kits and enterprise API.'
     roi: 'Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.'
     useCases: [;
-=======
     realImplementatio,
   n: true,
     implementationDetail,
@@ -432,13 +394,11 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   i: 'Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.'
     useCase,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Food safety tracking'
       'Pharmaceutical authenticity'
       'Luxury goods verification'
       'Sustainable sourcing verification'
       'Compliance monitoring'
-<<<<<<< HEAD
       'Quality assurance',
     ],
     integrations: [,
@@ -460,7 +420,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
       trial_days: 30;
       setup_time: '2 - 4 weeks',
       enterprise: 'Custom pricing',
-=======
       'Quality assurance'
     ]
     integration,
@@ -499,7 +458,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   e: '2 - 4 weeks',
       enterpris,
   e: 'Custom pricing',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -531,33 +489,27 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
       'Retail chains',
       'Logistics companies',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'Leading blockchain supply chain platform. Competes with IBM Food Trust ($0.01 - 0.10 / transaction), SAP Blockchain ($500 - 2000 / user), and Oracle Blockchain ($1000 - 5000 / user). Our advantage: Multi - industry focus and IoT integration.',
     competitors: [,
-=======
     market_positio,
   n: unknown,
       'Leading blockchain supply chain platform. Competes with IBM Food Trust ($0.01 - 0.10 / transaction), SAP Blockchain ($500 - 2000 / user), and Oracle Blockchain ($1000 - 5000 / user). Our,
   advantage: Multi - industry focus and IoT integration.',
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'IBM Food Trust, SAP Blockchain, Oracle Blockchain, VeChain, WaltonChain',
     ],
     tech_stac,
   k: [,
       'Hyperledger Fabric, Ethereum, Polygon, React, Node.js, PostgreSQL, IoT platforms',
     ],
-<<<<<<< HEAD
     real_implementation: true;
     implementation_details: unknown;
-=======
     real_implementatio,
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Production - ready blockchain platform with IoT integration, mobile applications, and comprehensive analytics. Includes hardware integration kits and enterprise API.',
     ro,
   i: 'Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.',
@@ -574,7 +526,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   s: [,
       'SAP, Oracle, Microsoft Dynamics, Salesforce, Custom ERP systems, IoT platforms',
     ],
-<<<<<<< HEAD
     support: unknown;
       '24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['ISO 27001, SOC 2 Type II, GDPR, Industry - specific standards'],
@@ -594,7 +545,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     implementationDetails: 'Production-ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile/web applications. Includes developer SDK and API.'
     roi: 'Content creators earn 200-500% more compared to traditional social media platforms through direct monetization.'
     useCases: [;
-=======
     suppor,
   t: unknown,
       '24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.',
@@ -632,28 +582,23 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   i: 'Content creators earn 200-500% more compared to traditional social media platforms through direct monetization.'
     useCase,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Social networking'
       'Content creation and sharing'
       'Community building'
       'Brand marketing'
       'Influencer monetization'
-<<<<<<< HEAD
       'Decentralized governance',
     ],
     integrations: [,
-=======
       'Decentralized governance'
     ]
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'
     ]
     suppor,
   t: 'Community support, developer documentation, custom development services, and enterprise solutions.',
       'Community support, developer documentation, custom development services, and enterprise solutions.',
-<<<<<<< HEAD
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup.com/web3-social-media-platform'
     icon: ''
@@ -663,7 +608,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     customers: 25000;
     rating: 4.6;
     reviews: 18000;
-=======
     complianc,
   e: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     lin,
@@ -683,7 +627,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   g: 4.6,
     review,
   s: 18000,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 ];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
     ];
@@ -692,7 +635,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     suppor,
   t: 'Community support, developer documentation, custom development services, and enterprise solutions.',
       'Community support, developer documentation, custom development services, and enterprise solutions.',
-<<<<<<< HEAD
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup && ziontechgroup.com/web3-social-media-platform',
     id: 'web3 - social - media - platform',
@@ -708,7 +650,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
       trial_days: 0;
       setup_time: 'Immediate',
       enterprise: 'Custom pricing',
-=======
     complianc,
   e: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     lin,
@@ -739,7 +680,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   e: 'Immediate',
       enterpris,
   e: 'Custom pricing',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -771,14 +711,12 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
       'Privacy - conscious individuals',
       'Web3 enthusiasts',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'Innovative Web3 social platform. Competes with traditional platforms like Facebook (free), Twitter (free), and Instagram (free). Our advantage: True decentralization and content ownership.',
     competitors: ['Facebook, Twitter, Instagram, TikTok, LinkedIn, YouTube'],
     tech_stack: ['IPFS, Ethereum, Polygon, React, Node.js, PostgreSQL, Redis'],
     real_implementation: true;
     implementation_details: unknown;
-=======
     market_positio,
   n: unknown,
       'Innovative Web3 social platform. Competes with traditional platforms like Facebook (free), Twitter (free), and Instagram (free). Our,
@@ -791,7 +729,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Production - ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile / web applications. Includes developer SDK and API.',
     ro,
   i: 'Content creators earn 200 - 500% more compared to traditional social media platforms through direct monetization.',
@@ -808,7 +745,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   s: [,
       'MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms',
     ],
-<<<<<<< HEAD
     support: unknown;
       'Community support, developer documentation, custom development services, and enterprise solutions.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
@@ -856,7 +792,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     reviews: 18000;
     rating: 4.6;
     reviews: 18000;
-=======
     suppor,
   t: unknown,
       'Community support, developer documentation, custom development services, and enterprise solutions.',
@@ -960,7 +895,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   g: 4.6,
     review,
   s: 18000,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   }
@@ -969,7 +903,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
 ;
   }
 ];
-<<<<<<< HEAD
 export interface BlockchainWeb3Service {;
   id: string;
   name: string;
@@ -1236,7 +1169,6 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
 ];
     rating: 4.6;
     reviews: 18000,  }
-=======
 export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   e: string}
     enterpris,
@@ -1648,7 +1580,6 @@ export const,
   g: 4.6,
     review,
   s: 18000,  }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 ];
 'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis', ], realImplementatio,
   n: true, export interface BlockchainWeb3Service export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}

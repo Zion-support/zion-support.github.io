@@ -3,14 +3,11 @@ import { fileURLToPath } from 'url';
 
 
 // Files that need specific fixes;
-<<<<<<< HEAD
 const specificFixes = {
   'app/blog/ai-2026-autonomous-business-intelligence-mega-breakthrough/page.tsx': {
     keywords:
       'autonomous business intelligence, AI 2026, enterprise AI, business automation, machine learning, AI breakthrough',
-=======
 const specificFixes = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
   'app/blog/ai-2026-autonomous-enterprise-automation-mega-breakthrough/page.tsx': {/* TODO: Fix JSX expression */}
   },
@@ -24,7 +21,6 @@ const specificFixes = {/* TODO: Fix JSX expression */}
   },
 };
 
-<<<<<<< HEAD
 function processFile(filePath) {
   try {
     // Apply specific fixes;
@@ -32,9 +28,7 @@ function processFile(filePath) {
       if (fix.keywords) {
         const keywordArray = fix.keywords;
           .split(', ')
-=======
 function processFile(filePath) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           .map(k => `'${k}'`)
           .join(', ');
         if (pattern.test(content)) {/* TODO: Fix JSX expression */}`
@@ -47,7 +41,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     // General fixes;
     const replacements = [
       // Fix import paths for components;
-<<<<<<< HEAD
       {
         pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
         replacement: "import { useRouter } from '../utils/navigation';",
@@ -60,7 +53,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       {
         pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g;
         replacement: "import Link from './utils/link';",
-=======
       {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
         replacemen,
@@ -73,7 +65,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   t: "import { Metadata } from './types/next';",
       },
       {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
     ];
 
@@ -88,7 +79,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   }
 }
 
-<<<<<<< HEAD
 function processDirectory(dirPath) {
 
   items.forEach(item => {)
@@ -98,10 +88,8 @@ function processDirectory(dirPath) {
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
         totalFixed++;
-=======
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
   });
@@ -109,8 +97,5 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
   return totalFixed;
 }
 
-<<<<<<< HEAD
 // Process the app directory;
-=======
 // Process the app directory;"`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

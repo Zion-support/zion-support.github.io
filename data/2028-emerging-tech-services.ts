@@ -1,6 +1,5 @@
 
 export interface EmergingTechService2028;
-<<<<<<< HEAD
 export interface EmergingTechService2028 {id: string;
 export interface EmergingTechService2028 {  id: string;
 export interface EmergingTechService2028 {
@@ -16,12 +15,10 @@ export interface EmergingTechService2028 {
     mobile: string;
     email: string}
     address: string}
-=======
 export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
   l: string}
@@ -29,7 +26,6 @@ export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
-<<<<<<< HEAD
     address: string;
   }
 export const emergingTech2028Services: EmergingTechService2028[] = [;
@@ -42,7 +38,6 @@ export const emergingTech2028Services: EmergingTechService2028[] = [
     tagline: 'Emerging tech services for 2028',
     price: '$299 / month',
     description: unknown;
-=======
     addres,
   s: string,
   }
@@ -64,7 +59,6 @@ export const,
   e: '$299 / month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced platform showcasing emerging technology services and innovations for 2028.',
     feature,
   s: [,
@@ -74,7 +68,6 @@ export const,
       'Advanced features',
       'Expert insights',
     ],
-<<<<<<< HEAD
     link: '/services / 2028 - emerging - tech - service'
     category: 'Emerging Tech Services 2028'
     real_implementation: true;
@@ -141,7 +134,6 @@ export const emergingTech2028Services: EmergingTechService2028[] = [,
 ];
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-=======
     lin,
   k: '/services / 2028 - emerging - tech - service',
     categor,
@@ -258,12 +250,10 @@ export const,
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
 ;
-<<<<<<< HEAD
     id: "2028-emerging-tech-service"
     name: "2028 Emerging Tech Service Platform",
     tagline: "Emerging tech services for 2028",
@@ -292,7 +282,6 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-=======
     i,"
   d: "2028-emerging-tech-service",
     nam,"
@@ -341,7 +330,6 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];

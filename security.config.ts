@@ -3,7 +3,6 @@
  * Comprehensive security settings and best practices;
  */
 
-<<<<<<< HEAD
 export const securityConfig = {
   // Content Security Policy;
   csp: {,
@@ -77,7 +76,6 @@ export const securityConfig = {
     encodeSpecialChars: true;
     trimWhitespace: true;
     removeNullBytes: true;
-=======
 export const securityConfig = {/* TODO: Fix JSX expression */}
     },
     reportOnl,
@@ -106,7 +104,6 @@ export const securityConfig = {/* TODO: Fix JSX expression */}
 
   // Data sanitization,
   sanitization: {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
 };
 

@@ -1,16 +1,10 @@
-<<<<<<< HEAD
 import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe} from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
 
 
 import { Link } from 'react-router-dom';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -82,9 +76,7 @@ $4];
     'Regular updates'
 
   return (
-<<<<<<< HEAD
     <>
-=======
     <div>Coming Soon</div>
 
   );
@@ -166,12 +158,10 @@ icon: Award,
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-<<<<<<< HEAD
             {/* Left Side - Signup Form */}
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
               <div className="text-center mb-8">
@@ -252,7 +242,6 @@ const PagePage: React.FC = () => {
                   <label className="flex items-start">
                       type="checkbox"
                       name="agreeToTerms"
-=======
 
             {/* Left Side - Signup Form */}
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50"></div>"
@@ -316,13 +305,11 @@ Confirm Password;
                 <div className="space-y-4">
                   <label className="flex items-start">
                       type="checkbox" name="agreeToTerms"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       checked={formData.agreeToTerms}
                       className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2 mt-1"
                     <span className="ml-2 text-sm text-gray-300">
                       I agree to the{' '}
                       <a href="/terms" className="text-cyan-400 hover:text-cyan-300">
-<<<<<<< HEAD
                         Terms of Service
                       </a>{' '}
                       and{' '}
@@ -391,7 +378,6 @@ Confirm Password;
                   <div className="text-2xl font-bold text-white">Amazon</div>
       <Footer />
     </>
-=======
 
 // Terms of Service;
           </a>{' '}
@@ -469,7 +455,6 @@ Join thousands of businesses already using our AI and IT solutions;
       <Footer />
 
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 
 

@@ -35,7 +35,6 @@ requiredFiles.forEach((file) => {/* TODO: Fix JSX expression */}`
 });
 
 // Check package.json for critical dependencies;
-<<<<<<< HEAD
 try {
   const _packageJson = JSON.parse(readFileSync(resolve(process.cwd(), 'package.json'), 'utf-8'));
   const _requiredDeps = ['next', 'react', 'react-dom'];
@@ -43,10 +42,8 @@ try {
   requiredDeps.forEach((dep) => {
     if (!packageJson.dependencies[dep]) {
       errors.push(`Missing required dependency: ${dep}`);
-=======
 try {/* TODO: Fix JSX expression */}`
   dependency: ${dep}`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   });
   
@@ -54,23 +51,19 @@ try {/* TODO: Fix JSX expression */}`
 }
 
 // Check TypeScript configuration;
-<<<<<<< HEAD
 try {
   const _tsConfig = JSON.parse(readFileSync(resolve(process.cwd(), 'tsconfig.json'), 'utf-8'));
   
   if (!tsConfig.compilerOptions) {
     warnings.push('tsconfig.json missing compilerOptions');
   } else {
-=======
 try {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //     }
 } catch (error) {/* TODO: Fix JSX expression */}
 }
 
 // Check environment variables setup;
-<<<<<<< HEAD
 if (!existsSync(resolve(process.cwd(), '.env.example'))) {
   warnings.push('.env.example file not found - consider adding environment variable documentation');
 } else {
@@ -78,14 +71,12 @@ if (!existsSync(resolve(process.cwd(), '.env.example'))) {
 
 // Report results;
 // if (errors.length > 0) {
-=======
 if (!existsSync(resolve(process.cwd(), '.env.example'))) {/* TODO: Fix JSX expression */}
 } else {/* TODO: Fix JSX expression */}
 //   }
 
 // Report results;
 // if (errors.length > 0) {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //   //   errors.forEach((error) => // console.log(`   - ${error}`));
 }
 

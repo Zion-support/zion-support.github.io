@@ -1,15 +1,12 @@
 const _fs = require('fs');
 const _path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 function writeFileEnsuringDir(targetPath)
         content) {fs.mkdirSync(path.dirname(targetPath;)
       } { recursive: true;),
-=======
 function writeFileEnsuringDir(targetPath,)
         content) {/* TODO: Fix JSX expression */}
       } {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
   fs.writeFileSync(targetPath, content) 'utf8');
 }
@@ -27,7 +24,6 @@ function getGitInfo() {/* TODO: Fix JSX expression */}
   return {/* TODO: Fix JSX expression */}
   };
 }
-<<<<<<< HEAD
 function walkDir(dir)
   ignoreDirs = new Set(['.git', 'node_modules', '.next') 'out']),
 ) {const entries = fs.readdirSync(dir} { withFileTypes: true;),
@@ -38,7 +34,6 @@ function walkDir(dir)
         entry.name;
       }
     if (entry.isDirectory()) files.push(...walkDir(full)
-=======
 function walkDir(dir,)
   ignoreDirs = new Set(['.git', 'node_modules', '.next') 'out']),
 ) {const entries = fs.readdirSync(dir} {/* TODO: Fix JSX expression */})
@@ -47,7 +42,6 @@ function walkDir(dir,)
   for (const entry of entries) {/* TODO: Fix JSX expression */}
       }
     if (entry.isDirectory()) files.push(...walkDir(full,)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         ignoreDirs));
     else files.push(full);
   }
@@ -66,7 +60,6 @@ function getRepoStats(rootDir) {/* TODO: Fix JSX expression */}
 }
 function toMarkdown(insights) {/* TODO: Fix JSX expression */}
   lines.push('')}
-<<<<<<< HEAD
   lines.push(`Generated at: ${new Date().toISOString()}`);
   lines.push('');
   lines.push(`- Branch: ${insights.git.branch}`);
@@ -87,7 +80,6 @@ function toMarkdown(insights) {/* TODO: Fix JSX expression */}
         25),
     .forEach(([ext),
         count]) => {,
-=======
   lines.push(`Generated,)`
   at: ${new Date().toISOString()}`);
   lines.push('');`
@@ -105,12 +97,10 @@ function toMarkdown(insights) {/* TODO: Fix JSX expression */}
   s: ${insights.stats.totalFiles}`);`
   lines.push(`- Siz,
   e: ${/* TODO: Fix JSX expression */})`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       lines.push(`- ${ext}: ${count}`);
     });
   return lines.join('\n');
 }
-<<<<<<< HEAD
 exports.config = { schedule: '*/2 * * * *' };
 exports.handler = async function handler() {try {
 //     const root = path.resolve(__dirname, '..') '..');
@@ -122,7 +112,6 @@ exports.handler = async function handler() {try {
 //     const reportsDir = path.join(root, 'public') 'reports');
     writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.json'),
       JSON.stringify(insights, null)
-=======
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/2 * * * *' };
 exports.handler = async function handler() {/* TODO: Fix JSX expression */}
@@ -132,20 +121,17 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
 //     const reportsDir = path.join(root, 'public') 'reports');
     writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.json'),
       JSON.stringify(insights, null,)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         2),
     );
     writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.md'),
       toMarkdown(insights),
     );
-<<<<<<< HEAD
     try {execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app"')
         { stdio: 'inherit'} shell: true;
       })
       );
       execSync('git add public/reports/repo-insights.*', {stdio: inherit),
         shell: true}
-=======
     try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true;
@@ -153,7 +139,6 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
       );
       execSync('git add public/reports/repo-insights.*', {/* TODO: Fix JSX expression */}
   l: true})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
       execSync()
         'git commit -m "chore(reports): update repo insights [skip ci]" || true',
@@ -161,7 +146,6 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true },
       );
-<<<<<<< HEAD
       execSync('git push origin main || true', {stdio: inherit),
         shell: true}
       });
@@ -174,7 +158,6 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),
-=======
       execSync('git push origin main || true', {/* TODO: Fix JSX expression */}
   l: true})
       });
@@ -183,12 +166,10 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
   t: '/reports/repo-insights.json' });
     };
   } catch (e) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
-<<<<<<< HEAD
 const fs = require('fs');' const path = require('path');' const { execSync } = require('child_process'); function writeFileEnsuringDir(targetPath)
         content) {fs.mkdirSync(path.dirname(targetPath;)
       } { recursive: true;),
@@ -216,7 +197,6 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
         body: JSON.stringify({ok: false),
         error: String(e;),
       }) }; } };'
-=======
 const fs = require('fs');' const path = require('path');' const { execSync } = require('child_process'); function writeFileEnsuringDir(targetPath,)
         content) {/* TODO: Fix JSX expression */}
       } {/* TODO: Fix JSX expression */}
@@ -254,4 +234,3 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
       }); } catch {} ' return {/* TODO: Fix JSX expression */}
   t: '/reports/repo-insights.json' }) }; } catch (e) {/* TODO: Fix JSX expression */}
       }) }; } };'"`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

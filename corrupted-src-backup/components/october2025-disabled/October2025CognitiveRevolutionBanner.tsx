@@ -2,8 +2,6 @@ import React from 'react';
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const October2025CognitiveRevolutionBanne, r: React.FC = () => { ,
   return(,)
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/20, overflo, w-hidd, e, n' > {/* Animated, background, effec, t, s */ })
@@ -11,7 +9,6 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => { ,
       <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 70% 5, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.15),transparent, 5, 0%)]' />
       {/* Conte, n, t */}
       <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-6'>
-=======
 const October2025CognitiveRevolutionBanne, r: React.FC = () => { 
   return (
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/20, overflo, w-hidd, e, n' > {/* Animated, background, effec, t, s */ }</div>
@@ -20,7 +17,6 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {
 
       {/* Conte, n, t */}</div>
       <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-6'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <div, className='flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4'>
           {/* Left, sid, e - Badge, and, Tit, l, e */}</div>
           <div, classNam, e = 'flex, item, s-start, ga, p-4, fle, x-1, mi, n-w-0'></div>
@@ -28,7 +24,6 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {
               <div, className='relati, v, e'></div>
                 <Brain, className='w-1, 2, h-12, tex, t-purp, l, e-400, animat, e-pul, s, e' />
                 <Sparkles, className='w-5 h-5, tex, t-yell, o, w-400, absolut, e -t, o, p-1 -rig, h, t-1, animat, e-boun, c, e' />
-=======
 const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/20, overflo, w-hidd, e, n' > {/* Animated, background, effec, t, s */ }
       <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.15),transparent, 5, 0%)]' /></div>
@@ -42,13 +37,11 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
               <div, className='relati, v, e'></div>
                 <Brain, className='w-1, 2, h-12, tex, t-purp, l, e-400, animat, e-pul, s, e' /></Brain>
                 <Sparkles, className='w-5 h-5, tex, t-yell, o, w-400, absolut, e -t, o, p-1 -rig, h, t-1, animat, e-boun, c, e' /></Sparkles>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               </div>
             </div>
 
             <div, className='fl, e, x-1, mi, n-w-0'></div>
               <div, className='flex, item, s-center, ga, p-2, m, b-2, fle, x-wr, a, p'></div>
-<<<<<<< HEAD
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, shado, w-lg, animat, e-pul, s, e'>
                   🚀 BRAND, NEW, OCTOBER 20, 2, 5;
                 </sp, a, n>
@@ -58,7 +51,6 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
                 </sp, a, n>
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gre, e, n-500, tex, t-white, shado, w-lg'></span>
                   <TrendingUp, className='w-3 h-3, m, r-1' />
-=======
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, shado, w-lg, animat, e-pul, s, e'></span>
                   🚀 BRAND, NEW, OCTOBER 20, 2, 5;
                 </sp, a, n>
@@ -68,12 +60,10 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
                 </sp, a, n>
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gre, e, n-500, tex, t-white, shado, w-lg'></span>
                   <TrendingUp, className='w-3 h-3, m, r-1' /></TrendingUp>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   $4.7B, VALUE, DELIVERED;
                 </sp, a, n>
               </div>
 
-<<<<<<< HEAD
               <h2, className='te, x, t-2xl, s, m: te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2, leadin, g-tig, h, t'>
                 🧠 Cognitive, Computing, Revolution: Hum, a, n-Like, AI, Intelligence;
               </h2>
@@ -81,7 +71,6 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
               <p, className='te, x, t-purp, l, e-100, tex, t-sm, s, m:te, x, t-base, leadin, g-relaxed, m, b-3'></p>
                 <span, className='fo, n, t-bold, tex, t-yell, o, w-3, 0, 0'>
                   JUST, PUBLISHED, TODAY:
-=======
               <h2, className='te, x, t-2xl, s, m: te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2, leadin, g-tig, h, t'></h2>
                 🧠 Cognitive, Computing, Revolutio,
   n: Hum, a, n-Like, AI, Intelligence;
@@ -91,33 +80,26 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
                 <span, className='fo, n, t-bold, tex, t-yell, o, w-3, 0, 0'></span>
                   JUST, PUBLISHED, TODA,
   Y:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 </sp, a, n>{' '}
                 Discover, how, Fortune 500, companies, are deploying, cognitive, AI;
                 systems, that, understand, reas, o, n, and, learn, like huma, n, s —
                 achievi, n, g{' '}
-<<<<<<< HEAD
                 <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>
                   98.7% decision, accurac, y;
                 </span>
                 ,{' '}
                 <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>
-=======
                 <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>
                   98.7% decision, accurac, y;
                 </span>
                 ,{' '}
                 <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   $4.7B+ in, value, creation;
                 </span>
                 , a, n, d{' '}
                 <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>, 3,6, 0, 0% R, O, I</sp, a, n>.
-<<<<<<< HEAD
                 Explore, mult, i-agent, orchestratio, n(97.8% automati, o, n, $84, 7, M+)
-=======
                 Explore, mult, i-agent, orchestratio, n (97.8% automati, o, n, $84, 7, M+)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 val, u, e), cognitive, enterprise, transformation, and, rea, l-world, telecom, success story, with, transformational results!
               </p>
 
@@ -174,11 +156,8 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
         {/* Bottom, stats, b, a, r */}
         <div, classNam, e = 'mt-4, p, t-4, borde, r-t, borde, r-purp, l, e-5, 0, 0/30'></div>
           <div, className='grid, gri, d-co, l, s-2, s, m: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r'></div>
-<<<<<<< HEAD
             <d, i, v>
-=======
             <d, i, v></d>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <div, className='te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>98.7%</div>
               <div, className='te, x, t-xs, tex, t-purp, l, e-2, 0, 0'>Decision, Accurac, y</div>
             </div>

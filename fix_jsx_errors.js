@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 import fs from 'fs';
 
-<<<<<<< HEAD
 function fixJSXErrors(filePath) {
   try {
     //Fix malformed JSX elements like: className="..." <span> -> className="..." /> <span>
@@ -39,7 +38,6 @@ function fixJSXErrors(filePath) {
         content = newContent;
         modified = true;
       }
-=======
 function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */}
       },
       {/* TODO: Fix JSX expression */}
@@ -54,7 +52,6 @@ function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */}
 
     patterns.forEach(fix => {/* TODO: Fix JSX expression */}
       })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
 
     if (modified) {/* TODO: Fix JSX expression */}

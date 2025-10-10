@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect, useCallback } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Star, Users, Award, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Zap } from 'lucide-react';
@@ -9,7 +7,6 @@ import SEOOptimizer from '../components/SEOOptimizer';
 
 const ContactPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
@@ -17,7 +14,6 @@ import Footer from '../components/Footer';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle, User, MessageSquare, Building, Globe } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -46,7 +42,6 @@ const ContactPage: React.FC = () => {
     setIsSubmitting(true);
     
     // Simulate form submission
-<<<<<<< HEAD
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     setIsSubmitted(true);
@@ -55,11 +50,9 @@ const ContactPage: React.FC = () => {
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
-=======
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitStatus('success');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       setFormData({
         name: '',
         email: '',
@@ -68,7 +61,6 @@ const ContactPage: React.FC = () => {
         service: '',
         message: ''
       });
-<<<<<<< HEAD
     }, 3000);
   };
 
@@ -162,7 +154,6 @@ const ContactPage: React.FC = () => {
       icon: Award,
       title: 'Proven Results',
       description: '300% average ROI and $50M+ in client savings'
-=======
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -274,21 +265,15 @@ const ContactPage: React.FC = () => {
     {
       question: 'Do you work with small businesses?',
       answer: 'Absolutely! We offer scalable solutions for businesses of all sizes, from startups to enterprise organizations.'
->>>>>>> origin/main
     }
   ];
 
-<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
       <Navigation />)
       <SEOOptimizer;)
         title="Contact Zion Tech Group - AI & IT Solutions")
-=======
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-=======
-<<<<<<< HEAD
     <>
       <SEOOptimizer
         title="Contact Us - Zion Tech Group"
@@ -328,7 +313,6 @@ const ContactPage: React.FC = () => {
                   <p className="text-gray-300">We'll get back to you within 24 hours.</p>
                 </div>
               ) : (
-=======
     }, 2000);
   };
 
@@ -405,7 +389,6 @@ const ContactPage: React.FC = () => {
                   </div>
                 )}
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -419,11 +402,8 @@ const ContactPage: React.FC = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-<<<<<<< HEAD
                         className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-=======
                         className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                         placeholder="Your full name"
                       />
                     </div>
@@ -438,11 +418,8 @@ const ContactPage: React.FC = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-<<<<<<< HEAD
                         className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-=======
                         className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                         placeholder="your@email.com"
                       />
                     </div>
@@ -459,11 +436,8 @@ const ContactPage: React.FC = () => {
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
-<<<<<<< HEAD
                         className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-=======
                         className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                         placeholder="Your company name"
                       />
                     </div>
@@ -477,11 +451,8 @@ const ContactPage: React.FC = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-<<<<<<< HEAD
                         className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-=======
                         className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                         placeholder="(555) 123-4567"
                       />
                     </div>
@@ -496,11 +467,8 @@ const ContactPage: React.FC = () => {
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-<<<<<<< HEAD
                       className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-=======
                       className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     >
                       <option value="">Select a service</option>
                       {services.map((service) => (
@@ -519,13 +487,10 @@ const ContactPage: React.FC = () => {
                       value={formData.message}
                       onChange={handleInputChange}
                       required
-<<<<<<< HEAD
                       rows={5}
                       className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-=======
                       rows={6}
                       className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       placeholder="Tell us about your project and how we can help..."
                     />
                   </div>
@@ -533,34 +498,27 @@ const ContactPage: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-<<<<<<< HEAD
                     className="cyber-button w-full justify-center inline-flex items-center disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <>
                         <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-=======
                     className="w-full cyber-button inline-flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <>
                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                         Sending...
                       </>
                     ) : (
                       <>
-<<<<<<< HEAD
                         <Send className="w-4 h-4 mr-2" />
-=======
                         <Send className="w-5 h-5 mr-2" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                         Send Message
                       </>
                     )}
                   </button>
                 </form>
-<<<<<<< HEAD
               )}
             </div>
 
@@ -649,16 +607,12 @@ const ContactPage: React.FC = () => {
       
       <Footer />
     </>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
       <Navigation />
       <SEOOptimizer
         title="Contact Zion Tech Group - AI & IT Solutions"
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         description="Get in touch with our AI and IT experts. Contact us for consultations, project inquiries, and enterprise solutions. Call (302) 464-0950 or email kleber@ziontechgroup.com"
         keywords="contact us, AI consulting, IT services, enterprise solutions, consultation"
-<<<<<<< HEAD
       >{/* Hero Section */}</SEOOptimizer>
       </SEOOptimizer><section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></section><div className="container mx-auto px-4 relative z-10"></div>
@@ -668,7 +622,6 @@ const ContactPage: React.FC = () => {
               <span className="text-cyan-400 text-sm font-medium">Get In Touch</span><h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">Let's Build the</h1>
               <span className="block holographic-text cyber-text">Future Together</span><p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">Ready to transform your business with AI and cutting-edge technology?</p>
               Our experts are here to help you achieve your goals.</p>
-=======
       />
       {/* Hero Section */}
       <section className="relative py-20 lg: py-32 overflow-hidden">
@@ -688,7 +641,6 @@ const ContactPage: React.FC = () => {
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
               Ready to transform your business with AI and cutting-edge technology?
               Our experts are here to help you achieve your goals.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
 
             <div className="flex flex-wrap justify-center gap-6"></div>
@@ -707,22 +659,16 @@ const ContactPage: React.FC = () => {
 ,
       {/* Contact Methods */}
       <section className="py-20">
-<<<<<<< HEAD
         <div className="container mx-auto px-4">
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">{contactMethods.map((method, index) => (</div>
-=======
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16">,
             {contactMethods.map((method, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="quantum-card p-6 text-center space-y-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto">
-=======
         <div className="container mx-auto px-4"></section>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">{contactMethods.map((method, index) => (</div>
               <div key={index} className="quantum-card p-6 text-center space-y-4"></div>
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <method.icon className="w-8 h-8 text-cyan-400" />
                 <h3 className="text-xl font-bold text-white">{method.title}</h3>
                 <div className="space-y-2"></div>
@@ -730,20 +676,17 @@ const ContactPage: React.FC = () => {
                   {method.action && (
                     <a;
                       href={method.action}
-<<<<<<< HEAD
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
                     >
                       <ArrowRight className="w-4 h-4 mr-1" >{method.action.startsWith('tel:') ? 'Call Now' :</ArrowRight>
                        method.action.startsWith('mailto:') ? 'Send Email' : 'View on Map'}</ArrowRight>
                     </ArrowRight>
-=======
                       className="inline-flex items-center text-cyan-400 hover: text-cyan-300 transition-colors text-sm",
                     >,
                       <ArrowRight className="w-4 h-4 mr-1" />,
                       {method.action.startsWith('tel:') ? 'Call Now' :,
                        method.action.startsWith('mailto:') ? 'Send Email' : 'View on Map'}
                     </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   )}
                 </div>
               </div>
@@ -761,12 +704,9 @@ const ContactPage: React.FC = () => {
 
       {/* Global Offices */}
       <section className="py-20 bg-slate-800/50">
-<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Global Offices<p className="text-lg text-gray-300 max-w-3xl mx-auto">We're here to serve you wherever you are in the world<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{offices.map((office, index) => (</div>
-=======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Our Global Offices;
             </h2>
@@ -776,14 +716,11 @@ const ContactPage: React.FC = () => {
           </div>,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
             {offices.map((office, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
-=======
         <div className="container mx-auto px-4"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Global Offices</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">We're here to serve you wherever you are in the world</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{offices.map((office, index) => (</div>
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3 className="text-xl font-bold text-white mb-4">{office.city}</h3>
                 <div className="space-y-3"></div>
                   <div className="flex items-center justify-center space-x-2"></div>
@@ -810,22 +747,16 @@ const ContactPage: React.FC = () => {
 
       {/* FAQ Section */}
       <section className="py-20">
-<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Frequently Asked Questions<p className="text-lg text-gray-300 max-w-3xl mx-auto">Common questions about our services and process</p>
-=======
         <div className="container mx-auto px-4"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Common questions about our services and process</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
           </div>
           <div className="max-w-4xl mx-auto"></div>
             <div className="space-y-6">{faqs.map((faq, index) => (</div>
-<<<<<<< HEAD
-=======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Frequently Asked Questions;
             </h2>
@@ -836,13 +767,10 @@ const ContactPage: React.FC = () => {
           <div className="max-w-4xl mx-auto">,
             <div className="space-y-6">,
               {faqs.map((faq, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{faq.question}<p className="text-gray-300">{faq.answer}</p>
-=======
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6"></div>
                   <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3><p className="text-gray-300">{faq.answer}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </div>
               ))}
             </div>
@@ -852,12 +780,10 @@ const ContactPage: React.FC = () => {
 
       <Footer />
     </div>
->>>>>>> origin/main
   );
 };
 
 export default ContactPage;
-=======
               </div>
 
               {/* Contact Information */}
@@ -984,4 +910,3 @@ export default ContactPage;
 };
 
 export default ContactPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

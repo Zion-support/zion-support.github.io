@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 export default function EnterpriseAISolutions(): React.JSX.Element {
   const solutions = [
     {
@@ -13,13 +12,10 @@ export default function EnterpriseAISolutions(): React.JSX.Element {
         'Custom AI Models',
         '24/7 Support',
       ],
-=======
 export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     {/* TODO: Fix JSX expression */}
     },
-<<<<<<< HEAD
     {
       icon: <Zap className="w-8 h-8" />,
       title: 'AI Automation Suite',
@@ -33,12 +29,9 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
     },
   ];
 
-<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Helmet>
         <title>Enterprise AI Solutions - Zion Website</title>
         <meta;
@@ -51,7 +44,6 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         <div className="text-center mb-16"></div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Enterprise AI Solutions</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
             Comprehensive AI solutions designed for enterprise-scale deployments and large;)
             organizations.)
           </p>)
@@ -64,7 +56,6 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
               className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow",
             >,
               <div className="flex items-center mb-4">,
-=======
             Comprehensive AI solutions designed for enterprise-scale deployments and large
             organizations.
           </p>
@@ -77,9 +68,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
               className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
             ></div>
               <div className="flex items-center mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <div className="text-blue-600 mr-3">{solution.icon}</div>
-=======
     {/* TODO: Fix JSX expression */}
     },
   ];
@@ -112,7 +101,6 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
             >"
               <div className="flex items-center mb-4"></div>"
                 <div className="text-blue-600 mr-3">{solution.icon}</div>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <h3 className="text-xl font-semibold text-gray-900">{solution.title}</h3>
               </div>
 "

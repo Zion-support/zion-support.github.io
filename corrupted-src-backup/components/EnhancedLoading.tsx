@@ -3,7 +3,6 @@ import React from 'react';
 interface LoadingProps {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 const EnhancedLoading: React.FC<LoadingProps> = ({,
   message = 'Loading...',
   size = 'md',
@@ -17,22 +16,18 @@ const EnhancedLoading: React.FC<LoadingProps> = ({,
 
   const renderSpinner = () => (
     <div;
-=======
 const,
   EnhancedLoading: React.FC<LoadingProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   };
 
   const renderSpinner = () => (<div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       className={`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ${sizeClasses[size]}`}
     />)
   );
 
-<<<<<<< HEAD
   const renderDots = () => (</div>
     <div className="flex space-x-1">
-<<<<<<< HEAD
       {[0, 1, 2].map(i => ()
         <div;)
           key={i})
@@ -40,7 +35,6 @@ const,
           style={{})
             animationDelay: `${i * 0.2}s`)
             animationDuration: '1s'),
-=======
       {[0, 1, 2].map(i => (</div>
         <div
           key={i}
@@ -48,8 +42,6 @@ const,
           style={{
             animationDelay: `${i * 0.2}s`,
             animationDuration: '1s',
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
   const renderDots = () => (<div className="flex space-x-1"></div>
       {/* TODO: Fix JSX expression */}
           key={i}`
@@ -58,7 +50,6 @@ const,
   y: `${i * 0.2}s`,
             animationDuratio,
   n: '1s',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }}
         />)
       ))}
@@ -68,7 +59,6 @@ const,
   const renderPulse = () => (<div className={`bg-blue-600 rounded-full animate-pulse ${sizeClasses[size]}`} /></div>)
   );
 
-<<<<<<< HEAD
   const renderLoader = () => {
     switch (variant) {
       case 'dots':
@@ -79,14 +69,10 @@ const,
     }
   };
 
-<<<<<<< HEAD
   return(<div className="flex flex-col items-center justify-center p-8">)
-=======
   return (</div>
     <div className="flex flex-col items-center justify-center p-8"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <div className="mb-4">{renderLoader()}</div>
-=======
   const renderLoader = () => {/* TODO: Fix JSX expression */}
     }
   };
@@ -94,7 +80,6 @@ const,
   return ("
     <div className="flex flex-col items-center justify-center p-8"></div>")
       <div className="mb-4">{renderLoader()}</div>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       <p className="text-gray-600 text-sm font-medium">{message}</p>
     </div>
   );

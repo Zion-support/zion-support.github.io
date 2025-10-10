@@ -10,7 +10,6 @@ const config: Config = {,
     extend: {
       colors: {
         primary: {
-<<<<<<< HEAD
           cyan: '#00ffff'
           purple: '#8b5cf6'
           pink: '#ec4899'
@@ -31,7 +30,6 @@ const config: Config = {,
         orbitron: ['Orbitron', 'monospace'],
         rajdhani: ['Rajdhani', 'sans-serif'],
         exo: ['Exo 2', 'sans-serif'],
-=======
           50: '#eff6ff',
           500: '#3b82f6',
           600: '#2563eb',
@@ -45,7 +43,6 @@ const config: Config = {,
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
       animation: {,
         'fade-in': 'fadeIn 0.5s ease-in-out',
@@ -56,13 +53,10 @@ const config: Config = {,
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
-<<<<<<< HEAD
         slideUp: {,
           '0%': { transform: 'translateY(20px)', opacity: '0' },
-=======
         slideUp: {
           '0%': { transform: 'translateY(10px)', opacity: '0' },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
       },

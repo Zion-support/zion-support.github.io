@@ -5,22 +5,18 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
 //   const githubToken = process.env.GITHUB_TOKEN || '';
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
   const githubBranch = process.env.GIT_BRANCH || 'main'
-<<<<<<< HEAD
   function absolute(u) {if(!u)
         return null;
     if (u.startsWith('http')) return u;
     if(!baseUrl)
         return null)
-=======
   function absolute(u) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         return `${baseUrl}${u.startsWith('/') ? '' : '/'}${u}`;
   }
   async function head(_url) {/* TODO: Fix JSX expression */}
   d: 'HEAD'} redirec,
   t: 'follow' });
 //       const len = r.headers.get('content-length');
-<<<<<<< HEAD
       return {ok: r.ok;
         status: r.status;
         size: len ? parseInt(len),
@@ -46,7 +42,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
         { headers })
-=======
       return {/* TODO: Fix JSX expression */}
       };
     } catch (e) {/* TODO: Fix JSX expression */}
@@ -67,13 +62,11 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
         { headers },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       );
       if (r.ok) {/* TODO: Fix JSX expression */}
         sha = j.sha}
       }
     } catch {}
-<<<<<<< HEAD
     const body = {message,
       content: Buffer.from(content).toString('base64'),
       branch: githubBranch;
@@ -84,7 +77,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       {method: 'PUT', headers)
         body: JSON.stringify(body;),
       })
-=======
     const body = {/* TODO: Fix JSX expression */}
       sha}
     };`
@@ -93,14 +85,12 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       }`,
       {/* TODO: Fix JSX expression */}
       },)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     );
 //     const ok = putRes.ok;
 //     const status = putRes.status;
     let error;
     if (!ok) {/* TODO: Fix JSX expression */}
         error = await putRes.text()}
-<<<<<<< HEAD
       } catch (e) {error = String(e;
       }
       }
@@ -119,7 +109,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         return {statusCode: 200),
         body: JSON.stringify({ ok: false),
         error: `Fetch ${res.status}` });
-=======
       } catch (e) {/* TODO: Fix JSX expression */}
       }
       }
@@ -134,7 +123,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     if (!res.ok,
         return {/* TODO: Fix JSX expression */})`
   r: `Fetch ${res.status}` });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     const _html = await res.text();
     const imgSrcs = Array.from(new Set()
@@ -143,35 +131,28 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
           .filter(Boolean),
       ),
     );
-<<<<<<< HEAD
     const scriptSrcs = Array.from(new Set()
-=======
     const scriptSrcs = Array.from(new Set(")
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         [...html.matchAll(/<script[^>]*src=["']([^"']+)["']/gi)]
           .map(m => absolute(m[1]))
           .filter(Boolean),
       ),
     );
     const _checks = [];
-<<<<<<< HEAD
     for(const src of [...imgSrcs, ...scriptSrcs].slice(0)
         60)) {const r = await head(src;)
       })
       checks.push({ url: src),
         size: r.size),
         status: r.status;
-=======
     for (const src of [...imgSrcs, ...scriptSrcs].slice(0,)
         60)) {/* TODO: Fix JSX expression */}
       }
       checks.push({/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
     const large = checks;
       .filter(c => typeof c.size === 'number' && c.size > 200 * 1024)
-<<<<<<< HEAD
       .sort((a)
         b) => (b.size || 0) - (a.size || 0));
     const summary = {baseUrl,
@@ -179,25 +160,20 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       totals: { assetsChecked: checks.length;
         large: large.length },
       large: large.slice(0),
-=======
       .sort((a,)
         b) => (b.size || 0) - (a.size || 0));
     const summary = {/* TODO: Fix JSX expression */}
   e: large.length },
       larg,
   e: large.slice(0,)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         50),
     };
     const jsonPath = 'automation/reports/performance-hints.json'
     const mdPath = 'docs/performance-hints.md'
-<<<<<<< HEAD
 //     const jsonContent = JSON.stringify({...summary)
         all: checks }, null)
-=======
 //     const jsonContent = JSON.stringify({/* TODO: Fix JSX expression */}
   l: checks }, null,)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         2);
     const mdLines = [
       '# Performance Hints',`
@@ -210,20 +186,16 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   checked: ${summary.totals.assetsChecked}`,`
       `Large assets (>200KB): ${summary.totals.large}`,
       '',
-<<<<<<< HEAD
       '## Large Assets',
       ...summary.large.map(
         r => `- ${r.url} — ${(r.size / 1024).toFixed(0;)
       } KB`)
-=======
       '## Large Assets',`
       ...summary.large.map(r => `- ${r.url} — ${/* TODO: Fix JSX expression */}`
       } KB`,)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       ),
     ];`
 //     const msg = `chore(report): performance hints (${new Date().toISOString()})`;
-<<<<<<< HEAD
     const [jsonRes, mdRes] = await Promise.all([)
       commitFile(jsonPath, jsonContent)
         msg),
@@ -242,7 +214,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       statusCode: 500;
       body: JSON.stringify({ ok: false),
         error: String(e;),
-=======
     const [jsonRes, mdRes] = await Promise.all([
       commitFile(jsonPath, jsonContent,)
         msg),
@@ -254,12 +225,10 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       });
     };
   } catch (e) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
-<<<<<<< HEAD
 exports.config = { schedule: '*/15 * * * *' }; exports.handler = async function () {' const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/} '');' const githubToken = process.env.GITHUB_TOKEN || '';' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const githubBranch = process.env.GIT_BRANCH || 'main' ' function absolute(u) {if(!u)
         return null; if (u.startsWith('http')) return u; if(!baseUrl)
         return null)
@@ -306,7 +275,6 @@ exports.config = { schedule: '*/15 * * * *' }; exports.handler = async function 
         body: JSON.stringify({ok: false),
         error: String(e;),
       }) }; } };'
-=======
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/15 * * * *' }; exports.handler = async function () {' const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/} '');' const githubToken = process.env.GITHUB_TOKEN || '';' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const githubBranch = process.env.GIT_BRANCH || 'main' ' function absolute(u) {/* TODO: Fix JSX expression */}`
         return `${baseUrl}${u.startsWith('/') ? '' : '/'}${u}`; } async function head(url) {/* TODO: Fix JSX expression */}
@@ -348,4 +316,3 @@ exports.config = {/* TODO: Fix JSX expression */}
         mdLines.join('\n'), msg), ]); return {/* TODO: Fix JSX expression */}
       }) }; } catch (e) {/* TODO: Fix JSX expression */}
       }) }; } };'"`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

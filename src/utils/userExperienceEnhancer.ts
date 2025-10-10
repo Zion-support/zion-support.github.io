@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * Advanced User Experience Enhancer
  * Comprehensive UX optimization utilities
@@ -626,7 +625,6 @@ ${this.metrics.performanceScore < 80 ? '- Optimize performance' : ''}
 }
 
 export default UserExperienceEnhancer;
-=======
 // UserExperienceEnhancer utility
 // This file contains utility functions and configurations
 
@@ -706,4 +704,3 @@ export default UserExperienceEnhancer;
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

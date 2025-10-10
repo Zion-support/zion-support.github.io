@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 const January2026RevolutionaryContentBanne, r: React.FC = () => {,
   const revolutionaryConten, t = [
     {
@@ -12,23 +11,18 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {,
       impa, c, t: '98% Automat, i, o, n',
       ty, p, e: 'b, l, o, g',
       readTime: '15, m, i, n',
-=======
 const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
     },
-<<<<<<< HEAD
   ]; return(<section, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'>
       {/* Animated, Backgroun, d */}
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></section>
-=======
   ]; return (<section, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'></section>
       {/* Animated, Backgroun, d */}
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
         <div, className='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
           sty, l, e={{ animationDel, a, y: ', 2, s' }}
@@ -37,7 +31,6 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
           sty, l, e={{ animationDel, a, y: ', 4, s' }}
          /></div>
       </div>
-<<<<<<< HEAD
       <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'>
         {/* Head, e, r */}</div>
         <div, className='te, x, t-center, m, b-16'></div>
@@ -49,7 +42,6 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
           </div>
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
             Revolutionary, AI, Breakthroughs: The, Future, is He, r, e;
-=======
       <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'></div>
         {/* Head, e, r */}
         <div, className='te, x, t-center, m, b-16'></div>
@@ -62,24 +54,19 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></h2>
             Revolutionary, AI, Breakthrough,
   s: The, Future, is He, r, e;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d'></p>
             Experience, the, cutting-edge, of, AI innovation, with, our latest, breakthrough, conten,
   t: 98% automation, ra, t, e, s, quantum, computing, revolutions, and, Fortune, 500 transformations, wort, h $1, 0, B.
           </p>
-<<<<<<< HEAD
         </div>)
         {/* Content, Gri, d */})
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>)
           { revolutionaryConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
-=======
         </div>
         {/* Content, Gri, d */}
-<<<<<<< HEAD
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>
           { revolutionaryConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <div, ke, y = { in, d, e, x  }, classNa, m, e = 'group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'
             >
               {/* Content, Hea, d, e, r */}</div>
@@ -87,7 +74,6 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
                 <div, className='te, x, t-4, x, l'>{conte, n, t.emo, j, i}</div>
                 <div, className='flex, fle, x-col, item, s-end, ga, p-2'></div>
                   <span, className='bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-500, tex, t-white, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-fu, l, l'>
-=======
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'></div>
           {/* TODO: Fix JSX expression */}
             <div, ke, y = { in, d, e, x  }, classNa, m, e = 'group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'
@@ -97,7 +83,6 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
                 <div, className='te, x, t-4, x, l'>{conte, n, t.emo, j, i}</div>
                 <div, className='flex, fle, x-col, item, s-end, ga, p-2'></div>
                   <span, className='bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-500, tex, t-white, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-fu, l, l'></span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     {conte, n, t.highlig, h, t}
                   </sp, a, n>
                   <span, className='te, x, t-xs, tex, t-gr, a, y-4, 0, 0'></span>
@@ -107,11 +92,8 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
               </div>
               {/* Content, Inf, o */}
               <div, className='mb-4'></div>
-<<<<<<< HEAD
                 <span, className='te, x, t-bl, u, e-400, tex, t-sm, fon, t-semibold, uppercase, tracking-wi, d, e'>
-=======
                 <span, className='te, x, t-bl, u, e-400, tex, t-sm, fon, t-semibold, uppercase, tracking-wi, d, e'></span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   {conte, n, t.category}
                 </sp, a, n>
                 <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s'></h3>
@@ -124,13 +106,10 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
               {/* Impact, Badg, e */}
               <div, className='mb-6'></div>
                 <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, border, border-gre, e, n-5, 0, 0/30, rounde, d-fu, l, l'></div>
-<<<<<<< HEAD
                   <Target, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
                   <span, className='te, x, t-gre, e, n-400, fon, t-bold, tex, t-sm'>
-=======
                   <Target, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' /></Target>
                   <span, className='te, x, t-gre, e, n-400, fon, t-bold, tex, t-sm'></span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     Impa, c, t: {conte, n, t.im, p, a, c, t}
                   </sp, a, n>
                 </div>
@@ -155,14 +134,11 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
             },
             {/* TODO: Fix JSX expression */}
             },
-<<<<<<< HEAD
           ].m, a, p((st, a, t, ind, e, x) => (</div>
             <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r'
             ></div>
-=======
           ].m, a, p((st, a, t, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r'
             ></div>`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <div, className='te, x, t-3xl, m, b-2'>{st, a, t.ic, o, n}</d, i, v > <div, classNam, e = { `te, x, t-2xl, fon, t-extrabold, b, g-gradie, n, t-to-r ${st, a, t.co, l, o, r }, bg-cl, i, p-text, tex, t-transparent, m, b-1`}
               ></div>
                 {st, a, t.val, u, e}
@@ -176,11 +152,8 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
         {/* Call, to, Action */}
         <div, classNam, e = 'te, x, t-cent, e, r'></div>
           <div, className='bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, border, border-bl, u, e-5, 0, 0/20, rounde, d-2x, l, p-8'></div>
-<<<<<<< HEAD
             <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-whi, t, e'>
-=======
             <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-whi, t, e'></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               Ready, to, Experience the, AI, Revolution?
             </h3>
             <p, className='te, x, t-gr, a, y-300, m, b-6, ma, x-w-2xl, m, x-au, t, o'></p>
@@ -188,23 +161,17 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
             </p>
             <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
               <Link, t, o='/conta, c, t'
-<<<<<<< HEAD
                 className='bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hover:-transla, t, e-y-1'
               >
-=======
                 className='bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hove,
   r:-transla, t, e-y-1'
               ></Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 Start, Your, Transformation;
               </Li, n, k>
               <Link, t, o='/servic, e, s'
                 className='bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r:bg-bl, u, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0'
-<<<<<<< HEAD
               >
-=======
               ></Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 Explore, Our, Services;
               </Li, n, k>
             </div>

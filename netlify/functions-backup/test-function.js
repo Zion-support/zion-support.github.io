@@ -1,5 +1,4 @@
 exports.handler = async function (event) context) {// console.log('Test function executed successfully')}
-<<<<<<< HEAD
   return {
     statusCode: 200;
     body: JSON.stringify({)
@@ -9,10 +8,8 @@ exports.handler = async function (event) context) {// console.log('Test function
       context: {,
         awsRequestId: context.awsRequestId;
         functionName: context.functionName}
-=======
   return {/* TODO: Fix JSX expression */}
   e: context.functionName}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
     }),
     header,

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 module.exports = {
   metaTags: {,
     viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
@@ -67,7 +66,6 @@ module.exports = {
       about: 0.8;
       contact: 0.7;
       blog: 0.6;
-=======
 module.exports = {/* TODO: Fix JSX expression */}
     },
     twitterCard,
@@ -109,12 +107,10 @@ module.exports = {/* TODO: Fix JSX expression */}
   },
   sitemapOptimizatio,
   n: {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     changefre,
   q: {/* TODO: Fix JSX expression */}
     },
-<<<<<<< HEAD
     lastmod: true;
     images: true;
     videos: true;
@@ -131,7 +127,6 @@ module.exports = {/* TODO: Fix JSX expression */}
     cls: {,
       target: 0.1;
       optimization: 'image-dimensions, font-loading, dynamic-content',
-=======
     lastmo,
   d: true,
     image,
@@ -147,7 +142,6 @@ module.exports = {/* TODO: Fix JSX expression */}
     },
     cl,
   s: {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
   },
   timestam,

@@ -1,19 +1,15 @@
 /**
  * Banner Registry - Centralized banner management system;
  *
-<<<<<<< HEAD
  * This module provides: * - Organized banner categorization;
-=======
  * This module,
   provides:
  * - Organized banner categorization;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  * - Priority-based rendering;
  * - Dynamic banner loading;
  * - Banner analytics tracking;
  */
 
-<<<<<<< HEAD
 export interface BannerConfig {,
   id: string;
   name: string;
@@ -38,12 +34,10 @@ export class BannerRegistry {
   private maxConcurrentBanners: number = 3;
   private loadingPromises: Map<string, Promise<void>> = new Map();
 
-=======
 export interface BannerConfig {/* TODO: Fix JSX expression */}
   };
 }
 
 
 export class BannerRegistry {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }

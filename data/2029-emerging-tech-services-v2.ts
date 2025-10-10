@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   description: string;
@@ -41,7 +40,6 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [,
     id: 'quantum - internet - security - gateway',
     name: 'Quantum Internet Security Gateway',
     description: unknown;
-=======
   i,
   d: string,
   nam,
@@ -122,7 +120,6 @@ export const,
   e: 'Quantum Internet Security Gateway',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Next - generation quantum internet security platform that provides unbreakable encryption and quantum - safe communication protocols for the future quantum internet infrastructure.',
     categor,
   y: [,
@@ -186,7 +183,6 @@ export const,
       'Quantum security experts',
       'Implementation team',
     ],
-<<<<<<< HEAD
     compliance: ['FIPS 140 - 2', 'Common Criteria', 'SOC 2', 'ISO 27001'],    scalability: 'Enterprise - grade, global deployment',    roi: '600% within 24 months',
     deployment: 'Hardware appliances, cloud options',
     maintenance: 'Continuous updates, security patches',
@@ -224,7 +220,6 @@ export const,
     ],
     price: '$35,999/month'
     features: [;
-=======
     complianc,
   e: ['FIPS 140 - 2', 'Common Criteria', 'SOC 2', 'ISO 27001'],    scalabilit,
   y: 'Enterprise - grade, global deployment',    ro,
@@ -287,7 +282,6 @@ export const,
   e: '$35,999/month'
     feature,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum market analysis algorithms'
       'Real-time trading execution'
       'Predictive market modeling'
@@ -306,18 +300,14 @@ export const,
       'Enhanced risk management'
       'Competitive trading advantage'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Institutional trading'
       'Hedge fund operations'
       'Algorithmic trading'
       'Risk management'
       'Portfolio optimization'
-<<<<<<< HEAD
       'Market analysis',
     ],
     marketSize: '$42.3B by 2029',
@@ -359,7 +349,6 @@ export const,
     id: 'quantum-creativity-studio',
     name: 'Quantum Creativity Studio',
     description:,
-=======
       'Market analysis'
     ]
     marketSiz,
@@ -435,7 +424,6 @@ export const,
   e: 'Quantum Creativity Studio'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Innovative quantum-enhanced creativity platform that uses quantum algorithms to generate unique artistic content, design solutions, and creative concepts that push the boundaries of human imagination.'
     categor,
   y: ['Creativity', 'Quantum Computing', 'AI', 'Design', 'Art']
@@ -461,18 +449,14 @@ export const,
       'Improve design quality'
       'Reduce creative blocks'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Graphic design'
       'Content creation'
       'Product design'
       'Marketing materials'
       'Creative agencies'
-<<<<<<< HEAD
       'Individual artists',
     ],
     marketSize: '$18.9B by 2029',
@@ -505,7 +489,6 @@ export const,
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
       'Individual artists'
     ]
     marketSiz,
@@ -569,7 +552,6 @@ export const,
   s://ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
       mobil,
@@ -585,7 +567,6 @@ export const,
   };
 ];      'Graphic designContent creationProduct designMarketing materialsCreative agenciesIndividual artists'
     ];
-<<<<<<< HEAD
     marketSize: '$18.9B by 2029'
     competitors: ['Adobe Creative SuiteCanvaFigmaSketch'];
     technology: ['Quantum ComputingAI/MLComputer GraphicsDesign Tools'];
@@ -594,7 +575,6 @@ export const,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
     marketSiz,
   e: '$18.9B by 2029'
     competitor,
@@ -613,7 +593,6 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   };
     feature,
@@ -634,23 +613,19 @@ export const,
       'Energy-efficient computing'
       'Long-term data preservation'
       'Biological compatibility'
-<<<<<<< HEAD
       'Revolutionary computing paradigm',
     ],
     useCases: [,
-=======
       'Revolutionary computing paradigm'
     ]
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Scientific research computing',
       'Medical data storage',
       'Environmental monitoring',
       'Space exploration data',
       'Biological research',
     ],
-<<<<<<< HEAD
     technology: [
       'DNA Synthesis',
       'Molecular Biology',
@@ -680,7 +655,6 @@ export const,
     market_size: '$15.8B by 2029',
     competitors: ['Microsoft', 'Illumina', 'Twist Bioscience', 'DNA Script'],
     technology: [,
-=======
     technolog,
   y: [,
       'DNA Synthesis'
@@ -736,7 +710,6 @@ export const,
   s: ['Microsoft', 'Illumina', 'Twist Bioscience', 'DNA Script'],
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'DNA Synthesis',
       'Molecular Biology',
       'Bioinformatics',
@@ -750,7 +723,6 @@ export const,
       'Biotech experts',
       'Implementation team',
     ],
-<<<<<<< HEAD
     compliance: ['FDA', 'ISO 13485', 'GMP', 'Research ethics'],    scalability: 'Research - grade, scalable deployment',    roi: '800% within 36 months',
     deployment: 'Laboratory setup, cloud integration',
     maintenance: 'Continuous optimization, biological monitoring',
@@ -778,7 +750,6 @@ export const,
     ],
     price: '$35,999/month'
     features: [;
-=======
     complianc,
   e: ['FDA', 'ISO 13485', 'GMP', 'Research ethics'],    scalabilit,
   y: 'Research - grade, scalable deployment',    ro,
@@ -831,7 +802,6 @@ export const,
   e: '$35,999/month'
     feature,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum market analysis algorithms'
       'Real-time trading execution'
       'Predictive market modeling'
@@ -848,16 +818,13 @@ export const,
       'Faster trade execution'
       'Better portfolio performance'
       'Enhanced risk management'
-<<<<<<< HEAD
       'Competitive trading advantage',
     ],
     useCases: [,
-=======
       'Competitive trading advantage'
     ]
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Institutional trading',
       'Hedge fund operations',
       'Algorithmic trading',
@@ -865,7 +832,6 @@ export const,
       'Portfolio optimization',
       'Market analysis',
     ],
-<<<<<<< HEAD
     technology: [
       'Quantum Computing',
       'Machine Learning',
@@ -895,7 +861,6 @@ export const,
     funding: 'Series C funding, $500M valuation'
     exit: 'IPO or financial acquisition',
     contact: description: unknown;
-=======
     technolog,
   y: [,
       'Quantum Computing'
@@ -950,7 +915,6 @@ export const,
     contac,
   t: descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Innovative quantum-enhanced creativity platform that uses quantum algorithms to generate unique artistic content, design solutions, and creative concepts that push the boundaries of human imagination.'
     categor,
   y: ['Creativity', 'Quantum Computing', 'AI', 'Design', 'Art']
@@ -976,7 +940,6 @@ export const,
       'Improve design quality'
       'Reduce creative blocks'
     ]
-<<<<<<< HEAD
     useCases: [;
     technology: [
       'Quantum Computing'
@@ -1057,7 +1020,6 @@ export const,
     mobile: string, email: string;
     website: string;
     address: string;
-=======
     useCase,
   s: [;
     technolog,
@@ -1229,7 +1191,6 @@ export const,
   e: string,
     addres,
   s: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 }
 export const,
@@ -1251,7 +1212,6 @@ export const,
   s: [;
       'Increase trading accuracy by 300%Reduce trading risks by 60%Faster trade executionBetter portfolio performanceEnhanced risk managementCompetitive trading advantage'
     ];
-<<<<<<< HEAD
     useCases: [;
       'Institutional tradingHedge fund operationsAlgorithmic tradingRisk managementPortfolio optimizationMarket analysis',
     ],
@@ -1279,7 +1239,6 @@ export const,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
     useCase,
   s: [;
       'Institutional tradingHedge fund operationsAlgorithmic tradingRisk managementPortfolio optimizationMarket analysis'
@@ -1339,7 +1298,6 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   };
     i,
@@ -1359,14 +1317,11 @@ export const,
   s: [;
       'Exponential storage density increaseParallel processing capabilitiesEnergy-efficient computingLong-term data preservationBiological compatibilityRevolutionary computing paradigm'
     ];
-<<<<<<< HEAD
     useCases: [;
       'Long-term data archivingScientific research computingMedical data storageEnvironmental monitoringSpace exploration dataBiological research',
-=======
     useCase,
   s: [;
       'Long-term data archivingScientific research computingMedical data storageEnvironmental monitoringSpace exploration dataBiological research'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ],
     marketSiz,
   e: '$15.8B by 2029', competitor,
@@ -1451,7 +1406,6 @@ export interface EmergingTechService2029V2 {/* TODO: Fix JSX expression */}
   }
 }
 ;
-<<<<<<< HEAD
 export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
   {,
     id: 'quantum-internet-security-gateway';
@@ -1654,7 +1608,6 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     id: 'quantum - creativity - studio',
     name: 'Quantum Creativity Studio',
     description: unknown;
-=======
 export const,
   emergingTechServices2029V2: EmergingTechService2029V2[] = [;
   {/* TODO: Fix JSX expression */}
@@ -1742,7 +1695,6 @@ export const,
   e: 'Quantum Creativity Studio',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Innovative quantum - enhanced creativity platform that uses quantum algorithms to generate unique artistic content, design solutions, and creative concepts that push the boundaries of human imagination.',
     categor,
   y: ['Creativity', 'Quantum Computing', 'AI', 'Design', 'Art'],
@@ -1788,7 +1740,6 @@ export const,
       'Computer Graphics',
       'Design Tools',
     ],
-<<<<<<< HEAD
     integration: ['Design tools', 'Creative platforms', 'Asset libraries'],
     support: ['24 / 7 creative support', 'Design experts', 'Implementation help'],
     compliance: ['Copyright protection', 'Creative licensing', 'Data privacy'],    scalability: 'Creative platform, multi - user support',    roi: '400% within 12 months',
@@ -1802,7 +1753,6 @@ export const,
     customization: 'Custom creative tools, templates',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
     integratio,
   n: ['Design tools', 'Creative platforms', 'Asset libraries'],
     suppor,
@@ -1833,7 +1783,6 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];

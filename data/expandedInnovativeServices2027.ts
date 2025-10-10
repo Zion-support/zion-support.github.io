@@ -1,7 +1,6 @@
 // Expanded Innovative Services 2027 - Zion Tech Group;
 // Additional Micro SAAS, IT Infrastructure, and AI Services;
 export type ExpandedService2027 =
-<<<<<<< HEAD
   id: string;
   name: string;
   category: string;
@@ -60,7 +59,6 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
     subcategory: 'Threat Intelligence',
     description: 'AI-powered cybersecurity platform that uses quantum-resistant algorithms to detect and neutralize advanced persistent threats in real-time',
     features: [,
-=======
   i,
   d: string;
   nam,
@@ -171,7 +169,6 @@ export const,
   n: 'AI-powered cybersecurity platform that uses quantum-resistant algorithms to detect and neutralize advanced persistent threats in real-time',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum-resistant encryption algorithms',
       'Real-time threat detection and response',
       'Behavioral analytics and anomaly detection',
@@ -208,7 +205,6 @@ export const,
       'Large enterprises',
       'Critical infrastructure operators'
     ],
-<<<<<<< HEAD
     pricing: unknown;
       model: 'Tiered Subscription'
       basePrice: 2500;
@@ -256,7 +252,6 @@ export const,
     subcategory: 'Compliance Automation',
     description: 'Intelligent compliance automation platform that continuously monitors and ensures regulatory compliance across multiple frameworks',
     features: [,
-=======
     pricin,
   g: unknown,
       mode,
@@ -347,7 +342,6 @@ export const,
   n: 'Intelligent compliance automation platform that continuously monitors and ensures regulatory compliance across multiple frameworks',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Multi-framework compliance monitoring',
       'Automated compliance reporting',
       'Real-time policy enforcement',
@@ -384,7 +378,6 @@ export const,
       'Compliance officers',
       'Risk management teams'
     ],
-<<<<<<< HEAD
     pricing: unknown;
       model: 'Per-User + Base'
       basePrice: 1500;
@@ -435,7 +428,6 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
     subcategory: 'Predictive Analytics',
     description: 'Advanced predictive analytics platform that uses machine learning to forecast business trends and provide actionable insights',
     features: [,
-=======
     pricin,
   g: unknown,
       mode,
@@ -530,7 +522,6 @@ export const,
   n: 'Advanced predictive analytics platform that uses machine learning to forecast business trends and provide actionable insights',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Multi-dimensional data analysis',
       'Real-time predictive modeling',
       'Automated insight generation',
@@ -567,7 +558,6 @@ export const,
       'E-commerce platforms',
       'Consulting firms'
     ],
-<<<<<<< HEAD
     pricing: unknown;
       model: 'Usage-based + Base'
       basePrice: 1800;
@@ -615,7 +605,6 @@ export const,
     subcategory: 'Real-Time Processing',
     description: 'High-performance real-time data streaming platform for processing and analyzing data as it flows through systems',
     features: [,
-=======
     pricin,
   g: unknown,
       mode,
@@ -706,7 +695,6 @@ export const,
   n: 'High-performance real-time data streaming platform for processing and analyzing data as it flows through systems',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Real-time data ingestion',
       'Stream processing engines',
       'Low-latency analytics',
@@ -743,7 +731,6 @@ export const,
       'Manufacturing firms',
       'Telecommunications'
     ],
-<<<<<<< HEAD
     pricing: unknown;
       model: 'Per-Stream + Processing'
       basePrice: 2200;
@@ -794,7 +781,6 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
     subcategory: 'Multi-Cloud Management',
     description: 'Intelligent multi-cloud orchestration platform that manages and optimizes workloads across multiple cloud providers',
     features: [,
-=======
     pricin,
   g: unknown,
       mode,
@@ -889,7 +875,6 @@ export const,
   n: 'Intelligent multi-cloud orchestration platform that manages and optimizes workloads across multiple cloud providers',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Multi-cloud workload management',
       'Automated cost optimization',
       'Unified monitoring and logging',
@@ -926,7 +911,6 @@ export const,
       'Government agencies',
       'E-commerce platforms'
     ],
-<<<<<<< HEAD
     pricing: unknown;
       model: 'Percentage of Cloud Spend'
       basePrice: 2000;
@@ -967,7 +951,6 @@ export const,
     reviews: 312;
     launchDate: '2027-01-10',
     status: 'active',
-=======
     pricin,
   g: unknown,
       mode,
@@ -1045,7 +1028,6 @@ export const,
   e: '2027-01-10',
     statu,
   s: 'active'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-powered-devops-automation',
@@ -1095,7 +1077,6 @@ export const,
       'Quality assurance teams',
       'Release managers'
     ],
-<<<<<<< HEAD
     pricing: unknown;
       model: 'Per-Developer + Base'
       basePrice: 1200;
@@ -1146,7 +1127,6 @@ export const advancedIoTServices: ExpandedService2027[] = [,
     subcategory: 'Industrial IoT',
     description: 'Comprehensive industrial IoT platform that provides real-time monitoring, predictive maintenance, and operational intelligence for manufacturing and industrial operations',
     features: [,
-=======
     pricin,
   g: unknown,
       mode,
@@ -1241,7 +1221,6 @@ export const,
   n: 'Comprehensive industrial IoT platform that provides real-time monitoring, predictive maintenance, and operational intelligence for manufacturing and industrial operations',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Real-time equipment monitoring',
       'Predictive maintenance algorithms',
       'Energy consumption optimization',
@@ -1278,7 +1257,6 @@ export const,
       'Chemical plants',
       'Mining operations'
     ],
-<<<<<<< HEAD
     pricing: unknown;
       model: 'Per-Smartphone + Data Processing'
       basePrice: 2800;
@@ -1319,7 +1297,6 @@ export const,
     reviews: 178;
     launchDate: '2027-01-25',
     status: 'active',
-=======
     pricin,
   g: unknown,
       mode,
@@ -1397,7 +1374,6 @@ export const,
   e: '2027-01-25',
     statu,
   s: 'active'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'smart-city-operations',
@@ -1447,7 +1423,6 @@ export const,
       'Utility companies',
       'Public safety agencies'
     ],
-<<<<<<< HEAD
     pricing: unknown;
       model: 'City Size + Services'
       basePrice: 5000;
@@ -1498,7 +1473,6 @@ export const advancedFinTechServices: ExpandedService2027[] = [
     subcategory: 'Quantum Finance',
     description: 'Revolutionary financial modeling platform that uses quantum computing to solve complex financial problems and optimize investment strategies',
     features: [,
-=======
     pricin,
   g: unknown,
       mode,
@@ -1593,7 +1567,6 @@ export const,
   n: 'Revolutionary financial modeling platform that uses quantum computing to solve complex financial problems and optimize investment strategies',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum portfolio optimization',
       'Risk assessment algorithms',
       'Real-time market analysis',
@@ -1630,7 +1603,6 @@ export const,
       'Trading firms',
       'Financial advisors'
     ],
-<<<<<<< HEAD
     pricing: unknown;
       model: 'Usage-based + Base'
       basePrice: 8000;
@@ -1671,7 +1643,6 @@ export const,
     reviews: 89;
     launchDate: '2027-01-05',
     status: 'active',
-=======
     pricin,
   g: unknown,
       mode,
@@ -1749,7 +1720,6 @@ export const,
   e: '2027-01-05',
     statu,
   s: 'active'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'decentralized-finance-protocol',
@@ -1799,7 +1769,6 @@ export const,
       'Startups and developers',
       'Global users'
     ],
-<<<<<<< HEAD
     pricing: unknown;
       model: 'Transaction Fees + Governance'
       basePrice: 0;
@@ -1850,7 +1819,6 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
     subcategory: 'AI Diagnostics',
     description: 'Advanced AI-powered diagnostic platform that assists healthcare professionals in accurate disease diagnosis and treatment planning',
     features: [,
-=======
     pricin,
   g: unknown,
       mode,
@@ -1945,7 +1913,6 @@ export const,
   n: 'Advanced AI-powered diagnostic platform that assists healthcare professionals in accurate disease diagnosis and treatment planning',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Medical image analysis',
       'Symptom assessment algorithms',
       'Treatment recommendation engine',
@@ -1982,7 +1949,6 @@ export const,
       'Pharmaceutical companies',
       'Medical device companies'
     ],
-<<<<<<< HEAD
     pricing: unknown;
       model: 'Per-Provider + Usage'
       basePrice: 3500;
@@ -2023,7 +1989,6 @@ export const,
     reviews: 134;
     launchDate: '2027-02-01',
     status: 'active',
-=======
     pricin,
   g: unknown,
       mode,
@@ -2101,7 +2066,6 @@ export const,
   e: '2027-02-01',
     statu,
   s: 'active'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'telemedicine-platform',
@@ -2151,7 +2115,6 @@ export const,
       'Patients',
       'Healthcare startups'
     ],
-<<<<<<< HEAD
     pricing: unknown;
       model: 'Per-Provider + Transaction'
       basePrice: 2500;
@@ -2192,7 +2155,6 @@ export const,
     reviews: 289;
     launchDate: '2027-01-15',
     status: 'active',
-=======
     pricin,
   g: unknown,
       mode,
@@ -2270,7 +2232,6 @@ export const,
   e: '2027-01-15',
     statu,
   s: 'active'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 // Export all expanded services;
@@ -2293,26 +2254,21 @@ export const EXPANDED_SERVICE_CATEGORIES = [
   'Healthcare Technology'
 ];
 // Helper function to get services by category;
-<<<<<<< HEAD
 export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] =>;
   if (category === 'All'),
-=======
 export const getExpandedServicesByCategory = (categor,)
   y: string): ExpandedService2027[] =>;
   if (category === 'All')
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return ALL_EXPANDED_SERVICES_2027;
   }
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category);
 };
 // Helper function to get services by subcategory;
-<<<<<<< HEAD
 export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[] =>;
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory);,
 };
 // Helper function to search services;
 export const searchExpandedServices = (query: string): ExpandedService2027[] =>;
-=======
 export const getExpandedServicesBySubcategory = (subcategor,)
   y: string): ExpandedService2027[] =>;
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory);
@@ -2320,7 +2276,6 @@ export const getExpandedServicesBySubcategory = (subcategor,)
 // Helper function to search services;
 export const searchExpandedServices = (quer,)
   y: string): ExpandedService2027[] =>;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //   const lowercaseQuery = query.toLowerCase();
   return ALL_EXPANDED_SERVICES_2027.filter(service =>)
     service.name.toLowerCase().includes(lowercaseQuery) ||

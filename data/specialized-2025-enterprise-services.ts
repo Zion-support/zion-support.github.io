@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -81,7 +80,6 @@ export interface SpecializedEnterpriseService {id: string, name: string;
   rating: number, reviews: number;
   benefits: string[], capabilities: string[],
   marketAdvantage: string;
-=======
   i,
   d: string;
   nam,
@@ -217,7 +215,6 @@ export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
   s: string[],
   marketAdvantag,
   e: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 const contact =
   mobil,
@@ -226,7 +223,6 @@ const contact =
   addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',
 };
-<<<<<<< HEAD
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [,
   // Advanced AI & Consciousness Services;
       'Cutting-edge platform for AI consciousness research, enabling scientists to study artificial general intelligence, consciousness emergence, and cognitive modeling.',
@@ -241,7 +237,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
     price: '$5, 999',
     period: '/month',
     description: unknown;
-=======
 export const,
   specializedEnterpriseServices: SpecializedEnterpriseService[] = [,
   // Advanced AI & Consciousness Services;
@@ -266,7 +261,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Cutting - edge platform for AI consciousness research, enabling scientists to study artificial general intelligence, consciousness emergence, and cognitive modeling.',
       'Consciousness simulation engine',
       'Cognitive architecture modeling',
@@ -279,7 +273,6 @@ export const,
       'API for research integration',
       'Expert consultation services',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     marketPosition: 'Leading AI consciousness research platform for scientific institutions',
@@ -290,7 +283,6 @@ export const,
     category: 'Advanced AI & Consciousness',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -310,7 +302,6 @@ export const,
   e: true;
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI/ML, Neural networks, Cognitive science, Python, TensorFlow, PyTorch'
     ]
     integration,
@@ -321,7 +312,6 @@ export const,
   s: [,
       'Consciousness research, AGI development, Psychology studies, AI ethics research, Cognitive modeling'
     ]
-<<<<<<< HEAD
     roi: 'Strategic investment in cutting-edge AI research with long-term scientific and commercial benefits'
     competitors: ['No direct competitors in consciousness simulation'];
     marketSize: 'Emerging research market'
@@ -341,7 +331,6 @@ export const,
     category: 'Advanced AI & Consciousness',
     real_service: true;
     technology: [,
-=======
     ro,
   i: 'Strategic investment in cutting-edge AI research with long-term scientific and commercial benefits'
     competitor,
@@ -381,7 +370,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI / ML, Neural networks, Cognitive science, Python, TensorFlow, PyTorch',
     ],
     integration,
@@ -392,7 +380,6 @@ export const,
   s: [,
       'Consciousness research, AGI development, Psychology studies, AI ethics research, Cognitive modeling',
     ],
-<<<<<<< HEAD
     roi: 'Strategic investment in cutting - edge AI research with long - term scientific and commercial benefits'
     competitors: ['No direct competitors in consciousness simulation']
     market_size: 'Emerging research market'
@@ -406,7 +393,6 @@ export const,
     customers: 23;
     rating: 5 && 5.0;
     reviews: 18;
-=======
     ro,
   i: 'Strategic investment in cutting - edge AI research with long - term scientific and commercial benefits',
     competitor,
@@ -432,7 +418,6 @@ export const,
   g: 5 && 5.0,
     review,
   s: 18,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum-enhanced ML algorithms',
     benefit,
   s: [,
@@ -450,7 +435,6 @@ export const,
       'Research collaboration',
       'Advanced analytics',
     ],
-<<<<<<< HEAD
     market_advantage: unknown;
       'Only comprehensive AI consciousness research platform available',
   },
@@ -461,7 +445,6 @@ export const,
     price: '$4, 499',
     period: '/month',
     description: unknown;
-=======
     market_advantag,
   e: unknown,
       'Only comprehensive AI consciousness research platform available',
@@ -479,7 +462,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary platform that combines quantum computing with machine learning, enabling unprecedented computational power for complex optimization problems.',
     feature,
   s: [,
@@ -494,7 +476,6 @@ export const,
       'Research and development tools',
       'Expert quantum consulting',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
       'Multi-quantum backend platform with hybrid computing capabilities',
@@ -511,7 +492,6 @@ export const,
     category: 'Quantum Computing & AI',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -542,7 +522,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Qiskit, Cirq, TensorFlow Quantum, Python, C++, Quantum algorithms',
     ],
     integration,
@@ -553,7 +532,6 @@ export const,
   s: [,
       'Financial optimization, Drug discovery, Logistics optimization, Machine learning research',
     ],
-<<<<<<< HEAD
     roi: 'Solve previously intractable problems and accelerate research by 100x',
     competitors: ['IBM Quantum, Google Quantum AI, Rigetti, D - Wave'],
     market_size: '$10B+ quantum computing market'
@@ -567,7 +545,6 @@ export const,
     customers: 45;
     rating: 4 && 4.9;
     reviews: 32;
-=======
     ro,
   i: 'Solve previously intractable problems and accelerate research by 100x',
     competitor,
@@ -593,7 +570,6 @@ export const,
   g: 4 && 4.9,
     review,
   s: 32,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Post-quantum cryptographic algorithms',
       'Lattice-based cryptography',
       'Hash-based signatures',
@@ -614,7 +590,6 @@ export const,
       'Error correction',
       'Research tools',
     ],
-<<<<<<< HEAD
     market_advantage: unknown;
       'Advanced quantum ML platform with hybrid computing capabilities',
   },
@@ -625,7 +600,6 @@ export const,
     price: '$2, 999',
     period: '/month',
     description: unknown;
-=======
     market_advantag,
   e: unknown,
       'Advanced quantum ML platform with hybrid computing capabilities',
@@ -643,7 +617,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced cryptography platform that implements post - quantum cryptographic algorithms, ensuring data security against future quantum computing threats.',
     feature,
   s: [,
@@ -658,7 +631,6 @@ export const,
       'Compliance and certification',
       'Expert security consulting',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
       'Enterprise-grade quantum-resistant cryptography platform with migration tools',
@@ -675,7 +647,6 @@ export const,
     category: 'Advanced Cybersecurity',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -706,7 +677,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Post - quantum algorithms, Lattice cryptography, Hash functions, Python, C++, Rust',
     ],
     integration,
@@ -717,7 +687,6 @@ export const,
   s: [,
       'Data encryption, Digital signatures, Key management, Secure communications',
     ],
-<<<<<<< HEAD
     roi: 'Future - proof security infrastructure and maintain compliance with emerging standards',
     competitors: ['NIST post - quantum candidates, PQShield, PQSecure, ISARA'],
     market_size: '$8B+ post - quantum cryptography market'
@@ -732,7 +701,6 @@ export const,
     rating: 4 && 4.8;
     reviews: 56;
     benefits: [,
-=======
     ro,
   i: 'Future - proof security infrastructure and maintain compliance with emerging standards',
     competitor,
@@ -760,7 +728,6 @@ export const,
   s: 56,
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Future - proof security',
       'Quantum - resistant algorithms',
       'Compliance readiness',
@@ -775,7 +742,6 @@ export const,
       'Migration tools',
       'Compliance support',
     ],
-<<<<<<< HEAD
     market_advantage: unknown;
       'Comprehensive quantum - resistant cryptography platform with migration support',
   },
@@ -786,7 +752,6 @@ export const,
     price: '$6, 999',
     period: '/month',
     description: unknown;
-=======
     market_advantag,
   e: unknown,
       'Comprehensive quantum - resistant cryptography platform with migration support',
@@ -804,7 +769,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI platform for satellite constellation management, enabling autonomous satellite operations, data processing, and mission optimization.',
     feature,
   s: [,
@@ -819,7 +783,6 @@ export const,
       'Mission analytics dashboard',
       'Expert space consulting',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: '',
       'Custom satellite orchestration platform with AI-powered optimization',
@@ -836,7 +799,6 @@ export const,
     category: 'Space Technology',
     real_service: true;
     technology: [,
-=======
     popula,
   r: false,
     ico,
@@ -867,7 +829,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI / ML, Orbital mechanics, Satellite protocols, Python, C++, Space systems',
     ],
     integration,
@@ -878,7 +839,6 @@ export const,
   s: [,
       'Satellite operations, Constellation management, Mission planning, Data processing',
     ],
-<<<<<<< HEAD
     roi: 'Optimize satellite operations by 400% and reduce mission costs by 60%',
     competitors: ['Maxar, Planet Labs, Spire, ICEYE'],
     market_size: '$5B+ satellite operations market'
@@ -893,7 +853,6 @@ export const,
     rating: 4 && 4.9;
     reviews: 8;
     benefits: [,
-=======
     ro,
   i: 'Optimize satellite operations by 400% and reduce mission costs by 60%',
     competitor,
@@ -921,7 +880,6 @@ export const,
   s: 8,
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '400% operation optimization',
       '60% mission cost reduction',
       'Autonomous operations',
@@ -936,7 +894,6 @@ export const,
       'Data processing',
       'Collision avoidance',
     ],
-<<<<<<< HEAD
     market_advantage: unknown;
       'Advanced AI satellite orchestration with autonomous capabilities',
   },
@@ -947,7 +904,6 @@ export const,
     price: '$7, 999',
     period: '/month',
     description: unknown;
-=======
     market_advantag,
   e: unknown,
       'Advanced AI satellite orchestration with autonomous capabilities',
@@ -965,7 +921,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Cutting - edge brain - computer interface platform that enables direct communication between the human brain and computers for research and medical applications.',
     feature,
   s: [,
@@ -980,7 +935,6 @@ export const,
       'Expert neural consultation',
       'Clinical trial support',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
       'Advanced BCI platform with medical-grade hardware and research tools',
@@ -997,7 +951,6 @@ export const,
     category: 'Neural Technology & BCI',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1028,7 +981,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Neural signal processing, Machine learning, Neuroscience, Python, C++, Neural hardware',
     ],
     integration,
@@ -1039,7 +991,6 @@ export const,
   s: [,
       'Medical rehabilitation, Cognitive research, Assistive technology, Human augmentation',
     ],
-<<<<<<< HEAD
     roi: 'Revolutionary medical applications and breakthrough research capabilities',
     competitors: ['Neuralink, CTRL - labs, Kernel, Paradromics'],
     market_size: '$3B+ BCI market'
@@ -1054,7 +1005,6 @@ export const,
     rating: 5 && 5.0;
     reviews: 5;
     benefits: [,
-=======
     ro,
   i: 'Revolutionary medical applications and breakthrough research capabilities',
     competitor,
@@ -1082,7 +1032,6 @@ export const,
   s: 5,
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary medical applications',
       'Breakthrough research capabilities',
       'Cognitive enhancement',
@@ -1097,7 +1046,6 @@ export const,
       'Medical applications',
       'Research tools',
     ],
-<<<<<<< HEAD
     market_advantage: unknown;
       'Advanced BCI platform with medical - grade capabilities and research tools',
   },
@@ -1108,7 +1056,6 @@ export const,
     price: '$1, 599',
     period: '/month',
     description: unknown;
-=======
     market_advantag,
   e: unknown,
       'Advanced BCI platform with medical - grade capabilities and research tools',
@@ -1126,7 +1073,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary IoT platform that autonomously manages, optimizes, and secures IoT devices and networks using advanced AI and machine learning.',
     feature,
   s: [,
@@ -1141,7 +1087,6 @@ export const,
       'Custom IoT applications',
       'Expert IoT consultation',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: '',
       'Industrial-grade autonomous IoT platform with AI-powered management',
@@ -1158,7 +1103,6 @@ export const,
     category: 'Advanced IoT & Edge Computing',
     real_service: true;
     technology: [,
-=======
     popula,
   r: false,
     ico,
@@ -1189,7 +1133,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI / ML, IoT protocols, Edge computing, Python, Kubernetes, Docker',
     ],
     integration,
@@ -1200,7 +1143,6 @@ export const,
   s: [,
       'Industrial automation, Smart city management, Energy optimization, Manufacturing IoT',
     ],
-<<<<<<< HEAD
     roi: 'Reduce IoT management costs by 70% and improve operational efficiency by 50%',
     competitors: ['AWS IoT, Azure IoT, Google Cloud IoT, PTC ThingWorx'],
     market_size: '$20B+ industrial IoT market'
@@ -1215,7 +1157,6 @@ export const,
     rating: 4 && 4.7;
     reviews: 45;
     benefits: [,
-=======
     ro,
   i: 'Reduce IoT management costs by 70% and improve operational efficiency by 50%',
     competitor,
@@ -1243,7 +1184,6 @@ export const,
   s: 45,
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '70% management cost reduction',
       '50% operational efficiency',
       'Autonomous management',
@@ -1258,7 +1198,6 @@ export const,
       'Predictive maintenance',
       'Security automation',
     ],
-<<<<<<< HEAD
     market_advantage: unknown;
       'Advanced autonomous IoT platform with AI - powered management capabilities',
   },
@@ -1277,7 +1216,6 @@ export const,
     price: '$2,199'
     period: '/month',
     description:,
-=======
     market_advantag,
   e: unknown,
       'Advanced autonomous IoT platform with AI - powered management capabilities',
@@ -1310,7 +1248,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced predictive analytics platform that uses machine learning and AI to provide accurate forecasts, trend analysis, and business intelligence insights.'
     feature,
   s: [,
@@ -1325,7 +1262,6 @@ export const,
       'Performance analytics',
       'Expert data consultation',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - green - 600 to - emerald - 600'
@@ -1343,7 +1279,6 @@ export const,
     real_service: true;
     technology: ['Python, TensorFlow, PyTorch, Scikit - learn, React, Node.js'],
     integrations: [,
-=======
     popula,
   r: true,
     ico,
@@ -1376,14 +1311,12 @@ export const,
   y: ['Python, TensorFlow, PyTorch, Scikit - learn, React, Node.js'],
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Data warehouses, Business intelligence tools, CRM systems, ERP platforms',
     ],
     use_case,
   s: [,
       'Sales forecasting, Demand prediction, Risk assessment, Performance optimization',
     ],
-<<<<<<< HEAD
     roi: 'Improve decision - making accuracy by 60% and reduce operational costs by 35%',
     competitors: ['SAS, IBM SPSS, RapidMiner, Alteryx'],
     market_size: '$30B+ predictive analytics market'
@@ -1402,7 +1335,6 @@ export const,
 ];
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform',
     benefits: [,
-=======
     ro,
   i: 'Improve decision - making accuracy by 60% and reduce operational costs by 35%',
     competitor,
@@ -1435,7 +1367,6 @@ export default specializedEnterpriseServices;    i,
   d: 'quantum-machine-learning-platform'
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '60% decision accuracy improvement',
       '35% operational cost reduction',
       'Advanced ML algorithms',
@@ -1450,26 +1381,20 @@ export default specializedEnterpriseServices;    i,
       'Anomaly detection',
       'Scenario modeling',
     ],
-<<<<<<< HEAD
     market_advantage: unknown;
-=======
     market_advantag,
   e: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced predictive analytics platform with custom ML model development',
   },
       'Advanced predictive analytics platform with custom ML model development',
   };
 ];
-<<<<<<< HEAD
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform',
     benefits: [,
-=======
 export default specializedEnterpriseServices;    i,
   d: 'quantum-machine-learning-platform'
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '60% decision accuracy improvement',
       '35% operational cost reduction',
       'Advanced ML algorithms',
@@ -1484,17 +1409,13 @@ export default specializedEnterpriseServices;    i,
       'Anomaly detection',
       'Scenario modeling',
     ],
-<<<<<<< HEAD
     market_advantage: unknown;
-=======
     market_advantag,
   e: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced predictive analytics platform with custom ML model development',
   },
 ];
 ;
-<<<<<<< HEAD
 export default specializedEnterpriseServices;    id: 'quantum - machine - learning - platform',
     name: 'Quantum Machine Learning Platform',
     tagline: 'Quantum - enhanced machine learning and optimization',
@@ -1781,7 +1702,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
       'Predictive modeling_time series forecasting_trend analysis_anomaly detection_scenario modeling',
     ],
     market_advantage: 'Advanced predictive analytics platform with custom ML model development',
-=======
 export default specializedEnterpriseServices;    i,
   d: 'quantum - machine - learning - platform'
     nam,
@@ -2301,7 +2221,6 @@ export default specializedEnterpriseServices;    i,
     ],
     market_advantag,
   e: 'Advanced predictive analytics platform with custom ML model development'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export default specializedEnterpriseServices;
@@ -2316,7 +2235,6 @@ export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -2333,7 +2251,6 @@ export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup.com',
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -2359,12 +2276,10 @@ export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
   websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const,
   specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
   // Advanced AI & Consciousness Services;
-<<<<<<< HEAD
   {
     id: 'ai-consciousness-research-platform';
     name: 'AI Consciousness Research Platform';
@@ -2404,15 +2319,12 @@ export const,
     reviews: 18;
     benefits: [,
       'Breakthrough consciousness researchAGI development capabilitiesScientific collaborationPatent-pending algorithmsExclusive research access',
-=======
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ]}
     capabilitie,
   s: [}
       'Consciousness simulationCognitive modelingEmotional intelligenceResearch collaborationAdvanced analytics'
     ];
-<<<<<<< HEAD
     marketAdvantage: 'Only comprehensive AI consciousness research platform available',
   };
   // Quantum Computing Services;
@@ -2455,19 +2367,16 @@ export const,
     reviews: 32;
     benefits: [,
       '100x research accelerationQuantum advantage in optimizationHybrid computing capabilitiesMulti-quantum backend supportExpert quantum consulting',
-=======
     marketAdvantag,
   e: 'Only comprehensive AI consciousness research platform available'
   };
   // Quantum Computing Services;
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ]}
     capabilitie,
   s: [}
       'Quantum ML algorithmsQuantum optimizationHybrid computingError correctionResearch tools'
     ];
-<<<<<<< HEAD
     marketAdvantage: 'Advanced quantum ML platform with hybrid computing capabilities',
   };
   // Advanced Cybersecurity Services;
@@ -2510,19 +2419,16 @@ export const,
     reviews: 56;
     benefits: [,
       'Future-proof securityQuantum-resistant algorithmsCompliance readinessMigration supportExpert consultation',
-=======
     marketAdvantag,
   e: 'Advanced quantum ML platform with hybrid computing capabilities'
   };
   // Advanced Cybersecurity Services;
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ]}
     capabilitie,
   s: [}
       'Post-quantum algorithmsLattice cryptographyHash-based signaturesMigration toolsCompliance support'
     ];
-<<<<<<< HEAD
     marketAdvantage: 'Comprehensive quantum-resistant cryptography platform with migration support',
   };
   // Space Technology Services;
@@ -2565,19 +2471,16 @@ export const,
     reviews: 8;
     benefits: [,
       '400% operation optimization60% mission cost reductionAutonomous operationsAI mission planningExpert space consulting',
-=======
     marketAdvantag,
   e: 'Comprehensive quantum-resistant cryptography platform with migration support'
   };
   // Space Technology Services;
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ]}
     capabilitie,
   s: [}
       'Autonomous operationsConstellation optimizationMission planningData processingCollision avoidance'
     ];
-<<<<<<< HEAD
     marketAdvantage: 'Advanced AI satellite orchestration with autonomous capabilities',
   };
   // Neural Interface Services;
@@ -2620,19 +2523,16 @@ export const,
     reviews: 5;
     benefits: [,
       'Revolutionary medical applicationsBreakthrough research capabilitiesCognitive enhancementMedical rehabilitationExpert neural consultation',
-=======
     marketAdvantag,
   e: 'Advanced AI satellite orchestration with autonomous capabilities'
   };
   // Neural Interface Services;
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ]}
     capabilitie,
   s: [}
       'Neural signal processingBrain-computer communicationCognitive enhancementMedical applicationsResearch tools'
     ];
-<<<<<<< HEAD
     marketAdvantage: 'Advanced BCI platform with medical-grade capabilities and research tools',
   };
   // Advanced IoT Services;
@@ -2675,19 +2575,16 @@ export const,
     reviews: 45;
     benefits: [,
       '70% management cost reduction50% operational efficiencyAutonomous managementSelf-healing networksAI optimization',
-=======
     marketAdvantag,
   e: 'Advanced BCI platform with medical-grade capabilities and research tools'
   };
   // Advanced IoT Services;
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ]}
     capabilitie,
   s: [}
       'Autonomous managementSelf-healing networksAI optimizationPredictive maintenanceSecurity automation'
     ];
-<<<<<<< HEAD
     marketAdvantage: 'Advanced autonomous IoT platform with AI-powered management capabilities',
   };
   // Advanced Analytics Services;
@@ -2730,24 +2627,19 @@ export const,
     reviews: 145;
     benefits: [,
       '60% decision accuracy improvement35% operational cost reductionAdvanced ML algorithmsReal-time predictionsCustom model development',
-=======
     marketAdvantag,
   e: 'Advanced autonomous IoT platform with AI-powered management capabilities'
   };
   // Advanced Analytics Services;
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ]}
     capabilitie,
   s: [}
       'Predictive modelingTime series forecastingTrend analysisAnomaly detectionScenario modeling'
     ];
-<<<<<<< HEAD
     marketAdvantage: 'Advanced predictive analytics platform with custom ML model development',
-=======
     marketAdvantag,
   e: 'Advanced predictive analytics platform with custom ML model development'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export default specializedEnterpriseServices;

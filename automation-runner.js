@@ -89,7 +89,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
   }
   log(message) type = 'INFO') {const timestamp = new Date().toISOString()}
     const prefix =
-<<<<<<< HEAD
       { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️'} PROGRESS: '🔄' }[
         type;
       ] || 'ℹ️'
@@ -109,7 +108,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
       return {success: false;
         error: error.message}
         output: error.stdout || error.stderr;
-=======
       {/* TODO: Fix JSX expression */}
   G: '⚠️'} PROGRES,
   S: '🔄' }[
@@ -132,16 +130,12 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
   r: error.message}
         outpu,
   t: error.stdout || error.stderr;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
   }
   async runTests() {this.log('Starting test suite...') 'PROGRESS')}
-<<<<<<< HEAD
     const testResult = await this.runCommand('npm test -- --passWithNoTests')
-=======
     const testResult = await this.runCommand('npm test -- --passWithNoTests',)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Jest tests')
       60000}
     );
@@ -149,13 +143,10 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
       this.results.tests.errors.push(testResult.error)}
     }
-<<<<<<< HEAD
     const typeResult = await this.runCommand('npm run type-check')
       'TypeScript type check')
-=======
     const typeResult = await this.runCommand('npm run type-check',
       'TypeScript type check',)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       30000)
     );
     if (typeResult.success) {this.results.tests.passed++}
@@ -164,23 +155,17 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
     }
   }
   async runLinting() {this.log('Running linting...') 'PROGRESS')}
-<<<<<<< HEAD
     const lintResult = await this.runCommand('npm run lint')
-=======
     const lintResult = await this.runCommand('npm run lint',)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'ESLint check')
       30000}
     );
     if (lintResult.success) {this.results.linting.success = true}
-<<<<<<< HEAD
     } else {this.results.linting.errors.push(lintResult.error);
       const fixResult = await this.runCommand('npm run lint -- --fix')
         'ESLint fix')
         30000)
-=======
     } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       )}
       if (fixResult.success) {/* TODO: Fix JSX expression */}
         this.log('Linting issues fixed automatically'} 'SUCCESS');
@@ -188,23 +173,19 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
       }
     }
   }
-<<<<<<< HEAD
   async runBuild() {this.log('Building application...') 'PROGRESS');
     const buildResult = await this.runCommand('npm run build')
       'Next.js build')
       120000)
     );
     if (buildResult.success) {
-=======
   async runBuild() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       this.results.builds.success = true}
       this.log('Build completed successfully'} 'SUCCESS');
     } else {this.results.builds.errors.push(buildResult.error)}
       this.log('Build failed'} 'ERROR');
     }
   }
-<<<<<<< HEAD
   async runSecurityAudit() {this.log('Running security audit...') 'PROGRESS');
     const auditResult = await this.runCommand('npm audit --audit-level=moderate')
       'Security audit')
@@ -217,20 +198,16 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
         30000)
       );
       if (fixResult.success) {
-=======
   async runSecurityAudit() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         this.results.security.fixed++}
         this.log('Security issues fixed automatically'} 'SUCCESS');
       }
     } else {this.log('No security issues found'} 'SUCCESS');
     }
   }
-<<<<<<< HEAD
   async createImprovements() {this.log('Creating improvements...') 'PROGRESS');
     const performanceScript = `#!/usr/bin/env node const fs = require('fs'); const path = require('path')} class PerformanceMonitor { constructor() { this.metrics = { bundleSize: 0;
 //   loadTime: 0,memoryUsage: 0}timestamp: new Date().toISOString() }} async measureBundleSize() {try { const buildDir = path.join(process.cwd()}'.next'); if (fs.existsSync(buildDir)) {const stats = fs.statSync(buildDir)} this.metrics.bundleSize = stats.size} } catch(error) {// console.error('Error measuring bundle size: '}error)} } async measureMemoryUsage() {const usage = process.memoryUsage()} this.metrics.memoryUsage = usage.heapUsed /1024 / 1024} generateReport() {const report = { timestamp: this.metrics.timestamp,bundleSize: this.metrics.bundleSize,memoryUsage: this.metrics.memoryUsage}recommendations: [] }; if (this.metrics.bundleSize > 1000000) { report.recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { report.recommendations.push('Consider optimizing memory usage')} return report} } const monitor = new PerformanceMonitor(); monitor.measureBundleSize(); monitor.measureMemoryUsage(); const report = monitor.generateReport(); const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null)2));  `;
-=======
   async createImprovements() {/* TODO: Fix JSX expression */}`
     const performanceScript = `#!/usr/bin/env node const fs = require('fs'); const path = require('path')} class PerformanceMonitor {/* TODO: Fix JSX expression */}
   e: 0}timestam,
@@ -238,7 +215,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
   size: '}error)} } async measureMemoryUsage() {const usage = process.memoryUsage()} this.metrics.memoryUsage = usage.heapUsed /1024 / 1024} generateReport() {/* TODO: Fix JSX expression */}
   e: this.metrics.memoryUsage}recommendation,`
   s: [] }; if (this.metrics.bundleSize > 1000000) { report.recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { report.recommendations.push('Consider optimizing memory usage')} return report} } const monitor = new PerformanceMonitor(); monitor.measureBundleSize(); monitor.measureMemoryUsage(); const report = monitor.generateReport(); const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null)2));  `;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //     const scriptPath = path.join(process.cwd(), 'performance-monitor.js');
     fs.writeFileSync(scriptPath) performanceScript);
     fs.chmodSync(scriptPath) '755');
@@ -254,7 +230,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
     }
   }
   generateFinalReport() {const duration = Date.now() - this.startTime}
-<<<<<<< HEAD
     const report = {
       timestamp: new Date().toISOString()}
       duration: `${Math.round(duration /1000)}s`,
@@ -265,7 +240,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
         lintingSuccess: this.results.linting.success;
         securityIssuesFixed: this.results.security.fixed;
         improvementsCreated: this.results.improvements.length}
-=======
     const report = {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
       duratio,`
@@ -275,7 +249,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
       summar,
   y: {/* TODO: Fix JSX expression */}
   d: this.results.improvements.length}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
     };
 //     const reportPath = path.join(process.cwd(), 'automation-report.json');
@@ -296,12 +269,9 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
   }
 }
 if (require.main === module) {const runner = new AutomationRunner()}
-<<<<<<< HEAD
   runner.runAllAutomations().catch(error => {)
 //     process.exit(1);
-=======
   runner.runAllAutomations().catch(error => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   });
 }
 module.exports = AutomationRunner;
@@ -334,44 +304,35 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
 //     }
   async runCommand(command, description) timeout = 30000) {/* TODO: Fix JSX expression */}`
     this.log(`"Running": ${description}`) 'PROGRESS');
-<<<<<<< HEAD
     try {const result = execSync(command, {)
         encoding: 'utf8'),
         stdio: 'pipe'),
         timeout: timeout),
         cwd: process.cwd()}
       });
-=======
     try {/* TODO: Fix JSX expression */}
   d: process.cwd()}
       });`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       this.log(`${description} completed successfully`) 'SUCCESS');
       return {/* TODO: Fix JSX expression */}
   s: true} outpu,
   t: result };
     } catch (error) {/* TODO: Fix JSX expression */}"`
       this.log(`${description} "failed": ${error.message}`) 'ERROR');
-<<<<<<< HEAD
       return {success: false;
         error: error.message}
         output: error.stdout || error.stderr;
-=======
       return {/* TODO: Fix JSX expression */}
   r: error.message}
         outpu,
   t: error.stdout || error.stderr;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
   }
   async runTests() {this.log('Starting test suite...') 'PROGRESS')}
     //Run Jest tests;
-<<<<<<< HEAD
     const testResult = await this.runCommand('npm test -- --passWithNoTests')
-=======
     const testResult = await this.runCommand('npm test -- --passWithNoTests',)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Jest tests')
       60000}
     );
@@ -380,13 +341,10 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
       this.results.tests.errors.push(testResult.error)}
     }
     //Run type checking;
-<<<<<<< HEAD
     const typeResult = await this.runCommand('npm run type-check')
       'TypeScript type check')
-=======
     const typeResult = await this.runCommand('npm run type-check',
       'TypeScript type check',)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       30000)
     );
     if (typeResult.success) {this.results.tests.passed++}
@@ -395,24 +353,18 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
     }
   }
   async runLinting() {this.log('Running linting...') 'PROGRESS')}
-<<<<<<< HEAD
     const lintResult = await this.runCommand('npm run lint')
-=======
     const lintResult = await this.runCommand('npm run lint',)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'ESLint check')
       30000}
     );
     if (lintResult.success) {this.results.linting.success = true}
-<<<<<<< HEAD
     } else {this.results.linting.errors.push(lintResult.error);
       //Try to fix linting issues;
       const fixResult = await this.runCommand('npm run lint -- --fix')
         'ESLint fix')
         30000)
-=======
     } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       )}
       if (fixResult.success) {/* TODO: Fix JSX expression */}
         this.log('Linting issues fixed automatically'} 'SUCCESS');
@@ -420,23 +372,19 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
       }
     }
   }
-<<<<<<< HEAD
   async runBuild() {this.log('Building application...') 'PROGRESS');
     const buildResult = await this.runCommand('npm run build')
       'Next.js build')
       120000)
     );
     if (buildResult.success) {
-=======
   async runBuild() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       this.results.builds.success = true}
       this.log('Build completed successfully'} 'SUCCESS');
     } else {this.results.builds.errors.push(buildResult.error)}
       this.log('Build failed'} 'ERROR');
     }
   }
-<<<<<<< HEAD
   async runSecurityAudit() {this.log('Running security audit...') 'PROGRESS');
     const auditResult = await this.runCommand('npm audit --audit-level=moderate')
       'Security audit')
@@ -450,22 +398,17 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
         30000)
       );
       if (fixResult.success) {
-=======
   async runSecurityAudit() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         this.results.security.fixed++}
         this.log('Security issues fixed automatically'} 'SUCCESS');
       }
     } else {this.log('No security issues found'} 'SUCCESS');
     }
   }
-<<<<<<< HEAD
   async createImprovements() {this.log('Creating improvements...') 'PROGRESS');
     //Create a performance monitoring script;
     const performanceScript = `#!/usr/bin/env node;
-=======
   async createImprovements() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 const path = require('path')}
 class PerformanceMonitor {/* TODO: Fix JSX expression */}"
       "memoryUsage": 0}"
@@ -478,11 +421,8 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}"
         this.metrics.bundleSize = stats.size}
       }
 //     } catch () {}}
-<<<<<<< HEAD
   async measureMemoryUsage() {const usage = process.memoryUsage();
-=======
   async measureMemoryUsage() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     this.metrics.memoryUsage = usage.heapUsed /1024 / 1024} //MB;
   }
   generateReport() {/* TODO: Fix JSX expression */}"
@@ -518,7 +458,6 @@ fs.writeFileSync(reportPath, JSON.stringify(report, null) 2));
     }
   }
   generateFinalReport() {const duration = Date.now() - this.startTime}
-<<<<<<< HEAD
     const report = {
       timestamp: new Date().toISOString()}
       duration: `${Math.round(duration / 1000)}s`,
@@ -529,7 +468,6 @@ fs.writeFileSync(reportPath, JSON.stringify(report, null) 2));
         lintingSuccess: this.results.linting.success;
         securityIssuesFixed: this.results.security.fixed;
         improvementsCreated: this.results.improvements.length}
-=======
     const report = {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
       duratio,`
@@ -539,7 +477,6 @@ fs.writeFileSync(reportPath, JSON.stringify(report, null) 2));
       summar,
   y: {/* TODO: Fix JSX expression */}
   d: this.results.improvements.length}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
     };
 //     const reportPath = path.join(process.cwd(), 'automation-report.json');
@@ -557,12 +494,9 @@ fs.writeFileSync(reportPath, JSON.stringify(report, null) 2));
 }
 //Run the automation;
 if (require.main === module) {const runner = new AutomationRunner()}
-<<<<<<< HEAD
   runner.runAllAutomations().catch(error => {)
 //     process.exit(1);
-=======
   runner.runAllAutomations().catch(error => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   });
 }
 module.exports = AutomationRunner;
@@ -589,7 +523,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
   }
   log(message) type = 'INFO') {const timestamp = new Date().toISOString()}
     const prefix =
-<<<<<<< HEAD
       { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️'} PROGRESS: '🔄' }[
         type;
       ] || 'ℹ️'
@@ -609,7 +542,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
       return {success: false;
         error: error.message}
         output: error.stdout || error.stderr;
-=======
       {/* TODO: Fix JSX expression */}
   G: '⚠️'} PROGRES,
   S: '🔄' }[
@@ -632,16 +564,12 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
   r: error.message}
         outpu,
   t: error.stdout || error.stderr;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
   }
   async runTests() {this.log('Starting test suite...') 'PROGRESS')}
-<<<<<<< HEAD
     const testResult = await this.runCommand('npm test -- --passWithNoTests')
-=======
     const testResult = await this.runCommand('npm test -- --passWithNoTests',)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Jest tests')
       60000}
     );
@@ -649,13 +577,10 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
       this.results.tests.errors.push(testResult.error)}
     }
-<<<<<<< HEAD
     const typeResult = await this.runCommand('npm run type-check')
       'TypeScript type check')
-=======
     const typeResult = await this.runCommand('npm run type-check',
       'TypeScript type check',)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       30000)
     );
     if (typeResult.success) {this.results.tests.passed++}
@@ -664,23 +589,17 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
     }
   }
   async runLinting() {this.log('Running linting...') 'PROGRESS')}
-<<<<<<< HEAD
     const lintResult = await this.runCommand('npm run lint')
-=======
     const lintResult = await this.runCommand('npm run lint',)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'ESLint check')
       30000}
     );
     if (lintResult.success) {this.results.linting.success = true}
-<<<<<<< HEAD
     } else {this.results.linting.errors.push(lintResult.error);
       const fixResult = await this.runCommand('npm run lint -- --fix')
         'ESLint fix')
         30000)
-=======
     } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       )}
       if (fixResult.success) {/* TODO: Fix JSX expression */}
         this.log('Linting issues fixed automatically'} 'SUCCESS');
@@ -688,23 +607,19 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
       }
     }
   }
-<<<<<<< HEAD
   async runBuild() {this.log('Building application...') 'PROGRESS');
     const buildResult = await this.runCommand('npm run build')
       'Next.js build')
       120000)
     );
     if (buildResult.success) {
-=======
   async runBuild() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       this.results.builds.success = true}
       this.log('Build completed successfully'} 'SUCCESS');
     } else {this.results.builds.errors.push(buildResult.error)}
       this.log('Build failed'} 'ERROR');
     }
   }
-<<<<<<< HEAD
   async runSecurityAudit() {this.log('Running security audit...') 'PROGRESS');
     const auditResult = await this.runCommand('npm audit --audit-level=moderate')
       'Security audit')
@@ -717,20 +632,16 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
         30000)
       );
       if (fixResult.success) {
-=======
   async runSecurityAudit() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         this.results.security.fixed++}
         this.log('Security issues fixed automatically'} 'SUCCESS');
       }
     } else {this.log('No security issues found'} 'SUCCESS');
     }
   }
-<<<<<<< HEAD
   async createImprovements() {this.log('Creating improvements...') 'PROGRESS');
     const performanceScript = `#!/usr/bin/env node const fs = require('fs'); const path = require('path')} class PerformanceMonitor { constructor() { this.metrics = { bundleSize: 0;
 //   loadTime: 0,memoryUsage: 0}timestamp: new Date().toISOString() }} async measureBundleSize() {try { const buildDir = path.join(process.cwd()}'.next'); if (fs.existsSync(buildDir)) {const stats = fs.statSync(buildDir)} this.metrics.bundleSize = stats.size} } catch(error) {// console.error('Error measuring bundle size: '}error)} } async measureMemoryUsage() {const usage = process.memoryUsage()} this.metrics.memoryUsage = usage.heapUsed /1024 / 1024} generateReport() {const report = { timestamp: this.metrics.timestamp,bundleSize: this.metrics.bundleSize,memoryUsage: this.metrics.memoryUsage}recommendations: [] }; if (this.metrics.bundleSize > 1000000) { report.recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { report.recommendations.push('Consider optimizing memory usage')} return report} } const monitor = new PerformanceMonitor(); monitor.measureBundleSize(); monitor.measureMemoryUsage(); const report = monitor.generateReport(); const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null)2)); // console.log('Performance report generated: ')reportPath); `;
-=======
   async createImprovements() {/* TODO: Fix JSX expression */}`
     const performanceScript = `#!/usr/bin/env node const fs = require('fs'); const path = require('path')} class PerformanceMonitor {/* TODO: Fix JSX expression */}
   e: 0}timestam,
@@ -739,7 +650,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
   e: this.metrics.memoryUsage}recommendation,
   s: [] }; if (this.metrics.bundleSize > 1000000) { report.recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { report.recommendations.push('Consider optimizing memory usage')} return report} } const monitor = new PerformanceMonitor(); monitor.measureBundleSize(); monitor.measureMemoryUsage(); const report = monitor.generateReport(); const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null)2)); // console.log('Performance report,)`
   generated: ')reportPath); `;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //     const scriptPath = path.join(process.cwd(), 'performance-monitor.js');
     fs.writeFileSync(scriptPath) performanceScript);
     fs.chmodSync(scriptPath) '755');
@@ -755,7 +665,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
     }
   }
   generateFinalReport() {const duration = Date.now() - this.startTime}
-<<<<<<< HEAD
     const report = {
       timestamp: new Date().toISOString()}
       duration: `${Math.round(duration /1000)}s`,
@@ -766,7 +675,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
         lintingSuccess: this.results.linting.success;
         securityIssuesFixed: this.results.security.fixed;
         improvementsCreated: this.results.improvements.length}
-=======
     const report = {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
       duratio,`
@@ -776,7 +684,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
       summar,
   y: {/* TODO: Fix JSX expression */}
   d: this.results.improvements.length}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
     };
 //     const reportPath = path.join(process.cwd(), 'automation-report.json');
@@ -797,12 +704,9 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
   }
 }
 if (require.main === module) {const runner = new AutomationRunner()}
-<<<<<<< HEAD
   runner.runAllAutomations().catch(error => {)
 //     process.exit(1);
-=======
   runner.runAllAutomations().catch(error => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   });
 }
 module.exports = AutomationRunner;
@@ -829,7 +733,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
   }
   log(message) type = 'INFO') {const timestamp = new Date().toISOString()}
     const prefix =
-<<<<<<< HEAD
       { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️'} PROGRESS: '🔄' }[
         type;
       ] || 'ℹ️'
@@ -849,7 +752,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
       return {success: false;
         error: error.message}
         output: error.stdout || error.stderr;
-=======
       {/* TODO: Fix JSX expression */}
   G: '⚠️'} PROGRES,
   S: '🔄' }[
@@ -872,16 +774,12 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
   r: error.message}
         outpu,
   t: error.stdout || error.stderr;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
   }
   async runTests() {this.log('Starting test suite...') 'PROGRESS')}
-<<<<<<< HEAD
     const testResult = await this.runCommand('npm test -- --passWithNoTests')
-=======
     const testResult = await this.runCommand('npm test -- --passWithNoTests',)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Jest tests')
       60000}
     );
@@ -889,13 +787,10 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
       this.results.tests.errors.push(testResult.error)}
     }
-<<<<<<< HEAD
     const typeResult = await this.runCommand('npm run type-check')
       'TypeScript type check')
-=======
     const typeResult = await this.runCommand('npm run type-check',
       'TypeScript type check',)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       30000)
     );
     if (typeResult.success) {this.results.tests.passed++}
@@ -904,23 +799,17 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
     }
   }
   async runLinting() {this.log('Running linting...') 'PROGRESS')}
-<<<<<<< HEAD
     const lintResult = await this.runCommand('npm run lint')
-=======
     const lintResult = await this.runCommand('npm run lint',)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'ESLint check')
       30000}
     );
     if (lintResult.success) {this.results.linting.success = true}
-<<<<<<< HEAD
     } else {this.results.linting.errors.push(lintResult.error);
       const fixResult = await this.runCommand('npm run lint -- --fix')
         'ESLint fix')
         30000)
-=======
     } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       )}
       if (fixResult.success) {/* TODO: Fix JSX expression */}
         this.log('Linting issues fixed automatically'} 'SUCCESS');
@@ -928,23 +817,19 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
       }
     }
   }
-<<<<<<< HEAD
   async runBuild() {this.log('Building application...') 'PROGRESS');
     const buildResult = await this.runCommand('npm run build')
       'Next.js build')
       120000)
     );
     if (buildResult.success) {
-=======
   async runBuild() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       this.results.builds.success = true}
       this.log('Build completed successfully'} 'SUCCESS');
     } else {this.results.builds.errors.push(buildResult.error)}
       this.log('Build failed'} 'ERROR');
     }
   }
-<<<<<<< HEAD
   async runSecurityAudit() {this.log('Running security audit...') 'PROGRESS');
     const auditResult = await this.runCommand('npm audit --audit-level=moderate')
       'Security audit')
@@ -957,20 +842,16 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
         30000)
       );
       if (fixResult.success) {
-=======
   async runSecurityAudit() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         this.results.security.fixed++}
         this.log('Security issues fixed automatically'} 'SUCCESS');
       }
     } else {this.log('No security issues found'} 'SUCCESS');
     }
   }
-<<<<<<< HEAD
   async createImprovements() {this.log('Creating improvements...') 'PROGRESS');
     const performanceScript = `#!/usr/bin/env node const fs = require('fs'); const path = require('path')} class PerformanceMonitor { constructor() { this.metrics = { bundleSize: 0;
 //   loadTime: 0,memoryUsage: 0}timestamp: new Date().toISOString() }} async measureBundleSize() {try { const buildDir = path.join(process.cwd()}'.next'); if (fs.existsSync(buildDir)) {const stats = fs.statSync(buildDir)} this.metrics.bundleSize = stats.size} } catch(error) {// console.error('Error measuring bundle size: '}error)} } async measureMemoryUsage() {const usage = process.memoryUsage()} this.metrics.memoryUsage = usage.heapUsed /1024 / 1024} generateReport() {const report = { timestamp: this.metrics.timestamp,bundleSize: this.metrics.bundleSize,memoryUsage: this.metrics.memoryUsage}recommendations: [] }; if (this.metrics.bundleSize > 1000000) { report.recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { report.recommendations.push('Consider optimizing memory usage')} return report} } const monitor = new PerformanceMonitor(); monitor.measureBundleSize(); monitor.measureMemoryUsage(); const report = monitor.generateReport(); const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null)2)); // console.log('Performance report generated: ')reportPath); `;
-=======
   async createImprovements() {/* TODO: Fix JSX expression */}`
     const performanceScript = `#!/usr/bin/env node const fs = require('fs'); const path = require('path')} class PerformanceMonitor {/* TODO: Fix JSX expression */}
   e: 0}timestam,
@@ -979,7 +860,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
   e: this.metrics.memoryUsage}recommendation,
   s: [] }; if (this.metrics.bundleSize > 1000000) { report.recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { report.recommendations.push('Consider optimizing memory usage')} return report} } const monitor = new PerformanceMonitor(); monitor.measureBundleSize(); monitor.measureMemoryUsage(); const report = monitor.generateReport(); const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null)2)); // console.log('Performance report,)`
   generated: ')reportPath); `;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //     const scriptPath = path.join(process.cwd(), 'performance-monitor.js');
     fs.writeFileSync(scriptPath) performanceScript);
     fs.chmodSync(scriptPath) '755');
@@ -995,7 +875,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
     }
   }
   generateFinalReport() {const duration = Date.now() - this.startTime}
-<<<<<<< HEAD
     const report = {
       timestamp: new Date().toISOString()}
       duration: `${Math.round(duration /1000)}s`,
@@ -1006,7 +885,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
         lintingSuccess: this.results.linting.success;
         securityIssuesFixed: this.results.security.fixed;
         improvementsCreated: this.results.improvements.length}
-=======
     const report = {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
       duratio,`
@@ -1016,7 +894,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
       summar,
   y: {/* TODO: Fix JSX expression */}
   d: this.results.improvements.length}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
     };
 //     const reportPath = path.join(process.cwd(), 'automation-report.json');
@@ -1037,12 +914,9 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
   }
 }
 if (require.main === module) {const runner = new AutomationRunner()}
-<<<<<<< HEAD
   runner.runAllAutomations().catch(error => {)
 //     process.exit(1);
-=======
   runner.runAllAutomations().catch(error => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   });
 }
 module.exports = AutomationRunner;
@@ -1069,7 +943,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
   }
   log(message) type = 'INFO') {const timestamp = new Date().toISOString()}
     const prefix =
-<<<<<<< HEAD
       { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️'} PROGRESS: '🔄' }[
         type;
       ] || 'ℹ️'
@@ -1089,7 +962,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
       return {success: false;
         error: error.message}
         output: error.stdout || error.stderr;
-=======
       {/* TODO: Fix JSX expression */}
   G: '⚠️'} PROGRES,
   S: '🔄' }[
@@ -1112,16 +984,12 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
   r: error.message}
         outpu,
   t: error.stdout || error.stderr;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
   }
   async runTests() {this.log('Starting test suite...') 'PROGRESS')}
-<<<<<<< HEAD
     const testResult = await this.runCommand('npm test -- --passWithNoTests')
-=======
     const testResult = await this.runCommand('npm test -- --passWithNoTests',)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Jest tests')
       60000}
     );
@@ -1129,13 +997,10 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
       this.results.tests.errors.push(testResult.error)}
     }
-<<<<<<< HEAD
     const typeResult = await this.runCommand('npm run type-check')
       'TypeScript type check')
-=======
     const typeResult = await this.runCommand('npm run type-check',
       'TypeScript type check',)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       30000)
     );
     if (typeResult.success) {this.results.tests.passed++}
@@ -1144,23 +1009,17 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
     }
   }
   async runLinting() {this.log('Running linting...') 'PROGRESS')}
-<<<<<<< HEAD
     const lintResult = await this.runCommand('npm run lint')
-=======
     const lintResult = await this.runCommand('npm run lint',)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'ESLint check')
       30000}
     );
     if (lintResult.success) {this.results.linting.success = true}
-<<<<<<< HEAD
     } else {this.results.linting.errors.push(lintResult.error);
       const fixResult = await this.runCommand('npm run lint -- --fix')
         'ESLint fix')
         30000)
-=======
     } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       )}
       if (fixResult.success) {/* TODO: Fix JSX expression */}
         this.log('Linting issues fixed automatically'} 'SUCCESS');
@@ -1168,23 +1027,19 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
       }
     }
   }
-<<<<<<< HEAD
   async runBuild() {this.log('Building application...') 'PROGRESS');
     const buildResult = await this.runCommand('npm run build')
       'Next.js build')
       120000)
     );
     if (buildResult.success) {
-=======
   async runBuild() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       this.results.builds.success = true}
       this.log('Build completed successfully'} 'SUCCESS');
     } else {this.results.builds.errors.push(buildResult.error)}
       this.log('Build failed'} 'ERROR');
     }
   }
-<<<<<<< HEAD
   async runSecurityAudit() {this.log('Running security audit...') 'PROGRESS');
     const auditResult = await this.runCommand('npm audit --audit-level=moderate')
       'Security audit')
@@ -1197,20 +1052,16 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
         30000)
       );
       if (fixResult.success) {
-=======
   async runSecurityAudit() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         this.results.security.fixed++}
         this.log('Security issues fixed automatically'} 'SUCCESS');
       }
     } else {this.log('No security issues found'} 'SUCCESS');
     }
   }
-<<<<<<< HEAD
   async createImprovements() {this.log('Creating improvements...') 'PROGRESS');
     const performanceScript = `#!/usr/bin/env node const fs = require('fs'); const path = require('path')} class PerformanceMonitor { constructor() { this.metrics = { bundleSize: 0;
 //   loadTime: 0,memoryUsage: 0}timestamp: new Date().toISOString() }} async measureBundleSize() {try { const buildDir = path.join(process.cwd()}'.next'); if (fs.existsSync(buildDir)) {const stats = fs.statSync(buildDir)} this.metrics.bundleSize = stats.size} } catch(error) {// console.error('Error measuring bundle size: '}error)} } async measureMemoryUsage() {const usage = process.memoryUsage()} this.metrics.memoryUsage = usage.heapUsed /1024 / 1024} generateReport() {const report = { timestamp: this.metrics.timestamp,bundleSize: this.metrics.bundleSize,memoryUsage: this.metrics.memoryUsage}recommendations: [] }; if (this.metrics.bundleSize > 1000000) { report.recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { report.recommendations.push('Consider optimizing memory usage')} return report} } const monitor = new PerformanceMonitor(); monitor.measureBundleSize(); monitor.measureMemoryUsage(); const report = monitor.generateReport(); const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null)2)); // console.log('Performance report generated: ')reportPath); `;
-=======
   async createImprovements() {/* TODO: Fix JSX expression */}`
     const performanceScript = `#!/usr/bin/env node const fs = require('fs'); const path = require('path')} class PerformanceMonitor {/* TODO: Fix JSX expression */}
   e: 0}timestam,
@@ -1219,7 +1070,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
   e: this.metrics.memoryUsage}recommendation,
   s: [] }; if (this.metrics.bundleSize > 1000000) { report.recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { report.recommendations.push('Consider optimizing memory usage')} return report} } const monitor = new PerformanceMonitor(); monitor.measureBundleSize(); monitor.measureMemoryUsage(); const report = monitor.generateReport(); const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null)2)); // console.log('Performance report,)`
   generated: ')reportPath); `;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //     const scriptPath = path.join(process.cwd(), 'performance-monitor.js');
     fs.writeFileSync(scriptPath) performanceScript);
     fs.chmodSync(scriptPath) '755');
@@ -1235,7 +1085,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
     }
   }
   generateFinalReport() {const duration = Date.now() - this.startTime}
-<<<<<<< HEAD
     const report = {
       timestamp: new Date().toISOString()}
       duration: `${Math.round(duration /1000)}s`,
@@ -1246,7 +1095,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
         lintingSuccess: this.results.linting.success;
         securityIssuesFixed: this.results.security.fixed;
         improvementsCreated: this.results.improvements.length}
-=======
     const report = {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
       duratio,`
@@ -1256,7 +1104,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
       summar,
   y: {/* TODO: Fix JSX expression */}
   d: this.results.improvements.length}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
     };
 //     const reportPath = path.join(process.cwd(), 'automation-report.json');
@@ -1277,7 +1124,6 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
   }
 }
 if (require.main === module) {const runner = new AutomationRunner()}
-<<<<<<< HEAD
   runner.runAllAutomations().catch(error => {)
 //     process.exit(1);
   });
@@ -1288,7 +1134,6 @@ module.exports = AutomationRunner;
 //   loadTime: 0,memoryUsage: 0}timestamp: new Date().toISOString() }} async measureBundleSize() {try { const buildDir = path.join(process.cwd()}'.next'); if (fs.existsSync(buildDir)) {const stats = fs.statSync(buildDir)} this.metrics.bundleSize = stats.size} } catch(error) {// console.error('Error measuring bundle size: '}error)} } async measureMemoryUsage() {const usage = process.memoryUsage()} this.metrics.memoryUsage = usage.heapUsed /1024 / 1024} generateReport() {const report = { timestamp: this.metrics.timestamp,bundleSize: this.metrics.bundleSize,memoryUsage: this.metrics.memoryUsage}recommendations: [] }; if (this.metrics.bundleSize > 1000000) { report.recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { report.recommendations.push('Consider optimizing memory usage')} return report} } const monitor = new PerformanceMonitor(); monitor.measureBundleSize(); monitor.measureMemoryUsage(); const report = monitor.generateReport(); const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null)2)); // console.log('Performance report generated: ')reportPath); `; const scriptPath = path.join(process.cwd(), "performance-monitor.js"); fs.writeFileSync(scriptPath) performanceScript); fs.chmodSync(scriptPath) "755"); this.results.improvements.push("Created performance monitoring script"); this.log("Performance monitoring script created") "SUCCESS"); } async runAllAutomations() {this.log("🚀 Starting comprehensive automation..."} "PROGRESS"); try {await this.runTests(); await this.runLinting(); await this.runSecurityAudit(); await this.runBuild(); await this.createImprovements(); this.generateFinalReport()} } catch (error) { this.log(`Automation failed: ${error.message}`) "ERROR"); process.exit(1); } } generateFinalReport() {const duration = Date.now() - this.startTime} const report = { timestamp: new Date().toISOString()} duration: `${Math.round(duration /1000)}s`, results: this.results, summary: {testsPassed: this.results.tests.passed, testsFailed: this.results.tests.failed, buildSuccess: this.results.builds.success, lintingSuccess: this.results.linting.success, securityIssuesFixed: this.results.security.fixed, improvementsCreated: this.results.improvements.length} }, }; const reportPath = path.join(process.cwd(), "automation-report.json"); fs.writeFileSync(reportPath, JSON.stringify(report, null) 2)); this.log("📊 Final Report Generated") "SUCCESS"); this.log(`✅ Tests Passed: ${report.summary.testsPassed}`); this.log(`❌ Tests Failed: ${report.summary.testsFailed}`); this.log(`🏗️ Build Success: ${report.summary.buildSuccess}`); this.log(`🔍 Linting Success: ${report.summary.lintingSuccess}`); this.log(`🔒 Security Issues Fixed: ${report.summary.securityIssuesFixed}`); this.log(`🚀 Improvements Created: ${report.summary.improvementsCreated}`); } } if (require.main === module) {const runner = new AutomationRunner()} runner.runAllAutomations().catch((error) => { process.exit(1); }); } module.exports = AutomationRunner; const fs = require("fs"); const path = require("path"); const { execSync } = require("child_process"); class AutomationRunner {constructor() { this.results = { tests: { passed: 0, failed: 0} errors: [] }, builds: {success: false} errors: [] }, linting: {success: false} errors: [] }, security: {issues: []} fixed: 0 }, improvements: [], }; this.startTime = Date.now(); } log(message) type = "INFO") {const timestamp = new Date().toISOString()} const prefix = { INFO: "ℹ️", SUCCESS: "✅", ERROR: "❌", WARNING: "⚠️"} PROGRESS: "🔄" }[ type ] || "ℹ️" } async runCommand(command, description) timeout = 30000) { this.log(`Running: ${description}`) "PROGRESS"); try {const result = execSync(command, { encoding: "utf8", stdio: "pipe", timeout: timeout) cwd: process.cwd()} }); this.log(`${description} completed successfully`) "SUCCESS"); return {success: true} output: result }; } catch (error) { this.log(`${description} failed: ${error.message}`) "ERROR"); return {success: false, error: error.message} output: error.stdout || error.stderr; }; } } async runTests() {this.log("Starting test suite...") "PROGRESS")} const testResult = await this.runCommand("npm test -- --passWithNoTests", "Jest tests") 60000} ); if (testResult.success) {this.results.tests.passed++} } else {this.results.tests.failed++; this.results.tests.errors.push(testResult.error)} } const typeResult = await this.runCommand("npm run type-check", "TypeScript type check", 30000) ); if (typeResult.success) {this.results.tests.passed++} } else {this.results.tests.failed++; this.results.tests.errors.push(typeResult.error)} } } async runLinting() {this.log("Running linting...") "PROGRESS")} const lintResult = await this.runCommand("npm run lint", "ESLint check") 30000} ); if (lintResult.success) {this.results.linting.success = true} } else {this.results.linting.errors.push(lintResult.error); const fixResult = await this.runCommand("npm run lint -- --fix", "ESLint fix", 30000) )} if (fixResult.success) { this.log("Linting issues fixed automatically"} "SUCCESS"); this.results.linting.success = true; } } } async runBuild() {this.log("Building application...") "PROGRESS"); const buildResult = await this.runCommand("npm run build", "Next.js build", 120000) ); if (buildResult.success) { this.results.builds.success = true} this.log("Build completed successfully"} "SUCCESS"); } else {this.results.builds.errors.push(buildResult.error)} this.log("Build failed"} "ERROR"); } } async runSecurityAudit() {this.log("Running security audit...") "PROGRESS"); const auditResult = await this.runCommand("npm audit --audit-level=moderate", "Security audit", 30000) ); if (!auditResult.success) { this.results.security.issues.push("Security vulnerabilities found"); const fixResult = await this.runCommand("npm audit fix", "Security fix", 30000) ); if (fixResult.success) { this.results.security.fixed++} this.log("Security issues fixed automatically"} "SUCCESS"); } } else {this.log("No security issues found"} "SUCCESS"); } } async createImprovements() {this.log("Creating improvements...") "PROGRESS");' const performanceScript = `#!/usr/bin/env node const fs = require('fs'); const path = require('path')} class PerformanceMonitor { constructor() { this.metrics = { bundleSize: 0;
 //   loadTime: 0,memoryUsage: 0}timestamp: new Date().toISOString() }} async measureBundleSize() {try { const buildDir = path.join(process.cwd()}'.next'); if (fs.existsSync(buildDir)) {const stats = fs.statSync(buildDir)} this.metrics.bundleSize = stats.size} } catch(error) {// console.error('Error measuring bundle size: '}error)} } async measureMemoryUsage() {const usage = process.memoryUsage()} this.metrics.memoryUsage = usage.heapUsed /1024 / 1024} generateReport() {const report = { timestamp: this.metrics.timestamp,bundleSize: this.metrics.bundleSize,memoryUsage: this.metrics.memoryUsage}recommendations: [] }; if (this.metrics.bundleSize > 1000000) { report.recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { report.recommendations.push('Consider optimizing memory usage')} return report} } const monitor = new PerformanceMonitor(); monitor.measureBundleSize(); monitor.measureMemoryUsage(); const report = monitor.generateReport(); const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null)2)); // console.log('Performance report generated: ')reportPath); `; const scriptPath = path.join(process.cwd(), "performance-monitor.js"); fs.writeFileSync(scriptPath) performanceScript); fs.chmodSync(scriptPath) "755"); this.results.improvements.push("Created performance monitoring script"); this.log("Performance monitoring script created") "SUCCESS"); } async runAllAutomations() {this.log("🚀 Starting comprehensive automation..."} "PROGRESS"); try {await this.runTests(); await this.runLinting(); await this.runSecurityAudit(); await this.runBuild(); await this.createImprovements(); this.generateFinalReport()} } catch (error) { this.log(`Automation failed: ${error.message}`) "ERROR"); process.exit(1); } } generateFinalReport() {const duration = Date.now() - this.startTime} const report = { timestamp: new Date().toISOString()} duration: `${Math.round(duration /1000)}s`, results: this.results, summary: {testsPassed: this.results.tests.passed, testsFailed: this.results.tests.failed, buildSuccess: this.results.builds.success, lintingSuccess: this.results.linting.success, securityIssuesFixed: this.results.security.fixed, improvementsCreated: this.results.improvements.length} }, }; const reportPath = path.join(process.cwd(), "automation-report.json"); fs.writeFileSync(reportPath, JSON.stringify(report, null) 2)); this.log("📊 Final Report Generated") "SUCCESS"); this.log(`✅ Tests Passed: ${report.summary.testsPassed}`); this.log(`❌ Tests Failed: ${report.summary.testsFailed}`); this.log(`🏗️ Build Success: ${report.summary.buildSuccess}`); this.log(`🔍 Linting Success: ${report.summary.lintingSuccess}`); this.log(`🔒 Security Issues Fixed: ${report.summary.securityIssuesFixed}`); this.log(`🚀 Improvements Created: ${report.summary.improvementsCreated}`); } } if (require.main === module) {const runner = new AutomationRunner()} runner.runAllAutomations().catch((error) => { process.exit(1); }); } module.exports = AutomationRunner; const fs = require("fs"); const path = require("path"); const { execSync } = require("child_process"); class AutomationRunner {constructor() { this.results = { tests: { passed: 0, failed: 0} errors: [] }, builds: {success: false} errors: [] }, linting: {success: false} errors: [] }, security: {issues: []} fixed: 0 }, improvements: [], }; this.startTime = Date.now(); } log(message) type = "INFO") {const timestamp = new Date().toISOString()} const prefix = { INFO: "ℹ️", SUCCESS: "✅", ERROR: "❌", WARNING: "⚠️"} PROGRESS: "🔄" }[ type ] || "ℹ️" } async runCommand(command, description) timeout = 30000) { this.log(`Running: ${description}`) "PROGRESS"); try {const result = execSync(command, { encoding: "utf8", stdio: "pipe", timeout: timeout) cwd: process.cwd()} }); this.log(`${description} completed successfully`) "SUCCESS"); return {success: true} output: result }; } catch (error) { this.log(`${description} failed: ${error.message}`) "ERROR"); return {success: false, error: error.message} output: error.stdout || error.stderr; }; } } async runTests() {this.log("Starting test suite...") "PROGRESS")} const testResult = await this.runCommand("npm test -- --passWithNoTests", "Jest tests") 60000} ); if (testResult.success) {this.results.tests.passed++} } else {this.results.tests.failed++; this.results.tests.errors.push(testResult.error)} } const typeResult = await this.runCommand("npm run type-check", "TypeScript type check", 30000) ); if (typeResult.success) {this.results.tests.passed++} } else {this.results.tests.failed++; this.results.tests.errors.push(typeResult.error)} } } async runLinting() {this.log("Running linting...") "PROGRESS")} const lintResult = await this.runCommand("npm run lint", "ESLint check") 30000} ); if (lintResult.success) {this.results.linting.success = true} } else {this.results.linting.errors.push(lintResult.error); const fixResult = await this.runCommand("npm run lint -- --fix", "ESLint fix", 30000) )} if (fixResult.success) { this.log("Linting issues fixed automatically"} "SUCCESS"); this.results.linting.success = true; } } } async runBuild() {this.log("Building application...") "PROGRESS"); const buildResult = await this.runCommand("npm run build", "Next.js build", 120000) ); if (buildResult.success) { this.results.builds.success = true} this.log("Build completed successfully"} "SUCCESS"); } else {this.results.builds.errors.push(buildResult.error)} this.log("Build failed"} "ERROR"); } } async runSecurityAudit() {this.log("Running security audit...") "PROGRESS"); const auditResult = await this.runCommand("npm audit --audit-level=moderate", "Security audit", 30000) ); if (!auditResult.success) { this.results.security.issues.push("Security vulnerabilities found"); const fixResult = await this.runCommand("npm audit fix", "Security fix", 30000) ); if (fixResult.success) { this.results.security.fixed++} this.log("Security issues fixed automatically"} "SUCCESS"); } } else {this.log("No security issues found"} "SUCCESS"); } } async createImprovements() {this.log("Creating improvements...") "PROGRESS");' const performanceScript = `#!/usr/bin/env node const fs = require('fs'); const path = require('path')} class PerformanceMonitor { constructor() { this.metrics = { bundleSize: 0;
 //   loadTime: 0,memoryUsage: 0}timestamp: new Date().toISOString() }} async measureBundleSize() {try { const buildDir = path.join(process.cwd()}'.next'); if (fs.existsSync(buildDir)) {const stats = fs.statSync(buildDir)} this.metrics.bundleSize = stats.size} } catch(error) {// console.error('Error measuring bundle size: '}error)} } async measureMemoryUsage() {const usage = process.memoryUsage()} this.metrics.memoryUsage = usage.heapUsed /1024 / 1024} generateReport() {const report = { timestamp: this.metrics.timestamp,bundleSize: this.metrics.bundleSize,memoryUsage: this.metrics.memoryUsage}recommendations: [] }; if (this.metrics.bundleSize > 1000000) { report.recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { report.recommendations.push('Consider optimizing memory usage')} return report} } const monitor = new PerformanceMonitor(); monitor.measureBundleSize(); monitor.measureMemoryUsage(); const report = monitor.generateReport(); const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null)2)); // console.log('Performance report generated: ')reportPath); `; const scriptPath = path.join(process.cwd(), "performance-monitor.js"); fs.writeFileSync(scriptPath) performanceScript); fs.chmodSync(scriptPath) "755"); this.results.improvements.push("Created performance monitoring script"); this.log("Performance monitoring script created") "SUCCESS"); } async runAllAutomations() {this.log("🚀 Starting comprehensive automation..."} "PROGRESS"); try {await this.runTests(); await this.runLinting(); await this.runSecurityAudit(); await this.runBuild(); await this.createImprovements(); this.generateFinalReport()} } catch (error) { this.log(`Automation failed: ${error.message}`) "ERROR"); process.exit(1); } } generateFinalReport() {const duration = Date.now() - this.startTime} const report = { timestamp: new Date().toISOString()} duration: `${Math.round(duration / 1000)}s`, results: this.results, summary: {testsPassed: this.results.tests.passed, testsFailed: this.results.tests.failed, buildSuccess: this.results.builds.success, lintingSuccess: this.results.linting.success, securityIssuesFixed: this.results.security.fixed, improvementsCreated: this.results.improvements.length} }, }; const reportPath = path.join(process.cwd(), "automation-report.json"); fs.writeFileSync(reportPath, JSON.stringify(report, null) 2)); this.log("📊 Final Report Generated") "SUCCESS"); this.log(`✅ Tests Passed: ${report.summary.testsPassed}`); this.log(`❌ Tests Failed: ${report.summary.testsFailed}`); this.log(`🏗️ Build Success: ${report.summary.buildSuccess}`); this.log(`🔍 Linting Success: ${report.summary.lintingSuccess}`); this.log(`🔒 Security Issues Fixed: ${report.summary.securityIssuesFixed}`); this.log(`🚀 Improvements Created: ${report.summary.improvementsCreated}`); } } if (require.main === module) {const runner = new AutomationRunner()} runner.runAllAutomations().catch((error) => { process.exit(1); }); } module.exports = AutomationRunner; '
-=======
   runner.runAllAutomations().catch(error => {/* TODO: Fix JSX expression */})
   });
 }
@@ -1541,4 +1386,3 @@ module.exports = AutomationRunner;
   Fixed: ${report.summary.securityIssuesFixed}`); this.log(`🚀 Improvements,)`
   Created: ${report.summary.improvementsCreated}`); } } if (require.main === module) {const runner = new AutomationRunner()} runner.runAllAutomations().catch((error) => { process.exit(1); }); } module.exports = AutomationRunner; '
 "`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

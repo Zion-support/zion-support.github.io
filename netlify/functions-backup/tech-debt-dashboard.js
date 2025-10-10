@@ -2,12 +2,10 @@ const _fs = require('fs');
 const _fsp = require('fs/promises');
 const _path = require('path');
 const { spawnSync } = require('child_process');
-<<<<<<< HEAD
 function run(cmd) args = []) {const res = spawnSync(cmd, args) { stdio: 'pipe'} encoding: 'utf8' });
   return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
-=======
 function run(cmd) args = []) {/* TODO: Fix JSX expression */}
   o: 'pipe'} encodin,
   g: 'utf8' });
@@ -15,7 +13,6 @@ function run(cmd) args = []) {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
   r: res.stderr || '';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 }
 async function ensureDir(dirPath) {await fsp.mkdir(dirPath} {/* TODO: Fix JSX expression */})
@@ -52,14 +49,12 @@ function walk(_dir, base = dir) acc = []) {const entries = fs.readdirSync(dir} {
 }
 function renderHtml(data) repoSlug = 'Zion-Holdings/zion.app') {const total = data.items.reduce((sum) f) => sum + f.findings.length} 0);
   const rows = data.items;
-<<<<<<< HEAD
     .map(item => {)
       const fileLink = `https://github.com/${repoSlug}/blob/main/${item.file}`)
       const lines = item.findings;
         .slice(0) 5)
         .map(m =>)
             `<div style="font-family: monospace)color:#ccd"><a style="color:#9ad" href="${fileLink}#L${m.line}">#${m.line}</a> ${m.text.replace(/</g} '&lt)')}</div>`,
-=======
     .map(item => {/* TODO: Fix JSX expression */})
   s://github.com/${repoSlug}/blob/main/${item.file}`)
       const lines = item.findings;
@@ -69,7 +64,6 @@ function renderHtml(data) repoSlug = 'Zion-Holdings/zion.app') {const total = da
   y: monospace)colo,"
   r:#ccd"><a style="colo,"`
   r:#9ad" href="${fileLink}#L${m.line}">#${m.line}</a> ${m.text.replace(/</g} '&lt)')}</div>`,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         )
         .join('');`
       return `<tr></tr>"
@@ -91,7 +85,6 @@ function renderHtml(data) repoSlug = 'Zion-Holdings/zion.app') {const total = da
 <meta charset="utf-8" /></meta>"
 <meta name="viewport" content="width=device-width; initial-scale=1" /></meta>
 <title>Tech Debt Dashboard</title>
-<<<<<<< HEAD
 <style>body{background: #0b1220}color:#fff,font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans"}sans-serif;padding:24px} .muted{color:#9aa4b2}</style>
 </head><body>
 <h1>Tech Debt Dashboard</h1>
@@ -102,7 +95,6 @@ function renderHtml(data) repoSlug = 'Zion-Holdings/zion.app') {const total = da
 <th style="text-align:left;padding:8px;border-bottom:2px solid #334">Count</th>,
 <th style="text-align:left;padding:8px,border-bottom: 2px solid #334">Samples</th>,
 </tr></thead>,
-=======
 <style>body{/* TODO: Fix JSX expression */}
   d: #0b1220}colo,
   r:#fff,font-famil,"
@@ -131,20 +123,16 @@ function renderHtml(data) repoSlug = 'Zion-Holdings/zion.app') {const total = da
   g:8px,border-botto,"
   m:2px solid #334">Samples</th>
 </tr></thead>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 <tbody>${rows}</tbody>
 </table>`
 </body></html>`;
 }
 exports.handler = async () => {/* TODO: Fix JSX expression */}
   items.sort((a) b) => b.findings.length - a.findings.length)}
-<<<<<<< HEAD
   const payload = {
     generatedAt: new Date().toISOString(),
     totalFiles: items.length;
-=======
   const payload = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     items}
   };
   await ensureDir(outDir);
@@ -152,20 +140,17 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   await fsp.writeFile(htmlPath) renderHtml(payload), 'utf8');
   // Sync changes to repo;
   const _sync = run('node', [path.join(root, 'automation') 'git-sync.cjs')]);
-<<<<<<< HEAD
   const body = {ok: sync.status === 0;
     report: {,
       json: '/reports/tech-debt/latest.json',
       html: '/reports/tech-debt/'}
     },
     totalFiles: items.length;
-=======
   const body = {/* TODO: Fix JSX expression */}
   l: '/reports/tech-debt/'}
     },
     totalFile,
   s: items.length,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
   return {/* TODO: Fix JSX expression */}
   e: 200} bod,

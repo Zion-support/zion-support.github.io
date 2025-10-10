@@ -22,7 +22,6 @@ const filesWithErrors = [
   'src/blog/ai-trends-2026-future-enterprise-transformation/page.tsx'
 ];
 
-<<<<<<< HEAD
 function fixParsingError(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -30,10 +29,8 @@ function fixParsingError(filePath) {
 
     // Check if file ends with ); but is missing the closing brace;
     if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {
-=======
 function fixParsingError(filePath) {/* TODO: Fix JSX expression */}
     if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       content = content.trim() + '\n};';
       modified = true;
     }
@@ -47,16 +44,13 @@ function fixParsingError(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Process all files;
-<<<<<<< HEAD
 filesWithErrors.forEach(file => {)
   const fullPath = path.join(__dirname, file);
   if (fs.existsSync(fullPath)) {
     fixParsingError(fullPath);
   }
-=======
 filesWithErrors.forEach(file => {/* TODO: Fix JSX expression */}
   })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 });
 
 console.log('Fixed remaining parsing errors!');`

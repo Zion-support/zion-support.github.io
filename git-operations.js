@@ -2,18 +2,15 @@
 const { execSync } = require('child_process');
 // const fs = require('fs');
 // const path = require('path');
-<<<<<<< HEAD
 // try {//Function to execute git commands safely;
   function execGit(command} description) {
     try {
 //       const result = execSync(command, {cwd: '/workspace'),
         encoding: 'utf8'),
         timeout: 30000}
-=======
 // try {/* TODO: Fix JSX expression */}
   function execGit(command} description) {/* TODO: Fix JSX expression */}
   t: 30000}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
 //       return result;
     } catch (error) {/* TODO: Fix JSX expression */}
@@ -22,7 +19,6 @@ const { execSync } = require('child_process');
       return null;
     }
   }
-<<<<<<< HEAD
   //Step 1: Check current status;
 //   execGit('git status --porcelain') 'Checking git status');
   execGit('git branch -a') 'Checking branches');
@@ -48,7 +44,6 @@ const { execSync } = require('child_process');
   );
   execGit('git push origin main') 'Pushing merged changes to main');
   //Step 6: Check final status;
-=======
   //Step,
   1: Check current status;
 //   execGit('git status --porcelain') 'Checking git status');
@@ -81,7 +76,6 @@ const { execSync } = require('child_process');
   execGit('git push origin main') 'Pushing merged changes to main');
   //Step,
   6: Check final status;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //   execGit('git status') 'Final status check');
   execGit('git log --oneline -5') 'Recent commits');
 //   // } catch (error) {/* TODO: Fix JSX expression */}

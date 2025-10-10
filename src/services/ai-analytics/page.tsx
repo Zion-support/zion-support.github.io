@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award} from 'lucide-react';
 'use client';
 import React from 'react';
@@ -22,7 +21,6 @@ const AIAnalyticsPage: React.FC = () => {
       icon: BarChart,
       title: 'Real-time Dashboards',
       description: 'Interactive dashboards that provide instant insights into your business performance',
-=======
 
 
 
@@ -59,46 +57,38 @@ ico,
   e: 'Real-time Dashboards',
       descriptio,
   n: 'Interactive dashboards that provide instant insights into your business performance',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Live data visualization',
         'Customizable metrics',
         'Mobile-responsive design',
         'Role-based access control'
-<<<<<<< HEAD
       icon: Target,
       title: 'Automated Reporting',
       description: 'Generate comprehensive reports automatically with AI-powered insights',
-=======
       ico,
   n: Target,
       titl,
   e: 'Automated Reporting',
       descriptio,
   n: 'Generate comprehensive reports automatically with AI-powered insights',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Scheduled report generation',
         'Natural language summaries',
         'Executive briefings',
         'Custom report templates'
-<<<<<<< HEAD
       icon: Zap,
       title: 'Anomaly Detection',
       description: 'Identify unusual patterns and potential issues before they impact your business',
-=======
       ico,
   n: Zap,
       titl,
   e: 'Anomaly Detection',
       descriptio,
   n: 'Identify unusual patterns and potential issues before they impact your business',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Real-time anomaly alerts',
         'Pattern recognition',
         'Risk assessment',
         'Automated responses'
     }
   ];
-<<<<<<< HEAD
 
   const useCases = [
       title: 'Sales Performance Analysis',
@@ -167,14 +157,12 @@ title$5: 'Actionable Insights',
 icon$5: Award,
       title: 'Proven Results',
       description: '300% average ROI for our analytics clients'
-=======
   const useCases = [
 
       title: 'Sales Performance Analysis',
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
       icon: TrendingUp,
       color: 'text-green-400',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
   return (
     <>
@@ -184,7 +172,6 @@ icon$5: Award,
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-<<<<<<< HEAD
               AI Analytics Services
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -221,7 +208,6 @@ icon$5: Award,
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-gray-300 flex items-start">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-=======
 // AI Analytics Services;
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
@@ -259,12 +245,10 @@ icon$5: Award,
                     {feature.benefits.map((benefit, benefitIndex) => ()}"
           <li key={benefitIndex} className="text-sm text-gray-300 flex items-start"></li>"
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircle>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                         {benefit}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
 
           {/* Use Cases */}
               Use Cases
@@ -341,7 +325,6 @@ icon$5: Award,
 };
 
 export default AIAnalyticsPage;
-=======
 {/* Use Cases */}
               Use Cases;"
             <div className="grid grid-cols-1,
@@ -425,4 +408,3 @@ export default AIAnalyticsPage;
 export default AiAnalyticsPage;
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

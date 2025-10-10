@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface BlogPost {
   slug: string;
   title: string;
@@ -126,7 +125,6 @@ Modern enterprises need shipping speed without surprise risk. This field guide s
     featured: true;
     readTime: '10 min read',
     image: '/images/enterprise-ai-governance-2025.jpg',
-=======
 export interface BlogPost {/* TODO: Fix JSX expression */}
 }
 
@@ -141,6 +139,5 @@ export const,
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
 ];

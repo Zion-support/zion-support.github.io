@@ -12,17 +12,14 @@ const SAMPLE_QUERIES = [
   'DevOps engineers with Kubernetes',
 ];
 
-<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'GET') {,
     res.setHeader('Allow', 'GET');
     return res.status(405).json({ error: 'Method not allowed' });
-=======
 export default function handler(re,
   q: NextApiRequest, re,)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   r: 'Method not allowed' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   try {/* TODO: Fix JSX expression */}

@@ -8,22 +8,15 @@ const CybersecurityAudit: React.FC = () => {,
   const [companySize, setCompanySize] = useState('');
   const [industry, setIndustry] = useState('');
 
-<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
-<<<<<<< HEAD
         <div className="max-w-4xl mx-auto">
-<<<<<<< HEAD
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">Cybersecurity Audit<p className="text-xl text-gray-300 text-center mb-12">Comprehensive security assessment to protect your digital assets</p>
-=======
         <div className="max-w-4xl mx-auto"></div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">Cybersecurity Audit</h1><p className="text-xl text-gray-300 text-center mb-12">Comprehensive security assessment to protect your digital assets</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           </p>
 
           <div className="cyber-card p-8 mb-8"></div>
@@ -59,7 +52,6 @@ const CybersecurityAudit: React.FC = () => {,
                     <option value="">Select industry...<option value="healthcare">Healthcare</option>
                     <option value="finance">Finance<option value="technology">Technology</option>
                     <option value="retail">Retail<option value="manufacturing">Manufacturing<button className="cyber-button w-full">Schedule Audit</button>
-=======
           <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">
             Cybersecurity Audit;
           </h1>
@@ -117,7 +109,6 @@ const CybersecurityAudit: React.FC = () => {,
               </div>
               <button className="cyber-button w-full">
                 Schedule Audit;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </button>
             </div>
           </div>
@@ -190,22 +181,16 @@ const CybersecurityAudit: React.FC = () => {,
             </div>
           </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="cyber-card p-6 text-center">
               <h3 className="text-xl font-bold text-white mb-4">Basic Audit<div className="text-3xl font-bold text-cyan-400 mb-4">$2,999</div>
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">,
             <div className="cyber-card p-6 text-center">,
               <h3 className="text-xl font-bold text-white mb-4">Basic Audit</h3>,
               <div className="text-3xl font-bold text-cyan-400 mb-4">$2,999</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
             <div className="cyber-card p-6 text-center"></div>
               <h3 className="text-xl font-bold text-white mb-4">Basic Audit</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$2,999</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <ul className="text-gray-300 space-y-2">
                 <li>Vulnerability scan<li>Basic penetration test</li>
                 <li>Security report<li>30-day support</li>
@@ -227,22 +212,17 @@ const CybersecurityAudit: React.FC = () => {,
             </div>
           </div>
 
-<<<<<<< HEAD
           <div className="text-center">
             <a;
               href="tel: +13024640950"
-=======
           <div className="text-center"></div>
             <a
               href="tel:+13024640950"
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               className="cyber-button mr-4"
-<<<<<<< HEAD
             >📞 Call: (302) 464-0950<a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >Schedule Audit</a>
-=======
             >
               📞 Call: (302) 464-0950;
             </a>
@@ -251,7 +231,6 @@ const CybersecurityAudit: React.FC = () => {,
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
               Schedule Audit;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </a>
           </div>
         </div>

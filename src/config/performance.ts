@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * Performance Configuration
  * Centralized performance monitoring and optimization settings
@@ -88,7 +87,6 @@ $4}
 };
 export type PerformanceConfig = typeof performanceConfig;
 export default performanceConfig;
-=======
 
 /**
  * Performance Configuration;
@@ -230,4 +228,3 @@ export default performanceConfig;
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

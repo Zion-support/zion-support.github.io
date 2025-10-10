@@ -5,7 +5,6 @@
  */
 export enum ErrorSeverity {/* TODO: Fix JSX expression */}
 }
-<<<<<<< HEAD
 
 export enum ErrorCategory {
   Network = 'network',
@@ -138,7 +137,6 @@ class ErrorTrackingService {
       this.reportToExternalService(errorId).catch(err => {)
         logger.error('Failed to report error to external service', { error: err.message })
       })
-=======
 export enum ErrorCategory {/* TODO: Fix JSX expression */}
 }
 export interface ErrorMetadata {/* TODO: Fix JSX expression */}
@@ -191,12 +189,10 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
     });
     // Send to external service if critical;
     if (metadata.severity === ErrorSeverity.Critical) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     return errorId;
   }
-<<<<<<< HEAD
 
   private generateErrorId(message: string): string {,
     const timestamp = Date.now().toString(36),
@@ -228,7 +224,6 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
         listener(error),
       } catch (listenerError) {
         logger.error('Error in error listener', { error: listenerError.message })
-=======
   /**
    * Generate a unique error ID based on the message;
    */
@@ -257,11 +252,9 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
   private notifyListeners(erro,)
   r: TrackedError): void {/* TODO: Fix JSX expression */}
       } catch (listenerError) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     })
   }
-<<<<<<< HEAD
 
   private async reportToExternalService(errorId: string): Promise<void> {,
     // In a real implementation, this would send to an external service;
@@ -313,7 +306,6 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
 
 // Export singleton instance;
 export const errorTracking = ErrorTrackingService.getInstance()
-=======
   /**
    * Report critical errors to external service;
    */
@@ -393,4 +385,3 @@ export const removeErrorListener = (listene,
   r: TrackedError) => void) =>
   errorTracking.removeListener(listener);
 `
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 interface OptimizedErrorBoundaryProps {
   children: ReactNode;
@@ -158,10 +157,8 @@ const ErrorFallback = memo<ErrorFallbackProps>(
             </svg>
           </div>
         </div>
-=======
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         <h1 className='text-xl font-semibold text-gray-900 mb-2'>
           Something went wrong
         </h1>
@@ -169,7 +166,6 @@ const ErrorFallback = memo<ErrorFallbackProps>(
 
           We&apos;re sorry, but something unexpected happened. Please try again.
         </p>
-<<<<<<< HEAD
         {process.env['NODE_ENV'] === 'development' && error && (
           <details className='mb-4 text-left'>
             <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700'>
@@ -178,7 +174,6 @@ const ErrorFallback = memo<ErrorFallbackProps>(
             <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>
               <div className='mb-2'>
                 <strong>Error:</strong> {error.message}
-=======
         {process.env['NODE_ENV'] === 'development' && error && ()}
           <details className='mb-4 text-left'></details>
             <summary className='cursor-pointer text-sm text-gray-500,
@@ -199,19 +194,16 @@ const ErrorFallback = memo<ErrorFallbackProps>(
                 <strong>Erro,
   r:</strong> {error.message}
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               </div>
               <div className='mb-2'></div>
                 <strong>Stac,
   k:</strong>
                 <pre className='whitespace-pre-wrap'>{error.stack}</pre>
               </div>
-<<<<<<< HEAD
               {errorInfo && (
                 <div>
                   <strong>Component Stack:</strong>
                   <pre className='whitespace-pre-wrap'>
-=======
 
               {errorInfo && ()}
           <div></div>
@@ -219,7 +211,6 @@ const ErrorFallback = memo<ErrorFallbackProps>(
   Stack:</strong>
                   <pre className='whitespace-pre-wrap'></pre>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     {errorInfo.componentStack}
                   </pre>
                 </div>
@@ -231,11 +222,9 @@ const ErrorFallback = memo<ErrorFallbackProps>(
   sm:flex-row gap-2 justify-center'></div>
           <button></button>
             onClick={onRetry}
-<<<<<<< HEAD
             className='px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors'
           >
             Try Again
-=======
 
             className='px-4 py-2 bg-blue-600 text-white rounded-md,
   hover:bg-blue-700,
@@ -246,11 +235,9 @@ const ErrorFallback = memo<ErrorFallbackProps>(
 // >
 //             Try Again;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           </button>
           <button></button>
             onClick={() => window.location.reload()}
-<<<<<<< HEAD
             className='px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
           >
             Reload Page
@@ -264,7 +251,6 @@ const ErrorFallback = memo<ErrorFallbackProps>(
   )
 );
 ErrorFallback.displayName = 'ErrorFallback';
-=======
 
             className='px-4 py-2 bg-gray-600 text-white rounded-md,
   hover:bg-gray-700,
@@ -289,4 +275,3 @@ ErrorFallback.displayName = 'ErrorFallback';
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

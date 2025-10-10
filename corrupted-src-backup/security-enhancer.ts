@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class SecurityEnhancer {
   private static instance: SecurityEnhancer;
   private isInitialized: boolean = false;
@@ -19,7 +18,6 @@ class SecurityEnhancer {
 
   private setupSecurityHeaders(): void {
     // Additional security headers setup;
-=======
 class SecurityEnhancer {/* TODO: Fix JSX expression */}
   private constructor() {}
   private setupHTTPSRedirect(): void {/* TODO: Fix JSX expression */}
@@ -30,7 +28,6 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     //     }
 
   private setupSecurityHeaders(): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     //     }
 
   public static getInstance(): SecurityEnhancer {/* TODO: Fix JSX expression */}

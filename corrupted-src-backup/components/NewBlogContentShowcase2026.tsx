@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
   const, blogPost, s = [
     {
@@ -226,7 +225,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-5, 0, 0',';
       bad, g, e: 'ETHI, C, S',';
       ta, g, s: ['AI, Ethic, s', 'Governan, c, e', 'Responsible, A, I', 'Complian, c, e']';
-=======
 const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -248,7 +246,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expr
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   ];
   const, blogStat, s = [
@@ -261,8 +258,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expr
     { val, u, e: '4.8', lab, e, l: 'Average, Ratin, g', ic, o, n: <Star, className="w-6 h-6" /> },";"
     { val, u, e: '1, 5, 0+', lab, e, l: 'Expert, Author, s', ic, o, n: <Brain, className="w-6 h-6" /> }";
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
   return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}
       <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
@@ -275,7 +270,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expr
             { blogSta, t, s.m, a, p((st, a, t, ind, e, x) = > (
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r">
                 <div, classNam, e="te, x, t-bl, u, e-400, m, b-2, flex, justify-cent, e, r">
-=======
   return (
     <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}</div>
@@ -289,7 +283,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expr
             { blogSta, t, s.m, a, p((st, a, t, ind, e, x) = > (</div>
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r"></div>
                 <div, classNam, e="te, x, t-bl, u, e-400, m, b-2, flex, justify-cent, e, r"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">
           { blogPos, t, s.m, a, p((po, s, t, ind, e, x) = > (</div>
             <div, ke, y = { po, s, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/20"
@@ -314,17 +307,13 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expr
             <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6"></div>
               <Star, classNam, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />
               <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-<<<<<<< HEAD
                 PREMIUM, CONTEN, T;
-=======
                 PREMIUM, CONTEN, T</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o">
               Subscribe, to, our newsletter, and, get early, access, to new, artic, l, e, s, exclusive, insight, s,</p> 
                 <Link, classNam, e="w-5 h-5" />
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>
                 <a, hre, f="/bl, o, g"
-=======
   return ("
     <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}"
@@ -365,7 +354,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expr
                 <Link, classNam, e="w-5 h-5" /></Link>"
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>"
                 <a, hre, f="/bl, o, g""
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   classNa, m, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 ></a>"
                   <Sparkles, classNam, e="w-5 h-5" /></Sparkles>"

@@ -12,7 +12,6 @@ import { fileURLToPath } from 'url';
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
 
-<<<<<<< HEAD
 class PerformanceEnhancer {
   constructor() {
     this.report = {
@@ -20,12 +19,10 @@ class PerformanceEnhancer {
       optimizations: [],
       metrics: {},
       recommendations: [],
-=======
 class PerformanceEnhancer {/* TODO: Fix JSX expression */}
   s: {},
       recommendation,
   s: []
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }
 
@@ -35,15 +32,12 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
     }
   }
 
-<<<<<<< HEAD
   async analyzeBundle() {
 //     try {
       // Build with analysis;
       execSync('npm run build:analyze', { stdio: 'pipe' });
-=======
   async analyzeBundle() {/* TODO: Fix JSX expression */}
   o: 'pipe' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       
 //       const distPath = path.join(process.cwd(), 'dist');
 //       const files = await fs.readdir(distPath);
@@ -59,7 +53,6 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
       this.report.metrics.fileSizes = fileSizes;
       
       // Add recommendations based on bundle size;
-<<<<<<< HEAD
       if (totalSize > 1024 * 1024) { // 1MB;
         this.report.recommendations.push('Bundle size is large (>1MB). Consider code splitting.');
       }
@@ -68,13 +61,11 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
         type: 'bundle-analysis'),
         status: 'completed'),
         details: `Total bundle size: ${(totalSize / 1024).toFixed(2)} KB`
-=======
       if (totalSize > 1024 * 1024) {/* TODO: Fix JSX expression */}
       }
       
       this.report.optimizations.push({/* TODO: Fix JSX expression */})`
   size: ${(totalSize / 1024).toFixed(2)} KB`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
       `
 //       // console.log(`✅ Bundle analysis completed. Total,)`
@@ -83,7 +74,6 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
 //       }
   }
 
-<<<<<<< HEAD
   async optimizeImages() {
 //     try {
 //       const publicPath = path.join(process.cwd(), 'public');
@@ -94,10 +84,8 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
         await fs.access(imagesPath);
       } catch {
 //         return;
-=======
   async optimizeImages() {/* TODO: Fix JSX expression */}
       } catch {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       
       const _images = await fs.readdir(imagesPath);
@@ -111,22 +99,18 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
         }
       }
       
-<<<<<<< HEAD
       this.report.optimizations.push({)
         type: 'image-optimization'),
         status: 'completed'),
         details: `Processed ${optimizedCount} images`
-=======
       this.report.optimizations.push({/* TODO: Fix JSX expression */}`
   s: `Processed ${optimizedCount} images`)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
       
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
 
-<<<<<<< HEAD
   async optimizeCSS() {
 //     try {
       // Generate critical CSS;
@@ -142,7 +126,6 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
 .text-xl { font-size: 1.25rem; }
 .p-4 { padding: 1rem; }
 .rounded { border-radius: 0.25rem; }
-=======
   async optimizeCSS() {/* TODO: Fix JSX expression */}
   t: 100vh; }
 .bg-slate-950 {/* TODO: Fix JSX expression */}
@@ -163,27 +146,22 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
   g: 1rem; }
 .rounded {/* TODO: Fix JSX expression */}
   s: 0.25rem; }`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 `;
 
 //       const criticalCSSPath = path.join(process.cwd(), 'public', 'critical.css');
       await fs.writeFile(criticalCSSPath, criticalCSS);
       
-<<<<<<< HEAD
       this.report.optimizations.push({)
         type: 'css-optimization'),
         status: 'completed'),
         details: 'Critical CSS generated',
-=======
       this.report.optimizations.push({/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
       
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
 
-<<<<<<< HEAD
   async optimizeJavaScript() {
 //     try {
       // Generate performance monitoring script;
@@ -205,7 +183,6 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
       new PerformanceObserver((list) => {
         const _entries = list.getEntries();
         entries.forEach((entry) => {
-=======
   async optimizeJavaScript() {/* TODO: Fix JSX expression */}
 }
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
@@ -214,7 +191,6 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
       
       // FID;
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //           });
       }).observe({/* TODO: Fix JSX expression */})
   s: ['first-input'] });
@@ -230,15 +206,12 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
   }
   
   // Start monitoring when DOM is ready;
-<<<<<<< HEAD
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', observeWebVitals);
   } else {
     observeWebVitals();
-=======
   if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 })();`
 `;
@@ -246,21 +219,17 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
 //       const performanceScriptPath = path.join(process.cwd(), 'public', 'performance-monitor.js');
       await fs.writeFile(performanceScriptPath, performanceScript);
       
-<<<<<<< HEAD
       this.report.optimizations.push({)
         type: 'javascript-optimization'),
         status: 'completed'),
         details: 'Performance monitoring script generated',
-=======
       this.report.optimizations.push({/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
       
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
 
-<<<<<<< HEAD
   async generateServiceWorker() {
 //     try {
       const serviceWorkerScript = `
@@ -286,12 +255,10 @@ self.addEventListener('fetch', (event) => {
       .then((response) => {
         // Return cached version or fetch from network;
         return response || fetch(event.request);
-=======
   async generateServiceWorker() {/* TODO: Fix JSX expression */}
 });
 
 self.addEventListener('fetch', (event) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       })
   );
 });
@@ -308,21 +275,17 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
 //       const serviceWorkerPath = path.join(process.cwd(), 'public', 'sw.js');
       await fs.writeFile(serviceWorkerPath, serviceWorkerScript);
       
-<<<<<<< HEAD
       this.report.optimizations.push({)
         type: 'service-worker'),
         status: 'completed'),
         details: 'Service worker generated for offline support',
-=======
       this.report.optimizations.push({/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
       
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
 
-<<<<<<< HEAD
   async optimizeBuild() {
 //     try {
       // Check if vite.config.js exists;
@@ -337,9 +300,7 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
         // Add optimization plugins if not present;
         if (!configContent.includes('rollup-plugin-visualizer')) {
           this.report.recommendations.push('Consider adding bundle analyzer to vite.config.js');
-=======
   async optimizeBuild() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
         
         if (!configContent.includes('terser')) {/* TODO: Fix JSX expression */}
@@ -348,21 +309,17 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
       } catch {/* TODO: Fix JSX expression */}
 //         }
       
-<<<<<<< HEAD
       this.report.optimizations.push({)
         type: 'build-optimization'),
         status: 'completed'),
         details: 'Build configuration analyzed',
-=======
       this.report.optimizations.push({/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
       
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
 
-<<<<<<< HEAD
   async generateReport() {
 //     //     const reportPath = path.join(process.cwd(), 'performance-enhancement-report.json');
     await fs.writeFile(reportPath, JSON.stringify(this.report, null, 2));
@@ -377,19 +334,16 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
   generateMarkdownReport() {
     return `# Performance Enhancement Report;
 Generated: ${this.report.timestamp}
-=======
   async generateReport() {/* TODO: Fix JSX expression */}
 //     }
 
   generateMarkdownReport() {/* TODO: Fix JSX expression */}
   Generated: ${this.report.timestamp}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
 ## Summary;
 This report contains the results of the performance enhancement process.
 
 ## Optimizations Applied;
-<<<<<<< HEAD
 ${this.report.optimizations.map(opt => )
   `- **${opt.type}**: ${opt.status} - ${opt.details}`)
 ).join('\n')}
@@ -398,7 +352,6 @@ ${this.report.optimizations.map(opt => )
 - Bundle Size: ${this.report.metrics.bundleSize ? `${(this.report.metrics.bundleSize / 1024).toFixed(2)} KB` : 'Not measured'}
 
 ## Recommendations;
-=======
 ${/* TODO: Fix JSX expression */}`
   `- **${opt.type}**: ${opt.status} - ${opt.details}`
 ).join('\n')}
@@ -408,7 +361,6 @@ ${/* TODO: Fix JSX expression */}`
   Size: ${this.report.metrics.bundleSize ? `${(this.report.metrics.bundleSize / 1024).toFixed(2)} KB` : 'Not measured'}
 
 ## Recommendations;`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 ${this.report.recommendations.map(rec => `- ${rec}`).join('\n')}
 
 ## Next Steps;

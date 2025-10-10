@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -31,7 +30,6 @@
     email: string;
     address: string;
     website: string;
-=======
   i,
   d: string;
   nam,
@@ -94,7 +92,6 @@
   s: string;
     websit,
   e: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
         'Hybrid quantum-classical computing',
         'Quantum-resistant encryption',
@@ -114,7 +111,6 @@
 export const,
   innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] =;
   [
-<<<<<<< HEAD
     // Quantum - Enhanced Cloud Infrastructure;
       id: 'quantum - enhanced - cloud - platform',
       name: 'Quantum - Enhanced Cloud Platform',
@@ -123,7 +119,6 @@ export const,
       price: '$599',
       period: '/month',
       description: unknown;
-=======
     // Quantum - Enhanced Cloud Infrastructure,
       i,
   d: 'quantum - enhanced - cloud - platform',
@@ -138,7 +133,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Revolutionary cloud platform that combines traditional cloud computing with quantum computing capabilities, enabling unprecedented processing power and security for enterprise applications.',
       feature,
   s: [,
@@ -153,7 +147,6 @@ export const,
         'Global edge computing network',
         'Quantum - safe data storage',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: ''
       color: 'from - indigo - 600 to - purple - 700'
@@ -168,7 +161,6 @@ export const,
       category: 'Quantum & Cloud Infrastructure',
       real_service: true;
       technology: [,
-=======
       popula,
   r: true,
       ico,
@@ -197,7 +189,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Quantum Computing',
         'Kubernetes',
         'Docker',
@@ -238,7 +229,6 @@ export const,
         'IBM Cloud',
         'Oracle Cloud',
       ],
-<<<<<<< HEAD
       market_size: '$397.4B market'
       growth_rate: '280% annual growth'
       variant: 'quantum - futuristic'
@@ -265,7 +255,6 @@ export const,
       price: '$299',
       period: '/month',
       description: unknown;
-=======
       market_siz,
   e: '$397.4B market',
       growth_rat,
@@ -313,7 +302,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Advanced edge computing platform that intelligently orchestrates distributed computing resources, optimizing performance and reducing latency for IoT and real - time applications.',
       feature,
   s: [,
@@ -328,7 +316,6 @@ export const,
         'Automated scaling',
         'Multi - cloud edge integration',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: ''
       color: 'from - teal - 500 to - cyan - 600'
@@ -343,7 +330,6 @@ export const,
       category: 'Edge Computing & IoT',
       real_service: true;
       technology: [,
-=======
       popula,
   r: true,
       ico,
@@ -372,7 +358,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Kubernetes',
         'Docker',
         'Python',
@@ -413,7 +398,6 @@ export const,
         'FogHorn',
         'ClearBlade',
       ],
-<<<<<<< HEAD
       market_size: '$43.4B market'
       growth_rate: '240% annual growth'
       variant: 'edge - futuristic'
@@ -439,7 +423,6 @@ export const,
       price: '$449',
       period: '/month',
       description: unknown;
-=======
       market_siz,
   e: '$43.4B market',
       growth_rat,
@@ -486,7 +469,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Comprehensive zero - trust network security platform that continuously verifies every user, device, and connection, providing enterprise - grade security for modern distributed networks.',
       feature,
   s: [,
@@ -501,7 +483,6 @@ export const,
         'Real - time monitoring',
         'Automated response',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: ''
       color: 'from - emerald - 600 to - green - 700'
@@ -516,7 +497,6 @@ export const,
       category: 'Network Security',
       real_service: true;
       technology: [,
-=======
       popula,
   r: true,
       ico,
@@ -545,7 +525,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Python',
         'TensorFlow',
         'React',
@@ -586,7 +565,6 @@ export const,
         'Check Point',
         'Juniper Networks',
       ],
-<<<<<<< HEAD
       market_size: '$45.2B market'
       growth_rate: '260% annual growth'
       variant: 'security - futuristic'
@@ -612,7 +590,6 @@ export const,
       price: '$199',
       period: '/month',
       description: unknown;
-=======
       market_siz,
   e: '$45.2B market',
       growth_rat,
@@ -659,7 +636,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Intelligent DevOps platform that uses AI to automate deployment, optimize performance, and predict potential issues before they impact your applications.',
       feature,
   s: [,
@@ -674,7 +650,6 @@ export const,
         'Cost optimization',
         'Team collaboration tools',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: ''
       color: 'from - orange - 500 to - red - 600'
@@ -689,7 +664,6 @@ export const,
       category: 'DevOps & Automation',
       real_service: true;
       technology: [,
-=======
       popula,
   r: true,
       ico,
@@ -718,7 +692,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'React',
         'Node && Node.js',
         'Python',
@@ -760,7 +733,6 @@ export const,
         'CircleCI',
         'Travis CI',
       ],
-<<<<<<< HEAD
       market_size: '$8.2B market'
       growth_rate: '190% annual growth'
       variant: 'devops - futuristic'
@@ -777,7 +749,6 @@ export const,
       customers: 2500;
       rating: 4 && 4.7;
       reviews: 1250;
-=======
       market_siz,
   e: '$8.2B market',
       growth_rat,
@@ -809,19 +780,16 @@ export const,
   g: 4 && 4.7,
       review,
   s: 1250,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
         'Quantum-resistant encryption',
         'Multi-layer security',
     // Quantum - Safe Data Storage;
-<<<<<<< HEAD
       id: 'quantum - safe - data - storage'
       name: 'Quantum - Safe Data Storage',
       tagline: 'Future - proof your data with quantum - resistant encryption',
       price: '$349',
       period: '/month',
       description: unknown;
-=======
       i,
   d: 'quantum - safe - data - storage',
       nam,
@@ -834,7 +802,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Advanced data storage platform that uses quantum - resistant encryption algorithms to protect your data against future quantum computing threats.',
       feature,
   s: [,
@@ -849,7 +816,6 @@ export const,
         'API access',
         'Mobile applications',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: '',
         'Post-Quantum Cryptography',
@@ -865,7 +831,6 @@ export const,
       category: 'Data Storage & Security',
       real_service: true;
       technology: [,
-=======
       popula,
   r: true,
       ico,
@@ -895,7 +860,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Post - Quantum Cryptography',
         'React',
         'Node && Node.js',
@@ -934,7 +898,6 @@ export const,
         'Dropbox Business',
         'Box',
       ],
-<<<<<<< HEAD
       market_size: '$78.4B market'
       growth_rate: '220% annual growth'
       variant: 'quantum - futuristic'
@@ -946,7 +909,6 @@ export const,
       },
       real_implementation: true;
       implementation_details: unknown;
-=======
       market_siz,
   e: '$78.4B market',
       growth_rat,
@@ -969,12 +931,10 @@ export const,
   n: true,
       implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Enterprise - grade quantum - safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24 / 7 support.',
       launch_dat,
   e: '2025 - 11 - 20',
         'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.',
-<<<<<<< HEAD
       launchDate: '2025-11-20'
       customers: 1100;
       rating: 4 && 4.8;
@@ -1011,7 +971,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     period: '/month',
     description: 'Revolutionary cloud platform that combines traditional cloud computing with quantum computing capabilities, enabling unprecedented processing power and security for enterprise applications.',
     features: [;
-=======
       launchDat,
   e: '2025-11-20',
       customer,
@@ -1051,7 +1010,6 @@ export const,
   n: 'Revolutionary cloud platform that combines traditional cloud computing with quantum computing capabilities, enabling unprecedented processing power and security for enterprise applications.',
     feature,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Hybrid quantum-classical computingQuantum-resistant encryptionQuantum machine learning accelerationMulti-cloud orchestrationAuto-scaling infrastructureQuantum key distributionAdvanced security protocolsReal-time performance monitoring'
       'Global edge computing networkQuantum-safe data storage'
       integration,
@@ -1072,7 +1030,6 @@ export const,
         'Data archiving'
         'Collaborative storage'
         'API-driven applications'
-<<<<<<< HEAD
       ],
       roi: 'Average customer saves $500K annually through improved security and compliance management.',
       competitors: [,
@@ -1185,7 +1142,6 @@ export interface Innovative2026ITInfrastructureService {;
   customers: number;
   rating: number;
   reviews: number;
-=======
       ]
       ro,
   i: 'Average customer saves $500K annually through improved security and compliance management.'
@@ -1372,13 +1328,11 @@ export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX express
   g: number;
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ;
 export const,
   innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [;
   // Quantum-Enhanced Cloud Infrastructure;
-<<<<<<< HEAD
   {
     id: 'quantum-enhanced-cloud-platform';
     name: 'Quantum-Enhanced Cloud Platform';
@@ -1590,7 +1544,6 @@ export const,
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com',
-=======
   {/* TODO: Fix JSX expression */}
   t: 'quantum-futuristic'}
     contactInf,
@@ -1716,7 +1669,6 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
     realImplementatio,
   n: true;
@@ -1745,14 +1697,12 @@ export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX express
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -1765,13 +1715,11 @@ export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX express
   g: number;
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ;
 export const,
   innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [;
   // Quantum-Enhanced Cloud Infrastructure;
-<<<<<<< HEAD
   {
     id: 'quantum-enhanced-cloud-platform';
     name: 'Quantum-Enhanced Cloud Platform';
@@ -1990,7 +1938,6 @@ export const,
     customers: 1100;
     rating: 4.8;
     reviews: 550;
-=======
   {/* TODO: Fix JSX expression */}
   t: 'quantum-futuristic'}
     contactInf,
@@ -2129,7 +2076,6 @@ export const,
   g: 4.8;
     review,
   s: 550,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 ;

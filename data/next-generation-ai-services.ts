@@ -1,5 +1,4 @@
 export interface NextGenerationAIService;
-<<<<<<< HEAD
 export interface NextGenerationAIService {;
   id: string;
   name: string;
@@ -48,7 +47,6 @@ export interface NextGenerationAIService {}
   customers: number;
   rating: number;
   reviews: number;
-=======
 export interface NextGenerationAIService {/* TODO: Fix JSX expression */}
 export interface NextGenerationAIService {}
   review,
@@ -73,7 +71,6 @@ export interface NextGenerationAIService {}
   g: number,
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
   i,
   d: string;
@@ -133,7 +130,6 @@ export interface NextGenerationAIService {}
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -162,7 +158,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary AI agent that autonomously manages business operations, makes decisions, and executes tasks without human intervention. Achieve 24/7 business operations with intelligent automation.',
     features: [,
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -215,7 +210,6 @@ export const,
   n: 'Revolutionary AI agent that autonomously manages business operations, makes decisions, and executes tasks without human intervention. Achieve 24/7 business operations with intelligent automation.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Autonomous decision-making engine',
       'Natural language business communication',
       'Multi-platform task execution',
@@ -227,7 +221,6 @@ export const,
       'Risk assessment and mitigation',
       'Performance optimization'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-purple-700'
@@ -268,7 +261,6 @@ export const,
     period: '/month',
     description: 'Revolutionary quantum AI computing platform that combines quantum computing with artificial intelligence to solve previously unsolvable problems. Achieve computational breakthroughs in research, finance, and science.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -348,7 +340,6 @@ export const,
   n: 'Revolutionary quantum AI computing platform that combines quantum computing with artificial intelligence to solve previously unsolvable problems. Achieve computational breakthroughs in research, finance, and science.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum AI algorithm optimization',
       'Hybrid quantum-classical computing',
       'Quantum machine learning models',
@@ -360,7 +351,6 @@ export const,
       'Quantum chemistry simulations',
       'Quantum financial modeling'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-indigo-700',
@@ -401,7 +391,6 @@ export const,
     period: '/month',
     description: 'Revolutionary platform for developing neural interfaces and brain-computer interfaces. Create applications that directly connect with the human nervous system for medical, research, and consumer applications.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -480,7 +469,6 @@ export const,
   n: 'Revolutionary platform for developing neural interfaces and brain-computer interfaces. Create applications that directly connect with the human nervous system for medical, research, and consumer applications.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Neural signal processing',
       'Brain-computer interface SDK',
       'Real-time neural data analysis',
@@ -492,7 +480,6 @@ export const,
       'Compliance with medical standards',
       '24/7 neural interface support'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-600 to-emerald-700',
@@ -533,7 +520,6 @@ export const,
     period: '/month',
     description: 'Revolutionary AI platform for autonomous space exploration, satellite operations, and space mission management. Enable autonomous space operations with intelligent decision-making and real-time optimization.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -612,7 +598,6 @@ export const,
   n: 'Revolutionary AI platform for autonomous space exploration, satellite operations, and space mission management. Enable autonomous space operations with intelligent decision-making and real-time optimization.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Autonomous satellite operations',
       'AI-powered mission planning',
       'Real-time space data analysis',
@@ -624,7 +609,6 @@ export const,
       'Earth observation analytics',
       'Space weather monitoring'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-indigo-600 to-blue-700',
@@ -665,7 +649,6 @@ export const,
     period: '/month',
     description: 'Revolutionary AI platform for accelerating drug discovery and pharmaceutical research. Reduce drug development timelines by 80% and increase success rates through intelligent molecular analysis and prediction.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -744,7 +727,6 @@ export const,
   n: 'Revolutionary AI platform for accelerating drug discovery and pharmaceutical research. Reduce drug development timelines by 80% and increase success rates through intelligent molecular analysis and prediction.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI molecular modeling',
       'Drug target identification',
       'Predictive toxicity analysis',
@@ -756,7 +738,6 @@ export const,
       'Drug interaction prediction',
       'Regulatory compliance tools'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-teal-700',
@@ -797,7 +778,6 @@ export const,
     period: '/month',
     description: 'Revolutionary quantum computing platform for financial trading, risk management, and portfolio optimization. Achieve superior returns through quantum-powered algorithms and real-time market analysis.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -876,7 +856,6 @@ export const,
   n: 'Revolutionary quantum computing platform for financial trading, risk management, and portfolio optimization. Achieve superior returns through quantum-powered algorithms and real-time market analysis.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum algorithmic trading',
       'Real-time risk assessment',
       'Portfolio optimization algorithms',
@@ -888,7 +867,6 @@ export const,
       'API for broker integration',
       '24/7 trading operations'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-yellow-600 to-orange-700'
@@ -929,7 +907,6 @@ export const,
     period: '/month',
     description: 'Revolutionary platform for building AI-powered metaverse experiences with intelligent NPCs, dynamic content generation, and immersive virtual environments. Create the next generation of digital experiences.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -1008,7 +985,6 @@ export const,
   n: 'Revolutionary platform for building AI-powered metaverse experiences with intelligent NPCs, dynamic content generation, and immersive virtual environments. Create the next generation of digital experiences.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI-powered NPC generation',
       'Dynamic content creation',
       'Real-time environment adaptation',
@@ -1020,7 +996,6 @@ export const,
       'Performance optimization',
       'Analytics and insights'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-pink-600 to-rose-700',
@@ -1061,7 +1036,6 @@ export const,
     period: '/month',
     description: 'Revolutionary AI platform for autonomous vehicles with advanced perception, decision-making, and safety systems. Enable fully autonomous transportation with industry-leading safety and performance.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -1140,7 +1114,6 @@ export const,
   n: 'Revolutionary AI platform for autonomous vehicles with advanced perception, decision-making, and safety systems. Enable fully autonomous transportation with industry-leading safety and performance.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced computer vision',
       'Real-time decision making',
       'Predictive safety systems',
@@ -1152,7 +1125,6 @@ export const,
       'Regulatory compliance',
       'Performance analytics'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-gray-600 to-slate-700',
@@ -1193,7 +1165,6 @@ export const,
     period: '/month',
     description: 'Revolutionary quantum internet security platform that provides unhackable communication through quantum key distribution and post-quantum cryptography. Secure the future of internet communications.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -1272,7 +1243,6 @@ export const,
   n: 'Revolutionary quantum internet security platform that provides unhackable communication through quantum key distribution and post-quantum cryptography. Secure the future of internet communications.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum key distribution (QKD)',
       'Post-quantum cryptography',
       'Quantum entanglement security',
@@ -1284,7 +1254,6 @@ export const,
       '24/7 quantum security operations',
       'Unhackable communication channels'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-red-600 to-pink-700'
@@ -1325,7 +1294,6 @@ export const,
     period: '/month',
     description: 'Revolutionary AI platform for intelligent manufacturing with predictive maintenance, quality control, and process optimization. Achieve Industry 4.0 with intelligent automation and real-time optimization.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -1404,7 +1372,6 @@ export const,
   n: 'Revolutionary AI platform for intelligent manufacturing with predictive maintenance, quality control, and process optimization. Achieve Industry 4.0 with intelligent automation and real-time optimization.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Predictive maintenance',
       'Quality control automation',
       'Process optimization',
@@ -1416,7 +1383,6 @@ export const,
       'Automation workflows',
       'Compliance management'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-orange-600 to-amber-700',
@@ -1449,7 +1415,6 @@ export const,
     customers: 220;
     rating: 4.7;
     reviews: 125;
-=======
     popula,
   r: true,
     ico,
@@ -1516,7 +1481,6 @@ export const,
   g: 4.7,
     review,
   s: 125,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export interface NextGenerationAIService export interface NextGenerationAIService {/* TODO: Fix JSX expression */}

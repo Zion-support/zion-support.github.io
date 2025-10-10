@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * Enhanced Performance Monitoring
  * Comprehensive performance tracking and optimization utilities
@@ -340,7 +339,6 @@ export function runWhenIdle(callback: () => void, timeout = 1000): void {
 export const performanceMonitor = new PerformanceMonitor();
 
 export default PerformanceMonitor;
-=======
 
 
 import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
@@ -426,4 +424,3 @@ export const performanceMonitor = new PerformanceMonitor();
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

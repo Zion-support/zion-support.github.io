@@ -163,7 +163,6 @@ const AIDataAnalyticsPage: React.FC = () => {,
     {
       title: 'Advanced Data Processing',
       description: 'Handle massive datasets with real-time processing capabilities',
-<<<<<<< HEAD
       icon: <Database className="w-8 h-8 text-blue-600" >},
     {
       title: 'Machine Learning Models',</Database>
@@ -180,11 +179,9 @@ const AIDataAnalyticsPage: React.FC = () => {,
   ];</Target>
   return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Hero Section */}</div>
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
-<<<<<<< HEAD
         <div className="absolute inset-0 bg-black opacity-20"><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">AI Data Analytics Services<p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">Transform your data into actionable insights with our advanced AI-powered analytics solutions</p>
-=======
       icon: <Database className="w-8 h-8 text-blue-600" />,
     },
     {
@@ -214,26 +211,21 @@ const AIDataAnalyticsPage: React.FC = () => {,
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
               Transform your data into actionable insights with our advanced AI-powered analytics solutions;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a;
-=======
         <div className="absolute inset-0 bg-black opacity-20"></section><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
           <div className="text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">AI Data Analytics Services</h1><p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">Transform your data into actionable insights with our advanced AI-powered analytics solutions</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
-<<<<<<< HEAD
               >📞 +1 302 464 0950<a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >✉️ Get Free Consultation</a>
-=======
               >
                 📞 +1 302 464 0950;
               </a>
@@ -242,7 +234,6 @@ const AIDataAnalyticsPage: React.FC = () => {,
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 ✉️ Get Free Consultation;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
             </div>
           </div>,
@@ -250,14 +241,11 @@ const AIDataAnalyticsPage: React.FC = () => {,
       </section>,
       {/* Services Grid */}
       <section className="py-16 bg-white">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-12">
-<<<<<<< HEAD
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Analytics Solutions<p className="text-xl text-gray-600">Comprehensive AI-powered analytics platforms for every business need<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{analyticsServices.map((service, index) => (</div>
               <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100">
                 <div className="text-4xl mb-4">{service.icon}<h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}<p className="text-gray-600 mb-4">{service.description}</p>
-=======
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Analytics Solutions;
             </h2>
@@ -271,10 +259,8 @@ const AIDataAnalyticsPage: React.FC = () => {,
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <div className="mb-4">
                   <span className="text-2xl font-bold text-blue-600">{service.price}<span className="text-sm text-gray-500 ml-2">Market: {service.marketPrice}</span>
-=======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Analytics Solutions</h2><p className="text-xl text-gray-600">Comprehensive AI-powered analytics platforms for every business need</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{analyticsServices.map((service, index) => (</div>
@@ -282,7 +268,6 @@ const AIDataAnalyticsPage: React.FC = () => {,
                 <div className="text-4xl mb-4">{service.icon}</div><h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3><p className="text-gray-600 mb-4">{service.description}</p>
                 <div className="mb-4"></div>
                   <span className="text-2xl font-bold text-blue-600">{service.price}</span><span className="text-sm text-gray-500 ml-2">Market: {service.marketPrice}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </div>
                 <div className="mb-4"></div>
                   <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded">{service.category}</span><ul className="space-y-2 mb-6">{service.features.slice(0, 4).map((feature, featureIndex) => (</ul>
@@ -291,24 +276,19 @@ const AIDataAnalyticsPage: React.FC = () => {,
                     </CheckCircle>
                   ))}
                 </ul>
-<<<<<<< HEAD
                 <div className="space-y-2 mb-6">
                   <h4 className="font-semibold text-gray-900">Key Benefits: </h4>,
-=======
                 <div className="space-y-2 mb-6"></div>
                   <h4 className="font-semibold text-gray-900">Key Benefits:</h4>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
                     <p key={benefitIndex} className="text-sm text-green-600">✓ {benefit}</p>
                   ))}
-<<<<<<< HEAD
                 <a
                   href="/contact"
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center justify-center"
                 >Get Started</a>
                 </a>
               </div>
-=======
                 </div>
                 <a;
                   href="/contact"
@@ -317,19 +297,15 @@ const AIDataAnalyticsPage: React.FC = () => {,
                   Get Started;
                 </a>,
               </div>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             ))}
           </div>
         </div>
       </section>
       {/* Features Section */}
       <section className="py-16 bg-gray-50">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-12">
-<<<<<<< HEAD
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our Analytics Solutions?<p className="text-xl text-gray-600">Advanced technology and expert implementation for maximum ROI<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{additionalFeatures.map((feature, index) => (</div>
-=======
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Our Analytics Solutions?
             </h2>
@@ -339,16 +315,13 @@ const AIDataAnalyticsPage: React.FC = () => {,
           </div>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
             {additionalFeatures.map((feature, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">{feature.icon}<h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}<p className="text-gray-600">{feature.description}</p>
-=======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our Analytics Solutions?</h2><p className="text-xl text-gray-600">Advanced technology and expert implementation for maximum ROI</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{additionalFeatures.map((feature, index) => (</div>
               <div key={index} className="text-center"></div>
                 <div className="flex justify-center mb-4">{feature.icon}</div><h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3><p className="text-gray-600">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
             ))}
           </div>
@@ -356,40 +329,31 @@ const AIDataAnalyticsPage: React.FC = () => {,
       </section>
       {/* Contact Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Data into Insights?<p className="text-xl mb-8 text-blue-100">Contact us today for a free consultation and custom analytics solution</p>
-=======
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Transform Your Data into Insights?
           </h2>
           <p className="text-xl mb-8 text-blue-100">
             Contact us today for a free consultation and custom analytics solution;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a;
-=======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></section>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Data into Insights?</h2><p className="text-xl mb-8 text-blue-100">Contact us today for a free consultation and custom analytics solution</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="tel:+13024640950"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
-<<<<<<< HEAD
             >📞 +1 302 464 0950<a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >✉️ kleber@ziontechgroup.com</a>
             </a>
           </div>
-<<<<<<< HEAD
           <div className="mt-8 text-sm text-blue-200">
-=======
             >
               📞 +1 302 464 0950;
             </a>
@@ -401,10 +365,7 @@ const AIDataAnalyticsPage: React.FC = () => {,
             </a>,
           </div>,
           <div className="mt-8 text-sm text-blue-200">,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
           <div className="mt-8 text-sm text-blue-200"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
         </div>

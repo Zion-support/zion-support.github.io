@@ -2,7 +2,6 @@ impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-<<<<<<< HEAD
 const AutonomousBusinessOperation, s = () => { 
   return(<>
       <Helm, e, t>
@@ -22,7 +21,6 @@ const AutonomousBusinessOperation, s = () => {
 
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }</div>
         <section, classNam, e = 'relative, p, y-24, overflo, w-hidd, e, n'>
-<<<<<<< HEAD
           <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20' />
             <div, classNam, e='flex, justif, y-center, m, b-8'>
               <div, classNam, e='inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-gre, e, n-5, 0, 0/20, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, tex, t-gre, e, n-300, tex, t-sm, fon, t-bold, uppercase, tracking-wider, animat, e-pul, s, e'>
@@ -36,7 +34,6 @@ const AutonomousBusinessOperation, s = () => {
                 Transform, Your, Enterprise in, 90, Days with, Sel, f-Managing, AI, Systems;
               <div, classNam, e = 'grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-12'>
                 <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/30, t, o-emera, l, d-6, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-2, borde, r-gre, e, n-4, 0, 0/50'>
-=======
           <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20' /></section>
 
             <div, classNam, e='flex, justif, y-center, m, b-8'></div>
@@ -51,7 +48,6 @@ const AutonomousBusinessOperation, s = () => {
                 Transform, Your, Enterprise in, 90, Days with, Sel, f-Managing, AI, Systems</p>
               <div, classNam, e = 'grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-12'></div>
                 <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/30, t, o-emera, l, d-6, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-2, borde, r-gre, e, n-4, 0, 0/50'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <div, className='te, x, t-5xl, fon, t-bold, tex, t-gre, e, n-300, m, b-2'>
                     85%
                   </div>
@@ -65,14 +61,11 @@ const AutonomousBusinessOperation, s = () => {
         <section, classNam, e='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           <div, classNam, e='te, x, t-center, m, b-16'></section>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
-<<<<<<< HEAD
               Wh, a, t's, Included, in Your, Platfor, m;
         {/* Trust, Indicat, o, r, s */}
-=======
               Wh, a, t's, Included, in Your, Platfor, m
 
         {/* Trust, Indicat, o, r, s */}</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <section, classNam, e = 'py-12, b, g-bla, c, k/20'>
           <div, className='container, m, x-auto, p, x-6'></section>
             <div, className='flex, fle, x-wrap, justif, y-center, item, s-center, ga, p-8, tex, t-bl, u, e-2, 0, 0'></div>
@@ -90,7 +83,6 @@ const AutonomousBusinessOperation, s = () => {
               </div>
               <div, className='flex, item, s-center, ga, p-2'></div>
                 <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
-=======
 const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }
         <section, classNam, e = 'relative, p, y-24, overflo, w-hidd, e, n'></section>
@@ -139,12 +131,10 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
               </div>
               <div, className='flex, item, s-center, ga, p-2'></div>
                 <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' /></CheckCircle>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <span, className='fo, n, t-semibo, l, d'>99.97% Uptime, SL, A</sp, a, n>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         <section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           <div, className='te, x, t-center, m, b-16'></section>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
@@ -188,13 +178,10 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
         <section, classNam, e='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           <div, classNam, e='te, x, t-center, m, b-16'></section>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
-<<<<<<< HEAD
               90-Day, Implementation, Timeline;
                     <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-bl, u, e-2, 0, 0'>
-=======
               90-Day, Implementation, Timeline</h2>
                     <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-bl, u, e-2, 0, 0'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       <CheckCircle, classNam, e='w-4 h-4, tex, t-bl, u, e-4, 0, 0' />
                     <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-purp, l, e-2, 0, 0'></div>
                       <CheckCircle, classNam, e='w-4 h-4, tex, t-purp, l, e-4, 0, 0' />
@@ -207,14 +194,10 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                 <TrendingUp, className='w-8 h-8, tex, t-purp, l, e-3, 0, 0' />
               </div>
               <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
-<<<<<<< HEAD
                 AI, Decision, Engine;
-=======
                 AI, Decision, Engine</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <li, className='flex, item, s-start, ga, p-2'>
                   <CheckCircle, className='w-4 h-4, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
-=======
         <section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'></section>
           <div, className='te, x, t-center, m, b-16'></div>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'></h2>
@@ -275,7 +258,6 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                 AI, Decision, Engine;
                 <li, className='flex, item, s-start, ga, p-2'></li>
                   <CheckCircle, className='w-4 h-4, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <sp, a, n>Automatic, model, retraining</sp, a, n>
                 </li>
               </ul>
@@ -284,25 +266,19 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
             {/* Feat, u, r, e , 3 */}
             <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/60, t, o-emera, l, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, hove, r: bord, e, r-gre, e, n-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'></div>
               <div, className='bg-gre, e, n-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-gre, e, n-4, 0, 0/30'></div>
-<<<<<<< HEAD
                 <Shield, className='w-8 h-8, tex, t-gre, e, n-3, 0, 0' />
               </div>
               <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
-<<<<<<< HEAD
                 Enterprise, Securit, y;
-=======
                 Enterprise, Securit, y</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <li, className='flex, item, s-start, ga, p-2'>
                   <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
-=======
                 <Shield, className='w-8 h-8, tex, t-gre, e, n-3, 0, 0' /></Shield>
               </div>
               <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'></h3>
                 Enterprise, Securit, y;
                 <li, className='flex, item, s-start, ga, p-2'></li>
                   <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <sp, a, n>Full, audit, trail & compliance, reportin, g</sp, a, n>
                 </li>
               </ul>
@@ -311,15 +287,11 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
             {/* Feat, u, r, e , 4 */}
             <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-oran, g, e-9, 0, 0/60, t, o-r, e, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-oran, g, e-4, 0, 0/50, hove, r: bord, e, r-oran, g, e-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'></div>
               <div, className='bg-oran, g, e-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-oran, g, e-4, 0, 0/30'></div>
-<<<<<<< HEAD
                 <Users, className='w-8 h-8, tex, t-oran, g, e-3, 0, 0' />
               </div>
               <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
-<<<<<<< HEAD
                 Expert, Implementation, Team;
-=======
                 Expert, Implementation, Team</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <li, className='flex, item, s-start, ga, p-2'>
                   <CheckCircle, className='w-4 h-4, tex, t-oran, g, e-400, m, t-1, fle, x-shri, n, k-0' />
             <div, className='bg-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-cy, a, n-4, 0, 0/50, hove, r: bord, e, r-cy, a, n-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'></div>
@@ -327,11 +299,8 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                 <Clock, className='w-8 h-8, tex, t-cy, a, n-3, 0, 0' />
               </div>
               <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
-<<<<<<< HEAD
                 Re, a, l-Time, Observabilit, y;
-=======
                 Re, a, l-Time, Observabilit, y</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <li, className='flex, item, s-start, ga, p-2'>
                   <CheckCircle, className='w-4 h-4, tex, t-cy, a, n-400, m, t-1, fle, x-shri, n, k-0' />
             <div, className='bg-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-indi, g, o-4, 0, 0/50, hove, r: bord, e, r-indi, g, o-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'></div>
@@ -339,11 +308,8 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                 <DollarSign, className='w-8 h-8, tex, t-indi, g, o-3, 0, 0' />
               </div>
               <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
-<<<<<<< HEAD
                 ROI, Guarante, e;
-=======
                 ROI, Guarante, e</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <li, className='flex, item, s-start, ga, p-2'>
                   <CheckCircle, className='w-4 h-4, tex, t-indi, g, o-400, m, t-1, fle, x-shri, n, k-0' />
         <section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
@@ -391,31 +357,24 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
         <section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           <div, className='bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-emera, l, d-600, rounde, d-2x, l, p-12, tex, t-cent, e, r'></section>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4'>
-<<<<<<< HEAD
               Read, Complete, Case Stu, d, y;
-=======
               Read, Complete, Case Stu, d, y</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <Link, className='w-5 h-5' />
         {/* Fina, l, C, T, A */}
         <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
-<<<<<<< HEAD
           <div, classNam, e='bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-2x, l, p-12, tex, t-cent, e, r'>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6'>
             <div, className='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-center, m, b-8'>
-=======
           <div, classNam, e='bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-2x, l, p-12, tex, t-cent, e, r'></section>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6'></h2>
 
             <div, className='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-center, m, b-8'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <Link, t, o='/conta, c, t'
                 className='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, b, g-white, tex, t-bl, u, e-600, hove, r:bg-bl, u, e-50, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, shado, w-xl, hove, r:shad, o, w-2, x, l'
               >
                 <Rocket, className='w-5 h-5' />
                 Schedule, Free, Consultation;
                 <Link, classNam, e='w-5 h-5' />
-=======
                 <Users, className='w-8 h-8, tex, t-oran, g, e-3, 0, 0' /></Users>
               </div>
               <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'></h3>
@@ -496,5 +455,4 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                 <Rocket, className='w-5 h-5' /></Rocket>
                 Schedule, Free, Consultation;
                 <Link, classNam, e='w-5 h-5' /></Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }

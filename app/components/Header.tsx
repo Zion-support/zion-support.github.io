@@ -1,24 +1,19 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from './Navigation';
 
-<<<<<<< HEAD
 const Header: React.FC = () => {
   return (
     <>
       <Navigation >{/* Spacer to prevent content from going under fixed header */}</Navigation>
       </Navigation><div className="h-16 lg:h-20" />
     </>
-=======
 const Header: React.FC = () => {,
   return(<>,)
       <Navigation />),
       {/* Spacer to prevent content from going under fixed header */}
       <div className="h-16 lg: h-20" />,
     </>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail, ChevronDown, Brain, Cloud, Shield, Code, Users, Briefcase, BookOpen, MessageSquare } from 'lucide-react';
@@ -216,7 +211,6 @@ const Header: React.FC = () => {
         )}
       </div>
     </header>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 

@@ -13,11 +13,8 @@ interface SEOHeadProps {
   structuredData?: object;
 }
 
-<<<<<<< HEAD
 const EnhancedSEOHead: React.FC<SEOHeadProps>= ({
-=======
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   title = "Zion Tech Group - Advanced AI and IT Solutions",
   description = "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
   keywords = "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, cybersecurity, business intelligence, micro SAAS",
@@ -66,33 +63,26 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({,
       "Automation"
     ]
   };
-<<<<<<< HEAD
 </SEOHeadProps>
   return (<Helmet>{/* Basic Meta Tags */}<title>{title}</title>
-=======
 
   return(<Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
       <meta name="googlebot" content="index, follow" />
-<<<<<<< HEAD
       <meta name="bingbot" content="index, follow" >{/* Open Graph / Facebook */}</meta>
       </meta><meta property="og:type" content={type} />
-=======
       <meta name="bingbot" content="index, follow" />
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-<<<<<<< HEAD
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
@@ -121,7 +111,6 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({,
       <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     </Helmet>
-=======
       <meta property="og: image:width" content="1200" />,
       <meta property="og:image:height" content="630" />,
       <meta property="og:site_name" content="Zion Tech Group" />,
@@ -161,7 +150,6 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({,
       <link rel="dns-prefetch" href="https://www.googletagmanager.com" />,
       <link rel="dns-prefetch" href="https://www.google-analytics.com" />,
     </Helmet>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   );
 };
 

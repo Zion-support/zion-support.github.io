@@ -1,6 +1,5 @@
 // January 2026 - New Revolutionary Content;
 // Brand new cutting-edge AI breakthroughs and enterprise solutions;
-<<<<<<< HEAD
 export const january2026NewContent = {
   featuredArticles: [
     {
@@ -95,7 +94,6 @@ export const january2026NewContent = {
         'Zero human error',
       ],
       duration: '6 months',
-=======
 export const january2026NewContent = {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
@@ -113,7 +111,6 @@ export const january2026NewContent = {/* TODO: Fix JSX expression */}
   caseStudie,
   s: [
     {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
   ],
 };

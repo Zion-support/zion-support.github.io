@@ -176,7 +176,6 @@ export default function AIDrugDiscoveryProPage() {
     address: '364 E Main St STE 1008, Middletown, DE 19709'
   };
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation >{/* Hero Section */}</Navigation>
@@ -187,7 +186,6 @@ export default function AIDrugDiscoveryProPage() {
               <Beaker className="w-4 h-4 text-cyan-400" />
               <span className="text-cyan-400 text-sm font-medium">AI Drug Discovery Pro</span><h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">AI-Powered Drug Discovery</h1><span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Revolutionizing Medicine</span><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Accelerate pharmaceutical research with AI-powered molecular analysis, drug interaction prediction,</p>
               and clinical trial optimization. Discover new treatments 10x faster.</p>
-=======
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       {/* Hero Section */}
@@ -210,20 +208,15 @@ export default function AIDrugDiscoveryProPage() {
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">),
               Accelerate pharmaceutical research with AI-powered molecular analysis, drug interaction prediction)
               and clinical trial optimization. Discover new treatments 10x faster.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
 
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a;
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
               <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 href="#features"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
               >
-<<<<<<< HEAD
                 <Play className="w-5 h-5 mr-2" >Explore Features</Play>
               </Play>
               <a
@@ -232,7 +225,6 @@ export default function AIDrugDiscoveryProPage() {
               >
                 <Calendar className="w-5 h-5 mr-2" >Schedule Demo</Calendar>
               </Calendar>
-=======
                 <Play className="w-5 h-5 mr-2" />
                 Explore Features;
               </a>
@@ -243,7 +235,6 @@ export default function AIDrugDiscoveryProPage() {
                 <Calendar className="w-5 h-5 mr-2" />
                 Schedule Demo;
               </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </div>
           </div>
         </div>,
@@ -251,21 +242,15 @@ export default function AIDrugDiscoveryProPage() {
 ,
       {/* Stats */}
       <section className="py-20">
-<<<<<<< HEAD
         <div className="container mx-auto px-4">
-<<<<<<< HEAD
-=======
         <div className="container mx-auto px-4"></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">{stats.map((stat, index) => (</div>
               <div key={index} className="text-center group"></div>
                 <div className="relative mb-4"></div>
                   <div className="w-20 h-20 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
                     <stat.icon className="w-10 h-10 text-white" />
                   </div>
-<<<<<<< HEAD
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"><div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.number}<div className="text-gray-400 font-medium">{stat.label}</div>
-=======
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-6xl mx-auto">,
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
@@ -277,10 +262,7 @@ export default function AIDrugDiscoveryProPage() {
                 </div>,
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-400 font-medium">{stat.label}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div><div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.number}</div><div className="text-gray-400 font-medium">{stat.label}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
             ))}
           </div>
@@ -289,10 +271,8 @@ export default function AIDrugDiscoveryProPage() {
 
       {/* Features */}
       <section id="features" className="py-20 bg-slate-800/50">
-<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Advanced AI Capabilities<p className="text-lg text-gray-300 max-w-3xl mx-auto">Cutting-edge AI technology designed specifically for pharmaceutical research and drug development<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">{features.map((feature, index) => (</div>
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 hover:bg-slate-700/50 transition-all duration-300">
                 <div className="flex items-center space-x-4 mb-6">
@@ -301,7 +281,6 @@ export default function AIDrugDiscoveryProPage() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{feature.title}<p className="text-gray-300">{feature.description}<div className="space-y-3">{feature.benefits.map((benefit, benefitIndex) => (</div>
-=======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Advanced AI Capabilities;
             </h2>
@@ -325,9 +304,7 @@ export default function AIDrugDiscoveryProPage() {
 
                 <div className="space-y-3">
                   {feature.benefits.map((benefit, benefitIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     <div key={benefitIndex} className="flex items-center space-x-3">
-=======
         <div className="container mx-auto px-4"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Advanced AI Capabilities</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Cutting-edge AI technology designed specifically for pharmaceutical research and drug development</p><div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">{features.map((feature, index) => (</div>
@@ -339,7 +316,6 @@ export default function AIDrugDiscoveryProPage() {
                   <div></div>
                     <h3 className="text-2xl font-bold text-white mb-2">{feature.title}</h3><p className="text-gray-300">{feature.description}</p><div className="space-y-3">{feature.benefits.map((benefit, benefitIndex) => (</div>
                     <div key={benefitIndex} className="flex items-center space-x-3"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300">{benefit}</span>
                     </div>
@@ -353,12 +329,9 @@ export default function AIDrugDiscoveryProPage() {
 
       {/* Capabilities */}
       <section className="py-20">
-<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Comprehensive Drug Discovery Platform<p className="text-lg text-gray-300 max-w-3xl mx-auto">End-to-end AI-powered solutions for every stage of drug development<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">{capabilities.map((capability, index) => (</div>
-=======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Comprehensive Drug Discovery Platform;
             </h2>
@@ -369,16 +342,13 @@ export default function AIDrugDiscoveryProPage() {
 ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">,
             {capabilities.map((capability, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-4">{capability.category}<ul className="space-y-3">{capability.items.map((item, itemIndex) => (</ul>
-=======
         <div className="container mx-auto px-4"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Comprehensive Drug Discovery Platform</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">End-to-end AI-powered solutions for every stage of drug development</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">{capabilities.map((capability, index) => (</div>
               <div key={index} className="bg-slate-800/50 rounded-lg p-6"></div>
                 <h3 className="text-xl font-bold text-white mb-4">{capability.category}</h3><ul className="space-y-3">{capability.items.map((item, itemIndex) => (</ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <li key={itemIndex} className="flex items-start space-x-3">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0" />
                       <span className="text-gray-300 text-sm">{item}</span>
@@ -393,27 +363,21 @@ export default function AIDrugDiscoveryProPage() {
 
       {/* Pricing */}
       <section className="py-20 bg-slate-800/50">
-<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Enterprise Pricing<p className="text-lg text-gray-300 max-w-3xl mx-auto">Flexible pricing options for pharmaceutical companies of all sizes</p>
-=======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Enterprise Pricing;
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Flexible pricing options for pharmaceutical companies of all sizes;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 rounded-2xl p-8">
               <div className="text-center mb-8">
-<<<<<<< HEAD
                 <h3 className="text-3xl font-bold text-white mb-2">AI Drug Discovery Pro<p className="text-gray-300 mb-6">Complete AI-powered drug discovery platform</p>
-=======
         <div className="container mx-auto px-4"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Enterprise Pricing</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Flexible pricing options for pharmaceutical companies of all sizes</p>
@@ -424,7 +388,6 @@ export default function AIDrugDiscoveryProPage() {
             <div className="bg-slate-800/50 rounded-2xl p-8"></div>
               <div className="text-center mb-8"></div>
                 <h3 className="text-3xl font-bold text-white mb-2">AI Drug Discovery Pro</h3><p className="text-gray-300 mb-6">Complete AI-powered drug discovery platform</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
 
                 <div className="flex items-baseline justify-center mb-6"></div>
                   <span className="text-5xl font-bold text-white">${pricing.monthly.toLocaleString()}</span><span className="text-gray-400 ml-2">/month</span><div className="text-green-400 text-sm mb-8">Save ${(pricing.monthly * 12) - pricing.yearly} per year with annual billing</div>
@@ -434,7 +397,6 @@ export default function AIDrugDiscoveryProPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8"></div>
                 <div></div>
                   <h4 className="text-lg font-semibold text-white mb-4">What's included:<ul className="space-y-3">{pricing.features.map((feature, index) => (</ul>
-=======
                 <h3 className="text-3xl font-bold text-white mb-2">AI Drug Discovery Pro</h3>
                 <p className="text-gray-300 mb-6">Complete AI-powered drug discovery platform</p>,
 ,
@@ -453,7 +415,6 @@ export default function AIDrugDiscoveryProPage() {
                   <h4 className="text-lg font-semibold text-white mb-4">What's included:</h4>,
                   <ul className="space-y-3">,
                     {pricing.features.map((feature, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                       <li key={index} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
@@ -462,18 +423,12 @@ export default function AIDrugDiscoveryProPage() {
                   </ul>
                 </div>
 
-<<<<<<< HEAD
                 <div>
-<<<<<<< HEAD
-=======
                 <div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <h4 className="text-lg font-semibold text-white mb-4">Add-ons:<ul className="space-y-3">{pricing.addOns.map((addon, index) => (</ul>
-=======
                   <h4 className="text-lg font-semibold text-white mb-4">Add-ons: </h4>,
                   <ul className="space-y-3">,
                     {pricing.addOns.map((addon, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                       <li key={index} className="flex items-center justify-between">
                         <div></div>
                           <div className="text-white font-medium">{addon.name}</div><div className="text-gray-400 text-sm">{addon.description}</div><div className="text-cyan-400 font-bold">+${addon.price.toLocaleString()}/mo</div>
@@ -483,24 +438,18 @@ export default function AIDrugDiscoveryProPage() {
                 </div>
               </div>
 
-<<<<<<< HEAD
               <div className="text-center">
                 <a;
-=======
               <div className="text-center"></div>
                 <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
                 >
-<<<<<<< HEAD
                   <MessageSquare className="w-5 h-5 mr-2" >Get Started Today</MessageSquare>
                 </MessageSquare>
-=======
                   <MessageSquare className="w-5 h-5 mr-2" />
                   Get Started Today;
                 </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </div>
             </div>
           </div>
@@ -509,12 +458,9 @@ export default function AIDrugDiscoveryProPage() {
 ,
       {/* Testimonials */}
       <section className="py-20">
-<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Trusted by Leading Pharmaceutical Companies<p className="text-lg text-gray-300 max-w-3xl mx-auto">See how our AI technology is transforming drug discovery<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">{testimonials.map((testimonial, index) => (</div>
-=======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Trusted by Leading Pharmaceutical Companies;
             </h2>
@@ -525,12 +471,10 @@ export default function AIDrugDiscoveryProPage() {
 ,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">,
             {testimonials.map((testimonial, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                 <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
-=======
         <div className="container mx-auto px-4"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Trusted by Leading Pharmaceutical Companies</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">See how our AI technology is transforming drug discovery</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">{testimonials.map((testimonial, index) => (</div>
@@ -538,7 +482,6 @@ export default function AIDrugDiscoveryProPage() {
                 <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (</div><Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
                 <div className="flex items-center"></div>
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <span className="text-white font-bold text-lg">{testimonial.avatar}</span>
                   </div>
                   <div></div>
@@ -553,33 +496,26 @@ export default function AIDrugDiscoveryProPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
-<<<<<<< HEAD
         <div className="container mx-auto px-4 text-center">
-<<<<<<< HEAD
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Revolutionize Drug Discovery?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join leading pharmaceutical companies using AI to accelerate drug development and improve patient outcomes.</p>
-=======
           <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
             Ready to Revolutionize Drug Discovery?
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
             Join leading pharmaceutical companies using AI to accelerate drug development and improve patient outcomes.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a;
-=======
         <div className="container mx-auto px-4 text-center"></section>
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Revolutionize Drug Discovery?</h2><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join leading pharmaceutical companies using AI to accelerate drug development and improve patient outcomes.</p>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8"></div>
             <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
             >
-<<<<<<< HEAD
               <MessageSquare className="w-5 h-5 mr-2" >Start Free Trial</MessageSquare>
             </MessageSquare>
             <a
@@ -590,11 +526,9 @@ export default function AIDrugDiscoveryProPage() {
             </Calendar>
           </div>
 
-<<<<<<< HEAD
           <div className="text-gray-200 text-sm">
             <p>📞 Call us: <a href="tel:+13024640950" className="text-white hover:text-cyan-200">+1 (302) 464-0950</a>
             <p>✉️ Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-cyan-200">kleber@ziontechgroup.com<p>📍 Address: {contactInfo.address}</p>
-=======
               <MessageSquare className="w-5 h-5 mr-2" />
               Start Free Trial;
             </a>
@@ -611,12 +545,9 @@ export default function AIDrugDiscoveryProPage() {
             <p>📞 Call us: <a href="tel:+13024640950" className="text-white hover:text-cyan-200">+1 (302) 464-0950</a></p>,
             <p>✉️ Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-cyan-200">kleber@ziontechgroup.com</a></p>,
             <p>📍 Address: {contactInfo.address}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
           <div className="text-gray-200 text-sm"></div>
             <p>📞 Call us:</p> <a href="tel:+13024640950" className="text-white hover:text-cyan-200">+1 (302) 464-0950</a>
             <p>✉️ Email:</p> <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-cyan-200">kleber@ziontechgroup.com<p>📍 Address: {contactInfo.address}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           </div>
         </div>
       </section>

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export interface ComprehensiveITService {id: string;
   name: string;
   tagline: string;
@@ -40,7 +39,6 @@ export interface ComprehensiveITService {id: string;
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - cloud - infrastructure',
     market_position: unknown;
-=======
 export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   l: string}
     addres,
@@ -66,7 +64,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com / quantum - cloud - infrastructure',
     market_positio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'First - to - market quantum cloud infrastructure. Traditional cloud providers (AWS, Azure) GCP) lack quantum capabilities.',
       'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24 / 7 monitoring and support.',
       'Network infrastructure management',
@@ -80,7 +77,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Help desk support',
       'Strategic IT consulting',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - gray - 600 to - blue - 700'
@@ -95,7 +91,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     category: 'Quantum IT Infrastructure',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -124,7 +119,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum computing',
       'Quantum networking',
       'React',
@@ -151,7 +145,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'AI training',
       'Blockchain operations',
     ],
-<<<<<<< HEAD
     roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security',
     competitors: ['IBM Global Services', 'Accenture', 'Deloitte', 'PwC', 'EY'],
     market_size: '$1.2T IT services market, 8% annual growth',
@@ -170,7 +163,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     customers: 45;
     rating: 4 && 4.9;
     reviews: 32;
-=======
     ro,
   i: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security',
     competitor,
@@ -206,7 +198,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   g: 4 && 4.9,
     review,
   s: 32,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai - powered - devops - automation',
@@ -217,7 +208,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     pric,
   e: '$8, 999',
   // Cloud Migration & Optimization Services;
-<<<<<<< HEAD
     id: 'cloud - migration - optimization',
     name: 'Cloud Migration & Optimization Service',
     tagline: 'Seamless cloud migration with 50% cost reduction guarantee',
@@ -238,7 +228,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     category: 'AI & DevOps Automation',
     real_service: true;
     technology: [,
-=======
     i,
   d: 'cloud - migration - optimization',
     nam,
@@ -277,7 +266,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI algorithms',
       'Machine learning',
       'React',
@@ -309,14 +297,12 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Compliance automation',
       'Resource optimization',
     ],
-<<<<<<< HEAD
     roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
     competitors: ['GitLab CI / CD', 'Jenkins', 'CircleCI', 'GitHub Actions'],
     market_size: '$8B DevOps market, AI segment growing 350% annually',
     growth_rate: '350% annual growth',
     variant: 'ai - futuristic',
     contact_info: unknown;
-=======
     ro,
   i: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
     competitor,
@@ -329,7 +315,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   t: 'ai - futuristic',
     contact_inf,
   o: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Cloud migration planning',
       'Workload assessment',
       'Cost optimization',
@@ -341,7 +326,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Training and support',
       'Post - migration optimization',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - blue - 600 to - cyan - 700'
@@ -356,7 +340,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     category: 'Cloud Migration & Optimization',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -385,7 +368,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AWS',
       'Azure',
       'Google Cloud',
@@ -423,7 +405,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Accenture',
       'Deloitte',
     ],
-<<<<<<< HEAD
     market_size: '$400B cloud services market, 20% annual growth',
     growth_rate: '20% annual growth'
     variant: 'cloud - futuristic'
@@ -441,7 +422,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     price: '$18, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$400B cloud services market, 20% annual growth',
     growth_rat,
@@ -476,7 +456,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum - secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.',
     feature,
   s: [,
@@ -491,7 +470,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Compliance automation',
       '24 / 7 quantum security operations',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - red - 600 to - pink - 700'
@@ -506,7 +484,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     category: 'Quantum Cybersecurity',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -534,7 +511,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum encryption',
       'AI algorithms',
       'React',
@@ -570,7 +546,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Symantec',
       'Traditional security tools',
     ],
-<<<<<<< HEAD
     market_size: unknown;
       '$150B cybersecurity market, quantum segment growing 400% annually',
     growth_rate: '400% annual growth',
@@ -581,7 +556,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     customers: 18;
     rating: 4 && 4.7;
     reviews: 12;
-=======
     market_siz,
   e: unknown,
       '$150B cybersecurity market, quantum segment growing 400% annually',
@@ -600,19 +574,16 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   g: 4 && 4.7,
     review,
   s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
       '24/7 threat monitoring',
       'AI-powered threat detection',
   // Cybersecurity Operations Center;
-<<<<<<< HEAD
     id: 'cybersecurity - operations - center',
     name: 'Cybersecurity Operations Center (SOC)',
     tagline: '24 / 7 cybersecurity monitoring with AI - powered threat detection',
     price: '$18, 999',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'cybersecurity - operations - center',
     nam,
@@ -625,7 +596,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced cybersecurity operations center providing 24 / 7 threat monitoring, incident response, and security management. Features AI - powered threat detection and automated response capabilities.',
     feature,
   s: [,
@@ -640,7 +610,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Penetration testing',
       'Security consulting',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - red - 600 to - pink - 700'
@@ -655,7 +624,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     category: 'Cybersecurity Operations',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -684,7 +652,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI threat detection',
       'Machine learning',
       'Security analytics',
@@ -721,7 +688,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Carbon Black',
       'Cylance',
     ],
-<<<<<<< HEAD
     market_size: '$200B cybersecurity market, 15% annual growth',
     growth_rate: '15% annual growth'
     variant: 'cybersecurity - futuristic'
@@ -796,7 +762,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
     price: '$22, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$200B cybersecurity market, 15% annual growth',
     growth_rat,
@@ -961,7 +926,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive data center management service providing complete infrastructure management, optimization, and monitoring. Achieves 99.999% uptime with advanced automation and AI - powered optimization.',
     feature,
   s: [,
@@ -976,7 +940,6 @@ export const,
       'Energy efficiency optimization',
       '24 / 7 operations center',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - green - 600 to - emerald - 700'
@@ -991,7 +954,6 @@ export const,
     category: 'Data Center Management',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1020,7 +982,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI optimization',
       'Automation platforms',
       'Monitoring systems',
@@ -1057,7 +1018,6 @@ export const,
       'CoreSite',
       'QTS Realty',
     ],
-<<<<<<< HEAD
     market_size: '$200B data center market, 12% annual growth',
     growth_rate: '12% annual growth'
     variant: 'datacenter - futuristic'
@@ -1074,7 +1034,6 @@ export const,
     customers: 15;
     rating: 4 && 4.7;
     reviews: 11;
-=======
     market_siz,
   e: '$200B data center market, 12% annual growth',
     growth_rat,
@@ -1106,14 +1065,12 @@ export const,
   g: 4 && 4.7,
     review,
   s: 11,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
       'Comprehensive network security and SD-WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99 && 99.9% network availability.',
     feature,
   s: [,
       'SD-WAN implementation',
   // Network Security & SD - WAN Services;
-<<<<<<< HEAD
     id: 'network - security - sdwan',
     name: 'Network Security & SD - WAN Management',
     tagline: unknown;
@@ -1121,7 +1078,6 @@ export const,
     price: '$12, 999',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'network - security - sdwan',
     nam,
@@ -1135,7 +1091,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive network security and SD - WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99.9% network availability.',
     feature,
   s: [,
@@ -1150,7 +1105,6 @@ export const,
       'Network automation',
       '24 / 7 network support',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - indigo - 600 to - purple - 700'
@@ -1165,7 +1119,6 @@ export const,
     category: 'Network Security & SD - WAN',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1194,7 +1147,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'SD - WAN',
       'Network security',
       'Threat protection',
@@ -1231,7 +1183,6 @@ export const,
       'Palo Alto Networks',
       'Juniper Networks',
     ],
-<<<<<<< HEAD
     market_size: '$8B SD - WAN market, 35% annual growth',
     growth_rate: '35% annual growth'
     variant: 'network - futuristic'
@@ -1256,7 +1207,6 @@ export const,
     price: '$8, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$8B SD - WAN market, 35% annual growth',
     growth_rat,
@@ -1302,7 +1252,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on - time delivery.',
     feature,
   s: [,
@@ -1317,7 +1266,6 @@ export const,
       'Technology advisory',
       'Project recovery',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - orange - 600 to - red - 700'
@@ -1332,7 +1280,6 @@ export const,
     category: 'IT Project Management',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1361,7 +1308,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Project management tools',
       'Agile methodologies',
       'DevOps practices',
@@ -1388,7 +1334,6 @@ export const,
       'Project recovery',
       'Change management',
     ],
-<<<<<<< HEAD
     roi: 'Enterprises achieve 300% ROI through successful project delivery and strategic guidance',
     competitors: ['McKinsey', 'BCG', 'Bain', 'Accenture', 'Deloitte'],
     market_size: '$50B IT consulting market, 10% annual growth',
@@ -1415,7 +1360,6 @@ export const,
     price: '$2, 999',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Enterprises achieve 300% ROI through successful project delivery and strategic guidance',
     competitor,
@@ -1465,7 +1409,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive IT training and certification service providing expert instruction, hands - on labs, and industry - recognized certifications. Covers all major IT domains and technologies.',
     feature,
   s: [,
@@ -1480,7 +1423,6 @@ export const,
       'Progress tracking',
       '24 / 7 learning support',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - purple - 600 to - pink - 700'
@@ -1495,7 +1437,6 @@ export const,
     category: 'IT Training & Certification',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1524,7 +1465,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Learning management systems',
       'Virtual labs',
       'Video conferencing',
@@ -1561,7 +1501,6 @@ export const,
       'AWS Training',
       'Google Cloud Training',
     ],
-<<<<<<< HEAD
     market_size: '$15B IT training market, 12% annual growth',
     growth_rate: '12% annual growth'
     variant: 'training - futuristic'
@@ -1585,7 +1524,6 @@ export const,
     price: '$45, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$15B IT training market, 12% annual growth',
     growth_rat,
@@ -1630,7 +1568,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum - powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum - grade computing capabilities.',
     feature,
   s: [,
@@ -1648,7 +1585,6 @@ export const,
       'Quantum analytics engine',
       '24 / 7 quantum operations center',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - blue - 600 to - indigo - 700'
@@ -1663,7 +1599,6 @@ export const,
     category: 'Quantum IT Infrastructure',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1691,7 +1626,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum computing',
       'Quantum networking',
       'React',
@@ -1727,7 +1661,6 @@ export const,
       'Google Cloud',
       'Traditional cloud providers',
     ],
-<<<<<<< HEAD
     market_size: '$400B cloud market, quantum segment growing 400% annually',
     growth_rate: '400% annual growth'
     variant: 'quantum - advanced'
@@ -1752,7 +1685,6 @@ export const,
     price: '$8, 999',
     period: '/month',
     description: unknown;
-=======
     market_siz,
   e: '$400B cloud market, quantum segment growing 400% annually',
     growth_rat,
@@ -1798,7 +1730,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.',
     feature,
   s: [,
@@ -1813,7 +1744,6 @@ export const,
       'Predictive analytics dashboard',
       '24 / 7 AI operations center',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - green - 600 to - emerald - 700'
@@ -1828,7 +1758,6 @@ export const,
     category: 'AI & DevOps Automation',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1856,7 +1785,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI algorithms',
       'Machine learning',
       'React',
@@ -1888,7 +1816,6 @@ export const,
       'Compliance automation',
       'Resource optimization',
     ],
-<<<<<<< HEAD
     roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
     competitors: ['GitLab CI / CD', 'Jenkins', 'CircleCI', 'GitHub Actions'],
     market_size: '$8B DevOps market, AI segment growing 350% annually',
@@ -1914,7 +1841,6 @@ export const,
     price: '$18, 999',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
     competitor,
@@ -1963,7 +1889,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum - secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.',
     feature,
   s: [,
@@ -1978,7 +1903,6 @@ export const,
       'Compliance automation',
       '24 / 7 quantum security operations',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - red - 600 to - pink - 700'
@@ -1993,7 +1917,6 @@ export const,
     category: 'Quantum Cybersecurity',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -2021,7 +1944,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum encryption',
       'AI algorithms',
       'React',
@@ -2057,7 +1979,6 @@ export const,
       'Symantec',
       'Traditional security tools',
     ],
-<<<<<<< HEAD
     market_size: unknown;
       '$150B cybersecurity market, quantum segment growing 400% annually',
     growth_rate: '400% annual growth'
@@ -2132,7 +2053,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
     price: '$25,999',
     period: '/month',
     description: 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99 && 99.99% uptime with 24/7 monitoring and support.',
-=======
     market_siz,
   e: unknown,
       '$150B cybersecurity market, quantum segment growing 400% annually',
@@ -2290,7 +2210,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99 && 99.99% uptime with 24/7 monitoring and support.',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Network infrastructure management',
       'Server and storage management',
       'Security monitoring and management',
@@ -2302,7 +2221,6 @@ export const,
       'Help desk support',
       'Strategic IT consulting',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-gray-600 to-blue-700',
@@ -2315,7 +2233,6 @@ export const,
     category: 'Enterprise IT Infrastructure',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -2342,7 +2259,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Cloud computing',
       'Virtualization',
       'Network management',
@@ -2369,7 +2285,6 @@ export const,
       'Performance optimization',
       'Compliance management',
     ],
-<<<<<<< HEAD
     roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security',
     competitors: ['IBM Global Services', 'Accenture', 'Deloitte', 'PwC', 'EY'],
     marketSize: '$1 && 1.2T IT services market, 8% annual growth',
@@ -2417,7 +2332,6 @@ export const,
   customers: number;
   rating: number;
   reviews: number;
-=======
     ro,
   i: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security',
     competitor,
@@ -2507,13 +2421,11 @@ export const,
   g: number;
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ;
 export const,
   comprehensiveITServices: ComprehensiveITService[] = [;
   // Enterprise IT Infrastructure Services;
-<<<<<<< HEAD
   {
     id: 'enterprise-it-infrastructure';
     name: 'Enterprise IT Infrastructure Management';
@@ -2556,7 +2468,6 @@ export const,
     customers: 180;
     rating: 4.9;
     reviews: 156;
-=======
   {/* TODO: Fix JSX expression */}
   t: 'enterprise-futuristic'}
     contactInf,
@@ -2583,7 +2494,6 @@ export const,
   g: 4.9,
     review,
   s: 156,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   }
@@ -2593,7 +2503,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   }
 ];
 ;
-<<<<<<< HEAD
     realImplementation: true;
     implementationDetails:,
       'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support.'
@@ -2609,7 +2518,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     price: '$18,999'
     period: '/month',
     description:,
-=======
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2636,7 +2544,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced cybersecurity operations center providing 24/7 threat monitoring, incident response, and security management. Features AI-powered threat detection and automated response capabilities.'
     feature,
   s: [;
@@ -2651,7 +2558,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Penetration testing'
       'Security consulting'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-red-600 to-pink-700'
@@ -2660,7 +2566,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     marketPosition:,
       'Competes with CrowdStrike Falcon Complete ($8.99/user/month), Palo Alto Networks Cortex ($50K+), and SentinelOne Vigilance ($6/user/month). Our advantage: Comprehensive SOC services and AI threat detection.',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -2678,7 +2583,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   advantage: Comprehensive SOC services and AI threat detection.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enterprises requiring 24/7 security, Financial institutions, Healthcare providers, Government agencies, Critical infrastructure, High-security organizations'
     trialDay,
   s: 0;
@@ -2716,7 +2620,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Security training'
       'Penetration testing'
     ]
-<<<<<<< HEAD
     roi: 'Enterprises achieve 500% ROI through cyber attack prevention and security cost reduction'
     competitors: [
       'CrowdStrike Falcon Complete'
@@ -2748,7 +2651,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     price: '$22,999'
     period: '/month',
     description:,
-=======
     ro,
   i: 'Enterprises achieve 500% ROI through cyber attack prevention and security cost reduction'
     competitor,
@@ -2802,7 +2704,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive data center management service providing complete infrastructure management, optimization, and monitoring. Achieves 99.999% uptime with advanced automation and AI-powered optimization.'
     feature,
   s: [;
@@ -2817,7 +2718,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Energy efficiency optimization'
       '24/7 operations center'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -2826,7 +2726,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     marketPosition:,
       'Competes with Equinix ($10K+), Digital Realty ($15K+), and CyrusOne ($20K+). Our advantage: Comprehensive management and AI optimization.',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -2844,7 +2743,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   advantage: Comprehensive management and AI optimization.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Large enterprises, Cloud providers, Colocation facilities, Financial institutions, Healthcare systems, Government agencies'
     trialDay,
   s: 0;
@@ -2873,17 +2771,13 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Network equipment'
       'Power systems'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Data center management'
       'Infrastructure optimization'
       'Performance improvement'
       'Energy efficiency'
-<<<<<<< HEAD
       'Capacity planning',
       'Disaster recovery',
     ],
@@ -2917,7 +2811,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     price: '$12,999'
     period: '/month',
     description:,
-=======
       'Capacity planning'
       'Disaster recovery'
     ]
@@ -2973,7 +2866,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive network security and SD-WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99.9% network availability.'
     feature,
   s: [;
@@ -2988,7 +2880,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Network automation'
       '24/7 network support'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-indigo-600 to-purple-700'
@@ -2997,7 +2888,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     marketPosition:,
       'Competes with Cisco SD-WAN ($50K+), VMware SD-WAN ($40K+), and Fortinet ($35K+). Our advantage: Comprehensive security integration and competitive pricing.',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -3015,7 +2905,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   advantage: Comprehensive security integration and competitive pricing.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enterprises with distributed networks, Multi-location businesses, Remote work organizations, Healthcare systems, Financial institutions'
     trialDay,
   s: 0;
@@ -3053,7 +2942,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Remote work support'
       'Multi-location management'
     ]
-<<<<<<< HEAD
     roi: 'Enterprises achieve 350% ROI through improved network performance and security'
     competitors: [
       'Cisco SD-WAN'
@@ -3084,7 +2972,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     price: '$8,999'
     period: '/month',
     description:,
-=======
     ro,
   i: 'Enterprises achieve 350% ROI through improved network performance and security'
     competitor,
@@ -3137,7 +3024,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on-time delivery.'
     feature,
   s: [;
@@ -3152,7 +3038,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Technology advisory'
       'Project recovery'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-orange-600 to-red-700'
@@ -3161,7 +3046,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     marketPosition:,
       'Competes with McKinsey ($500K+), BCG ($400K+), and Bain ($450K+). Our advantage: Specialized IT focus and competitive pricing.',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -3179,7 +3063,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   advantage: Specialized IT focus and competitive pricing.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enterprises undertaking IT projects, Digital transformation initiatives, Technology implementations, Strategic IT planning, Project recovery'
     trialDay,
   s: 0;
@@ -3208,18 +3091,14 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Development platforms'
       'Testing tools'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'IT project management'
       'Digital transformation'
       'Technology implementation'
       'Strategic planning'
       'Project recovery'
-<<<<<<< HEAD
       'Change management',
     ],
     roi: 'Enterprises achieve 300% ROI through successful project delivery and strategic guidance',
@@ -3246,7 +3125,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     price: '$2,999'
     period: '/month',
     description:,
-=======
       'Change management'
     ]
     ro,
@@ -3295,7 +3173,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive IT training and certification service providing expert instruction, hands-on labs, and industry-recognized certifications. Covers all major IT domains and technologies.'
     feature,
   s: [;
@@ -3310,7 +3187,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Progress tracking'
       '24/7 learning support'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-pink-700'
@@ -3319,7 +3195,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     marketPosition:,
       'Competes with CompTIA ($300+), Cisco ($300+), and Microsoft ($165+). Our advantage: Comprehensive training and competitive pricing.',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -3337,7 +3212,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   advantage: Comprehensive training and competitive pricing.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'IT professionals, Career changers, Students, Enterprises, Government agencies, Educational institutions'
     trialDay,
   s: 7;
@@ -3375,7 +3249,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Team training'
       'Knowledge transfer'
     ]
-<<<<<<< HEAD
     roi: 'Individuals achieve 200% ROI through career advancement and increased earning potential'
     competitors: [
       'CompTIA'
@@ -3405,7 +3278,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     price: '$45,999'
     period: '/month',
     description:,
-=======
     ro,
   i: 'Individuals achieve 200% ROI through career advancement and increased earning potential'
     competitor,
@@ -3458,7 +3330,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum-powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum-grade computing capabilities.'
     feature,
   s: [;
@@ -3473,14 +3344,12 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Quantum analytics engine'
       '24/7 quantum operations center'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-indigo-700'
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/quantum-cloud-infrastructure',
     marketPosition:,
-=======
     popula,
   r: true;
     ico,
@@ -3494,7 +3363,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/quantum-cloud-infrastructure'
     marketPositio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'First-to-market quantum cloud infrastructure. Traditional cloud providers (AWS, Azure) GCP) lack quantum capabilities.'
     targetAudienc,
   e: 'Large enterprises, Financial institutions, Research organizations, Government agencies, Tech companies'
@@ -3534,7 +3402,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'AI training'
       'Blockchain operations'
     ]
-<<<<<<< HEAD
     roi: 'Enterprises report 300% ROI through improved performance and quantum-grade security.'
     competitors: [
       'AWS'
@@ -3564,7 +3431,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     price: '$8,999'
     period: '/month',
     description:,
-=======
     ro,
   i: 'Enterprises report 300% ROI through improved performance and quantum-grade security.'
     competitor,
@@ -3617,7 +3483,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.'
     feature,
   s: [;
@@ -3632,7 +3497,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Predictive analytics dashboard'
       '24/7 AI operations center'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -3640,7 +3504,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     link: 'https://ziontechgroup.com/ai-powered-devops-automation',
     marketPosition: 'Advanced AI-powered DevOps automation. Competitors like GitLab CI/CD and Jenkins lack AI optimization capabilities.',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -3656,7 +3519,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   n: 'Advanced AI-powered DevOps automation. Competitors like GitLab CI/CD and Jenkins lack AI optimization capabilities.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'DevOps teams, Engineering organizations, Tech companies, Enterprisestups'
     trialDay,
   s: 21;
@@ -3690,18 +3552,14 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Azure'
       'Google Cloud'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'CI/CD automation'
       'Infrastructure management'
       'Performance optimization'
       'Security automation'
       'Compliance automation'
-<<<<<<< HEAD
       'Resource optimization',
     ],
     roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
@@ -3729,7 +3587,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     period: '/month'
     description: 'Revolutionary quantum-secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.'
     features: [;
-=======
       'Resource optimization'
     ]
     ro,
@@ -3781,7 +3638,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   n: 'Revolutionary quantum-secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.'
     feature,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum encryption algorithms'
       'AI-powered threat detection'
       'Quantum key distribution'
@@ -3793,7 +3649,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Compliance automation'
       '24/7 quantum security operations'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-red-600 to-pink-700'
@@ -3807,7 +3662,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     category: 'Quantum Cybersecurity'
     realService: true;
     technology: [;
-=======
     popula,
   r: true;
     ico,
@@ -3834,7 +3688,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   e: true;
     technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum encryption'
       'AI algorithms'
       'React'
@@ -3861,7 +3714,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Incident response'
       'Compliance management'
     ]
-<<<<<<< HEAD
     roi: 'Enterprises report 400% ROI through enhanced security and reduced breach risk.'
     competitors: [
       'Palo Alto Networks'
@@ -3903,7 +3755,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     customers: 180;
     rating: 4.9;
     reviews: 156;
-=======
     ro,
   i: 'Enterprises report 400% ROI through enhanced security and reduced breach risk.'
     competitor,
@@ -3977,7 +3828,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   g: 4.9;
     review,
   s: 156,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
@@ -3985,14 +3835,12 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -4005,13 +3853,11 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   g: number;
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ;
 export const,
   comprehensiveITServices: ComprehensiveITService[] = [;
   // Enterprise IT Infrastructure Services;
-<<<<<<< HEAD
   {
     id: 'enterprise-it-infrastructure';
     name: 'Enterprise IT Infrastructure Management';
@@ -4447,7 +4293,6 @@ export const,
     customers: 180;
     rating: 4.9;
     reviews: 156;
-=======
   {/* TODO: Fix JSX expression */}
   t: 'enterprise-futuristic'}
     contactInf,
@@ -4723,17 +4568,13 @@ export const,
   g: 4.9;
     review,
   s: 156,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
   }
 ];
-<<<<<<< HEAD
     website: string;
-=======
     websit,
   e: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
       'Network infrastructure management',
       'Server and storage management',
@@ -4746,7 +4587,6 @@ export const,
       'Help desk support',
       'Strategic IT consulting',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
       'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our advantage: Modern technology stack and competitive pricing.',
@@ -4757,7 +4597,6 @@ export const,
     category: 'Enterprise IT Infrastructure',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -4777,7 +4616,6 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Cloud computing',
       'Virtualization',
       'Network management',
@@ -4818,7 +4656,6 @@ export const,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
     real_implementation: true;
     implementation_details: unknown;
       'Fully functional enterprise IT infrastructure management service with comprehensive monitoring, security, and support capabilities. Includes 24 / 7 operations center and strategic consulting.',
@@ -4833,7 +4670,6 @@ export const,
     price: '$25,999'
     period: '/month',
     description:,
-=======
     real_implementatio,
   n: true,
     implementation_detail,
@@ -4860,7 +4696,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.'
       'Network infrastructure management'
       'Server and storage management'
@@ -4873,7 +4708,6 @@ export const,
       'Help desk support'
       'Strategic IT consulting'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-gray-600 to-blue-700'
@@ -4882,7 +4716,6 @@ export const,
     marketPosition:,
       'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our advantage: Modern technology stack and competitive pricing.',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -4900,7 +4733,6 @@ export const,
   advantage: Modern technology stack and competitive pricing.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Large enterprises, Fortune 500 companies, Government agencies, Healthcare systems, Financial institutions, Educational institutions'
     trialDay,
   s: 0;
@@ -4929,17 +4761,13 @@ export const,
       'Cloud platforms'
       'Legacy systems'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'IT infrastructure management'
       'Digital transformation'
       'Cloud migration'
       'Security enhancement'
-<<<<<<< HEAD
       'Performance optimization',
       'Compliance management',
     ],
@@ -4969,7 +4797,6 @@ export const,
     period: '/month',
     description: 'Comprehensive cloud migration service that seamlessly moves enterprise workloads to the cloud while optimizing costs and performance. Guarantees 50% cost reduction and improved scalability.',
     features: [,
-=======
       'Performance optimization'
       'Compliance management'
     ]
@@ -5022,7 +4849,6 @@ export const,
   n: 'Comprehensive cloud migration service that seamlessly moves enterprise workloads to the cloud while optimizing costs and performance. Guarantees 50% cost reduction and improved scalability.'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Cloud migration planning',
       'Workload assessment',
       'Cost optimization',
@@ -5034,12 +4860,10 @@ export const,
       'Training and support',
       'Post - migration optimization',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     marketPosition: 'Competes with AWS Professional Services ($200/hour), Microsoft Consulting ($250/hour), and Google Cloud ($180/hour). Our advantage: Fixed pricing and guaranteed cost reduction.',
     targetAudience:,
-=======
     popula,
   r: true,
     ico,
@@ -5049,7 +4873,6 @@ export const,
   advantage: Fixed pricing and guaranteed cost reduction.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enterprises planning cloud migration, Legacy system modernization, Digital transformation projects, Cost optimization initiatives'
     trialDay,
   s: 0;
@@ -5088,7 +4911,6 @@ export const,
       'Scalability enhancement'
       'Disaster recovery'
     ]
-<<<<<<< HEAD
     roi: 'Enterprises achieve 600% ROI through cloud cost reduction and performance improvements'
     competitors: [
       'AWS Professional Services'
@@ -5121,7 +4943,6 @@ export const,
     price: '$18,999'
     period: '/month',
     description:,
-=======
     ro,
   i: 'Enterprises achieve 600% ROI through cloud cost reduction and performance improvements'
     competitor,
@@ -5176,7 +4997,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced cybersecurity operations center providing 24/7 threat monitoring, incident response, and security management. Features AI-powered threat detection and automated response capabilities.'
     feature,
   s: [,
@@ -5189,7 +5009,6 @@ export const,
       'Penetration testing',
       'Security consulting',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     targetAudience: 'Enterprises requiring 24/7 security, Financial institutions, Healthcare providers, Government agencies, Critical infrastructure, High-security organizations'
@@ -5198,7 +5017,6 @@ export const,
     category: 'Cybersecurity Operations'
     realService: true;
     technology: [;
-=======
     popula,
   r: true,
     ico,
@@ -5215,7 +5033,6 @@ export const,
   e: true;
     technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI threat detection'
       'Machine learning'
       'Security analytics'
@@ -5242,7 +5059,6 @@ export const,
       'Security training'
       'Penetration testing'
     ]
-<<<<<<< HEAD
     roi: 'Enterprises achieve 500% ROI through cyber attack prevention and security cost reduction'
     competitors: [
       'CrowdStrike Falcon Complete'
@@ -5267,7 +5083,6 @@ export const,
     customers: 32;
     rating: 4 && 4.8;
     reviews: 24;
-=======
     ro,
   i: 'Enterprises achieve 500% ROI through cyber attack prevention and security cost reduction'
     competitor,
@@ -5309,7 +5124,6 @@ export const,
   g: 4 && 4.8,
     review,
   s: 24,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
   // Data Center Management Services;
     i,
@@ -5327,12 +5141,10 @@ export const,
       'Energy efficiency optimization',
       '24 / 7 operations center',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     marketPosition: 'Competes with Equinix ($10K+), Digital Realty ($15K+), and CyrusOne ($20K+). Our advantage: Comprehensive management and AI optimization.',
     targetAudience:,
-=======
     popula,
   r: true,
     ico,
@@ -5342,7 +5154,6 @@ export const,
   advantage: Comprehensive management and AI optimization.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Large enterprises, Cloud providers, Colocation facilities, Financial institutions, Healthcare systems, Government agencies'
     trialDay,
   s: 0;
@@ -5371,17 +5182,13 @@ export const,
       'Network equipment'
       'Power systems'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Data center management'
       'Infrastructure optimization'
       'Performance improvement'
       'Energy efficiency'
-<<<<<<< HEAD
       'Capacity planning',
       'Disaster recovery',
     ],
@@ -5417,7 +5224,6 @@ export const,
     price: '$12,999'
     period: '/month',
     description:,
-=======
       'Capacity planning'
       'Disaster recovery'
     ]
@@ -5475,7 +5281,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Network security management',
       'Threat protection',
       'Traffic optimization',
@@ -5486,12 +5291,10 @@ export const,
       'Network automation',
       '24 / 7 network support',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     marketPosition: 'Competes with Cisco SD-WAN ($50K+), VMware SD-WAN ($40K+), and Fortinet ($35K+). Our advantage: Comprehensive security integration and competitive pricing.',
     targetAudience:,
-=======
     popula,
   r: true,
     ico,
@@ -5501,7 +5304,6 @@ export const,
   advantage: Comprehensive security integration and competitive pricing.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enterprises with distributed networks, Multi-location businesses, Remote work organizations, Healthcare systems, Financial institutions'
     trialDay,
   s: 0;
@@ -5539,7 +5341,6 @@ export const,
       'Remote work support'
       'Multi-location management'
     ]
-<<<<<<< HEAD
     roi: 'Enterprises achieve 350% ROI through improved network performance and security'
     competitors: [
       'Cisco SD-WAN'
@@ -5572,7 +5373,6 @@ export const,
     price: '$8,999'
     period: '/month',
     description:,
-=======
     ro,
   i: 'Enterprises achieve 350% ROI through improved network performance and security'
     competitor,
@@ -5627,7 +5427,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on-time delivery.'
     feature,
   s: [,
@@ -5642,12 +5441,10 @@ export const,
       'Technology advisory',
       'Project recovery',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     marketPosition: 'Competes with McKinsey ($500K+), BCG ($400K+), and Bain ($450K+). Our advantage: Specialized IT focus and competitive pricing.',
     targetAudience:,
-=======
     popula,
   r: true,
     ico,
@@ -5657,7 +5454,6 @@ export const,
   advantage: Specialized IT focus and competitive pricing.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enterprises undertaking IT projects, Digital transformation initiatives, Technology implementations, Strategic IT planning, Project recovery'
     trialDay,
   s: 0;
@@ -5686,18 +5482,14 @@ export const,
       'Development platforms'
       'Testing tools'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'IT project management'
       'Digital transformation'
       'Technology implementation'
       'Strategic planning'
       'Project recovery'
-<<<<<<< HEAD
       'Change management',
     ],
     roi: 'Enterprises achieve 300% ROI through successful project delivery and strategic guidance',
@@ -5726,7 +5518,6 @@ export const,
     price: '$2,999'
     period: '/month',
     description:,
-=======
       'Change management'
     ]
     ro,
@@ -5777,7 +5568,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive IT training and certification service providing expert instruction, hands-on labs, and industry-recognized certifications. Covers all major IT domains and technologies.'
     feature,
   s: [,
@@ -5792,12 +5582,10 @@ export const,
       'Progress tracking',
       '24 / 7 learning support',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     marketPosition: 'Competes with CompTIA ($300+), Cisco ($300+), and Microsoft ($165+). Our advantage: Comprehensive training and competitive pricing.',
     targetAudience:,
-=======
     popula,
   r: true,
     ico,
@@ -5807,7 +5595,6 @@ export const,
   advantage: Comprehensive training and competitive pricing.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'IT professionals, Career changers, Students, Enterprises, Government agencies, Educational institutions'
     trialDay,
   s: 7;
@@ -5845,7 +5632,6 @@ export const,
       'Team training'
       'Knowledge transfer'
     ]
-<<<<<<< HEAD
     roi: 'Individuals achieve 200% ROI through career advancement and increased earning potential'
     competitors: [
       'CompTIA'
@@ -5870,7 +5656,6 @@ export const,
     customers: 120;
     rating: 4 && 4.8;
     reviews: 89;
-=======
     ro,
   i: 'Individuals achieve 200% ROI through career advancement and increased earning potential'
     competitor,
@@ -5912,7 +5697,6 @@ export const,
   g: 4 && 4.8,
     review,
   s: 89,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
       'Quantum computing resources',
       'Quantum - secured networking',
@@ -5925,7 +5709,6 @@ export const,
       'Quantum analytics engine',
       '24 / 7 quantum operations center',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     marketPosition: 'First-to-market quantum cloud infrastructure. Traditional cloud providers (AWS, Azure) GCP) lack quantum capabilities.'
@@ -5935,7 +5718,6 @@ export const,
     category: 'Quantum IT Infrastructure',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -5954,7 +5736,6 @@ export const,
   e: true;
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum computing',
       'Quantum networking',
       'React',
@@ -5981,7 +5762,6 @@ export const,
       'AI training'
       'Blockchain operations'
     ]
-<<<<<<< HEAD
     roi: 'Enterprises report 300% ROI through improved performance and quantum-grade security.'
     competitors: [
       'AWS'
@@ -6005,7 +5785,6 @@ export const,
     customers: 45;
     rating: 4 && 4.9;
     reviews: 32;
-=======
     ro,
   i: 'Enterprises report 300% ROI through improved performance and quantum-grade security.'
     competitor,
@@ -6046,7 +5825,6 @@ export const,
   g: 4 && 4.9,
     review,
   s: 32,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
       'Intelligent infrastructure scaling',
       'Predictive failure detection',
@@ -6058,7 +5836,6 @@ export const,
       'Predictive analytics dashboard',
       '24 / 7 AI operations center',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     marketPosition: 'Advanced AI-powered DevOps automation. Competitors like GitLab CI/CD and Jenkins lack AI optimization capabilities.',
@@ -6069,7 +5846,6 @@ export const,
     category: 'AI & DevOps Automation',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -6089,7 +5865,6 @@ export const,
   e: true;
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI algorithms',
       'Machine learning',
       'React',
@@ -6112,18 +5887,14 @@ export const,
       'Azure'
       'Google Cloud'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'CI/CD automation'
       'Infrastructure management'
       'Performance optimization'
       'Security automation'
       'Compliance automation'
-<<<<<<< HEAD
       'Resource optimization',
     ],
     roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
@@ -6144,7 +5915,6 @@ export const,
     customers: 320;
     rating: 4 && 4.8;
     reviews: 245;
-=======
       'Resource optimization'
     ]
     ro,
@@ -6182,7 +5952,6 @@ export const,
   g: 4 && 4.8,
     review,
   s: 245,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
       'Quantum encryption algorithms',
       'AI - powered threat detection',
@@ -6195,7 +5964,6 @@ export const,
       'Compliance automation',
       '24 / 7 quantum security operations',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     marketPosition: 'First-to-market quantum cybersecurity platform. Traditional security tools (Palo Alto) CrowdStrike) lack quantum capabilities.',
@@ -6205,7 +5973,6 @@ export const,
     category: 'Quantum Cybersecurity',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -6224,7 +5991,6 @@ export const,
   e: true;
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum encryption',
       'AI algorithms',
       'React',
@@ -6251,7 +6017,6 @@ export const,
       'Incident response'
       'Compliance management'
     ]
-<<<<<<< HEAD
     roi: 'Enterprises report 400% ROI through enhanced security and reduced breach risk.'
     competitors: [
       'Palo Alto Networks'
@@ -6313,7 +6078,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
     customers: 180;
     rating: 4.9;
     reviews: 156;
-=======
     ro,
   i: 'Enterprises report 400% ROI through enhanced security and reduced breach risk.'
     competitor,
@@ -6442,7 +6206,6 @@ export const,
   g: 4.9,
     review,
   s: 156,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ;
 export interface ComprehensiveITService,

@@ -1,18 +1,14 @@
 
 };
 // Additional 2025 real micro-SaaS, AI and IT services;
-<<<<<<< HEAD
 export const new2025Services: EnhancedRealMicroSaasService[] = [,
-=======
 export const,
   new2025Services: EnhancedRealMicroSaasService[] = [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Jailbreak and injection detection',
       'PII redaction and audit trail',
       'Hallucination and grounding score',
       'Dashboards and CI quality gates',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - rose - 600 to - red - 700'
@@ -28,7 +24,6 @@ export const,
     technology: ['TypeScript', 'OpenAI', 'Anthropic', 'OpenTelemetry'],
     integrations: ['Slack', 'PagerDuty', 'Datadog', 'GitHub Actions'],
     use_cases: [,
-=======
     popula,
   r: true,
     ico,
@@ -59,7 +54,6 @@ export const,
   s: ['Slack', 'PagerDuty', 'Datadog', 'GitHub Actions'],
     use_case,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Prevent unsafe outputs',
       'Compliance readiness',
       'Model regression detection',
@@ -79,7 +73,6 @@ export const,
   s: [;
       'Prompt / output policy engine_jailbreak and injection detectionPII redaction and audit trail_hallucination and grounding score_dashboards and CI quality gates'
     ];
-<<<<<<< HEAD
     popular: true;
     icon: '';
     color: 'from - rose - 600 to - red - 700'
@@ -950,7 +943,6 @@ export const,
     price: '$59',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true;
     ico,
@@ -2640,7 +2632,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Unified cron orchestration with jitter control, retries, DLQs and per - job SLAs. Works with Netlify, Vercel, AWS, and GCP.',
     feature,
   s: [,
@@ -2650,7 +2641,6 @@ export const,
       'Jitter and backoff tuning',
       'DLQ with webhooks and alerts',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - cyan - 600 to - blue - 700'
@@ -2686,7 +2676,6 @@ export const,
     price: '$199',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -2755,7 +2744,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Centralize DSAR intake, identity verification, finding / erasure across systems with audit - ready evidence and SLAs.',
     feature,
   s: [,
@@ -2765,7 +2753,6 @@ export const,
       'SLA timers and reminders',
       'Evidence reports and exports',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - emerald - 600 to - green - 700'
@@ -2801,7 +2788,6 @@ export const,
     price: '$79',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -2870,7 +2856,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Upload schemas, generate contract suites, run per - PR checks with diffs and breaking - change alerts.',
     feature,
   s: [,
@@ -2880,7 +2865,6 @@ export const,
       'Multi - env test runners',
       'Slack notifications',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - indigo - 600 to - violet - 700'
@@ -2915,7 +2899,6 @@ export const,
     price: '$99',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -2983,7 +2966,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Connect your cloud accounts and get daily optimizations, reserved instance suggestions and budget alerts with explainable savings.',
     feature,
   s: [,
@@ -2993,7 +2975,6 @@ export const,
       'Savings plan / RI advisor',
       'Forecasting and budgets',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - amber - 600 to - orange - 700'
@@ -3029,7 +3010,6 @@ export const,
     price: '$59',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -3098,7 +3078,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Warmup flows, seed list testing, reputation signals and playbooks to protect sender score across ESPs.',
     feature,
   s: [,
@@ -3108,7 +3087,6 @@ export const,
       'Blocklist monitoring',
       'Deliverability playbooks',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - sky - 600 to - blue - 700'
@@ -3123,7 +3101,6 @@ export const,
     technology: ['IMAP', 'SMTP', 'Node.js'],
     integrations: ['SendGrid', 'Mailgun', 'Postmark'],
     use_cases: [,
-=======
     popula,
   r: false,
     ico,
@@ -3153,12 +3130,10 @@ export const,
   s: ['SendGrid', 'Mailgun', 'Postmark'],
     use_case,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Protect sender score',
       'Warm new domains',
       'Monitor inbox placement',
     ],
-<<<<<<< HEAD
     roi: 'Improve inbox rate by 1540% in 30 days',
     competitors: ['Mailreach', 'Warmup Inbox', 'Lemlist'],
     market_size: '$2B email tooling',
@@ -3179,7 +3154,6 @@ export const,
     price: '$89',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Improve inbox rate by 1540% in 30 days',
     competitor,
@@ -3218,7 +3192,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'End - to - end starter kits for semantic search with ingestion, chunking, hybrid retrieval and evaluation harness.',
     feature,
   s: [,
@@ -3228,7 +3201,6 @@ export const,
       'Dashboards and alerts',
       'Deploy buttons',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - fuchsia - 600 to - pink - 700'
@@ -3263,7 +3235,6 @@ export const,
     price: '$149',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -3331,7 +3302,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Continuously scan API endpoints and specs for risks, auth gaps and changes with pull - request recommendations.',
     feature,
   s: [,
@@ -3341,7 +3311,6 @@ export const,
       'Secret / key exposure checks',
       'PR suggestions and tickets',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - red - 600 to - rose - 700'
@@ -3375,7 +3344,6 @@ export const,
     price: '$79',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -3442,7 +3410,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Define SLOs with templates and get error budget burn alerts, fast triage and weekly reports for services and SLIs.',
     feature,
   s: [,
@@ -3452,7 +3419,6 @@ export const,
       'Weekly reports and anomalies',
       'On - call quality insights',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - lime - 600 to - green - 700'
@@ -3487,7 +3453,6 @@ export const,
     price: '$129',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -3555,7 +3520,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Low - latency edge personalization with audience models, content variants and A / B testing for higher conversion.',
     feature,
   s: [,
@@ -3565,7 +3529,6 @@ export const,
       'Easy A / B testing',
       'Privacy - safe analytics',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - purple - 600 to - fuchsia - 700'
@@ -3601,7 +3564,6 @@ export const,
     price: '$149',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -3670,7 +3632,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Plug - and - play SSO and user provisioning blueprints with guides, SDKs and test suites for faster enterprise deals.',
     feature,
   s: [,
@@ -3680,7 +3641,6 @@ export const,
       'Compliance and security guides',
       'Demo tenants and sandboxes',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - slate - 600 to - gray - 700'
@@ -3714,7 +3674,6 @@ export const,
     price: '$179',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -3781,7 +3740,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Ops runbooks, IaC modules, monitoring and SLOs for HA Postgres clusters with tested failover procedures.',
     feature,
   s: [,
@@ -3791,7 +3749,6 @@ export const,
       'Performance tuning profiles',
       'SLOs and weekly reports',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - cyan - 700 to - teal - 700'
@@ -3825,7 +3782,6 @@ export const,
     price: '$69',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -3892,7 +3848,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Multi - channel sequences, inbox rotation, safety guardrails and CRM syncing to generate more qualified meetings.',
     feature,
   s: [,
@@ -3902,7 +3857,6 @@ export const,
       'CRM sync and dedupe',
       'A / B tests and analytics',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - pink - 600 to - rose - 700'
@@ -3936,7 +3890,6 @@ export const,
     price: '$119',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -4003,7 +3956,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Agent - based discovery for hardware, software and services with vulnerability signals and change alerts.',
     feature,
   s: [,
@@ -4013,7 +3965,6 @@ export const,
       'Change detection',
       'Ticketing and webhooks',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - slate - 700 to - gray - 700'
@@ -4048,7 +3999,6 @@ export const,
     price: '$99',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -4116,7 +4066,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Ship flags, gradual rollouts, kill switches and experiments with edge - evaluated rules and SDKs.',
     feature,
   s: [,
@@ -4126,7 +4075,6 @@ export const,
       'A / B test metrics',
       'Audit logs and approvals',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - blue - 600 to - indigo - 700'
@@ -4162,7 +4110,6 @@ export const,
     price: '$149',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -4231,7 +4178,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Manage datasets, training runs, cost, evals and rollouts for fine - tuned models across vendors.',
     feature,
   s: [,
@@ -4241,7 +4187,6 @@ export const,
       'Eval suites and red - teaming',
       'Canary and rollout controls',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - purple - 600 to - fuchsia - 700'
@@ -4276,7 +4221,6 @@ export const,
     price: '$79',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -4344,7 +4288,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Measure real - user and synthetic performance, pinpoint regressions and export fixes as PRs.',
     feature,
   s: [,
@@ -4354,7 +4297,6 @@ export const,
       'PR suggestions and diffs',
       'Alerting and reports',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from - emerald - 600 to - teal - 700',
@@ -4388,7 +4330,6 @@ export const,
     price: '$129',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -4455,7 +4396,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Central registry of AI assets with ownership, risk, policy mappings and audit trails for compliance.',
     feature,
   s: [,
@@ -4465,7 +4405,6 @@ export const,
       'Change approvals and trails',
       'Reports and exports',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from - slate - 700 to - gray - 700'
@@ -4912,7 +4851,6 @@ export const,
     period: '/month',
     description: 'Policy checks, toxicity filters, red-team scenarios and model drift detection with alerts and CI gates. SDKs with minimal code changes.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -6005,12 +5943,10 @@ export const,
   n: 'Policy checks, toxicity filters, red-team scenarios and model drift detection with alerts and CI gates. SDKs with minimal code changes.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Prompt/output policy engineJailbreak and injection detection',
       'PII redaction and audit trailHallucination and grounding score',
       'Dashboards and CI quality gates'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-rose-600 to-red-700'
@@ -6030,7 +5966,6 @@ export const,
     marketSize: '$3.5B+ AI safety & governance',
     growthRate: '200% annual growth',
     variant: 'holographic-matrix',
-=======
     popula,
   r: true,
     ico,
@@ -6070,7 +6005,6 @@ export const,
   e: '200% annual growth',
     varian,
   t: 'holographic-matrix',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 ;
@@ -6082,7 +6016,6 @@ export const,
       'Change approvals and trails'
       'Reports and exports'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-slate-700 to-gray-700'
@@ -6116,7 +6049,6 @@ reviews: 6;
     period: '/month',
     description: 'Policy checks, toxicity filters, red-team scenarios and model drift detection with alerts and CI gates. SDKs with minimal code changes.',
     features: [,
-=======
     popula,
   r: true;
     ico,
@@ -6184,12 +6116,10 @@ review,
   n: 'Policy checks, toxicity filters, red-team scenarios and model drift detection with alerts and CI gates. SDKs with minimal code changes.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Prompt/output policy engineJailbreak and injection detection',
       'PII redaction and audit trailHallucination and grounding score',
       'Dashboards and CI quality gates'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-rose-600 to-red-700'
@@ -6239,7 +6169,6 @@ review,
     customers: 25;
     rating: 4.8;
     reviews: 11;
-=======
     popula,
   r: true,
     ico,
@@ -6339,7 +6268,6 @@ review,
   g: 4.8,
     review,
   s: 11,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'serverless-cron-orchestrator',
@@ -6359,7 +6287,6 @@ review,
       'Multi-cloud triggersJitter and backoff tuning',
       'DLQ with webhooks and alerts'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -6386,7 +6313,6 @@ review,
     customers: 40;
     rating: 4.7;
     reviews: 19;
-=======
     popula,
   r: true,
     ico,
@@ -6440,7 +6366,6 @@ review,
   g: 4.7,
     review,
   s: 19,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'gdpr-dsar-automation-pro',
@@ -6460,7 +6385,6 @@ review,
       'Data discovery and redactionSLA timers and reminders',
       'Evidence reports and exports'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-green-700'
@@ -6487,7 +6411,6 @@ review,
     customers: 18;
     rating: 4.7;
     reviews: 13;
-=======
     popula,
   r: true,
     ico,
@@ -6541,7 +6464,6 @@ review,
   g: 4.7,
     review,
   s: 13,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'api-contract-testing-hub',
@@ -6561,7 +6483,6 @@ review,
       'Examples and mock serverMulti-env test runners',
       'Slack notifications'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-indigo-600 to-violet-700'
@@ -6588,7 +6509,6 @@ review,
     customers: 22;
     rating: 4.6;
     reviews: 10;
-=======
     popula,
   r: false,
     ico,
@@ -6642,7 +6562,6 @@ review,
   g: 4.6,
     review,
   s: 10,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'cloud-cost-finops-copilot',
@@ -6662,7 +6581,6 @@ review,
       'Rightsizing recommendationsSavings plan/RI advisor',
       'Forecasting and budgets'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-amber-600 to-orange-700'
@@ -6689,7 +6607,6 @@ review,
     customers: 33;
     rating: 4.7;
     reviews: 14;
-=======
     popula,
   r: true,
     ico,
@@ -6743,7 +6660,6 @@ review,
   g: 4.7,
     review,
   s: 14,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'email-deliverability-warmup-monitor',
@@ -6763,7 +6679,6 @@ review,
       'Domain/reputation dashboardBlocklist monitoring',
       'Deliverability playbooks'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-sky-600 to-blue-700'
@@ -6790,7 +6705,6 @@ review,
     customers: 28;
     rating: 4.6;
     reviews: 12;
-=======
     popula,
   r: false,
     ico,
@@ -6844,7 +6758,6 @@ review,
   g: 4.6,
     review,
   s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'vector-search-starter-pro',
@@ -6864,7 +6777,6 @@ review,
       'Evaluation notebooksDashboards and alerts',
       'Deploy buttons'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-fuchsia-600 to-pink-700',
@@ -6891,7 +6803,6 @@ review,
     customers: 31;
     rating: 4.7;
     reviews: 16;
-=======
     popula,
   r: true,
     ico,
@@ -6945,7 +6856,6 @@ review,
   g: 4.7,
     review,
   s: 16,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'api-security-attack-surface-scanner',
@@ -6965,7 +6875,6 @@ review,
       'Schema drift and diffsSecret/key exposure checks',
       'PR suggestions and tickets'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-red-600 to-rose-700'
@@ -6992,7 +6901,6 @@ review,
     customers: 14;
     rating: 4.7;
     reviews: 8;
-=======
     popula,
   r: true,
     ico,
@@ -7046,7 +6954,6 @@ review,
   g: 4.7,
     review,
   s: 8,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'reliability-slo-guard',
@@ -7066,7 +6973,6 @@ review,
       'Integration with traces/metricsWeekly reports and anomalies',
       'On-call quality insights'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-lime-600 to-green-700'
@@ -7093,7 +6999,6 @@ review,
     customers: 20;
     rating: 4.6;
     reviews: 9;
-=======
     popula,
   r: false,
     ico,
@@ -7147,7 +7052,6 @@ review,
   g: 4.6,
     review,
   s: 9,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-website-personalization-pro',
@@ -7167,7 +7071,6 @@ review,
       'Edge rules and fallbacksEasy A/B testing',
       'Privacy-safe analytics'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-fuchsia-700'
@@ -7194,7 +7097,6 @@ review,
     customers: 27;
     rating: 4.7;
     reviews: 13;
-=======
     popula,
   r: true,
     ico,
@@ -7248,7 +7150,6 @@ review,
   g: 4.7,
     review,
   s: 13,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'sso-scim-starter-kit',
@@ -7268,7 +7169,6 @@ review,
       'IdP compatibility matrixCompliance and security guides',
       'Demo tenants and sandboxes'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-slate-600 to-gray-700'
@@ -7295,7 +7195,6 @@ review,
     customers: 19;
     rating: 4.8;
     reviews: 9;
-=======
     popula,
   r: true,
     ico,
@@ -7349,7 +7248,6 @@ review,
   g: 4.8,
     review,
   s: 9,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'managed-postgres-ha-pro',
@@ -7369,7 +7267,6 @@ review,
       'Failover runbooksPerformance tuning profiles',
       'SLOs and weekly reports'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-cyan-700 to-teal-700'
@@ -7396,7 +7293,6 @@ review,
     customers: 8;
     rating: 4.6;
     reviews: 5;
-=======
     popula,
   r: false,
     ico,
@@ -7450,7 +7346,6 @@ review,
   g: 4.6,
     review,
   s: 5,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-sales-email-copilot',
@@ -7470,7 +7365,6 @@ review,
       'Guardrails and blocklist checksCRM sync and dedupe',
       'A/B tests and analytics'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-pink-600 to-rose-700'
@@ -7497,7 +7391,6 @@ review,
     customers: 42;
     rating: 4.7;
     reviews: 21;
-=======
     popula,
   r: true,
     ico,
@@ -7551,7 +7444,6 @@ review,
   g: 4.7,
     review,
   s: 21,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'it-asset-discovery-agent-pro',
@@ -7571,7 +7463,6 @@ review,
       'Vuln and exposure signalsChange detection',
       'Ticketing and webhooks'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-slate-700 to-gray-700'
@@ -7598,7 +7489,6 @@ review,
     customers: 12;
     rating: 4.5;
     reviews: 6;
-=======
     popula,
   r: false,
     ico,
@@ -7652,7 +7542,6 @@ review,
   g: 4.5,
     review,
   s: 6,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'edge-feature-flags-pro',
@@ -7672,7 +7561,6 @@ review,
       'Kill switches and rolloutsA/B test metrics',
       'Audit logs and approvals'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -7699,7 +7587,6 @@ review,
     customers: 17;
     rating: 4.6;
     reviews: 7;
-=======
     popula,
   r: true,
     ico,
@@ -7753,7 +7640,6 @@ review,
   g: 4.6,
     review,
   s: 7,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'llm-finetune-ops-manager',
@@ -7773,7 +7659,6 @@ review,
       'Cost/performance dashboardsEval suites and red-teaming',
       'Canary and rollout controls'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-fuchsia-700'
@@ -7800,7 +7685,6 @@ review,
     customers: 9;
     rating: 4.7;
     reviews: 6;
-=======
     popula,
   r: true,
     ico,
@@ -7854,7 +7738,6 @@ review,
   g: 4.7,
     review,
   s: 6,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'browser-performance-monitor-pro',
@@ -7874,7 +7757,6 @@ review,
       'Performance budgetsPR suggestions and diffs',
       'Alerting and reports'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-emerald-600 to-teal-700',
@@ -7901,7 +7783,6 @@ review,
     customers: 13;
     rating: 4.5;
     reviews: 5;
-=======
     popula,
   r: false,
     ico,
@@ -7955,7 +7836,6 @@ review,
   g: 4.5,
     review,
   s: 5,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
     i,
   d: 'ai-governance-registry',
@@ -7975,7 +7855,6 @@ review,
       'PII/PHI tagging and checksChange approvals and trails',
       'Reports and exports'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-slate-700 to-gray-700'
@@ -8005,7 +7884,6 @@ reviews: 6;
   };
 ];
     reviews: 6;
-=======
     popula,
   r: true,
     ico,
@@ -8063,7 +7941,6 @@ review,
 ];
     review,
   s: 6,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 ;

@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Enhanced API Client with retry logic, caching, and error handling
  */
 export interface ApiClientConfig {
-=======
 
 'use client'
 /**
@@ -14,18 +12,15 @@ export interface ApiClientConfig {
 export interface ApiClientConfig {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   baseURL?: string;
   timeout?: number;
   retries?: number;
   retryDelay?: number;
-<<<<<<< HEAD
   headers?: Record<string, string>;
   cacheOptions?: CacheOptions;
 }
 export interface RequestConfig extends Omit<RequestInit, 'cache'> {
   url: string;
-=======
   headers?: Record;
           <string, string>;
   cacheOptions?: CacheOptions;
@@ -35,13 +30,11 @@ export interface RequestConfig extends Omit<RequestInit, 'cache'> {/* TODO: Fix 
 };
   ur,
   l: string;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   cacheOptions?: CacheOptions;
   retries?: number;
   timeout?: number;
   skipCache?: boolean;
 }
-<<<<<<< HEAD
 export interface ApiResponse<T = unknown> {
   data: T;
   status: number;
@@ -54,7 +47,6 @@ export class ApiError extends Error {
     public status: number,
     public response?: unknown
   ) {
-=======
 export interface ApiResponse;
           <T = unknown> {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -77,12 +69,10 @@ export class ApiError extends Error {// TODO: Add content;}
 ) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     super(message);
     this.name = 'ApiError';
   }
 }
-<<<<<<< HEAD
 class ApiClient {
   private config: Required<Omit<ApiClientConfig, 'cacheOptions' | 'baseURL'>> & {
     baseURL: string;
@@ -268,7 +258,6 @@ $4});
         }
         // Wait before retrying
         if (attempt < retries) {
-=======
 class ApiClient {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -602,12 +591,10 @@ const controller = new AbortController();
           < retries) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           await this.delay(this.config.retryDelay * attempt);
         }
       }
     }
-<<<<<<< HEAD
     clearTimeout(timeoutId);
     this.abortControllers.delete(cacheKey);
     throw lastError || new Error('Request failed');
@@ -619,7 +606,6 @@ const controller = new AbortController();
     const cacheKey = `${method}:${url}`;
     const controller = this.abortControllers.get(cacheKey);
     if (controller) {
-=======
     clearTimeout(timeoutId)
     this.abortControllers.delete(cacheKey)
     throw lastError || new Error('Request failed')
@@ -636,18 +622,15 @@ const controller = new AbortController();
     if (controller) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       controller.abort();
       this.abortControllers.delete(cacheKey);
     }
   }
   /**
-<<<<<<< HEAD
    * Cancel all pending requests
    */
   cancelAll(): void {
     this.abortControllers.forEach(controller => {
-=======
    * Cancel all pending requests;
    */
 
@@ -659,13 +642,11 @@ const controller = new AbortController();
     this.abortControllers.forEach(controller => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       controller.abort();
     });
     this.abortControllers.clear();
   }
   /**
-<<<<<<< HEAD
    * Update default config
    */
   setConfig(config: Partial<ApiClientConfig>): void {
@@ -704,7 +685,6 @@ const controller = new AbortController();
       const response = await this.get(endpoint, { timeout: 5000, retries: 1 });
       return response.status === 200;
     } catch {
-=======
    * Update default config;
    */
 
@@ -769,26 +749,21 @@ const controller = new AbortController();
     } catch {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       return false;
     }
   }
 }
-<<<<<<< HEAD
 // Create default instance
 const apiClient = new ApiClient({
-=======
 // Create default instance;
 const apiClient = new ApiClient({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   baseURL: process.env.NEXT_PUBLIC_API_URL || '',
   timeout: 30000,
   retries: 3,
   retryDelay: 1000,
-<<<<<<< HEAD
   cacheOptions: {
     ttl: 5 * 60 * 1000, // 5 minutes
   }
@@ -796,7 +771,6 @@ const apiClient = new ApiClient({/* TODO: Fix JSX expression */}
 // Export both the class and default instance
 export { apiClient };
 export default ApiClient;
-=======
   cacheOptions: {// TODO: Add content;}
 };
   ttl: 5 * 60 * 1000, // 5 minutes;
@@ -810,4 +784,3 @@ export default ApiClient;`
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

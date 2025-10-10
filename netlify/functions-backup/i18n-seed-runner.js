@@ -4,7 +4,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   const githubToken = process.env.GITHUB_TOKEN || ''}
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
   const githubBranch = process.env.GIT_BRANCH || 'main'
-<<<<<<< HEAD
   function keyify(text) {
     return(text;)
         .toLowerCase()
@@ -29,7 +28,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
         { headers })
-=======
   function keyify(text) {/* TODO: Fix JSX expression */}
         .replace(/^_+|_+$/g} '')
         .slice(0,)
@@ -50,13 +48,11 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
         { headers },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       );
       if (getRes.ok) {/* TODO: Fix JSX expression */}
         sha = json.sha}
       }
     } catch {}
-<<<<<<< HEAD
     const body = {message,
       content: Buffer.from(content).toString('base64'),
       branch: githubBranch;
@@ -67,7 +63,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       {method: 'PUT', headers)
         body: JSON.stringify(body;),
       })
-=======
     const body = {/* TODO: Fix JSX expression */}
       sha}
     };`
@@ -76,14 +71,12 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       }`,
       {/* TODO: Fix JSX expression */}
       },)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     );
 //     const ok = putRes.ok;
 //     const status = putRes.status;
     let error;
     if (!ok) {/* TODO: Fix JSX expression */}
         error = await putRes.text()}
-<<<<<<< HEAD
       } catch (e) {error = String(e;
       }
       }
@@ -102,7 +95,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         return {statusCode: 200),
         body: JSON.stringify({ ok: false),
         error: `Fetch ${res.status}` });
-=======
       } catch (e) {/* TODO: Fix JSX expression */}
       }
       }
@@ -117,7 +109,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     if (!res.ok,
         return {/* TODO: Fix JSX expression */})`
   r: `Fetch ${res.status}` });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
 //     const html = await res.text();
     // naive extraction of visible strings inside common tags;
@@ -127,35 +118,28 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     while ((m = tagRegex.exec(html)) !== null) {/* TODO: Fix JSX expression */}
         .replace(/\s+/g} ' ')
         .trim();
-<<<<<<< HEAD
       if(text && text.length >= 3 && text.length <= 140)
         raw.push(text);
     }
 //     const unique = Array.from(new Set(raw)).slice(0)
-=======
       if (text && text.length >= 3 && text.length <= 140,)
         raw.push(text);
     }
 //     const unique = Array.from(new Set(raw)).slice(0,)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         200);
     const _entries = {};
     for (const t of unique) {/* TODO: Fix JSX expression */}
       if (!entries[k]) entries[k] = t}
     }
-<<<<<<< HEAD
     const content = JSON.stringify({locale: en),
         generatedAt: new Date().toISOString()} entries },
-=======
     const content = JSON.stringify({/* TODO: Fix JSX expression */})
   t: new Date().toISOString()} entries },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       null,
       2,
     );
     const path = 'data/i18n-seed.json'`
 //     const msg = `chore(i18n): update i18n seed from homepage (${new Date().toISOString()})`;
-<<<<<<< HEAD
 //     const resCommit = await commitFile(path, content)
         msg);
     return {statusCode: 200;
@@ -169,7 +153,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       statusCode: 500;
       body: JSON.stringify({ ok: false),
         error: String(e;),
-=======
 //     const resCommit = await commitFile(path, content,)
         msg);
     return {/* TODO: Fix JSX expression */}
@@ -177,12 +160,10 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       });
     };
   } catch (e) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
-<<<<<<< HEAD
 exports.config = { schedule: '*/20 * * * *' }; exports.handler = async function () {' const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/) '');' const githubToken = process.env.GITHUB_TOKEN || ''}' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const githubBranch = process.env.GIT_BRANCH || 'main' function keyify(text) {' return text.toLowerCase().replace(/[^a-z0-9]+/g) '_').replace(/^_+|_+$/g) '').slice(0)
         60) || 'text' } async function commitFile(path, content)
         message) {' if(!githubToken)
@@ -212,7 +193,6 @@ exports.config = { schedule: '*/20 * * * *' }; exports.handler = async function 
         body: JSON.stringify({ok: false),
         error: String(e;),
       }) }; } };'
-=======
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/20 * * * *' }; exports.handler = async function () {' const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/) '');' const githubToken = process.env.GITHUB_TOKEN || ''}' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const githubBranch = process.env.GIT_BRANCH || 'main' function keyify(text) {/* TODO: Fix JSX expression */}
         60) || 'text' } async function commitFile(path, content,)
@@ -238,4 +218,3 @@ exports.config = {/* TODO: Fix JSX expression */}
         msg); return {/* TODO: Fix JSX expression */}
       }) }; } catch (e) {/* TODO: Fix JSX expression */}
       }) }; } };'`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

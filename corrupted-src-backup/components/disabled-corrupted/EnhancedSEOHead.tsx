@@ -1,7 +1,6 @@
 import React from 'react';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-<<<<<<< HEAD
 interface SEOHeadProp, s {
   title?: string;
   description?: string;
@@ -53,7 +52,6 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({
     numberOfEmploye, e, s: '50, 0+',
     industry: 'Artificial, Intelligen, c, e',
     servic, e, s: [,
-=======
 interface SEOHeadProp, s {/* TODO: Fix JSX expression */}
  }
 
@@ -67,7 +65,6 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
     industr,
   y: 'Artificial, Intelligen, c, e',
     servic, e, s: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI, Workflow, Automatio, n',
       'Enterprise, AI, Solutions',
       'AI, Data, Analytics',
@@ -75,7 +72,6 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       'Quantum, Computin, g',
       'AI, Consultin, g',
     ],
-<<<<<<< HEAD
   }; return(<Helm, e, t>
       <title>{title}</title>
       <meta, nam, e = 'description' conte, n, t={description} />
@@ -112,7 +108,6 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       <meta, httpEqui, v='x-d, n, s-prefet, c, h-contr, o, l' conte, n, t='on' />)
       {/* Structured, Dat, a */})
       <script, typ, e='applicati, o, n/ld+js, o, n'>)
-=======
   }; return (<Helm, e, t></Helm>
       <title>{title}</title>
       <meta, nam, e = 'description' conte, n, t={description} /></meta>
@@ -156,7 +151,6 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       <meta, httpEqui, v='x-d, n, s-prefet, c, h-contr, o, l' conte, n, t='on' /></meta>
       {/* Structured, Dat, a */}
       <script, typ, e='applicati, o, n/ld+js, o, n'></script>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         {JS, O, N.stringi, f, y(structuredD, a, t, a)}
       </scri, p, t>
     </Helm, e, t>

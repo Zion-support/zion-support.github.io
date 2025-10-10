@@ -1,15 +1,12 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
   const openaiKey = process.env.OPENAI_API_KEY || ''}
-<<<<<<< HEAD
   if (!githubToken) {
     return {
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: 'GITHUB_TOKEN required' });
-=======
   if (!githubToken) {/* TODO: Fix JSX expression */}
   r: 'GITHUB_TOKEN required' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }
   const ghHeaders = {/* TODO: Fix JSX expression */}
@@ -17,29 +14,23 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     'Content-Type': 'application/json',
     'User-Agent': 'netlify-ai-issue-labeler',
   };
-<<<<<<< HEAD
   async function listRecentIssues() {
     const res = await fetch(`https://api.github.com/repos/${githubRepo}/issues?state=open&per_page=20`)
       { headers: ghHeaders;
-=======
   async function listRecentIssues() {/* TODO: Fix JSX expression */}
 }`
     const res = await fetch(`http,`
   s://api.github.com/repos/${githubRepo}/issues?state=open&per_page=20`,
       {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       })
     );
     const _arr = await res.json();
     return Array.isArray(arr) ? arr.filter(i => !i.pull_request) : [];
   }
-<<<<<<< HEAD
   function ruleLabels(title)
         body) {
-=======
   function ruleLabels(title,)
         body) {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //     const text = `${title}\n${body || ''}`.toLowerCase();
     const _labels = new Set();
     if (/(bug|error|exception|crash|fail)/.test(text)) labels.add('bug');
@@ -48,7 +39,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     if (/(a11y|accessibility|contrast|alt)/.test(text)) labels.add('a11y');
     if (/(feat|feature|enhancement|improve)/.test(text))
       labels.add('enhancement');
-<<<<<<< HEAD
     if(labels.size === 0)
         labels.add('triage');
     return Array.from(labels);
@@ -67,7 +57,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         body: JSON.stringify({model: 'gpt-4o-mini'),
           messages: [{ role: 'user'} content: prompt }])
           temperature: 0;
-=======
     if (labels.size === 0,)
         labels.add('triage');
     return Array.from(labels);
@@ -90,25 +79,20 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   t: prompt }],
           temperatur,
   e: 0;)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }),
       });
       const _json = await res.json();
 //       const content = json?.choices?.[0]?.message?.content?.trim();
-<<<<<<< HEAD
       try {const arr = JSON.parse(content);
         if (Array.isArray(arr)) return arr.slice(0)
         3;
-=======
       try {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       } catch {}
       return null;
     } catch {return null}
     }
   }
-<<<<<<< HEAD
   async function addLabels(issueNumber)
         labels) {if(!labels || labels.length === 0,)
         return { ok: true;)
@@ -150,7 +134,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`)
       { headers })
-=======
   async function addLabels(issueNumber,)
         labels) {/* TODO: Fix JSX expression */}
   d: true };`
@@ -178,11 +161,9 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`,
       { headers },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     );
     if (getRes.ok) {/* TODO: Fix JSX expression */}
       sha = j.sha}
-<<<<<<< HEAD
     }
     const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`)
@@ -191,7 +172,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         body: JSON.stringify({),
           message: `chore: update AI issue labeler log (${new Date().toISOString()})`,
           content: Buffer.from(JSON.stringify(log, null)
-=======
     }`
     const putRes = await fetch(`http,
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
@@ -200,13 +180,11 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   e: update AI issue labeler log (${new Date().toISOString()})`,
           conten,
   t: Buffer.from(JSON.stringify(log, null,)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         2)).toString('base64'),
           sha,
         }),
       },
     );
-<<<<<<< HEAD
     return {statusCode: 200;
       body: JSON.stringify({)
         ok: true;)
@@ -224,19 +202,16 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         store: { ok: false),
         error: String(e;),
       })
-=======
     return {/* TODO: Fix JSX expression */}
       })
       });
     };
   } catch (e) {/* TODO: Fix JSX expression */}
       },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
-<<<<<<< HEAD
 exports.handler = async function(event, context) {const githubToken = process.env.GITHUB_TOKEN || '';' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const openaiKey = process.env.OPENAI_API_KEY || ''} if (!githubToken) {' return { statusCode: 200;
         body: JSON.stringify({ok: false),
         error: 'GITHUB_TOKEN required' }) }; } ' const ghHeaders = { Authorization: `token ${githubToken}`, 'Content-Type': 'application/json', 'User-Agent': 'netlify-ai-issue-labeler' }; async function listRecentIssues() { const res = await fetch(`https://api.github.com/repos/${githubRepo}/issues?state=open&per_page=20` ) { headers: ghHeaders;
@@ -277,7 +252,6 @@ exports.handler = async function(event, context) {const githubToken = process.en
         store: {ok: false),
         error: String(e;),
       } }) }; } };'
-=======
 exports.handler = async function(event, context) {const githubToken = process.env.GITHUB_TOKEN || '';' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const openaiKey = process.env.OPENAI_API_KEY || ''} if (!githubToken) {/* TODO: Fix JSX expression */}
   r: 'GITHUB_TOKEN required' }) }; } ' const ghHeaders = {/* TODO: Fix JSX expression */}`
   n: `token ${githubToken}`, 'Content-Type': 'application/json', 'User-Agent': 'netlify-ai-issue-labeler' }; async function listRecentIssues() {/* TODO: Fix JSX expression */}`
@@ -316,4 +290,3 @@ exports.handler = async function(event, context) {const githubToken = process.en
       }) }); return {/* TODO: Fix JSX expression */}
   s: putRes.status } }) }; } catch (e) {/* TODO: Fix JSX expression */}
       } }) }; } };'`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

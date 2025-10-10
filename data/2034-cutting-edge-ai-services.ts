@@ -1,10 +1,8 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   description: string;
   category: | 'AI Consciousness'
-=======
   i,
   d: string,
   nam,
@@ -13,18 +11,15 @@
   n: string;
   categor,
   y: | 'AI Consciousness'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     | 'AI Emotional Intelligence'
     | 'AI Creativity'
     | 'AI Psychology'
     | 'AI Business Management'
-<<<<<<< HEAD
     | 'AI Healthcare',
     | 'AI Neural Interfaces',
     | 'AI Quantum Computing',
   pricing: {starter: string} professional?: string} enterprise?: string }
   features: string[];
-=======
     | 'AI Healthcare'
     | 'AI Neural Interfaces'
     | 'AI Quantum Computing'
@@ -33,7 +28,6 @@
   r: string} professional?: string} enterprise?: string }
   feature,
   s: string[];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   integrations?: string[];
   useCases?: string[];
   lin,
@@ -42,12 +36,10 @@
   launchDate?: string;,
   realService?: boolean;
 }
-<<<<<<< HEAD
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
     id: 'ai - emotional - support - agent',
     name: 'AI Emotional Support Agent',
     description: unknown;
-=======
 export const,
   cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
     i,
@@ -56,7 +48,6 @@ export const,
   e: 'AI Emotional Support Agent',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'On - demand AI agent trained on CBT and mindfulness protocols with escalation pathways.',
     categor,
   y: 'AI Emotional Intelligence',
@@ -70,7 +61,6 @@ export const,
       'Crisis escalation',
       'HIPAA - friendly modes',
     ],
-<<<<<<< HEAD
     integrations: ['Twilio', 'Slack'],
     use_cases: ['Employee wellness', '24 / 7 support'],
     link: 'https://ziontechgroup.com / services / ai - emotional - support - agent',
@@ -79,7 +69,6 @@ export const,
     id: 'ai - product - spec - writer',
     name: 'AI Product Spec Writer',
     description: unknown;
-=======
     integration,
   s: ['Twilio', 'Slack'],
     use_case,
@@ -96,7 +85,6 @@ export const,
   e: 'AI Product Spec Writer',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.',
     categor,
   y: 'AI Business Management',
@@ -110,7 +98,6 @@ export const,
       'Acceptance criteria',
       'Analytics alignment',
     ],
-<<<<<<< HEAD
     integrations: ['Jira', 'Linear'],
     use_cases: ['Faster planning', 'Better alignment'],
     link: 'https://ziontechgroup.com / services / ai - product - spec - writer',
@@ -122,7 +109,6 @@ export const,
     id: 'ai - creative - studio',
     name: 'AI Creative Studio',
     description: unknown;
-=======
     integration,
   s: ['Jira', 'Linear'],
     use_case,
@@ -146,7 +132,6 @@ export const,
   e: 'AI Creative Studio',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Generate brand - consistent images and short - form videos with approvals and rights management.',
     categor,
   y: 'AI Creativity',
@@ -160,7 +145,6 @@ export const,
       'Review & approvals',
       'Rights management',
     ],
-<<<<<<< HEAD
     integrations: ['Canva', 'Figma'],
     use_cases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com / services / ai - creative - studio',
@@ -185,7 +169,6 @@ export const,
 	id: string, name: string;
 	description: string;
 	category: | 'AI Consciousness'
-=======
     integration,
   s: ['Canva', 'Figma'],
     use_case,
@@ -237,12 +220,10 @@ export const,
   n: string,
 	categor,
   y: | 'AI Consciousness'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 		| 'AI Emotional Intelligence'
 		| 'AI Creativity'
 		| 'AI Psychology'
 		| 'AI Business Management'
-<<<<<<< HEAD
 		| 'AI Healthcare',
 		| 'AI Neural Interfaces',
 		| 'AI Quantum Computing',
@@ -293,7 +274,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 name: string;
 description: string;
 category: unknown;
-=======
 		| 'AI Healthcare'
 		| 'AI Neural Interfaces'
 		| 'AI Quantum Computing'
@@ -388,7 +368,6 @@ descriptio,
   n: string;
 categor,
   y: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   | 'AI Consciousness'
   | 'AI Emotional Intelligence'
   | 'AI Creativity'
@@ -404,19 +383,15 @@ feature,
   s: string[];
 integrations?: string[];
 use_cases?: string[];
-<<<<<<< HEAD
 link: string;
 rating?: number;,
-=======
 lin,
   k: string;
 rating?: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 launch_date?: string,
 real_service?: boolean;
 }
 ;
-<<<<<<< HEAD
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   id: 'ai - emotional - support - agent',
   name: 'AI Emotional Support Agent',
@@ -450,7 +425,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   use_cases: ['Marketing velocity_cost savings'],
   link: 'https://ziontechgroup.com / services / ai - creative - studio',
   real_service: true;
-=======
 export const,
   cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   i,
@@ -521,13 +495,11 @@ export const,
   s://ziontechgroup.com / services / ai - creative - studio',
   real_servic,
   e: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
 	}
 ];
 ;
-<<<<<<< HEAD
 export type CuttingEdgeAIService = {;
 	id: string;
 	name: string,,
@@ -540,9 +512,7 @@ export type CuttingEdgeAIService = {;
 		| 'AI Business Management',
 		| 'AI Healthcare',
 		| 'AI Neural Interfaces',
-=======
 export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 		| 'AI Quantum Computing'}
 	pricin,
   g: {/* TODO: Fix JSX expression */}
@@ -557,7 +527,6 @@ export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
 	launchDate?: string;,
 	realService?: boolean;
 };
-<<<<<<< HEAD
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 	{,
 		id: 'ai-emotional-support-agent'}
@@ -609,7 +578,6 @@ export type CuttingEdgeAIService = {;
 		| 'AI Business Management',
 		| 'AI Healthcare',
 		| 'AI Neural Interfaces',
-=======
 export const,
   cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 	{/* TODO: Fix JSX expression */}
@@ -684,7 +652,6 @@ export const,
 ];
 ;
 export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 		| 'AI Quantum Computing'}
 	pricin,
   g: {/* TODO: Fix JSX expression */}
@@ -699,7 +666,6 @@ export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
 	launchDate?: string;,
 	realService?: boolean;
 };
-<<<<<<< HEAD
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 	{,
 		id: 'ai-emotional-support-agent'}
@@ -743,7 +709,6 @@ export type CuttingEdgeAIService =
   name: string;
   description: string;
   category: unknown;
-=======
 export const,
   cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 	{/* TODO: Fix JSX expression */}
@@ -825,7 +790,6 @@ export type CuttingEdgeAIService =
   n: string;
   categor,
   y: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'PRD templates',
       'Story generation',
       'Acceptance criteria',
@@ -842,20 +806,16 @@ export type CuttingEdgeAIService =
     integration,
   s: ['Canva', 'Figma'],
   },
-<<<<<<< HEAD
 ];	id: string;
 	category: | 'AI Consciousness'
-=======
 ];	i,
   d: string,
 	categor,
   y: | 'AI Consciousness'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 		| 'AI Emotional Intelligence'
 		| 'AI Creativity'
 		| 'AI Psychology'
 		| 'AI Business Management'
-<<<<<<< HEAD
 		| 'AI Healthcare',
 		| 'AI Neural Interfaces',
 		| 'AI Quantum Computing',
@@ -903,7 +863,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 name: string;
   description: string;
 category: unknown;
-=======
 		| 'AI Healthcare'
 		| 'AI Neural Interfaces'
 		| 'AI Quantum Computing'
@@ -989,7 +948,6 @@ nam,
   n: string;
 categor,
   y: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   | 'AI Consciousness'
   | 'AI Emotional Intelligence'
   | 'AI Creativity'
@@ -1005,19 +963,15 @@ feature,
   s: string[];
 integrations?: string[];
 use_cases?: string[];
-<<<<<<< HEAD
 link: string;
 rating?: number;,
-=======
 lin,
   k: string;
 rating?: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 launch_date?: string,
 real_service?: boolean;
 }
 ;
-<<<<<<< HEAD
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   id: 'ai - emotional - support - agent',
   name: 'AI Emotional Support Agent',
@@ -1051,7 +1005,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   use_cases: ['Marketing velocity_cost savings'],
   link: 'https://ziontechgroup.com / services / ai - creative - studio',
   real_service: true;
-=======
 export const,
   cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   i,
@@ -1122,7 +1075,6 @@ export const,
   s://ziontechgroup.com / services / ai - creative - studio',
   real_servic,
   e: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ];
 ;

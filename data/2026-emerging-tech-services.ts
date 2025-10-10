@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -59,7 +58,6 @@ export const emergingTechServices2026: EmergingTechService2026[] = [;
     price: '$349',
     period: '/month',
     description:,
-=======
   i,
   d: string;
   nam,
@@ -175,7 +173,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.'
     feature,
   s: [;
@@ -189,13 +186,11 @@ export const,
       'Advanced analytics and reporting'
       'API for custom integrations'
       'Mobile app for monitoring'
-<<<<<<< HEAD
     ],
     popular: false;
     marketPosition:,
       'Competes with Siemens Digital Twin ($5000/month), PTC ThingWorx ($3000/month), GE Digital Twin ($2000/month). Our advantage: AI automation reduces digital twin creation time by 60% and improves simulation accuracy.',
     targetAudience:,
-=======
     ]
     popula,
   r: false,
@@ -205,7 +200,6 @@ export const,
   advantage: AI automation reduces digital twin creation time by 60% and improves simulation accuracy.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Manufacturing companies, Infrastructure providers, Energy companies, Smart city planners'
     trialDay,
   s: 14;
@@ -249,7 +243,6 @@ export const,
       'GE Digital Twin'
       'Autodesk'
     ]
-<<<<<<< HEAD
     marketSize: '$86.1B digital twin market'
     growthRate: '42% annual growth'
     contactInfo: contact;
@@ -270,7 +263,6 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>;
     customers: 56;
     rating: 4.4;
     reviews: 29;
-=======
     marketSiz,
   e: '$86.1B digital twin market'
     growthRat,
@@ -305,7 +297,6 @@ export const getEmergingTechServices2026ByCategory = (categor,)
   g: 4.4,
     review,
   s: 29,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 ];
 export const getEmergingTechServices2026ByCategory = (categor,)
@@ -315,14 +306,12 @@ export const getEmergingTechServices2026ByCategory = (categor,)
 ],
   return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular),
 };
-<<<<<<< HEAD
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services;
     tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms'
     price: '$999',
     period: '/month',
     description:,
-=======
 export const,
   emergingTechServices2026: EmergingTechService2026[] = [,
   // Quantum Computing Services,
@@ -333,7 +322,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Access to multiple quantum processors (IBM, Google) Rigetti)',
       'AI - optimized quantum algorithm library',
       'Quantum error correction and noise mitigation',
@@ -345,7 +333,6 @@ export const,
       'Quantum performance analytics and benchmarking',
       'API for quantum application development',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     targetAudience: 'Research institutions, Pharmaceutical companies, Financial institutions, AI research labs, Universities'
@@ -354,7 +341,6 @@ export const,
     category: 'Quantum Computing & AI'
     realService: true;
     technology: [;
-=======
     popula,
   r: true,
     ico,
@@ -371,7 +357,6 @@ export const,
   e: true;
     technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Qiskit'
       'Cirq'
       'PennyLane'
@@ -395,23 +380,19 @@ export const,
       'Optimization problems'
       'Machine learning'
       'Cryptography research'
-<<<<<<< HEAD
     ],
     roi: 'Research institutions report 500% ROI through accelerated discovery and breakthrough innovations.',
     competitors: [,
-=======
     ]
     ro,
   i: 'Research institutions report 500% ROI through accelerated discovery and breakthrough innovations.'
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'IBM Quantum',
       'Amazon Braket',
       'Google Quantum AI',
       'Rigetti',
     ],
-<<<<<<< HEAD
     customers: 23;
     rating: 4 && 4.9;
     reviews: 18;
@@ -423,7 +404,6 @@ export const,
     price: '$299',
     period: '/month',
     description:,
-=======
     customer,
   s: 23,
     ratin,
@@ -443,7 +423,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced blockchain analytics platform that uses AI to analyze blockchain data, optimize DeFi strategies, and provide intelligent insights for cryptocurrency and blockchain applications.'
     feature,
   s: [,
@@ -457,7 +436,6 @@ export const,
       'Real - time alerts and notifications',
       'API for blockchain applications',
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     marketPosition: 'Competes with Chainalysis ($1000+/month), Elliptic ($500/month), CipherTrace ($300/month). Our advantage: AI automation provides deeper insights and reduces analysis time by 80%.',
@@ -468,7 +446,6 @@ export const,
     category: 'Blockchain & Web3',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -489,7 +466,6 @@ export const,
   e: true;
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Python',
       'TensorFlow',
       'React',
@@ -504,23 +480,19 @@ export const,
       'Polygon'
       'Binance Smart Chain'
       'Solana'
-<<<<<<< HEAD
       'Uniswap',
     ],
     useCases: [,
-=======
       'Uniswap'
     ]
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Blockchain analytics',
       'DeFi optimization',
       'Portfolio management',
       'Security auditing',
       'Market analysis',
     ],
-<<<<<<< HEAD
     roi: 'Users report 300% ROI through improved trading strategies and DeFi optimization.',
     competitors: ['Chainalysis', 'Elliptic', 'CipherTrace', 'Glassnode'],
     customers: 156;
@@ -534,7 +506,6 @@ export const,
     price: '$199',
     period: '/month',
     description:,
-=======
     ro,
   i: 'Users report 300% ROI through improved trading strategies and DeFi optimization.',
     competitor,
@@ -558,7 +529,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive IoT platform that uses AI to manage connected devices, analyze sensor data, and provide intelligent automation for smart homes, cities, and industrial applications.'
     feature,
   s: [,
@@ -571,7 +541,6 @@ export const,
       'Scalable device connectivity',
       'Advanced analytics and reporting',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: '',
     targetAudience: 'Smart home companies, Industrial IoT providers, City planners, Manufacturing companies'
@@ -580,7 +549,6 @@ export const,
     category: 'Internet of Things (IoT)',
     realService: true;
     technology: [,
-=======
     popula,
   r: false,
     ico,
@@ -597,7 +565,6 @@ export const,
   e: true;
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Python',
       'TensorFlow',
       'React',
@@ -612,23 +579,19 @@ export const,
       'Google Cloud IoT'
       'Home Assistant'
       'SmartThings'
-<<<<<<< HEAD
       'Hubitat',
     ],
     useCases: [,
-=======
       'Hubitat'
     ]
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Smart home automation',
       'Industrial monitoring',
       'Smart city management',
       'Predictive maintenance',
       'Energy optimization',
     ],
-<<<<<<< HEAD
     roi: 'Organizations report 250% ROI through improved device management and operational efficiency.',
     competitors: ['AWS IoT', 'Azure IoT Hub', 'Google Cloud IoT', 'ThingWorx'],
     customers: 89;
@@ -642,7 +605,6 @@ export const,
     price: '$399',
     period: '/month',
     description:,
-=======
     ro,
   i: 'Organizations report 250% ROI through improved device management and operational efficiency.',
     competitor,
@@ -666,7 +628,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced edge computing platform that uses AI to optimize edge node performance, manage 5G network resources, and provide intelligent edge application deployment.'
     feature,
   s: [,
@@ -680,12 +641,10 @@ export const,
       'Mobile edge computing support',
       'API for edge applications',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: '',
     marketPosition: 'Competes with AWS Outposts ($1000+/month), Azure Stack Edge ($1000+/month), Google Anthos ($1000+/month). Our advantage: AI optimization improves edge performance by 40% and reduces latency by 60%.',
     targetAudience:,
-=======
     popula,
   r: false,
     ico,
@@ -695,7 +654,6 @@ export const,
   advantage: AI optimization improves edge performance by 40% and reduces latency by 60%.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Telecommunications companies, Edge computing providers, 5G network operators, Enterprises'
     trialDay,
   s: 14;
@@ -730,23 +688,19 @@ export const,
       'Edge application deployment'
       'Performance monitoring'
       'Resource optimization'
-<<<<<<< HEAD
     ],
     roi: 'Organizations report 300% ROI through improved edge performance and reduced network costs.',
     competitors: [,
-=======
     ]
     ro,
   i: 'Organizations report 300% ROI through improved edge performance and reduced network costs.'
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AWS Outposts',
       'Azure Stack Edge',
       'Google Anthos',
       'VMware Edge',
     ],
-<<<<<<< HEAD
     customers: 45;
     rating: 4 && 4.5;
     reviews: 23;
@@ -758,7 +712,6 @@ export const,
     price: '$249',
     period: '/month',
     description:,
-=======
     customer,
   s: 45,
     ratin,
@@ -779,7 +732,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AR/VR development platform that uses AI to create immersive content, optimize user experiences, and provide intelligent development tools for augmented and virtual reality applications.'
     feature,
   s: [,
@@ -793,12 +745,10 @@ export const,
       'Multi - platform deployment support',
       'API for AR / VR applications',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: '',
     marketPosition: 'Competes with Unity Pro ($180/month), Unreal Engine (5% royalty), Vuforia ($500/month). Our advantage: AI automation reduces AR/VR development time by 70% and improves content quality.',
     targetAudience:,
-=======
     popula,
   r: false,
     ico,
@@ -808,7 +758,6 @@ export const,
   advantage: AI automation reduces AR/VR development time by 70% and improves content quality.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AR/VR developers, Gaming companies, Educational institutions, Training providers'
     trialDay,
   s: 14;
@@ -834,22 +783,18 @@ export const,
       'Microsoft HoloLens'
       'Magic Leap'
       'ARKit'
-<<<<<<< HEAD
       'ARCore',
     ],
     useCases: [,
-=======
       'ARCore'
     ]
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '3D content creation',
       'Immersive training',
       'Virtual events',
       'Gaming and entertainment',
     ],
-<<<<<<< HEAD
     roi: 'Developers report 400% ROI through faster development and improved content quality.',
     competitors: ['Unity', 'Unreal Engine', 'Vuforia', 'ARKit'],
     customers: 67;
@@ -863,7 +808,6 @@ export const,
     price: '$599',
     period: '/month',
     description:,
-=======
     ro,
   i: 'Developers report 400% ROI through faster development and improved content quality.',
     competitor,
@@ -887,7 +831,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced robotics platform that uses AI to control robotic systems, optimize automation workflows, and provide intelligent robotics solutions for manufacturing, logistics, and service industries.'
     feature,
   s: [,
@@ -901,7 +844,6 @@ export const,
       'Mobile app for robot control',
       'API for robotics applications',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: '',
     marketPosition: 'Competes with ABB RobotStudio ($2000/month), FANUC ROBOGUIDE ($1500/month), KUKA Sim ($1000/month). Our advantage: AI automation improves robotic efficiency by 50% and reduces programming time by 80%.',
@@ -913,7 +855,6 @@ export const,
     realService: true;
     technology: ['Python', 'TensorFlow', 'ROS', 'React', 'PostgreSQL', 'Redis']
     integrations: [;
-=======
     popula,
   r: false,
     ico,
@@ -936,7 +877,6 @@ export const,
   y: ['Python', 'TensorFlow', 'ROS', 'React', 'PostgreSQL', 'Redis']
     integration,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'ABB'
       'FANUC'
       'KUKA'
@@ -951,23 +891,19 @@ export const,
       'Service robotics'
       'Research and development'
       'Quality control'
-<<<<<<< HEAD
     ],
     roi: 'Organizations report 400% ROI through improved robotic efficiency and reduced operational costs.',
     competitors: [,
-=======
     ]
     ro,
   i: 'Organizations report 400% ROI through improved robotic efficiency and reduced operational costs.'
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'ABB RobotStudio',
       'FANUC ROBOGUIDE',
       'KUKA Sim',
       'Universal Robots',
     ],
-<<<<<<< HEAD
     customers: 34;
     rating: 4 && 4.3;
     reviews: 18;
@@ -979,7 +915,6 @@ export const,
     price: '$349',
     period: '/month',
     description:,
-=======
     customer,
   s: 34,
     ratin,
@@ -999,7 +934,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.'
     feature,
   s: [,
@@ -1012,12 +946,10 @@ export const,
       'API for custom integrations',
       'Mobile app for monitoring',
     ],
-<<<<<<< HEAD
     popular: false;
     icon: '',
     marketPosition: 'Competes with Siemens Digital Twin ($5000/month), PTC ThingWorx ($3000/month), GE Digital Twin ($2000/month). Our advantage: AI automation reduces digital twin creation time by 60% and improves simulation accuracy.',
     targetAudience:,
-=======
     popula,
   r: false,
     ico,
@@ -1027,7 +959,6 @@ export const,
   advantage: AI automation reduces digital twin creation time by 60% and improves simulation accuracy.'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Manufacturing companies, Infrastructure providers, Energy companies, Smart city planners'
     trialDay,
   s: 14;
@@ -1072,7 +1003,6 @@ export const,
       'GE Digital Twin'
       'Autodesk'
     ]
-<<<<<<< HEAD
     marketSize: '$86.1B digital twin market'
     growthRate: '42% annual growth'
     contactInfo: contact;
@@ -1093,7 +1023,6 @@ export const,
 ];
 export const getEmergingTechServices2026ByCategory = (category: string) =>;
   return emergingTechServices2026.filter(service => service.category === category),
-=======
     marketSiz,
   e: '$86.1B digital twin market'
     growthRat,
@@ -1128,7 +1057,6 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>;
 export const getEmergingTechServices2026ByCategory = (categor,)
   y: string) =>;
   return emergingTechServices2026.filter(service => service.category === category)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   ),
 }
 export const getPopularEmergingTechServices2026 = () =>
@@ -1138,26 +1066,22 @@ export const getPopularEmergingTechServices2026 = () => {/* TODO: Fix JSX expres
 }
   },
 ];
-<<<<<<< HEAD
 export const getEmergingTechServices2026ByPriceRange = (minPrice: number)
   maxPrice: number),
 ) =>,
   return emergingTechServices2026 && emergingTechServices2026.filter(service =>,)
-=======
 export const getEmergingTechServices2026ByPriceRange = (minPric,)
   e: number)
   maxPric,
   e: number)
 ) =>
   return emergingTechServices2026 && emergingTechServices2026.filter(service =>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const _price = parseInt(service && service.price.replace('$') ''));
     return price >= minPrice && price <= maxPrice;
   })
 };    return price >= minPrice && price <= maxPrice;
   })
 }
-<<<<<<< HEAD
     id: 'quantum-computing-as-a-service', name: 'Quantum Computing as a Service (QCaaS)',
     tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms', price: '$999',
     period: '/month',
@@ -1342,7 +1266,6 @@ export const getEmergingTechServices2026ByPriceRange = (minPric,)
 ];
 export const getEmergingTechServices2026ByCategory = (category: string) =>,
   return emergingTechServices2026.filter(service => service.category === category),
-=======
     i,
   d: 'quantum-computing-as-a-service', nam,
   e: 'Quantum Computing as a Service (QCaaS)',
@@ -1761,33 +1684,26 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>,
 export const getEmergingTechServices2026ByCategory = (categor,)
   y: string) =>,
   return emergingTechServices2026.filter(service => service.category === category)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const getPopularEmergingTechServices2026 = () =>
   return emergingTechServices2026.filter(service => service.popular)
 };
-<<<<<<< HEAD
 export const getEmergingTechServices2026ByPriceRange = (minPrice: number) maxPrice: number) =>,
   return emergingTechServices2026.filter(service =>,)
-=======
 export const getEmergingTechServices2026ByPriceRange = (minPric,)
   e: number) maxPric,
   e: number) =>,
   return emergingTechServices2026.filter(service =>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const _price = parseInt(service.price.replace('$') ''));
     return price >= minPrice && price <= maxPrice;
   })
 };
 ;
-<<<<<<< HEAD
 export const getEmergingTechServices2026ByCategory = (category: string) =>: unknown;
   return emergingTechServices2026.filter(,)
-=======
 export const getEmergingTechServices2026ByCategory = (categor,)
   y: string) =>: unknown;
   return emergingTechServices2026.filter ()
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     service => service.category === category);
 }
 ;
@@ -1795,17 +1711,14 @@ export const getPopularEmergingTechServices2026 = () =>: unknown;
   return emergingTechServices2026.filter (service => service.popular);
 }
 ;
-<<<<<<< HEAD
 export const getEmergingTechServices2026ByPriceRange = (min_price: number)
   max_price: number) =>: unknown;
   return emergingTechServices2026.filter(service =>),
-=======
 export const getEmergingTechServices2026ByPriceRange = (min_pric,)
   e: number)
   max_pric,
   e: number) =>: unknown,
   return emergingTechServices2026.filter (service =>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const _price = parse_int (service.price.replace ('$') ''));
     return price >= min_price && price <= max_price;
   });
@@ -1817,14 +1730,11 @@ export interface EmergingTechService2026 {/* TODO: Fix JSX expression */}
   })
 };
 ;
-<<<<<<< HEAD
 export const getEmergingTechServices2026ByCategory = (category: string) =>: unknown;
   return emergingTechServices2026.filter(,)
-=======
 export const getEmergingTechServices2026ByCategory = (categor,)
   y: string) =>: unknown;
   return emergingTechServices2026.filter ()
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     service => service.category === category);
 }
 export interface EmergingTechService2026 {/* TODO: Fix JSX expression */}
@@ -1832,14 +1742,12 @@ export interface EmergingTechService2026 {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -1852,24 +1760,20 @@ export interface EmergingTechService2026 {/* TODO: Fix JSX expression */}
   g: number;
   review,
   s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ;
 export const getPopularEmergingTechServices2026 = () =>: unknown;
   return emergingTechServices2026.filter (service => service.popular);
 }
 ;
-<<<<<<< HEAD
 export const getEmergingTechServices2026ByPriceRange = (min_price: number)
   max_price: number) =>: unknown;
   return emergingTechServices2026.filter(service =>),
-=======
 export const getEmergingTechServices2026ByPriceRange = (min_pric,)
   e: number)
   max_pric,
   e: number) =>: unknown,
   return emergingTechServices2026.filter (service =>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const _price = parse_int (service.price.replace ('$') ''));
     return price >= min_price && price <= max_price;
   });

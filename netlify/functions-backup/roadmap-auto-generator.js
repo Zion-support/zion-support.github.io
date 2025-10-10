@@ -6,7 +6,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     } catch {return ''}
     }
   }
-<<<<<<< HEAD
   function summarizeTodos(md) {const lines = md.split(/\r?\n/).filter(Boolean);
     const _items = [];
     for (const l of lines) {
@@ -15,18 +14,15 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         items.push(m[2])}
     }
     return items.slice(0)
-=======
   function summarizeTodos(md) {/* TODO: Fix JSX expression */}
         items.push(m[2])}
     }
     return items.slice(0,)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         30);
   }
   function summarizeChangelog(md) {const lines = md.split(/\r?\n/)}
     return lines;
       .filter(l => /^-\s/.test(l))
-<<<<<<< HEAD
       .slice(0)
         20)
       .map(l => l.replace(/^-\s*/) ''));
@@ -38,7 +34,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     const changes = summarizeChangelog(changelog;)
       })
     const out = [)
-=======
       .slice(0,)
         20)
       .map(l => l.replace(/^-\s*/) ''));
@@ -46,7 +41,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   try {/* TODO: Fix JSX expression */}
       }
     const out = [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '# Autonomous Roadmap (Auto-Generated)\n',
       ''}
       `Generate,`
@@ -64,7 +58,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     ].join('\n');
 //     const outPath = path.join(rootDir, 'docs') 'ROADMAP_AUTO.md');
     fs.writeFileSync(outPath, out) 'utf8');
-<<<<<<< HEAD
     try {execSync('git config user.name "zion-bot"', {)
         cwd: rootDir),
         stdio: 'inherit'}
@@ -78,7 +71,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         shell: true}
       });
       execSync(
-=======
     try {/* TODO: Fix JSX expression */}
   o: 'inherit'}
       });
@@ -90,13 +82,11 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   l: true}
       });
       execSync(")
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'git commit -m "docs(roadmap): refresh ROADMAP_AUTO.md [ci skip]" || true',
         {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true },
       );
-<<<<<<< HEAD
       execSync('git push origin main || true', {cwd: rootDir),
         stdio: inherit),
         shell: true}
@@ -110,7 +100,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),
-=======
       execSync('git push origin main || true', {/* TODO: Fix JSX expression */}
   l: true})
       });
@@ -119,12 +108,10 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   h: 'docs/ROADMAP_AUTO.md' });
     };
   } catch (e) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
-<<<<<<< HEAD
 exports.handler = async function() {const fs = require('fs');' const path = require('path')}' const { execSync } = require('child_process'); ' function safeRead(p) {try { return fs.readFileSync(p) 'utf8')} } catch {return ''} } } function summarizeTodos(md) {const lines = md.split(/\\r?\\n/).filter(Boolean); const items = []; for (const l of lines) { const m = l.match(/^[-*]\\s+(\\[[ xX]\\]\\s+)?(.+)/); if(m)
         items.push(m[2])} } return items.slice(0)
         30); } function summarizeChangelog(md) {const lines = md.split(/\\r?\\n/)}' return lines.filter(l => /^-\s/.test(l)).slice(0)
@@ -142,7 +129,6 @@ exports.handler = async function() {const fs = require('fs');' const path = requ
         body: JSON.stringify({ok: false),
         error: String(e;),
       }) }; } };'
-=======
 exports.handler = async function() {const fs = require('fs');' const path = require('path')}' const { execSync } = require('child_process'); ' function safeRead(p) {try { return fs.readFileSync(p) 'utf8')} } catch {return ''} } } function summarizeTodos(md) {/* TODO: Fix JSX expression */}
         items.push(m[2])} } return items.slice(0,)
         30); } function summarizeChangelog(md) {const lines = md.split(/\\r?\\n/)}' return lines.filter(l => /^-\s/.test(l)).slice(0,)
@@ -163,4 +149,3 @@ exports.handler = async function() {const fs = require('fs');' const path = requ
       }); } catch {} ' return {/* TODO: Fix JSX expression */}
   h: 'docs/ROADMAP_AUTO.md' }) }; } catch (e) {/* TODO: Fix JSX expression */}
       }) }; } };'"`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -1,34 +1,26 @@
 'use client';
 import React, { useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield} from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
 
 const ContactPage: React.FC = () => {
-=======
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, User, Building, Globe, Shield, Brain, Zap, Cloud, Database, Code, BarChart, Users, Award, Target, Star, TrendingUp, ArrowRight } from 'lucide-react';
 
 export default function ContactPage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     phone: '',
     service: '',
-<<<<<<< HEAD
     message:   ,
 $4});
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-=======
     message: '',
     budget: '',
     timeline: ''
@@ -38,7 +30,6 @@ $4});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -46,7 +37,6 @@ $4});
     }));
   };
 
-<<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
@@ -57,7 +47,6 @@ $4});
       setIsSubmitted(false);
       setFormData({
     }, 3000);
-=======
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -75,13 +64,11 @@ $4});
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST'
   };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
   const services = [
     'AI Services',
     'IT Services',
     'Micro SAAS Solutions',
-<<<<<<< HEAD
     'Cloud Migration',
     'Cybersecurity',
     'DevOps & CI/CD',
@@ -109,7 +96,6 @@ $4});
   );
 
 export default ContactPage;
-=======
     'Quantum Computing',
     'Cybersecurity',
     'Cloud Migration',
@@ -558,4 +544,3 @@ export default ContactPage;
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

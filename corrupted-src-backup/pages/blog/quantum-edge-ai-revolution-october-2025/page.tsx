@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
-<<<<<<< HEAD
   return(<div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-9, 5, 0">";
-=======
   return (
     <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-9, 5, 0">";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <article, className="container, m, x-auto, p, x-6, p, y-16, ma, x-w-4, x, l">";
         {/* Head, e, r */}
         <header, className="mb-12">";
@@ -14,13 +10,10 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
             <span, className="te, x, t-gr, a, y-4, 0, 0">•</sp, a, n>";
             <span, className="te, x, t-gr, a, y-400, tex, t-sm">Octobe, r, 1, 20, 2, 5</sp, a, n>";
           </d, i, v>
-<<<<<<< HEAD
           <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l;
   g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
-=======
           <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l
   g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"</h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
             Quantum, Edge, AI Revolut, i, o;
   n: Re, a, l-Time, Intelligence, at the, Speed, of Lig, h, t;
@@ -60,31 +53,25 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
           <section, className="mb-12">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">The, Quantum, Edge AI, Architectur, e</h2>
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">
-<<<<<<< HEAD
               Our, quantum, edge AI, platform, combines three, revolutionary, technologie;
   s: </p>,
             <div, className="spa, c, e-y-6">
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
-=======
               Our, quantum, edge AI, platform, combines three, revolutionary, technologie
   s: </p>
             <div, className="spa, c, e-y-6"></section>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-cy, a, n-300, m, b-3">⚛️ Quantum, Acceleration, Layer</h3>
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d"></p>
           <section, className="mb-12">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">The, Quantum, Edge AI, Architectur, e</h2>";
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
-<<<<<<< HEAD
               Our, quantum, edge AI, platform, combines three, revolutionary, technologies: </p>,
             <div, className="spa, c, e-y-6">";
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";
-=======
               Our, quantum, edge AI, platform, combines three, revolutionary, technologies: </p>
             <div, className="spa, c, e-y-6">";</section>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-cy, a, n-300, m, b-3">⚛️ Quantum, Acceleration, Layer</h3>";
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";
                   Leverage, quantum, annealing and, quantum, machine learning, algorithms, to process, complex, optimization problems, and, neural network, computations, 1000x faster, than, classical GP, U, s. Our, hybrid, quantum-classical, architecture, seamlessly distributes, workloads, between quantum, processors, and traditional, computing, resources.
@@ -98,7 +85,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
               </d, i, v>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-indi, g, o-300, m, b-3">🛡️ Priva, c, y-Preserving, Computin, g</h3>";
-=======
 export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: Fix JSX expression */}
         {/* Head, e, r */}
         <header, className="mb-12">";"
@@ -174,40 +160,32 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
               </d, i, v>"
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-indi, g, o-300, m, b-3">🛡️ Priva, c, y-Preserving, Computin, g</h3>";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";
                   All, data, processing occurs, locally, on edge, devices, with quant, u, m-grade, encryptio, n. Federated, learning, enables model, training, across distributed, devices, without centralizing, sensitive, data. Ze, r, o-knowledge, proofs, verify model, integrity, without exposing, proprietary, algorithms.
                 </p>
               </d, i, v>
             </d, i, v>
-<<<<<<< HEAD
           </secti, o, n>
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-cy, a, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/20">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Re, a, l-World, Impac, t: Manufacturing, Success, Story</h2>"
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">
-<<<<<<< HEAD
               A, Fortune, 500 manufacturing, company, deployed our, quantum, edge AI, platform, across 2,500, production, facilities, achieving, remarkable, results: </p>,
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">"
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">
-=======
               A, Fortune, 500 manufacturing, company, deployed our, quantum, edge AI, platform, across 2,500, production, facilities, achieving, remarkable, results: </p>
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">"</section>
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-300, m, b-2">67%</d, i, v>
                 <p, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Operational, Cost, Reduction</p>
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-cy, a, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/20">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Re, a, l-World, Impac, t: Manufacturing, Success, Story</h2>";
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
-<<<<<<< HEAD
               A, Fortune, 500 manufacturing, company, deployed our, quantum, edge AI, platform, across 2,500, production, facilities, achieving, remarkable, results: </p>,
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">";
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">";
-=======
               A, Fortune, 500 manufacturing, company, deployed our, quantum, edge AI, platform, across 2,500, production, facilities, achieving, remarkable, results: </p>
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">";</section>
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-300, m, b-2">67%</d, i, v>";
                 <p, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Operational, Cost, Reduction</p>";
               </d, i, v>
@@ -217,7 +195,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
               </d, i, v>
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">";</div>
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-indi, g, o-300, m, b-2">$8, 9, M</d, i, v>";
-=======
           </secti, o, n>"
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-cy, a, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/20"></section>"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Re, a, l-World, Impac, t: Manufacturing, Success, Story</h2>""
@@ -244,30 +221,25 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
               </d, i, v>"
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">";"
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-indi, g, o-300, m, b-2">$8, 9, M</d, i, v>";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <p, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Annual, Saving, s</p>";
               </d, i, v>
             </d, i, v>"
             <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";
               By, processing, quality control, data, directly on, manufacturing, equipment with, quantu, m-accelerated, computer, vision mode, l, s, they, achieved, 0.3ms, latency, for defect, detectio, n—enabling, rea, l-time, intervention, and reducing, waste, by 78%.
             </p>
-<<<<<<< HEAD
           </secti, o, n>
-<<<<<<< HEAD
           <section, className="mb-12">)
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Technical, Implementation, Guide</h2>)
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">)
               Deploying, quantum, edge AI, in, your enterprise, involves, five key, phase, s: </p>),
             <div, className="spa, c, e-y-4">
               <div, className="bg-whi, t, e/5, rounde, d-x, l, p-6, borde, r-l-4, borde, r-cy, a, n-5, 0, 0">
-=======
           <section, className="mb-12">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Technical, Implementation, Guide</h2>
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">
               Deploying, quantum, edge AI, in, your enterprise, involves, five key, phase, s: </p>
             <div, className="spa, c, e-y-4"></section>
               <div, className="bg-whi, t, e/5, rounde, d-x, l, p-6, borde, r-l-4, borde, r-cy, a, n-5, 0, 0"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2">Phas, e, 1: Architecture, Assessmen, t (2-3, week, s)</h3>"
                 <p, className="te, x, t-gr, a, y-3, 0, 0">Evaluate, current, infrastructure, identify, edge, deployment poin, t, s, and, design, hybrid quant, u, m-classical, architectur, e.</p>
               </d, i, v>
@@ -289,15 +261,12 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
           <section, className="mb-12">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Technical, Implementation, Guide</h2>";
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
-<<<<<<< HEAD
               Deploying, quantum, edge AI, in, your enterprise, involves, five key, phase, s: </p>,
             <div, className="spa, c, e-y-4">";
               <div, className="bg-whi, t, e/5, rounde, d-x, l, p-6, borde, r-l-4, borde, r-cy, a, n-5, 0, 0">";
-=======
               Deploying, quantum, edge AI, in, your enterprise, involves, five key, phase, s: </p>
             <div, className="spa, c, e-y-4">";</section>
               <div, className="bg-whi, t, e/5, rounde, d-x, l, p-6, borde, r-l-4, borde, r-cy, a, n-5, 0, 0">";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2">Phas, e, 1: Architecture, Assessmen, t (2-3, week, s)</h3>";
                 <p, className="te, x, t-gr, a, y-3, 0, 0">Evaluate, current, infrastructure, identify, edge, deployment poin, t, s, and, design, hybrid quant, u, m-classical, architectur, e.</p>";
               </d, i, v>
@@ -330,7 +299,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
             <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">";</section>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-cy, a, n-300, m, b-3">🚀 Performance, Excellenc, e</h3>";
-=======
           </secti, o, n>"
           <section, className="mb-12"></section>"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Technical, Implementation, Guide</h2>"
@@ -394,52 +362,42 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
             <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">";"
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-cy, a, n-300, m, b-3">🚀 Performance, Excellenc, e</h3>";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">";
                   <li>• S, u, b-millisecond, inference, latency (&lt;0.5, m, s)</li>
                   <li>• 99.99% model, accurac, y</li>
                   <li>• 1, 0, B+ events, processed, per seco, n, d</li>
                   <li>• 1000x, faster, than classical, system, s</li>
                 </ul>
-<<<<<<< HEAD
               </d, i, v>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-bl, u, e-300, m, b-3">💰 Cost, Optimizatio, n</h3>";
-=======
               </d, i, v>"
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-bl, u, e-300, m, b-3">💰 Cost, Optimizatio, n</h3>";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">";
                   <li>• 67% reduction, in, operational cos, t, s</li>
                   <li>• 90% decrease, in, cloud expens, e, s</li>
                   <li>• 78% reduction, in, waste/defec, t, s</li>
                   <li>• $89M, average, annual savin, g, s</li>
                 </ul>
-<<<<<<< HEAD
               </d, i, v>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-indi, g, o-300, m, b-3">🛡️ Securi, t, y & Priva, c, y</h3>";
-=======
               </d, i, v>"
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-indi, g, o-300, m, b-3">🛡️ Securi, t, y & Priva, c, y</h3>";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">";
                   <li>• 1, 0, 0% on-device, data, processing</li>
                   <li>• Quant, u, m-grade, encryptio, n</li>
                   <li>• Ze, r, o-knowledge, proof, s</li>
                   <li>• Full, regulatory, compliance (GD, P, R, CC, P, A)</li>
                 </ul>
-<<<<<<< HEAD
               </d, i, v>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, b-3">⚡ Operational, Excellenc, e</h3>";
-=======
               </d, i, v>"
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, b-3">⚡ Operational, Excellenc, e</h3>";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">";
                   <li>• Re, a, l-time, decision, making</li>
                   <li>• Zero, cloud, dependency</li>
@@ -448,34 +406,27 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
                 </ul>
               </d, i, v>
             </d, i, v>
-<<<<<<< HEAD
           </secti, o, n>
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, t, o-indi, g, o-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-bl, u, e-5, 0, 0/20">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Industry, Application, s</h2>
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">
-<<<<<<< HEAD
               Quantum, edge, AI is, transforming, operations across, industrie, s: </p>,
             <div, className="spa, c, e-y-4">
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">
-=======
               Quantum, edge, AI is, transforming, operations across, industrie, s: </p>
             <div, className="spa, c, e-y-4"></section>
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-cy, a, n-300, m, b-2">🏭 Manufacturi, n, g</h3>
                 <p, className="te, x, t-gr, a, y-3, 0, 0">Re, a, l-time, quality, control, predictive, maintenanc, e, supply, chain, optimization</p>
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, t, o-indi, g, o-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-bl, u, e-5, 0, 0/20">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Industry, Application, s</h2>";
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
-<<<<<<< HEAD
               Quantum, edge, AI is, transforming, operations across, industrie, s: </p>,
             <div, className="spa, c, e-y-4">";
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">";
-=======
               Quantum, edge, AI is, transforming, operations across, industrie, s: </p>
             <div, className="spa, c, e-y-4">";</section>
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-cy, a, n-300, m, b-2">🏭 Manufacturi, n, g</h3>";
                 <p, className="te, x, t-gr, a, y-3, 0, 0">Re, a, l-time, quality, control, predictive, maintenanc, e, supply, chain, optimization</p>";
               </d, i, v>
@@ -496,29 +447,22 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
           <section, className="mb-12">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Gettingte, d</h2>
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">
-<<<<<<< HEAD
               Ready, to, transform your, enterprise, with quantum, edge, AI? Our, experts, are ready, to, help y, o, u: </p>,
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/20">
-=======
               Ready, to, transform your, enterprise, with quantum, edge, AI? Our, experts, are ready, to, help y, o, u: </p>
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/20"></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <ul, className="spa, c, e-y-3, tex, t-gr, a, y-300, m, b-6">
                 <li, className="flex, item, s-start, ga, p-3">
                   <span, className="te, x, t-cy, a, n-400, tex, t-xl">✓</sp, a, n>
           <section, className="mb-12">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Gettingte, d</h2>";
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
-<<<<<<< HEAD
               Ready, to, transform your, enterprise, with quantum, edge, AI? Our, experts, are ready, to, help y, o, u: </p>,
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/20">";
-=======
               Ready, to, transform your, enterprise, with quantum, edge, AI? Our, experts, are ready, to, help y, o, u: </p>
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/20">";</section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <ul, className="spa, c, e-y-3, tex, t-gr, a, y-300, m, b-6">";
                 <li, className="flex, item, s-start, ga, p-3">";
-=======
           </secti, o, n>"
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, t, o-indi, g, o-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-bl, u, e-5, 0, 0/20"></section>"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Industry, Application, s</h2>"
@@ -566,7 +510,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/20">";"
               <ul, className="spa, c, e-y-3, tex, t-gr, a, y-300, m, b-6">";"
                 <li, className="flex, item, s-start, ga, p-3">";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <span, className="te, x, t-cy, a, n-400, tex, t-xl">✓</sp, a, n>";
                   <sp, a, n>Assess, your, infrastructure and, identify, optimization opportuniti, e, s</sp, a, n>
                 </li>"
@@ -582,35 +525,29 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
                   <span, className="te, x, t-cy, a, n-400, tex, t-xl">✓</sp, a, n>";
                   <sp, a, n>Scale, deployment, across your, enterprise, with continuous, optimizatio, n</sp, a, n>
                 </li>
-<<<<<<< HEAD
               </ul>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"</div>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";</div>
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="/conta, c, t"
                   classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-xl, hove, r: fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, transitio, n-all, duratio, n-300, shado, w-lg, hov, e;
-=======
               </ul>"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">""
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";"
                 <a, titl, e="Internal, lin, k""
                   hr, e, f="/conta, c, t""
                   classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-xl, hove, r: fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, transitio, n-all, duratio, n-300, shado, w-lg, hov, e,"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r:shad, o, w-cy, a, n-5, 0, 0/50"
                 ></a>
                   Schedule, Consultatio, n →
-<<<<<<< HEAD
                 </a>
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="/ca, s, e-studi, e, s/quant, u, m-ed, g, e-ai-manufacturi, n, g-succe, s, s-20, 2, 5"
                   classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, fon, t-bold, tex, t-cy, a, n-300, borde, r-2, borde, r-cy, a, n-500, rounde, d-xl, hove, r: bg-cy, a, n-500, hov, e;
-=======
                 </a>"
                 <a, titl, e="Internal, lin, k""
                   hr, e, f="/ca, s, e-studi, e, s/quant, u, m-ed, g, e-ai-manufacturi, n, g-succe, s, s-20, 2, 5""
                   classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, fon, t-bold, tex, t-cy, a, n-300, borde, r-2, borde, r-cy, a, n-500, rounde, d-xl, hove, r: bg-cy, a, n-500, hov, e,"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r:te, x, t-white, transitio, n-all, duratio, n-3, 0, 0"
                 ></a>
                   View, Success, Story →
@@ -619,7 +556,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
             </d, i, v>
           </secti, o, n>
         </d, i, v>
-<<<<<<< HEAD
         {/* Foot, e, r */}
         <footer, className="mt-16, p, t-8, borde, r-t, borde, r-whi, t, e/10">
           <div, className="flex, fle, x-wrap, ga, p-4, item, s-center, justif, y-betwe, e, n"></div>
@@ -639,7 +575,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
               <span, className="te, x, t-gr, a, y-400, tex, t-sm">Sha, r, e: </sp, a, n>";
               <a, titl, e="Internal, lin, k" hr, e, f="#" classNa, m, e="te, x, t-gr, a, y-400, hove, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">Twitt, e, r</a>";
               <a, titl, e="Internal, lin, k" hr, e, f="#" classNa, m, e="te, x, t-gr, a, y-400, hov, e;
-=======
         {/* Foot, e, r */}"
         <footer, className="mt-16, p, t-8, borde, r-t, borde, r-whi, t, e/10"></footer>"
           <div, className="flex, fle, x-wrap, ga, p-4, item, s-center, justif, y-betwe, e, n"></div>"
@@ -659,7 +594,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
               <span, className="te, x, t-gr, a, y-400, tex, t-sm">Sha, r, e: </sp, a, n>";"
               <a, titl, e="Internal, lin, k" hr, e, f="#" classNa, m, e="te, x, t-gr, a, y-400, hove, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">Twitt, e, r</a>";"
               <a, titl, e="Internal, lin, k" hr, e, f="#" classNa, m, e="te, x, t-gr, a, y-400, hov, e,"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">Linked, I, n</a>";
             </d, i, v>
           </d, i, v>

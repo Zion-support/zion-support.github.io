@@ -9,7 +9,6 @@ class SEOOptimizer {
     this.issues = [];
   }
 
-<<<<<<< HEAD
   // Check meta tags;
   async checkMetaTags() {
     console.log('🏷️  Checking meta tags...');
@@ -206,7 +205,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export default SEOOptimizer;
-=======
 // SEO optimization script;
 function optimizeSEO() {/* TODO: Fix JSX expression */}
 }
@@ -377,4 +375,3 @@ function generateStructuredData() {/* TODO: Fix JSX expression */}
 
 // Run SEO optimization;
 optimizeSEO();"`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

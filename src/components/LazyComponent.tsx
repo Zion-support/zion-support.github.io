@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Suspense, lazy, ComponentType } from 'react';
 
 interface LazyComponentProps {
@@ -6,12 +5,10 @@ interface LazyComponentProps {
   children: React.ReactNode;
 }
 
-<<<<<<< HEAD
 export default function LazyComponent({
   className = '',
   children
 }: LazyComponentProps) {
-=======
 const DefaultFallback = () => (
   <div className="flex items-center justify-center p-8"></div>
     <div className="cyber-loader"></div>
@@ -23,7 +20,6 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
   fallback = <DefaultFallback />, 
   children 
 }) => {
->>>>>>> cursor/analyze-improve-and-deploy-application-4b35
   return (
     <Suspense fallback={fallback}>
       {children}
@@ -62,7 +58,6 @@ export const createLazyComponent = <P extends object>(
 };
 
 export default LazyComponent;
-=======
 
 
 import LoadingSpinner from './LoadingSpinner';
@@ -274,4 +269,3 @@ const imagePreloads = [
 export default LazyComponent;
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

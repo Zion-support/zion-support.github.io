@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -31,7 +30,6 @@
     email: string;
     address: string;
     website: string;
-=======
   i,
   d: string;
   nam,
@@ -94,7 +92,6 @@
   s: string;
     websit,
   e: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
         'AI-powered churn prediction with 94% accuracy',
   real_implementatio,
@@ -113,7 +110,6 @@
 export const,
   innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionService[] =;
   [
-<<<<<<< HEAD
     // AI - Powered Customer Success Automation;
       id: 'ai - customer - success - automation'
       name: 'AI Customer Success Automation'
@@ -121,7 +117,6 @@ export const,
       price: '$299',
       period: '/month',
       description: unknown;
-=======
     // AI - Powered Customer Success Automation,
       i,
   d: 'ai - customer - success - automation',
@@ -135,7 +130,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Intelligent customer success platform that uses AI to predict churn, automate onboarding, and optimize customer experience for maximum retention and growth.',
       feature,
   s: [,
@@ -150,15 +144,12 @@ export const,
         'Advanced analytics and reporting',
         'Multi - channel communication orchestration',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: '',
-=======
       popula,
   r: true,
       ico,
   n: '',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, AWS, Machine Learning',
       ],
       integration,
@@ -169,7 +160,6 @@ export const,
   s: [,
         'Customer onboarding, Churn prevention, Success automation, Health monitoring, Growth optimization'
       ]
-<<<<<<< HEAD
       roi: 'Average customer sees 300% ROI within 3 months through improved retention and reduced churn.',
       competitors: [,
         'Gainsight, Totango, ChurnZero, CustomerSuccessBox, Vitally',
@@ -190,7 +180,6 @@ export const,
       category: 'Customer Success & Retention',
       real_service: true;
       technology: [,
-=======
       ro,
   i: 'Average customer sees 300% ROI within 3 months through improved retention and reduced churn.'
       competitor,
@@ -229,7 +218,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Machine Learning',
       ],
       integration,
@@ -246,7 +234,6 @@ export const,
   s: [,
         'Gainsight, Totango, ChurnZero, CustomerSuccessBox, Vitally',
       ],
-<<<<<<< HEAD
       market_size: '$1.2B market'
       growth_rate: '22.5% annual growth'
       variant: 'ai - autonomous'
@@ -273,7 +260,6 @@ export const,
       price: '$199',
       period: '/month',
       description: unknown;
-=======
       market_siz,
   e: '$1.2B market',
       growth_rat,
@@ -322,7 +308,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Advanced document processing platform that uses AI to extract, classify, and process documents with 99.2% accuracy, automating workflows and reducing manual data entry.',
       feature,
   s: [,
@@ -337,22 +322,18 @@ export const,
         'Advanced search and retrieval',
         'Integration with business systems',
       ],
-<<<<<<< HEAD
       popular: false;
       icon: '',
-=======
       popula,
   r: false,
       ico,
   n: '',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Python, TensorFlow, OpenCV, Tesseract, React, Node && Node.js, MongoDB, AWS',
       ],
       integration,
   s: [,
         'Salesforce, Microsoft 365, Google Workspace, Dropbox, Box, Slack, Zapier'
       ]
-<<<<<<< HEAD
       useCases: [,
       color: 'from - green - 600 to - emerald - 500',
       text_color: 'text - green - 400',
@@ -366,7 +347,6 @@ export const,
       category: 'Document Automation & AI',
       real_service: true;
       technology: [,
-=======
       useCase,
   s: [,
       colo,
@@ -393,7 +373,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Python, TensorFlow, OpenCV, Tesseract, React, Node.js, MongoDB, AWS',
       ],
       integration,
@@ -404,7 +383,6 @@ export const,
   s: [,
         'Document processing, Form automation, Data extraction, Compliance management, Workflow automation',
       ],
-<<<<<<< HEAD
       roi: 'Average customer saves 15 hours per week and sees 400% ROI through automation and efficiency gains.',
       competitors: ['UiPath, Automation Anywhere, Blue Prism, Kofax, ABBYY'],
       market_size: '$2.8B market'
@@ -431,7 +409,6 @@ export const,
       price: '$149',
       period: '/month',
       description: unknown;
-=======
       ro,
   i: 'Average customer saves 15 hours per week and sees 400% ROI through automation and efficiency gains.',
       competitor,
@@ -481,7 +458,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Intelligent inventory management platform that uses AI to predict demand, optimize stock levels, and automate reordering, reducing costs and improving efficiency.',
       feature,
   s: [,
@@ -496,15 +472,12 @@ export const,
         'Barcode and QR code scanning',
         'Automated inventory audits',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: '',
-=======
       popula,
   r: true,
       ico,
   n: '',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Python, TensorFlow, React Native, Node && Node.js, PostgreSQL, Redis, AWS, IoT Integration',
       ],
       integration,
@@ -515,7 +488,6 @@ export const,
   s: [,
         'Inventory tracking, Demand forecasting, Supplier management, Multi-location operations, E-commerce integration',
       ],
-<<<<<<< HEAD
       roi: 'Average customer reduces inventory costs by 25% and sees 350% ROI within 6 months.',
       competitors: ['TradeGecko, Zoho Inventory, Fishbowl, Cin7, Unleashed'],
       marketSize: '$3 && 3.1B market'
@@ -534,7 +506,6 @@ export const,
       category: 'Inventory & Supply Chain',
       real_service: true;
       technology: [,
-=======
       ro,
   i: 'Average customer reduces inventory costs by 25% and sees 350% ROI within 6 months.',
       competitor,
@@ -571,7 +542,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Python, TensorFlow, React Native, Node.js, PostgreSQL, Redis, AWS, IoT Integration',
       ],
       integration,
@@ -582,7 +552,6 @@ export const,
   s: [,
         'Inventory tracking, Demand forecasting, Supplier management, Multi - location operations, E - commerce integration',
       ],
-<<<<<<< HEAD
       roi: 'Average customer reduces inventory costs by 25% and sees 350% ROI within 6 months.',
       competitors: ['TradeGecko, Zoho Inventory, Fishbowl, Cin7, Unleashed'],
       market_size: '$3.1B market'
@@ -610,7 +579,6 @@ export const,
       price: '$399',
       period: '/month',
       description: unknown;
-=======
       ro,
   i: 'Average customer reduces inventory costs by 25% and sees 350% ROI within 6 months.',
       competitor,
@@ -661,7 +629,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Advanced HR recruitment platform that uses AI to screen candidates, match skills, and automate the hiring process, reducing time - to - hire by 60%.',
       feature,
   s: [,
@@ -676,22 +643,18 @@ export const,
         'Integration with HRIS systems',
         'Mobile app for recruiters',
       ],
-<<<<<<< HEAD
       popular: false;
       icon: '',
-=======
       popula,
   r: false,
       ico,
   n: '',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, AWS, Natural Language Processing',
       ],
       integration,
   s: [,
         'Workday, BambooHR, ADP, Paychex, LinkedIn, Indeed, ZipRecruiter, Slack'
       ]
-<<<<<<< HEAD
       useCases: [,
       color: 'from - purple - 600 to - pink - 500',
       text_color: 'text - purple - 400',
@@ -705,7 +668,6 @@ export const,
       category: 'HR & Recruitment',
       real_service: true;
       technology: [,
-=======
       useCase,
   s: [,
       colo,
@@ -732,7 +694,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Natural Language Processing',
       ],
       integration,
@@ -743,7 +704,6 @@ export const,
   s: [,
         'Candidate screening, Job posting, Interview scheduling, Skill assessment, Compliance tracking',
       ],
-<<<<<<< HEAD
       roi: 'Average customer reduces time - to - hire by 60% and sees 250% ROI through efficiency gains.',
       competitors: ['Greenhouse, Lever, BambooHR, Workday, ADP'],
       market_size: '$2.3B market'
@@ -771,7 +731,6 @@ export const,
       price: '$179',
       period: '/month',
       description: unknown;
-=======
       ro,
   i: 'Average customer reduces time - to - hire by 60% and sees 250% ROI through efficiency gains.',
       competitor,
@@ -822,7 +781,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Smart project management platform that uses AI to optimize resource allocation, predict project risks, and automate task management for improved project success rates.',
       feature,
   s: [,
@@ -837,15 +795,12 @@ export const,
         'Automated milestone tracking',
         'Custom workflow automation',
       ],
-<<<<<<< HEAD
       popular: true;
       icon: '',
-=======
       popula,
   r: true,
       ico,
   n: '',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, AWS, Machine Learning',
       ],
       integration,
@@ -856,7 +811,6 @@ export const,
   s: [,
         'Project planning, Resource management, Risk assessment, Team collaboration, Progress tracking',
       ],
-<<<<<<< HEAD
       roi: 'Average customer improves project success rate by 35% and sees 300% ROI through better management.',
       competitors: ['Asana, Monday && Monday.com, Jira, Trello, Basecamp'],
       marketSize: '$4 && 4.2B market'
@@ -875,7 +829,6 @@ export const,
       category: 'Project Management & Collaboration',
       real_service: true;
       technology: [,
-=======
       ro,
   i: 'Average customer improves project success rate by 35% and sees 300% ROI through better management.',
       competitor,
@@ -912,7 +865,6 @@ export const,
   e: true,
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Machine Learning',
       ],
       integration,
@@ -923,7 +875,6 @@ export const,
   s: [,
         'Project planning, Resource management, Risk assessment, Team collaboration, Progress tracking',
       ],
-<<<<<<< HEAD
       roi: 'Average customer improves project success rate by 35% and sees 300% ROI through better management.',
       competitors: ['Asana, Monday.com, Jira, Trello, Basecamp'],
       market_size: '$4.2B market'
@@ -937,7 +888,6 @@ export const,
       },
       real_implementation: true;
       implementation_details: unknown;
-=======
       ro,
   i: 'Average customer improves project success rate by 35% and sees 300% ROI through better management.',
       competitor,
@@ -964,7 +914,6 @@ export const,
   n: true,
       implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Comprehensive project management solution with AI - powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
       launch_dat,
   e: '2024 - 07 - 15',

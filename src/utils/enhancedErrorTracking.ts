@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Enhanced Error Tracking Utility
  * Provides comprehensive error tracking with detailed context
  */
 export interface ErrorContext {
-=======
 
 'use client'
 /**
@@ -16,12 +14,10 @@ export interface ErrorContext {
 export interface ErrorContext {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   component?: string;
   action?: string;
   userId?: string;
   sessionId?: string;
-<<<<<<< HEAD
   metadata?: Record<string, unknown>;
 }
 export interface TrackedError {
@@ -129,7 +125,6 @@ $4});
 // Export singleton instance
 export const errorTracker = new EnhancedErrorTracker();
 export default errorTracker;
-=======
   metadata?: Record;
           <string, unknown>;
 }
@@ -333,4 +328,3 @@ export default errorTracker;`
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

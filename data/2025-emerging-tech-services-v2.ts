@@ -1,7 +1,6 @@
 
       'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS',
     ],
-<<<<<<< HEAD
     realImplementation: true;
   id: string;
   name: string;
@@ -34,7 +33,6 @@
   rating: number;
   reviews: number;
     implementationDetails:,
-=======
     realImplementatio,
   n: true,
   i,
@@ -99,7 +97,6 @@
   s: number,
     implementationDetail,
   s:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.'
     ro,
   i: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.'
@@ -110,7 +107,6 @@
       'Space logistics'
       'Resource processing'
       'Market analysis'
-<<<<<<< HEAD
       'Regulatory compliance',
     ],
     integrations: [,
@@ -132,7 +128,6 @@
     implementationDetails: 'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.'
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.'
     useCases: [;
-=======
       'Regulatory compliance'
     ]
     integration,
@@ -168,22 +163,18 @@
   i: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.'
     useCase,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Drug discovery'
       'Genetic analysis'
       'Protein folding'
       'Molecular dynamics'
       'Biological optimization'
-<<<<<<< HEAD
       'Research acceleration',
     ],
     integrations: [,
-=======
       'Research acceleration'
     ]
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software'
     ]
     suppor,
@@ -192,7 +183,6 @@
   e: [,
       'Research ethics, Data privacy, Scientific standards, Industry regulations',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-bio-computing-platform',
     id: 'quantum - bio - computing - platform',
     name: 'Quantum Bio - Computing Platform',
@@ -207,7 +197,6 @@
       trial_days: 14;
       setup_time: '8 hours',
       enterprise: 2499;
-=======
     lin,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/quantum-bio-computing-platform',
@@ -236,7 +225,6 @@
   e: '8 hours',
       enterpris,
   e: 2499,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -268,33 +256,27 @@
       'Universities',
       'Government agencies',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'Competitive with IBM Quantum ($500+), Google Quantum AI ($1000+), and specialized bio - computing platforms ($800+). Our advantage: Biological integration, quantum processing, and research optimization.',
     competitors: [,
-=======
     market_positio,
   n: unknown,
       'Competitive with IBM Quantum ($500+), Google Quantum AI ($1000+), and specialized bio - computing platforms ($800+). Our,
   advantage: Biological integration, quantum processing, and research optimization.',
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'IBM Quantum, Google Quantum AI, D - Wave, Rigetti, Specialized bio - computing platforms',
     ],
     tech_stac,
   k: [,
       'Quantum computing, Biological algorithms, Bioinformatics, React, Node.js, PostgreSQL, Redis, AWS',
     ],
-<<<<<<< HEAD
     real_implementation: true;
     implementation_details: unknown;
-=======
     real_implementatio,
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced quantum - bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.',
     ro,
   i: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.',
@@ -311,18 +293,14 @@
   s: [,
       'Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software',
     ],
-<<<<<<< HEAD
     support: unknown;
-=======
     suppor,
   t: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '24 / 7 research support, dedicated bio - quantum specialist, training programs, and quarterly research reviews.',
     complianc,
   e: [,
       'Research ethics, Data privacy, Scientific standards, Industry regulations',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com / quantum - bio - computing - platform'
     icon: ''
     color: 'from - green - 500 to - emerald - 600'
@@ -340,7 +318,6 @@
     implementationDetails: 'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.'
     roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.'
     useCases: [;
-=======
     lin,
   k: 'http,
   s://ziontechgroup.com / quantum - bio - computing - platform',
@@ -373,22 +350,18 @@
   i: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.'
     useCase,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Accessibility assistance'
       'Gaming control'
       'Medical research'
       'Communication aids'
       'Prosthetic control'
-<<<<<<< HEAD
       'Cognitive enhancement',
     ],
     integrations: [,
-=======
       'Cognitive enhancement'
     ]
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms'
     ]
     suppor,
@@ -397,7 +370,6 @@
   e: [,
       'Medical device regulations, Data privacy, Ethical guidelines, Industry standards',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup && ziontechgroup.com/brain-computer-interface-platform',
     id: 'brain - computer - interface - platform',
     name: 'Brain - Computer Interface Platform',
@@ -412,7 +384,6 @@
       trial_days: 21;
       setup_time: '6 hours',
       enterprise: 1599;
-=======
     lin,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/brain-computer-interface-platform',
@@ -441,7 +412,6 @@
   e: '6 hours',
       enterpris,
   e: 1599,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -473,33 +443,27 @@
       'Technology companies',
       'Educational institutions',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'Competitive with Neuralink ($1000+), CTRL - labs ($500+), and specialized BCI platforms ($400+). Our advantage: Advanced signal processing, comprehensive applications, and developer - friendly platform.',
     competitors: [,
-=======
     market_positio,
   n: unknown,
       'Competitive with Neuralink ($1000+), CTRL - labs ($500+), and specialized BCI platforms ($400+). Our,
   advantage: Advanced signal processing, comprehensive applications, and developer - friendly platform.',
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Neuralink, CTRL - labs, Kernel, Paradromics, specialized BCI platforms',
     ],
     tech_stac,
   k: [,
       'Neural signal processing, AI / ML, React, Node.js, PostgreSQL, Redis, AWS, Neural hardware',
     ],
-<<<<<<< HEAD
     real_implementation: true;
     implementation_details: unknown;
-=======
     real_implementatio,
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced BCI platform with neural processing, real - time analysis, and comprehensive applications. Includes hardware integration and development tools.',
     ro,
   i: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.',
@@ -516,18 +480,14 @@
   s: [,
       'Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms',
     ],
-<<<<<<< HEAD
     support: unknown;
-=======
     suppor,
   t: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '24 / 7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.',
     complianc,
   e: [,
       'Medical device regulations, Data privacy, Ethical guidelines, Industry standards',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com / brain - computer - interface - platform'
     icon: ''
     color: 'from - blue - 500 to - indigo - 600'
@@ -545,7 +505,6 @@
     implementationDetails: 'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.'
     roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.'
     useCases: [;
-=======
     lin,
   k: 'http,
   s://ziontechgroup.com / brain - computer - interface - platform',
@@ -578,22 +537,18 @@
   i: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.'
     useCase,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Energy system optimization'
       'Fusion power simulation'
       'Grid optimization'
       'Energy storage optimization'
       'Renewable integration'
-<<<<<<< HEAD
       'Energy research',
     ],
     integrations: [,
-=======
       'Energy research'
     ]
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications'
     ]
     suppor,
@@ -602,7 +557,6 @@
   e: [,
       'Energy regulations, Safety standards, Environmental regulations, Industry standards',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-energy-platform',
     id: 'quantum - energy - platform',
     name: 'Quantum Energy Platform',
@@ -617,7 +571,6 @@
       trial_days: 14;
       setup_time: '6 hours',
       enterprise: 1999;
-=======
     lin,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/quantum-energy-platform',
@@ -646,7 +599,6 @@
   e: '6 hours',
       enterpris,
   e: 1999,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -678,33 +630,27 @@
       'Technology companies',
       'Environmental organizations',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'Competitive with specialized energy platforms ($300+), quantum computing services ($500+), and simulation software ($400+). Our advantage: Quantum optimization, comprehensive energy modeling, and fusion simulation.',
     competitors: [,
-=======
     market_positio,
   n: unknown,
       'Competitive with specialized energy platforms ($300+), quantum computing services ($500+), and simulation software ($400+). Our,
   advantage: Quantum optimization, comprehensive energy modeling, and fusion simulation.',
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Specialized energy platforms, Quantum computing services, Simulation software, Energy optimization tools',
     ],
     tech_stac,
   k: [,
       'Quantum computing, Energy algorithms, React, Node.js, PostgreSQL, Redis, AWS, Energy systems',
     ],
-<<<<<<< HEAD
     real_implementation: true;
     implementation_details: unknown;
-=======
     real_implementatio,
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.',
     ro,
   i: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.',
@@ -721,18 +667,14 @@
   s: [,
       'Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications',
     ],
-<<<<<<< HEAD
     support: unknown;
-=======
     suppor,
   t: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '24 / 7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.',
     complianc,
   e: [,
       'Energy regulations, Safety standards, Environmental regulations, Industry standards',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com / quantum - energy - platform'
     icon: ''
     color: 'from - yellow - 500 to - orange - 600'
@@ -750,7 +692,6 @@
     implementationDetails: 'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.'
     roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.'
     useCases: [;
-=======
     lin,
   k: 'http,
   s://ziontechgroup.com / quantum - energy - platform',
@@ -783,22 +724,18 @@
   i: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.'
     useCase,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Autonomous driving'
       'Fleet management'
       'Safety systems'
       'Traffic optimization'
       'Transportation logistics'
-<<<<<<< HEAD
       'Research and development',
     ],
     integrations: [,
-=======
       'Research and development'
     ]
     integration,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'
     ]
     suppor,
@@ -807,7 +744,6 @@
   e: [,
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform'
     icon: ''
     color: 'from-red-500 to-pink-600'
@@ -818,7 +754,6 @@
     reviews: 65;
     marketSize: '$35B autonomous vehicle market',
     growthRate: '75% annually',
-=======
     lin,
   k: 'http,
   s://ziontechgroup.com/autonomous-vehicle-ai-platform',
@@ -840,7 +775,6 @@
   e: '$35B autonomous vehicle market',
     growthRat,
   e: '75% annually',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
     ];
@@ -848,7 +782,6 @@
   s: [;
       'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
     ];
-<<<<<<< HEAD
     targetAudience: [;
       'Space agenciesMining companiesInvestment firmsResearch institutionsGovernment agenciesTechnology companies',
     ],
@@ -887,7 +820,6 @@
       trial_days: 14;
       setup_time: '12 hours',
       enterprise: 2999;
-=======
     targetAudienc,
   e: [;
       'Space agenciesMining companiesInvestment firmsResearch institutionsGovernment agenciesTechnology companies'
@@ -961,7 +893,6 @@
   e: '12 hours',
       enterpris,
   e: 2999,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -993,33 +924,27 @@
       'Government agencies',
       'Technology companies',
     ],
-<<<<<<< HEAD
     market_position: unknown;
       'Competitive with Waymo ($1000+), Tesla Autopilot ($200+), and specialized AV platforms ($800+). Our advantage: Advanced AI, comprehensive safety, and fleet optimization.',
     competitors: [,
-=======
     market_positio,
   n: unknown,
       'Competitive with Waymo ($1000+), Tesla Autopilot ($200+), and specialized AV platforms ($800+). Our,
   advantage: Advanced AI, comprehensive safety, and fleet optimization.',
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Waymo, Tesla Autopilot, Cruise, Argo AI, specialized AV platforms',
     ],
     tech_stac,
   k: [,
       'Advanced AI / ML, Computer Vision, Robotics, React, Node.js, PostgreSQL, Redis, AWS, Vehicle systems',
     ],
-<<<<<<< HEAD
     real_implementation: true;
     implementation_details: unknown;
-=======
     real_implementatio,
   n: true,
     implementation_detail,
   s: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced autonomous vehicle platform with AI perception, decision - making, and safety systems. Includes vehicle integration and fleet management tools.',
     ro,
   i: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.',
@@ -1036,18 +961,14 @@
   s: [,
       'Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications',
     ],
-<<<<<<< HEAD
     support: unknown;
-=======
     suppor,
   t: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',
     complianc,
   e: [,
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform'
     icon: ''
     color: 'from - red - 500 to - pink - 600'
@@ -1099,7 +1020,6 @@
     reviews: 65;
     market_size: '$35B autonomous vehicle market',
     growth_rate: '75% annually',
-=======
     lin,
   k: 'http,
   s://ziontechgroup.com / autonomous - vehicle - ai - platform',
@@ -1214,7 +1134,6 @@
   e: '$35B autonomous vehicle market',
     growth_rat,
   e: '75% annually'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
     feature,
@@ -1226,7 +1145,6 @@
   s: [;
       'Solve biological problems 1000x fasterAccelerate drug discoveryImprove genetic analysisEnable new research capabilitiesReduce research costs'
     ];
-<<<<<<< HEAD
     targetAudience: [;
       'Pharmaceutical companiesResearch institutionsBiotechnology firmsHealthcare organizationsUniversitiesGovernment agencies',
     ],
@@ -1265,7 +1183,6 @@
       trialDays: 21;
       setupTime: '6 hours',
       enterprise: 1599;
-=======
     targetAudienc,
   e: [;
       'Pharmaceutical companiesResearch institutionsBiotechnology firmsHealthcare organizationsUniversitiesGovernment agencies'
@@ -1339,7 +1256,6 @@
   e: '6 hours'
       enterpris,
   e: 1599,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [;
@@ -1350,7 +1266,6 @@
   s: [;
       'Enable new forms of human-computer interactionImprove accessibility for disabled usersCreate immersive gaming experiencesAdvance medical researchEnhance human capabilities'
     ];
-<<<<<<< HEAD
     targetAudience: [;
       'Healthcare providersGaming companiesAccessibility organizationsResearch institutionsTechnology companiesEducational institutions',
     ],
@@ -1389,7 +1304,6 @@
       trialDays: 14;
       setupTime: '6 hours',
       enterprise: 1999;
-=======
     targetAudienc,
   e: [;
       'Healthcare providersGaming companiesAccessibility organizationsResearch institutionsTechnology companiesEducational institutions'
@@ -1463,7 +1377,6 @@
   e: '6 hours'
       enterpris,
   e: 1999,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [;
@@ -1474,7 +1387,6 @@
   s: [;
       'Optimize energy systems 100x fasterEnable fusion power simulationReduce energy costs by 30%Improve grid efficiencyAccelerate clean energy adoption'
     ];
-<<<<<<< HEAD
     targetAudience: [;
       'Energy companiesUtility providersResearch institutionsGovernment agenciesTechnology companiesEnvironmental organizations',
     ],
@@ -1513,7 +1425,6 @@
       trialDays: 14;
       setupTime: '12 hours',
       enterprise: 2999;
-=======
     targetAudienc,
   e: [;
       'Energy companiesUtility providersResearch institutionsGovernment agenciesTechnology companiesEnvironmental organizations'
@@ -1587,7 +1498,6 @@
   e: '12 hours'
       enterpris,
   e: 2999,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [;
@@ -1598,7 +1508,6 @@
   s: [;
       'Enable autonomous transportationImprove road safetyReduce transportation costsOptimize fleet operationsAdvance mobility technology'
     ];
-<<<<<<< HEAD
     targetAudience: [;
       'Automotive manufacturersTransportation companiesLogistics providersRide-sharing platformsGovernment agenciesTechnology companies',
     ],
@@ -1624,7 +1533,6 @@
     reviews: 65;
     marketSize: '$35B autonomous vehicle market',
     growthRate: '75% annually',
-=======
     targetAudienc,
   e: [;
       'Automotive manufacturersTransportation companiesLogistics providersRide-sharing platformsGovernment agenciesTechnology companies'
@@ -1673,12 +1581,10 @@
   e: '$35B autonomous vehicle market'
     growthRat,
   e: '75% annually'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export interface EmergingTechService {/* TODO: Fix JSX expression */}
   }
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -1990,7 +1896,6 @@ export interface EmergingTechService {;
   reviews: number;
   marketSize: string;
   growthRate: string;
-=======
   i,
   d: string;
   nam,
@@ -2423,13 +2328,11 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   e: string;
   growthRat,
   e: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 ;
 export interface EmergingTechService {/* TODO: Fix JSX expression */}
   }
 ];
-<<<<<<< HEAD
 export const emergingTechServicesV2: EmergingTechService[] = [;
   {
     id: 'space-mining-platform';
@@ -2665,7 +2568,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     reviews: 65;
     marketSize: '$35B autonomous vehicle market';
     growthRate: '75% annually',
-=======
 export const,
   emergingTechServicesV2: EmergingTechService[] = [;
   {/* TODO: Fix JSX expression */}
@@ -2982,7 +2884,6 @@ export const,
   e: '$35B autonomous vehicle market';
     growthRat,
   e: '75% annually'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
   }

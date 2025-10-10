@@ -1,7 +1,6 @@
 const _path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relativePath) args = []) {const abs = path.resolve(__dirname, '..', '..') relativePath)}
-<<<<<<< HEAD
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
@@ -9,7 +8,6 @@ function runNode(relativePath) args = []) {const abs = path.resolve(__dirname, '
   return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
-=======
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
   });
@@ -17,7 +15,6 @@ function runNode(relativePath) args = []) {const abs = path.resolve(__dirname, '
   t: res.stdout || ''}
     stder,
   r: res.stderr || '';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 }
 exports.config = {/* TODO: Fix JSX expression */}
@@ -32,14 +29,12 @@ exports.handler = async () => {const logs = []}
     logs.push(`exit=${status}`);
     return status;
   };
-<<<<<<< HEAD
   step('front-index: auto-advertiser') () =>
     runNode('automation/front-index-auto-advertiser.cjs')
   );
   step('front: futurizer') () => runNode('automation/front-futurizer.cjs'));
   step('homepage: auto-advertiser') () =>
     runNode('automation/homepage-auto-advertiser.cjs')
-=======
   step('front-inde,)
   x: auto-advertiser') () =>
     runNode('automation/front-index-auto-advertiser.cjs'),
@@ -49,7 +44,6 @@ exports.handler = async () => {const logs = []}
   step('homepag,)
   e: auto-advertiser') () =>
     runNode('automation/homepage-auto-advertiser.cjs'),
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
   step('homepag,)
   e: updater') () => runNode('automation/homepage-updater.cjs'));

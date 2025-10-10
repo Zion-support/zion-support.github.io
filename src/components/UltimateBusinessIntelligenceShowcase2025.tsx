@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
         return (
@@ -140,7 +139,6 @@ readingTimereadingTime: '45 min read',
               >Learn More</Link>
     </section>);
 export default UltimateBusinessIntelligenceShowcase2025
-=======
 
 
 'use client';
@@ -285,4 +283,3 @@ export default UltimateBusinessIntelligenceShowcase2025;
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 // Accessibility improvements to implement;
 // 1. Add ARIA labels to interactive elements;
@@ -94,7 +93,6 @@ const trapFocus = (element) => {
 // - Activable with Enter/Space;
 // - Have visible focus indicators;
 // - Follow logical tab order;
-=======
 // Accessibility improvements
 // Add ARIA labels
 export const addARIALabels = () => {
@@ -118,4 +116,3 @@ export const runAccessibilityImprovements = () => {
   improveKeyboardNavigation();
   addAltText();
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
