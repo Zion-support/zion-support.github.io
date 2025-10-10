@@ -6,23 +6,21 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 // Fallback component
 const EmptyComponent = (): JSX.Element => <div />;
 // Lazy load heavy components - these may not exist, so make them optional
-const UnifiedBanner = lazy(() =>
+lazy(() =>
   import('./components/NewestContent2025Banner').catch(() => ({ default: EmptyComponent }))
 );
-const ContentPromotion = lazy(() =>
+lazy(() =>
   import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: EmptyComponent }))
 );
-const ContentShowcase = lazy(() =>
+lazy(() =>
   import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: EmptyComponent }))
 );
 
-function OptimizedHomePage() {
+export default function OptimizedHomePage() {
   return (
     <div className="min-h-screen bg-white">
       <SEOOptimizer />
-      <AccessibilityEnhancer enableKeyboardNavigation enableScreenReaderSupport enableHighContrast enableFocusManagement enableSkipLinks>
-        <div />
-      </AccessibilityEnhancer>
+      <AccessibilityEnhancer />
       <PerformanceMonitor />
       {/* Main Content */}
       <main className="relative">
