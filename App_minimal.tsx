@@ -4,23 +4,24 @@ import { HelmetProvider } from 'react-helmet-async';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
-
-const App: React.FC = () => {
-  return (
-    <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-white">
-          <Navigation />
-          <main>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
-    </HelmetProvider>
+const App: React.FC = () => {;
+return (;
+    <div></div>;
+    <HelmetProvider>;
+      <Router>;
+        <div className="min-h-screen bg-white"></div>;
+          <Navigation />;}
+          <main></main>;}
+            <Routes>}
+              <Route path="/" element={<HomePage />} />;
+            </Routes>;
+          </main>;
+          <Footer />;
+        </div>;
+      </Router>;
+    </HelmetProvider>;
+  </div>;
+  </div>
   );
 };
-
 export default App;

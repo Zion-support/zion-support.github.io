@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
-
+import React from 'react';
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
-
+;
 export default AdvancedPerformanceMonitor;

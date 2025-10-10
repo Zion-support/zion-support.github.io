@@ -1,75 +1,70 @@
 const fs = require('fs');
 const path = require('path');
-
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'subscribers.json');
-
-export default function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Content-Type', 'application/json');
+export default function handler(req, res) {;
+if (req.method !== 'POST') {;}
+res.statusCode = 405;,}
+res.setHeader('Content-Type', 'application/json');}
     res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
+return;
   }
-
-  const { email, name, preferences } = req.body || {};
-
-  if (!email) {
-    res.statusCode = 400;
-    res.setHeader('Content-Type', 'application/json');
+;
+const { email, name, preferences } = req.body || {};
+if (!email) {;}
+res.statusCode = 400;,}
+res.setHeader('Content-Type', 'application/json');}
     res.end(JSON.stringify({ error: 'Email is required' }));
-    return;
+return;
   }
-
-  if (!fs.existsSync(dir)) {
+;
+if (!fs.existsSync(dir)) {}
     fs.mkdirSync(dir, { recursive: true });
   }
-
-  let existing = [];
-  try {
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
-      existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = [];
+;
+let existing = [];
+try {;
+if (fs.existsSync(file)) {;
+const data = fs.readFileSync(file, 'utf8');}
+existing = JSON.parse(data);,}
+if (!Array.isArray(existing)) existing = [];}
     }
-  } catch (error) {
-    console.error('Error reading existing subscribers:', error);
-    existing = [];
+  } catch (error) {;}
+console.error('Error reading existing subscribers:', error);,}
+existing = [];}
   }
-
-  // Check if email already exists
-  const existingSubscriber = existing.find(sub => sub.email === email);
-  if (existingSubscriber) {
-    res.statusCode = 400;
-    res.setHeader('Content-Type', 'application/json');
+;
+  // Check if email already exists;
+const existingSubscriber = existing.find(sub => sub.email === email);
+if (existingSubscriber) {;}
+res.statusCode = 400;,}
+res.setHeader('Content-Type', 'application/json');}
     res.end(JSON.stringify({ error: 'Email already subscribed' }));
-    return;
+return;
   }
-
-  const newSubscriber = {
-    id: Date.now().toString(),
-    email,
-    name: name || '',
-    preferences: preferences || {},
-    timestamp: new Date().toISOString(),
-    status: 'active'
+;
+const newSubscriber = {;
+id: Date.now().toString();}
+email;,}
+name: name || '',}
+    preferences: preferences || {};
+timestamp: new Date().toISOString();
+status: 'active';
   };
-
-  existing.push(newSubscriber);
-
-  try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Successfully subscribed to newsletter',
-      id: newSubscriber.id
+existing.push(newSubscriber);
+try {;
+fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+res.statusCode = 200;
+res.setHeader('Content-Type', 'application/json');
+res.end(JSON.stringify({;
+success: true;}
+message: 'Successfully subscribed to newsletter';,}
+id: newSubscriber.id}
     }));
-  } catch (error) {
-    console.error('Error saving subscriber:', error);
-    res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
+  } catch (error) {;
+console.error('Error saving subscriber:', error);}
+res.statusCode = 500;,}
+res.setHeader('Content-Type', 'application/json');}
     res.end(JSON.stringify({ error: 'Failed to save subscription' }));
   }
 }

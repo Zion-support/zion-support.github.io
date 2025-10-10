@@ -1,25 +1,25 @@
-
-
+import React from 'react';
+;
 'use client';
 interface DynamicOptions {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   loading?: () => React.ReactElement;
-  ssr?: boolean;
+ssr?: boolean;
 }
 export function dynamic;
-          <T extends ComponentType<unknown>>()
-  importFun,
-  c: () => Promise;
+          <T extends ComponentType<unknown>>();
+importFun;
+c: () => Promise;
           <{/* TODO: Fix JSX expression */}
-  t: T }>,
-  _option,
-  s: DynamicOptions = {}
-): ComponentType<unknown> {/* TODO: Fix JSX expression */}
-  s: unknown) => (})
-    <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}><LazyComponent {...props} /></Suspense>
-  )
+  t: T }>;
+_option;
+s: DynamicOptions: {}
+): ComponentType<unknown> {/* TODO: Fix JSX expression */};
+  s: unknown) => (});
+    <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}><LazyComponent {...props} /></Suspense>;
+  </div>;
+  </div>
+  );
 }
-
-
-
+;

@@ -1,38 +1,38 @@
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config: {/* TODO: Fix JSX expression */};
   e: '*/5 * * * *' };
-exports.handler = async function () {/* TODO: Fix JSX expression */}
+exports.handler: async function () {/* TODO: Fix JSX expression */};
   const { execSync } = require('child_process');
-  const run = cmd => execSync(cmd) {stdio: 'inherit'} shell: true;
+const run = cmd => execSync(cmd) {stdio: 'inherit'} shell: true;
       });
-  try {// Generate site reports and search indexes;
-    run('node scripts/seo-audit.js || true');
-    run('node scripts/generate-search-index.js || true');
-    run('node scripts/ai-trends-radar.js || true');
+try {// Generate site reports and search indexes;
+run('node scripts/seo-audit.js || true');
+run('node scripts/generate-search-index.js || true');
+run('node scripts/ai-trends-radar.js || true');
     // Repo intelligence and docs indexing;
-    run('node automation/docs-pages-indexer.cjs || true');
-    run('node automation/repo-knowledge-graph.cjs || true');
-    run('node automation/repo-radar-metrics.cjs || true');
+run('node automation/docs-pages-indexer.cjs || true');
+run('node automation/repo-knowledge-graph.cjs || true');
+run('node automation/repo-radar-metrics.cjs || true');
     // Commit and push;
-    run('git config user.name "zion-bot"');
-    run('git config user.email "bot@zion.app"');
-    run('git add -A');
-    run(
-      'git commit -m "chore(reports): auto-generate reports and indexes [skip ci]" || true');
+run('git config user.name "zion-bot"');
+run('git config user.email "bot@zion.app"');
+run('git add -A');}
+run(;}
+      'git commit -m "chore(reports): auto-generate reports and indexes [skip ci]" || true');}
     run('git push origin main || true')}
-    return {
-      statusCode: 200;
-      body: JSON.stringify({ ok: true),
+    return {;}
+statusCode: 200;,}
+body: JSON.stringify({ ok: true),}
         tool: 'auto-reports-suite' });
     };
-  } catch (e) {return {
-      statusCode: 200;
-      body: JSON.stringify({ ok: false),
-        error: String(e;),
-  const run = cmd => execSync(cmd) {/* TODO: Fix JSX expression */}
-  o: 'inherit'} shel,
-  l: true;
+  } catch (e) {return {;
+statusCode: 200;}
+body: JSON.stringify({ ok: false);,}
+error: String(e;),}
+  const run = cmd: > execSync(cmd) {/* TODO: Fix JSX expression */};
+  o: 'inherit'} shel;
+l: true;
       });
-  try {/* TODO: Fix JSX expression */}
+try {/* TODO: Fix JSX expression */}
     run('git push origin main || true')}
     return {/* TODO: Fix JSX expression */}
   l: 'auto-reports-suite' });
@@ -43,15 +43,15 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   }
 };
 exports.config = { schedule: '*/5 * * * *' }; exports.handler = async function() {' const { execSync } = require('child_process');' const run = (cmd) => execSync(cmd) {stdio: 'inherit'} shell: true;
-      }); try {// Generate site reports and search indexes' run('node scripts/seo-audit.js || true');' run('node scripts/generate-search-index.js || true');' run('node scripts/ai-trends-radar.js || true'); // Repo intelligence and docs indexing' run('node automation/docs-pages-indexer.cjs || true');' run('node automation/repo-knowledge-graph.cjs || true');' run('node automation/repo-radar-metrics.cjs || true'); // Commit and push' run('git config user.name "zion-bot"');' run('git config user.email "bot@zion.app"');' run('git add -A');' run('git commit -m "chore(reports): auto-generate reports and indexes [skip ci]" || true');' run('git push origin main || true')} ' return { statusCode: 200;
-        body: JSON.stringify({ok: true),
-        tool: 'auto-reports-suite' }) }; } catch (e) {return { statusCode: 200;
-        body: JSON.stringify({ok: false),
-        error: String(e;)}) }; } };'
-exports.config = {/* TODO: Fix JSX expression */}
+      }); try {// Generate site reports and search indexes' run('node scripts/seo-audit.js || true');' run('node scripts/generate-search-index.js || true');' run('node scripts/ai-trends-radar.js || true'); // Repo intelligence and docs indexing' run('node automation/docs-pages-indexer.cjs || true');' run('node automation/repo-knowledge-graph.cjs || true');' run('node automation/repo-radar-metrics.cjs || true'); // Commit and push' run('git config user.name "zion-bot"');' run('git config user.email "bot@zion.app"');' run('git add -A');' run('git commit -m "chore(reports): auto-generate reports and indexes [skip ci]" || true');' run('git push origin main || true')} ' return { statusCode: 200;,}
+body: JSON.stringify({ok: true),}
+        tool: 'auto-reports-suite' }) }; } catch (e) {return { statusCode: 200;,}
+body: JSON.stringify({ok: false),}
+        error: String(e;)}) }; } };';
+exports.config: {/* TODO: Fix JSX expression */};
   e: '*/5 * * * *' }; exports.handler = async function() {' const { execSync } = require('child_process');' const run = (cmd) => execSync(cmd) {/* TODO: Fix JSX expression */}
-  o: 'inherit'} shel,
-  l: true;
+  o: 'inherit'} shel;
+l: true;
       }); try {// Generate site reports and search indexes' run('node scripts/seo-audit.js || true');' run('node scripts/generate-search-index.js || true');' run('node scripts/ai-trends-radar.js || true'); // Repo intelligence and docs indexing' run('node automation/docs-pages-indexer.cjs || true');' run('node automation/repo-knowledge-graph.cjs || true');' run('node automation/repo-radar-metrics.cjs || true'); // Commit and push' run('git config user.name "zion-bot"');' run('git config user.email "bot@zion.app"');' run('git add -A');' run('git commit -m "chore(reports): auto-generate reports and indexes [skip ci]" || true');' run('git push origin main || true')} ' return {/* TODO: Fix JSX expression */}
   l: 'auto-reports-suite' }) }; } catch (e) {/* TODO: Fix JSX expression */}
-      }) }; } };'"
+      }) }; } };'";

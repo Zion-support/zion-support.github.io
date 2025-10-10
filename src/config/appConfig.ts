@@ -1,101 +1,98 @@
 
-/**
+/**;
  * Application Configuration;
  * Centralized configuration management for the Zion Tech Group application;
- */
-
+ */;
 export interface AppConfig {// TODO: Add content;}
-
+;
 }
-  ap,
-  p: {/* TODO: Fix JSX expression */}
+  ap;
+p: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  nam,
-  e: string;,
-    versio,
-  n: string;,
-    environmen,
-  t: 'development' | 'production' | 'test';
+nam;
+e: string;
+versio;
+n: string;
+environmen;
+t: 'development' | 'production' | 'test';
   };
-  ap,
-  i: {/* TODO: Fix JSX expression */}
+ap;
+i: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  baseUr,
-  l: string;,
-    timeou,
-  t: number;,
-    retryAttempt,
-  s: number;,
-    feature,
-  s: {/* TODO: Fix JSX expression */}
+baseUr;
+l: string;
+timeou;
+t: number;
+retryAttempt;
+s: number;
+feature;
+s: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-
-  analytics: boolean;,
-    monitoring: boolean;,
-    errorTracking: boolean;,
-    performanceOptimization: boolean;,
-    performance: {// TODO: Add content;}
+analytics: boolean;
+monitoring: boolean;
+errorTracking: boolean;
+performanceOptimization: boolean;
+performance: {// TODO: Add content;}
 };
-  enableLazyLoading: boolean;,
-    imageLazyLoadThreshold: number;,
-    componentLazyLoadThreshold: number;,
-    cacheMaxAge: number;,
-    security: {// TODO: Add content;}
+enableLazyLoading: boolean;
+imageLazyLoadThreshold: number;
+componentLazyLoadThreshold: number;
+cacheMaxAge: number;
+security: {// TODO: Add content;}
 };
-  enableCSP: boolean;,
-    enableHSTS: boolean;,
-    enableXSSProtection: boolean
-
+enableCSP: boolean;
+enableHSTS: boolean;
+enableXSSProtection: boolean;
 }
-    nam,
-  e: 'Zion Tech Group',
-    versio,
-  n: '1.0.0',
-    environmen,
-  t:
-//       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'
-  },
-    enableLazyLoadin,
-  g: true,
-    imageLazyLoadThreshol,
-  d: 0.5,
-    componentLazyLoadThreshol,
-  d: 0.25,
-    cacheMaxAg,
-  e: 3600000, // 1 hour in milliseconds;
-// enableCS,
-  P: true,
-// enableHST,
-  S: true,
-// enableXSSProtectio,
-  n: true;
+    nam;
+e: 'Zion Tech Group';
+versio;
+n: '1.0.0';
+environmen;
+t:;
+//       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development';
+  };
+enableLazyLoadin;
+g: true;
+imageLazyLoadThreshol;
+d: 0.5;
+componentLazyLoadThreshol;
+d: 0.25;
+cacheMaxAg;
+e: 3600000, // 1 hour in milliseconds;
+// enableCS;
+P: true;
+// enableHST;
+S: true;
+// enableXSSProtectio;
+n: true;
  * Get configuration value by key path;
- * @example getConfig('app.name') => 'Zion Tech Group'
+ * @example getConfig('app.name') => 'Zion Tech Group';
 export function getConfig;
-          <T = unknown>(keyPat)
-  h: string): T {const keys = keyPath.split('.');}
+          <T = unknown>(keyPat);
+h: string): T {const keys = keyPath.split('.');}
   const __keys = keyPath.split('.');
-  let,
-  value: unknown = config;
-  for (const key of keys) {/* TODO: Fix JSX expression */}
+let;
+value: unknown = config;
+for (const key of keys) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     if (value && typeof value === 'object' && key in value) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      value = (value as Record;)
+      value = (value as Record;);
           <string, unknown>)[key];
     } else {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       throw new Error(`Configuration key "${keyPath}" not found`);
-  return value as T;
+return value as T;
  * Check if a feature is enabled;
-export function isFeatureEnabled(featur)
-  e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */}
+export function isFeatureEnabled(featur);
+e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   return config.features[feature];
@@ -115,6 +112,3 @@ export function isDevelopment(): boolean {/* TODO: Fix JSX expression */}
 }
   return config.app.environment === 'development';
 export default config;
-
-
-
