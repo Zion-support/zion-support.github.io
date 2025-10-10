@@ -38,6 +38,22 @@ const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
 
+// Additional AI Services
+const AIEnergyManagementPage = React.lazy(() => import('./app/ai-energy-management/page'));
+const AIEnvironmentalPage = React.lazy(() => import('./app/ai-environmental/page'));
+const AILegalAnalysisPage = React.lazy(() => import('./app/ai-legal-analysis/page'));
+const AIMentalHealthPage = React.lazy(() => import('./app/ai-mental-health/page'));
+const AIQualityControlPage = React.lazy(() => import('./app/ai-quality-control/page'));
+const AIRetailPage = React.lazy(() => import('./app/ai-retail/page'));
+const AISportsPage = React.lazy(() => import('./app/ai-sports/page'));
+
+// IT Services
+const APIDevelopmentPage = React.lazy(() => import('./app/api-development/page'));
+const ComplianceServicesPage = React.lazy(() => import('./app/compliance-services/page'));
+const DataBackupPage = React.lazy(() => import('./app/data-backup/page'));
+const DataMigrationPage = React.lazy(() => import('./app/data-migration/page'));
+const HybridCloudPage = React.lazy(() => import('./app/hybrid-cloud/page'));
+
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
@@ -80,6 +96,22 @@ const App: React.FC = () => {
                             <Route path="/micro-saas" element={<MicroSaasPage />} />
                             <Route path="/ai-services" element={<AiServicesPage />} />
                             <Route path="/it-services" element={<ItServicesPage />} />
+                            
+                            {/* Additional AI Services Routes */}
+                            <Route path="/ai-energy-management" element={<AIEnergyManagementPage />} />
+                            <Route path="/ai-environmental" element={<AIEnvironmentalPage />} />
+                            <Route path="/ai-legal-analysis" element={<AILegalAnalysisPage />} />
+                            <Route path="/ai-mental-health" element={<AIMentalHealthPage />} />
+                            <Route path="/ai-quality-control" element={<AIQualityControlPage />} />
+                            <Route path="/ai-retail" element={<AIRetailPage />} />
+                            <Route path="/ai-sports" element={<AISportsPage />} />
+                            
+                            {/* IT Services Routes */}
+                            <Route path="/api-development" element={<APIDevelopmentPage />} />
+                            <Route path="/compliance-services" element={<ComplianceServicesPage />} />
+                            <Route path="/data-backup" element={<DataBackupPage />} />
+                            <Route path="/data-migration" element={<DataMigrationPage />} />
+                            <Route path="/hybrid-cloud" element={<HybridCloudPage />} />
                           </Routes>
                         </Suspense>
                       </main>
