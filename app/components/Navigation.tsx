@@ -108,12 +108,14 @@ const Navigation: React.FC = () => {
 
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
     };
   }, []);
 
+<<<<<<< HEAD
   const closeAllMenus = () => {
     setServicesOpen(false);
     setIsOpen(false);
@@ -420,10 +422,26 @@ const Navigation: React.FC = () => {
         { name: 'AI Legal Research Pro', path: '/ai-legal-research-pro', description: 'Advanced legal research AI', icon: '⚖️', popular: true }
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-d464
       ]
+=======
+  const services = [
+    {
+      name: 'AI Services',
+      href: '/ai-services',
+      icon: Brain,
+      description: 'Advanced AI solutions for business automation and optimization'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
     },
     {
-      title: 'IT Services',
+      name: 'IT Services',
+      href: '/it-services',
+      icon: Settings,
+      description: 'Comprehensive IT infrastructure and support services'
+    },
+    {
+      name: 'Micro SaaS',
+      href: '/micro-saas',
       icon: Cloud,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       color: 'text-blue-600',
@@ -804,19 +822,27 @@ const Navigation: React.FC = () => {
     { name: 'AI Voice Cloning Studio Pro', href: '/ai-voice-cloning-studio', icon: Mic, category: 'Creative', price: '$149/mo' },
     { name: 'AI Infrastructure Monitoring Pro', href: '/ai-infrastructure-monitoring-pro', icon: Activity, category: 'IT', price: '$499/mo' },
     { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro', icon: FlaskConical, category: 'Healthcare', price: '$7,500/mo' }
+=======
+      description: 'Powerful, affordable AI-powered business tools'
+    }
   ];
 
-  const aiServices = [
-    { name: 'AI-Powered Drug Discovery Pro', href: '/ai-drug-discovery-pro', icon: Stethoscope, price: '$4,500/mo' },
-    { name: 'AI Climate Change Solutions Pro', href: '/ai-climate-solutions-pro', icon: Globe, price: '$3,200/mo' },
-    { name: 'AI-Powered Space Technology Pro', href: '/ai-space-technology-pro', icon: Rocket, price: '$5,500/mo' },
-    { name: 'AI-Powered Financial Crime Detection Pro', href: '/ai-financial-crime-detection-pro', icon: Shield, price: '$2,800/mo' },
-    { name: 'AI-Powered Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro', icon: Truck, price: '$2,200/mo' },
-    { name: 'AI-Powered Energy Grid Management Pro', href: '/ai-energy-grid-management-pro', icon: Zap, price: '$3,500/mo' },
-    { name: 'AI-Powered Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro', icon: Sprout, price: '$1,800/mo' },
-    { name: 'AI-Powered Legal Research Pro', href: '/ai-legal-research-pro', icon: Scale, price: '$2,500/mo' }
+  const companyLinks = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Contact', href: '/contact' }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
   ];
 
+  const resourceLinks = [
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'Support', href: '/support' }
+  ];
+
+<<<<<<< HEAD
   const itServices = [
     { name: 'AI-Powered Infrastructure Monitoring Pro', href: '/ai-infrastructure-monitoring', icon: Activity, price: '$1,800/mo' },
     { name: 'Blockchain Integration Services Pro', href: '/blockchain-integration-services', icon: Shield, price: '$2,500/mo' },
@@ -894,10 +920,27 @@ const Navigation: React.FC = () => {
             Zion Tech Group
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
             </span>
+=======
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-black/90 backdrop-blur-lg border-b border-white/10' 
+        : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+              <Brain className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
+<<<<<<< HEAD
             <Link
               to="/"
 <<<<<<< HEAD
@@ -959,73 +1002,102 @@ const Navigation: React.FC = () => {
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-ce29
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
             {/* Services Dropdown */}
-            <div className="relative">
+            <div className="relative group">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-                aria-expanded={servicesOpen}
-                aria-haspopup="true"
+                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200"
               >
                 <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
-                  <div className="grid grid-cols-2 gap-6 px-6">
-                    {serviceCategories.map((category, index) => (
-                      <div key={index} className="space-y-3">
-                        <div className="flex items-center space-x-2 mb-3">
-                          <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
-                            <category.icon className={`w-4 h-4 ${category.color}`} />
-                          </div>
-                          <h3 className="font-semibold text-gray-900 text-sm">{category.title}</h3>
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white/95 backdrop-blur-lg rounded-xl shadow-xl border border-white/20 p-6">
+                  <div className="grid grid-cols-1 gap-4">
+                    {services.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.href}
+                        className="flex items-start space-x-3 p-3 rounded-lg hover:bg-white/10 transition-colors duration-200"
+                        onClick={() => setServicesOpen(false)}
+                      >
+                        <service.icon className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-semibold text-gray-900">{service.name}</h3>
+                          <p className="text-sm text-gray-600">{service.description}</p>
                         </div>
-                        <div className="space-y-2">
-                          {category.services.slice(0, 6).map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              to={service.path}
-                              className="block px-3 py-2 text-sm text-gray-600 hover:bg-cyan-400/20 hover:text-cyan-600 rounded-lg transition-colors"
-                              onClick={closeAllMenus}
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
+                      </Link>
                     ))}
-                  </div>
-                  <div className="border-t border-gray-200 mt-6 pt-4 px-6">
-                    <Link
-                      to="/services"
-                      className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
-                      onClick={closeAllMenus}
-                    >
-                      View All Services
-                    </Link>
                   </div>
                 </div>
               )}
             </div>
 
-            <Link 
-              to="/case-studies" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
-              Case Studies
-            </Link>
+            {/* Company Links */}
+            <div className="relative group">
+              <button className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200">
+                <span>Company</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-48 bg-white/95 backdrop-blur-lg rounded-xl shadow-xl border border-white/20 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="space-y-2">
+                  {companyLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      to={link.href}
+                      className="block px-3 py-2 text-gray-900 hover:bg-white/10 rounded-lg transition-colors duration-200"
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Resources Links */}
+            <div className="relative group">
+              <button className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200">
+                <span>Resources</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-48 bg-white/95 backdrop-blur-lg rounded-xl shadow-xl border border-white/20 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="space-y-2">
+                  {resourceLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      to={link.href}
+                      className="block px-3 py-2 text-gray-900 hover:bg-white/10 rounded-lg transition-colors duration-200"
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
             <Link
-              to="/blog"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
+              to="/pricing"
+              className="text-white hover:text-cyan-400 transition-colors duration-200"
             >
-              Blog
+              Pricing
             </Link>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <a
+              href="tel:+13024640950"
+              className="flex items-center space-x-2 text-white hover:text-cyan-400 transition-colors duration-200"
+            >
+              <Phone className="w-4 h-4" />
+              <span className="text-sm">+1 (302) 464-0950</span>
+            </a>
             <Link
               to="/contact"
+<<<<<<< HEAD
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
@@ -1049,12 +1121,15 @@ const Navigation: React.FC = () => {
               className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center cyber-button quantum-ripple"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
               onClick={closeAllMenus}
+=======
+              className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
             >
               Get Started
-              <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>
 
+<<<<<<< HEAD
           {/* Mobile Menu Buttons */}
           <div className="lg:hidden flex items-center space-x-4">
             <button
@@ -1072,10 +1147,20 @@ const Navigation: React.FC = () => {
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
+=======
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Menu */}
         {isOpen && (
+<<<<<<< HEAD
           <div className="lg:hidden cyber-card-ultra mt-2 p-4">
             <div className="space-y-4">
               {/* Mobile Search */}
@@ -1114,35 +1199,27 @@ const Navigation: React.FC = () => {
               </Link>
 
               {/* Mobile Services */}
+=======
+          <div className="lg:hidden bg-black/95 backdrop-blur-lg border-t border-white/10">
+            <div className="px-4 py-6 space-y-4">
+              {/* Services */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
               <div>
-                <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
-                >
-                  <div className="flex items-center space-x-2">
-                    <Code className="w-4 h-4" />
-                    <span>Services</span>
-                  </div>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {servicesOpen && (
-                  <div className="ml-4 space-y-2 mt-2">
-                    {serviceCategories.map((category, categoryIndex) => (
-                      <div key={categoryIndex}>
-                        <div className="text-gray-300 font-semibold text-sm mb-2">{category.title}</div>
-                        <div className="ml-4 space-y-1">
-                          {category.services.slice(0, 4).map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              to={service.path}
-                              className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1"
-                              onClick={closeAllMenus}
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                        </div>
+                <h3 className="text-white font-semibold mb-3">Services</h3>
+                <div className="space-y-2">
+                  {services.map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.href}
+                      className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/10 transition-colors duration-200"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <service.icon className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <h4 className="text-white font-medium">{service.name}</h4>
+                        <p className="text-sm text-gray-400">{service.description}</p>
                       </div>
+<<<<<<< HEAD
                     ))}
 =======
   const mainLinks = [
@@ -1266,32 +1343,58 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-f31a
                   </div>
                 )}
+=======
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Company */}
+              <div>
+                <h3 className="text-white font-semibold mb-3">Company</h3>
+                <div className="space-y-2">
+                  {companyLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      to={link.href}
+                      className="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Resources */}
+              <div>
+                <h3 className="text-white font-semibold mb-3">Resources</h3>
+                <div className="space-y-2">
+                  {resourceLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      to={link.href}
+                      className="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
               </div>
 
 <<<<<<< HEAD
               <Link
-                to="/case-studies"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
-                onClick={closeAllMenus}
+                to="/pricing"
+                className="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200"
+                onClick={() => setIsOpen(false)}
               >
-                Case Studies
+                Pricing
               </Link>
-              <Link
-                to="/blog"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
-                onClick={closeAllMenus}
-              >
-                Blog
-              </Link>
-              <Link
-                to="/contact"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
-                onClick={closeAllMenus}
-              >
-                Contact
-              </Link>
-              
+
               {/* Mobile CTA */}
+<<<<<<< HEAD
               <Link
                 to="/contact"
                 className="block bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center mt-4 cyber-button quantum-ripple"
@@ -1299,6 +1402,24 @@ const Navigation: React.FC = () => {
               >
                 Get Started
               </Link>
+=======
+              <div className="pt-4 border-t border-white/10">
+                <a
+                  href="tel:+13024640950"
+                  className="flex items-center space-x-2 text-white hover:text-cyan-400 transition-colors duration-200 mb-4"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>+1 (302) 464-0950</span>
+                </a>
+                <Link
+                  to="/contact"
+                  className="block w-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-500 hover:to-blue-600 transition-all duration-300"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Get Started
+                </Link>
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
             </div>
           </div>
         )}
@@ -1346,8 +1467,12 @@ const Navigation: React.FC = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default Navigation;
 >>>>>>> cursor/analyze-improve-and-deploy-application-58b3
 =======
 export default Navigation;
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-f31a
+=======
+export default Navigation;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01

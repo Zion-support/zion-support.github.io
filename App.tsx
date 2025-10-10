@@ -510,4 +510,8 @@ const App: React.FC = memo(() => {
       </HelmetProvider>
     </EnhancedErrorBoundary>
   );
+<<<<<<< HEAD
 };
+=======
+});
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
