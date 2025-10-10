@@ -347,12 +347,480 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
     {
       icon: Heart,
       title: 'AI Drug Discovery Pro',
-      description: 'Advanced AI platform for pharmaceutical research, drug discovery, and clinical trial optimization',
-      price: '$2,499/month',
+      description: 'Advanced AI platform for pharmaceutical research and drug development',
+      price: '$2,999/month',
       marketPrice: '$5000-20000/month',
-      features: ['Molecular design and optimization', 'Drug-target interaction prediction', 'Clinical trial design optimization', 'Side effect prediction', 'Drug repurposing analysis', 'Biomarker discovery', 'Regulatory compliance assistance', 'Real-world evidence analysis'],
-      benefits: ['Faster drug development', 'Reduced research costs', 'Better success rates', 'Life-saving innovations'],
-      category: 'Pharmaceutical AI',
+      features: ['Molecular property prediction', 'Drug-target interaction analysis', 'Clinical trial optimization', 'Side effect prediction', 'Drug repurposing algorithms', 'Biomarker discovery', 'Personalized medicine', 'Regulatory compliance'],
+      benefits: ['Faster drug development', 'Reduced R&D costs', 'Higher success rates', 'Personalized treatments'],
+      category: 'Healthcare',
+      popular: false
+    },
+    {
+      icon: Zap,
+      title: 'AI Energy Grid Management Pro',
+      description: 'Smart grid optimization and renewable energy management with AI',
+      price: '$1,999/month',
+      marketPrice: '$3000-15000/month',
+      features: ['Grid load balancing', 'Renewable energy forecasting', 'Demand response optimization', 'Energy storage management', 'Fault detection and prevention', 'Carbon footprint reduction', 'Real-time monitoring', 'Predictive maintenance'],
+      benefits: ['Reduced energy costs', 'Improved grid stability', 'Increased renewable integration', 'Environmental sustainability'],
+      category: 'Energy',
+      popular: false
+    },
+    {
+      icon: Shield,
+      title: 'AI Financial Crime Detection Pro',
+      description: 'Advanced AI system for detecting and preventing financial crimes',
+      price: '$1,499/month',
+      marketPrice: '$2500-10000/month',
+      features: ['Real-time fraud detection', 'Money laundering prevention', 'Transaction monitoring', 'Risk scoring algorithms', 'Regulatory compliance', 'Pattern recognition', 'Behavioral analysis', 'Alert management'],
+      benefits: ['Reduced financial losses', 'Compliance automation', 'Real-time protection', 'Risk mitigation'],
+      category: 'Financial Security',
+      popular: true
+    },
+    {
+      icon: Globe,
+      title: 'AI Agricultural Intelligence Pro',
+      description: 'Smart farming solutions with AI-powered crop optimization and monitoring',
+      price: '$899/month',
+      marketPrice: '$1500-5000/month',
+      features: ['Crop yield prediction', 'Soil analysis and optimization', 'Pest and disease detection', 'Weather forecasting', 'Irrigation optimization', 'Harvest timing', 'Resource management', 'Sustainability tracking'],
+      benefits: ['Increased crop yields', 'Reduced resource waste', 'Better crop quality', 'Sustainable farming'],
+      category: 'Agriculture',
+      popular: false
+    },
+    {
+      icon: Brain,
+      title: 'AI Climate Solutions Pro',
+      description: 'AI-powered climate monitoring and environmental impact optimization',
+      price: '$1,299/month',
+      marketPrice: '$2000-8000/month',
+      features: ['Climate modeling and prediction', 'Carbon footprint analysis', 'Environmental monitoring', 'Sustainability reporting', 'Emission reduction strategies', 'Green energy optimization', 'Climate risk assessment', 'Environmental compliance'],
+      benefits: ['Environmental sustainability', 'Cost reduction', 'Compliance automation', 'Climate resilience'],
+      category: 'Climate',
+      popular: false
+    },
+    {
+      icon: Cpu,
+      title: 'AI Quantum Computing Solutions',
+      description: 'Quantum-enhanced AI algorithms for complex optimization problems',
+      price: '$4,999/month',
+      marketPrice: '$8000-30000/month',
+      features: ['Quantum machine learning', 'Optimization algorithms', 'Cryptographic security', 'Drug discovery acceleration', 'Financial modeling', 'Climate simulation', 'Quantum neural networks', 'Hybrid processing'],
+      benefits: ['Exponential speed improvements', 'Breakthrough problem solving', 'Future-proof technology', 'Competitive advantage'],
+      category: 'Quantum AI',
+      popular: false
+    },
+    {
+      icon: Monitor,
+      title: 'AI Holographic Workspace',
+      description: 'Immersive 3D workspace with AI-powered collaboration tools',
+      price: '$2,499/month',
+      marketPrice: '$4000-15000/month',
+      features: ['3D holographic interfaces', 'Spatial computing', 'Virtual collaboration', 'Immersive visualization', 'Gesture control', 'Real-time 3D rendering', 'Multi-user environments', 'AR/VR integration'],
+      benefits: ['Immersive experience', 'Enhanced collaboration', '3D data visualization', 'Future workspace'],
+      category: 'Immersive Tech',
+      popular: false
+    },
+    {
+      icon: Box,
+      title: 'AI 3D Generation',
+      description: 'AI-powered 3D content creation and modeling for various industries',
+      price: '$1,199/month',
+      marketPrice: '$2000-8000/month',
+      features: ['AI 3D model generation', 'Text-to-3D conversion', 'Automated texture mapping', '3D animation creation', 'Architectural visualization', 'Product design automation', 'VR content creation', '3D printing optimization'],
+      benefits: ['Faster 3D creation', 'Cost reduction', 'Creative automation', 'Professional quality'],
+      category: '3D Technology',
+      popular: true
+    },
+    {
+      icon: Zap,
+      title: 'AI 5G Implementation',
+      description: '5G network optimization and AI-powered connectivity solutions',
+      price: '$1,799/month',
+      marketPrice: '$3000-12000/month',
+      features: ['5G network optimization', 'AI traffic management', 'Edge computing integration', 'IoT device management', 'Network slicing automation', 'Performance monitoring', 'Predictive maintenance', 'Ultra-low latency apps'],
+      benefits: ['Ultra-fast connectivity', 'Network optimization', 'IoT enablement', 'Future-ready infrastructure'],
+      category: '5G Technology',
+      popular: false
+    },
+    {
+      icon: Link,
+      title: 'AI Blockchain Solutions',
+      description: 'Decentralized AI applications with blockchain integration',
+      price: '$1,399/month',
+      marketPrice: '$2500-10000/month',
+      features: ['Decentralized AI training', 'Blockchain data verification', 'Smart contract AI', 'Cryptocurrency algorithms', 'NFT generation', 'DeFi optimization', 'Supply chain transparency', 'Secure computation'],
+      benefits: ['Enhanced security', 'Transparent operations', 'Decentralized control', 'Innovation leadership'],
+      category: 'Blockchain AI',
+      popular: true
+    }
+  ];
+
+  // New Micro SAAS Services with real capabilities
+  const microSaasServices = [
+    {
+      icon: BarChart,
+      title: 'Zion Analytics Pro',
+      description: 'Advanced business intelligence platform with real-time dashboards and predictive analytics',
+      price: '$99/month',
+      marketPrice: '$200-500/month',
+      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Data visualization', 'API integration', 'Automated alerts', 'Team collaboration', 'Mobile access'],
+      benefits: ['Data-driven decisions', 'Time savings', 'Cost reduction', 'Better insights'],
+      category: 'Analytics',
+      popular: true,
+      link: 'https://ziontechgroup.com/zion-analytics-pro'
+    },
+    {
+      icon: MessageSquare,
+      title: 'Zion Chat AI',
+      description: 'Intelligent customer support chatbot with natural language processing',
+      price: '$79/month',
+      marketPrice: '$150-400/month',
+      features: ['Natural language processing', 'Multi-language support', 'CRM integration', 'Live chat handoff', 'Analytics dashboard', 'Custom training', 'API access', '24/7 support'],
+      benefits: ['24/7 availability', 'Reduced support costs', 'Better customer experience', 'Scalable solution'],
+      category: 'Customer Service',
+      popular: true,
+      link: 'https://ziontechgroup.com/zion-chat-ai'
+    },
+    {
+      icon: Shield,
+      title: 'Zion Security Shield',
+      description: 'Comprehensive cybersecurity monitoring and threat detection platform',
+      price: '$149/month',
+      marketPrice: '$300-800/month',
+      features: ['Real-time threat detection', 'Vulnerability scanning', 'Incident response', 'Compliance monitoring', 'Security reports', 'Team alerts', 'API integration', '24/7 monitoring'],
+      benefits: ['Enhanced security', 'Compliance automation', 'Threat prevention', 'Peace of mind'],
+      category: 'Cybersecurity',
+      popular: true,
+      link: 'https://ziontechgroup.com/zion-security-shield'
+    },
+    {
+      icon: Cloud,
+      title: 'Zion Cloud Vault',
+      description: 'Secure cloud backup and disaster recovery solution with AI optimization',
+      price: '$59/month',
+      marketPrice: '$100-300/month',
+      features: ['Automated backups', 'Disaster recovery', 'File versioning', 'Encryption', 'Cross-platform sync', 'Bandwidth optimization', 'Restore testing', 'Compliance support'],
+      benefits: ['Data protection', 'Business continuity', 'Cost savings', 'Automated processes'],
+      category: 'Cloud Storage',
+      popular: true,
+      link: 'https://ziontechgroup.com/zion-cloud-vault'
+    },
+    {
+      icon: FileText,
+      title: 'Zion Content Studio',
+      description: 'AI-powered content creation platform for blogs, social media, and marketing',
+      price: '$89/month',
+      marketPrice: '$150-500/month',
+      features: ['AI content generation', 'SEO optimization', 'Brand voice training', 'Multi-platform publishing', 'Content calendar', 'Performance analytics', 'Team collaboration', 'Templates library'],
+      benefits: ['Save time', 'Consistent quality', 'SEO optimization', 'Increased engagement'],
+      category: 'Content Creation',
+      popular: true,
+      link: 'https://ziontechgroup.com/zion-content-studio'
+    },
+    {
+      icon: Users,
+      title: 'Zion CRM Intelligence',
+      description: 'AI-enhanced customer relationship management with predictive insights',
+      price: '$129/month',
+      marketPrice: '$200-600/month',
+      features: ['Lead scoring', 'Sales forecasting', 'Customer segmentation', 'Automated follow-ups', 'Pipeline management', 'Performance analytics', 'Integration hub', 'Mobile app'],
+      benefits: ['Increased sales', 'Better customer relationships', 'Automated processes', 'Data-driven insights'],
+      category: 'CRM',
+      popular: true,
+      link: 'https://ziontechgroup.com/zion-crm-intelligence'
+    },
+    {
+      icon: Database,
+      title: 'Zion Data Sync',
+      description: 'Intelligent data integration and synchronization platform',
+      price: '$109/month',
+      marketPrice: '$200-500/month',
+      features: ['Real-time sync', 'Data transformation', 'Error handling', 'Monitoring dashboard', 'API connections', 'Scheduled syncs', 'Data validation', 'Custom mappings'],
+      benefits: ['Data accuracy', 'Time savings', 'Reduced errors', 'Better integration'],
+      category: 'Data Integration',
+      popular: false,
+      link: 'https://ziontechgroup.com/zion-data-sync'
+    },
+    {
+      icon: Target,
+      title: 'Zion Lead Magnet',
+      description: 'Advanced lead generation and nurturing platform with AI optimization',
+      price: '$79/month',
+      marketPrice: '$150-400/month',
+      features: ['Lead capture forms', 'Email automation', 'Lead scoring', 'A/B testing', 'Analytics dashboard', 'CRM integration', 'Landing page builder', 'Social media integration'],
+      benefits: ['More qualified leads', 'Automated nurturing', 'Higher conversion rates', 'Better ROI'],
+      category: 'Lead Generation',
+      popular: true,
+      link: 'https://ziontechgroup.com/zion-lead-magnet'
+    },
+    {
+      icon: Calendar,
+      title: 'Zion Project Master',
+      description: 'AI-powered project management with intelligent resource allocation',
+      price: '$99/month',
+      marketPrice: '$200-500/month',
+      features: ['Project planning', 'Resource allocation', 'Task automation', 'Progress tracking', 'Team collaboration', 'Risk assessment', 'Time tracking', 'Reporting suite'],
+      benefits: ['Better project delivery', 'Resource optimization', 'Team productivity', 'Risk mitigation'],
+      category: 'Project Management',
+      popular: true,
+      link: 'https://ziontechgroup.com/zion-project-master'
+    },
+    {
+      icon: Mail,
+      title: 'Zion Email Automation',
+      description: 'Intelligent email marketing platform with AI-powered personalization',
+      price: '$69/month',
+      marketPrice: '$120-350/month',
+      features: ['Email automation', 'Personalization engine', 'A/B testing', 'Analytics dashboard', 'Template library', 'List management', 'Deliverability optimization', 'Compliance tools'],
+      benefits: ['Higher open rates', 'Better engagement', 'Time savings', 'Improved deliverability'],
+      category: 'Email Marketing',
+      popular: true,
+      link: 'https://ziontechgroup.com/zion-email-automation'
+    },
+    {
+      icon: Package,
+      title: 'Zion Inventory Smart',
+      description: 'AI-powered inventory management with demand forecasting',
+      price: '$119/month',
+      marketPrice: '$200-600/month',
+      features: ['Inventory tracking', 'Demand forecasting', 'Reorder automation', 'Multi-location support', 'Analytics dashboard', 'Supplier management', 'Cost optimization', 'Integration hub'],
+      benefits: ['Reduced stockouts', 'Lower inventory costs', 'Better planning', 'Automated processes'],
+      category: 'Inventory Management',
+      popular: false,
+      link: 'https://ziontechgroup.com/zion-inventory-smart'
+    },
+    {
+      icon: DollarSign,
+      title: 'Zion Invoice Genius',
+      description: 'Automated invoice generation and payment processing platform',
+      price: '$59/month',
+      marketPrice: '$100-300/month',
+      features: ['Automated invoicing', 'Payment processing', 'Recurring billing', 'Client portal', 'Expense tracking', 'Tax calculations', 'Reporting suite', 'Integration options'],
+      benefits: ['Faster payments', 'Reduced errors', 'Time savings', 'Better cash flow'],
+      category: 'Invoicing',
+      popular: true,
+      link: 'https://ziontechgroup.com/zion-invoice-genius'
+    },
+    {
+      icon: Settings,
+      title: 'Zion Workflow Automation',
+      description: 'No-code workflow automation platform with AI optimization',
+      price: '$89/month',
+      marketPrice: '$150-450/month',
+      features: ['Visual workflow builder', 'AI optimization', 'Integration library', 'Conditional logic', 'Error handling', 'Monitoring dashboard', 'Team collaboration', 'Custom triggers'],
+      benefits: ['Process efficiency', 'Error reduction', 'Time savings', 'Scalable automation'],
+      category: 'Automation',
+      popular: true,
+      link: 'https://ziontechgroup.com/zion-workflow-automation'
+    },
+    {
+      icon: Monitor,
+      title: 'Zion Performance Monitor',
+      description: 'Real-time application and infrastructure monitoring with AI insights',
+      price: '$129/month',
+      marketPrice: '$250-700/month',
+      features: ['Real-time monitoring', 'Performance analytics', 'Alert management', 'Root cause analysis', 'Custom dashboards', 'API monitoring', 'Uptime tracking', 'Team notifications'],
+      benefits: ['Better performance', 'Faster issue resolution', 'Reduced downtime', 'Proactive monitoring'],
+      category: 'Monitoring',
+      popular: false,
+      link: 'https://ziontechgroup.com/zion-performance-monitor'
+    },
+    {
+      icon: CheckSquare,
+      title: 'Zion Compliance Manager',
+      description: 'Automated compliance management for various industry standards',
+      price: '$149/month',
+      marketPrice: '$300-800/month',
+      features: ['Compliance tracking', 'Automated reporting', 'Risk assessment', 'Document management', 'Audit trails', 'Team training', 'Policy management', 'Integration options'],
+      benefits: ['Compliance automation', 'Risk reduction', 'Time savings', 'Audit readiness'],
+      category: 'Compliance',
+      popular: false,
+      link: 'https://ziontechgroup.com/zion-compliance-manager'
+    },
+    {
+      icon: Globe,
+      title: 'Zion Social Scheduler',
+      description: 'AI-powered social media management and scheduling platform',
+      price: '$79/month',
+      marketPrice: '$150-400/month',
+      features: ['Content scheduling', 'AI optimization', 'Multi-platform posting', 'Analytics dashboard', 'Content library', 'Team collaboration', 'Hashtag research', 'Engagement tracking'],
+      benefits: ['Consistent posting', 'Better engagement', 'Time savings', 'Data-driven strategy'],
+      category: 'Social Media',
+      popular: true,
+      link: 'https://ziontechgroup.com/zion-social-scheduler'
+    },
+    {
+      icon: Eye,
+      title: 'Zion AI Video Editor',
+      description: 'AI-powered video editing and content creation platform',
+      price: '$99/month',
+      marketPrice: '$200-600/month',
+      features: ['AI video editing', 'Auto-captioning', 'Thumbnail generation', 'Music library', 'Template library', 'Export options', 'Collaboration tools', 'Analytics dashboard'],
+      benefits: ['Professional quality', 'Time savings', 'Easy to use', 'Consistent branding'],
+      category: 'Video Editing',
+      popular: true,
+      link: 'https://ziontechgroup.com/zion-ai-video-editor'
+    },
+    {
+      icon: Globe,
+      title: 'Zion AI Translator Pro',
+      description: 'Advanced AI translation platform with context understanding',
+      price: '$69/month',
+      marketPrice: '$120-350/month',
+      features: ['100+ languages', 'Context understanding', 'Document translation', 'Website translation', 'API access', 'Team collaboration', 'Quality assurance', 'Custom glossaries'],
+      benefits: ['Accurate translations', 'Time savings', 'Global reach', 'Professional quality'],
+      category: 'Translation',
+      popular: false,
+      link: 'https://ziontechgroup.com/zion-ai-translator-pro'
+    },
+    {
+      icon: Code,
+      title: 'Zion AI Code Reviewer',
+      description: 'Intelligent code review and quality assurance platform',
+      price: '$119/month',
+      marketPrice: '$200-600/month',
+      features: ['Automated code review', 'Security scanning', 'Performance analysis', 'Best practices', 'Team collaboration', 'Integration options', 'Custom rules', 'Learning recommendations'],
+      benefits: ['Better code quality', 'Faster reviews', 'Security improvement', 'Team learning'],
+      category: 'Development',
+      popular: true,
+      link: 'https://ziontechgroup.com/zion-ai-code-reviewer'
+    },
+    {
+      icon: Users,
+      title: 'Zion Customer Insights Pro',
+      description: 'Advanced customer analytics and behavior prediction platform',
+      price: '$139/month',
+      marketPrice: '$250-700/month',
+      features: ['Customer segmentation', 'Behavior prediction', 'Churn analysis', 'Lifetime value', 'Personalization engine', 'A/B testing', 'Integration hub', 'Custom dashboards'],
+      benefits: ['Better customer understanding', 'Increased retention', 'Personalized experiences', 'Data-driven decisions'],
+      category: 'Customer Analytics',
+      popular: true,
+      link: 'https://ziontechgroup.com/zion-customer-insights-pro'
+    }
+  ];
+
+  // IT Services with real capabilities and pricing
+  const itServices = [
+    {
+      icon: Cloud,
+      title: 'Cloud Infrastructure Solutions',
+      description: 'Scalable cloud infrastructure with 99.9% uptime guarantee and 24/7 monitoring',
+      price: '$299/month',
+      marketPrice: '$500-2000/month',
+      features: ['AWS/Azure/GCP setup', 'Auto-scaling', 'Load balancing', 'CDN integration', 'Backup solutions', 'Security hardening', 'Monitoring', '24/7 support'],
+      benefits: ['Scalable infrastructure', 'Cost optimization', 'High availability', 'Expert support'],
+      category: 'Infrastructure',
+      popular: true
+    },
+    {
+      icon: Code,
+      title: 'Custom Software Development',
+      description: 'Bespoke software solutions tailored to your business needs with modern technologies',
+      price: '$150/hour',
+      marketPrice: '$200-500/hour',
+      features: ['Full-stack development', 'Mobile apps', 'Web applications', 'API development', 'Database design', 'UI/UX design', 'Testing', 'Deployment'],
+      benefits: ['Custom solutions', 'Modern technology', 'Scalable architecture', 'Ongoing support'],
+      category: 'Development',
+      popular: true
+    },
+    {
+      icon: Shield,
+      title: 'Cybersecurity Services',
+      description: 'Comprehensive security solutions including penetration testing and compliance',
+      price: '$499/month',
+      marketPrice: '$800-3000/month',
+      features: ['Security assessment', 'Penetration testing', 'Compliance audit', 'Incident response', 'Security training', 'Vulnerability scanning', 'Policy development', '24/7 monitoring'],
+      benefits: ['Enhanced security', 'Compliance assurance', 'Risk mitigation', 'Expert guidance'],
+      category: 'Security',
+      popular: true
+    },
+    {
+      icon: Database,
+      title: 'Database Management',
+      description: 'Professional database administration and optimization services',
+      price: '$199/month',
+      marketPrice: '$300-1000/month',
+      features: ['Database design', 'Performance optimization', 'Backup strategies', 'Security hardening', 'Monitoring', 'Migration services', 'Consulting', '24/7 support'],
+      benefits: ['Optimized performance', 'Data security', 'Reliable backups', 'Expert management'],
+      category: 'Database',
+      popular: false
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile applications for iOS and Android',
+      price: '$8,000/project',
+      marketPrice: '$15000-50000/project',
+      features: ['iOS development', 'Android development', 'Cross-platform', 'UI/UX design', 'API integration', 'Push notifications', 'App store deployment', 'Maintenance'],
+      benefits: ['Professional apps', 'Cross-platform', 'Modern design', 'Ongoing support'],
+      category: 'Mobile',
+      popular: true
+    },
+    {
+      icon: Globe,
+      title: 'Web Development',
+      description: 'Modern web applications with responsive design and SEO optimization',
+      price: '$5,000/project',
+      marketPrice: '$10000-30000/project',
+      features: ['Responsive design', 'SEO optimization', 'Performance optimization', 'Security implementation', 'CMS integration', 'E-commerce solutions', 'Analytics setup', 'Maintenance'],
+      benefits: ['Modern design', 'SEO friendly', 'Fast loading', 'Mobile responsive'],
+      category: 'Web Development',
+      popular: true
+    },
+    {
+      icon: Settings,
+      title: 'DevOps & CI/CD',
+      description: 'Automated deployment pipelines and infrastructure as code',
+      price: '$399/month',
+      marketPrice: '$600-2000/month',
+      features: ['CI/CD pipelines', 'Infrastructure as code', 'Container orchestration', 'Monitoring setup', 'Automated testing', 'Deployment automation', 'Security scanning', 'Documentation'],
+      benefits: ['Faster deployments', 'Reduced errors', 'Automated processes', 'Better reliability'],
+      category: 'DevOps',
+      popular: true
+    },
+    {
+      icon: Monitor,
+      title: 'IT Support & Maintenance',
+      description: '24/7 technical support and proactive system maintenance',
+      price: '$199/month',
+      marketPrice: '$300-1000/month',
+      features: ['24/7 support', 'Proactive monitoring', 'System maintenance', 'Security updates', 'Performance optimization', 'Backup management', 'Incident response', 'User training'],
+      benefits: ['Minimal downtime', 'Proactive maintenance', 'Expert support', 'Peace of mind'],
+      category: 'Support',
+      popular: true
+    },
+    {
+      icon: BarChart,
+      title: 'Data Analytics & BI',
+      description: 'Business intelligence solutions with custom dashboards and reporting',
+      price: '$299/month',
+      marketPrice: '$500-2000/month',
+      features: ['Custom dashboards', 'Data visualization', 'ETL processes', 'Report automation', 'Data warehousing', 'Predictive analytics', 'Integration services', 'Training'],
+      benefits: ['Data-driven insights', 'Automated reporting', 'Better decisions', 'Competitive advantage'],
+      category: 'Analytics',
+      popular: false
+    },
+    {
+      icon: Wifi,
+      title: 'Network Infrastructure',
+      description: 'Complete network design, implementation, and management services',
+      price: '$399/month',
+      marketPrice: '$600-2000/month',
+      features: ['Network design', 'Hardware installation', 'Security configuration', 'Performance optimization', 'Monitoring setup', 'Disaster recovery', 'Documentation', 'Training'],
+      benefits: ['Reliable connectivity', 'Enhanced security', 'Optimized performance', 'Scalable design'],
+      category: 'Networking',
+      popular: false
+    }
+  ];
+
+  // Contact information
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
       popular: false
     },
     {
