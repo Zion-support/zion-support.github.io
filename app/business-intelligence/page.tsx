@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp } from 'lucide-react';
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp } from 'lucide-react'
 const BusinessIntelligencePage: React.FC = () => {
   const features = [
     {
@@ -58,7 +58,7 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </div>
       <section className="py-16 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Key Benefits,
@@ -79,7 +79,7 @@ const BusinessIntelligencePage: React.FC = () => {
       </section>
       {/* CTA Section */}
       <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
@@ -101,10 +101,3 @@ const BusinessIntelligencePage: React.FC = () => {
     </div>
   ),
 };
-
-export default BusinessIntelligencePage
-  </button>
-  </button>
-  </h2>
-  </h1>
-  </div>

@@ -13,19 +13,6 @@ const AiAnalyticsDashboardPage: React.FC = () => {
       description: 'Get instant insights with real-time data visualization and monitoring.',
       benefits: ['Live dashboards', 'Real-time updates', 'Instant alerts', 'Performance monitoring']
     },
-    {
-      icon: Brain,
-      title: 'AI-Powered Insights',
-      description: 'Leverage artificial intelligence to uncover hidden patterns and trends.',
-      benefits: ['Predictive analytics', 'Anomaly detection', 'Smart recommendations', 'Automated insights']
-    },
-    {
-      icon: PieChart,
-      title: 'Advanced Visualizations',
-      description: 'Create stunning charts and graphs to present your data effectively.',
-      benefits: ['Interactive charts', 'Custom visualizations', 'Export capabilities', 'Responsive design']
-    },
-    {
       icon: Activity,
       title: 'Performance Tracking',
       description: 'Monitor key performance indicators and track business metrics.',
@@ -68,11 +55,6 @@ const AiAnalyticsDashboardPage: React.FC = () => {
                 </button>
                 <button className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
                   View Demo
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -159,8 +141,4 @@ const AiAnalyticsDashboardPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAnalyticsDashboard;
-=======
-export default AiAnalyticsDashboardPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7

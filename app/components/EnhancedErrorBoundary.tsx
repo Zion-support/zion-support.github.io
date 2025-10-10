@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -7,14 +7,14 @@ interface Props {
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
+    super(props)
     this.state = { hasError: false }
   }
 
@@ -30,12 +30,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error caught by boundary:', error, errorInfo)
     }
 
     // Send error to analytics in production
     if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag
       gtag('event', 'exception', {
         description: error.message,
         fatal: false
@@ -46,7 +46,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
 
       return (
@@ -69,11 +69,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </button>
           </div>
         </div>
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 };
 
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary

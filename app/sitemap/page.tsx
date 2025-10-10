@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Map, ArrowRight, ExternalLink, Calendar, Users, Code, Shield, Cloud, Brain, Zap } from 'lucide-react';
-
+import { Helmet } from 'react-helmet-async'
+import { Map, ArrowRight, ExternalLink, Calendar, Users, Code, Shield, Cloud, Brain, Zap } from 'lucide-react'
 const SitemapPage: React.FC = () => {
   const lastUpdated = new Date().toISOString().split('T')[0]
   
@@ -106,8 +105,7 @@ const SitemapPage: React.FC = () => {
     }
   ]
 
-  const totalPages = pageCategories.reduce((total, category) => total + category.pages.length, 0);
-
+  const totalPages = pageCategories.reduce((total, category) => total + category.pages.length, 0)
   return (
     <>
       <Helmet>
@@ -254,5 +252,3 @@ const SitemapPage: React.FC = () => {
     </>
   );
 };
-
-export default SitemapPage;

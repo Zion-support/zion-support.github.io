@@ -1,15 +1,15 @@
-'use client';
+'use client'
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Helmet } from 'react-helmet-async'
+import { ChevronDown, ChevronUp } from 'lucide-react'
 const FAQPage: React.FC = () => {
-  const [openItems, setOpenItems] = useState<number[]>([]);
+  const [openItems, setOpenItems] = useState<number[]>([])
   const toggleItem = (index: number) => {
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(item => item !== index)
         : [...prev, index]
-    );
+    )
   }
   const faqs = [
     {

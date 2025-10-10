@@ -1,0 +1,372 @@
+/* Enhanced Mobile Responsiveness for Zion Tech Group */
+
+/* Mobile First Approach */
+@media (max-width: 480px) {
+  /* Navigation improvements */
+  .mobile-menu {
+    padding: 1rem;
+  }
+  
+  .mobile-menu .space-y-4 > * + * {
+    margin-top: 0.75rem;
+  }
+  
+  /* Service cards mobile optimization */
+  .service-card-mobile {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 12px;
+  }
+  
+  .service-card-mobile h3 {
+    font-size: 1.125rem;
+    line-height: 1.4;
+  }
+  
+  .service-card-mobile p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  
+  /* Pricing display mobile */
+  .pricing-mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .pricing-mobile .price {
+    font-size: 1.5rem;
+  }
+  
+  .pricing-mobile .market-price {
+    font-size: 0.875rem;
+  }
+  
+  /* Button improvements */
+  .btn-mobile {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+    justify-content: center;
+  }
+  
+  /* Grid improvements */
+  .grid-mobile {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  /* Text sizing */
+  .text-mobile-sm {
+    font-size: 0.75rem;
+  }
+  
+  .text-mobile-base {
+    font-size: 0.875rem;
+  }
+  
+  .text-mobile-lg {
+    font-size: 1rem;
+  }
+  
+  .text-mobile-xl {
+    font-size: 1.125rem;
+  }
+  
+  .text-mobile-2xl {
+    font-size: 1.5rem;
+  }
+  
+  .text-mobile-3xl {
+    font-size: 1.875rem;
+  }
+  
+  /* Spacing improvements */
+  .space-mobile-y-2 > * + * {
+    margin-top: 0.5rem;
+  }
+  
+  .space-mobile-y-4 > * + * {
+    margin-top: 1rem;
+  }
+  
+  .space-mobile-y-6 > * + * {
+    margin-top: 1.5rem;
+  }
+  
+  /* Padding improvements */
+  .p-mobile-4 {
+    padding: 1rem;
+  }
+  
+  .p-mobile-6 {
+    padding: 1.5rem;
+  }
+  
+  .px-mobile-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .py-mobile-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  /* Margin improvements */
+  .m-mobile-4 {
+    margin: 1rem;
+  }
+  
+  .mx-mobile-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  
+  .my-mobile-4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Container improvements */
+  .container-mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Hero section mobile */
+  .hero-mobile {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .hero-mobile h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-mobile p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Feature list mobile */
+  .feature-list-mobile {
+    padding-left: 1rem;
+  }
+  
+  .feature-list-mobile li {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Card improvements */
+  .card-mobile {
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card-mobile h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .card-mobile p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer mobile */
+  .footer-mobile {
+    padding: 2rem 1rem;
+  }
+  
+  .footer-mobile .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-mobile h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-mobile ul {
+    gap: 0.75rem;
+  }
+  
+  .footer-mobile li {
+    font-size: 0.875rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 360px) {
+  .hero-mobile h1 {
+    font-size: 1.75rem;
+  }
+  
+  .text-mobile-3xl {
+    font-size: 1.5rem;
+  }
+  
+  .text-mobile-2xl {
+    font-size: 1.25rem;
+  }
+  
+  .container-mobile {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  .p-mobile-4 {
+    padding: 0.75rem;
+  }
+  
+  .p-mobile-6 {
+    padding: 1rem;
+  }
+}
+
+/* Large mobile devices */
+@media (min-width: 481px) and (max-width: 768px) {
+  .grid-mobile {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .hero-mobile h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-mobile p {
+    font-size: 1.125rem;
+  }
+  
+  .service-card-mobile {
+    padding: 1.25rem;
+  }
+  
+  .card-mobile {
+    padding: 1.25rem;
+  }
+}
+
+/* Tablet portrait */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid-mobile {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .hero-mobile h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-mobile p {
+    font-size: 1.25rem;
+  }
+  
+  .service-card-mobile {
+    padding: 1.5rem;
+  }
+  
+  .card-mobile {
+    padding: 1.5rem;
+  }
+}
+
+/* Touch improvements */
+@media (hover: none) and (pointer: coarse) {
+  .btn-mobile {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .clickable-mobile {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .link-mobile {
+    padding: 0.75rem;
+    display: block;
+  }
+}
+
+/* Landscape mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero-mobile {
+    padding: 1rem;
+  }
+  
+  .hero-mobile h1 {
+    font-size: 1.75rem;
+  }
+  
+  .hero-mobile p {
+    font-size: 0.875rem;
+  }
+  
+  .grid-mobile {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .card-mobile {
+    border: 2px solid currentColor;
+  }
+  
+  .btn-mobile {
+    border: 2px solid currentColor;
+  }
+  
+  .text-mobile-base {
+    font-weight: 500;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .card-mobile,
+  .btn-mobile,
+  .service-card-mobile {
+    transition: none;
+  }
+  
+  .card-mobile:hover,
+  .btn-mobile:hover,
+  .service-card-mobile:hover {
+    transform: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .mobile-menu,
+  .btn-mobile,
+  .footer-mobile {
+    display: none;
+  }
+  
+  .card-mobile,
+  .service-card-mobile {
+    border: 1px solid #000;
+    break-inside: avoid;
+  }
+  
+  .text-mobile-base {
+    color: #000;
+  }
+}

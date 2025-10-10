@@ -1,7 +1,7 @@
-'use client';
+'use client'
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { 
   Brain, 
   MessageSquare, 
@@ -26,11 +26,9 @@ import {
   Server
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import Footer from '../components/Footer'
 const AiServicesPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const services = [
     {
       id: 'ai-chatbots',
@@ -987,33 +985,8 @@ const AiServicesPage: React.FC = () => {
       icon: Mic
     },
     {
-      id: 'ai-content-generation',
-      name: 'AI Content Generation Pro',
-      description: 'Advanced content generation platform with multi-format support and brand consistency',
-      price: '$499/month',
-      marketPrice: '$1000-3000/month',
-      features: [
-        'Multi-format content generation',
-        'Brand voice customization',
-        'SEO-optimized content',
-        'Content planning and scheduling',
-        'Plagiarism detection',
-        'Content performance analytics',
-        'Integration with CMS platforms',
-        'Custom content templates'
-      ],
-      benefits: [
-        'Scale content production',
-        'Maintain brand consistency',
-        'Improve SEO performance',
-        'Reduce content costs'
-      ],
-      category: 'Content Generation',
-      popular: true,
-      icon: FileText
     }
-  ]
-
+  ];
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'Customer Service', name: 'Customer Service', count: services.filter(s => s.category === 'Customer Service').length },
@@ -1047,8 +1020,7 @@ const AiServicesPage: React.FC = () => {
 
   const filteredServices = services.filter(service => 
     selectedCategory === 'all' || service.category === selectedCategory
-  );
-
+  )
   return (
     <>
       <Helmet>
@@ -1183,7 +1155,7 @@ const AiServicesPage: React.FC = () => {
       
       <Footer />
     </>
-  );
+  )
 }
 
-export default AiServicesPage;
+export default AiServicesPage

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Shield, FileText, Users, Lock, BarChart, CheckCircle, ArrowRight, Zap, Brain } from 'lucide-react';
+import { Helmet } from 'react-helmet-async'
+import { Shield, FileText, Users, Lock, BarChart, CheckCircle, ArrowRight, Zap, Brain } from 'lucide-react'
 const MedicalRecordsManagerPage: React.FC = () => {
   const features = [
     {
@@ -72,6 +72,3 @@ const MedicalRecordsManagerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-
-export default MedicalRecordsManagerPage
-  </h1>

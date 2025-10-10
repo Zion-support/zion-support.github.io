@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -6,10 +6,8 @@ import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
-import StructuredData from './components/StructuredData';
-
-import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-
+import StructuredData from './components/StructuredData'
+import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react'
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
@@ -19,29 +17,26 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
-
+;
 const HomePage: React.FC = () => {
-    const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
+    const [isLoaded, setIsLoaded] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    setIsLoaded(true);
+    setIsLoaded(true)
     // Trigger visibility animation
-    const timer = setTimeout(() => setIsVisible(true), 100);
+    const timer = setTimeout(() => setIsVisible(true), 100)
     return () => clearTimeout(timer)
-  }, []);
-
+  }, [])
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag
       gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       })
     }
-  }, []);
-
+  }, [])
   const features = [
     {
       icon: Brain,
@@ -172,8 +167,7 @@ const HomePage: React.FC = () => {
 
             {/* Hero Section */}
             <section id="main-content" className="relative pt-20 pb-16 overflow-hidden">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center">
                   <div className="mb-8">
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
@@ -235,13 +229,11 @@ const HomePage: React.FC = () => {
               </div>
 
 const HomePage: React.FC = memo(() => {
-    const [isLoaded, setIsLoaded] = useState(false);
-
+    const [isLoaded, setIsLoaded] = useState(false)
   useEffect(() => {
-    preloadComponents();
+    preloadComponents()
     setIsLoaded(true)
-  }, []);
-
+  }, [])
   const features = [
     {
       icon: Brain,
@@ -314,12 +306,11 @@ const HomePage: React.FC = memo(() => {
               improve efficiency, and stay ahead of the competition.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
             </section>
 
             {/* Services Section */}
             <section className="py-20 bg-slate-800/50 backdrop-blur-sm">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                     Our Core Services
@@ -366,7 +357,7 @@ const HomePage: React.FC = memo(() => {
 
             {/* Features Section */}
             <section className="py-20">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                     Why Choose Zion Tech Group?
@@ -405,7 +396,7 @@ const HomePage: React.FC = memo(() => {
 
             {/* Testimonials Section */}
             <section className="py-20 bg-slate-900/50">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                     What Our Clients Say
@@ -484,7 +475,7 @@ const HomePage: React.FC = memo(() => {
 
             {/* CTA Section */}
             <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                   Ready to Transform Your Business?
                 </h2>
@@ -519,10 +510,8 @@ const HomePage: React.FC = memo(() => {
       </PerformanceOptimizer>
 
     </React.Fragment>
-  );
+  )
 }
 
-HomePage.displayName = 'HomePage';
-
-export default HomePage;
-
+HomePage.displayName = 'HomePage'
+export default HomePage

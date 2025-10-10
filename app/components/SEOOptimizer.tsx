@@ -1,10 +1,10 @@
 'use client';
 interface SEOOptimizerProps {
   title: string;
-  description: string;
+  description: string
   keywords?: string[]
-  canonicalUrl?: string;
-  structuredData?: object;
+  canonicalUrl?: string
+  structuredData?: object
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -14,8 +14,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   canonicalUrl,
   structuredData
 }) => {
-  const keywordsString = keywords.join(', ');
-
+  const keywordsString = keywords.join(', ')
   return (
     <Helmet>
       <title>{title}</title>
@@ -37,5 +36,3 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     </Helmet>
   );
 };
-
-export default SEOOptimizer;

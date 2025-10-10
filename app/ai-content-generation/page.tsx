@@ -2,8 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const AiContentGenerationPage: React.FC = () => {
   const features = [
     {
@@ -128,7 +128,7 @@ const AiContentGenerationPage: React.FC = () => {
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -149,7 +149,7 @@ const AiContentGenerationPage: React.FC = () => {
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Transform your business with our page solutions today
@@ -164,22 +164,7 @@ const AiContentGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
   ),
 };
-
-export default AiContentGenerationPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
-  </main>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

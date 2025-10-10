@@ -1,11 +1,9 @@
-'use client';
+'use client'
 import React, { memo } from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
-
+import { Link } from 'react-router-dom'
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react'
 const Footer: React.FC = memo(() => {
-  const currentYear = new Date().getFullYear();
-  
+  const currentYear = new Date().getFullYear()
   const aiServices = [
     { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Automated content' },
@@ -41,6 +39,16 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Content Generation Pro', url: '/ai-content-generation-pro', description: 'Advanced content creation' }
   ]
 
+  const microSaasServices = [
+    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Real-time BI & Analytics' },
+    { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'No-code Chatbot Platform' },
+    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Automated Email Campaigns' },
+    { name: 'Social Media AI', url: '/social-media-ai', description: 'AI Social Management' },
+    { name: 'AI Project Management', url: '/ai-project-management', description: 'Smart Project Tracking' },
+    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'Automated SEO Tools' },
+    { name: 'AI Sales CRM', url: '/ai-sales-crm', description: 'Intelligent CRM System' },
+    { name: 'AI Design Studio', url: '/ai-design-studio', description: 'AI Design Tools' }
+  ]
 
   const itServices = [
     { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, GCP' },
@@ -138,7 +146,7 @@ const Footer: React.FC = memo(() => {
                 <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
                   <Phone className="w-4 h-4 text-white" />
                 </div>
-                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors font-medium">+1 302 464 0950</a>
+                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors font-medium">+1 (302) 464-0950</a>
               </div>
               <div className="flex items-center text-sm text-gray-300 group">
                 <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
@@ -150,13 +158,13 @@ const Footer: React.FC = memo(() => {
                 <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-3 mt-0.5 group-hover:scale-110 transition-transform">
                   <MapPin className="w-4 h-4 text-white" />
                 </div>
-                <span className="font-medium">364 E Main St STE 1008<br />Middletown DE 19709</span>
+                <span className="font-medium">364 E Main St STE 1008<br />Middletown, DE 19709<br />United States</span>
               </div>
               <div className="flex items-center text-sm text-gray-300 group">
                 <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
                   <Clock className="w-4 h-4 text-white" />
                 </div>
-                <span className="font-medium">Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support</span>
+                <span className="font-medium">Mon-Fri: 9AM-6PM EST<br />24/7 Emergency Support Available</span>
               </div>
             </div>
           </div>
@@ -418,9 +426,8 @@ const Footer: React.FC = memo(() => {
         </div>
       </div>
     </footer>
-  );
+  )
 })
 
-Footer.displayName = 'Footer';
-
-export default Footer;
+Footer.displayName = 'Footer'
+export default Footer

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Bot, ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async'
+import { Bot, ArrowRight } from 'lucide-react'
 const SmartSupportBotPage: React.FC = () => {
     return (
     <>
@@ -29,41 +29,6 @@ const SmartSupportBotPage: React.FC = () => {
             </h1>
             <p>
               AI-powered customer service automation with intelligent support bot.;
-              24/7 customer assistance and automated responses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button>
-                <span>Get Started</span>
-                <ArrowRight>
-              </button>
-              <button>
-                View Demo
-              </button>
-            </div>
-          </div>
-        </section>
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
-              <p>
-                We're developing powerful AI support bot solutions. Stay tuned for updates!
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>,
-  )
-  }
 };
 
 export default SmartSupportBotPage;
-

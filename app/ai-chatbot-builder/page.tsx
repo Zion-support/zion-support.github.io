@@ -7,25 +7,6 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 
 const AiChatbotBuilderPage: React.FC = () => {
   const features = [
-    {
-      icon: Brain,
-      title: 'No-Code Builder',
-      description: 'Create sophisticated chatbots without any coding knowledge.',
-      benefits: ['Drag-and-drop interface', 'Visual workflow builder', 'Pre-built templates', 'Easy customization']
-    },
-    {
-      icon: MessageCircle,
-      title: 'Multi-Channel Support',
-      description: 'Deploy your chatbot across multiple platforms and channels.',
-      benefits: ['Website integration', 'Social media bots', 'Mobile apps', 'API integration']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Track performance and optimize your chatbot with detailed analytics.',
-      benefits: ['Conversation analytics', 'User engagement metrics', 'Performance insights', 'A/B testing']
-    },
-    {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Built with enterprise-grade security and compliance features.',
@@ -85,11 +66,6 @@ const AiChatbotBuilderPage: React.FC = () => {
                   View Demo
                 </button>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -124,9 +100,6 @@ const AiChatbotBuilderPage: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* Use Cases Section */}
-<<<<<<< HEAD
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text mb-12">
             Use Cases
@@ -163,43 +136,6 @@ const AiChatbotBuilderPage: React.FC = () => {
             <div className="text-center mb-16"></div>
               <h2>
                 Why Choose Our Solution?;
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Use Cases
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7
-              </h2>
-              <p className="text-xl text-gray-300">
-                Discover how chatbots can transform your business
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {useCase.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4">
-                    {useCase.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {useCase.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -225,8 +161,4 @@ const AiChatbotBuilderPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AIChatbotBuilder;
-=======
-export default AiChatbotBuilderPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7

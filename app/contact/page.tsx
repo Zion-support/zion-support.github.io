@@ -1,10 +1,9 @@
-'use client';
+'use client'
 import React, { useState, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async'
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import Footer from '../components/Footer'
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -14,26 +13,24 @@ const ContactPage: React.FC = () => {
     service: '',
     message: ''
   })
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
+    }))
   }, []);
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
     try {
       // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
+      await new Promise(resolve => setTimeout(resolve, 2000))
+      setSubmitStatus('success')
       setFormData({
         name: '',
         email: '',
@@ -43,12 +40,11 @@ const ContactPage: React.FC = () => {
         message: ''
       })
     } catch (error) {
-      setSubmitStatus('error');
+      setSubmitStatus('error')
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  }, []);
-
+  }, [])
   return (
     <>
       <Helmet>
@@ -277,5 +273,3 @@ const ContactPage: React.FC = () => {
     </>
   );
 };
-
-export default ContactPage;

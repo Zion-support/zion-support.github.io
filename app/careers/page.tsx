@@ -1,9 +1,8 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, ArrowRight } from 'lucide-react';
-
+import { Link } from 'react-router-dom'
+import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, ArrowRight } from 'lucide-react'
 const CareersPage: React.FC = () => {
   const openPositions = [
     {
@@ -75,7 +74,7 @@ const CareersPage: React.FC = () => {
       </Helmet>
 
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -88,7 +87,7 @@ const CareersPage: React.FC = () => {
       </section>
 
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
             {openPositions.map((position, index) => (
@@ -134,7 +133,7 @@ const CareersPage: React.FC = () => {
       </section>
 
       <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Work With Us?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {values.map((value, index) => (
@@ -151,7 +150,7 @@ const CareersPage: React.FC = () => {
       </section>
 
       <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-8">Benefits & Perks</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {benefits.map((benefit, index) => (
@@ -175,5 +174,3 @@ const CareersPage: React.FC = () => {
     </div>
   );
 };
-
-export default CareersPage;

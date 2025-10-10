@@ -1,8 +1,8 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Settings, ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async'
+import { Settings, ArrowRight } from 'lucide-react'
 const MicroSaaSPage: React.FC = () => {
-    const serviceName = 'lead-scoring';
+    const serviceName = 'lead-scoring'
   const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
 return (
     <>,
@@ -38,8 +38,7 @@ return (
                 <span>Get Started</span>
                 <ArrowRight>
               </button>
-              <button>
-                View Demo,
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">View Demo,
               </button>
             </div>
           </div>
@@ -58,11 +57,6 @@ return (
               <p>
                 We're developing powerful {title.toLowerCase()} solutions. Stay tuned for updates!
               </p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
   );
 };
 

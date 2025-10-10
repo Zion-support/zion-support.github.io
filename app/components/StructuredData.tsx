@@ -1,9 +1,8 @@
-'use client';
-import React from 'react';
-
+'use client'
+import React from 'react'
 interface StructuredDataProps {
-  type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness';
-  data?: Record<string, unknown>;
+  type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness'
+  data?: Record<string, unknown>
 }
 
 const StructuredData: React.FC<StructuredDataProps> = ({ 
@@ -167,8 +166,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
     }
   }
 
-  const structuredData = data || getDefaultData();
-
+  const structuredData = data || getDefaultData()
   return (
     <script
       type="application/ld+json"
@@ -178,5 +176,3 @@ const StructuredData: React.FC<StructuredDataProps> = ({
     />
   );
 };
-
-export default StructuredData;

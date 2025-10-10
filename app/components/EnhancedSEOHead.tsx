@@ -7,9 +7,9 @@ interface SEOHeadProps {
   description: string;
   keywords?: string[]
   canonicalUrl?: string;
-  structuredData?: any;
-  ogImage?: string;
-  twitterCard?: string;
+  structuredData?: any
+  ogImage?: string
+  twitterCard?: string
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -21,8 +21,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ogImage = '/og-image.jpg',
   twitterCard = 'summary_large_image'
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -59,5 +58,3 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     </Helmet>
   );
 };
-
-export default SEOHead;

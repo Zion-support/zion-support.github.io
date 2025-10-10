@@ -1,12 +1,10 @@
-'use client';
+'use client'
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Search, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, ArrowRight, CheckCircle, ExternalLink, Download, FileText, Settings, Database } from 'lucide-react';
-
+import { Helmet } from 'react-helmet-async'
+import { Search, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, ArrowRight, CheckCircle, ExternalLink, Download, FileText, Settings, Database } from 'lucide-react'
 const DocsPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const categories = [
     { id: 'all', name: 'All Documentation', icon: BookOpen },
     { id: 'getting-started', name: 'Getting Started', icon: Zap },
@@ -116,15 +114,13 @@ const DocsPage: React.FC = () => {
 
   const filteredDocs = selectedCategory === 'all' 
     ? documentation 
-    : documentation.filter(doc => doc.category === selectedCategory);
-
+    : documentation.filter(doc => doc.category === selectedCategory)
   const searchResults = searchQuery 
     ? documentation.filter(doc => 
         doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.description.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    : filteredDocs;
-
+    : filteredDocs
   return (
     <>
       <Helmet>
@@ -347,5 +343,3 @@ const DocsPage: React.FC = () => {
     </>
   );
 };
-
-export default DocsPage;

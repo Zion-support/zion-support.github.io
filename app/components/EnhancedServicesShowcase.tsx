@@ -1,5 +1,5 @@
-import React from 'react';
-import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
+import React from 'react'
+import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react'
 const EnhancedServicesShowcase: React.FC = () => {
     const services = [
     {
@@ -50,47 +50,6 @@ return (
           <h2>
             Our Core Services
           </h2>
-          <p>
-            Comprehensive AI and IT solutions designed to transform your business and drive innovation
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-          {
-    services.map((service, index) => (</div>
-  }
-            <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-all duration-300"></div>
-              <div className="flex items-center mb-4"></div>
-                <service>
-                <div />
-                  <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                  <div className="text-sm text-cyan-400 font-semibold">{service.stats}</div>
-              </div>
-              <p className="text-gray-300 mb-4">{service.description}</p>
-              <ul>
-                {
-    service.features.map((feature, featureIndex) => (
-  }
-                  <li>
-                    <CheckCircle>
-
-                    {feature}
-                  </li>
-                ))}
-
-              </ul>
-              <a>
-                Learn More <ArrowRight>
-              </a>
-            </div>
-          ))}
-        </div>
-        <div className="text-center mt-12"></div>
-          <a>
-            View All Services;
-            <ArrowRight>
-          </a>
-        </div>
-    </section>
   );
 };
 

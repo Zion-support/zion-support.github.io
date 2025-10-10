@@ -1,7 +1,6 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
-
+'use client'
+import React, { useState, useEffect } from 'react'
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react'
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
     clients: 0,
@@ -54,7 +53,6 @@ const ContentStatistics: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
       description: 'Serving clients across 50+ countries'
     },
     {
@@ -79,39 +77,13 @@ const ContentStatistics: React.FC = () => {
               [key]: Math.min(current + increment, target)
             }
           }
-          return prev;
+          return prev
         })
-      }, 16);
+      }, 16)
     })
 
     return () => {
-      timers.forEach(timer => clearInterval(timer));
+      timers.forEach(timer => clearInterval(timer))
     }
-=======
-    };
-
-    // Start animations with slight delays
-    Object.keys(targetCounters).forEach((key, index) => {
-      setTimeout(() => {
-        animateCounter(key as keyof typeof targetCounters);
-      }, index * 100);
-    });
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
-  }, []);
-
-  return (
-          </p>
-        </div>
-
-        {/* Statistics Grid */}
-            </div>
-          ))}
-        </div>
-
-        </div>
-      </div>
-    </div>
   );
 };
-
-export default ContentStatistics;

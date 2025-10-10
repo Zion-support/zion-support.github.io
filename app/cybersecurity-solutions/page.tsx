@@ -1,6 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import { Helmet } from 'react-helmet-async'
 const CybersecuritySolutionsPage: React.FC = () => {
   return (
     <>
@@ -112,5 +111,3 @@ const CybersecuritySolutionsPage: React.FC = () => {
     </>
   );
 };
-
-export default CybersecuritySolutionsPage;

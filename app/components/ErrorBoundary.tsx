@@ -1,5 +1,5 @@
-'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+'use client'
+import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
 
 interface Props {
@@ -8,14 +8,14 @@ interface Props {
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
+    super(props)
     this.state = { hasError: false }
   }
 
@@ -33,17 +33,17 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   handleReload = () => {
-    window.location.reload();
+    window.location.reload()
   }
 
   handleGoHome = () => {
-    window.location.href = '/';
+    window.location.href = '/'
   }
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
 
       return (
@@ -104,10 +104,10 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+      )
     }
-    return this.props.children;
+    return this.props.children
   }
 };
 
-export default ErrorBoundary;
+export default ErrorBoundary

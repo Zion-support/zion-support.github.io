@@ -1,12 +1,12 @@
-'use client';
+'use client'
 import React, { useEffect, useCallback } from 'react';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
   enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
+  enableLazyLoading?: boolean
+  enablePreloading?: boolean
+  enableCodeSplitting?: boolean
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
@@ -23,38 +23,36 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
       images.forEach((img) => {
-        const image = img as HTMLImageElement;
+        const image = img as HTMLImageElement
         if (image.dataset.src) {
-          image.src = image.dataset.src;
-          image.removeAttribute('data-src');
+          image.src = image.dataset.src
+          image.removeAttribute('data-src')
         }
       })
     }
 
     // Run optimization after component mount
-    const timer = setTimeout(optimizeImages, 100);
-    return () => clearTimeout(timer);
+    const timer = setTimeout(optimizeImages, 100)
+    return () => clearTimeout(timer)
   }, [enableImageOptimization]);
 
   // Lazy loading
   useEffect(() => {
-    if (!enableLazyLoading) return;
-
+    if (!enableLazyLoading) return
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const target = entry.target as HTMLElement;
-            target.classList.add('loaded');
+            const target = entry.target as HTMLElement
+            target.classList.add('loaded')
           }
         })
       },
       { threshold: 0.1 } )
 
-    const lazyElements = document.querySelectorAll('[data-lazy]');
-    lazyElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
+    const lazyElements = document.querySelectorAll('[data-lazy]')
+    lazyElements.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
   }, [enableLazyLoading]);
 
   // Preloading
@@ -75,42 +73,38 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       criticalFont.href = '/fonts/inter-var.woff2';
       criticalFont.as = 'font';
       criticalFont.type = 'font/woff2';
-      criticalFont.crossOrigin = 'anonymous';
-      document.head.appendChild(criticalFont);
+      criticalFont.crossOrigin = 'anonymous'
+      document.head.appendChild(criticalFont)
     }
 
-    preloadCriticalResources();
-  }, [enablePreloading]);
-
+    preloadCriticalResources()
+  }, [enablePreloading])
   // Code splitting optimization
   useEffect(() => {
-    if (!enableCodeSplitting) return;
-
+    if (!enableCodeSplitting) return
     const optimizeCodeSplitting = () => {
       // Preload next likely routes
-      const links = document.querySelectorAll('a[href^="/"]');
+      const links = document.querySelectorAll('a[href^="/"]')
       links.forEach((link) => {
         link.addEventListener('mouseenter', () => {
-          const href = link.getAttribute('href');
+          const href = link.getAttribute('href')
           if (href && !href.startsWith('#')) {
             // Preload the route
-            import(/* webpackChunkName: "route" */ `../app${href}/page.tsx`);
+            import(/* webpackChunkName: "route" */ `../app${href}/page.tsx`)
           }
         })
       })
     }
 
-    const timer = setTimeout(optimizeCodeSplitting, 1000);
-    return () => clearTimeout(timer);
-  }, [enableCodeSplitting]);
-
+    const timer = setTimeout(optimizeCodeSplitting, 1000)
+    return () => clearTimeout(timer)
+  }, [enableCodeSplitting])
   // Performance monitoring
   useEffect(() => {
     const measurePerformance = () => {
       if ('performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paint = performance.getEntriesByType('paint');
-        
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        const paint = performance.getEntriesByType('paint')
         const metrics = {
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
@@ -120,7 +114,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
         // Send metrics to analytics
         if (typeof window !== 'undefined' && 'gtag' in window) {
-          const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+          const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag
           gtag('event', 'performance_metrics', {
             event_category: 'performance',
             event_label: 'page_load',
@@ -137,5 +131,3 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   return <>{children}</>;
 };
-
-export default PerformanceOptimizer;

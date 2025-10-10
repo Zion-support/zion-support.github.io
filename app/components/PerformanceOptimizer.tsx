@@ -1,9 +1,8 @@
-'use client';
-import React, { useEffect, useState, useCallback } from 'react';
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
-
+'use client'
+import React, { useEffect, useState, useCallback } from 'react'
+import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react'
 interface PerformanceOptimizerProps {
-    children: React.ReactNode;
+    children: React.ReactNode
   enableImageOptimization?: boolean
   enableLazyLoading?: boolean
   enablePreloading?: boolean,
@@ -17,14 +16,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enablePreloading = true,
   enableCodeSplitting = true
 }) => {
-    const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizations, setOptimizations] = useState<string[]>([]);
-  const [performanceScore, setPerformanceScore] = useState<number | null>(null);
-
+    const [isOptimizing, setIsOptimizing] = useState(false)
+  const [optimizations, setOptimizations] = useState<string[]>([])
+  const [performanceScore, setPerformanceScore] = useState<number | null>(null)
   const optimizeImages = useCallback(() => {
-    if (!enableImageOptimization) return;
-    
-    const images = document.querySelectorAll('img');
+    if (!enableImageOptimization) return
+    const images = document.querySelectorAll('img')
     images.forEach((img) => {
       if (!img.loading) {
         img.loading = 'lazy'
@@ -33,11 +30,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     img.decoding = 'async'
   }
     })
-  }, [enableImageOptimization]);
-
+  }, [enableImageOptimization])
   const optimizeMemory = useCallback(() => {
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
+      const memory = (performance as any).memory
       if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
         // Trigger garbage collection if available
         if (window.gc) {
@@ -45,10 +41,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }
       }
     }
-  }, []);
-
+  }, [])
   const runOptimizations = useCallback(async () => {
-    setIsOptimizing(true);
+    setIsOptimizing(true)
     const newOptimizations: string[] = []
     // Optimize images
     if (enableImageOptimization) {
@@ -63,21 +58,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     // Calculate performance score
     const score = Math.floor(Math.random() * 30) + 70; // Simulate score between 70-100
     setPerformanceScore(score);
-    newOptimizations.push(`Performance score: ${score}/100`);
-
-    setOptimizations(newOptimizations);
-    setIsOptimizing(false);
-  }, [enableImageOptimization, optimizeImages, optimizeMemory]);
-
+    newOptimizations.push(`Performance score: ${score}/100`)
+    setOptimizations(newOptimizations)
+    setIsOptimizing(false)
+  }, [enableImageOptimization, optimizeImages, optimizeMemory])
   useEffect(() => {
     // Run initial optimizations
     const timer = setTimeout(() => {
       runOptimizations()
-  }, 1000);
-
-    return () => clearTimeout(timer);
-  }, [runOptimizations]);
-
+  }, 1000)
+    return () => clearTimeout(timer)
+  }, [runOptimizations])
   return (
     <div className="performance-optimizer">
       {children}
@@ -123,8 +114,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         </div>
       )}
     </div>
-  );
-
+  )
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
   enableLazyLoading = true,
@@ -135,8 +125,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     // Preload critical resources
     if (enablePreloading && typeof window !== 'undefined') {
       // Preload critical fonts
-      const fontPreload = document.createElement('link');
-      fontPreload.rel = 'preload';
+      const fontPreload = document.createElement('link')
+      fontPreload.rel = 'preload'
       fontPreload.href = 'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
       fontPreload.as = 'style'
       document.head.appendChild(fontPreload),
@@ -150,15 +140,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
-        link.href = src;
-        link.as = 'image';
+        link.href = src
+        link.as = 'image'
         document.head.appendChild(link)
   })
     }
 
     // Optimize images
     if (enableImageOptimization && typeof window !== 'undefined') {
-    const images = document.querySelectorAll('img');
+    const images = document.querySelectorAll('img')
       images.forEach(img => {
         // Add loading="lazy" for non-critical images
         if (enableLazyLoading && !img.hasAttribute('loading')) {
@@ -180,15 +170,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             const img = entry.target as HTMLImageElement;
             if (img.dataset.src) {
               img.src = img.dataset.src;
-              img.removeAttribute('data-src');
+              img.removeAttribute('data-src')
               observer.unobserve(img)
   }
           }
         })
       })
 
-      const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach(img => imageObserver.observe(img));
+      const lazyImages = document.querySelectorAll('img[data-src]')
+      lazyImages.forEach(img => imageObserver.observe(img))
     }
 
     // Performance monitoring
@@ -215,5 +205,3 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   return null;
 
 };
-
-export default PerformanceOptimizer;

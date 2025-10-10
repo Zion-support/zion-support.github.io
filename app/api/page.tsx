@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Code, Database, Zap, Shield, Globe, Cpu, BarChart, Users, Settings, ArrowRight, CheckCircle, Star, ExternalLink } from 'lucide-react';
-
+import { Helmet } from 'react-helmet-async'
+import { Code, Database, Zap, Shield, Globe, Cpu, BarChart, Users, Settings, ArrowRight, CheckCircle, Star, ExternalLink } from 'lucide-react'
 const ApiPage: React.FC = () => {
   const apiEndpoints = [
     {
@@ -409,7 +408,7 @@ const ApiPage: React.FC = () => {
 
           {/* Support */}
           <section className="mb-16">
-            <div className="cyber-card-enhanced p-8 text-center">
+          <div className="cyber-card-enhanced p-8 text-center">
               <h2 className="text-2xl font-bold text-white mb-4">Need Help?</h2>
               <p className="text-gray-300 mb-6">
                 Our developer support team is here to help you integrate our APIs successfully.
@@ -441,5 +440,3 @@ const ApiPage: React.FC = () => {
     </>
   );
 };
-
-export default ApiPage;
