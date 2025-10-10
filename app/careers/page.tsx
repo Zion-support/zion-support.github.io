@@ -263,10 +263,6 @@ const CareersPage: React.FC = () => {
                   Contact Us
                 </Link>
               </div>
-=======
-                  {position.requirements && (
-                    <div className="mb-6">
-                      <h4 className="text-white font-semibold mb-2">Key Requirements:</h4>
                       <ul className="space-y-1">
                         {position.requirements.map((req, reqIndex) => (
                           <li key={reqIndex} className="text-gray-300 text-sm flex items-center">

@@ -25,13 +25,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-<<<<<<< HEAD
-    focusableElements[nextIndex]?.focus();
-    event.preventDefault();
   }
-  /**
-   * Handle escape key
-   */
   private handleEscapeKey(event: KeyboardEvent): void {
     // Close any open modals or dropdowns
     const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
@@ -512,13 +506,6 @@ Recommendations:
 - Test with screen readers regularly
 `;
   }
-}
-=======
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
     '24/7 technical support',
@@ -640,4 +627,3 @@ Recommendations:
 };
 
 export default AccessibilityEnhancerPage;
->>>>>>> f7c4928b2138abffab75f9beb3ca62b8e0c3452d
