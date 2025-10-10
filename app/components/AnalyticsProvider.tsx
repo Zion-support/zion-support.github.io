@@ -37,7 +37,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       gtag('config', trackingId, {
         page_title: document.title,
         page_location: window.location.href,
-
+        send_page_view: true
+      });
     }
   }, [trackingId]);
 
@@ -48,7 +49,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-      }
+      console.log('Analytics event:', event, properties);
+    }
   };
 
   const page = (name: string, properties?: Record<string, any>) => {
@@ -57,12 +59,14 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         page_title: name,
         page_location: window.location.href,
         ...properties,
-
+        send_page_view: true
+      });
     }
 
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-      }
+      console.log('Analytics page:', name, properties);
+    }
   };
 
   const identify = (userId: string, traits?: Record<string, any>) => {
@@ -70,12 +74,14 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       window.gtag('config', trackingId, {
         user_id: userId,
         ...traits,
-
+        send_page_view: true
+      });
     }
 
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-      }
+      console.log('Analytics identify:', userId, traits);
+    }
   };
 
   const value: AnalyticsContextType = {
