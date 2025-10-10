@@ -26,7 +26,7 @@ const,
 //   children,
   className = '',
   breakpoints = {},
-//   fallback,)
+//   fallback)
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -89,7 +89,7 @@ const,
   };
 
   return (
-    <div className="responsivecontainer">
+    <div className="responsivecontainer"></div>
 
       {/* Component content */}
     </div>)
@@ -157,8 +157,7 @@ export const useBreakpoint = () => {/* TODO: Fix JSX expression */}
 //     isDesktop,
 //     isLargeDesktop,
     curren,
-  t: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : 'sm',
-  };
+  t: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : 'sm'};
 };
 
 export default ResponsiveContainer;

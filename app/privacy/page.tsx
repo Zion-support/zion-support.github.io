@@ -28,11 +28,11 @@ const PrivacyPage = () => {
             </p>
             <h2 className="text-2xl font-semibold text-white mb-4">How We Use Your Information</h2>
             <p className="text-gray-300 mb-6">
-              We use the information we collect to provide, maintain, and improve our services.
+              We use your information to provide, maintain, and improve our services.
             </p>
             <h2 className="text-2xl font-semibold text-white mb-4">Contact Us</h2>
             <p className="text-gray-300">
-              If you have any questions about this privacy policy, please contact us at kleber@ziontechgroup.com
+              If you have any questions about this privacy policy, please contact us at kleber@ziontechgroup.com.
             </p>
           </div>
         </div>

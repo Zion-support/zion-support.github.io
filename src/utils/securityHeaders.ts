@@ -22,8 +22,7 @@ export const,
   contentSecurityPolic,
   y: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
 //     "default-src 'self'","
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' http,
   s://www.googletagmanager.com,"
@@ -41,8 +40,7 @@ export const,
 //     "frame-ancestors 'none'","
 //     "base-uri 'self'","
 //     "form-action 'self'",
-//     'upgrade-insecure-requests',
-  ].join('; '),
+//     'upgrade-insecure-requests'].join('; '),
   // HTTP Strict Transport Security (HSTS)
   strictTransportSecurit,
   y: 'max-age=63072000; includeSubDomains; preload',
@@ -59,8 +57,7 @@ export const,
   permissionsPolic,
   y: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
     'camera=()',
     'microphone=()',
     'geolocation=()',
@@ -78,7 +75,7 @@ export const,
 export function getSecurityHeaders()
   customConfig?: Partial;
 
-          <SecurityHeadersConfig>
+          <SecurityHeadersConfig></SecurityHeadersConfig>
 ): Record<string, string> {const headers: Record<string, string> = {}
   // TODO: Add content;
 
@@ -126,7 +123,7 @@ export function getSecurityHeaders()
 export function getNextSecurityHeaders()
   customConfig?: Partial;
 
-          <SecurityHeadersConfig>
+          <SecurityHeadersConfig></SecurityHeadersConfig>
 ): Array<{ key: string; value: string }> {// TODO: Add content;}
 
 }

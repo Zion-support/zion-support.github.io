@@ -28,7 +28,7 @@ const TermsPage = () => {
             </p>
             <h2 className="text-2xl font-semibold text-white mb-4">Contact Us</h2>
             <p className="text-gray-300">
-              If you have any questions about these terms, please contact us at kleber@ziontechgroup.com
+              If you have any questions about these terms, please contact us at kleber@ziontechgroup.com.
             </p>
           </div>
         </div>

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const AIEmailAssistant: React.FC = () => {,
+const AIEmailAssistant: React.FC = () => {
   const [emailType, setEmailType] = useState('');
   const [recipient, setRecipient] = useState('');
   const [subject, setSubject] = useState('');
@@ -15,22 +15,12 @@ const AIEmailAssistant: React.FC = () => {,
     setMessage("This is where the AI would generate your email content based on your requirements...");
   };
 
-<<<<<<< HEAD
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-<<<<<<< HEAD
-        <div className="max-w-4xl mx-auto">
-<<<<<<< HEAD
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Email Assistant<p className="text-xl text-gray-300 text-center mb-12">Create professional emails with AI-powered writing assistance</p>
-=======
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
         <div className="max-w-4xl mx-auto"></div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Email Assistant</h1><p className="text-xl text-gray-300 text-center mb-12">Create professional emails with AI-powered writing assistance</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           </p>
 
           <div className="cyber-card p-8 mb-8"></div>
@@ -73,15 +63,14 @@ const AIEmailAssistant: React.FC = () => {,
                 onClick={handleGenerateEmail}
                 className="cyber-button w-full"
               >Generate with AI</button>
-=======
-          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center"></h1>
             AI Email Assistant;
           </h1>
-          <p className="text-xl text-gray-300 text-center mb-12">
+          <p className="text-xl text-gray-300 text-center mb-12"></p>
             Create professional emails with AI-powered writing assistance;
           </p>
 
-          <div className="cyber-card p-8 mb-8">
+          <div className="cyber-card p-8 mb-8"></div>
             <h2 className="text-2xl font-bold text-white mb-6">Compose Your Email</h2>)
             <div className="space-y-6">)
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">)
@@ -133,26 +122,18 @@ const AIEmailAssistant: React.FC = () => {,
               <button;
                 onClick={handleGenerateEmail}
                 className="cyber-button w-full"
-              >
+              ></button>
                 Generate with AI;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </button>
             </div>
           </div>
 
           <div className="cyber-card p-8 mb-8"></div>
             <h2 className="text-2xl font-bold text-white mb-6">Features</h2>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"><span className="text-gray-300">Smart subject line generation</span>
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               <div className="space-y-4"></div>
                 <div className="flex items-center space-x-3"></div>
                   <div className="w-2 h-2 bg-cyan-400 rounded-full"></div><span className="text-gray-300">Smart subject line generation</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </div>
                 <div className="flex items-center space-x-3"></div>
                   <div className="w-2 h-2 bg-cyan-400 rounded-full"></div><span className="text-gray-300">Tone adjustment</span>
@@ -184,59 +165,46 @@ const AIEmailAssistant: React.FC = () => {,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
             <div className="cyber-card p-6 text-center"></div>
               <h3 className="text-xl font-bold text-white mb-4">Personal</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$19/month</div>
-              <ul className="text-gray-300 space-y-2">
+              <ul className="text-gray-300 space-y-2"></ul>
                 <li>50 emails/month<li>Basic templates</li>
                 <li>Grammar check<li>Email support</li>
               </ul>
             </div>
             <div className="cyber-card p-6 text-center border-2 border-cyan-400"></div>
               <h3 className="text-xl font-bold text-white mb-4">Business</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$59/month</div>
-              <ul className="text-gray-300 space-y-2">
+              <ul className="text-gray-300 space-y-2"></ul>
                 <li>500 emails/month<li>Advanced templates</li>
                 <li>AI generation<li>Priority support<li>Analytics</li>
               </ul>
             </div>
             <div className="cyber-card p-6 text-center"></div>
               <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$149/month</div>
-              <ul className="text-gray-300 space-y-2">
+              <ul className="text-gray-300 space-y-2"></ul>
                 <li>Unlimited emails<li>Custom templates</li>
                 <li>Team collaboration<li>24/7 support<li>API access</li>
               </ul>
             </div>
           </div>
 
-<<<<<<< HEAD
-          <div className="text-center">
-            <a;
-=======
           <div className="text-center"></div>
             <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="tel:+13024640950"
               className="cyber-button mr-4"
-<<<<<<< HEAD
-            >📞 Call: (302) 464-0950<a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >Start Writing</a>
-=======
-            >
+            ></a>
               📞 Call: (302) 464-0950;
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >
+            ></a>
               Start Writing;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </a>
           </div>
         </div>
       </main>
 
       <Footer />,
-    </div>,
-  );
+    </div>);
 };
 
 export default AIEmailAssistant;

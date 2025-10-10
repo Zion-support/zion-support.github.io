@@ -94,8 +94,7 @@ const AdvancedPerformanceMonitor: React.FC;
             if ()
               entry.entryType === 'first-input' &&
               'processingStart' in entry &&
-//               'startTime' in entry,
-) {/* TODO: Fix JSX expression */}
+//               'startTime' in entry) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
               const fidEntry = entry as PerformanceEventTiming;
@@ -132,8 +131,7 @@ const AdvancedPerformanceMonitor: React.FC;
             if ()
               entry.entryType === 'layout-shift' &&
               'hadRecentInput' in entry &&
-//               'value' in entry,
-) {/* TODO: Fix JSX expression */}
+//               'value' in entry) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
               const clsEntry = entry as LayoutShift;
@@ -206,16 +204,15 @@ const memory =
     if (typeof window === 'undefined' || !('performance' in window)) return;
     const resources = performance.getEntriesByType('resource');
     const slowResources = _resources.filter()
-      (resourc,)
-  e: PerformanceResourceTiming) => resource.duration > 1000,
-);
+      (resourc)
+  e: PerformanceResourceTiming) => resource.duration > 1000);
     if (slowResources.length > 0) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       // eslint-disable-next-line no-console;
 // console.log('Slow,
   resources:', slowResources.map(r => ({/* TODO: Fix JSX expression */}
-  e: r.name,}
+  e: r.name}
       //   duratio,
   n: r.duration,
       //   siz,
@@ -304,13 +301,11 @@ const memory =
     };
   }, [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
 //     enableRealTimeMonitoring,
 //     measureWebVitals,
 //     measureResourceTiming,
-//     measureCoreWebVitals,
-  ]);
+//     measureCoreWebVitals]);
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

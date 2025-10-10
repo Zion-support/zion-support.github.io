@@ -20,20 +20,20 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></mai>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center"></div>
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-100 text-emerald-800 text-sm font-medium mb-6"></div>
                 <TrendingUp className="w-4 h-4 mr-2" />
                 Blockchain AI Technology
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
                 AI Blockchain Analytics</h1>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400"></span>
                   Advanced Crypto Intelligence
                 </span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto"></p>
                 Unlock the power of blockchain data with AI-powered analytics. Comprehensive insights for DeFi, 
                 NFT, and crypto markets with real-time intelligence.
               </p>
@@ -56,13 +56,13 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white"></section>
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
                 Comprehensive Blockchain Intelligence
               </h2>
-              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto"></p>
                 Advanced AI-powered analytics for the entire blockchain ecosystem
               </p>
             </div>
@@ -73,7 +73,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
                   <BarChart className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">DeFi Analytics</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   Comprehensive DeFi protocol analysis with TVL tracking, yield farming insights, and risk assessment.
                 </p>
                 <ul className="space-y-2"></u>
@@ -91,7 +91,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
                   <Target className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">NFT Intelligence</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   Advanced NFT market analysis with floor price tracking, rarity scoring, and trend prediction.
                 </p>
                 <ul className="space-y-2"></u>
@@ -108,7 +108,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
                   <Shield className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Security Monitoring</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   Real-time security monitoring with smart contract analysis and vulnerability detection.
                 </p>
                 <ul className="space-y-2"></u>
@@ -125,7 +125,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
                   <TrendingUp className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Market Intelligence</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   AI-powered market analysis with price prediction, sentiment analysis, and trading signals.
                 </p>
                 <ul className="space-y-2"></u>
@@ -143,7 +143,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">On-Chain Analytics</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   Deep on-chain analysis with wallet tracking, transaction patterns, and network metrics.
                 </p>
                 <ul className="space-y-2"></u>
@@ -161,7 +161,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Real-Time Alerts</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   Customizable alerts for price movements, whale transactions, and market anomalies.
                 </p>
                 <ul className="space-y-2"></u>
@@ -178,13 +178,13 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50"></section>
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
                 Blockchain Analytics Use Cases
               </h2>
-              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto"></p>
                 Powerful insights for every blockchain stakeholder
               </p>
             </div>
@@ -258,13 +258,13 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-white"></section>
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
                 Blockchain Analytics Pricing
               </h2>
-              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto"></p>
                 Choose the perfect plan for your blockchain analytics needs
               </p>
             </div>
@@ -300,14 +300,14 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
                 <a 
                   href="mailto:kleber@ziontechgroup.com?subject=AI Blockchain Analytics Starter Plan"
                   className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
-                >
+                ></a>
                   Get Started
                 </a>
               </div>
 
               <div className="bg-white p-8 rounded-xl border-2 border-emerald-500 relative"></div>
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-                  <span className="bg-emerald-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-emerald-500 text-white px-4 py-1 rounded-full text-sm font-semibold"></span>
                     Most Popular
                   </span>
                 </div>
@@ -344,7 +344,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
                 <a 
                   href="mailto:kleber@ziontechgroup.com?subject=AI Blockchain Analytics Professional Plan"
                   className="w-full bg-emerald-600 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-emerald-700 transition-colors"
-                >
+                ></a>
                   Get Started
                 </a>
               </div>
@@ -383,7 +383,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
                 <a 
                   href="mailto:kleber@ziontechgroup.com?subject=AI Blockchain Analytics Enterprise Plan"
                   className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
-                >
+                ></a>
                   Contact Sales
                 </a>
               </div>
@@ -392,12 +392,12 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-emerald-600 to-cyan-600">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-emerald-600 to-cyan-600"></section>
           <div className="max-w-4xl mx-auto text-center"></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Unlock Blockchain Intelligence
             </h2>
-            <p className="text-xl text-emerald-100 mb-8">
+            <p className="text-xl text-emerald-100 mb-8"></p>
               Get comprehensive insights into the blockchain ecosystem with AI-powered analytics
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -418,7 +418,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
         </section>
 
         {/* Contact Info */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900"></section>
           <div className="max-w-4xl mx-auto text-center"></section>
             <div className="grid md:grid-cols-3 gap-8 text-white"></div>
               <div className="flex items-center justify-center"></div>

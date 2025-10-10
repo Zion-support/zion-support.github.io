@@ -30,9 +30,7 @@ const SEOHead: React.FC<SEOProps> = ({
 //   structuredData,
 //   canonical,
   noindex = false,
-  nofollow = false,
-
-}) => {const canonicalUrl = canonical || url;}
+  nofollow = false}) => {const canonicalUrl = canonical || url;}
   const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
   return null;
 };

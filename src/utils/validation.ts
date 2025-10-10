@@ -11,7 +11,7 @@ export interface ValidationResult {// TODO: Add content;}
   error?: string;
 }
 // Email validation;
-export function validateEmail(emai,)
+export function validateEmail(emai)
   l: string): ValidationResult {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -42,7 +42,7 @@ export function validateEmail(emai,)
   d: true }
 }
 // URL validation;
-export function validateURL(ur,)
+export function validateURL(ur)
   l: string): ValidationResult {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -103,7 +103,7 @@ export function validateLength()
   d: true }
 }
 // Password validation;
-export function validatePassword(passwor,)
+export function validatePassword(passwor)
   d: string): ValidationResult {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -175,7 +175,7 @@ export function validatePassword(passwor,)
   d: true }
 }
 // HTML sanitization;
-export function sanitizeHTML(inpu,)
+export function sanitizeHTML(inpu)
   t: any): string {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -202,7 +202,7 @@ export function sanitizeHTML(inpu,)
     .replace(/\// g, '&#x2F;')
 }
 // Date validation;
-export function validateDate(dateStrin,)
+export function validateDate(dateStrin)
   g: string): ValidationResult {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -287,7 +287,7 @@ let sum = 0;
   d: true }
 }
 // JSON validation;
-export function validateJSON(jsonStrin,)
+export function validateJSON(jsonStrin)
   g: string): ValidationResult {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -336,12 +336,11 @@ export function validateComposite()
 // Async validation;
 export async function validateAsync()
   validato,
-  r: (valu,)
+  r: (valu)
   e: string) => Promise;
           <ValidationResult>,
 
-  value: string,
-): Promise<ValidationResult> {// TODO: Add content;}
+  value: string): Promise<ValidationResult> {// TODO: Add content;}
 
 }
   try {/* TODO: Fix JSX expression */}
@@ -357,27 +356,27 @@ export async function validateAsync()
   }
 }
 // Legacy function names for backward compatibility;
-export const isValidEmail = (emai,)
+export const isValidEmail = (emai)
   l: string) => validateEmail(email).isValid;
-export const isValidPhone = (phon,)
+export const isValidPhone = (phon)
   e: string) => phone && phone.length >= 10;
-export const isValidUrl = (ur,)
+export const isValidUrl = (ur)
   l: string) => validateURL(url).isValid;
-export const isRequired = (valu,)
+export const isRequired = (valu)
   e: any) => value !== null && value !== undefined && value !== ''
-export const isValidPassword = (passwor,)
+export const isValidPassword = (passwor)
   d: string) => validatePassword(password).isValid;
 export const isValidLength = (valu,
   e: string, mi,
-  n: number, ma,)
+  n: number, ma)
   x: number) =>
   validateLength(value, min, max).isValid;
 export const sanitizeInput = sanitizeHTML;
-export const isValidDate = (dat,)
+export const isValidDate = (dat)
   e: string) => validateDate(date).isValid;
-export const isValidCreditCard = (car,)
+export const isValidCreditCard = (car)
   d: string) => validateCreditCard(card).isValid;
-export const isValidJSON = (jso,)
+export const isValidJSON = (jso)
   n: string) => validateJSON(json).isValid;"`
 
 

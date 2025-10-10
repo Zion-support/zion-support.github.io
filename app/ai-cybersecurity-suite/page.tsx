@@ -20,20 +20,20 @@ const AICybersecuritySuitePage: React.FC = () => {
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></mai>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center"></div>
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-100 text-red-800 text-sm font-medium mb-6"></div>
                 <Shield className="w-4 h-4 mr-2" />
                 AI Security Technology
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
                 AI Cybersecurity Suite</h1>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400"></span>
                   Advanced Threat Protection
                 </span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto"></p>
                 Protect your organization with AI-powered cybersecurity solutions. Real-time threat detection, 
                 automated response, and advanced analytics for comprehensive security.
               </p>
@@ -56,13 +56,13 @@ const AICybersecuritySuitePage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white"></section>
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
                 Comprehensive AI Security Solutions
               </h2>
-              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto"></p>
                 Advanced AI-powered cybersecurity tools to protect against modern threats
               </p>
             </div>
@@ -73,7 +73,7 @@ const AICybersecuritySuitePage: React.FC = () => {
                   <Brain className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Threat Detection</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   Machine learning algorithms detect and analyze threats in real-time with 99.9% accuracy.
                 </p>
                 <ul className="space-y-2"></u>
@@ -91,7 +91,7 @@ const AICybersecuritySuitePage: React.FC = () => {
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Automated Response</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   Instant automated response to security incidents with AI-powered decision making.
                 </p>
                 <ul className="space-y-2"></u>
@@ -109,7 +109,7 @@ const AICybersecuritySuitePage: React.FC = () => {
                   <Eye className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Network Monitoring</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   24/7 network monitoring with AI-powered anomaly detection and traffic analysis.
                 </p>
                 <ul className="space-y-2"></u>
@@ -128,7 +128,7 @@ const AICybersecuritySuitePage: React.FC = () => {
                   <Target className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Vulnerability Assessment</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   Automated vulnerability scanning and penetration testing with AI-enhanced analysis.
                 </p>
                 <ul className="space-y-2"></u>
@@ -146,7 +146,7 @@ const AICybersecuritySuitePage: React.FC = () => {
                   <AlertTriangle className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Threat Intelligence</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   Global threat intelligence feeds with AI-powered correlation and analysis.
                 </p>
                 <ul className="space-y-2"></u>
@@ -163,7 +163,7 @@ const AICybersecuritySuitePage: React.FC = () => {
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Security Operations</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   Centralized security operations center with AI-powered incident management.
                 </p>
                 <ul className="space-y-2"></u>
@@ -180,13 +180,13 @@ const AICybersecuritySuitePage: React.FC = () => {
         </section>
 
         {/* Security Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50"></section>
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
                 Advanced Security Capabilities
               </h2>
-              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto"></p>
                 Comprehensive protection against all types of cyber threats
               </p>
             </div>
@@ -260,13 +260,13 @@ const AICybersecuritySuitePage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-white"></section>
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
                 Cybersecurity Pricing
               </h2>
-              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto"></p>
                 Comprehensive security solutions for organizations of all sizes
               </p>
             </div>
@@ -302,14 +302,14 @@ const AICybersecuritySuitePage: React.FC = () => {
                 <a 
                   href="mailto:kleber@ziontechgroup.com?subject=AI Cybersecurity Small Business Plan"
                   className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
-                >
+                ></a>
                   Get Started
                 </a>
               </div>
 
               <div className="bg-white p-8 rounded-xl border-2 border-red-500 relative"></div>
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-                  <span className="bg-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold"></span>
                     Most Popular
                   </span>
                 </div>
@@ -346,7 +346,7 @@ const AICybersecuritySuitePage: React.FC = () => {
                 <a 
                   href="mailto:kleber@ziontechgroup.com?subject=AI Cybersecurity Enterprise Plan"
                   className="w-full bg-red-600 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-red-700 transition-colors"
-                >
+                ></a>
                   Get Started
                 </a>
               </div>
@@ -385,7 +385,7 @@ const AICybersecuritySuitePage: React.FC = () => {
                 <a 
                   href="mailto:kleber@ziontechgroup.com?subject=AI Cybersecurity Custom Plan"
                   className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
-                >
+                ></a>
                   Contact Sales
                 </a>
               </div>
@@ -394,12 +394,12 @@ const AICybersecuritySuitePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-600 to-orange-600">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-600 to-orange-600"></section>
           <div className="max-w-4xl mx-auto text-center"></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Secure Your Organization Today
             </h2>
-            <p className="text-xl text-red-100 mb-8">
+            <p className="text-xl text-red-100 mb-8"></p>
               Don't wait for a breach. Get comprehensive AI-powered cybersecurity protection now.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -420,7 +420,7 @@ const AICybersecuritySuitePage: React.FC = () => {
         </section>
 
         {/* Contact Info */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900"></section>
           <div className="max-w-4xl mx-auto text-center"></section>
             <div className="grid md:grid-cols-3 gap-8 text-white"></div>
               <div className="flex items-center justify-center"></div>

@@ -1,8 +1,7 @@
 
 // Mock functions for sitemap generation;
 export const getAllPages = () => [
-  // TODO: Add items,
-]
+  // TODO: Add items]
   { path: '/', priority: 1.0 },
   { path: '/services', priority: 0.8 },
   { path: '/contact', priority: 0.7 },
@@ -23,7 +22,7 @@ export const generateSitemap = (pages: Array;)
           
           <?xml version="1.0" encoding="UTF-8"?>
 ';
-  sitemap += '<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
+  sitemap += '<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9"></urlset>
 ';
   pages.forEach(page => {// TODO: Add content;}
 }
@@ -36,7 +35,7 @@ export const generateSitemap = (pages: Array;)
           
           
           
-          <url>
+          <url></url>
 `;
     sitemap += `    <loc>${baseUrl}${page.path}</loc>
 `;

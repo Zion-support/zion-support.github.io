@@ -1,72 +1,9 @@
 'use client';
 
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight } from 'lucide-react';
-
-const AIVoiceCloningPage: React.FC = () => {
-  const features = [
-    'High-fidelity voice synthesis with 99.9% accuracy',
-    'Real-time voice cloning in under 30 seconds',
-    'Multi-language support (50+ languages)',
-    'Emotion and tone control capabilities',
-    'Custom voice training with minimal samples',
-    'API integration for seamless deployment',
-    'Voice aging and gender transformation',
-    'Batch processing for multiple voices',
-    'Privacy-compliant voice data handling',
-    'Real-time voice conversion'
-  ];
-
-  const benefits = [
-    'Create personalized voice assistants for your brand',
-    'Improve accessibility with custom voice options',
-    'Reduce voice actor costs by 90%',
-    'Enable 24/7 multilingual customer support',
-    'Enhance user experience with familiar voices',
-    'Scale voice content production instantly',
-    'Maintain brand consistency across all touchpoints',
-    'Enable voice personalization for users'
-  ];
-
-  const useCases = [
-    {
-      title: 'Customer Service',
-      description: 'Deploy AI agents with your brand voice for consistent customer interactions',
-      icon: '🎧'
-    },
-    {
-      title: 'Content Creation',
-      description: 'Generate voiceovers for videos, podcasts, and presentations',
-      icon: '🎬'
-    },
-    {
-      title: 'Accessibility',
-      description: 'Create custom voices for visually impaired users',
-      icon: '♿'
-    },
-    {
-      title: 'Education',
-      description: 'Develop personalized learning experiences with familiar voices',
-      icon: '📚'
-    },
-    {
-      title: 'Entertainment',
-      description: 'Create unique character voices for games and media',
-      icon: '🎮'
-    },
-    {
-      title: 'Marketing',
-      description: 'Produce consistent brand voice across all marketing materials',
-      icon: '📢'
-    }
-import { CheckCircle, Star, Phone, Mail, MapPin, Mic, Volume2, Languages, Zap, Shield, Clock } from 'lucide-react';
-=======
 import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Mic, Volume2, Download, Play, Pause, Settings, Users, Zap, Shield, Globe } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import ErrorBoundary from '../components/ErrorBoundary';
->>>>>>> origin/main
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -83,20 +20,20 @@ const AIVoiceCloningPage: React.FC = () => {
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></mai>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center"></div>
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-100 text-purple-800 text-sm font-medium mb-6"></div>
                 <Mic className="w-4 h-4 mr-2" />
                 AI Voice Technology
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
                 AI Voice Cloning</h1>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400"></span>
                   Professional Voice Synthesis
                 </span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto"></p>
                 Create realistic voice clones with our advanced AI technology. Perfect for content creators, 
                 businesses, and developers who need high-quality voice synthesis.
               </p>
@@ -119,13 +56,13 @@ const AIVoiceCloningPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white"></section>
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
                 Powerful Voice Cloning Features
               </h2>
-              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto"></p>
                 Our AI voice cloning technology delivers professional-quality results with advanced features
               </p>
             </div>
@@ -136,7 +73,7 @@ const AIVoiceCloningPage: React.FC = () => {
                   <Mic className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">High-Quality Voice Synthesis</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   Generate natural-sounding voices with 99% accuracy and professional quality audio output.
                 </p>
                 <ul className="space-y-2"></u>
@@ -154,7 +91,7 @@ const AIVoiceCloningPage: React.FC = () => {
                   <Settings className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Easy Voice Training</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   Train custom voice models with just 10 minutes of audio samples using our advanced AI.
                 </p>
                 <ul className="space-y-2"></u>
@@ -170,7 +107,7 @@ const AIVoiceCloningPage: React.FC = () => {
                   <Globe className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Multi-Language Support</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   Support for 50+ languages and dialects with native pronunciation and accent accuracy.
                 </p>
                 <ul className="space-y-2"></u>
@@ -189,7 +126,7 @@ const AIVoiceCloningPage: React.FC = () => {
                   <Shield className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Privacy & Security</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   Enterprise-grade security with voice data encryption and secure processing.
                 </p>
                 <ul className="space-y-2"></u>
@@ -207,14 +144,14 @@ const AIVoiceCloningPage: React.FC = () => {
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Real-time Processing</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   Generate voice audio in real-time with our optimized AI models and cloud infrastructure.
                 </p>
                 <ul className="space-y-2"></u>
                   <li className="flex items-center text-sm text-gray-600"></l>
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircl>
                     <1 second generation
-                  </li>
+                  </li></1>
                   <li className="flex items-center text-sm text-gray-600"></l>
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Batch</CheckCircle></<<CheckCircle>processing</CheckCircle>
                   </li>
@@ -226,7 +163,7 @@ const AIVoiceCloningPage: React.FC = () => {
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Team Collaboration</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   Share voice models and collaborate with team members on voice projects.
                 </p>
                 <ul className="space-y-2"></u>
@@ -242,13 +179,13 @@ const AIVoiceCloningPage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50"></section>
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
                 Simple, Transparent Pricing
               </h2>
-              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto"></p>
                 Choose the perfect plan for your voice cloning needs
               </p>
             </div>
@@ -284,14 +221,14 @@ const AIVoiceCloningPage: React.FC = () => {
                 <a 
                   href="mailto:kleber@ziontechgroup.com?subject=AI Voice Cloning Starter Plan"
                   className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
-                >
+                ></a>
                   Get Started
                 </a>
               </div>
 
               <div className="bg-white p-8 rounded-xl border-2 border-purple-500 relative"></div>
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-                  <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold"></span>
                     Most Popular
                   </span>
                 </div>
@@ -328,7 +265,7 @@ const AIVoiceCloningPage: React.FC = () => {
                 <a 
                   href="mailto:kleber@ziontechgroup.com?subject=AI Voice Cloning Professional Plan"
                   className="w-full bg-purple-600 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-purple-700 transition-colors"
-                >
+                ></a>
                   Get Started
                 </a>
               </div>
@@ -367,7 +304,7 @@ const AIVoiceCloningPage: React.FC = () => {
                 <a 
                   href="mailto:kleber@ziontechgroup.com?subject=AI Voice Cloning Enterprise Plan"
                   className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
-                >
+                ></a>
                   Contact Sales
                 </a>
               </div>
@@ -376,12 +313,12 @@ const AIVoiceCloningPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-pink-600">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-pink-600"></section>
           <div className="max-w-4xl mx-auto text-center"></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Ready to Create Amazing Voice Content?
             </h2>
-            <p className="text-xl text-purple-100 mb-8">
+            <p className="text-xl text-purple-100 mb-8"></p>
               Join thousands of creators and businesses using our AI voice cloning technology
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -402,7 +339,7 @@ const AIVoiceCloningPage: React.FC = () => {
         </section>
 
         {/* Contact Info */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900"></section>
           <div className="max-w-4xl mx-auto text-center"></section>
             <div className="grid md:grid-cols-3 gap-8 text-white"></div>
               <div className="flex items-center justify-center"></div>
@@ -427,8 +364,4 @@ const AIVoiceCloningPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AIVoiceCloningPage;
-=======
-export default AIVoiceCloningPage;
->>>>>>> origin/main

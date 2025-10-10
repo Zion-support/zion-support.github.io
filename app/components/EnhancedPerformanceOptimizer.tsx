@@ -15,17 +15,10 @@ interface PerformanceOptimizerProps {}
   enableCriticalResourcePreloading?: boolean;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({
-=======
 const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({}
->>>>>>> origin/merge-error-fixes
   enableImageOptimization = true,
-=======
-const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
+const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   enableLazyLoading = true,
   enableCodeSplitting = true,
   enablePreloading = true,
@@ -37,15 +30,9 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
   enablePrefetching = true,
   enableCriticalResourcePreloading = true;
 }) => {
-<<<<<<< HEAD
-
-  // Image optimization;
-  useEffect(() => {
-=======
 }
   // Image optimization
   useEffect(() => {}
->>>>>>> origin/merge-error-fixes
     if (!enableImageOptimization || typeof window === 'undefined') return;
 
     const optimizeImages = () => {}
@@ -60,13 +47,8 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
 
     };
 
-<<<<<<< HEAD
-    // Optimize images on load;
-    if (document.readyState === 'complete') {
-=======
     // Optimize images on load
     if (document.readyState === 'complete') {}
->>>>>>> origin/merge-error-fixes
       optimizeImages();
     } else {}
       window.addEventListener('load', optimizeImages);
@@ -77,21 +59,12 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
     };
   }, [enableImageOptimization]);
 
-<<<<<<< HEAD
-  // Lazy loading for images and components;
-  useEffect(() => {
-    if (!enableLazyLoading || typeof window === 'undefined') return;
-
-    const observerOptions = {
-      root: null;
-=======
   // Lazy loading for images and components
   useEffect(() => {}
     if (!enableLazyLoading || typeof window === 'undefined') return;
 
     const observerOptions = {}
       root: null,
->>>>>>> origin/merge-error-fixes
       rootMargin: '50px',
       threshold: 0.1;
     };
@@ -118,21 +91,12 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
     };
   }, [enableLazyLoading]);
 
-<<<<<<< HEAD
-  // Resource hints and preloading;
-  useEffect(() => {
-    if (!enableResourceHints || typeof window === 'undefined') return;
-
-    const addResourceHints = () => {
-      // Preconnect to external domains;
-=======
   // Resource hints and preloading
   useEffect(() => {}
     if (!enableResourceHints || typeof window === 'undefined') return;
 
     const addResourceHints = () => {}
       // Preconnect to external domains
->>>>>>> origin/merge-error-fixes
       const domains = [
         'https: //fonts.googleapis.com'
         'https: //fonts.gstatic.com'
@@ -157,28 +121,17 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
         const link = document.createElement('link');
         link.rel = 'dns-prefetch';
         link.href = domain;
-        document.head.appendChild(link);,
-,
-    };
+        document.head.appendChild(link);};
 
     addResourceHints();
   }, [enableResourceHints]);
 
-<<<<<<< HEAD
-  // Critical resource preloading;
-  useEffect(() => {
-    if (!enableCriticalResourcePreloading || typeof window === 'undefined') return;
-
-    const preloadCriticalResources = () => {
-      // Preload critical CSS;
-=======
   // Critical resource preloading
   useEffect(() => {}
     if (!enableCriticalResourcePreloading || typeof window === 'undefined') return;
 
     const preloadCriticalResources = () => {}
       // Preload critical CSS
->>>>>>> origin/merge-error-fixes
       const criticalCSS = document.createElement('link');
       criticalCSS.rel = 'preload';
       criticalCSS.href = '/critical.css';
@@ -199,11 +152,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
         link.href = fontUrl;
         link.as = 'style';
         link.crossOrigin = 'anonymous';
-<<<<<<< HEAD
-        link.onload = () => {,
-=======
         link.onload = () => {}
->>>>>>> origin/merge-error-fixes
           link.rel = 'stylesheet';
         };
         document.head.appendChild(link);
@@ -213,27 +162,16 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
     preloadCriticalResources();
   }, [enableCriticalResourcePreloading]);
 
-<<<<<<< HEAD
-  // Service Worker registration;
-  useEffect(() => {
-=======
   // Service Worker registration
   useEffect(() => {}
->>>>>>> origin/merge-error-fixes
     if (!enableServiceWorker || typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
 
     const registerServiceWorker = async () => {}
       try {}
         const registration = await navigator.serviceWorker.register('/sw.js');
-<<<<<<< HEAD
-        // Service Worker registered successfully;
-      } catch (error) {
-        // Service Worker registration failed;
-=======
         // Service Worker registered successfully
       } catch (error) {}
         // Service Worker registration failed
->>>>>>> origin/merge-error-fixes
       }
     };
 
@@ -244,43 +182,31 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
     }
   }, [enableServiceWorker]);
 
-<<<<<<< HEAD
-  // Web Vitals monitoring;
-  useEffect(() => {
-=======
   // Web Vitals monitoring
   useEffect(() => {}
->>>>>>> origin/merge-error-fixes
     if (!enableWebVitals || typeof window === 'undefined') return;
 
     const reportWebVitals = async () => {}
       try {}
         const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        const reportMetric = (metric: any) => {
-=======
         const reportMetric = (metric: any) => {}
->>>>>>> origin/merge-error-fixes
           // Send to analytics
           if ('gtag' in window) {}
             (window as any).gtag('event', 'web_vitals', {)}
               event_category: 'Performance',
-              event_label: metric.name,)
+              event_label: metric.name)
     value: Math.round(metric.value),
               non_interaction: true,
 
-=======
-        const reportMetric = (metric: any) => {,
+        const reportMetric = (metric: any) => {
           // Send to analytics;
-          if ('gtag' in window) {,
+          if ('gtag' in window) {
             (window as any).gtag('event', 'web_vitals', {)
               event_category: 'Performance'),
               event_label: metric.name),
               value: Math.round(metric.value),
               non_interaction: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           }
         };
 
@@ -289,26 +215,16 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
         getFCP(reportMetric);
         getLCP(reportMetric);
         getTTFB(reportMetric);
-<<<<<<< HEAD
-      } catch (error) {
-        // Failed to load web vitals;
-=======
       } catch (error) {}
         // Failed to load web vitals
->>>>>>> origin/merge-error-fixes
       }
     };
 
     reportWebVitals();
   }, [enableWebVitals]);
 
-<<<<<<< HEAD
-  // Prefetching for likely next pages;
-  useEffect(() => {
-=======
   // Prefetching for likely next pages
   useEffect(() => {}
->>>>>>> origin/merge-error-fixes
     if (!enablePrefetching || typeof window === 'undefined') return;
 
     const prefetchPages = () => {}
@@ -320,15 +236,9 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
         '/it-services'
       ];
 
-<<<<<<< HEAD
-      // Prefetch after a delay to not impact initial load;
-      setTimeout(() => {
-        likelyPages.forEach((page) => {
-=======
       // Prefetch after a delay to not impact initial load
       setTimeout(() => {}
         likelyPages.forEach((page) => {}
->>>>>>> origin/merge-error-fixes
           const link = document.createElement('link');
           link.rel = 'prefetch';
           link.href = page;
@@ -344,21 +254,12 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
     }
   }, [enablePrefetching]);
 
-<<<<<<< HEAD
-  // Compression optimization;
-  useEffect(() => {
-    if (!enableCompression || typeof window === 'undefined') return;
-
-    const optimizeCompression = () => {
-      // Enable compression for text resources;
-=======
   // Compression optimization
   useEffect(() => {}
     if (!enableCompression || typeof window === 'undefined') return;
 
     const optimizeCompression = () => {}
       // Enable compression for text resources
->>>>>>> origin/merge-error-fixes
       const style = document.createElement('style');
       style.textContent = `
         /* Enable hardware acceleration for animations */
@@ -386,16 +287,6 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
     optimizeCompression();
   }, [enableCompression]);
 
-<<<<<<< HEAD
-  // Memory optimization;
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-    const optimizeMemory = () => {
-      // Clean up unused event listeners periodically;
-      const cleanup = () => {
-        // Remove any orphaned event listeners;
-=======
   // Memory optimization
   useEffect(() => {}
     if (typeof window === 'undefined') return;
@@ -404,7 +295,6 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
       // Clean up unused event listeners periodically
       const cleanup = () => {}
         // Remove any orphaned event listeners
->>>>>>> origin/merge-error-fixes
         const elements = document.querySelectorAll('[data-cleanup]');
         elements.forEach((element) => {}
           element.removeAttribute('data-cleanup');
@@ -421,33 +311,12 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
     return cleanupInterval;
   }, []);
 
-<<<<<<< HEAD
-  // Performance monitoring;
-  const measurePerformance = useCallback(() => {
-=======
   // Performance monitoring
   const measurePerformance = useCallback(() => {}
->>>>>>> origin/merge-error-fixes
     if (typeof window === 'undefined' || !window.performance) return;
 
     const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
 
-<<<<<<< HEAD
-    if (navigation) {
-      const metrics = {
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart;
-        loadComplete: navigation.loadEventEnd - navigation.fetchStart;
-        firstByte: navigation.responseStart - navigation.fetchStart;
-        domInteractive: navigation.domInteractive - navigation.fetchStart;
-      };
-
-      // Performance metrics collected;
-      // Send to analytics;
-      if ('gtag' in window) {
-        Object.entries(metrics).forEach(([key, value]) => {
-<<<<<<< HEAD
-          (window as any).gtag('event', 'performance_metric', {
-=======
     if (navigation) {}
       const metrics = {}
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
@@ -462,20 +331,17 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
       if ('gtag' in window) {}
         Object.entries(metrics).forEach(([key, value]) => {}
           (window as any).gtag('event', 'performance_metric', {)}
->>>>>>> origin/merge-error-fixes
             event_category: 'Performance',
-            event_label: key,)
+            event_label: key)
     value: Math.round(value),
             non_interaction: true,
 
 
-=======
           (window as any).gtag('event', 'performance_metric', {)
             event_category: 'Performance'),
             event_label: key),
             value: Math.round(value),
             non_interaction: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       }
     }
   }, []);

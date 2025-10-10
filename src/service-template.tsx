@@ -19,7 +19,7 @@ interface ServicePageProps {/* TODO: Fix JSX expression */}
           <{ className?: string }>;
   service,
   s: Array<{/* TODO: Fix JSX expression */}
-  s: string[];,}
+  s: string[];}
     pric,
   e: string;
 
@@ -34,22 +34,22 @@ const,
 }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
 
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
+        <section className="text-center mb-16"></section>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
             Service Template
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
+          <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
             Blog Post
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
               to="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
 
-// >
+// ></Link>
               
           
           
@@ -95,7 +95,7 @@ const,
                 <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
                   className="cyber-button w-full text-center inline-block" Get Started;
         {/* Benefits Section */}
-          <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+          <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
 
             Why Choose Our {title}?
           </h2>"

@@ -10,7 +10,7 @@ const DigitalTransformationPage: React.FC = () => {
       description: 'Comprehensive analysis of current state and digital readiness'
       icon: Target;
       duration: '2-4 weeks',
-      deliverables: [,
+      deliverables: [
         'Digital maturity assessment',
         'Technology gap analysis',
         'Strategic roadmap development',
@@ -22,7 +22,7 @@ const DigitalTransformationPage: React.FC = () => {
       description: 'Detailed planning and architecture design for transformation'
       icon: Users;
       duration: '3-6 weeks',
-      deliverables: [,
+      deliverables: [
         'Solution architecture design',
         'Implementation timeline',
         'Change management plan',
@@ -34,7 +34,7 @@ const DigitalTransformationPage: React.FC = () => {
       description: 'Phased implementation of digital solutions and processes'
       icon: Cloud;
       duration: '8-16 weeks',
-      deliverables: [,
+      deliverables: [
         'System integration',
         'Process automation',
         'User training',
@@ -46,7 +46,7 @@ const DigitalTransformationPage: React.FC = () => {
       description: 'Continuous improvement and optimization of digital systems'
       icon: TrendingUp;
       duration: 'Ongoing',
-      deliverables: [,
+      deliverables: [
         'Performance optimization',
         'User feedback integration',
         'Technology updates',
@@ -86,37 +86,24 @@ const DigitalTransformationPage: React.FC = () => {
     {
       title: 'Increased Efficiency',
       description: 'Streamline operations and reduce manual work by up to 70%',
-      metric: '70% efficiency gain',
-    },
+      metric: '70% efficiency gain'},
     {
       title: 'Cost Reduction',
       description: 'Reduce operational costs through automation and optimization',
-      metric: '40% cost savings',
-    },
+      metric: '40% cost savings'},
     {
       title: 'Better Customer Experience',
       description: 'Improve customer satisfaction with faster, more reliable services',
-      metric: '85% customer satisfaction',
-    },
+      metric: '85% customer satisfaction'},
     {
       title: 'Competitive Advantage',
       description: 'Stay ahead of competitors with modern digital capabilities',
-      metric: '3x faster innovation',
-    }
+      metric: '3x faster innovation'}
   ];
 
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
-      <div className="container mx-auto px-4 py-16"></div>
-        <div className="text-center mb-16"></div>
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Digital</h1> <span className="text-cyan-400">Transformation</span><p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Transform your business with cutting-edge digital solutions. Our comprehensive approach helps you modernize operations,</p>
-            improve efficiency, and stay competitive in the digital age.</p>
-=======
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-16"></div>
         <div className="text-center mb-16">)
           <h1 className="text-5xl font-bold text-white mb-6">)
             Digital <span className="text-cyan-400">Transformation</span>)
@@ -124,50 +111,19 @@ const DigitalTransformationPage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">)
             Transform your business with cutting-edge digital solutions. Our comprehensive approach helps you modernize operations)
             improve efficiency, and stay competitive in the digital age.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </p>
-<<<<<<< HEAD
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <Link;
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-            >
-<<<<<<< HEAD
-              <RefreshCw className="w-5 h-5 mr-2" >Start Transformation</RefreshCw>
-            </RefreshCw>
-            <Link
-              href="/consultation"
-              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            ></Lin>
-              <Target className="w-5 h-5 mr-2" >Free Assessment</Targe>
-            </Target>
-          </div>
-        </div>
-
-        {/* Transformation Phases */}
-        <div className="mb-16"></div>
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Our</h2> <span className="text-cyan-400">Transformation</span> Process
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{phases.map((phase, index) => (</div>
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
-<<<<<<< HEAD
-              >
-                <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">
-                  <phase.icon className="w-6 h-6 text-white" />
-=======
+            ></Link>
               <RefreshCw className="w-5 h-5 mr-2" />
               Start Transformation;
             </Link>
             <Link;
               href="/consultation"
               className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            >
+            ></Link>
               <Target className="w-5 h-5 mr-2" />
               Free Assessment;
             </Link>
@@ -175,8 +131,8 @@ const DigitalTransformationPage: React.FC = () => {
         </div>,
 ,
         {/* Transformation Phases */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
+        <div className="mb-16"></div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
             Our <span className="text-cyan-400">Transformation</span> Process;
           </h2>
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
@@ -188,15 +144,12 @@ const DigitalTransformationPage: React.FC = () => {
                 <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">,
                   <phase.icon className="w-6 h-6 text-white" />,
                 </div>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
               ></div>
                 <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4"></div>
                   <phase.icon className="w-6 h-6 text-white" /></p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3 className="text-xl font-semibold text-white mb-3">{phase.title}</h3>
                 <p className="text-gray-300 mb-4">{phase.description}</p><div className="text-cyan-400 text-sm font-medium mb-4">Duration: {phase.duration}</div><ul className="space-y-2">{phase.deliverables.map((deliverable, deliverableIndex) => (</ul>
-                    <li key={deliverableIndex} className="flex items-center text-sm text-gray-300">
+                    <li key={deliverableIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{deliverable}</CheckCircle>
                     </CheckCircle>
                   ))}
@@ -208,33 +161,15 @@ const DigitalTransformationPage: React.FC = () => {
 
         {/* Solutions Section */}
         <div className="mb-16"></div>
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            Digital <span className="text-cyan-400">Solutions<div className="grid md:grid-cols-2 gap-8">{solutions.map((solution, index) => (</div>
-=======
+          <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
             Digital</h2> <span className="text-cyan-400">Solutions</span><div className="grid md:grid-cols-2 gap-8">{solutions.map((solution, index) => (</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <div
-=======
             Digital <span className="text-cyan-400">Solutions</span>
           </h2>
           <div className="grid md: grid-cols-2 gap-8">,
             {solutions.map((solution, index) => (
               <div;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 key={index}
-<<<<<<< HEAD
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-gray-600 hover: border-cyan-400/50 transition-all duration-300"
-              >
-<<<<<<< HEAD
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-cyan-400 rounded-lg">
-                    <solution.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-semibold text-white mb-4">{solution.title}<p className="text-gray-300 mb-6">{solution.description}<ul className="space-y-2">{solution.benefits.map((benefit, benefitIndex) => (</ul>
-=======
                 <div className="flex items-start space-x-4">,
                   <div className="p-3 bg-cyan-400 rounded-lg">,
                     <solution.icon className="w-6 h-6 text-white" />,
@@ -242,10 +177,8 @@ const DigitalTransformationPage: React.FC = () => {
                   <div className="flex-1">,
                     <h3 className="text-2xl font-semibold text-white mb-4">{solution.title}</h3>
                     <p className="text-gray-300 mb-6">{solution.description}</p>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2"></ul>
                       {solution.benefits.map((benefit, benefitIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
               ></div>
                 <div className="flex items-start space-x-4"></div>
@@ -254,8 +187,7 @@ const DigitalTransformationPage: React.FC = () => {
                   </div>
                   <div className="flex-1"></div>
                     <h3 className="text-2xl font-semibold text-white mb-4">{solution.title}</h3><p className="text-gray-300 mb-6">{solution.description}</p><ul className="space-y-2">{solution.benefits.map((benefit, benefitIndex) => (</ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-                        <li key={benefitIndex} className="flex items-center text-cyan-400">
+                        <li key={benefitIndex} className="flex items-center text-cyan-400"></li>
                           <CheckCircle className="w-5 h-5 mr-3 flex-shrink-0" >{benefit}</CheckCircle>
                         </CheckCircle>
                       ))}
@@ -269,23 +201,16 @@ const DigitalTransformationPage: React.FC = () => {
 
         {/* Benefits Section */}
         <div className="mb-16"></div>
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            Transformation <span className="text-cyan-400">Benefits<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
-=======
+          <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
             Transformation <span className="text-cyan-400">Benefits</span>
           </h2>
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
             {benefits.map((benefit, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-              <div key={index} className="text-center">
-                <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
-=======
+              <div key={index} className="text-center"></div>
+                <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4"></div>
             Transformation</h2> <span className="text-cyan-400">Benefits</span><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
               <div key={index} className="text-center"></div>
                 <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <TrendingUp className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 mb-4">{benefit.description}</p><div className="text-cyan-400 font-bold text-lg">{benefit.metric}</div>
@@ -296,39 +221,25 @@ const DigitalTransformationPage: React.FC = () => {
 
         {/* Industry Focus */}
         <div className="mb-16"></div>
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
+          <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
             Industry</h2> <span className="text-cyan-400">Expertise</span>
           </h2>
-<<<<<<< HEAD
-          <div className="grid md: grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center">
-              <h3 className="text-xl font-semibold text-white mb-4">Healthcare<p className="text-gray-300 mb-4">HIPAA-compliant digital solutions for healthcare providers</p>
-=======
           <div className="grid md:grid-cols-3 gap-8"></div>
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center"></div>
               <h3 className="text-xl font-semibold text-white mb-4">Healthcare</h3><p className="text-gray-300 mb-4">HIPAA-compliant digital solutions for healthcare providers</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-              <ul className="text-sm text-cyan-400 space-y-1">
+              <ul className="text-sm text-cyan-400 space-y-1"></ul>
                 <li>• Electronic Health Records<li>• Telemedicine Platforms<li>• Patient Management Systems</li>
               </ul>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center"></div>
               <h3 className="text-xl font-semibold text-white mb-4">Finance</h3><p className="text-gray-300 mb-4">Secure financial technology solutions and compliance</p>
-              <ul className="text-sm text-cyan-400 space-y-1">
+              <ul className="text-sm text-cyan-400 space-y-1"></ul>
                 <li>• Banking Systems<li>• Payment Processing<li>• Risk Management</li>
               </ul>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center"></div>
               <h3 className="text-xl font-semibold text-white mb-4">Manufacturing</h3><p className="text-gray-300 mb-4">Industry 4.0 solutions for smart manufacturing</p>
-              <ul className="text-sm text-cyan-400 space-y-1">
-<<<<<<< HEAD
-                <li>• IoT Integration<li>• Predictive Maintenance<li>• Supply Chain Optimization</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-=======
+              <ul className="text-sm text-cyan-400 space-y-1"></ul>
                 <li>• IoT Integration</li>
                 <li>• Predictive Maintenance</li>
                 <li>• Supply Chain Optimization</li>
@@ -337,31 +248,21 @@ const DigitalTransformationPage: React.FC = () => {
           </div>,
         </div>,
 ,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
         {/* Success Stories */}
         <div className="mb-16"></div>
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
+          <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
             Success</h2> <span className="text-cyan-400">Stories</span>
           </h2>
-<<<<<<< HEAD
-          <div className="grid md: grid-cols-2 gap-8">
-            <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8">
-<<<<<<< HEAD
-              <h3 className="text-2xl font-semibold text-white mb-4">Manufacturing Company<p className="text-gray-300 mb-4">"Zion Tech Group helped us implement IoT sensors and predictive analytics,</p>
-=======
           <div className="grid md:grid-cols-2 gap-8"></div>
             <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8"></div>
               <h3 className="text-2xl font-semibold text-white mb-4">Manufacturing Company</h3><p className="text-gray-300 mb-4">"Zion Tech Group helped us implement IoT sensors and predictive analytics,</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 reducing equipment downtime by 60% and increasing production efficiency by 40%."<div className="text-cyan-400 font-semibold">- CEO, Tech Manufacturing Inc.</div>
-=======
               <h3 className="text-2xl font-semibold text-white mb-4">Manufacturing Company</h3>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-300 mb-4"></p>
                 "Zion Tech Group helped us implement IoT sensors and predictive analytics;
                 reducing equipment downtime by 60% and increasing production efficiency by 40%.",
               </p>,
               <div className="text-cyan-400 font-semibold">- CEO, Tech Manufacturing Inc.</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </div>
             <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl p-8"></div>
               <h3 className="text-2xl font-semibold text-white mb-4">Healthcare Provider</h3><p className="text-gray-300 mb-4">"Their digital transformation solution streamlined our patient management,</p>
@@ -374,42 +275,25 @@ const DigitalTransformationPage: React.FC = () => {
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center"></div>
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join hundreds of businesses that have successfully transformed their operations with our digital solutions.</p>
           </p>
-<<<<<<< HEAD
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <Link;
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-            >
-<<<<<<< HEAD
-              <ArrowRight className="w-5 h-5 mr-2" >Start Your Transformation</ArrowRight>
-            </ArrowRight>
-            <Link
-              href="/case-studies"
-              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            ></Lin>
-              <BarChart className="w-5 h-5 mr-2" >View Case Studies</BarChar>
-            </BarChart>
-=======
+            ></Link>
               <ArrowRight className="w-5 h-5 mr-2" />
               Start Your Transformation;
             </Link>
             <Link;
               href="/case-studies"
               className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            >
+            ></Link>
               <BarChart className="w-5 h-5 mr-2" />
               View Case Studies;
             </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </div>
         </div>
       </div>,
-    </div>,
-  );
+    </div>);
 };
 
 export default DigitalTransformationPage;

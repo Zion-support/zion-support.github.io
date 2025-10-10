@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-/**
- * Service Worker Registration Utility
- */
-export interface ServiceWorkerConfig {
-  onSuccess?: (registration: ServiceWorkerRegistration) => void;
-  onUpdate?: (registration: ServiceWorkerRegistration) => void;
-  onError?: (error: Error) => void;
-}
-/**
- * Register service worker with lifecycle callbacks
- */
-export async function registerServiceWorker(
-  _config: ServiceWorkerConfig = {}
-): Promise<ServiceWorkerRegistration | undefined> {
-  // Check if service workers are supported
-  if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
-    return;
-  }
-  // Only register in production or if explicitly enabled
-=======
 
 /**
  * Service Worker Registration Utility;
@@ -49,41 +28,10 @@ export async function registerServiceWorker()
     return;
   }
 // Only register in production or if explicitly enabled;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     window.location.hostname === 'localhost' ||
       window.location.hostname === '[::1]' ||
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
   );
-<<<<<<< HEAD
-  // Use isLocalhost for conditional logic if needed
-  if (isLocalhost) {
-    }
-  try {
-    // Wait for page to load
-    await new Promise<void>((resolve) => {
-      if (document.readyState === 'complete') {
-      } else {
-        window.addEventListener('load', () => resolve());
-      }
-    });
-    const registration = await navigator.serviceWorker.register('/service-worker.js', {
-      scope:     ,
-$4});
-    // Handle updates
-    registration.addEventListener('updatefound', () => {
-      const installingWorker = registration.installing;
-      if (!installingWorker) return;
-      installingWorker.addEventListener('statechange', () => {
-        if (installingWorker.state === 'installed') {
-          if (navigator.serviceWorker.controller) {
-            // New update available
-            if (config.onUpdate) {
-              config.onUpdate(registration);
-            }
-          } else {
-            // Content cached for offline use
-            if (config.onSuccess) {
-=======
   // Use isLocalhost for conditional logic if needed;
   if (isLocalhost) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -138,7 +86,6 @@ $4});
             if (config.onSuccess) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               config.onSuccess(registration);
             }
           }
@@ -146,36 +93,16 @@ $4});
       });
     });
     return registration;
-<<<<<<< HEAD
-  } catch (error) {
-    // // console.error('[SW] Registration failed:', error);
-    if (config.onError && error instanceof Error) {
-=======
   } catch (error) {/* TODO: Fix JSX expression */}
   failed:', error);}
     if (config.onError && error instanceof Error) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       config.onError(error);
     }
   }
 }
 /**
-<<<<<<< HEAD
- * Unregister service worker
- */
-export async function unregisterServiceWorker(): Promise<boolean> {
-  if (!('serviceWorker' in navigator)) {
-    return false;
-  }
-  try {
-    const registration = await navigator.serviceWorker.ready;
-    const result = await registration.unregister();
-    return result;
-  } catch (error) {
-    // // console.error('[SW] Unregistration failed:', error);
-=======
  * Unregister service worker;
  */
 export async function unregisterServiceWorker(): Promise;
@@ -195,74 +122,10 @@ export async function unregisterServiceWorker(): Promise;
     return result;
   } catch (error) {/* TODO: Fix JSX expression */}
   failed:', error);}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return false;
   }
 }
 /**
-<<<<<<< HEAD
- * Check for service worker updates
- */
-export async function checkForUpdates(): Promise<void> {
-  if (!('serviceWorker' in navigator)) {
-    return;
-  }
-  try {
-    const registration = await navigator.serviceWorker.ready;
-    await registration.update();
-    } catch (error) {
-    // // console.error('[SW] Update check failed:', error);
-  }
-}
-/**
- * Skip waiting and activate new service worker
- */
-export function skipWaiting(): void {
-  if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
-    return;
-  }
-  navigator.serviceWorker.controller.postMessage({ action: 'skipWaiting' });
-}
-/**
- * Clear all caches
- */
-export function clearCaches(): void {
-  if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
-    return;
-  }
-  navigator.serviceWorker.controller.postMessage({ action: 'clearCache' });
-  }
-/**
- * Get service worker registration status
- */
-export async function getServiceWorkerStatus(): Promise<{
-  supported: boolean;
-  registered: boolean;
-  active: boolean;
-}> {
-  if (!('serviceWorker' in navigator)) {
-    return {
-      supported: false,
-      registered: false,
-      active: false
-    };
-  }
-  try {
-    const registration = await navigator.serviceWorker.getRegistration();
-    return {
-      supported: true,
-      registered: !!registration,
-      active: !!registration?.active
-    };
-  } catch {
-    return {
-      supported: true,
-      registered: false,
-      active: false
-    };
-  }
-}
-=======
  * Check for service worker updates;
  */
 export async function checkForUpdates(): Promise;
@@ -386,4 +249,3 @@ export async function getServiceWorkerStatus(): Promise;
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

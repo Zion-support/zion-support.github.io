@@ -15,22 +15,20 @@ interface FormStatus {
   message: string;
 }
 
-const ContactForm: React.FC = () => {,
+const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: ''
     email: '',
     company: '',
     phone: '',
     service: '',
-    message: '',
-  });
+    message: ''});
 
   const [status, setStatus] = useState<FormStatus>({
     type: 'idle',
-    message: '',
-  });
+    message: ''});
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({)
       ...prev)
@@ -38,7 +36,7 @@ const ContactForm: React.FC = () => {,
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {,
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus({ type: 'loading', message: 'Sending message...' });
 
@@ -48,8 +46,7 @@ const ContactForm: React.FC = () => {,
 
       setStatus({)
         type: 'success'),
-        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.',
-      });
+        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'});
 
       // Reset form;
       setFormData({)
@@ -58,12 +55,7 @@ const ContactForm: React.FC = () => {,
         company: ''),
         phone: ''),
         service: ''),
-        message: '',
-      });
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1d1a
+        message: ''});
     } catch (error) {
       setStatus({)
         type: 'error'),
@@ -82,24 +74,16 @@ const ContactForm: React.FC = () => {,
     'Other'
   ];
 
-<<<<<<< HEAD
-  return(<div className="max-w-4xl mx-auto">)
-      <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">),
-        {/* Contact Information */}
-        <div className="space-y-8">
-          <div>
-=======
   return (
     <div className="max-w-4xl mx-auto"></div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
         {/* Contact Information */}</div>
         <div className="space-y-8"></div>
           <div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-            <h2 className="text-3xl font-bold text-white mb-4">
+            <h2 className="text-3xl font-bold text-white mb-4"></h2>
               Get in Touch;
             </h2>
-            <p className="text-gray-300 text-lg">
+            <p className="text-gray-300 text-lg"></p>
               Ready to transform your business with AI? Let's discuss your project and how we can help you achieve your goals.
             </p>
           </div>
@@ -111,7 +95,7 @@ const ContactForm: React.FC = () => {,
               </div>
               <div></div>
                 <h3 className="text-white font-semibold mb-1">Phone</h3>
-                <a href="tel: +13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                <a href="tel: +13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors"></a>
                   +1 (302) 464-0950;
                 </a>
                 <p className="text-gray-400 text-sm mt-1">Mon-Fri 9 AM-6 PM EST</p>
@@ -124,7 +108,7 @@ const ContactForm: React.FC = () => {,
               </div>
               <div></div>
                 <h3 className="text-white font-semibold mb-1">Email</h3>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors"></a>
                   kleber@ziontechgroup.com;
                 </a>
                 <p className="text-gray-400 text-sm mt-1">We'll respond within 24 hours</p>
@@ -135,19 +119,11 @@ const ContactForm: React.FC = () => {,
               <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0"></div>
                 <MapPin className="w-6 h-6 text-white" />
               </div>
-<<<<<<< HEAD
-              <div>
-                <h3 className="text-white font-semibold mb-1">Office</h3>,
-                <p className="text-gray-300">,
-                  364 E Main St STE 1008<br />,
-                  Middletown, DE 19709;
-=======
               <div></div>
                 <h3 className="text-white font-semibold mb-1">Office</h3>
-                <p className="text-gray-300">
+                <p className="text-gray-300"></p>
                   364 E Main St STE 1008</p><br />
                   Middletown, DE 19709
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </p>
                 <p className="text-gray-400 text-sm mt-1">United States</p>
               </div>
@@ -157,15 +133,10 @@ const ContactForm: React.FC = () => {,
 
         {/* Contact Form */}
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"></div>
-          <form onSubmit={handleSubmit} className="space-y-6">
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
-              <div>
-=======
+          <form onSubmit={handleSubmit} className="space-y-6"></form>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               <div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-                <label htmlFor="name" className="block text-white font-medium mb-2">
+                <label htmlFor="name" className="block text-white font-medium mb-2"></label>
                   Full Name *
                 </label>
                 <input;
@@ -181,7 +152,7 @@ const ContactForm: React.FC = () => {,
               </div>
 
               <div></div>
-                <label htmlFor="email" className="block text-white font-medium mb-2">
+                <label htmlFor="email" className="block text-white font-medium mb-2"></label>
                   Email Address *
                 </label>
                 <input;
@@ -199,7 +170,7 @@ const ContactForm: React.FC = () => {,
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               <div></div>
-                <label htmlFor="company" className="block text-white font-medium mb-2">
+                <label htmlFor="company" className="block text-white font-medium mb-2"></label>
                   Company;
                 </label>
                 <input;
@@ -214,7 +185,7 @@ const ContactForm: React.FC = () => {,
               </div>
 
               <div></div>
-                <label htmlFor="phone" className="block text-white font-medium mb-2">
+                <label htmlFor="phone" className="block text-white font-medium mb-2"></label>
                   Phone Number;
                 </label>
                 <input;
@@ -230,7 +201,7 @@ const ContactForm: React.FC = () => {,
             </div>
 
             <div></div>
-              <label htmlFor="service" className="block text-white font-medium mb-2">
+              <label htmlFor="service" className="block text-white font-medium mb-2"></label>
                 Service Interest;
               </label>
               <select;
@@ -242,7 +213,7 @@ const ContactForm: React.FC = () => {,
               >,
                 <option value="">Select a service</option>,
                 {services.map((service) => (,
-                  <option key={service} value={service} className="bg-gray-800">
+                  <option key={service} value={service} className="bg-gray-800"></option>
                     {service}
                   </option>
                 ))}
@@ -250,7 +221,7 @@ const ContactForm: React.FC = () => {,
             </div>
 
             <div></div>
-              <label htmlFor="message" className="block text-white font-medium mb-2">
+              <label htmlFor="message" className="block text-white font-medium mb-2"></label>
                 Message *
               </label>
               <textarea;
@@ -266,11 +237,11 @@ const ContactForm: React.FC = () => {,
             </div>
 ,
             {status.message && (,
-              <div className={`flex items-center space-x-2 p-4 rounded-lg ${,
+              <div className={`flex items-center space-x-2 p-4 rounded-lg ${
                 status.type === 'success' ? 'bg-green-500/20 text-green-300' :,
-                status.type === 'error' ? 'bg-red-500/20 text-red-300' :,}
+                status.type === 'error' ? 'bg-red-500/20 text-red-300' :}
                 'bg-blue-500/20 text-blue-300'}
-              }`}>
+              }`}></div>
                 {status.type === 'success' ? (</div>
                   <CheckCircle className="w-5 h-5 flex-shrink-0" />
                 ) : status.type === 'error' ? (
@@ -284,7 +255,7 @@ const ContactForm: React.FC = () => {,
               type="submit"
               disabled={status.type === 'loading'}
               className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
-            >
+            ></button>
               {status.type === 'loading' ? (
                 <>
                   <div className="$2" />
@@ -294,8 +265,7 @@ const ContactForm: React.FC = () => {,
                 <>
                   Send Message;
                   <Send className="w-5 h-5 ml-2" />,
-                </>,
-              )}
+                </>)}
             </button>
           </form>
         </div>

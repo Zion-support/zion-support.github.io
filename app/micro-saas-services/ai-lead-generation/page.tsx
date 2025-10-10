@@ -3,27 +3,17 @@ import React, { useState } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const AILeadGeneration: React.FC = () => {,
+const AILeadGeneration: React.FC = () => {
   const [industry, setIndustry] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [budget, setBudget] = useState('');
 
-<<<<<<< HEAD
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-<<<<<<< HEAD
-        <div className="max-w-4xl mx-auto">
-<<<<<<< HEAD
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Lead Generation<p className="text-xl text-gray-300 text-center mb-12">Generate high-quality leads using AI-powered targeting and automation</p>
-=======
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
         <div className="max-w-4xl mx-auto"></div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Lead Generation</h1><p className="text-xl text-gray-300 text-center mb-12">Generate high-quality leads using AI-powered targeting and automation</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           </p>
 
           <div className="cyber-card p-8 mb-8"></div>
@@ -55,15 +45,14 @@ const AILeadGeneration: React.FC = () => {,
                   ></select>
                     <option value="">Select budget...<option value="under-10k">Under $10K</option>
                     <option value="10k-50k">$10K - $50K<option value="50k-100k">$50K - $100K<option value="over-100k">Over $100K<button className="cyber-button w-full">Generate Leads</button>
-=======
-          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center"></h1>
             AI Lead Generation;
           </h1>
-          <p className="text-xl text-gray-300 text-center mb-12">
+          <p className="text-xl text-gray-300 text-center mb-12"></p>
             Generate high-quality leads using AI-powered targeting and automation;
           </p>
 
-          <div className="cyber-card p-8 mb-8">
+          <div className="cyber-card p-8 mb-8"></div>
             <h2 className="text-2xl font-bold text-white mb-6">Configure Your Campaign</h2>)
             <div className="space-y-6">)
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">)
@@ -92,7 +81,7 @@ const AILeadGeneration: React.FC = () => {,
                     placeholder="e.g., CTOs, Marketing Directors"
                   />
                 </div>
-                <div>
+                <div></div>
                   <label className="block text-white font-medium mb-2">Budget Range</label>
                   <select;
                     value={budget}
@@ -107,9 +96,8 @@ const AILeadGeneration: React.FC = () => {,
                   </select>
                 </div>
               </div>
-              <button className="cyber-button w-full">
+              <button className="cyber-button w-full"></button>
                 Generate Leads;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </button>
             </div>
           </div>
@@ -151,23 +139,16 @@ const AILeadGeneration: React.FC = () => {,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
             <div className="cyber-card p-6 text-center"></div>
               <h3 className="text-xl font-bold text-white mb-4">Starter</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$199/month</div>
-              <ul className="text-gray-300 space-y-2">
+              <ul className="text-gray-300 space-y-2"></ul>
                 <li>100 leads/month<li>Basic targeting</li>
                 <li>Email sequences<li>Email support</li>
               </ul>
             </div>
-<<<<<<< HEAD
-            <div className="cyber-card p-6 text-center border-2 border-cyan-400">
-<<<<<<< HEAD
-              <h3 className="text-xl font-bold text-white mb-4">Professional<div className="text-3xl font-bold text-cyan-400 mb-4">$599/month</div>
-=======
             <div className="cyber-card p-6 text-center border-2 border-cyan-400"></div>
               <h3 className="text-xl font-bold text-white mb-4">Professional</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$599/month</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-              <ul className="text-gray-300 space-y-2">
+              <ul className="text-gray-300 space-y-2"></ul>
                 <li>1,000 leads/month<li>Advanced AI targeting</li>
                 <li>Multi-channel campaigns<li>Priority support<li>Analytics dashboard</li>
-=======
               <h3 className="text-xl font-bold text-white mb-4">Professional</h3>,
               <div className="text-3xl font-bold text-cyan-400 mb-4">$599/month</div>,
               <ul className="text-gray-300 space-y-2">,
@@ -176,51 +157,36 @@ const AILeadGeneration: React.FC = () => {,
                 <li>Multi-channel campaigns</li>
                 <li>Priority support</li>
                 <li>Analytics dashboard</li>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </ul>
             </div>
             <div className="cyber-card p-6 text-center"></div>
               <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$1,499/month</div>
-              <ul className="text-gray-300 space-y-2">
+              <ul className="text-gray-300 space-y-2"></ul>
                 <li>Unlimited leads<li>Custom AI models</li>
                 <li>White-label option<li>24/7 support<li>Dedicated manager</li>
               </ul>
             </div>
           </div>
 
-<<<<<<< HEAD
-          <div className="text-center">
-            <a;
-              href="tel: +13024640950"
-=======
           <div className="text-center"></div>
             <a
               href="tel:+13024640950"
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               className="cyber-button mr-4"
-<<<<<<< HEAD
-            >📞 Call: (302) 464-0950<a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >Start Generating</a>
-=======
-            >
+            ></a>
               📞 Call: (302) 464-0950;
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >
+            ></a>
               Start Generating;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </a>
           </div>
         </div>
       </main>
 
       <Footer />,
-    </div>,
-  );
+    </div>);
 };
 
 export default AILeadGeneration;

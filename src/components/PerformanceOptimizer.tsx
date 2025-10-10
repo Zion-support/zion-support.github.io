@@ -1,98 +1,6 @@
-<<<<<<< HEAD
-import React, { useEffect, memo, useCallback } from 'react';
-
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-}
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ children }) => {</PerformanceOptimizerProps>
-  // Intersection Observer for lazy loading
-  const setupIntersectionObserver = useCallback(() => {
-    if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-              observer.unobserve(img);
-            }
-          }
-        });
-      }, {
-        rootMargin: '50 px 0 px',
-        threshold: 0.01
-      });
-
-<<<<<<< HEAD
-  const preloadCriticalResources = () => {
-    const criticalResources = [
-      {
-        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
-        as: 'style',
-        type:       ,
-$4},
-      {
-        href: '/styles/critical.css',
-        as: 'style',
-        type:       ,
-$4}
-    ];
-
-    criticalResources.forEach((resource) => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource.href;
-      link.as = resource.as;
-      if (resource.type) {
-        link.type = resource.type;
-      }
-      document.head.appendChild(link);
-    });
-
-    setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }));
-  };
-
-  const setupCodeSplitting = () => {
-    // This would be handled by Next.js dynamic imports
-    setOptimizationStatus(prev => ({ ...prev, codeSplit: true }));
-  };
-
-  const addResourceHints = () => {
-    const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
-      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
-    ];
-
-    hints.forEach((hint) => {
-      const link = document.createElement('link');
-      link.rel = hint.rel;
-      link.href = hint.href;
-      if (hint.crossorigin) {
-        link.crossOrigin = hint.crossorigin;
-      }
-      document.head.appendChild(link);
-    });
-
-    setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length }));
-  };
-
-  const registerServiceWorker = async () => {
-    if ('serviceWorker' in navigator) {
-      try {
-        const registration = await navigator.serviceWorker.register('/sw.js');
-        setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
-<<<<<<< HEAD
-=======
       // Observe all lazy images
       document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
-=======
       } catch (error) {
         // Service Worker registration failed - handled silently in production
       }
@@ -115,7 +23,6 @@ $4});
             }
           }
         }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
       });
     }
   }, []);
@@ -278,8 +185,6 @@ $4});
 PerformanceOptimizer.displayName = 'PerformanceOptimizer';
 
 export default PerformanceOptimizer;
->>>>>>> origin/main
-=======
 'use client';
 
 
@@ -432,8 +337,7 @@ const,
     // Preload critical images
     const criticalImages = [
       '/logo.png',
-      '/og-image.svg',
-    ];
+      '/og-image.svg'];
 
     criticalImages.forEach((src) => {
       const link = document.createElement('link');
@@ -480,4 +384,3 @@ const,
 };
 
 export default PerformanceOptimizer;"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

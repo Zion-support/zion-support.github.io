@@ -51,7 +51,7 @@ class MonitoringService {/* TODO: Fix JSX expression */}
   e: `Unhandled Promise,`
   Rejection: ${event.reason}`,
   private reportMetric(nam,
-  e: string, valu,)
+  e: string, valu)
   e: number): void {// Sample rate;}
     if (Math.random() > performanceConfig.monitoring.sampleRate) {return;}
     // Send to analytics (if configured)
@@ -61,11 +61,11 @@ class MonitoringService {/* TODO: Fix JSX expression */}
       gtag('event', name, {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  valu,)
+  valu)
   e: Math.round(name === 'cls' ? value * 1000 : value),
         event_categor,
   y: 'Web Vitals'
-  public logError(erro,)
+  public logError(erro)
   r: ErrorReport): void {this.errors.push(error)}
     // Keep only last 50 errors;
     if (this.errors.length > 50) {/* TODO: Fix JSX expression */}
@@ -97,7 +97,7 @@ class MonitoringService {/* TODO: Fix JSX expression */}
         console.log('[Memory]', {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  use,)`
+  use)`
   d: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
           tota,`
   l: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,

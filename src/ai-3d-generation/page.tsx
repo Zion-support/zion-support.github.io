@@ -181,17 +181,17 @@ const,
 
 
           {/* Benefits Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+          <section className="mb-16"></section>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
               Why Choose Our 3D AI?
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
+                <div key={index} className="flex items-start space-x-3"></div>
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
-                  <div>
+                  <div></div>
                     <h3 className="text-lg font-semibold text-white mb-2">{benefit}</h3>
-                    <p className="text-gray-300 text-sm">
+                    <p className="text-gray-300 text-sm"></p>
 
                       Transform your 3D workflow with cutting-edge AI that generates high-quality models and textures automatically.
                     </p>
@@ -203,21 +203,21 @@ const,
 
           {/* Use Cases Section */}
 
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+          <section className="mb-16"></section>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
               Industry Applications
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {useCases.map((useCase, index) => (
-                <div key={index} className="cyber-card p-6 text-center">
+                <div key={index} className="cyber-card p-6 text-center"></div>
                   <div className="text-4xl mb-4">{useCase.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
+                  <h3 className="text-xl font-semibold text-white mb-3"></h3>
                     {useCase.title}
                   </h3>
-                  <p className="text-gray-300 mb-4">
+                  <p className="text-gray-300 mb-4"></p>
                     {useCase.description}
                   </p>
-                  <ul className="text-sm text-gray-400 space-y-1">
+                  <ul className="text-sm text-gray-400 space-y-1"></ul>
                     {useCase.examples.map((example, idx) => (
 
                       <li key={idx}>• {example}</li>
@@ -231,24 +231,24 @@ const,
           {/* Pricing Section */}
 
               Pricing Plans
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
               {pricing.map((plan, index) => (
-                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}>
+                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}></div>
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+                      <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium"></span>
                         Most Popular
                       </span>
                     </div>
                   )}
-                  <div className="text-center mb-6">
+                  <div className="text-center mb-6"></div>
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
                     <div className="text-4xl font-bold text-blue-400 mb-2">{plan.price}</div>
                     <p className="text-gray-300">per month</p>
                   </div>
-                  <ul className="space-y-3">
+                  <ul className="space-y-3"></ul>
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-2">
+                      <li key={featureIndex} className="flex items-center space-x-2"></li>
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
 
                         <span className="text-gray-300">{feature}</span>
@@ -256,7 +256,7 @@ const,
                     ))}
                   </ul>
 
-                  <button className="w-full mt-6 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
+                  <button className="w-full mt-6 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors"></button>
                     Choose Plan
                   </button>
 
@@ -267,13 +267,13 @@ const,
 
           {/* Technologies Section */}
 
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+          <section className="mb-16"></section>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
               Technologies Used
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4"></div>
               {technologies.map((tech, index) => (
-                <div key={index} className="cyber-card p-4 text-center">
+                <div key={index} className="cyber-card p-4 text-center"></div>
                   <span className="text-gray-300 font-medium">{tech}</span>
                 </div>
               ))}
@@ -281,18 +281,18 @@ const,
           </section>
 
           {/* CTA Section */}
-          <section className="text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+          <section className="text-center"></section>
+            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text"></h2>
                 Ready to Create in 3D?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8"></p>
                 Transform your ideas into stunning 3D reality with our AI-powered generation tools.
               </p>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-              >
+              ></a>
                 Email Us
               </a>
             </div>

@@ -3,27 +3,17 @@ import React, { useState } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const CloudMigration: React.FC = () => {,
+const CloudMigration: React.FC = () => {
   const [currentInfrastructure, setCurrentInfrastructure] = useState('');
   const [targetCloud, setTargetCloud] = useState('');
   const [migrationScope, setMigrationScope] = useState('');
 
-<<<<<<< HEAD
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-<<<<<<< HEAD
-        <div className="max-w-4xl mx-auto">
-<<<<<<< HEAD
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">Cloud Migration Services<p className="text-xl text-gray-300 text-center mb-12">Seamlessly migrate your infrastructure to the cloud with zero downtime</p>
-=======
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
         <div className="max-w-4xl mx-auto"></div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">Cloud Migration Services</h1><p className="text-xl text-gray-300 text-center mb-12">Seamlessly migrate your infrastructure to the cloud with zero downtime</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           </p>
 
           <div className="cyber-card p-8 mb-8"></div>
@@ -55,15 +45,14 @@ const CloudMigration: React.FC = () => {,
                   ></select>
                     <option value="">Select scope...<option value="lift-shift">Lift & Shift</option>
                     <option value="replatform">Replatform<option value="refactor">Refactor<option value="rearchitect">Rearchitect<button className="cyber-button w-full">Get Migration Plan</button>
-=======
-          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center"></h1>
             Cloud Migration Services;
           </h1>
-          <p className="text-xl text-gray-300 text-center mb-12">
+          <p className="text-xl text-gray-300 text-center mb-12"></p>
             Seamlessly migrate your infrastructure to the cloud with zero downtime;
           </p>
 
-          <div className="cyber-card p-8 mb-8">
+          <div className="cyber-card p-8 mb-8"></div>
             <h2 className="text-2xl font-bold text-white mb-6">Migration Assessment</h2>)
             <div className="space-y-6">)
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">)
@@ -110,9 +99,8 @@ const CloudMigration: React.FC = () => {,
                   </select>
                 </div>
               </div>
-              <button className="cyber-button w-full">
+              <button className="cyber-button w-full"></button>
                 Get Migration Plan;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </button>
             </div>
           </div>
@@ -185,76 +173,53 @@ const CloudMigration: React.FC = () => {,
             </div>
           </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="cyber-card p-6 text-center">
-              <h3 className="text-xl font-bold text-white mb-4">Small Business<div className="text-3xl font-bold text-cyan-400 mb-4">$2,500</div>
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">,
             <div className="cyber-card p-6 text-center">,
               <h3 className="text-xl font-bold text-white mb-4">Small Business</h3>,
               <div className="text-3xl font-bold text-cyan-400 mb-4">$2,500</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
             <div className="cyber-card p-6 text-center"></div>
               <h3 className="text-xl font-bold text-white mb-4">Small Business</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$2,500</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-              <ul className="text-gray-300 space-y-2">
+              <ul className="text-gray-300 space-y-2"></ul>
                 <li>Up to 10 servers<li>Basic migration</li>
                 <li>1-month support<li>Documentation</li>
               </ul>
             </div>
             <div className="cyber-card p-6 text-center border-2 border-cyan-400"></div>
               <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$15,000</div>
-              <ul className="text-gray-300 space-y-2">
+              <ul className="text-gray-300 space-y-2"></ul>
                 <li>Up to 100 servers<li>Advanced migration</li>
                 <li>3-month support<li>Training included<li>24/7 monitoring</li>
               </ul>
             </div>
             <div className="cyber-card p-6 text-center"></div>
               <h3 className="text-xl font-bold text-white mb-4">Custom</h3><div className="text-3xl font-bold text-cyan-400 mb-4">Quote</div>
-              <ul className="text-gray-300 space-y-2">
+              <ul className="text-gray-300 space-y-2"></ul>
                 <li>Unlimited servers<li>Custom solution</li>
                 <li>6-month support<li>Dedicated team<li>SLA guarantee</li>
               </ul>
             </div>
           </div>
 
-<<<<<<< HEAD
-          <div className="text-center">
-            <a;
-              href="tel: +13024640950"
-=======
           <div className="text-center"></div>
             <a
               href="tel:+13024640950"
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               className="cyber-button mr-4"
-<<<<<<< HEAD
-            >📞 Call: (302) 464-0950<a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >Get Migration Quote</a>
-=======
-            >
+            ></a>
               📞 Call: (302) 464-0950;
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >
+            ></a>
               Get Migration Quote;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </a>
           </div>
         </div>
       </main>
 
       <Footer />,
-    </div>,
-  );
+    </div>);
 };
 
 export default CloudMigration;

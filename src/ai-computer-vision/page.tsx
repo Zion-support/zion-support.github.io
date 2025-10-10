@@ -4,10 +4,7 @@
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
 import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 
 import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucide-react';
 const AIComputerVisionPage: React.FC = () => {
@@ -70,8 +67,7 @@ const AIComputerVisionPage: React.FC = () => {
       feature,
   s: [
   // TOD,
-  O: Add items,
-];
+  O: Add items];
 //         'Up to 1,000 images/month',
 //         'Basic models',
 //         'Email support',
@@ -82,24 +78,24 @@ const AIComputerVisionPage: React.FC = () => {
 
 const PagePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
 
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
+        <section className="text-center mb-16"></section>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse"></h1>
 // AI Computer Vision;
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
+          <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse"></p>
 // Advanced Visual Intelligence Solutions;
           </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
 Transform your business with cutting-edge computer vision technology. From object detection to facial recognition,
             our AI-powered visual intelligence solutions help you see and understand the world like never before.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
             <a
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-// >
+// ></a>
 //               Get Started;
           </a>
               href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"

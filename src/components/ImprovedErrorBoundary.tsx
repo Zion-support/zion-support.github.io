@@ -1,75 +1,14 @@
-<<<<<<< HEAD
-'use client';
-/**
- * Improved Error Boundary
- * Enhanced error handling with recovery mechanisms and user-friendly fallbacks
- */
-interface Props {
-=======
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   children: ReactNode;
 
   fallback?: ReactNode;
   onError?: (erro,
-  r: Error, errorInf,)
+  r: Error, errorInf)
   o: ErrorInfo) => void;
   resetKeys?: Array;
           <string | number>;
 }
-<<<<<<< HEAD
-interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorCount: number;
-}
-class ImprovedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorCount: 0
-    };
-  }
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error
-    };
-  }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
-    // Log error to console for debugging
-    console.error('Error caught by ImprovedErrorBoundary:', {
-      message: error.message,
-      stack: error.stack,
-      component: errorInfo.componentStack ?? undefined,
-      timestamp: Date.now(),
-      userAgent: navigator.userAgent,
-      url: window.location.href
-    });
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-    // Update state with error details
-    this.setState((prevState) => ({
-      errorInfo,
-      errorCount: prevState.errorCount + 1
-    }));
-    // Log to console in development
-    if (process.env['NODE_ENV'] === 'development') {
-    }
-    // Send to external error tracking (if available)
-    if (typeof window !== 'undefined' && (window as unknown as { Sentry: unknown }).Sentry) {
-      (window as unknown as { Sentry: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {
-        contexts: {
-          react: {
-            componentStack: errorInfo.componentStack
-=======
 interface State {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -106,7 +45,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   t: 0;
     };
   }
-  static getDerivedStateFromError(erro,)
+  static getDerivedStateFromError(erro)
   r: Error): Partial;
           <State> {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -120,7 +59,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     };
   }
   componentDidCatch(erro,
-  r: Error, errorInf,)
+  r: Error, errorInf)
   o: ErrorInfo): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -135,7 +74,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   k: error.stack,
       componen,
   t: errorInfo.componentStack ?? undefined,
-      timestam,)
+      timestam)
   p: Date.now(),
       userAgen,
   t: navigator.userAgent,
@@ -182,71 +121,30 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   componentStac,
   k: errorInfo.componentStack;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         })
       });
     }
   }
-<<<<<<< HEAD
-  componentDidUpdate(prevProps: Props): void {
-=======
 
-  componentDidUpdate(prevProp,)
+  componentDidUpdate(prevProp)
   s: Props): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     // Reset error state if resetKeys changed
     if (this.props.resetKeys && prevProps.resetKeys) {
         (key, index) => key !== prevProps.resetKeys![index]
       );
-<<<<<<< HEAD
-      if (resetKeysChanged && this.state.hasError) {
-=======
 
       if (resetKeysChanged && this.state.hasError) {/* TODO: Fix JSX expression */}
   O: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         this.resetErrorBoundary();
       }
     }
   }
-<<<<<<< HEAD
-  resetErrorBoundary = (): void => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null
-    });
-  };
-  handleReload = (): void => {
-    window.location.reload();
-  };
-  handleGoHome = (): void => {
-    window.location.href = '/';
-  };
-  render(): ReactNode {
-    if (this.state.hasError) {
-      // Use custom fallback if provided
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-      // Default error UI
-      return (
-        <div className="error-boundary-container" style={styles.container}>
-          <div style={styles.content}>
-            <div style={styles.icon}>⚠️</div>
-            <h1 style={styles.title}>Oops! Something went wrong</h1>
-            <p style={styles.message}>
-              We're sorry for the inconvenience. The application encountered an unexpected error.
-            </p>
-            {process.env['NODE_ENV'] === 'development' && this.state.error && (
-              <details style={styles.details}>
-=======
 
   resetErrorBoundary = (): void => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -298,23 +196,12 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
             {process.env['NODE_ENV'] === 'development' && this.state.error && ()}
           <details style={styles.details}></details>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <summary style={styles.summary}>Error Details (Development Only)</summary>
                 <div style={styles.errorDetails}></div>
                   <p style={styles.errorMessage}></p>
                     <strong>Erro,
   r:</strong> {this.state.error.message}
                   </p>
-<<<<<<< HEAD
-                  {this.state.error.stack && (
-                    <pre style={styles.stack}>
-                      {this.state.error.stack}
-                    </pre>
-                  )}
-                  {this.state.errorInfo?.componentStack && (
-                    <pre style={styles.stack}>
-                      <strong>Component Stack:</strong>
-=======
 
                   {this.state.error.stack && ()}
           <pre style={styles.stack}></pre>
@@ -326,7 +213,6 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                       <strong>Component,
   Stack:</strong>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       {this.state.errorInfo.componentStack}
                     </pre>
                   )}
@@ -338,35 +224,21 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                 onClick={this.resetErrorBoundary}
                 style={styles.button}"
                 aria-label="Try Again"
-<<<<<<< HEAD
-              >
-                Try Again
-              </button>
-              <button
-=======
 
 // >
 //                 Try Again;
           </button>
               <button></button>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 onClick={this.handleReload}
                 style={{...styles.button, ...styles.secondaryButton}}"
                 aria-label="Reload Page"
-<<<<<<< HEAD
-              >
-                Reload Page
-              </button>
-              <button
-=======
 
 // >
 //                 Reload Page;
           </button>
               <button></button>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 onClick={this.handleGoHome}
                 style={{...styles.button, ...styles.secondaryButton}}"
                 aria-label="Go to Homepage"
@@ -374,120 +246,15 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                 Go Home
               </button>
             </div>
-<<<<<<< HEAD
-            {this.state.errorCount > 1 && (
-              <p style={styles.errorCount}>
-                This error has occurred {this.state.errorCount} times
-=======
 
             {this.state.errorCount > 1 && ()}
           <p style={styles.errorCount}></p>
                 This error has occurred {this.state.errorCount} times;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               </p>
             )}
           </div>
         </div>
-<<<<<<< HEAD
-      );
-    }
-    return this.props.children;
-  }
-}
-const styles = {
-  container: {
-    minHeight: '100vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '20px',
-    backgroundColor: '#f5f5f5',
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
-  },
-  content: {
-    maxWidth: '600px',
-    width: '100%',
-    backgroundColor: 'white',
-    borderRadius: '8px',
-    padding: '40px',
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-    textAlign: 'center' as const
-  },
-  icon: {
-    fontSize: '48px',
-    marginBottom:   ,
-$4},
-  title: {
-    fontSize: '24px',
-    fontWeight: 'bold',
-    color: '#333',
-    marginBottom:   ,
-$4},
-  message: {
-    fontSize: '16px',
-    color: '#666',
-    marginBottom: '32px',
-    lineHeight:   ,
-$4},
-  details: {
-    textAlign: 'left' as const,
-    marginBottom: '24px',
-    backgroundColor: '#f9f9f9',
-    padding: '16px',
-    borderRadius: '4px',
-    border:   ,
-$4},
-  summary: {
-    cursor: 'pointer',
-    fontWeight: 'bold',
-    marginBottom: '12px',
-    userSelect: 'none' as const
-  },
-  errorDetails: {
-    fontSize:   ,
-$4},
-  errorMessage: {
-    marginBottom: '12px',
-    color:   ,
-$4},
-  stack: {
-    backgroundColor: '#f5f5f5',
-    padding: '12px',
-    borderRadius: '4px',
-    fontSize: '12px',
-    overflowX: 'auto' as const,
-    fontFamily: 'monospace',
-    whiteSpace: 'pre-wrap' as const,
-    wordBreak: 'break-all' as const
-  },
-  actions: {
-    display: 'flex',
-    gap: '12px',
-    justifyContent: 'center',
-    flexWrap: 'wrap' as const
-  },
-  button: {
-    padding: '12px 24px',
-    fontSize: '16px',
-    fontWeight: '500',
-    color: 'white',
-    backgroundColor: '#007bff',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    transition:   ,
-$4},
-  secondaryButton: {
-    backgroundColor:   ,
-$4},
-  errorCount: {
-    marginTop: '24px',
-    fontSize: '14px',
-    color:   ,
-$4}
-};
-=======
 
       );
     }
@@ -698,4 +465,3 @@ const styles = {// TODO: Add content;}
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

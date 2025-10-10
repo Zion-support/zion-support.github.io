@@ -47,7 +47,7 @@ export const _validationRules = {// TODO: Add content;}
 
 };
   validat,
-  e: (valu,)
+  e: (valu)
   e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -88,7 +88,7 @@ export const _validationRules = {// TODO: Add content;}
 
 };
   validat,
-  e: (valu,)
+  e: (valu)
   e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -106,7 +106,7 @@ export const _validationRules = {// TODO: Add content;}
 
 };
   validat,
-  e: (valu,)
+  e: (valu)
   e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -177,7 +177,7 @@ export const _validationRules = {// TODO: Add content;}
   O: Add content;}
 };
   validat,
-  e: (valu,)
+  e: (valu)
   e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -219,7 +219,7 @@ export const _validationRules = {// TODO: Add content;}
 
 };
   validat,
-  e: (fil,)
+  e: (fil)
   e: File) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -247,7 +247,7 @@ export const _validationRules = {// TODO: Add content;}
  */
 export function validateField;
           <T>(valu,
-  e: T, rule,)
+  e: T, rule)
   s: ValidationRule<T>[]): ValidationResult {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -278,7 +278,7 @@ export function validateForm;
 
   formData: T,
   validationSchema: Record;
-          <keyof T, ValidationRule[]>
+          <keyof T, ValidationRule[]></keyof>
 ): Record<keyof T, ValidationResult> {// TODO: Add content;}
 
 }
@@ -304,7 +304,7 @@ export function isFormValid;
           <T extends Record<string, unknown>>()
 
   validationResults: Record;
-          <keyof T, ValidationResult>
+          <keyof T, ValidationResult></keyof>
 ): boolean {// TODO: Add content;}
 
 }
@@ -317,7 +317,7 @@ export function getFormErrors;
           <T extends Record<string, unknown>>()
 
   validationResults: Record;
-          <keyof T, ValidationResult>
+          <keyof T, ValidationResult></keyof>
 ): Record<keyof T, string[]> {// TODO: Add content;}
 
 }
@@ -363,8 +363,7 @@ export function debounce;
 
           <T extends (...args: Parameters<T>) => ReturnType<T>>(),
     func: T,
-  wait: number,
-): (...args: Parameters;
+  wait: number): (...args: Parameters;
           <T>) => void {// TODO: Add content;}
 
 }

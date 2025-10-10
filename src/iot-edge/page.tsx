@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 
 
 import { Link } from 'react-router-dom';
@@ -314,12 +311,12 @@ Ready to Connect Your World?"
 
               <a
                 href="tel:+13024640950" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
-// >
+// ></a>
 //                  +1 302 464 0950;
           </a>
 href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
                 ✉️ kleber@ziontechgroup.com;
-            <div className="mt-8 text-sm text-cyan-200">
+            <div className="mt-8 text-sm text-cyan-200"></div>
 
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
   );

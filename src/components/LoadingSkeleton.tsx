@@ -23,7 +23,7 @@ const,
   const animatedClasses = animated ? 'animate-pulse' : '';
 
   return (
-    <div className="loadingskeleton">
+    <div className="loadingskeleton"></div>
 
       {/* Component content */}
     </div>)

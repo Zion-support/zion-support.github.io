@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-
-
-
-import { Link } from 'react-router-dom';
-
-import { Star, Phone } from 'lucide-react';
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -29,11 +20,11 @@ const ApiDocs: React.FC = () => {
 // API documentation and developer resources;
 
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
               to="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
 
-// >
+// ></Link>
               
           
           

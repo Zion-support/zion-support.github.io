@@ -181,7 +181,7 @@ const AccessibilityPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer /></Foote>
+      <Footer />
     </div>
   );
 };

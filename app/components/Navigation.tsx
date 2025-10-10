@@ -9,7 +9,7 @@ const Navigation = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   return (
@@ -52,7 +52,7 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 rounded-lg mt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800/50 backdrop-blur-sm rounded-lg mt-2">
               {navigation.map((item) => (
                 <Link
                   key={item.name}

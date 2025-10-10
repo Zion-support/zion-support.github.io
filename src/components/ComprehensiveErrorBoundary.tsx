@@ -4,7 +4,7 @@
 
   fallback?: ReactNode;
   onError?: (erro,
-  r: Error, errorInf,)
+  r: Error, errorInf)
   o: ErrorInfo) => void;
   enableErrorReporting?: boolean;
   maxRetries?: number;
@@ -50,7 +50,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     };
     this.maxRetries = props.maxRetries || 3;
   }
-  static getDerivedStateFromError(erro,)
+  static getDerivedStateFromError(erro)
   r: Error): Partial;
           <State> {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -70,7 +70,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     };
   }
   componentDidCatch(erro,
-  r: Error, errorInf,)
+  r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -94,8 +94,8 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   }
 
   private reportError = (erro,
-  r: Error, errorInf,)
-  o: ErrorInfo) => {// Enhanced error reporting,}
+  r: Error, errorInf)
+  o: ErrorInfo) => {// Enhanced error reporting}
  messag,
   e: error.message,
       stac,

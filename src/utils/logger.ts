@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-export const logger = {
-  debug: (message: string, ...args: any[]) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.debug(`[DEBUG] ${message}`, ...args);
-    }
-  },
-  info: (message: string, ...args: any[]) => {
-    console.info(`[INFO] ${message}`, ...args);
-  },
-  warn: (message: string, ...args: any[]) => {
-    console.warn(`[WARN] ${message}`, ...args);
-  },
-  error: (message: string, error?: Error, ...args: any[]) => {
-    console.error(`[ERROR] ${message}`, error, ...args);
-  },
-};
-=======
 
 /**
  * Enhanced Logger Utility;
@@ -125,7 +107,7 @@ class Logger {/* TODO: Fix JSX expression */}
           <string, unknown>,
     contextOrMetadata?: string | Record<string, unknown>,
 
-    metadata?: Record<string, unknown>
+    metadata?: Record<string, unknown></string>
   ): void {// TODO: Add content;}
 
 }
@@ -180,7 +162,7 @@ class Logger {/* TODO: Fix JSX expression */}
     context?: LogContext,
     metadata?: Record;
 
-          <string, unknown>
+          <string, unknown></string>
   ): void {// TODO: Add content;}
 
 }
@@ -234,15 +216,15 @@ class Logger {/* TODO: Fix JSX expression */}
 }
     const,
   parts: string[] = [];`
-    if (context.component) parts.push(`componen,)`
+    if (context.component) parts.push(`componen)`
   t:${context.component}`);`
-    if (context.action) parts.push(`actio,)`
+    if (context.action) parts.push(`actio)`
   n:${context.action}`);`
-    if (context.userId) parts.push(`use,)`
+    if (context.userId) parts.push(`use)`
   r:${context.userId}`);`
-    if (context.sessionId) parts.push(`sessio,)`
+    if (context.sessionId) parts.push(`sessio)`
   n:${context.sessionId}`);`
-    if (context.requestId) parts.push(`reques,)`
+    if (context.requestId) parts.push(`reques)`
   t:${context.requestId}`);
     return parts.join(', ');
   }
@@ -323,7 +305,7 @@ class Logger {/* TODO: Fix JSX expression */}
   d: 'POST',
     //   header,
   s: {// 'Content-Type': 'application/json'},
-    //   bod,)
+    //   bod)
   y: JSON.stringify(entry)
     // }).catch(err => {/* TODO: Fix JSX expression */})
   service:', err);}
@@ -362,4 +344,3 @@ export const logger = new Logger()`
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

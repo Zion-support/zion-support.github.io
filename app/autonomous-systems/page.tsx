@@ -1,183 +1,26 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { CheckCircle, Star, Bot, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, RefreshCw } from 'lucide-react';;
-
-const AutonomousSystemsPage: React.FC = () => {,
-  const autonomousServices = [,
-    {,
-      title: 'Self-Healing Infrastructure',
-      description: 'AI-powered infrastructure that automatically detects, diagnoses, and repairs system issues without human intervention.',
-      icon: '🔄',
-      price: 'Starting at $3,500/month',
-      features: ['Automatic issue detection', 'Self-repair capabilities', 'Predictive maintenance', 'Performance optimization', 'Zero-downtime updates'],
-      benefits: ['Reduce downtime by 90%', 'Lower maintenance costs by 60%', 'Improve system reliability'],
-      marketPrice: '$5,000-12,000/month',
-      category: 'Infrastructure Automation',
-      technologies: ['Kubernetes', 'Docker', 'Prometheus', 'Grafana', 'AI/ML Models']
-    },
-    {
-      title: 'Autonomous Business Process Automation',
-      description: 'Intelligent automation of complex business processes with decision-making capabilities and exception handling.',
-      icon: '⚙️',
-      price: 'Starting at $4,500/month',
-      features: ['Process discovery', 'Workflow automation', 'Decision automation', 'Exception handling', 'Continuous optimization'],
-      benefits: ['Reduce process time by 70%', 'Eliminate human errors', 'Improve compliance'],
-      marketPrice: '$7,000-18,000/month',
-      category: 'Process Automation',
-      technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Custom AI', 'RPA Tools']
-    },
-    {
-      title: 'Intelligent Monitoring & Alerting',
-      description: 'AI-powered monitoring systems that learn from patterns and provide intelligent alerts and recommendations.',
-      icon: '👁️',
-      price: 'Starting at $2,800/month',
-      features: ['Anomaly detection', 'Predictive alerting', 'Root cause analysis', 'Performance optimization', 'Custom dashboards'],
-      benefits: ['Prevent issues before they occur', 'Reduce false alerts by 80%', 'Improve system performance'],
-      marketPrice: '$4,500-10,000/month',
-      category: 'Monitoring',
-      technologies: ['ELK Stack', 'Splunk', 'Datadog', 'New Relic', 'Custom ML Models']
-    },
-    {
-      title: 'Autonomous Data Management',
-      description: 'Self-managing data systems that automatically optimize, clean, and secure data without human intervention.',
-      icon: '🗄️',
-      price: 'Starting at $3,200/month',
-      features: ['Data quality automation', 'Automatic data cleaning', 'Schema evolution', 'Data lineage tracking', 'Privacy compliance'],
-      benefits: ['Improve data quality by 95%', 'Reduce data management costs', 'Ensure compliance'],
-      marketPrice: '$5,000-12,000/month',
-      category: 'Data Management',
-      technologies: ['Apache Airflow', 'dbt', 'Great Expectations', 'Apache Kafka', 'Data Catalogs']
-    },
-    {
-      title: 'Self-Optimizing Cloud Resources',
-      description: 'Autonomous cloud resource management that continuously optimizes costs, performance, and scalability.',
-      icon: '☁️',
-      price: 'Starting at $2,500/month',
-      features: ['Auto-scaling', 'Cost optimization', 'Performance tuning', 'Resource allocation', 'Capacity planning'],
-      benefits: ['Reduce cloud costs by 40%', 'Improve performance by 50%', 'Eliminate manual optimization'],
-      marketPrice: '$4,000-8,000/month',
-      category: 'Cloud Automation',
-      technologies: ['AWS Auto Scaling', 'Kubernetes HPA', 'Terraform', 'CloudFormation', 'Cost Optimization Tools']
-    },
-    {
-      title: 'Autonomous Security Operations',
-      description: 'AI-driven security systems that automatically detect, analyze, and respond to security threats.',
-      icon: '🛡️',
-      price: 'Starting at $4,000/month',
-      features: ['Threat detection', 'Automated response', 'Vulnerability scanning', 'Incident investigation', 'Compliance monitoring'],
-      benefits: ['Detect threats 10 x faster', 'Reduce response time by 90%', 'Prevent security breaches'],
-      marketPrice: '$6,000-15,000/month',
-      category: 'Security Automation',
-      technologies: ['SIEM', 'SOAR', 'EDR', 'XDR', 'AI/ML Security Tools']
-    },
-    {
-      title: 'Self-Learning Customer Service',
-      description: 'Autonomous customer service systems that learn from interactions and continuously improve responses.',
-      icon: '🤖',
-      price: 'Starting at $2,200/month',
-      features: ['Natural language processing', 'Sentiment analysis', 'Response optimization', 'Knowledge base updates', 'Escalation management'],
-      benefits: ['Improve customer satisfaction', 'Reduce response time by 80%', 'Lower support costs'],
-      marketPrice: '$3,500-8,000/month',
-      category: 'Customer Service',
-      technologies: ['NLP', 'Chatbots', 'Sentiment Analysis', 'Knowledge Graphs', 'Conversational AI']
-    },
-    {
-      title: 'Autonomous Supply Chain Management',
-      description: 'Self-managing supply chain systems that optimize inventory, predict demand, and manage suppliers automatically.',
-      icon: '📦',
-      price: 'Starting at $3,800/month',
-      features: ['Demand forecasting', 'Inventory optimization', 'Supplier management', 'Risk assessment', 'Order automation'],
-      benefits: ['Reduce inventory costs by 30%', 'Improve forecast accuracy', 'Minimize supply disruptions'],
-      marketPrice: '$6,000-14,000/month',
-      category: 'Supply Chain',
-      technologies: ['Demand Planning', 'Inventory Optimization', 'Supplier Portals', 'Risk Analytics', 'IoT Sensors']
-    },
-    {
-      title: 'Self-Adapting Software Development',
-      description: 'Autonomous development systems that automatically write, test, and deploy code based on requirements.',
-      icon: 'laptop',
-      price: 'Starting at $5,500/month',
-      features: ['Code generation', 'Automated testing', 'Deployment automation', 'Bug fixing', 'Performance optimization'],
-      benefits: ['Accelerate development by 60%', 'Reduce bugs by 70%', 'Improve code quality'],
-      marketPrice: '$8,000-20,000/month',
-      category: 'Development Automation',
-      technologies: ['GitHub Copilot', 'CodeT5', 'Automated Testing', 'CI/CD', 'Code Analysis Tools']
-    },
-    {
-      title: 'Autonomous Financial Operations',
-      description: 'Self-managing financial systems that handle transactions, compliance, and reporting automatically.',
-      icon: 'dollar-sign',
-      price: 'Starting at $4,200/month',
-      features: ['Transaction processing', 'Compliance monitoring', 'Financial reporting', 'Risk assessment', 'Audit automation'],
-      benefits: ['Reduce processing time by 85%', 'Improve accuracy to 99.9%', 'Ensure compliance'],
-      marketPrice: '$7,000-16,000/month',
-      category: 'Financial Automation',
-      technologies: ['Blockchain', 'Smart Contracts', 'Financial APIs', 'Compliance Tools', 'Risk Analytics']
-    },
-    {
-      title: 'Self-Optimizing Marketing Campaigns',
-      description: 'Autonomous marketing systems that create, test, and optimize campaigns without human intervention.',
-      icon: 'trending-up',
-      price: 'Starting at $2,800/month',
-      features: ['Campaign creation', 'A/B testing automation', 'Audience targeting', 'Content optimization', 'Performance analysis'],
-      benefits: ['Increase ROI by 45%', 'Reduce campaign management time', 'Improve conversion rates'],
-      marketPrice: '$4,500-10,000/month',
-      category: 'Marketing Automation',
-      technologies: ['Marketing AI', 'A/B Testing', 'Personalization', 'Analytics', 'Ad Platforms']
-    },
-    {
-      title: 'Autonomous Quality Assurance',
-      description: 'Self-managing QA systems that automatically test, validate, and ensure quality across all applications.',
-      icon: 'search',
-      price: 'Starting at $3,000/month',
-      features: ['Automated test generation', 'Performance testing', 'Security testing', 'Usability testing', 'Regression testing'],
-      benefits: ['Reduce testing time by 75%', 'Improve test coverage', 'Catch bugs earlier'],
-      marketPrice: '$5,000-12,000/month',
-      category: 'Quality Assurance',
-      technologies: ['Selenium', 'Appium', 'TestNG', 'Performance Tools', 'Security Scanners']
-    }
-  ];
-
-  const _categories = [...new Set(autonomousServices.map(service => service.category))];
-
-  return(<>
-      <Helmet>
-        <title>Autonomous Systems Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced autonomous systems services including self-healing infrastructure, process automation, and intelligent monitoring solutions." />
-        <meta name="keywords" content="autonomous systems, self-healing infrastructure, process automation, intelligent monitoring, business automation" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">{/* Hero Section */}</div>
-        <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-700 text-white py-20">
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-black opacity-20"><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Autonomous Systems Services<p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto">Self-managing, self-optimizing systems that operate independently and continuously improve</p>
-=======
           <div className="absolute inset-0 bg-black opacity-20"></section><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center"></div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Autonomous Systems Services</h1><p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto">Self-managing, self-optimizing systems that operate independently and continuously improve</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">Explore Autonomous Solutions<button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">Schedule Demo</button>
-=======
           <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
+            <div className="text-center"></div>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6"></h1>
                 Autonomous Systems Services;
               </h1>,
               <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto">,
                 Self-managing, self-optimizing systems that operate independently and continuously improve;
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+                <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"></button>
                   Explore Autonomous Solutions;
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"></button>
                   Schedule Demo;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 </button>
               </div>
             </div>
@@ -185,27 +28,17 @@ const AutonomousSystemsPage: React.FC = () => {,
         </section>,
 ,
         {/* Key Benefits */}
-        <section className="py-16 bg-white">
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our Autonomous Systems?<p className="text-xl text-gray-600">Cutting-edge autonomous technology that reduces costs, improves efficiency, and eliminates human errors</p>
-=======
+        <section className="py-16 bg-white"></section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our Autonomous Systems?</h2><p className="text-xl text-gray-600">Cutting-edge autonomous technology that reduces costs, improves efficiency, and eliminates human errors</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               <div className="text-center"></div>
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <Bot className="w-8 h-8 text-green-600" />
-<<<<<<< HEAD
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Self-Managing<p className="text-gray-600">Systems that monitor, diagnose, and repair themselves automatically</p>
-=======
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
             <div className="text-center mb-12">,
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">,
                 Why Choose Our Autonomous Systems?,
@@ -214,17 +47,14 @@ const AutonomousSystemsPage: React.FC = () => {,
                 Cutting-edge autonomous technology that reduces costs, improves efficiency, and eliminates human errors;
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
               <div className="text-center">,
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">,
                   <Bot className="w-8 h-8 text-green-600" />,
                 </div>,
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Self-Managing</h3>,
                 <p className="text-gray-600">Systems that monitor, diagnose, and repair themselves automatically</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Self-Managing</h3><p className="text-gray-600">Systems that monitor, diagnose, and repair themselves automatically</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
               <div className="text-center"></div>
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
@@ -247,29 +77,13 @@ const AutonomousSystemsPage: React.FC = () => {,
 
         {/* Services by Category */}
         {categories.map(category => (
-<<<<<<< HEAD
-          <section key={category} className="py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
-              <div className="text-center mb-12"></div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{category} Solutions</h2><p className="text-xl text-gray-600">)</p>
-    Autonomous {category.toLowerCase()} systems that adapt and optimize continuously<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{autonomousServices
-                  .filter(service => service.category === category)</div>
-                  .map((service, index) => (</div>
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"></div>
-                      <div className="text-4xl mb-4">{service.icon}</div><h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3><p className="text-gray-600 mb-4">{service.description}</p>
-
-<<<<<<< HEAD
-                      <div className="mb-4">
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-2xl font-bold text-green-600">{service.price}<span className="text-sm text-gray-500">Market: {service.marketPrice}<div className="text-sm text-green-600 font-semibold">Save up to 45% vs market rates</div>
-=======
           <section key={category} className="py-16 bg-gray-50">)
-            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,)
-              <div className="text-center mb-12">,)
+            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">)
+              <div className="text-center mb-12">)
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">),
                   {category} Solutions;
                 </h2>
-                <p className="text-xl text-gray-600">
+                <p className="text-xl text-gray-600"></p>
                   Autonomous {category.toLowerCase()} systems that adapt and optimize continuously;
                 </p>
               </div>
@@ -282,20 +96,17 @@ const AutonomousSystemsPage: React.FC = () => {,
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
 
-                      <div className="mb-4">
-                        <div className="flex items-center justify-between mb-2">
+                      <div className="mb-4"></div>
+                        <div className="flex items-center justify-between mb-2"></div>
                           <span className="text-2xl font-bold text-green-600">{service.price}</span>
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
-                        <div className="text-sm text-green-600 font-semibold">
+                        <div className="text-sm text-green-600 font-semibold"></div>
                           Save up to 45% vs market rates;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                         </div>
                       </div>
 
-                      <div className="mb-4">
-<<<<<<< HEAD
-=======
+                      <div className="mb-4"></div>
                       <div className="mb-4"></div>
                         <div className="flex items-center justify-between mb-2"></div>
                           <span className="text-2xl font-bold text-green-600">{service.price}</span><span className="text-sm text-gray-500">Market: {service.marketPrice}</span><div className="text-sm text-green-600 font-semibold">Save up to 45% vs market rates</div>
@@ -303,94 +114,61 @@ const AutonomousSystemsPage: React.FC = () => {,
                       </div>
 
                       <div className="mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:<ul className="space-y-1">{service.features.map((feature, featureIndex) => (</ul>
-=======
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features: </h4>,
                         <ul className="space-y-1">,
                           {service.features.map((feature, featureIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-                            <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                            <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" >{feature}</CheckCircle>
                             </CheckCircle>
                           ))}
                         </ul>
                       </div>
 
-<<<<<<< HEAD
-                      <div className="mb-4">
-<<<<<<< HEAD
-                        <h4 className="font-semibold text-gray-900 mb-2">Technologies:<div className="flex flex-wrap gap-2">{service.technologies.map((tech, techIndex) => (<span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">{tech}</span>
-=======
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies: </h4>,
                         <div className="flex flex-wrap gap-2">,
                           {service.technologies.map((tech, techIndex) => (
-                            <span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">
+                            <span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded"></span>
                               {tech}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
                       <div className="mb-4"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:<div className="flex flex-wrap gap-2">{service.technologies.map((tech, techIndex) => (</div><span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">{tech}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                             </span>
                           ))}
                         </div>
                       </div>
 
-<<<<<<< HEAD
-                      <div className="mb-6">
-<<<<<<< HEAD
-=======
                       <div className="mb-6"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:<ul className="space-y-1">{service.benefits.map((benefit, benefitIndex) => (</ul>
-=======
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits: </h4>,
                         <ul className="space-y-1">,
                           {service.benefits.map((benefit, benefitIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600"></li>
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" >{benefit}</Star>
                             </Star>
                           ))}
-<<<<<<< HEAD
-                        <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors">Get Autonomous Consultation</button>
-                      </button>
-                    </div>
-=======
                         </ul>
                       </div>
 
-                      <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-green-700 transition-colors">
+                      <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-green-700 transition-colors"></button>
                         Get Autonomous Consultation;
                       </button>,
-                    </div>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-                  ))}
+                    </div>))}
               </div>
             </div>
           </section>
         ))}
 
         {/* Autonomous Capabilities Showcase */}
-        <section className="py-16 bg-white">
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="text-center mb-12">
-<<<<<<< HEAD
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Autonomous Capabilities<p className="text-xl text-gray-600">Advanced autonomous technologies that enable self-managing, self-optimizing systems</p>
-=======
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <section className="py-16 bg-white"></section>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
                 Our Autonomous Capabilities;
               </h2>,
               <p className="text-xl text-gray-600">,
                 Advanced autonomous technologies that enable self-managing, self-optimizing systems;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
-=======
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Autonomous Capabilities</h2><p className="text-xl text-gray-600">Advanced autonomous technologies that enable self-managing, self-optimizing systems</p>
@@ -398,7 +176,6 @@ const AutonomousSystemsPage: React.FC = () => {,
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Bot className="w-12 h-12 text-green-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Autonomous Operations</h3><p className="text-gray-600">Self-managing systems that operate without human intervention</p>
               </div>
@@ -420,23 +197,14 @@ const AutonomousSystemsPage: React.FC = () => {,
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg"></div>
                 <Cpu className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Intelligent Monitoring<p className="text-gray-600">Advanced monitoring with anomaly detection and alerting</p>
-=======
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Intelligent Monitoring</h3><p className="text-gray-600">Advanced monitoring with anomaly detection and alerting</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600 text-white">
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Automate Your Operations?<p className="text-xl mb-8 text-green-100">Contact our autonomous systems experts for a free consultation and custom automation strategy</p>
-=======
+        <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600 text-white"></section>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Intelligent Monitoring</h3>
                 <p className="text-gray-600">Advanced monitoring with anomaly detection and alerting</p>
               </div>,
@@ -445,58 +213,41 @@ const AutonomousSystemsPage: React.FC = () => {,
         </section>,
 ,
         {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600 text-white"></section>
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4"></h2>
               Ready to Automate Your Operations?
             </h2>
-            <p className="text-xl mb-8 text-green-100">
+            <p className="text-xl mb-8 text-green-100"></p>
               Contact our autonomous systems experts for a free consultation and custom automation strategy;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a;
-=======
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></section>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Automate Your Operations?</h2><p className="text-xl mb-8 text-green-100">Contact our autonomous systems experts for a free consultation and custom automation strategy</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 href="tel:+13024640950"
                 className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center"
-<<<<<<< HEAD
-              >📞 +1 302 464 0950<a
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
-              >✉️ kleber@ziontechgroup.com</a>
-              </a>
-            </div>
-<<<<<<< HEAD
-            <div className="mt-8 text-sm text-green-200">
-=======
-              >
+              ></a>
                 📞 +1 302 464 0950;
               </a>
               <a;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
-              >
+              ></a>
                 ✉️ kleber@ziontechgroup.com;
               </a>,
             </div>,
             <div className="mt-8 text-sm text-green-200">,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
             <div className="mt-8 text-sm text-green-200"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
         </section>
       </div>
     </>
-=======
 import { Bot, Cpu, Eye, Brain, Shield, Zap, CheckCircle, ArrowRight, Settings, Target } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -566,8 +317,8 @@ const AutonomousSystemsPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
         <title>Autonomous Systems - Zion Tech Group</title>
         <meta name="description" content="Advanced autonomous systems powered by AI and machine learning. Self-managing solutions for vehicles, manufacturing, and infrastructure." />
         <meta name="keywords" content="autonomous systems, self-driving, automation, AI, machine learning, robotics" />
@@ -576,25 +327,25 @@ const AutonomousSystemsPage: React.FC = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto text-center"></div>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
             Autonomous <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Systems</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
             Self-managing systems powered by advanced AI and machine learning. Transform your operations with intelligent automation that adapts, learns, and optimizes without human intervention.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-            >
+            ></a>
               Get Started
             </a>
             <a
               href="#features"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
+            ></a>
               Learn More
             </a>
           </div>
@@ -602,28 +353,28 @@ const AutonomousSystemsPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
               Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Features</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Our autonomous systems combine cutting-edge AI, machine learning, and robotics to deliver intelligent, self-managing solutions.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
-                <div className="text-cyan-400 mb-6 group-hover:text-cyan-300 transition-colors">
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group"></div>
+                <div className="text-cyan-400 mb-6 group-hover:text-cyan-300 transition-colors"></div>
                   <feature.icon className="w-12 h-12" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
-                <ul className="space-y-2">
+                <ul className="space-y-2"></ul>
                   {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                    <li key={idx} className="flex items-center text-sm text-gray-400"></li>
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-3" />
                       {benefit}
                     </li>
@@ -636,28 +387,28 @@ const AutonomousSystemsPage: React.FC = () => {
       </section>
 
       {/* Applications Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
               Application <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Areas</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Our autonomous systems are designed for diverse industries and use cases, from transportation to manufacturing.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {applications.map((app, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
-                <div className="text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors">
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group"></div>
+                <div className="text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors"></div>
                   <app.icon className="w-10 h-10" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{app.title}</h3>
                 <p className="text-gray-300 mb-4 text-sm">{app.description}</p>
-                <ul className="space-y-1">
+                <ul className="space-y-1"></ul>
                   {app.useCases.map((useCase, idx) => (
-                    <li key={idx} className="text-xs text-gray-400 flex items-center">
+                    <li key={idx} className="text-xs text-gray-400 flex items-center"></li>
                       <ArrowRight className="w-3 h-3 mr-2 text-cyan-400" />
                       {useCase}
                     </li>
@@ -670,38 +421,38 @@ const AutonomousSystemsPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"></div>
+            <div></div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
                 Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Autonomous Systems</span>?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8"></p>
                 Autonomous systems offer unprecedented efficiency, reliability, and cost savings. Our solutions are designed to operate independently while maintaining the highest standards of safety and performance.
               </p>
-              <ul className="space-y-4">
+              <ul className="space-y-4"></ul>
                 {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-center text-gray-300">
+                  <li key={index} className="flex items-center text-gray-300"></li>
                     <CheckCircle className="w-6 h-6 text-cyan-400 mr-4 flex-shrink-0" />
                     <span>{benefit}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8">
-              <div className="text-center">
-                <div className="w-32 h-32 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+            <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8"></div>
+              <div className="text-center"></div>
+                <div className="w-32 h-32 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center"></div>
                   <Bot className="w-16 h-16 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Ready to Automate?</h3>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300 mb-6"></p>
                   Let us help you implement autonomous systems that transform your operations and drive efficiency.
                 </p>
                 <a
                   href="/contact"
                   className="inline-flex items-center bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300"
-                >
+                ></a>
                   Get Consultation
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
@@ -712,26 +463,26 @@ const AutonomousSystemsPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
             Ready to Implement Autonomous Systems?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 mb-8"></p>
             Contact our experts to discuss how autonomous systems can transform your business operations and drive efficiency.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-            >
+            ></a>
               <Zap className="w-5 h-5" />
               Call (302) 464-0950
             </a>
             <a
               href="/contact"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2"
-            >
+            ></a>
               <ArrowRight className="w-5 h-5" />
               Get Quote
             </a>
@@ -741,7 +492,6 @@ const AutonomousSystemsPage: React.FC = () => {
 
       <Footer />
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 

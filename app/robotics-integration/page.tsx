@@ -187,20 +187,20 @@ const RoboticsIntegrationPage: React.FC = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-20 overflow-hidden"></section>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></section>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"></h1>
             Robotics Integration
           </h1>
-          <p className="text-xl md:text-2 xl text-gray-300 mb-8 max-w-4 xl mx-auto">
+          <p className="text-xl md:text-2 xl text-gray-300 mb-8 max-w-4 xl mx-auto"></p>
             Transform your operations with intelligent robotic systems. From manufacturing to healthcare, 
             our robotics integration solutions deliver unprecedented efficiency and precision.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center"></button>
               Start Integration
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
@@ -231,16 +231,16 @@ const RoboticsIntegrationPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <section className="py-24 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-20"></div>
             <h2 className="text-5xl font-bold text-white mb-6">Integration Features</h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"></p>
               Comprehensive robotics solutions that seamlessly integrate with your existing systems.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {features.map((feature, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300"></div>
                 <div className="text-center"></div>
@@ -257,18 +257,18 @@ const RoboticsIntegrationPage: React.FC = () => {
       </section>
 
       {/* Solutions Section */}
-      <section className="py-24 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+      <section className="py-24 bg-gradient-to-r from-purple-900/20 to-blue-900/20"></section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-20"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
               Industry Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-4 xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-4 xl mx-auto leading-relaxed"></p>
               Specialized robotics solutions tailored for different industries and applications.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12"></div>
             {solutions.map((solution, index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"></div>
                 <div className="flex items-center mb-6"></div>
@@ -278,7 +278,7 @@ const RoboticsIntegrationPage: React.FC = () => {
                   <h3 className="text-2 xl font-bold text-white">{solution.title}</h>
                 </div>
                 <p className="text-gray-300 mb-6 leading-relaxed">{solution.description}</p>
-                <div className="space-y-2">
+                <div className="space-y-2"></div>
                   {solution.benefits.map((benefit, benefitIndex) => (</div>
                     <div key={benefitIndex} className="flex items-center text-gray-300"></div>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
@@ -293,18 +293,18 @@ const RoboticsIntegrationPage: React.FC = () => {
       </section>
 
       {/* Robot Types Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <section className="py-24 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-20"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
               Robot Types
             </h2>
-            <p className="text-xl text-gray-300 max-w-4 xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-4 xl mx-auto leading-relaxed"></p>
               Comprehensive range of robots for every application and industry need.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {robotTypes.map((robot, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300"></div>
                 <div className="text-center"></div>
@@ -313,9 +313,9 @@ const RoboticsIntegrationPage: React.FC = () => {
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3">{robot.name}</h>
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">{robot.description}</p>
-                  <div className="space-y-1">
+                  <div className="space-y-1"></div>
                     {robot.applications.map((application, appIndex) => (</div>
-                      <div key={appIndex} className="text-xs text-gray-400">
+                      <div key={appIndex} className="text-xs text-gray-400"></div>
                         • {application}
                       </div>
                     ))}
@@ -328,25 +328,25 @@ const RoboticsIntegrationPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-20"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
               Integration Packages
             </h2>
-            <p className="text-xl text-gray-300 max-w-4 xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-4 xl mx-auto leading-relaxed"></p>
               Flexible pricing options to match your robotics integration needs.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
             {pricingPlans.map((plan, index) => (</div>
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 relative ${
                 plan.popular ? 'border-cyan-400/40 ring-2 ring-cyan-400/20' : 'border-gray-700'
-              }`}>
+              }`}></div>
                 {plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-                    <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">
+                    <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full"></span>
                       Most Popular
                     </span>
                   </div>
@@ -380,32 +380,32 @@ const RoboticsIntegrationPage: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-20"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
               Success Stories
             </h2>
-            <p className="text-xl text-gray-300 max-w-4 xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-4 xl mx-auto leading-relaxed"></p>
               See how organizations are transforming their operations with robotics integration.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
             {testimonials.map((testimonial, index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"></div>
                 <div className="flex items-center mb-4"></div>
-                  <div className="flex text-yellow-400">
+                  <div className="flex text-yellow-400"></div>
                     {[...Array(5)].map((_, i) => (</div>
                       <Star key={i} className="w-5 h-5 fill-current" />
                     ))}
                   </div>
                 </div>
-                <p className="text-gray-300 mb-6 italic">
+                <p className="text-gray-300 mb-6 italic"></p>
                   "{testimonial.content}"
                 </p>
                 <div className="flex items-center"></div>
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4"></div>
                     {testimonial.avatar}
                   </div>
                   <div></div>
@@ -421,17 +421,17 @@ const RoboticsIntegrationPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></section>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8"></h2>
             Automate Your Future
           </h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-4 xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 mb-12 max-w-4 xl mx-auto leading-relaxed"></p>
             Join the robotics revolution and transform your operations with intelligent automation solutions.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center"></button>
               Start Integration
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>

@@ -11,7 +11,7 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
   l: boolean;,
     timestam,
   p: string;
-  constructor(messag,)
+  constructor(messag)
   e: string, statusCode = 500, isOperational = true) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -27,7 +27,7 @@ export const _errorHandler = (error: AppError | Error) => {// TODO: Add content;
 }
   const isDevelopment = process.env.NODE_ENV === 'development';
   const appError = error instanceof AppError ? error : new AppError(error.message)
-// console.error({message: appError.message,}
+// console.error({message: appError.message}
     stack: isDevelopment ? appError.stack : undefined,
     timestamp: new Date().toISOString(),
     statusCode: appError.statusCode || 500;
@@ -45,14 +45,14 @@ export const _errorHandler = (error: AppError | Error) => {// TODO: Add content;
 export const asyncHandler = (f,
   n: (re,
   q: unknown, re,
-  s: unknown, nex,)
+  s: unknown, nex)
   t: unknown) => unknown) => (re,
   q: unknown, re,
-  s: unknown, nex,)
+  s: unknown, nex)
   t: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  Promise.resolve(fn(req, res, next)).catch((erro,)
+  Promise.resolve(fn(req, res, next)).catch((erro)
   r: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

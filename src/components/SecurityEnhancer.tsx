@@ -229,8 +229,7 @@ const,
       (window as any).gtag('event', 'security_event', {
         event_category: 'Security',
         event_label: event,
-        custom_map: data,
-      });
+        custom_map: data});
     }
   }, [rateLimit]);
 
@@ -243,8 +242,7 @@ const,
         rateLimit,
         metrics,
         isSecure,
-        warnings: securityWarnings,
-      };
+        warnings: securityWarnings};
     }
   }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);
 
@@ -252,16 +250,16 @@ const,
     <>
       {/* Security Status Indicator */}
       {!isSecure && (
-        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">
+        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50"></div>
           ⚠️ Security Warning: This site is not served over HTTPS
         </div>
       )}
 
       {/* Security Warnings */}
       {securityWarnings.length > 0 && (
-        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md">
+        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md"></div>
           <h4 className="font-bold mb-2">Security Warnings</h4>
-          <ul className="text-sm space-y-1">
+          <ul className="text-sm space-y-1"></ul>
             {securityWarnings.map((warning, index) => (
               <li key={index}>• {warning}</li>
             ))}
@@ -271,9 +269,9 @@ const,
 
       {/* Security Metrics (Development Only) */}
       {process.env.NODE_ENV === 'development' && (
-        <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs">
+        <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs"></div>
           <h4 className="font-bold mb-2">Security Metrics</h4>
-          <div className="space-y-1">
+          <div className="space-y-1"></div>
             <div>CSP Violations: {metrics.cspViolations}</div>
             <div>XSS Attempts: {metrics.xssAttempts}</div>
             <div>CSRF Attempts: {metrics.csrfAttempts}</div>

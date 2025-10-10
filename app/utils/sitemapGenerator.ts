@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const generateSitemap = useCallback((...args) => {
-  const baseUrl = 'https: //ziontechgroup.com',
-  const staticPages = [,
-=======
 export const generateSitemap = useCallback((...args) => {}
   const baseUrl = 'https://ziontechgroup.com'
   const staticPages = [
->>>>>>> origin/merge-error-fixes
     '',
     '/services',
     '/contact',
@@ -48,13 +41,8 @@ export const generateSitemap = useCallback((...args) => {}
     '/productivity'
   ]
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-  ${staticPages.map(page =>),
-=======
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
   ${staticPages.map(page =>)}
->>>>>>> origin/merge-error-fixes
   <url>}
     <loc>${baseUrl}${page}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
@@ -77,7 +65,6 @@ Disallow: /api/,
 Disallow: /_next/,
 Disallow: /private/`;}
 }
-=======
 export interface SitemapEntry {/* TODO: Fix JSX expression */}
 }
 export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */}
@@ -219,4 +206,3 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 };
 export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */}
 };`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

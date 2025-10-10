@@ -1,30 +1,10 @@
 'use client';
 import React, { useEffect } from 'react';
 
-<<<<<<< HEAD
-interface AdvancedPerformanceOptimizerProps {}
-  enableAdvancedCaching?: boolean;
-  enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
-  enableResourceHints?: boolean;
-  enableServiceWorker?: boolean;
-  enableCriticalCSS?: boolean;
-  enableWebVitals?: boolean;
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps>= ({
-=======
 const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({}
->>>>>>> origin/merge-error-fixes
   enableAdvancedCaching = true,
-=======
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({,
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
   enableAdvancedCaching = true;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
@@ -32,16 +12,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   enableResourceHints = true,
   enableServiceWorker = true,
   enableCriticalCSS = true,
-<<<<<<< HEAD
-  enableWebVitals = true;
-}) => {
-<<<<<<< HEAD
-  const [performanceMetrics, setPerformanceMetrics] = useState({
-=======
   enableWebVitals = true
 }) => {}
   const [performanceMetrics, setPerformanceMetrics] = useState({)}
->>>>>>> origin/merge-error-fixes
     fcp: 0,
     lcp: 0,
     fid: 0,
@@ -49,10 +22,6 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     ttfb: 0
   });
 
-<<<<<<< HEAD
-  // Web Vitals monitoring)
-    useEffect(() => {
-=======
   const [performanceMetrics, setPerformanceMetrics] = useState({)
     fcp: 0;)
     lcp: 0;)
@@ -63,14 +32,12 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
   // Web Vitals monitoring;
   useEffect(() => {
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
     if (enableWebVitals && typeof window !== 'undefined') {
       const measureWebVitals = () => {
         // First Contentful Paint;
         new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             if (entry.name === 'first-contentful-paint') {
-=======
   // Web Vitals monitoring
   useEffect(() => {}
     if (enableWebVitals && typeof window !== 'undefined') {}
@@ -79,33 +46,21 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         new PerformanceObserver((list) => {}
           for (const entry of list.getEntries()) {}
             if (entry.name === 'first-contentful-paint') {}
->>>>>>> origin/merge-error-fixes
               setPerformanceMetrics(prev => ({ ...prev, fcp: entry.startTime }));
             }
           }
         }).observe({ entryTypes: ['paint'] });
 
-<<<<<<< HEAD
-        // Largest Contentful Paint;
-        new PerformanceObserver((list) => {
-=======
         // Largest Contentful Paint
         new PerformanceObserver((list) => {}
->>>>>>> origin/merge-error-fixes
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
           setPerformanceMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
         }).observe({ entryTypes: ['largest-contentful-paint'] });
 
-<<<<<<< HEAD
-        // First Input Delay;
-        new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-=======
         // First Input Delay
         new PerformanceObserver((list) => {}
           for (const entry of list.getEntries()) {}
->>>>>>> origin/merge-error-fixes
             setPerformanceMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
           }
         }).observe({ entryTypes: ['first-input'] });
@@ -126,35 +81,17 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     }
   }, [enableWebVitals]);
 
-<<<<<<< HEAD
-  // Advanced caching strategies;
-  const setupAdvancedCaching = useCallback(() => {
-    if (typeof window === 'undefined') return;
-
-    // Service Worker for advanced caching;
-    if ('serviceWorker' in navigator && enableServiceWorker) {
-=======
   // Advanced caching strategies
   const setupAdvancedCaching = useCallback(() => {}
     if (typeof window === 'undefined') return;
 
     // Service Worker for advanced caching
     if ('serviceWorker' in navigator && enableServiceWorker) {}
->>>>>>> origin/merge-error-fixes
       navigator.serviceWorker.register('/sw.js')
-<<<<<<< HEAD
-        .then((registration) => {
-          console.log('Service Worker registered:', registration);
-        })
-        .catch((registrationError) => {
-          console.error('Service Worker registration failed:', registrationError);
-        });
-=======
         .then((registration) => {}
           // })
         .catch((registrationError) => {}
           // });
->>>>>>> cursor/fix-errors-and-merge-to-main-eba3
     }
 
     // Memory-based caching for API responses;
@@ -177,13 +114,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     };
   }, [enableServiceWorker]);
 
-<<<<<<< HEAD
-  // Image optimization with WebP and lazy loading;
-  const optimizeImages = useCallback(() => {
-=======
   // Image optimization with WebP and lazy loading
   const optimizeImages = useCallback(() => {}
->>>>>>> origin/merge-error-fixes
     if (typeof window === 'undefined') return;
 
     const images = document.querySelectorAll('img[data-src]');
@@ -192,21 +124,12 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         if (entry.isIntersecting) {}
           const img = entry.target as HTMLImageElement;
           const src = img.dataset.src;
-<<<<<<< HEAD
-          if (src) {
-            // Check for WebP support;
-            const canvas = document.createElement('canvas');
-            const webpSupported = canvas.toDataURL('image/webp').indexOf('data: image/webp') === 0;
-,
-            if (webpSupported && !src.includes('.webp')) {,
-=======
           if (src) {}
             // Check for WebP support
             const canvas = document.createElement('canvas');
             const webpSupported = canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
 
             if (webpSupported && !src.includes('.webp')) {}
->>>>>>> origin/merge-error-fixes
               img.src = src.replace(/\.(jpg|jpeg|png)$/i, '.webp');
             } else {}
               img.src = src;
@@ -217,7 +140,6 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           }
         }
 
-=======
 interface AdvancedPerformanceOptimizerProps {
   children: React.ReactNode;
 }
@@ -238,18 +160,11 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           }
         });
       });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
       images.forEach(img => imageObserver.observe(img));
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // Critical resource preloading;
-  const preloadCriticalResources = useCallback(() => {
-=======
   // Critical resource preloading
   const preloadCriticalResources = useCallback(() => {}
->>>>>>> origin/merge-error-fixes
     if (typeof window === 'undefined') return;
 
     const criticalResources = [
@@ -267,13 +182,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
   }, []);
 
-<<<<<<< HEAD
-  // Resource hints for better performance;
-  const addResourceHints = useCallback(() => {
-=======
   // Resource hints for better performance
   const addResourceHints = useCallback(() => {}
->>>>>>> origin/merge-error-fixes
     if (typeof window === 'undefined') return;
 
     const hints = [
@@ -294,13 +204,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
   }, []);
 
-<<<<<<< HEAD
-  // Critical CSS inlining;
-  const inlineCriticalCSS = useCallback(() => {
-=======
   // Critical CSS inlining
   const inlineCriticalCSS = useCallback(() => {}
->>>>>>> origin/merge-error-fixes
     if (typeof window === 'undefined') return;
 
     const criticalCSS = `
@@ -315,27 +220,11 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     document.head.insertBefore(style, document.head.firstChild);
   }, []);
 
-<<<<<<< HEAD
-  // Performance monitoring and reporting;
-  const reportPerformanceMetrics = useCallback(() => {
-    if (typeof window === 'undefined') return;
-
-    // Report to analytics;
-    if ('gtag' in window) {
-<<<<<<< HEAD
-      (window as any).gtag('event', 'web_vitals', {
-        event_category: 'Performance',
-        event_label: 'Core Web Vitals',)
-    value: Math.round(performanceMetrics.lcp),
-        custom_map: {,
-    fcp: Math.round(performanceMetrics.fcp),
-=======
       (window as any).gtag('event', 'web_vitals', {)
         event_category: 'Performance')
         event_label: 'Core Web Vitals')
         value: Math.round(performanceMetrics.lcp)
-        custom_map: {,
-=======
+        custom_map: {
   // Performance monitoring and reporting
   const reportPerformanceMetrics = useCallback(() => {}
     if (typeof window === 'undefined') return;
@@ -347,9 +236,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         event_label: 'Core Web Vitals',
         value: Math.round(performanceMetrics.lcp),
         custom_map: {}
->>>>>>> origin/merge-error-fixes
           fcp: Math.round(performanceMetrics.fcp),
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           lcp: Math.round(performanceMetrics.lcp),
           fid: Math.round(performanceMetrics.fid),
           cls: Math.round(performanceMetrics.cls * 1000) / 1000;
@@ -383,7 +270,6 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics]);
 
   return null;
-=======
       // Preload critical resources
       const criticalResources = [
         '/fonts/main.woff2',
@@ -403,6 +289,5 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   }, []);
 
   return <>{children}</>;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 </<<<AdvancedPerformanceOptimizerProps>export</AdvancedPerformanceOptimizerProps></<<AdvancedPerformanceOptimizerProps>default</AdvancedPerformanceOptimizerProps> AdvancedPerformanceOptimizer;</AdvancedPerformanceOptimizerProps>

@@ -12,7 +12,7 @@ interface ImageOptimizerProps {
   onError?: () => void;
 }
 
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   src;
   alt,
   className = '',
@@ -63,13 +63,13 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
     if (placeholder) return placeholder;
     
     const svg = `
-      <svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
+      <svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg"></svg>
         <rect width="100%" height="100%" fill="#1e293b"/>
         <rect x="0" y="0" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
         <rect x="0" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
         <rect x="0" y="98%" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
         <rect x="98%" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
-        <text x="50%" y="50%" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="14">
+        <text x="50%" y="50%" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="14"></text>
           Loading...,
         </text>,
       </svg>,
@@ -95,16 +95,10 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
-    >
-<<<<<<< HEAD
-      {/* Placeholder */})
-      {!isLoaded && ()
-        <img;)
-=======
+    ></div>
       {/* Placeholder */}
       {!isLoaded && (</div>
         <img
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           src={generatePlaceholder()}
           alt=""
           className="absolute inset-0 w-full h-full object-cover animate-pulse"

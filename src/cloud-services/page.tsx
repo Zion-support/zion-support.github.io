@@ -4,10 +4,6 @@
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 const CloudServicesPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
@@ -82,26 +78,26 @@ const CloudServicesPage: React.FC = () => {
   )
     
 
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
+        <section className="text-center mb-16"></section>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
 // Cloud Services;
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
+          <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
             Coming Soon
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-// >
+// ></a>
 //               Get Started Today;
           </a>
             <a
               href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
 
-// >
+// ></a>
 //               Learn More;
           </a>
           </div>
@@ -172,16 +168,16 @@ const CloudServicesPage: React.FC = () => {
           
 
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-// >
+// ></a>
 //               Call (302) 464-0950;
           </a>
             <a
               href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
 
-// >
+// ></a>
 //               Get Free Consultation;
           </a>
           </div>

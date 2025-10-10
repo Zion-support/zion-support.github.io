@@ -1,10 +1,3 @@
-<<<<<<< HEAD:app/sitemap.ts
-// sitemap file;
-// This file is under development;
-export default function sitemap() {
-  return null;
-}
-=======
 
 
 export default function sitemap(): MetadataRoute.Sitemap {const _baseUrl = 'https://ziontechgroup.com'}
@@ -42,16 +35,13 @@ export default function sitemap(): MetadataRoute.Sitemap {const _baseUrl = 'http
     '/careers',
     '/privacy',
     '/terms',
-    '/support',
-  ];
+    '/support'];
   return routes.map((route) => ({// TODO: Add content;}
 };
   url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: route === '' ? 'daily' : 'weekly',
-    priority: route === '' ? 1 : 0.8,
-  }))
+    priority: route === '' ? 1 : 0.8}))
 }
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174:src/sitemap.ts

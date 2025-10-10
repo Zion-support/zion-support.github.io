@@ -56,7 +56,7 @@ class AdvancedErrorBoundary extends Component;
 }
   private retryCount = 0;
   private maxRetries = 3;
-  constructor(prop,)
+  constructor(prop)
   s: ErrorBoundaryProps) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -74,7 +74,7 @@ class AdvancedErrorBoundary extends Component;
   d: null;
     };
   }
-  static getDerivedStateFromError(erro,)
+  static getDerivedStateFromError(erro)
   r: Error): Partial;
           <ErrorBoundaryState> {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -90,7 +90,7 @@ class AdvancedErrorBoundary extends Component;
     };
   }
   componentDidCatch(erro,
-  r: Error, errorInf,)
+  r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -128,7 +128,7 @@ class AdvancedErrorBoundary extends Component;
     }
   }
   private reportError = (erro,
-  r: Error, errorInf,)
+  r: Error, errorInf)
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -200,7 +200,7 @@ class AdvancedErrorBoundary extends Component;
 }`
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   };
-  private sendErrorReport = async (errorRepor,)
+  private sendErrorReport = async (errorRepor)
   t: ErrorReport) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -219,7 +219,7 @@ class AdvancedErrorBoundary extends Component;
 }
           'Content-Type': 'application/json'
         },
-        bod,)
+        bod)
   y: JSON.stringify(errorReport)
       });
     } catch (reportError) {/* TODO: Fix JSX expression */}

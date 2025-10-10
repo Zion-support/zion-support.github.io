@@ -1,122 +1,3 @@
-<<<<<<< HEAD
-'use client';
-/**
- * Application Health Check Utility
- * Monitors application health and provides diagnostic information
- */
-export interface HealthStatus {
-  status: 'healthy' | 'degraded' | 'unhealthy';
-  timestamp: number;
-  uptime: number;
-  checks: HealthCheck[];
-}
-export interface HealthCheck {
-  name: string;
-  status: 'pass' | 'warn' | 'fail';
-  message?: string;
-  details?: Record<string, unknown>;
-  duration?: number;
-}
-export type HealthCheckFunction = () => Promise<HealthCheck> | HealthCheck
-class HealthCheckService {
-  private checks: Map<string, HealthCheckFunction> = new Map()
-  private startTime: number = Date.now()
-  private lastCheckTime: number = 0
-  private cachedStatus?: HealthStatus
-  private cacheTimeout: number = 5000; // 5 seconds
-  constructor() {
-    this.registerDefaultChecks()
-  }
-  /**
-   * Register default health checks
-   */
-  private registerDefaultChecks(): void {
-    // Memory usage check
-    this.register('memory', this.checkMemory.bind(this))
-    // Performance check
-    this.register('performance', this.checkPerformance.bind(this))
-    // Browser API availability check
-    if (typeof window !== 'undefined') {
-      this.register('browser-apis', this.checkBrowserAPIs.bind(this))
-    }
-    // Local storage check
-    if (typeof window !== 'undefined') {
-      this.register('storage', this.checkStorage.bind(this))
-    }
-  }
-  /**
-   * Register a custom health check
-   */
-  register(name: string, checkFn: HealthCheckFunction): void {
-    this.checks.set(name, checkFn)
-  }
-  /**
-   * Unregister a health check
-   */
-  unregister(name: string): void {
-    this.checks.delete(name)
-  }
-  /**
-   * Run all health checks
-   */
-  async runChecks(): Promise<HealthStatus> {
-    const now = Date.now()
-    // Return cached status if still valid
-    if (
-      this.cachedStatus &&
-      now - this.lastCheckTime < this.cacheTimeout
-    ) {
-      return this.cachedStatus
-    }
-    const checks: HealthCheck[] = []
-    // Run all checks
-    for (const [name, checkFn] of this.checks.entries()) {
-      try {
-        const startTime = performance.now()
-        const check = await checkFn()
-        const duration = performance.now() - startTime
-        checks.push({
-          ...check,
-          name,
-          duration
-        })
-      } catch (error) {
-        logger.error(`Health check "${name}" failed`, error as Error);
-        checks.push({
-          name,
-          status: 'fail',
-          message: error instanceof Error ? error.message : 'Unknown error'
-        })
-      }
-    }
-    // Determine overall status
-    const hasFailures = checks.some((c) => c.status === 'fail')
-    const hasWarnings = checks.some((c) => c.status === 'warn')
-    let status: 'healthy' | 'degraded' | 'unhealthy'
-    if (hasFailures) {
-      status = 'unhealthy'
-    } else if (hasWarnings) {
-      status = 'degraded'
-    } else {
-      status = 'healthy'
-    }
-    const healthStatus: HealthStatus = {
-      status,
-      timestamp: now,
-      uptime: now - this.startTime,
-      checks
-    };
-    // Cache the result
-    this.cachedStatus = healthStatus
-    this.lastCheckTime = now
-    // Log unhealthy status
-    if (status === 'unhealthy') {
-      logger.error('Application health check failed', { healthStatus })
-    } else if (status === 'degraded') {
-      logger.warn('Application health degraded', { healthStatus })
-    }
-    return healthStatus
-=======
 
 'use client'
 /**
@@ -216,9 +97,7 @@ constructor() {/* TODO: Fix JSX expression */}
     if ()
 //       this.cachedStatus &&
 //       now - this.lastCheckTime;
-          < this.cacheTimeout,
-
-) {// TODO: Add content;}
+          < this.cacheTimeout) {// TODO: Add content;}
 
 }
       return this.cachedStatus;
@@ -301,94 +180,10 @@ const hasFailures = checks.some((c) => c.status === 'fail')
       logger.warn('Application health degraded', { healthStatus })
     }
     return healthStatus;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Get current health status (may return cached)
    */
-<<<<<<< HEAD
-  async getStatus(): Promise<HealthStatus> {
-    return this.runChecks()
-  }
-  /**
-   * Check memory usage
-   */
-  private checkMemory(): HealthCheck {
-    if (typeof performance === 'undefined' || !('memory' in performance)) {
-      return {
-        name: 'memory',
-        status: 'pass',
-        message:       ,
-$4};
-    }
-    try {
-      const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
-      let status: 'pass' | 'warn' | 'fail' = 'pass'
-      let message = `Memory usage: ${usedPercent.toFixed(1)}%`
-      if (usedPercent > 90) {
-        status = 'fail'
-        message = `Critical memory usage: ${usedPercent.toFixed(1)}%`
-      } else if (usedPercent > 75) {
-        status = 'warn'
-        message = `High memory usage: ${usedPercent.toFixed(1)}%`
-      }
-      return {
-        name: 'memory',
-        status,
-        message,
-        details: {
-          used: memory.usedJSHeapSize,
-          total: memory.totalJSHeapSize,
-          limit: memory.jsHeapSizeLimit,
-          usedPercent
-        }
-      }
-    } catch (error) {
-      return {
-        name: 'memory',
-        status: 'warn',
-        message:       ,
-$4};
-    }
-  }
-  /**
-   * Check performance metrics
-   */
-  private checkPerformance(): HealthCheck {
-    try {
-      const report = performanceMonitor.getReport()
-      const { poor, needsImprovement, good } = report.summary
-      let status: 'pass' | 'warn' | 'fail' = 'pass'
-      let message = `Performance: ${good} good, ${needsImprovement} needs improvement, ${poor} poor`
-      if (poor > 0) {
-        status = 'warn'
-      }
-      if (poor > 2) {
-        status = 'fail'
-        message = `Critical performance issues: ${poor} poor metrics`
-      }
-      return {
-        name: 'performance',
-        status,
-        message,
-        details: {
-          metrics: report.metrics,
-          summary: report.summary
-        }
-      }
-    } catch (error) {
-      return {
-        name: 'performance',
-        status: 'warn',
-        message:       ,
-$4}
-    }
-  }
-  /**
-   * Check browser API availability
-   */
-  private checkBrowserAPIs(): HealthCheck {
-=======
   async getStatus(): Promise;
           <HealthStatus> {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -531,25 +326,12 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
   private checkBrowserAPIs(): HealthCheck {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const requiredAPIs = [
       'fetch',
       'localStorage',
       'sessionStorage',
       'console',
       'navigator'
-<<<<<<< HEAD
-    ];
-    const missingAPIs: string[] = []
-    requiredAPIs.forEach((api) => {
-      if (typeof window !== 'undefined' && !(api in window)) {
-        missingAPIs.push(api)
-      }
-    })
-    if (missingAPIs.length > 0) {
-      return {
-        name: 'browser-apis',
-=======
     ]
 
     const missingAPIs: string[] = []
@@ -570,73 +352,11 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
 };
 
   name: 'browser-apis',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         status: 'warn',
         message: `Missing browser APIs: ${missingAPIs.join(', ')}`,
         details: { missingAPIs }
       }
     }
-<<<<<<< HEAD
-    return {
-      name: 'browser-apis',
-      status: 'pass',
-      message:     ,
-$4}
-  }
-  /**
-   * Check storage availability
-   */
-  private checkStorage(): HealthCheck {
-    try {
-      const testKey = '_health_check_test'
-      const testValue = 'test'
-      // Test localStorage
-      localStorage.setItem(testKey, testValue)
-      const retrieved = localStorage.getItem(testKey)
-      localStorage.removeItem(testKey)
-      if (retrieved !== testValue) {
-        return {
-          name: 'storage',
-          status: 'fail',
-          message:         ,
-$4}
-      }
-      // Check available space (approximate)
-      const testData = 'x'.repeat(1024 * 1024); // 1MB
-      try {
-        localStorage.setItem('_size_test', testData);
-        localStorage.removeItem('_size_test');
-      } catch {
-        return {
-          name: 'storage',
-          status: 'warn',
-          message:         ,
-$4}
-      }
-      return {
-        name: 'storage',
-        status: 'pass',
-        message:       ,
-$4};
-    } catch {
-      return {
-        name: 'storage',
-        status: 'fail',
-        message:       ,
-$4}
-    }
-  }
-  /**
-   * Get application uptime
-   */
-  getUptime(): number {
-    return Date.now() - this.startTime
-  }
-  /**
-   * Get formatted uptime string
-   */
-  getFormattedUptime(): string {
-=======
     return {// TODO: Add content;}
 };
   name: 'browser-apis',
@@ -734,21 +454,11 @@ $4}
   getFormattedUptime(): string {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const uptime = this.getUptime()
     const seconds = Math.floor(uptime / 1000)
     const minutes = Math.floor(seconds / 60)
     const hours = Math.floor(minutes / 60)
     const days = Math.floor(hours / 24)
-<<<<<<< HEAD
-    if (days > 0) {
-      return `${days}d ${hours % 24}h ${minutes % 60}m`
-    } else if (hours > 0) {
-      return `${hours}h ${minutes % 60}m`
-    } else if (minutes > 0) {
-      return `${minutes}m ${seconds % 60}s`
-    } else {
-=======
 
     if (days > 0) {// TODO: Add content;}
 }
@@ -762,30 +472,10 @@ $4}
     } else {// TODO: Add content;}
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       return `${seconds}s`
     }
   }
   /**
-<<<<<<< HEAD
-   * Clear cached status
-   */
-  clearCache(): void {
-    this.cachedStatus = undefined
-    this.lastCheckTime = 0
-  }
-}
-// Export singleton instance
-export const healthCheck = new HealthCheckService()
-// Export convenience functions
-export const runHealthChecks = () => healthCheck.runChecks()
-export const getHealthStatus = () => healthCheck.getStatus()
-export const registerHealthCheck = (name: string, checkFn: HealthCheckFunction) =>
-  healthCheck.register(name, checkFn)
-export const getUptime = () => healthCheck.getUptime()
-export const getFormattedUptime = () => healthCheck.getFormattedUptime()
-export default healthCheck
-=======
    * Clear cached status;
    */
 
@@ -802,7 +492,7 @@ export const healthCheck = new HealthCheckService()
 export const runHealthChecks = () => healthCheck.runChecks()
 export const getHealthStatus = () => healthCheck.getStatus()
 export const registerHealthCheck = (nam,
-  e: string, checkF,)
+  e: string, checkF)
   n: HealthCheckFunction) =>
 //   healthCheck.register(name, checkFn)
 export const getUptime = () => healthCheck.getUptime()
@@ -811,4 +501,3 @@ export default healthCheck;"`
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

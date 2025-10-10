@@ -1,9 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -15,22 +11,6 @@ const ITServicesPage: React.FC = () => {
       title: 'Cloud Services',
       description: 'Comprehensive cloud migration, setup, and optimization services for AWS, Azure, and Google Cloud.',
       icon: Cloud,
-<<<<<<< HEAD
-  const services = [
-    {
-      icon: Cloud,
-      title: 'Cloud Migration & Management',
-      description: 'Seamless migration to AWS, Azure, or GCP with 99.9% uptime guarantee.',
-      features: ['AWS/Azure/GCP Migration', 'Cloud Architecture Design', 'Cost Optimization', '24/7 Monitoring'],
-      features: ['Cloud Migration', 'Infrastructure Setup', 'Cost Optimization', 'Security Configuration', 'Monitoring', '24/7 Support'],
-      price: 'Starting at $1,299/month',
-      category: 'Cloud',
-      color: 'text-blue-400'
-    },
-    {
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions with threat detection, prevention, and incident response capabilities.',
-=======
       features: ['Cloud migration', 'Infrastructure setup', 'Cost optimization', 'Security configuration', 'Monitoring', '24/7 support'],
       price: 'Starting at $1,500/month',
       category: 'Infrastructure',
@@ -40,7 +20,6 @@ const ITServicesPage: React.FC = () => {
 $4},
       title: 'Advanced Threat Protection',
       description: 'Comprehensive cybersecurity solutions with real-time threat detection and automated response.',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
       icon: Shield,
       features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response', 'Compliance', 'Penetration Testing'],
       price: 'Starting at $1,599/month',
@@ -117,94 +96,94 @@ $4},
 
   return (
       
-      <main className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <main className="pt-24 pb-16 px-4"></main>
+        <div className="max-w-7xl mx-auto"></div>
           {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+          <section className="text-center mb-16"></section>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text"></h1>
               IT Services
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Comprehensive IT solutions including infrastructure, cybersecurity, 
               database management, and DevOps services.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center space-x-2"
-              >
+              ></a>
                 <Cloud className="w-4 h-4" />
                 <span>Get Started</span>
               </a>
               <a
                 href="/contact"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
+              ></a>
                 Learn More
               </a>
             </div>
           </section>
 
           {/* Services Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+          <section className="mb-16"></section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text"></h2>
               Our IT Services
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {services.map((service, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <service.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
-                  <ul className="space-y-2 mb-6">
+                  <ul className="space-y-2 mb-6"></ul>
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="mb-4">
+                <div className="mb-4"></div>
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
-                  <ul className="text-sm text-gray-400 space-y-1">
+                  <ul className="text-sm text-gray-400 space-y-1"></ul>
                     {service.benefits.slice(0, 3).map((benefit, idx) => (
-                      <li key={idx} className="flex items-center">
+                      <li key={idx} className="flex items-center"></li>
                         <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="mb-4">
+                <div className="mb-4"></div>
                   <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                 </div>
-                <div className="mb-4">
+                <div className="mb-4"></div>
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologies:</h4>
-                  <div className="flex flex-wrap gap-1">
+                  <div className="flex flex-wrap gap-1"></div>
                     {service.technologies.slice(0, 4).map((tech, idx) => (
-                      <span key={idx} className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">
+                      <span key={idx} className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded"></span>
                         {tech}
                       </span>
                     ))}
                   </div>
                 </div>
                 <p className="text-gray-300 mb-4">{service.description}</p>
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-2 mb-6"></ul>
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-400"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <div className="text-center">
+                <div className="text-center"></div>
                   <div className={`text-lg font-bold ${service.color} mb-2`}>{service.price}</div>
                   <a
                     href="/contact"
                     className={`inline-flex items-center text-sm font-medium ${service.color} hover:opacity-80 transition-opacity`}
-                  >
+                  ></a>
                     Learn More <ArrowRight className="w-4 h-4 ml-1" />
                   </a>
                 </div>
@@ -216,28 +195,28 @@ $4},
         keywords={['IT services', 'cloud migration', 'cybersecurity', 'DevOps', 'database management', 'IT infrastructure', 'IT consulting']}
         canonicalUrl="https://ziontechgroup.com/it-services"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
         
-        <main className="pt-16">
+        <main className="pt-16"></main>
           {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+            <div className="max-w-4xl mx-auto"></div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text"></h1>
                 Comprehensive IT Services
               </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8">
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8"></p>
                 Expert IT solutions for modern businesses
               </p>
-              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto"></p>
                 From cloud migration to cybersecurity, our expert IT team provides comprehensive solutions 
                 to keep your business running smoothly and securely in the digital age.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center space-x-2"
-                >
+                ></a>
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
                 </a>
@@ -245,17 +224,17 @@ $4},
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
+                ></a>
                   <Mail className="w-5 h-5" />
                   <span>Get Free Consultation</span>
                 </a>
               </div>
               
               {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"></div>
                 {stats.map((stat, index) => (
-                  <div key={index} className="cyber-card p-6 text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
+                  <div key={index} className="cyber-card p-6 text-center"></div>
+                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text"></div>
                       {stat.number}
                     </div>
                     <div className="text-gray-300 font-medium">{stat.label}</div>
@@ -269,22 +248,22 @@ $4},
         </section>
 
         {/* Support Tiers */}
-        <section className="mb-16">
+        <section className="mb-16"></section>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Support Tiers</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6"></div>
               <h3 className="text-xl font-bold text-white mb-4">Basic Support</h3>
               <div className="text-3xl font-bold text-cyan-400 mb-4">$199/month</div>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center text-sm text-gray-300">
+              <ul className="space-y-2 mb-6"></ul>
+                <li className="flex items-center text-sm text-gray-300"></li>
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Business hours support
                 </li>
-                <li className="flex items-center text-sm text-gray-300">
+                <li className="flex items-center text-sm text-gray-300"></li>
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Remote assistance
                 </li>
-                <li className="flex items-center text-sm text-gray-300">
+                <li className="flex items-center text-sm text-gray-300"></li>
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Basic monitoring
                 </li>
@@ -292,27 +271,27 @@ $4},
               <a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
-              >
+              ></a>
                 Get Started
               </a>
             </div>
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500"></div>
               <h3 className="text-xl font-bold text-white mb-4">Professional Support</h3>
               <div className="text-3xl font-bold text-cyan-400 mb-4">$499/month</div>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center text-sm text-gray-300">
+              <ul className="space-y-2 mb-6"></ul>
+                <li className="flex items-center text-sm text-gray-300"></li>
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   24/7 support
                 </li>
-                <li className="flex items-center text-sm text-gray-300">
+                <li className="flex items-center text-sm text-gray-300"></li>
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   On-site visits
                 </li>
-                <li className="flex items-center text-sm text-gray-300">
+                <li className="flex items-center text-sm text-gray-300"></li>
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Advanced monitoring
                 </li>
-                <li className="flex items-center text-sm text-gray-300">
+                <li className="flex items-center text-sm text-gray-300"></li>
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Priority response
                 </li>
@@ -320,27 +299,27 @@ $4},
               <a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
-              >
+              ></a>
                 Get Started
               </a>
             </div>
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6"></div>
               <h3 className="text-xl font-bold text-white mb-4">Enterprise Support</h3>
               <div className="text-3xl font-bold text-cyan-400 mb-4">Custom</div>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center text-sm text-gray-300">
+              <ul className="space-y-2 mb-6"></ul>
+                <li className="flex items-center text-sm text-gray-300"></li>
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Dedicated team
                 </li>
-                <li className="flex items-center text-sm text-gray-300">
+                <li className="flex items-center text-sm text-gray-300"></li>
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Custom SLAs
                 </li>
-                <li className="flex items-center text-sm text-gray-300">
+                <li className="flex items-center text-sm text-gray-300"></li>
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Proactive monitoring
                 </li>
-                <li className="flex items-center text-sm text-gray-300">
+                <li className="flex items-center text-sm text-gray-300"></li>
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Strategic consulting
                 </li>
@@ -348,7 +327,7 @@ $4},
               <a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
-              >
+              ></a>
                 Contact Sales
               </a>
             </div>
@@ -356,59 +335,59 @@ $4},
         </section>
 
         {/* CTA Section */}
-        <section className="text-center">
-          <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8">
+        <section className="text-center"></section>
+          <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8"></div>
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your IT Infrastructure?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto"></p>
               Get a free IT assessment and discover how our services can improve your technology infrastructure and reduce costs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
-              >
+              ></a>
                 Get Free IT Assessment
               </a>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
+              ></a>
                 (302) 464-0950
               </a>
             </div>
       </main>
 
           {/* Services Section */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="max-w-7xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+          <section className="container mx-auto px-4 py-16"></section>
+            <div className="max-w-7xl mx-auto"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text"></h2>
                 Our IT Services
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
                 {itServices.map((service, index) => (
-                  <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                  <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
+                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6"></div>
                       <service.icon className={`w-8 h-8 ${service.color}`} />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-4 neon-text">{service.title}</h3>
                     <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-                    <div className="mb-4">
+                    <div className="mb-4"></div>
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:</h4>
-                      <ul className="space-y-1">
+                      <ul className="space-y-1"></ul>
                         {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center text-xs text-gray-300">
+                          <li key={featureIndex} className="flex items-center text-xs text-gray-300"></li>
                             <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                             {feature}
                           </li>
                         ))}
                       </ul>
                     </div>
-                    <div className="text-center">
+                    <div className="text-center"></div>
                       <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
                       <a 
                         href="/contact" 
                         className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-                      >
+                      ></a>
                         Learn More
                       </a>
                     </div>
@@ -419,15 +398,15 @@ $4},
           </section>
 
           {/* Benefits Section */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="max-w-7xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+          <section className="container mx-auto px-4 py-16"></section>
+            <div className="max-w-7xl mx-auto"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text"></h2>
                 Why Choose Our IT Services?
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                  <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto"></div>
                       <benefit.icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-4 neon-text">{benefit.title}</h3>
@@ -439,19 +418,19 @@ $4},
           </section>
 
           {/* CTA Section */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 neon-text">
+          <section className="container mx-auto px-4 py-16"></section>
+            <div className="max-w-4xl mx-auto text-center"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 neon-text"></h2>
                 Ready to Transform Your IT Infrastructure?
               </h2>
-              <p className="text-lg text-gray-300 mb-12">
+              <p className="text-lg text-gray-300 mb-12"></p>
                 Let our expert IT team help you build a robust, secure, and scalable technology foundation for your business.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center justify-center space-x-2"
-                >
+                ></a>
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
                 </a>
@@ -459,7 +438,7 @@ $4},
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center justify-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
+                ></a>
                   <Mail className="w-5 h-5" />
                   <span>Get Free Consultation</span>
                 </a>
@@ -475,29 +454,28 @@ $4},
 };
 
 export default ITServicesPage;
-=======
 import { Cloud, ArrowRight } from 'lucide-react';
 
 export default function ITServicesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="container mx-auto px-4 py-20"></div>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6"></h1>
             IT Services
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 mb-8"></p>
             Comprehensive IT support and services to keep your business running smoothly.
           </p>
-          <div className="bg-slate-800/50 rounded-lg p-8">
+          <div className="bg-slate-800/50 rounded-lg p-8"></div>
             <h2 className="text-2xl font-bold text-white mb-4">IT Services Solutions</h2>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-300 mb-6"></p>
               Get expert IT support, infrastructure management, and technology consulting.
             </p>
             <a
               href="/contact"
               className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
-            >
+            ></a>
               <ArrowRight className="w-5 h-5 mr-2" />
               Contact Us
             </a>
@@ -507,4 +485,3 @@ export default function ITServicesPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -41,7 +41,7 @@ export interface MicroSaasService {
 
 export const microSaasServices: MicroSaasService[] = [
   // AI-Powered Productivity Tools;
-  {,
+  {
     id: 'ai-project-manager-pro',
     title: 'AI Project Manager Pro',
     description: 'Revolutionary AI-powered project management platform that uses machine learning to predict project outcomes, optimize resource allocation, and prevent delays. Trusted by 15,000+ teams worldwide.',
@@ -49,7 +49,7 @@ export const microSaasServices: MicroSaasService[] = [
     icon: '📊',
     price: '$99/month',
     originalPrice: '$149/month',
-    features: [,
+    features: [
       'AI-powered project planning and timeline prediction',
       'Smart resource allocation and workload balancing',
       'Risk assessment and mitigation recommendations',
@@ -59,7 +59,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Integration with 50+ popular tools',
       'Custom AI models for your industry'
     ],
-    benefits: [,
+    benefits: [
       '40% increase in project delivery speed',
       '70% reduction in project delays',
       '85% accuracy in timeline predictions',
@@ -74,7 +74,7 @@ export const microSaasServices: MicroSaasService[] = [
     users: '15,000+',
     freeTrial: '14 days',
     marketPrice: '$149-299/month',
-    capabilities: [,
+    capabilities: [
       'Machine Learning-based predictions',
       'Natural Language Processing for task descriptions',
       'Computer Vision for progress analysis',
@@ -82,7 +82,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Automated risk assessment',
       'Smart resource optimization'
     ],
-    useCases: [,
+    useCases: [
       'Software development projects',
       'Marketing campaign management',
       'Construction project oversight',
@@ -90,7 +90,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Product launch coordination',
       'Research and development projects'
     ],
-    integrations: [,
+    integrations: [
       'Jira', 'Asana', 'Trello', 'Monday.com', 'Slack', 'Microsoft Teams',
       'GitHub', 'GitLab', 'Bitbucket', 'Figma', 'Adobe Creative Suite',
       'Salesforce', 'HubSpot', 'Zapier', 'Webhook integrations'
@@ -100,7 +100,7 @@ export const microSaasServices: MicroSaasService[] = [
     whiteLabel: true;
     support: '24/7 Priority Support',
     setupTime: '15 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['Python', 'JavaScript', 'TypeScript', 'Go'],
       frameworks: ['React', 'Node.js', 'FastAPI', 'TensorFlow', 'PyTorch'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
@@ -122,7 +122,7 @@ export const microSaasServices: MicroSaasService[] = [
     icon: '✅',
     price: '$49/month',
     originalPrice: '$79/month',
-    features: [,
+    features: [
       'AI-powered task prioritization and scheduling',
       'Smart deadline prediction and alerts',
       'Habit tracking and goal setting',
@@ -132,7 +132,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Cross-platform synchronization',
       'Voice-to-task conversion'
     ],
-    benefits: [,
+    benefits: [
       '60% increase in task completion rate',
       '45% reduction in missed deadlines',
       '35% improvement in focus time',
@@ -147,7 +147,7 @@ export const microSaasServices: MicroSaasService[] = [
     users: '25,000+',
     freeTrial: '14 days',
     marketPrice: '$79-149/month',
-    capabilities: [,
+    capabilities: [
       'Natural Language Processing for task creation',
       'Machine Learning for priority scoring',
       'Predictive Analytics for deadline estimation',
@@ -155,7 +155,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Smart notification system',
       'Automated workflow optimization'
     ],
-    useCases: [,
+    useCases: [
       'Personal productivity management',
       'Team task coordination',
       'Project milestone tracking',
@@ -163,7 +163,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Goal setting and achievement',
       'Time management optimization'
     ],
-    integrations: [,
+    integrations: [
       'Google Calendar', 'Outlook', 'Apple Calendar', 'Slack', 'Microsoft Teams',
       'Notion', 'Evernote', 'Todoist', 'Any.do', 'TickTick', 'Zapier'
     ],
@@ -172,7 +172,7 @@ export const microSaasServices: MicroSaasService[] = [
     whiteLabel: false;
     support: 'Email & Chat Support',
     setupTime: '5 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['JavaScript', 'TypeScript', 'Python'],
       frameworks: ['React Native', 'Node.js', 'Express', 'TensorFlow Lite'],
       databases: ['SQLite', 'PostgreSQL', 'Redis'],
@@ -195,7 +195,7 @@ export const microSaasServices: MicroSaasService[] = [
     icon: '✍️',
     price: '$79/month',
     originalPrice: '$129/month',
-    features: [,
+    features: [
       'GPT-4 powered content generation',
       'Brand voice training and customization',
       'SEO optimization and keyword research',
@@ -205,7 +205,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Social media content scheduling',
       'Content performance analytics'
     ],
-    benefits: [,
+    benefits: [
       '80% reduction in content creation time',
       '300% increase in content output',
       '65% improvement in SEO rankings',
@@ -220,7 +220,7 @@ export const microSaasServices: MicroSaasService[] = [
     users: '40,000+',
     freeTrial: '7 days',
     marketPrice: '$129-299/month',
-    capabilities: [,
+    capabilities: [
       'Natural Language Generation',
       'Sentiment Analysis',
       'SEO Optimization',
@@ -228,7 +228,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Content Personalization',
       'Multi-language Translation'
     ],
-    useCases: [,
+    useCases: [
       'Blog post creation',
       'Social media content',
       'Email marketing campaigns',
@@ -236,7 +236,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Ad copy creation',
       'Website content'
     ],
-    integrations: [,
+    integrations: [
       'WordPress', 'HubSpot', 'Mailchimp', 'Hootsuite', 'Buffer',
       'Google Docs', 'Notion', 'Slack', 'Zapier', 'Webhook APIs'
     ],
@@ -245,7 +245,7 @@ export const microSaasServices: MicroSaasService[] = [
     whiteLabel: true;
     support: '24/7 Support',
     setupTime: '10 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['Python', 'JavaScript', 'TypeScript'],
       frameworks: ['FastAPI', 'React', 'Next.js', 'OpenAI API', 'Hugging Face'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis'],
@@ -267,7 +267,7 @@ export const microSaasServices: MicroSaasService[] = [
     icon: '📱',
     price: '$89/month',
     originalPrice: '$149/month',
-    features: [,
+    features: [
       'AI content creation for all social platforms',
       'Smart posting schedule optimization',
       'Advanced audience analytics and insights',
@@ -277,7 +277,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Social listening and sentiment analysis',
       'ROI tracking and reporting'
     ],
-    benefits: [,
+    benefits: [
       '70% increase in social media engagement',
       '50% reduction in social media management time',
       '85% improvement in content performance',
@@ -292,7 +292,7 @@ export const microSaasServices: MicroSaasService[] = [
     users: '30,000+',
     freeTrial: '14 days',
     marketPrice: '$149-399/month',
-    capabilities: [,
+    capabilities: [
       'Computer Vision for image analysis',
       'Natural Language Processing for content',
       'Sentiment Analysis for engagement',
@@ -300,7 +300,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Automated A/B testing',
       'Real-time trend analysis'
     ],
-    useCases: [,
+    useCases: [
       'Brand social media management',
       'Influencer marketing campaigns',
       'Customer service automation',
@@ -308,7 +308,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Social media advertising',
       'Community management'
     ],
-    integrations: [,
+    integrations: [
       'Facebook', 'Instagram', 'Twitter', 'LinkedIn', 'TikTok', 'YouTube',
       'Pinterest', 'Snapchat', 'Hootsuite', 'Buffer', 'Sprout Social',
       'HubSpot', 'Salesforce', 'Zapier'
@@ -318,7 +318,7 @@ export const microSaasServices: MicroSaasService[] = [
     whiteLabel: true;
     support: '24/7 Support',
     setupTime: '20 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['Python', 'JavaScript', 'TypeScript'],
       frameworks: ['Django', 'React', 'FastAPI', 'TensorFlow', 'OpenCV'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
@@ -341,7 +341,7 @@ export const microSaasServices: MicroSaasService[] = [
     icon: '🤖',
     price: '$129/month',
     originalPrice: '$199/month',
-    features: [,
+    features: [
       'AI-powered lead scoring and qualification',
       'Predictive customer behavior analysis',
       'Automated email sequences and follow-ups',
@@ -351,7 +351,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Advanced reporting and analytics',
       'Integration with 100+ business tools'
     ],
-    benefits: [,
+    benefits: [
       '45% increase in lead conversion rates',
       '60% reduction in sales cycle time',
       '80% improvement in lead qualification accuracy',
@@ -366,7 +366,7 @@ export const microSaasServices: MicroSaasService[] = [
     users: '20,000+',
     freeTrial: '21 days',
     marketPrice: '$199-499/month',
-    capabilities: [,
+    capabilities: [
       'Machine Learning for lead scoring',
       'Natural Language Processing for communication',
       'Predictive Analytics for sales forecasting',
@@ -374,7 +374,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Automated decision making',
       'Real-time data processing'
     ],
-    useCases: [,
+    useCases: [
       'Sales pipeline management',
       'Lead generation and qualification',
       'Customer relationship management',
@@ -382,7 +382,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Customer service automation',
       'Marketing campaign optimization'
     ],
-    integrations: [,
+    integrations: [
       'Salesforce', 'HubSpot', 'Pipedrive', 'Zoho CRM', 'Microsoft Dynamics',
       'Mailchimp', 'Constant Contact', 'Zapier', 'Webhook APIs',
       'Google Workspace', 'Microsoft 365', 'Slack', 'Teams'
@@ -392,7 +392,7 @@ export const microSaasServices: MicroSaasService[] = [
     whiteLabel: true;
     support: '24/7 Priority Support',
     setupTime: '30 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],
       frameworks: ['Django', 'React', 'FastAPI', 'Spring Boot', 'TensorFlow'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
@@ -414,7 +414,7 @@ export const microSaasServices: MicroSaasService[] = [
     icon: '💰',
     price: '$199/month',
     originalPrice: '$299/month',
-    features: [,
+    features: [
       'Real-time financial data analysis',
       'AI-powered risk assessment and scoring',
       'Predictive financial modeling',
@@ -424,7 +424,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Portfolio optimization algorithms',
       'Regulatory compliance monitoring'
     ],
-    benefits: [,
+    benefits: [
       '70% improvement in financial decision accuracy',
       '50% reduction in analysis time',
       '85% better risk prediction accuracy',
@@ -439,7 +439,7 @@ export const microSaasServices: MicroSaasService[] = [
     users: '12,000+',
     freeTrial: '14 days',
     marketPrice: '$299-999/month',
-    capabilities: [,
+    capabilities: [
       'Machine Learning for pattern recognition',
       'Time Series Analysis for forecasting',
       'Risk Assessment algorithms',
@@ -447,7 +447,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Computer Vision for document processing',
       'Real-time data processing'
     ],
-    useCases: [,
+    useCases: [
       'Investment portfolio management',
       'Risk assessment and mitigation',
       'Financial planning and forecasting',
@@ -455,7 +455,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Market analysis and research',
       'Trading strategy optimization'
     ],
-    integrations: [,
+    integrations: [
       'Bloomberg', 'Reuters', 'Yahoo Finance', 'Alpha Vantage', 'Quandl',
       'QuickBooks', 'Xero', 'Sage', 'SAP', 'Oracle', 'Salesforce',
       'Excel', 'Google Sheets', 'Tableau', 'Power BI'
@@ -465,7 +465,7 @@ export const microSaasServices: MicroSaasService[] = [
     whiteLabel: true;
     support: '24/7 Expert Support',
     setupTime: '45 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['Python', 'R', 'Julia', 'JavaScript'],
       frameworks: ['TensorFlow', 'PyTorch', 'Pandas', 'NumPy', 'Scikit-learn'],
       databases: ['PostgreSQL', 'InfluxDB', 'TimescaleDB', 'Redis'],
@@ -488,7 +488,7 @@ export const microSaasServices: MicroSaasService[] = [
     icon: '🎧',
     price: '$59/month',
     originalPrice: '$99/month',
-    features: [,
+    features: [
       'Natural language understanding and processing',
       'Multi-language support (50+ languages)',
       'Sentiment analysis and emotional intelligence',
@@ -498,7 +498,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Advanced analytics and reporting',
       'Custom branding and white-label options'
     ],
-    benefits: [,
+    benefits: [
       '70% reduction in support costs',
       '85% improvement in response time',
       '90% customer satisfaction rate',
@@ -513,7 +513,7 @@ export const microSaasServices: MicroSaasService[] = [
     users: '35,000+',
     freeTrial: '14 days',
     marketPrice: '$99-299/month',
-    capabilities: [,
+    capabilities: [
       'Natural Language Understanding',
       'Sentiment Analysis',
       'Intent Recognition',
@@ -521,7 +521,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Knowledge Graph Integration',
       'Multi-modal Processing'
     ],
-    useCases: [,
+    useCases: [
       'E-commerce customer support',
       'SaaS product support',
       'Technical support automation',
@@ -529,7 +529,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Lead qualification',
       'Appointment scheduling'
     ],
-    integrations: [,
+    integrations: [
       'Zendesk', 'Freshdesk', 'Intercom', 'Help Scout', 'LiveChat',
       'Slack', 'Microsoft Teams', 'WhatsApp', 'Facebook Messenger',
       'Salesforce', 'HubSpot', 'Zapier', 'Webhook APIs'
@@ -539,7 +539,7 @@ export const microSaasServices: MicroSaasService[] = [
     whiteLabel: true;
     support: '24/7 Support',
     setupTime: '15 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['Python', 'JavaScript', 'TypeScript'],
       frameworks: ['FastAPI', 'React', 'OpenAI GPT', 'Hugging Face', 'Rasa'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
@@ -562,7 +562,7 @@ export const microSaasServices: MicroSaasService[] = [
     icon: '🔍',
     price: '$79/month',
     originalPrice: '$129/month',
-    features: [,
+    features: [
       'Automated code quality analysis',
       'Bug detection and vulnerability scanning',
       'Performance optimization suggestions',
@@ -572,7 +572,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Documentation generation',
       'Integration with popular IDEs and CI/CD'
     ],
-    benefits: [,
+    benefits: [
       '60% reduction in code review time',
       '80% improvement in code quality',
       '70% reduction in production bugs',
@@ -587,7 +587,7 @@ export const microSaasServices: MicroSaasService[] = [
     users: '18,000+',
     freeTrial: '14 days',
     marketPrice: '$129-399/month',
-    capabilities: [,
+    capabilities: [
       'Static Code Analysis',
       'Machine Learning for pattern recognition',
       'Natural Language Processing for comments',
@@ -595,7 +595,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Performance profiling',
       'Automated refactoring suggestions'
     ],
-    useCases: [,
+    useCases: [
       'Code quality assurance',
       'Security vulnerability detection',
       'Performance optimization',
@@ -603,7 +603,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Onboarding new developers',
       'Maintaining coding standards'
     ],
-    integrations: [,
+    integrations: [
       'GitHub', 'GitLab', 'Bitbucket', 'Azure DevOps', 'Jenkins',
       'VS Code', 'IntelliJ', 'Sublime Text', 'Atom', 'Vim',
       'Slack', 'Microsoft Teams', 'Jira', 'Trello', 'Asana'
@@ -613,7 +613,7 @@ export const microSaasServices: MicroSaasService[] = [
     whiteLabel: true;
     support: 'Developer Support',
     setupTime: '10 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['Python', 'JavaScript', 'TypeScript', 'Java', 'C#', 'Go'],
       frameworks: ['TensorFlow', 'PyTorch', 'SonarQube', 'ESLint', 'Prettier'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis'],
@@ -636,7 +636,7 @@ export const microSaasServices: MicroSaasService[] = [
     icon: '🏥',
     price: '$149/month',
     originalPrice: '$249/month',
-    features: [,
+    features: [
       'AI-powered symptom analysis and triage',
       'Medication reminder and management',
       'Health monitoring and tracking',
@@ -646,7 +646,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Health insights and recommendations',
       'HIPAA compliant data protection'
     ],
-    benefits: [,
+    benefits: [
       '60% reduction in unnecessary doctor visits',
       '80% improvement in medication adherence',
       '70% faster symptom assessment',
@@ -661,7 +661,7 @@ export const microSaasServices: MicroSaasService[] = [
     users: '8,000+',
     freeTrial: '30 days',
     marketPrice: '$249-999/month',
-    capabilities: [,
+    capabilities: [
       'Natural Language Processing for symptoms',
       'Machine Learning for diagnosis assistance',
       'Computer Vision for medical imaging',
@@ -669,7 +669,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Real-time monitoring',
       'Privacy-preserving AI'
     ],
-    useCases: [,
+    useCases: [
       'Primary care assistance',
       'Chronic disease management',
       'Mental health support',
@@ -677,7 +677,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Health monitoring',
       'Medication management'
     ],
-    integrations: [,
+    integrations: [
       'Epic', 'Cerner', 'Allscripts', 'NextGen', 'athenahealth',
       'Apple Health', 'Google Fit', 'Fitbit', 'Garmin', 'Samsung Health',
       'Zoom', 'Microsoft Teams', 'WebRTC', 'Twilio'
@@ -687,7 +687,7 @@ export const microSaasServices: MicroSaasService[] = [
     whiteLabel: true;
     support: '24/7 Medical Support',
     setupTime: '60 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],
       frameworks: ['FastAPI', 'React Native', 'TensorFlow', 'PyTorch', 'OpenCV'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Encrypted storage'],
@@ -710,7 +710,7 @@ export const microSaasServices: MicroSaasService[] = [
     icon: '🛒',
     price: '$119/month',
     originalPrice: '$199/month',
-    features: [,
+    features: [
       'AI-powered product recommendations',
       'Dynamic pricing optimization',
       'Inventory management and forecasting',
@@ -720,7 +720,7 @@ export const microSaasServices: MicroSaasService[] = [
       'A/B testing and optimization',
       'Revenue analytics and reporting'
     ],
-    benefits: [,
+    benefits: [
       '35% increase in conversion rates',
       '25% boost in average order value',
       '40% reduction in inventory costs',
@@ -735,7 +735,7 @@ export const microSaasServices: MicroSaasService[] = [
     users: '22,000+',
     freeTrial: '14 days',
     marketPrice: '$199-599/month',
-    capabilities: [,
+    capabilities: [
       'Recommendation Engine',
       'Price Optimization algorithms',
       'Demand Forecasting',
@@ -743,7 +743,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Behavioral Analytics',
       'Real-time Personalization'
     ],
-    useCases: [,
+    useCases: [
       'Online retail optimization',
       'Marketplace management',
       'Subscription box services',
@@ -751,7 +751,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Mobile commerce',
       'Cross-platform selling'
     ],
-    integrations: [,
+    integrations: [
       'Shopify', 'WooCommerce', 'Magento', 'BigCommerce', 'Amazon',
       'eBay', 'Etsy', 'Facebook Shop', 'Instagram Shopping',
       'Google Shopping', 'PayPal', 'Stripe', 'Square'
@@ -761,7 +761,7 @@ export const microSaasServices: MicroSaasService[] = [
     whiteLabel: true;
     support: '24/7 Support',
     setupTime: '30 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],
       frameworks: ['Django', 'React', 'FastAPI', 'TensorFlow', 'PyTorch'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
@@ -784,7 +784,7 @@ export const microSaasServices: MicroSaasService[] = [
     icon: '🎓',
     price: '$89/month',
     originalPrice: '$149/month',
-    features: [,
+    features: [
       'Personalized learning paths and curriculum',
       'AI-powered intelligent tutoring system',
       'Automated assessment and grading',
@@ -794,7 +794,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Interactive content creation tools',
       'Virtual classroom and collaboration features'
     ],
-    benefits: [,
+    benefits: [
       '50% improvement in learning outcomes',
       '40% reduction in learning time',
       '70% increase in student engagement',
@@ -809,7 +809,7 @@ export const microSaasServices: MicroSaasService[] = [
     users: '28,000+',
     freeTrial: '21 days',
     marketPrice: '$149-399/month',
-    capabilities: [,
+    capabilities: [
       'Adaptive Learning algorithms',
       'Natural Language Processing for content',
       'Computer Vision for assessment',
@@ -817,7 +817,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Personalization Engine',
       'Real-time feedback systems'
     ],
-    useCases: [,
+    useCases: [
       'K-12 education',
       'Higher education',
       'Corporate training',
@@ -825,7 +825,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Professional certification',
       'Skills development'
     ],
-    integrations: [,
+    integrations: [
       'Google Classroom', 'Microsoft Teams', 'Canvas', 'Blackboard', 'Moodle',
       'Zoom', 'WebEx', 'Slack', 'Discord', 'YouTube', 'Vimeo',
       'Google Drive', 'OneDrive', 'Dropbox', 'Box'
@@ -835,7 +835,7 @@ export const microSaasServices: MicroSaasService[] = [
     whiteLabel: true;
     support: 'Educational Support',
     setupTime: '45 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],
       frameworks: ['Django', 'React', 'FastAPI', 'TensorFlow', 'PyTorch'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
@@ -868,17 +868,17 @@ export const serviceCategories = [
 
 // Pricing tiers for comparison;
 export const pricingTiers = {
-  starter: {,
+  starter: {
     name: 'Starter',
     price: '$29-99/month',
     features: ['Basic AI features', 'Standard support', 'Limited integrations', 'Basic analytics']
   },
-  professional: {,
+  professional: {
     name: 'Professional',
     price: '$99-299/month',
     features: ['Advanced AI features', 'Priority support', 'Full integrations', 'Advanced analytics', 'API access']
   },
-  enterprise: {,
+  enterprise: {
     name: 'Enterprise',
     price: '$299-999/month',
     features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees']
@@ -892,5 +892,4 @@ export const contactInfo = {
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',
   hours: '24/7 Support Available',
-  timezone: 'EST (Eastern Standard Time)',
-};
+  timezone: 'EST (Eastern Standard Time)'};

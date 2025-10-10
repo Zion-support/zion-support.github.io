@@ -11,9 +11,9 @@ interface BreadcrumbItem {
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
   
-  const generateBreadcrumbs = (): BreadcrumbItem[] => {,
+  const generateBreadcrumbs = (): BreadcrumbItem[] => {
     const pathSegments = location.pathname.split('/').filter(Boolean);
-    const breadcrumbs: BreadcrumbItem[] = [,
+    const breadcrumbs: BreadcrumbItem[] = [
       { name: 'Home', href: '/' }
     ];
 
@@ -56,18 +56,11 @@ const Breadcrumb: React.FC = () => {
     }))
   };
 
-<<<<<<< HEAD
-  return(<>)
-      <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3">)
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,)
-          <ol className="flex items-center space-x-2 text-sm">),
-=======
   return (
     <>
-      <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3">
+      <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3"></nav>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <ol className="flex items-center space-x-2 text-sm">
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
+          <ol className="flex items-center space-x-2 text-sm"></ol>
             {breadcrumbs.map((item, index) => (
               <li key={item.href} className="flex items-center"></li>
                 {index > 0 && (

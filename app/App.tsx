@@ -118,19 +118,14 @@ const App: React.FC = () => {
     <ErrorBoundary>
       <HelmetProvider>
         <AnalyticsProvider>
-          <PerformanceOptimizer>
-            <AccessibilityEnhancer>
-              <EnhancedAccessibility>
-                <AppWithPerformanceMonitoring />
-              </EnhancedAccessibility>
-            </AccessibilityEnhancer>
-          </PerformanceOptimizer>
+          <AppWithPerformanceMonitoring />
+          <PerformanceOptimizer />
+          <AccessibilityEnhancer />
+          <EnhancedAccessibility />
         </AnalyticsProvider>
       </HelmetProvider>
     </ErrorBoundary>
   );
 };
-
-App.displayName = 'App';
 
 export default App;

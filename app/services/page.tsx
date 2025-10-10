@@ -80,7 +80,7 @@ const ServicesPage = () => {
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth 
-                and digital transformation.
+                and digital transformation journey.
               </p>
             </div>
           </div>
@@ -91,30 +91,24 @@ const ServicesPage = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div key={index} className="group bg-gray-800 rounded-xl p-8 hover:bg-gray-700 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl">
-                  <div className="flex items-center mb-6">
-                    <div className="p-3 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/30 transition-colors">
-                      <service.icon className="w-8 h-8 text-cyan-400" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white ml-4">{service.title}</h3>
+                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
+                    <h3 className="text-xl font-semibold text-white">{service.title}</h3>
                   </div>
-                  
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <ul className="space-y-2 mb-4">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-
                   <div className="text-cyan-400 font-semibold mb-4">{service.price}</div>
-                  
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:transform group-hover:scale-105">
-                    Get Started
-                    <ArrowRight className="inline-block ml-2 group-hover:translate-x-1 transition-transform" />
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white py-2 px-4 rounded-lg transition-all duration-300 flex items-center justify-center">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2" />
                   </button>
                 </div>
               ))}
@@ -124,20 +118,19 @@ const ServicesPage = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our services can help you achieve your business goals. 
-              Contact us today for a free consultation.
+            <p className="text-xl text-gray-300 mb-8">
+              Contact our team to discuss your project requirements and get a customized solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Get Free Consultation
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Contact Us
               </button>
-              <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                View Portfolio
+              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Schedule Demo
               </button>
             </div>
           </div>

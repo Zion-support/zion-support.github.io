@@ -1,31 +1,4 @@
 /**
-<<<<<<< HEAD
- * Accessibility utilities and helpers;
- */
-
-export interface AccessibilityConfig {}
-  enableAnnouncements?: boolean;
-  enableFocusManagement?: boolean;
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  announceDelay?: number;
-}
-
-export class AccessibilityManager {}
-  private config: AccessibilityConfig;
-  private liveRegion: HTMLElement | null = null;
-  private focusHistory: HTMLElement[] = [];
-<<<<<<< HEAD
-,
-  constructor(config: AccessibilityConfig = {}) {
-    this.config = {
-      enableAnnouncements: true;
-      enableFocusManagement: true;
-      enableKeyboardNavigation: true;
-      enableScreenReaderSupport: true;
-      announceDelay: 100;
-      ...config;
-=======
 
   constructor(config: AccessibilityConfig = {}) {}
     this.config = {}
@@ -35,8 +8,6 @@ export class AccessibilityManager {}
       enableScreenReaderSupport: true,
       announceDelay: 100,
       ...config
->>>>>>> origin/merge-error-fixes
-=======
  * Accessibility Utilities;
  * WCAG 2.1 Level AA compliance helpers;
  */
@@ -50,56 +21,19 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
   e: boolean };
   } {/* TODO: Fix JSX expression */}
       }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
 
     this.initialize();
   }
-<<<<<<< HEAD
-
-  private initialize(): void {}
-    if (this.config.enableAnnouncements && typeof document !== 'undefined') {}
-      this.createLiveRegion();
-    }
-  }
-
-  private createLiveRegion(): void {}
-    this.liveRegion = document.createElement('div');
-    this.liveRegion.setAttribute('aria-live', 'polite');
-    this.liveRegion.setAttribute('aria-atomic', 'true');
-    this.liveRegion.className = 'sr-only';
-    this.liveRegion.style.cssText = `
-      position: absolute;
-      left: -10000 px;
-      width: 1 px;
-      height: 1 px;
-      overflow: hidden;
-    `;
-    document.body.appendChild(this.liveRegion);
-  }
-
-  /**
-   * Announce message to screen readers;
-   */
-<<<<<<< HEAD
-  announce(message: string, priority: 'polite' | 'assertive' = 'polite'): void {,
-=======
   announce(message: string, priority: 'polite' | 'assertive' = 'polite'): void {}
->>>>>>> origin/merge-error-fixes
     if (!this.liveRegion || !this.config.enableAnnouncements) return;
 ,
     this.liveRegion.setAttribute('aria-live', priority);
     this.liveRegion.textContent = message;
 
-<<<<<<< HEAD
-    // Clear after announcement;
-    setTimeout(() => {
-      if (this.liveRegion) {
-=======
     // Clear after announcement
     setTimeout(() => {}
       if (this.liveRegion) {}
->>>>>>> origin/merge-error-fixes
         this.liveRegion.textContent = '';
       }
     }, this.config.announceDelay);
@@ -143,17 +77,10 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
     const firstElement = focusableElements[0];
     const lastElement = focusableElements[focusableElements.length - 1];
 
-<<<<<<< HEAD
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
-        if (e.shiftKey) {
-          if (document.activeElement === firstElement) {,
-=======
     const handleKeyDown = (e: KeyboardEvent) => {}
       if (e.key === 'Tab') {}
         if (e.shiftKey) {}
           if (document.activeElement === firstElement) {}
->>>>>>> origin/merge-error-fixes
             lastElement.focus();
             e.preventDefault();
           }
@@ -164,8 +91,7 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
           }
         }
       }
-=======
-  private hexToRgb(he,)
+  private hexToRgb(he)
   x: string): { r: number; g: number; b: number } {/* TODO: Fix JSX expression */}
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result;
@@ -173,7 +99,7 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
         }
       : { r: 0, g: 0, b: 0 };
   }
-  private getLuminance(rg,)
+  private getLuminance(rg)
   b: { r: number; g: number; b: number }): number {/* TODO: Fix JSX expression */}
     });
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
@@ -255,14 +181,14 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
   }
   // Announce screen reader messages;
   public announce(messag,
-  e: string, priorit,)
+  e: string, priorit)
   y: 'polite' | 'assertive' = 'polite'): void {/* TODO: Fix JSX expression */}
     }, 1000);
   }
   private createAnnouncer(): HTMLElement {/* TODO: Fix JSX expression */}
   }
   // Trap focus within a modal;
-  public trapFocus(elemen,)
+  public trapFocus(elemen)
   t: HTMLElement): () => void {/* TODO: Fix JSX expression */}
         } else if (!e.shiftKey && document.activeElement === lastElement) {/* TODO: Fix JSX expression */}
         }
@@ -273,24 +199,13 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
     element.addEventListener('keydown', handleTabKey);
     // Return cleanup function;
     return () => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
 
     container.addEventListener('keydown', handleKeyDown);
     firstElement.focus();
   }
-<<<<<<< HEAD
-
-  /**
-   * Get all focusable elements within container;
-   */
-<<<<<<< HEAD
-  private getFocusableElements(container: HTMLElement): HTMLElement[] {
-    const focusableSelectors = [,
-=======
   private getFocusableElements(container: HTMLElement): HTMLElement[] {}
     const focusableSelectors = [
->>>>>>> origin/merge-error-fixes
       'button:not([disabled])',
       'input: not([disabled])',
       'select: not([disabled])',
@@ -305,19 +220,11 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
   /**
    * Add keyboard navigation to element;
    */
-<<<<<<< HEAD
-  addKeyboardNavigation(element: HTMLElement): void {,
-    if (!this.config.enableKeyboardNavigation) return;
-,
-    element.addEventListener('keydown', (e) => {
-      switch (e.key) {
-=======
   addKeyboardNavigation(element: HTMLElement): void {}
     if (!this.config.enableKeyboardNavigation) return;
 
     element.addEventListener('keydown', (e) => {}
       switch (e.key) {}
->>>>>>> origin/merge-error-fixes
         case 'Enter':
         case ' ':
           e.preventDefault();
@@ -333,13 +240,8 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
   /**
    * Enhance button accessibility;
    */
-<<<<<<< HEAD
-  enhanceButton(button: HTMLButtonElement): void {,
-    if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {,
-=======
   enhanceButton(button: HTMLButtonElement): void {}
     if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {}
->>>>>>> origin/merge-error-fixes
       button.setAttribute('aria-label', 'Button');
     }
 
@@ -349,11 +251,7 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
   /**
    * Enhance form field accessibility;
    */
-<<<<<<< HEAD
-  enhanceFormField(field: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement): void {,
-=======
   enhanceFormField(field: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement): void {}
->>>>>>> origin/merge-error-fixes
     const label = document.querySelector(`label[for="${field.id}"]`);
 
     if (!label && !field.getAttribute('aria-label')) {}
@@ -368,11 +266,7 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
   /**
    * Create accessible modal;
    */
-<<<<<<< HEAD
-  createAccessibleModal(modal: HTMLElement): void {,
-=======
   createAccessibleModal(modal: HTMLElement): void {}
->>>>>>> origin/merge-error-fixes
     modal.setAttribute('role', 'dialog');
     modal.setAttribute('aria-modal', 'true');
 
@@ -397,19 +291,11 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
   /**
    * Get accessible name for element;
    */
-<<<<<<< HEAD
-  getAccessibleName(element: HTMLElement): string {
-    return element.getAttribute('aria-label') ||,
-           element.getAttribute('aria-labelledby') ||,
-           element.textContent?.trim() ||,
-           element.getAttribute('title') ||,
-=======
   getAccessibleName(element: HTMLElement): string {}
     return element.getAttribute('aria-label') ||
            element.getAttribute('aria-labelledby') ||
            element.textContent?.trim() ||
            element.getAttribute('title') ||
->>>>>>> origin/merge-error-fixes
            '';
   }
 
@@ -420,19 +306,11 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
     const tabIndex = element.getAttribute('tabindex');
     if (tabIndex === '-1') return false;
 
-<<<<<<< HEAD
-    if(element instanceof HTMLButtonElement ||)
-        element instanceof HTMLInputElement ||)
-        element instanceof HTMLSelectElement ||)
-        element instanceof HTMLTextAreaElement ||),
-        element instanceof HTMLAnchorElement) {,
-=======
     if (element instanceof HTMLButtonElement ||
         element instanceof HTMLInputElement ||
         element instanceof HTMLSelectElement ||
         element instanceof HTMLTextAreaElement ||
         element instanceof HTMLAnchorElement) {}
->>>>>>> origin/merge-error-fixes
       return !element.disabled;
     }
 
@@ -451,21 +329,12 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
   }
 }
 
-<<<<<<< HEAD
-// Utility functions;
-export const accessibilityUtils = {
-=======
 // Utility functions
 export const accessibilityUtils = {}
->>>>>>> origin/merge-error-fixes
   /**
    * Create skip link;
    */
-<<<<<<< HEAD
-  createSkipLink(text: string = 'Skip to main content', target: string = 'main'): HTMLElement {,
-=======
   createSkipLink(text: string = 'Skip to main content', target: string = 'main'): HTMLElement {}
->>>>>>> origin/merge-error-fixes
     const skipLink = document.createElement('a');
     skipLink.href = `#${target}`;
     skipLink.textContent = text;
@@ -481,13 +350,8 @@ export const accessibilityUtils = {}
       z-index: 1000;
       transition: top 0.3 s;
     `;
-<<<<<<< HEAD
-,
-    skipLink.addEventListener('focus', () => {
-=======
 
     skipLink.addEventListener('focus', () => {}
->>>>>>> origin/merge-error-fixes
       skipLink.style.top = '6px';
 
     skipLink.addEventListener('blur', () => {}
@@ -508,22 +372,15 @@ export const accessibilityUtils = {}
   /**
    * Remove ARIA attributes from element;
    */
-<<<<<<< HEAD
-  removeAriaAttributes(element: HTMLElement, attributes: string[]): void {,
-    attributes.forEach(attr => {,)
-=======
   removeAriaAttributes(element: HTMLElement, attributes: string[]): void {}
     attributes.forEach(attr => {)}
->>>>>>> origin/merge-error-fixes
       element.removeAttribute(attr);
-,
-  }
+}
 };
 
 export default AccessibilityManager;
-=======
   // Check if element is visible to screen readers;
-  public isAccessible(elemen,)
+  public isAccessible(elemen)
   t: HTMLElement): boolean {/* TODO: Fix JSX expression */}
   }
 }
@@ -531,4 +388,3 @@ export default AccessibilityManager;
 const a11y = new AccessibilityService();
 export default a11y;
 "`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

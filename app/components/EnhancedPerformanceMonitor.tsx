@@ -11,7 +11,7 @@ interface PerformanceMetrics {
   TTFB: number | null;
 }
 
-const EnhancedPerformanceMonitor: React.FC = () => {,
+const EnhancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     CLS: null;
     FID: null;
@@ -46,8 +46,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {,
 
     // Monitor performance in development;
     if (process.env.NODE_ENV === 'development') {
-      const handleKeyPress = (e: KeyboardEvent) => {,
-        if (e.ctrlKey && e.shiftKey && e.key === 'P') {,
+      const handleKeyPress = (e: KeyboardEvent) => {
+        if (e.ctrlKey && e.shiftKey && e.key === 'P') {
           setIsVisible(prev => !prev);
         }
       };
@@ -73,23 +73,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {,
     return null;
   }
 
-<<<<<<< HEAD
-  return (
-    <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 shadow-lg z-50 max-w-sm"></div>
-      <div className="flex items-center justify-between mb-3"></div>
-        <h3 className="text-white font-semibold text-sm">Performance Monitor</h3><button
-          onClick={() =>setIsVisible(false)}
-          className="text-gray-400 hover:text-white text-xs"
-        ></button>
-          ✕</button>
-        </button>
-      </div>
-      
-<<<<<<< HEAD
-      <div className="space-y-2 text-xs">
-        <div className="flex justify-between items-center">
-          <span className="text-gray-300">CLS:<span className={getScoreColor(metrics.CLS, { good: 0.1, needsImprovement: 0.25 })}>{metrics.CLS ? metrics.CLS.toFixed(3) : '...'} ({getScoreText(metrics.CLS, { good: 0.1, needsImprovement: 0.25 })})</span>
-=======
   return(<div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 shadow-lg z-50 max-w-sm">)
       <div className="flex items-center justify-between mb-3">)
         <h3 className="text-white font-semibold text-sm">Performance Monitor</h3>)
@@ -104,54 +87,36 @@ const EnhancedPerformanceMonitor: React.FC = () => {,
       <div className="space-y-2 text-xs">,
         <div className="flex justify-between items-center">,
           <span className="text-gray-300">CLS:</span>,
-          <span className={getScoreColor(metrics.CLS, { good: 0.1, needsImprovement: 0.25 })}>
+          <span className={getScoreColor(metrics.CLS, { good: 0.1, needsImprovement: 0.25 })}></span>
             {metrics.CLS ? metrics.CLS.toFixed(3) : '...'} ({getScoreText(metrics.CLS, { good: 0.1, needsImprovement: 0.25 })})
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </span>
         </div>
         
-        <div className="flex justify-between items-center">
-<<<<<<< HEAD
-          <span className="text-gray-300">FID:<span className={getScoreColor(metrics.FID, { good: 100, needsImprovement: 300 })}>{metrics.FID ? `${metrics.FID.toFixed(0)}ms` : '...'} ({getScoreText(metrics.FID, { good: 100, needsImprovement: 300 })})</span>
-=======
+        <div className="flex justify-between items-center"></div>
           <span className="text-gray-300">FID: </span>,
-          <span className={getScoreColor(metrics.FID, { good: 100, needsImprovement: 300 })}>
+          <span className={getScoreColor(metrics.FID, { good: 100, needsImprovement: 300 })}></span>
             {metrics.FID ? `${metrics.FID.toFixed(0)}ms` : '...'} ({getScoreText(metrics.FID, { good: 100, needsImprovement: 300 })})
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </span>
         </div>
         
-        <div className="flex justify-between items-center">
-<<<<<<< HEAD
-          <span className="text-gray-300">FCP:<span className={getScoreColor(metrics.FCP, { good: 1800, needsImprovement: 3000 })}>{metrics.FCP ? `${metrics.FCP.toFixed(0)}ms` : '...'} ({getScoreText(metrics.FCP, { good: 1800, needsImprovement: 3000 })})</span>
-=======
+        <div className="flex justify-between items-center"></div>
           <span className="text-gray-300">FCP: </span>,
-          <span className={getScoreColor(metrics.FCP, { good: 1800, needsImprovement: 3000 })}>
+          <span className={getScoreColor(metrics.FCP, { good: 1800, needsImprovement: 3000 })}></span>
             {metrics.FCP ? `${metrics.FCP.toFixed(0)}ms` : '...'} ({getScoreText(metrics.FCP, { good: 1800, needsImprovement: 3000 })})
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </span>
         </div>
         
-        <div className="flex justify-between items-center">
-<<<<<<< HEAD
-          <span className="text-gray-300">LCP:<span className={getScoreColor(metrics.LCP, { good: 2500, needsImprovement: 4000 })}>{metrics.LCP ? `${metrics.LCP.toFixed(0)}ms` : '...'} ({getScoreText(metrics.LCP, { good: 2500, needsImprovement: 4000 })})</span>
-=======
+        <div className="flex justify-between items-center"></div>
           <span className="text-gray-300">LCP: </span>,
-          <span className={getScoreColor(metrics.LCP, { good: 2500, needsImprovement: 4000 })}>
+          <span className={getScoreColor(metrics.LCP, { good: 2500, needsImprovement: 4000 })}></span>
             {metrics.LCP ? `${metrics.LCP.toFixed(0)}ms` : '...'} ({getScoreText(metrics.LCP, { good: 2500, needsImprovement: 4000 })})
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </span>
         </div>
         
-        <div className="flex justify-between items-center">
-<<<<<<< HEAD
-          <span className="text-gray-300">TTFB:<span className={getScoreColor(metrics.TTFB, { good: 800, needsImprovement: 1800 })}>{metrics.TTFB ? `${metrics.TTFB.toFixed(0)}ms` : '...'} ({getScoreText(metrics.TTFB, { good: 800, needsImprovement: 1800 })})</span>
-=======
+        <div className="flex justify-between items-center"></div>
           <span className="text-gray-300">TTFB: </span>,
-          <span className={getScoreColor(metrics.TTFB, { good: 800, needsImprovement: 1800 })}>
+          <span className={getScoreColor(metrics.TTFB, { good: 800, needsImprovement: 1800 })}></span>
             {metrics.TTFB ? `${metrics.TTFB.toFixed(0)}ms` : '...'} ({getScoreText(metrics.TTFB, { good: 800, needsImprovement: 1800 })})
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
       <div className="space-y-2 text-xs"></div>
         <div className="flex justify-between items-center"></div>
           <span className="text-gray-300">CLS:</span><span className={getScoreColor(metrics.CLS, { good: 0.1, needsImprovement: 0.25 })}>{metrics.CLS ? metrics.CLS.toFixed(3) : '...'} ({getScoreText(metrics.CLS, { good: 0.1, needsImprovement: 0.25 })})</span>
@@ -175,22 +140,14 @@ const EnhancedPerformanceMonitor: React.FC = () => {,
         
         <div className="flex justify-between items-center"></div>
           <span className="text-gray-300">TTFB:</span><span className={getScoreColor(metrics.TTFB, { good: 800, needsImprovement: 1800 })}>{metrics.TTFB ? `${metrics.TTFB.toFixed(0)}ms` : '...'} ({getScoreText(metrics.TTFB, { good: 800, needsImprovement: 1800 })})</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           </span>
         </div>
       </div>
       
-<<<<<<< HEAD
-      <div className="mt-3 pt-2 border-t border-gray-700">
-<<<<<<< HEAD
-=======
       <div className="mt-3 pt-2 border-t border-gray-700"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <p className="text-xs text-gray-400">Press Ctrl+Shift+P to toggle</p>
-=======
-        <p className="text-xs text-gray-400">
+        <p className="text-xs text-gray-400"></p>
           Press Ctrl+Shift+P to toggle;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
         </p>
       </div>
     </div>

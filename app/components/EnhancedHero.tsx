@@ -1,16 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-<<<<<<< HEAD
-interface HeroStats {
-  clients: number;,
-    savings: string;
-  uptime: string;,
-    support: string;
-}
-
-const EnhancedHero: React.FC = () => {,
-=======
 interface HeroStats {}
   clients: number;
   savings: string;
@@ -19,11 +9,10 @@ interface HeroStats {}
 }
 
 const EnhancedHero: React.FC = () => {}
->>>>>>> origin/merge-error-fixes
   const [currentStat, setCurrentStat] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
-  const stats: HeroStats[] = [,
+  const stats: HeroStats[] = [
     { clients: 500, savings: '$2.5B+', uptime: '99.9%', support: '24/7' },
     { clients: 750, savings: '$3.2B+', uptime: '99.95%', support: '24/7' },
     { clients: 1000, savings: '$4.1B+', uptime: '99.99%', support: '24/7' }
@@ -37,89 +26,48 @@ const EnhancedHero: React.FC = () => {}
     return () => clearInterval(interval);
   }, [stats.length]);
 
-<<<<<<< HEAD
-  const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-<<<<<<< HEAD
-      (window as any).gtag('event', 'phone_click', {
-        event_category: 'engagement',)
-    event_label: 'main_phone_number',
-=======
   const handlePhoneClick = useCallback(() => {}
     if (typeof window !== 'undefined' && 'gtag' in window) {}
       (window as any).gtag('event', 'phone_click', {)}
         event_category: 'engagement',
         event_label: 'main_phone_number',
->>>>>>> origin/merge-error-fixes
 
-=======
       (window as any).gtag('event', 'phone_click', {)
         event_category: 'engagement'),
-        event_label: 'main_phone_number'),
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-    }
+        event_label: 'main_phone_number')}
   }, []);
 
   const containerVariants = {}
     hidden: { opacity: 0, y: 50 },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    visible: {,
-    opacity: 1,
-      y: 0,
-      transition: {,
-    duration: 0.8,
-=======
     visible: {}
       opacity: 1,
       y: 0,
       transition: {}
         duration: 0.8,
->>>>>>> origin/merge-error-fixes
         staggerChildren: 0.2
-=======
     visible: {
       opacity: 1;
       y: 0;
-      transition: {,
+      transition: {
         duration: 0.8;
         staggerChildren: 0.2;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       }
     }
   };
 
   const itemVariants = {}
     hidden: { opacity: 0, y: 30 },
-<<<<<<< HEAD
-    visible: {,
-<<<<<<< HEAD
-    opacity: 1,
-=======
     visible: {}
       opacity: 1,
->>>>>>> origin/merge-error-fixes
       y: 0,
-=======
       opacity: 1;
       y: 0;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       transition: { duration: 0.6 }
     }
   };
 
   const statVariants = {}
     hidden: { opacity: 0, scale: 0.8 },
-<<<<<<< HEAD
-    visible: {,
-<<<<<<< HEAD
-    opacity: 1,
-      scale: 1,
-      transition: { duration: 0.5 }
-    },
-    exit: {,
-    opacity: 0,
-=======
     visible: {}
       opacity: 1,
       scale: 1,
@@ -127,17 +75,14 @@ const EnhancedHero: React.FC = () => {}
     },
     exit: {}
       opacity: 0,
->>>>>>> origin/merge-error-fixes
       scale: 0.8,
-=======
       opacity: 1;
       scale: 1;
       transition: { duration: 0.5 }
     },
-    exit: {,
+    exit: {
       opacity: 0;
       scale: 0.8;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       transition: { duration: 0.3 }
     }
   };
@@ -148,47 +93,20 @@ const EnhancedHero: React.FC = () => {}
       animate={isVisible ? "visible" : "hidden"}
       variants={containerVariants}
     >{/* Animated Background */}</motion>
-<<<<<<< HEAD
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-        <div className="absolute inset-0 cyber-grid opacity-20"><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">{/* Floating Elements */}</div>
-=======
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <div className="absolute inset-0 cyber-grid opacity-20"></div><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">{/* Floating Elements */}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         </div><motion.div
-=======
         <div className="absolute inset-0 cyber-grid opacity-20"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
 
         {/* Floating Elements */}
         <motion.div;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           className="absolute top-20 left-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl"
           animate={{}
             y: [0, -20, 0],
-            x: [0, 10, 0],}
+            x: [0, 10, 0]}
             scale: [1, 1.1, 1]}
           }}
-<<<<<<< HEAD
-          transition={{
-            duration: 4;
-            repeat: Infinity;}
-            ease: "easeInOut"}
-          }}
-        />
-        <motion.div;
-          className="absolute bottom-20 right-20 w-24 h-24 bg-purple-500/20 rounded-full blur-xl")
-          animate={{)
-            y: [0, 20, 0],)
-            x: [0, -10, 0])}
-            scale: [1, 0.9, 1]}
-          }}
-          transition={{
-            duration: 3),
-            repeat: Infinity),}
-            ease: "easeInOut"}
-=======
           transition={{}
             duration: 4,
             repeat: Infinity,
@@ -206,45 +124,28 @@ const EnhancedHero: React.FC = () => {}
             duration: 3,
             repeat: Infinity,
             ease: "easeInOut"
->>>>>>> origin/merge-error-fixes
           }}
         /></motio>
       </div>
 
-<<<<<<< HEAD
-      <div className="relative z-10 container mx-auto px-4 py-16 pt-24">
-        <motion.div;
-=======
       <div className="relative z-10 container mx-auto px-4 py-16 pt-24"></div>
         <motion.div
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           className="text-center max-w-6xl mx-auto"
           variants={itemVariants}
-<<<<<<< HEAD
-        >{/* Main Heading */}<motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text"
-            variants={itemVariants}
-          >Zion Tech Group</motion>
-=======
-        >
+        ></motion>
           {/* Main Heading */}
           <motion.h1;
             className="text-4xl sm: text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text",
             variants={itemVariants}
-          >
+          ></motion>
             Zion Tech Group;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </motion.h1>
 
           <motion.p;
             className="text-lg sm: text-xl md:text-2xl text-cyan-400 mb-8 font-medium",
             variants={itemVariants}
-<<<<<<< HEAD
-          >Advanced AI and IT Solutions</motion>
-=======
-          >
+          ></motion>
             Advanced AI and IT Solutions;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </motion.p>
 
           <motion.p;
@@ -257,8 +158,8 @@ const EnhancedHero: React.FC = () => {}
           <motion.div;
             className="grid grid-cols-2 sm: grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto mb-12",
             variants={itemVariants}
-          >
-            <AnimatePresence mode="wait">
+          ></motion>
+            <AnimatePresence mode="wait"></AnimatePresence>
               <motion.div;
                 key={currentStat}
                 className="cyber-card hologram-card p-4 sm: p-6 text-center",
@@ -266,19 +167,13 @@ const EnhancedHero: React.FC = () => {}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-              >
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-2">{stats[currentStat].clients}+<div className="text-gray-300 text-sm sm:text-base">Enterprise Clients</div>
-=======
+              ></motion>
                 <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-2">{stats[currentStat].clients}+</div><div className="text-gray-300 text-sm sm:text-base">Enterprise Clients</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </motion.div>
             </AnimatePresence>
 
             <AnimatePresence mode="wait"></AnimatePresenc>
               <motion.div
-=======
                 <div className="text-2xl sm: text-3xl font-bold text-cyan-400 mb-2">,
                   {stats[currentStat].clients}+
                 </div>
@@ -288,26 +183,19 @@ const EnhancedHero: React.FC = () => {}
 ,
             <AnimatePresence mode="wait">,
               <motion.div;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 key={`savings-${currentStat}`}
                 className="cyber-card hologram-card p-4 sm: p-6 text-center",
                 variants={statVariants}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-              >
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-2">{stats[currentStat].savings}<div className="text-gray-300 text-sm sm:text-base">Cost Savings</div>
-=======
+              ></motion>
                 <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-2">{stats[currentStat].savings}</div><div className="text-gray-300 text-sm sm:text-base">Cost Savings</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </motion.div>
             </AnimatePresence>
 
             <AnimatePresence mode="wait"></AnimatePresenc>
               <motion.div
-=======
                 <div className="text-2xl sm: text-3xl font-bold text-green-400 mb-2">,
                   {stats[currentStat].savings}
                 </div>
@@ -317,26 +205,19 @@ const EnhancedHero: React.FC = () => {}
 ,
             <AnimatePresence mode="wait">,
               <motion.div;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 key={`uptime-${currentStat}`}
                 className="cyber-card hologram-card p-4 sm: p-6 text-center",
                 variants={statVariants}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-              >
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div className="text-2xl sm:text-3xl font-bold text-purple-400 mb-2">{stats[currentStat].uptime}<div className="text-gray-300 text-sm sm:text-base">Uptime</div>
-=======
+              ></motion>
                 <div className="text-2xl sm:text-3xl font-bold text-purple-400 mb-2">{stats[currentStat].uptime}</div><div className="text-gray-300 text-sm sm:text-base">Uptime</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </motion.div>
             </AnimatePresence>
 
             <AnimatePresence mode="wait"></AnimatePresenc>
               <motion.div
-=======
                 <div className="text-2xl sm: text-3xl font-bold text-purple-400 mb-2">,
                   {stats[currentStat].uptime}
                 </div>
@@ -346,25 +227,18 @@ const EnhancedHero: React.FC = () => {}
 ,
             <AnimatePresence mode="wait">,
               <motion.div;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 key={`support-${currentStat}`}
                 className="cyber-card hologram-card p-4 sm: p-6 text-center",
                 variants={statVariants}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-              >
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-2">{stats[currentStat].support}<div className="text-gray-300 text-sm sm:text-base">Support</div>
-=======
+              ></motion>
                 <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-2">{stats[currentStat].support}</div><div className="text-gray-300 text-sm sm:text-base">Support</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </motion.div>
             </AnimatePresence>
           </motion.div>
 
-=======
                 <div className="text-2xl sm: text-3xl font-bold text-orange-400 mb-2">,
                   {stats[currentStat].support}
                 </div>
@@ -373,24 +247,19 @@ const EnhancedHero: React.FC = () => {}
             </AnimatePresence>,
           </motion.div>,
 ,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           {/* CTA Buttons */}
           <motion.div;
             className="flex flex-col sm: flex-row gap-4 justify-center items-center",
             variants={itemVariants}
-          >
+          ></motion>
             <motion.a;
               href="tel: +13024640950",
               onClick={handlePhoneClick}
               className="cyber-button w-full sm: w-auto text-center",
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-            >📞 Call Now: (302) 464-0950</motion>
-=======
-            >
+            ></motion>
               📞 Call Now: (302) 464-0950;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </motion.a>
 
             <motion.a;
@@ -399,12 +268,8 @@ const EnhancedHero: React.FC = () => {}
               style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-            >Get Free Consultation</motion>
-=======
-            >
+            ></motion>
               Get Free Consultation;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </motion.a>
           </motion.div>
 
@@ -412,7 +277,7 @@ const EnhancedHero: React.FC = () => {}
           <motion.div;
             className="mt-16 flex flex-wrap justify-center items-center gap-8 opacity-60"
             variants={itemVariants}
-          >
+          ></motion>
             <div className="text-gray-400 text-sm">Trusted by Fortune 500 Companies</div><div className="text-gray-400 text-sm">•</div>
             <div className="text-gray-400 text-sm">SOC 2 Compliant</div><div className="text-gray-400 text-sm">•</div><div className="text-gray-400 text-sm">ISO 27001 Certified</div>
           </motion.div>
@@ -424,14 +289,9 @@ const EnhancedHero: React.FC = () => {}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-      >
-<<<<<<< HEAD
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <motion.div;
-=======
+      ></motion>
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"></div>
           <motion.div
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             className="w-1 h-3 bg-white/60 rounded-full mt-2"
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}

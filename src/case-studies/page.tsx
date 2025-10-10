@@ -1,89 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const CaseStudiesPage: React.FC = () => {
-  const _caseStudies = [
-    {
-      id: 1,
-      title: 'E-commerce Platform Transformation',
-      company: 'TechRetail Inc.',
-      industry: 'E-commerce',
-      challenge: 'Low conversion rates and high customer acquisition costs',
-      solution: 'AI-powered personalization and dynamic pricing optimization',
-      results: {
-        roi: '340%',
-        conversion: '+85%',
-        costReduction: '-65%',
-        revenue:       ,
-$4},
-      image: '🛒',
-      description:     ,
-$4},
-    {
-      id: 2,
-      title: 'Financial Services Automation',
-      company: 'FinTech Solutions',
-      industry: 'Financial Services',
-      challenge: 'Manual processes causing delays and errors in loan processing',
-      solution: 'AI-powered document processing and risk assessment automation',
-      results: {
-        roi: '280%',
-        processingTime: '-80%',
-        accuracy: '+95%',
-        costSavings:       ,
-$4},
-      image: '🏦',
-      description:     ,
-$4},
-    {
-      id: 3,
-      title: 'Healthcare Data Analytics',
-      company: 'MedTech Innovations',
-      industry: 'Healthcare',
-      challenge: 'Fragmented patient data and inefficient treatment planning',
-      solution: 'AI-powered data integration and predictive analytics for treatment optimization',
-      results: {
-        roi: '420%',
-        patientOutcomes: '+70%',
-        efficiency: '+90%',
-        costSavings:       ,
-$4},
-      image: '🏥',
-      description:     ,
-$4},
-    {
-      id: 4,
-      title: 'Manufacturing Optimization',
-      company: 'AutoParts Manufacturing',
-      industry: 'Manufacturing',
-      challenge: 'Production inefficiencies and quality control issues',
-      solution: 'AI-powered predictive maintenance and quality control automation',
-      results: {
-        roi: '310%',
-        efficiency: '+75%',
-        defects: '-90%',
-        downtime:       ,
-$4},
-      image: '🏭',
-      description:     ,
-$4}
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Case Studies</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced case studies solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
-        </a>
-      </div>
-    </div>
-  );
-};
-
-export default CaseStudiesPage;
-=======
 'use client';
 import React, { useState } from 'react';
 import { ArrowRight, Filter, Search, Calendar, User, Building, Target, TrendingUp, Award, Star, Eye, MessageCircle, Share2, Download, Play, CheckCircle, Clock, DollarSign, BarChart, Users, Globe, Shield, Zap, Brain, Cloud, Code } from 'lucide-react';
@@ -358,29 +272,29 @@ export default function CaseStudiesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative py-20 lg:py-32 overflow-hidden"></section>
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
+        <div className="container mx-auto px-4 relative z-10"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse"></h1>
               Case Studies
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed"></p>
               Real results from real clients. Discover how we've helped businesses across 
               industries transform their operations with AI and technology solutions.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
+            <div className="flex flex-wrap justify-center gap-4"></div>
+              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"></div>
                 <Award className="w-5 h-5 text-cyan-400" />
                 <span className="text-white font-medium">Proven Results</span>
               </div>
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
+              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"></div>
                 <TrendingUp className="w-5 h-5 text-purple-400" />
                 <span className="text-white font-medium">300% Average ROI</span>
               </div>
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
+              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"></div>
                 <Star className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">Client Success</span>
               </div>
@@ -390,11 +304,11 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Search and Filter */}
-      <section className="py-8">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col lg:flex-row gap-4 mb-8">
-              <div className="flex-1 relative">
+      <section className="py-8"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-6xl mx-auto"></div>
+            <div className="flex flex-col lg:flex-row gap-4 mb-8"></div>
+              <div className="flex-1 relative"></div>
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -404,14 +318,14 @@ export default function CaseStudiesPage() {
                   className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
                 />
               </div>
-              <div className="flex gap-2 overflow-x-auto">
+              <div className="flex gap-2 overflow-x-auto"></div>
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
                   className="px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
                 >
                   {industries.map((industry) => (
-                    <option key={industry.name} value={industry.name}>
+                    <option key={industry.name} value={industry.name}></option>
                       {industry.label} ({industry.count})
                     </option>
                   ))}
@@ -422,7 +336,7 @@ export default function CaseStudiesPage() {
                   className="px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
                 >
                   {services.map((service) => (
-                    <option key={service.name} value={service.name}>
+                    <option key={service.name} value={service.name}></option>
                       {service.label} ({service.count})
                     </option>
                   ))}
@@ -434,37 +348,37 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Case Studies Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <section className="py-20"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
               {filteredCaseStudies.map((study) => (
-                <div key={study.id} className="bg-slate-800/50 rounded-lg overflow-hidden hover:bg-slate-700/50 transition-all duration-300">
-                  <div className="relative">
+                <div key={study.id} className="bg-slate-800/50 rounded-lg overflow-hidden hover:bg-slate-700/50 transition-all duration-300"></div>
+                  <div className="relative"></div>
                     <img
                       src={study.image}
                       alt={study.title}
                       className="w-full h-64 object-cover"
                     />
-                    <div className="absolute top-4 left-4 flex gap-2">
-                      <div className={`w-8 h-8 ${getServiceColor(study.service)}`}>
+                    <div className="absolute top-4 left-4 flex gap-2"></div>
+                      <div className={`w-8 h-8 ${getServiceColor(study.service)}`}></div>
                         {React.createElement(getServiceIcon(study.service), { className: 'w-8 h-8' })}
                       </div>
-                      <div className="w-8 h-8 text-gray-400">
+                      <div className="w-8 h-8 text-gray-400"></div>
                         {React.createElement(getIndustryIcon(study.industry), { className: 'w-8 h-8' })}
                       </div>
                     </div>
                     {study.featured && (
-                      <div className="absolute top-4 right-4">
-                        <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      <div className="absolute top-4 right-4"></div>
+                        <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium"></span>
                           Featured
                         </span>
                       </div>
                     )}
                   </div>
                   
-                  <div className="p-6">
-                    <div className="flex items-center space-x-2 mb-3">
+                  <div className="p-6"></div>
+                    <div className="flex items-center space-x-2 mb-3"></div>
                       <img
                         src={study.logo}
                         alt={study.company}
@@ -478,40 +392,40 @@ export default function CaseStudiesPage() {
                     <h3 className="text-xl font-bold text-white mb-3">{study.title}</h3>
                     <p className="text-gray-300 text-sm mb-4 line-clamp-2">{study.challenge}</p>
                     
-                    <div className="grid grid-cols-2 gap-4 mb-4">
-                      <div className="text-center">
+                    <div className="grid grid-cols-2 gap-4 mb-4"></div>
+                      <div className="text-center"></div>
                         <div className="text-2xl font-bold text-green-400">{study.metrics.roi}</div>
                         <div className="text-xs text-gray-400">ROI</div>
                       </div>
-                      <div className="text-center">
+                      <div className="text-center"></div>
                         <div className="text-2xl font-bold text-cyan-400">{study.duration}</div>
                         <div className="text-xs text-gray-400">Duration</div>
                       </div>
                     </div>
                     
-                    <div className="space-y-2 mb-6">
+                    <div className="space-y-2 mb-6"></div>
                       <h4 className="text-sm font-semibold text-white">Key Results:</h4>
                       {study.results.slice(0, 3).map((result, index) => (
-                        <div key={index} className="flex items-center space-x-2 text-sm text-gray-300">
+                        <div key={index} className="flex items-center space-x-2 text-sm text-gray-300"></div>
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span>{result}</span>
                         </div>
                       ))}
                     </div>
                     
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2">
+                    <div className="flex items-center justify-between"></div>
+                      <div className="flex items-center space-x-2"></div>
                         <img
                           src={study.testimonial.image}
                           alt={study.testimonial.author}
                           className="w-8 h-8 rounded-full"
                         />
-                        <div>
+                        <div></div>
                           <div className="text-white font-medium text-sm">{study.testimonial.author}</div>
                           <div className="text-gray-400 text-xs">{study.testimonial.role}</div>
                         </div>
                       </div>
-                      <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all flex items-center">
+                      <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all flex items-center"></button>
                         View Case Study
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </button>
@@ -525,31 +439,31 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+      <section className="py-20 bg-slate-800/50"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-6xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4"></h2>
                 Our Track Record
               </h2>
-              <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-300 max-w-3xl mx-auto"></p>
                 Numbers that speak to our success and client satisfaction
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+              <div className="text-center"></div>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
                 <div className="text-gray-300">Projects Completed</div>
               </div>
-              <div className="text-center">
+              <div className="text-center"></div>
                 <div className="text-4xl font-bold text-purple-400 mb-2">300%</div>
                 <div className="text-gray-300">Average ROI</div>
               </div>
-              <div className="text-center">
+              <div className="text-center"></div>
                 <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
                 <div className="text-gray-300">Client Satisfaction</div>
               </div>
-              <div className="text-center">
+              <div className="text-center"></div>
                 <div className="text-4xl font-bold text-yellow-400 mb-2">24/7</div>
                 <div className="text-gray-300">Support Available</div>
               </div>
@@ -559,26 +473,26 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700"></section>
+        <div className="container mx-auto px-4 text-center"></div>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6"></h2>
             Ready to Create Your Success Story?
           </h2>
-          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto"></p>
             Join hundreds of businesses that have transformed their operations with our solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
-            >
+            ></a>
               <MessageCircle className="w-5 h-5 mr-2" />
               Start Your Project
             </a>
             <a
               href="/consultation"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
-            >
+            ></a>
               <Calendar className="w-5 h-5 mr-2" />
               Free Consultation
             </a>
@@ -588,4 +502,3 @@ export default function CaseStudiesPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

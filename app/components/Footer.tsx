@@ -52,6 +52,11 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                  Blog
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -60,43 +65,42 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-2">
               <li>
-                <span className="text-gray-300">AI & Machine Learning</span>
+                <Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                  AI Services
+                </Link>
               </li>
               <li>
-                <span className="text-gray-300">Cloud Solutions</span>
+                <Link to="/quantum-computing" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                  Quantum Computing
+                </Link>
               </li>
               <li>
-                <span className="text-gray-300">Cybersecurity</span>
+                <Link to="/cloud-services" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                  Cloud Services
+                </Link>
               </li>
               <li>
-                <span className="text-gray-300">Data Analytics</span>
+                <Link to="/consultation" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                  Consultation
+                </Link>
               </li>
             </ul>
           </div>
         </div>
 
+        {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a
-                href="https://linkedin.com/company/zion-tech-group"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-cyan-400 transition-colors"
-              >
-                <ExternalLink className="w-4 h-4" />
-              </a>
-              <a
-                href="https://twitter.com/ziontechgroup"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-cyan-400 transition-colors"
-              >
-                <ExternalLink className="w-4 h-4" />
-              </a>
+              <Link to="/privacy" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
+                Terms of Service
+              </Link>
             </div>
           </div>
         </div>

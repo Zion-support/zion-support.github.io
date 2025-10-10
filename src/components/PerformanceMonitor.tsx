@@ -14,8 +14,7 @@ const PerformanceMonitor: React.FC = () => {
     fid: null,
     cls: null,
     fcp: null,
-    ttfb: null,
-  });
+    ttfb: null});
 
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
@@ -95,24 +94,21 @@ const PerformanceMonitor: React.FC = () => {
           gtag('event', 'web_vitals', {
             event_category: 'Performance',
             event_label: 'LCP',
-            value: Math.round(metrics.lcp),
-          });
+            value: Math.round(metrics.lcp)});
         }
         
         if (metrics.fid !== null) {
           gtag('event', 'web_vitals', {
             event_category: 'Performance',
             event_label: 'FID',
-            value: Math.round(metrics.fid),
-          });
+            value: Math.round(metrics.fid)});
         }
         
         if (metrics.cls !== null) {
           gtag('event', 'web_vitals', {
             event_category: 'Performance',
             event_label: 'CLS',
-            value: Math.round(metrics.cls * 1000) / 1000,
-          });
+            value: Math.round(metrics.cls * 1000) / 1000});
         }
       }
     };
@@ -134,7 +130,7 @@ const PerformanceMonitor: React.FC = () => {
   }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50"></div>
       <div className="mb-2 font-bold">Performance Metrics</div>
       <div>LCP: {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'Measuring...'}</div>
       <div>FID: {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'Measuring...'}</div>

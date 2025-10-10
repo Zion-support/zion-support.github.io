@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-'use client';
-/**
- * Error Handling Configuration
- * Centralized error tracking and reporting settings
- */
-export enum ErrorSeverity {
-=======
 
 'use client'
 /**
@@ -16,20 +8,15 @@ export enum ErrorSeverity {
 export enum ErrorSeverity {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   LOW = 'low',
   MEDIUM = 'medium',
   HIGH = 'high',
   CRITICAL = 'critical'
 }
-<<<<<<< HEAD
-export enum ErrorCategory {
-=======
 
 export enum ErrorCategory {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   NETWORK = 'network',
   VALIDATION = 'validation',
   AUTHENTICATION = 'authentication',
@@ -40,18 +27,6 @@ export enum ErrorCategory {// TODO: Add content;}
   THIRD_PARTY = 'third_party',
   UNKNOWN = 'unknown'
 }
-<<<<<<< HEAD
-export interface ErrorConfig {
-  enabled: boolean;
-  logToConsole: boolean;
-  sendToServer: boolean;
-  sampleRate: number;
-  maxStackTraceLength: number;
-  ignoreErrors: RegExp[];
-  severityThreshold: ErrorSeverity;
-}
-export const _errorHandlingConfig: ErrorConfig = {
-=======
 
 export interface ErrorConfig {// TODO: Add content;}
 };
@@ -65,52 +40,13 @@ export interface ErrorConfig {// TODO: Add content;}
 }
 export const _errorHandlingConfig: ErrorConfig = {// TODO: Add content;}
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   enabled: true,
   logToConsole: process.env['NODE_ENV'] !== 'production',
   sendToServer: process.env['NODE_ENV'] === 'production',
   sampleRate: 1.0,
   maxStackTraceLength: 1000,
   ignoreErrors: [
-<<<<<<< HEAD
-    /ResizeObserver loop/i,
-    /Non-Error promise rejection captured/i,
-    /Loading chunk \d+ failed/i,
-  ],
-  severityThreshold: ErrorSeverity.LOW
-};
-export const _errorMessages = {
-  network: {
-    offline: 'You are currently offline. Please check your internet connection.',
-    timeout: 'Request timed out. Please try again.',
-    serverError:   ,
-$4},
-  validation: {
-    required: 'This field is required.',
-    invalid: 'Please enter a valid value.',
-    format:   ,
-$4},
-  authentication: {
-    failed: 'Authentication failed. Please try logging in again.',
-    expired: 'Your session has expired. Please log in again.',
-    unauthorized:   ,
-$4},
-  generic: {
-    unknown: 'An unexpected error occurred. Please try again.',
-    retry:   ,
-$4}
-};
-export class AppError extends Error {
-  constructor(
-    message: string,
-    public category: ErrorCategory = ErrorCategory.UNKNOWN,
-    public severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-    public metadata?: Record<string, unknown>
-  ) {
-=======
-  // TODO: Add items,
-
-]
+  // TODO: Add items]
 //     /ResizeObserver loop/i,
 //     /Non-Error promise rejection captured/i,
 //     /Loading chunk \d+ failed/i,
@@ -201,20 +137,16 @@ export class AppError extends Error {
   severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     public metadata?: Record;
 
-          <string, unknown>
+          <string, unknown></string>
   ) {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     super(message);
     this.name = 'AppError';
     Error.captureStackTrace(this, this.constructor);
   }
 }
 export default errorHandlingConfig;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

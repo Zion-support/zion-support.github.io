@@ -18,8 +18,7 @@ const,
       addres,
   s: {/* TODO: Fix JSX expression */}
       },
-      ...seoData.structuredData,
-    };
+      ...seoData.structuredData};
 
     if (seoData.author) {/* TODO: Fix JSX expression */}
       };
@@ -89,8 +88,7 @@ const,
       {/* TODO: Fix JSX expression */}
   t: '#3B82F6' },
       {/* TODO: Fix JSX expression */}
-  t: '/browserconfig.xml' },
-    ];
+  t: '/browserconfig.xml' }];
     return metaTags;
   }, [seoData]);
 
@@ -128,7 +126,7 @@ const,
     }
   }, [seoData]);
 
-  const addStructuredData = (dat,)
+  const addStructuredData = (dat)
   a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
     }
     

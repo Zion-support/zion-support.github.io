@@ -5,29 +5,25 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-<<<<<<< HEAD
-import { CheckCircle, Star } from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 const ProductivityPage: React.FC = () => {
   return (
-    <div>
+    <div></div>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
+        <section className="text-center mb-16"></section>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
             Page
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
+          <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
             Coming Soon
           </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
             This page is under development. Please check back soon for updates.
           </p>
         </section>
         {/* Key Benefits */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
+        <section className="mb-16"></section>
+          <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text"></h2>
 
 // Why Choose Our Productivity Tools?
           

@@ -21,7 +21,7 @@ const,
 
   const updateMetaTag = (nam,
   e: string, conten,
-  t: string, attribut,)
+  t: string, attribut)
   e: string = 'name') => {/* TODO: Fix JSX expression */}
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     if (!meta) {/* TODO: Fix JSX expression */}
@@ -29,13 +29,13 @@ const,
     meta.setAttribute('content', content);
   };
 
-  const updateCanonicalUrl = (ur,)
+  const updateCanonicalUrl = (ur)
   l: string) => {/* TODO: Fix JSX expression */}
     }
     canonical.setAttribute('href', url);
   };
 
-  const addStructuredData = (dat,)
+  const addStructuredData = (dat)
   a: any) => {/* TODO: Fix JSX expression */}
     }
     document.head.appendChild(script);
@@ -123,7 +123,7 @@ const,
   }, [mergedSEOData, page]);
 
   return (
-    <Helmet>
+    <Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{mergedSEOData.title}</title>
       <meta name="description" content={mergedSEOData.description} />
@@ -182,12 +182,12 @@ const,
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
 
       {/* Structured Data */}
-      <script type="application/ld+json">
+      <script type="application/ld+json"></script>
         {JSON.stringify(mergedSEOData.structuredData)}
       </script>
 
       {/* Additional structured data for services */}
-      <script type="application/ld+json">
+      <script type="application/ld+json"></script>
         {JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'Service',

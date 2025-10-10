@@ -4,161 +4,6 @@
  * Configuration Manager;
  * Centralized configuration management with environment-based settings;
  */
-<<<<<<< HEAD
-
-export type Environment = 'development' | 'staging' | 'production' | 'test'
-
-export interface AppConfig {
-  environment: Environment;
-  api: {
-    baseURL: string;
-    timeout: number;
-    retryAttempts: number;
-    enableCaching: boolean;
-  }
-  features: {
-    enableAnalytics: boolean;
-    enableErrorReporting: boolean;
-    enablePerformanceMonitoring: boolean;
-    enableAccessibility: boolean;
-    enableSEO: boolean;
-    enablePWA: boolean;
-  }
-  performance: {
-    enableCodeSplitting: boolean;
-    enableLazyLoading: boolean;
-    enableImageOptimization: boolean;
-    enableCaching: boolean;
-  }
-  security: {
-    enableCSP: boolean;
-    enableCORS: boolean;
-    enableRateLimiting: boolean;
-    maxRequestsPerMinute: number;
-  }
-  ui: {,
-    theme: 'light' | 'dark' | 'auto',
-    language: string;
-    timezone: string;
-  }
-  logging: {,
-    level: 'debug' | 'info' | 'warn' | 'error',
-    enableConsole: boolean;
-    enableNetwork: boolean;
-  }
-}
-
-const defaultConfig: AppConfig = {
-  environment: 'development'
-  api: {
-    baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com'
-    timeout: 30000;
-    retryAttempts: 3;
-    enableCaching: true;
-  },
-  features: {
-    enableAnalytics: true;
-    enableErrorReporting: true;
-    enablePerformanceMonitoring: true;
-    enableAccessibility: true;
-    enableSEO: true;
-    enablePWA: true;
-  },
-  performance: {
-    enableCodeSplitting: true;
-    enableLazyLoading: true;
-    enableImageOptimization: true;
-    enableCaching: true;
-  },
-  security: {
-    enableCSP: true;
-    enableCORS: true;
-    enableRateLimiting: true;
-    maxRequestsPerMinute: 100;
-  },
-  ui: {,
-    theme: 'auto',
-    language: 'en',
-    timezone: 'UTC',
-  },
-  logging: {,
-    level: 'info',
-    enableConsole: true;
-    enableNetwork: false;
-  }
-}
-
-class ConfigManager {
-  private config: AppConfig;
-  constructor() {,
-    this.config = { ...defaultConfig }
-    this.loadEnvironmentConfig()
-  }
-
-  private loadEnvironmentConfig(): void {
-    const env = process.env.NODE_ENV as Environment || 'development'
-
-    this.config.environment = env;
-    // Override with environment-specific settings;
-    if (env === 'production') {
-      this.config.logging.level = 'error'
-      this.config.logging.enableConsole = false;
-      this.config.features.enableAnalytics = true;
-    } else if (env === 'staging') {
-      this.config.logging.level = 'warn'
-      this.config.logging.enableConsole = true;
-    }
-  }
-
-  public getConfig(): AppConfig {
-    return { ...this.config }
-  }
-
-  public updateConfig(updates: Partial<AppConfig>): void {,
-    this.config = { ...this.config, ...updates }
-  }
-
-  public getApiConfig() {
-    return this.config.api;
-  }
-
-  public getFeatureConfig() {
-    return this.config.features;
-  }
-
-  public getPerformanceConfig() {
-    return this.config.performance;
-  }
-
-  public getSecurityConfig() {
-    return this.config.security;
-  }
-
-  public getUIConfig() {
-    return this.config.ui;
-  }
-
-  public getLoggingConfig() {
-    return this.config.logging;
-  }
-
-  public isDevelopment(): boolean {
-    return this.config.environment === 'development'
-  }
-
-  public isProduction(): boolean {
-    return this.config.environment === 'production'
-  }
-
-  public isStaging(): boolean {
-    return this.config.environment === 'staging'
-  }
-}
-
-// Export singleton instance;
-export const configManager = new ConfigManager()
-export default configManager;
-=======
 export type Environment = 'development' | 'staging' | 'production' | 'test';
 export interface AppConfig {/* TODO: Fix JSX expression */}
   };
@@ -274,10 +119,10 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Deep merge two config objects;
    */
   private mergeConfig(bas,
-  e: AppConfig, overrid,)
+  e: AppConfig, overrid)
   e: Partial<AppConfig>): AppConfig {/* TODO: Fix JSX expression */}
     const result = { ...base } as AppConfig;
-    (Object.keys(override) as Array<keyof AppConfig>).forEach(<K extends keyof AppConfig>(ke,)
+    (Object.keys(override) as Array<keyof AppConfig>).forEach(<K extends keyof AppConfig>(ke)
   y: K) => {/* TODO: Fix JSX expression */}
             result[key] = Object.assign({}, baseValue, value) as typeof baseValue;
           } else {/* TODO: Fix JSX expression */}
@@ -290,7 +135,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**
    * Get configuration value;
    */
-  get<K extends keyof AppConfig>(ke,)
+  get<K extends keyof AppConfig>(ke)
   y: K): AppConfig[K];
   get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
   y: K,
@@ -308,7 +153,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Set configuration value;
    */
   set<K extends keyof AppConfig>(ke,
-  y: K, valu,)
+  y: K, valu)
   e: AppConfig[K]): void;
   set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
   y: K,
@@ -335,7 +180,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**
    * Get default value for a config key;
    */
-  private getDefaultForKey<K extends keyof AppConfig>(ke,)
+  private getDefaultForKey<K extends keyof AppConfig>(ke)
   y: K): AppConfig[K] {/* TODO: Fix JSX expression */}
       },
       feature,
@@ -370,19 +215,19 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**
    * Check if feature is enabled;
    */
-  isFeatureEnabled(featur,)
+  isFeatureEnabled(featur)
   e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */}
   }
   /**
    * Enable feature;
    */
-  enableFeature(featur,)
+  enableFeature(featur)
   e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */}
   }
   /**
    * Disable feature;
    */
-  disableFeature(featur,)
+  disableFeature(featur)
   e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */}
   }
   /**
@@ -394,7 +239,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**
    * Update API configuration;
    */
-  updateAPIConfig(confi,)
+  updateAPIConfig(confi)
   g: Partial<AppConfig['api']>): void {/* TODO: Fix JSX expression */}
     this.config.api = { ...this.config.api, ...config };
   }
@@ -421,7 +266,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**
    * Override configuration;
    */
-  override(confi,)
+  override(confi)
   g: Partial<AppConfig>): void {/* TODO: Fix JSX expression */}
   }
   /**
@@ -456,4 +301,3 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
 // Export singleton instance;
 export const configManager = ConfigManager.getInstance();
 export default ConfigManager;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

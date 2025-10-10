@@ -131,251 +131,19 @@ const HeroSection = () => (
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-          Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. 
-          Transform your business with our advanced AI capabilities.
+          Unlock the power of artificial intelligence with our comprehensive suite of enterprise solutions. 
+          From quantum computing to advanced analytics, we help businesses achieve unprecedented growth.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
             Get Started Today
-            <ArrowRight className="inline-block ml-2 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="inline-block ml-2 w-5 h-5" />
           </button>
-          
-          <button className="group border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-            <Play className="inline-block mr-2 group-hover:scale-110 transition-transform" />
+          <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
             Watch Demo
+            <Play className="inline-block ml-2 w-5 h-5" />
           </button>
-        </div>
-
-        {/* Trust indicators */}
-        <div className="flex flex-wrap justify-center items-center gap-8 text-gray-400 text-sm">
-          <div className="flex items-center gap-2">
-            <CheckCircle className="text-green-400" />
-            <span>500+ Successful Projects</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Star className="text-yellow-400" />
-            <span>4.9/5 Client Rating</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Award className="text-purple-400" />
-            <span>Industry Recognition</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
-// Services Section Component
-const ServicesSection = () => {
-  const services = [
-    {
-      icon: Brain,
-      title: "AI & Machine Learning",
-      description: "Advanced AI solutions for automation, prediction, and intelligent decision-making.",
-      features: ["Custom AI Models", "Predictive Analytics", "Natural Language Processing", "Computer Vision"]
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and migration services for modern businesses.",
-      features: ["Cloud Migration", "DevOps Automation", "Container Orchestration", "Serverless Architecture"]
-    },
-    {
-      icon: Shield,
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets and data.",
-      features: ["Threat Detection", "Security Audits", "Compliance Management", "Incident Response"]
-    },
-    {
-      icon: Database,
-      title: "Data Analytics",
-      description: "Transform raw data into actionable insights with our analytics solutions.",
-      features: ["Business Intelligence", "Real-time Analytics", "Data Visualization", "Predictive Modeling"]
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile applications for iOS and Android.",
-      features: ["Native Apps", "Cross-platform", "UI/UX Design", "App Store Optimization"]
-    },
-    {
-      icon: Globe,
-      title: "Web Development",
-      description: "Modern, responsive web applications with cutting-edge technologies.",
-      features: ["React/Next.js", "E-commerce", "Progressive Web Apps", "Performance Optimization"]
-    }
-  ];
-
-  return (
-    <section className="py-20 bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Our <span className="text-cyan-400">Services</span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="group bg-gray-800 rounded-xl p-8 hover:bg-gray-700 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/30 transition-colors">
-                  <service.icon className="w-8 h-8 text-cyan-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white ml-4">{service.title}</h3>
-              </div>
-              
-              <p className="text-gray-300 mb-6">{service.description}</p>
-              
-              <ul className="space-y-2">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                    <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              
-              <button className="mt-6 text-cyan-400 hover:text-cyan-300 font-semibold group-hover:translate-x-1 transition-transform">
-                Learn More <ArrowRight className="inline-block ml-1" />
-              </button>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// Stats Section Component
-const StatsSection = () => {
-  const stats = [
-    { number: "500+", label: "Projects Completed", icon: CheckCircle },
-    { number: "50+", label: "Happy Clients", icon: Users },
-    { number: "99.9%", label: "Uptime Guarantee", icon: Shield },
-    { number: "24/7", label: "Support Available", icon: Clock }
-  ];
-
-  return (
-    <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-600">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Trusted by Industry Leaders
-          </h2>
-          <p className="text-xl text-cyan-100 max-w-3xl mx-auto">
-            Our track record speaks for itself. See why businesses choose Zion Tech Group for their technology needs.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center group">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300">
-                <stat.icon className="w-12 h-12 text-white mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                  <AnimatedCounter end={parseInt(stat.number.replace(/\D/g, ''))} />
-                  {stat.number.includes('%') && '%'}
-                  {stat.number.includes('+') && '+'}
-                  {stat.number.includes('/') && '/'}
-                </div>
-                <p className="text-cyan-100 text-lg font-semibold">{stat.label}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// Contact Section Component
-const ContactSection = () => (
-  <section className="py-20 bg-gray-900">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-          Ready to Get Started?
-        </h2>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Let's discuss how our AI-powered solutions can transform your business. 
-          Contact us today for a free consultation.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <div className="space-y-8">
-          <div className="flex items-start space-x-4">
-            <div className="p-3 bg-cyan-500/20 rounded-lg">
-              <Phone className="w-6 h-6 text-cyan-400" />
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-              <p className="text-gray-300">+1-302-464-0950</p>
-            </div>
-          </div>
-
-          <div className="flex items-start space-x-4">
-            <div className="p-3 bg-cyan-500/20 rounded-lg">
-              <Mail className="w-6 h-6 text-cyan-400" />
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-              <p className="text-gray-300">kleber@ziontechgroup.com</p>
-            </div>
-          </div>
-
-          <div className="flex items-start space-x-4">
-            <div className="p-3 bg-cyan-500/20 rounded-lg">
-              <MapPin className="w-6 h-6 text-cyan-400" />
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
-              <p className="text-gray-300">
-                364 E Main St STE 1008<br />
-                Middletown, DE 19709
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-gray-800 rounded-xl p-8">
-          <h3 className="text-2xl font-semibold text-white mb-6">Get a Free Quote</h3>
-          <form className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
-              />
-            </div>
-            <input
-              type="text"
-              placeholder="Company Name"
-              className="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
-            />
-            <textarea
-              placeholder="Tell us about your project"
-              rows={4}
-              className="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
-            />
-            <button
-              type="submit"
-              className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-            >
-              Send Message
-            </button>
-          </form>
         </div>
       </div>
     </div>
@@ -383,7 +151,7 @@ const ContactSection = () => (
 );
 
 // Main HomePage Component
-const HomePage = () => {
+const HomePage: React.FC = () => {
   return (
     <ErrorBoundary>
       <SEOHead 
@@ -391,12 +159,43 @@ const HomePage = () => {
         description="Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Transform your business with our advanced AI capabilities."
       />
       <Navigation />
-      <main>
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <HeroSection />
-        <ServicesSection />
-        <StatsSection />
-        <ContactSection />
+        
+        {/* Additional sections would go here */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-8">
+              Why Choose Zion Tech Group?
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                <Brain className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-4">AI Expertise</h3>
+                <p className="text-gray-300">
+                  Our team of AI experts delivers cutting-edge solutions that drive real business value.
+                </p>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                <Shield className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-4">Enterprise Security</h3>
+                <p className="text-gray-300">
+                  Bank-grade security and compliance standards protect your data and operations.
+                </p>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                <Zap className="w-12 h-12 text-green-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-4">Rapid Deployment</h3>
+                <p className="text-gray-300">
+                  Get up and running quickly with our streamlined implementation process.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
+
       <Footer />
       <PerformanceMonitor />
     </ErrorBoundary>

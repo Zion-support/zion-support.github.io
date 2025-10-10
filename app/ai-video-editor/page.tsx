@@ -20,20 +20,20 @@ const AIVideoEditorPage: React.FC = () => {
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></mai>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center"></div>
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-6"></div>
                 <Video className="w-4 h-4 mr-2" />
                 AI Video Technology
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
                 AI Video Editor</h1>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"></span>
                   Professional Video Production
                 </span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto"></p>
                 Create professional videos with AI-powered editing tools. Automated cutting, effects, 
                 and optimization for content creators and businesses.
               </p>
@@ -56,13 +56,13 @@ const AIVideoEditorPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white"></section>
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
                 Revolutionary AI Video Editing
               </h2>
-              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto"></p>
                 Transform your video content with intelligent automation and professional editing tools
               </p>
             </div>
@@ -73,7 +73,7 @@ const AIVideoEditorPage: React.FC = () => {
                   <Scissors className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Auto-Cutting</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   AI automatically detects and cuts out dead air, filler words, and unwanted segments.
                 </p>
                 <ul className="space-y-2"></u>
@@ -90,7 +90,7 @@ const AIVideoEditorPage: React.FC = () => {
                   <Film className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Auto Scene Detection</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   Automatically detect scene changes and apply appropriate transitions and effects.
                 </p>
                 <ul className="space-y-2"></u>
@@ -108,7 +108,7 @@ const AIVideoEditorPage: React.FC = () => {
                   <Music className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Music & Sound</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   Automatically add background music, sound effects, and audio enhancement.
                 </p>
                 <ul className="space-y-2"></u>
@@ -126,7 +126,7 @@ const AIVideoEditorPage: React.FC = () => {
                   <Palette className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Color Grading AI</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   Automatic color correction and professional color grading for cinematic look.
                 </p>
                 <ul className="space-y-2"></u>
@@ -143,7 +143,7 @@ const AIVideoEditorPage: React.FC = () => {
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Optimization</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   AI optimizes video for different platforms and automatically adjusts quality settings.
                 </p>
                 <ul className="space-y-2"></u>
@@ -161,7 +161,7 @@ const AIVideoEditorPage: React.FC = () => {
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Team Collaboration</h>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4"></p>
                   Collaborate with team members on video projects with real-time editing.
                 </p>
                 <ul className="space-y-2"></u>
@@ -178,13 +178,13 @@ const AIVideoEditorPage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50"></section>
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
                 Choose Your Video Editing Plan
               </h2>
-              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto"></p>
                 Professional video editing tools for every budget
               </p>
             </div>
@@ -220,14 +220,14 @@ const AIVideoEditorPage: React.FC = () => {
                 <a 
                   href="mailto:kleber@ziontechgroup.com?subject=AI Video Editor Creator Plan"
                   className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
-                >
+                ></a>
                   Get Started
                 </a>
               </div>
 
               <div className="bg-white p-8 rounded-xl border-2 border-blue-500 relative"></div>
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-                  <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold"></span>
                     Most Popular
                   </span>
                 </div>
@@ -264,7 +264,7 @@ const AIVideoEditorPage: React.FC = () => {
                 <a 
                   href="mailto:kleber@ziontechgroup.com?subject=AI Video Editor Professional Plan"
                   className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors"
-                >
+                ></a>
                   Get Started
                 </a>
               </div>
@@ -303,7 +303,7 @@ const AIVideoEditorPage: React.FC = () => {
                 <a 
                   href="mailto:kleber@ziontechgroup.com?subject=AI Video Editor Enterprise Plan"
                   className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
-                >
+                ></a>
                   Contact Sales
                 </a>
               </div>
@@ -312,12 +312,12 @@ const AIVideoEditorPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-cyan-600">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-cyan-600"></section>
           <div className="max-w-4xl mx-auto text-center"></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Ready to Create Amazing Videos?
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-blue-100 mb-8"></p>
               Join thousands of creators using our AI video editing technology
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -338,7 +338,7 @@ const AIVideoEditorPage: React.FC = () => {
         </section>
 
         {/* Contact Info */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900"></section>
           <div className="max-w-4xl mx-auto text-center"></section>
             <div className="grid md:grid-cols-3 gap-8 text-white"></div>
               <div className="flex items-center justify-center"></div>

@@ -1,38 +1,13 @@
-<<<<<<< HEAD
-
-
-
-import { Link } from 'react-router-dom';
-
-import { ArrowLeft, ArrowRight, Target, CheckCircle, Star } from 'lucide-react';
-export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-  return (<div>Coming Soon</div>)
-  )
-    
-          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
-      {/* Header */}"
-      <header className="bg-white shadow-sm border-b"></header>"
-        <div className="max-w-7xl mx-auto px-4,
-  sm:px-6,"
-  lg:px-8 py-4"></div>"
-          <Link href="/" className="inline-flex items-center text-blue-600,"
-  hover:text-blue-800 transition-colors duration-200"></Link>"
-            <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
-// Back to Home;
-=======
 import React from 'react';
 export default function ServicesAdvertisingPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
+      <header className="bg-white shadow-sm border-b"></header>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4"></div>
+          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200"></Link>
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
           </Link>
         </div>
       </header>
@@ -68,10 +43,10 @@ AI-Powered Advertising Solutions;"
           
 
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <Link
                 href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
-// >
+// ></Link>
 //                 Start Free Consultation;
           <ArrowRight className="w-4 h-4 ml-2" />
 href="#services" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
@@ -227,11 +202,11 @@ Transparent Pricing;
                 Contact Sales;
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4"></h2>
 Ready to Transform Your Advertising?
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-xl mb-8 text-blue-100"></p>
             Get a free AI advertising assessment and discover how we can boost your ROI by 300%
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center" Get Free Assessment;
               href="/case-studies" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"

@@ -4,9 +4,9 @@ import { Target, BarChart, Users, Zap, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ServicesAdvertisingPage: React.FC = () => {,
-  const advertisingServices = [,
-    {,
+const ServicesAdvertisingPage: React.FC = () => {
+  const advertisingServices = [
+    {
       title: 'AI-Powered Ad Campaigns',
       description: 'Leverage artificial intelligence to create, optimize, and scale your advertising campaigns across all platforms.',
       features: ['Automated A/B Testing', 'Real-time Optimization', 'Cross-platform Management', 'ROI Tracking'],
@@ -45,41 +45,25 @@ const ServicesAdvertisingPage: React.FC = () => {,
     'Comprehensive Reporting'
   ];
 
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Navigation >{/* Hero Section */}</Navigation>
-      </Navigation><section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto"></section>
-          <div className="text-center mb-16"></div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Advanced</h1> <span className="text-cyan-400">Advertising</span> Services
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your advertising strategy with AI-powered solutions that deliver measurable results.</p>
-              Our comprehensive advertising services help you reach the right audience at the right time.</p>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Get Started Today<a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Call +1 302 464 0950</a>
-=======
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+      <section className="pt-24 pb-16 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6"></h1>
               Advanced <span className="text-cyan-400">Advertising</span> Services;
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Transform your advertising strategy with AI-powered solutions that deliver measurable results.
               Our comprehensive advertising services help you reach the right audience at the right time.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold"></a>
                 Get Started Today;
               </a>
-              <a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
+              <a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold"></a>
                 Call +1 302 464 0950;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
             </div>
           </div>
@@ -87,17 +71,7 @@ const ServicesAdvertisingPage: React.FC = () => {,
       </section>,
 ,
       {/* Services Grid */}
-      <section className="py-16 px-4">
-<<<<<<< HEAD
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-<<<<<<< HEAD
-            <h2 className="text-4xl font-bold text-white mb-4">Our Advertising Services<p className="text-xl text-gray-300">Comprehensive solutions for every advertising need<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{advertisingServices.map((service, index) => (</div>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                  <h3 className="text-2xl font-bold text-white">{service.title}<p className="text-gray-300 mb-6">{service.description}<ul className="space-y-2 mb-6">{service.features.map((feature, featureIndex) => (</ul>
-=======
+      <section className="py-16 px-4"></section>
             <h2 className="text-4xl font-bold text-white mb-4">Our Advertising Services</h2>
             <p className="text-xl text-gray-300">Comprehensive solutions for every advertising need</p>)
           </div>)
@@ -110,10 +84,8 @@ const ServicesAdvertisingPage: React.FC = () => {,
                   <h3 className="text-2xl font-bold text-white">{service.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-2 mb-6"></ul>
                   {service.features.map((feature, featureIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-12"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Our Advertising Services</h2><p className="text-xl text-gray-300">Comprehensive solutions for every advertising need</p><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{advertisingServices.map((service, index) => (</div>
@@ -121,25 +93,16 @@ const ServicesAdvertisingPage: React.FC = () => {,
                 <div className="flex items-center mb-4"></div>
                   <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
                   <h3 className="text-2xl font-bold text-white">{service.title}</h3><p className="text-gray-300 mb-6">{service.description}</p><ul className="space-y-2 mb-6">{service.features.map((feature, featureIndex) => (</ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-                    <li key={featureIndex} className="flex items-center text-gray-300">
+                    <li key={featureIndex} className="flex items-center text-gray-300"></li>
                       <CheckCircle className="w-5 h-5 text-green-400 mr-2" >{feature}</CheckCircle>
                     </CheckCircle>
                   ))}
                 </ul>
-<<<<<<< HEAD
-                <div className="flex justify-between items-center">
-<<<<<<< HEAD
-                  <span className="text-3xl font-bold text-cyan-400">{service.price}<a href="/contact" className="cyber-button px-6 py-2">Learn More</a>
-=======
                   <span className="text-3xl font-bold text-cyan-400">{service.price}</span>
-                  <a href="/contact" className="cyber-button px-6 py-2">
+                  <a href="/contact" className="cyber-button px-6 py-2"></a>
                     Learn More;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
                 <div className="flex justify-between items-center"></div>
                   <span className="text-3xl font-bold text-cyan-400">{service.price}</span><a href="/contact" className="cyber-button px-6 py-2">Learn More</a>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   </a>
                 </div>
               </div>
@@ -149,29 +112,20 @@ const ServicesAdvertisingPage: React.FC = () => {,
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 bg-slate-800/30">
-<<<<<<< HEAD
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-<<<<<<< HEAD
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Advertising Services?<p className="text-xl text-gray-300">Proven results and cutting-edge technology<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
-=======
+      <section className="py-16 px-4 bg-slate-800/30"></section>
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Advertising Services?</h2>
             <p className="text-xl text-gray-300">Proven results and cutting-edge technology</p>
           </div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {benefits.map((benefit, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
-=======
+              <div key={index} className="text-center"></div>
+                <div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center mx-auto mb-4"></div>
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-12"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Advertising Services?</h2><p className="text-xl text-gray-300">Proven results and cutting-edge technology</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
               <div key={index} className="text-center"></div>
                 <div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center mx-auto mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <CheckCircle className="w-8 h-8 text-cyan-400" />
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
               </div>
@@ -181,33 +135,25 @@ const ServicesAdvertisingPage: React.FC = () => {,
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4"></section>
         <div className="max-w-4xl mx-auto text-center"></section>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Advertising?</h2><p className="text-xl text-gray-300 mb-8">Let our experts help you create and execute advertising campaigns that deliver real results.</p>
           </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Start Your Campaign<a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Call +1 302 464 0950</a>
-=======
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold"></a>
               Start Your Campaign;
             </a>
-            <a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
+            <a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold"></a>
               Call +1 302 464 0950;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </a>
           </div>
         </div>
       </section>
 
       <Footer />,
-    </div>,
-  );
+    </div>);
 };
 
 export default ServicesAdvertisingPage;

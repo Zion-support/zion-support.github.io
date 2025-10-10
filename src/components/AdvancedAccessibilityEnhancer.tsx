@@ -14,9 +14,9 @@ const,
     }));
 
     // Listen for changes in user preferences;
-    const motionQuery = window.matchMedia('(prefers-reduced-motio,)
+    const motionQuery = window.matchMedia('(prefers-reduced-motio)
   n: reduce)');
-    const contrastQuery = window.matchMedia('(prefers-contras,)
+    const contrastQuery = window.matchMedia('(prefers-contras)
   t: high)');
     
     const handleMotionChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
@@ -113,14 +113,14 @@ const,
     });
 
     // Add ARIA labels to images;
-    const images = document.querySelectorAll('im,)
+    const images = document.querySelectorAll('im)
   g:not([alt])');
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}`
       img.setAttribute('alt', `Image ${index + 1}`);
     });
 
     // Add ARIA labels to form inputs;
-    const inputs = document.querySelectorAll('inpu,)
+    const inputs = document.querySelectorAll('inpu)
   t:not([aria-label]):not([aria-labelledby])');
     inputs.forEach((input, index) => {/* TODO: Fix JSX expression */}
       } else if (label) {/* TODO: Fix JSX expression */}
