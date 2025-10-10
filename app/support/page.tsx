@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react';
 
 interface FAQ {
@@ -15,12 +14,6 @@ const SupportPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
-=======
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, MessageSquare } from 'lucide-react';
-
-const SupportPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
     { id: 'all', name: 'All Topics' },
@@ -29,7 +22,6 @@ const SupportPage: React.FC = () => {
     { id: 'billing', name: 'Billing' },
     { id: 'implementation', name: 'Implementation' }
   ];
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
 
   const faqs: FAQ[] = [
     {

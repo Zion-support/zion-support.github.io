@@ -105,7 +105,7 @@ const Footer: React.FC = memo(() => {
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
@@ -114,7 +114,7 @@ const Footer: React.FC = memo(() => {
               ))}
               <li>
                 <Link 
-                  href="/ai-services"
+                  to="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All AI Services →
@@ -132,7 +132,7 @@ const Footer: React.FC = memo(() => {
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
@@ -141,7 +141,7 @@ const Footer: React.FC = memo(() => {
               ))}
               <li>
                 <Link 
-                  href="/it-services"
+                  to="/it-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All IT Services →
@@ -159,7 +159,7 @@ const Footer: React.FC = memo(() => {
               {microSaasServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
@@ -168,7 +168,7 @@ const Footer: React.FC = memo(() => {
               ))}
               <li>
                 <Link 
-                  href="/micro-saas"
+                  to="/micro-saas"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All Micro SAAS →
@@ -186,7 +186,7 @@ const Footer: React.FC = memo(() => {
               {emergingTech.map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
@@ -205,7 +205,7 @@ const Footer: React.FC = memo(() => {
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
-                    href={link.url}
+                    to={link.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {link.name}
@@ -218,7 +218,7 @@ const Footer: React.FC = memo(() => {
               {supportLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
-                    href={link.url}
+                    to={link.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {link.name}
@@ -259,15 +259,15 @@ const Footer: React.FC = memo(() => {
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Privacy Policy
-              </a>
-              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              </Link>
+              <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Terms of Service
-              </a>
-              <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              </Link>
+              <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>
