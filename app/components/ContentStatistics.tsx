@@ -54,7 +54,6 @@ const ContentStatistics: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
       description: 'Serving clients across 50+ countries'
     },
     {
@@ -78,7 +77,6 @@ const ContentStatistics: React.FC = () => {
               ...prev,
               [key]: Math.min(current + increment, target)
             }
-          }
           return prev;
         })
       }, 16);
@@ -86,8 +84,6 @@ const ContentStatistics: React.FC = () => {
 
     return () => {
       timers.forEach(timer => clearInterval(timer));
-    }
-=======
     };
 
     // Start animations with slight delays
@@ -96,7 +92,6 @@ const ContentStatistics: React.FC = () => {
         animateCounter(key as keyof typeof targetCounters);
       }, index * 100);
     });
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
   }, []);
 
   return (

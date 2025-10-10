@@ -38,7 +38,6 @@ import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, 
       title: 'Portability',
       description: 'Receive your data in a structured format',
       icon: Database
-<<<<<<< HEAD
     },
     {
       title: 'Restriction',
@@ -58,8 +57,6 @@ import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, 
     address: '364 E Main St STE 1008, Middletown, DE 19709'
   }
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
   return (
     <>
       <Helmet>

@@ -3,7 +3,6 @@
  * Provides comprehensive accessibility improvements for web applications
  */
 
-<<<<<<< HEAD
 export class AccessibilityEnhancer {
   private focusableElements: HTMLElement[] = []
   private skipLinks: HTMLElement[] = []
@@ -98,8 +97,7 @@ export class AccessibilityEnhancer {
         this.handleEscapeKey(event);
       } else if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
         this.handleArrowKeys(event);
-      }
-    })
+      })
   }
 
   /**
@@ -120,12 +118,10 @@ export class AccessibilityEnhancer {
       const nextIndex = currentIndex < this.focusableElements.length - 1 ? currentIndex + 1 : 0;
       this.focusableElements[nextIndex]?.focus();
     }
-  }
 
   /**
    * Handle escape key
    */
-=======
 const AccessibilityEnhancerPage: React.FC = () => {
   const features = [
     {
@@ -148,8 +144,6 @@ const AccessibilityEnhancerPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-00a6
   private handleEscapeKey(event: KeyboardEvent): void {
     // Close any open modals or dropdowns
     const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
@@ -177,7 +171,6 @@ const AccessibilityEnhancerPage: React.FC = () => {
         activeElement.getAttribute('type') === 'radio') {
       this.handleMenuNavigation(event);
     }
-  }
 
   /**
    * Handle menu navigation with arrow keys
@@ -243,8 +236,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     navs.forEach((nav, index) => {
       if (!nav.getAttribute('aria-label') && !nav.getAttribute('aria-labelledby')) {
         nav.setAttribute('aria-label', `Navigation ${index + 1}`);
-      }
-    })
+      })
     
     // Setup banner landmark
     const header = document.querySelector('header');
@@ -257,7 +249,6 @@ const AccessibilityEnhancerPage: React.FC = () => {
     if (footer) {
       footer.setAttribute('role', 'contentinfo');
     }
-  }
 
   /**
    * Setup ARIA labels
@@ -270,8 +261,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
       if (icon) {
         const iconName = icon.getAttribute('data-icon') || 'button';
         button.setAttribute('aria-label', iconName);
-      }
-    })
+      })
     
     // Add ARIA labels to form inputs
     const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
@@ -282,7 +272,6 @@ const AccessibilityEnhancerPage: React.FC = () => {
         if (!label.id) {
           label.id = `label-${input.id}`;
         }
-      }
     })
   }
 
@@ -299,7 +288,6 @@ const AccessibilityEnhancerPage: React.FC = () => {
       } else {
         document.body.classList.remove('high-contrast');
       }
-    }
     
     mediaQuery.addEventListener('change', handleContrastChange);
     handleContrastChange(mediaQuery);
@@ -330,7 +318,6 @@ const AccessibilityEnhancerPage: React.FC = () => {
     if (liveRegion) {
       liveRegion.textContent = `Page loaded: ${title}`;
     }
-  }
 
   /**
    * Announce messages to screen readers
@@ -340,7 +327,6 @@ const AccessibilityEnhancerPage: React.FC = () => {
     if (liveRegion) {
       liveRegion.textContent = message;
     }
-  }
 
   /**
    * Update focusable elements (call when DOM changes)
@@ -379,12 +365,9 @@ const AccessibilityEnhancerPage: React.FC = () => {
     this.skipLinks = []
     this.landmarks = []
   }
-<<<<<<< HEAD
-}
 
 // Create global instance
 export const accessibilityEnhancer = new AccessibilityEnhancer();
-=======
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
     '24/7 technical support',
@@ -392,14 +375,12 @@ export const accessibilityEnhancer = new AccessibilityEnhancer();
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-00a6
 
 // Export utility functions
 export const announceToScreenReader = (message: string) => {
   accessibilityEnhancer.announce(message);
 }
 
-<<<<<<< HEAD
 export const updateFocusableElements = () => {
   accessibilityEnhancer.updateFocusableElements();
 }
@@ -411,6 +392,4 @@ export const focusFirstElement = () => {
 export const focusLastElement = () => {
   accessibilityEnhancer.focusLast();
 }
-=======
 export default AccessibilityEnhancerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-00a6

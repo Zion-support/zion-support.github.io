@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
 
-=======
 const NextPage: React.FC = () => {
   const features = [
     {
@@ -93,14 +91,12 @@ const NextPage: React.FC = () => {
       'max-image-preview'?: 'none' | 'standard' | 'large';
       'max-snippet'?: number;
     }
-  }
   verification?: {
     google?: string;
     yandex?: string;
     yahoo?: string;
     other?: Record<string, string>;
   }
-}
 
 export interface MetadataRoute {
   url: string,
@@ -120,7 +116,6 @@ export interface MetadataRouteSitemap extends MetadataRoute {
 export interface NextPageProps {
   params: { [key: string]: string }
   searchParams: { [key: string]: string | string[] | undefined }
-}
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -246,7 +241,6 @@ export interface RouteHandler {
 // Dynamic route types
 export interface DynamicRoute {
   params: { [key: string]: string }
-}
 
 // Static generation types
 export interface StaticProps {
@@ -279,8 +273,6 @@ declare module 'next' {
       email: string;
       name?: string;
     }
-  }
 }
 
 export {}
->>>>>>> cursor/fix-errors-and-merge-to-main-00a6

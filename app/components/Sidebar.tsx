@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -23,8 +22,7 @@ import {
   MapPin,
 
   Clock
-  }
-} from 'lucide-react'
+  } from 'lucide-react'
 const Sidebar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['ai-services', 'micro-saas', 'it-services']));
@@ -37,7 +35,6 @@ useEffect(() => {
   )
   }
         setIsOpen(false);}
-      }
     }
 window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -51,11 +48,9 @@ const toggleSection = (;
     $3
   )
   }
-      newExpanded.delete(section);}
-    } else {
+      newExpanded.delete(section);} else {
     newExpanded.add(section)
   }
-    }
     setExpandedSections(newExpanded);
   }
 const navigationSections = [
@@ -154,7 +149,6 @@ const contactInfo = {
     address: '364 E Main St STE 1008 Middletown, DE 19709',
     hours: 'Mon-Fri 9AM-6PM EST'
   }
-  }
 return (
     <>
 
@@ -165,8 +159,7 @@ return (
         className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
         aria-label="Open sidebar"
       >,
-        <Menu>
-      </button>
+        <Menu></Menu>
 
       {/* Sidebar Overlay */}
       {
@@ -195,10 +188,7 @@ return (
               className="lg: hidden text-gray-400 hover:text-white transition-colors"
               aria-label="Close sidebar"
             >,
-              <X>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
-            </button>
+              <X></X>
           </div>
 
           {/* Navigation */}
