@@ -7,7 +7,7 @@ import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
-  className?: string;,
+    className?: string;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, className = '' }) => {
@@ -98,7 +98,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
         {optimizations.length > 0 && (
           <div className="space-y-2 mb-4">
             {optimizations.map((optimization, index) => (
-              </div><div key={index} className="flex items-center text-sm text-green-600">
+                <div key={index} className="flex items-center text-sm text-green-600">
                 <CheckCircle className="h-4 w-4 mr-2" />
                 {optimization}
               </div>
@@ -108,7 +108,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
 
         {performanceScore && (
           <div className="mt-4">
-            </div><div className="flex items-center justify-between mb-2">
+              <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-700">Performance Score</span>
               <span className="text-sm font-bold text-gray-900">{performanceScore}/100</span>
             </div>

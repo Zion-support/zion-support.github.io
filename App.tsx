@@ -12,8 +12,8 @@ import ErrorBoundary from './app/components/ErrorBoundary';
 import SEOHead from './app/components/EnhancedSEOHead';
 import SkipLink from './app/components/SkipLink';
 import Breadcrumb from './app/components/Breadcrumb';
-import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+// import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+// import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './app/components/AnalyticsProvider';
@@ -52,9 +52,9 @@ const App: React.FC = () => {
         <Router>
           <AppWithPerformanceMonitoring>
             <AnalyticsProvider>
-              <PerformanceOptimizer>
+              {/* <PerformanceOptimizer> */}
                 <EnhancedAccessibility>
-                  <AccessibilityEnhancer>
+                  {/* <AccessibilityEnhancer> */}
                     <PerformanceMonitor />
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                       <Navigation />
@@ -81,9 +81,9 @@ const App: React.FC = () => {
                       </main>
                       <Footer />
                     </div>
-                  </AccessibilityEnhancer>
+                  {/* </AccessibilityEnhancer> */}
                 </EnhancedAccessibility>
-              </PerformanceOptimizer>
+              {/* </PerformanceOptimizer> */}
             </AnalyticsProvider>
           </AppWithPerformanceMonitoring>
         </Router>
