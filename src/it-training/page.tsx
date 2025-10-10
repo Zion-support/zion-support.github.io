@@ -1,13 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { GraduationCap, BookOpen, Users, Award, CheckCircle, Star,  GraduationCap,  BookOpen,  Award } from 'lucide-react';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { GraduationCap, BookOpen, Users, Award, CheckCircle, Star,  GraduationCap,  BookOpen,  Award } from 'lucide-react'
 const ITTrainingPage: React.FC = () => {
-  const features = [];
+  const features = []
   return (
-    {// TODO: Add content;}
-};
+    {// TODO:  Add content}
+}
   ico,
   n: GraduationCap,
       titl,
@@ -15,7 +15,7 @@ const ITTrainingPage: React.FC = () => {
       descriptio,
   n: 'Industry-recognized IT certification training programs',
       benefit,
-  s: ['Microsoft certifications', 'AWS certifications', 'Cisco certifications'];
+  s: ['Microsoft certifications', 'AWS certifications', 'Cisco certifications']
     },
       ico,
   n: BookOpen,
@@ -34,7 +34,7 @@ const ITTrainingPage: React.FC = () => {
       benefit,
   s: ['Real-world experience', 'Industry insights', 'Mentorship']
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -84,6 +84,6 @@ const ITTrainingPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default ItTrainingPage;
+  )
+}
+export default ItTrainingPage

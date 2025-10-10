@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react' 
 interface OptimizedImageProps {/* TODO: Fix JSX expression */}
 }
 const,
@@ -17,8 +17,8 @@ const,
   t: height ? `${height}px` : 'auto'
       }}
     />
-  );
-};
-export default OptimizedImage;
+  ) 
+} 
+export default OptimizedImage 
 "`
   </OptimizedImageProps>

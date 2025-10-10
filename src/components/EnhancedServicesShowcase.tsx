@@ -1,29 +1,29 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Phone, Mail, ExternalLink, Star, CheckCircle, ArrowRight, Zap, Brain, Cloud, Rocket, TrendingUp, Users, Award, Shield, Clock, DollarSign, Target, BarChart, Sparkles } from 'lucide-react';
-import { services, serviceCategories, contactInfo } from '../data/services';
+'use client' 
+import React, { useState, useEffect } from 'react' 
+import { Phone, Mail, ExternalLink, Star, CheckCircle, ArrowRight, Zap, Brain, Cloud, Rocket, TrendingUp, Users, Award, Shield, Clock, DollarSign, Target, BarChart, Sparkles } from 'lucide-react' 
+import { services, serviceCategories, contactInfo } from '../data/services' 
 interface ServiceCardProps {
-  service: typeof services[0];
-  index: number;
+  service: typeof services[0] 
+  index: number 
 }
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(false) 
   const formatPrice = (pricing: typeof service.pricing) => {
     if (pricing.custom) {
-      return 'Custom Pricing';
+      return 'Custom Pricing' 
     }
-    return `$${pricing.starting.toLocaleString()}/${pricing.period === 'month' ? 'mo' : pricing.period === 'year' ? 'yr' : 'one-time'}`;
-  };
+    return `$${pricing.starting.toLocaleString()}/${pricing.period === 'month' ? 'mo' : pricing.period === 'year' ? 'yr' : 'one-time'}` 
+  } 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'ai': return Brain;
-      case 'micro-saas': return Zap;
-      case 'it': return Cloud;
-      case 'emerging-tech': return Rocket;
-      default: return Target;
+      case 'ai': return Brain 
+      case 'micro-saas': return Zap 
+      case 'it': return Cloud 
+      case 'emerging-tech': return Rocket 
+      default: return Target 
     }
-  };
-  const CategoryIcon = getCategoryIcon(service.category);
+  } 
+  const CategoryIcon = getCategoryIcon(service.category) 
   return (
     <div
       className={`quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-500 ${
@@ -58,13 +58,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
           {service.popular && (
             <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-bold flex items-center">
               <Star className="w-3 h-3 mr-1" />
-              Popular;
+              Popular 
   </
           )}
           {service.new && (
             <span className="bg-gradient-to-r from-green-400 to-cyan-500 text-black text-xs px-2 py-1 rounded-full font-bold flex items-center">
               <Sparkles className="w-3 h-3 mr-1" />
-              New;
+              New 
   </
           )}
         </div>
@@ -77,7 +77,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
       <div className="mb-4">
         <h4 className="text-sm font-semibold text-cyan-400 mb-2 flex items-center">
           <CheckCircle className="w-4 h-4 mr-2" />
-          Key Features;
+          Key Features 
   </
         <ul className="space-y-1">
           {service.features.slice(0, 3).map((feature, idx) => (
@@ -88,7 +88,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
           ))}
           {service.features.length > 3 && (
             <li className="text-xs text-cyan-400">
-              +{service.features.length - 3} more features;
+              +{service.features.length - 3} more features 
   </
           )}
         </ul>
@@ -97,7 +97,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
       <div className="mb-4">
         <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center">
           <TrendingUp className="w-4 h-4 mr-2" />
-          Key Benefits;
+          Key Benefits 
   </
         <div className="grid grid-cols-2 gap-2">
           {service.benefits.slice(0, 2).map((benefit, idx) => (
@@ -132,14 +132,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
           href={`tel:${contactInfo.phone}`}
           className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group">
           <Phone className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-          Call Now;
+          Call Now 
   </
         <div className="grid grid-cols-2 gap-2">
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="bg-slate-800 text-cyan-400 py-2 px-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
             <Mail className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
-            Email;
+            Email 
   </
           <a
             href={service.contact.demo}
@@ -147,7 +147,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
             rel="noopener noreferrer"
             className="bg-slate-800 text-purple-400 py-2 px-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
             <ExternalLink className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
-            Demo;
+            Demo 
   </
         </div>
       </div>
@@ -163,30 +163,30 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
         </div>
       </div>
     </div>
-  );
-};
+  ) 
+} 
 const EnhancedServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [filteredServices, setFilteredServices] = useState(services);
+  const [selectedCategory, setSelectedCategory] = useState<string>('all') 
+  const [filteredServices, setFilteredServices] = useState(services) 
   useEffect(() => {
     if (selectedCategory === 'all') {
-      setFilteredServices(services);
+      setFilteredServices(services) 
     } else {
-      setFilteredServices(services.filter(service => service.category === selectedCategory));
+      setFilteredServices(services.filter(service => service.category === selectedCategory)) 
     }
-  }, [selectedCategory]);
-  const popularServices = services.filter(service => service.popular);
-  const newServices = services.filter(service => service.new);
+  }, [selectedCategory]) 
+  const popularServices = services.filter(service => service.popular) 
+  const newServices = services.filter(service => service.new) 
   return (
     <section className="py-16 px-4">
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 neon-text">
-            Our Services;
+            Our Services 
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business operations;
+            Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business operations 
   </
           {/* Contact Info Banner */}
           <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
@@ -225,7 +225,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                 : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
             }`}
           >
-            All Services;
+            All Services 
   </
           {serviceCategories.map((category) => (
             <button
@@ -252,7 +252,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         {selectedCategory === 'all' && (
           <div className="mb-12">
             <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text">
-              Most Popular Services;
+              Most Popular Services 
   </
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {popularServices.map((service, index) => (
@@ -296,15 +296,15 @@ const EnhancedServicesShowcase: React.FC = () => {
               style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
             >
               <Mail className="w-5 h-5 mr-2" />
-              Get Free Consultation;
+              Get Free Consultation 
   </
           </div>
         </div>
       </div>
     </section>
-  );
-};
-export default EnhancedServicesShowcase;
+  ) 
+} 
+export default EnhancedServicesShowcase 
   </a>
   </h3>
   </button>

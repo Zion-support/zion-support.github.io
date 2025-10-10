@@ -5,17 +5,6 @@
  */;
 import React, { ReactElement, useCallback } from 'react';
 // Test result types;
-<<<<<<< HEAD
-export interface PerformanceMetrics {
-  renderTime: number,
-    memoryUsage: number,
-    timestamp: string;}
-}
-export interface CoverageMetrics {
-  statements: number,
-    branches: number,
-    functions: number,
-=======
 export interface PerformanceMetrics {;
   renderTime: number,;
     memoryUsage: number;}
@@ -25,7 +14,6 @@ export interface CoverageMetrics {;
   statements: number,;
     branches: number;
   functions: number,;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     lines: number;}
   renderTime: number,;
   memoryUsage: number,;
@@ -38,24 +26,6 @@ export interface CoverageMetrics {;
   lines: number;}
 }
 // Test configuration interface;
-<<<<<<< HEAD
-export interface TestConfig {
-  enableMocking: boolean,
-    enableCoverage: boolean,
-    enablePerformance: boolean,
-    enableAccessibility: boolean
-// Test result types
-export interface PerformanceMetrics {}
-  renderTime: number,
-    memoryUsage: number
-  timestamp: string;}
-}
-export interface CoverageMetrics {}
-  statements: number,
-    branches: number
-  functions: number,
-    lines: number;}
-=======
 export interface TestConfig {;
   enableMocking: boolean,;
     enableCoverage: boolean;
@@ -72,35 +42,14 @@ export interface CoverageMetrics {}
   branches: number;
   functions: number;
   lines: number;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 }
 // Test configuration interface;
 export interface TestConfig {}
-<<<<<<< HEAD
-  enableMocking: boolean,
-    enableCoverage: boolean
-  enablePerformance: boolean,
-    enableAccessibility: boolean
-  enableVisualRegression: boolean
-  mockDataPath?: string
-  coverageThreshold: number,
-    performanceThreshold: number,
-    accessibilityThreshold: number
-  timeout?: number
-  verbose?: boolean
-  bail?: boolean
-  enableMocking: boolean,
-  enableCoverage: boolean,
-  enablePerformance: boolean,
-  enableAccessibility: boolean,
-  enableVisualRegression: boolean,
-=======
   enableMocking: boolean;
   enableCoverage: boolean;
   enablePerformance: boolean;
   enableAccessibility: boolean;
   enableVisualRegression: boolean;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   mockDataPath?: string;
   coverageThreshold: number,;
     performanceThreshold: number;
@@ -129,59 +78,6 @@ export interface TestConfig {}
   includePattern?: string[],;
   excludePattern?: string[];}
 }
-<<<<<<< HEAD
-// Default test configuration
-export const defaultTestConfig: TestConfig = {,
-    enableMocking: true,
-export const defaultTestConfig: TestConfig = {}
-  enableMocking: true,
-  enableCoverage: true,
-  enablePerformance: true,
-  enableAccessibility: true,
-  enableVisualRegression: false,
-  coverageThreshold: 80,
-  performanceThreshold: 100,
-  accessibilityThreshold: 90}
-}
-interface TestResult {
-  name: string,
-    status: 'passed' | 'failed' | 'skipped' | 'pending'
-interface TestResult {}
-  name: string,
-    status: 'passed' | 'failed' | 'skipped' | 'pending'
-  duration: number
-  error?: Error
-  assertions: AssertionResult[]
-  coverage?: CoverageResult;}
-}
-interface AssertionResult {
-  name: string,
-    status: 'passed' | 'failed'
-interface AssertionResult {}
-  name: string,
-    status: 'passed' | 'failed'
-  expected?: unknown
-  actual?: unknown
-  message?: string;}
-}
-interface CoverageResult {
-  statements: number,
-    branches: number,
-    functions: number,
-    lines: number,
-    uncovered: string[];}
-}
-interface TestSuite {
-  name: string,
-    tests: Test[]
-  beforeAll: (() => void | Promise<void>)[],</void></<<<void>afterAll</void></void>: (() => void | Promise<void>)[]</void></<<<void>beforeEach</void></void>: (() => void | Promise<void>)[],</void></<<<void>afterEach</void></void>: (() => void | Promise<void>)[];}</void>
-}
-interface Test {</void>
-  name: string,</void>
-    fn: () => void | Promise<void>timeout?: number
-  skip?: boolean
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 // Default test configuration;
 export const defaultTestConfig: TestConfig = {,;
     enableMocking: true,;}
@@ -268,20 +164,6 @@ interface CoverageResult {;
 interface TestSuite {;
   name: string,;}
 interface CoverageResult {}
-<<<<<<< HEAD
-  statements: number,
-    branches: number
-  functions: number,
-    lines: number
-  uncovered: string[];}
-}
-interface TestSuite {}
-  name: string,
-    tests: Test[]
-  beforeAll: (() => void | Promise<void>)[],
-  afterAll: (() => void | Promise<void>)[],
-  beforeEach: (() => void | Promise<void>)[],
-=======
   statements: number;
   branches: number;
   functions: number;
@@ -294,7 +176,6 @@ interface TestSuite {}
   beforeAll: (() => void | Promise<void>)[],;
   afterAll: (() => void | Promise<void>)[],;
   beforeEach: (() => void | Promise<void>)[],;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   afterEach: (() => void | Promise<void>)[];}
 }
 interface Test {;
@@ -318,42 +199,10 @@ interface Test {}
   skip?: boolean;
   only?: boolean;}
 }
-<<<<<<< HEAD
-export class TestRunner {
-  private static instance: TestRunner,
-  private config: TestConfig,
-  private suites: TestSuite[] = []
-  private currentSuite: TestSuite | null = null</void>
-  private results: TestResult[] = []</void>
-  private testResults: Array<{,
-interface Test {}
-  name: string,
-    fn: () => void | Promise<void>
-  timeout?: number
-  skip?: boolean
-  only?: boolean;}
-}
-export class TestRunner {}
-  private static instance: TestRunner
-  private config: TestConfig
-  private suites: TestSuite[] = []
-  private currentSuite: TestSuite | null = null
-  private results: TestResult[] = []
-  private testResults: Array<{}
-    name: string,
-    status: 'passed' | 'failed' | 'skipped',
-    duration: number
-    error?: string;}
-  }> = []
-  private isRunning: boolean = false
-  private startTime: number = 0
-  constructor(config: Partial<TestConfig>= {}) {
-=======
 export class TestRunner {}
   private static instance: TestRunner;
   private config: TestConfig;
   private suites: TestSuite[] = [];
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   private currentSuite: TestSuite | null = null;
   private results: TestResult[] = [];
   private testResults: Array<{}
@@ -615,19 +464,11 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       const renderTime = performance.now() - startTime;
       // Measure memory usage if available;
       let memoryUsage = 0;
-<<<<<<< HEAD
-      if ('memory' in performance) {
-=======
-;
       if ('memory' in performance) {;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         if (memory) {;
           memoryUsage = memory.usedJSHeapSize;
-<<<<<<< HEAD
-=======
 ;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         }
       }
       unmount();
@@ -1170,18 +1011,6 @@ export class TestRunner {/* TODO: Fix JSX expression */}
             <div class="test ${result.status}"></div>;
                 <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>;
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
-<<<<<<< HEAD
-            </div>
-        <h3 id="heading-summary">Summary</h3>
-        <p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
-        <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
-        <p>Duration: ${Date.now() - this.startTime}ms</p>
-    </div>
-    <div class="tests">
-        ${this.results;
-=======
             </div>;
         <h3 id="heading-summary">Summary</h3>;
         <p>Total: ${this.results.length}</p>;
@@ -1192,7 +1021,6 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     </div>;
     <div class="tests"></div>;
         ${this.results;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           .map(result => `}
         ${this.results}
           .map();
@@ -1462,231 +1290,6 @@ export class TestRunner {/* TODO: Fix JSX expression */}
    * Generate JUnit report;
    */;
   private generateJunitReport(): void {}
-<<<<<<< HEAD
-    const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
-        ${this.results
-          .map()</testsuite>
-    result => `}</testsuite>
-<testsuites>}
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
-        ${this.results}
-          .map()
-            result => `}
-            <testcase name="${result.name}" time="${result.duration / 1000}">
-                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
-                ${result.status === 'skipped' ? '<skipped>' : ''}</skipped>
-            </skipped>
-<testsuites>}
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
-        ${this.results;
-          .map(result => `}
-            <testcase name="${result.name}" time="${result.duration / 1000}">)
-                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''})
-                ${result.status === 'skipped' ? '<skipped/>' : ''})
-            </testcase>)
-)
-          )
-          .join('')}
-    </testsuite>
-</testsuites>`
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-  }
-  // Integration test
-  async runIntegrationTest()
-    component: ReactElement,
-    testName: string)
-    userInteractions: (result: RenderResult) => Promise<void>
-  // Integration test;
-  async runIntegrationTest(component: ReactElement),
-    testName: string),
-    userInteractions: (result: RenderResult) => Promise<void>): Promise<{ passed: boolean; error?: string }> {
-    try {
-      const result = this.customRender(component)
-      await userInteractions(result)
-      this.testResults.push({`}
-  ): Promise<{ passed: boolean; error?: string }> {}
-    try {}
-      const result = this.customRender(component)
-      await userInteractions(result)
-      this.testResults.push({`})
-        name: `Integration: ${testName}`,
-        status: 'passed')
-    duration: 0
-      this.testResults.push({`})
-        name: `Integration: ${testName}`)
-        status: 'passed'),
-        duration: 0,
-      })
-      return { passed: true }
-    } catch (error) {}
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error'
-      this.testResults.push({`}
-      this.testResults.push({`})
-        name: `Integration: ${testName}`,
-        status: 'failed',
-        duration: 0)
-    error: errorMessage
-      this.testResults.push({`})
-        name: `Integration: ${testName}`)
-        status: 'failed'),
-        duration: 0),
-        error: errorMessage,
-      })
-      return { passed: false, error: errorMessage }
-    }
-  }
-  // Visual regression test
-  async runVisualRegressionTest(
-    component: ReactElement)
-    testName: string
-  // Visual regression test;
-  async runVisualRegressionTest(component: ReactElement),
-    testName: string,
-  ): Promise<{ passed: boolean; diff?: unknown }> {
-    // This would typically use a tool like Percy or Chromatic;
-    // For now, we'll just return a placeholder}
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-    this.testResults.push({`}
-  async runVisualRegressionTest()
-    component: ReactElement,
-    testName: string
-  ): Promise<{ passed: boolean; diff?: unknown }> {}
-    // This would typically use a tool like Percy or Chromatic
-    // For now, we'll just return a placeholder}
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-    this.testResults.push({`})
-      name: `Visual: ${testName}`,
-      status: 'passed')
-    duration: 0
-    this.testResults.push({`})
-      name: `Visual: ${testName}`)
-      status: 'passed'),
-      duration: 0,
-    })
-    return { passed: true }
-  }
-  // Coverage test;
-  // Coverage test;
-  async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {
-    // This would typically use Istanbul or similar
-    // For now, we'll just return a placeholder
-    const coverage: CoverageMetrics = {,
-    statements: 85,
-  // Coverage test
-  // Coverage test
-  async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {}
-    // This would typically use Istanbul or similar
-    // For now, we'll just return a placeholder
-    const coverage: CoverageMetrics = {}
-      statements: 85,
-      branches: 80,
-      functions: 90,
-      lines: 85}
-    }
-    const passed = coverage.statements >= this.config.coverageThreshold
-    this.testResults.push({)}
-      name: 'Coverage',
-      status: passed ? 'passed' : 'failed',
-      duration: 0,`})
-    error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%
-    })
-    return { passed, coverage }
-  }
-  // Run all tests
-  async runAllTests(
-    tests: Array<{,
-    name: string,
-    type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual',
-    component: ReactElement)
-    assertions?: (result: RenderResult) => void
-      userInteractions?: (result: RenderResult) => Promise<void>;}</voi>
-    }></void>
-    // This would typically use Istanbul or similar;
-    // For now, we'll just return a placeholder;
-    const coverage: CoverageMetrics = {
-      statements: 85,
-      branches: 80,
-      functions: 90,
-      lines: 85}
-    }
-    const passed = coverage.statements >= this.config.coverageThreshold;
-    this.testResults.push({)
-      name: 'Coverage'),
-      status: passed ? 'passed' : 'failed'),
-      duration: 0,`}
-      error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%
-    })
-    return { passed, coverage }
-  }
-  // Run all tests;
-  async runAllTests(tests: Array<{)
-      name: string;)
-      type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual')
-      component: ReactElement;)
-      assertions?: (result: RenderResult) => void;
-      userInteractions?: (result: RenderResult) => Promise<void>;}
-    }>
-  ): Promise<{
-  async runAllTests()
-    tests: Array<{}
-      name: string,
-    type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual'
-      component: ReactElement
-      assertions?: (result: RenderResult) => void
-      userInteractions?: (result: RenderResult) => Promise<void>;}
-    }>
-  ): Promise<{}
-    passed: boolean;}
-    results: Array<{ name: string; type: string; passed: boolean; error?: string }>
-  }> {}
-    const results: Array<{ name: string; type: string; passed: boolean; error?: string }> = []
-    for (const test of tests) {
-      let result;
-      switch (test.type) {
-        case 'component':
-          result = await this.runComponentTest(
-    for (const test of tests) {}
-      let result
-      switch (test.type) {}
-        case 'component':
-          result = await this.runComponentTest()
-            test.component,
-            test.name)
-    test.assertions as any
-          result = await this.runComponentTest(test.component)
-            test.name)
-            test.assertions as any;
-          )
-          break;
-        case 'integration':
-          result = await this.runIntegrationTest(
-          result = await this.runIntegrationTest()
-            test.component,
-            test.name)
-    test.userInteractions as any
-          result = await this.runIntegrationTest(test.component)
-            test.name)
-            test.userInteractions as any;
-          )
-          break;
-        case 'performance':
-          result = await this.runPerformanceTest(test.component, test.name)
-          break;
-        case 'accessibility':
-          result = await this.runAccessibilityTest(test.component, test.name)
-          break;
-        case 'visual':
-          result = await this.runVisualRegressionTest(test.component, test.name)
-          break;
-        default:}
-          result = { passed: false, error: 'Unknown test type' }
-  private generateJunitReport(): void {/* TODO: Fix JSX expression */}"
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
-        ${/* TODO: Fix JSX expression */}"
-            <testcase name="${result.name}" time="${result.duration / 1000}"></testcase>"`
-=======
     const xml = `<?xml version="1.0" encoding="UTF-8"?>;
 <testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
         ${this.results;
@@ -1698,7 +1301,6 @@ export class TestRunner {/* TODO: Fix JSX expression */}
           .map();
             result => `}
             <testcase name="${result.name}" time="${result.duration / 1000}">;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
                 ${result.status === 'skipped' ? '<skipped>' : ''}</skipped>;
             </skipped>;
@@ -2765,54 +2367,4 @@ export const testRunner = new TestRunner();
 export { Mock };
 export type {/* TODO: Fix JSX expression */}
 };
-<<<<<<< HEAD
-"`
-  </T>
-  </T>
-  </T>
-  </T>
-  </T>
-  </T>
-  </T>
-  </T>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </testsuite>
-  </testsuites>
-  </h4>
-  </h3>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </TestConfig>
-  </TestConfig>
-  </TestConfig>
-  </void>
-  </void>
-  </void>
-  </void>
-=======
 "`;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

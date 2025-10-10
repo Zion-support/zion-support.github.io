@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const Pagetsx: React.FC = () => {
-  const _features = [];
+  const _features = []
   return (
     {icon: Users,
     title: 'Advanced Features',
@@ -83,5 +83,5 @@ const Pagetsx: React.FC = () => {
       <Footer /></div>
   )
 }
-export default Pagetsx;"
-export default GdprPage;
+export default Pagetsx"
+export default GdprPage

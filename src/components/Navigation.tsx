@@ -1,42 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+import React, { useState, useEffect } from 'react' 
+import { Link } from 'react-router-dom' 
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react' 
 const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-  const [itServicesOpen, setItServicesOpen] = useState(false);
-  const [microSaasOpen, setMicroSaasOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false) 
+  const [servicesOpen, setServicesOpen] = useState(false) 
+  const [aiServicesOpen, setAiServicesOpen] = useState(false) 
+  const [itServicesOpen, setItServicesOpen] = useState(false) 
+  const [microSaasOpen, setMicroSaasOpen] = useState(false) 
+  const [isScrolled, setIsScrolled] = useState(false) 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false);
+        setIsOpen(false) 
       }
-    };
+    } 
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
+      setIsScrolled(window.scrollY > 50) 
+    } 
+    window.addEventListener('resize', handleResize) 
+    window.addEventListener('scroll', handleScroll) 
     return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+      window.removeEventListener('resize', handleResize) 
+      window.removeEventListener('scroll', handleScroll) 
+    } 
+  }, []) 
   const closeAllMenus = () => {
-    setServicesOpen(false);
-    setAiServicesOpen(false);
-    setItServicesOpen(false);
-    setMicroSaasOpen(false);
-    setIsOpen(false);
-  };
+    setServicesOpen(false) 
+    setAiServicesOpen(false) 
+    setItServicesOpen(false) 
+    setMicroSaasOpen(false) 
+    setIsOpen(false) 
+  } 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen) 
     if (isOpen) {
-      closeAllMenus();
+      closeAllMenus() 
     }
-  };
+  } 
   const serviceCategories = [
     {
       title: 'Micro SAAS Solutions',
@@ -164,7 +164,7 @@ const Navigation: React.FC = () => {
         { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
       ]
     }
-  ];
+  ] 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -186,10 +186,10 @@ const Navigation: React.FC = () => {
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
             <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home;
+              Home 
   </
             <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
-              About;
+              About 
   </
             {/* Services Dropdown */}
             <div className="relative">
@@ -247,7 +247,7 @@ const Navigation: React.FC = () => {
                       className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                       onClick={closeAllMenus}
                     >
-                      View All Services;
+                      View All Services 
   </
                   </div>
                 </div>
@@ -261,21 +261,21 @@ const Navigation: React.FC = () => {
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
-              Case Studies;
+              Case Studies 
   </
             <Link
               href="/blog"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
-              Blog;
+              Blog 
   </
             <Link
               href="/contact"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
-              Contact;
+              Contact 
   </
             {/* CTA Button */}
             <Link
@@ -284,7 +284,7 @@ const Navigation: React.FC = () => {
               onClick={closeAllMenus}
             >
               <Phone className="w-4 h-4 mr-2" />
-              (302) 464-0950;
+              (302) 464-0950 
   </
           </div>
           {/* Mobile Menu Button */}
@@ -307,14 +307,14 @@ const Navigation: React.FC = () => {
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
-                Home;
+                Home 
   </
               <Link
                 href="/about"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
-                About;
+                About 
   </
               {/* Mobile Services */}
               <div>
@@ -369,7 +369,7 @@ const Navigation: React.FC = () => {
             <a
               href="/contact"
               className="cyber-button px-4 py-2 text-sm font-medium">
-              Get Started;
+              Get Started 
   </
           </div>
           {/* Mobile Menu Button */}
@@ -405,16 +405,16 @@ const Navigation: React.FC = () => {
                 onClick={closeAllMenus}
               >
                 <Phone className="w-4 h-4 inline mr-2" />
-                (302) 464-0950;
+                (302) 464-0950 
   </
             </div>
           </div>
         )}
       </div>
     </nav>
-  );
-};
-export default Navigation;
+  ) 
+} 
+export default Navigation 
   </a>
   </a>
   </Link>

@@ -10,10 +10,10 @@ export default function HeroSection() {
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
             <span className="block holographic-text cyber-text-3d">
-              Zion Tech Group;
+              Zion Tech Group 
   </
             <span className="block text-white mt-4">
-              Advanced AI & IT Solutions;
+              Advanced AI & IT Solutions 
   </
           </h1>
           {/* Subtitle */}
@@ -56,12 +56,12 @@ export default function HeroSection() {
             <a
               href="#services"
               className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-              Explore Services;
+              Explore Services 
   </
             <a
               href="#contact"
               className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">
-              Get Started;
+              Get Started 
   </
           </div>
           {/* Stats */}
@@ -92,8 +92,8 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-  );
-};
+  ) 
+} 
 export default HeroSection;"`
   </a>
   </a>
