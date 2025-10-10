@@ -19,14 +19,13 @@ import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './app/components/AnalyticsProvider';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 
-// Import pages
+// Import pages that exist
 import AboutPage from './app/about/page';
 import ServicesPage from './app/services/page';
 import ContactPage from './app/contact/page';
 import BlogPage from './app/blog/page';
 import CaseStudiesPage from './app/case-studies/page';
 import EnterprisePage from './app/enterprise/page';
-import GuidesPage from './app/guides/page';
 import DocsPage from './app/docs/page';
 import ApiDocsPage from './app/api-docs/page';
 import SupportPage from './app/support/page';
@@ -63,8 +62,7 @@ const structuredData = {
   ],
   "foundingDate": "2020",
   "numberOfEmployees": "50-100",
-  "industry": "Technology",
-  "description": "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services."
+  "industry": "Technology"
 };
 
 // App component with performance monitoring
@@ -88,7 +86,6 @@ const AppWithPerformanceMonitoring = memo(() => {
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/case-studies" element={<CaseStudiesPage />} />
             <Route path="/enterprise" element={<EnterprisePage />} />
-            <Route path="/guides" element={<GuidesPage />} />
             <Route path="/docs" element={<DocsPage />} />
             <Route path="/api-docs" element={<ApiDocsPage />} />
             <Route path="/support" element={<SupportPage />} />

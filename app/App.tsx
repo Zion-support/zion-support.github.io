@@ -1,21 +1,4 @@
-<<<<<<< HEAD
 'use client';
-import React, { useEffect, useState, lazy } from 'react';
-import { useRouter } from 'next/navigation';
-
-// Lazy load components for better performance;
-const HomePage = lazy(() => import('./page'));
-
-// Loading component;
-const LoadingSpinner: React.FC = React.memo(() => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
-      <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
-    </div>
-  </div>
-));
-=======
 import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -48,110 +31,43 @@ const AiDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'
 // IT Services
 const ItServicesPage = lazy(() => import('./it-services/page'));
 const ItInfrastructurePage = lazy(() => import('./it-infrastructure/page'));
+const CloudServicesPage = lazy(() => import('./cloud-services/page'));
 const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
-const CloudMigrationPage = lazy(() => import('./cloud-migration/page'));
-const DatabaseManagementPage = lazy(() => import('./database-management/page'));
-const ItConsultingPage = lazy(() => import('./it-consulting/page'));
-const ItSupportPage = lazy(() => import('./it-support/page'));
-
-// Specialized Solutions
-const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
-const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
-const BlockchainWeb3Page = lazy(() => import('./blockchain-web3/page'));
-const BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
-const IotEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
-const RoboticsPage = lazy(() => import('./robotics/page'));
-const ArVrSolutionsPage = lazy(() => import('./ar-vr-solutions/page'));
-
-// Micro SAAS
-const MicroSaasPage = lazy(() => import('./micro-saas/page'));
-
-// Additional pages
-const PrivacyPage = lazy(() => import('./privacy/page'));
-const TermsPage = lazy(() => import('./terms/page'));
-const CookiesPage = lazy(() => import('./cookies/page'));
-const GdprPage = lazy(() => import('./gdpr/page'));
-const CompliancePage = lazy(() => import('./compliance/page'));
-const DocsPage = lazy(() => import('./docs/page'));
-const ApiDocsPage = lazy(() => import('./api-docs/page'));
-const ConsultationPage = lazy(() => import('./consultation/page'));
-const NotFoundPage = lazy(() => import('./not-found'));
-
-// Utils
-import { performanceOptimizer, performanceMonitor, seoOptimizer, accessibilityEnhancer, collectPerformanceMetrics } from './utils/performanceUtils';
-
-// Styles
-import './globals.css';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-
-// Mock components for now - these will be implemented
-const PerformanceOptimizer = () => null;
-const SEOOptimizer = () => null;
-const AccessibilityEnhancer = () => null;
-const UserExperienceEnhancer = () => null;
-const SecurityEnhancer = () => null;
+const DevOpsPage = lazy(() => import('./devops/page'));
+const DatabasePage = lazy(() => import('./database/page'));
+const MobileDevelopmentPage = lazy(() => import('./mobile-development/page'));
+const WebDevelopmentPage = lazy(() => import('./web-development/page'));
 
 // Loading component
-const LoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400"></div>
+const LoadingSpinner: React.FC = React.memo(() => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
+      <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
+    </div>
   </div>
-);
+));
 
+// Main App component
 const App: React.FC = () => {
-  const [isInitialized, setIsInitialized] = useState(false);
-  const router = useRouter();
-
   useEffect(() => {
-<<<<<<< HEAD
-    // Initialize app;
-    const initializeApp = async () => {
-      try {
-        // Add any initialization logic here;
-        setIsInitialized(true);
-      } catch (error) {
-        setIsInitialized(true);
-      }
+    // Preload critical resources
+    const preloadCriticalResources = () => {
+      // Preload critical CSS
+      const criticalCSS = document.createElement('link');
+      criticalCSS.rel = 'preload';
+      criticalCSS.href = '/styles/critical.css';
+      criticalCSS.as = 'style';
+      document.head.appendChild(criticalCSS);
     };
 
-    initializeApp();
-=======
-    // Initialize performance monitoring
-    if (typeof window !== 'undefined') {
-      try {
-        performanceOptimizer();
-        performanceMonitor();
-        seoOptimizer();
-        accessibilityEnhancer();
-        collectPerformanceMetrics();
-      } catch (error) {
-        console.warn('Performance monitoring initialization failed:', error);
-      }
-    }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+    preloadCriticalResources();
   }, []);
 
-  if (!isInitialized) {
-    return <LoadingSpinner />;
-  }
-
   return (
-<<<<<<< HEAD
-    <div className="App">
-      <HomePage />
-    </div>
-=======
     <HelmetProvider>
       <BrowserRouter>
-        <div className="App">
-          {/* Enhanced Components */}
-          <PerformanceOptimizer />
-          <SEOOptimizer />
-          <AccessibilityEnhancer />
-          <UserExperienceEnhancer />
-          <SecurityEnhancer />
-          
-          {/* Main App Content with Routing */}
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               {/* Main Pages */}
@@ -164,7 +80,7 @@ const App: React.FC = () => {
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/team" element={<TeamPage />} />
               <Route path="/careers" element={<CareersPage />} />
-              
+
               {/* AI Services */}
               <Route path="/ai-services" element={<AiServicesPage />} />
               <Route path="/ai-marketing" element={<AiMarketingPage />} />
@@ -178,46 +94,21 @@ const App: React.FC = () => {
               <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
               <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
               <Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />
-              
+
               {/* IT Services */}
               <Route path="/it-services" element={<ItServicesPage />} />
               <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
+              <Route path="/cloud-services" element={<CloudServicesPage />} />
               <Route path="/cybersecurity" element={<CybersecurityPage />} />
-              <Route path="/cloud-migration" element={<CloudMigrationPage />} />
-              <Route path="/database-management" element={<DatabaseManagementPage />} />
-              <Route path="/it-consulting" element={<ItConsultingPage />} />
-              <Route path="/it-support" element={<ItSupportPage />} />
-              
-              {/* Specialized Solutions */}
-              <Route path="/quantum-computing" element={<QuantumComputingPage />} />
-              <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
-              <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
-              <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
-              <Route path="/iot-edge-computing" element={<IotEdgeComputingPage />} />
-              <Route path="/robotics" element={<RoboticsPage />} />
-              <Route path="/ar-vr-solutions" element={<ArVrSolutionsPage />} />
-              
-              {/* Micro SAAS */}
-              <Route path="/micro-saas" element={<MicroSaasPage />} />
-              
-              {/* Legal & Support Pages */}
-              <Route path="/privacy" element={<PrivacyPage />} />
-              <Route path="/terms" element={<TermsPage />} />
-              <Route path="/cookies" element={<CookiesPage />} />
-              <Route path="/gdpr" element={<GdprPage />} />
-              <Route path="/compliance" element={<CompliancePage />} />
-              <Route path="/docs" element={<DocsPage />} />
-              <Route path="/api-docs" element={<ApiDocsPage />} />
-              <Route path="/consultation" element={<ConsultationPage />} />
-              
-              {/* Catch all route */}
-              <Route path="*" element={<NotFoundPage />} />
+              <Route path="/devops" element={<DevOpsPage />} />
+              <Route path="/database" element={<DatabasePage />} />
+              <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+              <Route path="/web-development" element={<WebDevelopmentPage />} />
             </Routes>
           </Suspense>
         </div>
       </BrowserRouter>
     </HelmetProvider>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 
