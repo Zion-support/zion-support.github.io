@@ -1,15 +1,7 @@
 'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+import React, { useCallback, useState, useEffect, memo } from 'react';
 import { 
-  Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, 
-  MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, 
-  Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, 
-  Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, 
-  Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, 
-  Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, 
-  Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, 
-  Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, 
-  ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location
+  Phone, Mail, MapPin, BarChart, MessageSquare, Eye, Database, Cloud, Code, Settings
 } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -66,7 +58,7 @@ const HomePage: React.FC = () => {
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as Window & { gtag: (command: string, action: string, parameters?: Record<string, any>) => void }).gtag('event', 'phone_click', {
+      (window as Window & { gtag: (command: string, action: string, parameters?: Record<string, unknown>) => void }).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
