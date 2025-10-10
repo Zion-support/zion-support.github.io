@@ -1,14 +1,12 @@
 'use client';
 import React from 'react';
 import React, { useEffect } from 'react';
-
 interface AnalyticsProps {
   enableGoogleAnalytics?: boolean;
   enablePerformanceMonitoring?: boolean;
   enableErrorTracking?: boolean;
   enableUserBehaviorTracking?: boolean;
 }
-
 const Analytics: React.FC<AnalyticsProps> = ({
   enableGoogleAnalytics = true,
   enablePerformanceMonitoring = true,
@@ -19,34 +17,28 @@ const Analytics: React.FC<AnalyticsProps> = ({
     if (enableGoogleAnalytics) {
       initializeGoogleAnalytics();
     }
-
     if (enablePerformanceMonitoring) {
       initializePerformanceMonitoring();
     }
-
     if (enableErrorTracking) {
       initializeErrorTracking();
     }
-
     if (enableUserBehaviorTracking) {
       initializeUserBehaviorTracking();
     }
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
-
   const initializeGoogleAnalytics = () => {
     // Load Google Analytics
     const script = document.createElement('script');
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
     document.head.appendChild(script);
-
     // Initialize gtag
     (window as any).dataLayer = (window as any).dataLayer || [];
     function gtag(...args: any[]) {
       (window as any).dataLayer.push(args);
     }
     (window as any).gtag = gtag;
-
     gtag('js', new Date());
     gtag('config', 'GA_MEASUREMENT_ID', {
       page_title: document.title,
@@ -54,7 +46,6 @@ const Analytics: React.FC<AnalyticsProps> = ({
       send_page_view: true
     });
   };
-
   const initializePerformanceMonitoring = () => {
     if ('PerformanceObserver' in window) {
       // Monitor Core Web Vitals
@@ -72,9 +63,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
           }
         }
       });
-
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-
       // Monitor page load time
       window.addEventListener('load', () => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -84,7 +73,6 @@ const Analytics: React.FC<AnalyticsProps> = ({
       });
     }
   };
-
   const initializeErrorTracking = () => {
     // Track JavaScript errors
     window.addEventListener('error', (event) => {
@@ -96,7 +84,6 @@ const Analytics: React.FC<AnalyticsProps> = ({
         error: event.error?.stack
       });
     });
-
     // Track unhandled promise rejections
     window.addEventListener('unhandledrejection', (event) => {
       trackEvent('error', 'unhandled_promise_rejection', {
@@ -104,7 +91,6 @@ const Analytics: React.FC<AnalyticsProps> = ({
         promise: event.promise
       });
     });
-
     // Track resource loading errors
     window.addEventListener('error', (event) => {
       if (event.target !== window) {
@@ -116,7 +102,6 @@ const Analytics: React.FC<AnalyticsProps> = ({
       }
     }, true);
   };
-
   const initializeUserBehaviorTracking = () => {
     // Track page views
     trackEvent('page_view', 'page_view', {
@@ -124,7 +109,6 @@ const Analytics: React.FC<AnalyticsProps> = ({
       page_location: window.location.href,
       page_path: window.location.pathname
     });
-
     // Track scroll depth
     let maxScroll = 0;
     window.addEventListener('scroll', () => {
@@ -136,19 +120,16 @@ const Analytics: React.FC<AnalyticsProps> = ({
         }
       }
     });
-
     // Track time on page
     const startTime = Date.now();
     window.addEventListener('beforeunload', () => {
       const timeOnPage = Math.round((Date.now() - startTime) / 1000);
       trackEvent('engagement', 'time_on_page', timeOnPage);
     });
-
     // Track clicks on important elements
     document.addEventListener('click', (event) => {
       const target = event.target as HTMLElement;
       const tagName = target.tagName.toLowerCase();
-
       if (tagName === 'a') {
         const href = (target as HTMLAnchorElement).href;
         trackEvent('engagement', 'link_click', {
@@ -162,7 +143,6 @@ const Analytics: React.FC<AnalyticsProps> = ({
         });
       }
     });
-
     // Track form submissions
     document.addEventListener('submit', (event) => {
       const form = event.target as HTMLFormElement;
@@ -173,7 +153,6 @@ const Analytics: React.FC<AnalyticsProps> = ({
       });
     });
   };
-
   const trackEvent = (category: string, action: string, value?: any) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', action, {
@@ -183,10 +162,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
       });
     }
   };
-
   return null;
 };
-
 // Extend Window interface for gtag
 declare global {
   interface Window {
@@ -194,15 +171,14 @@ declare global {
     gtag: (...args: any[]) => void;
   }
 }
-
 export default Analytics;
-
 // Analytics Provider for context
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <>
+    <React.Fragment>
       <Analytics />
       {children}
-    </>
+    </React.Fragment>
   );
 };
+  </AnalyticsProps>

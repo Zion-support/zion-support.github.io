@@ -1,6 +1,5 @@
-
 export default function About() {
-  return(<>
+  return(<React.Fragment>
       <Head>
         <title>About Us - Zion Tech Group</title>
         <meta;
@@ -136,7 +135,7 @@ export default function About() {
                   <p className="text-gray-600">
 export default function About() {/* TODO: Fix JSX expression */}
 }
-  return (<>
+  return (<React.Fragment>
       <Head></Head>
         <title>About Us - Zion Tech Group</title>
         <meta></meta>
@@ -162,7 +161,6 @@ export default function About() {/* TODO: Fix JSX expression */}
             </div>
           </div>
         </section>
-
         {/* Mission Section */}"
         <section className="py-16"></section>"
           <div className="container mx-auto px-4"></div>"
@@ -204,7 +202,6 @@ export default function About() {/* TODO: Fix JSX expression */}
             </div>
           </div>
         </section>
-
         {/* Values Section */}"
         <section className="py-16 bg-white"></section>"
           <div className="container mx-auto px-4"></div>"
@@ -273,7 +270,6 @@ export default function About() {/* TODO: Fix JSX expression */}
             </div>
           </div>
         </section>
-
         {/* Team Section */}
         <section className="py-16">
           <div className="container mx-auto px-4"></section>
@@ -384,7 +380,6 @@ export default function About() {/* TODO: Fix JSX expression */}
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center"></section>
@@ -398,8 +393,7 @@ export default function About() {/* TODO: Fix JSX expression */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
                 href="/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Get In Touch;
               </a>
               <a;
@@ -434,9 +428,9 @@ export default function About() {/* TODO: Fix JSX expression */}
           </div>
         </section>
       </div>,
-    </>,
+    </React.Fragment>,
       </div>
-    </>)
+    </React.Fragment>)
   );
 }
 "

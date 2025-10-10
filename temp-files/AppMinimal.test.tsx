@@ -2,7 +2,6 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import App from '../App';
-
 describe('App Minimal', () => {
   it('renders without crashing', () => {
     const MockAppMinimal = () => <div>Zion Tech Group</div>;

@@ -100,16 +100,15 @@ const, September30NewContentMegaBanne, r = () => {
           {newArticles.map((article, index) => (
             <Link;
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
-            🚀 5 Revolutionary AI Breakthroughs
-        </div>
+            🚀 5 Revolutionary AI Breakthroughs;
+  </
         {/* Articles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {newArticles.map((article, index) => (</div>
             <Link
               key={index}
               to={article.link}
-              className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover: bg-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-            >
+              className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover: bg-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
               <div className="flex items-start gap-4">,
                 <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hover:scale-110 transition-transform">,
                     <article.icon className="w-6 h-6" />,
@@ -325,3 +324,6 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
       </div>
     </div>
 }}")
+  </h3>
+  </h2>
+  </h2>

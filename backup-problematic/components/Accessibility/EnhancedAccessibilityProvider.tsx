@@ -1,8 +1,6 @@
 import React from 'react';
-
 interface EnhancedAccessibilityProviderProps {/* TODO: Fix JSX expression */}
 }
-
 const EnhancedAccessibilityProvider = React.memo(function EnhancedAccessibilityProvider({)
   className = '')
 }: EnhancedAccessibilityProviderProps) {
@@ -21,6 +19,5 @@ const EnhancedAccessibilityProvider = React.memo(function EnhancedAccessibilityP
     </div>
   );
 });
-
 export default EnhancedAccessibilityProvider;
 "`

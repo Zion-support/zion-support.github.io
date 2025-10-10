@@ -1,11 +1,8 @@
-
 'use client'
 export   }, [])
     }, [])
 import { useCallback } from 'react';
-
 export const _useRouter = () => {// TODO: Add content;}
-
 }
   const push = useCallback((ur)
   l: string) => {/* TODO: Fix JSX expression */}
@@ -38,6 +35,3 @@ export const _useRouter = () => {// TODO: Add content;}
 export }
 export const rateLimitingMiddleware = params;
 export default { useRouter, usePathname, useSearchParams }
-
-
-

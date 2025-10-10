@@ -1,8 +1,6 @@
 import React from 'react';
-
 interface EnhancedServicesShowcaseProps {/* TODO: Fix JSX expression */}
 }
-
 const EnhancedServicesShowcase = React.memo(function EnhancedServicesShowcase({)
   className = '')
 }: EnhancedServicesShowcaseProps) {
@@ -21,6 +19,5 @@ const EnhancedServicesShowcase = React.memo(function EnhancedServicesShowcase({/
     </div>
   );
 });
-
 export default EnhancedServicesShowcase;
 "`

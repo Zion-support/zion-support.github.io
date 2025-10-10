@@ -1,8 +1,6 @@
 import React from 'react';
-
 interface LoadingSpinnerProps {/* TODO: Fix JSX expression */}
 }
-
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
   size = 'md',
   className = '',
@@ -16,10 +14,8 @@ export const,
   LoadingSpinner: React.FC<LoadingSpinnerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   };
-
   const colorClasses = {/* TODO: Fix JSX expression */}
   };
-
   return(<div className={`flex items-center justify-center ${className}`}>
       <div;)
         className={`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}`})
@@ -41,6 +37,7 @@ export const,
     </div>)
   );
 };
-
 export default LoadingSpinner;
 "`
+  </LoadingSpinnerProps>
+  </LoadingSpinnerProps>

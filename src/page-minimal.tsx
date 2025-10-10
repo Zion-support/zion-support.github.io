@@ -1,28 +1,15 @@
-
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
-
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
 };
 export default function HomePage() {
-
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
@@ -55,15 +42,6 @@ Home;
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
 // Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation,
 //               and enterprise IT solutions that drive growth, efficiency, and innovation.
-            
-          
-          
-          
-          
-          
-          
-          
-          
           </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -81,15 +59,6 @@ Home;
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
 // Why Choose Zion Tech Group?
-              
-          
-          
-          
-          
-          
-          
-          
-          
           </h2>
               <p className="text-xl text-gray-600">
                 We deliver measurable results through innovative AI solutions;
@@ -136,7 +105,31 @@ Ready to Transform Your Business?
 © 2026 Zion Tech Group. All rights reserved.
       </footer>
   );
-
 }
-
-
+  </p>
+  </div>
+  </div>
+  </p>
+  </div>
+  </p>
+  </h2>
+  </section>
+  </div>
+  </div>
+  </p>
+  </div>
+  </div>
+  </div>
+  </p>
+  </div>
+  </section>
+  </Link>
+  </div>
+  </div>
+  </Link>
+  </Link>
+  </Link>
+  </Link>
+  </div>
+  </div>
+  </div>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: '',
@@ -8,20 +7,17 @@ export default function ContactSection() {
     service: '',
     message: ''
   });
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
     console.log('Form submitted:', formData);
   };
-
   const contactInfo = [
     {
       icon: (
@@ -55,7 +51,6 @@ export default function ContactSection() {
       link: '#'
     }
   ];
-
   const services = [
     'AI & Machine Learning',
     'Cloud Solutions',
@@ -66,7 +61,6 @@ export default function ContactSection() {
     'IT Consulting',
     'Other'
   ];
-
   return (
     <section id="contact" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,28 +74,24 @@ export default function ContactSection() {
             Let's discuss your project and create something amazing together.
           </p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="cyber-card-advanced p-8">
               <h3 className="text-2xl font-bold text-white mb-6">
-                Let's Start a Conversation
-              </h3>
+                Let's Start a Conversation</span>
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
                 Whether you have a specific project in mind or just want to explore 
                 how AI and IT solutions can benefit your business, we're here to help. 
                 Our team of experts is ready to provide personalized consultation.
               </p>
-
               {/* Contact Info Cards */}
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <a
                     key={index}
                     href={info.link}
-                    className="flex items-center p-4 cyber-card hover:scale-105 transition-all duration-300 group"
-                  >
+                    className="flex items-center p-4 cyber-card hover:scale-105 transition-all duration-300 group">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mr-4 text-black group-hover:scale-110 transition-transform duration-300">
                       {info.icon}
                     </div>
@@ -115,7 +105,6 @@ export default function ContactSection() {
                 ))}
               </div>
             </div>
-
             {/* Why Choose Us */}
             <div className="cyber-card-advanced p-8">
               <h3 className="text-xl font-bold text-white mb-6">
@@ -149,12 +138,10 @@ export default function ContactSection() {
               </ul>
             </div>
           </div>
-
           {/* Contact Form */}
           <div className="cyber-card-advanced p-8">
             <h3 className="text-2xl font-bold text-white mb-6">
-              Send Us a Message
-            </h3>
+              Send Us a Message</span>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -188,11 +175,9 @@ export default function ContactSection() {
                   />
                 </div>
               </div>
-
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                  Company Name
-                </label>
+                  Company Name</span>
                 <input
                   type="text"
                   id="company"
@@ -203,18 +188,15 @@ export default function ContactSection() {
                   placeholder="Your company name"
                 />
               </div>
-
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                  Service Interested In
-                </label>
+                  Service Interested In</span>
                 <select
                   id="service"
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
-                >
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300">
                   <option value="">Select a service</option>
                   {services.map((service, index) => (
                     <option key={index} value={service}>
@@ -223,7 +205,6 @@ export default function ContactSection() {
                   ))}
                 </select>
               </div>
-
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                   Message *
@@ -239,13 +220,10 @@ export default function ContactSection() {
                   placeholder="Tell us about your project..."
                 />
               </div>
-
               <button
                 type="submit"
-                className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-              >
-                Send Message
-              </button>
+                className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
+                Send Message</span>
             </form>
           </div>
         </div>
@@ -253,3 +231,10 @@ export default function ContactSection() {
     </section>
   );
 }
+  </button>
+  </textarea>
+  </label>
+  </label>
+  </h3>
+  </h3>
+  </HTMLInputElement>

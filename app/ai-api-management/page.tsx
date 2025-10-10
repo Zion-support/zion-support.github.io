@@ -3,9 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
 const AiApiManagementPage: React.FC = () => {
   const features = [
     {
@@ -31,94 +29,30 @@ const AiApiManagementPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
-import { CheckCircle, ArrowRight } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
-    {
-      title: 'Feature 1',
-      description: 'Description of feature 1',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    },
-    {
-      title: 'Feature 2',
-      description: 'Description of feature 2',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    },
-    {
-      title: 'Feature 3',
-      description: 'Description of feature 3',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     }
   ];
-
   const benefits = [
-<<<<<<< HEAD
-    'Increase efficiency by up to 50%',
+'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-=======
-    'Benefit 1',
-    'Benefit 2',
-    'Benefit 3',
-    'Benefit 4',
-    'Benefit 5',
-    'Benefit 6'
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
   ];
-
   return (
-    <>
+    <React.Fragment>
       <Helmet>
-<<<<<<< HEAD
-        <title>AI API Management - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered API management solution for modern businesses." />
-        <meta name="keywords" content="AI API management, artificial intelligence, API management, AI solutions, intelligent automation" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                AI API Management
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Streamline your API operations with intelligent management powered by AI technology.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                  Get Started
-                </button>
-                <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-=======
-        <title>Page | Zion Tech Group</title>
+<title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
-      
       <Navigation />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Page
+            AI API Management
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Solutions
             </span>
@@ -132,22 +66,20 @@ const PagePage: React.FC = () => {
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Demo
-            </button>
+              View Demo;
+  </
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Page Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced solutions designed for modern business needs
-            </p>
+              Advanced solutions designed for modern business needs;
+  </
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
@@ -169,17 +101,15 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our proven solutions
-            </p>
+              Experience the benefits of our proven solutions;
+  </
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
@@ -192,38 +122,34 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Transform your business with our page solutions today
-          </p>
+            Transform your business with our page solutions today;
+  </
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial
-            </button>
+              Start Free Trial;
+  </
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales
-            </button>
+              Contact Sales;
+  </
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Powerful AI API Management Features
-              </h2>
+                Powerful AI API Management Features;
+  </
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover how our AI API management platform can revolutionize your development workflow.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -245,7 +171,6 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
           <div className="max-w-7xl mx-auto">
@@ -254,7 +179,6 @@ const PagePage: React.FC = () => {
                 Why Choose Our AI API Management?
               </h2>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
@@ -267,7 +191,6 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
@@ -278,19 +201,22 @@ const PagePage: React.FC = () => {
               Join thousands of businesses already using our AI API management platform.
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-              Start Your Free Trial
-            </button>
+              Start Your Free Trial;
+  </
           </div>
         </section>
       </main>
-      
       <Footer />
-    </>
+    </React.Fragment>
   );
 };
-
-<<<<<<< HEAD
 export default AiApiManagementPage;
-=======
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+  </button>
+  </h2>
+  </button>
+  </button>
+  </p>
+  </p>
+  </p>
+  </button>
+  </span>

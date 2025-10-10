@@ -1,10 +1,9 @@
-
 interface LinkProps {
   href: string,
     children: React.ReactNode
 interface LinkProps {}
-  href: string
-  children: React.ReactNode
+  href: string,
+    children: React.ReactNode
   className?: string
   target?: string
   rel?: string
@@ -82,3 +81,6 @@ export default Link;
   );
 };
 export default Link;
+  </LinkProps>
+  </LinkProps>
+  </LinkProps>

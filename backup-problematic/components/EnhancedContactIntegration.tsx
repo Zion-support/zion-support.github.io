@@ -1,8 +1,6 @@
 import React from 'react';
-
 interface EnhancedContactIntegrationProps {/* TODO: Fix JSX expression */}
 }
-
 const EnhancedContactIntegration = React.memo(function EnhancedContactIntegration({)
   className = '')
 }: EnhancedContactIntegrationProps) {
@@ -21,6 +19,5 @@ const EnhancedContactIntegration = React.memo(function EnhancedContactIntegratio
     </div>
   );
 });
-
 export default EnhancedContactIntegration;
 "`

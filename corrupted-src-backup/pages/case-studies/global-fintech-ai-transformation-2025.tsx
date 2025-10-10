@@ -1,9 +1,8 @@
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
 const GlobalFinTechAITransformatio, n = () => { 
-  return(<>
+  return(<React.Fragment>
       <Helm, e, t>
         <title>
           Global, FinTech, AI Transformati, o, n: $127M, Annual, Value Creati, o, n | Zion, Tech, Group;
@@ -15,7 +14,6 @@ const GlobalFinTechAITransformatio, n = () => {
           conte, n, t='fintec, h, A, I, digital, bankin, g, fraud, detectio, n, AI, transformation, case stu, d, y, financial, services, AI'
         /></meta>
       </Helm, e, t>
-
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
         <Head, e, r />
         <article, className='container, m, x-auto, p, x-6, p, y-20'>
@@ -26,14 +24,12 @@ const GlobalFinTechAITransformatio, n = () => {
             Back, to, Case Studi, e, s;
               <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>18-month, engagemen, t</sp, a, n>
             </div>
-
             <h1, className='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
               Global, FinTech, AI Transformati, o, n:</h1>
               <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-bl, u, e-400, m, t-2'>
                 $127M, Annual, Value Creati, o, n;
               </sp, a, n>
             </h1>
-
             <p, className='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>
               How, a, Fortune 500, digital, banking platform, leveraged, AI to, transform, operatio, n, s, achievi, n, g $127M, in, annual val, u, e, 94% fraud, detection, accuracy, and, 10x, customer growth, through, intelligent;
               automation, and, predictive analyti, c, s.
@@ -183,7 +179,6 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                     </div>
                   </div>
                 </div>
-
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'></div>
                   <p, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-light, italic, mb-4'>
                     "The, fraud, detection platform, alone, paid for, the, entire;

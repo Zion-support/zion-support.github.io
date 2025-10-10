@@ -1,19 +1,16 @@
 'use client';
 import React from 'react';
 import { Loader2 } from 'lucide-react';
-
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
   className?: string;
 }
-
 const sizeClasses = {
   sm: 'h-4 w-4',
   md: 'h-6 w-6',
   lg: 'h-8 w-8',
 };
-
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   text = 'Loading...',
@@ -26,5 +23,5 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     </div>
   );
 };
-
 export default LoadingSpinner;
+  </LoadingSpinnerProps>

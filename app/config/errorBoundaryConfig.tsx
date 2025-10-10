@@ -2,46 +2,36 @@
  * Error Boundary Configuration
  * Centralized configuration for error handling across the application
  */
-
 import React from 'react';
-
-
 export interface ErrorBoundaryConfig {
   /**
    * Whether to log errors to console
    */
   logErrors: boolean,
-
   /**
    * Whether to show detailed error messages
    */
   showDetails: boolean,
-
   /**
    * Whether to send errors to external service
    */
   reportErrors: boolean,
-
   /**
    * Error reporting endpoint
    */
   reportingEndpoint?: string;
-
   /**
    * Whether to show error overlay in development
    */
   showErrorOverlay: boolean,
-
   /**
    * Maximum number of errors to store
    */
   maxStoredErrors: number,
-
   /**
    * Custom error messages by error type
    */
   customMessages: Record<string, string>;
-
   /**
    * Fallback UI components
    */
@@ -51,7 +41,6 @@ export interface ErrorBoundaryConfig {
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>;
   };
 }
-
 /**
  * Default error messages
  */
@@ -63,7 +52,6 @@ const DEFAULT_ERROR_MESSAGES = {
   serverError: 'Server error occurred. Please try again later.',
   validation: 'Validation error. Please check your input.',
 };
-
 /**
  * Get error boundary configuration based on environment
  */
@@ -82,7 +70,6 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
     },
   };
 }
-
 /**
  * Default error fallback component
  */
@@ -106,8 +93,8 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
           </svg>
         </div>
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">
-          Oops! Something went wrong
-        </h2>
+          Oops! Something went wrong;
+  </
         <p className="mt-2 text-center text-gray-600">
           {error.message || 'An unexpected error occurred'}
         </p>
@@ -117,22 +104,19 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         <div className="mt-6 flex gap-4"></div>
           <button
             onClick={resetError}
-            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Try Again
-          </button>
+            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+            Try Again;
+  </
           <button
             onClick={() => (window.location.href = '/')}
-            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
-          >
-            Go Home
-          </button>
+            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
+            Go Home;
+  </
         </div>
       </div>
     </div>
   );
 }
-
 /**
  * Network error fallback component
  */
@@ -162,16 +146,14 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
         <div className="mt-6"></div>
           <button
             onClick={resetError}
-            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Retry Connection
-          </button>
+            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+            Retry Connection;
+  </
         </div>
       </div>
     </div>
   );
 }
-
 /**
  * Not found error fallback component
  */
@@ -187,22 +169,19 @@ function NotFoundFallback(): JSX.Element {
         <div className="mt-6 flex gap-4 justify-center"></div>
           <button
             onClick={() => (window.location.href = '/')}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Go Home
-          </button>
+            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+            Go Home;
+  </
           <button
             onClick={() => window.history.back()}
-            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors"
-          >
-            Go Back
-          </button>
+            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors">
+            Go Back;
+  </
         </div>
       </div>
     </div>
   );
 }
-
 /**
  * Get error type from error object
  */
@@ -224,7 +203,6 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
   }
   return 'default';
 }
-
 /**
  * Format error for logging
  */
@@ -239,5 +217,12 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
     url: typeof window !== 'undefined' ? window.location.href : 'unknown',
   };
 }
-
 export default getErrorBoundaryConfig;
+  </button>
+  </button>
+  </button>
+  </path>
+  </button>
+  </button>
+  </h2>
+  </path>

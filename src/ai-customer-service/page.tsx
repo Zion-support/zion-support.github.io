@@ -1,6 +1,5 @@
 'use client';
 import { Helmet } from 'react-helmet-async';
-
 export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
 }
   return (<div><Helmet></Helmet>
@@ -27,7 +26,6 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
               Transform your customer service with intelligent AI agents that provide instant, accurate, and personalized support in 50+ languages.
             </p>
           </section>
-
           {/* Features Grid */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Key Features</h2>"
@@ -83,7 +81,6 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
               </div>
             </div>
           </section>
-
           {/* Pricing Section */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>"
@@ -131,7 +128,6 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
               </div>
             </div>
           </section>
-
           {/* Benefits Section */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our AI Customer Service?</h2>"
@@ -166,7 +162,6 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
               </div>
             </div>
           </section>
-
           {/* CTA Section */}"
           <section className="text-center"></section>"
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Service?</h2>"
@@ -188,7 +183,6 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
             </div>
           </section>
         </main>
-        
         <Footer /></Footer>
       </div>
     </div>

@@ -1,14 +1,10 @@
 import React from 'react';
-
-
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-
 const ServicesPage: React.FC = () => {
   const aiServices = [
     {
@@ -66,7 +62,6 @@ const ServicesPage: React.FC = () => {
       link: '/ai-computer-vision'
     }
   ];
-
   const itServices = [
     {
       icon: Database,
@@ -123,7 +118,6 @@ const ServicesPage: React.FC = () => {
       link: '/network-solutions'
     }
   ];
-
   const microSaasServices = [
     {
       icon: BarChart3,
@@ -180,7 +174,6 @@ const ServicesPage: React.FC = () => {
       link: '/ai-content-generation'
     }
   ];
-
   const benefits = [
     {
       icon: TrendingUp,
@@ -203,14 +196,12 @@ const ServicesPage: React.FC = () => {
       description: 'Quick implementation with minimal downtime'
     }
   ];
-
   const stats = [
     { label: 'Projects Completed', value: '500+' },
     { label: 'Happy Clients', value: '200+' },
     { label: 'Uptime Guarantee', value: '99.9%' },
     { label: 'Support Available', value: '24/7' }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
@@ -219,36 +210,32 @@ const ServicesPage: React.FC = () => {
         keywords="AI services, IT solutions, micro SAAS, automation, cybersecurity, cloud services, business intelligence"
       />
       <Navigation />
-      
       {/* Hero Section */}
       <section className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Our Services
-            </h1>
+              Our Services;
+  </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions designed to transform your business operations and drive growth
-            </p>
+              Comprehensive AI and IT solutions designed to transform your business operations and drive growth;
+  </
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
-              >
+                className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">
                 <Phone className="h-5 w-5 mr-2" />
-                Call (302) 464-0950
-              </a>
+                Call (302) 464-0950;
+  </
               <Link
                 to="/contact"
-                className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Get Free Consultation
-              </Link>
+                className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Get Free Consultation;
+  </
             </div>
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -266,17 +253,16 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* AI Services Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              AI Services
-            </h2>
+              AI Services;
+  </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced artificial intelligence solutions to automate, optimize, and transform your business
-            </p>
+              Advanced artificial intelligence solutions to automate, optimize, and transform your business;
+  </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
@@ -284,8 +270,8 @@ const ServicesPage: React.FC = () => {
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
+                      Most Popular;
+  </
                   </div>
                 )}
                 <div className="flex items-center mb-4">
@@ -305,27 +291,25 @@ const ServicesPage: React.FC = () => {
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
                   <Link
                     to={service.link}
-                    className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
-                  >
-                    Learn More
-                  </Link>
+                    className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
+                    Learn More;
+  </
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* IT Services Section */}
       <section className="py-24 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              IT Services
-            </h2>
+              IT Services;
+  </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Robust IT infrastructure and support services to keep your business running smoothly
-            </p>
+              Robust IT infrastructure and support services to keep your business running smoothly;
+  </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => (
@@ -333,8 +317,8 @@ const ServicesPage: React.FC = () => {
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
+                      Most Popular;
+  </
                   </div>
                 )}
                 <div className="flex items-center mb-4">
@@ -354,24 +338,22 @@ const ServicesPage: React.FC = () => {
                   <div className="text-2xl font-bold text-blue-400 mb-4">{service.price}</div>
                   <Link
                     to={service.link}
-                    className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
-                  >
-                    Learn More
-                  </Link>
+                    className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
+                    Learn More;
+  </
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Micro SAAS Services Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Micro SAAS Solutions
-            </h2>
+              Micro SAAS Solutions;
+  </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
             </p>
@@ -382,8 +364,8 @@ const ServicesPage: React.FC = () => {
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
+                      Most Popular;
+  </
                   </div>
                 )}
                 <div className="flex items-center mb-4">
@@ -403,17 +385,15 @@ const ServicesPage: React.FC = () => {
                   <div className="text-2xl font-bold text-purple-400 mb-4">{service.price}</div>
                   <Link
                     to={service.link}
-                    className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
-                  >
-                    Learn More
-                  </Link>
+                    className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
+                    Learn More;
+  </
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-24 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -422,8 +402,8 @@ const ServicesPage: React.FC = () => {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We deliver exceptional results with proven expertise and cutting-edge technology
-            </p>
+              We deliver exceptional results with proven expertise and cutting-edge technology;
+  </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
@@ -438,7 +418,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -452,27 +431,40 @@ const ServicesPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors hover:bg-gray-100 flex items-center justify-center"
-              >
+                className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors hover:bg-gray-100 flex items-center justify-center">
                 <Phone className="h-5 w-5 mr-2" />
-                Call (302) 464-0950
-              </a>
+                Call (302) 464-0950;
+  </
               <Link
                 to="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Get Free Consultation
-              </Link>
+                className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Get Free Consultation;
+  </
             </div>
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
 };
-
 export default ServicesPage;
-
-
+  </Link>
+  </a>
+  </p>
+  </Link>
+  </span>
+  </h2>
+  </Link>
+  </span>
+  </p>
+  </h2>
+  </Link>
+  </span>
+  </p>
+  </h2>
+  </Link>
+  </a>
+  </p>
+  </h1>
+  </SEOOptimizer>

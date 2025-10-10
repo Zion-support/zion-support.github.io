@@ -1,14 +1,9 @@
 import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react';
 'use client';
 import React from 'react';
-
-
 import { Link } from 'react-router-dom';
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
 const PartnersPage: React.FC = () => {
   const partnerTypes = [
     {
@@ -50,7 +45,6 @@ const PartnersPage: React.FC = () => {
         { name: 'SAP', description: 'Enterprise Resource Planning', logo: '📋' }
     }
   ];
-
   const benefits = [
       icon: Globe,
       title: 'Global Reach',
@@ -64,7 +58,6 @@ icon$5: Star,
 icon$5: CheckCircle,
       title: 'Quality Assurance',
       description: 'Rigorous partner certification and quality standards'
-
   const partnershipTiers = [
       name: 'Strategic Partners',
       level: 'Platinum',
@@ -98,11 +91,9 @@ namename: 'Channel Partners',
         'Competitive margins'
       color: 'text-orange-400',
       bgColor: 'bg-orange-500/10'
-
   const partnerTypes = [];
   return (
     {// TODO: Add content;}
-
 };
   titl,
   e: 'Technology Partners',
@@ -179,28 +170,25 @@ namename: 'Channel Partners',
     }
   ];
   const benefits = [
-
 icon: Globe,
       title: 'Global Reach',
       description: 'Access to worldwide markets and customers through our partner network',
-
 const PagePage: React.FC = () => {
   return (
-    <>
+    <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Our Partners
-            </h1>
+              Our Partners;
+  </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               We work with industry-leading technology partners to deliver comprehensive solutions 
               that drive innovation and business success.
             </p>
           </div>
-
           {/* Partner Types */}
           <div className="mb-16">
             {partnerTypes.map((type, index) => (
@@ -211,7 +199,6 @@ const PagePage: React.FC = () => {
                   <div>
                     <h2 className="text-2xl font-bold text-white neon-text">{type.title}</h2>
                     <p className="text-gray-300">{type.description}</p>
-                
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {type.partners.map((partner, partnerIndex) => (
                     <div key={partnerIndex} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
@@ -219,7 +206,6 @@ const PagePage: React.FC = () => {
                       <h3 className="text-lg font-semibold text-white mb-2">{partner.name}</h3>
                       <p className="text-gray-300 text-sm">{partner.description}</p>
                   ))}
-
           {/* Partnership Benefits */}
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Why Partner With Us?
@@ -231,7 +217,6 @@ const PagePage: React.FC = () => {
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
-
           {/* Partnership Tiers */}
               Partnership Tiers
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -248,7 +233,6 @@ const PagePage: React.FC = () => {
                         <span className="text-gray-300 text-sm">{benefit}</span>
                       </li>
                   </ul>
-
           {/* Become a Partner CTA */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
@@ -259,11 +243,10 @@ const PagePage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-              >
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
                 <Handshake className="w-5 h-5 mr-2" />
-                Become a Partner
-              </a>
+                Become a Partner;
+  </
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
@@ -273,8 +256,7 @@ const PagePage: React.FC = () => {
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />
-    </>
-
+    </React.Fragment>
           {/* Header */}
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
@@ -284,15 +266,6 @@ const PagePage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
 // We work with industry-leading technology partners to deliver comprehensive solutions;
 //               that drive innovation and business success.
-            
-          
-          
-          
-          
-          
-          
-          
-          
           </p>
           </div>
           {/* Partner Types */}"
@@ -318,15 +291,6 @@ const PagePage: React.FC = () => {
           {/* Partnership Benefits */}"
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Why Partner With Us?
-            
-          
-          
-          
-          
-          
-          
-          
-          
           </h2>"
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
@@ -360,25 +324,14 @@ const PagePage: React.FC = () => {
               Become Our Partner;"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
               Join our partner ecosystem and unlock new opportunities for growth, innovation, and success.
-
               Let's build the future together.
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-
 // >
-                
-          
-          
-          
-          
-          
-          
-          
           "
           <Handshake className="w-5 h-5 mr-2" /></Handshake>
 // Become a Partner;
-
           </a>
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 <Phone className="w-4 h-4 mr-2" />
@@ -387,12 +340,24 @@ const PagePage: React.FC = () => {
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us;
       <Footer />
-
     </div>
   );
 };
-
-
 export default PartnersPage;
-
-
+  </a>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

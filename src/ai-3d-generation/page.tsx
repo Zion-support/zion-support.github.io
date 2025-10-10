@@ -3,7 +3,6 @@ import { Camera, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Aw
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-
 const AI3DGenerationPage: React.FC = () => {
   const features = [
     '3D Model Generation',
@@ -17,7 +16,6 @@ const AI3DGenerationPage: React.FC = () => {
     'Material Library',
     'Scene Composition'
   ];
-
   const benefits = [
     'Professional 3D content',
     'Time savings',
@@ -26,7 +24,6 @@ const AI3DGenerationPage: React.FC = () => {
     'Cost-effective',
     'Scalable production'
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -50,19 +47,16 @@ const AI3DGenerationPage: React.FC = () => {
       popular: false
     }
   ];
-
   return (
-    <>
+    <React.Fragment>
       <SEOOptimizer
         title="AI 3D Generation Studio - Create 3D Models & Animations with AI | Zion Tech Group"
         description="Create professional 3D models, animations, and virtual environments with AI 3D Generation Studio. No 3D skills needed, starting at $299/month."
         keywords={['AI 3D generation', '3D models', '3D animation', 'VR AR content', '3D automation', 'AI 3D']}
         canonicalUrl="https://ziontechgroup.com/ai-3d-generation"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -72,35 +66,32 @@ const AI3DGenerationPage: React.FC = () => {
                   <Camera className="w-8 h-8 text-white" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-white neon-text">
-                  AI 3D Generation Studio
-                </h1>
+                  AI 3D Generation Studio;
+  </
               </div>
               <p className="text-xl text-gray-300 mb-8">
-                Create 3D models, animations, and virtual environments with AI
-              </p>
+                Create 3D models, animations, and virtual environments with AI;
+  </
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >
-                  Start Free Trial
-                </a>
+                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
+                  Start Free Trial;
+  </
                 <a
                   href="#demo"
-                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
+                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                   <Play className="w-5 h-5" />
-                  View Gallery
-                </a>
+                  View Gallery;
+  </
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              AI 3D Generation Features
-            </h2>
+              AI 3D Generation Features;
+  </
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -112,7 +103,6 @@ const AI3DGenerationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -129,20 +119,19 @@ const AI3DGenerationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Simple, Transparent Pricing
-            </h2>
+              Simple, Transparent Pricing;
+  </
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
+                        Most Popular;
+  </
                     </div>
                   )}
                   <div className="text-center mb-6">
@@ -168,13 +157,12 @@ const AI3DGenerationPage: React.FC = () => {
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                     }`}
                   >
-                    Get Started
-                  </a>
+                    Get Started;
+  </
                 </div>
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center mb-16">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -182,30 +170,37 @@ const AI3DGenerationPage: React.FC = () => {
                 Ready to Create Amazing 3D Content?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join leading companies using AI 3D generation technology
-              </p>
+                Join leading companies using AI 3D generation technology;
+  </
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >
-                  Start Your Free Trial
-                </a>
+                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
+                  Start Your Free Trial;
+  </
                 <a
                   href="tel:+13024640950"
-                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
+                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                   <span>Call +1 302 464 0950</span>
                 </a>
               </div>
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
-    </>
+    </React.Fragment>
   );
 };
-
 export default AI3DGenerationPage;
+  </a>
+  </p>
+  </a>
+  </h2>
+  </h2>
+  </a>
+  </a>
+  </p>
+  </h1>
+  </div>
+  </SEOOptimizer>

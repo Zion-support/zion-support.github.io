@@ -1,5 +1,5 @@
+import React from 'react';
 'use client';
-
 interface UserExperienceEnhancerProps {
   enableSmoothScrolling?: boolean;
   enableLoadingStates?: boolean;
@@ -7,7 +7,6 @@ interface UserExperienceEnhancerProps {
   enableAnalytics?: boolean;
   enableNotifications?: boolean;
 }
-
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
   enableSmoothScrolling = true,
   enableLoadingStates = true,
@@ -17,20 +16,16 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
 }) => {
   const [isOnline, setIsOnline] = useState(true);
   const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
-
   // Handle online/offline status
   useEffect(() => {
     const handleOffline = () => setIsOnline(false);
-
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
-
     return () => {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
     };
   }, []);
-
   // Smooth scrolling
   useEffect(() => {
     if (enableSmoothScrolling) {
@@ -39,29 +34,21 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
         html {
           scroll-behavior: smooth;
         }
-        
         @media (prefers-reduced-motion: reduce) {
           html {
             scroll-behavior: auto;
-
 interface UserExperienceEnhancerProps {/* TODO: Fix JSX expression */}
 }
-
 const,
   UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
-
   // Handle online/offline status;
   useEffect(() => {/* TODO: Fix JSX expression */}
-
     };
-
-
   // Smooth scrolling;
   useEffect(() => {/* TODO: Fix JSX expression */}
         }
-        
         @media (prefers-reduced-motio)
   n: reduce) {/* TODO: Fix JSX expression */}
           }
@@ -70,12 +57,10 @@ const,
       document.head.appendChild(style);
     }
   }, [enableSmoothScrolling]);
-
   // Loading states management
   const setLoading = useCallback((key: string, loading: boolean) => {
     setLoadingStates(prev => ({ ...prev, [key]: loading }));
   }, []);
-
   // Global loading state
   useEffect(() => {
     if (enableLoadingStates) {
@@ -91,7 +76,6 @@ const,
   g: boolean) => {/* TODO: Fix JSX expression */}
     setLoadingStates(prev => ({ ...prev, [key]: loading }));
   }, []);
-
   // Global loading state;
   useEffect(() => {/* TODO: Fix JSX expression */}`
             setLoading(`link-${href}`, true);
@@ -100,13 +84,11 @@ const,
       });
     }
   }, [enableLoadingStates, setLoading]);
-
   // Error boundary enhancement
   useEffect(() => {
     if (enableErrorBoundaries) {
       const handleError = (event: ErrorEvent) => {
         // console.error('Global error caught:', event.error);
-        
         // Send error to analytics if available
         if (typeof window !== 'undefined' && 'gtag' in window) {
           (window as any).gtag('event', 'exception', {
@@ -117,10 +99,8 @@ const,
           });
         }
       };
-
       const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
         // console.error('Unhandled promise rejection:', event.reason);
-        
         if (typeof window !== 'undefined' && 'gtag' in window) {
           (window as any).gtag('event', 'exception', {
             description: event.reason?.message || 'Unhandled promise rejection',
@@ -130,10 +110,8 @@ const,
           });
         }
       };
-
       window.addEventListener('error', handleError);
       window.addEventListener('unhandledrejection', handleUnhandledRejection);
-
       return () => {
         window.removeEventListener('error', handleError);
         window.removeEventListener('unhandledrejection', handleUnhandledRejection);
@@ -141,7 +119,6 @@ const,
       };
     }
   }, [enableErrorBoundaries]);
-
   // Analytics enhancement
   useEffect(() => {
     if (enableAnalytics && typeof window !== 'undefined') {
@@ -167,16 +144,13 @@ $4});
           }
         }
       };
-
       // Track scroll depth
       const handleScroll = () => {
         const scrollDepth = Math.round(
           (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
         );
-        
         if (scrollDepth > maxScrollDepth) {
           maxScrollDepth = scrollDepth;
-          
           // Track milestone scroll depths
           if (maxScrollDepth >= 25 && maxScrollDepth < 50) {
             if ('gtag' in window) {
@@ -221,7 +195,6 @@ $4});
           }
         }
       };
-
       // Track time on page
       const startTime = Date.now();
       const handleBeforeUnload = () => {
@@ -238,11 +211,9 @@ $4});
           });
         }
       };
-
       document.addEventListener('visibilitychange', handleVisibilityChange);
       window.addEventListener('scroll', handleScroll, { passive: true });
       window.addEventListener('beforeunload', handleBeforeUnload);
-
       return () => {
         document.removeEventListener('visibilitychange', handleVisibilityChange);
         window.removeEventListener('scroll', handleScroll);
@@ -250,12 +221,10 @@ $4});
       window.addEventListener('scroll', handleScroll, {/* TODO: Fix JSX expression */})
   e: true });
       window.addEventListener('beforeunload', handleBeforeUnload);
-
       return () => {/* TODO: Fix JSX expression */}
       };
     }
   }, [enableAnalytics]);
-
   // Notifications
   useEffect(() => {
     if (enableNotifications && !isOnline) {
@@ -264,23 +233,19 @@ $4});
       notification.className = 'fixed top-4 right-4 bg-yellow-500 text-black px-4 py-2 rounded-lg shadow-lg z-50';
       notification.textContent = 'You are currently offline. Some features may not be available.';
       document.body.appendChild(notification);
-
       const timer = setTimeout(() => {
         notification.remove();
       }, 5000);
-
       return () => {
         clearTimeout(timer);
         notification.remove();
   // Notifications;
   useEffect(() => {/* TODO: Fix JSX expression */}
       }, 5000);
-
       return () => {/* TODO: Fix JSX expression */}
       };
     }
   }, [isOnline, enableNotifications]);
-
   // Performance monitoring
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -325,24 +290,19 @@ $4});
           }
         }
       });
-
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-
       return () => {
         observer.disconnect();
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-
       return () => {/* TODO: Fix JSX expression */}
       };
     }
   }, []);
-
   return null;
 };
-
 export default UserExperienceEnhancer;
-
 };
-
 export default UserExperienceEnhancer;`
+  </UserExperienceEnhancerProps>
+  </UserExperienceEnhancerProps>

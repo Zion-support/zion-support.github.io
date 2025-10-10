@@ -1,10 +1,8 @@
 'use client';
 import React from 'react';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
-
 export default function PrivacyPage() {
   const lastUpdated = 'January 1, 2024';
-
   const dataTypes = [
     {
       category: 'Personal Information',
@@ -31,7 +29,6 @@ export default function PrivacyPage() {
       examples: ['Contact forms', 'Support requests', 'Email correspondence']
     }
   ];
-
   const rights = [
     {
       title: 'Right to Access',
@@ -64,7 +61,6 @@ export default function PrivacyPage() {
       icon: Lock
     }
   ];
-
   const securityMeasures = [
     'SSL/TLS encryption for data transmission',
     'Regular security audits and penetration testing',
@@ -73,7 +69,6 @@ export default function PrivacyPage() {
     'Employee training on data protection',
     'Incident response and breach notification procedures'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -82,8 +77,8 @@ export default function PrivacyPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              Privacy Policy
-            </h1>
+              Privacy Policy;
+  </
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
               Your privacy is important to us. Learn how we collect, use, and protect your personal information.
             </p>
@@ -104,7 +99,6 @@ export default function PrivacyPage() {
           </div>
         </div>
       </section>
-
       {/* Last Updated */}
       <section className="py-8">
         <div className="container mx-auto px-4">
@@ -120,7 +114,6 @@ export default function PrivacyPage() {
           </div>
         </div>
       </section>
-
       {/* Introduction */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -140,7 +133,6 @@ export default function PrivacyPage() {
           </div>
         </div>
       </section>
-
       {/* Information We Collect */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -171,7 +163,6 @@ export default function PrivacyPage() {
           </div>
         </div>
       </section>
-
       {/* How We Use Your Information */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -212,7 +203,6 @@ export default function PrivacyPage() {
           </div>
         </div>
       </section>
-
       {/* Data Security */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -232,7 +222,6 @@ export default function PrivacyPage() {
           </div>
         </div>
       </section>
-
       {/* Your Rights */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -250,7 +239,6 @@ export default function PrivacyPage() {
           </div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
         <div className="container mx-auto px-4">
@@ -275,14 +263,15 @@ export default function PrivacyPage() {
             </div>
             <a
               href="/contact"
-              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
-            >
+              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
               <Mail className="w-5 h-5 mr-2" />
-              Contact Us
-            </a>
+              Contact Us;
+  </
           </div>
         </div>
       </section>
     </div>
   );
 }
+  </a>
+  </h1>

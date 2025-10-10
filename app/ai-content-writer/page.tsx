@@ -3,53 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const AiContentWriterPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>AI Content Writer - Zion Tech Group</title>
-        <meta name="description" content="Intelligent content writing powered by AI technology." />
-        <meta name="keywords" content="AI content writer, artificial intelligence, content writing, AI solutions, intelligent writing" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-=======
 import { CheckCircle, ArrowRight } from 'lucide-react';
-
 const AIContentWriterPage: React.FC = () => {
   const features = [
     {
@@ -68,7 +22,6 @@ const AIContentWriterPage: React.FC = () => {
       benefits: ['Keyword research', 'SEO scoring', 'Content suggestions']
     }
   ];
-
   const benefits = [
     'Increase content production by 10x',
     'Improve engagement by 200%',
@@ -77,7 +30,6 @@ const AIContentWriterPage: React.FC = () => {
     'Enable consistent branding',
     'Automate content workflows'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -85,9 +37,7 @@ const AIContentWriterPage: React.FC = () => {
         <meta name="description" content="Professional AI content writer solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="ai content writer, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
-      
       <Navigation />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -96,8 +46,8 @@ const AIContentWriterPage: React.FC = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             AI Content Writer
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
-            </span>
+              Solutions;
+  </
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Create high-quality content with our AI Content Writer. Advanced writing tools, 
@@ -109,22 +59,20 @@ const AIContentWriterPage: React.FC = () => {
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Demo
-            </button>
+              View Demo;
+  </
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">AI Content Writer Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced solutions designed for modern business needs
-            </p>
+              Advanced solutions designed for modern business needs;
+  </
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
@@ -146,17 +94,15 @@ const AIContentWriterPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Content Writer?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our proven solutions
-            </p>
+              Experience the benefits of our proven solutions;
+  </
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
@@ -169,60 +115,55 @@ const AIContentWriterPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Transform your content creation with our AI Content Writer solutions today
-          </p>
+            Transform your content creation with our AI Content Writer solutions today;
+  </
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial
-            </button>
+              Start Free Trial;
+  </
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales
-            </button>
+              Contact Sales;
+  </
           </div>
         </div>
       </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                AI Content Writer
-              </h1>
+                AI Content Writer;
+  </
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                 Transform your business with intelligent solutions powered by cutting-edge AI technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                  Get Started
-                </button>
+                  Get Started;
+  </
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-                  Learn More
-                </button>
+                  Learn More;
+  </
               </div>
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Powerful AI Features
-              </h2>
+                Powerful AI Features;
+  </
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover how our AI platform can revolutionize your business operations.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -244,7 +185,6 @@ const AIContentWriterPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
@@ -255,19 +195,26 @@ const AIContentWriterPage: React.FC = () => {
               Join thousands of businesses already using our AI platform.
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-              Start Your Free Trial
-            </button>
+              Start Your Free Trial;
+  </
           </div>
         </section>
       </main>
-      
       <Footer />
-    </>
+    </React.Fragment>
   );
 };
-
-<<<<<<< HEAD
 export default AiContentWriterPage;
-=======
-export default AIContentWriterPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+  </button>
+  </h2>
+  </button>
+  </button>
+  </h1>
+  </button>
+  </button>
+  </p>
+  </p>
+  </p>
+  </button>
+  </span>
+  </div>

@@ -1,21 +1,17 @@
 import React, { useState } from 'react';
-
 export default function EnhancedContactForm(): React.JSX.Element {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-
   return(<form;)
       aria-label="Contact form")
       onSubmit={e => e.preventDefault()}
-      className="grid gap-4 max-w-xl mx-auto"
-    >
+      className="grid gap-4 max-w-xl mx-auto">
       <input;
         aria-label="Name"
 export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix JSX expression */}
       onSubmit={e => e.preventDefault()}
-      className="grid gap-4 max-w-xl mx-auto"
-    >
+      className="grid gap-4 max-w-xl mx-auto">
       <input></input>"
         aria-label="Name""
         placeholder="Name"

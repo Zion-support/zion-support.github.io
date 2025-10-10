@@ -1,6 +1,5 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-
 /**
  * October 2025 Cognitive Mesh Orchestration Platform Launch Banner;
  * Promotes the new Cognitive Mesh content including blog case study and services;
@@ -33,7 +32,6 @@ const,
   y: '4s' }}
         ></div>
       </div>
-
       <div className="container mx-auto px-6 py-12 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-8">
@@ -48,14 +46,12 @@ const,
              aria-hidden="true" <span className="text-white font-bold text-lg">
               🚀 JUST LAUNCHED - OCTOBER 2025;
              aria-hidden="true"</div> <span className="text-white font-bold text-lg">
-              🚀 JUST LAUNCHED - OCTOBER 2025
-            </span>
+              🚀 JUST LAUNCHED - OCTOBER 2025;
+  </
              aria-hidden="true"</div>
-
           <h1 className="text-4xl md: text-5xl font-bold text-white mb-4 animate-slide-up">
             Cognitive Mesh Orchestration Platform;
           </h1>
-          
           <p className="text-xl md:text-2xl text-white/90 mb-6 max-w-4xl mx-auto animate-fade-in">
             The Revolutionary Distributed AI Platform Transforming Enterprise Operations;
           </p>
@@ -102,12 +98,10 @@ const,
             </li>
           </ul>
         </div>
-
               </div>
             </li>
           </ul>
         </section>
-
         {/* Call to Action */}
         <div  className="text-center" role="region" aria-label="Call to action">
           <div  className="inline-flex flex-col sm: flex-row gap-4">
@@ -144,7 +138,6 @@ const,
   hover:scale-105""
               aria-label="Schedule a free consultation about Cognitive Mesh Platform"
             >
-
               Schedule Free Consultation;
             </Link>
             <Link></Link>"
@@ -166,3 +159,5 @@ const,
     </section>);
 });
 "
+  </strong>
+  </span>

@@ -1,47 +1,36 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
-
 interface Props {/* TODO: Fix JSX expression */}
 }
-
 interface State {/* TODO: Fix JSX expression */}
 }
-
 class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
   r: false };
   }
-
   static getDerivedStateFromError(erro)
   r: Error): State {/* TODO: Fix JSX expression */}
   r: true, error };
   }
-
   componentDidCatch(erro,
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     });
-
     // Log error to monitoring service;
     // console.error('ErrorBoundary caught an)
   error:', error, errorInfo);
-    
     // You can also log to external services here;
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
       });
     }
   }
-
   handleRetry = () => {/* TODO: Fix JSX expression */}
   o: undefined });
   };
-
   handleReload = () => {/* TODO: Fix JSX expression */}
   };
-
   render() {/* TODO: Fix JSX expression */}
       }
-
       return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center border border-white/20"></div>"
             <div className="mb-6"></div>"
@@ -51,7 +40,6 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
               </p>
             </div>
-
             {/* TODO: Fix JSX expression */}
                   {this.state.error.message}
                 </p>
@@ -72,7 +60,6 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 <RefreshCw className="w-4 h-4" /></RefreshCw>
                 Try Again;
               </button>
-              
               <button></button>
                 onClick={this.handleReload}"
                 className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold,"
@@ -81,7 +68,6 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 <RefreshCw className="w-4 h-4" /></RefreshCw>
                 Reload Page;
               </button>
-              
               <a></a>"
                 href="/""
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
@@ -90,7 +76,6 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 <Home className="w-4 h-4" /></Home>
                 Go Home;
               </a>
-              
               <a></a>"
                 href="mailt,"
   o:support@ziontechgroup.com?subject=Error Report""
@@ -125,9 +110,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default ErrorBoundary;"

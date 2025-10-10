@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression */}
 }
   return (<div><Helmet></Helmet>
@@ -30,7 +29,6 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               Turn complex data into beautiful, interactive visualizations with AI-powered insights that help you make data-driven decisions faster and more accurately.
             </p>
           </section>
-
           {/* Features Grid */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features</h2>"
@@ -86,7 +84,6 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               </div>
             </div>
           </section>
-
           {/* Pricing Section */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>"
@@ -134,7 +131,6 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               </div>
             </div>
           </section>
-
           {/* Use Cases Section */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Perfect For</h2>"
@@ -166,7 +162,6 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               </div>
             </div>
           </section>
-
           {/* CTA Section */}"
           <section className="text-center"></section>"
             <h2 className="text-3xl font-bold text-white mb-6">Start Visualizing Your Data Today</h2>"
@@ -188,7 +183,6 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
             </div>
           </section>
         </main>
-        
         <Footer /></Footer>
       </div>
     </div>

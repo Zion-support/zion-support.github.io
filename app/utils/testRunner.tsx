@@ -7,13 +7,13 @@ import React, { ReactElement, useCallback } from 'react';
 // Test result types;
 export interface PerformanceMetrics {
   renderTime: number,
-    memoryUsage: number
-  timestamp: string;}
+    memoryUsage: number,
+    timestamp: string;}
 }
 export interface CoverageMetrics {
   statements: number,
-    branches: number
-  functions: number,
+    branches: number,
+    functions: number,
     lines: number;}
   renderTime: number,
   memoryUsage: number,
@@ -28,32 +28,32 @@ export interface CoverageMetrics {
 // Test configuration interface;
 export interface TestConfig {
   enableMocking: boolean,
-    enableCoverage: boolean
-  enablePerformance: boolean,
+    enableCoverage: boolean,
+    enablePerformance: boolean,
     enableAccessibility: boolean
 // Test result types
 export interface PerformanceMetrics {}
-  renderTime: number
-  memoryUsage: number
+  renderTime: number,
+    memoryUsage: number
   timestamp: string;}
 }
 export interface CoverageMetrics {}
-  statements: number
-  branches: number
-  functions: number
-  lines: number;}
+  statements: number,
+    branches: number
+  functions: number,
+    lines: number;}
 }
 // Test configuration interface
 export interface TestConfig {}
-  enableMocking: boolean
-  enableCoverage: boolean
-  enablePerformance: boolean
-  enableAccessibility: boolean
+  enableMocking: boolean,
+    enableCoverage: boolean
+  enablePerformance: boolean,
+    enableAccessibility: boolean
   enableVisualRegression: boolean
   mockDataPath?: string
   coverageThreshold: number,
-    performanceThreshold: number
-  accessibilityThreshold: number
+    performanceThreshold: number,
+    accessibilityThreshold: number
   timeout?: number
   verbose?: boolean
   bail?: boolean
@@ -95,8 +95,8 @@ interface TestResult {
   name: string,
     status: 'passed' | 'failed' | 'skipped' | 'pending'
 interface TestResult {}
-  name: string
-  status: 'passed' | 'failed' | 'skipped' | 'pending'
+  name: string,
+    status: 'passed' | 'failed' | 'skipped' | 'pending'
   duration: number
   error?: Error
   assertions: AssertionResult[]
@@ -106,18 +106,18 @@ interface AssertionResult {
   name: string,
     status: 'passed' | 'failed'
 interface AssertionResult {}
-  name: string
-  status: 'passed' | 'failed'
+  name: string,
+    status: 'passed' | 'failed'
   expected?: unknown
   actual?: unknown
   message?: string;}
 }
 interface CoverageResult {
   statements: number,
-    branches: number
-  functions: number,
-    lines: number
-  uncovered: string[];}
+    branches: number,
+    functions: number,
+    lines: number,
+    uncovered: string[];}
 }
 interface TestSuite {
   name: string,
@@ -164,15 +164,15 @@ interface CoverageResult {
 interface TestSuite {
   name: string,
 interface CoverageResult {}
-  statements: number
-  branches: number
-  functions: number
-  lines: number
+  statements: number,
+    branches: number
+  functions: number,
+    lines: number
   uncovered: string[];}
 }
 interface TestSuite {}
-  name: string
-  tests: Test[]
+  name: string,
+    tests: Test[]
   beforeAll: (() => void | Promise<void>)[],
   afterAll: (() => void | Promise<void>)[],
   beforeEach: (() => void | Promise<void>)[],
@@ -193,8 +193,8 @@ export class TestRunner {
   private results: TestResult[] = []</void>
   private testResults: Array<{,
 interface Test {}
-  name: string
-  fn: () => void | Promise<void>
+  name: string,
+    fn: () => void | Promise<void>
   timeout?: number
   skip?: boolean
   only?: boolean;}
@@ -206,7 +206,7 @@ export class TestRunner {}
   private currentSuite: TestSuite | null = null
   private results: TestResult[] = []
   private testResults: Array<{}
-    name: string
+    name: string,
     status: 'passed' | 'failed' | 'skipped',
     duration: number
     error?: string;}
@@ -464,12 +464,10 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       const renderTime = performance.now() - startTime;
       // Measure memory usage if available;
       let memoryUsage = 0;
-
       if ('memory' in performance) {
         const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         if (memory) {
           memoryUsage = memory.usedJSHeapSize;
-
         }
       }
       unmount();
@@ -1013,7 +1011,6 @@ export class TestRunner {/* TODO: Fix JSX expression */}
                 <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
             </div>
-
         <h3 id="heading-summary">Summary</h3>
         <p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
@@ -1306,7 +1303,6 @@ export class TestRunner {/* TODO: Fix JSX expression */}
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
                 ${result.status === 'skipped' ? '<skipped>' : ''}</skipped>
             </skipped>
-
 <testsuites>}
     <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
         ${this.results;
@@ -1427,8 +1423,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   // Run all tests
   async runAllTests(
     tests: Array<{,
-    name: string
-      type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual',
+    name: string,
+    type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual',
     component: ReactElement)
     assertions?: (result: RenderResult) => void
       userInteractions?: (result: RenderResult) => Promise<void>;}</voi>
@@ -1461,8 +1457,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   ): Promise<{
   async runAllTests()
     tests: Array<{}
-      name: string
-      type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual'
+      name: string,
+    type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual'
       component: ReactElement
       assertions?: (result: RenderResult) => void
       userInteractions?: (result: RenderResult) => Promise<void>;}
@@ -2371,3 +2367,49 @@ export { Mock };
 export type {/* TODO: Fix JSX expression */}
 };
 "`
+  </T>
+  </T>
+  </T>
+  </T>
+  </T>
+  </T>
+  </T>
+  </T>
+  </void>
+  </void>
+  </void>
+  </void>
+  </void>
+  </testsuite>
+  </testsuites>
+  </h4>
+  </h3>
+  </void>
+  </void>
+  </void>
+  </void>
+  </void>
+  </void>
+  </void>
+  </void>
+  </void>
+  </void>
+  </void>
+  </void>
+  </void>
+  </void>
+  </void>
+  </void>
+  </void>
+  </void>
+  </void>
+  </void>
+  </void>
+  </void>
+  </TestConfig>
+  </TestConfig>
+  </TestConfig>
+  </void>
+  </void>
+  </void>
+  </void>

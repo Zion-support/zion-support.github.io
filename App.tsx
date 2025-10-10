@@ -1,5 +1,4 @@
 'use client';
-
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -18,9 +17,7 @@ import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './app/components/AnalyticsProvider';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
-
 // Structured data for SEO - moved to SEOHead component
-
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
@@ -37,13 +34,11 @@ const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
-
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
 };
-
 // Main App Component
 const App: React.FC = () => {
   return (
@@ -95,7 +90,5 @@ const App: React.FC = () => {
     </ErrorBoundary>
   );
 };
-
 App.displayName = 'App';
-
 export default App;

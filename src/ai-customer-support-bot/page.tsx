@@ -6,7 +6,6 @@ import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCirc
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AICustomerSupportBotPage: React.FC = () => {
   const features = [
     {
@@ -29,7 +28,6 @@ const AICustomerSupportBotPage: React.FC = () => {
       benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement']
     }
   ];
-
   const pricingPlans = [
       name: 'Starter',
       price: '$149',
@@ -42,8 +40,8 @@ const AICustomerSupportBotPage: React.FC = () => {
         'Basic analytics',
         'Standard integrations'
       ],
-      popular: false
-      name: 'Professional',
+      popular: false,
+    name: 'Professional',
       price: '$299',
       description: 'Ideal for growing companies',
         'Up to 10,000 conversations/month',
@@ -52,8 +50,8 @@ const AICustomerSupportBotPage: React.FC = () => {
         'Advanced analytics',
         'Custom integrations',
         'Multi-language support'
-      popular: true
-      name: 'Enterprise',
+      popular: true,
+    name: 'Enterprise',
       price: '$599',
       description: 'For large organizations',
         'Unlimited conversations',
@@ -63,22 +61,18 @@ const AICustomerSupportBotPage: React.FC = () => {
         'White-label options',
         'API access',
         'Custom training'
-
   const stats = [
     { icon: Users, value: '1,000+', label: 'Happy Customers' },
     { icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
     { icon: Clock, value: '45%', label: 'Satisfaction Increase' },
     { icon: Star, value: '4.8/5', label: 'Customer Rating' }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Customer Support Bot | Zion Tech Group</title>
         <meta name="description" content="Enhance customer experience with our AI-powered support bot. 24/7 assistance, natural language processing, and seamless human handoff." />
       </Helmet>
-      
       <Navigation />
-      
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">AI Customer Support Bot</h1>
@@ -87,7 +81,6 @@ const AICustomerSupportBotPage: React.FC = () => {
             natural language and escalates complex issues to human agents seamlessly.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
@@ -95,7 +88,6 @@ const AICustomerSupportBotPage: React.FC = () => {
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
           ))}
-
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {features.map((feature, index) => (
             <div key={index} className="bg-slate-800/50 rounded-lg p-6">
@@ -109,7 +101,6 @@ const AICustomerSupportBotPage: React.FC = () => {
                     {benefit}
                   </li>
               </ul>
-
           <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
@@ -127,9 +118,8 @@ const AICustomerSupportBotPage: React.FC = () => {
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       {feature}
                 <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-                  Get Started
-                </button>
-
+                  Get Started;
+  </
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Support?</h2>
           <p className="text-xl text-gray-300 mb-8">
@@ -139,16 +129,30 @@ const AICustomerSupportBotPage: React.FC = () => {
               Schedule Demo
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               View Case Studies
-      
       <Footer />
   );
 };
-
-
 export default $1;
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, BarChart, Calendar, Target, ArrowRight, Phone, Mail, MapPin, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, MessageSquare, Headphones, Globe, Languages } from 'lucide-react';
-
 export default AICustomerSupportBotPage;
+  </button>
+  </button>
+  </div>
+  </p>
+  </div>
+  </button>
+  </li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

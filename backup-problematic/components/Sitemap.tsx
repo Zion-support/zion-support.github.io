@@ -1,8 +1,6 @@
 import React from 'react';
-
 interface SitemapProps {/* TODO: Fix JSX expression */}
 }
-
 const Sitemap = React.memo(function Sitemap({ className = '' }: SitemapProps) {
   return(<div className={`bg-blue-100 p-4 rounded-lg ${className}`}>)
       <h3 className="text-lg font-semibold text-blue-800">Sitemap</h3>)
@@ -18,6 +16,5 @@ const Sitemap = React.memo(function Sitemap({ className = '' }: SitemapProps) {/
     </div>
   );
 });
-
 export default Sitemap;
 "`

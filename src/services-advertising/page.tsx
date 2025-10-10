@@ -1,15 +1,10 @@
-
-
-
 import { Link } from 'react-router-dom';
-
 import { ArrowLeft, ArrowRight, Target, CheckCircle, Star } from 'lucide-react';
 export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   return (<div>Coming Soon</div>)
   )
-    
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
       {/* Header */}"
       <header className="bg-white shadow-sm border-b"></header>"
@@ -29,8 +24,8 @@ export default function ServicesAdvertisingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
-          </Link>
+            Back to Home;
+  </
         </div>
       </header>
       {/* Hero Section */}"
@@ -55,16 +50,6 @@ AI-Powered Advertising Solutions;"
 // Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy,
 //               60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven;
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
-            
-          
-          
-          
-          
-          
-          
-          
-
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
@@ -72,7 +57,6 @@ AI-Powered Advertising Solutions;"
 //                 Start Free Consultation;
           <ArrowRight className="w-4 h-4 ml-2" />
 href="#services" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-
                 View Our Services;
       </section>
       {/* Key Metrics */}"
@@ -222,7 +206,6 @@ Transparent Pricing;
                   <span>Custom integrations</span>
                   <span>White-label options</span>
                 Contact Sales;
-
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -232,12 +215,18 @@ Ready to Transform Your Advertising?
             Get a free AI advertising assessment and discover how we can boost your ROI by 300%
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center" Get Free Assessment;
               href="/case-studies" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-
               View Success Stories;
   );
 };
-
-
 export default ServicesAdvertisingPage;
-
-
+  </p>
+  </h2>
+  </div>
+  </section>
+  </div>
+  </div>
+  </div>
+  </Link>
+  </div>
+  </Link>
+  </div>

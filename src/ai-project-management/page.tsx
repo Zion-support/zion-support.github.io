@@ -1,6 +1,5 @@
 'use client';
 import { Helmet } from 'react-helmet-async';
-
 export default function AIProjectManagementPage() {/* TODO: Fix JSX expression */}
 }
   return (<div><Helmet></Helmet>
@@ -27,7 +26,6 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
               Revolutionize your project management with AI-driven insights, predictive analytics, and automated resource optimization that delivers projects 40% faster and 30% under budget.
             </p>
           </section>
-
           {/* Features Grid */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features</h2>"
@@ -83,7 +81,6 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
               </div>
             </div>
           </section>
-
           {/* Pricing Section */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>"
@@ -131,7 +128,6 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
               </div>
             </div>
           </section>
-
           {/* Benefits Section */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Proven Results</h2>"
@@ -163,7 +159,6 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
               </div>
             </div>
           </section>
-
           {/* CTA Section */}"
           <section className="text-center"></section>"
             <h2 className="text-3xl font-bold text-white mb-6">Transform Your Project Management Today</h2>"
@@ -185,7 +180,6 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
             </div>
           </section>
         </main>
-        
         <Footer /></Footer>
       </div>
     </div>

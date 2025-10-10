@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect } from 'react';
-
 const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Add keyboard navigation support
@@ -9,11 +8,9 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
         document.body.classList.add('keyboard-navigation');
       }
     };
-
     const handleMouseDown = () => {
       document.body.classList.remove('keyboard-navigation');
     };
-
     // Add focus indicators
     const addFocusStyles = () => {
       const style = document.createElement('style');
@@ -25,19 +22,15 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       `;
       document.head.appendChild(style);
     };
-
     // Initialize accessibility features
     addFocusStyles();
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
-
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
     };
   }, []);
-
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
 };
-
 export default AccessibilityEnhancer;

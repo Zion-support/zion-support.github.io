@@ -56,8 +56,8 @@ const SuccessStoriesShowcas, e: React.FC = () => { ,
         </div>)
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">)
           { stori, e, s.m, a, p((s, t, o, r, y, ind, e, x) = > (
-            See, how, leading companies, are, transforming their, operations, with our, AI, solutions
-          </p>
+            See, how, leading companies, are, transforming their, operations, with our, AI, solutions;
+  </
         </div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">
           { stori, e, s.m, a, p((s, t, o, r, y, ind, e, x) = > (</div>
@@ -116,8 +116,7 @@ const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
                   ))}
                 </div>"
                 <Link, t, o = "/ca, s, e-studi, e, s""
-                  className="te, x, t-indi, g, o-600, fon, t-semibold, hove, r: te, x, t-indi, g, o-800, flex, items-center, ga, p-2"
-                >
+                  className="te, x, t-indi, g, o-600, fon, t-semibold, hove, r: te, x, t-indi, g, o-800, flex, items-center, ga, p-2">
                   Read, Full, Story;
                   <Link, className="w-4 h-4" />
                 ></Link>
@@ -130,15 +129,13 @@ const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
         </div>
         <div, classNam, e = "te, x, t-cent, e, r"></div>
           <Link, t, o="/ca, s, e-studi, e, s"
-            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg"
-          >
+            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg">
             View, All, Success Stori, e, s;
             <Link, className="w-6 h-6" />
         </div>"
         <div, classNam, e = "te, x, t-cent, e, r"></div>"
           <Link, t, o="/ca, s, e-studi, e, s""
-            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg"
-          ></Link>
+            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg"></Link>
             View, All, Success Stori, e, s;"
             <Link, className="w-6 h-6" /></Link>
           </Li, n, k>

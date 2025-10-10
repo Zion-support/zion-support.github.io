@@ -1,10 +1,8 @@
 import React, { Suspense, lazy, ComponentType } from 'react';
-
 interface LazyComponentProps {
   fallback?: React.ReactNode;
   children: React.ReactNode;
 }
-
 export default function LazyComponent({
   className = '',
   children
@@ -15,7 +13,6 @@ const DefaultFallback = () => (
     <span className="ml-3 text-cyan-400">Loading...</span>
   </div>
 );
-
 const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallback</LazyComponentProps> = <DefaultFallback />,</DefaultFallback>children</DefaultFallback> 
 }) => {
   return (
@@ -24,7 +21,6 @@ const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallb
     </Suspense>
   );
 };
-
 // Higher-order component for lazy loading
 export const withLazyLoading = <P extends object>(</P>Component</P>: ComponentType<P>,</P>fallback</P>?: React.ReactNode
 ) => {
@@ -33,27 +29,20 @@ export const withLazyLoading = <P extends object>(</P>Component</P>: ComponentTy
       <Component {...props} /></Component>
     </LazyComponent>
   );
-
   LazyWrappedComponent.displayName = `withLazyLoading(${Component.displayName || Component.name})`;
-  
   return LazyWrappedComponent;
 };
-
 // Utility function to create lazy components
 export const createLazyComponent = <P extends object>(</P>importFunc</P>: () => Promise<{ default: ComponentType<P> }>,</P>fallback</P>?: React.ReactNode
 ) => {
   const LazyComponent = lazy(importFunc);
-  
   return (props: P) => (
     <LazyComponent fallback={fallback}></LazyComponent>
       <LazyComponent {...props} /></LazyComponen>
     </LazyComponent>
   );
 };
-
 export default LazyComponent;
-
-
 import LoadingSpinner from './LoadingSpinner';
 interface LazyComponentProps {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -76,15 +65,6 @@ export const _withLazyLoading = {};
 }
   return (prop)
   s: P) => ()
-    
-          
-          
-          
-          
-          
-          
-          
-          
           <Suspense fallback={fallback || <LoadingSpinner />}>
       <Component {...props} /></Component>
     </Suspense>
@@ -98,14 +78,6 @@ const,
 }
 //   children,
   fallback = 
-          
-          
-          
-          
-          
-          
-          
-          
           <LoadingSpinner />,
   delay = 0,
   threshold = 0.1,
@@ -151,7 +123,6 @@ const,
   }, [delay, threshold, rootMargin]);
   return (<div>Coming Soon</div>)
   )
-    
           <div ref={elementRef}></div>
       {isVisible ? ()}
           <Suspense fallback={fallback}></Suspense>
@@ -159,15 +130,6 @@ const,
         </Suspense>
       ) : ()
 // fallback)}
-    
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
   );
 };
@@ -197,15 +159,6 @@ export const createLazyComponent = {};
   const LazyComponent = lazy(importFunction);
   return (prop)
   s: P) => ()
-    
-          
-          
-          
-          
-          
-          
-          
-          
           <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} /></LazyComponent>
     </Suspense>
@@ -253,7 +206,11 @@ const imagePreloads = [
     document.head.appendChild(link);
   });
 };
-
 export default LazyComponent;
-
-
+  </P>
+  </P>
+  </any>
+  </HTMLDivElement>
+  </LazyComponentProps>
+  </P>
+  </P>

@@ -1,3 +1,4 @@
+import React from 'react';
 'use client';
 interface ModernLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -44,8 +45,6 @@ $4};
           <p className="text-sm text-gray-300 animate-pulse">{text}</p>
         )}
       </div>
-
-
 'use client';
 interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -97,7 +96,6 @@ const,
     : 'flex items-center justify-center p-4';
   return (<div>Coming Soon</div>)
   )
-    
           <div className={containerClasses} role="status" aria-label="Loading"></div>"
       <div className="flex flex-col items-center space-y-4"></div>"
         <div className="relative"></div>
@@ -113,8 +111,6 @@ const,
   );
 };
 export default ModernLoadingSpinner;
-
 export default ModernLoadingSpinner;"`
-
-
-
+  </ModernLoadingSpinnerProps>
+  </ModernLoadingSpinnerProps>

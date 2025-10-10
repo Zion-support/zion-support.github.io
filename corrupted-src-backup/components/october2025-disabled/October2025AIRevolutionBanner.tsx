@@ -38,8 +38,8 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
           </h2>)
           <p, className='te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>)
             <strong, className='te, x, t-whi, t, e'>NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automat, i, o, n), AI-powered, development, tools (5x, faster, coding), and, enterprise, AI safe, t, y (99.2% complian, c, e). The, definitive, guides for, forwar, d-thinking, organizations, transforming;
-            The, Complete, AI Revoluti, o, n: 3, Essential, Guides
-          </h2>
+            The, Complete, AI Revoluti, o, n: 3, Essential, Guides;
+  </
           <p, className='te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'></p>
             <strong, className='te, x, t-whi, t, e'>NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automat, i, o, n), AI-powered, development, tools (5x, faster, coding), and, enterprise, AI safe, t, y (99.2% complian, c, e). The, definitive, guides for, forwar, d-thinking, organizations, transforming
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></h2>

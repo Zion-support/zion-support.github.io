@@ -2,8 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
-
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -14,7 +12,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -22,15 +19,14 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         <meta name="description" content="Professional FuturisticServiceCard services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="FuturisticServiceCard, AI solutions, IT services, Zion Tech Group, futuristicservicecard" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                FuturisticServiceCard
-              </span>
+                FuturisticServiceCard;
+  </
               <br />
               <span className="text-white">Solutions</span>
             </h1>
@@ -44,12 +40,15 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
+                Learn More;
+  </
             </div>
           </div>
         </div>
   );
 };
-
 export default FuturisticServiceCardPage;
+  </button>
+  </span>
+  </section>
+  </div>

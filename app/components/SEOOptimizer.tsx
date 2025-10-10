@@ -97,7 +97,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
     document.head.appendChild(script);
   };
-
   const addOrganizationStructuredData = () => {
     const organizationData = {
       '@context': 'https://schema.org',
@@ -157,3 +156,4 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   );
 };
 export default SEOOptimizer;
+  </SEOOptimizerProps>

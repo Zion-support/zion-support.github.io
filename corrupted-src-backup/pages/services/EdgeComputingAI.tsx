@@ -326,13 +326,13 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
   ];
-  return(<>
+  return(<React.Fragment>
       <Helmet>
         <title>Edge, Computing, AI - Zion, Tech, Group | Re, a, l-Time, Edge, Intelligence</title>
         <me, t, a;
   na, m, e="descripti, o, n"
           content="Deploy, AI, at the, edge, for re, a, l-time, processing, with s, u, b-10ms, response, times. Edge, computing, solutions for, Io, T, industrial, automatio, n, smart, citie, s, and, healthcare, applications." /><meta name="keywor, d, s" content="edge, computin, g, edge, A, I, I, o, T, re, a, l-time, processin, g, edge, analytic, s, distributed, computin, g, edge, deploymen, t, low, latency, AI" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ed, g, e-computi, n, g-ai/>"
-  return (<>
+  return (<React.Fragment>
       <Helmet></Helmet>
         <title>Edge, Computing, AI - Zion, Tech, Group | Re, a, l-Time, Edge, Intelligence</title>
         <me, t, a;"
@@ -1037,7 +1037,7 @@ pl, a, n.popul, a, r;
         </secti, o, n>
       </ma, i, n>
       <Foot, e, r   /></Foot>
-    </>
+    </React.Fragment>
   );
 };
 export default EdgeComputingAI;

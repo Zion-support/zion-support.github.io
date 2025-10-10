@@ -19,5 +19,4 @@ interface AnalyticsData {/* TODO: Fix JSX expression */}
   s: Array<{/* TODO: Fix JSX expression */}
   }>;
 }
-
 export default AnalyticsDashboard;

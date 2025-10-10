@@ -2,11 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, ArrowRight } from 'lucide-react';
-=======
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, Zap } from 'lucide-react';
-
 interface JobPosition {
   id: string;
   title: string;
@@ -20,8 +16,6 @@ interface JobPosition {
   posted: string;
   featured: boolean;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-
 const CareersPage: React.FC = () => {
   const openPositions: JobPosition[] = [
     {
@@ -31,11 +25,7 @@ const CareersPage: React.FC = () => {
       location: 'Remote',
       type: 'Full-time',
       experience: '5+ years',
-<<<<<<< HEAD
-      description: 'Design and implement cutting-edge AI solutions for enterprise clients.',
-      requirements: ['Python, TensorFlow, PyTorch', '5+ years AI experience', 'Machine Learning expertise']
-=======
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
+description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
       requirements: [
         '5+ years experience in AI/ML development',
         'Expertise in Python, TensorFlow, PyTorch',
@@ -51,7 +41,6 @@ const CareersPage: React.FC = () => {
       ],
       posted: '2 days ago',
       featured: true
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     },
     {
       id: '2',
@@ -62,21 +51,8 @@ const CareersPage: React.FC = () => {
       experience: '7+ years',
       description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
-<<<<<<< HEAD
-    },
-    {
-      title: 'Data Scientist',
-      department: 'Data Analytics',
-      location: 'San Francisco, CA',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Extract insights from complex datasets to drive business decisions.',
-      requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills']
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     }
   ];
-
   const benefits = [
     'Competitive salary and equity',
     'Comprehensive health insurance',
@@ -89,7 +65,6 @@ const CareersPage: React.FC = () => {
     'Unlimited PTO',
     'Mental health support'
   ];
-
   const values = [
     {
       icon: Lightbulb,
@@ -116,7 +91,6 @@ const CareersPage: React.FC = () => {
       color: 'text-red-400'
     }
   ];
-
   const culture = [
     {
       stat: '98%',
@@ -139,7 +113,6 @@ const CareersPage: React.FC = () => {
       description: 'Highly rated workplace'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -147,21 +120,18 @@ const CareersPage: React.FC = () => {
         <meta name="description" content="Join our team of AI and IT experts. Explore career opportunities at Zion Tech Group and be part of the future of technology." />
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, cybersecurity, remote work, technology careers" />
       </Helmet>
-
-<<<<<<< HEAD
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Join Our Team
-          </h1>
+            Join Our Team;
+  </
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Work on cutting-edge AI and IT solutions that transform businesses worldwide.
           </p>
         </div>
       </section>
-
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions</h2>
@@ -169,8 +139,7 @@ const CareersPage: React.FC = () => {
             {openPositions.map((position, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
-              >
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-white mb-2">{position.title}</h3>
                 <div className="flex flex-wrap gap-4 text-sm text-gray-300 mb-4">
                   <div className="flex items-center space-x-1">
@@ -185,7 +154,6 @@ const CareersPage: React.FC = () => {
                     <Clock className="w-4 h-4" />
                     <span>{position.type}</span>
                   </div>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -196,7 +164,6 @@ const CareersPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
               Be part of the future of technology. Join our team of innovators, creators, and problem-solvers who are building the next generation of AI and IT solutions.
             </p>
-
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {culture.map((item, index) => (
                 <div key={index} className="text-center">
@@ -208,7 +175,6 @@ const CareersPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Company Values */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -218,7 +184,6 @@ const CareersPage: React.FC = () => {
                 These core values guide everything we do and shape our company culture.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
@@ -232,7 +197,6 @@ const CareersPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -242,7 +206,6 @@ const CareersPage: React.FC = () => {
                 We offer comprehensive benefits and perks to support our team members' well-being and growth.
               </p>
             </div>
-
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {benefits.map((benefit, index) => (
@@ -255,7 +218,6 @@ const CareersPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Open Positions */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -265,7 +227,6 @@ const CareersPage: React.FC = () => {
                 Explore our current job openings and find the perfect role for you.
               </p>
             </div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {openPositions.map((position) => (
                 <div
@@ -280,7 +241,6 @@ const CareersPage: React.FC = () => {
                       <span className="text-yellow-400 text-sm font-semibold">Featured Position</span>
                     </div>
                   )}
-
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
@@ -292,9 +252,7 @@ const CareersPage: React.FC = () => {
                       {position.type}
                     </span>
                   </div>
-
                   <p className="text-gray-300 mb-6">{position.description}</p>
-
                   <div className="flex items-center gap-4 mb-6 text-sm text-gray-400">
                     <div className="flex items-center gap-1">
                       <MapPin className="w-4 h-4" />
@@ -309,14 +267,11 @@ const CareersPage: React.FC = () => {
                       <span>Posted {position.posted}</span>
                     </div>
                   </div>
-
                   <button className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
-                    Apply Now
-                  </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+                    Apply Now;
+  </
                 </div>
-<<<<<<< HEAD
-                <p className="text-gray-300 mb-4">{position.description}</p>
+<p className="text-gray-300 mb-4">{position.description}</p>
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2">Requirements:</h4>
                   <ul className="text-sm text-gray-300 space-y-1">
@@ -334,15 +289,8 @@ const CareersPage: React.FC = () => {
                 </button>
               </div>
             ))}
-=======
-              ))}
-            </div>
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
-=======
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -356,21 +304,18 @@ const CareersPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                   <Zap className="w-5 h-5" />
-                  Send Resume
-                </button>
+                  Send Resume;
+  </
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
-                >
-                  Contact Us
-                </Link>
+                  className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  Contact Us;
+  </
               </div>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
           </div>
         </div>
       </section>
-
       <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Work With Us?</h2>
@@ -387,7 +332,6 @@ const CareersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-8">Benefits & Perks</h2>
@@ -402,8 +346,7 @@ const CareersPage: React.FC = () => {
           <div className="mt-8">
             <Link
               to="/contact"
-              className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
-            >
+              className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
               Get in Touch
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
@@ -413,5 +356,13 @@ const CareersPage: React.FC = () => {
     </div>
   );
 };
-
 export default CareersPage;
+  </Link>
+  </button>
+  </button>
+  </div>
+  </div>
+  </div>
+  </section>
+  </h1>
+  </div>

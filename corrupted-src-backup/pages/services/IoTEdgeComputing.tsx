@@ -328,13 +328,13 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     { na, m, e: "Ener, g, y", devic, e, s: "Smart, meter, s, grid, sensor, s, renewable, energ, y" },";"
     { na, m, e: "Agricultu, r, e", devic, e, s: "Soil, sensor, s, weather, station, s, irrigation, system, s" }";
   ];
-  return(<>
+  return(<React.Fragment>
       <Helmet>
         <title>I, o, T & Edge, Computin, g - Zion, Tech, Group | Smart, Connected, Solutions</title>
         <me, t, a;
   na, m, e="descripti, o, n"
           content="Advanced, IoT, and edge, computing, solutions with, rea, l-time, AI, processing, 5G, integratio, n, and, global, connectivity. 95% latency, reductio, n, enterprise, securit, y." /><meta name="keywor, d, s" content="IoT, solution, s, edge, computin, g, smart, device, s, connected, system, s, re, a, l-time, analytic, s, 5G, Io, T, industrial, Io, T" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/i, o, t-ed, g, e-computi, n, g/>"
-  return (<>
+  return (<React.Fragment>
       <Helmet></Helmet>
         <title>I, o, T & Edge, Computin, g - Zion, Tech, Group | Smart, Connected, Solutions</title>
         <me, t, a;"
@@ -1059,7 +1059,7 @@ pl, a, n.popul, a, r;
         </secti, o, n>
       </ma, i, n>
       <Foot, e, r   /></Foot>
-    </>
+    </React.Fragment>
   );
 };
 export default IoTEdgeComputing;

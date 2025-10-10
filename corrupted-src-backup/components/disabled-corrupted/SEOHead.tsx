@@ -1,9 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface SEOHeadProps {/* TODO: Fix JSX expression */}
 }
-
 const SEOHead: React.FC<SEOHeadProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of advanced AI and IT solutions that transform businesses and drive innovation across industries.',
@@ -17,7 +15,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl;
     : `https://zion.app${canonicalUrl}`;
-
   const defaultStructuredData = {
     '@context': 'https: //schema.org',
     '@type': 'Organization',
@@ -26,7 +23,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
     logo: 'https://zion.app/logo.png',
     description: description;
     sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']};
-
   return(<Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -65,10 +61,8 @@ const,
     ? canonicalUrl;`
     : `http,`
   s://zion.app${canonicalUrl}`;
-
   const defaultStructuredData = {/* TODO: Fix JSX expression */}
   };
-
   return (<Helmet></Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} /></meta>"
@@ -114,6 +108,7 @@ const,
     </Helmet>
   );
 };
-
 export default SEOHead;
 "`
+  </SEOHeadProps>
+  </SEOHeadProps>

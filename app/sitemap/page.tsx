@@ -1,5 +1,4 @@
 import React from 'react';
-
 const SitemapPage: React.FC = () => {
   const pages = [
     { path: '/', title: 'Home', description: 'Zion Tech Group - Advanced AI and IT Solutions' },
@@ -28,7 +27,6 @@ const SitemapPage: React.FC = () => {
     { path: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection practices' },
     { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' },
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8"></div>
       <div className="max-w-7xl mx-auto"></div>
@@ -37,10 +35,9 @@ const SitemapPage: React.FC = () => {
             Sitemap</h1>
           </h1>
           <p className="text-xl text-gray-600">
-            Navigate through all pages on our website
-          </p>
+            Navigate through all pages on our website;
+  </
         </div>
-
         <div className="bg-white rounded-lg shadow-lg p-8"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {pages.map((page, index) => (</div>
@@ -48,8 +45,7 @@ const SitemapPage: React.FC = () => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   <a 
                     href={page.path} 
-                    className="text-blue-600 hover:text-blue-700 transition-colors"
-                  >
+                    className="text-blue-600 hover:text-blue-700 transition-colors">
                     {page.title}
                   </a>
                 </h3>
@@ -63,7 +59,6 @@ const SitemapPage: React.FC = () => {
             ))}
           </div>
         </div>
-
         <div className="mt-12 bg-blue-50 rounded-lg p-8"></div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
             Need Help Finding Something?
@@ -74,21 +69,21 @@ const SitemapPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4"></div>
             <a 
               href="/contact"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
-            >
-              Contact Us
-            </a>
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center">
+              Contact Us;
+  </
             <a 
               href="tel:+13024640950"
-              className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center"
-            >
-              Call Us: (302) 464-0950
-            </a>
+              className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center">
+              Call Us: (302) 464-0950;
+  </
           </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default SitemapPage;
+  </a>
+  </a>
+  </p>

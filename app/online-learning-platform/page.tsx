@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BookOpen, Users, BarChart, Zap, Shield, CheckCircle } from 'lucide-react';
-
 const OnlineLearningPlatformPage: React.FC = () => {
   const features = [
     { icon: BookOpen, title: 'Course Management', description: 'Create, organize, and manage educational content with AI-powered course recommendations.' },
@@ -12,9 +11,8 @@ const OnlineLearningPlatformPage: React.FC = () => {
     { icon: Shield, title: 'Secure Platform', description: 'Secure, scalable platform with role-based access and data protection.' },
     { icon: CheckCircle, title: 'Certification', description: 'Automated certification and credential management system.' }
   ];
-
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Online Learning Platform | Zion Tech Group - AI-Powered Education Platform</title>
         <meta name="description" content="Create engaging online learning experiences with AI-powered education platform. Course management, student analytics, and personalized learning." />
@@ -41,8 +39,7 @@ const OnlineLearningPlatformPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
-
 export default OnlineLearningPlatformPage;

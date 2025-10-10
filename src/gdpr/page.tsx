@@ -1,7 +1,5 @@
-
-
+import React from 'react';
 import { Link } from 'react-router-dom';
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const Pagetsx: React.FC = () => {
@@ -21,7 +19,6 @@ const Pagetsx: React.FC = () => {
     title: 'Security & Compliance',
       description: 'Enterprise-grade security with full compliance and data protection',
       benefits: ['Data protection', 'Compliance', 'Secure operations']
-
     }
   ]
   return (<div className="min-h-screen bg-gray-900 text-white"></div>
@@ -34,26 +31,21 @@ const Pagetsx: React.FC = () => {
         <section className="py-20 px-4"></section>"
           <div className="max-w-6xl mx-auto text-center"></div>"
             <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></h1>
-              tsx;
-            </h1>"
+              tsx</h1>"
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
-              Advanced tsx solutions powered by AI and cutting-edge technology;
-            </p>"
+              Advanced tsx solutions powered by AI and cutting-edge technology</p>"
             <div className="flex flex-col,"
   sm:flex-row gap-4 justify-center"></div>"
               <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"
   hover:bg-cyan-600 transition-colors"></a>
-                Get Started;
-              </a>"
+                Get Started</a>"
               <a href="/demo" className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg,
   hover:bg-cyan-500,"
   hover:text-white transition-colors"></a>
-                View Demo;
-              </a>
+                View Demo</a>
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
@@ -68,7 +60,6 @@ const Pagetsx: React.FC = () => {
                     {feature.benefits.map((benefit, idx) => (}
                       <li key={idx} className="flex items-center">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-
                         {benefit}
                       </li>)
                     ))}
@@ -85,8 +76,7 @@ const Pagetsx: React.FC = () => {
             <p className="text-gray-300 mb-8">Contact us today for a free consultation and customized solution</p>"
             <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"
   hover:bg-cyan-600 transition-colors"></a>
-              Contact Us;
-            </a>
+              Contact Us</a>
           </div>
         </section>
       </main>
@@ -94,10 +84,4 @@ const Pagetsx: React.FC = () => {
   )
 }
 export default Pagetsx;"
-
-
-
-
 export default GdprPage;
-
-

@@ -1,8 +1,6 @@
 import React from 'react';
-
 interface BreadcrumbNavigationProps {/* TODO: Fix JSX expression */}
 }
-
 const BreadcrumbNavigation = React.memo(function BreadcrumbNavigation({)
   className = '')
 }: BreadcrumbNavigationProps) {
@@ -21,6 +19,5 @@ const BreadcrumbNavigation = React.memo(function BreadcrumbNavigation({/* TODO: 
     </div>
   );
 });
-
 export default BreadcrumbNavigation;
 "`

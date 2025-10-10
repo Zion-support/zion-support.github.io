@@ -255,7 +255,7 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {
       benefi, t, s: ["45% reduction, in, stockouts", "30% improvement, in, delivery tim, e, s", "25% cost, reductio, n"]";
     }
   ];
-  return(<>
+  return(<React.Fragment>
       <Helmet>
         <title>AI, Predictive, Analytics - Zion, Tech, Group | Advanced, Forecastin, g & Insigh, t, s</title>
         <me, t, a;
@@ -310,7 +310,7 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
     {/* TODO: Fix JSX expression */}
     }
   ];
-  return (<>
+  return (<React.Fragment>
       <Helmet></Helmet>
         <title>AI, Predictive, Analytics - Zion, Tech, Group | Advanced, Forecastin, g & Insigh, t, s</title>
         <me, t, a;"
@@ -959,7 +959,7 @@ pl, a, n.popul, a, r;
         </secti, o, n>
       </ma, i, n>
       <Foot, e, r   /></Foot>
-    </>
+    </React.Fragment>
   );
 };
 export default AIPredictiveAnalytics;

@@ -1,8 +1,5 @@
 import React from 'react';
-
-
 interface SEOProps {// TODO: Add content;}
-
 }
   title?: string;
   description?: string;
@@ -22,13 +19,10 @@ interface SEOProps {// TODO: Add content;}
   section?: string;
   tags?: string[];
 }
-
 const EnhancedSEO: React.FC;
           <SEOProps> = ({// TODO: Add content;}
 }
-
 const EnhancedSEO: React.FC<SEOProps> = ({
-
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],
@@ -48,15 +42,11 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   tags = []}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;}
   const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
   return (
-    
     // Update meta description
-
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {/* TODO: Fix JSX expression */}
     }
     metaDescription.setAttribute('content', description);
-    
-
           <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title><meta name="description" content={fullDescription} /><meta name="keywords" content={keywordsString} /><meta name="author" content={author} /><meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /><meta name="language" content={lang} /><link rel="canonical" href={canonicalUrl} />
@@ -66,7 +56,6 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="twitter:card" content={twitterCard} /><meta name="twitter:site" content={twitterSite} /><meta name="twitter:title" content={fullTitle} /><meta name="twitter:description" content={fullDescription} /><meta name="twitter:image" content={ogImage} />
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#00ffff" /><meta name="msapplication-TileColor" content="#00ffff" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /><meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-
       {/* Article Meta Tags */}
       {/* TODO: Fix JSX expression */}"
   e:published_time" content={publishedTime} />}
@@ -94,14 +83,6 @@ const EnhancedSEO: React.FC<SEOProps> = ({
           <link rel="preconnect" href="http,"
   s:// www.googletagmanager.com" /></link>
       {/* DNS Prefetch */}
-      
-          
-          
-          
-          
-          
-          
-          
           "
           <link rel="dns-prefetch" href="// fonts.googleapis.com" /></link>"
           <link rel="dns-prefetch" href="// www.google-analytics.com" /></link>"
@@ -109,8 +90,6 @@ const EnhancedSEO: React.FC<SEOProps> = ({
           </Helmet>
   );
 };
-
 export default EnhancedSEO;"`
-
-
-
+  </SEOProps>
+  </SEOProps>

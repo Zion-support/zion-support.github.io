@@ -1,6 +1,4 @@
-
 import React from 'react';
-
 'use client';
 /**
  * Jest setup file for testing environment;
@@ -126,5 +124,3 @@ delete (window as unknown as Record<string, unknown>).location;
   reload: jest.fn(),
   assign: jest.fn(),
   replace: jest.fn()
-
-

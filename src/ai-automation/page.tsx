@@ -5,7 +5,6 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AIAutomationPage: React.FC = () => {
   const features = [
     {
@@ -33,7 +32,6 @@ const AIAutomationPage: React.FC = () => {
       benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -81,22 +79,20 @@ const AIAutomationPage: React.FC = () => {
       popular: false
     }
   ];
-
   const stats = [
     { icon: Users, value: '200+', label: 'Automated Processes' },
     { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
     { icon: Clock, value: '60%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'Client Rating' }
   ];
-
 export default function AIAutomationPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-            AI Automation
-          </h1>
+            AI Automation;
+  </
           <p className="text-xl text-gray-300 mb-8">
             Intelligent process automation with AI-powered decision making and exception handling.
           </p>
@@ -107,14 +103,15 @@ export default function AIAutomationPage() {
             </p>
             <a
               href="/contact"
-              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
-            >
+              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
               <ArrowRight className="w-5 h-5 mr-2" />
-              Contact Us
-            </a>
+              Contact Us;
+  </
           </div>
         </div>
       </div>
     </div>
   );
 }
+  </a>
+  </h1>

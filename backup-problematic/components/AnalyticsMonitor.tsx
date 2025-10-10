@@ -1,8 +1,6 @@
 import React from 'react';
-
 interface AnalyticsMonitorProps {/* TODO: Fix JSX expression */}
 }
-
 const AnalyticsMonitor = React.memo(function AnalyticsMonitor({)
   className = '')
 }: AnalyticsMonitorProps) {
@@ -21,6 +19,5 @@ const AnalyticsMonitor = React.memo(function AnalyticsMonitor({/* TODO: Fix JSX 
     </div>
   );
 });
-
 export default AnalyticsMonitor;
 "`

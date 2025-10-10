@@ -1,13 +1,10 @@
 'use client';
 import React, { createContext, useContext, useEffect } from 'react';
-
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
   trackPageView: (pageName: string) => void;
 }
-
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
   if (!context) {
@@ -15,7 +12,6 @@ export const useAnalytics = () => {
   }
   return context;
 };
-
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Initialize Google Analytics
@@ -26,13 +22,11 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       });
     }
   }, []);
-
   const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
       gtag('event', eventName, parameters);
     }
   };
-
   const trackPageView = (pageName: string) => {
     if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
       gtag('event', 'page_view', {
@@ -41,17 +35,15 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       });
     }
   };
-
   const value = {
     trackEvent,
     trackPageView,
   };
-
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );
 };
-
 export { AnalyticsProvider };
+  </AnalyticsContextType>

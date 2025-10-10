@@ -1,11 +1,7 @@
 import React from 'react';
-
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
 };
   titl,
   e: 'IoT Device Management Platform',
@@ -151,7 +147,6 @@ titl,
   const categories = [...new Set(iotServices.map(service => service.category))];
   return (<div>Coming Soon</div>)
   )
-    
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         {/* Hero Section */}"
         <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20"></section>"
@@ -189,15 +184,6 @@ Schedule Demo;
               <h2 className="text-3xl,"
   md:text-4xl font-bold text-gray-900 mb-4"></h2>
 // Why Choose Our IoT & Edge Services?
-              
-          
-          
-          
-          
-          
-          
-          
-          
           </h2>"
               <p className="text-xl text-gray-600"></p>
 Expert IoT engineers delivering scalable, secure, and intelligent connected solutions;"
@@ -308,7 +294,6 @@ Save up to 40% vs market rates;"
 Ready to Connect Your World?"
             <p className="text-xl mb-8 text-cyan-100"></p>
               Contact our IoT experts for a free consultation and custom connected solution strategy;
-
               <a
                 href="tel:+13024640950" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
 // >
@@ -317,12 +302,8 @@ Ready to Connect Your World?"
 href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
                 ✉️ kleber@ziontechgroup.com;
             <div className="mt-8 text-sm text-cyan-200">
-
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
   );
 };
-
-
 export default IotEdgePage;
-
-
+  </div>

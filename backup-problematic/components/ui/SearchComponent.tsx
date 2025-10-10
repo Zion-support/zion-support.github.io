@@ -1,8 +1,6 @@
 import React from 'react';
-
 interface SearchComponentProps {/* TODO: Fix JSX expression */}
 }
-
 const SearchComponent = React.memo(function SearchComponent({)
   className = '')
 }: SearchComponentProps) {
@@ -21,6 +19,5 @@ const SearchComponent = React.memo(function SearchComponent({/* TODO: Fix JSX ex
     </div>
   );
 });
-
 export default SearchComponent;
 "`

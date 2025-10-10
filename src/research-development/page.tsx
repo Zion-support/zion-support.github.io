@@ -1,17 +1,12 @@
 'use client';
 import React, { useState } from 'react';
-
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
 'use client';
 import React, { useState } from 'react';
 const ResearchDevelopmentPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
-
   const _researchAreas = [
     {
       id: 'ai',
@@ -46,7 +41,6 @@ $4},
       description:     ,
 $4}
   ];
-
   const researchProjects = {
     ai: [
       {
@@ -192,7 +186,6 @@ $4},
 $4}
     ]
   };
-
   const publications = [
     {
       title: 'Consensus Intelligence: A Framework for Multi-Agent Decision Making',
@@ -227,7 +220,6 @@ $4},
       link:     ,
 $4}
   ];
-
   const achievements = [
     {
       icon: Award,
@@ -250,23 +242,21 @@ $4},
       description:     ,
 $4}
   ];
-
   return (
-    <>
+    <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Research & Development
-            </h1>
+              Research & Development;
+  </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Pushing the boundaries of technology through cutting-edge research and innovation. 
               Our R&D team is dedicated to creating the next generation of AI and IT solutions.
             </p>
           </div>
-
           {/* Research Areas Tabs */}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -285,11 +275,9 @@ $4}
                 </button>
               ))}
             </div>
-            
             <div className="text-center">
               <p className="text-gray-300 max-w-2xl mx-auto">
     <div>Coming Soon</div>
-
   );
 };
   const [activeTab, setActiveTab] = useState('ai');
@@ -755,8 +743,7 @@ $4}
   ];
   return (<div>Coming Soon</div>)
   )
-    
-          <>
+          <React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
@@ -765,12 +752,10 @@ $4}
             <h1 className="text-4xl,"
   md:text-5xl font-bold text-white mb-6 neon-text"></h1>
 // Research & Development;
-
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-
-          </p>
+            Coming Soon;
+  </
           </div>
           {/* Research Areas Tabs */}"
           <div className="mb-12"></div>"
@@ -789,14 +774,6 @@ $4}
   hover:bg-slate-700/50 border-2 border-transparent'`
                   }`}
 //                 >
-                  
-          
-          
-          
-          
-          
-          
-          
           "
           <area.icon className="w-5 h-5 mr-2" /></area>"
                   <span className="font-medium">{area.name}</span>
@@ -809,12 +786,11 @@ $4}
               </p>
             </div>
           </div>
-
           {/* Research Projects */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Current Research Projects
-            </h2>
+              Current Research Projects;
+  </
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
@@ -827,7 +803,6 @@ $4}
                       <p className="text-gray-300 text-sm mb-4">{project.description}</p>
                     </div>
                   </div>
-                  
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
                       <div className="text-sm text-gray-400 mb-1">Status</div>
@@ -851,7 +826,6 @@ $4}
                       <div className="text-sm text-white">{project.funding}</div>
                     </div>
                   </div>
-                  
                   <div>
                     <div className="text-sm font-semibold text-cyan-400 mb-2">Key Outcomes:</div>
                     <ul className="space-y-1">
@@ -887,15 +861,6 @@ $4}
                         project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'`
                       }`}></div>
                         {project.status}
-                      
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
                     </div>
                     <div></div>"
@@ -927,12 +892,11 @@ $4}
               ))}
             </div>
           </div>
-
           {/* Publications */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Recent Publications
-            </h2>
+              Recent Publications;
+  </
             <div className="max-w-4xl mx-auto">
               <div className="space-y-6">
                 {publications.map((pub, index) => (
@@ -947,13 +911,12 @@ $4}
                         <span className={`px-2 py-1 rounded text-xs ${
                           pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'
                         }`}>
-                          {pub.impact} Impact
-                        </span>
+                          {pub.impact} Impact;
+  </
                       </div>
                       <a
                         href={pub.link}
-                        className="text-cyan-400 hover:text-cyan-300 text-sm font-medium"
-                      >
+                        className="text-cyan-400 hover:text-cyan-300 text-sm font-medium">
                         Read Paper →
                       </a>
           {/* Publications */}"
@@ -995,12 +958,11 @@ $4}
               </div>
             </div>
           </div>
-
           {/* Achievements */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Research Achievements
-            </h2>
+              Research Achievements;
+  </
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {achievements.map((achievement, index) => (
                 <div key={index} className="text-center">
@@ -1027,12 +989,11 @@ $4}
               ))}
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
-              Collaborate With Our Research Team
-            </h2>
+              Collaborate With Our Research Team;
+  </
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Interested in collaborating on cutting-edge research? We welcome partnerships with 
               universities, research institutions, and industry leaders.
@@ -1040,25 +1001,22 @@ $4}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-              >
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
                 <BookOpen className="w-5 h-5 mr-2" />
-                Start Collaboration
-              </a>
+                Start Collaboration;
+  </
               <a
                 href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
-              </a>
+                (302) 464-0950;
+  </
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us
-              </a>
+                Email Us;
+  </
           {/* CTA Section */}"
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
             <h2 className="text-2xl font-bold text-white mb-4"></h2>
@@ -1067,64 +1025,25 @@ $4}
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
 // Interested in collaborating on cutting-edge research? We welcome partnerships with;
               universities, research institutions, and industry leaders.
-            
-          
-          
-          
-          
-          
-          
-          
-          
-
           </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-
 // >
-                
-          
-          
-          
-          
-          
-          
-          
           "
           <BookOpen className="w-5 h-5 mr-2" /></BookOpen>
 // Start Collaboration;
           </a>
-
               <a
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-
 // >
-                
-          
-          
-          
-          
-          
-          
-          
           "
           <Phone className="w-4 h-4 mr-2" /></Phone>
 // (302) 464-0950;
           </a>
-
               <a
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-
 // >
-                
-          
-          
-          
-          
-          
-          
-          
           "
           <Mail className="w-4 h-4 mr-2" /></Mail>
 // Email Us;
@@ -1133,15 +1052,12 @@ $4}
           </div>
         </div>
       </div>
-
       <Footer />
-    </>
-
+    </React.Fragment>
     </div>
   );
 };
-
-
 export default ResearchDevelopmentPage;
-
-
+  </a>
+  </a>
+  </a>

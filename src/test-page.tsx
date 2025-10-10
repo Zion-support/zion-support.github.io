@@ -1,9 +1,5 @@
-
-
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone ,  Users,  TrendingUp,  Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -24,7 +20,6 @@ const testPagetsx: React.FC = () => {
     title: 'Security & Compliance',
       description: 'Enterprise-grade security with full compliance and data protection',
       benefits: ['Data protection', 'Compliance', 'Secure operations']
-
     }
   ]
   return (<div className="min-h-screen bg-gray-900 text-white"></div>
@@ -52,12 +47,10 @@ const testPagetsx: React.FC = () => {
   hover:bg-cyan-500,"
   hover:text-white transition-colors"></a>
                 View Demo;
-
               </a>
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
@@ -72,7 +65,6 @@ const testPagetsx: React.FC = () => {
                     {feature.benefits.map((benefit, idx) => (}
                       <li key={idx} className="flex items-center">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-
                         {benefit}
                       </li>)
                     ))}
@@ -82,7 +74,6 @@ const testPagetsx: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}"
         <section className="py-16 px-4 bg-gray-800"></section>"
           <div className="max-w-4xl mx-auto text-center"></div>"
@@ -91,16 +82,12 @@ const testPagetsx: React.FC = () => {
             <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"
   hover:bg-cyan-600 transition-colors"></a>
               Contact Us;
-
             </a>
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
 export default testPagetsx;
-
-

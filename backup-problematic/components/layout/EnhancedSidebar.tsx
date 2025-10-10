@@ -1,8 +1,6 @@
 import React from 'react';
-
 interface EnhancedSidebarProps {/* TODO: Fix JSX expression */}
 }
-
 const EnhancedSidebar = React.memo(function EnhancedSidebar({)
   className = '')
 }: EnhancedSidebarProps) {
@@ -21,6 +19,5 @@ const EnhancedSidebar = React.memo(function EnhancedSidebar({/* TODO: Fix JSX ex
     </div>
   );
 });
-
 export default EnhancedSidebar;
 "`

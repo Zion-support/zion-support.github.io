@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
-
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
-
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {</AccessibilityEnhancerProps>useEffect</AccessibilityEnhancerProps>(() => {
     // Add keyboard navigation support
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -11,11 +9,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         document.body.classList.add('keyboard-navigation');
       }
     };
-
     const handleMouseDown = () => {
       document.body.classList.remove('keyboard-navigation');
     };
-
     // Add focus indicators
     const addFocusIndicators = () => {
       const style = document.createElement('style');
@@ -27,7 +23,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       `;
       document.head.appendChild(style);
     };
-
     // Add ARIA labels to interactive elements
     const enhanceAccessibility = () => {
       const buttons = document.querySelectorAll('button:not([aria-label])');
@@ -39,7 +34,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         if (!button.getAttribute('role')) {
           button.setAttribute('role', 'button');
         }
-
       const links = document.querySelectorAll('a:not([aria-label])');
       links.forEach(link => {
         if (!link.getAttribute('aria-label') && link.textContent) {
@@ -52,7 +46,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           link.setAttribute('rel', 'noopener noreferrer');
         }
       });
-
       // Add ARIA labels to images
       const images = document.querySelectorAll('img:not([alt])');
       images.forEach(img => {
@@ -60,7 +53,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           img.setAttribute('alt', '');
         }
       });
-
       // Add ARIA labels to form inputs
       const inputs = document.querySelectorAll('input:not([aria-label])');
       inputs.forEach(input => {
@@ -69,7 +61,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           input.setAttribute('aria-label', label.textContent?.trim() || '');
         }
       });
-
       // Add skip links
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
@@ -77,72 +68,58 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
-
     addFocusIndicators();
     enhanceAccessibility();
-
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
-
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
     };
   }, []);
-
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
 import React, { useEffect, useState } from 'react';
-
 interface AccessibilitySettings {
   highContrast: boolean;
   reducedMotion: boolean;
   fontSize: 'small' | 'medium' | 'large';
   focusVisible: boolean;
 }
-
 const AccessibilityEnhancer: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     reducedMotion: false,
     fontSize: 'medium',
     focusVisible: false});
-
   useEffect(() => {
     // Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-    
     setSettings(prev => ({
       ...prev,
       reducedMotion: prefersReducedMotion,
       highContrast: prefersHighContrast}));
-
     // Apply accessibility settings
     const root = document.documentElement;
-    
     if (settings.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
-
     if (settings.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
-
     // Font size
     root.classList.remove('font-small', 'font-medium', 'font-large');
     root.classList.add(`font-${settings.fontSize}`);
-
     // Focus visible
     if (settings.focusVisible) {
       root.classList.add('focus-visible');
     } else {
       root.classList.remove('focus-visible');
     }
-
     // Add keyboard navigation support
     const handleKeyDown = (e: KeyboardEvent) => {
       // Skip to main content
@@ -153,7 +130,6 @@ const AccessibilityEnhancer: React.FC = () => {
           e.preventDefault();
         }
       }
-
       // Escape key to close modals/dropdowns
       if (e.key === 'Escape') {
         const activeElement = document.activeElement as HTMLElement;
@@ -162,14 +138,11 @@ const AccessibilityEnhancer: React.FC = () => {
         }
       }
     };
-
     document.addEventListener('keydown', handleKeyDown);
-
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, [settings]);
-
   // Add ARIA live region for announcements
   useEffect(() => {
     const liveRegion = document.createElement('div');
@@ -178,7 +151,6 @@ const AccessibilityEnhancer: React.FC = () => {
     liveRegion.className = 'sr-only';
     liveRegion.id = 'live-region';
     document.body.appendChild(liveRegion);
-
     return () => {
       const existingLiveRegion = document.getElementById('live-region');
       if (existingLiveRegion) {
@@ -186,7 +158,6 @@ const AccessibilityEnhancer: React.FC = () => {
       }
     };
   }, []);
-
   // Announce page changes
   useEffect(() => {
     const announcePageChange = () => {
@@ -196,18 +167,14 @@ const AccessibilityEnhancer: React.FC = () => {
         liveRegion.textContent = `Page loaded: ${pageTitle}`;
       }
     };
-
     // Announce after a short delay to ensure content is loaded
     const timeoutId = setTimeout(announcePageChange, 1000);
-
     return () => clearTimeout(timeoutId);
   }, []);
-
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
     return null;
   }
-
   return (
     <div className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs z-50">
       <div className="mb-2 font-bold">Accessibility Settings</div>
@@ -235,8 +202,7 @@ const AccessibilityEnhancer: React.FC = () => {
           <select
             value={settings.fontSize}
             onChange={(e) => setSettings(prev => ({ ...prev, fontSize: e.target.value as any }))}
-            className="bg-gray-700 text-white rounded px-2 py-1"
-          >
+            className="bg-gray-700 text-white rounded px-2 py-1">
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="large">Large</option>
@@ -255,5 +221,4 @@ const AccessibilityEnhancer: React.FC = () => {
     </div>
   );
 };
-
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer</AccessibilitySettings>

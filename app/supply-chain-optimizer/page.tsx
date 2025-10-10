@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Truck, BarChart, Zap, Shield, CheckCircle, Target } from 'lucide-react';
-
 const SupplyChainOptimizerPage: React.FC = () => {
   const features = [
     { icon: Truck, title: 'Logistics Optimization', description: 'AI-powered logistics optimization for efficient supply chain management.' },
@@ -12,9 +11,8 @@ const SupplyChainOptimizerPage: React.FC = () => {
     { icon: CheckCircle, title: 'Quality Control', description: 'Automated quality control and compliance monitoring.' },
     { icon: Target, title: 'Performance Analytics', description: 'Real-time performance tracking and optimization recommendations.' }
   ];
-
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Supply Chain Optimizer | Zion Tech Group - AI-Powered Supply Chain Management</title>
         <meta name="description" content="Optimize your supply chain with AI-powered tools. Logistics optimization, demand forecasting, and automated processes." />
@@ -41,8 +39,7 @@ const SupplyChainOptimizerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
-
 export default SupplyChainOptimizerPage;
