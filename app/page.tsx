@@ -5,33 +5,8 @@ import Footer from './components/Footer';
 import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-<<<<<<< HEAD
-import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
-=======
-import StructuredData from './components/StructuredData';
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
-import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, DollarSign, MessageCircle, Heart } from 'lucide-react';
 
-<<<<<<< HEAD
-// Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-
-// Preload critical components
-const preloadComponents = () => {
-  if (typeof window !== 'undefined') {
-    // Preload critical components after initial render
-    setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
-  }
-};
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
