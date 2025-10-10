@@ -1,37 +1,900 @@
 {
-  "timestamp": "2025-10-10T07:28:42.185Z",
+  "timestamp": "2025-10-10T22:23:22.809Z",
   "baseUrl": "https://ziontechgroup.com",
   "summary": {
-    "totalLinks": 1,
-    "workingLinks": 1,
+    "totalUrls": 147,
+    "workingLinks": 146,
     "brokenLinks": 0,
-    "missingPages": 0,
-    "errors": []
+    "redirects": 1,
+    "errors": 0
   },
   "workingLinks": [
     {
       "url": "https://ziontechgroup.com",
-      "statusCode": 200,
-      "depth": 0
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/about",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/services",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/contact",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/pricing",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/blog",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/case-studies",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/careers",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-services",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/it-services",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/micro-saas",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/tutorials",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/team",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/partners",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/support",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/status",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/faq",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/docs",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/api-docs",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/community",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/demo",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/compliance",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/digital-transformation",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/business-intelligence",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/edge-computing",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/consultation",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/privacy",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/terms",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/cookies",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/sitemap",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-analytics",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-automation",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-chatbot-builder",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-crm",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-cybersecurity",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-data-analytics",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-healthcare",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-financial-services",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-computer-vision",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-voice-solutions",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-ecommerce-solutions",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-hr-solutions",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-content-generation",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-workflow-automation",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-document-processing",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-predictive-analytics",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-edge-computing",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-video-analysis",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-speech-synthesis",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-recommendation-engine",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-sentiment-analysis",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-chatbot-enterprise",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-content-moderation",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-predictive-modeling",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-document-intelligence",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-conversation-analytics",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-supply-chain-ai",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-healthcare-diagnostics",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-financial-forecasting",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-iot-analytics",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-conversational-ai",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-automated-testing",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-knowledge-management",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-customer-churn",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-automated-reporting",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-voice-assistant",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-content-generation-pro",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/cloud-infrastructure",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/api-development",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/cybersecurity-solutions",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/database-management",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/mobile-development",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/web-development",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/devops-cicd",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/it-support",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/data-analytics-bi",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/custom-software",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/network-infrastructure",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/it-asset-management",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/it-security-services",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/it-project-management",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/cloud-native-development",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-integration-services",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/blockchain-development",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/iot-development",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/e-commerce-development",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/api-development-advanced",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/data-engineering",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/cybersecurity-advanced",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/cloud-migration-advanced",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/devops-advanced",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/machine-learning-ops",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/enterprise-integration",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/performance-optimization",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/disaster-recovery-advanced",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/compliance-automation",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/cloud-cost-optimization",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/security-automation",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/data-visualization",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/workflow-automation",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/cloud-native-security",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-analytics-pro",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-chat-ai",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-security-shield",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-cloud-vault",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-content-studio",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-crm-intelligence",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-data-sync",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-lead-magnet",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-project-master",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-email-automation",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-inventory-smart",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-invoice-genius",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-workflow-automation",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-performance-monitor",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-compliance-manager",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-social-scheduler",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-video-editor",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-translator-pro",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-code-reviewer",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-customer-insights",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-email-assistant",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-meeting-assistant",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-seo-optimizer",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-data-cleaner",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-contract-analyzer",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-survey-builder",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-accounting-assistant",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-recruitment-pro",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-content-moderation",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-predictive-maintenance",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-energy-manager",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-supply-chain-optimizer",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-fraud-detector",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-customer-service-pro",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-marketing-automation",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-document-ai",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/5g-implementation",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-3d-generation",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-holographic-workspace",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-autonomous-systems",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-blockchain-solutions",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/quantum-computing",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/ar-vr-solutions",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/iot-integration",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
+    },
+    {
+      "url": "https://ziontechgroup.com/machine-learning",
+      "status": 200,
+      "depth": 0,
+      "title": "No title"
     }
   ],
   "brokenLinks": [],
-  "missingPages": [],
-  "errors": []
-  "timestamp": "2025-10-09T17:00:53.717Z",
-  "baseUrl": "https://ziontechgroup.com",
-  "statistics": {
-    "totalPages": 1,
-    "totalLinks": 0,
-    "brokenLinks": 0
-  },
-  "brokenLinks": [],
-  "pages": [
+  "redirects": [
     {
-      "url": "https://ziontechgroup.com",
-      "title": "Zion Tech Group - Technology Solutions",
-      "linkCount": 0,
-      "links": []
+      "url": "https://ziontechgroup.com/enterprise",
+      "status": 301,
+      "depth": 0,
+      "redirectTo": "/enterprise/"
     }
-  ]
+  ],
+  "errors": [],
+  "missingPages": []
 }
