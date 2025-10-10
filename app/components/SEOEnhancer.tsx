@@ -20,8 +20,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   twitterCard = 'summary_large_image',
   structuredData}
 }) => {
-<<<<<<< HEAD
-=======
   const defaultStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -51,10 +49,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
-
->>>>>>> cursor/fix-errors-and-merge-to-main-4927
   return (
-    <Head>}
+    <Head>
       {/* Basic Meta Tags */}
       <title>{title} | Zion Tech Group - AI & IT Solutions</title>
       <meta name="description" content={description} />
