@@ -1,2 +1,1 @@
-import React from 'react';
-export default AICostOptimizationBanner;
+import React from 'react'; export default AICostOptimizationBanner; 

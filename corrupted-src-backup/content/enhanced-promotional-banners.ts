@@ -9,9 +9,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
     description: 'Revolutionary AI platform delivering unprecedented business transformation with measurable results.'
     ctaText: 'Get Started Now'
     ctaUrl: '/services/autonomous-business-operations'
-    featured: true;
-    priority: 1;
-    startDate: '2025-10-01',
+    featured: true; priority: 1; startDate: '2025-10-01',
     endDate: '2025-12-31',
     category: 'AI Platform',
     tags: ['AI', 'Automation', 'Business Operations', 'Cost Reduction']},
@@ -22,9 +20,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
       'Complete governance framework for enterprise AI deployment with policy tests, scorecards, and rollback capabilities.',
     ctaText: 'Learn More'
     ctaUrl: '/services/ai-governance'
-    featured: true;
-    priority: 2;
-    startDate: '2025-10-01',
+    featured: true; priority: 2; startDate: '2025-10-01',
     endDate: '2025-12-31',
     category: 'AI Governance',
     tags: ['AI Governance', 'Enterprise', 'Safety', 'Compliance'],
@@ -33,4 +29,4 @@ export const,
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
+  }]

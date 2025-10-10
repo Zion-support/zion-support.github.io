@@ -1,6 +1,5 @@
 import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";"
-import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";';
-interface, NewArticlesPromoBannerProp, s {/* TODO: Fix JSX expression */}
+import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";'; interface, NewArticlesPromoBannerProp, s {/* TODO: Fix JSX expression */}
 }
 const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> = ({
   varia, n, t = 'def, a, u, l, t',
@@ -27,8 +26,7 @@ const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> =
                   <TrendingUp, classNam, e="w-5 h-5, tex, t-gre, e, n-3, 0, 0" />
                   <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-gre, e, n-3, 0, 0">{artic, l, e.cate, g, o, r, y}</sp, a, n>
                     Re, a, d <Link, classNam, e="w-4 h-4" />
-              View, All, Articles;
-              <Link, classNam, e="w-5 h-5" />
+              View, All, Articles; <Link, classNam, e="w-5 h-5" />
   if (varia, n, t = == 'featu, r, e, d') {
     retu, r, n(<div, classNam, e = {`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}>
         <div, classNam, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-60, 0, p-6">

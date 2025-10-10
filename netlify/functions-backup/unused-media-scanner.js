@@ -1,9 +1,7 @@
 exports.handler = async function (event, context) {
   try {
-    // Unused media scanning simulation;
-    const result = {
-      statusCode: 200;
-      headers: {,
+    // Unused media scanning simulation; const result = {
+      statusCode: 200; headers: {,
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'},
       body: JSON.stringify({)
@@ -13,17 +11,13 @@ exports.handler = async function (event, context) {
         source: event.source || 'unknown'
         scanning: {
           status: 'active'
-          mediaScanned: 0;
-          unusedFound: 0;
-          lastScan: new Date().toISOString()}
+          mediaScanned: 0; unusedFound: 0; lastScan: new Date().toISOString()}
       })
-    };
-    return result;
-  } catch (error) {
+    }
+    return result; } catch (error) {
 
     return {
-      statusCode: 500;
-      headers: {,
+      statusCode: 500; headers: {,
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'},
       body: JSON.stringify({),
@@ -36,13 +30,12 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   y: JSON.stringify({/* TODO: Fix JSX expression */}
         })
       })
-    };
-    return result;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    }
+    return result; } catch (error) {/* TODO: Fix JSX expression */}
       },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
       })
-    };
+    }
   }
-};
+}

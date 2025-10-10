@@ -1,6 +1,5 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
-impo, r, t { octoberLatestBreakthroughConte, n, t } fr, o, m "../conte, n, t/octob, e, r-20, 2, 5-late, s, t-breakthrou, g, h-conte, n, t";
-const October2025LatestBreakthroughBanne, r = () => { 
+impo, r, t { octoberLatestBreakthroughConte, n, t } fr, o, m "../conte, n, t/octob, e, r-20, 2, 5-late, s, t-breakthrou, g, h-conte, n, t"; const October2025LatestBreakthroughBanne, r = () => { 
   return(<div, classNam, e = "bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n"  > {/* Animated, background, effects */ }
       <div, className="absolute, inse, t-0, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" />
@@ -16,15 +15,12 @@ const October2025LatestBreakthroughBanne, r = () => {
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, p, x-6, p, y-2, rounde, d-full, m, b-6"></div>
             <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />
             <span, className="te, x, t-white, fon, t-semibold, tex, t-sm">
-              NEW, BREAKTHROUGH, CONTENT · OCTOBER, 202, 5;
-            </sp, a, n>
+              NEW, BREAKTHROUGH, CONTENT · OCTOBER, 202, 5; </sp, a, n>
           </div>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">
-            Latest, AI, Infrastructure Breakthroug, h, s;
-          </h2>
+            Latest, AI, Infrastructure Breakthroug, h, s; </h2>
           <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o">
-            Master, advanced, LLM orchestra, t, i, o, n, vector, database, optimization, and, productio, n-ready, AI, agents with, our, latest enterprise, guide, s;
-          </p>
+            Master, advanced, LLM orchestra, t, i, o, n, vector, database, optimization, and, productio, n-ready, AI, agents with, our, latest enterprise, guide, s; </p>
         </div>)
         {/* Content, Card, s */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">)
@@ -51,15 +47,12 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, p, x-6, p, y-2, rounde, d-full, m, b-6"></div>"
             <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" /></Zap>"
             <span, className="te, x, t-white, fon, t-semibold, tex, t-sm"></span>
-              NEW, BREAKTHROUGH, CONTENT · OCTOBER, 202, 5;
-            </sp, a, n>
+              NEW, BREAKTHROUGH, CONTENT · OCTOBER, 202, 5; </sp, a, n>
           </div>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4"></h2>
-            Latest, AI, Infrastructure Breakthroug, h, s;
-          </h2>"
+            Latest, AI, Infrastructure Breakthroug, h, s; </h2>"
           <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o"></p>
-            Master, advanced, LLM orchestra, t, i, o, n, vector, database, optimization, and, productio, n-ready, AI, agents with, our, latest enterprise, guide, s;
-          </p>
+            Master, advanced, LLM orchestra, t, i, o, n, vector, database, optimization, and, productio, n-ready, AI, agents with, our, latest enterprise, guide, s; </p>
         </div>
         {/* Content, Card, s */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8"></div>
@@ -108,8 +101,7 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
                   ))}
                 </ul>
                 <div, classNam, e = "flex, item, s-center, ga, p-2, tex, t-sm, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">
-                  Read, Full, Article;
-                  Read, Full, Article</div>
+                  Read, Full, Article; Read, Full, Article</div>
                   <Link, className="w-4 h-4" />
                 </ul>"
                 <div, classNam, e = "flex, item, s-center, ga, p-2, tex, t-sm, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l"></div>
@@ -117,8 +109,7 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
                   <Link, className="w-4 h-4" /></Link>
                 </div>
               </Li, n, k>
-            );
-          })}
+            ); })}
         </div>
         {/* CTA, Sectio, n */}
         <div, classNam, e = "te, x, t-center, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-8"></div>
@@ -135,8 +126,7 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
           <div, className="flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r"></div>
             <Link, t, o="/conta, c, t"
               className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-bl, u, e-900, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r: bg-bl, u, e-50, transitio, n-colo, r, s">
-              Schedule, Free, Consultation;
-              <Link, className="w-5 h-5" />
+              Schedule, Free, Consultation; <Link, className="w-5 h-5" />
             </Li, n, k>
             <Link, t, o="/bl, o, g"
               className="inli, n, e-flex, item, s-center, ga, p-2, b, g-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s">
@@ -149,8 +139,7 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
             </Li, n, k>"
             <Link, t, o="/bl, o, g""
               className="inli, n, e-flex, item, s-center, ga, p-2, b, g-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"></Link>
-              Explore, All, Articles;
-            </Li, n, k>
+              Explore, All, Articles; </Li, n, k>
           </div>
         </div>
         {/* Stat, s, B, a, r */}
@@ -190,7 +179,5 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
         </div>
       </div>
     </div>
-  );
-};
-export default October2025LatestBreakthroughBanner;
-"`
+  ); }
+export default October2025LatestBreakthroughBanner; "`

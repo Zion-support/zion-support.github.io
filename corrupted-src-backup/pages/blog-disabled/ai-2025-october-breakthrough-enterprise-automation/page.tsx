@@ -1,12 +1,9 @@
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-const EnterpriseAutomation202, 5 = () => { 
-  return(:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx;
-    <React.Fragment>
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'; const EnterpriseAutomation202, 5 = () => { 
+  return(:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx <React.Fragment>
       <Helm, e, t>
         <title>
           AI-Powered, Enterprise, Automation 20, 2, 5: Complete, Implementation, Guide |
-          Zion, Tech, Group;
-        </title>
+          Zion, Tech, Group; </title>
         <meta, nam, e = 'description'
           conte, n, t='Transform, your, enterprise with, AI, automation in, 202, 5. Complete, guide, covering implementation, strateg, i, e, s, ROI, optimizatio, n, and, rea, l-world, case, studies for, 40, 0%+ efficiency, gain, s.'
         />
@@ -26,26 +23,22 @@ const EnterpriseAutomation202, 5 = () => {
             <Link, t, o='/'
               className='te, x, t-white, hove, r:te, x, t-zi, o, n-cyan, transitio, n-colo, r, s'
             >
-              ← Back, to, Home;
-            </Li, n, k>
+              ← Back, to, Home; </Li, n, k>
           </div>
         </div>
         <div, className='container, m, x-auto, p, x-6, p, y-12'></div>
           <div, className='m, a, x-w-4xl, m, x-auto, tex, t-center, m, b-12'></div>
             <div, className='inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, b, g-emera, l, d-5, 0, 0/20, tex, t-emera, l, d-300, tex, t-sm, fon, t-medium, m, b-6, border, border-emera, l, d-4, 0, 0/30'></div>
               <Zap, className='w-4 h-4, m, r-2' />
-              October, 202, 5 • Enterprise, A, I;
-            </div>
+              October, 202, 5 • Enterprise, A, I; </div>
             <h1, className='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
               AI-Powered, Enterprise, Automation 20, 2, 5:</h1>
               <span, className='bg-gradie, n, t-to-r, fro, m-emera, l, d-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
-                Complete, Implementation, Guide;
-                Complete, Implementation, Guide</span>
+                Complete, Implementation, Guide; Complete, Implementation, Guide</span>
             <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
               AI-Powered, Enterprise, Automation 20, 2, 5:</h1>
               <span, classNam, e='bg-gradie, n, t-to-r, fro, m-emera, l, d-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
-                Complete, Implementation, Guide;
-                Complete, Implementation, Guide</span>
+                Complete, Implementation, Guide; Complete, Implementation, Guide</span>
           <article, classNam, e='m, a, x-w-4xl, m, x-au, t, o'>
             <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, m, d: p-12, border, border-whi, t, e/10'></div>
               <section, classNam, e='mb-12'>
@@ -53,24 +46,20 @@ const EnterpriseAutomation202, 5 = () => {
             <div, classNam, e = 'flex, fle, x-wrap, justif, y-center, ga, p-4, tex, t-sm, tex, t-zi, o, n-sla, t, e'></section>
               <div, className='flex, item, s-cent, e, r'></div>
                 <Clock, className='w-4 h-4, m, r-2' />
-                18, min, read;
-              </div>
+                18, min, read; </div>
               <div, className='flex, item, s-cent, e, r'></div>
                 <Users, className='w-4 h-4, m, r-2' />
-                Enterprise, Strateg, y;
-              </div>
+                Enterprise, Strateg, y; </div>
               <div, className='flex, item, s-cent, e, r'></div>
                 <CheckCircle, className='w-4 h-4, m, r-2' />
-                Featur, e, d;
-              </div>
+                Featur, e, d; </div>
             </div>
           </div>
           <article, className='m, a, x-w-4xl, m, x-au, t, o'>
             <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, m, d: p-12, border, border-whi, t, e/10'></div>
               <section, className='mb-12'>
                 <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
-                  Executive, Summar, y;
-                </h2>
+                  Executive, Summar, y; </h2>
                 <div, className='bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-emera, l, d-4, 0, 0/30, rounde, d-x, l, p-6, m, b-6'>
 const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
                   <p, className='te, x, t-white, tex, t-lg, leadin, g-relax, e, d' > Enterprise, AI, automation is, no, longer a, future, aspiration—it's, a, present necessi, t, y. Companies, implementing, comprehensive AI, automation, strategies are, see, i, n, g{' ' }
@@ -91,8 +80,7 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
                     <li, classNam, e='flex, item, s-sta, r, t'>
                       <CheckCircle, classNam, e='w-5 h-5, tex, t-emera, l, d-400, m, r-3, m, t-0.5, fle, x-shri, n, k-0' />
                       <span, classNam, e='te, x, t-whi, t, e'>
-                        Cost, Optimizatio, n: 70% reduction, in, AI infrastructure, cost, s;
-                      </sp, a, n>
+                        Cost, Optimizatio, n: 70% reduction, in, AI infrastructure, cost, s; </sp, a, n>
                   <div, classNam, e='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
                     <li, className='flex, item, s-sta, r, t'>
                       <CheckCircle, className='w-5 h-5, tex, t-emera, l, d-400, m, r-3, m, t-0.5, fle, x-shri, n, k-0' />
@@ -104,25 +92,21 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
                     <li, classNam, e='flex, item, s-sta, r, t'></li>
                       <CheckCircle, classNam, e='w-5 h-5, tex, t-emera, l, d-400, m, r-3, m, t-0.5, fle, x-shri, n, k-0' /></CheckCircle>
                       <span, classNam, e='te, x, t-whi, t, e'></span>
-                        Cost, Optimizatio, n: 70% reduction, in, AI infrastructure, cost, s;
-                      </sp, a, n>
+                        Cost, Optimizatio, n: 70% reduction, in, AI infrastructure, cost, s; </sp, a, n>
                   <div, classNam, e='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
                     <li, className='flex, item, s-sta, r, t'></li>
                       <CheckCircle, className='w-5 h-5, tex, t-emera, l, d-400, m, r-3, m, t-0.5, fle, x-shri, n, k-0' /></CheckCircle>
                       <span, className='te, x, t-whi, t, e'></span>
-                        Cost, Optimizatio, n: 70% reduction, in, AI infrastructure, cost, s;
-                      </sp, a, n>
+                        Cost, Optimizatio, n: 70% reduction, in, AI infrastructure, cost, s; </sp, a, n>
                   <div, className='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
                     <Link, t, o='/conta, c, t'
                       className='bg-emera, l, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, hove, r:bg-emera, l, d-600, transitio, n-colors, inlin, e-flex, item, s-center, justif, y-center, ga, p-2'
                     >
-                      Start, Your, Transformation;
-                      <Link, classNam, e='w-5 h-5' />
+                      Start, Your, Transformation; <Link, classNam, e='w-5 h-5' />
     <div></div>
       <Helmet>
         <title>AI-Powered Enterprise Automation 2025: Complete Implementation Guide | Zion Tech Group</title>),
-:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx;
-        <meta name="description" content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." /><meta property="og:title", content="AI-Powered Enterprise Automation 2025: Complete Implementation Guide" />",
+:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx <meta name="description" content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." /><meta property="og:title", content="AI-Powered Enterprise Automation 2025: Complete Implementation Guide" />",
         <meta property="og:description", content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." />"
         <meta name="description" content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." /><meta property="og:title", content="AI-Powered Enterprise Automation 2025: Complete Implementation Guide" />,
         <meta property="og:description", content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." />
@@ -139,8 +123,7 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
   </div>
           <div></div>
               <Zap className=" />,"
-  October 2025 • Enterprise AI;
-  </div>
+  October 2025 • Enterprise AI; </div>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">",
   AI-Powered Enterprise Automation 2025: <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">,
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">"
@@ -180,8 +163,7 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
           <div className="max-w-4xl mx-auto text-center mb-12"></div>
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-500/20 text-emerald-300 text-sm font-medium mb-6 border border-emerald-400/30"></div>
               <Zap className="w-4 h-4 mr-2 ,>
-  October 2025 • Enterprise AI;
-            </div>
+  October 2025 • Enterprise AI; </div>
             "
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">,
   AI-Powered Enterprise Automation 2025: <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">,
@@ -194,8 +176,7 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
           <div className="max-w-4xl mx-auto text-center mb-12"></div>
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-500/20 text-emerald-300 text-sm font-medium mb-6 border border-emerald-400/30"></div>
               <Zap className="w-4 h-4 mr-2/>,"
-  October 2025 • Enterprise AI;
-            </div>
+  October 2025 • Enterprise AI; </div>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">",
   AI-Powered Enterprise Automation 2025: <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">,
         <meta name="description", content ="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." />
@@ -222,29 +203,24 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
   </div>
           <div></div>
               <Zap className="w-4 h-4 mr-2" />
-  October 2025 • Enterprise AI;
-  </div>
+  October 2025 • Enterprise AI; </div>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">"
   AI-Powered Enterprise Automation 2025: <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">"
-  Complete Implementation Guide;
-              </span>,
+  Complete Implementation Guide; </span>,
             </h1>,
             ,
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">,"
   AI-Powered Enterprise Automation 2025:</h1> <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">"
-  Complete Implementation Guide;
-  </
+  Complete Implementation Guide; </
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">,"</p>
                     ></Link>
-                      Start, Your, Transformation;
-                      <Link, classNam, e='w-5 h-5' /></Link>
+                      Start, Your, Transformation; <Link, classNam, e='w-5 h-5' /></Link>
     <div></div>
       <Helmet></Helmet>
         <title>AI-Powered Enterprise Automation,
   2025: Complete Implementation Guide | Zion Tech Group</title>,
-:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx;
-        <meta name="description" content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." /><meta property="o,"
+:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx <meta name="description" content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." /><meta property="o,"
   g:title", content="AI-Powered Enterprise Automation,"
   2025: Complete Implementation Guide" />""
         <meta property="o,"
@@ -263,8 +239,7 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
   </div>
           <div></div>"
               <Zap className=" />,"
-  October 2025 • Enterprise AI;
-  </div>"
+  October 2025 • Enterprise AI; </div>"
             <h1 className="text-4xl,"
   md: text-6xl font-bold text-white mb-6 leading-tight">"
   AI-Powered Enterprise Automation,"
@@ -305,8 +280,7 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
           <div className="max-w-4xl mx-auto text-center mb-12"></div>"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-500/20 text-emerald-300 text-sm font-medium mb-6 border border-emerald-400/30"></div>"
               <Zap className="w-4 h-4 mr-2 ,></Zap>
-  October 2025 • Enterprise AI;
-            </div>"
+  October 2025 • Enterprise AI; </div>"
             ""
             <h1 className="text-4xl,"
   md: text-6xl font-bold text-white mb-6 leading-tight"></h1>
@@ -316,8 +290,7 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
           <div className="max-w-4xl mx-auto text-center mb-12"></div>"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-500/20 text-emerald-300 text-sm font-medium mb-6 border border-emerald-400/30"></div>"
               <Zap className="w-4 h-4 mr-2/>,"
-  October 2025 • Enterprise AI;
-            </div>
+  October 2025 • Enterprise AI; </div>
             "
             <h1 className="text-4xl,"
   md: text-6xl font-bold text-white mb-6 leading-tight">"
@@ -344,30 +317,26 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
   </div>
           <div></div>"
               <Zap className="w-4 h-4 mr-2" /></Zap>
-  October 2025 • Enterprise AI;
-  </div>"
+  October 2025 • Enterprise AI; </div>"
             <h1 className="text-4xl,"
   md: text-6xl font-bold text-white mb-6 leading-tight">"
   AI-Powered Enterprise Automation,"
   2025: <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">"
-  Complete Implementation Guide;
-              </span>
+  Complete Implementation Guide; </span>
             </h1>
             "
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">,""
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">,"
-  Transform your enterprise with cutting-edge AI automation. Learn proven strategies for 400%+ efficiency gains;
-              implementation frameworks, and real-world case studies from Fortune 500 companies.
+  Transform your enterprise with cutting-edge AI automation. Learn proven strategies for 400%+ efficiency gains; implementation frameworks, and real-world case studies from Fortune 500 companies.
             </p>
             <div></div><Clock className=" />18 min read</div>"
               <div></div><CheckCircle className=" />Featured</div>
   </div>
   </div>
 "
-                    comprehensive AI automation strategies are seeing <strong >400-600% efficiency gains</strong>"
+                    comprehensive AI automation strategies are seeing <strong>400-600% efficiency gains</strong>"
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx;
-            <div><Clock className=" />18 min read</div>"
+:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx <div><Clock className=" />18 min read</div>"
               <div><CheckCircle className=" />Featured</div>
 :src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx</p>
             <div></div><Clock className=" />18 min read</div>"
@@ -393,17 +362,16 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
                 <h2 className="text-3xl font-bold text-white mb-6">Executive Summary</h2>"
                 <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/30 rounded-xl p-6 mb-6"></section>
                   <p className="text-white text-lg leading-relaxed">,"
-  Enterprise AI automation is no longer a future aspiration—it's a present necessity. Companies implementing ';';
-                    comprehensive AI automation strategies are seeing</p> <strong >400-600% efficiency gains</strong>
+  Enterprise AI automation is no longer a future aspiration—it's a present necessity. Companies implementing ';'; comprehensive AI automation strategies are seeing</p> <strong>400-600% efficiency gains</strong>
             "
             <div><Clock className=" />18 min read</div>""
               <div><CheckCircle className=" />Featured</div>
   </div>
   </div>"
 ""
-                    comprehensive AI automation strategies are seeing <strong >400-600% efficiency gains</strong>""
+                    comprehensive AI automation strategies are seeing <strong>400-600% efficiency gains</strong>""
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed"></p>
-:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx;"
+:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx"
             <div><Clock className=" />18 min read</div>""
               <div><CheckCircle className=" />Featured</div>
   </div>"
@@ -425,11 +393,9 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
                 <h2 className="text-3xl font-bold text-white mb-6">Executive Summary</h2>""
                 <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/30 rounded-xl p-6 mb-6"></div>"
                   <p className="text-white text-lg leading-relaxed">,"
-  Enterprise AI automation is no longer a future aspiration—it's a present necessity. Companies implementing ';';
-                    comprehensive AI automation strategies are seeing <strong >400-600% efficiency gains</strong>"
+  Enterprise AI automation is no longer a future aspiration—it's a present necessity. Companies implementing ';'; comprehensive AI automation strategies are seeing <strong>400-600% efficiency gains</strong>"
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">"
-  Transform your enterprise with cutting-edge AI automation. Learn proven strategies for 400%+ efficiency gains;
-              implementation frameworks, and real-world case studies from Fortune 500 companies.
+  Transform your enterprise with cutting-edge AI automation. Learn proven strategies for 400%+ efficiency gains; implementation frameworks, and real-world case studies from Fortune 500 companies.
             </p>
             <div></div><Clock className="w-4 h-4 mr-2" />18 min read</div>
               <div></div><CheckCircle className="w-4 h-4 mr-2" />Featured</div>
@@ -460,8 +426,8 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
             <div></div>"
                   <p className="text-white text-lg leading-relaxed">"
   Enterprise AI automation is no longer a future aspiration—it's a present necessity. Companies implementing '
-                    comprehensive AI automation strategies are seeing</p> <strong >400-600% efficiency gains</strong>
-                    <strong >70% cost reduction</strong>, and <strong >95% faster decision-making</strong>.
+                    comprehensive AI automation strategies are seeing</p> <strong>400-600% efficiency gains</strong>
+                    <strong>70% cost reduction</strong>, and <strong>95% faster decision-making</strong>.
                   </p>
   </div>
                 <div></div>
@@ -500,9 +466,7 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
                 <h2 className="text-3xl font-bold text-white mb-6">The AI Automation,
   Revolution: Why 2025 Changes Everything</h2>"
                 <p className="text-zion-slate-light mb-6 leading-relaxed">,"
-  The convergence of advanced AI models, edge computing, and enterprise-grade platforms has created;
-                  an unprecedented opportunity for automation transformation. Unlike previous waves of automation that;
-                  and adaptive learning.
+  The convergence of advanced AI models, edge computing, and enterprise-grade platforms has created; an unprecedented opportunity for automation transformation. Unlike previous waves of automation that; and adaptive learning.
                 </p>
                 <div></section>
                   <h3 className="text-xl font-bold text-white mb-4">Key Drivers of the 2025 Automation Revolution</h3>
@@ -620,12 +584,10 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
                       <Link className="w-5 h-5 " />
                       <Link className="w-5 h-5" />
                     </Link>
-:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx;
-                    <Link to="/case-studies"
+:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx <Link to="/case-studies"
   className= " />
                     <Link to="/case-studies>"
-  className= "border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-white transition-colors;
-                  <div></div>"
+  className= "border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-white transition-colors; <div></div>"
                     to="/contact""
   className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold,"
   hover:bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2""
@@ -651,16 +613,14 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
                       <Link className="w-5 h-5 " /></Link>"
                       <Link className="w-5 h-5" /></Link>
                     </Link>
-:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx;"
+:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx"
                     <Link to="/case-studies""
   className= " /></Link>"
                     <Link to="/case-studies>""
   className= "border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold,
   hover:bg-emerald-400,
-  hover:text-white transition-colors;
-                    >
-                      View Case Studies;
-                    </Link>
+  hover:text-white transition-colors; >
+                      View Case Studies; </Link>
                   </div>
                 </div>
               </section>
@@ -668,10 +628,8 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
           </article>
         </div>
       </div>,
-    </React.Fragment>);
-};
-export default EnterpriseAutomation2025;
-  </div>
+    </React.Fragment>); }
+export default EnterpriseAutomation2025; </div>
 </article>
 </article>
 </article>

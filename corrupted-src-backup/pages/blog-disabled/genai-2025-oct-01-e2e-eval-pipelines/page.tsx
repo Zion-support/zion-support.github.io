@@ -1,25 +1,20 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-export default function BlogPost(): React.JSX.Element {
+import React from 'react'; import { Helmet } from 'react-helmet-async'; export default function BlogPost(): React.JSX.Element {
   return(<React.Fragment>
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
         <Helmet>
           <title>Genai 2025 Oct 01 E2e Eval Pipelines - Zion Tech Group</title>
-          <meta;
-            name="description"
+          <meta; name="description"
             content="Genai 2025 Oct 01 E2 e Eval Pipelines - Latest insights from Zion Tech Group"
           /></meta>
         </Helmet>
         <div className="max-w-4xl mx-auto px-4 py-20">
           <div className="mb-12">
             <h1 className="text-4xl md: text-5xl font-bold mb-6 leading-tight">
-              Genai 2025 Oct 01 E2e Eval Pipelines;
-        <div className="max-w-4xl mx-auto px-4 py-20"></div>
+              Genai 2025 Oct 01 E2e Eval Pipelines; <div className="max-w-4xl mx-auto px-4 py-20"></div>
           <div className="mb-12"></div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Genai 2025 Oct 01 E2e Eval Pipelines;
-  </
+              Genai 2025 Oct 01 E2e Eval Pipelines; </
             <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8"></div>
               <span>By Zion Tech Group Team</span>
               <span>•</span>
@@ -32,19 +27,16 @@ export default function BlogPost(): React.JSX.Element {
             <div className="text-gray-200 leading-relaxed"></div>
               <h2>Introduction</h2>
               <p>
-                This is a placeholder blog post. The content for "Genai 2025 Oct 01 E2e Eval;
-                Pipelines" will be added here.
+                This is a placeholder blog post. The content for "Genai 2025 Oct 01 E2e Eval; Pipelines" will be added here.
               </p>
 ,
               <h2>Main Content</h2>,
               <p>,
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor;
-                incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor; incididunt ut labore et dolore magna aliqua.
               </p>
               <h2>Conclusion</h2>
               <p>
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip;
-                ex ea commodo consequat.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip; ex ea commodo consequat.
               </p>
             </div>
           </div>
@@ -64,10 +56,8 @@ export default function BlogPost(): React.JSX.Element {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
-                    Twitter;
-                  </a>,
-                  <a;
-                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
+                    Twitter; </a>,
+                  <a; href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
@@ -78,8 +68,7 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
                     className="bg-white bg-opacity-20,"
   hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
                   >
-                    Twitter;
-                  </a>
+                    Twitter; </a>
                   <a></a>
                     href={/* TODO: Fix JSX expression */}`
   s://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}"
@@ -88,26 +77,22 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
                     className="bg-white bg-opacity-20,"
   hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
                   >
-                    LinkedIn;
-                  </a>
+                    LinkedIn; </a>
                 </div>
               </div>
-              <a;
-                href="/blog"
+              <a; href="/blog"
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               <a></a>"
                 href="/blog""
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold,"
   hover:bg-gray-100 transition-colors"
               >
-                Back to Blog;
-              </a>
+                Back to Blog; </a>
             </div>
           </div>
         </div>
       </div>,
-    </React.Fragment>);
-}
+    </React.Fragment>); }
 "`
   </h1>
   </h1>

@@ -14,14 +14,6 @@ export default {
     '^@/content/(.*)$': '<rootDir>/content/$1'
   },
   transform: {
-<<<<<<< HEAD
-    '^.+\\.(ts|tsx)$': ['ts-jest', {
-      tsconfig: {
-        jsx: 'react-jsx'
-      }
-    }],
-    '^.+\\.(js|jsx)$': 'babel-jest'
-=======
     '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', {
       presets: [
         ['@babel/preset-env', { targets: { node: 'current' } }],
@@ -29,28 +21,3 @@ export default {
         '@babel/preset-typescript'
       ]
     }]
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
-  },
-  testMatch: [
-    '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
-    '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)'
-  ],
-  collectCoverageFrom: [
-    'app/**/*.{ts,tsx}',
-    '!app/**/*.d.ts',
-    '!app/**/*.stories.{ts,tsx}',
-    '!app/**/index.{ts,tsx}'
-  ],
-  coverageDirectory: 'coverage',
-  coverageReporters: ['text', 'lcov', 'html'],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  testPathIgnorePatterns: [
-    '<rootDir>/node_modules/',
-    '<rootDir>/dist/',
-    '<rootDir>/.next/',
-    '<rootDir>/out/'
-  ],
-  transformIgnorePatterns: [
-    'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
-  ]
-};

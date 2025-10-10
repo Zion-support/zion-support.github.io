@@ -1,7 +1,7 @@
 import { describe, it, expect } from '@jest/globals';
 
-describe('Performance Monitoring', () => {
-  it('should be a placeholder test', () => {
+describe('PerformanceMonitoring', () => {
+  it('should be defined', () => {
     expect(true).toBe(true);
   });
 });

@@ -1,6 +1,4 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-      i,
+import, React, from 'rea, c, t'; impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m'; i,
   d:  , 4,
       titl,
   e: 'Autonomous, Enterprise, System,
@@ -17,7 +15,7 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
   e: '28, m, i, n',
       trendi, n, g: t, r, u, e,
       ic, o, n: '🤖',
-      metri, c, s: { val, u, e: '9, 5%', lab, e, l: 'Automat, i, o, n' }}]; retu, r, n(<div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
+      metri, c, s: { val, u, e: '9, 5%', lab, e, l: 'Automat, i, o, n' }}] retu, r, n(<div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}
       <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-30'>
         <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />

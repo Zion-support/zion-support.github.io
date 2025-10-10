@@ -2,8 +2,8 @@
   s: [] }) {/* TODO: Fix JSX expression */}
   s: 2 }); } catch {await fs && fs.writeJson(FILE_PATH} {/* TODO: Fix JSX expression */})
   s: [] }) {/* TODO: Fix JSX expression */}"
-  s: 2 }); } } if (req && req.method === "POST") { const body = req && req.body || {}; const data = await fs && fs.readJson(FILE_PATH); const item = {/* TODO: Fix JSX expression */}
-  t: new Date().toISOString()} }; data && data.items.unshift(item); await fs && fs.writeJson(FILE_PATH, data) {/* TODO: Fix JSX expression */}
+  s: 2 }); } } if (req && req.method === "POST") { const body = req && req.body || {} const data = await fs && fs.readJson(FILE_PATH); const item = {/* TODO: Fix JSX expression */}
+  t: new Date().toISOString()} } data && data.items.unshift(item); await fs && fs.writeJson(FILE_PATH, data) {/* TODO: Fix JSX expression */}
   s: 2 }); return res && res.status(201).json(item); } const item = {/* TODO: Fix JSX expression */}
   t: new Date().toISOString() } data.items.unshift(item); await fs.writeJson(FILE_PATH, data) {/* TODO: Fix JSX expression */}
   s: 2 }); return res.status(201).json(item); } res.status(405).json({/* TODO: Fix JSX expression */}")

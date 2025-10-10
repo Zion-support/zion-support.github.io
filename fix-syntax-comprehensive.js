@@ -1,9 +1,6 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-
-// List of files with syntax errors
+import fs from 'fs'; import path from 'path'; // List of files with syntax errors
 const filesToFix = [
   '/workspace/src/about/page.tsx',
   '/workspace/src/ai-ab-testing/page.tsx',
@@ -25,15 +22,10 @@ const filesToFix = [
   '/workspace/src/ai-document-processor/page.tsx',
   '/workspace/src/ai-ecommerce-optimizer/page.tsx',
   '/workspace/src/ai-ecommerce-solutions/page.tsx'
-];
-
-// Function to fix syntax errors in a file
+]; // Function to fix syntax errors in a file
 function fixSyntaxErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Fix malformed imports
+    let content = fs.readFileSync(filePath, 'utf8'); let modified = false; // Fix malformed imports
     const importFixes = [
       // Fix malformed import statements
       {
@@ -49,15 +41,11 @@ function fixSyntaxErrors(filePath) {
       {
         pattern: /import\s+{([^}]*)\s+from\s+'([^']*)';\s*}/g,
         replacement: "import { $1 } from '$2';"
-      }
-    ];
+      }]
     
     for (const fix of importFixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
+      const newContent = content.replace(fix.pattern, fix.replacement); if (newContent !== content) {
+        content = newContent; modified = true; }
     }
     
     // Fix malformed function declarations
@@ -76,15 +64,11 @@ function fixSyntaxErrors(filePath) {
       {
         pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[\s*}\s*const\s+(\w+)\s*=\s*\[\s*}/g,
         replacement: 'const $1: React.FC = () => {\n  const $2 = [];\n  const $3 = [];\n  return ('
-      }
-    ];
+      }]
     
     for (const fix of functionFixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
+      const newContent = content.replace(fix.pattern, fix.replacement); if (newContent !== content) {
+        content = newContent; modified = true; }
     }
     
     // Fix malformed object literals
@@ -98,15 +82,11 @@ function fixSyntaxErrors(filePath) {
       {
         pattern: /(\w+):\s*\[\s*}\s*(\w+):/g,
         replacement: '$1: [],\n    $2:'
-      }
-    ];
+      }]
     
     for (const fix of objectFixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
+      const newContent = content.replace(fix.pattern, fix.replacement); if (newContent !== content) {
+        content = newContent; modified = true; }
     }
     
     // Fix malformed JSX
@@ -120,38 +100,24 @@ function fixSyntaxErrors(filePath) {
       {
         pattern: /<(\w+)([^>]*)>([^<]*)<\/?$/gm,
         replacement: '<$1$2>$3</$1>'
-      }
-    ];
+      }]
     
     for (const fix of jsxFixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
+      const newContent = content.replace(fix.pattern, fix.replacement); if (newContent !== content) {
+        content = newContent; modified = true; }
     }
     
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
-      return true;
-    }
+      fs.writeFileSync(filePath, content, 'utf8'); console.log(`Fixed syntax errors in: ${filePath}`); return true; }
     
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false; } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message); return false; }
 }
 
 // Main execution
-console.log('Starting comprehensive syntax error resolution...');
-
-let fixedCount = 0;
-for (const file of filesToFix) {
+console.log('Starting comprehensive syntax error resolution...'); let fixedCount = 0; for (const file of filesToFix) {
   if (fixSyntaxErrors(file)) {
-    fixedCount++;
-  }
+    fixedCount++; }
 }
 
 console.log(`Fixed syntax errors in ${fixedCount} files`);

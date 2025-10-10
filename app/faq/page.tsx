@@ -1,95 +1,164 @@
 'use client';
-import React, { useState } from 'react';
+
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ChevronDown, ChevronUp } from 'lucide-react';
-const FAQPage: React.FC = () => {
-  const [openItems, setOpenItems] = useState<number[]>([]);
-  const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(item => item !== index)
-        : [...prev, index]
-    );
-  };
-  const faqs = [
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
+
+const FaqPage: React.FC = () => {
+  const features = [
     {
-      question: "What AI services do you offer?",
-      answer: "We offer comprehensive AI services including marketing automation, customer support, data analytics, content generation, healthcare solutions, financial services, e-commerce solutions, cybersecurity, mobile apps, sales automation, workflow automation, and data visualization."
+      icon: CheckCircle,
+      title: 'Faq Solutions',
+      description: 'Comprehensive faq solutions tailored to your business needs.',
+      benefits: ['Expert consultation', 'Custom implementation', 'Ongoing support']
     },
     {
-      question: "How can AI benefit my business?",
-      answer: "AI can automate repetitive tasks, provide data-driven insights, improve customer experience, enhance security, optimize operations, and drive innovation. Our solutions typically deliver 300% ROI within the first year."
+      icon: Users,
+      title: 'Expert Team',
+      description: 'Our experienced team delivers high-quality faq services.',
+      benefits: ['Certified professionals', 'Industry expertise', 'Proven track record']
     },
     {
-      question: "Do you provide IT infrastructure services?",
-      answer: "Yes, we offer complete IT infrastructure services including cloud migration, DevOps, database management, cybersecurity, managed IT services, and IT consulting to modernize your technology stack."
-    },
-    {
-      question: "What is your pricing model?",
-      answer: "We offer flexible pricing models including subscription-based plans starting at $99/month for small businesses, custom enterprise solutions, and project-based pricing. Contact us for a personalized quote."
-    },
-    {
-      question: "Do you offer 24/7 support?",
-      answer: "Yes, we provide 24/7 technical support for all our services. Our support team is available via phone, email, and live chat to ensure your systems run smoothly around the clock."
-    },
-    {
-      question: "How long does implementation take?",
-      answer: "Implementation timelines vary based on project complexity. Simple AI solutions can be deployed in 2-4 weeks, while comprehensive digital transformation projects may take 3-6 months. We provide detailed timelines during consultation."
-    },
-    {
-      question: "Do you work with small businesses?",
-      answer: "Absolutely! We work with businesses of all sizes, from startups to enterprise organizations. Our micro SAAS solutions are specifically designed for small businesses looking to leverage AI technology."
-    },
-    {
-      question: "What industries do you serve?",
-      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
+      icon: BarChart,
+      title: 'Performance Focused',
+      description: 'Optimized faq solutions for maximum performance and efficiency.',
+      benefits: ['Performance monitoring', 'Continuous optimization', 'Real-time analytics']
     }
   ];
+
+  const benefits = [
+    'Professional faq services',
+    'Custom solutions for your business',
+    'Expert consultation and support',
+    'Proven methodologies and best practices',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Cost-effective pricing',
+    'Quick implementation and deployment'
+  ];
+
   return (
-    <React.Fragment>
+    <>
       <Helmet>
-        <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
-        <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
-        <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />
+        <title>Faq Services - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional faq services and solutions to help your business succeed with cutting-edge technology and expert guidance." />
+        <meta name="keywords" content="faq, services, solutions, technology, AI, IT" />
+        <meta property="og:title" content="Faq Services - Zion Tech Group" />
+        <meta property="og:description" content="Professional faq services and solutions to help your business succeed with cutting-edge technology and expert guidance." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Faq Services - Zion Tech Group" />
+        <meta name="twitter:description" content="Professional faq services and solutions to help your business succeed with cutting-edge technology and expert guidance." />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Frequently Asked <span className="text-cyan-400">Questions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Find answers to common questions about our AI and IT services, pricing, and implementation.
-            </p>
+
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Professional Faq Services
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Professional faq services and solutions to help your business succeed with cutting-edge technology and expert guidance.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 flex items-center justify-center">
+                  Get Started <ArrowRight className="ml-2 h-5 w-5" />
+                </button>
+                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
+                  Learn More
+                </button>
+              </div>
+            </div>
           </div>
         </section>
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20">
-                  <button
-                    onClick={() => toggleItem(index)}
-                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors">
-                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                    {openItems.includes(index) ? (
-                      <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                    ) : (
-                      <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                    )}
-                  </button>
-                  {openItems.includes(index) && (
-                    <div className="px-6 pb-4">
-                      <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                    </div>
-                  )}
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Faq Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We deliver exceptional faq solutions that drive business success.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <div className="flex items-center mb-4">
+                    <feature.icon className="h-8 w-8 text-blue-400 mr-3" />
+                    <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                  </div>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
           </div>
         </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Key Benefits
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the advantages of working with our faq experts.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg p-6 border border-white/10">
+                  <div className="flex items-center">
+                    <CheckCircle className="h-6 w-6 text-green-400 mr-3" />
+                    <span className="text-white font-medium">{benefit}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-purple-100 mb-8">
+                Contact our experts to discuss your faq needs and get a customized solution.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call Now
+                </button>
+                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                  <Mail className="mr-2 h-5 w-5" />
+                  Email Us
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
-export default FAQPage;
+
+export default FaqPage;

@@ -1,2 +1,1 @@
-import React from 'react';
-export default SiteHeader;
+import React from 'react'; export default SiteHeader; 

@@ -1,2 +1,1 @@
-import React from 'react';
-export default AppRouter;
+import React from 'react'; export default AppRouter; 

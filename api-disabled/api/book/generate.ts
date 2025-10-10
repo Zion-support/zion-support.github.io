@@ -20,7 +20,7 @@
   e: 0.7}),' const text = completion.choices?.[0]?.message?.content || '', drafted.push ({/* TODO: Fix JSX expression */}
   e: ch.title} conten)
   t: text }); } res.status (200).json ({/* TODO: Fix JSX expression */})
-  s: drafted }); } ; res.status(200).json({/* TODO: Fix JSX expression */})
+  s: drafted }); } res.status(200).json({/* TODO: Fix JSX expression */})
   s: drafted }); } catch (error) {/* TODO: Fix JSX expression */}
   r: "Internal server error" }); } '
 "`

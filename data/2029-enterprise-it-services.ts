@@ -1,112 +1,50 @@
 
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
-export interface EnterpriseItService2029 {;,
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; variant: string; contactInfo: unknown; mobile: string; email: string; export interface EnterpriseItService2029 {,
     address: string}
   i,
-  d: string;
-  nam,
-  e: string;
-  taglin,
+  d: string; nam,
+  e: string; taglin,
   e: string,
   pric,
   e: string,
   descriptio,
-  n: string;
-  feature,
-  s: string[];
-  popula,
-  r: boolean;
-  ico,
-  n: string;
-  colo,
-  r: string;
-  textColo,
-  r: string;
-  lin,
-  k: string;
-  marketPositio,
-  n: string;
-  targetAudienc,
-  e: string;
-  trialDay,
-  s: number;
-  setupTim,
-  e: string;
-  categor,
-  y: string;
-  realServic,
-  e: boolean;
-  technolog,
-  y: string[];
-  integration,
-  s: string[];
-  useCase,
-  s: string[];
-  ro,
-  i: string;
-  competitor,
-  s: string[];
-  marketSiz,
-  e: string;
-  growthRat,
-  e: string;
-  varian,
-  t: string;
-  contactInf,
-  o: unknown;
-    mobil,
-  e: string;
-    emai,
-  l: string;
-export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */}
+  n: string; feature,
+  s: string[]; popula,
+  r: boolean; ico,
+  n: string; colo,
+  r: string; textColo,
+  r: string; lin,
+  k: string; marketPositio,
+  n: string; targetAudienc,
+  e: string; trialDay,
+  s: number; setupTim,
+  e: string; categor,
+  y: string; realServic,
+  e: boolean; technolog,
+  y: string[]; integration,
+  s: string[]; useCase,
+  s: string[]; ro,
+  i: string; competitor,
+  s: string[]; marketSiz,
+  e: string; growthRat,
+  e: string; varian,
+  t: string; contactInf,
+  o: unknown; mobil,
+  e: string; emai,
+  l: string; export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */}
   s: string}
-};
+}
   i,
-  d: string;
-  nam,
-  e: string;
-  taglin,
-  e: string;
-  pric,
+  d: string; nam,
+  e: string; taglin,
+  e: string; pric,
   e: string,,
   descriptio,
-  n: string;
-  feature,
-  s: string[];
-  lin,
-  k: string;
-  categor,
-  y: string;
-  realImplementatio,
-  n: boolean;
-  contactInf,
+  n: string; feature,
+  s: string[]; lin,
+  k: string; categor,
+  y: string; realImplementatio,
+  n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string}
     addres,
@@ -114,44 +52,31 @@ export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */}
   }
 }
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
-];
-  id: string, name: string;
-  tagline: string, price: string;
-  description: string, features: string[],
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-  }
+  }]
+  id: string, name: string; tagline: string, price: string; description: string, features: string[],
+  link: string, category: string; realImplementation: boolean; contactInfo: unknown; mobile: string, email: string; address: string; }
 }
 export const enterpriseITServices2029: EnterpriseItService2029[] = [,
     id: "2029-enterprise-it", name: "2029 Enterprise IT Service Platform",
     tagline: "Enterprise IT services for 2029", price: "$599/month"
     description: "Advanced enterprise IT service platform designed for large organizations in 2029."
-    features: [;
-      "Enterprise IT services"
+    features: [; "Enterprise IT services"
       "Scalable solutions"
       "Advanced security"
       "24/7 support",
       "Custom integration"],
     link: "/services/2029-enterprise-it", category: "Enterprise IT Services 2029",
-    realImplementation: true;
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
-];
+    realImplementation: true; contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
+  }]
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
-];
+  }]
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
-];
+  }]
   i,
   d: string, nam,
   e: string,
@@ -201,25 +126,21 @@ export const,
   o: addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
-];
+  }]
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
-];
+  }]
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
-];
-;
-    id: "2029-enterprise-it"
+  }]
+id: "2029-enterprise-it"
     name: "2029 Enterprise IT Service Platform",
     tagline: "Enterprise IT services for 2029",
     price: "$599/month",
@@ -233,14 +154,11 @@ export const,
     ],
     link: "/services/2029-enterprise-it"
     category: "Enterprise IT Services 2029"
-    realImplementation: true;
-    contactInfo: unknown;
-      mobile: "+1 302 464 0950"
+    realImplementation: true; contactInfo: unknown; mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobile: "+1 302 464 0950",
+      address: '364 E Main St STE 1008 Middletown DE 19709'}}]      mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -280,8 +198,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}]      mobil,"
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com"
@@ -292,8 +209,7 @@ export const,
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
-];
+  }]
 i,
   d: string; nam,
   e: string; taglin,
@@ -323,7 +239,7 @@ i,
   o: mobil,
   e: string; emai,
   l: string; export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */}
-  s: string }; i,
+  s: string } i,
   d: string; nam,
   e: string; taglin,
   e: string; pric,
@@ -336,7 +252,7 @@ i,
   o: {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} } } addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } }] i,
   d: string, nam,
   e: string, taglin,
   e: string, pric,
@@ -361,13 +277,13 @@ i,
   y: "Enterprise IT Services 2029", realImplementatio,
   n: true, contactInf,
   o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } }] mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } }] emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } }] i,"
   d: "2029-enterprise-it", nam,"
   e: "2029 Enterprise IT Service Platform", taglin,"
   e: "Enterprise IT services for 2029", pric,"
@@ -382,10 +298,10 @@ i,
   l: "kleber@ziontechgroup.com", mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}] mobil,"
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com" mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } }] '"

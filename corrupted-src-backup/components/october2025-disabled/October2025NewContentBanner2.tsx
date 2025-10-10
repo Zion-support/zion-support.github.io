@@ -1,14 +1,12 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
-impo, r, t { Le, a, f, DollarSi, g, n, M, i, c, B, o, t, ArrowRig, h, t } fr, o, m "luci, d, e-rea, c, t";
-const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
+impo, r, t { Le, a, f, DollarSi, g, n, M, i, c, B, o, t, ArrowRig, h, t } fr, o, m "luci, d, e-rea, c, t"; const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    }
-  ]; return(<section, classNam, e = "py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
+    }] return(<section, classNam, e = "py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-10"></section>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>
@@ -22,11 +20,9 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
             <span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d">FRESH, INSIGHT, S | October, 202, 5</sp, a, n>
           </div>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">
-            Latest, AI, Breakthroughs & Innovatio, n, s;
-          </h2>
+            Latest, AI, Breakthroughs & Innovatio, n, s; </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
-            Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation;
-          </p>
+            Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation; </p>
         </div>)
         {/* Articles, G, r, i, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">)
@@ -60,11 +56,9 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
             <span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d">FRESH, INSIGHT, S | October, 202, 5</sp, a, n>
           </div>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4"></h2>
-            Latest, AI, Breakthroughs & Innovatio, n, s;
-          </h2>"
+            Latest, AI, Breakthroughs & Innovatio, n, s; </h2>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o"></p>
-            Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation;
-          </p>
+            Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation; </p>
         </div>
         {/* Articles, G, r, i, d */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12"></div>
@@ -101,8 +95,7 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
                 </d, i, v  > {/* Hover, Gradient, Effe, c, t */}`
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} /></div>
               </Li, n, k>)
-            );
-          })}
+            ); })}
         </div>
         {/* CTA, Sectio, n */}
         <div, classNam, e = "te, x, t-cent, e, r"></div>
@@ -117,7 +110,5 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-};
-export default October2025NewContentBanner2;
-"`
+  ); }
+export default October2025NewContentBanner2; "`

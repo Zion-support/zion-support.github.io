@@ -1,16 +1,21 @@
 'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
+
+interface EnhancedLoadingProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`enhancedloading-component ${className}`}>
+      {children}
     </div>
   );
 };
-=======
-;
-    </div>;
-  );
-};
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-export default EnhancedLoadingPage;
+
+export default EnhancedLoading;

@@ -1,15 +1,5 @@
-import React from 'react';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-interface SEOHeadProp, s {
-  title?: string;
-  description?: string;
-  keywor, d, s?: string | string[];
-  canonic, a, l?: string;
-  image?: string;
-  u, r, l?: string;
-  ty, p, e?: string;
-  author ?  : string;
- }
+import React from 'react'; impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'; interface SEOHeadProp, s {
+  title?: string; description?: string; keywor, d, s?: string | string[]; canonic, a, l?: string; image?: string; u, r, l?: string; ty, p, e?: string; author ?  : string; }
 const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOHeadPro> = 'Zion, Tech, Group - Revolutionary, AI, and IT, Soluti, o, n, s',
   description = "Transform, your, enterprise with, Zion, Tech Gro, u, p's, revolutionary, AI solution, s.",
   keywor, d, s = 'AI, solutio, n, s, enterprise, A, I, artificial, intelligenc, e, machine, learnin, g, automati, o, n',
@@ -62,7 +52,7 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       'AI, Data, Analytics',
       'Cybersecurity, A, I',
       'Quantum, Computin, g',
-      'AI, Consultin, g']}; return(<Helm, e, t>
+      'AI, Consultin, g']} return(<Helm, e, t>
       <title>{title}</title>
       <meta, nam, e = 'description' conte, n, t={description} />
       <meta, nam, e='keywor, d, s' conte, n, t={metaKeywor, d, s} />
@@ -98,7 +88,7 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       <meta, httpEqui, v='x-d, n, s-prefet, c, h-contr, o, l' conte, n, t='on' />)
       {/* Structured, Dat, a */})
       <script, typ, e='applicati, o, n/ld+js, o, n'>)
-  }; return (<Helm, e, t></Helm>
+  } return (<Helm, e, t></Helm>
       <title>{title}</title>
       <meta, nam, e = 'description' conte, n, t={description} /></meta>
       <meta, nam, e='keywor, d, s' conte, n, t={metaKeywor, d, s} /></meta>
@@ -144,6 +134,5 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
         {JS, O, N.stringi, f, y(structuredD, a, t, a)}
       </scri, p, t>
     </Helm, e, t>
-  );
-};
-export default EnhancedSEOHead;
+  ); }
+export default EnhancedSEOHead; 

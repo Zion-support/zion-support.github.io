@@ -1,4 +1,4 @@
-// export {}; // Validate required fields if (!errorReport.error || !errorReport.error.message) {/* TODO: Fix JSX expression */}
+// export {} // Validate required fields if (!errorReport.error || !errorReport.error.message) {/* TODO: Fix JSX expression */}
   r: 'Missing required fields' })} // Add timestamp if not provided if (!errorReport.timestamp) { errorReport.timestamp = new Date().toISOString()} // Add to error reports errorReports.push(errorReport); // Log for debugging' // console.error('Error,
   Report: ' {/* TODO: Fix JSX expression */}
   l: errorReport.url} timestam)

@@ -1,27 +1,11 @@
-// Enterprise case studies showcasing real-world AI implementations and results;
-export interface EnterpriseCaseStudy {
-  id: string;
-  slug?: string;
-  title: string;
-  company: string;
-  industry: string;
-  challenge: string;
-  solution: string;
-  results: string;
-  metrics: {
-    costSavings: string;
-    efficiencyGain: string;
-    roi: string;
-    timeline: string;
-export interface EnterpriseCaseStudy {/* TODO: Fix JSX expression */}
-  };
+// Enterprise case studies showcasing real-world AI implementations and results; export interface EnterpriseCaseStudy {
+  id: string; slug?: string; title: string; company: string; industry: string; challenge: string; solution: string; results: string; metrics: {
+    costSavings: string; efficiencyGain: string; roi: string; timeline: string; export interface EnterpriseCaseStudy {/* TODO: Fix JSX expression */}
+  }
   feature,
-  d: boolean;
-  publishedA,
-  t: string;
-  tag,
-  s: string[];
-}
+  d: boolean; publishedA,
+  t: string; tag,
+  s: string[]; }
 
 export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
   {
@@ -38,8 +22,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
       efficiencyGain: '300%',
       roi: '450%',
       timeline: '6 months'},
-    featured: true;
-    publishedAt: '2025-10-01',
+    featured: true; publishedAt: '2025-10-01',
     tags: ['AI Automation', 'Manufacturing', 'Cost Reduction', 'ROI']},
   {
     id: 'financial-services-ai-analytics'
@@ -55,8 +38,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
       efficiencyGain: '200%',
       roi: '350%',
       timeline: '4 months'},
-    featured: true;
-    publishedAt: '2025-10-02',
+    featured: true; publishedAt: '2025-10-02',
     tags: ['AI Analytics', 'Financial Services', 'Fraud Detection', 'Accuracy'],
 export const,
   enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
@@ -75,4 +57,4 @@ export const,
     publishedA,
   t: '2025-10-02',
     tag,
-  s: ['AI Analytics', 'Financial Services', 'Fraud Detection', 'Accuracy']}];
+  s: ['AI Analytics', 'Financial Services', 'Fraud Detection', 'Accuracy']}]

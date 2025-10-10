@@ -2,16 +2,12 @@ module.exports = {
   metaTags: {,
     viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview: -1'
-    canonical: true;
-    alternate: true;
-    ogTags: {
+    canonical: true; alternate: true; ogTags: {
       type: 'website'
       locale: 'en_US'
       site_name: 'Zion Tech Group'
       image: '/images/og-image.jpg',
-      imageWidth: 1200;
-      imageHeight: 630;
-    },
+      imageWidth: 1200; imageHeight: 630; },
     twitterCards: {,
       card: 'summary_large_image',
       creator: '@ZionTechGroup',
@@ -44,21 +40,10 @@ module.exports = {
         '@type': 'SearchAction',
         target: 'https://zion.app/search?q={search_term_string}',
         'query-input': 'required name=search_term_string'}},
-    breadcrumbs: true;
-    services: true;
-    faq: true;
-    reviews: true;
-    events: true;
-  },
+    breadcrumbs: true; services: true; faq: true; reviews: true; events: true; },
   sitemapOptimization: {
-    dynamic: true;
-    priority: {
-      home: 1;
-      services: 0.9;
-      about: 0.8;
-      contact: 0.7;
-      blog: 0.6;
-module.exports = {/* TODO: Fix JSX expression */}
+    dynamic: true; priority: {
+      home: 1; services: 0.9 about: 0.8 contact: 0.7 blog: 0.6 module.exports = {/* TODO: Fix JSX expression */}
     },
     twitterCard,
   s: {/* TODO: Fix JSX expression */}
@@ -97,20 +82,14 @@ module.exports = {/* TODO: Fix JSX expression */}
     changefre,
   q: {/* TODO: Fix JSX expression */}
     },
-    lastmod: true;
-    images: true;
-    videos: true;
-  },
+    lastmod: true; images: true; videos: true; },
   coreWebVitals: {,
     lcp: {,
-      target: 2.5;
-      optimization: 'image-optimization, critical-css, resource-hints'},
+      target: 2.5 optimization: 'image-optimization, critical-css, resource-hints'},
     fid: {,
-      target: 100;
-      optimization: 'code-splitting-loading, third-party-optimization'},
+      target: 100; optimization: 'code-splitting-loading, third-party-optimization'},
     cls: {,
-      target: 0.1;
-      optimization: 'image-dimensions, font-loading, dynamic-content',
+      target: 0.1 optimization: 'image-dimensions, font-loading, dynamic-content',
     lastmo,
   d: true,
     image,
@@ -129,4 +108,4 @@ module.exports = {/* TODO: Fix JSX expression */}
   timestam,
   p: '2025-10-06T0,
   4:4,
-  9:10.507Z'};
+  9:10.507Z'}

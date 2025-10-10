@@ -1,5 +1,4 @@
-import React from 'react';
-const January2026RevolutionaryContentBanne, r: React.FC = () => {,
+import React from 'react'; const January2026RevolutionaryContentBanne, r: React.FC = () => {,
   const revolutionaryConten, t = [
     {
       title: 'Ne, x, t-Generation, Enterprise, Automation: The, 2026, AI Revolu, t, i, o, n',
@@ -16,7 +15,7 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    }]; return(<section, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'>
+    }] return(<section, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'>
       {/* Animated, Backgroun, d */}
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></section>
   ]; return (<section, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'></section>
@@ -36,24 +35,20 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8'></div>
             <Sparkles, className='w-5 h-5, tex, t-bl, u, e-4, 0, 0' />
             <span, className='te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e'>
-              January, 202, 6 • Revolutionary, Content, Launch;
-            </sp, a, n>
+              January, 202, 6 • Revolutionary, Content, Launch; </sp, a, n>
           </div>
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
-            Revolutionary, AI, Breakthroughs: The, Future, is He, r, e;
-      <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'></div>
+            Revolutionary, AI, Breakthroughs: The, Future, is He, r, e; <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'></div>
         {/* Head, e, r */}
         <div, className='te, x, t-center, m, b-16'></div>
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8'></div>
             <Sparkles, className='w-5 h-5, tex, t-bl, u, e-4, 0, 0' /></Sparkles>
             <span, className='te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e'></span>
-              January, 202, 6 • Revolutionary, Content, Launch;
-            </sp, a, n>
+              January, 202, 6 • Revolutionary, Content, Launch; </sp, a, n>
           </div>
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></h2>
             Revolutionary, AI, Breakthrough,
-  s: The, Future, is He, r, e;
-          </h2>
+  s: The, Future, is He, r, e; </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d'></p>
             Experience, the, cutting-edge, of, AI innovation, with, our latest, breakthrough, conten,
   t: 98% automation, ra, t, e, s, quantum, computing, revolutions, and, Fortune, 500 transformations, wort, h $1, 0, B.
@@ -164,20 +159,16 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
                 className='bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hove,
   r:-transla, t, e-y-1'
               ></Link>
-                Start, Your, Transformation;
-              </Li, n, k>
+                Start, Your, Transformation; </Li, n, k>
               <Link, t, o='/servic, e, s'
                 className='bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r:bg-bl, u, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0'
               >
               ></Link>
-                Explore, Our, Services;
-              </Li, n, k>
+                Explore, Our, Services; </Li, n, k>
             </div>
           </div>
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-};
-export default January2026RevolutionaryContentBanner;
-`
+  ); }
+export default January2026RevolutionaryContentBanner; `

@@ -1,5 +1,4 @@
-import React from 'react';
-interface SearchComponentProps {/* TODO: Fix JSX expression */}
+import React from 'react'; interface SearchComponentProps {/* TODO: Fix JSX expression */}
 }
 const SearchComponent = React.memo(function SearchComponent({)
   className = '')
@@ -17,7 +16,4 @@ const SearchComponent = React.memo(function SearchComponent({/* TODO: Fix JSX ex
       <h3 className="text-lg font-semibold text-blue-800">SearchComponent</h3>"
       <p className="text-blue-600">This component is under development.</p>
     </div>
-  );
-});
-export default SearchComponent;
-"`
+  ); }); export default SearchComponent; "`

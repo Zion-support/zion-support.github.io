@@ -12,7 +12,7 @@
   PerformanceMonitor: React.FC = () => {useEffect(() => { // Only run in browser environment}' if (typeof window === 'undefined') return} const,
   metrics: PerformanceMetrics = {} // First Contentful Paint (FCP); const fcpObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) {' if (entry.name === 'first-contentful-paint') { metrics.fcp = entry.startTime}' // console.log('FC)
   P: '} entry.startTime)} } })' fcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] }) // Largest Contentful Paint (LCP); const lcpObserver = new PerformanceObserver((list) => {const entries = list.getEntries(); const lastEntry = entries[entries.length - 1]; metrics.lcp = lastEntry.startTime}' // console.log('LC)
+  s: ['paint'] }) // Largest Contentful Paint (LCP); const lcpObserver = new PerformanceObserver((list) => {const entries = list.getEntries() const lastEntry = entries[entries.length - 1]; metrics.lcp = lastEntry.startTime}' // console.log('LC)
   P: '} lastEntry.startTime)})' lcpObserver.observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint'] }) // First Input Delay (FID); const fidObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { metrics.fid = (entry as unknown).processingStart - entry.startTime}' // console.log('FI)
   D: '} metrics.fid)} })' fidObserver.observe({/* TODO: Fix JSX expression */})
@@ -29,6 +29,5 @@
   d: 'POST'} header,
   s: {' 'Content-Type': 'application/json'}, bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
-  p: Date.now()} metrics})}).catch(console.error)} } // Send metrics when page is about to unload;' window.addEventListener('beforeunload') sendMetrics); // Also send after a delay to capture late metrics; setTimeout(sendMetrics) 5000); // Cleanup; return () => {fcpObserver.disconnect(); lcpObserver.disconnect(); fidObserver.disconnect(); clsObserver.disconnect(); fmpObserver.disconnect()}' window.removeEventListener('beforeunload'} sendMetrics)} }, []);' return null // This component doesn&apos;t render unknownthing'} ; export default PerformanceMonitor'
-import User from 'lucide-react';
-  </T>
+  p: Date.now()} metrics})}).catch(console.error)} } // Send metrics when page is about to unload;' window.addEventListener('beforeunload') sendMetrics); // Also send after a delay to capture late metrics; setTimeout(sendMetrics) 5000); // Cleanup; return () => {fcpObserver.disconnect() lcpObserver.disconnect() fidObserver.disconnect() clsObserver.disconnect() fmpObserver.disconnect()}' window.removeEventListener('beforeunload'} sendMetrics)} }, []);' return null // This component doesn&apos;t render unknownthing'} export default PerformanceMonitor'
+import User from 'lucide-react'; </T>

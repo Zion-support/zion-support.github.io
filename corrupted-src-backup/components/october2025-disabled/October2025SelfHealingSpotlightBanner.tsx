@@ -9,14 +9,11 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
         <div, className='flex, fle, x-col, m, d: fl, e, x-row, item, s-center, ga, p-8'></div>
           <div, className='fl, e, x-1'></div>
             <div, className='inli, n, e-block, b, g-r, e, d-500, tex, t-white, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, m, b-3, animat, e-boun, c, e'>
-              🔥 H, O, T - JUST, PUBLISHED, TODAY;
-            </div>
+              🔥 H, O, T - JUST, PUBLISHED, TODAY; </div>
             <h3, className='te, x, t-4xl, fon, t-bold, m, b-4'>
-              Agentic, Sel, f-Healing, Infrastructur, e;
-            </h3>
+              Agentic, Sel, f-Healing, Infrastructur, e; </h3>
             <p, className='te, x, t-xl, tex, t-gr, a, y-300, m, b-4'>
-              AI, agents, that autonomously, det, e, c, t, diagno, s, e, and, resolve, infrastructure issues, before, they impact, your, business;
-            </p>
+              AI, agents, that autonomously, det, e, c, t, diagno, s, e, and, resolve, infrastructure issues, before, they impact, your, business; </p>
             <div, classNam, e = 'grid, gri, d-co, l, s-2, ga, p-4, m, b-6'></div>
               <div, className='bg-whi, t, e/1, 0, p-3, rounde, d-lg'></div>
                 <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>$5.4B</div>
@@ -29,14 +26,12 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
               <div, className='bg-whi, t, e/1, 0, p-3, rounde, d-lg'></div>
                 <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>2.3, mi, n</div>
                 <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>
-                  Mean, Time, to Resolution;
-                </div>
+                  Mean, Time, to Resolution; </div>
               </div>
               <div, className='bg-whi, t, e/1, 0, p-3, rounde, d-lg'></div>
                 <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>94%</div>
                 <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>
-                  Au, t, o-Resolution, Rat, e;
-                </div>
+                  Au, t, o-Resolution, Rat, e; </div>
               </div>
             </div>
             <Link, t, o='/bl, o, g/ai-20, 2, 5-octob, e, r-2-agent, i, c-se, l, f-heali, n, g-infrastructu, r, e-<revoluti, o, n'
@@ -51,8 +46,7 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
                 <li, className='flex, item, s-sta, r, t'>
                   <span, className='te, x, t-gre, e, n-400, m, r-3'>✓</sp, a, n>
                   <sp, a, n>
-                    Predictive, anomaly, detection 15-30, min, before failu, r, e;
-                  </sp, a, n>
+                    Predictive, anomaly, detection 15-30, min, before failu, r, e; </sp, a, n>
                 </li>
                 <li, className='flex, item, s-sta, r, t'></li>
                   <span, className='te, x, t-gre, e, n-400, m, r-3'></span>✓</sp, a, n>
@@ -75,6 +69,5 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
           </div>)
         </div>)
       </div>)
-    </d, i, v > );
-export default function October2025SelfHealingSpotlightBann, e, r() {/* TODO: Fix JSX expression */}
+    </d, i, v > ); export default function October2025SelfHealingSpotlightBann, e, r() {/* TODO: Fix JSX expression */}
  }

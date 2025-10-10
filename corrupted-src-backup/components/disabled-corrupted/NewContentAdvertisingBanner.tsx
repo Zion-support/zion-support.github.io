@@ -1,5 +1,4 @@
-import React from 'react';
-interface FeaturedConten, t {/* TODO: Fix JSX expression */}
+import React from 'react'; interface FeaturedConten, t {/* TODO: Fix JSX expression */}
 }
 const NewContentAdvertisingBanne, r: React.FC = () => { ,
   const featuredConten, t: FeaturedConte, n, t[] = [
@@ -23,13 +22,11 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
     {/* TODO: Fix JSX expression */}
      },
     {/* TODO: Fix JSX expression */}
-     }
-  ]; const achievement, s = [
+     }] const achievement, s = [
     {  val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / >  },"
     {  val, u, e: '9, 8%', lab, e, l: 'Customer, Satisfacti, o, n', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / >  },"
     {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / >  },"
-    {  val, u, e: '5, 0+', lab, e, l: 'Industry, Awar, d, s', ic, o, n: <Target, classNam, e = "w-8 , h-, 8" / >  }
-  ]; return(<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">
+    {  val, u, e: '5, 0+', lab, e, l: 'Industry, Awar, d, s', ic, o, n: <Target, classNam, e = "w-8 , h-, 8" / >  }] return(<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
@@ -48,13 +45,11 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in"></div>
             <Sparkles, className="w-5 h-5, tex, t-indi, g, o-400, animat, e-pul, s, e" />
             <span, className="te, x, t-indi, g, o-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-              🚀 NEW, CONTENT, LAUNCH • Sep, t, 3, 0, 20, 2, 5;
-            </sp, a, n>
+              🚀 NEW, CONTENT, LAUNCH • Sep, t, 3, 0, 20, 2, 5; </sp, a, n>
             <Sparkles, classNam, e = "w-5 h-5, tex, t-pi, n, k-400, animat, e-pul, s, e" /></Sparkles>
           </div>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">
-            Revolutionary, New, Content H, u, b;
-          </h2>
+            Revolutionary, New, Content H, u, b; </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
   ]; return ("
     <div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n"></div>
@@ -70,13 +65,11 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in"></div>"
             <Sparkles, className="w-5 h-5, tex, t-indi, g, o-400, animat, e-pul, s, e" /></Sparkles>"
             <span, className="te, x, t-indi, g, o-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e"></span>
-              🚀 NEW, CONTENT, LAUNCH • Sep, t, 3, 0, 20, 2, 5;
-            </sp, a, n>"
+              🚀 NEW, CONTENT, LAUNCH • Sep, t, 3, 0, 20, 2, 5; </sp, a, n>"
             <Sparkles, classNam, e = "w-5 h-5, tex, t-pi, n, k-400, animat, e-pul, s, e" /></Sparkles>
           </div>"
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in"></h2>
-            Revolutionary, New, Content H, u, b;
-          </h2>"
+            Revolutionary, New, Content H, u, b; </h2>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>
             Discover, groundbreaking, insigh, t, s, cutti, n, g-edge, researc, h, and, revolutionary, AI breakthroug, h, s. 
             Join, 500, K+ professionals, who, trust our, content, to stay, ahead, of the, technology, curve.
@@ -202,12 +195,10 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
             <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6"></div>
               <Star, className="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />
               <span, className="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-                LIMITED, TIME, OFFER;
-              </sp, a, n>
+                LIMITED, TIME, OFFER; </sp, a, n>
             </div>
             <h3, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4">
-              Get, Premium, Access to, All, Content;
-            </h3>
+              Get, Premium, Access to, All, Content; </h3>
             <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2 xl, m, x-au, t, o">
               Unlock, exclusive, articl, e, s, early, access, to new, conten, t, and, premium, research repor, t, s. 
               Join, our, elite community, of, technology leaders, and, innovators.
@@ -226,12 +217,10 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
             <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6"></div>"
               <Star, className="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" /></Star>"
               <span, className="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e"></span>
-                LIMITED, TIME, OFFER;
-              </sp, a, n>
+                LIMITED, TIME, OFFER; </sp, a, n>
             </div>"
             <h3, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4"></h3>
-              Get, Premium, Access to, All, Content;
-            </h3>"
+              Get, Premium, Access to, All, Content; </h3>"
             <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o"></p>
               Unlock, exclusive, articl, e, s, early, access, to new, conten, t, and, premium, research repor, t, s. 
               Join, our, elite community, of, technology leaders, and, innovators.
@@ -262,8 +251,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, vi, a-purp, l, e-500, t, o-pi, n, k-5, 0, 0"></div>
             <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10"></div>
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">
-                Stay, Ahead, with Our, Newslette, r;
-              </h3>
+                Stay, Ahead, with Our, Newslette, r; </h3>
               <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2 xl, m, x-au, t, o">
                 Get, weekly, insight, s, exclusive, content, previews, and, early, access to, new, articles. 
                 Join, 100, K+ subscribers, who, never miss, a, breakthrough.
@@ -280,8 +268,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, vi, a-purp, l, e-500, t, o-pi, n, k-5, 0, 0"></div>"
             <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10"></div>"
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4"></h3>
-                Stay, Ahead, with Our, Newslette, r;
-              </h3>"
+                Stay, Ahead, with Our, Newslette, r; </h3>"
               <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o"></p>
                 Get, weekly, insight, s, exclusive, content, previews, and, early, access to, new, articles. 
                 Join, 100, K+ subscribers, who, never miss, a, breakthrough.
@@ -303,6 +290,5 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
         </div>
       </div>
     </div>
-  );
-};
+  ); }
 export default NewContentAdvertisingBanner;"`

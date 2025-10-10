@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
+import React, { useEffect } from 'react'; import { Helmet } from 'react-helmet-async'; interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -21,28 +19,18 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
   structuredData,
   children}) => {
   useEffect(() => {
-    // Add structured data to the page;
-    if (structuredData) {
-      const _script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);
-      return () => {
-        document.head.removeChild(script);
-const,
+    // Add structured data to the page; if (structuredData) {
+      const _script = document.createElement('script'); script.type = 'application/ld+json'; script.text = JSON.stringify(structuredData); document.head.appendChild(script); return () => {
+        document.head.removeChild(script); const,
   SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-      };
+      }
     }
-  }, [structuredData]);
-  // Default structured data for organization;
-  const defaultStructuredData = {
+  }, [structuredData]); // Default structured data for organization; const defaultStructuredData = {
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
-    description: description;
-    url: canonicalUrl || window.location.origin;
-    logo: `${window.location.origin}/logo.png`,
+    description: description; url: canonicalUrl || window.location.origin logo: `${window.location.origin}/logo.png`,
     sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']
     contactPoint: {,
       '@type': 'ContactPoint',
@@ -57,9 +45,8 @@ const,
   s://twitter.com/ziontechgroup'],
     contactPoin,
   t: {/* TODO: Fix JSX expression */}
-    }};
-  //   const finalStructuredData = structuredData || defaultStructuredData;
-  return(<React.Fragment>)
+    }}
+  //   const finalStructuredData = structuredData || defaultStructuredData; return(<React.Fragment>)
       <Helmet>)
         {/* Basic Meta Tags */})
         <title>{title}</title>)
@@ -176,9 +163,7 @@ const,
         <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
       </Helmet>
       {children}
-  );
-};
-export default SEOEnhancer;
-"`
+  ); }
+export default SEOEnhancer; "`
   </SEOEnhancerProps>
   </SEOEnhancerProps>

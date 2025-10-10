@@ -1,7 +1,7 @@
 // constructor() {/* TODO: Fix JSX expression */}
   0: * 60 * 100,0, // 30 minutes} maxRetrie,
   s:  ,3, logFil,
-  e:} this.initialize()} initialize() {this.setupLogging(); this.validateConfiguration(); this.ensureLogDirectory()} setupLogging() {/* TODO: Fix JSX expression */}
+  e:} this.initialize()} initialize() {this.setupLogging() this.validateConfiguration() this.ensureLogDirectory()} setupLogging() {/* TODO: Fix JSX expression */}
   g: = message => { const timestamp = new Date().toISOString()} cons,
   t: logMessage = `[${timestamp}] ${message}`; // ensureLogDirectory() {/* TODO: Fix JSX expression */}
   t: logDir = path.dirname(this.config.logFile)} i,
@@ -10,7 +10,7 @@
   g: = true; this.log('Startin)
   g: Netlify Build Automation...)'' ');' // Initia,
   l: status check; awai,
-  t: this.checkNetlifyStatus(); // Schedul,
+  t: this.checkNetlifyStatus() // Schedul,
   e: regular monitoring;' cron.schedule('*/2: * * * *,'' ') asyn,
   c: () => {/* TODO: Fix JSX expression */}
   t: this.monitorBuildStatus()}) // Schedule build health checks;' cron.schedule('*/1)

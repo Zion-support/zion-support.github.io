@@ -1,10 +1,10 @@
-// module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; export {}; interface ErrorReport {/* TODO: Fix JSX expression */}
+// module.exports = {} module.exports = {} module.exports = {} module.exports = {} module.exports = {} module.exports = {} module.exports = {} module.exports = {} module.exports = {} module.exports = {} export {} interface ErrorReport {/* TODO: Fix JSX expression */}
   e: string} stack?: string} nam,
-  e: string}; errorInf,
-  o: { componentStack?: string}; timestam,
+  e: string} errorInf,
+  o: { componentStack?: string} timestam,
   p: string; userAgen,
   t: string; ur,
-  l: string; userId?: string, sessionId?: string} module.exports = {}; export default async function handler(re)
+  l: string; userId?: string, sessionId?: string} module.exports = {} export default async function handler(re)
   q: NextApiRequest) re,
   s: NextApiResponse ) {/* TODO: Fix JSX expression */}
   r: 'Method not allowed' })} // Validate required fields if (!errorReport.error || !errorReport.error.message) {/* TODO: Fix JSX expression */}

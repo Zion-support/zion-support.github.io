@@ -1,3 +1,1 @@
-import React from 'react';
-// import Footer from '../components/Footer';
-export default Home;
+import React from 'react'; // import Footer from '../components/Footer'; export default Home; 

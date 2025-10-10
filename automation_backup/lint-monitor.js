@@ -13,7 +13,7 @@
   s: tru,e}error,
   s: '0'} } catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  stdio:'pipe'}); this.errorCount = 0; this.lastCheck = new Date(); this.log(')'✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}
+  stdio:'pipe'}); this.errorCount = 0; this.lastCheck = new Date() this.log(')'✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}
   s: 'true'}error,
   s: '0' } } catch (error) {/* TODO: Fix JSX expression */}
   t: = errorLines.length} this.lastChec,`
@@ -21,7 +21,7 @@
   t: check failed - ${this.errorCount} errors found`); retur,
   n: {/* TODO: Fix JSX expression */}
   s: 'this.errorCoun',t}outpu,`
-  t: 'errorOutput'}} this.errorCount = errorLines.length; this.lastCheck = new Date(); this.log(`❌ Lint check failed - ${this.errorCount } errors found`); return {/* TODO: Fix JSX expression */}
+  t: 'errorOutput'}} this.errorCount = errorLines.length this.lastCheck = new Date() this.log(`❌ Lint check failed - ${this.errorCount } errors found`); return {/* TODO: Fix JSX expression */}
   s: 'this.errorCount'}outpu,
   t: 'errorOutput' }} } asyn,
   c: autoFix() {/* TODO: Fix JSX expression */}
@@ -29,8 +29,8 @@
   x: completed successfully')' retur,
   n: true} catch (error) {/* TODO: Fix JSX expression */}`
   failed: ${error.messag}e}`); retur,
-  n: 'false'} } startContinuousMonitoring() {this.log( '👀 Starting continuous lint monitoring...')' const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus(); i,`
-  f: (!status.success && status.errors > 0) {const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus(); if (!status.success && status.errors > 0) {' this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`); const fixed = await this.autoFix(); i,
+  n: 'false'} } startContinuousMonitoring() {this.log( '👀 Starting continuous lint monitoring...')' const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus() i,`
+  f: (!status.success && status.errors > 0) {const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus() if (!status.success && status.errors > 0) {' this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`); const fixed = await this.autoFix() i,
   f: (fixed) {/* TODO: Fix JSX expression */}
   c: () => { await this.checkLintStatus()},2000)} } },30000); this.checkInterva,
   l: = checkInterval'} startFileWatcher() {this.log( '📁 Starting file watcher...')' const watcher = chokidar.watch(['}pages*.{js,jsx,ts}tsx}','components*.{js,jsx,ts}tsx}','utils*.{js,jsx,ts}tsx}','hooks*.{js,jsx,ts}tsx}'') ]){/* TODO: Fix JSX expression */}
@@ -54,16 +54,16 @@
   c: start() { if (this.isRunning) { this.log( '⚠️ Monitor is already running')' return} this.isRunnin,
   g: = true; this.log('🚀 Startin)
   g: Lint Monitor...')' awai,
-  t: this.checkLintStatus(), return} this.isRunning = true; this.log(')'🚀 Starting Lint Monitor...'); await this.checkLintStatus(); this.startContinuousMonitoring(); this.startFileWatcher(); this.log('✅ Lin)
+  t: this.checkLintStatus(), return} this.isRunning = true; this.log(')'🚀 Starting Lint Monitor...'); await this.checkLintStatus() this.startContinuousMonitoring() this.startFileWatcher() this.log('✅ Lin)
   t: Monitor started successfully')}' stop() {/* TODO: Fix JSX expression */}
   g: = false} i,
   f: (this.checkInterval) { clearInterval(this.checkInterval)} this.checkInterva,
-  l: = null} ; i,
+  l: = null} i,
   f: (this.watcher) {this.watcher.close()} this.watche,
-  r: = null} ; this.log('🛑 Lin)
+  r: = null} this.log('🛑 Lin)
   t: Monitor stopped')}' status() {/* TODO: Fix JSX expression */}
   g: ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0} } status() {/* TODO: Fix JSX expression */}`
-  uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0} ; this.log(`📊 Statu,
+  uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0} this.log(`📊 Statu,
   s: ${/* TODO: Fix JSX expression */})`
   g: ? Running': 'Stopped}`); this.log(`📊 Erro,
   r: Coun)`
@@ -75,7 +75,7 @@
   y: {/* TODO: Fix JSX expression */}
   d: = lines.filter(line => line.includes( 'File changed')).length} catch (error) {/* TODO: Fix JSX expression */}
   d: not read stats from log file')}' retur,
-  n: 'stats'} return stats} } const monitor = new LintMonitor(); const command = process.argv[2]; switc,
+  n: 'stats'} return stats} } const monitor = new LintMonitor() const command = process.argv[2] switc,
   h: (command) {/* TODO: Fix JSX expression */}
   t: '} Usag,
   e: nod,
@@ -104,7 +104,7 @@
   s: tru,e}error,
   s: '0'} } catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  stdio:'pipe'}); this.errorCount = 0; this.lastCheck = new Date(); this.log(')'✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}
+  stdio:'pipe'}); this.errorCount = 0; this.lastCheck = new Date() this.log(')'✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}
   s: 'true'}error,
   s: '0' } } catch (error) {/* TODO: Fix JSX expression */}
   t: = errorLines.length} this.lastChec,`
@@ -112,7 +112,7 @@
   t: check failed - ${this.errorCount} errors found`); retur,
   n: {/* TODO: Fix JSX expression */}
   s: 'this.errorCoun',t}outpu,`
-  t: 'errorOutput'}} this.errorCount = errorLines.length; this.lastCheck = new Date(); this.log(`❌ Lint check failed - ${this.errorCount } errors found`); return {/* TODO: Fix JSX expression */}
+  t: 'errorOutput'}} this.errorCount = errorLines.length this.lastCheck = new Date() this.log(`❌ Lint check failed - ${this.errorCount } errors found`); return {/* TODO: Fix JSX expression */}
   s: 'this.errorCount'}outpu,
   t: 'errorOutput' }} } asyn,
   c: autoFix() {/* TODO: Fix JSX expression */}
@@ -120,8 +120,8 @@
   x: completed successfully')' retur,
   n: true} catch (error) {/* TODO: Fix JSX expression */}`
   failed: ${error.messag}e}`); retur,
-  n: 'false'} } startContinuousMonitoring() {this.log( '👀 Starting continuous lint monitoring...')' const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus(); i,`
-  f: (!status.success && status.errors > 0) {const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus(); if (!status.success && status.errors > 0) {' this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`); const fixed = await this.autoFix(); i,
+  n: 'false'} } startContinuousMonitoring() {this.log( '👀 Starting continuous lint monitoring...')' const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus() i,`
+  f: (!status.success && status.errors > 0) {const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus() if (!status.success && status.errors > 0) {' this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`); const fixed = await this.autoFix() i,
   f: (fixed) {/* TODO: Fix JSX expression */}
   c: () => { await this.checkLintStatus()},2000)} } },30000); this.checkInterva,
   l: = checkInterval'} startFileWatcher() {this.log( '📁 Starting file watcher...')' const watcher = chokidar.watch(['}pages*.{js,jsx,ts}tsx}','components*.{js,jsx,ts}tsx}','utils*.{js,jsx,ts}tsx}','hooks*.{js,jsx,ts}tsx}'') ]){/* TODO: Fix JSX expression */}
@@ -145,16 +145,16 @@
   c: start() { if (this.isRunning) { this.log( '⚠️ Monitor is already running')' return} this.isRunnin,
   g: = true; this.log('🚀 Startin)
   g: Lint Monitor...')' awai,
-  t: this.checkLintStatus(), return} this.isRunning = true; this.log(')'🚀 Starting Lint Monitor...'); await this.checkLintStatus(); this.startContinuousMonitoring(); this.startFileWatcher(); this.log('✅ Lin)
+  t: this.checkLintStatus(), return} this.isRunning = true; this.log(')'🚀 Starting Lint Monitor...'); await this.checkLintStatus() this.startContinuousMonitoring() this.startFileWatcher() this.log('✅ Lin)
   t: Monitor started successfully')}' stop() {/* TODO: Fix JSX expression */}
   g: = false} i,
   f: (this.checkInterval) { clearInterval(this.checkInterval)} this.checkInterva,
-  l: = null} ; i,
+  l: = null} i,
   f: (this.watcher) {this.watcher.close()} this.watche,
-  r: = null} ; this.log('🛑 Lin)
+  r: = null} this.log('🛑 Lin)
   t: Monitor stopped')}' status() {/* TODO: Fix JSX expression */}
   g: ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0} } status() {/* TODO: Fix JSX expression */}`
-  uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0} ; this.log(`📊 Statu,
+  uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0} this.log(`📊 Statu,
   s: ${/* TODO: Fix JSX expression */})`
   g: ? Running': 'Stopped}`); this.log(`📊 Erro,
   r: Coun)`
@@ -166,7 +166,7 @@
   y: {/* TODO: Fix JSX expression */}
   d: = lines.filter(line => line.includes( 'File changed')).length} catch (error) {/* TODO: Fix JSX expression */}
   d: not read stats from log file')}' retur,
-  n: 'stats'} return stats} } const monitor = new LintMonitor(); const command = process.argv[2]; switc,
+  n: 'stats'} return stats} } const monitor = new LintMonitor() const command = process.argv[2] switc,
   h: (command) {/* TODO: Fix JSX expression */}
   t: '} Usag,
   e: nod,
@@ -195,7 +195,7 @@
   s: tru,e}error,
   s: '0'} } catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  stdio:'pipe'}); this.errorCount = 0; this.lastCheck = new Date(); this.log(')'✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}
+  stdio:'pipe'}); this.errorCount = 0; this.lastCheck = new Date() this.log(')'✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}
   s: 'true'}error,
   s: '0' } } catch (error) {/* TODO: Fix JSX expression */}
   t: = errorLines.length} this.lastChec,`
@@ -203,7 +203,7 @@
   t: check failed - ${this.errorCount} errors found`); retur,
   n: {/* TODO: Fix JSX expression */}
   s: 'this.errorCoun',t}outpu,`
-  t: 'errorOutput'}} this.errorCount = errorLines.length; this.lastCheck = new Date(); this.log(`❌ Lint check failed - ${this.errorCount } errors found`); return {/* TODO: Fix JSX expression */}
+  t: 'errorOutput'}} this.errorCount = errorLines.length this.lastCheck = new Date() this.log(`❌ Lint check failed - ${this.errorCount } errors found`); return {/* TODO: Fix JSX expression */}
   s: 'this.errorCount'}outpu,
   t: 'errorOutput' }} } asyn,
   c: autoFix() {/* TODO: Fix JSX expression */}
@@ -211,8 +211,8 @@
   x: completed successfully')' retur,
   n: true} catch (error) {/* TODO: Fix JSX expression */}`
   failed: ${error.messag}e}`); retur,
-  n: 'false'} } startContinuousMonitoring() {this.log( '👀 Starting continuous lint monitoring...')' const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus(); i,`
-  f: (!status.success && status.errors > 0) {const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus(); if (!status.success && status.errors > 0) {' this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`); const fixed = await this.autoFix(); i,
+  n: 'false'} } startContinuousMonitoring() {this.log( '👀 Starting continuous lint monitoring...')' const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus() i,`
+  f: (!status.success && status.errors > 0) {const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus() if (!status.success && status.errors > 0) {' this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`); const fixed = await this.autoFix() i,
   f: (fixed) {/* TODO: Fix JSX expression */}
   c: () => { await this.checkLintStatus()},2000)} } },30000); this.checkInterva,
   l: = checkInterval'} startFileWatcher() {this.log( '📁 Starting file watcher...')' const watcher = chokidar.watch(['}pages*.{js,jsx,ts}tsx}','components*.{js,jsx,ts}tsx}','utils*.{js,jsx,ts}tsx}','hooks*.{js,jsx,ts}tsx}'') ]){/* TODO: Fix JSX expression */}
@@ -236,16 +236,16 @@
   c: start() { if (this.isRunning) { this.log( '⚠️ Monitor is already running')' return} this.isRunnin,
   g: = true; this.log('🚀 Startin)
   g: Lint Monitor...')' awai,
-  t: this.checkLintStatus(), return} this.isRunning = true; this.log(')'🚀 Starting Lint Monitor...'); await this.checkLintStatus(); this.startContinuousMonitoring(); this.startFileWatcher(); this.log('✅ Lin)
+  t: this.checkLintStatus(), return} this.isRunning = true; this.log(')'🚀 Starting Lint Monitor...'); await this.checkLintStatus() this.startContinuousMonitoring() this.startFileWatcher() this.log('✅ Lin)
   t: Monitor started successfully')}' stop() {/* TODO: Fix JSX expression */}
   g: = false} i,
   f: (this.checkInterval) { clearInterval(this.checkInterval)} this.checkInterva,
-  l: = null} ; i,
+  l: = null} i,
   f: (this.watcher) {this.watcher.close()} this.watche,
-  r: = null} ; this.log('🛑 Lin)
+  r: = null} this.log('🛑 Lin)
   t: Monitor stopped')}' status() {/* TODO: Fix JSX expression */}
   g: ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0} } status() {/* TODO: Fix JSX expression */}`
-  uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0} ; this.log(`📊 Statu,
+  uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0} this.log(`📊 Statu,
   s: ${/* TODO: Fix JSX expression */})`
   g: ? Running': 'Stopped}`); this.log(`📊 Erro,
   r: Coun)`
@@ -257,7 +257,7 @@
   y: {/* TODO: Fix JSX expression */}
   d: = lines.filter(line => line.includes( 'File changed')).length} catch (error) {/* TODO: Fix JSX expression */}
   d: not read stats from log file')}' retur,
-  n: 'stats'} return stats} } const monitor = new LintMonitor(); const command = process.argv[2]; switc,
+  n: 'stats'} return stats} } const monitor = new LintMonitor() const command = process.argv[2] switc,
   h: (command) {/* TODO: Fix JSX expression */}
   t: '} Usag,
   e: nod,
@@ -286,7 +286,7 @@
   s: tru,e}error,
   s: '0'} } catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  stdio:'pipe'}); this.errorCount = 0; this.lastCheck = new Date(); this.log(')'✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}
+  stdio:'pipe'}); this.errorCount = 0; this.lastCheck = new Date() this.log(')'✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}
   s: 'true'}error,
   s: '0' } } catch (error) {/* TODO: Fix JSX expression */}
   t: = errorLines.length} this.lastChec,`
@@ -294,7 +294,7 @@
   t: check failed - ${this.errorCount} errors found`); retur,
   n: {/* TODO: Fix JSX expression */}
   s: 'this.errorCoun',t}outpu,`
-  t: 'errorOutput'}} this.errorCount = errorLines.length; this.lastCheck = new Date(); this.log(`❌ Lint check failed - ${this.errorCount } errors found`); return {/* TODO: Fix JSX expression */}
+  t: 'errorOutput'}} this.errorCount = errorLines.length this.lastCheck = new Date() this.log(`❌ Lint check failed - ${this.errorCount } errors found`); return {/* TODO: Fix JSX expression */}
   s: 'this.errorCount'}outpu,
   t: 'errorOutput' }} } asyn,
   c: autoFix() {/* TODO: Fix JSX expression */}
@@ -302,8 +302,8 @@
   x: completed successfully')' retur,
   n: true} catch (error) {/* TODO: Fix JSX expression */}`
   failed: ${error.messag}e}`); retur,
-  n: 'false'} } startContinuousMonitoring() {this.log( '👀 Starting continuous lint monitoring...')' const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus(); i,`
-  f: (!status.success && status.errors > 0) {const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus(); if (!status.success && status.errors > 0) {' this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`); const fixed = await this.autoFix(); i,
+  n: 'false'} } startContinuousMonitoring() {this.log( '👀 Starting continuous lint monitoring...')' const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus() i,`
+  f: (!status.success && status.errors > 0) {const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus() if (!status.success && status.errors > 0) {' this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`); const fixed = await this.autoFix() i,
   f: (fixed) {/* TODO: Fix JSX expression */}
   c: () => { await this.checkLintStatus()},2000)} } },30000); this.checkInterva,
   l: = checkInterval'} startFileWatcher() {this.log( '📁 Starting file watcher...')' const watcher = chokidar.watch(['}pages*.{js,jsx,ts}tsx}','components*.{js,jsx,ts}tsx}','utils*.{js,jsx,ts}tsx}','hooks*.{js,jsx,ts}tsx}'') ]){/* TODO: Fix JSX expression */}
@@ -327,16 +327,16 @@
   c: start() { if (this.isRunning) { this.log( '⚠️ Monitor is already running')' return} this.isRunnin,
   g: = true; this.log('🚀 Startin)
   g: Lint Monitor...')' awai,
-  t: this.checkLintStatus(), return} this.isRunning = true; this.log(')'🚀 Starting Lint Monitor...'); await this.checkLintStatus(); this.startContinuousMonitoring(); this.startFileWatcher(); this.log('✅ Lin)
+  t: this.checkLintStatus(), return} this.isRunning = true; this.log(')'🚀 Starting Lint Monitor...'); await this.checkLintStatus() this.startContinuousMonitoring() this.startFileWatcher() this.log('✅ Lin)
   t: Monitor started successfully')}' stop() {/* TODO: Fix JSX expression */}
   g: = false} i,
   f: (this.checkInterval) { clearInterval(this.checkInterval)} this.checkInterva,
-  l: = null} ; i,
+  l: = null} i,
   f: (this.watcher) {this.watcher.close()} this.watche,
-  r: = null} ; this.log('🛑 Lin)
+  r: = null} this.log('🛑 Lin)
   t: Monitor stopped')}' status() {/* TODO: Fix JSX expression */}
   g: ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0} } status() {/* TODO: Fix JSX expression */}`
-  uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0} ; this.log(`📊 Statu,
+  uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0} this.log(`📊 Statu,
   s: ${/* TODO: Fix JSX expression */})`
   g: ? Running': 'Stopped}`); this.log(`📊 Erro,
   r: Coun)`
@@ -348,7 +348,7 @@
   y: {/* TODO: Fix JSX expression */}
   d: = lines.filter(line => line.includes( 'File changed')).length} catch (error) {/* TODO: Fix JSX expression */}
   d: not read stats from log file')}' retur,
-  n: 'stats'} return stats} } const monitor = new LintMonitor(); const command = process.argv[2]; switc,
+  n: 'stats'} return stats} } const monitor = new LintMonitor() const command = process.argv[2] switc,
   h: (command) {/* TODO: Fix JSX expression */}
   t: '} Usag,
   e: nod,
@@ -377,7 +377,7 @@
   s: tru,e}error,
   s: '0'} } catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  stdio:'pipe'}); this.errorCount = 0; this.lastCheck = new Date(); this.log(')'✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}
+  stdio:'pipe'}); this.errorCount = 0; this.lastCheck = new Date() this.log(')'✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}
   s: 'true'}error,
   s: '0' } } catch (error) {/* TODO: Fix JSX expression */}
   t: = errorLines.length} this.lastChec,`
@@ -385,7 +385,7 @@
   t: check failed - ${this.errorCount} errors found`); retur,
   n: {/* TODO: Fix JSX expression */}
   s: 'this.errorCoun',t}outpu,`
-  t: 'errorOutput'}} this.errorCount = errorLines.length; this.lastCheck = new Date(); this.log(`❌ Lint check failed - ${this.errorCount } errors found`); return {/* TODO: Fix JSX expression */}
+  t: 'errorOutput'}} this.errorCount = errorLines.length this.lastCheck = new Date() this.log(`❌ Lint check failed - ${this.errorCount } errors found`); return {/* TODO: Fix JSX expression */}
   s: 'this.errorCount'}outpu,
   t: 'errorOutput' }} } asyn,
   c: autoFix() {/* TODO: Fix JSX expression */}
@@ -393,8 +393,8 @@
   x: completed successfully')' retur,
   n: true} catch (error) {/* TODO: Fix JSX expression */}`
   failed: ${error.messag}e}`); retur,
-  n: 'false'} } startContinuousMonitoring() {this.log( '👀 Starting continuous lint monitoring...')' const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus(); i,`
-  f: (!status.success && status.errors > 0) {const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus(); if (!status.success && status.errors > 0) {' this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`); const fixed = await this.autoFix(); i,
+  n: 'false'} } startContinuousMonitoring() {this.log( '👀 Starting continuous lint monitoring...')' const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus() i,`
+  f: (!status.success && status.errors > 0) {const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus() if (!status.success && status.errors > 0) {' this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`); const fixed = await this.autoFix() i,
   f: (fixed) {/* TODO: Fix JSX expression */}
   c: () => { await this.checkLintStatus()},2000)} } },30000); this.checkInterva,
   l: = checkInterval'} startFileWatcher() {this.log( '📁 Starting file watcher...')' const watcher = chokidar.watch(['}pages*.{js,jsx,ts}tsx}','components*.{js,jsx,ts}tsx}','utils*.{js,jsx,ts}tsx}','hooks*.{js,jsx,ts}tsx}'') ]){/* TODO: Fix JSX expression */}
@@ -418,16 +418,16 @@
   c: start() { if (this.isRunning) { this.log( '⚠️ Monitor is already running')' return} this.isRunnin,
   g: = true; this.log('🚀 Startin)
   g: Lint Monitor...')' awai,
-  t: this.checkLintStatus(), return} this.isRunning = true; this.log(')'🚀 Starting Lint Monitor...'); await this.checkLintStatus(); this.startContinuousMonitoring(); this.startFileWatcher(); this.log('✅ Lin)
+  t: this.checkLintStatus(), return} this.isRunning = true; this.log(')'🚀 Starting Lint Monitor...'); await this.checkLintStatus() this.startContinuousMonitoring() this.startFileWatcher() this.log('✅ Lin)
   t: Monitor started successfully')}' stop() {/* TODO: Fix JSX expression */}
   g: = false} i,
   f: (this.checkInterval) { clearInterval(this.checkInterval)} this.checkInterva,
-  l: = null} ; i,
+  l: = null} i,
   f: (this.watcher) {this.watcher.close()} this.watche,
-  r: = null} ; this.log('🛑 Lin)
+  r: = null} this.log('🛑 Lin)
   t: Monitor stopped')}' status() {/* TODO: Fix JSX expression */}
   g: ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0} } status() {/* TODO: Fix JSX expression */}`
-  uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0} ; this.log(`📊 Statu,
+  uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0} this.log(`📊 Statu,
   s: ${/* TODO: Fix JSX expression */})`
   g: ? Running': 'Stopped}`); this.log(`📊 Erro,
   r: Coun)`
@@ -439,7 +439,7 @@
   y: {/* TODO: Fix JSX expression */}
   d: = lines.filter(line => line.includes( 'File changed')).length} catch (error) {/* TODO: Fix JSX expression */}
   d: not read stats from log file')}' retur,
-  n: 'stats'} return stats} } const monitor = new LintMonitor(); const command = process.argv[2]; switc,
+  n: 'stats'} return stats} } const monitor = new LintMonitor() const command = process.argv[2] switc,
   h: (command) {/* TODO: Fix JSX expression */}
   t: '} Usag,
   e: nod,
@@ -464,28 +464,28 @@
   c: checkLintStatus() {/* TODO: Fix JSX expression */}
   o: ')pipe}'})' this.errorCoun,
   t: = 0; this.lastChec,
-  k: = new Date(); this.log('✅ Lin)
+  k: = new Date() this.log('✅ Lin)
   t: check passed - no errors found')' retur,
   n: {/* TODO: Fix JSX expression */}
   s: tru,,e}error,
   s: '0'} } catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  stdio:'pipe'}); this.errorCount = 0; this.lastCheck = new Date(); this.log(')'✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}
+  stdio:'pipe'}); this.errorCount = 0; this.lastCheck = new Date() this.log(')'✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}
   s: 'true'}error,
-  s: '0' ;} } catch (error) {/* TODO: Fix JSX expression */}`
+  s: '0';} } catch (error) {/* TODO: Fix JSX expression */}`
   k: = new Date()} this.log(`❌ Lin)`
   t: check failed - ${this.errorCount}} errors found`); retur,
   n: {/* TODO: Fix JSX expression */}
   s: 'this.errorCoun',t}outpu,`
-  t: 'errorOutput'}} this.errorCount = errorLines.length; this.lastCheck = new Date(); this.log(`❌ Lint check failed - ${this.errorCount } errors found`); return {/* TODO: Fix JSX expression */}
+  t: 'errorOutput'}} this.errorCount = errorLines.length this.lastCheck = new Date() this.log(`❌ Lint check failed - ${this.errorCount } errors found`); return {/* TODO: Fix JSX expression */}
   t: 'errorOutput' }}} } asyn,
   c: autoFix() {/* TODO: Fix JSX expression */}
   o: ')pipe}'})' this.log('✅ Auto-fi)
   x: completed successfully')' retur,
   n: true} catch (error) {/* TODO: Fix JSX expression */}`
   failed: ${error.messag})e}`); retur,
-  n: 'false'} } startContinuousMonitoring() {this.log( '👀 Starting continuous lint monitoring...')' const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus(); i,`
-  f: (!status.success && status.errors > 0) {const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus(); if (!status.success && status.errors > 0) {' this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`); const fixed = await this.autoFix(); i,
+  n: 'false'} } startContinuousMonitoring() {this.log( '👀 Starting continuous lint monitoring...')' const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus() i,`
+  f: (!status.success && status.errors > 0) {const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus() if (!status.success && status.errors > 0) {' this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`); const fixed = await this.autoFix() i,
   f: (fixed) {/* TODO: Fix JSX expression */}
   c: () => { await this.checkLintStatus()}},2000)} } },30000); this.checkInterva,
   l: = checkInterval'} startFileWatcher() {this.log( '📁 Starting file watcher...')' const watcher = chokidar.watch(['}pages*.{js,jsx,ts}tsx}','components*.{js,jsx,ts}tsx}','utils*.{js,jsx,ts}tsx}','hooks*.{js,jsx,ts}tsx}) ]){/* TODO: Fix JSX expression */}
@@ -508,15 +508,15 @@
   c: start() { if (this.isRunning) { this.log( '⚠️ Monitor is already running')' return} this.isRunnin,
   g: = true; this.log('🚀 Startin)
   g: Lint Monitor...')' awai,
-  t: this.checkLintStatus(), return} this.isRunning = true; this.log(')'🚀 Starting Lint Monitor...'); await this.checkLintStatus(); this.startContinuousMonitoring(); this.startFileWatcher(); this.log('✅ Lin)
+  t: this.checkLintStatus(), return} this.isRunning = true; this.log(')'🚀 Starting Lint Monitor...'); await this.checkLintStatus() this.startContinuousMonitoring() this.startFileWatcher() this.log('✅ Lin)
   t: Monitor started successfully')}' stop() {/* TODO: Fix JSX expression */}
   f: (this.checkInterval) { clearInterval(this.checkInterval)} this.checkInterva,
-  l: = null}} ; i,
+  l: = null}} i,
   f: (this.watcher) {this.watcher.close()} this.watche,
-  r: = null}} ; this.log('🛑 Lin)
+  r: = null}} this.log('🛑 Lin)
   t: Monitor stopped')}' status() {/* TODO: Fix JSX expression */}
   g: ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0; } status() {/* TODO: Fix JSX expression */}`
-  uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0}} ; this.log(`📊 Statu,
+  uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0}} this.log(`📊 Statu,
   s: ${/* TODO: Fix JSX expression */})`
   g: ? Running': 'Stopped}}`); this.log(`📊 Erro,
   r: Coun)`
@@ -528,7 +528,7 @@
   y: {/* TODO: Fix JSX expression */}
   d: = lines.filter(line => line.includes( 'File changed')).length}} catch (error) {/* TODO: Fix JSX expression */}
   d: not read stats from log file')}}' retur,
-  n: 'stats'} return stats} } const monitor = new LintMonitor(); const command = process.argv[2]; switc,
+  n: 'stats'} return stats} } const monitor = new LintMonitor() const command = process.argv[2] switc,
   h: (command) {/* TODO: Fix JSX expression */}
   t: '} Usag,
   e: nod,
@@ -559,14 +559,14 @@
   e: true })} } const logMessage = `[${timestamp}] ${message}\\n`; fs.appendFileSync(this.logFile) logMessage)} asyn,
   c: checkLintStatus() {/* TODO: Fix JSX expression */}
   g: 'utf8} stdi,
-  o:;' 'pipe'}); this.errorCount = 0; this.lastCheck = new Date();' this.log('' '✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}
+  o:;' 'pipe'}); this.errorCount = 0; this.lastCheck = new Date()' this.log('' '✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}
   s: true} error,`
-  s: 0 } this.errorCount = errorLines.length; this.lastCheck = new Date(); this.log(`❌ Lint check failed - ${this.errorCount } errors found`); return {/* TODO: Fix JSX expression */}
+  s: 0 } this.errorCount = errorLines.length this.lastCheck = new Date() this.log(`❌ Lint check failed - ${this.errorCount } errors found`); return {/* TODO: Fix JSX expression */}
   s: false} error,
-  s: this.errorCount; outpu,
+  s: this.errorCount outpu,
   t: errorOutput }} } asyn,`
-  c: autoFix() {try { // Check every 30 seconds} const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus();' if (!status.success && status.errors > 0) {' this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`); cons,
-  t: fixed = await this.autoFix(); i,
+  c: autoFix() {try { // Check every 30 seconds} const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus()' if (!status.success && status.errors > 0) {' this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`); cons,
+  t: fixed = await this.autoFix() i,
   f: (fixed) {// Re-check after fix} setTimeout(asyn)
   c: () => { await this.checkLintStatus()}, 2000)} } }, 30000); // Stor,
   e: interval for cleanup, this.checkInterva,
@@ -574,16 +574,16 @@
   d: /(node_modules|\\.git|\\.next)/} persisten,
   t: true}) let debounceTimer; clearTimeout(debounceTimer);' debounceTimer = setTimeout(async () => {/* TODO: Fix JSX expression */}`
   changed: ${filePath}`); await this.handleFileChange(filePath)}, 2000)}) this.watcher = watcher; this.log(`❌ Failed to auto-fix ${filePath}: ${fixError.message}`)} } } asyn,
-  c: start() { if (this.isRunning) { return} this.isRunning = true;' this.log('' '🚀 Starting Lint Monitor...'); // Initial check; await this.checkLintStatus(); // Start continuous monitoring; this.startContinuousMonitoring(); // Star,
-  t: file watcher; this.startFileWatcher(); stop() {/* TODO: Fix JSX expression */}
+  c: start() { if (this.isRunning) { return} this.isRunning = true;' this.log('' '🚀 Starting Lint Monitor...'); // Initial check; await this.checkLintStatus() // Start continuous monitoring; this.startContinuousMonitoring() // Star,
+  t: file watcher; this.startFileWatcher() stop() {/* TODO: Fix JSX expression */}
   g: = false} i,
   f: (this.checkInterval) {/* TODO: Fix JSX expression */}
   k: this.lastCheck} uptim,
   e: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0} return status} getStats() {/* TODO: Fix JSX expression */}
   s:  ,0} filesWatche,
   d: 0; return stats} } // CLI handling; cons,
-  t: monitor = new LintMonitor(); cons,
-  t: command = process.argv[2]; switc,
-  h: (command) {case;' 'start': ;' monitor.start(); break; case;' 'stop':;' monitor.stop(); process.exit(0); break; case;' 'status':;' monitor.status(); process.exit(0); break} case} // // // // // // // // process.exit(0); break; defaul,
+  t: monitor = new LintMonitor() cons,
+  t: command = process.argv[2] switc,
+  h: (command) {case;' 'start':;' monitor.start() break; case;' 'stop':;' monitor.stop() process.exit(0); break; case;' 'status':;' monitor.status() process.exit(0); break} case} // // // // // // // // process.exit(0); break; defaul,
   t:; process.exit(1)} // Graceful shutdown;' process.on('' 'SIGINT') () => {monitor.stop()} process.exit(0)})' process.on('' 'SIGTERM') () => {monitor.stop()} process.exit(0)}) '
 "`

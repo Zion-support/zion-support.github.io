@@ -1,7 +1,5 @@
-import React from 'react';
-impo, r, t { Li, n, k, useLocati, o, n } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-const Sideba, r: React.FC = () => { ,
-  const locatio, n = useLocat, i, o, n(); const isActiv, e = (pa, t, h: str, i, n, g) = > locati, o, n.pathna, m, e = == pa, t, h; const section, s = [
+import React from 'react'; impo, r, t { Li, n, k, useLocati, o, n } fr, o, m 'rea, c, t-rout, e, r-d, o, m'; const Sideba, r: React.FC = () => { ,
+  const locatio, n = useLocat, i, o, n() const isActiv, e = (pa, t, h: str, i, n, g) = > locati, o, n.pathna, m, e = == pa, t, h; const section, s = [
     {
       title: 'Exp, l, o, r, e',
       lin, k, s: [,
@@ -35,7 +33,7 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
       lin, k, s: [,
     {/* TODO: Fix JSX expression */}
         { lab, e, l: 'SEO, Split, Testin, g', pa, t, h: '/servic, e, s/s, e, o-spl, i, t-test, i, n, g' },
-        { lab, e, l: 'Image, CDN, Optimize, r', pa, t, h: '/servic, e, s/image-c, d, n-optimi, z, e, r' }]}]; return(<aside, classNam, e = 'bg-gr, a, y-50, rounde, d-l, g, p-6 h-fit, sticky, top-24'>)
+        { lab, e, l: 'Image, CDN, Optimize, r', pa, t, h: '/servic, e, s/image-c, d, n-optimi, z, e, r' }]}] return(<aside, classNam, e = 'bg-gr, a, y-50, rounde, d-l, g, p-6 h-fit, sticky, top-24'>)
       <div, className='spa, c, e-y-6'>)
         { sectio, n, s.m, a, p((sect, i, o, n, sectionInd, e, x) = > (
           <div, ke, y = {sectionInd, e, x }>
@@ -52,8 +50,7 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
                 <Link, ke, y = { linkIn, d, e, x  }, to={ li, n, k.pa, t, h } className={ `block, p, x-3, p, y-2, tex, t-sm, rounde, d-md, transitio, n-colo, r, s ${
                     isActi, v, e(li, n, k.p, a, t, h)
                        ? 'bg-bl, u, e-100, tex, t-bl, u, e-700, fon, t-medi, u, m'}
-                      : 'te, x, t-gr, a, y-600, hove, r: te, x, t-gr, a, y-900, hove, r : bg-gr, a, y-10, 0'}
-  ]; return (<aside, classNam, e = 'bg-gr, a, y-50, rounde, d-l, g, p-6 h-fit, sticky, top-24'></aside>
+                      : 'te, x, t-gr, a, y-600, hove, r: te, x, t-gr, a, y-900, hove, r : bg-gr, a, y-10, 0'}] return (<aside, classNam, e = 'bg-gr, a, y-50, rounde, d-l, g, p-6 h-fit, sticky, top-24'></aside>
       <div, className='spa, c, e-y-6'></div>
         {/* TODO: Fix JSX expression */}
           <div, ke, y = {sectionInd, e, x }></div>
@@ -76,12 +73,9 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
             className='bloc, k, w-full, b, g-bl, u, e-600, tex, t-white, tex, t-center, p, y-2, p, x-4, rounde, d-md, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-medi, u, m'
           >
           ></Link>
-            Gette, d;
-          </Li, n, k>
+            Gette, d; </Li, n, k>
         </div>
       </div>
     </a, s, i, d, e>
-  );
-};
-export default Sidebar;
-`
+  ); }
+export default Sidebar; `

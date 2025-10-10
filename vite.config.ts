@@ -1,8 +1,4 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
-
-export default defineConfig({
+import { defineConfig } from 'vite'; import react from '@vitejs/plugin-react'; import { resolve } from 'path'; export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
@@ -32,49 +28,35 @@ export default defineConfig({
           // Vendor chunks
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
-            }
+              return 'vendor-react'; }
             if (id.includes('react-router')) {
-              return 'vendor-router';
-            }
+              return 'vendor-router'; }
             if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-ui';
-            }
+              return 'vendor-ui'; }
             if (id.includes('recharts')) {
-              return 'vendor-charts';
-            }
+              return 'vendor-charts'; }
             if (id.includes('web-vitals')) {
-              return 'vendor-analytics';
-            }
-            return 'vendor-misc';
-          }
+              return 'vendor-analytics'; }
+            return 'vendor-misc'; }
           // App chunks
           if (id.includes('/app/ai-')) {
-            return 'ai-services';
-          }
+            return 'ai-services'; }
           if (id.includes('/app/it-')) {
-            return 'it-services';
-          }
+            return 'it-services'; }
           if (id.includes('/app/components/')) {
-            return 'components';
-          }
-          return 'app';
-        },
+            return 'components'; }
+          return 'app'; },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
-          const ext = assetInfo.name?.split('.').pop();
+          const ext = assetInfo.name?.split('.').pop()
           if (/\.(css)$/i.test(assetInfo.name || '')) {
-            return `assets/css/[name]-[hash].${ext}`;
-          }
+            return `assets/css/[name]-[hash].${ext}`; }
           if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
-            return `assets/images/[name]-[hash].${ext}`;
-          }
+            return `assets/images/[name]-[hash].${ext}`; }
           if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) {
-            return `assets/fonts/[name]-[hash].${ext}`;
-          }
-          return `assets/[name]-[hash].${ext}`;
-        }
+            return `assets/fonts/[name]-[hash].${ext}`; }
+          return `assets/[name]-[hash].${ext}`; }
       }
     },
     terserOptions: {

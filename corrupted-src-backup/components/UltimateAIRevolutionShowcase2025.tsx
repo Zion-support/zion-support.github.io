@@ -7,8 +7,7 @@ const, UltimateAIRevolutionShowcase202, 5 = () => {
       ic, o, n: '🧠',
       col, o, r: 'fr, o, m-viol, e, t-500, t, o-purp, l, e-50, 0',
       reade, r, s: '5, 0, 0, K+',
-      rati, n, g: 5., 0;
-    },
+      rati, n, g: 5., 0; },
     {
       title: 'Autonomous, Neural, Network, s',
       description: 'Se, l, f-evolving, neural, architectures with, 9, 9.97% accuracy, in, autonomous decisi, o, n-mak, i, n, g',
@@ -16,8 +15,7 @@ const, UltimateAIRevolutionShowcase202, 5 = () => {
       ic, o, n: '⚡',
       col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-50, 0',
       reade, r, s: '1, 8, 0, K+',
-      rati, n, g: 4., 9;
-    },
+      rati, n, g: 4., 9; },
     {
       title: 'Synthetic, Consciousness, Revolutio, n',
       description: 'True, AI, awareness with, emotional, intelligenc, e, creative, autonom, y, and, moral, reasoning',
@@ -25,8 +23,7 @@ const, UltimateAIRevolutionShowcase202, 5 = () => {
       ic, o, n: '🌟',
       col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0',
       reade, r, s: '2, 0, 3, K+',
-      rati, n, g: 5., 0;
-    },
+      rati, n, g: 5., 0; },
     {
       title: 'Neur, a, l-Synaptic, Fusion, A, I',
       description: 'Revolutionary, brai, n-computer, interface, achieving 99.98% neural, accura, c, y',
@@ -34,10 +31,8 @@ const, UltimateAIRevolutionShowcase202, 5 = () => {
       ic, o, n: '🚀',
       col, o, r: 'fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0',
       reade, r, s: '1, 5, 6, K+',
-      rati, n, g: 4., 8;
-      <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-viol, e, t-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
-        Revolutionary, AI, Breakthroughs;
-        Revolutionary, AI, Breakthroughs</h2>
+      rati, n, g: 4., 8; <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-viol, e, t-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
+        Revolutionary, AI, Breakthroughs; Revolutionary, AI, Breakthroughs</h2>
       <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6, m, b-8">
         { revolutionaryFeatur, e, s.m, a, p((fea, t, u, r, e, ind, e, x) = > (</div>
           <div, ke, y = { in, d, e, x  }, classNa, m, e={ `bg-gradie, n, t-to-br ${featu, r, e.col, o, r } round, e, d-x, l, p-6, tex, t-white, transform, hover: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-, x, l`}></div>
@@ -55,14 +50,11 @@ const, UltimateAIRevolutionShowcase202, 5 = () => {
           classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-purp, l, e-600, hove, r:to-bl, u, e-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg"
         >
           <Rocket, classNam, e="w-5 h-5" />
-          Explore, Revolutionary, Content;
-          <Link, classNam, e="w-5 h-5" />
+          Explore, Revolutionary, Content; <Link, classNam, e="w-5 h-5" />
           <Award, classNam, e="w-5 h-5" />
-          View, Success, Stories;
-          <Link, classNam, e="w-5 h-5" />
+          View, Success, Stories; <Link, classNam, e="w-5 h-5" />
           <Globe, classNam, e="w-5 h-5" />
-          Get, AI, Services;
-          <Link, classNam, e="w-5 h-5" />
+          Get, AI, Services; <Link, classNam, e="w-5 h-5" />
 }}}
 const, UltimateAIRevolutionShowcase202, 5 = () => {/* TODO: Fix JSX expression */}
     },

@@ -1,9 +1,4 @@
-#!/usr/bin/env node;
-import fs from 'fs';
-import { execSync } from 'child_process';
-
-// Files that need specific fixes;
-const fixes = [
+#!/usr/bin/env node; import fs from 'fs'; import { execSync } from 'child_process'; // Files that need specific fixes; const fixes = [
   {
     file: '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx',
     changes: [,
@@ -67,35 +62,21 @@ const fixes = [
   {/* TODO: Fix JSX expression */}
   m: 'import { describe, it, expect, jest }',
         t,
-  o: 'import { describe, it, expect, jest as _jest }'}]}];
+  o: 'import { describe, it, expect, jest as _jest }'}]}]
 
 function applyFixes() {/* TODO: Fix JSX expression */}
 }
   fixes.forEach(({ file, changes }) => {/* TODO: Fix JSX expression */}
     }
 
-
     changes.forEach(({ from, to }) => {/* TODO: Fix JSX expression */}
-        content = content.replace(new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), to);
-        modified = true;
-        totalFixed++;
-      }
-    });
-
-    if (modified) {/* TODO: Fix JSX expression */}
+        content = content.replace(new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), to); modified = true; totalFixed++; }
+    }); if (modified) {/* TODO: Fix JSX expression */}
     }
-  });
+  }); }
 
-}
-
-// Apply fixes;
-// Run linter to check results;
-try {
-  execSync('pnpm run lint:comprehensive', { stdio: 'inherit' });
-
-} catch (error) {
+// Apply fixes; // Run linter to check results; try {
+  execSync('pnpm run lint:comprehensive', { stdio: 'inherit' }); } catch (error) {
 try {/* TODO: Fix JSX expression */}
-  o: 'inherit' });
-
-} catch (error) {/* TODO: Fix JSX expression */}
+  o: 'inherit' }); } catch (error) {/* TODO: Fix JSX expression */}
 }

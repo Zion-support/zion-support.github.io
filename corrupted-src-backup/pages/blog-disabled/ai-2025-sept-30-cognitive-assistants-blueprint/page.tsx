@@ -1,13 +1,11 @@
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'; export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
   return(<div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
 export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t { 
   return (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>
       <Helm, e, t>
         <title>
-          Cognitive, Assistants, Blueprint — 92% C, S, A, T, Governed, Velocit, y;
-        </title>
+          Cognitive, Assistants, Blueprint — 92% C, S, A, T, Governed, Velocit, y; </title>
         <meta, nam, e = 'description'
           conte, n, t='Cognitive, Assistants, Blueprint - 92% C, S, A, T, Governed, Velocity, for AI, system, s'
         />)
@@ -17,14 +15,11 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
       </Helm, e, t>
       <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
-          Cognitive, Assistants, Blueprint;
-        </h1>
+          Cognitive, Assistants, Blueprint; </h1>
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
-          92% CS, A, T, Governed, Velocit, y;
-        </p>
+          92% CS, A, T, Governed, Velocit, y; </p>
         <p, classNam, e = 'te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
-          " A, practical, guide to, shipping, reliable cognitive, assistants, with;
-          policy, tes, t, s, live, eval, scorecards, and, KP, I‑linked, rollbac, k.
+          " A, practical, guide to, shipping, reliable cognitive, assistants, with; policy, tes, t, s, live, eval, scorecards, and, KP, I‑linked, rollbac, k.
         </p>
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'></div>
           <p>
@@ -33,10 +28,8 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
         </div>
         <div, className='mt-8'></div>
           <Link, t, o='/<bl, o, g' className='te, x, t-cy, a, n-300, hove, r: underli, n, e'>
-            ← Back, to, Blog;
-          </Li, n, k>
+            ← Back, to, Blog; </Li, n, k>
         </div>
       </div>
-    </d, i, v > );
-export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
+    </d, i, v > ); export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
  }

@@ -2,25 +2,18 @@ export interface UltimateInnovativeService {/* TODO: Fix JSX expression */}
   l: string}
     websit,
   e: string}
-  };
+  }
   technicalSpecs?:
     technolog,
-  y: string[];
-    integration,
-  s: string[];
-    apiEndpoint,
-  s: number;
-    uptim,
-  e: string;
-    securit,
-  y: string[]};
+  y: string[]; integration,
+  s: string[]; apiEndpoint,
+  s: number; uptim,
+  e: string; securit,
+  y: string[]}
   competitors?: string[]
-  marketSize?: string;
-  uniqueValue?: string;
-};
+  marketSize?: string; uniqueValue?: string; }
 export const,
-  ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [;
-    i,
+  ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [; i,
   d: "quantum-ai-optimization-platform",
   titl,"
   e: "Quantum AI Optimization Platform"
@@ -31,8 +24,7 @@ export const,
     subcategor,"
   y: "Optimization",
   pric,
-  e: 15999;
-    currenc,"
+  e: 15999; currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
@@ -78,11 +70,9 @@ export const,
     contactInfo: phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"}
-    technicalSpecs: unknown;
-      technology: ["Quantum Computing", "Machine Learning", "Hybrid Algorithms", "Real-time Processing"]
+    technicalSpecs: unknown; technology: ["Quantum Computing", "Machine Learning", "Hybrid Algorithms", "Real-time Processing"]
       integrations: ["AWS", "Azure", "Google Cloud", "Quantum APIs"]
-      apiEndpoints: 50;
-      uptime: "99.99%",
+      apiEndpoints: 50; uptime: "99.99%",
       security: ["Quantum-resistant encryption", "Zero-trust architecture", "SOC2 compliance"]
     }
     competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum"]
@@ -148,8 +138,7 @@ export const,
     subcategor,"
   y: "Brain Simulation",
   pric,
-  e: 8999;
-    currenc,"
+  e: 8999; currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
@@ -239,8 +228,7 @@ export const,
     subcategor,"
   y: "AI Design",
   pric,
-  e: 12999;
-    currenc,"
+  e: 12999; currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
@@ -292,11 +280,9 @@ export const,
     description: "Advanced AI platform for autonomous space operations including satellite management, space exploration, and orbital optimization. Features autonomous decision-making and real-time space analytics."
     category: "Space Technology"
     subcategory: "AI Autonomous Systems"
-    price: 19999;
-    currency: "USD"
+    price: 19999; currency: "USD"
     pricingModel: "monthly"
-    features: [;
-      "Autonomous satellite operations"
+    features: [; "Autonomous satellite operations"
       "Real-time space analytics"
       "Orbital optimization algorithms"
       "Space debris tracking"
@@ -346,8 +332,7 @@ export const,
     subcategor,"
   y: "AI Autonomous Systems",
   pric,
-  e: 19999;
-    currenc,"
+  e: 19999; currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
@@ -437,8 +422,7 @@ export const,
     subcategor,"
   y: "AI Discovery",
   pric,
-  e: 14999;
-    currenc,"
+  e: 14999; currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
@@ -528,8 +512,7 @@ export const,
     subcategor,"
   y: "AI Platform",
   pric,
-  e: 24999;
-    currenc,"
+  e: 24999; currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
@@ -619,8 +602,7 @@ export const,
     subcategor,"
   y: "AI Platform",
   pric,
-  e: 17999;
-    currenc,"
+  e: 17999; currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
@@ -672,11 +654,9 @@ export const,
     description: "Revolutionary extended reality platform combining VR, AR, and AI for immersive experiences. Features AI-powered content generation and adaptive environments."
     category: "Extended Reality"
     subcategory: "AI Platform"
-    price: 15999;
-    currency: "USD"
+    price: 15999; currency: "USD"
     pricingModel: "monthly"
-    features: [;
-      "AI-powered content generation"
+    features: [; "AI-powered content generation"
       "Adaptive virtual environments"
       "Real-time rendering optimization"
       "Multi-user collaboration"
@@ -726,8 +706,7 @@ export const,
     subcategor,"
   y: "AI Platform",
   pric,
-  e: 15999;
-    currenc,"
+  e: 15999; currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
@@ -817,8 +796,7 @@ export const,
     subcategor,"
   y: "Computing Platform",
   pric,
-  e: 13999;
-    currenc,"
+  e: 13999; currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
@@ -908,8 +886,7 @@ export const,
     subcategor,"
   y: "AI Platform",
   pric,
-  e: 16999;
-    currenc,"
+  e: 16999; currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
@@ -999,8 +976,7 @@ export const,
     subcategor,"
   y: "AI Platform",
   pric,
-  e: 18999;
-    currenc,"
+  e: 18999; currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
@@ -1078,7 +1054,7 @@ export const,
     }
     uniqueValu,"
   e: "Most advanced commercial sustainable technology platform with AI-powered environmental optimization and circular economy modeling"
-  };
+  }
 ]
 export interface UltimateInnovativeService,
   id: string,
@@ -1102,12 +1078,12 @@ export interface UltimateInnovativeService,
   contactInfo: phon,
   e: string,
   email: string,
-  website: string }; technicalSpecs?: technolog,
+  website: string } technicalSpecs?: technolog,
   y: string[] integration,
   s: string[] apiEndpoint,
   s: number,
   uptime: string,
-  security: string[] }; competitors?: string[] marketSize?: string uniqueValue?: string }; export const,
+  security: string[] } competitors?: string[] marketSize?: string uniqueValue?: string } export const,
   ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [ i,"
   d: "quantum-ai-optimization-platform",
   titl,"
@@ -1470,4 +1446,4 @@ export interface UltimateInnovativeService,
   l: "kleber@ziontechgroup.com" websit,"
   e: "http,"
   s://ziontechgroup.com" } uniqueValu,"
-  e: "Most advanced commercial sustainable technology platform with AI-powered environmental optimization and circular economy modeling" }; ]"
+  e: "Most advanced commercial sustainable technology platform with AI-powered environmental optimization and circular economy modeling" } ]"

@@ -9,26 +9,21 @@
 const trapFocus = (element) => {
   const focusableElements = element.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-  );
-  const firstElement = focusableElements[0];
-  const lastElement = focusableElements[focusableElements.length - 1];
-  
-  element.addEventListener('keydown', (e) => {
+  ); const firstElement = focusableElements[0] const lastElement = focusableElements[focusableElements.length - 1]; element.addEventListener('keydown', (e) => {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
-          lastElement.focus();
-          e.preventDefault();
+          lastElement.focus()
+          e.preventDefault()
         }
       } else {
         if (document.activeElement === lastElement) {
-          firstElement.focus();
-          e.preventDefault();
+          firstElement.focus()
+          e.preventDefault()
         }
       }
     }
-  });
-};
+  }); }
 
 // 3. Add live regions for dynamic content
 // Example JSX:
@@ -79,9 +74,7 @@ const trapFocus = (element) => {
 // 8. Color contrast and visual indicators
 // Example CSS:
 // .focus-visible:focus {
-//   outline: 2px solid #0066cc;
-//   outline-offset: 2px;
-// }
+//   outline: 2px solid #0066cc; //   outline-offset: 2px; // }
 
 // 9. Keyboard navigation
 // Example JSX:
@@ -95,4 +88,4 @@ const trapFocus = (element) => {
 //   {errorMessage}
 // </div>
 
-export { trapFocus };
+export { trapFocus }

@@ -1,557 +1,164 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
-export default function StatusPage() {
-  const [lastUpdated, setLastUpdated] = useState(new Date());
-  const [isRefreshing, setIsRefreshing] = useState(false);
-  const refreshStatus = async () => {
-=======
-;
-export default function StatusPage() {;
-  const [lastUpdated, setLastUpdated] = useState(new Date());
-  const [isRefreshing, setIsRefreshing] = useState(false);
-;
-  const refreshStatus = async () => {;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-    setIsRefreshing(true);
-    // Simulate API call;
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setLastUpdated(new Date());
-    setIsRefreshing(false);}
-  };
-<<<<<<< HEAD
-  const services = [
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
+
+const StatusPage: React.FC = () => {
+  const features = [
     {
-      name: 'API Services',
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '45ms',
-      lastIncident: '2024-01-15',
-      description: 'Core API endpoints and authentication'
+      icon: CheckCircle,
+      title: 'Status Solutions',
+      description: 'Comprehensive status solutions tailored to your business needs.',
+      benefits: ['Expert consultation', 'Custom implementation', 'Ongoing support']
     },
     {
-      name: 'AI Services',
-      status: 'operational',
-      uptime: '99.8%',
-      responseTime: '120ms',
-      lastIncident: '2024-01-10',
-      description: 'Machine learning and AI processing'
+      icon: Users,
+      title: 'Expert Team',
+      description: 'Our experienced team delivers high-quality status services.',
+      benefits: ['Certified professionals', 'Industry expertise', 'Proven track record']
     },
     {
-      name: 'Cloud Infrastructure',
-      status: 'operational',
-      uptime: '99.95%',
-      responseTime: '25ms',
-      lastIncident: '2024-01-05',
-      description: 'Cloud hosting and storage services'
-    },
-    {
-      name: 'Database',
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '15ms',
-      lastIncident: '2024-01-12',
-      description: 'Primary and backup databases'
-    },
-    {
-      name: 'CDN',
-      status: 'operational',
-      uptime: '99.99%',
-      responseTime: '8ms',
-      lastIncident: '2024-01-08',
-      description: 'Content delivery network'
-    },
-    {
-      name: 'Monitoring',
-      status: 'operational',
-      uptime: '100%',
-      responseTime: '5ms',
-      lastIncident: 'Never',
-      description: 'System monitoring and alerts'
+      icon: BarChart,
+      title: 'Performance Focused',
+      description: 'Optimized status solutions for maximum performance and efficiency.',
+      benefits: ['Performance monitoring', 'Continuous optimization', 'Real-time analytics']
     }
   ];
-  const incidents = [
-    {
-      id: 1,
-      title: 'API Response Time Degradation',
-      status: 'resolved',
-      severity: 'minor',
-      startTime: '2024-01-15T10:30:00Z',
-      endTime: '2024-01-15T11:45:00Z',
-      description: 'Some API endpoints experienced increased response times due to high traffic load.',
-      affectedServices: ['API Services', 'AI Services']
-    },
-    {
-      id: 2,
-      title: 'Database Connection Issues',
-      status: 'resolved',
-      severity: 'major',
-      startTime: '2024-01-12T14:20:00Z',
-      endTime: '2024-01-12T16:30:00Z',
-      description: 'Intermittent database connection issues affecting some user operations.',
-      affectedServices: ['Database', 'API Services']
-    }
+
+  const benefits = [
+    'Professional status services',
+    'Custom solutions for your business',
+    'Expert consultation and support',
+    'Proven methodologies and best practices',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Cost-effective pricing',
+    'Quick implementation and deployment'
   ];
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'operational':
-=======
-;
-  const services = [;
-    {;
-      name: 'API Services',;
-      status: 'operational',;
-      uptime: '99.9%',;
-      responseTime: '45ms',;
-      lastIncident: '2024-01-15',;
-      description: 'Core API endpoints and authentication';}
-    },;
-    {;
-      name: 'AI Services',;
-      status: 'operational',;
-      uptime: '99.8%',;
-      responseTime: '120ms',;
-      lastIncident: '2024-01-10',;
-      description: 'Machine learning and AI processing';}
-    },;
-    {;
-      name: 'Cloud Infrastructure',;
-      status: 'operational',;
-      uptime: '99.95%',;
-      responseTime: '25ms',;
-      lastIncident: '2024-01-05',;
-      description: 'Cloud hosting and storage services';}
-    },;
-    {;
-      name: 'Database',;
-      status: 'operational',;
-      uptime: '99.9%',;
-      responseTime: '15ms',;
-      lastIncident: '2024-01-12',;
-      description: 'Primary and backup databases';}
-    },;
-    {;
-      name: 'CDN',;
-      status: 'operational',;
-      uptime: '99.99%',;
-      responseTime: '8ms',;
-      lastIncident: '2024-01-08',;
-      description: 'Content delivery network';}
-    },;
-    {;
-      name: 'Monitoring',;
-      status: 'operational',;
-      uptime: '100%',;
-      responseTime: '5ms',;
-      lastIncident: 'Never',;
-      description: 'System monitoring and alerts';}
-    }
-  ];
-;
-  const incidents = [;
-    {;
-      id: 1,;
-      title: 'API Response Time Degradation',;
-      status: 'resolved',;
-      severity: 'minor',;
-      startTime: '2024-01-15T10:30:00Z',;
-      endTime: '2024-01-15T11:45:00Z',;
-      description: 'Some API endpoints experienced increased response times due to high traffic load.',;
-      affectedServices: ['API Services', 'AI Services'];}
-    },;
-    {;
-      id: 2,;
-      title: 'Database Connection Issues',;
-      status: 'resolved',;
-      severity: 'major',;
-      startTime: '2024-01-12T14:20:00Z',;
-      endTime: '2024-01-12T16:30:00Z',;
-      description: 'Intermittent database connection issues affecting some user operations.',;
-      affectedServices: ['Database', 'API Services'];}
-    }
-  ];
-;
-  const getStatusIcon = (;
-    switch (status) {;
-      case 'operational':;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-        return <CheckCircle className="w-5 h-5 text-green-400" />;
-      case 'degraded':;
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
-      case 'outage':;
-        return <XCircle className="w-5 h-5 text-red-400" />;
-<<<<<<< HEAD
-      default:
-        return <Clock className="w-5 h-5 text-gray-400" />;
-    }
-  };
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'operational':
-        return 'text-green-400';
-      case 'degraded':
-        return 'text-yellow-400';
-      case 'outage':
-        return 'text-red-400';
-      default:
-        return 'text-gray-400';
-    }
-  };
-  const getSeverityColor = (severity: string) => {
-    switch (severity) {
-      case 'critical':
-        return 'bg-red-500/20 text-red-400 border-red-500/50';
-      case 'major':
-        return 'bg-orange-500/20 text-orange-400 border-orange-500/50';
-      case 'minor':
-        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
-      default:
-        return 'bg-gray-500/20 text-gray-400 border-gray-500/50';
-    }
-  };
-  const overallStatus = services.every(service => service.status === 'operational') 
-    ? 'operational' 
-    : services.some(service => service.status === 'outage') 
-      ? 'outage' 
-      : 'degraded';
+
   return (
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Real-time status of all our services. We're committed to providing reliable, 
-            high-performance AI and IT solutions.
-          </p>
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="flex items-center gap-2">
-=======
-      default:;) => {
-  return (
-    $3
+    <>
+      <Helmet>
+        <title>Status Services - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional status services and solutions to help your business succeed with cutting-edge technology and expert guidance." />
+        <meta name="keywords" content="status, services, solutions, technology, AI, IT" />
+        <meta property="og:title" content="Status Services - Zion Tech Group" />
+        <meta property="og:description" content="Professional status services and solutions to help your business succeed with cutting-edge technology and expert guidance." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Status Services - Zion Tech Group" />
+        <meta name="twitter:description" content="Professional status services and solutions to help your business succeed with cutting-edge technology and expert guidance." />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Professional Status Services
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Professional status services and solutions to help your business succeed with cutting-edge technology and expert guidance.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 flex items-center justify-center">
+                  Get Started <ArrowRight className="ml-2 h-5 w-5" />
+                </button>
+                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Status Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We deliver exceptional status solutions that drive business success.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <div className="flex items-center mb-4">
+                    <feature.icon className="h-8 w-8 text-blue-400 mr-3" />
+                    <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                  </div>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Key Benefits
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the advantages of working with our status experts.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg p-6 border border-white/10">
+                  <div className="flex items-center">
+                    <CheckCircle className="h-6 w-6 text-green-400 mr-3" />
+                    <span className="text-white font-medium">{benefit}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-purple-100 mb-8">
+                Contact our experts to discuss your status needs and get a customized solution.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call Now
+                </button>
+                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                  <Mail className="mr-2 h-5 w-5" />
+                  Email Us
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
-        return <Clock className="w-5 h-5 text-gray-400" />;}
-    }
-  };
-;
-  const getStatusColor = (;
-    switch (status) {;
-      case 'operational':;
-        return 'text-green-400';
-      case 'degraded':;
-        return 'text-yellow-400';
-      case 'outage':;
-        return 'text-red-400';
-      default:;) => {
-  return (
-    $3
-  );
-};
-        return 'text-gray-400';}
-    }
-  };
-;
-  const getSeverityColor = (;
-    switch (severity) {;
-      case 'critical':;
-        return 'bg-red-500/20 text-red-400 border-red-500/50';
-      case 'major':;
-        return 'bg-orange-500/20 text-orange-400 border-orange-500/50';
-      case 'minor':;
-        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
-      default:;) => {
-  return (
-    $3
-  );
-};
-        return 'bg-gray-500/20 text-gray-400 border-gray-500/50';}
-    }
-  };
-;
-  const overallStatus = services.every(service => service.status === 'operational');
-    ? 'operational';
-    : services.some(service => service.status === 'outage');
-      ? 'outage';
-      : 'degraded';
-;
-  return (;
-          </h1>;
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">;
-            Real-time status of all our services. We're committed to providing reliable,;
-            high-performance AI and IT solutions.;
-          </p>;
-          <div className="flex items-center justify-center gap-4 mb-8"></div>;
-            <div className="flex items-center gap-2"></div>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-              {getStatusIcon(overallStatus)}
-              <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>;
-                {overallStatus === 'operational' ? 'All Systems Operational' :;}
-                 overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
-              </span>;
-            </div>;
-            <button;
-              onClick={refreshStatus}
-              disabled={isRefreshing}
-<<<<<<< HEAD
-              className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50">
-              <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
-              Refresh;
-  </
-          </div>
-          <p className="text-gray-400 text-sm">
-            Last updated: {lastUpdated.toLocaleString()}
-          </p>
-        </div>
-      </section>
-=======
-              className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50";
-            >;
-              <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />;
-              Refresh;
-            </button>;
-          </div>;
-          <p className="text-gray-400 text-sm">;
-            Last updated: {lastUpdated.toLocaleString()}
-          </p>;
-        </div>;
-      </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-      {/* Services Status */}
-      <section className="py-16 px-4"></section>;
-        <div className="max-w-7xl mx-auto"></div>;
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Status</h2>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>;
-            {services.map((service, index) => (;}
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300"></div>;
-                <div className="flex items-center justify-between mb-4"></div>;
-                  <div className="flex items-center gap-3"></div>;
-                    {getStatusIcon(service.status)}
-                    <h3 className="text-lg font-semibold text-white">{service.name}</h3>;
-                  </div>;
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>;
-                    {service.status}
-<<<<<<< HEAD
-                  </span>
-                </div>
-                <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Uptime:</span>
-                    <span className="text-white">{service.uptime}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Response Time:</span>
-                    <span className="text-white">{service.responseTime}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Last Incident:</span>
-                    <span className="text-white">{service.lastIncident}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-=======
-                  </span>;
-                </div>;
-                <p className="text-gray-300 text-sm mb-4">{service.description}</p>;
-                <div className="space-y-2 text-sm"></div>;
-                  <div className="flex justify-between"></div>;
-                    <span className="text-gray-400">Uptime:</span>;
-                    <span className="text-white">{service.uptime}</span>;
-                  </div>;
-                  <div className="flex justify-between"></div>;
-                    <span className="text-gray-400">Response Time:</span>;
-                    <span className="text-white">{service.responseTime}</span>;
-                  </div>;
-                  <div className="flex justify-between"></div>;
-                    <span className="text-gray-400">Last Incident:</span>;
-                    <span className="text-white">{service.lastIncident}</span>;
-                  </div>;
-                </div>;
-              </div>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-      {/* Recent Incidents */}
-      <section className="py-16 px-4"></section>;
-        <div className="max-w-7xl mx-auto"></div>;
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Recent Incidents</h2>;
-          <div className="space-y-6"></div>;
-            {incidents.map((incident) => (;}
-              <div key={incident.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>;
-                <div className="flex items-start justify-between mb-4"></div>;
-                  <div></div>;
-                    <h3 className="text-xl font-semibold text-white mb-2">{incident.title}</h3>;
-                    <div className="flex items-center gap-4 text-sm text-gray-400"></div>;
-                      <span>Started: {new Date(incident.startTime).toLocaleString()}</span>;
-                      <span>Ended: {new Date(incident.endTime).toLocaleString()}</span>;
-                    </div>;
-                  </div>;
-                  <div className="flex items-center gap-2"></div>;
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>;
-                      {incident.severity}
-                    </span>;
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${;
-                      incident.status === 'resolved';
-                        ? 'bg-green-500/20 text-green-400';
-                        : 'bg-yellow-500/20 text-yellow-400';}
-                    }`}>;
-                      {incident.status}
-<<<<<<< HEAD
-                    </span>
-                  </div>
-                </div>
-                <p className="text-gray-300 mb-4">{incident.description}</p>
-                <div>
-                  <span className="text-gray-400 text-sm">Affected Services: </span>
-                  <span className="text-white text-sm">{incident.affectedServices.join(', ')}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Performance Metrics */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Performance Metrics</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-6 h-6 text-white" />
-              </div>
-              <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-gray-400">Overall Uptime</div>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-6 h-6 text-white" />
-              </div>
-              <div className="text-3xl font-bold text-white mb-2">45ms</div>
-              <div className="text-gray-400">Avg Response Time</div>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Users className="w-6 h-6 text-white" />
-              </div>
-              <div className="text-3xl font-bold text-white mb-2">50K+</div>
-              <div className="text-gray-400">Active Users</div>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Activity className="w-6 h-6 text-white" />
-              </div>
-              <div className="text-3xl font-bold text-white mb-2">1.2M</div>
-              <div className="text-gray-400">Requests Today</div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Need More Information?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Subscribe to status updates or contact our support team for more details.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Subscribe to Updates;
-  </
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              Contact Support;
-  </
-          </div>
-        </div>
-      </section>
-      <Footer />
-    </div>
-  );
-}
-  </button>
-  </button>
-  </button>
-=======
-                    </span>;
-                  </div>;
-                </div>;
-                <p className="text-gray-300 mb-4">{incident.description}</p>;
-                <div></div>;
-                  <span className="text-gray-400 text-sm">Affected Services: </span>;
-                  <span className="text-white text-sm">{incident.affectedServices.join(', ')}</span>;
-                </div>;
-              </div>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Performance Metrics */}
-      <section className="py-16 px-4"></section>;
-        <div className="max-w-7xl mx-auto"></div>;
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Performance Metrics</h2>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>;
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>;
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>;
-                <TrendingUp className="w-6 h-6 text-white" />;
-              </div>;
-              <div className="text-3xl font-bold text-white mb-2">99.9%</div>;
-              <div className="text-gray-400">Overall Uptime</div>;
-            </div>;
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>;
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>;
-                <Zap className="w-6 h-6 text-white" />;
-              </div>;
-              <div className="text-3xl font-bold text-white mb-2">45ms</div>;
-              <div className="text-gray-400">Avg Response Time</div>;
-            </div>;
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>;
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>;
-                <Users className="w-6 h-6 text-white" />;
-              </div>;
-              <div className="text-3xl font-bold text-white mb-2">50K+</div>;
-              <div className="text-gray-400">Active Users</div>;
-            </div>;
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>;
-              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>;
-                <Activity className="w-6 h-6 text-white" />;
-              </div>;
-              <div className="text-3xl font-bold text-white mb-2">1.2M</div>;
-              <div className="text-gray-400">Requests Today</div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700"></section>;
-        <div className="max-w-4xl mx-auto text-center"></div>;
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-            Need More Information?;
-          </h2>;
-          <p className="text-xl text-purple-100 mb-8">;
-            Subscribe to status updates or contact our support team for more details.;
-          </p>;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>;
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">;
-              Subscribe to Updates;
-            </button>;
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">;
-              Contact Support;
-            </button>;
-          </div>;
-        </div>;
-      </section>;
-      <Footer />;
-    </div>;
-  );
-}
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
+export default StatusPage;

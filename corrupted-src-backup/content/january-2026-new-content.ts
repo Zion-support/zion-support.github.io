@@ -1,6 +1,4 @@
-// January 2026 - New Revolutionary Content;
-// Brand new cutting-edge AI breakthroughs and enterprise solutions;
-export const january2026NewContent = {
+// January 2026 - New Revolutionary Content; // Brand new cutting-edge AI breakthroughs and enterprise solutions; export const january2026NewContent = {
   featuredArticles: [
     {
       id: 'ai-2026-january-autonomous-enterprise-mesh'
@@ -8,8 +6,7 @@ export const january2026NewContent = {
       description: 'Revolutionary self-organizing AI mesh networks achieving 99.7% operational efficiency with zero human intervention'
       link: '/blog/ai-2026-january-autonomous-enterprise-mesh'
       type: 'article'
-      featured: true;
-      publishDate: '2026-01-15',
+      featured: true; publishDate: '2026-01-15',
       category: 'Enterprise AI',
       tags: ['autonomous', 'mesh', 'enterprise', 'intelligence', '2026'],
       readTime: '12 min',
@@ -20,8 +17,7 @@ export const january2026NewContent = {
       description: 'Breakthrough quantum-edge convergence delivering 200-250x speed improvements with ultra-low latency processing'
       link: '/blog/ai-2026-january-quantum-edge-computing'
       type: 'article'
-      featured: true;
-      publishDate: '2026-01-15',
+      featured: true; publishDate: '2026-01-15',
       category: 'Quantum Computing',
       tags: ['quantum', 'edge', 'computing', 'latency', '2026'],
       readTime: '15 min',
@@ -33,8 +29,7 @@ export const january2026NewContent = {
         'Revolutionary AI achieving genuine consciousness, emotional intelligence, and creative autonomy with $500B enterprise value',
       link: '/blog/ai-2026-january-synthetic-consciousness'
       type: 'article'
-      featured: true;
-      publishDate: '2026-01-15',
+      featured: true; publishDate: '2026-01-15',
       category: 'Artificial Consciousness',
       tags: ['consciousness', 'synthetic', 'awareness', 'emotion', '2026'],
       readTime: '18 min',
@@ -47,8 +42,7 @@ export const january2026NewContent = {
       description: 'Self-organizing AI systems for complete business automation with 99.7% efficiency'
       link: '/services/ai-2026-autonomous-enterprise-solutions'
       type: 'service'
-      featured: true;
-      category: 'Enterprise AI'
+      featured: true; category: 'Enterprise AI'
       pricing: 'Custom',
       features: [,
         'Self-healing infrastructure',
@@ -61,8 +55,7 @@ export const january2026NewContent = {
       description: 'Sub-millisecond processing with quantum-edge convergence for real-time applications'
       link: '/services/ai-2026-quantum-edge-platform'
       type: 'service'
-      featured: true;
-      category: 'Quantum Computing'
+      featured: true; category: 'Quantum Computing'
       pricing: 'Starting at $50K/month',
       features: [,
         'Sub-millisecond latency',
@@ -76,8 +69,7 @@ export const january2026NewContent = {
       description: 'Complete enterprise automation achieving 95% operational efficiency with $2.8B value creation'
       link: '/case-studies/fortune-100-autonomous-transformation'
       type: 'case-study'
-      featured: true;
-      industry: 'Enterprise',
+      featured: true; industry: 'Enterprise',
       results: [,
         '95% automation rate',
         '$2.8 B value creation',
@@ -99,6 +91,6 @@ export const january2026NewContent = {/* TODO: Fix JSX expression */}
   caseStudie,
   s: [
     {/* TODO: Fix JSX expression */}
-    }]};
+    }]}
 
-export default january2026 NewContent;
+export default january2026 NewContent; 

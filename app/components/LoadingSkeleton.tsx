@@ -1,8 +1,21 @@
 'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
-=======
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
+interface LoadingSkeletonProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`loadingskeleton-component ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default LoadingSkeleton;

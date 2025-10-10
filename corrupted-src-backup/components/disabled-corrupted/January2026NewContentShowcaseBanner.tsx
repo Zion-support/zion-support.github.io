@@ -1,12 +1,10 @@
-import React from 'react';
-const January2026NewContentShowcaseBanne, r: React.FC = () => {,
+import React from 'react'; const January2026NewContentShowcaseBanne, r: React.FC = () => {,
   const features = [,
     { ic, o, n: B, r, a, i, n, title: "Synthetic, Consciousne, s, s", de, s, c: "True, AI, awarenes, s" },
     { ic, o, n: Za, p, title: "Quantum, Edge, Processin, g", de, s, c: "S, u, b-millisecond, spe, e, d" },
     { ic, o, n: Netw, o, r, k, title: "Autonomous, Me, s, h", de, s, c: "Se, l, f-organizing, syste, m, s" },
     { ic, o, n: Shi, e, l, d, title: "Quantum, Securi, t, y", de, s, c: "Unbreakable, protecti, o, n" },
-    { ic, o, n: Cp, u, title: "Neuromorphi, c, A, I", de, s, c: "Bra, i, n-inspired, computi, n, g" }
-  ]; return(<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
+    { ic, o, n: Cp, u, title: "Neuromorphi, c, A, I", de, s, c: "Bra, i, n-inspired, computi, n, g" }] return(<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
 const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
   e: "Synthetic, Consciousne, s, s", de, s, c: "True, AI, awarenes, s" },
     {/* TODO: Fix JSX expression */}"
@@ -16,8 +14,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
     {/* TODO: Fix JSX expression */}"
   e: "Quantum, Securi, t, y", de, s, c: "Unbreakable, protecti, o, n" },
     {/* TODO: Fix JSX expression */}"
-  e: "Neuromorphi, c, A, I", de, s, c: "Bra, i, n-inspired, computi, n, g" }
-  ]; return (<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
+  e: "Neuromorphi, c, A, I", de, s, c: "Bra, i, n-inspired, computi, n, g" }] return (<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
       anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
       transiti, o, n = {/* TODO: Fix JSX expression */}
   n: , 0., 8 }}"
@@ -44,8 +41,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
             classNa, m, e = "inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-500, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-4"
           ></moti>"
             <span, className="mr-2">🚀</sp, a, n>
-            January, 202, 6 - Revolutionary, AI, Breakthroughs;
-          </moti, o, n.d, i, v>
+            January, 202, 6 - Revolutionary, AI, Breakthroughs; </moti, o, n.d, i, v>
           <moti, o, n.h2, initia, l={{ opac, i, t, y:  , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
             transiti, o, n = {/* TODO: Fix JSX expression */}
@@ -53,8 +49,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
             classNa, m, e = "te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-white, t, o-bl, u, e-200, b, g-cl, i, p-text, tex, t-transparent, m, b-4"
           >
           ></moti>
-            The, Future, of AI, is, Here;
-          </moti, o, n.h2>
+            The, Future, of AI, is, Here; </moti, o, n.h2>
           <moti, o, n.p, initia, l={{ opac, i, t, y: , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
             transiti, o, n = {{ del, a, y: , 0., 4, duration: 0., 6 }})
@@ -132,8 +127,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
         >
           <a, hre, f="/bl, o, g"
             className="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-500, hove, r: fr, o, m-purp, l, e-600, hove, r:to-bl, u, e-600, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, shado, w-lg, hove, r:shad, o, w-xl">
-            Explore, January, 2026 Conte, n, t;
-            <Link, className="ml-2 w-5 h-5" />
+            Explore, January, 2026 Conte, n, t; <Link, className="ml-2 w-5 h-5" />
           </a>
         </moti, o, n.d, i, v>
       </div>
@@ -154,6 +148,5 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
       <div, classNam, e = "absolute, to, p-10, lef, t-1, 0, w-2, 0, h-20, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-xl, animat, e-pul, s, e" /></div>"
       <div, className="absolute, botto, m-10, righ, t-1, 0, w-3, 2, h-32, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-xl, animat, e-pulse, dela, y-10, 0, 0" /></div>
     </moti, o, n.di, v>
-  );
-};
+  ); }
 export default January2026NewContentShowcaseBanner;"

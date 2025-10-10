@@ -1,5 +1,4 @@
-import React from 'react';
-interface SEOProps {/* TODO: Fix JSX expression */}
+import React from 'react'; interface SEOProps {/* TODO: Fix JSX expression */}
 }
 const SEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - AI-Powered Enterprise Solutions',
@@ -17,9 +16,7 @@ const,
       <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords.join(', ')} /></meta>
       {children}
-  );
-};
-export default SEO;
-"
+  ); }
+export default SEO; "
   </SEOProps>
   </SEOProps>

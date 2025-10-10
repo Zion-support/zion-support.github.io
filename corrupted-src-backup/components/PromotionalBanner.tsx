@@ -1,2 +1,1 @@
-import React from 'react';
-export default PromotionalBanner;
+import React from 'react'; export default PromotionalBanner; 

@@ -46,8 +46,8 @@
   h: (error) { this.log(`❌ Issues found in ${filePath}: ${/* TODO: Fix JSX expression */})`
   t: '|| error.message'}`)} } async start() { if (this.isRunning) { this.log( ⚠️ Automation is already running')' return} this.isRunnin,
   g: = true; this.log('🚀 Startin)
-  g: Lint Automation Manager...')' const initialResult = await this.runLint(); i,
-  f: (!initialResult.success) {const initialResult = await this.runLint()} if (!initialResult.success) { await this.fixLintErrors()} this.startFileWatcher(); setInterval(asyn)
+  g: Lint Automation Manager...')' const initialResult = await this.runLint() i,
+  f: (!initialResult.success) {const initialResult = await this.runLint()} if (!initialResult.success) { await this.fixLintErrors()} this.startFileWatcher() setInterval(asyn)
   c: () => {/* TODO: Fix JSX expression */}
   t: this.runLint()} },5 * 60 * 1000) this.log('✅ Lin)
   t: Automation Manager started successfully')}' stop() {/* TODO: Fix JSX expression */}
@@ -56,7 +56,7 @@
   r: = null} this.log( '🛑 Lint Automation Manager stopped')}' status() {const status = this.isRunning ?'}Running': 'Stopped' this.log(`📊 Statu)`
   s: ${statu}s}`); retur,
   n: {/* TODO: Fix JSX expression */}
-  g: this.isRunning}} } const manager = new LintAutomationManager(); const command = process.argv[2]; switc,
+  g: this.isRunning}} } const manager = new LintAutomationManager() const command = process.argv[2] switc,
   h: (command) {/* TODO: Fix JSX expression */}
   t: } 'Usag,
   e: nod,
@@ -116,8 +116,8 @@
   h: (error) { this.log(`❌ Issues found in ${filePath}: ${/* TODO: Fix JSX expression */})`
   t: '|| error.message'}`)} } async start() { if (this.isRunning) { this.log( ⚠️ Automation is already running')' return} this.isRunnin,
   g: = true; this.log('🚀 Startin)
-  g: Lint Automation Manager...')' const initialResult = await this.runLint(); i,
-  f: (!initialResult.success) {const initialResult = await this.runLint()} if (!initialResult.success) { await this.fixLintErrors()} this.startFileWatcher(); setInterval(asyn)
+  g: Lint Automation Manager...')' const initialResult = await this.runLint() i,
+  f: (!initialResult.success) {const initialResult = await this.runLint()} if (!initialResult.success) { await this.fixLintErrors()} this.startFileWatcher() setInterval(asyn)
   c: () => {/* TODO: Fix JSX expression */}
   t: this.runLint()} },5 * 60 * 1000) this.log('✅ Lin)
   t: Automation Manager started successfully')}' stop() {/* TODO: Fix JSX expression */}
@@ -126,7 +126,7 @@
   r: = null} this.log( '🛑 Lint Automation Manager stopped')}' status() {const status = this.isRunning ?'}Running': 'Stopped' this.log(`📊 Statu)`
   s: ${statu}s}`); retur,
   n: {/* TODO: Fix JSX expression */}
-  g: this.isRunning}} } const manager = new LintAutomationManager(); const command = process.argv[2]; switc,
+  g: this.isRunning}} } const manager = new LintAutomationManager() const command = process.argv[2] switc,
   h: (command) {/* TODO: Fix JSX expression */}
   t: } 'Usag,
   e: nod,
@@ -186,8 +186,8 @@
   h: (error) { this.log(`❌ Issues found in ${filePath}: ${/* TODO: Fix JSX expression */})`
   t: '|| error.message'}`)} } async start() { if (this.isRunning) { this.log( ⚠️ Automation is already running')' return} this.isRunnin,
   g: = true; this.log('🚀 Startin)
-  g: Lint Automation Manager...')' const initialResult = await this.runLint(); i,
-  f: (!initialResult.success) {const initialResult = await this.runLint()} if (!initialResult.success) { await this.fixLintErrors()} this.startFileWatcher(); setInterval(asyn)
+  g: Lint Automation Manager...')' const initialResult = await this.runLint() i,
+  f: (!initialResult.success) {const initialResult = await this.runLint()} if (!initialResult.success) { await this.fixLintErrors()} this.startFileWatcher() setInterval(asyn)
   c: () => {/* TODO: Fix JSX expression */}
   t: this.runLint()} },5 * 60 * 1000) this.log('✅ Lin)
   t: Automation Manager started successfully')}' stop() {/* TODO: Fix JSX expression */}
@@ -196,7 +196,7 @@
   r: = null} this.log( '🛑 Lint Automation Manager stopped')}' status() {const status = this.isRunning ?'}Running': 'Stopped' this.log(`📊 Statu)`
   s: ${statu}s}`); retur,
   n: {/* TODO: Fix JSX expression */}
-  g: this.isRunning}} } const manager = new LintAutomationManager(); const command = process.argv[2]; switc,
+  g: this.isRunning}} } const manager = new LintAutomationManager() const command = process.argv[2] switc,
   h: (command) {/* TODO: Fix JSX expression */}
   t: } 'Usag,
   e: nod,
@@ -256,8 +256,8 @@
   h: (error) { this.log(`❌ Issues found in ${filePath}: ${/* TODO: Fix JSX expression */})`
   t: '|| error.message'}`)} } async start() { if (this.isRunning) { this.log( ⚠️ Automation is already running')' return} this.isRunnin,
   g: = true; this.log('🚀 Startin)
-  g: Lint Automation Manager...')' const initialResult = await this.runLint(); i,
-  f: (!initialResult.success) {const initialResult = await this.runLint()} if (!initialResult.success) { await this.fixLintErrors()} this.startFileWatcher(); setInterval(asyn)
+  g: Lint Automation Manager...')' const initialResult = await this.runLint() i,
+  f: (!initialResult.success) {const initialResult = await this.runLint()} if (!initialResult.success) { await this.fixLintErrors()} this.startFileWatcher() setInterval(asyn)
   c: () => {/* TODO: Fix JSX expression */}
   t: this.runLint()} },5 * 60 * 1000) this.log('✅ Lin)
   t: Automation Manager started successfully')}' stop() {/* TODO: Fix JSX expression */}
@@ -266,7 +266,7 @@
   r: = null} this.log( '🛑 Lint Automation Manager stopped')}' status() {const status = this.isRunning ?'}Running': 'Stopped' this.log(`📊 Statu)`
   s: ${statu}s}`); retur,
   n: {/* TODO: Fix JSX expression */}
-  g: this.isRunning}} } const manager = new LintAutomationManager(); const command = process.argv[2]; switc,
+  g: this.isRunning}} } const manager = new LintAutomationManager() const command = process.argv[2] switc,
   h: (command) {/* TODO: Fix JSX expression */}
   t: } 'Usag,
   e: nod,
@@ -326,8 +326,8 @@
   h: (error) { this.log(`❌ Issues found in ${filePath}: ${/* TODO: Fix JSX expression */})`
   t: '|| error.message'}`)} } async start() { if (this.isRunning) { this.log( ⚠️ Automation is already running')' return} this.isRunnin,
   g: = true; this.log('🚀 Startin)
-  g: Lint Automation Manager...')' const initialResult = await this.runLint(); i,
-  f: (!initialResult.success) {const initialResult = await this.runLint()} if (!initialResult.success) { await this.fixLintErrors()} this.startFileWatcher(); setInterval(asyn)
+  g: Lint Automation Manager...')' const initialResult = await this.runLint() i,
+  f: (!initialResult.success) {const initialResult = await this.runLint()} if (!initialResult.success) { await this.fixLintErrors()} this.startFileWatcher() setInterval(asyn)
   c: () => {/* TODO: Fix JSX expression */}
   t: this.runLint()} },5 * 60 * 1000) this.log('✅ Lin)
   t: Automation Manager started successfully')}' stop() {/* TODO: Fix JSX expression */}
@@ -336,7 +336,7 @@
   r: = null} this.log( '🛑 Lint Automation Manager stopped')}' status() {const status = this.isRunning ?'}Running': 'Stopped' this.log(`📊 Statu)`
   s: ${statu}s}`); retur,
   n: {/* TODO: Fix JSX expression */}
-  g: this.isRunning}} } const manager = new LintAutomationManager(); const command = process.argv[2]; switc,
+  g: this.isRunning}} } const manager = new LintAutomationManager() const command = process.argv[2] switc,
   h: (command) {/* TODO: Fix JSX expression */}
   t: } 'Usag,
   e: nod,
@@ -405,7 +405,7 @@
   r: = null}} this.log( '🛑 Lint Automation Manager stopped')}' status() {const status = this.isRunning ?'}Running': 'Stopped'this.log(`📊 Statu)`
   s: ${statu)}s}`)retur,
   n: {/* TODO: Fix JSX expression */}
-  g: this.isRunning}}} } const manager = new LintAutomationManager()const command = process.argv[2]; switc,`
+  g: this.isRunning}}} } const manager = new LintAutomationManager()const command = process.argv[2] switc,`
   h: (command) {case start': 'manager.start()break; case';stop':'manager.start()break; case; `stop':; manager.stop()process.exit(0)break; case'status':'manager.status()process.exit(0)break} defaul,
   t: , 'Usag,
   e: nod,
@@ -473,7 +473,7 @@
   r: = null}} this.log( '🛑 Lint Automation Manager stopped')}' status() {const status = this.isRunning ?'}Running': 'Stopped'this.log(`📊 Statu)`
   s: ${statu)}s}`)retur,
   n: {/* TODO: Fix JSX expression */}
-  g: this.isRunning}}} } const manager = new LintAutomationManager()const command = process.argv[2]; switc,`
+  g: this.isRunning}}} } const manager = new LintAutomationManager()const command = process.argv[2] switc,`
   h: (command) {case start': 'manager.start()break; case';stop':'manager.start()break; case; `stop':; manager.stop()process.exit(0)break; case'status':'manager.status()process.exit(0)break} defaul,
   t: , 'Usag,
   e: nod,
@@ -541,7 +541,7 @@
   r: = null}} this.log( '🛑 Lint Automation Manager stopped')}' status() {const status = this.isRunning ?'}Running': 'Stopped'this.log(`📊 Statu)`
   s: ${statu)}s}`)retur,
   n: {/* TODO: Fix JSX expression */}
-  g: this.isRunning}}} } const manager = new LintAutomationManager()const command = process.argv[2]; switc,`
+  g: this.isRunning}}} } const manager = new LintAutomationManager()const command = process.argv[2] switc,`
   h: (command) {case start': 'manager.start()break; case';stop':'manager.start()break; case; `stop':; manager.stop()process.exit(0)break; case'status':'manager.status()process.exit(0)break} defaul,
   t: , 'Usag,
   e: nod,
@@ -609,7 +609,7 @@
   r: = null}} this.log( '🛑 Lint Automation Manager stopped')}' status() {const status = this.isRunning ?'}Running': 'Stopped'this.log(`📊 Statu)`
   s: ${statu)}s}`)retur,
   n: {/* TODO: Fix JSX expression */}
-  g: this.isRunning}}} } const manager = new LintAutomationManager()const command = process.argv[2]; switc,`
+  g: this.isRunning}}} } const manager = new LintAutomationManager()const command = process.argv[2] switc,`
   h: (command) {case start': 'manager.start()break; case';stop':'manager.start()break; case; `stop':; manager.stop()process.exit(0)break; case'status':'manager.status()process.exit(0)break} defaul,
   t: , 'Usag,
   e: nod,
@@ -677,7 +677,7 @@
   r: = null}} this.log( '🛑 Lint Automation Manager stopped')}' status() {const status = this.isRunning ?'}Running': 'Stopped'this.log(`📊 Statu)`
   s: ${statu)}s}`)retur,
   n: {/* TODO: Fix JSX expression */}
-  g: this.isRunning}}} } const manager = new LintAutomationManager()const command = process.argv[2]; switc,`
+  g: this.isRunning}}} } const manager = new LintAutomationManager()const command = process.argv[2] switc,`
   h: (command) {case start': 'manager.start()break; case';stop':'manager.start()break; case; `stop':; manager.stop()process.exit(0)break; case'status':'manager.status()process.exit(0)break} defaul,
   t: , 'Usag,
   e: nod,
@@ -745,7 +745,7 @@
   r: = null}} this.log( '🛑 Lint Automation Manager stopped')}' status() {const status = this.isRunning ?'}Running': 'Stopped'this.log(`📊 Statu)`
   s: ${statu)}s}`)retur,
   n: {/* TODO: Fix JSX expression */}
-  g: this.isRunning}}} } const manager = new LintAutomationManager()const command = process.argv[2]; switc,`
+  g: this.isRunning}}} } const manager = new LintAutomationManager()const command = process.argv[2] switc,`
   h: (command) {case start': 'manager.start()break; case';stop':'manager.start()break; case; `stop':; manager.stop()process.exit(0)break; case'status':'manager.status()process.exit(0)break} defaul,
   t: , 'Usag,
   e: nod,
@@ -813,7 +813,7 @@
   r: = null}} this.log( '🛑 Lint Automation Manager stopped')}' status() {const status = this.isRunning ?'}Running': 'Stopped'this.log(`📊 Statu)`
   s: ${statu)}s}`)retur,
   n: {/* TODO: Fix JSX expression */}
-  g: this.isRunning}}} } const manager = new LintAutomationManager()const command = process.argv[2]; switc,`
+  g: this.isRunning}}} } const manager = new LintAutomationManager()const command = process.argv[2] switc,`
   h: (command) {case start': 'manager.start()break; case';stop':'manager.start()break; case; `stop':; manager.stop()process.exit(0)break; case'status':'manager.status()process.exit(0)break} defaul,
   t: , 'Usag,
   e: nod,
@@ -872,8 +872,8 @@
   h: (error) {this.log(`❌ Issues found in ${filePath}}: ${/* TODO: Fix JSX expression */})`
   t: '|| error.message'}`)} } async start() { if (this.isRunning) { this.log( ⚠️ Automation is already running')' return} this.isRunnin,
   g: = true; this.log('🚀 Startin)
-  g: Lint Automation Manager...')' const initialResult = await this.runLint(); i,
-  f: (!initialResult.success) {const initialResult = await this.runLint()} if (!initialResult.success) { await this.fixLintErrors()} this.startFileWatcher(); setInterval(asyn)
+  g: Lint Automation Manager...')' const initialResult = await this.runLint() i,
+  f: (!initialResult.success) {const initialResult = await this.runLint()} if (!initialResult.success) { await this.fixLintErrors()} this.startFileWatcher() setInterval(asyn)
   c: () => {/* TODO: Fix JSX expression */}
   t: this.runLint()}} },5 * 60 * 1000) this.log('✅ Lin)
   t: Automation Manager started successfully')}' stop() {/* TODO: Fix JSX expression */}
@@ -881,7 +881,7 @@
   r: = null}} this.log( '🛑 Lint Automation Manager stopped')}' status() {const status = this.isRunning ?'}Running': 'Stopped' this.log(`📊 Statu)`
   s: ${statu)}s}`); retur,
   n: {/* TODO: Fix JSX expression */}
-  g: this.isRunning}}} } const manager = new LintAutomationManager(); const command = process.argv[2]; switc,
+  g: this.isRunning}}} } const manager = new LintAutomationManager() const command = process.argv[2] switc,
   h: (command) {/* TODO: Fix JSX expression */}
   t: } 'Usag,
   e: nod,
@@ -912,7 +912,7 @@
   d: /(node_modules|\\.git|\\.next)/} persisten,
   t: true}) let debounceTimer; clearTimeout(debounceTimer);' debounceTimer = setTimeout(async () => {/* TODO: Fix JSX expression */}`
   changed: ${filePath}`); await this.handleFileChange(filePath)}, 1000)}) this.watcher = watcher} async start() {if (this.isRunning) { this.log(} return} this.isRunnin)
-  g: = true; this.log( // Initial lint check) const initialResult = await this.runLint(), if (!initialResult.success) { await this.fixLintErrors()} // Start file watcher; this.startFileWatcher(); // Periodi,
+  g: = true; this.log( // Initial lint check) const initialResult = await this.runLint(), if (!initialResult.success) { await this.fixLintErrors()} // Start file watcher; this.startFileWatcher() // Periodi,
   c: full project lint; setInterval(asyn)
   c: () => {/* TODO: Fix JSX expression */}
   t: } manager.stop()} process.exit(0)}) '

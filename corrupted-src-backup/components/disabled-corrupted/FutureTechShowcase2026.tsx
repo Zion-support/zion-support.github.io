@@ -1,9 +1,7 @@
-import React from 'react';
-const FutureTechShowcase202, 6: React.FC = () => { ,
+import React from 'react'; const FutureTechShowcase202, 6: React.FC = () => { ,
   const futureTechArticle, s = [
     {
-      id: 1;
-      title: 'Neur, a, l-Quantum, Hybrid, Computin, g',
+      id: 1; title: 'Neur, a, l-Quantum, Hybrid, Computin, g',
       slug: 'neur, a, l-quant, u, m-hybr, i, d-2, 0, 2, 6',
       excerpt: 'Breakthrough, fusion, of quantum, computing, and neural, networks, achieving unprecedented, processing, speeds. Experienc, e, 1, 0,000 x, faster, AI inference, with, quantum-enhanced, deep, learning.',
       category: 'Quantum, AI, Revolutio, n',
@@ -24,7 +22,7 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
     {/* TODO: Fix JSX expression */}
      },
     {/* TODO: Fix JSX expression */}
-     }]; return(<div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
+     }] return(<div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
         <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
@@ -56,14 +54,12 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
           <div, className='inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in'></div>
             <Sparkles, className='w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e' /></Sparkles>
             <span, className='te, x, t-purp, l, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e'></span>
-              🚀 6, REVOLUTIONARY, FUTURE TECH, BREAKTHROUGH, S • Januar, y, 2, 0, 20, 2, 6;
-            </sp, a, n>
+              🚀 6, REVOLUTIONARY, FUTURE TECH, BREAKTHROUGH, S • Januar, y, 2, 0, 20, 2, 6; </sp, a, n>
             <Sparkles, classNam, e = 'w-5 h-5, tex, t-cy, a, n-400, animat, e-pul, s, e' /></Sparkles>
           </div>
           <h2, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-cy, a, n-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in'>
           <h2, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-cy, a, n-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in'></h2>
-            Future, Technology, Showcase 20, 2, 6;
-          </h2>
+            Future, Technology, Showcase 20, 2, 6; </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'></p>
             Experience, the, next generation, of, AI and, technology, breakthroughs.
             From, quantu, m-neural, fusion, to se, l, f-evolving, AI, ecosyste, m, s, discover, technologies, that will, reshape, the future, of, enterprise computi, n, g.
@@ -193,15 +189,12 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
           <div, className='inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-cy, a, n-500, t, o-pi, n, k-5, 0, 0'></div>
             <div, className='bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10'></div>
               <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
-                Lead, the, Future Technology, Revolutio, n;
-              </h3>
+                Lead, the, Future Technology, Revolutio, n; </h3>
               <p, className='te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'>
               <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'></h3>
-                Lead, the, Future Technology, Revolutio, n;
-              </h3>
+                Lead, the, Future Technology, Revolutio, n; </h3>
               <p, className='te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'></p>
-                Be, among, the first, enterprises, to deploy, these, revolutionary;
-                technologies. Get, exclusive, access to, our, future tech, innovations, and transform, your, organization with, nex, t-generation, AI, capabilities.
+                Be, among, the first, enterprises, to deploy, these, revolutionary; technologies. Get, exclusive, access to, our, future tech, innovations, and transform, your, organization with, nex, t-generation, AI, capabilities.
               </p>
               <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
                 <a, hre, f='/bl, o, g'
@@ -222,7 +215,5 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
         </div>
       </div>
     </div>
-  );
-};
-export default FutureTechShowcase2026;
-`
+  ); }
+export default FutureTechShowcase2026; `

@@ -1,45 +1,22 @@
-'use client';
-import React, { useEffect, useCallback, useRef } from 'react';
-import { Helmet } from 'react-helmet-async';
-interface SEOData {
- title: string;
- description: string;
- keywords: string[];
- canonicalUrl: string;
- ogTitle?: string;
- ogDescription?: string;
- ogImage?: string;
- ogType?: string;
- twitterCard?: string;
- twitterTitle?: string;
- twitterDescription?: string;,
- twitterImage?: string;
- structuredData?: Record<string, unknown>;</string>robots</string>?: string;
- author?: string;
- publishedTime?: string;
- modifiedTime?: string;
- section?: string;
- tags?: string[];
-interface SEOData {/* TODO: Fix JSX expression */}
+'use client'; import React, { useEffect, useCallback, useRef } from 'react'; import { Helmet } from 'react-helmet-async'; interface SEOData {
+ title: string; description: string; keywords: string[]; canonicalUrl: string; ogTitle?: string; ogDescription?: string; ogImage?: string; ogType?: string; twitterCard?: string; twitterTitle?: string; twitterDescription?: string;,
+ twitterImage?: string; structuredData?: Record<string, unknown>;</string>robots</string>?: string; author?: string; publishedTime?: string; modifiedTime?: string; section?: string; tags?: string[]; interface SEOData {/* TODO: Fix JSX expression */}
 }
 interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
- seoData;
- enableStructuredData = true,
+ seoData; enableStructuredData = true,
  enableOpenGraph = true,
  enableTwitterCards = true,
  enableSchemaMarkup = true}) => {
  const _structuredDataRef = useRef<HTMLScriptElement | null>(null);</HTMLScriptElement>const</HTMLScriptElement> generateStructuredData = useCallback(() => {
- if (!enableStructuredData || !seoData.structuredData) return null;
- const baseStructuredData = {
+ if (!enableStructuredData || !seoData.structuredData) return null; const baseStructuredData = {
  '@context': 'https: //schema.org',
  '@type': 'Organization',
  name: 'Zion Tech Group'
  url: 'https://ziontechgroup.com'
  logo: 'https://ziontechgroup.com/logo.png'
- description: seoData.description;
- address: {
+ description: seoData.description address: {
  '@type': 'PostalAddress'
  streetAddress: '364 E Main St STE 1008'
  addressLocality: 'Middletown'
@@ -70,33 +47,24 @@ const,
   s://twitter.com/ziontechgroup',
  'http,
   s://github.com/Zion-Holdings'],
- ...seoData.structuredData};
- return baseStructuredData;
- }, [seoData, enableStructuredData]);
- const generateBreadcrumbStructuredData = useCallback(() => {
- if (!enableSchemaMarkup) return null;
- return {
+ ...seoData.structuredData}
+ return baseStructuredData; }, [seoData, enableStructuredData]); const generateBreadcrumbStructuredData = useCallback(() => {
+ if (!enableSchemaMarkup) return null; return {
  '@context': 'https: //schema.org',
  '@type': 'BreadcrumbList',
  itemListElement: [
  {
  '@type': 'ListItem'
- position: 1;
- name: 'Home',
+ position: 1; name: 'Home',
  item: 'https://ziontechgroup.com'},
  {
  '@type': 'ListItem',
- position: 2;
- name: seoData.title;
- item: seoData.canonicalUrl;
- const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
+ position: 2; name: seoData.title item: seoData.canonicalUrl const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
  },
  {/* TODO: Fix JSX expression */}
- }]};
- }, [seoData, enableSchemaMarkup]);
- const generateFAQStructuredData = useCallback(() => {
- if (!enableSchemaMarkup) return null;
- const faqData = {
+ }]}
+ }, [seoData, enableSchemaMarkup]); const generateFAQStructuredData = useCallback(() => {
+ if (!enableSchemaMarkup) return null; const faqData = {
  '@context': 'https: //schema.org',
  '@type': 'FAQPage',
  mainEntity: [
@@ -123,80 +91,45 @@ const,
  {/* TODO: Fix JSX expression */}
  }},
  {/* TODO: Fix JSX expression */}
- }}]};
- return faqData;
- }, [enableSchemaMarkup]);
- const _structuredData = generateStructuredData();
- const _breadcrumbData = generateBreadcrumbStructuredData();
- const _faqData = generateFAQStructuredData();
+ }}]}
+ return faqData; }, [enableSchemaMarkup]); const _structuredData = generateStructuredData()
+ const _breadcrumbData = generateBreadcrumbStructuredData()
+ const _faqData = generateFAQStructuredData()
  useEffect(() => {
- // Update page title and meta description for better SEO;
- if (typeof document !== 'undefined') {
- document.title = seoData.title;
- let _metaDescription = document.querySelector('meta[name="description"]');
- if (!metaDescription) {
- metaDescription = document.createElement('meta');
- metaDescription.setAttribute('name', 'description');
- document.head.appendChild(metaDescription);
- useEffect(() => {/* TODO: Fix JSX expression */}
+ // Update page title and meta description for better SEO; if (typeof document !== 'undefined') {
+ document.title = seoData.title let _metaDescription = document.querySelector('meta[name="description"]'); if (!metaDescription) {
+ metaDescription = document.createElement('meta'); metaDescription.setAttribute('name', 'description'); document.head.appendChild(metaDescription); useEffect(() => {/* TODO: Fix JSX expression */}
  }
- metaDescription.setAttribute('content', seoData.description);
- // Update canonical URL;
- let _canonicalLink = document.querySelector('link[rel="canonical"]');
- if (!canonicalLink) {/* TODO: Fix JSX expression */}
+ metaDescription.setAttribute('content', seoData.description); // Update canonical URL; let _canonicalLink = document.querySelector('link[rel="canonical"]'); if (!canonicalLink) {/* TODO: Fix JSX expression */}
  }
- canonicalLink.setAttribute('href', seoData.canonicalUrl);
- }
- }, [seoData]);
- // const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {,
- // const metaTag = document.createElement('meta');
- // metaTag.setAttribute(attribute, name);
- // metaTag.content = content;
- // document.head.appendChild(metaTag);
- // };
+ canonicalLink.setAttribute('href', seoData.canonicalUrl); }
+ }, [seoData]); // const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {,
+ // const metaTag = document.createElement('meta'); // metaTag.setAttribute(attribute, name); // metaTag.content = content; // document.head.appendChild(metaTag); // }
  // const _updateCanonicalUrl = (url: string) => {
- // let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
- // ,
+ // let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement; // ,
  // if (canonicalLink) {,
- // canonicalLink.href = url;
- // } else {
- // canonicalLink = document.createElement('link');
- // canonicalLink.rel = 'canonical';
- // canonicalLink.href = url;
- // document.head.appendChild(canonicalLink);
- // }
- // };origin/
+ // canonicalLink.href = url; // } else {
+ // canonicalLink = document.createElement('link'); // canonicalLink.rel = 'canonical'; // canonicalLink.href = url; // document.head.appendChild(canonicalLink); // }
+ // }origin/
  // const _addStructuredData = (data: Record<string, unknown>) => {
- // // Remove existing structured data;
- // // if (structuredDataRef.current) {
- // // structuredDataRef.current.remove();
+ // // Remove existing structured data; // // if (structuredDataRef.current) {
+ // // structuredDataRef.current.remove()
  // const _addMetaTag = (nam,
   e: string, conten,
   t: string, attribut)
   e: string = 'name') => {/* TODO: Fix JSX expression */}
- // };
+ // }
  // const _updateCanonicalUrl = (ur)
   l: string) => {/* TODO: Fix JSX expression */}
  // } else {/* TODO: Fix JSX expression */}
  // }
- // };origin/
+ // }origin/
  // const _addStructuredData = (dat)
   a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
  // // }
  // 
- // const script = document.createElement('script');
- // script.type = 'application/ld+json';
- // script.textContent = JSON.stringify(data);
- // document.head.appendChild(script);
- // };
- // Add new structured data;
- const _script = document.createElement('script');
- script.type = 'application/ld+json';
- script.textContent = JSON.stringify(data);
- script.id = 'structured-data';
- document.head.appendChild(script);
- structuredDataRef.current = script;
- };
+ // const script = document.createElement('script'); // script.type = 'application/ld+json'; // script.textContent = JSON.stringify(data); // document.head.appendChild(script); // }
+ // Add new structured data; const _script = document.createElement('script'); script.type = 'application/ld+json'; script.textContent = JSON.stringify(data); script.id = 'structured-data'; document.head.appendChild(script); structuredDataRef.current = script; }
  const _trackPageView = (config: SEOData) => {,
  if (typeof window !== 'undefined' && 'gtag' in window) {,
  (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {)
@@ -205,25 +138,21 @@ const,
  const _trackPageView = (confi)
   g: SEOData) => {/* TODO: Fix JSX expression */}
   g: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {/* TODO: Fix JSX expression */})
- });
+ }); }
  }
- };
  const _trackPerformanceMetrics = () => {
  if (typeof window !== 'undefined' && 'performance' in window) {
  window.addEventListener('load', () => {
- const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
- if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
+ const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming; if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
  (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {)
  event_category: 'Performance'),
  event_label: 'Page Load'),
  value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
  const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
   s: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {/* TODO: Fix JSX expression */})
- });
- }
- });
- }
- };origin/
+ }); }
+ }); }
+ }origin/
  return(<Helmet>)
  {/* Basic Meta Tags */})
  <title>{seoData.title}</title>)
@@ -343,8 +272,7 @@ const,
  <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
  <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
  </Helmet>
- );
-};
+ ); }
 export default AdvancedSEOOptimizer;"
   </AdvancedSEOOptimizerProps>
   </AdvancedSEOOptimizerProps>

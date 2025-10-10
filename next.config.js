@@ -1,11 +1,6 @@
-import withBundleAnalyzer from '@next/bundle-analyzer';
-import crypto from 'crypto';
-
-const bundleAnalyzer = withBundleAnalyzer({
+import withBundleAnalyzer from '@next/bundle-analyzer'; import crypto from 'crypto'; const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
-});
-
-/** @type {import('next').NextConfig} */
+}); /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
@@ -35,8 +30,7 @@ const nextConfig = {
         new webpack.DefinePlugin({
           'self': 'undefined',
         })
-      );
-    }
+      ); }
 
     // Optimize bundle size
     config.optimization = {
@@ -58,13 +52,9 @@ const nextConfig = {
               return (
                 module.size() > 160000 &&
                 /node_modules[/\\]/.test(module.identifier())
-              );
-            },
+              ); },
             name(module) {
-              const _hash = crypto.createHash('sha1');
-              _hash.update(module.identifier());
-              return _hash.digest('hex').substring(0, 8);
-            },
+              const _hash = crypto.createHash('sha1'); _hash.update(module.identifier()); return _hash.digest('hex').substring(0, 8); },
             priority: 30,
             minChunks: 1,
             reuseExistingChunk: true,
@@ -83,8 +73,7 @@ const nextConfig = {
                   .update(chunks.reduce((acc, chunk) => acc + chunk.name, ''))
                   .digest('hex')
                   .substring(0, 8)
-              );
-            },
+              ); },
             priority: 10,
             minChunks: 2,
             reuseExistingChunk: true,
@@ -94,13 +83,10 @@ const nextConfig = {
         minSize: 20000,
       },
       minimize: !dev,
-    };
+    }
 
     // Tree shaking
-    config.optimization.usedExports = true;
-
-    return config;
-  },
+    config.optimization.usedExports = true; return config; },
 
   async headers() {
     return [
@@ -133,7 +119,7 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';",
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com frame-ancestors 'none'; base-uri 'self'; form-action 'self';",
           },
         ],
       },
@@ -155,8 +141,7 @@ const nextConfig = {
           },
         ],
       },
-    ];
-  },
+    ]; },
 
   async redirects() {
     return [
@@ -165,8 +150,7 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
-    ];
-  },
+    ]; },
 
   experimental: {
     optimizeCss: true,
@@ -190,6 +174,6 @@ const nextConfig = {
       exclude: ['error', 'warn'],
     } : false,
   },
-};
+}
 
 export default bundleAnalyzer(nextConfig);

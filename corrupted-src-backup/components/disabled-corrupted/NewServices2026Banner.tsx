@@ -1,5 +1,5 @@
 type NewServices2026BannerProp, s = {/* TODO: Fix JSX expression */}
- };
+ }
 export default function NewServices2026Bann, e, r({)
   varia, n, t = 'showc, a, s, e')
   showCou, n, t =  , 6)
@@ -37,11 +37,9 @@ export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression *
                  : 'bg-whi, t, e/20, tex, t-whi, t, e'}
              }`}
           >
-            NEW, 2026, SERVICES;
-          </d, i, v > <h2, className={ `te, x, t-3xl, fon, t-bold, m, b-2 ${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' }`}
+            NEW, 2026, SERVICES; </d, i, v > <h2, className={ `te, x, t-3xl, fon, t-bold, m, b-2 ${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' }`}
           >
-            Latest, AI, Services;
-  ].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return (<section, classNam, e = {/* TODO: Fix JSX expression */}
+            Latest, AI, Services; ].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return (<section, classNam, e = {/* TODO: Fix JSX expression */}
        } ${ varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' } py-12 ${classNa, m, e}`}
     ></section>
       <div, className='container, m, x-auto, p, x-6'></div>
@@ -52,7 +50,7 @@ export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression *
           </d, i, v > <h2, className={ `te, x, t-3xl, fon, t-bold, m, b-2 ${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' }`}
           ></h2>
             Latest, AI, Services;`
-          </h2 > <p, classNam, e = {  `${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-6, 0, 0'  : 'te, x, t-whi, t, e/8, 0'  }, m, a, x-w-3xl, m, x-au, t, o`}
+          </h2> <p, classNam, e = {  `${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-6, 0, 0'  : 'te, x, t-whi, t, e/8, 0'  }, m, a, x-w-3xl, m, x-au, t, o`}
           ></p>
             Accelerate, transformation, with our, newest, AI-powered, solution, s.
           </p>
@@ -80,6 +78,5 @@ export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression *
         </div>
       </div>
     </secti, o, n>
-  );
-}
+  ); }
 `

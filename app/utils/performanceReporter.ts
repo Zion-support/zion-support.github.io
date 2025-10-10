@@ -1,5 +1,6 @@
-'use client';
-/**;
- * Performance Reporter;
- * Comprehensive performance monitoring and reporting;
- */;
+// performanceReporter.ts
+export const performanceReporter = {
+  // Implementation
+};
+
+export default performanceReporter;

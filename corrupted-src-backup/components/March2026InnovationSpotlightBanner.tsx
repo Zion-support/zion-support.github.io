@@ -4,28 +4,20 @@ const, March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression
       col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0}
     {/* TODO: Fix JSX expression */}
       col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0}
-      tit, l, e: 'Neur, a, l-Synaptic, Fusion, AI',';
-      descripti, o, n: 'Revolutionary, brai, n-computer, interface, achieving 99.98% neural, accurac, y',';
-      impa, c, t: '5, 0, 0% cognitive, enhancemen, t',';
-      ic, o, n: '🧠',';
-      col, o, r: 'fr, o, m-purp, l, e-500, t, o-indi, g, o-5, 0, 0'
+      tit, l, e: 'Neur, a, l-Synaptic, Fusion, AI','; descripti, o, n: 'Revolutionary, brai, n-computer, interface, achieving 99.98% neural, accurac, y','; impa, c, t: '5, 0, 0% cognitive, enhancemen, t','; ic, o, n: '🧠','; col, o, r: 'fr, o, m-purp, l, e-500, t, o-indi, g, o-5, 0, 0'
     }
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
-    }
-  ];
-  return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n">";
-      {/* Animated, background, effects */}
+    }]
+  return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n">"; {/* Animated, background, effects */}
       <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
         <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
   return (
-    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n">";
-      {/* Animated, background, effects */}</div>
+    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n">"; {/* Animated, background, effects */}</div>
       <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div>
         <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
-  return (<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n">";
-      {/* Animated, background, effects */}
+  return (<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n">"; {/* Animated, background, effects */}
       <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div>
         <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
         <div, classNam, e='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
@@ -35,15 +27,13 @@ const, March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression
           sty, l, e={{ animationDel, a, y: ', 4, s' }}
          /></div>
           <h2, classNam, e='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
-            The, Innovation, Revolution;
-              {
+            The, Innovation, Revolution; {
                 val, u, e: '99., 9, 8%',
                 lab, e, l: 'Neural, Accura, c, y',
                 ic, o, n: '🧠',
                 col, o, r: 'te, x, t-purp, l, e-40, 0',
           <h2, classNam, e='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></h2>
-            The, Innovation, Revolution;
-              {/* TODO: Fix JSX expression */}
+            The, Innovation, Revolution; {/* TODO: Fix JSX expression */}
               },
               {/* TODO: Fix JSX expression */}
               },
@@ -77,8 +67,7 @@ const, March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression
         <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-indi, g, o-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-purp, l, e-5, 0, 0/20, m, b-16'></div>
           <div, classNam, e='te, x, t-center, m, b-12'></div>
             <h3, classNam, e='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4'>
-              Revolutionary, Success, Stories;
-                company: 'NeuroTech, Glo, b, a, l',
+              Revolutionary, Success, Stories; company: 'NeuroTech, Glo, b, a, l',
               {/* TODO: Fix JSX expression */}
               },
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16'></div>

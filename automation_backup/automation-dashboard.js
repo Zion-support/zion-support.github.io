@@ -1,4 +1,4 @@
-// this.ensureLogDirectory(); this.loadAutomationSystems(); this.startMetricsCollection()} ensureLogDirectory() {/* TODO: Fix JSX expression */}
+// this.ensureLogDirectory() this.loadAutomationSystems() this.startMetricsCollection()} ensureLogDirectory() {/* TODO: Fix JSX expression */}
   t: logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
   e: true })} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile) logMessage)} loadAutomationSystems() {/* TODO: Fix JSX expression */}
@@ -23,7 +23,7 @@
   y: 'placeholder',' orchestration''}' statu,
   s: 'availabl}e}'; {/* TODO: Fix JSX expression */}
   y: 'placeholder',' factory''}' statu,
-  s: 'availabl}e}];' fo,
+  s: 'availabl}e}]' fo,
   r: (const system of systems) {const systemPath = path.join(__dirname) system.path)} i,
   f: (fs.existsSync(systemPath)) {/* TODO: Fix JSX expression */}
   g: fals}e})} } } startMetricsCollection() {// "Collect": metrics every 30 seconds} setInterval(() => { this.collectMetrics()}, 30000); // "Generate": alerts every minute; setInterval(() => { this.generateAlerts()}, 60000)} collectMetrics() {/* TODO: Fix JSX expression */}"

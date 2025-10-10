@@ -1,6 +1,4 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-interface SEOHeadProps {/* TODO: Fix JSX expression */}
+import React from 'react'; import { Helmet } from 'react-helmet-async'; interface SEOHeadProps {/* TODO: Fix JSX expression */}
 }
 const SEOHead: React.FC<SEOHeadProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -11,18 +9,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData}) => {
-  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullCanonicalUrl = canonicalUrl.startsWith('http')
-    ? canonicalUrl;
-    : `https://zion.app${canonicalUrl}`;
-  const defaultStructuredData = {
+  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`; const fullCanonicalUrl = canonicalUrl.startsWith('http')
+    ? canonicalUrl; : `https://zion.app${canonicalUrl}`; const defaultStructuredData = {
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.png',
-    description: description;
-    sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']};
+    description: description; sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']}
   return(<Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -56,13 +50,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
 const,
   SEOHead: React.FC<SEOHeadProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullCanonicalUrl = canonicalUrl.startsWith('http')
+  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`; const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl;`
     : `http,`
-  s://zion.app${canonicalUrl}`;
-  const defaultStructuredData = {/* TODO: Fix JSX expression */}
-  };
+  s://zion.app${canonicalUrl}`; const defaultStructuredData = {/* TODO: Fix JSX expression */}
+  }
   return (<Helmet></Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} /></meta>"
@@ -106,9 +98,7 @@ const,
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
-  );
-};
-export default SEOHead;
-"`
+  ); }
+export default SEOHead; "`
   </SEOHeadProps>
   </SEOHeadProps>
