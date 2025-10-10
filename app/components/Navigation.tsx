@@ -143,17 +143,17 @@ const Navigation: React.FC = () => {
   const microSAASServices = [
     // Productivity & Management
     { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, category: 'Productivity', price: '$99/mo' },
-    { name: 'AI Quantum Task Optimizer', href: '/ai-quantum-task-optimizer', icon: Cpu, category: 'Productivity', price: '$199/mo' },
-    { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace', icon: Globe, category: 'Productivity', price: '$299/mo' },
-    { name: 'AI Neural Memory Assistant', href: '/ai-neural-memory-assistant', icon: Brain, category: 'Productivity', price: '$149/mo' },
-    { name: 'AI Telepathic Interface Pro', href: '/ai-telepathic-interface', icon: Eye, category: 'Productivity', price: '$399/mo' },
+    { name: 'AI Meeting Assistant Pro', href: '/ai-meeting-assistant', icon: Mic, category: 'Productivity', price: '$39/mo' },
+    { name: 'AI Document Manager Pro', href: '/ai-document-manager', icon: FileText, category: 'Productivity', price: '$49/mo' },
+    { name: 'AI Calendar Optimizer Pro', href: '/ai-calendar-optimizer', icon: Calendar, category: 'Productivity', price: '$29/mo' },
     { name: 'AI Task Manager Pro', href: '/ai-task-manager', icon: Check, category: 'Productivity', price: '$49/mo' },
     { name: 'AI Workflow Automation Pro', href: '/ai-workflow-automation', icon: Settings, category: 'Productivity', price: '$79/mo' },
     { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, category: 'Productivity', price: '$39/mo' },
     { name: 'AI Time Tracker Pro', href: '/ai-time-tracker', icon: Clock3, category: 'Productivity', price: '$34/mo' },
-    { name: 'AI Predictive Analytics Engine', href: '/ai-predictive-analytics-engine', icon: BarChart, category: 'Analytics', price: '$199/mo' },
-    { name: 'AI Quantum Neural Network', href: '/ai-quantum-neural-network', icon: Cpu, category: 'Quantum', price: '$999/mo' },
-    { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine', icon: Settings, category: 'AI', price: '$399/mo' },
+    { name: 'AI Email Assistant Pro', href: '/ai-email-assistant', icon: Mail, category: 'Productivity', price: '$39/mo' },
+    { name: 'AI Password Manager Pro', href: '/ai-password-manager', icon: Lock, category: 'Security', price: '$19/mo' },
+    { name: 'AI Invoice Generator Pro', href: '/ai-invoice-generator', icon: FileText, category: 'Finance', price: '$49/mo' },
+    { name: 'AI Expense Tracker Pro', href: '/ai-expense-tracker', icon: CreditCard, category: 'Finance', price: '$29/mo' },
     
     // Content & Marketing
     { name: 'AI Content Writer Pro', href: '/ai-content-writer', icon: FileText, category: 'Content', price: '$89/mo' },
@@ -476,6 +476,12 @@ const Navigation: React.FC = () => {
 
             <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
+            </a>
+            <a href="/team" className="text-white hover:text-cyan-400 transition-colors">
+              Team
+            </a>
+            <a href="/careers" className="text-white hover:text-cyan-400 transition-colors">
+              Careers
             </a>
             <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
               Blog
