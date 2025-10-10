@@ -105,16 +105,16 @@ const Navigation: React.FC = () => {
   ];
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-500/20' : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-500/20 cyber-scan-line' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group" onClick={closeAllMenus}>
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 energy-pulse">
               <Brain className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+            <span className="text-xl font-bold text-white neon-text glitch">Zion Tech Group</span>
           </Link>
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
