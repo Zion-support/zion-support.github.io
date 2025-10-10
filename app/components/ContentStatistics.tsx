@@ -1,174 +1,62 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react';
+import React from 'react';
+import { TrendingUp, Users, Award, Globe } from 'lucide-react';
 
 const ContentStatistics: React.FC = () => {
-  const [counters, setCounters] = useState({
-    clients: 0,
-    projects: 0,
-    satisfaction: 0,
-    years: 0,
-    countries: 0,
-    uptime: 0
-  });
-
-  const targetCounters = {
-    clients: 10000,
-    projects: 5000,
-    satisfaction: 99,
-    years: 15,
-    countries: 50,
-    uptime: 99
-  };
-
-  const statistics = [
+  const stats = [
     {
       icon: Users,
-      value: counters.clients,
+      value: '10,000+',
       label: 'Happy Clients',
-      suffix: '+',
-      color: 'text-blue-400',
-      description: 'Businesses trust our solutions'
+      description: 'Satisfied customers worldwide'
     },
     {
       icon: Award,
-      value: counters.projects,
+      value: '500+',
       label: 'Projects Completed',
-      suffix: '+',
-      color: 'text-purple-400',
       description: 'Successful implementations'
     },
     {
       icon: TrendingUp,
-      value: counters.satisfaction,
-      label: 'Client Satisfaction',
-      suffix: '%',
-      color: 'text-green-400',
-      description: 'Customer satisfaction rate'
-    },
-    {
-      icon: Clock,
-      value: counters.years,
-      label: 'Years Experience',
-      suffix: '+',
-      color: 'text-yellow-400',
-      description: 'Industry expertise'
+      value: '99.9%',
+      label: 'Uptime',
+      description: 'Reliable service delivery'
     },
     {
       icon: Globe,
-      value: counters.countries,
-      label: 'Countries Served',
-      suffix: '+',
-      color: 'text-cyan-400',
-      description: 'Global presence'
-    },
-    {
-      icon: BarChart3,
-      value: counters.uptime,
-      label: 'Uptime Guarantee',
-      suffix: '%',
-      color: 'text-red-400',
-      description: 'Service reliability'
+      value: '50+',
+      label: 'Countries',
+      description: 'Global presence and reach'
     }
   ];
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-      stats: ['95% Accuracy', '10x Faster', '24/7 Learning']
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-      stats: ['< 100ms Response', '99.9% Uptime', '10M+ Requests']
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-      stats: ['256-bit Encryption', 'SOC 2 Compliant', 'Zero Breaches']
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
-      stats: ['50+ Countries', '15+ Languages', '24/7 Support']
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-  const achievements = [
-    {
-      icon: Star,
-      title: 'Industry Recognition',
-      description: 'Awarded Best AI Solutions Provider 2024',
-      value: '25+'
-    },
-    {
-      icon: Target,
-      title: 'Success Rate',
-      description: 'Projects delivered on time and within budget',
-      value: '98%'
-    },
-    {
-      icon: Rocket,
-      title: 'Growth Rate',
-      description: 'Year-over-year business growth',
-      value: '300%'
-    }
-  ];
-
-  useEffect(() => {
-    const duration = 3000; // 3 seconds
-    const steps = 60;
-    const stepDuration = duration / steps;
-
-    const timers = Object.keys(targetCounters).map((key) => {
-      const target = targetCounters[key as keyof typeof targetCounters];
-      const increment = target / steps;
-      let current = 0;
-
-      return setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          current = target;
-        }
-        setCounters(prev => ({
-          ...prev,
-          [key]: Math.floor(current)
-        }));
-      }, stepDuration);
-    });
-
-    return () => {
-      timers.forEach(timer => clearInterval(timer));
-    };
-  }, []);
 
   return (
+    <section className="py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Trusted by <span className="text-cyan-400">Industry Leaders</span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Our track record speaks for itself. See why thousands of businesses trust us with their technology needs.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <stat.icon className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
+              <div className="text-xl font-semibold text-cyan-400 mb-2">{stat.label}</div>
+              <div className="text-gray-300">{stat.description}</div>
             </div>
           ))}
         </div>
-
-        {/* Features Section */}
-          </div>
-        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
