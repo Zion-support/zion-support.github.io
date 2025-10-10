@@ -417,20 +417,20 @@ const microSAASServices = [
                 </div>
               </div>
 
-              <h3 className="text-2xl font-bold text-white mb-4">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4">
                 {service.name}
               </h3>
 
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 leading-relaxed">
                 {service.description}
               </p>
 
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
-                <ul className="space-y-2">
+              <div className="mb-4 sm:mb-6">
+                <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-white mb-2 sm:mb-3">Key Features:</h4>
+                <ul className="space-y-1 sm:space-y-2">
                   {service.features.slice(0, 6).map((feature, index) => (
-                    <li key={index} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    <li key={index} className="flex items-center text-xs sm:text-sm text-gray-300">
+                      <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -438,11 +438,11 @@ const microSAASServices = [
               </div>
 
               {service.capabilities && (
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Proven Results:</h4>
+                <div className="mb-4 sm:mb-6">
+                  <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-white mb-2 sm:mb-3">Proven Results:</h4>
                   <ul className="space-y-1">
                     {service.capabilities.map((capability, index) => (
-                      <li key={index} className="flex items-center text-cyan-300 text-sm">
+                      <li key={index} className="flex items-center text-cyan-300 text-xs sm:text-sm">
                         <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
                         {capability}
                       </li>
@@ -451,18 +451,18 @@ const microSAASServices = [
                 </div>
               )}
 
-              <div className="flex items-center justify-between mb-6">
-                <div className="text-2xl font-bold text-white">
+              <div className="flex items-center justify-between mb-4 sm:mb-6">
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
                   {service.price}
                 </div>
-                <div className="text-sm text-gray-400">
+                <div className="text-xs sm:text-sm text-gray-400">
                   {service.category}
                 </div>
               </div>
 
-              <div className="flex items-center justify-between mb-6 text-sm">
+              <div className="flex items-center justify-between mb-4 sm:mb-6 text-xs sm:text-sm">
                 <div className="flex items-center text-gray-400">
-                  <Users className="w-4 h-4 mr-1" />
+                  <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
                   {service.users}
                 </div>
                 <div className="text-cyan-400 font-medium">
@@ -477,7 +477,7 @@ const microSAASServices = [
                 rel="noopener noreferrer"
               >
                 Get Started
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-2" />
               </a>
             </div>
           ))}
@@ -522,15 +522,15 @@ const microSAASServices = [
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
+      <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
+          <p className="text-lg sm:text-xl text-purple-100 mb-6 sm:mb-8">
             Join 50,000+ businesses already using our AI-powered micro SaaS solutions. Start your free trial today!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6 sm:mb-8">
             <a
               href="https://ziontechgroup.com/contact"
               className="neon-button-enhanced py-4 px-8 rounded-lg font-semibold text-lg transition-all duration-300"
@@ -544,7 +544,7 @@ const microSAASServices = [
               Call: +1 (302) 464-0950
             </a>
           </div>
-          <div className="text-purple-100 text-sm">
+          <div className="text-purple-100 text-xs sm:text-sm">
             <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
           </div>
         </div>
