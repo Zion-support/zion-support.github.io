@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -59,8 +57,20 @@ const ContentCarousel: React.FC = () => {
   }, []);
 
   return (
+    <div className="relative overflow-hidden rounded-lg">
+      <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+        {items.map((item, index) => (
+          <div key={index} className="w-full flex-shrink-0">
+            <div className="bg-gray-800 p-8 text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
+              <p className="text-gray-300 mb-6">{item.description}</p>
+              <button className="bg-cyan-500 text-white px-6 py-2 rounded-lg hover:bg-cyan-600 transition-colors">
+                Learn More
+              </button>
             </div>
           </div>
+        ))}
+      </div>
 
           {/* Navigation Buttons */}
           <button

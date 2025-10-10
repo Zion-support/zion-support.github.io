@@ -53,7 +53,12 @@ const MicroSaasPage: React.FC = () => {
   return (
     <>
       <Helmet>
+        <title>Micro SAAS Solutions | Zion Tech Group</title>
+        <meta name="description" content="Affordable Micro SAAS solutions for modern businesses. AI-powered tools and applications to streamline your operations." />
+        <meta name="keywords" content="micro saas, saas solutions, business tools, AI applications, productivity software" />
+      </Helmet>
 
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">

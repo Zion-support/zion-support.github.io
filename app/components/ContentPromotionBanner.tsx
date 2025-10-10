@@ -38,6 +38,17 @@ const ContentPromotionBanner: React.FC = () => {
   ];
 
   return (
+    <div className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-8 px-4">
+      <div className="max-w-7xl mx-auto text-center">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">
+          Transform Your Business with AI
+        </h2>
+        <p className="text-lg mb-6">
+          Discover how our AI solutions can revolutionize your operations
+        </p>
+        <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          Learn More
+        </button>
       </div>
     </div>
   );
