@@ -31,6 +31,7 @@ import {
   Search,
   Bot,
   Palette,
+  DollarSign,
   Camera,
   Music,
   Video,

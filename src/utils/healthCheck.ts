@@ -173,7 +173,7 @@ class HealthCheckService {
   private checkPerformance(): HealthCheck {
     try {
       const report = performanceMonitor.getReport()
-      const reportData = JSON.parse(report)
+      const reportData = report
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = 'Performance metrics available'
       
