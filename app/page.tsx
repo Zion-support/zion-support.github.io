@@ -128,11 +128,13 @@ const HomePage: React.FC = () => {
       </Helmet>
 
       <AccessibilityEnhancer
-        enableKeyboardNavigation={true}, enableScreenReaderSupport={true}, enableHighContrast={true}, enableFocusManagement={true}
+        enableKeyboardNavigation={true} 
+        enableScreenReaderSupport={true} 
+        enableHighContrast={true} 
+        enableFocusManagement={true}
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">=======</div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">>>>>>>> cursor/website-audit-and-update-with-deployment-26c5</div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">
         <Navigation />
         
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">{/* Hero Section */}</main>

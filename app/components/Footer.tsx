@@ -226,7 +226,9 @@ const Footer: React.FC = memo(() => {
               <li className="pt-2 border-t border-cyan-500/20">
                 <Link 
                   to="/ai-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-all duration-300 text-sm font-semibold flex items-center group">View All AI Services</Link>
+                  className="text-cyan-400 hover:text-cyan-300 transition-all duration-300 text-sm font-semibold flex items-center group"
+                >
+                  View All AI Services
                   <Zap className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </li>
@@ -255,7 +257,9 @@ const Footer: React.FC = memo(() => {
               <li className="pt-2 border-t border-purple-500/20">
                 <Link 
                   to="/it-services"
-                  className="text-purple-400 hover:text-purple-300 transition-all duration-300 text-sm font-semibold flex items-center group">View All IT Services</Link>
+                  className="text-purple-400 hover:text-purple-300 transition-all duration-300 text-sm font-semibold flex items-center group"
+                >
+                  View All IT Services
                   <Zap className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </li>
@@ -283,7 +287,9 @@ const Footer: React.FC = memo(() => {
               <li className="pt-2 border-t border-green-500/20">
                 <Link 
                   to="/micro-saas"
-                  className="text-green-400 hover:text-green-300 transition-all duration-300 text-sm font-semibold flex items-center group">View All Micro SAAS</Link>
+                  className="text-green-400 hover:text-green-300 transition-all duration-300 text-sm font-semibold flex items-center group"
+                >
+                  View All Micro SAAS
                   <Zap className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </li>
