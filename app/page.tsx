@@ -45,7 +45,9 @@ const microSAASServices = [
     price: "$99/mo",
     features: ["Smart Scheduling", "Risk Prediction", "Team Optimization", "Progress Tracking"],
     category: "Productivity",
-    popular: true
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-project-manager"
   },
   {
     name: "AI Analytics Dashboard",
