@@ -19,7 +19,10 @@ import {
   Users,
   MessageSquare,
   FileText,
-  Target
+  Target,
+  Mail,
+  Calendar,
+  ShoppingCart
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -193,6 +196,196 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $99/month',
       marketPrice: '$200-600/month',
       benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization']
+    },
+    {
+      icon: BarChart3,
+      title: 'Zion Social Media Manager',
+      description: 'AI-powered social media management platform with automated posting and analytics.',
+      category: 'saas',
+      features: ['Multi-platform Scheduling', 'AI Content Suggestions', 'Analytics Dashboard', 'Hashtag Optimization', 'Engagement Tracking', 'Competitor Analysis'],
+      price: 'Starting at $79/month',
+      marketPrice: '$150-400/month',
+      benefits: ['Save 10+ hours weekly', 'Increase engagement by 200%', 'Automated posting', 'Better content strategy']
+    },
+    {
+      icon: FileText,
+      title: 'Zion Document AI',
+      description: 'Intelligent document processing and management with OCR and automated workflows.',
+      category: 'saas',
+      features: ['OCR Text Extraction', 'Document Classification', 'Automated Workflows', 'Version Control', 'Collaboration Tools', 'Search & Retrieval'],
+      price: 'Starting at $59/month',
+      marketPrice: '$120-300/month',
+      benefits: ['Process documents 5x faster', 'Reduce manual errors', 'Better organization', 'Automated workflows']
+    },
+    {
+      icon: Users,
+      title: 'Zion HR Management',
+      description: 'Complete HR management system with employee onboarding, time tracking, and payroll integration.',
+      category: 'saas',
+      features: ['Employee Database', 'Time & Attendance', 'Payroll Integration', 'Performance Reviews', 'Leave Management', 'Compliance Tracking'],
+      price: 'Starting at $89/month',
+      marketPrice: '$200-500/month',
+      benefits: ['Streamline HR processes', 'Reduce admin time by 70%', 'Better employee experience', 'Compliance automation']
+    },
+    {
+      icon: ShoppingCart,
+      title: 'Zion Inventory Pro',
+      description: 'Advanced inventory management with real-time tracking and automated reordering.',
+      category: 'saas',
+      features: ['Real-time Inventory Tracking', 'Automated Reordering', 'Multi-location Support', 'Barcode Scanning', 'Analytics & Reports', 'Supplier Management'],
+      price: 'Starting at $129/month',
+      marketPrice: '$250-600/month',
+      benefits: ['Reduce stockouts by 80%', 'Optimize inventory levels', 'Save on storage costs', 'Better cash flow']
+    },
+    {
+      icon: Mail,
+      title: 'Zion Email Marketing Pro',
+      description: 'Advanced email marketing platform with AI-powered personalization and automation.',
+      category: 'saas',
+      features: ['AI Personalization', 'Automated Campaigns', 'A/B Testing', 'Advanced Segmentation', 'Analytics Dashboard', 'Template Library'],
+      price: 'Starting at $69/month',
+      marketPrice: '$150-400/month',
+      benefits: ['Increase open rates by 40%', 'Automated nurturing', 'Better targeting', 'Higher conversions']
+    },
+    {
+      icon: Calendar,
+      title: 'Zion Appointment Scheduler',
+      description: 'Smart appointment scheduling with automated reminders and calendar integration.',
+      category: 'saas',
+      features: ['Online Booking', 'Automated Reminders', 'Calendar Sync', 'Payment Processing', 'Custom Forms', 'Multi-timezone Support'],
+      price: 'Starting at $39/month',
+      marketPrice: '$80-200/month',
+      benefits: ['Reduce no-shows by 60%', 'Automated scheduling', 'Better customer experience', 'Save admin time']
+    },
+    {
+      icon: Shield,
+      title: 'Zion Password Manager',
+      description: 'Enterprise-grade password management with team collaboration and security features.',
+      category: 'saas',
+      features: ['Secure Password Storage', 'Team Sharing', '2FA Integration', 'Password Generator', 'Security Audit', 'Compliance Tools'],
+      price: 'Starting at $49/month',
+      marketPrice: '$100-250/month',
+      benefits: ['Enhanced security', 'Team collaboration', 'Compliance ready', 'Reduced password risks']
+    },
+    {
+      icon: BarChart3,
+      title: 'Zion Project Tracker',
+      description: 'Comprehensive project management with time tracking, resource planning, and reporting.',
+      category: 'saas',
+      features: ['Project Planning', 'Time Tracking', 'Resource Management', 'Gantt Charts', 'Team Collaboration', 'Progress Reports'],
+      price: 'Starting at $79/month',
+      marketPrice: '$150-400/month',
+      benefits: ['Improve project delivery', 'Better resource utilization', 'Real-time visibility', 'Enhanced collaboration']
+    },
+    {
+      icon: FileText,
+      title: 'Zion Contract Manager',
+      description: 'AI-powered contract management with automated review and compliance tracking.',
+      category: 'saas',
+      features: ['Contract Repository', 'AI Review', 'Automated Alerts', 'Version Control', 'Compliance Tracking', 'E-signature Integration'],
+      price: 'Starting at $99/month',
+      marketPrice: '$200-500/month',
+      benefits: ['Reduce contract risks', 'Automated compliance', 'Better organization', 'Faster negotiations']
+    },
+    {
+      icon: Users,
+      title: 'Zion Customer Portal',
+      description: 'Self-service customer portal with support tickets, knowledge base, and account management.',
+      category: 'saas',
+      features: ['Support Tickets', 'Knowledge Base', 'Account Management', 'Order Tracking', 'Billing History', 'Live Chat'],
+      price: 'Starting at $89/month',
+      marketPrice: '$180-450/month',
+      benefits: ['Reduce support costs', 'Improve customer satisfaction', '24/7 self-service', 'Better customer experience']
+    },
+    {
+      icon: BarChart3,
+      title: 'Zion Expense Tracker',
+      description: 'Automated expense tracking with receipt scanning and reimbursement workflows.',
+      category: 'saas',
+      features: ['Receipt Scanning', 'Automated Categorization', 'Approval Workflows', 'Integration with Accounting', 'Mobile App', 'Policy Compliance'],
+      price: 'Starting at $59/month',
+      marketPrice: '$120-300/month',
+      benefits: ['Reduce expense processing time', 'Better compliance', 'Automated workflows', 'Real-time tracking']
+    },
+    {
+      icon: Mail,
+      title: 'Zion Survey Builder',
+      description: 'Advanced survey and form builder with analytics and automated responses.',
+      category: 'saas',
+      features: ['Drag-and-Drop Builder', 'Advanced Logic', 'Real-time Analytics', 'Multi-channel Distribution', 'Response Management', 'Integration APIs'],
+      price: 'Starting at $49/month',
+      marketPrice: '$100-250/month',
+      benefits: ['Create surveys 10x faster', 'Better response rates', 'Real-time insights', 'Automated workflows']
+    },
+    {
+      icon: Users,
+      title: 'Zion Team Communication',
+      description: 'Secure team communication platform with video calls, file sharing, and project channels.',
+      category: 'saas',
+      features: ['Video Conferencing', 'File Sharing', 'Project Channels', 'Screen Sharing', 'Mobile Apps', 'Integration Hub'],
+      price: 'Starting at $69/month',
+      marketPrice: '$150-350/month',
+      benefits: ['Improve team collaboration', 'Reduce email overload', 'Better project visibility', 'Enhanced productivity']
+    },
+    {
+      icon: BarChart3,
+      title: 'Zion Financial Dashboard',
+      description: 'Real-time financial dashboard with cash flow tracking and automated reporting.',
+      category: 'saas',
+      features: ['Cash Flow Tracking', 'Automated Reports', 'Financial Forecasting', 'Multi-currency Support', 'Integration with Banks', 'Custom Dashboards'],
+      price: 'Starting at $99/month',
+      marketPrice: '$200-500/month',
+      benefits: ['Better financial visibility', 'Automated reporting', 'Improved cash flow', 'Data-driven decisions']
+    },
+    {
+      icon: FileText,
+      title: 'Zion Knowledge Base',
+      description: 'AI-powered knowledge management system with search and content organization.',
+      category: 'saas',
+      features: ['AI Search', 'Content Organization', 'Version Control', 'Access Control', 'Analytics', 'Integration APIs'],
+      price: 'Starting at $79/month',
+      marketPrice: '$160-400/month',
+      benefits: ['Improve knowledge sharing', 'Reduce support tickets', 'Better content organization', 'Enhanced search']
+    },
+    {
+      icon: Users,
+      title: 'Zion Employee Training',
+      description: 'Learning management system with course creation, progress tracking, and certification.',
+      category: 'saas',
+      features: ['Course Creation', 'Progress Tracking', 'Certification Management', 'Mobile Learning', 'Analytics', 'Integration Tools'],
+      price: 'Starting at $89/month',
+      marketPrice: '$180-450/month',
+      benefits: ['Improve employee skills', 'Track learning progress', 'Reduce training costs', 'Better compliance']
+    },
+    {
+      icon: BarChart3,
+      title: 'Zion Performance Monitor',
+      description: 'Application performance monitoring with real-time alerts and detailed analytics.',
+      category: 'saas',
+      features: ['Real-time Monitoring', 'Performance Alerts', 'Detailed Analytics', 'Error Tracking', 'Uptime Monitoring', 'Custom Dashboards'],
+      price: 'Starting at $69/month',
+      marketPrice: '$140-350/month',
+      benefits: ['Prevent downtime', 'Improve performance', 'Better user experience', 'Proactive monitoring']
+    },
+    {
+      icon: FileText,
+      title: 'Zion Content Scheduler',
+      description: 'Content planning and scheduling platform with team collaboration and approval workflows.',
+      category: 'saas',
+      features: ['Content Calendar', 'Team Collaboration', 'Approval Workflows', 'Multi-platform Publishing', 'Analytics', 'Template Library'],
+      price: 'Starting at $59/month',
+      marketPrice: '$120-300/month',
+      benefits: ['Improve content planning', 'Better team coordination', 'Consistent publishing', 'Enhanced productivity']
+    },
+    {
+      icon: Users,
+      title: 'Zion Feedback Manager',
+      description: 'Customer feedback collection and analysis platform with automated insights.',
+      category: 'saas',
+      features: ['Feedback Collection', 'Sentiment Analysis', 'Automated Insights', 'Action Planning', 'Integration Tools', 'Reporting Dashboard'],
+      price: 'Starting at $79/month',
+      marketPrice: '$160-400/month',
+      benefits: ['Improve customer satisfaction', 'Automated insights', 'Better decision making', 'Proactive improvements']
     }
   ];
 

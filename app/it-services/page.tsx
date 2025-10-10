@@ -22,7 +22,11 @@ import {
   ShoppingCart,
   Monitor,
   Headphones,
-  BarChart
+  BarChart,
+  Brain,
+  Link,
+  Box,
+  DollarSign
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -1006,6 +1010,552 @@ const ItServicesPage: React.FC = () => {
         'Reduced security risks'
       ],
       category: 'Cloud Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'quantum-computing',
+      name: 'Quantum Computing Solutions',
+      description: 'Quantum computing implementation and optimization services for advanced problem solving',
+      price: '$5,000/month',
+      marketPrice: '$10000-50000/month',
+      features: [
+        'Quantum algorithm development',
+        'Quantum circuit optimization',
+        'Quantum machine learning',
+        'Quantum cryptography',
+        'Quantum simulation',
+        'Hybrid classical-quantum systems',
+        'Quantum error correction',
+        'Quantum software development'
+      ],
+      benefits: [
+        'Exponential computational power',
+        'Solve complex optimization problems',
+        'Advanced cryptography',
+        'Future-proof technology'
+      ],
+      category: 'Emerging Technologies',
+      popular: false,
+      icon: Cpu
+    },
+    {
+      id: 'edge-computing-advanced',
+      name: 'Advanced Edge Computing',
+      description: 'Edge computing infrastructure and application deployment for low-latency processing',
+      price: '$2,800/month',
+      marketPrice: '$5500-18000/month',
+      features: [
+        'Edge infrastructure setup',
+        'Edge application deployment',
+        'Edge data processing',
+        'Edge AI model deployment',
+        'Edge security implementation',
+        'Edge monitoring and management',
+        'Edge-to-cloud integration',
+        'Edge performance optimization'
+      ],
+      benefits: [
+        'Ultra-low latency processing',
+        'Reduced bandwidth costs',
+        'Improved user experience',
+        'Enhanced data privacy'
+      ],
+      category: 'Edge Computing',
+      popular: true,
+      icon: Server
+    },
+    {
+      id: '5g-implementation',
+      name: '5G Network Implementation',
+      description: '5G network design, deployment, and optimization for enterprise applications',
+      price: '$4,500/month',
+      marketPrice: '$9000-30000/month',
+      features: [
+        '5G network architecture design',
+        '5G infrastructure deployment',
+        '5G application development',
+        '5G security implementation',
+        '5G performance optimization',
+        '5G testing and validation',
+        '5G integration services',
+        '5G monitoring and management'
+      ],
+      benefits: [
+        'Ultra-fast connectivity',
+        'Massive IoT support',
+        'Low latency applications',
+        'Enhanced mobile experiences'
+      ],
+      category: '5G & Connectivity',
+      popular: true,
+      icon: Wifi
+    },
+    {
+      id: 'ai-infrastructure',
+      name: 'AI Infrastructure Services',
+      description: 'Specialized infrastructure for AI/ML workloads and model deployment',
+      price: '$3,200/month',
+      marketPrice: '$6500-20000/month',
+      features: [
+        'AI/ML infrastructure design',
+        'GPU cluster setup',
+        'Model training infrastructure',
+        'Model deployment platforms',
+        'AI data pipeline setup',
+        'AI monitoring and management',
+        'AI security implementation',
+        'AI performance optimization'
+      ],
+      benefits: [
+        'Optimized AI performance',
+        'Scalable AI infrastructure',
+        'Cost-effective AI operations',
+        'Enhanced AI security'
+      ],
+      category: 'AI Infrastructure',
+      popular: true,
+      icon: Brain
+    },
+    {
+      id: 'blockchain-infrastructure',
+      name: 'Blockchain Infrastructure',
+      description: 'Blockchain network setup, smart contract deployment, and decentralized application development',
+      price: '$3,800/month',
+      marketPrice: '$7500-25000/month',
+      features: [
+        'Blockchain network design',
+        'Smart contract development',
+        'DApp development',
+        'Blockchain security auditing',
+        'Token development',
+        'DeFi protocol implementation',
+        'NFT marketplace creation',
+        'Blockchain integration'
+      ],
+      benefits: [
+        'Decentralized solutions',
+        'Enhanced security',
+        'Transparent transactions',
+        'Future-proof technology'
+      ],
+      category: 'Blockchain',
+      popular: true,
+      icon: Link
+    },
+    {
+      id: 'microservices-architecture',
+      name: 'Microservices Architecture',
+      description: 'Microservices design, implementation, and management for scalable applications',
+      price: '$2,600/month',
+      marketPrice: '$5200-16000/month',
+      features: [
+        'Microservices design',
+        'Service mesh implementation',
+        'API gateway setup',
+        'Service discovery',
+        'Load balancing',
+        'Circuit breaker patterns',
+        'Distributed tracing',
+        'Microservices monitoring'
+      ],
+      benefits: [
+        'Scalable architecture',
+        'Independent deployments',
+        'Technology diversity',
+        'Improved fault tolerance'
+      ],
+      category: 'Architecture',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'serverless-architecture',
+      name: 'Serverless Architecture',
+      description: 'Serverless application design and deployment for cost-effective scaling',
+      price: '$1,800/month',
+      marketPrice: '$3600-12000/month',
+      features: [
+        'Serverless application design',
+        'Function-as-a-Service deployment',
+        'Event-driven architecture',
+        'Serverless monitoring',
+        'Cost optimization',
+        'Security implementation',
+        'Performance tuning',
+        'Integration services'
+      ],
+      benefits: [
+        'Pay-per-use pricing',
+        'Automatic scaling',
+        'Reduced operational overhead',
+        'Faster development cycles'
+      ],
+      category: 'Serverless',
+      popular: true,
+      icon: Cloud
+    },
+    {
+      id: 'container-orchestration',
+      name: 'Container Orchestration',
+      description: 'Kubernetes and container orchestration setup and management',
+      price: '$2,400/month',
+      marketPrice: '$4800-15000/month',
+      features: [
+        'Kubernetes cluster setup',
+        'Container orchestration',
+        'Service mesh implementation',
+        'Auto-scaling configuration',
+        'Container security',
+        'Monitoring and logging',
+        'CI/CD integration',
+        'Disaster recovery'
+      ],
+      benefits: [
+        'Automated container management',
+        'High availability',
+        'Resource optimization',
+        'Simplified deployments'
+      ],
+      category: 'Containers',
+      popular: true,
+      icon: Box
+    },
+    {
+      id: 'data-lake-architecture',
+      name: 'Data Lake Architecture',
+      description: 'Data lake design and implementation for big data analytics and AI',
+      price: '$2,200/month',
+      marketPrice: '$4400-14000/month',
+      features: [
+        'Data lake design',
+        'Data ingestion pipelines',
+        'Data cataloging',
+        'Data governance',
+        'Data security',
+        'Analytics platform setup',
+        'Data visualization',
+        'Machine learning integration'
+      ],
+      benefits: [
+        'Centralized data storage',
+        'Scalable analytics',
+        'Data democratization',
+        'AI/ML readiness'
+      ],
+      category: 'Data Architecture',
+      popular: true,
+      icon: Database
+    },
+    {
+      id: 'zero-trust-security',
+      name: 'Zero Trust Security',
+      description: 'Zero trust security architecture implementation and management',
+      price: '$3,500/month',
+      marketPrice: '$7000-25000/month',
+      features: [
+        'Zero trust architecture design',
+        'Identity and access management',
+        'Network segmentation',
+        'Device trust verification',
+        'Continuous monitoring',
+        'Threat detection',
+        'Incident response',
+        'Compliance automation'
+      ],
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Better compliance',
+        'Proactive threat protection'
+      ],
+      category: 'Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'hybrid-cloud-management',
+      name: 'Hybrid Cloud Management',
+      description: 'Hybrid cloud infrastructure management and optimization',
+      price: '$2,800/month',
+      marketPrice: '$5600-18000/month',
+      features: [
+        'Hybrid cloud architecture',
+        'Multi-cloud management',
+        'Cloud migration services',
+        'Cost optimization',
+        'Security management',
+        'Performance monitoring',
+        'Disaster recovery',
+        'Compliance management'
+      ],
+      benefits: [
+        'Flexible cloud strategy',
+        'Cost optimization',
+        'Risk mitigation',
+        'Best of both worlds'
+      ],
+      category: 'Cloud Management',
+      popular: true,
+      icon: Cloud
+    },
+    {
+      id: 'api-management-platform',
+      name: 'API Management Platform',
+      description: 'Comprehensive API management and governance platform',
+      price: '$1,600/month',
+      marketPrice: '$3200-10000/month',
+      features: [
+        'API gateway setup',
+        'API lifecycle management',
+        'API security',
+        'Rate limiting and throttling',
+        'API analytics',
+        'Developer portal',
+        'API documentation',
+        'API testing'
+      ],
+      benefits: [
+        'Centralized API management',
+        'Enhanced security',
+        'Better developer experience',
+        'API monetization'
+      ],
+      category: 'API Management',
+      popular: true,
+      icon: Code
+    },
+    {
+      id: 'observability-platform',
+      name: 'Observability Platform',
+      description: 'Comprehensive observability platform for monitoring, logging, and tracing',
+      price: '$1,400/month',
+      marketPrice: '$2800-8000/month',
+      features: [
+        'Application monitoring',
+        'Infrastructure monitoring',
+        'Log aggregation',
+        'Distributed tracing',
+        'Alerting and notification',
+        'Dashboard creation',
+        'Performance analytics',
+        'Incident management'
+      ],
+      benefits: [
+        'Complete system visibility',
+        'Faster issue resolution',
+        'Proactive monitoring',
+        'Better performance'
+      ],
+      category: 'Observability',
+      popular: true,
+      icon: Monitor
+    },
+    {
+      id: 'gitops-implementation',
+      name: 'GitOps Implementation',
+      description: 'GitOps methodology implementation for automated deployments',
+      price: '$1,800/month',
+      marketPrice: '$3600-12000/month',
+      features: [
+        'GitOps workflow setup',
+        'Automated deployments',
+        'Infrastructure as Code',
+        'Configuration management',
+        'Rollback capabilities',
+        'Compliance tracking',
+        'Security scanning',
+        'Team collaboration'
+      ],
+      benefits: [
+        'Automated deployments',
+        'Better version control',
+        'Improved security',
+        'Faster delivery'
+      ],
+      category: 'DevOps',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'service-mesh-implementation',
+      name: 'Service Mesh Implementation',
+      description: 'Service mesh setup and management for microservices communication',
+      price: '$2,000/month',
+      marketPrice: '$4000-12000/month',
+      features: [
+        'Service mesh deployment',
+        'Traffic management',
+        'Security policies',
+        'Observability integration',
+        'Load balancing',
+        'Circuit breaking',
+        'Retry policies',
+        'Canary deployments'
+      ],
+      benefits: [
+        'Enhanced service communication',
+        'Improved security',
+        'Better observability',
+        'Traffic management'
+      ],
+      category: 'Microservices',
+      popular: true,
+      icon: Link
+    },
+    {
+      id: 'event-driven-architecture',
+      name: 'Event-Driven Architecture',
+      description: 'Event-driven architecture design and implementation for real-time systems',
+      price: '$2,200/month',
+      marketPrice: '$4400-14000/month',
+      features: [
+        'Event architecture design',
+        'Event streaming setup',
+        'Event sourcing',
+        'CQRS implementation',
+        'Event processing',
+        'Event storage',
+        'Event monitoring',
+        'Event security'
+      ],
+      benefits: [
+        'Real-time processing',
+        'Scalable architecture',
+        'Loose coupling',
+        'Better performance'
+      ],
+      category: 'Event Architecture',
+      popular: true,
+      icon: Zap
+    },
+    {
+      id: 'multi-cloud-strategy',
+      name: 'Multi-Cloud Strategy',
+      description: 'Multi-cloud architecture design and implementation for vendor independence',
+      price: '$3,000/month',
+      marketPrice: '$6000-20000/month',
+      features: [
+        'Multi-cloud architecture',
+        'Cloud provider evaluation',
+        'Workload distribution',
+        'Cost optimization',
+        'Security management',
+        'Disaster recovery',
+        'Compliance management',
+        'Migration planning'
+      ],
+      benefits: [
+        'Vendor independence',
+        'Risk mitigation',
+        'Cost optimization',
+        'Best-of-breed solutions'
+      ],
+      category: 'Cloud Strategy',
+      popular: true,
+      icon: Cloud
+    },
+    {
+      id: 'digital-transformation',
+      name: 'Digital Transformation',
+      description: 'Comprehensive digital transformation services for modernizing business operations',
+      price: '$5,000/month',
+      marketPrice: '$10000-50000/month',
+      features: [
+        'Digital strategy development',
+        'Process digitization',
+        'Technology modernization',
+        'Change management',
+        'Training and adoption',
+        'Performance monitoring',
+        'Continuous improvement',
+        'ROI measurement'
+      ],
+      benefits: [
+        'Modernized operations',
+        'Improved efficiency',
+        'Better customer experience',
+        'Competitive advantage'
+      ],
+      category: 'Digital Transformation',
+      popular: true,
+      icon: TrendingUp
+    },
+    {
+      id: 'legacy-modernization',
+      name: 'Legacy System Modernization',
+      description: 'Legacy system modernization and migration to modern platforms',
+      price: '$4,000/month',
+      marketPrice: '$8000-30000/month',
+      features: [
+        'Legacy system assessment',
+        'Modernization strategy',
+        'Data migration',
+        'Application refactoring',
+        'API development',
+        'Integration services',
+        'Testing and validation',
+        'Training and support'
+      ],
+      benefits: [
+        'Modern technology stack',
+        'Improved performance',
+        'Better maintainability',
+        'Enhanced security'
+      ],
+      category: 'Legacy Modernization',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'cloud-finops',
+      name: 'Cloud FinOps',
+      description: 'Cloud financial operations and cost optimization services',
+      price: '$1,200/month',
+      marketPrice: '$2400-8000/month',
+      features: [
+        'Cloud cost analysis',
+        'Cost allocation',
+        'Budget management',
+        'Resource optimization',
+        'Cost forecasting',
+        'Chargeback models',
+        'Cost governance',
+        'ROI analysis'
+      ],
+      benefits: [
+        'Reduced cloud costs',
+        'Better cost visibility',
+        'Optimized resource usage',
+        'Improved budgeting'
+      ],
+      category: 'Cloud FinOps',
+      popular: true,
+      icon: DollarSign
+    },
+    {
+      id: 'site-reliability-engineering',
+      name: 'Site Reliability Engineering',
+      description: 'SRE practices implementation for high-availability systems',
+      price: '$3,600/month',
+      marketPrice: '$7200-25000/month',
+      features: [
+        'SRE methodology implementation',
+        'Service level objectives',
+        'Error budgets',
+        'Incident management',
+        'Post-mortem analysis',
+        'Capacity planning',
+        'Performance optimization',
+        'Team training'
+      ],
+      benefits: [
+        'High system availability',
+        'Faster incident response',
+        'Better reliability',
+        'Reduced operational costs'
+      ],
+      category: 'SRE',
       popular: true,
       icon: Shield
     }
