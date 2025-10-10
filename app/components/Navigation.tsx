@@ -9,6 +9,7 @@ const Navigation: React.FC = () => {
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -36,12 +37,14 @@ const Navigation: React.FC = () => {
   const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen);
   const toggleItServices = () => setItServicesOpen(!itServicesOpen);
   const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen);
+  const toggleResources = () => setResourcesOpen(!resourcesOpen);
 
   const closeAllMenus = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
+    setResourcesOpen(false);
     setIsOpen(false);
   };
 
@@ -86,6 +89,17 @@ const Navigation: React.FC = () => {
     { name: 'Financial Tracking', href: '/micro-saas-finance', icon: DollarSign, description: 'Financial management' },
     { name: 'Inventory Management', href: '/micro-saas-inventory', icon: Box, description: 'Stock and asset tracking' },
     { name: 'Performance Monitoring', href: '/micro-saas-monitoring', icon: Monitor, description: 'System performance tracking' }
+  ];
+
+  const resourcesLinks = [
+    { name: 'Blog', href: '/blog', icon: FileText, description: 'Latest insights and updates' },
+    { name: 'Case Studies', href: '/case-studies', icon: BarChart, description: 'Success stories and results' },
+    { name: 'Documentation', href: '/docs', icon: FileText, description: 'Technical documentation' },
+    { name: 'API Reference', href: '/api-docs', icon: Code, description: 'API documentation' },
+    { name: 'Support', href: '/support', icon: MessageCircle, description: 'Get help and support' },
+    { name: 'FAQ', href: '/faq', icon: MessageCircle, description: 'Frequently asked questions' },
+    { name: 'Privacy Policy', href: '/privacy', icon: Lock, description: 'Privacy and data protection' },
+    { name: 'Terms of Service', href: '/terms', icon: FileText, description: 'Terms and conditions' }
   ];
 
   return (
@@ -258,12 +272,41 @@ const Navigation: React.FC = () => {
             <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
-            <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Case Studies
-            </Link>
-            <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Blog
-            </Link>
+            
+            {/* Resources Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggleResources}
+                className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              >
+                Resources
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              
+              {resourcesOpen && (
+                <div className="absolute left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-xl shadow-xl py-2 z-50 border border-white/10">
+                  <div className="grid grid-cols-1 gap-1">
+                    {resourcesLinks.map((resource) => (
+                      <Link
+                        key={resource.name}
+                        to={resource.href}
+                        className="block px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors group"
+                      >
+                        <div className="flex items-center">
+                          <resource.icon className="w-4 h-4 mr-3 text-purple-400 group-hover:text-purple-300" />
+                          <div>
+                            <div className="font-medium">{resource.name}</div>
+                            <div className="text-xs text-gray-400">{resource.description}</div>
+                          </div>
+                          <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-purple-400 ml-auto" />
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Contact
             </Link>
@@ -316,12 +359,41 @@ const Navigation: React.FC = () => {
               <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 About
               </Link>
-              <Link to="/case-studies" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Case Studies
-              </Link>
-              <Link to="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Blog
-              </Link>
+              
+              {/* Mobile Resources */}
+              <div>
+                <button
+                  onClick={toggleResources}
+                  className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                >
+                  Resources
+                  <ChevronDown className="w-4 h-4 ml-1" />
+                </button>
+                
+                {resourcesOpen && (
+                  <div className="ml-4 mt-2 space-y-2">
+                    <Link to="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300" onClick={closeAllMenus}>
+                      Blog
+                    </Link>
+                    <Link to="/case-studies" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300" onClick={closeAllMenus}>
+                      Case Studies
+                    </Link>
+                    <Link to="/support" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300" onClick={closeAllMenus}>
+                      Support
+                    </Link>
+                    <Link to="/faq" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300" onClick={closeAllMenus}>
+                      FAQ
+                    </Link>
+                    <Link to="/privacy" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300" onClick={closeAllMenus}>
+                      Privacy Policy
+                    </Link>
+                    <Link to="/terms" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300" onClick={closeAllMenus}>
+                      Terms of Service
+                    </Link>
+                  </div>
+                )}
+              </div>
+
               <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Contact
               </Link>

@@ -44,6 +44,21 @@ const AIVoiceAssistantPlatformPage = React.lazy(() => import('./app/ai-voice-ass
 const AIPredictiveMaintenancePage = React.lazy(() => import('./app/ai-predictive-maintenance/page'));
 const AISupplyChainOptimizationPage = React.lazy(() => import('./app/ai-supply-chain-optimization/page'));
 const AICloudInfrastructurePage = React.lazy(() => import('./app/ai-cloud-infrastructure/page'));
+// Additional pages
+const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
+const TermsPage = React.lazy(() => import('./app/terms/page'));
+const CookiesPage = React.lazy(() => import('./app/cookies/page'));
+const AiNetworkSolutionsPage = React.lazy(() => import('./app/ai-network-solutions/page'));
+const AiMobileDevelopmentPage = React.lazy(() => import('./app/ai-mobile-development/page'));
+const AiSystemIntegrationPage = React.lazy(() => import('./app/ai-system-integration/page'));
+const MicroSaasProjectManagementPage = React.lazy(() => import('./app/micro-saas-project-management/page'));
+const MicroSaasCustomerSupportPage = React.lazy(() => import('./app/micro-saas-customer-support/page'));
+const MicroSaasAnalyticsPage = React.lazy(() => import('./app/micro-saas-analytics/page'));
+const MicroSaasCmsPage = React.lazy(() => import('./app/micro-saas-cms/page'));
+const MicroSaasCollaborationPage = React.lazy(() => import('./app/micro-saas-collaboration/page'));
+const MicroSaasFinancePage = React.lazy(() => import('./app/micro-saas-finance/page'));
+const MicroSaasInventoryPage = React.lazy(() => import('./app/micro-saas-inventory/page'));
+const MicroSaasMonitoringPage = React.lazy(() => import('./app/micro-saas-monitoring/page'));
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
@@ -95,6 +110,21 @@ const App: React.FC = () => {
                             <Route path="/ai-predictive-maintenance" element={<AIPredictiveMaintenancePage />} />
                             <Route path="/ai-supply-chain-optimization" element={<AISupplyChainOptimizationPage />} />
                             <Route path="/ai-cloud-infrastructure" element={<AICloudInfrastructurePage />} />
+                            {/* Additional Routes */}
+                            <Route path="/privacy" element={<PrivacyPage />} />
+                            <Route path="/terms" element={<TermsPage />} />
+                            <Route path="/cookies" element={<CookiesPage />} />
+                            <Route path="/ai-network-solutions" element={<AiNetworkSolutionsPage />} />
+                            <Route path="/ai-mobile-development" element={<AiMobileDevelopmentPage />} />
+                            <Route path="/ai-system-integration" element={<AiSystemIntegrationPage />} />
+                            <Route path="/micro-saas-project-management" element={<MicroSaasProjectManagementPage />} />
+                            <Route path="/micro-saas-customer-support" element={<MicroSaasCustomerSupportPage />} />
+                            <Route path="/micro-saas-analytics" element={<MicroSaasAnalyticsPage />} />
+                            <Route path="/micro-saas-cms" element={<MicroSaasCmsPage />} />
+                            <Route path="/micro-saas-collaboration" element={<MicroSaasCollaborationPage />} />
+                            <Route path="/micro-saas-finance" element={<MicroSaasFinancePage />} />
+                            <Route path="/micro-saas-inventory" element={<MicroSaasInventoryPage />} />
+                            <Route path="/micro-saas-monitoring" element={<MicroSaasMonitoringPage />} />
                           </Routes>
                         </Suspense>
                       </main>
