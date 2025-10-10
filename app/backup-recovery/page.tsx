@@ -6,26 +6,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const BackupRecoveryPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
-      icon: Shield,
-      title: 'Secure Backup Solutions',
-      description: 'Advanced encryption and secure storage for your critical business data'
-    },
-    {
-      icon: Zap,
-      title: 'Fast Recovery',
-      description: 'Lightning-fast data recovery with minimal downtime for your business'
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Monitoring',
-      description: 'Intelligent monitoring and automated backup scheduling'
-    },
-    {
-      icon: Globe,
-      title: 'Global Redundancy',
-      description: 'Worldwide backup storage with multiple redundancy layers'
-=======
       icon: Database,
       title: 'Automated Backups',
       description: 'Automated backup solutions with intelligent scheduling and monitoring'
@@ -44,18 +24,12 @@ const BackupRecoveryPage: React.FC = () => {
       icon: Globe,
       title: 'Cloud Integration',
       description: 'Seamless cloud backup and recovery across multiple platforms'
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
-    'Advanced data protection and encryption',
-    'Real-time backup monitoring and alerts',
-=======
     'Automated backup scheduling',
     'Real-time data protection',
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     'Enterprise-grade security and compliance',
     'Scalable and flexible backup solutions',
     '24/7 technical support',
@@ -69,14 +43,6 @@ const BackupRecoveryPage: React.FC = () => {
       <Helmet>
         <title>Backup & Recovery | Zion Tech Group</title>
         <meta name="description" content="Professional Backup & Recovery services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<<<<<<< HEAD
-        <meta name="keywords" content="backup recovery, data protection, IT services, Zion Tech Group, disaster recovery" />
-      </Helmet>
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-=======
         <meta name="keywords" content="backup recovery, data protection, disaster recovery, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
 
@@ -84,41 +50,12 @@ const BackupRecoveryPage: React.FC = () => {
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
             Backup & Recovery
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced backup and recovery solutions. 
             Powered by cutting-edge AI technology and industry expertise.
           </p>
-<<<<<<< HEAD
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our backup solutions deliver unmatched performance, security, and scalability.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-              <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">
-            Why Choose Our Backup & Recovery Solutions?
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3">
-                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
-=======
         </div>
       </section>
 
@@ -187,7 +124,6 @@ const BackupRecoveryPage: React.FC = () => {
               <Mail className="mr-2 h-5 w-5" />
               Email Us
             </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
           </div>
         </div>
 

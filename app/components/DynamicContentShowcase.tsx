@@ -92,20 +92,11 @@ const DynamicContentShowcase: React.FC = () => {
       name: 'Michael Chen',
       company: 'DataFlow Systems',
       role: 'CEO',
-<<<<<<< HEAD
-      content: 'The performance improvements we\'ve seen are remarkable. Highly recommended!',
-=======
       content: 'Outstanding performance and reliability. Our team productivity increased by 300% and we\'ve seen a 50% reduction in operational costs.',
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
       rating: 5
     },
     {
       name: 'Emily Rodriguez',
-<<<<<<< HEAD
-      company: 'CloudFirst Solutions',
-      role: 'VP Engineering',
-      content: 'Outstanding security features and seamless integration. Perfect for our needs.',
-=======
       company: 'InnovateLab',
       role: 'Product Manager',
       content: 'The best investment we made this year. ROI was evident within the first month, and the support team is absolutely fantastic.',
@@ -116,7 +107,6 @@ const DynamicContentShowcase: React.FC = () => {
       company: 'CloudFirst Solutions',
       role: 'VP Engineering',
       content: 'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
       rating: 5
     }
   ];
@@ -125,24 +115,6 @@ const DynamicContentShowcase: React.FC = () => {
     if (!isPlaying) return;
     
     const timer = setInterval(() => {
-<<<<<<< HEAD
-      setCurrentIndex((prev) => (prev + 1) % features.length);
-    }, 3000);
-
-    return () => clearInterval(timer);
-  }, [features.length]);
-
-  return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Dynamic Content Showcase
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience our cutting-edge solutions through an interactive showcase of features and capabilities.
-          </p>
-=======
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 4000);
     
@@ -185,64 +157,12 @@ const DynamicContentShowcase: React.FC = () => {
               Learn More
             </button>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
         </div>
 
-<<<<<<< HEAD
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-              <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
-                <feature.icon className="h-6 w-6 text-white" />
-              </div>
-<<<<<<< HEAD
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Benefits Section */}
-        <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Us?</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Testimonials */}
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-white mb-8">What Our Clients Say</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-                <div className="flex justify-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div className="text-center">
-                  <p className="text-white font-semibold">{testimonial.name}</p>
-                  <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-=======
             ))}
           </div>
         </div>
       </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
 =======
       {/* Features Section */}
       <section className="py-16 px-4">
