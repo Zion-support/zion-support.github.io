@@ -58,6 +58,37 @@ const MicroSaasPage: React.FC = () => {
         <meta name="keywords" content="micro SaaS, SaaS solutions, business tools, AI tools, affordable software, subscription software" />
       </Helmet>
 
+<<<<<<< HEAD
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="container mx-auto px-4">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
+              Micro
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                {' '}SaaS
+              </span>
+              {' '}Solutions
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Affordable, scalable AI and IT tools designed for growing businesses. 
+              Start with low monthly costs and scale as you grow.
+            </p>
+          </div>
+
+          {/* Benefits */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
               </div>
             ))}
           </div>
@@ -164,11 +195,33 @@ const MicroSaasPage: React.FC = () => {
             </div>
           </div>
 
+<<<<<<< HEAD
+=======
+          {/* CTA Section */}
+          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
+>>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Choose the micro SaaS solution that fits your business needs. 
               Start with a free trial and scale as you grow.
             </p>
+<<<<<<< HEAD
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2">
+                <Zap className="w-5 h-5" />
+                <span>Start Free Trial</span>
+                <ArrowRight className="w-5 h-5" />
+              </button>
+              <Link
+                to="/contact"
+                className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+              >
+                Contact Sales
+              </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </div>
           </div>
         </div>

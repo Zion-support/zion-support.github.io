@@ -56,8 +56,16 @@ const ContactPage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
+<<<<<<< HEAD
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Get in Touch
+=======
+            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
+              Get in
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                {' '}Touch
+              </span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Ready to transform your business? Let's discuss your project and explore 
@@ -65,6 +73,7 @@ const ContactPage: React.FC = () => {
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="space-y-8">
@@ -138,6 +147,23 @@ const ContactPage: React.FC = () => {
                   <button
                     onClick={resetForm}
                     className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+=======
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+              <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
+              
+              {isSubmitted ? (
+                <div className="text-center py-12">
+                  <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
+                  <p className="text-gray-300 mb-6">
+                    Thank you for your message. We'll get back to you within 24 hours.
+                  </p>
+                  <button
+                    onClick={() => setIsSubmitted(false)}
+                    className="bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
+>>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                   >
                     Send Another Message
                   </button>
@@ -257,8 +283,13 @@ const ContactPage: React.FC = () => {
                   >
                     {isLoading ? (
                       <>
+<<<<<<< HEAD
                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                         Sending...
+=======
+                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                        <span>Sending...</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                       </>
                     ) : (
                       <>

@@ -1,5 +1,10 @@
 'use client';
 
+<<<<<<< HEAD
+=======
+import React, { useEffect } from 'react';
+import { measureWebVitals } from '../../src/utils/performanceMonitor';
+>>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
@@ -36,6 +41,10 @@ const PerformanceMonitor: React.FC = () => {
     };
   }, []);
 
+<<<<<<< HEAD
+=======
+  return null;
+>>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 };
 
 export default PerformanceMonitor;

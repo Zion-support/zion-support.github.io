@@ -15,6 +15,10 @@ interface FormStatus {
   message: string,
 }
 
+<<<<<<< HEAD
+=======
+const ContactForm: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -78,6 +82,24 @@ interface FormStatus {
     'Other'
   ];
 
+<<<<<<< HEAD
+=======
+  return (
+    <div className="max-w-2xl mx-auto">
+      <div className="bg-white rounded-2xl shadow-2xl p-8">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+          <p className="text-gray-600">
+            Ready to transform your business? Let's discuss your project.
+          </p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                Full Name *
+>>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
               </label>
               <input
                 type="text"
@@ -106,6 +128,10 @@ interface FormStatus {
                 placeholder="your.email@company.com"
               />
             </div>
+<<<<<<< HEAD
+=======
+          </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -150,6 +176,46 @@ interface FormStatus {
               onChange={handleChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
             >
+<<<<<<< HEAD
+=======
+              <option value="">Select a service</option>
+              {services.map((service) => (
+                <option key={service} value={service}>
+                  {service}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+              Message *
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              rows={5}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+              placeholder="Tell us about your project and how we can help..."
+            />
+          </div>
+
+          {status.message && (
+            <div className={`p-4 rounded-lg flex items-center space-x-3 ${
+              status.type === 'success' 
+                ? 'bg-green-50 text-green-800 border border-green-200' 
+                : status.type === 'error'
+                ? 'bg-red-50 text-red-800 border border-red-200'
+                : 'bg-blue-50 text-blue-800 border border-blue-200'
+            }`}>
+              {status.type === 'success' ? (
+                <CheckCircle className="h-5 w-5 text-green-500" />
+              ) : status.type === 'error' ? (
+                <AlertCircle className="h-5 w-5 text-red-500" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
               ) : (
                 <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
               )}

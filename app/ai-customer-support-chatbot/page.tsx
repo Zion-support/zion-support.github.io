@@ -58,21 +58,138 @@ const AICustomerSupportChatbotPage: React.FC = () => {
 
   const useCases = [
     {
+<<<<<<< HEAD
+=======
+      title: 'E-commerce Support',
+      description: 'Handle product inquiries, order tracking, and returns with AI assistance',
+      icon: '🛒'
+    },
+    {
+      title: 'Technical Support',
+      description: 'Provide technical assistance and troubleshooting for software and hardware',
+      icon: '🔧'
+    },
+    {
+      title: 'Billing & Payments',
+      description: 'Assist with billing questions, payment issues, and account management',
+      icon: '💳'
+    },
+    {
+      title: 'Product Information',
+      description: 'Answer questions about products, features, and specifications',
+      icon: '📋'
+    },
+    {
+      title: 'Appointment Scheduling',
+      description: 'Help customers schedule appointments and manage bookings',
+      icon: '📅'
+    },
+    {
+      title: 'General Inquiries',
+      description: 'Handle general questions and provide information about services',
+      icon: '❓'
+    }
+  ];
+
+  return (
+    <>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
       <Helmet>
         <title>AI Customer Support Chatbot - Zion Tech Group</title>
         <meta name="description" content="Transform your customer support with our AI Customer Support Chatbot. 24/7 availability, natural language processing, and intelligent escalation for better customer experience." />
         <meta name="keywords" content="AI chatbot, customer support chatbot, virtual assistant, customer service automation, AI support bot" />
       </Helmet>
 
+<<<<<<< HEAD
           </div>
         </section>
 
+=======
+      <Navigation />
+
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-8">
+              <Bot className="w-10 h-10 text-white" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Customer Support Chatbot
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your customer support with our AI Customer Support Chatbot. 24/7 availability, 
+              natural language processing, and intelligent escalation for better customer experience.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-600 transition-all duration-300 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </button>
+              <button className="border border-orange-400 text-orange-300 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Advanced Chatbot Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Our AI Customer Support Chatbot combines cutting-edge technology with customer expertise
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg mb-4">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+        {/* Use Cases Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Applications & Use Cases
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                From e-commerce to technical support, our AI Customer Support Chatbot serves diverse needs
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
+                  <div className="text-4xl mb-4">{useCase.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
+                </div>
+              ))}
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
           </div>
         </section>
 

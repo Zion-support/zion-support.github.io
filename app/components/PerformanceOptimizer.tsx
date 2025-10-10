@@ -44,6 +44,10 @@ const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ childre
     return () => observer.disconnect();
   }, []);
 
+<<<<<<< HEAD
+=======
+  return <>{children}</>;
+>>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 };
 
 export default PerformanceOptimizer;
