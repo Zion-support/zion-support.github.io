@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { 
   Cpu, 
@@ -26,6 +27,8 @@ const EdgeComputingPage: React.FC = () => {
       description: 'Process data at the edge for sub-millisecond response times and real-time applications.',
       benefits: ['< 1ms latency', 'Real-time processing', 'Instant decisions', 'High-frequency trading']
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
 import { Cpu, Zap, Globe, Shield, CheckCircle, ArrowRight, Phone, Mail, MapPin, Calendar, MessageSquare, Database, Network, Clock, Target, Award, Star, Brain, TrendingUp } from 'lucide-react';
 
 export default function EdgeComputingPage() {
@@ -41,11 +44,15 @@ export default function EdgeComputingPage() {
       title: 'Edge AI Processing',
       description: 'Run AI models and machine learning algorithms directly at the edge.',
       features: ['Local AI', 'Real-time Inference', 'Reduced Bandwidth', 'Privacy Protection']
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     },
     {
       icon: Globe,
       title: 'Global Edge Network',
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: 'Deploy applications across our global edge network for optimal performance worldwide.',
       benefits: ['200+ locations', 'Global coverage', 'Local processing', 'Reduced bandwidth costs']
@@ -59,10 +66,15 @@ export default function EdgeComputingPage() {
       description: 'Worldwide edge computing network for optimal performance and reliability.',
       features: ['Global Coverage', 'Load Balancing', 'Failover Protection', 'CDN Integration']
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+      description: 'Worldwide edge computing network for optimal performance and reliability.',
+      features: ['Global Coverage', 'Load Balancing', 'Failover Protection', 'CDN Integration']
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     },
     {
       icon: Shield,
       title: 'Edge Security',
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: 'Comprehensive security at the edge with encryption, authentication, and threat detection.',
       benefits: ['End-to-end encryption', 'Zero-trust security', 'Threat detection', 'Compliance ready']
@@ -70,11 +82,16 @@ export default function EdgeComputingPage() {
       description: 'Comprehensive security solutions for edge computing environments.',
       features: ['Zero Trust', 'Data Encryption', 'Access Control', 'Threat Detection']
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+      description: 'Comprehensive security solutions for edge computing environments.',
+      features: ['Zero Trust', 'Data Encryption', 'Access Control', 'Threat Detection']
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     }
   ];
 
   const useCases = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       title: 'IoT Applications',
       description: 'Real-time processing of IoT sensor data for smart cities and industrial automation.',
@@ -306,6 +323,8 @@ export default function EdgeComputingPage() {
 
 export default EdgeComputingPage;
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
       title: 'IoT Data Processing',
       description: 'Process IoT sensor data at the edge for real-time insights and control.',
       icon: '🌐'
@@ -538,5 +557,9 @@ export default EdgeComputingPage;
       </section>
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+}
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369

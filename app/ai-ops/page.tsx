@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
@@ -25,10 +26,16 @@ import { Brain, Cpu, Database, Shield, Zap, TrendingUp, CheckCircle, ArrowRight,
 
 export default function AIOpsPage() {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+import { Brain, Cpu, Database, Shield, Zap, TrendingUp, CheckCircle, ArrowRight, Settings, BarChart, Users, Clock, Target, Award, Star, Globe, Phone, Mail, MapPin, Calendar, MessageSquare } from 'lucide-react';
+
+export default function AIOpsPage() {
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
   const features = [
     {
       icon: Brain,
       title: 'Intelligent Monitoring',
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: 'AI-powered infrastructure monitoring with predictive analytics and anomaly detection.',
       benefits: ['Predictive failure detection', 'Automated root cause analysis', 'Real-time performance insights']
@@ -51,6 +58,8 @@ export default function AIOpsPage() {
       description: 'Built-in security monitoring and threat detection with automated response capabilities.',
       benefits: ['Threat detection', 'Automated security patches', 'Compliance monitoring']
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
       description: 'AI-powered system monitoring that predicts and prevents issues before they impact your business.',
       benefits: ['Predictive Analytics', 'Anomaly Detection', 'Automated Alerts']
     },
@@ -71,7 +80,10 @@ export default function AIOpsPage() {
       title: 'Enhanced Security',
       description: 'AI-powered security monitoring and threat detection to protect your infrastructure.',
       benefits: ['Threat Detection', 'Security Analytics', 'Compliance Monitoring']
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     }
   ];
 
@@ -79,6 +91,7 @@ export default function AIOpsPage() {
     {
       title: 'Infrastructure Monitoring',
       description: 'Comprehensive monitoring of servers, networks, applications, and cloud resources.',
+<<<<<<< HEAD
 <<<<<<< HEAD
       icon: Monitor
     },
@@ -102,6 +115,8 @@ export default function AIOpsPage() {
       description: 'Predictive capacity planning based on usage patterns and growth projections.',
       icon: BarChart
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
       icon: '🖥️'
     },
     {
@@ -118,14 +133,20 @@ export default function AIOpsPage() {
       title: 'Capacity Planning',
       description: 'Predictive capacity planning to ensure optimal resource utilization.',
       icon: '📊'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     },
     {
       title: 'Cost Optimization',
       description: 'AI-driven cost analysis and optimization recommendations for cloud resources.',
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: Settings
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
       icon: '💰'
     },
     {
@@ -155,11 +176,15 @@ export default function AIOpsPage() {
       metric: '24/7',
       label: 'Monitoring',
       description: 'Continuous AI-powered monitoring and alerting'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <>
       <Helmet>
@@ -320,6 +345,8 @@ export default function AIOpsPage() {
 
 export default AIOpsPage;
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -465,5 +492,9 @@ export default AIOpsPage;
       </section>
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+}
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369

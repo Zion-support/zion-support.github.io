@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { 
   Stethoscope, 
@@ -78,6 +79,8 @@ const HealthcareITPage: React.FC = () => {
       description: 'HIPAA, HITECH, and other regulatory compliance management.',
       icon: CheckCircle
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
 import { Stethoscope, Shield, Database, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Calendar, MessageSquare, Heart, Activity, FileText, Lock, Globe, Award, Star, Zap, Brain } from 'lucide-react';
 
 export default function HealthcareITPage() {
@@ -170,11 +173,15 @@ export default function HealthcareITPage() {
       title: 'Revenue Cycle Management',
       description: 'Comprehensive RCM solutions for billing and claims processing.',
       icon: '💰'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <>
       <Helmet>
@@ -374,6 +381,8 @@ export default function HealthcareITPage() {
 
 export default HealthcareITPage;
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -542,5 +551,9 @@ export default HealthcareITPage;
       </section>
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+}
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369

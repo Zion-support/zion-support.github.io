@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { 
   Wifi, 
@@ -285,6 +286,8 @@ const IoTPlatformPage: React.FC = () => {
 
 export default IoTPlatformPage;
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
 import { Wifi, Cpu, Database, Shield, CheckCircle, ArrowRight, Phone, Mail, MapPin, Calendar, MessageSquare, Network, Zap, Target, Award, Star, Brain, TrendingUp, Smartphone, Globe } from 'lucide-react';
 
 export default function IoTPlatformPage() {
@@ -549,5 +552,9 @@ export default function IoTPlatformPage() {
       </section>
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+}
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369

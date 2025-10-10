@@ -404,6 +404,7 @@ const MicroSAASPage: React.FC = () => {
       rating: 4.6,
       users: '1,700+',
 <<<<<<< HEAD
+<<<<<<< HEAD
       trial: '21-day free trial'
     },
 <<<<<<< HEAD
@@ -2216,10 +2217,13 @@ export default MicroSAASPage;orage', 'Multi-device Sync', 'Team Sharing', '2FA I
 >>>>>>> cursor/analyze-improve-and-deploy-application-58b3
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-deac
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     },
     { 
       name: 'AI Logo Designer Pro', 
       href: '/ai-logo-designer', 
+<<<<<<< HEAD
 <<<<<<< HEAD
       icon: FileText, 
       category: 'Design', 
@@ -2842,6 +2846,8 @@ export default MicroSAASPage;orage', 'Multi-device Sync', 'Team Sharing', '2FA I
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-deac
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
 
   if (!isLoaded) {
     return (

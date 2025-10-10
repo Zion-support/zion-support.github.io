@@ -238,6 +238,7 @@ const HomePage: React.FC = () => {
       
       {/* Hero Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className="relative py-20 overflow-hidden" aria-labelledby="hero-heading">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" aria-hidden="true"></div>
         
@@ -304,6 +305,8 @@ const HomePage: React.FC = () => {
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.
           </p>
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <button 
@@ -399,6 +402,7 @@ const HomePage: React.FC = () => {
                   <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
                   
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <ul className="space-y-2 mb-6" role="list" aria-label={`Features of ${service.name}`}>
 =======
                   <ul className="space-y-2 mb-6" role="list" aria-label={`${service.name} features`}>
@@ -423,6 +427,16 @@ const HomePage: React.FC = () => {
                     >
                       Learn More →
                     </button>
+=======
+                  <div className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
                   </div>
                 </div>
               </article>
@@ -431,6 +445,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* AI Services Section */}
       <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -484,10 +499,13 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
             ))}
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* IT Services Section */}
       <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -597,11 +615,14 @@ const HomePage: React.FC = () => {
       <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Contact us today for a free consultation and discover how our AI and IT solutions can revolutionize your operations.
           </p>
+<<<<<<< HEAD
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="text-center">
@@ -741,6 +762,8 @@ const HomePage: React.FC = () => {
               ))}
             </div>
           </div>
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
         </div>
       </section>
 

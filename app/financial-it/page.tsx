@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { 
   CreditCard, 
@@ -27,6 +28,8 @@ const FinancialITPage: React.FC = () => {
       description: 'Full compliance with Sarbanes-Oxley Act and financial regulatory requirements.',
       benefits: ['Audit trail management', 'Financial controls', 'Risk assessment', 'Compliance reporting']
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
 import { DollarSign, Shield, Database, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Calendar, MessageSquare, CreditCard, BarChart, Lock, Globe, Award, Star, Zap, Brain, TrendingUp } from 'lucide-react';
 
 export default function FinancialITPage() {
@@ -36,11 +39,15 @@ export default function FinancialITPage() {
       title: 'SOX-Compliant Infrastructure',
       description: 'Secure, compliant IT infrastructure designed for financial services organizations.',
       features: ['SOX Compliance', 'Data Encryption', 'Access Controls', 'Audit Logging']
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     },
     {
       icon: Database,
       title: 'Financial Data Management',
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: 'Secure financial data storage, processing, and analytics with real-time insights.',
       benefits: ['Real-time reporting', 'Data integrity', 'Automated reconciliation', 'Multi-currency support']
@@ -80,6 +87,8 @@ export default function FinancialITPage() {
       description: 'Secure payment processing and transaction management systems.',
       icon: DollarSign
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
       description: 'Advanced data management systems for financial data processing and analytics.',
       features: ['Real-time Processing', 'Data Warehousing', 'Analytics', 'Reporting']
     },
@@ -139,11 +148,15 @@ export default function FinancialITPage() {
       title: 'Payment Processing',
       description: 'Secure payment processing systems for various payment methods.',
       icon: '💳'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     },
     {
       title: 'Trading Platforms',
       description: 'High-performance trading platforms with low-latency execution.',
+<<<<<<< HEAD
 <<<<<<< HEAD
       icon: TrendingUp
     },
@@ -152,6 +165,8 @@ export default function FinancialITPage() {
       description: 'Secure customer-facing applications and self-service portals.',
       icon: Smartphone
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
       icon: '📈'
     },
     {
@@ -168,11 +183,15 @@ export default function FinancialITPage() {
       title: 'Customer Portal',
       description: 'Secure customer portals for online banking and financial services.',
       icon: '👤'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <>
       <Helmet>
@@ -372,6 +391,8 @@ export default function FinancialITPage() {
 
 export default FinancialITPage;
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -540,5 +561,9 @@ export default FinancialITPage;
       </section>
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+}
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369

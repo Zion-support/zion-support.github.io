@@ -92,14 +92,18 @@ const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
 const AIOpsPage = React.lazy(() => import('./app/ai-ops/page'));
 const HealthcareITPage = React.lazy(() => import('./app/healthcare-it/page'));
 const FinancialITPage = React.lazy(() => import('./app/financial-it/page'));
 const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
 const IoTPlatformPage = React.lazy(() => import('./app/iot-platform/page'));
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 const AIVoiceAssistantPage = React.lazy(() => import('./app/ai-voice-assistant/page'));
@@ -116,6 +120,8 @@ const AICybersecurityProPage = React.lazy(() => import('./app/ai-cybersecurity-p
 const AICloudOptimizationProPage = React.lazy(() => import('./app/ai-cloud-optimization-pro/page'));
 const AISmartCalendarProPage = React.lazy(() => import('./app/ai-smart-calendar-pro/page'));
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -162,14 +168,18 @@ const App: React.FC = memo(() => {
                       <Route path="/services" element={<ServicesPage />} />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
                       <Route path="/ai-ops" element={<AIOpsPage />} />
                       <Route path="/healthcare-it" element={<HealthcareITPage />} />
                       <Route path="/financial-it" element={<FinancialITPage />} />
                       <Route path="/edge-computing" element={<EdgeComputingPage />} />
                       <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                       <Route path="/iot-platform" element={<IoTPlatformPage />} />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                       <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
@@ -179,6 +189,8 @@ const App: React.FC = memo(() => {
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-aeba
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
                     </Routes>
                   </Suspense>
                   </main>
