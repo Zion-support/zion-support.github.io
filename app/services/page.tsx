@@ -13,18 +13,27 @@ import {
   CheckCircle,
   ArrowRight,
   Search,
-  Filter
+  Filter,
+  Settings,
+  Users
 } from 'lucide-react';
-<<<<<<< HEAD
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 const ServicesPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
   const services = [
     // AI Services
     {
+      id: 1,
       icon: Brain,
       title: 'AI Solutions',
       description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
       price: 'Starting at $1,500/month',
+      marketPrice: '$2,500-8,000/month',
       category: 'AI Services',
       popular: true
     },
