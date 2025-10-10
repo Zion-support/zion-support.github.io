@@ -119,13 +119,13 @@ const Navigation: React.FC = () => {
       hoverColor: 'hover:bg-cyan-500/20',
       services: [
         { name: 'AI Project Manager Pro', path: '/ai-project-manager', description: 'Intelligent project planning with predictive analytics', icon: '📊', popular: true },
+        { name: 'AI Smart Calendar Pro', path: '/ai-smart-calendar', description: 'AI-powered calendar management', icon: '📅', popular: true },
+        { name: 'AI Video Generator Pro', path: '/ai-video-generator', description: 'Create professional videos with AI', icon: '🎥', popular: true },
+        { name: 'AI Password Manager Pro', path: '/ai-password-manager', description: 'Ultra-secure password management', icon: '🔒', popular: true },
+        { name: 'AI Expense Tracker Pro', path: '/ai-expense-tracker', description: 'Smart expense tracking with AI', icon: '💰', popular: true },
+        { name: 'AI Invoice Generator Pro', path: '/ai-invoice-generator', description: 'Automated invoice creation', icon: '📄', popular: true },
         { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management', icon: '📱', popular: true },
-        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'AI-powered business intelligence', icon: '📈', popular: true },
-        { name: 'AI Email Marketing Suite', path: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
-        { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true },
-        { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite', icon: '✍️', popular: true },
-        { name: 'AI Financial Advisor', path: '/ai-financial-advisor', description: 'Personalized financial planning', icon: '💰', popular: false },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Visual workflow builder', icon: '⚡', popular: true }
+        { name: 'AI Email Marketing Suite', path: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true }
       ]
     },
     {
@@ -134,15 +134,14 @@ const Navigation: React.FC = () => {
       color: 'text-purple-600',
       bgColor: 'bg-purple-50',
       services: [
-        { name: 'AI Workflow Automation Platform', path: '/ai-workflow-automation', description: 'End-to-end business process automation', icon: '⚡', popular: true },
-        { name: 'AI Customer Support Suite', path: '/ai-customer-support', description: 'Advanced 24/7 customer support', icon: '🤖', popular: true },
-        { name: 'AI Data Analytics Platform', path: '/ai-data-analytics', description: 'Advanced analytics with ML predictions', icon: '📊', popular: true },
-        { name: 'AI Content Generation Studio', path: '/ai-content-generation', description: 'Complete content creation suite', icon: '✍️', popular: true },
+        { name: 'AI Analytics Platform', path: '/ai-analytics', description: 'Advanced analytics with ML predictions', icon: '📊', popular: true },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'End-to-end business process automation', icon: '⚡', popular: true },
+        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'Advanced 24/7 customer support', icon: '🤖', popular: true },
+        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'Complete content creation suite', icon: '✍️', popular: true },
         { name: 'AI Healthcare Solutions', path: '/ai-healthcare', description: 'Medical AI and diagnosis support', icon: '🏥', popular: true },
         { name: 'AI Fintech Platform', path: '/ai-fintech', description: 'Financial AI and fraud detection', icon: '💳', popular: true },
-        { name: 'AI Computer Vision Platform', path: '/ai-computer-vision', description: 'Advanced image recognition', icon: '👁️', popular: false },
-        { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform', icon: '🧠', popular: false },
-        { name: 'AI Quantum Computing', path: '/ai-quantum-computing', description: 'Next-gen quantum solutions', icon: '⚛️', popular: false }
+        { name: 'AI Security Solutions', path: '/ai-cybersecurity', description: 'Advanced AI security solutions', icon: '🛡️', popular: true },
+        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing', icon: '📄', popular: true }
       ]
     },
     {
@@ -151,14 +150,14 @@ const Navigation: React.FC = () => {
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',
       services: [
-        { name: 'Cloud Migration & Setup', path: '/cloud-migration', description: 'Seamless cloud migration', icon: '☁️', popular: true },
-        { name: 'Enterprise Cybersecurity Suite', path: '/cybersecurity', description: 'Comprehensive security solutions', icon: '🛡️', popular: true },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure', description: 'Scalable infrastructure architecture', icon: '🏗️', popular: true },
-        { name: '24/7 IT Support & Monitoring', path: '/it-support', description: 'Round-the-clock technical support', icon: '🔄', popular: true },
-        { name: 'Custom Software Development', path: '/custom-development', description: 'Tailored software solutions', icon: '💻', popular: true },
-        { name: 'DevOps & CI/CD Implementation', path: '/devops-cicd', description: 'Streamlined development processes', icon: '⚙️', popular: false },
-        { name: 'Database Management & Optimization', path: '/database-management', description: 'Performance tuning & security', icon: '🗄️', popular: false },
-        { name: 'Network Design & Implementation', path: '/network-design', description: 'Secure network infrastructure', icon: '🌐', popular: false }
+        { name: 'Cloud Migration & Setup', path: '/it-services', description: 'Seamless cloud migration', icon: '☁️', popular: true },
+        { name: 'Enterprise Cybersecurity', path: '/it-services', description: 'Comprehensive security solutions', icon: '🛡️', popular: true },
+        { name: 'IT Infrastructure Design', path: '/it-services', description: 'Scalable infrastructure architecture', icon: '🏗️', popular: true },
+        { name: '24/7 IT Support', path: '/it-services', description: 'Round-the-clock technical support', icon: '🔄', popular: true },
+        { name: 'Custom Software Development', path: '/it-services', description: 'Tailored software solutions', icon: '💻', popular: true },
+        { name: 'DevOps & CI/CD', path: '/it-services', description: 'Streamlined development processes', icon: '⚙️', popular: true },
+        { name: 'Database Management', path: '/it-services', description: 'Performance tuning & security', icon: '🗄️', popular: false },
+        { name: 'Network Design', path: '/it-services', description: 'Secure network infrastructure', icon: '🌐', popular: false }
       ]
     },
     {

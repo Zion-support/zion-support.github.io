@@ -50,7 +50,8 @@ const AIServicesPage: React.FC = () => {
         'Automated campaign optimization',
         'Real-time performance tracking',
         'Predictive customer behavior'
-      ]
+      ],
+      price: 'Starting at $299/mo'
     },
     {
       id: 2,
@@ -61,13 +62,23 @@ const AIServicesPage: React.FC = () => {
         'Process Automation',
         'Smart Workflows',
         'Error Detection',
-        'Performance Optimization'
+        'Performance Optimization',
+        'Custom Integrations',
+        'API Management',
+        'Real-time Monitoring'
       ],
       category: 'Automation',
       popular: true,
       rating: 4.9,
       users: '3,200+',
-      color: 'from-blue-500 to-cyan-600'
+      color: 'from-blue-500 to-cyan-600',
+      capabilities: [
+        '80% reduction in manual tasks',
+        '99.9% automation accuracy',
+        'Real-time process monitoring',
+        'Custom workflow creation'
+      ],
+      price: 'Starting at $199/mo'
     },
     {
       id: 3,
@@ -78,13 +89,23 @@ const AIServicesPage: React.FC = () => {
         'Threat Detection',
         'Anomaly Detection',
         'Automated Response',
-        'Security Analytics'
+        'Security Analytics',
+        'Real-time Monitoring',
+        'Incident Response',
+        'Compliance Management'
       ],
       category: 'Security',
-      popular: false,
+      popular: true,
       rating: 4.7,
       users: '1,500+',
-      color: 'from-red-500 to-orange-600'
+      color: 'from-red-500 to-orange-600',
+      capabilities: [
+        '99.9% threat detection accuracy',
+        'Real-time security monitoring',
+        'Automated incident response',
+        'Compliance automation'
+      ],
+      price: 'Starting at $399/mo'
     },
     {
       id: 4,
@@ -95,17 +116,81 @@ const AIServicesPage: React.FC = () => {
         'OCR Processing',
         'Data Extraction',
         'Document Classification',
-        'Automated Workflows'
+        'Automated Workflows',
+        'Multi-language Support',
+        'Batch Processing',
+        'API Integration'
       ],
       category: 'Document Processing',
-      popular: false,
+      popular: true,
       rating: 4.6,
       users: '1,800+',
-      color: 'from-green-500 to-emerald-600'
+      color: 'from-green-500 to-emerald-600',
+      capabilities: [
+        '99.5% extraction accuracy',
+        'Process 10,000+ documents/hour',
+        'Multi-format support',
+        'Automated data validation'
+      ],
+      price: 'Starting at $149/mo'
+    },
+    {
+      id: 5,
+      name: 'AI Customer Support',
+      description: 'Intelligent customer support with natural language processing and automation',
+      icon: Users,
+      features: [
+        '24/7 AI Chatbots',
+        'Natural Language Processing',
+        'Sentiment Analysis',
+        'Ticket Routing',
+        'Knowledge Base Integration',
+        'Multi-language Support',
+        'Human Handoff'
+      ],
+      category: 'Customer Service',
+      popular: true,
+      rating: 4.8,
+      users: '4,500+',
+      color: 'from-indigo-500 to-purple-600',
+      capabilities: [
+        '90% query resolution rate',
+        '24/7 availability',
+        'Multi-language support',
+        'Seamless human handoff'
+      ],
+      price: 'Starting at $99/mo'
+    },
+    {
+      id: 6,
+      name: 'AI Content Generation',
+      description: 'Create high-quality content at scale with AI-powered writing and editing',
+      icon: FileText,
+      features: [
+        'Content Writing',
+        'SEO Optimization',
+        'Brand Voice Matching',
+        'Multi-language Support',
+        'Content Templates',
+        'Plagiarism Detection',
+        'Performance Analytics'
+      ],
+      category: 'Content',
+      popular: true,
+      rating: 4.7,
+      users: '3,800+',
+      color: 'from-teal-500 to-cyan-600',
+      capabilities: [
+        '10x faster content creation',
+        'SEO-optimized content',
+        'Brand consistency',
+        'Multi-language support'
+      ],
+      price: 'Starting at $79/mo'
     }
   ];
 
-  const categories = ['All', 'Marketing', 'Automation', 'Security', 'Document Processing'];
+  const categories = ['All', 'Marketing', 'Automation', 'Security', 'Document Processing', 'Customer Service', 'Content'];
 
   if (!isLoaded) {
     return (
@@ -186,6 +271,22 @@ const AIServicesPage: React.FC = () => {
                 <div className="text-sm text-gray-400">
                   {service.category}
                 </div>
+              </div>
+
+              <div className="mb-6">
+                <div className="text-2xl font-bold text-white mb-2">
+                  {service.price}
+                </div>
+                {service.capabilities && (
+                  <div className="space-y-1">
+                    {service.capabilities.map((capability, capIndex) => (
+                      <div key={capIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                        {capability}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
 
               <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">

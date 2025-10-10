@@ -73,7 +73,7 @@ const MicroSAASPage: React.FC = () => {
       price: '$199/mo',
       description: 'Create professional videos with AI-powered editing and effects',
       features: ['Auto Editing', 'Voice Synthesis', 'Visual Effects', 'Template Library'],
-      popular: false,
+      popular: true,
       rating: 4.6
     },
     { 
@@ -95,6 +95,39 @@ const MicroSAASPage: React.FC = () => {
       price: '$79/mo',
       description: 'Intelligent email marketing with personalization and automation',
       features: ['Personalization', 'A/B Testing', 'Automation', 'Analytics'],
+      popular: true,
+      rating: 4.7
+    },
+    { 
+      name: 'AI Password Manager Pro', 
+      href: '/ai-password-manager', 
+      icon: Lock, 
+      category: 'Security', 
+      price: '$4.99/mo',
+      description: 'Ultra-secure password management with AI-powered generation and monitoring',
+      features: ['AI Generation', 'Security Monitoring', 'One-Click Login', 'Multi-Platform Sync'],
+      popular: true,
+      rating: 4.9
+    },
+    { 
+      name: 'AI Expense Tracker Pro', 
+      href: '/ai-expense-tracker', 
+      icon: DollarSign, 
+      category: 'Finance', 
+      price: '$9.99/mo',
+      description: 'Smart expense tracking with AI receipt scanning and financial insights',
+      features: ['Receipt Scanning', 'Smart Categorization', 'Analytics', 'Budgeting'],
+      popular: true,
+      rating: 4.8
+    },
+    { 
+      name: 'AI Invoice Generator Pro', 
+      href: '/ai-invoice-generator', 
+      icon: FileText, 
+      category: 'Business', 
+      price: '$19.99/mo',
+      description: 'Automated invoice creation with AI-powered billing and payment processing',
+      features: ['Auto Generation', 'Payment Processing', 'Analytics', 'Multi-Currency'],
       popular: true,
       rating: 4.7
     }
