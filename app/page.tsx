@@ -1309,8 +1309,161 @@ const HomePage: React.FC = () => {
       rating: 4.9,
       users: '1,500+',
       freeTrial: '30 days'
+    },
+    // Revolutionary AI Services
+    {
+      title: 'AI Quantum Computing Interface',
+      description: 'Access quantum computing power through our AI interface. Solve complex optimization problems 1000x faster than classical computers.',
+      icon: '⚛️',
+      price: '$2,999/month',
+      originalPrice: '$4,999/month',
+      features: ['Quantum algorithm optimization', 'Quantum machine learning', 'Cryptographic security', 'Molecular simulation', 'Financial modeling', 'Drug discovery', 'Climate modeling', 'Quantum encryption'],
+      benefits: ['1000x faster processing', 'Quantum advantage', 'Breakthrough solutions', 'Future-proof technology'],
+      link: '/ai-quantum-computing-interface',
+      popular: true,
+      category: 'Quantum AI',
+      rating: 4.9,
+      users: '150+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Neural Interface Pro',
+      description: 'Direct brain-computer interface using advanced neural networks. Control devices with your thoughts and enhance cognitive abilities.',
+      icon: '🧠',
+      price: '$4,999/month',
+      originalPrice: '$7,999/month',
+      features: ['Neural signal processing', 'Thought-to-text conversion', 'Cognitive enhancement', 'Memory augmentation', 'Focus optimization', 'Sleep quality improvement', 'Stress reduction', 'Learning acceleration'],
+      benefits: ['Direct brain control', 'Enhanced cognition', 'Improved memory', 'Peak mental performance'],
+      link: '/ai-neural-interface',
+      popular: true,
+      category: 'Neural AI',
+      rating: 4.8,
+      users: '75+',
+      freeTrial: '3 days'
+    },
+    {
+      title: 'AI Holographic Reality Studio',
+      description: 'Create immersive holographic experiences with AI-powered 3D modeling, spatial computing, and photorealistic rendering.',
+      icon: '🌐',
+      price: '$3,499/month',
+      originalPrice: '$5,499/month',
+      features: ['Holographic 3D modeling', 'Spatial computing', 'Photorealistic rendering', 'AR/VR integration', 'Gesture recognition', 'Voice commands', 'Real-time collaboration', 'Haptic feedback'],
+      benefits: ['Immersive experiences', 'Next-gen content', 'Spatial computing', 'Future of interaction'],
+      link: '/ai-holographic-reality-studio',
+      popular: true,
+      category: 'Holographic AI',
+      rating: 4.9,
+      users: '200+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Molecular Designer Pro',
+      description: 'Design new materials, drugs, and compounds using AI-powered molecular simulation and quantum chemistry calculations.',
+      icon: '🧬',
+      price: '$2,499/month',
+      originalPrice: '$3,999/month',
+      features: ['Molecular simulation', 'Drug discovery', 'Material design', 'Quantum chemistry', 'Property prediction', 'Synthesis planning', 'Toxicity analysis', 'Patent generation'],
+      benefits: ['Faster drug discovery', 'New materials', 'Cost reduction', 'Scientific breakthroughs'],
+      link: '/ai-molecular-designer',
+      popular: true,
+      category: 'Scientific AI',
+      rating: 4.8,
+      users: '300+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'AI Climate Intelligence Platform',
+      description: 'Advanced climate modeling and environmental prediction using AI to combat climate change and optimize sustainability.',
+      icon: '🌍',
+      price: '$1,999/month',
+      originalPrice: '$2,999/month',
+      features: ['Climate modeling', 'Weather prediction', 'Carbon tracking', 'Sustainability optimization', 'Renewable energy planning', 'Emission reduction', 'Environmental monitoring', 'Policy recommendations'],
+      benefits: ['Climate solutions', 'Sustainability optimization', 'Environmental protection', 'Future planning'],
+      link: '/ai-climate-intelligence',
+      popular: true,
+      category: 'Environmental AI',
+      rating: 4.9,
+      users: '500+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Space Exploration Assistant',
+      description: 'AI-powered space mission planning, satellite management, and astronomical research with real-time data analysis.',
+      icon: '🚀',
+      price: '$3,999/month',
+      originalPrice: '$5,999/month',
+      features: ['Mission planning', 'Satellite management', 'Astronomical analysis', 'Orbital mechanics', 'Space weather prediction', 'Resource optimization', 'Risk assessment', 'Data visualization'],
+      benefits: ['Space mission success', 'Satellite optimization', 'Scientific discovery', 'Space exploration'],
+      link: '/ai-space-exploration',
+      popular: true,
+      category: 'Space AI',
+      rating: 4.9,
+      users: '100+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Blockchain Intelligence Suite',
+      description: 'Advanced blockchain analytics, smart contract optimization, and DeFi protocol management with AI-powered insights.',
+      icon: '⛓️',
+      price: '$1,799/month',
+      originalPrice: '$2,499/month',
+      features: ['Blockchain analytics', 'Smart contract optimization', 'DeFi protocol management', 'Token economics', 'Security auditing', 'Yield farming optimization', 'NFT marketplace', 'Cross-chain bridges'],
+      benefits: ['DeFi optimization', 'Smart contract security', 'Yield maximization', 'Blockchain innovation'],
+      link: '/ai-blockchain-intelligence',
+      popular: true,
+      category: 'Blockchain AI',
+      rating: 4.8,
+      users: '400+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'AI Autonomous Vehicle Controller',
+      description: 'Advanced AI system for autonomous vehicle control with real-time decision making, safety optimization, and fleet management.',
+      icon: '🚗',
+      price: '$2,799/month',
+      originalPrice: '$3,999/month',
+      features: ['Real-time decision making', 'Safety optimization', 'Fleet management', 'Route optimization', 'Predictive maintenance', 'Weather adaptation', 'Traffic analysis', 'Emergency response'],
+      benefits: ['Safer transportation', 'Fleet optimization', 'Cost reduction', 'Autonomous future'],
+      link: '/ai-autonomous-vehicle',
+      popular: true,
+      category: 'Autonomous AI',
+      rating: 4.9,
+      users: '250+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Medical Diagnosis Pro',
+      description: 'Advanced medical AI for accurate diagnosis, treatment recommendations, and patient monitoring with 99.7% accuracy.',
+      icon: '🏥',
+      price: '$3,299/month',
+      originalPrice: '$4,999/month',
+      features: ['Medical diagnosis', 'Treatment recommendations', 'Patient monitoring', 'Medical imaging analysis', 'Drug interaction checking', 'Symptom analysis', 'Health trend prediction', 'Emergency alerts'],
+      benefits: ['99.7% diagnostic accuracy', 'Faster diagnosis', 'Better patient outcomes', 'Medical innovation'],
+      link: '/ai-medical-diagnosis',
+      popular: true,
+      category: 'Medical AI',
+      rating: 4.9,
+      users: '600+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Financial Trading Algorithm',
+      description: 'Advanced AI trading system with real-time market analysis, risk management, and automated trading strategies.',
+      icon: '📈',
+      price: '$1,499/month',
+      originalPrice: '$2,299/month',
+      features: ['Real-time market analysis', 'Risk management', 'Automated trading', 'Portfolio optimization', 'Sentiment analysis', 'News impact analysis', 'Backtesting', 'Performance analytics'],
+      benefits: ['Higher returns', 'Risk reduction', '24/7 trading', 'Data-driven decisions'],
+      link: '/ai-financial-trading',
+      popular: true,
+      category: 'Financial AI',
+      rating: 4.8,
+      users: '800+',
+      freeTrial: '7 days'
     }
   ];
+
+  const additionalMicroSAASServices = [
     {
       title: 'AI Meeting Assistant Pro',
       description: 'Revolutionary meeting management with real-time transcription, action item extraction, and intelligent follow-ups. Used by Fortune 500 companies.',
@@ -2239,6 +2392,8 @@ const HomePage: React.FC = () => {
       freeTrial: '21 days'
     }
   ];
+
+  const additionalAIServices = [
     {
       title: 'AI Cybersecurity Shield Pro',
       description: 'Advanced AI-powered security solutions with real-time threat detection, behavioral analysis, and automated response.',
@@ -2738,6 +2893,8 @@ const HomePage: React.FC = () => {
       freeTrial: '14 days'
     }
   ];
+
+  const additionalITServices = [
     {
       title: 'Enterprise IT Infrastructure',
       description: 'Complete enterprise IT infrastructure with high availability, scalability, and security. Built for Fortune 500 companies.',
@@ -2901,6 +3058,127 @@ const HomePage: React.FC = () => {
       category: 'Enterprise',
       rating: 4.9,
       users: '200+',
+      freeTrial: '30 days'
+    },
+    // Revolutionary IT Services
+    {
+      title: 'AI-Powered Edge Computing',
+      description: 'Next-generation edge computing with AI inference, real-time processing, and ultra-low latency. Process data at the edge for maximum performance.',
+      icon: Cpu,
+      price: '$2,999/month',
+      originalPrice: '$4,499/month',
+      features: ['AI Edge Inference', 'Real-time Processing', 'Ultra-low Latency', 'Distributed Computing', 'Edge Analytics', 'IoT Integration', '5G Optimization', 'Autonomous Operation'],
+      benefits: ['Ultra-low latency', 'Real-time AI', 'Edge intelligence', '5G ready'],
+      link: '/ai-edge-computing',
+      popular: true,
+      category: 'Edge Computing',
+      rating: 4.9,
+      users: '150+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'Quantum-Safe Cybersecurity',
+      description: 'Future-proof cybersecurity with quantum-resistant encryption, post-quantum cryptography, and quantum key distribution.',
+      icon: Shield,
+      price: '$3,499/month',
+      originalPrice: '$5,299/month',
+      features: ['Quantum-resistant Encryption', 'Post-quantum Cryptography', 'Quantum Key Distribution', 'Hybrid Security', 'Migration Planning', 'Compliance', 'Risk Assessment', 'Future-proofing'],
+      benefits: ['Quantum-safe security', 'Future-proof protection', 'Advanced encryption', 'Compliance ready'],
+      link: '/quantum-safe-cybersecurity',
+      popular: true,
+      category: 'Quantum Security',
+      rating: 4.9,
+      users: '100+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'Neuromorphic Computing Infrastructure',
+      description: 'Revolutionary neuromorphic computing with brain-inspired processors, spiking neural networks, and ultra-efficient AI processing.',
+      icon: Brain,
+      price: '$4,999/month',
+      originalPrice: '$7,999/month',
+      features: ['Neuromorphic Processors', 'Spiking Neural Networks', 'Ultra-efficient AI', 'Real-time Learning', 'Adaptive Computing', 'Energy Optimization', 'Pattern Recognition', 'Cognitive Computing'],
+      benefits: ['Ultra-efficient AI', 'Real-time learning', 'Brain-inspired computing', 'Energy optimization'],
+      link: '/neuromorphic-computing',
+      popular: true,
+      category: 'Neuromorphic',
+      rating: 4.8,
+      users: '75+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'Holographic Data Centers',
+      description: 'Revolutionary holographic data storage and processing with 3D data structures, spatial computing, and infinite scalability.',
+      icon: Cube,
+      price: '$3,999/month',
+      originalPrice: '$6,299/month',
+      features: ['Holographic Storage', '3D Data Structures', 'Spatial Computing', 'Infinite Scalability', 'Light-speed Processing', 'Quantum Storage', 'Holographic Displays', 'Spatial Analytics'],
+      benefits: ['Infinite storage', '3D data processing', 'Light-speed access', 'Future technology'],
+      link: '/holographic-data-centers',
+      popular: true,
+      category: 'Holographic IT',
+      rating: 4.9,
+      users: '50+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'AI-Powered Network Orchestration',
+      description: 'Intelligent network management with AI-driven optimization, self-healing networks, and predictive maintenance.',
+      icon: Globe,
+      price: '$2,299/month',
+      originalPrice: '$3,499/month',
+      features: ['AI Network Optimization', 'Self-healing Networks', 'Predictive Maintenance', 'Traffic Intelligence', 'Security Automation', 'Performance Tuning', 'Capacity Planning', 'Anomaly Detection'],
+      benefits: ['Self-healing networks', 'Predictive maintenance', 'AI optimization', 'Zero downtime'],
+      link: '/ai-network-orchestration',
+      popular: true,
+      category: 'Network AI',
+      rating: 4.8,
+      users: '300+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'Molecular Computing Infrastructure',
+      description: 'Revolutionary molecular computing with DNA storage, molecular processors, and biological computing systems.',
+      icon: '🧬',
+      price: '$5,999/month',
+      originalPrice: '$9,999/month',
+      features: ['DNA Data Storage', 'Molecular Processors', 'Biological Computing', 'Synthetic Biology', 'Molecular Memory', 'Bio-sensors', 'Molecular Networks', 'Biological AI'],
+      benefits: ['Massive data storage', 'Molecular processing', 'Biological computing', 'Revolutionary technology'],
+      link: '/molecular-computing',
+      popular: true,
+      category: 'Molecular IT',
+      rating: 4.9,
+      users: '25+',
+      freeTrial: '60 days'
+    },
+    {
+      title: 'Space-Based Computing',
+      description: 'Orbital computing infrastructure with satellite processing, space-based data centers, and interplanetary networks.',
+      icon: '🚀',
+      price: '$7,999/month',
+      originalPrice: '$12,999/month',
+      features: ['Satellite Processing', 'Space Data Centers', 'Interplanetary Networks', 'Orbital Computing', 'Space Weather Monitoring', 'Satellite Management', 'Space Communications', 'Orbital Analytics'],
+      benefits: ['Global coverage', 'Space-based processing', 'Interplanetary networks', 'Future infrastructure'],
+      link: '/space-based-computing',
+      popular: true,
+      category: 'Space IT',
+      rating: 4.9,
+      users: '15+',
+      freeTrial: '90 days'
+    },
+    {
+      title: 'AI-Powered Green IT',
+      description: 'Sustainable IT infrastructure with AI-driven energy optimization, carbon-neutral computing, and environmental monitoring.',
+      icon: '🌱',
+      price: '$1,799/month',
+      originalPrice: '$2,699/month',
+      features: ['Energy Optimization', 'Carbon-neutral Computing', 'Environmental Monitoring', 'Green Data Centers', 'Renewable Energy', 'Waste Reduction', 'Sustainability Metrics', 'Green AI'],
+      benefits: ['Carbon neutral', 'Energy efficient', 'Sustainable computing', 'Environmental impact'],
+      link: '/ai-green-it',
+      popular: true,
+      category: 'Green IT',
+      rating: 4.8,
+      users: '400+',
       freeTrial: '30 days'
     }
   ];
@@ -3145,6 +3423,157 @@ const HomePage: React.FC = () => {
       rating: 4.9,
       users: '250+',
       freeTrial: '30 days'
+    },
+    // Revolutionary Specialized Services
+    {
+      title: 'AI-Powered Quantum Biology',
+      description: 'Revolutionary quantum biology solutions with molecular AI, quantum genetics, and biological quantum computing for breakthrough discoveries.',
+      icon: '🧬',
+      price: '$6,999/month',
+      originalPrice: '$10,999/month',
+      features: ['Molecular AI', 'Quantum Genetics', 'Biological Quantum Computing', 'Protein Folding', 'Drug Discovery', 'Quantum Biology', 'Synthetic Life', 'Bio-Quantum Interfaces'],
+      benefits: ['Breakthrough discoveries', 'Quantum biology', 'Molecular AI', 'Life sciences revolution'],
+      link: '/ai-quantum-biology',
+      popular: true,
+      category: 'Quantum Biology',
+      rating: 4.9,
+      users: '30+',
+      freeTrial: '90 days'
+    },
+    {
+      title: 'Holographic Data Visualization',
+      description: 'Revolutionary holographic data visualization with 3D analytics, spatial data processing, and immersive data exploration for complex datasets.',
+      icon: '🌐',
+      price: '$4,499/month',
+      originalPrice: '$6,999/month',
+      features: ['3D Data Visualization', 'Spatial Analytics', 'Holographic Displays', 'Immersive Exploration', 'Real-time Rendering', 'Data Interaction', 'Collaborative Analysis', 'AR/VR Integration'],
+      benefits: ['Immersive data exploration', '3D analytics', 'Spatial understanding', 'Next-gen visualization'],
+      link: '/holographic-data-visualization',
+      popular: true,
+      category: 'Holographic Analytics',
+      rating: 4.8,
+      users: '80+',
+      freeTrial: '45 days'
+    },
+    {
+      title: 'AI-Powered Space Manufacturing',
+      description: 'Revolutionary space manufacturing with zero-gravity production, orbital factories, and space-based material science for next-generation manufacturing.',
+      icon: '🚀',
+      price: '$8,999/month',
+      originalPrice: '$14,999/month',
+      features: ['Zero-gravity Production', 'Orbital Factories', 'Space Material Science', 'Microgravity Manufacturing', 'Space Robotics', 'Orbital Logistics', 'Space Quality Control', 'Earth Return Systems'],
+      benefits: ['Space manufacturing', 'Zero-gravity production', 'Advanced materials', 'Space industry leadership'],
+      link: '/ai-space-manufacturing',
+      popular: true,
+      category: 'Space Manufacturing',
+      rating: 4.9,
+      users: '20+',
+      freeTrial: '120 days'
+    },
+    {
+      title: 'Neural Interface Development',
+      description: 'Advanced neural interface development with brain-computer interfaces, neural prosthetics, and cognitive enhancement technologies.',
+      icon: '🧠',
+      price: '$5,999/month',
+      originalPrice: '$9,999/month',
+      features: ['Brain-Computer Interfaces', 'Neural Prosthetics', 'Cognitive Enhancement', 'Neural Signal Processing', 'Brain Mapping', 'Neural Implants', 'Thought Control', 'Memory Enhancement'],
+      benefits: ['Direct brain control', 'Neural prosthetics', 'Cognitive enhancement', 'Medical breakthroughs'],
+      link: '/neural-interface-development',
+      popular: true,
+      category: 'Neural Technology',
+      rating: 4.9,
+      users: '40+',
+      freeTrial: '60 days'
+    },
+    {
+      title: 'AI-Powered Climate Engineering',
+      description: 'Revolutionary climate engineering with AI-controlled weather modification, carbon capture optimization, and climate restoration technologies.',
+      icon: '🌍',
+      price: '$7,499/month',
+      originalPrice: '$11,999/month',
+      features: ['Weather Modification', 'Carbon Capture AI', 'Climate Restoration', 'Atmospheric Engineering', 'Ocean Restoration', 'Geoengineering', 'Climate Modeling', 'Environmental AI'],
+      benefits: ['Climate restoration', 'Weather control', 'Environmental healing', 'Climate solutions'],
+      link: '/ai-climate-engineering',
+      popular: true,
+      category: 'Climate Engineering',
+      rating: 4.8,
+      users: '60+',
+      freeTrial: '90 days'
+    },
+    {
+      title: 'Quantum Internet Infrastructure',
+      description: 'Revolutionary quantum internet with quantum communication, quantum encryption, and quantum networking for ultra-secure global communication.',
+      icon: '🌐',
+      price: '$9,999/month',
+      originalPrice: '$15,999/month',
+      features: ['Quantum Communication', 'Quantum Encryption', 'Quantum Networking', 'Quantum Key Distribution', 'Quantum Teleportation', 'Quantum Repeaters', 'Quantum Routers', 'Quantum Security'],
+      benefits: ['Ultra-secure communication', 'Quantum encryption', 'Future internet', 'Unbreakable security'],
+      link: '/quantum-internet-infrastructure',
+      popular: true,
+      category: 'Quantum Internet',
+      rating: 4.9,
+      users: '25+',
+      freeTrial: '120 days'
+    },
+    {
+      title: 'AI-Powered Time Dilation Computing',
+      description: 'Revolutionary time dilation computing with relativistic processing, temporal data analysis, and time-based quantum computing for complex temporal problems.',
+      icon: '⏰',
+      price: '$12,999/month',
+      originalPrice: '$19,999/month',
+      features: ['Relativistic Processing', 'Temporal Data Analysis', 'Time-based Quantum Computing', 'Temporal Algorithms', 'Time Dilation Effects', 'Temporal Optimization', 'Time Travel Simulation', 'Temporal AI'],
+      benefits: ['Temporal computing', 'Time-based processing', 'Relativistic effects', 'Future technology'],
+      link: '/ai-time-dilation-computing',
+      popular: true,
+      category: 'Temporal Computing',
+      rating: 4.9,
+      users: '10+',
+      freeTrial: '180 days'
+    },
+    {
+      title: 'Holographic Memory Systems',
+      description: 'Revolutionary holographic memory with 3D data storage, light-speed retrieval, and infinite capacity for next-generation data management.',
+      icon: '💾',
+      price: '$3,999/month',
+      originalPrice: '$6,299/month',
+      features: ['3D Data Storage', 'Light-speed Retrieval', 'Infinite Capacity', 'Holographic Displays', 'Spatial Memory', 'Quantum Storage', 'Holographic Processing', 'Memory AI'],
+      benefits: ['Infinite storage', 'Light-speed access', '3D memory', 'Future data management'],
+      link: '/holographic-memory-systems',
+      popular: true,
+      category: 'Holographic Storage',
+      rating: 4.8,
+      users: '100+',
+      freeTrial: '60 days'
+    },
+    {
+      title: 'AI-Powered Consciousness Transfer',
+      description: 'Revolutionary consciousness transfer technology with digital consciousness, mind uploading, and AI-human consciousness integration.',
+      icon: '👤',
+      price: '$15,999/month',
+      originalPrice: '$24,999/month',
+      features: ['Digital Consciousness', 'Mind Uploading', 'AI-Human Integration', 'Consciousness Backup', 'Digital Immortality', 'Consciousness Transfer', 'Neural Mapping', 'Digital Life'],
+      benefits: ['Digital immortality', 'Consciousness backup', 'AI-human integration', 'Transhumanist technology'],
+      link: '/ai-consciousness-transfer',
+      popular: true,
+      category: 'Consciousness Technology',
+      rating: 4.9,
+      users: '5+',
+      freeTrial: '365 days'
+    },
+    {
+      title: 'Quantum Teleportation Network',
+      description: 'Revolutionary quantum teleportation network with instant data transfer, quantum entanglement communication, and quantum transportation systems.',
+      icon: '⚡',
+      price: '$19,999/month',
+      originalPrice: '$29,999/month',
+      features: ['Quantum Teleportation', 'Instant Data Transfer', 'Quantum Entanglement', 'Quantum Transportation', 'Quantum Communication', 'Quantum Networks', 'Quantum Security', 'Quantum AI'],
+      benefits: ['Instant transfer', 'Quantum teleportation', 'Unbreakable security', 'Revolutionary technology'],
+      link: '/quantum-teleportation-network',
+      popular: true,
+      category: 'Quantum Teleportation',
+      rating: 4.9,
+      users: '3+',
+      freeTrial: '365 days'
     }
   ];
 
@@ -3212,17 +3641,39 @@ const HomePage: React.FC = () => {
           enableErrorReporting={true}
         />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-          {/* Animated Background Elements */}
+          {/* Enhanced Futuristic Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
+            {/* Cyber Grid Background */}
+            <div className="absolute inset-0 cyber-grid"></div>
+            <div className="absolute inset-0 neural-network-bg"></div>
+            <div className="absolute inset-0 particle-field"></div>
+            <div className="absolute inset-0 quantum-field"></div>
+            <div className="absolute inset-0 matrix-rain"></div>
+            
+            {/* Floating Geometric Shapes */}
+            <div className="absolute top-20 left-10 w-4 h-4 bg-cyan-400/30 rounded-full animate-pulse floating"></div>
+            <div className="absolute top-40 right-20 w-6 h-6 bg-purple-400/30 rounded-full animate-pulse floating" style={{animationDelay: '1s'}}></div>
+            <div className="absolute bottom-40 left-1/4 w-3 h-3 bg-pink-400/30 rounded-full animate-pulse floating" style={{animationDelay: '2s'}}></div>
+            <div className="absolute top-60 right-1/3 w-5 h-5 bg-green-400/30 rounded-full animate-pulse floating" style={{animationDelay: '3s'}}></div>
+            
+            {/* Cyber Scan Lines */}
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent cyber-scan-line"></div>
+            <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400/50 to-transparent cyber-scan-line" style={{animationDelay: '1s'}}></div>
+            
+            {/* Enhanced Glow Effects */}
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
             <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-400/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+            
+            {/* Additional Quantum Effects */}
+            <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-cyan-400/20 to-purple-400/20 rounded-full blur-2xl animate-pulse delay-700"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-gradient-to-r from-pink-400/20 to-cyan-400/20 rounded-full blur-2xl animate-pulse delay-300"></div>
           </div>
           
           <Navigation />
           
-          {/* Hero Section */}
-          <section className="relative pt-20 pb-16 overflow-hidden cyber-grid neural-network-bg particle-field">
+          {/* Enhanced Hero Section */}
+          <section className="relative pt-20 pb-16 overflow-hidden cyber-grid neural-network-bg particle-field quantum-field matrix-rain">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent"></div>
             
@@ -3239,9 +3690,9 @@ const HomePage: React.FC = () => {
                   <span className="text-cyan-300 text-sm font-medium">Trusted by 500+ Fortune 500 Companies</span>
                 </div>
                 
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight cyber-text-3d neon-text">
                   Transform Your Business with
-                  <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
+                  <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse holographic">
                     AI-Powered Solutions
                   </span>
                 </h1>
@@ -3315,15 +3766,15 @@ const HomePage: React.FC = () => {
                 </h2>
                 <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                   Powerful, affordable AI-powered tools designed for modern businesses. 
-                  Choose from our comprehensive suite of <span className="text-cyan-400 font-semibold">50+ micro SAAS solutions</span> that boost productivity and drive growth.
+                  Choose from our comprehensive suite of <span className="text-cyan-400 font-semibold">60+ micro SAAS solutions</span> that boost productivity and drive growth.
                 </p>
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 md:gap-8">
-                {microSAASServices.map((service, index) => (
+                {[...microSAASServices, ...additionalMicroSAASServices].map((service, index) => (
                   <div
                     key={index}
-                    className="group relative bg-slate-900/80 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-500 h-full flex flex-col hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                    className="group relative bg-slate-900/80 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-500 h-full flex flex-col hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cyber-card quantum-card energy-pulse"
                   >
                     {/* Glow Effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -3426,7 +3877,7 @@ const HomePage: React.FC = () => {
                 {aiServices.map((service, index) => (
                   <div
                     key={index}
-                    className="group relative bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-6 hover:border-purple-400/40 transition-all duration-500 h-full flex flex-col hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10"
+                    className="group relative bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-6 hover:border-purple-400/40 transition-all duration-500 h-full flex flex-col hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 cyber-card quantum-card energy-pulse"
                   >
                     {/* Glow Effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -3511,7 +3962,7 @@ const HomePage: React.FC = () => {
               <div className="text-center mb-16">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-400/20 mb-6 backdrop-blur-sm">
                   <Settings className="w-4 h-4 text-green-400 mr-2" />
-                  <span className="text-green-300 text-sm font-medium">12+ IT Services & Solutions</span>
+                  <span className="text-green-300 text-sm font-medium">20+ IT Services & Solutions</span>
                 </div>
                 
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -3526,10 +3977,10 @@ const HomePage: React.FC = () => {
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
-                {itServices.map((service, index) => (
+                {[...itServices, ...additionalITServices].map((service, index) => (
                   <div
                     key={index}
-                    className="group relative bg-slate-900/80 backdrop-blur-sm border border-green-400/20 rounded-2xl p-6 hover:border-green-400/40 transition-all duration-500 h-full flex flex-col hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10"
+                    className="group relative bg-slate-900/80 backdrop-blur-sm border border-green-400/20 rounded-2xl p-6 hover:border-green-400/40 transition-all duration-500 h-full flex flex-col hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10 cyber-card quantum-card energy-pulse"
                   >
                     {/* Glow Effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-emerald-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -3614,7 +4065,7 @@ const HomePage: React.FC = () => {
               <div className="text-center mb-16">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-400/20 mb-6 backdrop-blur-sm">
                   <Cpu className="w-4 h-4 text-orange-400 mr-2" />
-                  <span className="text-orange-300 text-sm font-medium">4+ Specialized Solutions</span>
+                  <span className="text-orange-300 text-sm font-medium">15+ Specialized Solutions</span>
                 </div>
                 
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -3632,7 +4083,7 @@ const HomePage: React.FC = () => {
                 {specializedServices.map((service, index) => (
                   <div
                     key={index}
-                    className="group relative bg-slate-800/80 backdrop-blur-sm border border-orange-400/20 rounded-2xl p-6 hover:border-orange-400/40 transition-all duration-500 h-full flex flex-col hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/10"
+                    className="group relative bg-slate-800/80 backdrop-blur-sm border border-orange-400/20 rounded-2xl p-6 hover:border-orange-400/40 transition-all duration-500 h-full flex flex-col hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/10 cyber-card quantum-card energy-pulse"
                   >
                     {/* Glow Effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-red-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
