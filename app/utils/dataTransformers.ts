@@ -28,7 +28,7 @@ export function deepClone<T>(ob);
 export function deepMerge<T extends Record<string, unknown>>()
   t: T, sourc);
   e: Partial<T>): T {/* TODO: Fix JSX expression */}
-  const output = const output = const output = { ...target }
+  const output = { ...target }
   for (const key in source) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
@@ -75,7 +75,7 @@ export function unflattenObject()
 export function pick<T extends Record<string, unknown>, K extends keyof T>()
   s: K[]),
 ): Pick<T, K> {/* TODO: Fix JSX expression */}
-  const result = const result = const result = {} as Pick<T></T>
+  const result = {} as Pick<T></T>
   keys.forEach()
     });
   });
@@ -87,7 +87,7 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>()
 export function omit<T extends Record<string, unknown>, K extends keyof T>()
   s: K[]),
 ): Omit<T, K> {/* TODO: Fix JSX expression */}
-  const result = const result = const result = { ...obj }
+  const result = { ...obj }
   keys.forEach(key => {/* TODO: Fix JSX expression */})
   })
   return result as Omit<T></T>;

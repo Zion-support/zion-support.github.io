@@ -3,12 +3,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react';
 const AccessibilityPage: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     {
       icon: Eye,
       title: 'Visual Accessibility',;
       description: 'Comprehensive visual accessibility features including high contrast modes, text scaling, and screen reader compatibility.',;
-      benefits: ['High contrast mode', 'Text scaling', 'Screen reader support', 'Color blind friendly'];
+      benefits: ['High contrast mode', 'Text scaling', 'Screen reader support', 'Color blind friendly'],
     },
     {
       icon: MousePointer,
@@ -41,7 +41,7 @@ const AccessibilityPage: React.FC = () => {
       benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
     },
   ];
-const standards = const standards = const standards = [
+const standards = [
     {
       name: 'WCAG 2.1 AA',
       description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',

@@ -27,7 +27,7 @@ const [isIntersecting, setIsIntersecting] = useState(false);
 useEffect(() => {
     const element = ref.current;
     if (!element) return;
-const observer = const observer = new IntersectionObserver()
+const observer = new IntersectionObserver()
       ([entry]) => {;
         setIsIntersecting(entry.isIntersecting);
         setEntry(entry);

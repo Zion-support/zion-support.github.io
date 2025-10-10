@@ -29,7 +29,7 @@ import {
   }
 } from 'lucide-react'
 const ProcessAutomationPage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
       icon: Zap,
       title: 'Workflow Automation',
@@ -52,7 +52,7 @@ const ProcessAutomationPage: React.FC = () => {
   };
     };
   ];
-const benefits = const benefits = const benefits = [
+const benefits = [
     'Reduce manual work and human errors',
     'Increase operational efficiency',
     'Lower operational costs',

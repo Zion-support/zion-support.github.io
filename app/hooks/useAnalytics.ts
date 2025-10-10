@@ -5,8 +5,8 @@ interface AnalyticsEvent {
   value?: number
   }
 }
-export const useAnalytics = const useAnalytics = ();
-  const trackEvent = const trackEvent = useCallback((eventName: string, parameters: AnalyticsEvent) => {;
+export const useAnalytics = ();
+  const trackEvent = useCallback((eventName: string, parameters: AnalyticsEvent) => {;
     ) => {;
   return ()
   )
@@ -15,13 +15,13 @@ export const useAnalytics = const useAnalytics = ();
       (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', eventName, parameters);
     }
   }, []);
-const trackPageView = const trackPageView = const trackPageView = useCallback((pagePath: string, pageTitle: string) => {
+const trackPageView = useCallback((pagePath: string, pageTitle: string) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {}
       (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.()
       });
     };
   }, []);
-const trackConversion = const trackConversion = const trackConversion = useCallback((conversionId: string, value?: number) => {
+const trackConversion = useCallback((conversionId: string, value?: number) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {}
       (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.()
       });

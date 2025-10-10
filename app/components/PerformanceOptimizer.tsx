@@ -30,7 +30,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
     })
   }, [enableImageOptimization]);
 
-  const optimizeMemory = const optimizeMemory = useCallback(() => {;
+  const optimizeMemory = useCallback(() => {;
     if ('memory' in performance) {;
       const memory = (performance as any).memory;
       if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
@@ -66,7 +66,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
 
   useEffect(() => {
     // Run initial optimizations
-    const timer = const timer = const timer = setTimeout(() => {;
+    const timer = setTimeout(() => {;
       runOptimizations();
   }, 1000);
 
@@ -106,7 +106,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
       document.head.appendChild(fontPreload),
 
       // Preload critical images
-      const criticalImages = const criticalImages = const criticalImages = [;
+      const criticalImages = [;
         '/images/hero-bg.jpg',;
         '/images/logo.png';
       ];
@@ -136,7 +136,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
 
     // Intersection Observer for lazy loading
     if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-    const imageObserver = const imageObserver = const imageObserver = new IntersectionObserver((entries, observer) => {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach();
           if (entry.isIntersecting) {;
             const img = entry.target as HTMLImageElement;
@@ -155,7 +155,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
 
     // Performance monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = const observer = const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
             // LCP measurement logged for performance monitoring

@@ -17,7 +17,7 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 // Preload critical components;
-const preloadComponents = const preloadComponents = ()
+const preloadComponents = ()
   if (typeof window !== 'undefined') {;
     // Preload critical components after initial render;
     setTimeout(() => {
@@ -47,7 +47,7 @@ useEffect(() => {
   }
   }, []);
   // Analytics tracking for phone clicks - optimized;
-  const handlePhoneClick = const handlePhoneClick = const handlePhoneClick = useCallback(() => {
+  const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag()
       });

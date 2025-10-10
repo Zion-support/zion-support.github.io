@@ -10,12 +10,12 @@ const AISmartContractAuditor: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  const features = const features = const features = [
+  const features = [
     {
       icon: Shield,
       title: 'Automated Security Analysis',;
       description: 'AI-powered vulnerability detection in smart contracts using advanced static analysis',;
-      benefits: ['Detects 99.9% of common vulnerabilities', 'Reduces audit time by 80%', 'Zero false positives'];
+      benefits: ['Detects 99.9% of common vulnerabilities', 'Reduces audit time by 80%', 'Zero false positives'],
     },
     {
       icon: Code,
@@ -36,7 +36,7 @@ const AISmartContractAuditor: React.FC = () => {
       benefits: ['Continuous learning', 'Pattern recognition', 'Predictive analysis']
     },
   ];
-  const pricingPlans = const pricingPlans = const pricingPlans = [
+  const pricingPlans = [
     {
       name: 'Starter',
       price: '$299',
@@ -89,7 +89,7 @@ const AISmartContractAuditor: React.FC = () => {
     };
   ];
 
-  const useCases = const useCases = const useCases = [
+  const useCases = [
     {
       title: 'DeFi Protocol Audits',
       description: 'Comprehensive security analysis for decentralized finance protocols',

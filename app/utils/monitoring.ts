@@ -48,7 +48,7 @@ class MonitoringService {}
     if ('PerformanceObserver' in window) {
       try {
         // Largest Contentful Paint;
-        const lcpObserver = const lcpObserver = const lcpObserver = new PerformanceObserver((list) => {
+        const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
   };
           const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
@@ -68,7 +68,7 @@ class MonitoringService {}
         fidObserver.observe({ entryTypes: ['first-input'] })
         // Cumulative Layout Shift;
         let clsValue = 0;
-        const clsObserver = const clsObserver = new PerformanceObserver();
+        const clsObserver = new PerformanceObserver();
     const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
@@ -81,7 +81,7 @@ class MonitoringService {}
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
         // First Contentful Paint;
-        const fcpObserver = const fcpObserver = new PerformanceObserver();
+        const fcpObserver = new PerformanceObserver();
     const entries = list.getEntries();
           entries.forEach()
             this.reportMetric('fcp', entry.startTime)
@@ -97,7 +97,7 @@ class MonitoringService {}
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
       try {
-        const longTaskObserver = const longTaskObserver = const longTaskObserver = new PerformanceObserver((list) => {
+        const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
     // Keep HEAD version
   }
@@ -149,7 +149,7 @@ class MonitoringService {}
       return
   }
     }
-    const thresholds = const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals];
+    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals];
     if (thresholds) {;
     const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor';
     // Keep HEAD version;

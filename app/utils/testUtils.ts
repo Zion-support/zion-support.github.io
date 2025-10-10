@@ -6,7 +6,7 @@
 /**;
  * Wait for a specified amount of time;
  */;
-export const wait = const wait = const wait = (ms: number): Promise<void> => {
+export const wait = (ms: number): Promise<void> => {
     ,
   };
 export const wait = (ms: number): Promise<void> => {};
@@ -15,7 +15,7 @@ export const wait = (ms: number): Promise<void> => {};
 /**;
  * Wait for a condition to be true;
  */;
-export const waitFor = const waitFor = async ()
+export const waitFor = async ()
   condition: () => boolean,
   timeout = 5000,;
   interval = 100;
@@ -34,7 +34,7 @@ export const waitFor = const waitFor = async ()
 /**;
  * Mock fetch for testing;
  */;
-export const mockFetch = const mockFetch = ()
+export const mockFetch = ()
 ): void => {}
   if (typeof global !== 'undefined') {};
     (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>;
@@ -71,7 +71,7 @@ export class MockStorage implements Storage {}
   }
   key(index: number): string | null {
     ,
-    const keys = const keys = const keys = Array.from(this.store.keys()),;
+    const keys = Array.from(this.store.keys()),;
   };
     return keys[index] || null;}
   }
@@ -100,19 +100,19 @@ export class MockStorage implements Storage {}
 /**;
  * Create a mock localStorage for testing;
  */;
-export const createMockStorage = const createMockStorage = (): MockStorage => {};
+export const createMockStorage = (): MockStorage => {};
   return new MockStorage();}
 }
 /**;
  * Mock window object;
  */;
-export const mockWindow = const mockWindow = (overrides: Partial<Window> = {}): void => {;
+export const mockWindow = (overrides: Partial<Window> = {}): void => {;
     if (typeof global !== 'undefined') {;
     Object.defineProperty(global, 'window', {);
       value: {),
         ...global.window),
   }
-export const mockWindow = const mockWindow = const mockWindow = (overrides: Partial<Window> = {}): void => {}
+export const mockWindow = (overrides: Partial<Window> = {}): void => {}
   if (typeof global !== 'undefined') {}
     Object.defineProperty(global, 'window', {)}
       value: {}
@@ -140,7 +140,7 @@ export const waitFor = async (conditio);
 /**;
  * Mock fetch for testing;
  */;
-export const mockFetch = const mockFetch = const mockFetch = ()
+export const mockFetch = ()
   s: Record<string, string> = {});
 ): void => {/* TODO: Fix JSX expression */};
   h: typeof fetch }).fetch = jest.fn(() =>;
@@ -173,7 +173,7 @@ export class MockStorage implements Storage {/* TODO: Fix JSX expression */}
 /**;
  * Create a mock localStorage for testing;
  */;
-export const createMockStorage = const createMockStorage = const createMockStorage = (): MockStorage => {/* TODO: Fix JSX expression */};
+export const createMockStorage = (): MockStorage => {/* TODO: Fix JSX expression */};
 };
 /**;
  * Mock window object;
@@ -188,7 +188,7 @@ export const mockWindow = (override);
 /**;
  * Create a mock performance API;
  */;
-export const createMockPerformance = const createMockPerformance = (): Performance => {};
+export const createMockPerformance = (): Performance => {};
   const entries: PerformanceEntry[] = [];
   return {
     now: () => Date.now(),
@@ -245,7 +245,7 @@ export const createMockPerformance = const createMockPerformance = (): Performan
     dispatchEvent: () => true,
     onresourcetimingbufferfull: null,
     timeOrigin: Date.now(),
-export const createMockPerformance = const createMockPerformance = const createMockPerformance = (): Performance => {/* TODO: Fix JSX expression */};
+export const createMockPerformance = (): Performance => {/* TODO: Fix JSX expression */};
   N: () => ({});
       } as PerformanceEntry);
     },
@@ -288,7 +288,7 @@ export const createMockPerformance = const createMockPerformance = const createM
 /**;
  * Generate random test data;
  */;
-export const generateTestData = const generateTestData = const generateTestData = {
+export const generateTestData = {
     string: (length = 10): string => {,
     return Math.random(),
       .toString(36),
@@ -318,7 +318,7 @@ export const generateTestData = {};
     return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000);},
   array: <T>(generator: () => T, length = 5): T[] => {}
     return Array.from({ length }, generator);
-export const generateTestData = const generateTestData = const generateTestData = {/* TODO: Fix JSX expression */},
+export const generateTestData = {/* TODO: Fix JSX expression */},
   numbe,
   r: (min = 0, max = 100): number => {/* TODO: Fix JSX expression */},
   boolea,
@@ -342,7 +342,7 @@ export const generateTestData = const generateTestData = const generateTestData 
 /**;
  * Deep clone an object;
  */;
-export const deepClone = const deepClone = const deepClone = <T>(obj: T): T => {
+export const deepClone = <T>(obj: T): T => {
     ,
   };
 export const deepClone = <T>(obj: T): T => {};
@@ -351,7 +351,7 @@ export const deepClone = <T>(obj: T): T => {};
 /**;
  * Compare objects for equality;
  */;
-export const deepEqual = const deepEqual = const deepEqual = (obj1: unknown, obj2: unknown): boolean => {
+export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {
     ,
   };
 export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {};
@@ -410,7 +410,7 @@ export const deepClone = <T>(ob);
 /**;
  * Compare objects for equality;
  */;
-export const deepEqual = const deepEqual = const deepEqual = ();
+export const deepEqual = ();
   1: unknown, obj);
   2: unknown): boolean => {/* TODO: Fix JSX expression */}
 }
@@ -448,7 +448,7 @@ export interface Deferred<T> {
   }
   reject: (reason?: unknown) => void,}
 }
-export const createDeferred = const createDeferred = const createDeferred = <T>(): Deferred<T> => {
+export const createDeferred = <T>(): Deferred<T> => {
     let resolve as any: (value: T) => void
   let reject as any: (reason?: unknown) => void,
   const promise = new Promise<T>((res, rej) => {
@@ -470,7 +470,7 @@ export const createDeferred = <T>(): Deferred<T> => {}
 }
 export interface Deferred<T> {/* TODO: Fix JSX expression */}
 }
-export const createDeferred = const createDeferred = const createDeferred = <T>(): Deferred<T> => {/* TODO: Fix JSX expression */}
+export const createDeferred = <T>(): Deferred<T> => {/* TODO: Fix JSX expression */}
   })
   return { promise, resolve, reject };
 };
@@ -512,7 +512,7 @@ export const retryWithBackoff = async <T>(f);
 /**;
  * Measure execution time of a function;
  */;
-export const measureExecutionTime = const measureExecutionTime = async <T>()
+export const measureExecutionTime = async <T>()
   fn: () => T | Promise<T>): Promise<{ result: T, duration: number }> => {
     fn: () => T | Promise<T></T>
   }

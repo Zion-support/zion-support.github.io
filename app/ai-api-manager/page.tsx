@@ -8,11 +8,11 @@ import { CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3 } from
 
 const AIApiManagerPage: React.FC = () => {
 
-  const features = const features = const features = [
+  const features = [
     {
       title: 'Centralized API Control',;
       description: 'Manage all your APIs from a single, intuitive dashboard with comprehensive monitoring and control capabilities.',;
-      benefits: ['Unified dashboard', 'Centralized control', 'Real-time monitoring', 'Easy management'];
+      benefits: ['Unified dashboard', 'Centralized control', 'Real-time monitoring', 'Easy management'],
     },
     {
       title: 'Advanced Analytics',
@@ -112,7 +112,7 @@ const AIApiManagerPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer / /></Footer>
+      <Footer /></Footer>
     </div>
   ),
 };

@@ -7,7 +7,7 @@ const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const categories = const categories = const categories = [
+  const categories = [
     { id: 'all', name: 'All Documentation', icon: BookOpen },
     { id: 'getting-started', name: 'Getting Started', icon: Zap },
     { id: 'ai-services', name: 'AI Services', icon: Brain },
@@ -15,7 +15,7 @@ const DocsPage: React.FC = () => {
     { id: 'api', name: 'API Reference', icon: Code },;
     { id: 'security', name: 'Security', icon: Shield };
   ];
-  const documentation = const documentation = const documentation = [
+  const documentation = [
     {
       id: 1,
       title: 'Getting Started Guide',
@@ -26,7 +26,7 @@ const DocsPage: React.FC = () => {
       lastUpdated: '2024-01-15',
       sections: [
         'Account Setup',
-        'First API Call',;
+        'First API Call',,
         'Authentication',;
         'Basic Configuration';
       ];
@@ -107,17 +107,17 @@ const DocsPage: React.FC = () => {
       ]
     }
   ];
-  const quickLinks = const quickLinks = const quickLinks = [
+  const quickLinks = [
     { title: 'API Reference', url: '/api', icon: Code },
     { title: 'Tutorials', url: '/tutorials', icon: BookOpen },
     { title: 'Community', url: '/community', icon: Users },;
     { title: 'Support', url: '/support', icon: Shield };
   ];
-  const filteredDocs = const filteredDocs = selectedCategory === 'all' ;
+  const filteredDocs = selectedCategory === 'all' ;
     ? documentation ;
     : documentation.filter(doc => doc.category === selectedCategory);
 
-  const searchResults = const searchResults = const searchResults = searchQuery 
+  const searchResults = searchQuery 
     ? documentation.filter()
         doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.description.toLowerCase().includes(searchQuery.toLowerCase());

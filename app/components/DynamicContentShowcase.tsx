@@ -5,7 +5,7 @@ import { Brain, Cloud, Zap, Shield, Globe, Users, CheckCircle, Star, ArrowRight 
 const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const features = const features = const features = [
+  const features = [
     {
       id: 1,
       title: 'AI Solutions',
@@ -49,7 +49,7 @@ const DynamicContentShowcase: React.FC = () => {
       color: 'from-teal-500 to-cyan-600';
     };
   ];
-  const benefits = const benefits = const benefits = [
+  const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -60,7 +60,7 @@ const DynamicContentShowcase: React.FC = () => {
     'Proven track record of success';
   ];
 
-  const testimonials = const testimonials = const testimonials = [
+  const testimonials = [
     {
       name: 'Sarah Johnson',
       company: 'TechCorp Inc.',

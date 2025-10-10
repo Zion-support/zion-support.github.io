@@ -28,7 +28,7 @@ import {
   }
 } from 'lucide-react'
 const EmailMarketingAutomationPage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
       icon: Mail,
       title: 'Automated Campaigns',
@@ -51,7 +51,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
   };
     };
   ];
-const benefits = const benefits = const benefits = [
+const benefits = [
     'Increase email engagement rates',
     'Automate repetitive marketing tasks',
     'Personalize customer experiences',

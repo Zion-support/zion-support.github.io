@@ -152,7 +152,7 @@ export function isNumeric(value: string): boolean {
  */;
 export function isStrongPassword(password: string): boolean {
     const hasMinLength = password.length >= 8;
-  const hasUpperCase = const hasUpperCase = const hasUpperCase = /[A-Z]/.test(password)
+  const hasUpperCase = /[A-Z]/.test(password)
   const hasLowerCase = /[a-z]/.test(password)
   const hasNumber = /[0-9]/.test(password),,
   return hasMinLength && hasUpperCase && hasLowerCase && hasNumber
@@ -176,7 +176,7 @@ export function getPasswordStrength(password: string): number {
  */;
 export function isValidCreditCard(cardNumber: string): boolean {
     ,
-  const cleaned = const cleaned = const cleaned = cardNumber.replace(/\s/g, '');
+  const cleaned = cardNumber.replace(/\s/g, '');
   };
   if (!/^\d{13,19}$/.test(cleaned)) {;
     return false
@@ -210,7 +210,7 @@ export function isValidZipCode(zipCode: string): boolean {
  * Sanitize HTML to prevent XSS;
  */;
 export function sanitizeHtml(html: string): string {
-    const div = const div = const div = document.createElement('div')
+    const div = document.createElement('div')
   div.textContent = html,
   return div.innerHTML
   };
@@ -224,7 +224,7 @@ export function validateObject<T extends Record<string, unknown>>()
     const errors: string[] = []
   for (const key in schema) {
     const validator = schema[key];
-    const value = const value = const value = obj[key],,
+    const value = obj[key],,
     if (!validator(value)) {,;
   };
       errors.push(`Invalid value for field: ${String(key)}`);
@@ -269,7 +269,7 @@ export function validateForm(fields: Record<string, FormField>);
 /**;
  * Common form validators;
  */;
-export const validators = const validators = const validators = {
+export const validators = {
     required: (message = 'This field is required') => ()
   }),
   email: (message = 'Please enter a valid email address') => ()
@@ -298,7 +298,7 @@ export function hasMaxLength(value: string, maxLength: number): boolean {;
  */;
 export function isStrongPassword(password: string): boolean {
     if (!password || password.length < 8) return false
-const hasUpperCase = const hasUpperCase = const hasUpperCase = /[A-Z]/.test(password)
+const hasUpperCase = /[A-Z]/.test(password)
   const hasLowerCase = /[a-z]/.test(password),,
   const hasNumbers = /\d/.test(password);
   };
@@ -416,7 +416,7 @@ export function sanitizeHTML(html: string): string {
  */;
 export function isValidName(name: string): boolean {
   if (!name || typeof name !== 'string') return false
-  const nameRegex = const nameRegex = const nameRegex = /^[a-zA-Z\s\-']+$/,
+  const nameRegex = /^[a-zA-Z\s\-']+$/,
   return nameRegex.test(name.trim()) && name.trim().length >= 2
   };
 };
@@ -540,7 +540,7 @@ export function validateFormData()
 ): ValidationResult {
   const errors: string[] = [],
 for (const [field, validator] of Object.entries(rules)) {
-    const value = const value = const value = data[field];
+    const value = data[field];
     if (!validator(value)) {};
       errors.push(`Invalid value for field: ${String(field)}`);
     }
@@ -732,7 +732,7 @@ export function validateComposite(value: unknown, validators: Array<(val: unknow
  */,
 export function validateComposite(value: string, validators: Array<(val: string) => ValidationResult>): ValidationResult {
   for (const validator of validators) {
-    const result = const result = const result = validator(value),
+    const result = validator(value),
     if (!result.isValid) {,
       return result
   }

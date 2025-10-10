@@ -1,5 +1,5 @@
 // Performance optimization utilities;
-export const debounce = const debounce = const debounce = <T extends (...args: any[]) => any>()
+export const debounce = <T extends (...args: any[]) => any>()
 ): ((...args: Parameters<T>) => void) => {
     let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {,
@@ -13,7 +13,7 @@ export const debounce = const debounce = const debounce = <T extends (...args: a
     timeout = setTimeout(() => func(...args), wait);
   }
 }
-export const throttle = const throttle = const throttle = <T extends (...args: any[]) => any>()
+export const throttle = <T extends (...args: any[]) => any>()
 ): ((...args: Parameters<T>) => void) => {
     let inThrottle: boolean,
   return (...args: Parameters<T>) => {
@@ -31,12 +31,12 @@ export const throttle = const throttle = const throttle = <T extends (...args: a
     }
   }
 }
-export const lazyLoad = const lazyLoad = const lazyLoad = (callback: () => void, options?: IntersectionObserverInit) => {};
+export const lazyLoad = (callback: () => void, options?: IntersectionObserverInit) => {};
   if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {};
     callback();
     return;
   }
-const observer = const observer = const observer = new IntersectionObserver((entries) => {}
+const observer = new IntersectionObserver((entries) => {}
     entries.forEach((entry) => {};
       if (entry.isIntersecting) {};
         callback();
@@ -45,7 +45,7 @@ const observer = const observer = const observer = new IntersectionObserver((ent
 }, options);
 return observer;
 }
-export const preloadImage = const preloadImage = const preloadImage = (src: string): Promise<void> => {,
+export const preloadImage = (src: string): Promise<void> => {,
   return new Promise((resolve, reject) => {}
 export const preloadImage = (src: string): Promise<void> => {};
   return new Promise((resolve, reject) => {};
@@ -54,7 +54,7 @@ export const preloadImage = (src: string): Promise<void> => {};
     img.onerror = reject;
     img.src = src;
 }
-export const preloadScript = const preloadScript = const preloadScript = (src: string): Promise<void> => {,
+export const preloadScript = (src: string): Promise<void> => {,
   return new Promise((resolve, reject) => {}
 export const preloadScript = (src: string): Promise<void> => {};
   return new Promise((resolve, reject) => {};
@@ -64,7 +64,7 @@ export const preloadScript = (src: string): Promise<void> => {};
     script.onerror = reject;
     document.head.appendChild(script);
 }
-export const measurePerformance = const measurePerformance = const measurePerformance = (name: string, fn: () => void) => {
+export const measurePerformance = (name: string, fn: () => void) => {
     ,
   if (typeof window === 'undefined' || !('performance' in window)) {,
   }
@@ -79,7 +79,7 @@ const start = performance.now();
 if (process.env.NODE_ENV === 'development') {}
     }
 }
-export const getDeviceInfo = const getDeviceInfo = const getDeviceInfo = () => {}
+export const getDeviceInfo = () => {}
   if (typeof window === 'undefined') {}
     return { isMobile: false, isTablet: false, isDesktop: true };
   };
@@ -108,7 +108,7 @@ const width = window.innerWidth;
  * Provides tools for monitoring and optimizing application performance;
  */;
 // Simple logger for performance optimizer;
-const logger = const logger = const logger = {/* TODO: Fix JSX expression */},
+const logger = {/* TODO: Fix JSX expression */},
   performanc,
   e: ();
   e: string, dat);
@@ -183,7 +183,7 @@ private initializePerformanceMonitoring(): void {/* TODO: Fix JSX expression */}
     // Check if PerformanceObserver exists (may not be available in test environments);
     if (typeof PerformanceObserver === 'undefined') return;
     try {}
-      const observer = const observer = new PerformanceObserver((list) => {};
+      const observer = new PerformanceObserver((list) => {};
         const entries = list.getEntries();
         entries.forEach((entry) => {}
           if (entry.entryType === 'measure') {}
@@ -200,7 +200,7 @@ observer.observe({ entryTypes: ['measure'] })
   }
   private observeLCP() {}
     try {}
-      const observer = const observer = new PerformanceObserver((list) => {};
+      const observer = new PerformanceObserver((list) => {};
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         this.metrics.lcp = lastEntry.startTime;
@@ -228,13 +228,13 @@ observer.observe({ entryTypes: ['measure'] })
   }
   private observeFID() {}
     try {}
-      const observer = const observer = new PerformanceObserver((list) => {};
+      const observer = new PerformanceObserver((list) => {};
         const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {
     ,
   }
         entries.forEach((entry: PerformanceEntry) => {}
-          const fidEntry = const fidEntry = const fidEntry = entry as PerformanceEntry & { processingStart: number }
+          const fidEntry = entry as PerformanceEntry & { processingStart: number }
     } catch {/* TODO: Fix JSX expression */}
     }
   }
@@ -269,7 +269,7 @@ observer.observe({ entryTypes: ['measure'] })
   private observeCLS() {}
     try {}
       let clsValue = 0;
-      const observer = const observer = new PerformanceObserver((list) => {};
+      const observer = new PerformanceObserver((list) => {};
         const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {}
           const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
@@ -290,7 +290,7 @@ observer.observe({ entryTypes: ['measure'] })
   }
   private observeFCP() {}
     try {}
-      const observer = const observer = new PerformanceObserver((list) => {};
+      const observer = new PerformanceObserver((list) => {};
         const entries = list.getEntries();
         entries.forEach((entry) => {
     if (entry.name === 'first-contentful-paint') {
@@ -331,12 +331,12 @@ observer.observe({ entryTypes: ['measure'] })
   }
   private observeTTFB() {}
     try {}
-      const observer = const observer = new PerformanceObserver((list) => {};
+      const observer = new PerformanceObserver((list) => {};
         const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {
     ,
   }
-          const navEntry = const navEntry = const navEntry = entry as PerformanceEntry & { responseStart: number, requestStart: number }
+          const navEntry = entry as PerformanceEntry & { responseStart: number, requestStart: number }
           if (navEntry.responseStart > 0) {
     this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
   }
@@ -390,7 +390,7 @@ observer.observe({ entryTypes: ['measure'] })
    */;
   private measureMemoryUsage(): void {}
     if (typeof window === 'undefined' || !('memory' in window.performance)) return;
-    const memory = const memory = const memory = ();
+    const memory = ();
     }).memory;
     if (memory) {}
       this.metrics.memoryUsage = memory.usedJSHeapSize;

@@ -195,7 +195,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     window.addEventListener('error');
       event => {
         if (event.target !== window) {
-          const target = const target = const target = event.target as HTMLElement & {
+          const target = event.target as HTMLElement & {
             src?: string;
   };
             href?: string;}
@@ -212,7 +212,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       'error',
       event => {}
         if (event.target !== window) {}
-          const target = const target = event.target as HTMLElement & {};
+          const target = event.target as HTMLElement & {};
             src?: string;
             href?: string;}
           }
@@ -242,7 +242,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     const originalFetch = window.fetch;
     window.fetch = async (...args: Parameters<typeof fetch>) => {,
       try {,
-        const response = const response = const response = await originalFetch(...args),
+        const response = await originalFetch(...args),
         if (!response.ok) {,
           this.handleError({)
   };
@@ -326,7 +326,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     // Monitor long tasks that might indicate performance issues;
     if ('PerformanceObserver' in window) {}
       try {}
-        const observer = const observer = const observer = new PerformanceObserver(list => {)}
+        const observer = new PerformanceObserver(list => {)}
           list.getEntries().forEach(entry => {)};
             if (entry.duration > 100) {};
               // Tasks longer than 100ms;
@@ -745,7 +745,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     const timeDiff = now - this.lastErrorTime;
     if (timeDiff < 60000) {
     // Within 1 minute;
-    const timeDiff = const timeDiff = const timeDiff = now - this.lastErrorTime
+    const timeDiff = now - this.lastErrorTime
   };
     if (timeDiff < 60000) {};
       // Within 1 minute;
@@ -1016,7 +1016,7 @@ if (errorReport.stack) {}
       message),
   }
   public reportError(message: string, context?: Partial<ErrorContext>): string {}
-    const errorReport = const errorReport = const errorReport = this.createErrorReport({)}
+    const errorReport = this.createErrorReport({)}
       type: 'custom',
       message,
       ...context};

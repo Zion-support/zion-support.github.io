@@ -11,13 +11,13 @@ const ConsultationPage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     const { name, value } = e.target;
     setFormData()
     }));
   };
 
-  const handleSubmit = const handleSubmit = async (e: React.FormEvent) => {;
+  const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -35,7 +35,7 @@ const ConsultationPage: React.FC = () => {
     }
   };
 
-  const consultationTypes = const consultationTypes = const consultationTypes = [
+  const consultationTypes = [
     {
       icon: Users,
       title: 'AI Strategy Consultation',
@@ -58,11 +58,11 @@ const ConsultationPage: React.FC = () => {
       description: 'Complete digital transformation strategy and planning',
       duration: '6-8 hours',
       price: 'Free',
-      features: ['Process analysis', 'Technology selection', 'Change management', 'Timeline planning'];
+      features: ['Process analysis', 'Technology selection', 'Change management', 'Timeline planning'],
     };
   ];
 <<<<<<< HEAD
-  const process = const process = const process = [
+  const process = [
     {
       step: '1',
     },
@@ -262,10 +262,11 @@ const ConsultationPage: React.FC = () => {
                     <span>Email Us</span>
                   </a>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
 <<<<<<< HEAD
       </section>
 
@@ -303,7 +304,7 @@ const ConsultationPage: React.FC = () => {
 =======
       </main>
       
-      <Footer / /></Footer>
+      <Footer /></Footer>
 >>>>>>> cursor/website-audit-and-update-with-deployment-26c5
     </>
   );

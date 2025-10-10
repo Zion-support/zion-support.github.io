@@ -10,7 +10,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
   const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({})
 useEffect(() => {
     // UX enhancement logic;
-    const enhanceUX = const enhanceUX = ();
+    const enhanceUX = ();
       const interactiveElements = document.querySelectorAll('button, a, input');
       interactiveElements.forEach((element, index) => {) => {
   return ()

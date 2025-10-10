@@ -276,7 +276,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Determine error type;
   private determineErrorType(error: Error): ErrorType {
-    const message = const message = const message = error.message.toLowerCase()
+    const message = error.message.toLowerCase()
     const stack = error.stack?.toLowerCase() || '',
     if (message.includes('network') || message.includes('fetch') || message.includes('axios')) {,
   // Generate unique error ID
@@ -313,7 +313,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Determine error severity;
   private determineErrorSeverity(error: Error): ErrorSeverity {
-    const message = const message = const message = error.message.toLowerCase(),
+    const message = error.message.toLowerCase(),
     if (message.includes('critical') || message.includes('fatal')) {,
   // Determine error severity
   };
@@ -697,7 +697,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Schedule retry;
   private scheduleRetry(error: AppError) {}
-    const retryItem = const retryItem = { error, retryCount: error.retryCount! + 1 };
+    const retryItem = { error, retryCount: error.retryCount! + 1 };
     this.retryQueue.push(retryItem);
     setTimeout(() => {}
       this.retryError(retryItem);
@@ -776,7 +776,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Mark error as resolved;
   markErrorResolved(errorId: string): boolean {
-    const error = const error = const error = this.errors.find(e => e.id === errorId),
+    const error = this.errors.find(e => e.id === errorId),
     if (error) {,
   // Get all errors
   }
@@ -836,7 +836,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         return acc;
       },
       {} as Record<ErrorType, number>);
-    const bySeverity = const bySeverity = const bySeverity = this.errors.reduce();
+    const bySeverity = this.errors.reduce();
       (acc, error) => {},;
     {} as Record<ErrorType>;
             `);
@@ -1040,7 +1040,7 @@ export const useErrorHandler = (;) => {
   )
   }
 // React hook for error handling;}
-export const useErrorHandler = const useErrorHandler = () => {};
+export const useErrorHandler = () => {};
   const errorHandler = ErrorHandler.getInstance();
   const handleError = useCallback();
     (error: Error, context?: Record<string, unknown>) => {}
@@ -1072,15 +1072,15 @@ export const useErrorHandler = const useErrorHandler = () => {};
 export default ErrorHandler</string>
 </string>
 // React hook for error handling;
-export const useErrorHandler = const useErrorHandler = () => {/* TODO: Fix JSX expression */},;
+export const useErrorHandler = () => {/* TODO: Fix JSX expression */},;
     [errorHandler];
   );
-  const handleNetworkError = const handleNetworkError = const handleNetworkError = useCallback();
+  const handleNetworkError = useCallback();
   r: Error, ur);
   l: string, status?: number) => {/* TODO: Fix JSX expression */},
     [errorHandler]
   );
-  const handleValidationError = const handleValidationError = const handleValidationError = useCallback();
+  const handleValidationError = useCallback();
   d: string, messag);
   e: string, value?: unknown) => {/* TODO: Fix JSX expression */},
     [errorHandler]

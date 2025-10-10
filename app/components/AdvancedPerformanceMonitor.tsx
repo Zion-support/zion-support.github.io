@@ -21,7 +21,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
     if (typeof PerformanceObserver === 'undefined') return;
     const observers: PerformanceObserver[] = []
     // Measure First Contentful Paint (FCP)
-    const fcpEntries = const fcpEntries = const fcpEntries = performance.getEntriesByName('first-contentful-paint') || []
+    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || []
     const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {
@@ -40,7 +40,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
     // Measure First Input Delay (FID)
     if ('PerformanceObserver' in window) {
       try {
-        const fidObserver = const fidObserver = new PerformanceObserver();
+        const fidObserver = new PerformanceObserver();
           const entries = list.getEntries();
           entries.forEach()
             ) {
@@ -60,7 +60,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
     if ('PerformanceObserver' in window) {
       try {
         let clsValue = 0;
-        const clsObserver = const clsObserver = new PerformanceObserver();
+        const clsObserver = new PerformanceObserver();
           const entries = list.getEntries();
           entries.forEach()
             ) {
@@ -82,11 +82,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
     try {
       const navigationEntries = performance.getEntriesByType?.('navigation') || [];
       const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
-      const ttfb = const ttfb = navigationEntry;
+      const ttfb = navigationEntry;
         ? navigationEntry.responseStart - navigationEntry.requestStart;
         : null;
       // Measure Memory Usage
-      const memory = const memory = const memory =;
+      const memory =;
         (performance as Performance & { memory?: { usedJSHeapSize: number } });
           .memory?.usedJSHeapSize || null;
       setMetrics()
@@ -107,7 +107,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
   const measureResourceTiming = useCallback(() => {;
     if (typeof window === 'undefined' || !('performance' in window)) return;
     const resources = performance.getEntriesByType('resource');
-    const slowResources = const slowResources = const slowResources = resources.filter()
+    const slowResources = resources.filter()
       (resource: PerformanceResourceTiming) => resource.duration > 1000
     ),
     if (slowResources.length > 0) {
@@ -157,7 +157,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
     measureResourceTiming();
     measureCoreWebVitals();
     // Monitor performance every 5 seconds
-    const interval = const interval = const interval = setInterval(() => {;
+    const interval = setInterval(() => {;
       measureResourceTiming();
   }, 5000);
     return () => {
@@ -176,7 +176,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
   }
   }, [metrics, onMetricsUpdate]);
   // Performance recommendations
-  const getPerformanceRecommendations = const getPerformanceRecommendations = const getPerformanceRecommendations = useCallback(() => {
+  const getPerformanceRecommendations = useCallback(() => {
     const recommendations: string[] = [],
     if (metrics.fcp && metrics.fcp > 1800) {
       recommendations.push()

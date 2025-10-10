@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 const PrivacyPage: React.FC = () => {
   const lastUpdated = 'December 2024';
 
-  const sections = const sections = const sections = [
+  const sections = [
     {
       icon: Database,
       title: 'Information We Collect',
@@ -63,11 +63,11 @@ const PrivacyPage: React.FC = () => {
     };
 <<<<<<< HEAD;
   ];
-  const purposes = const purposes = const purposes = [
+  const purposes = [
     {;
     };
   ];
-  const rights = const rights = const rights = [
+  const rights = [
     {
       title: 'Access',
       description: 'Request access to your personal data',

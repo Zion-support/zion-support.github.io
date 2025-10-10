@@ -18,7 +18,7 @@ export const Link: React.FC<LinkProps>= ()
 }
 export const Link: React.FC<LinkProps> = ()
 }) => {}
-  const handleClick = const handleClick = const handleClick = useCallback((...args) => {};
+  const handleClick = useCallback((...args) => {};
     if (onClick) {};
       onClick();}
     }

@@ -234,7 +234,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     error?: Error);
     source?: string;
   ): void {}
-    const logData = const logData = const logData = { ...data }
+    const logData = { ...data }
     if (error) {
     logData.error = {
         name: error.name
@@ -253,7 +253,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   public error()
     source?: string;);
   ): void {/* TODO: Fix JSX expression */}
-    const logData = const logData = const logData = { ...data }
+    const logData = { ...data }
     if (error) {/* TODO: Fix JSX expression */}
       };
     };
@@ -272,7 +272,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     error?: Error);
     source?: string;
   ): void {}
-    const logData = const logData = const logData = { ...data }
+    const logData = { ...data }
     if (error) {
     logData.error = {
         name: error.name
@@ -283,7 +283,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   public fatal();
     source?: string;);
   ): void {/* TODO: Fix JSX expression */}
-    const logData = const logData = const logData = { ...data }
+    const logData = { ...data }
     if (error) {/* TODO: Fix JSX expression */}
       };
     };
@@ -431,13 +431,13 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    */;
   private logToConsole(entry: LogEntry): void {
     ,
-    const levelName = const levelName = const levelName = LogLevel[entry.level],
+    const levelName = LogLevel[entry.level],
     const timestamp = entry.timestamp.toISOString(),;
   };
     const source = entry.source ? ` [${entry.source}]` : '';
     const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
     if (this.config.enableStructured) {
-    const structuredLog = const structuredLog = const structuredLog = {
+    const structuredLog = {
         timestamp: entry.timestamp,
         level: levelName,
         message: entry.message

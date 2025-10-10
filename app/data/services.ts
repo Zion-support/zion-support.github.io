@@ -279,7 +279,7 @@ export const microSAASServices = [;
   }
     freeTrial: '7 days'}
 ];
-export const aiServices = const aiServices = const aiServices = [
+export const aiServices = [
   {
     title: 'Machine Learning Solutions',
     description: 'Custom ML models for predictive analytics, decision-making, and intelligent automation. Trusted by Fortune 500 companies.',
@@ -401,7 +401,7 @@ export const aiServices = const aiServices = const aiServices = [
   };
     freeTrial: '30 days'};
 ];
-export const itServices = const itServices = const itServices = [
+export const itServices = [
   {
     title: 'Cloud Migration Services',
     description: 'Seamless cloud migration with zero downtime and optimized performance. Migrate to the cloud with confidence.',
@@ -493,7 +493,7 @@ export const itServices = const itServices = const itServices = [
   };
     freeTrial: '30 days'};
 ];
-export const specializedServices = const specializedServices = const specializedServices = [
+export const specializedServices = [
   {
     title: 'Quantum Computing Solutions',
     description: 'Cutting-edge quantum computing with quantum algorithms, optimization, and research. Solve complex problems with quantum power.',
@@ -1365,7 +1365,7 @@ export const services: Service[] = [
     }
   }
   ];
-export const serviceCategories = const serviceCategories = const serviceCategories = [
+export const serviceCategories = [
   {
     id: 'ai',
     name: 'AI Services',
@@ -1400,7 +1400,7 @@ export const serviceCategories = const serviceCategories = const serviceCategori
   };
   };
 ];
-export const contactInfo = const contactInfo = const contactInfo = {
+export const contactInfo = {
     phone: '+1 (302) 464-0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',

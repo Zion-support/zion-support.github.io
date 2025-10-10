@@ -10,12 +10,12 @@ const AICyberDefenseMatrix: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  const features = const features = const features = [
+  const features = [
     {
       icon: Shield,
       title: 'AI Threat Detection',;
       description: 'Advanced AI algorithms for real-time threat detection and automated response',;
-      benefits: ['99.9% threat detection rate', 'Real-time monitoring', 'Automated response'];
+      benefits: ['99.9% threat detection rate', 'Real-time monitoring', 'Automated response'],
     },
     {
       icon: Zap,
@@ -36,7 +36,7 @@ const AICyberDefenseMatrix: React.FC = () => {
       benefits: ['Automated containment', 'Rapid response', 'Minimal downtime']
     },
   ];
-  const pricingPlans = const pricingPlans = const pricingPlans = [
+  const pricingPlans = [
     {
       name: 'Essential',
       price: '$499',
@@ -89,7 +89,7 @@ const AICyberDefenseMatrix: React.FC = () => {
     };
   ];
 
-  const useCases = const useCases = const useCases = [
+  const useCases = [
     {
       title: 'Financial Services',
       description: 'Advanced cyber defense for banks and financial institutions',

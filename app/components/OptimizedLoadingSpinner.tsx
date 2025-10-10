@@ -11,22 +11,22 @@ interface OptimizedLoadingSpinnerProps {
 }
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo()
   }) => {
-    const sizeClasses = const sizeClasses = useMemo()
+    const sizeClasses = useMemo()
       () => ()
       }),
       [];
     );
-const textSizeClasses = const textSizeClasses = useMemo()
+const textSizeClasses = useMemo()
       () => ()
       }),
       [];
     );
-const colorClasses = const colorClasses = useMemo()
+const colorClasses = useMemo()
       () => ()
       }),
       [];
     );
-const renderSpinner = const renderSpinner = useMemo(() => {;
+const renderSpinner = useMemo(() => {;
     switch (variant) {;
         case 'dots':;
           return ()

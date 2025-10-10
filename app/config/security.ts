@@ -46,7 +46,7 @@ export const rateLimitConfig = {;
 /**;
  * CORS configuration;
  */;
-export const corsConfig = const corsConfig = const corsConfig = {
+export const corsConfig = {
     origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
@@ -57,7 +57,7 @@ export const corsConfig = const corsConfig = const corsConfig = {
 /**;
  * Session configuration;
  */;
-export const sessionConfig = const sessionConfig = const sessionConfig = {
+export const sessionConfig = {
     secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
   resave: false,
   saveUninitialized: false,
@@ -71,7 +71,7 @@ export const sessionConfig = const sessionConfig = const sessionConfig = {
 /**;
  * Input validation patterns;
  */;
-export const validationPatterns = const validationPatterns = const validationPatterns = {}
+export const validationPatterns = {}
   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
   phone: /^\+?[1-9]\d{1,14}$/,
   url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,

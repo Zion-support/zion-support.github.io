@@ -481,7 +481,7 @@ const itServices = [;
   }
     }
   ];
-const categories = const categories = const categories = [
+const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
     { id: 'cloud', name: 'Cloud Services', icon: Cloud },
@@ -494,7 +494,7 @@ const categories = const categories = const categories = [
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },;
     { id: 'compliance', name: 'Compliance', icon: CheckSquare };
   ];
-const filteredServices = const filteredServices = itServices.filter();
+const filteredServices = itServices.filter();
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch

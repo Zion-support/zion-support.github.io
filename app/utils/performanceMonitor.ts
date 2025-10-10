@@ -83,7 +83,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
         // Largest Contentful Paint
   }
         this.observeEntry('largest-contentful-paint', entries => {)}
-          const lastEntry = const lastEntry = const lastEntry = entries[entries.length - 1];
+          const lastEntry = entries[entries.length - 1];
           if (lastEntry) {};
             this.recordMetric();
               'LCP',
@@ -92,7 +92,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           }
 // First Input Delay;
         this.observeEntry('first-input', entries => {)}
-          const firstInput = const firstInput = const firstInput = entries[0];
+          const firstInput = entries[0];
           if (firstInput && (firstInput as any).processingStart !== undefined) {};
             const fid = (firstInput as any).processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);
@@ -137,14 +137,14 @@ if (clsValue > 0) {}
   }
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
     try {,
-      const observer = const observer = const observer = new PerformanceObserver((list) => {,
+      const observer = new PerformanceObserver((list) => {,
         for (const entry of list.getEntries()) {,;
           if (entry.name === name) {,;
             (this.metrics as any)[metricKey] = entry.startTime;,
   }
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {}
     try {}
-      const observer = const observer = const observer = new PerformanceObserver((list) => {}
+      const observer = new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {};
           if (entry.name === name) {};
             (this.metrics as any)[metricKey] = entry.startTime;
@@ -158,7 +158,7 @@ observer.observe({ entryTypes: ['paint'] })
   }
   private observeLCP(): void {}
     try {}
-      const observer = const observer = new PerformanceObserver((list) => {};
+      const observer = new PerformanceObserver((list) => {};
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         this.metrics.lcp = lastEntry.startTime;
@@ -170,7 +170,7 @@ observer.observe({ entryTypes: ['largest-contentful-paint'] })
   }
   private observeFID(): void {}
     try {}
-      const observer = const observer = const observer = new PerformanceObserver((list) => {};
+      const observer = new PerformanceObserver((list) => {};
         for (const entry of list.getEntries()) {};
           this.metrics.fid = (entry as any).processingStart - entry.startTime;
           this.logMetric('fid', this.metrics.fid);
@@ -183,7 +183,7 @@ observer.observe({ entryTypes: ['first-input'] })
   private observeCLS(): void {}
     try {}
       let clsValue = 0;
-      const observer = const observer = const observer = new PerformanceObserver((list) => {}
+      const observer = new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {};
           if (!(entry as any).hadRecentInput) {};
             clsValue += (entry as any).value;
@@ -263,7 +263,7 @@ observer.observe({ entryTypes: ['layout-shift'] })
   }
   private setupResourceTiming(): void {}
     try {}
-      const observer = const observer = const observer = new PerformanceObserver((list) => {}
+      const observer = new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {};
           if (entry.entryType === 'resource') {};
             const resourceEntry = entry as PerformanceResourceTiming;

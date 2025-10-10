@@ -9,13 +9,13 @@ const MicroSaasPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const products = const products = const products = [
+  const products = [
     {;
 <<<<<<< HEAD;
 ;];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
 
-  const filteredProducts = const filteredProducts = selectedCategory === 'All' ;
+  const filteredProducts = selectedCategory === 'All' ;
     ? products ;
     : products.filter(product => product.category === selectedCategory);
 =======
@@ -405,7 +405,7 @@ const MicroSaasPage: React.FC = () => {
     }
   ];
 
-  const categories = const categories = const categories = [
+  const categories = [
     { id: 'all', name: 'All Tools', count: products.length },
     { id: 'Analytics', name: 'Analytics', count: products.filter(p => p.category === 'Analytics').length },
     { id: 'Customer Service', name: 'Customer Service', count: products.filter(p => p.category === 'Customer Service').length },
@@ -418,7 +418,7 @@ const MicroSaasPage: React.FC = () => {
     { id: 'Content', name: 'Content', count: products.filter(p => p.category === 'Content').length };
   ];
 
-  const filteredProducts = const filteredProducts = const filteredProducts = products.filter();
+  const filteredProducts = products.filter();
     const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          product.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
@@ -564,7 +564,7 @@ const MicroSaasPage: React.FC = () => {
   ];
 
   const categories = ['all', ...Array.from(new Set(microSaasProducts.map(product => product.category)))];
-  const filteredProducts = const filteredProducts = const filteredProducts = microSaasProducts.filter();
+  const filteredProducts = microSaasProducts.filter();
   );
 
   const popularProducts = microSaasProducts.filter(product => product.popular);

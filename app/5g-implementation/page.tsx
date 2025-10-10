@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
 const FiveGImplementationPage: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     {
       icon: Wifi,
       title: '5G Network Design',
@@ -38,7 +38,7 @@ const FiveGImplementationPage: React.FC = () => {
       icon: BarChart,
       title: 'Performance Analytics',
       description: 'Advanced analytics and reporting for 5G network performance and optimization.',
-      benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations'];
+      benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations'],
     },;
   ];
   return ()

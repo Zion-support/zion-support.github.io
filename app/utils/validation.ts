@@ -41,7 +41,7 @@ export function validateURL(url: string): ValidationResult {
   }
 try {
     const urlObj = new URL(url);
-    const isValid = const isValid = const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',;
+    const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',;
     return {,;
       isValid;
       error: isValid ? undefined : 'Invalid URL format',
@@ -305,7 +305,7 @@ export function validateComposite(value: unknown)
   validators: Array<(val: unknown) => ValidationResult>
 ): ValidationResult {
     for (const validator of validators) {
-    const result = const result = const result = validator(value),;
+    const result = validator(value),;
     if (!result.isValid) {,;
       return result;
 export function validateComposite()

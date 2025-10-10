@@ -29,7 +29,7 @@ import {
   }
 } from 'lucide-react'
 const DataAnalyticsPage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
       icon: BarChart,
       title: 'Advanced Data Visualization',
@@ -52,7 +52,7 @@ const DataAnalyticsPage: React.FC = () => {
   };
     };
   ];
-const benefits = const benefits = const benefits = [
+const benefits = [
     'Make data-driven business decisions',
     'Identify new opportunities and trends',
     'Improve operational efficiency',

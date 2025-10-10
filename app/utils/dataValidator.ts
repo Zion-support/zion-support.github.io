@@ -188,7 +188,7 @@ export function createCustomValidator<T>()
   message: string,
 ): (value: T) => { isValid: boolean, errors: string[] }, {
     return (value: T) => {
-    const isValid = const isValid = const isValid = validator(value),;
+    const isValid = validator(value),;
     return {,;
       isValid;
       errors: isValid ? [] : [message],
@@ -292,7 +292,7 @@ export function validateForm<T extends Record<string, unknown>>()
 /**;
  * Validation rules builder;
  */;
-export const ValidationRulesBuilder = const ValidationRulesBuilder = const ValidationRulesBuilder = {/* TODO: Fix JSX expression */},
+export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */},
     message: 'This field is required'}),
   email: (): ValidationRule<string> => ()
     validate: (value: string) => validateEmail(value),

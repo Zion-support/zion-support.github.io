@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const AnalyticsToolsPage: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Analytics',
@@ -25,7 +25,7 @@ const AnalyticsToolsPage: React.FC = () => {
       description: 'Worldwide deployment and support for international business analytics';
     };
   ];
-  const benefits = const benefits = const benefits = [
+  const benefits = [
     'Advanced AI-powered data analysis',
     'Real-time processing and insights',
     'Enterprise-grade security and compliance',

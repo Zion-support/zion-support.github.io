@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BookOpen, Users, BarChart, Zap, Shield, CheckCircle } from 'lucide-react';
 const OnlineLearningPlatformPage: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     { icon: BookOpen, title: 'Course Management', description: 'Create, organize, and manage educational content with AI-powered course recommendations.' },
     { icon: Users, title: 'Student Analytics', description: 'Track student progress and engagement with detailed analytics and insights.' },
     { icon: BarChart, title: 'Performance Tracking', description: 'Monitor learning outcomes and identify areas for improvement.' },

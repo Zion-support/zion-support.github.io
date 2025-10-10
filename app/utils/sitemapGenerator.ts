@@ -1,8 +1,8 @@
-export const generateSitemap = const generateSitemap = const generateSitemap = useCallback((...args) => {
+export const generateSitemap = useCallback((...args) => {
     const baseUrl = 'https: //ziontechgroup.com',;
   const staticPages = [,;
   }];
-export const generateSitemap = const generateSitemap = const generateSitemap = useCallback((...args) => {}
+export const generateSitemap = useCallback((...args) => {}
   const baseUrl = 'https: //ziontechgroup.com',
   const staticPages = [
     '',
@@ -60,7 +60,7 @@ export const generateSitemap = const generateSitemap = const generateSitemap = u
 </urlset>`;
   return sitemap;
 }
-export const generateRobotsTxt = const generateRobotsTxt = useCallback((...args) => {};
+export const generateRobotsTxt = useCallback((...args) => {};
   return `User-agent: *;
 Allow: /
 Sitemap: https://ziontechgroup.com/sitemap.xml
@@ -74,7 +74,7 @@ Disallow: /private/`,}
 }
 export interface SitemapEntry {/* TODO: Fix JSX expression */}
 }
-export const generateSitemap = const generateSitemap = const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */}
+export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */}
   l: `${baseUrl}/`,
       lastmo,
   d: currentDate,
@@ -211,5 +211,5 @@ export const generateSitemap = const generateSitemap = const generateSitemap = (
     }
   ]
 }
-export const generateRobotsTxt = const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */};
+export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */};
 }`;

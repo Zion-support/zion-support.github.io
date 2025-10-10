@@ -4,14 +4,14 @@ import { Helmet } from 'react-helmet-async';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 const FAQPage: React.FC = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
-  const toggleItem = const toggleItem = const toggleItem = (index: number) => {
+  const toggleItem = (index: number) => {
     setOpenItems()
       prev.includes(index) ;
         ? prev.filter(item => item !== index);
         : [...prev, index];
     );
   }
-  const faqs = const faqs = const faqs = [
+  const faqs = [
     {
       question: "What AI services do you offer?",
       answer: "We offer comprehensive AI services including marketing automation, customer support, data analytics, content generation, healthcare solutions, financial services, e-commerce solutions, cybersecurity, mobile apps, sales automation, workflow automation, and data visualization."

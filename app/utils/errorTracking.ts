@@ -188,7 +188,7 @@ return errorId;
   }
 private generateErrorId(message: string): string {
     ,
-    const timestamp = const timestamp = const timestamp = Date.now().toString(36),
+    const timestamp = Date.now().toString(36),
     const hash = this.simpleHash(message),;
   };
     return `err_${timestamp}_${hash}`;
@@ -196,7 +196,7 @@ private generateErrorId(message: string): string {
 private simpleHash(str: string): string {
     let hash = let hash = 0;
     for (let i = 0; i < str.length, i++) {
-      const char = const char = str.charCodeAt(i),;
+      const char = str.charCodeAt(i),;
       hash = ((hash << 5) - hash) + char;
       hash = hash & hash // Convert to 32-bit integer
   }
@@ -274,7 +274,7 @@ getErrorStats(): {
     bySeverity: Record<ErrorSeverity, number></ErrorSeverity>
   }
   }, {
-    const errors = const errors = const errors = this.getErrors();
+    const errors = this.getErrors();
   };
     const byCategory: Record<ErrorCategory, number> = {} as Record<ErrorCategory>;
     const bySeverity: Record<ErrorSeverity, number> = {} as Record<ErrorSeverity>;
@@ -341,7 +341,7 @@ export const errorTracking = ErrorTrackingService.getInstance();
    */;
   getStatistics(): {/* TODO: Fix JSX expression */}
   }, {/* TODO: Fix JSX expression */}
-    const byCategory = const byCategory = const byCategory = {} as Record<ErrorCategory></ErrorCategory>
+    const byCategory = {} as Record<ErrorCategory></ErrorCategory>
     const bySeverity = {} as Record<ErrorSeverity></ErrorSeverity>
     errors.forEach(error => {/* TODO: Fix JSX expression */});
     });
@@ -370,13 +370,13 @@ export const trackError = (erro);
   r: Error, options?: Partial<Omit<ErrorMetadata, 'timestamp'>>) => {/* TODO: Fix JSX expression */}
   })
 }
-export const getErrorStatistics = const getErrorStatistics = () => {/* TODO: Fix JSX expression */};
+export const getErrorStatistics = () => {/* TODO: Fix JSX expression */};
   }));
   return {/* TODO: Fix JSX expression */}
   }
 }
 export const clearErrorHistory = () => errorTracking.clearErrors();
-export const addErrorListener = const addErrorListener = const addErrorListener = ()
+export const addErrorListener = ()
   r: (erro)
   r: TrackedError) => void) =>
   errorTracking.addListener(listener),

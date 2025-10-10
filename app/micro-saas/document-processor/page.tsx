@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Settings, ArrowRight } from 'lucide-react';
 const MicroSaaSPage: React.FC = () => {
     const serviceName = 'document-processor';
-  const title = const title = const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+  const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
 return ()
               Powerful {title.toLowerCase()} micro SaaS solution designed for modern businesses.
             </p>

@@ -75,10 +75,10 @@ const PartnersPage: React.FC = () => {
   const categories = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))];
   const tiers = ['all', ...Array.from(new Set(partners.map(partner => partner.tier)))];
 
-  const filteredPartners = const filteredPartners = partners.filter();
+  const filteredPartners = partners.filter();
   });
 
-  const getTierColor = const getTierColor = const getTierColor = (tier: string) => {;
+  const getTierColor = (tier: string) => {;
     switch (tier) {;
       case 'strategic':;
         return 'from-purple-500 to-pink-600';
@@ -91,7 +91,7 @@ const PartnersPage: React.FC = () => {
     }
   };
 
-  const getTierIcon = const getTierIcon = const getTierIcon = (tier: string) => {;
+  const getTierIcon = (tier: string) => {;
     switch (tier) {;
       case 'strategic':;
         return <Star className="w-4 h-4" />;

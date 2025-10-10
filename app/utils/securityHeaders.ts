@@ -63,7 +63,7 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
 export function getSecurityHeaders();
   customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>
 ): Record<string, string> {}
-  const config = const config = const config = { ...defaultSecurityHeaders, ...customConfig };
+  const config = { ...defaultSecurityHeaders, ...customConfig };
   const headers: Record<string, string> = {};
     'X-XSS-Protection': '1; mode=block',
     'X-DNS-Prefetch-Control': 'on'}
@@ -95,7 +95,7 @@ export const,
  */;
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
 ): Record<string, string> {/* TODO: Fix JSX expression */}
-  const config = const config = const config = { ...defaultSecurityHeaders, ...customConfig }
+  const config = { ...defaultSecurityHeaders, ...customConfig }
   const,
   headers: Record<string, string> = {/* TODO: Fix JSX expression */}
   }

@@ -85,7 +85,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ()
     analyzeSEO();
   }, [analyzeSEO]);
 
-  const generateStructuredData = const generateStructuredData = const generateStructuredData = () => {
+  const generateStructuredData = () => {
     const defaultStructuredData = {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -102,7 +102,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ()
     return structuredData || defaultStructuredData;
   }
 
-  const _trackPageView = const _trackPageView = const _trackPageView = (config: SEOData) => {
+  const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag()
       })

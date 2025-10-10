@@ -5,12 +5,12 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi, Server } from 'lucide-react';
 const EdgeComputingPage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
       icon: Cpu,
       title: 'Edge Processing',;
       description: 'Process data locally at the edge for ultra-low latency and real-time responsiveness.',;
-      benefits: ['Sub-millisecond latency', 'Real-time processing', 'Local data processing', 'Reduced bandwidth usage'];
+      benefits: ['Sub-millisecond latency', 'Real-time processing', 'Local data processing', 'Reduced bandwidth usage'],
   },
     {
     icon: Globe,
@@ -43,7 +43,7 @@ const EdgeComputingPage: React.FC = () => {
       benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
   },
   ];
-const services = const services = const services = [
+const services = [
     {
     icon: '⚡',
       title: 'Edge Analytics',
@@ -66,7 +66,7 @@ const services = const services = const services = [
   };
     };
   ];
-const benefits = const benefits = const benefits = [
+const benefits = [
     'Ultra-Low Latency',
     'Reduced Bandwidth Costs',
 
@@ -78,7 +78,7 @@ const benefits = const benefits = const benefits = [
 ;
     'Global Scalability';
   ];
-const useCases = const useCases = const useCases = [
+const useCases = [
     {
     title: 'Autonomous Vehicles',
       description: 'Real-time decision making for self-driving cars',
@@ -255,7 +255,7 @@ return ()
           </div>
         </div>
       </section>
-      <Footer / /></Footer>
+      <Footer /></Footer>
   ),
 };
 

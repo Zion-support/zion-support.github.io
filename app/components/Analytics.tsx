@@ -27,7 +27,7 @@ if (enableUserBehaviorTracking) {
   }
     }
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
-const initializeGoogleAnalytics = const initializeGoogleAnalytics = ();
+const initializeGoogleAnalytics = ();
     const script = document.createElement('script');
     script.async = true;
     script.src = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
@@ -46,10 +46,10 @@ gtag('js', new Date());
     gtag()
     })
   }
-const initializePerformanceMonitoring = const initializePerformanceMonitoring = ()
+const initializePerformanceMonitoring = ()
     if ('PerformanceObserver' in window) {;
     // Monitor Core Web Vitals;
-      const observer = const observer = const observer = new PerformanceObserver((list) => {;
+      const observer = new PerformanceObserver((list) => {;
         for (const entry of list.getEntries()) {;
           if (entry.entryType === 'largest-contentful-paint') {) => {;
   return ()
@@ -79,7 +79,7 @@ observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layo
       })
     }
   }
-const initializeErrorTracking = const initializeErrorTracking = ()
+const initializeErrorTracking = ()
     window.addEventListener('error', (event) => {
     trackEvent()
         colno: event.colno,) => {
@@ -107,7 +107,7 @@ const initializeErrorTracking = const initializeErrorTracking = ()
       }
     }, true);
   }
-const initializeUserBehaviorTracking = const initializeUserBehaviorTracking = ()
+const initializeUserBehaviorTracking = ()
       page_location: window.location.href,) => {
   return ()
   )
@@ -161,7 +161,7 @@ if (tagName === 'a') {
       })
     })
   }
-const trackEvent = const trackEvent = ()
+const trackEvent = ()
     if (typeof window !== 'undefined' && 'gtag' in window) {
     (window as any).gtag()
         event_label: typeof value === 'object' ? JSON.stringify(value) : value,) => {

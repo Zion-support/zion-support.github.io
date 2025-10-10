@@ -11,7 +11,7 @@ import Footer from '../components/Footer';
 const CookiesPage: React.FC = () => {
   const lastUpdated = 'December 2024';
 
-  const cookieTypes = const cookieTypes = const cookieTypes = [
+  const cookieTypes = [
     {
       icon: Settings,
       title: 'Essential Cookies',

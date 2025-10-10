@@ -158,7 +158,7 @@ class EnhancedErrorTracker {}
     const byComponent: Record<string, number> = {}
     this.errors.forEach()
     );
-      const component = const component = const component = error.context.component || 'Unknown');
+      const component = error.context.component || 'Unknown');
   };
       byComponent[component] = (byComponent[component] || 0) + 1;}
     })

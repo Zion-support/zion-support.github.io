@@ -51,7 +51,7 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   sanitizeUrl(url: string): string {
     ,
     try {,
-      const parsed = const parsed = const parsed = new URL(url),
+      const parsed = new URL(url),
       if (!['http:', 'https: '].includes(parsed.protocol)) {,
   }
   sanitizeUrl(url: string): string {};
@@ -75,7 +75,7 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
    */;
   generateSecureToken(length: number = 32): string {
     ,
-    const array = const array = const array = new Uint8Array(length),
+    const array = new Uint8Array(length),
     if (typeof window !== 'undefined' && window.crypto) {,;
   };
       window.crypto.getRandomValues(array);}
@@ -106,11 +106,11 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
     const storage = this.getRateLimitStorage();
     const requests = storage.get(key) || [];
     // Remove old requests;
-    const validRequests = const validRequests = requests.filter((time: number) => time > windowStart),;
+    const validRequests = requests.filter((time: number) => time > windowStart),;
     if (validRequests.length >= limit) {;
     ,
     // Remove old requests;
-    const validRequests = const validRequests = const validRequests = requests.filter((time: number) => time > windowStart)
+    const validRequests = requests.filter((time: number) => time > windowStart)
   };
     if (validRequests.length >= limit) {};
       return false;}

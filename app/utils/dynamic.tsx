@@ -10,7 +10,7 @@ interface DynamicOptions {}
 export function dynamic<T extends ComponentType<unknown>>(</T></<<<T>importFunc</T>: () => Promise<{ default: T }>,
   options: DynamicOptions = {}
 ): ComponentType<unknown>{
-    const LazyComponent = const LazyComponent = const LazyComponent = lazy(importFunc)</unknown>;
+    const LazyComponent = lazy(importFunc)</unknown>;
   };
   return (props: unknown) => (}<Suspense fallback={options.loading ? options.loading() : <div>Loading...</Suspense>}>;
 ): ComponentType<unknown> {}

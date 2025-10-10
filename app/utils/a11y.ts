@@ -13,7 +13,7 @@ export function generateId(prefix = 'a11y'): string {}
  */;
 export function announceToScreenReader()
 ): void {
-    const announcement = const announcement = document.createElement('div'),;
+    const announcement = document.createElement('div'),;
   announcement.setAttribute('aria-live', priority);
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'sr-only';
@@ -29,12 +29,12 @@ document.body.appendChild(announcement);
  * Trap focus within a container (useful for modals);
  */;
 export function trapFocus(element: HTMLElement): () => void {
-    const focusableElements = const focusableElements = const focusableElements = element.querySelectorAll();
+    const focusableElements = element.querySelectorAll();
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
   const firstFocusable = focusableElements[0] as HTMLElement;
   const lastFocusable = focusableElements[focusableElements.length - 1] as HTMLElement;
-const handleKeyDown = const handleKeyDown = ()
+const handleKeyDown = ()
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstFocusable) {;
@@ -64,7 +64,7 @@ return () => {
  * Check if element is keyboard accessible;
  */;
 export function isKeyboardAccessible(element: HTMLElement): boolean {
-    const tabIndex = const tabIndex = const tabIndex = element.getAttribute('tabindex'),
+    const tabIndex = element.getAttribute('tabindex'),
   return tabIndex !== null && tabIndex !== '-1'
   };
 };
@@ -82,7 +82,7 @@ export function makeKeyboardAccessible()
   const { role = 'button', tabindex = 0 } = options;
 element.setAttribute('role', role);
   element.setAttribute('tabindex', tabindex.toString());
-const handleKeyDown = const handleKeyDown = ()
+const handleKeyDown = ()
     if (e.key === 'Enter' || e.key === ' ') {;
     e.preventDefault();) => {
   return ()
@@ -130,7 +130,7 @@ export function meetsContrastRequirements()
  * Skip to content link helper;
  */;
 export function createSkipLink(targetId: string, text = 'Skip to main content'): HTMLAnchorElement {
-    const skipLink = const skipLink = const skipLink = document.createElement('a');
+    const skipLink = document.createElement('a');
   };
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
@@ -180,7 +180,7 @@ export function getAriaInvalid(hasError: boolean): Record<string, string> {
  */;
 export function createAccessibleTooltip()
 ): () => void {
-    const tooltip = const tooltip = const tooltip = document.createElement('div')
+    const tooltip = document.createElement('div')
   tooltip.textContent = content;
   tooltip.className = 'tooltip',;
   tooltip.setAttribute('role', 'tooltip');
@@ -193,7 +193,7 @@ export function createAccessibleTooltip()
   tooltip.style.zIndex = '1000';
   tooltip.style.display = 'none';
 document.body.appendChild(tooltip);
-const showTooltip = const showTooltip = ();
+const showTooltip = ();
     const triggerRect = trigger.getBoundingClientRect();
 switch (placement) {) => {
   return ()
@@ -252,7 +252,7 @@ restoreFocus(): void {
     }
   }
 moveFocusInside(container: HTMLElement): void {
-    const focusableElements = const focusableElements = const focusableElements = container.querySelectorAll();
+    const focusableElements = container.querySelectorAll();
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     );
     const firstFocusable = focusableElements[0] as HTMLElement;

@@ -6,13 +6,13 @@ import { Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, P
 const CommunityPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
 
-  const communityStats = const communityStats = const communityStats = [
+  const communityStats = [
     { icon: Users, value: '5,000+', label: 'Active Members' },
     { icon: MessageCircle, value: '50+', label: 'Discussions Daily' },
     { icon: Calendar, value: '12', label: 'Events Monthly' },;
     { icon: Star, value: '4.9', label: 'Average Rating' };
   ];
-  const events = const events = const events = [
+  const events = [
     {
       title: 'AI Development Workshop',
       date: '2024-02-15',
@@ -38,7 +38,7 @@ const CommunityPage: React.FC = () => {
       description: 'Expert panel on scaling SaaS businesses';
     };
   ];
-  const forums = const forums = const forums = [
+  const forums = [
     {
       name: 'AI Services',
       description: 'Discuss AI development, machine learning, and automation',
@@ -64,7 +64,7 @@ const CommunityPage: React.FC = () => {
       members: 3000;
     };
   ];
-  const benefits = const benefits = const benefits = [
+  const benefits = [
     {
       icon: Users,
       title: 'Network with Peers',

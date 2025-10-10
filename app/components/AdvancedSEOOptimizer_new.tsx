@@ -71,7 +71,7 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ()
   useEffect(() => {
     analyzeSEO()
   }, [analyzeSEO]);
-  const generateStructuredData = const generateStructuredData = const generateStructuredData = () => {
+  const generateStructuredData = () => {
     const defaultStructuredData = {
       "@context": "https://schema.org",
       "@type": "Organization",

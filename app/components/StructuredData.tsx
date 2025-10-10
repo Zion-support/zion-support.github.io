@@ -8,7 +8,7 @@ interface StructuredDataProps {
 
 const StructuredData: React.FC<StructuredDataProps> = ()
 }) => {
-  const getDefaultData = const getDefaultData = const getDefaultData = () => {
+  const getDefaultData = () => {
     switch (type) {
       case 'Organization':
         return {

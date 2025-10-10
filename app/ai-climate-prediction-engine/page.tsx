@@ -10,12 +10,12 @@ const AIClimatePredictionEngine: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  const features = const features = const features = [
+  const features = [
     {
       icon: Globe,
       title: 'Global Climate Modeling',;
       description: 'Advanced AI models for global climate prediction with high-resolution forecasting',;
-      benefits: ['95% accuracy in predictions', 'Global coverage', 'Real-time updates'];
+      benefits: ['95% accuracy in predictions', 'Global coverage', 'Real-time updates'],
     },
     {
       icon: BarChart,
@@ -36,7 +36,7 @@ const AIClimatePredictionEngine: React.FC = () => {
       benefits: ['Risk mitigation', 'Adaptation strategies', 'Policy recommendations']
     },
   ];
-  const pricingPlans = const pricingPlans = const pricingPlans = [
+  const pricingPlans = [
     {
       name: 'Basic',
       price: '$299',
@@ -89,7 +89,7 @@ const AIClimatePredictionEngine: React.FC = () => {
     };
   ];
 
-  const useCases = const useCases = const useCases = [
+  const useCases = [
     {
       title: 'Agricultural Planning',
       description: 'Climate predictions for crop planning and agricultural optimization',

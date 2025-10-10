@@ -30,7 +30,7 @@ import {
   }
 } from 'lucide-react'
 const PenetrationTestingPage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
       icon: Search,
       title: 'Comprehensive Vulnerability Assessment',
@@ -53,7 +53,7 @@ const PenetrationTestingPage: React.FC = () => {
   };
     };
   ];
-const benefits = const benefits = const benefits = [
+const benefits = [
     'Identify security vulnerabilities before attackers do',
     'Comply with industry regulations and standards',
     'Improve your security posture and defenses',

@@ -192,7 +192,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
    * Get console styling based on severity;
    */;
   private getConsoleStyle(severity: ErrorReport['severity']): string {
-    const styles = const styles = const styles = {,
+    const styles = {,
   }
   private getConsoleStyle(severity: ErrorReport['severity']): string {}
     const styles = {}
@@ -309,17 +309,17 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
 /**;
  * Convenience function to report errors;
  */;
-export const reportError = const reportError = ()
+export const reportError = ()
 ): void => {};
   ErrorReporter.getInstance().reportError(error, severity, context);}
 }
 /**;
  * React error boundary helper;
  */;
-export const captureComponentError = const captureComponentError = ()
+export const captureComponentError = ()
 ): void => {
     ,;
-  const report = const report = ErrorReporter.getInstance(),;
+  const report = ErrorReporter.getInstance(),;
   report.reportError(error, 'high', {);
     componentName);
   componentName: string
@@ -332,14 +332,14 @@ export const captureComponentError = const captureComponentError = ()
   })
 }
 export default ErrorReporter;
-export const reportError = const reportError = const reportError = ();
+export const reportError = ();
   context?: Record<string, unknown></string>);
 ): void => {/* TODO: Fix JSX expression */}
 }
 /**;
  * React error boundary helper;
  */;
-export const captureComponentError = const captureComponentError = const captureComponentError = ();
+export const captureComponentError = ();
   e: string;),
 ): void => {/* TODO: Fix JSX expression */}
   })

@@ -21,7 +21,7 @@ const ContactPage: React.FC = () => {
   })
 const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-const handleInputChange = const handleInputChange = const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};
+const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};
 ;
     const { name, value } = e.target;
     setFormData()
@@ -46,7 +46,7 @@ try {
   }
     }
   }
-const services = const services = const services = [
+const services = [
     'AI Solutions',
     'Cloud Computing',
     'Mobile App Development',
@@ -61,7 +61,7 @@ const services = const services = const services = [
 ;
     'Other';
   ];
-const contactInfo = const contactInfo = const contactInfo = [
+const contactInfo = [
     {
     icon: Phone,
       title: 'Phone',

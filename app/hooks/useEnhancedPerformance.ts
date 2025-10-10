@@ -57,7 +57,7 @@ if (trackPerformance && renderCountRef.current > 10) {
   }
     }
   })
-const trackError = const trackError = useCallback()
+const trackError = useCallback()
     (error: Error, context?: Record<string, unknown>) => {
     if (trackErrors) {
         errorTracker.trackError()
@@ -65,7 +65,7 @@ const trackError = const trackError = useCallback()
       },
     [component, trackErrors];
   );
-const trackUserAction = const trackUserAction = useCallback()
+const trackUserAction = useCallback()
     (action: string, metadata?: Record<string, unknown>) => {
     if (trackAnalytics) {
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata)
@@ -73,13 +73,13 @@ const trackUserAction = const trackUserAction = useCallback()
       },
     [component, trackAnalytics];
   );
-const measureOperation = const measureOperation = useCallback()
+const measureOperation = useCallback()
     (operationName: string) => {};
       const _markName = `${component}-${operationName}`;
       const _startTime = performance.now();
 return {
     end: () => {
-          const _duration = const _duration = const _duration = performance.now() - startTime,
+          const _duration = performance.now() - startTime,
 if (trackPerformance) {
             analytics.trackPerformance();
             );

@@ -10,12 +10,12 @@ const AIQuantumComputingSimulator: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  const features = const features = const features = [
+  const features = [
     {
       icon: Cpu,
       title: 'Quantum Circuit Simulation',;
       description: 'Advanced quantum circuit simulation with up to 50 qubits using state-of-the-art algorithms',;
-      benefits: ['Up to 50 qubit simulation', 'Real-time circuit optimization', 'Multiple quantum gates support'];
+      benefits: ['Up to 50 qubit simulation', 'Real-time circuit optimization', 'Multiple quantum gates support'],
     },
     {
       icon: Brain,
@@ -36,7 +36,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
       benefits: ['Noise modeling', 'Error correction codes', 'Fidelity analysis']
     },
   ];
-  const pricingPlans = const pricingPlans = const pricingPlans = [
+  const pricingPlans = [
     {
       name: 'Researcher',
       price: '$199',
@@ -89,7 +89,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
     };
   ];
 
-  const useCases = const useCases = const useCases = [
+  const useCases = [
     {
       title: 'Quantum Algorithm Development',
       description: 'Develop and test quantum algorithms for optimization, cryptography, and machine learning',

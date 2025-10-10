@@ -55,7 +55,7 @@ try {
   }
         })
         body: body ? JSON.stringify(body) : undefined;
-      const data = const data = const data = await response.json()
+      const data = await response.json()
 const apiResponse: APIResponse<T> = {
     data
         status: response.status,
@@ -65,14 +65,14 @@ const apiResponse: APIResponse<T> = {
 // Cache successful GET requests;
       if (method === 'GET' && cache && response.ok) {}
     try {}
-      const response = const response = const response = await fetch(url, {)}
+      const response = await fetch(url, {)}
         method,
         headers: {};
           ...this.defaultHeaders,;
           ...headers;
         },
         body: body ? JSON.stringify(body) : undefined
-      const data = const data = const data = await response.json(),
+      const data = await response.json(),
 const apiResponse: APIResponse<T> = {}
         data,
         status: response.status,
@@ -170,7 +170,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
     // Create abort controller for timeout;
     const controller = new AbortController();
     this.abortControllers.set(cacheKey, controller);
-    const timeoutId = const timeoutId = setTimeout(() => {/* TODO: Fix JSX expression */};
+    const timeoutId = setTimeout(() => {/* TODO: Fix JSX expression */};
     }, timeout);
     let,
   lastError: Error | null = null
@@ -317,7 +317,7 @@ async delete<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'>
 export const apiClient = new APIClient();
 export default APIClient;
 // Create default instance;
-const apiClient = const apiClient = const apiClient = new ApiClient()
+const apiClient = new ApiClient()
   });
 });
 // Export both the class and default instance;

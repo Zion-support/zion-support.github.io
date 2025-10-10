@@ -7,7 +7,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 export default function APIDocsPage() {
     const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const copyToClipboard = const copyToClipboard = const copyToClipboard = (code: string, id: string) => {
+  const copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code)
     setCopiedCode(id),
     setTimeout(() => setCopiedCode(null), 2000)
@@ -26,7 +26,7 @@ export default function APIDocsPage() {
           code: `curl -X POST "https://api.ziontechgroup.com/ai/text-analysis" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
-  -d '{;
+  -d '{,
     "text": "Your text to analyze",;
     "features": ["sentiment", "entities", "key_phrases"];
   }'`
@@ -93,7 +93,7 @@ export default function APIDocsPage() {
   ]
     }
   ];
-  const filteredEndpoints = const filteredEndpoints = const filteredEndpoints = apiEndpoints.map()
+  const filteredEndpoints = apiEndpoints.map()
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.path.toLowerCase().includes(searchQuery.toLowerCase());
@@ -141,7 +141,7 @@ export default function APIDocsPage() {
           </div>
         </div>
       </section>
-      <Footer / /></Footer>
+      <Footer /></Footer>
     </div>
   ),
 }

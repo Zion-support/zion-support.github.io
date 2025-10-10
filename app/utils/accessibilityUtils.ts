@@ -1,12 +1,12 @@
 // Accessibility utilities for improving user experience and compliance;
-export const generateId = const generateId = (prefix: string = 'id'): string => {};
+export const generateId = (prefix: string = 'id'): string => {};
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 }
-export const createAriaLabel = const createAriaLabel = (text: string, context?: string): string => {};
+export const createAriaLabel = (text: string, context?: string): string => {};
   return context ? `${text}, ${context}` : text;
 }
 export const announceToScreenReader = (message: string): void => {;
-    const announcement = const announcement = document.createElement('div'),;
+    const announcement = document.createElement('div'),;
   announcement.setAttribute('aria-live', 'polite');
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'sr-only';
@@ -17,19 +17,19 @@ setTimeout(() => {
   }
   }, 1000);
 }
-export const focusElement = const focusElement = const focusElement = (element: HTMLElement | null): void => {
+export const focusElement = (element: HTMLElement | null): void => {
     if (element) {
     element.focus()
   }
   };
 };
 export const trapFocus = (container: HTMLElement): (() => void) => {;
-    const focusableElements = const focusableElements = const focusableElements = container.querySelectorAll();
+    const focusableElements = container.querySelectorAll();
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
 const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-const handleTabKey = const handleTabKey = ()
+const handleTabKey = ()
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {;
@@ -54,7 +54,7 @@ return () => {
   }
   }
 }
-export const validateAriaAttributes = const validateAriaAttributes = const validateAriaAttributes = (element: HTMLElement): string[] => {
+export const validateAriaAttributes = (element: HTMLElement): string[] => {
     const errors: string[] = []
 // Check for required ARIA attributes,
   if (element.getAttribute('role') === 'button' && !element.getAttribute('aria-label') && !element.textContent?.trim()) {
@@ -83,14 +83,14 @@ element.addEventListener('keydown', (e) => {
   })
 }
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {;
-    const skipLink = const skipLink = const skipLink = document.createElement('a');
+    const skipLink = document.createElement('a');
   };
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
   skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
 return skipLink,
 }
-export const checkColorContrast = const checkColorContrast = const checkColorContrast = (foreground: string, background: string): boolean => {
+export const checkColorContrast = (foreground: string, background: string): boolean => {
     // Simple contrast ratio calculation (simplified)
   const getLuminance = (color: string): number => {
     const rgb = color.match(/\d+/g);

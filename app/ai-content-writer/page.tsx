@@ -5,11 +5,11 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIContentWriterPage: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     {
       title: 'AI-Powered Writing',;
       description: 'Generate high-quality content using advanced AI algorithms that understand context, tone, and audience.',;
-      benefits: ['Context-aware writing', 'Multiple tones', 'Audience targeting', 'Quality optimization'];
+      benefits: ['Context-aware writing', 'Multiple tones', 'Audience targeting', 'Quality optimization'],
     },
     {
       title: 'Content Optimization',
@@ -22,7 +22,7 @@ const AIContentWriterPage: React.FC = () => {
       benefits: ['Blog posts', 'Social media', 'Email campaigns', 'Marketing copy']
     },
   ];
-  const benefits = const benefits = const benefits = [
+  const benefits = [
     '10x faster content creation',
     'Improved SEO performance',
     'Consistent brand voice',
@@ -30,7 +30,7 @@ const AIContentWriterPage: React.FC = () => {
     'Content analytics',;
     'Team collaboration';
   ];
-  const stats = const stats = const stats = [
+  const stats = [
     { icon: <PenTool className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Articles Created' },
     { icon: <Zap className="w-8 h-8 text-green-500" />, value: '90%', label: 'Time Saved' },
     { icon: <Users className="w-8 h-8 text-purple-500" />, value: '500+', label: 'Happy Users' },;
@@ -128,7 +128,7 @@ const AIContentWriterPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer / /></Footer>
+      <Footer /></Footer>
     </div>
   );
 };

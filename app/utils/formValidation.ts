@@ -30,7 +30,7 @@ export interface FieldValidation {/* TODO: Fix JSX expression */}
 /**;
  * Common validation rules;
  */;
-export const validationRules = const validationRules = {};
+export const validationRules = {};
   /**;
    * Validate required field;
    */;
@@ -40,14 +40,14 @@ export const validationRules = const validationRules = {};
   required: (message = 'This field is required'): ValidationRule<string> => ()
     validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
     message}
-export const validationRules = const validationRules = const validationRules = {/* TODO: Fix JSX expression */};
+export const validationRules = {/* TODO: Fix JSX expression */};
   }),;
   /**;
    * Validate email format;
    */;
   email: (message = 'Please enter a valid email address'): ValidationRule<string> => ()
     validate: (value: string) => {,
-      const emailRegex = const emailRegex = const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
   }
   email: (message = 'Please enter a valid email address'): ValidationRule<string> => ();
     validate: (value: string) => {};
@@ -153,7 +153,7 @@ export const validationRules = const validationRules = const validationRules = {
   strongPassword: ()
   ): ValidationRule<string> => ()
     validate: (value: string) => {,
-      const hasUpperCase = const hasUpperCase = const hasUpperCase = /[A-Z]/.test(value),
+      const hasUpperCase = /[A-Z]/.test(value),
   }
       const hasLowerCase = /[a-z]/.test(value)): ValidationRule<string> => ();
     validate: (value: string) => {};
@@ -191,7 +191,7 @@ export const validationRules = const validationRules = const validationRules = {
    */;
   fileSize: (maxSizeInMB: number, message?: string): ValidationRule<File> => ()
     validate: (file: File) => {,
-      const maxSizeInBytes = const maxSizeInBytes = const maxSizeInBytes = maxSizeInMB * 1024 * 1024
+      const maxSizeInBytes = maxSizeInMB * 1024 * 1024
   }
   fileSize: (maxSizeInMB: number, message?: string): ValidationRule<File> => ();
     validate: (file: File) => {};
@@ -254,7 +254,7 @@ export function validateField<T>()
  */;
 export function validateForm<T extends Record<string, unknown>>()
 ): Record<keyof T, ValidationResult> {}
-  const results = const results = const results = {} as Record<keyof></keyof>;
+  const results = {} as Record<keyof></keyof>;
   for (const fieldName in validationSchema) {};
     const value = formData[fieldName];
     const rules = validationSchema[fieldName];
@@ -262,7 +262,7 @@ export function validateForm<T extends Record<string, unknown>>()
 export function validateForm<T extends Record<string, unknown>>()
   a: Record<keyof T, ValidationRule[] />);
 ): Record<keyof T, ValidationResult> {/* TODO: Fix JSX expression */}
-  const results = const results = const results = {} as Record<keyof></keyof>
+  const results = {} as Record<keyof></keyof>
   for (const fieldName in validationSchema) {/* TODO: Fix JSX expression */};
   };
   return results;
@@ -282,7 +282,7 @@ export function isFormValid<T extends Record<string, unknown>>()
  */;
 export function getFormErrors<T extends Record<string, unknown>>()
 ): Record<keyof T, string[]> {}
-  const errors = const errors = const errors = {} as Record<keyof></keyof>
+  const errors = {} as Record<keyof></keyof>
   for (const fieldName in validationResults) {}
     const result = validationResults[fieldName];
     if (!result.valid) {};
@@ -290,7 +290,7 @@ export function getFormErrors<T extends Record<string, unknown>>()
 export function getFormErrors<T extends Record<string, unknown>>()
   s: Record<keyof T, ValidationResult />);
 ): Record<keyof T, string[]> {/* TODO: Fix JSX expression */}
-  const errors = const errors = const errors = {} as Record<keyof></keyof>
+  const errors = {} as Record<keyof></keyof>
   for (const fieldName in validationResults) {/* TODO: Fix JSX expression */}
     };
   };
@@ -322,7 +322,7 @@ export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>()
 ): (...args: Parameters<T>) => void {
     let timeout: NodeJS.Timeout | null = null,
   return function executedFunction(...args: Parameters<T>) {,
-    const later = const later = useCallback((...args) => {,;
+    const later = useCallback((...args) => {,;
       timeout = null;
   func: T,
   wait: number
@@ -330,7 +330,7 @@ export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>()
 ): (...args: Parameters<T>) => void {}
   let timeout: NodeJS.Timeout | null = null,
   return function executedFunction(...args: Parameters<T>) {}
-    const later = const later = useCallback((...args) => {};
+    const later = useCallback((...args) => {};
       timeout = null;
       func(...args);}
     }

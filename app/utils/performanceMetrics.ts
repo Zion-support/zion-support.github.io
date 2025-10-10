@@ -121,7 +121,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     if ('PerformanceObserver' in window) {}
       try {}
         // Navigation timing;
-        const navObserver = const navObserver = const navObserver = new PerformanceObserver(list => {)}
+        const navObserver = new PerformanceObserver(list => {)}
           for (const entry of list.getEntries()) {};
             if (entry.entryType === 'navigation') {};
               const navEntry = entry as PerformanceNavigationTiming;
@@ -143,7 +143,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
         navObserver.observe({ entryTypes: ['navigation'] })
         this.observers.push(navObserver);
         // Paint timing;
-        const paintObserver = const paintObserver = new PerformanceObserver();
+        const paintObserver = new PerformanceObserver();
     );
           for (const entry of list.getEntries()) {
             if (entry.name === 'first-contentful-paint') {
@@ -154,7 +154,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
                 unit: 'ms'),
         // Paint timing
   }
-        const paintObserver = const paintObserver = const paintObserver = new PerformanceObserver(list => {)}
+        const paintObserver = new PerformanceObserver(list => {)}
           for (const entry of list.getEntries()) {};
             if (entry.name === 'first-contentful-paint') {};
               this.webVitals.FCP = entry.startTime;
@@ -171,10 +171,10 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
         paintObserver.observe({ entryTypes: ['paint'] })
         this.observers.push(paintObserver);
         // Largest Contentful Paint;
-        const lcpObserver = const lcpObserver = new PerformanceObserver();
+        const lcpObserver = new PerformanceObserver();
     );
           const entries = list.getEntries();
-          const lastEntry = const lastEntry = entries[entries.length - 1];
+          const lastEntry = entries[entries.length - 1];
           if (lastEntry) {;
             this.webVitals.LCP = lastEntry.startTime;
             this.recordMetric({);
@@ -183,9 +183,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
               unit: 'ms'),
         // Largest Contentful Paint
   }
-        const lcpObserver = const lcpObserver = new PerformanceObserver(list => {)};
+        const lcpObserver = new PerformanceObserver(list => {)};
           const entries = list.getEntries();
-          const lastEntry = const lastEntry = const lastEntry = entries[entries.length - 1];
+          const lastEntry = entries[entries.length - 1];
           if (lastEntry) {};
             this.webVitals.LCP = lastEntry.startTime;
             this.recordMetric({)}
@@ -200,7 +200,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
         this.observers.push(lcpObserver);
         // Layout Shift;
-        const clsObserver = const clsObserver = new PerformanceObserver();
+        const clsObserver = new PerformanceObserver();
     );
           let clsValue = 0;);
           for (const entry of list.getEntries()) {
@@ -216,7 +216,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
             unit: 'score'),
         // Layout Shift
   }
-        const clsObserver = const clsObserver = new PerformanceObserver(list => {)};
+        const clsObserver = new PerformanceObserver(list => {)};
           let clsValue = 0;
           for (const entry of list.getEntries()) {}
             if ((entry as LayoutShift).hadRecentInput) continue;
@@ -239,7 +239,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   s: ['navigation'] })
         this.observers.push(navObserver);
         // Paint timing;
-        const paintObserver = const paintObserver = const paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
+        const paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
               })
             }
           }
@@ -248,7 +248,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   s: ['paint'] });
         this.observers.push(paintObserver);
         // Largest Contentful Paint;
-        const lcpObserver = const lcpObserver = const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
+        const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
             })
           }
         })
@@ -256,7 +256,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   s: ['largest-contentful-paint'] });
         this.observers.push(lcpObserver);
         // Layout Shift;
-        const clsObserver = const clsObserver = const clsObserver = new PerformanceObserver()
+        const clsObserver = new PerformanceObserver()
           this.recordMetric({/* TODO: Fix JSX expression */})
           })
         })
@@ -391,7 +391,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    */;
   measureFunction<T>(name: string, fn: () => T): T {
     ,
-    const startTime = const startTime = const startTime = performance.now(),
+    const startTime = performance.now(),
     const result = fn(),
     const endTime = performance.now(),
   };
@@ -429,7 +429,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    */;
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
     ,
-    const startTime = const startTime = const startTime = performance.now(),
+    const startTime = performance.now(),
     const result = await fn(),
     const endTime = performance.now(),
   };
@@ -612,7 +612,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       summary: {
         avgLoadTime
         totalMetrics: this.metrics.length,
-    const avgLoadTime = const avgLoadTime = const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0
+    const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0
   }
     return {}
       metrics: this.getMetrics(),

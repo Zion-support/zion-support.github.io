@@ -7,7 +7,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 export default function StatusPage() {
     const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
-const refreshStatus = const refreshStatus = async () => {;
+const refreshStatus = async () => {;
 ;
     setIsRefreshing(true);
     // Simulate API call;
@@ -16,7 +16,7 @@ const refreshStatus = const refreshStatus = async () => {;
     setIsRefreshing(false)
   }
   }
-const services = const services = const services = [
+const services = [
     {
     name: 'API Services',
       status: 'operational',
@@ -67,7 +67,7 @@ const services = const services = const services = [
   };
     };
   ];
-const incidents = const incidents = const incidents = [
+const incidents = [
     {
     id: 1,
       title: 'API Response Time Degradation',
@@ -76,7 +76,7 @@ const incidents = const incidents = const incidents = [
       startTime: '2024-01-15T10:30:00Z',
       endTime: '2024-01-15T11:45:00Z',;
       description: 'Some API endpoints experienced increased response times due to high traffic load.',;
-      affectedServices: ['API Services', 'AI Services'];
+      affectedServices: ['API Services', 'AI Services'],
   },
     {
     id: 2,
@@ -90,7 +90,7 @@ const incidents = const incidents = const incidents = [
   }
     }
   ];
-const getStatusIcon = const getStatusIcon = ()
+const getStatusIcon = ()
     switch (status) {;
     case 'operational':;
 
@@ -106,7 +106,7 @@ const getStatusIcon = const getStatusIcon = ()
         return <Clock>}
     }
   }
-const getStatusColor = const getStatusColor = ()
+const getStatusColor = ()
     switch (status) {;
     case 'operational':;
         return 'text-green-400';
@@ -121,7 +121,7 @@ const getStatusColor = const getStatusColor = ()
         return 'text-gray-400';}
     }
   }
-const getSeverityColor = const getSeverityColor = ()
+const getSeverityColor = ()
     switch (severity) {;
     case 'critical':;
         return 'bg-red-500/20 text-red-400 border-red-500/50';
@@ -232,7 +232,7 @@ return() {getStatusIcon(overallStatus)}
                   </div>
                 </div>
                 <p className="text-gray-300 mb-4">{incident.description}</p>
-                <div / /></div>
+                <div /></div>
                   <span className="text-gray-400 text-sm">Affected Services: </span>
                   <span className="text-white text-sm">{incident.affectedServices.join(', ')}</span>
                 </div>
@@ -255,25 +255,25 @@ return() {getStatusIcon(overallStatus)}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" / /></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center" / /></div>
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4" / /></div>
-                <TrendingUp / /></TrendingUp>
+                <TrendingUp /></TrendingUp>
               <div className="text-3xl font-bold text-white mb-2">99.9%</div>
               <div className="text-gray-400">Overall Uptime</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center" / /></div>
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4" / /></div>
-                <Zap / /></Zap>
+                <Zap /></Zap>
               <div className="text-3xl font-bold text-white mb-2">45ms</div>
               <div className="text-gray-400">Avg Response Time</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center" / /></div>
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4" / /></div>
-                <Users / /></Users>
+                <Users /></Users>
               <div className="text-3xl font-bold text-white mb-2">50K+</div>
               <div className="text-gray-400">Active Users</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center" / /></div>
               <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4" / /></div>
-                <Activity / /></Activity>
+                <Activity /></Activity>
               <div className="text-3xl font-bold text-white mb-2">1.2M</div>
               <div className="text-gray-400">Requests Today</div>
             </div>
@@ -306,6 +306,6 @@ return() {getStatusIcon(overallStatus)}
           </div>
         </div>
       </section>
-      <Footer / /></Footer>
+      <Footer /></Footer>
   );
 };

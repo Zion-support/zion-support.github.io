@@ -30,7 +30,7 @@ import {
   }
 } from 'lucide-react'
 const SecurityMonitoringSuitePage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
       icon: Monitor,
       title: 'Real-time Dashboard',
@@ -53,7 +53,7 @@ const SecurityMonitoringSuitePage: React.FC = () => {
   };
     };
   ];
-const benefits = const benefits = const benefits = [
+const benefits = [
     '24/7 security monitoring and protection',
     'Real-time threat detection and alerts',
     'Comprehensive security analytics',

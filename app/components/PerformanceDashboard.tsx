@@ -18,9 +18,9 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
   const [alerts, setAlerts] = useState<string[]>([]);
   useEffect(() => {
     const updateMetrics = () => {;
-      const navigation = const navigation = const navigation = performance.getEntriesByType();
+      const navigation = performance.getEntriesByType();
       )[0] as PerformanceNavigationTiming;
-      const loadTime = const loadTime = navigation;
+      const loadTime = navigation;
         ? navigation.loadEventEnd - navigation.fetchStart;
         : 0;
       // Measure render time
@@ -82,12 +82,12 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
   }
     setAlerts(newAlerts);
   }
-  const toggleMonitoring = const toggleMonitoring = const toggleMonitoring = () => {
+  const toggleMonitoring = () => {
     setIsMonitoring(!isMonitoring)
   };
   const formatBytes = (bytes: number) => {;
     if (bytes === 0) return '0 Bytes';
-    const k = const k = 1024,;
+    const k = 1024,;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]

@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const CloudMigrationPage: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     {
       icon: Shield,
       title: 'Secure Cloud Migration',
@@ -12,7 +12,7 @@ const CloudMigrationPage: React.FC = () => {
     {;
     };
   ];
-  const benefits = const benefits = const benefits = [
+  const benefits = [
     'Advanced cloud migration technology',
     'Real-time migration monitoring',
     'Enterprise-grade security and compliance',

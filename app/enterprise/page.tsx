@@ -5,12 +5,12 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
 const EnterprisePage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
       icon: Shield,
       title: 'Enterprise Security',;
       description: 'Comprehensive security solutions designed for large-scale enterprise environments.',;
-      benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control'];
+      benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control'],
   },
     {
     icon: Cloud,
@@ -43,12 +43,12 @@ const EnterprisePage: React.FC = () => {
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
   },
   ];
-const solutions = const solutions = const solutions = [
+const solutions = [
     {
     title: 'Enterprise Resource Planning',
       description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',;
       icon: Building,;
-      benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management'];
+      benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management'],
   },
     {
     title: 'Customer Relationship Management',
@@ -69,7 +69,7 @@ const solutions = const solutions = const solutions = [
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
   }
   ];
-const benefits = const benefits = const benefits = [
+const benefits = [
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',
     'Enhance security and compliance',
@@ -83,7 +83,7 @@ const benefits = const benefits = const benefits = [
 ;
     'Provide 24/7 support and monitoring';
   ];
-const stats = const stats = const stats = [
+const stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },;
@@ -226,7 +226,7 @@ return ()
           </div>
         </div>
       </section>
-      <Footer / /></Footer>
+      <Footer /></Footer>
   ),
 };
 

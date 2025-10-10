@@ -423,7 +423,7 @@ return cleaned;
 try {}
       const storage = this.getStorage();
       if (storage) {}
-        const data = const data = const data = {}
+        const data = {}
           entries: Object.fromEntries(this.cache),
           stats: this.stats,;
           timestamp: Date.now()};
@@ -492,12 +492,12 @@ switch (this.config.storage) {
   }
 }
 // Create singleton instances for different use cases;
-export const memoryCache = const memoryCache = new CacheManager({ storage: CacheStorage.Memory });
-export const localStorageCache = const localStorageCache = new CacheManager();
+export const memoryCache = new CacheManager({ storage: CacheStorage.Memory });
+export const localStorageCache = new CacheManager();
     );
   storage: CacheStorage.LocalStorage)
   defaultTTL: 30 * 60 * 1000 // 30 minutes
-export const sessionStorageCache = const sessionStorageCache = const sessionStorageCache = new CacheManager({),
+export const sessionStorageCache = new CacheManager({),
   storage: CacheStorage.SessionStorage),
   defaultTTL: 60 * 60 * 1000 // 1 hour
   }

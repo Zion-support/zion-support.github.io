@@ -5,12 +5,12 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock } from 'lucide-react';
 
 const CloudServicesPage: React.FC = () => {
-  const services = const services = const services = [
+  const services = [
     {
       icon: Cloud,
       title: 'Cloud Migration',;
       description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime and maximum security.',;
-      features: ['AWS, Azure, GCP expertise', 'Zero-downtime migration', 'Cost optimization', 'Security compliance'];
+      features: ['AWS, Azure, GCP expertise', 'Zero-downtime migration', 'Cost optimization', 'Security compliance'],
     },
     {
       icon: Server,
@@ -31,7 +31,7 @@ const CloudServicesPage: React.FC = () => {
   ];
   const benefits = [;
   ];
-  const pricing = const pricing = const pricing = [
+  const pricing = [
     {
       name: 'Starter',
       price: '$2,999',
@@ -40,7 +40,7 @@ const CloudServicesPage: React.FC = () => {
       features: [
         'Basic cloud setup',
         'Email support',
-        'Monthly monitoring',;
+        'Monthly monitoring',,
         'Standard security',;
         'Up to 5 users';
       ];

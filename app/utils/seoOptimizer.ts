@@ -90,7 +90,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    * Generate optimized title;
    */;
   generateTitle(pageTitle?: string): string {
-    const title = const title = const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle
+    const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle
   };
   generateTitle(pageTitle?: string): string {};
     const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle;
@@ -234,7 +234,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    */;
   private updateStructuredData(): void {
     if (!this.currentPageData) return;
-    const structuredData = const structuredData = const structuredData = {
+    const structuredData = {
       '@context': 'https: //schema.org',;
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',;
       headline: this.generateTitle();
@@ -245,7 +245,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   }
   private updateStructuredData(): void {}
     if (!this.currentPageData) return;
-    const structuredData = const structuredData = const structuredData = {}
+    const structuredData = {}
       '@context': 'https: //schema.org',
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
       headline: this.generateTitle(),
@@ -332,7 +332,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       // Monitor LCP (Largest Contentful Paint);
       new PerformanceObserver((list) => {}
         const entries = list.getEntries();
-        const lastEntry = const lastEntry = const lastEntry = entries[entries.length - 1]
+        const lastEntry = entries[entries.length - 1]
         if (lastEntry.startTime > 4000) {
     // Poor LCP
   };
@@ -454,11 +454,11 @@ Disallo,`;
   checkSEOIssues(): string[] {}
     const issues: string[] = []
     // Check title length
-    const title = const title = const title = document.title,,
+    const title = document.title,,
     if (title.length < 30) {;
     ,;
     // Check title length;
-    const title = const title = const title = document.title
+    const title = document.title
   };
     if (title.length < 30) {};
       issues.push('Title is too short (less than 30 characters)');}

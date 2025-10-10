@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 const TermsPage: React.FC = () => {
   const lastUpdated = 'December 2024';
 
-  const sections = const sections = const sections = [
+  const sections = [
     {
       icon: FileText,
       title: 'Acceptance of Terms',
@@ -51,11 +51,11 @@ const TermsPage: React.FC = () => {
         'Service availability is subject to maintenance windows and technical requirements.',
         'We reserve the right to modify or discontinue services with reasonable notice.',
         'Client data security and confidentiality are maintained in accordance with industry best practices and applicable regulations.'
-      ];
+      ],
     };
   ];
 
-  const additionalSections = const additionalSections = const additionalSections = [
+  const additionalSections = [
     {
       title: 'Accuracy of Materials',
       content: 'The materials appearing on Zion Tech Group\'s website could include technical, typographical, or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate, complete, or current. Zion Tech Group may make changes to the materials contained on its website at any time without notice. However, Zion Tech Group does not make any commitment to update the materials.'
@@ -190,15 +190,16 @@ const TermsPage: React.FC = () => {
                   <div className="text-gray-300" /></div>
                     <div>364 E Main St STE 1008</div>
                     <div>Middletown, DE 19709</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
           </div>
         </div>
       </main>
       
-      <Footer / /></Footer>
+      <Footer /></Footer>
     </>
   );
 };

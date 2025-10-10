@@ -37,7 +37,7 @@
    */
   private handleMenuNavigation(event: KeyboardEvent): void {
     const activeElement = document.activeElement as HTMLElement;
-    const menuItems = const menuItems = const menuItems = Array.from()
+    const menuItems = Array.from()
       activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || [];
     ) as HTMLElement[];
     ;
@@ -146,7 +146,7 @@
     // Add high contrast mode support
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
     
-    const handleContrastChange = const handleContrastChange = (e: MediaQueryListEvent) => {;
+    const handleContrastChange = (e: MediaQueryListEvent) => {;
       if (e.matches) {;
         document.body.classList.add('high-contrast');
       } else {

@@ -7,9 +7,9 @@ import Footer from '../components/Footer';
 
 const SitemapPage: React.FC = () => {
 <<<<<<< HEAD
-  const lastUpdated = const lastUpdated = new Date().toISOString().split('T')[0];
+  const lastUpdated = new Date().toISOString().split('T')[0];
   ;
-  const pageCategories = const pageCategories = const pageCategories = [
+  const pageCategories = [
 =======
   const sitemapSections = [
 >>>>>>> cursor/website-audit-and-update-with-deployment-26c5
@@ -21,7 +21,7 @@ const SitemapPage: React.FC = () => {
         { name: 'Home', url: '/', description: 'Main landing page' },
         { name: 'About', url: '/about', description: 'About Zion Tech Group' },
         { name: 'Services', url: '/services', description: 'Our service offerings' },
-        { name: 'Pricing', url: '/pricing', description: 'Service pricing plans' },;
+        { name: 'Pricing', url: '/pricing', description: 'Service pricing plans' },,
         { name: 'Contact', url: '/contact', description: 'Contact information' };
       ];
 =======
@@ -187,7 +187,7 @@ const SitemapPage: React.FC = () => {
     }
   ];
 
-  const quickLinks = const quickLinks = const quickLinks = [
+  const quickLinks = [
     { name: 'Get Started', url: '/contact', icon: ArrowRight },
     { name: 'Free Consultation', url: '/consultation', icon: Calendar },
     { name: 'Request Demo', url: '/demo', icon: Video },
@@ -255,13 +255,14 @@ const SitemapPage: React.FC = () => {
                     Call: (302) 464-0950
                   </a>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
       </main>
       
-      <Footer / /></Footer>
+      <Footer /></Footer>
     </>
   );
 };

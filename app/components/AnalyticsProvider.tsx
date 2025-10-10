@@ -48,7 +48,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   }
   }
 
-  const trackPageView = const trackPageView = const trackPageView = (pageName: string, pagePath: string) => {
+  const trackPageView = (pageName: string, pagePath: string) => {
     if (typeof window === 'undefined') return,
 ;
     // Google Analytics;

@@ -4,7 +4,7 @@ import React from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Star, Users } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     {
       title: 'AI-Powered Solutions',
       description: 'Leverage cutting-edge AI to automate and optimize your business processes.',
@@ -26,7 +26,7 @@ const ContentPromotionBanner: React.FC = () => {
       icon: Users;
     };
   ];
-  const benefits = const benefits = const benefits = [
+  const benefits = [
     'Easy integration with existing systems',;
     'Cost-effective pricing plans',;
     'Proven track record of success';

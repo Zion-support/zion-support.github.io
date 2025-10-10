@@ -12,13 +12,13 @@ const DemoPage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     const { name, value } = e.target;
     setFormData()
     }));
   };
 
-  const handleSubmit = const handleSubmit = async (e: React.FormEvent) => {;
+  const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -36,7 +36,7 @@ const DemoPage: React.FC = () => {
     }
   };
 
-  const demos = const demos = const demos = [
+  const demos = [
     {
       id: 'ai-chatbot',
       title: 'AI Chatbot Demo',
@@ -52,7 +52,7 @@ const DemoPage: React.FC = () => {
 <<<<<<< HEAD
       description: 'See how our AI analytics can transform your business intelligence',;
       duration: '5 min',;
-      features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports'];
+      features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports'],
 =======
       description: 'See how our AI-powered analytics can transform your data into actionable insights',
       icon: BarChart,
@@ -102,7 +102,7 @@ const DemoPage: React.FC = () => {
 =======
   ];
 
-  const benefits = const benefits = const benefits = [
+  const benefits = [
     'See our solutions in action',
     'Get personalized recommendations',
     'Ask questions to our experts',
@@ -130,10 +130,11 @@ const DemoPage: React.FC = () => {
                               {demo.features.slice(0, 2).map((feature, index) => ()
                               ))}
                             </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
                   ))}
                 </div>
 
@@ -275,13 +276,14 @@ const DemoPage: React.FC = () => {
                     <span>Email Us</span>
                   </a>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
       </main>
       
-      <Footer / /></Footer>
+      <Footer /></Footer>
     </>
   );
 };

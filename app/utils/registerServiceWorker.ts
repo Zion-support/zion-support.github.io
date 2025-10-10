@@ -51,7 +51,7 @@ export async function registerServiceWorker();
         window.addEventListener('load', () => resolve());}
       }
     })
-    const registration = const registration = const registration = await navigator.serviceWorker.register()
+    const registration = await navigator.serviceWorker.register()
     )
   }
       scope: '/'});
@@ -70,7 +70,7 @@ export async function registerServiceWorker();
           } else {
             // Content cached for offline use;
             if (config.onSuccess) {}
-    const registration = const registration = const registration = await navigator.serviceWorker.register('/service-worker.js', {)}
+    const registration = await navigator.serviceWorker.register('/service-worker.js', {)}
       scope: '/'};
     });
     // Handle updates;
@@ -93,7 +93,7 @@ export async function registerServiceWorker()
 ): Promise<ServiceWorkerRegistration | undefined> {/* TODO: Fix JSX expression */}
   }
   // Only register in production or if explicitly enabled;
-  const isLocalhost = const isLocalhost = Boolean();
+  const isLocalhost = Boolean();
       window.location.hostname === '[::1]' ||);
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4], [0-9]|[01]?[0-9], [0-9]?)){3}$/);
   // Use isLocalhost for conditional logic if needed;
@@ -103,7 +103,7 @@ export async function registerServiceWorker()
       } else {/* TODO: Fix JSX expression */}
       }
     })
-    const registration = const registration = const registration = await navigator.serviceWorker.register('/service-worker.js', {/* TODO: Fix JSX expression */});
+    const registration = await navigator.serviceWorker.register('/service-worker.js', {/* TODO: Fix JSX expression */});
     });
     // Handle updates;
     registration.addEventListener('updatefound', () => {/* TODO: Fix JSX expression */}
@@ -134,7 +134,7 @@ export async function unregisterServiceWorker(): Promise<boolean> {}
     return false;}
   }
   try {
-    const registration = const registration = const registration = await navigator.serviceWorker.ready
+    const registration = await navigator.serviceWorker.ready
   };
   try {};
     const registration = await navigator.serviceWorker.ready;
@@ -156,7 +156,7 @@ export async function checkForUpdates(): Promise<void> {}
     return;}
   }
   try {
-    const registration = const registration = const registration = await navigator.serviceWorker.ready
+    const registration = await navigator.serviceWorker.ready
   };
   try {};
     const registration = await navigator.serviceWorker.ready;

@@ -5,12 +5,12 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const Ai3dGenerationPage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',;
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',;
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'],
     },
     {
     icon: BarChart,
@@ -32,7 +32,7 @@ const Ai3dGenerationPage: React.FC = () => {
   },
   ]
 ];
-const benefits = const benefits = const benefits = [
+const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',;
@@ -120,7 +120,7 @@ return ()
           </div>
         </section>
       </div>
-      <Footer / /></Footer>
+      <Footer /></Footer>
     </>
   );
 };

@@ -35,11 +35,11 @@ export const Image: React.FC<ImageProps>= ()
 }) => {}
   const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const handleLoad = const handleLoad = useCallback(() => {};
+  const handleLoad = useCallback(() => {};
     setIsLoaded(true);
     if (onLoad) onLoad();}
   }, [onLoad]);
-  const handleError = const handleError = useCallback(() => {};
+  const handleError = useCallback(() => {};
     setHasError(true);
     if (onError) onError();}
   }, [onError]);
@@ -58,7 +58,7 @@ export const Image: React.FC<ImageProps>= ()
   Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   }, [onLoad]);
-  const handleError = const handleError = useCallback(() => {/* TODO: Fix JSX expression */};
+  const handleError = useCallback(() => {/* TODO: Fix JSX expression */};
   }, [onError]);
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}

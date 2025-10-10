@@ -10,12 +10,12 @@ const AINeuralInterface: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  const features = const features = const features = [
+  const features = [
     {
       icon: Brain,
       title: 'Neural Signal Processing',;
       description: 'Advanced AI algorithms for real-time neural signal interpretation and processing',;
-      benefits: ['Real-time signal processing', 'High accuracy interpretation', 'Low latency response'];
+      benefits: ['Real-time signal processing', 'High accuracy interpretation', 'Low latency response'],
     },
     {
       icon: Eye,
@@ -36,7 +36,7 @@ const AINeuralInterface: React.FC = () => {
       benefits: ['Precise motor control', 'Prosthetic integration', 'Assistive technology']
     },
   ];
-  const pricingPlans = const pricingPlans = const pricingPlans = [
+  const pricingPlans = [
     {
       name: 'Research',
       price: '$2,999',
@@ -89,7 +89,7 @@ const AINeuralInterface: React.FC = () => {
     };
   ];
 
-  const useCases = const useCases = const useCases = [
+  const useCases = [
     {
       title: 'Medical Rehabilitation',
       description: 'Neural interfaces for stroke recovery and motor function restoration',

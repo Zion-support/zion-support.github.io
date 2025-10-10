@@ -30,7 +30,7 @@ private measureCoreWebVitals(): void {
 private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return,
 try {
-      const observer = const observer = const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === type) {
             callback(entry)
@@ -50,7 +50,7 @@ private observeLCP(): void {
 try {
       const observer = new PerformanceObserver((list) => {;
         const entries = list.getEntries();
-        const lastEntry = const lastEntry = const lastEntry = entries[entries.length - 1]
+        const lastEntry = entries[entries.length - 1]
         this.metrics.largestContentfulPaint = lastEntry.startTime
   }
       });
@@ -64,7 +64,7 @@ try {
 private observeFID(): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 try {
-      const observer = const observer = const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           this.metrics.firstInputDelay = entry.processingStart - entry.startTime
   }
@@ -81,7 +81,7 @@ private observeCLS(): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 try {
       let clsValue = 0;
-      const observer = const observer = const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value
@@ -133,10 +133,10 @@ public cleanup(): void {
 }
 export const performanceMonitor = new PerformanceMonitor();
 // Utility functions;
-export const measureFunction = const measureFunction = const measureFunction = <T extends (...args: any[]) => any>()
+export const measureFunction = <T extends (...args: any[]) => any>()
 ): T => {
   return ((...args: Parameters<T>) => {
-    const start = const start = performance.now()
+    const start = performance.now()
     const result = fn(...args)
     const end = performance.now(),;
 if (name) {};
@@ -145,7 +145,7 @@ if (name) {};
 return result;
   }) as T;
 }
-export const debounce = const debounce = const debounce = <T extends (...args: any[]) => any>();
+export const debounce = <T extends (...args: any[]) => any>();
 ): T => {;
     let timeout: NodeJS.Timeout;
 return ((...args: Parameters<T>) => {
@@ -154,7 +154,7 @@ return ((...args: Parameters<T>) => {
   }
   }) as T;
 }
-export const throttle = const throttle = const throttle = <T extends (...args: any[]) => any>()
+export const throttle = <T extends (...args: any[]) => any>()
 ): T => {
     let inThrottle: boolean
 return ((...args: Parameters<T>) => {
@@ -166,7 +166,7 @@ return ((...args: Parameters<T>) => {
     };
   }) as T;
 }
-export const lazyLoad = const lazyLoad = const lazyLoad = (callback: () => void): void => {
+export const lazyLoad = (callback: () => void): void => {
     if ('requestIdleCallback' in window) {
     requestIdleCallback(callback)
   }

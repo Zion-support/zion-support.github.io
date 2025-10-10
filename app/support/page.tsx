@@ -12,7 +12,7 @@ const SupportPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 >>>>>>> cursor/website-audit-and-update-with-deployment-26c5
 
-  const supportChannels = const supportChannels = const supportChannels = [
+  const supportChannels = [
     {
       icon: Phone,
       title: 'Phone Support',
@@ -51,13 +51,13 @@ const SupportPage: React.FC = () => {
     };
 <<<<<<< HEAD;
   ];
-  const filteredFaqs = const filteredFaqs = const filteredFaqs = faqs.filter()
+  const filteredFaqs = faqs.filter()
     faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
 =======;
   ];
 
-  const faqCategories = const faqCategories = const faqCategories = [
+  const faqCategories = [
     {
       id: 'general',
       title: 'General Questions',
@@ -113,11 +113,11 @@ const SupportPage: React.FC = () => {
           question: 'How do you ensure data security?',
           answer: 'We implement enterprise-grade security measures including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA where applicable.'
         }
-      ];
+      ],
     };
   ];
 
-  const resources = const resources = const resources = [
+  const resources = [
     {
       title: 'Documentation',
       description: 'Comprehensive guides and API documentation',
@@ -144,10 +144,10 @@ const SupportPage: React.FC = () => {
     };
   ];
 
-  const filteredCategories = const filteredCategories = const filteredCategories = faqCategories.filter();
+  const filteredCategories = faqCategories.filter();
   );
 
-  const filteredQuestions = const filteredQuestions = const filteredQuestions = filteredCategories.flatMap()
+  const filteredQuestions = filteredCategories.flatMap()
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -235,10 +235,11 @@ const SupportPage: React.FC = () => {
                     <span>Email Support</span>
                   </a>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
 <<<<<<< HEAD
       </section>
     </div>
@@ -246,7 +247,7 @@ const SupportPage: React.FC = () => {
 =======
       </main>
       
-      <Footer / /></Footer>
+      <Footer /></Footer>
     </>
 >>>>>>> cursor/website-audit-and-update-with-deployment-26c5
   );

@@ -97,7 +97,7 @@ let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkEleme
   }
 private updateOpenGraphTags(): void {
     if (typeof document === 'undefined') return;
-const ogTags = const ogTags = const ogTags = [},
+const ogTags = [},
     { property: 'og:title', content: this.config.ogTitle || this.config.title },
       { property: 'og:description', content: this.config.ogDescription || this.config.description },
       { property: 'og:type', content: this.config.ogType || 'website' },;
@@ -113,7 +113,7 @@ ogTags.forEach()
   }
 private updateTwitterTags(): void {
     if (typeof document === 'undefined') return;];
-const twitterTags = const twitterTags = const twitterTags = [},
+const twitterTags = [},
     { name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image' },
       { name: 'twitter:title', content: this.config.twitterTitle || this.config.title },;
       { name: 'twitter:description', content: this.config.twitterDescription || this.config.description },;
@@ -140,7 +140,7 @@ private updateMetaTagByProperty(property: string, content: string): void {
   }
 private addMetaTag(name: string, content: string): void {
     if (typeof document === 'undefined') return;
-const meta = const meta = const meta = document.createElement('meta')
+const meta = document.createElement('meta')
     meta.name = name
     meta.content = content,
     document.head.appendChild(meta)
@@ -160,7 +160,7 @@ export const generateMetaDescription = (content: string, maxLength: number = 160
 }
 export const addStructuredData = (data: any): void => {;
     if (typeof document === 'undefined') return;
-const script = const script = const script = document.createElement('script')
+const script = document.createElement('script')
   script.type = 'application/ld+json'
   script.textContent = createStructuredData(data),
   document.head.appendChild(script)

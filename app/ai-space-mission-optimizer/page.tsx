@@ -10,12 +10,12 @@ const AISpaceMissionOptimizer: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  const features = const features = const features = [
+  const features = [
     {
       icon: Rocket,
       title: 'Mission Trajectory Optimization',;
       description: 'AI-powered trajectory planning for optimal fuel efficiency and mission success',;
-      benefits: ['30% fuel savings', 'Optimal trajectory planning', 'Real-time adjustments'];
+      benefits: ['30% fuel savings', 'Optimal trajectory planning', 'Real-time adjustments'],
     },
     {
       icon: Target,
@@ -36,7 +36,7 @@ const AISpaceMissionOptimizer: React.FC = () => {
       benefits: ['Multi-planetary coordination', 'Deep space navigation', 'Mission timeline optimization']
     },
   ];
-  const pricingPlans = const pricingPlans = const pricingPlans = [
+  const pricingPlans = [
     {
       name: 'Explorer',
       price: '$4,999',
@@ -89,7 +89,7 @@ const AISpaceMissionOptimizer: React.FC = () => {
     };
   ];
 
-  const useCases = const useCases = const useCases = [
+  const useCases = [
     {
       title: 'Satellite Constellation Management',
       description: 'Optimize satellite constellation deployment and maintenance operations',

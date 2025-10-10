@@ -27,7 +27,7 @@ const HomePage: React.FC = () => {
   }, []);
 
   // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = const handlePhoneClick = useCallback(() => {;
+  const handlePhoneClick = useCallback(() => {;
     if (typeof window !== 'undefined' && 'gtag' in window) {;
       const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
       gtag()
@@ -35,12 +35,12 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
-  const features = const features = const features = [
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',;
       description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',;
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'];
+      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
     },
     {
       icon: Cloud,
@@ -73,13 +73,13 @@ const HomePage: React.FC = () => {
       benefits: ['Strategy Planning', 'Technology Assessment', 'Implementation Support', 'Training']
     },
   ];
-  const services = const services = const services = [
+  const services = [
     {
       icon: Brain,
       title: 'AI Services',
       description: 'Comprehensive AI solutions including machine learning, natural language processing, and computer vision.',;
       href: '/ai-services',;
-      features: ['Machine Learning', 'NLP', 'Computer Vision', 'Predictive Analytics'];
+      features: ['Machine Learning', 'NLP', 'Computer Vision', 'Predictive Analytics'],
     },
     {
       icon: Cloud,
@@ -120,10 +120,11 @@ const HomePage: React.FC = () => {
                     <div className="text-center" /></div>
                       <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">5★</div>
                       <div className="text-sm text-gray-300">Client Rating</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
 
 const HomePage: React.FC = memo(() => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -133,12 +134,12 @@ const HomePage: React.FC = memo(() => {
     setIsLoaded(true)
   }, []);
 
-  const features = const features = const features = [
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',;
       description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',;
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'];
+      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
     },
     {
       icon: Cloud,
@@ -171,7 +172,7 @@ const HomePage: React.FC = memo(() => {
       benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training']
     },
   ];
-  const stats = const stats = const stats = [
+  const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' },;
@@ -324,10 +325,11 @@ const HomePage: React.FC = memo(() => {
                       <div></div>
                         <div className="text-white font-semibold">David Wilson</div>
                         <div className="text-sm text-gray-400">VP Engineering, DataFlow</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
               </div>
             </section>
 
@@ -357,7 +359,7 @@ const HomePage: React.FC = memo(() => {
             </section>
 
             {/* Footer */}
-            <Footer / /></Footer>
+            <Footer /></Footer>
           </div>
 
         </AccessibilityEnhancer>

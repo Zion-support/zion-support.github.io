@@ -9,7 +9,7 @@ interface SecurityEnhancerProps {
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
     useEffect(() => {
     // Security enhancement logic;
-    const enhanceSecurity = const enhanceSecurity = ();
+    const enhanceSecurity = ();
         'X-XSS-Protection': '1; mode=block',) => {
   return ()
   )

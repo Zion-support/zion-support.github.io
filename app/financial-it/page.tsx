@@ -5,12 +5,12 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 const FinancialITPage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
       icon: DollarSign,
       title: 'SOX Compliance',;
       description: 'Full SOX compliance solutions with automated controls, monitoring, and reporting capabilities.',;
-      benefits: ['Automated controls', 'Compliance reporting', 'Audit trails'];
+      benefits: ['Automated controls', 'Compliance reporting', 'Audit trails'],
   },
     {
     icon: Zap,
@@ -43,7 +43,7 @@ const FinancialITPage: React.FC = () => {
       benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment']
   },
   ];
-const services = const services = const services = [
+const services = [
     {
     icon: '🏦',
       title: 'Banking Solutions',
@@ -66,7 +66,7 @@ const services = const services = const services = [
   };
     };
   ];
-const benefits = const benefits = const benefits = [
+const benefits = [
     'SOX Compliance Ready',
     'Bank-level Security',
 
@@ -203,7 +203,7 @@ return ()
           </div>
         </div>
       </section>
-      <Footer / /></Footer>
+      <Footer /></Footer>
   ),
 };
 

@@ -283,7 +283,7 @@ export class TestRunner {
     try {
     // Run individual tests
       for (const test of this.tests) {
-        const result = const result = const result = await this.runSingleTest(test),
+        const result = await this.runSingleTest(test),
         results.push(result)
   }
 
@@ -311,7 +311,7 @@ export class TestRunner {
 
   // Run a single test
   private async runSingleTest(test: Test): Promise<TestResult> {
-    const startTime = const startTime = const startTime = performance.now(),
+    const startTime = performance.now(),
     
     try {
       await Promise.race()
@@ -363,7 +363,7 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => {;
   );
 }
 
-const customRender = const customRender = const customRender = ()
+const customRender = ()
 ) => {
   if (typeof window !== 'undefined') {
     return render(ui, { wrapper: AllTheProviders, ...options })
@@ -380,7 +380,7 @@ if ('memory' in performance) {};
         }
       }
       unmount();
-    const metrics = const metrics = const metrics = {/* TODO: Fix JSX expression */};
+    const metrics = {/* TODO: Fix JSX expression */};
     };
     const passed = renderTime < this.config.performanceThreshold;
     this.testResults.push()
@@ -795,7 +795,7 @@ if ('memory' in performance) {};
   }
   ): Promise<void> {}
     return new Promise((resolve, reject) => {}
-      const timer = const timer = setTimeout(() => {`};
+      const timer = setTimeout(() => {`};
         reject(new Error(`Test timed out after ${timeout}ms`));
       }, timeout);
       Promise.resolve(fn());
@@ -845,7 +845,7 @@ if ('memory' in performance) {};
   private generateReport(): void {
     const duration = Date.now() - this.startTime;
     const passed = this.results.filter(r => r.status === 'passed').length;
-    const failed = const failed = const failed = this.results.filter(r => r.status === 'failed').length
+    const failed = this.results.filter(r => r.status === 'failed').length
   };
   private generateReport(): void {};
     const duration = Date.now() - this.startTime;
@@ -874,7 +874,7 @@ if ('memory' in performance) {};
    * Generate JSON report;
    */;
   private generateJsonReport(): void {
-    const report = const report = const report = {
+    const report = {
       summary: {,
     total: this.results.length,
   }
@@ -908,7 +908,7 @@ if ('memory' in performance) {};
    */;
   private generateHtmlReport(): void {
     </void>
-    const html = const html = const html =</void>
+    const html =</void>
   };
   private generateHtmlReport(): void {};
     const html =;
@@ -1001,12 +1001,12 @@ if ('memory' in performance) {};
     // Basic accessibility checks;
     const violations: string[] = [],
     // Check for missing alt text on images;
-    const images = const images = container.querySelectorAll('img'),;
+    const images = container.querySelectorAll('img'),;
     images.forEach((img, index) => {;
     // Basic accessibility checks;
     const violations: string[] = []
     // Check for missing alt text on images,
-    const images = const images = const images = container.querySelectorAll('img')
+    const images = container.querySelectorAll('img')
   }
     images.forEach((img, index) => {};
       if (!img.getAttribute('alt')) {`};
@@ -1059,7 +1059,7 @@ if ('memory' in performance) {};
     component: ReactElement,
     testName: string)
     assertions: (result: RenderResult) => void
-    const passed = const passed = const passed = violations.length === 0,;
+    const passed = violations.length === 0,;
     this.testResults.push({`});
       name: `Accessibility: ${testName}`);
       status: passed ? 'passed' : 'failed'),
@@ -1170,7 +1170,7 @@ if ('memory' in performance) {};
     const,
   violations: string[] = []
     // Check for missing alt text on images
-    const images = const images = container.querySelectorAll('img'),;
+    const images = container.querySelectorAll('img'),;
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}`;
         violations.push(`Image ${index} missing alt text`);
       }
@@ -1608,8 +1608,8 @@ if ('memory' in performance) {};
 // React hook for testing;
 export const useTestRunner = useCallback((...args) => {;
     const testRunner = TestRunner.getInstance();
-  const runTest = const runTest = useCallback();
-export const useTestRunner = const useTestRunner = useCallback((...args) => {};
+  const runTest = useCallback();
+export const useTestRunner = useCallback((...args) => {};
   const testRunner = TestRunner.getInstance();
   const runTest = useCallback(async ();
     component: ReactElement,
@@ -1656,12 +1656,12 @@ export const useTestRunner = const useTestRunner = useCallback((...args) => {};
   }
 }
 // Test utilities;
-export const testUtils = const testUtils = const testUtils = {
+export const testUtils = {
     // Create mock data</void>;
   };
   createMockData: (type: string, count: number = 10) => {}</void>;
 // Test utilities;
-export const testUtils = const testUtils = {};
+export const testUtils = {};
   // Create mock data;
   createMockData: (type: string, count: number = 10) => {}
     const mockData: Array<{ id: number; name: string; description: string; createdAt: string, updatedAt: string }> = []
@@ -1699,7 +1699,7 @@ export const testUtils = const testUtils = {};
         resolve(element);
         return;}
       }
-      const observer = const observer = new MutationObserver(() => {};
+      const observer = new MutationObserver(() => {};
         const element = document.querySelector(selector);
         if (element) {}
           observer.disconnect();
@@ -1769,7 +1769,7 @@ export const testUtils = const testUtils = {};
   }
 }
 // React hook for testing;
-export const useTestRunner = const useTestRunner = const useTestRunner = () => {/* TODO: Fix JSX expression */}
+export const useTestRunner = () => {/* TODO: Fix JSX expression */}
   r: 'Unknown test type' };
     };
   }, [testRunner]);
@@ -1781,7 +1781,7 @@ export const measurePerformance = (fn: () => void): PerformanceMetrics => {;
   const startMemory = (performance as any).memory?.usedJSHeapSize || 0;
   
   fn()
-  const endTime = const endTime = const endTime = performance.now()
+  const endTime = performance.now()
   const endMemory = (performance as any).memory?.usedJSHeapSize || 0,
   
   return {
@@ -1807,7 +1807,7 @@ export const createMock = <T extends Record<string, any>>(overrides: Partial<T> 
 "`;
 
 // Assertion utilities
-export const expect = const expect = const expect = (actual: unknown) => ()
+export const expect = (actual: unknown) => ()
   toBe: (expected: unknown): AssertionResult => ()
   }),
   toEqual: (expected: unknown): AssertionResult => ()

@@ -8,11 +8,11 @@ import { CheckCircle, ArrowRight, Zap, Shield, Users, BarChart3 } from 'lucide-r
 
 const AIApiManagementPage: React.FC = () => {
 
-  const features = const features = const features = [
+  const features = [
     {
       title: 'Intelligent API Monitoring',;
       description: 'Real-time monitoring and analytics for all your APIs with AI-powered insights and anomaly detection.',;
-      benefits: ['Real-time monitoring', 'Anomaly detection', 'Performance analytics', 'Automated alerts'];
+      benefits: ['Real-time monitoring', 'Anomaly detection', 'Performance analytics', 'Automated alerts'],
     },
     {
       title: 'Smart Rate Limiting',
@@ -111,7 +111,7 @@ const AIApiManagementPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer / /></Footer>
+      <Footer /></Footer>
     </div>
   ),
 };

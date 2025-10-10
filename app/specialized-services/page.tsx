@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const PagePage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
             </div>
           </div>
@@ -97,7 +97,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const SpecializedServicesPage: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -119,7 +119,7 @@ const SpecializedServicesPage: React.FC = () => {
       description: 'Scale your operations worldwide with our robust infrastructure';
     };
   ];
-  const benefits = const benefits = const benefits = [
+  const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce operational costs by 30%',
     'Improve decision-making with real-time insights',
