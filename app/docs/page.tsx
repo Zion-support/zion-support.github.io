@@ -1,10 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } from 'lucide-react';
+
+const DocsPage: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
 
   const docCategories = [
     {
@@ -130,7 +133,7 @@ import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } 
                     {category.docs.map((doc, docIndex) => (
                       <Link
                         key={docIndex}
-                        href={doc.link}
+                        to={doc.link}
                         className="block p-3 bg-slate-800/50 rounded-lg hover:bg-slate-700/50 transition-colors group"
                       >
                         <div className="flex items-center justify-between">
@@ -173,7 +176,7 @@ import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } 
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Link
-                href="/api-docs"
+                to="/api-docs"
                 className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
               >
                 <Code className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
@@ -184,7 +187,7 @@ import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } 
               </Link>
               
               <Link
-                href="/micro-saas"
+                to="/micro-saas"
                 className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
               >
                 <BookOpen className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
@@ -195,7 +198,7 @@ import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } 
               </Link>
               
               <Link
-                href="/compliance"
+                to="/compliance"
                 className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
               >
                 <FileText className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
@@ -206,7 +209,7 @@ import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } 
               </Link>
               
               <Link
-                href="/contact"
+                to="/contact"
                 className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
               >
                 <Download className="w-8 h-8 text-cyan-400 mx-auto mb-3" />

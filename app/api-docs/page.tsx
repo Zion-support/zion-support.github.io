@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
@@ -265,13 +265,13 @@ const APIDocsPage: React.FC = () => {
               Get your API key and start building with our powerful AI and micro SAAS services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="cyber-button px-8 py-4"
               >
                 Get API Key
                 <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
+              </Link>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
