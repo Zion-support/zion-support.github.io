@@ -38,15 +38,17 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
 ))
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton'
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isVisible, setIsVisible] = useState(false)  useEffect(() => {
-    preloadComponents()
-    setIsLoaded(true)
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  
+  useEffect(() => {
+    preloadComponents();
+    setIsLoaded(true);
     // Trigger visibility animation
-    const timer = setTimeout(() => setIsVisible(true), 100)
-    return () => clearTimeout(timer)
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timer);
   }, [])
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {

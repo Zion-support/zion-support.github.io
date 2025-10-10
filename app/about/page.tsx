@@ -25,7 +25,9 @@ import {
   MapPin
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'const AboutPage: React.FC = () => {
+import Footer from '../components/Footer';
+
+const AboutPage: React.FC = () => {
   return (
     <>
       <Helmet>

@@ -104,7 +104,22 @@ const Navigation: React.FC = () => {
     { name: 'AI Customer Churn Prediction', href: '/ai-customer-churn', icon: Users, description: 'Churn prevention' },
     { name: 'AI Automated Reporting', href: '/ai-automated-reporting', icon: BarChart, description: 'Smart reporting' },
     { name: 'AI Voice Assistant Platform', href: '/ai-voice-assistant', icon: Mic, description: 'Enterprise voice AI' },
-    { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro', icon: FileText, description: 'Advanced content creation' }
+    { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro', icon: FileText, description: 'Advanced content creation' },
+    { name: 'AI Multimodal Assistant', href: '/ai-multimodal-assistant', icon: Brain, description: 'Text, image, audio, video processing' },
+    { name: 'AI 3D Content Generation', href: '/ai-3d-generation', icon: Box, description: '3D models and virtual environments' },
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing', icon: Cpu, description: 'Quantum-enhanced AI algorithms' },
+    { name: 'AI Climate Solutions', href: '/ai-climate-solutions-pro', icon: Zap, description: 'Climate monitoring and sustainability' },
+    { name: 'AI Drug Discovery', href: '/ai-drug-discovery-pro', icon: Heart, description: 'Pharmaceutical research platform' },
+    { name: 'AI Space Technology', href: '/ai-space-technology', icon: Globe, description: 'Space exploration and satellite management' },
+    { name: 'AI Neural Interface', href: '/ai-neural-interfaces', icon: Brain, description: 'Brain-computer interface technology' },
+    { name: 'AI Robotics & Automation', href: '/ai-robotics-automation', icon: Settings, description: 'Intelligent robotics solutions' },
+    { name: 'AI Metaverse Platform', href: '/ai-metaverse-platform', icon: Monitor, description: 'Virtual world creation' },
+    { name: 'AI Ethical Governance', href: '/ai-ethical-governance', icon: Shield, description: 'AI ethics and governance' },
+    { name: 'AI Advanced FinTech', href: '/ai-fintech-advanced', icon: TrendingUp, description: 'DeFi, crypto, digital banking' },
+    { name: 'AI Personalized Education', href: '/ai-education-personalized', icon: Users, description: 'Personalized learning platform' },
+    { name: 'AI Agricultural Intelligence', href: '/ai-agricultural-intelligence-pro', icon: Zap, description: 'Precision agriculture solutions' },
+    { name: 'AI Energy Grid Management', href: '/ai-energy-grid-management-pro', icon: Zap, description: 'Smart energy management' },
+    { name: 'AI Financial Crime Detection', href: '/ai-financial-crime-detection-pro', icon: Shield, description: 'Financial crime prevention' }
   ]
 
   const itServices = [
@@ -141,7 +156,21 @@ const Navigation: React.FC = () => {
     { name: 'Security Automation', href: '/security-automation', icon: Shield, description: 'Automated security' },
     { name: 'Data Visualization & BI', href: '/data-visualization', icon: BarChart, description: 'Advanced dashboards' },
     { name: 'Workflow Automation', href: '/workflow-automation', icon: Settings, description: 'Process automation' },
-    { name: 'Cloud-Native Security', href: '/cloud-native-security', icon: Shield, description: 'Container security' }
+    { name: 'Cloud-Native Security', href: '/cloud-native-security', icon: Shield, description: 'Container security' },
+    { name: 'Quantum Computing Infrastructure', href: '/quantum-computing-infrastructure', icon: Cpu, description: 'Quantum computing setup' },
+    { name: 'Edge Computing Platform', href: '/edge-computing-platform', icon: Server, description: 'Distributed processing solutions' },
+    { name: '5G Network Implementation', href: '/5g-implementation', icon: Wifi, description: '5G network deployment' },
+    { name: 'AI Infrastructure Management', href: '/ai-infrastructure-management', icon: Brain, description: 'AI workload management' },
+    { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure', icon: Link, description: 'Blockchain setup & management' },
+    { name: 'Metaverse Infrastructure', href: '/metaverse-infrastructure', icon: Monitor, description: 'Virtual world hosting' },
+    { name: 'IoT Platform Management', href: '/iot-platform-management', icon: Wifi, description: 'IoT device management' },
+    { name: 'Cybersecurity Operations Center', href: '/cybersecurity-operations-center', icon: Shield, description: '24/7 security monitoring' },
+    { name: 'Green IT Solutions', href: '/green-it-solutions', icon: Zap, description: 'Sustainable IT practices' },
+    { name: 'Digital Transformation Consulting', href: '/digital-transformation-consulting', icon: Settings, description: 'Digital strategy & implementation' },
+    { name: 'Zero Trust Security', href: '/zero-trust-security', icon: Shield, description: 'Zero trust architecture' },
+    { name: 'Hyperautomation Platform', href: '/hyperautomation-platform', icon: Settings, description: 'End-to-end automation' },
+    { name: 'Immersive Technology Solutions', href: '/immersive-technology-solutions', icon: Monitor, description: 'AR/VR solutions' },
+    { name: 'Data Fabric Platform', href: '/data-fabric-platform', icon: Database, description: 'Unified data management' }
   ]
 
   const microSaasServices = [
@@ -180,7 +209,22 @@ const Navigation: React.FC = () => {
     { name: 'Zion AI Fraud Detector', href: '/zion-ai-fraud-detector', icon: Shield, description: 'Fraud detection' },
     { name: 'Zion AI Customer Service Pro', href: '/zion-ai-customer-service-pro', icon: MessageSquare, description: 'Advanced customer service' },
     { name: 'Zion AI Marketing Automation', href: '/zion-ai-marketing-automation', icon: Target, description: 'Marketing AI' },
-    { name: 'Zion AI Document AI', href: '/zion-ai-document-ai', icon: FileText, description: 'Document processing' }
+    { name: 'Zion AI Document AI', href: '/zion-ai-document-ai', icon: FileText, description: 'Document processing' },
+    { name: 'Zion AI Climate Tracker', href: '/zion-ai-climate-tracker', icon: Globe, description: 'Climate monitoring platform' },
+    { name: 'Zion AI Quantum Optimizer', href: '/zion-ai-quantum-optimizer', icon: Cpu, description: 'Quantum optimization platform' },
+    { name: 'Zion AI Metaverse Builder', href: '/zion-ai-metaverse-builder', icon: Monitor, description: 'Virtual world creation' },
+    { name: 'Zion AI Neural Interface', href: '/zion-ai-neural-interface', icon: Brain, description: 'Brain-computer interface' },
+    { name: 'Zion AI Space Analytics', href: '/zion-ai-space-analytics', icon: Globe, description: 'Space technology platform' },
+    { name: 'Zion AI Drug Discovery', href: '/zion-ai-drug-discovery', icon: Heart, description: 'Pharmaceutical research' },
+    { name: 'Zion AI Robotics Controller', href: '/zion-ai-robotics-controller', icon: Settings, description: 'Robotics control platform' },
+    { name: 'Zion AI Ethics Monitor', href: '/zion-ai-ethics-monitor', icon: Shield, description: 'AI ethics platform' },
+    { name: 'Zion AI FinTech Pro', href: '/zion-ai-fintech-pro', icon: TrendingUp, description: 'Advanced FinTech platform' },
+    { name: 'Zion AI Education Pro', href: '/zion-ai-education-pro', icon: Users, description: 'Personalized learning' },
+    { name: 'Zion AI Agriculture Pro', href: '/zion-ai-agriculture-pro', icon: Zap, description: 'Precision agriculture' },
+    { name: 'Zion AI Energy Grid', href: '/zion-ai-energy-grid', icon: Zap, description: 'Energy grid optimization' },
+    { name: 'Zion AI Financial Crime', href: '/zion-ai-financial-crime', icon: Shield, description: 'Financial crime detection' },
+    { name: 'Zion AI 3D Generator', href: '/zion-ai-3d-generator', icon: Box, description: '3D content creation' },
+    { name: 'Zion AI Multimodal', href: '/zion-ai-multimodal', icon: Brain, description: 'Multimodal AI assistant' }
   ]
 
   const emergingTech = [

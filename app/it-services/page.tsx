@@ -1006,6 +1006,370 @@ const ItServicesPage: React.FC = () => {
       category: 'Cloud Security',
       popular: true,
       icon: Shield
+    },
+    {
+      id: 'quantum-computing-infrastructure',
+      name: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing infrastructure setup and management for advanced computational needs',
+      price: '$5,999/month',
+      marketPrice: '$12000-50000/month',
+      features: [
+        'Quantum hardware integration',
+        'Quantum algorithm development',
+        'Hybrid classical-quantum systems',
+        'Quantum cloud services',
+        'Quantum security implementation',
+        'Quantum simulation environments',
+        'Quantum networking setup',
+        'Quantum software development'
+      ],
+      benefits: [
+        'Exponential computational power',
+        'Solve complex optimization problems',
+        'Future-ready infrastructure',
+        'Competitive advantage'
+      ],
+      category: 'Quantum Computing',
+      popular: false,
+      icon: Cpu
+    },
+    {
+      id: 'edge-computing-platform',
+      name: 'Edge Computing Platform',
+      description: 'Comprehensive edge computing solutions for distributed processing and low-latency applications',
+      price: '$2,800/month',
+      marketPrice: '$5500-20000/month',
+      features: [
+        'Edge infrastructure deployment',
+        'Distributed computing management',
+        'Real-time data processing',
+        'Edge AI model deployment',
+        'Edge security implementation',
+        'Bandwidth optimization',
+        'Edge analytics platform',
+        'Multi-location synchronization'
+      ],
+      benefits: [
+        'Ultra-low latency processing',
+        'Reduced bandwidth costs',
+        'Improved user experience',
+        'Distributed intelligence'
+      ],
+      category: 'Edge Computing',
+      popular: true,
+      icon: Server
+    },
+    {
+      id: '5g-network-implementation',
+      name: '5G Network Implementation',
+      description: 'Complete 5G network design, deployment, and optimization for enterprise applications',
+      price: '$4,500/month',
+      marketPrice: '$9000-35000/month',
+      features: [
+        '5G network architecture design',
+        'Small cell deployment',
+        'Network slicing implementation',
+        '5G core network setup',
+        'Edge computing integration',
+        'IoT connectivity optimization',
+        'Network performance monitoring',
+        '5G security implementation'
+      ],
+      benefits: [
+        'Ultra-fast connectivity',
+        'Massive IoT support',
+        'Low latency applications',
+        'Future-ready infrastructure'
+      ],
+      category: '5G Networks',
+      popular: true,
+      icon: Wifi
+    },
+    {
+      id: 'ai-infrastructure-management',
+      name: 'AI Infrastructure Management',
+      description: 'Specialized infrastructure management for AI workloads and machine learning operations',
+      price: '$3,200/month',
+      marketPrice: '$6500-25000/month',
+      features: [
+        'GPU cluster management',
+        'AI model deployment infrastructure',
+        'Distributed training environments',
+        'Model serving optimization',
+        'AI workload orchestration',
+        'Resource auto-scaling',
+        'AI monitoring and alerting',
+        'Cost optimization for AI workloads'
+      ],
+      benefits: [
+        'Optimized AI performance',
+        'Reduced infrastructure costs',
+        'Scalable AI operations',
+        'Improved model deployment'
+      ],
+      category: 'AI Infrastructure',
+      popular: true,
+      icon: Brain
+    },
+    {
+      id: 'blockchain-infrastructure',
+      name: 'Blockchain Infrastructure Services',
+      description: 'Complete blockchain infrastructure setup including nodes, networks, and smart contract deployment',
+      price: '$2,500/month',
+      marketPrice: '$5000-20000/month',
+      features: [
+        'Blockchain node deployment',
+        'Smart contract development',
+        'DeFi protocol integration',
+        'Cross-chain bridge setup',
+        'Blockchain security implementation',
+        'Consensus mechanism optimization',
+        'Blockchain monitoring and analytics',
+        'Token economics design'
+      ],
+      benefits: [
+        'Decentralized infrastructure',
+        'Enhanced security and transparency',
+        'Smart contract automation',
+        'Future-proof technology'
+      ],
+      category: 'Blockchain Infrastructure',
+      popular: true,
+      icon: Link
+    },
+    {
+      id: 'metaverse-infrastructure',
+      name: 'Metaverse Infrastructure Platform',
+      description: 'Comprehensive infrastructure for building and managing metaverse experiences and virtual worlds',
+      price: '$3,800/month',
+      marketPrice: '$7500-30000/month',
+      features: [
+        'Virtual world hosting infrastructure',
+        'Real-time rendering optimization',
+        'Avatar and asset management',
+        'Spatial computing integration',
+        'Virtual economy infrastructure',
+        'Cross-platform compatibility',
+        'Metaverse security implementation',
+        'Performance optimization'
+      ],
+      benefits: [
+        'Immersive virtual experiences',
+        'Scalable metaverse platform',
+        'Enhanced user engagement',
+        'Future-ready infrastructure'
+      ],
+      category: 'Metaverse Infrastructure',
+      popular: true,
+      icon: Monitor
+    },
+    {
+      id: 'iot-platform-management',
+      name: 'IoT Platform Management',
+      description: 'Comprehensive IoT platform management including device connectivity, data processing, and analytics',
+      price: '$2,200/month',
+      marketPrice: '$4500-18000/month',
+      features: [
+        'IoT device management',
+        'Sensor data collection and processing',
+        'Real-time analytics and monitoring',
+        'Device security implementation',
+        'Firmware update management',
+        'IoT data visualization',
+        'Integration with business systems',
+        'Predictive maintenance'
+      ],
+      benefits: [
+        'Connected device management',
+        'Real-time insights',
+        'Automated operations',
+        'Improved efficiency'
+      ],
+      category: 'IoT Management',
+      popular: true,
+      icon: Wifi
+    },
+    {
+      id: 'cybersecurity-operations-center',
+      name: 'Cybersecurity Operations Center (SOC)',
+      description: '24/7 cybersecurity operations center with advanced threat detection and response capabilities',
+      price: '$4,200/month',
+      marketPrice: '$8500-35000/month',
+      features: [
+        '24/7 security monitoring',
+        'Advanced threat detection',
+        'Incident response automation',
+        'Security orchestration',
+        'Threat intelligence integration',
+        'Vulnerability management',
+        'Security analytics and reporting',
+        'Compliance monitoring'
+      ],
+      benefits: [
+        'Proactive threat protection',
+        'Rapid incident response',
+        'Reduced security risks',
+        'Compliance assurance'
+      ],
+      category: 'Security Operations',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'green-it-solutions',
+      name: 'Green IT Solutions',
+      description: 'Sustainable IT infrastructure and practices for environmental responsibility and cost reduction',
+      price: '$1,800/month',
+      marketPrice: '$3500-15000/month',
+      features: [
+        'Energy-efficient infrastructure design',
+        'Carbon footprint monitoring',
+        'Renewable energy integration',
+        'E-waste management',
+        'Green data center optimization',
+        'Sustainable procurement',
+        'Environmental reporting',
+        'Green certification support'
+      ],
+      benefits: [
+        'Reduce environmental impact',
+        'Lower energy costs',
+        'Improve sustainability',
+        'Enhanced brand reputation'
+      ],
+      category: 'Green IT',
+      popular: true,
+      icon: Zap
+    },
+    {
+      id: 'digital-transformation-consulting',
+      name: 'Digital Transformation Consulting',
+      description: 'Comprehensive digital transformation strategy and implementation for modernizing business operations',
+      price: '$3,500/month',
+      marketPrice: '$7000-30000/month',
+      features: [
+        'Digital strategy development',
+        'Technology roadmap planning',
+        'Process digitization',
+        'Change management',
+        'Digital culture transformation',
+        'Technology integration',
+        'Performance measurement',
+        'Continuous optimization'
+      ],
+      benefits: [
+        'Modernize business operations',
+        'Improve efficiency and agility',
+        'Enhanced customer experience',
+        'Competitive advantage'
+      ],
+      category: 'Digital Transformation',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'zero-trust-security',
+      name: 'Zero Trust Security Architecture',
+      description: 'Implementation of zero trust security model for comprehensive network and data protection',
+      price: '$2,900/month',
+      marketPrice: '$5800-25000/month',
+      features: [
+        'Zero trust network architecture',
+        'Identity and access management',
+        'Micro-segmentation',
+        'Continuous verification',
+        'Least privilege access',
+        'Security policy automation',
+        'Threat detection and response',
+        'Compliance monitoring'
+      ],
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Better access control',
+        'Improved compliance'
+      ],
+      category: 'Zero Trust Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'hyperautomation-platform',
+      name: 'Hyperautomation Platform',
+      description: 'Comprehensive automation platform combining RPA, AI, and process mining for end-to-end automation',
+      price: '$3,600/month',
+      marketPrice: '$7200-30000/month',
+      features: [
+        'Process discovery and mining',
+        'RPA implementation',
+        'AI-powered automation',
+        'Workflow orchestration',
+        'Exception handling',
+        'Performance monitoring',
+        'Integration capabilities',
+        'Continuous optimization'
+      ],
+      benefits: [
+        'Complete process automation',
+        'Improved efficiency',
+        'Reduced errors',
+        'Cost savings'
+      ],
+      category: 'Hyperautomation',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'immersive-technology-solutions',
+      name: 'Immersive Technology Solutions',
+      description: 'AR/VR and mixed reality solutions for training, collaboration, and customer engagement',
+      price: '$2,700/month',
+      marketPrice: '$5500-22000/month',
+      features: [
+        'AR/VR application development',
+        'Mixed reality experiences',
+        'Virtual training environments',
+        'Immersive collaboration tools',
+        '3D content creation',
+        'Spatial computing integration',
+        'Device management',
+        'Performance optimization'
+      ],
+      benefits: [
+        'Enhanced user experiences',
+        'Improved training effectiveness',
+        'Remote collaboration',
+        'Innovative engagement'
+      ],
+      category: 'Immersive Technology',
+      popular: true,
+      icon: Monitor
+    },
+    {
+      id: 'data-fabric-platform',
+      name: 'Data Fabric Platform',
+      description: 'Unified data management platform providing seamless access to data across all sources and locations',
+      price: '$3,300/month',
+      marketPrice: '$6600-28000/month',
+      features: [
+        'Unified data access layer',
+        'Data virtualization',
+        'Real-time data integration',
+        'Data governance and quality',
+        'Self-service analytics',
+        'Data lineage tracking',
+        'Security and compliance',
+        'Performance optimization'
+      ],
+      benefits: [
+        'Unified data access',
+        'Improved data quality',
+        'Faster insights',
+        'Better governance'
+      ],
+      category: 'Data Fabric',
+      popular: true,
+      icon: Database
     }
   ]
 
@@ -1042,7 +1406,21 @@ const ItServicesPage: React.FC = () => {
     { id: 'Cloud Optimization', name: 'Cloud Optimization', count: services.filter(s => s.category === 'Cloud Optimization').length },
     { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
     { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
-    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
+    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: services.filter(s => s.category === 'Quantum Computing').length },
+    { id: 'Edge Computing', name: 'Edge Computing', count: services.filter(s => s.category === 'Edge Computing').length },
+    { id: '5G Networks', name: '5G Networks', count: services.filter(s => s.category === '5G Networks').length },
+    { id: 'AI Infrastructure', name: 'AI Infrastructure', count: services.filter(s => s.category === 'AI Infrastructure').length },
+    { id: 'Blockchain Infrastructure', name: 'Blockchain Infrastructure', count: services.filter(s => s.category === 'Blockchain Infrastructure').length },
+    { id: 'Metaverse Infrastructure', name: 'Metaverse Infrastructure', count: services.filter(s => s.category === 'Metaverse Infrastructure').length },
+    { id: 'IoT Management', name: 'IoT Management', count: services.filter(s => s.category === 'IoT Management').length },
+    { id: 'Security Operations', name: 'Security Operations', count: services.filter(s => s.category === 'Security Operations').length },
+    { id: 'Green IT', name: 'Green IT', count: services.filter(s => s.category === 'Green IT').length },
+    { id: 'Digital Transformation', name: 'Digital Transformation', count: services.filter(s => s.category === 'Digital Transformation').length },
+    { id: 'Zero Trust Security', name: 'Zero Trust Security', count: services.filter(s => s.category === 'Zero Trust Security').length },
+    { id: 'Hyperautomation', name: 'Hyperautomation', count: services.filter(s => s.category === 'Hyperautomation').length },
+    { id: 'Immersive Technology', name: 'Immersive Technology', count: services.filter(s => s.category === 'Immersive Technology').length },
+    { id: 'Data Fabric', name: 'Data Fabric', count: services.filter(s => s.category === 'Data Fabric').length }
   ]
 
   const filteredServices = services.filter(service => 

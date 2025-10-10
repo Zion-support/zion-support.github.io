@@ -3,19 +3,15 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react'const MicroSaasPage: React.FC = () => {
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Search, Filter, ExternalLink, Users, Mail, DollarSign, Eye, Globe, Code } from 'lucide-react';
+
+const MicroSaasPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('all');
 
   const microSaasTools = [
     {
-<<<<<<< HEAD
-      title: 'AI Content Generator',
-      description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
-      features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content scheduling'],
-      price: '$29/month',
-      icon: Zap=======
       title: 'Zion AI Content Studio Pro',
       description: 'Advanced AI-powered content creation platform with GPT-4 integration, brand voice training, and multi-channel publishing.',
       features: ['GPT-4 & Claude Integration', 'Brand Voice AI Training', 'Multi-language Support (50+ languages)', 'SEO Optimization Engine', 'Content Calendar & Scheduling', 'Plagiarism Detection', 'A/B Testing Tools', 'Social Media Auto-Posting'],
@@ -25,7 +21,6 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react'
       icon: Zap,
       category: 'content',
       link: 'https://ziontechgroup.com/zion-ai-content-studio-pro'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3339
     },
     {
       title: 'Zion Analytics Intelligence',
@@ -94,13 +89,6 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react'
       link: 'https://ziontechgroup.com/zion-invoice-genius-ai'
     },
     {
-<<<<<<< HEAD
-      title: 'Security Monitor',
-      description: 'Advanced security monitoring and threat detection for your applications.',
-      features: ['Real-time monitoring', 'Threat detection', 'Automated alerts', 'Compliance reporting'],
-      price: '$39/month',
-      icon: Shield    },
-    {
       title: 'Zion AI Video Editor Pro',
       description: 'AI-powered video editing platform with automatic editing, voice synthesis, and multi-format export.',
       features: ['AI Auto-Editing', 'Voice Synthesis & Dubbing', 'Multi-format Export', 'Template Library', 'Color Correction AI', 'Audio Enhancement', 'Subtitle Generation', 'Cloud Rendering'],
@@ -143,226 +131,171 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react'
       icon: Users,
       category: 'analytics',
       link: 'https://ziontechgroup.com/zion-ai-customer-insights'
-=======
-      title: 'Zion Analytics Pro',
-      description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights and predictive modeling.',
-      features: ['Real-time Data Visualization', 'AI-powered Predictive Analytics', 'Custom Dashboard Builder', 'Advanced Data Connectors', 'Automated Report Generation', 'Multi-tenant Architecture'],
-      price: '$89/month',
-      marketPrice: '$150-500/month',
-      benefits: ['Data-driven decision making', 'Real-time insights', 'Custom dashboards', 'Automated reporting'],
-      icon: Star,
-      category: 'Analytics',
-      popular: true
     },
     {
-      title: 'Zion Chat AI',
-      description: 'Next-generation AI customer support platform with advanced NLP, sentiment analysis, and multi-channel support.',
-      features: ['GPT-4 Powered AI', 'Multi-channel Support', 'Advanced Sentiment Analysis', 'Automated Ticket Routing', 'Live Agent Handoff', 'Multi-language Support'],
+      title: 'Zion AI Climate Tracker',
+      description: 'AI-powered climate monitoring and sustainability optimization platform for businesses.',
+      features: ['Carbon Footprint Tracking', 'Sustainability Reporting', 'Environmental Impact Analysis', 'Green Energy Optimization', 'ESG Compliance Monitoring', 'Climate Risk Assessment', 'Sustainability Goal Tracking', 'Automated Reporting'],
       price: '$149/month',
       marketPrice: '$300-800/month',
-      benefits: ['24/7 customer support', 'Reduced response time', 'Improved customer satisfaction', 'Lead generation'],
-      icon: Zap,
-      category: 'Customer Service',
-      popular: true
+      benefits: ['Reduce environmental impact', 'Achieve sustainability goals', 'Comply with regulations', 'Improve brand reputation'],
+      icon: Globe,
+      category: 'sustainability',
+      link: 'https://ziontechgroup.com/zion-ai-climate-tracker'
     },
     {
-      title: 'Zion Security Shield',
-      description: 'Enterprise-grade cybersecurity monitoring and threat detection with automated incident response.',
-      features: ['Real-time Threat Detection', 'Automated Incident Response', 'Compliance Monitoring', 'Vulnerability Scanning', 'Security Analytics', '24/7 SOC Support'],
+      title: 'Zion AI Quantum Optimizer',
+      description: 'Quantum-enhanced optimization platform for complex business problems and resource allocation.',
+      features: ['Quantum Algorithm Integration', 'Complex Optimization Problems', 'Resource Allocation Optimization', 'Supply Chain Optimization', 'Portfolio Optimization', 'Scheduling Optimization', 'Route Optimization', 'Cost Minimization'],
+      price: '$299/month',
+      marketPrice: '$600-2000/month',
+      benefits: ['Solve complex optimization problems', 'Exponential computational speedup', 'Better resource utilization', 'Competitive advantage'],
+      icon: Cpu,
+      category: 'optimization',
+      link: 'https://ziontechgroup.com/zion-ai-quantum-optimizer'
+    },
+    {
+      title: 'Zion AI Metaverse Builder',
+      description: 'Comprehensive platform for creating and managing virtual worlds and metaverse experiences.',
+      features: ['Virtual World Creation', 'Avatar Management', '3D Asset Library', 'Real-time Collaboration', 'Virtual Economy Management', 'Cross-platform Integration', 'AI-powered NPCs', 'Event Management'],
       price: '$199/month',
       marketPrice: '$400-1200/month',
-      benefits: ['Proactive threat protection', 'Reduced security incidents', 'Compliance assurance', 'Expert security team'],
+      benefits: ['Create immersive experiences', 'Engage users in virtual worlds', 'Monetize virtual environments', 'Future-ready platform'],
+      icon: Monitor,
+      category: 'metaverse',
+      link: 'https://ziontechgroup.com/zion-ai-metaverse-builder'
+    },
+    {
+      title: 'Zion AI Neural Interface',
+      description: 'Advanced brain-computer interface platform for enhanced human-AI interaction.',
+      features: ['Neural Signal Processing', 'Brain-Computer Interface', 'Cognitive Enhancement', 'Medical Applications', 'Real-time Neural Feedback', 'Custom Interface Design', 'Research Tools', 'Safety Monitoring'],
+      price: '$499/month',
+      marketPrice: '$1000-5000/month',
+      benefits: ['Revolutionary human-AI interaction', 'Medical breakthrough potential', 'Enhanced cognitive capabilities', 'Future technology leadership'],
+      icon: Brain,
+      category: 'neural',
+      link: 'https://ziontechgroup.com/zion-ai-neural-interface'
+    },
+    {
+      title: 'Zion AI Space Analytics',
+      description: 'AI-powered space technology platform for satellite management and space data analysis.',
+      features: ['Satellite Constellation Management', 'Space Debris Tracking', 'Earth Observation Analysis', 'Space Weather Prediction', 'Mission Planning', 'Autonomous Control', 'Space Resource Utilization', 'Planetary Exploration'],
+      price: '$399/month',
+      marketPrice: '$800-3000/month',
+      benefits: ['Enhanced space operations', 'Improved mission success rates', 'Cost-effective space solutions', 'Advanced space analytics'],
+      icon: Globe,
+      category: 'space',
+      link: 'https://ziontechgroup.com/zion-ai-space-analytics'
+    },
+    {
+      title: 'Zion AI Drug Discovery',
+      description: 'AI-powered pharmaceutical research platform for drug discovery and molecular design.',
+      features: ['Molecular Design', 'Drug-Target Interaction Prediction', 'ADMET Property Prediction', 'Chemical Synthesis Planning', 'Clinical Trial Optimization', 'Regulatory Compliance', 'Patent Analysis', 'Collaborative Research'],
+      price: '$599/month',
+      marketPrice: '$1200-5000/month',
+      benefits: ['Accelerate drug development', 'Reduce research costs', 'Improve success rates', 'Faster time to market'],
+      icon: Heart,
+      category: 'pharmaceutical',
+      link: 'https://ziontechgroup.com/zion-ai-drug-discovery'
+    },
+    {
+      title: 'Zion AI Robotics Controller',
+      description: 'Intelligent robotics control platform for autonomous systems and robotic process automation.',
+      features: ['Autonomous Robot Control', 'Computer Vision Integration', 'RPA Implementation', 'Human-Robot Collaboration', 'Predictive Maintenance', 'Custom Robotic Solutions', 'Performance Optimization', 'Safety Monitoring'],
+      price: '$249/month',
+      marketPrice: '$500-2000/month',
+      benefits: ['Increased automation efficiency', 'Reduced operational costs', 'Improved safety', 'Scalable robotic solutions'],
+      icon: Settings,
+      category: 'robotics',
+      link: 'https://ziontechgroup.com/zion-ai-robotics-controller'
+    },
+    {
+      title: 'Zion AI Ethics Monitor',
+      description: 'Comprehensive AI ethics and governance platform ensuring responsible AI deployment.',
+      features: ['AI Bias Detection', 'Ethical Framework Implementation', 'Algorithmic Auditing', 'Transparency Tools', 'Compliance Monitoring', 'Ethical Decision Support', 'Impact Assessment', 'Continuous Monitoring'],
+      price: '$179/month',
+      marketPrice: '$350-1000/month',
+      benefits: ['Ensure responsible AI use', 'Build trust with stakeholders', 'Comply with regulations', 'Mitigate AI risks'],
       icon: Shield,
-      category: 'Security',
-      popular: true
+      category: 'ethics',
+      link: 'https://ziontechgroup.com/zion-ai-ethics-monitor'
     },
     {
-      title: 'Zion Content Studio',
-      description: 'AI-powered content creation platform for blogs, social media, marketing materials, and multimedia content.',
-      features: ['AI Content Generation', 'Multi-platform Publishing', 'SEO Optimization', 'Brand Voice Training', 'Content Calendar', 'Performance Analytics'],
-      price: '$79/month',
-      marketPrice: '$150-400/month',
-      benefits: ['Save 80% content creation time', 'Consistent brand voice', 'SEO optimization', 'Multi-platform publishing'],
-      icon: Clock,
-      category: 'Content',
-      popular: false
+      title: 'Zion AI FinTech Pro',
+      description: 'Advanced AI platform for financial services including DeFi, crypto, and digital banking.',
+      features: ['DeFi Protocol Optimization', 'Cryptocurrency Trading Algorithms', 'Digital Banking Automation', 'Risk Assessment', 'Fraud Detection', 'Regulatory Compliance', 'Smart Contract Development', 'Cross-chain Integration'],
+      price: '$349/month',
+      marketPrice: '$700-2500/month',
+      benefits: ['Enhanced financial services', 'Improved security and compliance', 'Automated financial processes', 'Competitive advantage'],
+      icon: TrendingUp,
+      category: 'fintech',
+      link: 'https://ziontechgroup.com/zion-ai-fintech-pro'
     },
     {
-      title: 'Zion CRM Intelligence',
-      description: 'AI-enhanced customer relationship management with predictive analytics and automated workflows.',
-      features: ['AI Lead Scoring', 'Predictive Analytics', 'Automated Workflows', 'Customer Segmentation', 'Sales Forecasting', 'Integration Hub'],
+      title: 'Zion AI Education Pro',
+      description: 'Revolutionary AI-powered personalized learning platform for educational institutions.',
+      features: ['Personalized Learning Paths', 'Adaptive Content Delivery', 'Student Performance Analytics', 'Automated Assessment', 'Learning Style Optimization', 'Parent Dashboards', 'Curriculum Optimization', 'Accessibility Features'],
       price: '$129/month',
-      marketPrice: '$200-600/month',
-      benefits: ['Increase sales by 35%', 'Better lead qualification', 'Automated follow-ups', 'Data-driven insights'],
-      icon: Star,
-      category: 'CRM',
-      popular: false
+      marketPrice: '$250-800/month',
+      benefits: ['Improve learning outcomes', 'Personalize education experience', 'Reduce administrative burden', 'Enhance student engagement'],
+      icon: Users,
+      category: 'education',
+      link: 'https://ziontechgroup.com/zion-ai-education-pro'
     },
     {
-      title: 'Zion Lead Magnet',
-      description: 'Advanced lead generation and qualification platform with AI-powered prospect scoring and nurturing.',
-      features: ['AI-powered Lead Scoring', 'Multi-channel Lead Capture', 'Automated Lead Nurturing', 'CRM Integration', 'Advanced Analytics', 'A/B Testing'],
-      price: '$99/month',
-      marketPrice: '$200-600/month',
-      benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization'],
+      title: 'Zion AI Agriculture Pro',
+      description: 'Advanced AI solutions for precision agriculture and sustainable farming.',
+      features: ['Crop Monitoring', 'Precision Irrigation', 'Pest Detection', 'Yield Prediction', 'Soil Analysis', 'Weather Analysis', 'Automated Equipment', 'Supply Chain Optimization'],
+      price: '$199/month',
+      marketPrice: '$400-1500/month',
+      benefits: ['Increase crop yields', 'Reduce resource waste', 'Improve sustainability', 'Optimize farming operations'],
       icon: Zap,
-      category: 'Marketing',
-      popular: true
+      category: 'agriculture',
+      link: 'https://ziontechgroup.com/zion-ai-agriculture-pro'
     },
     {
-      title: 'Zion Project Master',
-      description: 'AI-powered project management with intelligent resource allocation and automated reporting.',
-      features: ['AI Resource Allocation', 'Predictive Timeline Management', 'Risk Assessment', 'Team Collaboration', 'Progress Tracking', 'Automated Reporting'],
-      price: '$69/month',
-      marketPrice: '$120-350/month',
-      benefits: ['Improved project success rate', 'Better resource utilization', 'Reduced project delays', 'Automated reporting'],
-      icon: Clock,
-      category: 'Project Management',
-      popular: false
-    },
-    {
-      title: 'Zion Email Automation',
-      description: 'Intelligent email marketing platform with AI-powered personalization and automated campaigns.',
-      features: ['AI Personalization', 'Automated Campaigns', 'A/B Testing', 'Advanced Segmentation', 'Deliverability Optimization', 'Performance Analytics'],
-      price: '$59/month',
-      marketPrice: '$100-300/month',
-      benefits: ['Increase open rates by 40%', 'Automated campaigns', 'Better personalization', 'ROI optimization'],
+      title: 'Zion AI Energy Grid',
+      description: 'Intelligent energy grid optimization and smart energy management platform.',
+      features: ['Smart Grid Optimization', 'Energy Demand Forecasting', 'Renewable Energy Integration', 'Grid Stability Monitoring', 'Energy Storage Optimization', 'Peak Load Management', 'Distributed Energy Management', 'Real-time Analytics'],
+      price: '$279/month',
+      marketPrice: '$550-2000/month',
+      benefits: ['Optimize energy distribution', 'Reduce energy costs', 'Improve grid reliability', 'Support renewable integration'],
       icon: Zap,
-      category: 'Marketing',
-      popular: false
+      category: 'energy',
+      link: 'https://ziontechgroup.com/zion-ai-energy-grid'
     },
     {
-      title: 'Zion Invoice Genius',
-      description: 'AI-powered invoice generation and management with automated billing and payment tracking.',
-      features: ['AI-powered Invoice Generation', 'Automated Recurring Billing', 'Multi-currency Support', 'Payment Tracking', 'Tax Calculation', 'Client Portal'],
-      price: '$49/month',
-      marketPrice: '$100-300/month',
-      benefits: ['Save 90% invoice creation time', 'Reduce payment delays', 'Automated follow-ups', 'Professional invoices'],
+      title: 'Zion AI Financial Crime',
+      description: 'Advanced AI system for detecting and preventing financial crimes and money laundering.',
+      features: ['Real-time Transaction Monitoring', 'Money Laundering Detection', 'Sanctions Screening', 'KYC/AML Automation', 'Risk Scoring', 'Regulatory Reporting', 'Cross-border Analysis', 'ML Model Updates'],
+      price: '$399/month',
+      marketPrice: '$800-3000/month',
+      benefits: ['Detect financial crimes early', 'Ensure regulatory compliance', 'Reduce false positives', 'Protect financial institutions'],
       icon: Shield,
-      category: 'Finance',
-      popular: true
+      category: 'security',
+      link: 'https://ziontechgroup.com/zion-ai-financial-crime'
     },
     {
-      title: 'Zion Workflow Automation',
-      description: 'Intelligent business process automation with AI-powered workflow optimization and monitoring.',
-      features: ['Process Mining', 'Workflow Optimization', 'Task Automation', 'Exception Handling', 'Performance Monitoring', 'Custom Integrations'],
-      price: '$89/month',
-      marketPrice: '$150-500/month',
-      benefits: ['Process efficiency', 'Error reduction', 'Cost savings', 'Scalable automation'],
-      icon: Clock,
-      category: 'Automation',
-      popular: false
+      title: 'Zion AI 3D Generator',
+      description: 'Revolutionary AI platform for 3D content creation, models, and virtual environments.',
+      features: ['3D Model Generation', 'Texture Application', 'Animation Generation', 'Virtual Environment Creation', 'Asset Optimization', 'Game Engine Integration', 'AR/VR Content', 'Custom Pipeline Development'],
+      price: '$229/month',
+      marketPrice: '$450-1800/month',
+      benefits: ['Reduce 3D creation time by 90%', 'Lower production costs', 'Faster prototyping', 'Enhanced creative capabilities'],
+      icon: Box,
+      category: '3d',
+      link: 'https://ziontechgroup.com/zion-ai-3d-generator'
     },
     {
-      title: 'Zion Social Scheduler',
-      description: 'AI-powered social media management with content optimization and automated posting.',
-      features: ['AI Content Optimization', 'Multi-platform Scheduling', 'Hashtag Research', 'Engagement Analytics', 'Competitor Analysis', 'Content Calendar'],
-      price: '$39/month',
-      marketPrice: '$80-200/month',
-      benefits: ['Increase engagement by 60%', 'Automated posting', 'Better content strategy', 'Time savings'],
-      icon: Star,
-      category: 'Social Media',
-      popular: false
-    },
-    {
-      title: 'Zion AI Video Editor',
-      description: 'AI-powered video editing platform with automated editing, effects, and optimization.',
-      features: ['AI Auto-editing', 'Smart Cut Detection', 'Automated Subtitles', 'Color Correction', 'Audio Enhancement', 'Multi-format Export'],
-      price: '$79/month',
-      marketPrice: '$150-400/month',
-      benefits: ['Save 70% editing time', 'Professional quality', 'Automated features', 'Easy to use'],
-      icon: Zap,
-      category: 'Video',
-      popular: false
-    },
-    {
-      title: 'Zion AI Translator Pro',
-      description: 'Advanced AI translation platform with context-aware translations and real-time language processing.',
-      features: ['100+ Languages', 'Context-aware Translation', 'Real-time Processing', 'Document Translation', 'Voice Translation', 'API Integration'],
-      price: '$59/month',
-      marketPrice: '$100-300/month',
-      benefits: ['Accurate translations', 'Real-time processing', 'Multiple formats', 'API integration'],
-      icon: Shield,
-      category: 'Translation',
-      popular: false
-    },
-    {
-      title: 'Zion AI Code Reviewer',
-      description: 'Intelligent code review platform with automated bug detection and security analysis.',
-      features: ['Automated Code Review', 'Security Vulnerability Detection', 'Performance Analysis', 'Code Quality Metrics', 'Best Practice Suggestions', 'Team Collaboration'],
-      price: '$99/month',
-      marketPrice: '$200-500/month',
-      benefits: ['Reduce bugs by 50%', 'Improve code quality', 'Security enhancement', 'Team learning'],
-      icon: Clock,
-      category: 'Development',
-      popular: false
-    },
-    {
-      title: 'Zion Customer Insights Pro',
-      description: 'AI-powered customer analytics platform with sentiment analysis and behavioral insights.',
-      features: ['Sentiment Analysis', 'Behavioral Tracking', 'Customer Segmentation', 'Churn Prediction', 'Lifetime Value Analysis', 'Real-time Dashboards'],
-      price: '$119/month',
-      marketPrice: '$250-600/month',
-      benefits: ['Better customer understanding', 'Churn prevention', 'Personalized experiences', 'Data-driven decisions'],
-      icon: Star,
-      category: 'Analytics',
-      popular: false
-    },
-    {
-      title: 'Zion AI Email Assistant',
-      description: 'Smart email management with AI-powered sorting, drafting, and response suggestions.',
-      features: ['Smart Email Sorting', 'AI Draft Suggestions', 'Priority Classification', 'Auto-responses', 'Email Analytics', 'Calendar Integration'],
-      price: '$39/month',
-      marketPrice: '$80-200/month',
-      benefits: ['Save 2 hours daily', 'Better email organization', 'Faster responses', 'Reduced email stress'],
-      icon: Zap,
-      category: 'Productivity',
-      popular: false
-    },
-    {
-      title: 'Zion AI Meeting Assistant',
-      description: 'Intelligent meeting management with automated transcription, action items, and follow-ups.',
-      features: ['Automated Transcription', 'Action Item Extraction', 'Meeting Summaries', 'Calendar Integration', 'Follow-up Automation', 'Team Collaboration'],
-      price: '$69/month',
-      marketPrice: '$120-350/month',
-      benefits: ['Better meeting efficiency', 'Automated follow-ups', 'Improved accountability', 'Time savings'],
-      icon: Shield,
-      category: 'Productivity',
-      popular: false
-    },
-    {
-      title: 'Zion AI SEO Optimizer',
-      description: 'AI-powered SEO optimization platform with keyword research and content optimization.',
-      features: ['Keyword Research', 'Content Optimization', 'Competitor Analysis', 'Rank Tracking', 'Technical SEO Audit', 'Performance Monitoring'],
-      price: '$79/month',
-      marketPrice: '$150-400/month',
-      benefits: ['Increase organic traffic', 'Better search rankings', 'Automated optimization', 'Competitive advantage'],
-      icon: Clock,
-      category: 'SEO',
-      popular: false
-    },
-    {
-      title: 'Zion AI Data Cleaner',
-      description: 'Intelligent data cleaning and validation platform with automated data quality management.',
-      features: ['Automated Data Cleaning', 'Duplicate Detection', 'Data Validation', 'Format Standardization', 'Quality Scoring', 'Error Reporting'],
-      price: '$59/month',
-      marketPrice: '$100-300/month',
-      benefits: ['Improve data quality', 'Reduce errors', 'Automated cleaning', 'Better analytics'],
-      icon: Star,
-      category: 'Data',
-      popular: false
-    },
-    {
-      title: 'Zion AI Contract Analyzer',
-      description: 'AI-powered contract analysis and risk assessment with automated legal document processing.',
-      features: ['Contract Analysis', 'Risk Assessment', 'Clause Extraction', 'Compliance Checking', 'Automated Summaries', 'Legal Database Integration'],
-      price: '$149/month',
-      marketPrice: '$300-800/month',
-      benefits: ['Faster contract review', 'Risk reduction', 'Compliance assurance', 'Time savings'],
-      icon: Zap,
-      category: 'Legal',
-      popular: false
->>>>>>> cursor/website-audit-and-update-with-deployment-9351
+      title: 'Zion AI Multimodal',
+      description: 'Advanced AI assistant processing text, images, audio, and video for comprehensive automation.',
+      features: ['Multimodal Processing', 'Cross-modal Understanding', 'Real-time Interactions', 'Custom Model Training', 'API Integration', 'Conversation Management', 'Context-aware Responses', 'Multi-language Support'],
+      price: '$179/month',
+      marketPrice: '$350-1200/month',
+      benefits: ['Unified AI experience', 'Enhanced user interactions', 'Comprehensive automation', 'Future-proof technology'],
+      icon: Brain,
+      category: 'multimodal',
+      link: 'https://ziontechgroup.com/zion-ai-multimodal'
     }
   ]
 
@@ -378,7 +311,21 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react'
     { id: 'social', name: 'Social Media', count: microSaasTools.filter(t => t.category === 'social').length },
     { id: 'video', name: 'Video & Media', count: microSaasTools.filter(t => t.category === 'video').length },
     { id: 'translation', name: 'Translation', count: microSaasTools.filter(t => t.category === 'translation').length },
-    { id: 'development', name: 'Development', count: microSaasTools.filter(t => t.category === 'development').length }
+    { id: 'development', name: 'Development', count: microSaasTools.filter(t => t.category === 'development').length },
+    { id: 'sustainability', name: 'Sustainability', count: microSaasTools.filter(t => t.category === 'sustainability').length },
+    { id: 'optimization', name: 'Optimization', count: microSaasTools.filter(t => t.category === 'optimization').length },
+    { id: 'metaverse', name: 'Metaverse', count: microSaasTools.filter(t => t.category === 'metaverse').length },
+    { id: 'neural', name: 'Neural AI', count: microSaasTools.filter(t => t.category === 'neural').length },
+    { id: 'space', name: 'Space Technology', count: microSaasTools.filter(t => t.category === 'space').length },
+    { id: 'pharmaceutical', name: 'Pharmaceutical', count: microSaasTools.filter(t => t.category === 'pharmaceutical').length },
+    { id: 'robotics', name: 'Robotics', count: microSaasTools.filter(t => t.category === 'robotics').length },
+    { id: 'ethics', name: 'AI Ethics', count: microSaasTools.filter(t => t.category === 'ethics').length },
+    { id: 'fintech', name: 'FinTech', count: microSaasTools.filter(t => t.category === 'fintech').length },
+    { id: 'education', name: 'Education', count: microSaasTools.filter(t => t.category === 'education').length },
+    { id: 'agriculture', name: 'Agriculture', count: microSaasTools.filter(t => t.category === 'agriculture').length },
+    { id: 'energy', name: 'Energy', count: microSaasTools.filter(t => t.category === 'energy').length },
+    { id: '3d', name: '3D & AR/VR', count: microSaasTools.filter(t => t.category === '3d').length },
+    { id: 'multimodal', name: 'Multimodal AI', count: microSaasTools.filter(t => t.category === 'multimodal').length }
   ]
 
   const filteredTools = microSaasTools.filter(tool => {
@@ -546,12 +493,6 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react'
                 Choose from our ready-made solutions or let us build a custom micro SaaS tool for your specific needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                  Browse Solutions
-                </button>
-                <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300">
-                  Custom Development
-                </button>=======
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
@@ -567,7 +508,6 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react'
               </div>
               <div className="mt-6 text-sm text-gray-400">
                 <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3339
               </div>
             </div>
           </div>

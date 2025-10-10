@@ -1007,7 +1007,398 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Content Generation',
       popular: true,
-      icon: FileText    }
+      icon: FileText
+    },
+    {
+      id: 'ai-multimodal-assistant',
+      name: 'AI Multimodal Assistant',
+      description: 'Advanced AI assistant that processes text, images, audio, and video for comprehensive business automation',
+      price: '$1,299/month',
+      marketPrice: '$2500-8000/month',
+      features: [
+        'Text, image, audio, and video processing',
+        'Cross-modal understanding and generation',
+        'Real-time multimodal interactions',
+        'Custom model training',
+        'API integration capabilities',
+        'Advanced conversation management',
+        'Context-aware responses',
+        'Multi-language support'
+      ],
+      benefits: [
+        'Unified AI experience',
+        'Enhanced user interactions',
+        'Comprehensive automation',
+        'Future-proof technology'
+      ],
+      category: 'Multimodal AI',
+      popular: true,
+      icon: Brain
+    },
+    {
+      id: 'ai-3d-generation',
+      name: 'AI 3D Content Generation',
+      description: 'Revolutionary 3D content creation using AI for models, animations, and virtual environments',
+      price: '$1,599/month',
+      marketPrice: '$3000-12000/month',
+      features: [
+        '3D model generation from text prompts',
+        'Automatic texture and material application',
+        'Animation generation and rigging',
+        'Virtual environment creation',
+        '3D asset optimization',
+        'Integration with game engines',
+        'AR/VR content generation',
+        'Custom 3D pipeline development'
+      ],
+      benefits: [
+        'Reduce 3D creation time by 90%',
+        'Lower production costs',
+        'Faster prototyping',
+        'Enhanced creative capabilities'
+      ],
+      category: '3D & AR/VR',
+      popular: true,
+      icon: Box
+    },
+    {
+      id: 'ai-quantum-computing',
+      name: 'AI Quantum Computing Solutions',
+      description: 'Quantum-enhanced AI algorithms for complex optimization and machine learning problems',
+      price: '$2,999/month',
+      marketPrice: '$6000-25000/month',
+      features: [
+        'Quantum machine learning algorithms',
+        'Quantum optimization solutions',
+        'Quantum neural networks',
+        'Hybrid classical-quantum processing',
+        'Quantum data analysis',
+        'Custom quantum algorithm development',
+        'Quantum simulation services',
+        'Integration with quantum hardware'
+      ],
+      benefits: [
+        'Exponential computational speedup',
+        'Solve previously intractable problems',
+        'Advanced optimization capabilities',
+        'Future-ready technology'
+      ],
+      category: 'Quantum AI',
+      popular: false,
+      icon: Cpu
+    },
+    {
+      id: 'ai-climate-solutions',
+      name: 'AI Climate Solutions Pro',
+      description: 'AI-powered climate monitoring, prediction, and sustainability optimization for businesses',
+      price: '$1,899/month',
+      marketPrice: '$3500-15000/month',
+      features: [
+        'Climate data analysis and prediction',
+        'Carbon footprint optimization',
+        'Renewable energy optimization',
+        'Environmental impact assessment',
+        'Sustainability reporting automation',
+        'Climate risk analysis',
+        'Green supply chain optimization',
+        'ESG compliance monitoring'
+      ],
+      benefits: [
+        'Reduce environmental impact',
+        'Achieve sustainability goals',
+        'Comply with regulations',
+        'Improve brand reputation'
+      ],
+      category: 'Climate AI',
+      popular: true,
+      icon: Zap
+    },
+    {
+      id: 'ai-drug-discovery',
+      name: 'AI Drug Discovery Platform',
+      description: 'Advanced AI platform for pharmaceutical research, drug discovery, and molecular design',
+      price: '$3,999/month',
+      marketPrice: '$8000-50000/month',
+      features: [
+        'Molecular design and optimization',
+        'Drug-target interaction prediction',
+        'ADMET property prediction',
+        'Chemical synthesis planning',
+        'Clinical trial optimization',
+        'Regulatory compliance support',
+        'Patent analysis and generation',
+        'Collaborative research tools'
+      ],
+      benefits: [
+        'Accelerate drug development',
+        'Reduce research costs',
+        'Improve success rates',
+        'Faster time to market'
+      ],
+      category: 'Pharmaceutical AI',
+      popular: false,
+      icon: Heart
+    },
+    {
+      id: 'ai-space-technology',
+      name: 'AI Space Technology Solutions',
+      description: 'AI-powered solutions for space exploration, satellite management, and aerospace applications',
+      price: '$2,499/month',
+      marketPrice: '$5000-20000/month',
+      features: [
+        'Satellite constellation management',
+        'Space debris tracking and avoidance',
+        'Earth observation data analysis',
+        'Space weather prediction',
+        'Mission planning optimization',
+        'Autonomous spacecraft control',
+        'Space resource utilization',
+        'Planetary exploration AI'
+      ],
+      benefits: [
+        'Enhanced space operations',
+        'Improved mission success rates',
+        'Cost-effective space solutions',
+        'Advanced space analytics'
+      ],
+      category: 'Space AI',
+      popular: false,
+      icon: Globe
+    },
+    {
+      id: 'ai-neural-interfaces',
+      name: 'AI Neural Interface Technology',
+      description: 'Cutting-edge AI for brain-computer interfaces and neural signal processing',
+      price: '$4,999/month',
+      marketPrice: '$10000-50000/month',
+      features: [
+        'Neural signal processing and analysis',
+        'Brain-computer interface development',
+        'Neural pattern recognition',
+        'Cognitive enhancement algorithms',
+        'Medical neural applications',
+        'Real-time neural feedback',
+        'Custom neural interface design',
+        'Research collaboration tools'
+      ],
+      benefits: [
+        'Revolutionary human-AI interaction',
+        'Medical breakthrough potential',
+        'Enhanced cognitive capabilities',
+        'Future technology leadership'
+      ],
+      category: 'Neural AI',
+      popular: false,
+      icon: Brain
+    },
+    {
+      id: 'ai-robotics-automation',
+      name: 'AI Robotics & Automation',
+      description: 'Intelligent robotics solutions with advanced AI for industrial and service applications',
+      price: '$2,299/month',
+      marketPrice: '$4500-18000/month',
+      features: [
+        'Autonomous robot control systems',
+        'Computer vision for robotics',
+        'Robotic process automation (RPA)',
+        'Human-robot collaboration',
+        'Predictive maintenance for robots',
+        'Custom robotic solutions',
+        'Integration with existing systems',
+        'Performance optimization'
+      ],
+      benefits: [
+        'Increased automation efficiency',
+        'Reduced operational costs',
+        'Improved safety',
+        'Scalable robotic solutions'
+      ],
+      category: 'Robotics AI',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'ai-metaverse-platform',
+      name: 'AI Metaverse Platform',
+      description: 'Comprehensive AI platform for building and managing metaverse experiences and virtual worlds',
+      price: '$1,799/month',
+      marketPrice: '$3500-15000/month',
+      features: [
+        'Virtual world generation',
+        'AI-powered avatars and NPCs',
+        'Real-time environment adaptation',
+        'Virtual economy management',
+        'Social interaction AI',
+        'Content moderation for virtual spaces',
+        'Cross-platform integration',
+        'Custom metaverse development'
+      ],
+      benefits: [
+        'Create immersive virtual experiences',
+        'Engage users in virtual worlds',
+        'Monetize virtual environments',
+        'Future-ready platform'
+      ],
+      category: 'Metaverse AI',
+      popular: true,
+      icon: Monitor
+    },
+    {
+      id: 'ai-ethical-governance',
+      name: 'AI Ethical Governance Platform',
+      description: 'Comprehensive AI ethics and governance platform ensuring responsible AI deployment',
+      price: '$1,399/month',
+      marketPrice: '$2800-10000/month',
+      features: [
+        'AI bias detection and mitigation',
+        'Ethical AI framework implementation',
+        'Algorithmic auditing tools',
+        'Transparency and explainability',
+        'Compliance monitoring',
+        'Ethical decision support',
+        'Stakeholder impact assessment',
+        'Continuous ethics monitoring'
+      ],
+      benefits: [
+        'Ensure responsible AI use',
+        'Build trust with stakeholders',
+        'Comply with regulations',
+        'Mitigate AI risks'
+      ],
+      category: 'AI Ethics',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'ai-fintech-advanced',
+      name: 'AI Advanced FinTech Solutions',
+      description: 'Next-generation AI solutions for financial services including DeFi, crypto, and digital banking',
+      price: '$2,799/month',
+      marketPrice: '$5500-25000/month',
+      features: [
+        'DeFi protocol optimization',
+        'Cryptocurrency trading algorithms',
+        'Digital banking automation',
+        'Risk assessment and management',
+        'Fraud detection and prevention',
+        'Regulatory compliance automation',
+        'Smart contract development',
+        'Cross-chain integration'
+      ],
+      benefits: [
+        'Enhanced financial services',
+        'Improved security and compliance',
+        'Automated financial processes',
+        'Competitive advantage'
+      ],
+      category: 'FinTech AI',
+      popular: true,
+      icon: TrendingUp
+    },
+    {
+      id: 'ai-education-personalized',
+      name: 'AI Personalized Education Platform',
+      description: 'Revolutionary AI-powered personalized learning platform for educational institutions',
+      price: '$999/month',
+      marketPrice: '$2000-8000/month',
+      features: [
+        'Personalized learning paths',
+        'Adaptive content delivery',
+        'Student performance analytics',
+        'Automated assessment and grading',
+        'Learning style optimization',
+        'Parent and teacher dashboards',
+        'Curriculum optimization',
+        'Accessibility features'
+      ],
+      benefits: [
+        'Improve learning outcomes',
+        'Personalize education experience',
+        'Reduce administrative burden',
+        'Enhance student engagement'
+      ],
+      category: 'Education AI',
+      popular: true,
+      icon: Users
+    },
+    {
+      id: 'ai-agricultural-intelligence',
+      name: 'AI Agricultural Intelligence Pro',
+      description: 'Advanced AI solutions for precision agriculture, crop optimization, and sustainable farming',
+      price: '$1,499/month',
+      marketPrice: '$3000-12000/month',
+      features: [
+        'Crop monitoring and analysis',
+        'Precision irrigation systems',
+        'Pest and disease detection',
+        'Yield prediction and optimization',
+        'Soil analysis and management',
+        'Weather pattern analysis',
+        'Automated farming equipment',
+        'Supply chain optimization'
+      ],
+      benefits: [
+        'Increase crop yields',
+        'Reduce resource waste',
+        'Improve sustainability',
+        'Optimize farming operations'
+      ],
+      category: 'Agricultural AI',
+      popular: false,
+      icon: Zap
+    },
+    {
+      id: 'ai-energy-grid-management',
+      name: 'AI Energy Grid Management',
+      description: 'Intelligent energy grid optimization and smart energy management solutions',
+      price: '$2,199/month',
+      marketPrice: '$4500-18000/month',
+      features: [
+        'Smart grid optimization',
+        'Energy demand forecasting',
+        'Renewable energy integration',
+        'Grid stability monitoring',
+        'Energy storage optimization',
+        'Peak load management',
+        'Distributed energy management',
+        'Real-time grid analytics'
+      ],
+      benefits: [
+        'Optimize energy distribution',
+        'Reduce energy costs',
+        'Improve grid reliability',
+        'Support renewable integration'
+      ],
+      category: 'Energy AI',
+      popular: true,
+      icon: Zap
+    },
+    {
+      id: 'ai-financial-crime-detection',
+      name: 'AI Financial Crime Detection Pro',
+      description: 'Advanced AI system for detecting and preventing financial crimes including money laundering and fraud',
+      price: '$3,299/month',
+      marketPrice: '$6500-25000/month',
+      features: [
+        'Real-time transaction monitoring',
+        'Money laundering detection',
+        'Sanctions screening',
+        'KYC/AML automation',
+        'Risk scoring and profiling',
+        'Regulatory reporting automation',
+        'Cross-border transaction analysis',
+        'Machine learning model updates'
+      ],
+      benefits: [
+        'Detect financial crimes early',
+        'Ensure regulatory compliance',
+        'Reduce false positives',
+        'Protect financial institutions'
+      ],
+      category: 'Financial Security AI',
+      popular: true,
+      icon: Shield
+    }
   ]
 
   const categories = [
@@ -1038,7 +1429,22 @@ const AiServicesPage: React.FC = () => {
     { id: 'Conversational AI', name: 'Conversational AI', count: services.filter(s => s.category === 'Conversational AI').length },
     { id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length },
     { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },
-    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length }
+    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length },
+    { id: 'Multimodal AI', name: 'Multimodal AI', count: services.filter(s => s.category === 'Multimodal AI').length },
+    { id: '3D & AR/VR', name: '3D & AR/VR', count: services.filter(s => s.category === '3D & AR/VR').length },
+    { id: 'Quantum AI', name: 'Quantum AI', count: services.filter(s => s.category === 'Quantum AI').length },
+    { id: 'Climate AI', name: 'Climate AI', count: services.filter(s => s.category === 'Climate AI').length },
+    { id: 'Pharmaceutical AI', name: 'Pharmaceutical AI', count: services.filter(s => s.category === 'Pharmaceutical AI').length },
+    { id: 'Space AI', name: 'Space AI', count: services.filter(s => s.category === 'Space AI').length },
+    { id: 'Neural AI', name: 'Neural AI', count: services.filter(s => s.category === 'Neural AI').length },
+    { id: 'Robotics AI', name: 'Robotics AI', count: services.filter(s => s.category === 'Robotics AI').length },
+    { id: 'Metaverse AI', name: 'Metaverse AI', count: services.filter(s => s.category === 'Metaverse AI').length },
+    { id: 'AI Ethics', name: 'AI Ethics', count: services.filter(s => s.category === 'AI Ethics').length },
+    { id: 'FinTech AI', name: 'FinTech AI', count: services.filter(s => s.category === 'FinTech AI').length },
+    { id: 'Education AI', name: 'Education AI', count: services.filter(s => s.category === 'Education AI').length },
+    { id: 'Agricultural AI', name: 'Agricultural AI', count: services.filter(s => s.category === 'Agricultural AI').length },
+    { id: 'Energy AI', name: 'Energy AI', count: services.filter(s => s.category === 'Energy AI').length },
+    { id: 'Financial Security AI', name: 'Financial Security AI', count: services.filter(s => s.category === 'Financial Security AI').length }
   ]
 
   const filteredServices = services.filter(service => 
