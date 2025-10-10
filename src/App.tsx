@@ -5,12 +5,12 @@ import LoadingSpinner from './components/LoadingSpinner';
 import { performanceMonitor } from './utils/performanceMonitor';
 
 // Lazy load components for better performance
-const HomePage = lazy(() => import('./page'));
-const AboutPage = lazy(() => import('./about/page'));
-const ContactPage = lazy(() => import('./contact/page'));
-const ServicesPage = lazy(() => import('./services/page'));
-const BlogPage = lazy(() => import('./blog/page'));
-const CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const HomePage = lazy(() => import('../app/page'));
+const AboutPage = lazy(() => import('../app/about/page'));
+const ContactPage = lazy(() => import('../app/contact/page'));
+const ServicesPage = lazy(() => import('../app/services/page'));
+const BlogPage = lazy(() => import('../app/blog/page'));
+const CaseStudiesPage = lazy(() => import('../app/case-studies/page'));
 const NotFoundPage = lazy(() => import('./not-found'));
 
 // AI Services Pages
@@ -70,6 +70,18 @@ const ITConsultingPage = lazy(() => import('./it-consulting/page'));
 const CloudMigrationPage = lazy(() => import('./cloud-migration/page'));
 const TeamPage = lazy(() => import('./team/page'));
 const CareersPage = lazy(() => import('./careers/page'));
+
+// Newly Created Pages
+const AITaskManagerPage = lazy(() => import('../app/ai-task-manager/page'));
+const AITimeTrackerPage = lazy(() => import('../app/ai-time-tracker/page'));
+const AIWebsiteBuilderPage = lazy(() => import('../app/ai-website-builder/page'));
+const AIInvoiceGeneratorPage = lazy(() => import('../app/ai-invoice-generator/page'));
+const AIExpenseTrackerPage = lazy(() => import('../app/ai-expense-tracker/page'));
+const AIStockPortfolioManagerPage = lazy(() => import('../app/ai-stock-portfolio-manager/page'));
+const AIPasswordManagerPage = lazy(() => import('../app/ai-password-manager/page'));
+const AILogoDesignerPage = lazy(() => import('../app/ai-logo-designer/page'));
+const AdvancedRoboticsSystemsPage = lazy(() => import('../app/advanced-robotics-systems/page'));
+const DigitalTwinDevelopmentPage = lazy(() => import('../app/digital-twin-development/page'));
 
 // IT Services Pages
 const AnalyticsToolsPage = lazy(() => import('./analytics-tools/page'));
@@ -230,6 +242,18 @@ const App: React.FC = () => {
             <Route path="/cloud-migration" element={<CloudMigrationPage />} />
             <Route path="/team" element={<TeamPage />} />
             <Route path="/careers" element={<CareersPage />} />
+            
+            {/* Newly Created Pages */}
+            <Route path="/ai-task-manager" element={<AITaskManagerPage />} />
+            <Route path="/ai-time-tracker" element={<AITimeTrackerPage />} />
+            <Route path="/ai-website-builder" element={<AIWebsiteBuilderPage />} />
+            <Route path="/ai-invoice-generator" element={<AIInvoiceGeneratorPage />} />
+            <Route path="/ai-expense-tracker" element={<AIExpenseTrackerPage />} />
+            <Route path="/ai-stock-portfolio-manager" element={<AIStockPortfolioManagerPage />} />
+            <Route path="/ai-password-manager" element={<AIPasswordManagerPage />} />
+            <Route path="/ai-logo-designer" element={<AILogoDesignerPage />} />
+            <Route path="/advanced-robotics-systems" element={<AdvancedRoboticsSystemsPage />} />
+            <Route path="/digital-twin-development" element={<DigitalTwinDevelopmentPage />} />
             
             {/* IT Services Pages */}
             <Route path="/analytics-tools" element={<AnalyticsToolsPage />} />
