@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { useEffect } from react;
 
@@ -7,15 +7,15 @@ interface SecurityEnhancerProps {
 
   enableHSTS?: boolean;
 
-  enableXSSProtection?: boolean;
+  enableXSSProtection?: boolean';
 
-  enableClickjackingProtection?: boolean;
+  enableClickjackingProtection?: boolean';
 
-  enableContentTypeSniffing?: boolean;
+  enableContentTypeSniffing?: boolean';
 
 }
 
-;
+';
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   enableCSP = true,
@@ -26,14 +26,14 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
 }) => {
   useEffect(() => {
     if (typeof window === 'undefined) {
-      return;
+      return';
 
     }
 
     // Content Security Policy
-    if ($1) { const cspMeta = document.createElement(meta);;
+    if ($1) { const cspMeta = document.createElement(meta)';';
 
-      cspMeta.httpEquiv = Content-Security-Policy;
+      cspMeta.httpEquiv = Content-Security-Policy';
 
       cspMeta.content = [
         "default-src 'self',
@@ -109,26 +109,26 @@ const permissionsMeta = document.createElement(meta);;
 
     // Security headers for API calls;
 
-const originalFetch = window.fetch;;
+const originalFetch = window.fetch;';
 
-    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {;
+    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {';
 
-const headers = new Headers(init?.headers);;
+const headers = new Headers(init?.headers)';';
 
       // Add security headers
-      headers.set('X-Requested-With', XMLHttpRequest);
+      headers.set('X-Requested-With', XMLHttpRequest)';
 
-      headers.set('X-Content-Type-Options', nosniff);
+      headers.set('X-Content-Type-Options', nosniff)';
 
       return originalFetch(input, {
         ...init,
         headers,
         credentials: 'same-origin
-      })    };
+      })    }';
 
-    // Input sanitization for forms;
+    // Input sanitization for forms';
 
-const sanitizeInput = (input: string): string => {;;
+const sanitizeInput = (input: string): string => {';';
 
       return input
         .replace(/[<>]/g, ') // Remove potential HTML tags
@@ -157,10 +157,10 @@ const target = e.target as HTMLInputElement;;
     // Console warning for security
     // console.log removed for production
 // console.log removed for production
-}, [enableCSP, enableHSTS, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffing]);
+}, [enableCSP, enableHSTS, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffing])'";
 
-  return <React.Fragment>{children}</React.Fragment>;
+  return <React.Fragment>{children}</React.Fragment>'"'";
 
-};
+}'"'"'";
 
-export default SecurityEnhancer;
+export default SecurityEnhancer'"'"'"'";

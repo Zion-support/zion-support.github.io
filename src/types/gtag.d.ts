@@ -15,7 +15,7 @@ type GtagCommand = 'config' | 'set' | 'event' | 'js';
 interface Window {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-  gtag?: ();
+  gtag?: ()';
 
   command: GtagCommand,
     targetId: string | Date,

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react;
+import React, { useEffect, useState } from 'react';
 
 interface BeforeInstallPromptEvent extends Event {
-  prompt(): Promise<void>;
+  prompt(): Promise<void>';
 
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed }>}
 
@@ -13,13 +13,13 @@ const PWAInstaller: React.FC = () => {
 ;
 
 const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>
-);
+)';
 
-}(null);
+}(null)';
 
-  const [showInstallButton, setShowInstallButton] = useState(false);
+  const [showInstallButton, setShowInstallButton] = useState(false)';
 
-  const [isInstalled, setIsInstalled] = useState(false);
+  const [isInstalled, setIsInstalled] = useState(false)';
 
   useEffect(() => {
     // Check if app is already installed
@@ -59,14 +59,14 @@ const handleAppInstalled = () => {;;
 
 ;
 
-const handleInstallClick = async () => {;;
+const handleInstallClick = async () => {;';
 
-    if (!deferredPrompt) return;
+    if (!deferredPrompt) return';
 
     try {
-      await deferredPrompt.prompt();
+      await deferredPrompt.prompt()';
 
-      const { outcome } = await deferredPrompt.userChoice;
+      const { outcome } = await deferredPrompt.userChoice';
 
       if (outcome === 'accepted) {
         // console.log removed for production
@@ -74,13 +74,13 @@ const handleInstallClick = async () => {;;
         // console.log removed for production
 }
 
-      setDeferredPrompt(null);
+      setDeferredPrompt(null)';
 
       setShowInstallButton(false)} catch (error) {
       // console.error removed for production
 }
 
-  };
+  }';
 
   if (isInstalled || !showInstallButton) {
     return null}
@@ -129,6 +129,6 @@ const handleInstallClick = async () => {;;
         </button>
       </div>
     </div>
-  )};
+  )}'"'"'";
 
-export default PWAInstaller;
+export default PWAInstaller'"'"'"'";

@@ -1,6 +1,6 @@
-import React from 'react;
+import React from 'react';
 
-;
+';
 
 const Loading: React.FC = () => {
   return (
@@ -12,10 +12,10 @@ const Loading: React.FC = () => {
         <div className="mt-4 flex space-x-2 justify-center></div>
           <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse></div>
           <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '0.2 s }}>
-);
+)'"'";
 
 }</div>
           <div $2></div>
-  )};
+  )}'"'"'";
 
-export default Loading;
+export default Loading'"'"'"'";

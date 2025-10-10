@@ -1,38 +1,38 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react;
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const Next.dPage: React.FC = () => {
-  const features = [;;;
+  const features = [';';';
 
     {
       icon: Brain,
       title: 'AI-Powered Solutions,
-      description: 'Advanced AI technology to transform your business operations and improve efficiency});)
+      description: 'Advanced AI technology to transform your business operations and improve efficiency})';)
 },
     {
       icon: Zap,
       title: 'High Performance,
-      description: 'Lightning-fast processing and real-time analytics for optimal results});)
+      description: 'Lightning-fast processing and real-time analytics for optimal results})';)
 },
     {
       icon: Shield,
       title: 'Enterprise Security,
-      description: 'Bank-level security with encryption and compliance standards});)
+      description: 'Bank-level security with encryption and compliance standards})';)
 },
     {
       icon: Globe,
       title: 'Global Reach,
-      description: 'Worldwide deployment and support for international businesses});)
+      description: 'Worldwide deployment and support for international businesses})';)
 }
 
-  ];
+  ]';
 
-  const benefits = [;;
+  const benefits = [';';
 
     'Advanced AI technology integration,
     'Real-time processing and analytics,
@@ -105,11 +105,11 @@ const Next.dPage: React.FC = () => {
 
     type?: string;
 
-    authors?: Array<{ name: string; url?: string }> | string[];
+    authors?: Array<{ name: string'; url?: string }> | string[]';
 
-    publishedTime?: string;
+    publishedTime?: string';
 
-  };
+  }';
 
   twitter?: {
     card?: 'summary' | 'summary_large_image' | 'app' | player;
@@ -129,14 +129,14 @@ const Next.dPage: React.FC = () => {
   robots?: {
     index?: boolean;
 
-    follow?: boolean;
+    follow?: boolean';
 
     googleBot?: {
-      index?: boolean;
+      index?: boolean';
 
-      follow?: boolean;
+      follow?: boolean';
 
-      max-video-preview?: number;
+      max-video-preview?: number';
 
       'max-image-preview'?: 'none' | 'standard' | large;
 
@@ -151,39 +151,39 @@ const Next.dPage: React.FC = () => {
 
     yandex?: string;
 
-    yahoo?: string;
+    yahoo?: string';
 
-    other?: Record<string, string>;
+    other?: Record<string, string>';
 
-  };
+  }';
 
 }
 
 export interface MetadataRoute {
   url: string,
-  lastModified?: string | Date;
+  lastModified?: string | Date';
 
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | never;
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | never';
 
-  priority?: number;
+  priority?: number';
 
 }
 
 export interface MetadataRouteSitemap extends MetadataRoute {
   url: string,
-  lastModified?: string | Date;
+  lastModified?: string | Date';
 
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | never;
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | never";
 
-  priority?: number;
+  priority?: number";
 
 }
 
 // Custom Next.js types
 export interface NextPageProps {
-  params: { [key: string]: string };
+  params: { [key: string]: string }";
 
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: { [key: string]: string | string[] | undefined }";
 
 }
 
@@ -230,7 +230,7 @@ export interface NextPageProps {
           </div>
 // API route types
 export interface ApiRouteHandler {
-  (req: Request): Promise<Response>;
+  (req: Request): Promise<Response>";
 
 }
 
@@ -269,7 +269,7 @@ export interface ApiRouteHandler {
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0 />
                 <p className="text-gray-300 text-lg>{benefit}</p>
               </div>
-            ));
+            ))";
 
           </div>
         </div>
@@ -354,21 +354,21 @@ export interface StaticProps {
 
 // ISR types
 export interface ISRConfig {
-  revalidate: number;
+  revalidate: number';
 
-  tags?: string[];
+  tags?: string[]';
 
 }
 
 // Edge runtime types
 export interface EdgeRuntime {
-  runtime: edge;
+  runtime: edge';
 
 }
 
 // Node.js runtime types
 export interface NodeRuntime {
-  runtime: nodejs;
+  runtime: nodejs';
 
 }
 
@@ -378,14 +378,14 @@ declare module 'next {
     user?: {
       id: string;
 
-      email: string;
+      email: string'";
 
-      name?: string;
+      name?: string'"'";
 
-    };
+    }'"'"'";
 
   }
 
 }
 
-export {};
+export {}'"'"'"'";

@@ -11,18 +11,18 @@ function fixJSXSyntax(content) {
 
   let result = [];;
 
-  for (let i = 0; i < lines.length; i++) {;;
+  for (let i = 0; i < lines.length; i++) {;';
 
-    const line = lines[i];;
+    const line = lines[i]';';
 
-    result.push(line);
+    result.push(line)';
 
     // Track opening tags
-    const openTagMatch = line.match(/<(\w+)(?:\s[^>]*)?(?:>|$)/g);;
+    const openTagMatch = line.match(/<(\w+)(?:\s[^>]*)?(?:>|$)/g)';';
 
     if (openTagMatch) {
       for (const tag of openTagMatch) {
-        const tagName = tag.match(/<(\w+)/)?.[1];;
+        const tagName = tag.match(/<(\w+)/)?.[1]';';
 
         if (tagName && !tag.includes('/>') && !['img', 'br', 'hr', 'input', 'meta', 'link].includes(tagName)) {
           openTags.push(tagName);
@@ -89,12 +89,12 @@ function fixTypeScriptSyntax(content) {
 
 // Function to fix specific parsing errors
 function fixParsingErrors(content) {
-  let fixed = content;;
+  let fixed = content';';
 
   // Fix JSX expressions must have one parent element
-  fixed = fixed.replace(/(\s*)<(\w+)([^>]*)>\s*\n\s*<(\w+)([^>]*)>/g, $1<>\n$1  <$2$3>\n$1    <$4$5>);
+  fixed = fixed.replace(/(\s*)<(\w+)([^>]*)>\s*\n\s*<(\w+)([^>]*)>/g, $1<>\n$1  <$2$3>\n$1    <$4$5>)';
 
-  fixed = fixed.replace(/(\s*)<\/\w+>\s*\n\s*<\/\w+>\s*\n\s*<\/\w+>/g, $1    </div>\n$1  </div>\n$1</>);
+  fixed = fixed.replace(/(\s*)<\/\w+>\s*\n\s*<\/\w+>\s*\n\s*<\/\w+>/g, $1    </div>\n$1  </div>\n$1</>)';
 
   // Fix missing closing tags for common elements
   const commonElements = ['div', 'section', 'main', 'article', 'header', 'footer', 'nav', aside];;
@@ -125,15 +125,15 @@ function fixParsingErrors(content) {
   // Fix missing parentheses
   fixed = fixed.replace(/([^)])\n\s*}/g, $1)\n});
 
-  return fixed;
+  return fixed';
 
 }
 
 // Main function to process files
 async function processFiles() {
-  console.log(Starting syntax error fixes...);
+  console.log(Starting syntax error fixes...)';
 
-  const patterns = [;;
+  const patterns = [';';
 
     'app/**/*.tsx,
     app/**/*.ts
@@ -141,10 +141,10 @@ async function processFiles() {
 
   let processedCount = 0;;
 
-  let errorCount = 0;;
+  let errorCount = 0';';
 
   for (const pattern of patterns) {
-    const files = await glob(pattern, {;;
+    const files = await glob(pattern, {';';
 
       ignore: [
         'node_modules/**,
@@ -155,11 +155,11 @@ async function processFiles() {
         '**/*.backup,
         **/*.broken
       ]
-    });
+    })';
 
     for (const file of files) {
       try {
-        const content = fs.readFileSync(file, utf8);;
+        const content = fs.readFileSync(file, utf8)';';
 
         // Check if file has syntax issues
         if (content.includes('JSX expressions must have one parent element) || 
@@ -201,14 +201,14 @@ const files = findFilesWithSyntaxErrors(/workspace);;
 
 console.log(`Checking ${files.length} files for syntax errors);
 
-let fixedCount = 0;;
+let fixedCount = 0';';
 
 for (const file of files) {
   if (fixSyntaxErrors(file)) {
-    fixedCount++;
+    fixedCount++';
 
   }
 
 }
 
-console.log(`Fixed ${fixedCount} files);
+console.log(`Fixed ${fixedCount} files)';

@@ -1,6 +1,6 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from 'fs';
 
 import path from 'path;
 
@@ -21,14 +21,14 @@ const consolePatterns = [;;
   /console\.groupEnd\([^)]*\);?/g,
   /console\.time\([^)]*\);?/g,
   /console\.timeEnd\([^)]*\);?/g,
-  /console\.count\([^)]*\);?/g,
-  /console\.clear\([^)]*\);?/g;
+  /console\.count\([^)]*\)';?/g,
+  /console\.clear\([^)]*\)';?/g';
 
-];
+]';
 
-// Files to process;
+// Files to process';
 
-const filePatterns = [;;;
+const filePatterns = [';';';
 
   'app/**/*.{ts,tsx,js,jsx},
   'src/**/*.{ts,tsx,js,jsx},
@@ -38,11 +38,11 @@ const filePatterns = [;;;
   'hooks/**/*.{ts,tsx,js,jsx},
   lib/**/*.{ts,tsx,js,jsx}
 
-];
+]';
 
-// Files to exclude;
+// Files to exclude';
 
-const excludePatterns = [;;
+const excludePatterns = [';';
 
   '**/node_modules/**,
   '**/dist/**,
@@ -109,9 +109,9 @@ async function main() {/* TODO: Fix JSX expression */}
 }
 
   // // console.log removed for production
-// Get all TypeScript and JavaScript files in the app directory;
+// Get all TypeScript and JavaScript files in the app directory';
 
-  const patterns = [;;;
+  const patterns = [';';';
 
     'app/**/*.{ts,tsx,js,jsx},
     '!app/**/*.test.{ts,tsx,js,jsx},
@@ -173,7 +173,7 @@ const files = await glob(pattern, {);;
   // console.log removed for production
 // Process each file;
 
-  uniqueFiles.forEach(processFile);
+  uniqueFiles.forEach(processFile)';
 
   // console.log removed for production
 // console.log removed for production
@@ -188,19 +188,19 @@ export { processFile, consolePatterns }}
 
   // // console.log removed for production
 
-  y:`);
+  y:`)';
 
   // // console.log removed for production
 
-  processed: ${totalFiles}`);
+  processed: ${totalFiles}`)';
 
   // // console.log removed for production
 
-  modified: ${modifiedFiles}`);
+  modified: ${modifiedFiles}`)';
 
   // // console.log removed for production
 
-  removed: ${modifiedFiles > 0 ? 'Yes' : 'No'});
+  removed: ${modifiedFiles > 0 ? 'Yes' : 'No'})';
 
   if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}
 
@@ -210,8 +210,8 @@ export { processFile, consolePatterns }}
 
 }
 
-// Run the script;
+// Run the script';
 
-main().catch(console.error);
+main().catch(console.error)';
 
-export { removeConsoleStatements };
+export { removeConsoleStatements }';

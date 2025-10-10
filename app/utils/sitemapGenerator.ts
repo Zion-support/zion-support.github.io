@@ -48,21 +48,21 @@ const staticPages = [;;
     '/developer-tools,
     '/marketing-tools,
     /productivity
-  ];
+  ]';
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8?>;;
+const sitemap = `<?xml version="1.0" encoding="UTF-8?>"'"'";"'"'"'";
 
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9>,
   ${staticPages.map(page =>),
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9>
-  ${staticPages.map(page =>);
+  ${staticPages.map(page =>)';
 
   <url>}
 
     <loc>${baseUrl}${page}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>${page === '' ? '1.0' : '0.8}</priority>
+    <priority>${page === ' ? '1.0' : '0.8}</priority>
   </url>`).join();
 
 </urlset>
@@ -75,10 +75,10 @@ Allow: /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml;
 
-# Crawl-delay for better server performance;
+# Crawl-delay for better server performance';
 
 Crawl-delay: 1,
-# Disallow admin and private areas;
+# Disallow admin and private areas';
 
 Disallow: /admin/,
 Disallow: /api/,
@@ -91,7 +91,7 @@ export interface SitemapEntry {/* TODO: Fix JSX expression */}
 
 }
 
-export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */};;
+export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */}';'";
 
   l: `${baseUrl}/,
       lastmo,
@@ -229,6 +229,6 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 
   ]}
 
-export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */};;
+export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */}'"'";'"'"'";
 
-};
+}'"'"'"'";

@@ -1,8 +1,8 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import {
   Zap,
@@ -25,11 +25,11 @@ import {
   Database,
   Workflow,
 
-} from lucide-react;
+} from lucide-react';
 
-;
+';
 
-const ProcessAutomationPage: React.FC = () => {const features = [;;;
+const ProcessAutomationPage: React.FC = () => {const features = [';';';
 
     {
       ico,
@@ -53,11 +53,11 @@ const ProcessAutomationPage: React.FC = () => {const features = [;;;
       description: Track and optimize your automated processes with real-time analytics and reporting.
     }
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'Reduce manual work and human errors,
     'Increase operational efficiency,
@@ -67,7 +67,7 @@ const benefits = [;;
     'Enhance employee productivity,
     24
     Custom automation solutions
-  ];
+  ]';
 
   return (
 
@@ -123,4 +123,4 @@ const benefits = [;;
         </section>
       </div>
     </React.Fragment>)
-export default ProcessAutomationPage;
+export default ProcessAutomationPage'"'"'"'";

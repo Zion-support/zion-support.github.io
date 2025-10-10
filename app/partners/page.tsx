@@ -1,21 +1,21 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react;
+import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react;
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 
-import { CheckCircle, Handshake, Users, Award } from 'lucide-react;
+import { CheckCircle, Handshake, Users, Award } from 'lucide-react';
 
-const PartnersPage = () => {;
-  const partners = [;
+const PartnersPage = () => {';
+  const partners = [';
     {
       name: 'Microsoft,
       logo: '/api/placeholder/200/100,
@@ -23,20 +23,20 @@ const PartnersPage = () => {;
     {
       name: 'Amazon Web Services,
       logo: '/api/placeholder/200/100,
-import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react;
+import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
 
 interface Partner {
-  name: string;
+  name: string';
 
-  logo: string;
+  logo: string';
 
-  description: string;
+  description: string';
 
-  category: string;
+  category: string';
 
-  website?: string;
+  website?: string';
 
-  tier: 'strategic' | 'preferred' | 'certified});)
+  tier: 'strategic' | 'preferred' | 'certified})';)
 }
 
 const PartnersPage: React.FC = () => {
@@ -56,7 +56,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://aws.amazon.com,
       tier: 'strategic
     },
-      tier: 'strategic});)},
+      tier: 'strategic})';)},
     {
       name: 'Google Cloud,
       logo: '/images/partners/google-cloud.png,
@@ -78,7 +78,7 @@ const PartnersPage: React.FC = () => {
       description: 'Customer relationship management and business automation,
       description: 'Customer relationship management and business automation platform',      category: 'CRM & Automation,
       website: 'https://salesforce.com,
-      tier: 'preferred});)
+      tier: 'preferred})';)
 },
     {
       name: 'Oracle,
@@ -86,7 +86,7 @@ const PartnersPage: React.FC = () => {
       description: 'Database solutions and enterprise applications,
       category: 'Database & Enterprise,
       website: 'https://oracle.com,
-      tier: 'preferred});)
+      tier: 'preferred})';)
 },
     {
       name: 'ServiceNow,
@@ -94,7 +94,7 @@ const PartnersPage: React.FC = () => {
       description: 'IT service management and workflow automation,
       category: 'IT Management,
       website: 'https://servicenow.com,
-      tier: 'certified});)
+      tier: 'certified})';)
 },
     {
       name: 'Splunk,
@@ -103,9 +103,9 @@ const PartnersPage: React.FC = () => {
       category: 'Analytics & Security,
       website: 'https://splunk.com,
       tier: 'certified
-    }  ];
+    }  ]';
 
-  const benefits = [;;
+  const benefits = [';';
 
     'Access to cutting-edge technology platforms,
     'Joint go-to-market strategies,
@@ -113,9 +113,9 @@ const PartnersPage: React.FC = () => {
     'Technical support and training,
     'Early access to new features,
     Dedicated partner success manager
-  ];
+  ]';
 
-  const partnershipTiers = [;;
+  const partnershipTiers = [';';
 
     {
       name: 'Strategic,
@@ -206,7 +206,7 @@ const PagePage: React.FC = () => {
                   <h></h>{tier.name}</h3>
                   <p className="text-gray-300>{tier.description}</p>
                 </div>
-              ));
+              ))";
 
             </div>
           </div>
@@ -232,7 +232,7 @@ const PagePage: React.FC = () => {
       <div></div>
                     <div></div>
                       <div></div>
-                        <di></di>{partner.name.charAt(0);</div>
+                        <di></di>{partner.name.charAt(0)"'";</div>
                       </div>
                       <h3></h3>
                         {partner.name}
@@ -249,11 +249,11 @@ const PagePage: React.FC = () => {
                           Visit Website
                           <ExternalLink className="w-3 h-3 />
                         </a>
-                      );
+                      )"'"'";
 
                     </div>
                   </div>
-                );
+                )"'"'"'";
 
               })}
 
@@ -280,7 +280,7 @@ const PagePage: React.FC = () => {
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1 />
                     <span className="text-gray-300>{benefit}</span>
                   </div>
-                ));
+                ))'"'"'"'";
 
               </div>
             </div>
@@ -326,7 +326,7 @@ const PagePage: React.FC = () => {
     {
       name: 'IBM,
       logo: /api/placeholder/200
-  ];
+  ]"'";
 
   return (<div>
                 <)
@@ -451,6 +451,6 @@ const PagePage: React.FC = () => {
         </div>
       </section>
     </div>
-  );};
+  )'"'";}'"'"'";
 
-export default PagePage;
+export default PagePage'"'"'"'";

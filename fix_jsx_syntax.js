@@ -99,13 +99,13 @@ async function main() {/* TODO: Fix JSX expression */}
       }
 
       //6. Fix unclosed input,
-  tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button></button>;
+  tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button></button>';
 
-const inputFix = content.replace();;
+const inputFix = content.replace()';';
 
         /<input([^>]*?)\n\s*\n\s*<button/g,
         <input$1\n/>\n\n<button
-      );
+      )';
 
       if (inputFix !== content) {/* TODO: Fix JSX expression */}
 
@@ -113,7 +113,7 @@ const inputFix = content.replace();;
 
       //7. Fix unclosed br,
   tags: <br> -> <br /></br>
-      //       const brFix = content.replace(/<br>/g, <br />);;
+      //       const brFix = content.replace(/<br>/g, <br />)';';
 
       if (brFix !== content) {/* TODO: Fix JSX expression */}
 
@@ -127,8 +127,8 @@ const inputFix = content.replace();;
 
       //       }
 
-  });
+  })';
 
   //   }
 
-// main().catch(console.error);
+// main().catch(console.error)';

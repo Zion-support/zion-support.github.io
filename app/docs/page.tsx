@@ -1,22 +1,22 @@
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight, Globe, Brain, Cloud, Shield, Settings, Users, Database, Zap, Eye, Sparkles } from 'lucide-react;
+import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight, Globe, Brain, Cloud, Shield, Settings, Users, Database, Zap, Eye, Sparkles } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-import SEOOptimizer from '../components/SEOOptimizer;
+import SEOOptimizer from '../components/SEOOptimizer';
 
-export default function DocsPage() {;
+export default function DocsPage() {';
 
-const [searchQuery, setSearchQuery] = useState();
+const [searchQuery, setSearchQuery] = useState()';
 
-;
+';
 
-const docCategories = [;;
+const docCategories = [';';
 
     {
       title: 'Getting Started,
@@ -63,11 +63,11 @@ const docCategories = [;;
       ]
     }
 
-  ];
+  ]';
 
-;
+';
 
-const popularDocs = [;;
+const popularDocs = [';';
 
     { title: 'Quick Start Guide', description: 'Get started in minutes', category: 'Getting Started', link: '/docs/quick-start },
     { title: 'API Authentication', description: 'Learn how to authenticate', category: 'API Reference', link: '/docs/api/auth },
@@ -76,16 +76,16 @@ const popularDocs = [;;
 
   ];
 
-;
+';
 
-const filteredDocs = docCategories.map(category => ({;;
+const filteredDocs = docCategories.map(category => ({';';
 
     ...category,
     docs: category.docs.filter(doc => 
       doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       doc.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  })).filter(category => category.docs.length > 0);
+  })).filter(category => category.docs.length > 0)';
 
   return (
 

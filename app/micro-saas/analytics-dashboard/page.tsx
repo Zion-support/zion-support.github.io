@@ -1,12 +1,12 @@
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from lucide-react;
+import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from lucide-react';
 
-;
+';
 
-const AIAnalyticsDashboardPage: React.FC = () => {const features = [;;;
+const AIAnalyticsDashboardPage: React.FC = () => {const features = [';';';
 
     {
       ico,
@@ -40,11 +40,11 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [;;;
 description: 'Monitor KPIs and business objectives with automated alerts.]
     }
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'Real-time data visualization and reporting,
     'AI-powered predictive analytics,
@@ -52,11 +52,11 @@ const benefits = [;;
     'Automated report generation,
     'Multi-platform data integration,
     Mobile-responsive design
-  ];
+  ]';
 
-;
+';
 
-const metrics = [;;
+const metrics = [';';
 
     { label: 'Data Sources', value: '50+, icon: BarChart },
     { label: 'Update Frequency', value: 'Real-time, icon: Clock },
@@ -206,13 +206,13 @@ const metrics = [;;
         <
       <
     <
-  );
+  )';
 
 )]
-    };
+    }';
 
-};
+}'";
 
-export default AIAnalyticsDashboardPage;
+export default AIAnalyticsDashboardPage'"'";
 
-      description: 'Monitor KPIs and business objectives with automated alerts.';);
+      description: 'Monitor KPIs and business objectives with automated alerts.'"'"'";)'"'"'"'";

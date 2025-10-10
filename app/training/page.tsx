@@ -1,12 +1,12 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react;
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-  ];
+  ]';
 
   return (<div className=min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
       
@@ -41,4 +41,4 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
     </div>)
-export default PagePage;
+export default PagePage'"'"'"'";

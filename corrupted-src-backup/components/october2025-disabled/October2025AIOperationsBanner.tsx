@@ -57,7 +57,7 @@ const Ico, n = artic, l, e.ic, o, n; return (</div>
                 {/* Conte, n, t */}</div>
                 <div, classNam, e = "relativ, e, z-10" ></div> <div, classNam, e = { w-1, 2, h-12, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.co, l, o, r }, flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0}></div>
                     <Icon, classNam, e = w-6 h-6, tex, t-whi, t, e />
-  ]; return (
+  ]"; return (
 
     <div, classNam, e = bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6, l, g:px-8, relative, overflow-hidd, e, n></div>
       {/* Animated, background, elemen, t, s */}
@@ -73,16 +73,16 @@ const Ico, n = artic, l, e.ic, o, n; return (</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, border, border-bl, u, e-4, 0, 0/30, m, b-4></div>
             <Activity, className="w-4 h-4, tex, t-bl, u, e-400, animat, e-pul, s, e /></Activity>
             <span, className=te, x, t-bl, u, e-300, tex, t-sm, fon, t-semibo, l, d></span>
-              OCTOBER, 202, 5 - BREAKTHROUGH, AI, OPERATIONS;
+              OCTOBER, 202, 5 - BREAKTHROUGH, AI, OPERATIONS";
 
             </sp, a, n>
           </div>
           <h2, className=te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4></h2>
-            Transform, Your, Enterprise Operatio, n, s;
+            Transform, Your, Enterprise Operatio, n, s";
 
           </h2>
           <p, className=te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o></p>
-            Three, revolutionary, platforms delivering, unprecedented, R, O, I, securi, t, y, and, operational, excellence;
+            Three, revolutionary, platforms delivering, unprecedented, R, O, I, securi, t, y, and, operational, excellence";
 
           </p>
         </div>
@@ -196,8 +196,8 @@ const Ico, n = artic, l, e.ic, o, n; return (</div>
         </div>
       </div>
     </div>
-  )};
+  )}";
 
-export default October2025AIOperationsBanner;
+export default October2025AIOperationsBanner";
 
 "`

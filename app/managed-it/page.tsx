@@ -1,22 +1,22 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-;
+';
 
-const PagePage: React.FC = () => {const features = [;
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react;
+const PagePage: React.FC = () => {const features = [';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const PagePage: React.FC = () => {
-  const features = [;
+  const features = [';
     {
       icon: Brain,
       title: 'AI-Powered Intelligence,
@@ -53,9 +53,9 @@ const PagePage: React.FC = () => {
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support]
     }
 
-  ];
+  ]';
 
-  const benefits = [    'Transform your business with AI technology,;
+  const benefits = [    'Transform your business with AI technology,';
     'Make data-driven decisions with confidence,
     'Identify trends and opportunities early,
     'Optimize business processes and workflows,
@@ -135,11 +135,11 @@ const PagePage: React.FC = () => {
                           {benefit}
 
                         </li>
-                      ));
+                      ))";
 
-                    </ul>);
+                    </ul>)";
 
-                </div>              ));
+                </div>              ))"'";
 
             </div>
           </div>
@@ -226,14 +226,14 @@ const PagePage: React.FC = () => {
       </div>
       <Footer />
     </React.Fragment>)
-  );
+  )';
 
-};
+}'";
 
-export default PagePage;
+export default PagePage'"'";
 
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'"'"'";
 
-;
+'"'"'"'";
 
 const PagePage: React.FC = () => {const features = [

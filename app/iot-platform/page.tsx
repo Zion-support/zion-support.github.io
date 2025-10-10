@@ -1,12 +1,12 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
 import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from lucide-react},
     {
@@ -18,7 +18,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
     {
     }
 
-  ];
+  ]';
 
   return (
 
@@ -103,4 +103,4 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
 
       <Footer />
 </div>)
-export default PagePage;
+export default PagePage';

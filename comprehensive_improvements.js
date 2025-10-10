@@ -16,23 +16,23 @@ packageJson.scripts = {
     'perf:audit': 'lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html,
 packageJson.scripts = {/* TODO: Fix JSX expression */}
 
-};
+}';
 
-fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))';
 
-// // 2. Create performance optimization script;
+// // 2. Create performance optimization script';
 
-// const performanceScript = `import { execSync } from 'child_process;;;
+// const performanceScript = `import { execSync } from 'child_process';';';
 
-// // Optimize images;
+// // Optimize images';
 
 // try {
-    execSync('find public -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.webp" | head -10', { stdio: pipe });
+    execSync('find public -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.webp" | head -10', { stdio: pipe })';
 
 //     } catch (error) {
 //     }
 
-// Optimize CSS;
+// Optimize CSS';
 
 // try {
     execSync('pnpm run build:optimized', { stdio: pipe });
@@ -108,50 +108,50 @@ fs.writeFileSync(/workspace/scripts/accessibility-improver.js, accessibilityScri
 
 //     }
 
-// `;
+// `';
 
-fs.writeFileSync(/workspace/scripts/seo-improver.js, seoScript);
+fs.writeFileSync(/workspace/scripts/seo-improver.js, seoScript)';
 
-// // 5. Create comprehensive test suite;
+// // 5. Create comprehensive test suite';
 
-// // 5. Create comprehensive test suite;
+// // 5. Create comprehensive test suite';
 
-// // const testSuite = `import { describe, it, expect } from '@jest/globals;;;
+// // const testSuite = `import { describe, it, expect } from '@jest/globals';';';
 
 describe('Comprehensive Test Suite, () => {/* TODO: Fix JSX expression */}
 
-    });
+    })';
 
     it('should pass performance test, () => {
 //         const startTime = Date.now();;
 
-        // Simulate some work;
+        // Simulate some work';
 
-//         const endTime = Date.now();;
+//         const endTime = Date.now()';';
 
-        expect(endTime - startTime).toBeLessThan(1000)});
+        expect(endTime - startTime).toBeLessThan(1000)})';
 
     it('should pass accessibility test, () => {
-        // Basic accessibility check;
+        // Basic accessibility check';
 
-        expect(document).toBeDefined();
+        expect(document).toBeDefined()';
 
     it('should pass performance test, () => {/* TODO: Fix JSX expression */}
 
-    });
+    })';
 
     it('should pass accessibility test, () => {/* TODO: Fix JSX expression */}
 
-    })});`
-;
+    })})';`
+';
 
-fs.writeFileSync(/workspace/__tests__/comprehensive.test.js, testSuite);
+fs.writeFileSync(/workspace/__tests__/comprehensive.test.js, testSuite)';
 
-// // 6. Create monitoring script;
+// // 6. Create monitoring script';
 
-// // const monitoringScript = `import { execSync } from 'child_process;;;
+// // const monitoringScript = `import { execSync } from 'child_process';';';
 
-// // Monitor performance;
+// // Monitor performance';
 
 // try {
 //     // // console.log removed for production
@@ -289,11 +289,11 @@ pnpm,
 ;
 
 ,
-fs.writeFileSync(/workspace/README.md, readmeContent);
+fs.writeFileSync(/workspace/README.md, readmeContent)';
 
-// // 8. Create improvement summary;
+// // 8. Create improvement summary';
 
-const improvementSummary = {;;
+const improvementSummary = {';';
 
     timestamp: new Date().toISOString(),
     improvements: [,
@@ -312,10 +312,10 @@ const improvementSummary = {;;
         Monitor system performance
     ];
 
-const improvementSummary = {/* TODO: Fix JSX expression */};;
+const improvementSummary = {/* TODO: Fix JSX expression */}'";'"'";
 
-};
+}'"'"'";
 
-fs.writeFileSync(/workspace/improvements-summary.json, JSON.stringify(improvementSummary, null, 2));
+fs.writeFileSync(/workspace/improvements-summary.json, JSON.stringify(improvementSummary, null, 2))'"'"'"'";
 
 // // // // // // // // // // // // // // `

@@ -57,11 +57,11 @@ const $1: React.FC = () => {const webServices = [,
       colo,
     r: 'text-gray-400'}
 
-  ];
+  ]';
 
-;
+';
 
-const technologies = [;;
+const technologies = [';';
 
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
     { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
@@ -69,9 +69,9 @@ const technologies = [;;
     { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-  ];;
+  ]';';
 
-const process = [;;
+const process = [';';
 
     {
       ste,
@@ -95,7 +95,7 @@ const process = [;;
       description: 'Thorough testing and deployment with ongoing support',
       icon: Shield,})}
 
-  ];
+  ]';
 
   return(<React.Fragment>
       
@@ -113,26 +113,26 @@ const process = [;;
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl l,
     g:text-6xl font-bold text-white mb-6 neon-text">
-              Web Development Services;<
+              Web Development Services"'"'";<
             <
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
               Build modern, scalable, and high-performance web applications with our expert development team.
               From frontend to backend, we deliver solutions that drive business growth.
             <
             <div className="flex flex-col sm: flex-row gap-4 justify-center"><
-              <a;
+              <a"'"'"'";
             <div className="flex flex-col sm:flex-row gap-4 justify-center"><
               <a
                 href="
                 className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
               >Start Your Project<a
-      <SEOOptimizer;        title="Web Development Services - Zion Tech Group"
+      <SEOOptimizer'"'"'"'";        title="Web Development Services - Zion Tech Group"
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
         keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']}
 
         canonicalUrl="https: //ziontechgroup.com/web-development",
       />,
-        <PerformanceOptimizer;
+        <PerformanceOptimizer";
 
           enableImageOptimization={true}
 
@@ -143,7 +143,7 @@ const process = [;;
           enablePrefetching={true}
 
         />
-      <AccessibilityEnhancer;
+      <AccessibilityEnhancer";
 
         enableKeyboardNavigation={true}
 
@@ -154,7 +154,7 @@ const process = [;;
         enableFocusManagement={true}
 
       />
-      <SecurityEnhancer;
+      <SecurityEnhancer";
 
         enableCSP={true}
 
@@ -180,14 +180,14 @@ const process = [;;
 
           <section></section>
             <h1></h1>
-              Web Development Services;</h1>
+              Web Development Services";</h1>
             </h1>,
             <p></p>,
               Build modern, scalable, and high-performance web applications with our expert development team.
               From frontend to backend, we deliver solutions that drive business growth.
             </p>
             <div>
-              <a;
+              <a";
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></a></section>
               <a></a>Start Your Project<a
@@ -195,16 +195,16 @@ const process = [;;
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >Call +1 302 464 0950<
               >
-                Start Your Project;
+                Start Your Project";
 
               <
-              <a;
+              <a";
 
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove,
     r:text-slate-900 transition-all duration-300"
               >
-                Call +1 302 464 0950;              <
+                Call +1 302 464 0950";              <
             <
           <
 ,
@@ -220,7 +220,7 @@ const process = [;;
                     <div><
                       <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}<div className={`font-semibold ${service.color}`}>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}<
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">)
-              Our Web Development Services;)
+              Our Web Development Services";)
             <
 )
             <div className="grid grid-cols-1 md:grid-cols-2 l,
@@ -269,7 +269,7 @@ const process = [;;
                     <
                   )}
 
-                  <a;
+                  <a"'";
 
                     href="
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button"
@@ -278,7 +278,7 @@ const process = [;;
                 <
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button"
                   >
-                    Get Started;
+                    Get Started"'"'";
 
                   <
                 <
@@ -293,7 +293,7 @@ const process = [;;
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" 
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}<p className="text-sm text-gray-300">{tech.description}<
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-              Technologies We Use;
+              Technologies We Use"'"'"'";
             <
 ,
             <div>,
@@ -342,7 +342,7 @@ const process = [;;
                   <div>
                     <span></span>{step.step}<h3>{step.title}<p className="text-gray-300">{step.description}</p>
             <h2></h2>
-              Our Development Process;
+              Our Development Process'"'"'"'";
 
             <
 ,
@@ -377,7 +377,7 @@ const process = [;;
                 Let's discuss your project requirements and create a custom solution that drives your business forward.
               <
               <div className="flex flex-col sm:flex-row gap-4 justify-center"><
-                <a;
+                <a'"'"'"'";
             <div className="cyber-card p-12 max-w-4xl mx-auto"><
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.<
               <
@@ -412,7 +412,7 @@ const process = [;;
                 Let's discuss your project requirements and create a custom solution that drives your business forward.
               </p>
               <div>
-                <a;
+                <a'"'"'"'";
 
             <div className="cyber-card p-12 max-w-4xl mx-auto"></a></section>
               <h></h>Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
@@ -423,10 +423,10 @@ const process = [;;
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >Call +1 302 464 0950<
                 >
-                  Start Your Project;
+                  Start Your Project";
 
                 <
-                <a;
+                <a";
 
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove,
@@ -443,10 +443,10 @@ const process = [;;
     <
       </div>,
     </>);)
-};
+}'";
       </div>
     </>
-  );
-};
+  )'"'";
+}'"'"'";
 
-export default WebDevelopmentPage;
+export default WebDevelopmentPage'"'"'"'";

@@ -1,43 +1,43 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react;
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react;
+import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react';
 
 interface FAQ {
-  question: string;
+  question: string';
 
-  answer: string;
+  answer: string';
 
-  category: string});)
+  category: string})';)
 }
 
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search } from 'lucide-react;
+import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search } from 'lucide-react';
 
 import Navigation from ../components
 import Footer from ../components
 
 const SupportPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState(');
+  const [searchTerm, setSearchTerm] = useState(')';
 
-  const [selectedCategory, setSelectedCategory] = useState('all);
+  const [selectedCategory, setSelectedCategory] = useState('all)';
 
-  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null)';
 
-  const categories = [;
+  const categories = [';
     { id: 'all', name: 'All Topics },
     { id: 'general', name: 'General },
     { id: 'technical', name: 'Technical },
     { id: 'billing', name: 'Billing },
     { id: 'implementation', name: 'Implementation }
 
-  ];
+  ]';
 
   const faqs: FAQ[] = [
     {
@@ -45,45 +45,45 @@ const SupportPage: React.FC = () => {
       answer: 'Contact our team for a free consultation where we\'ll assess your needs and recommend the best AI solutions for your business. We\'ll guide you through the entire process from planning to implementation.,
       category: 'general
     },
-      category: 'general});)},
+      category: 'general})';)},
     {
       question: 'What support do you provide after implementation?,
       answer: 'We provide 24/7 technical support, regular maintenance, updates, and ongoing optimization to ensure your systems run smoothly. Our support includes monitoring, troubleshooting, and performance optimization.,
       category: 'support
     },
-      category: 'support});)},
+      category: 'support})';)},
     {
       question: 'How long does implementation typically take?,
       answer: 'Implementation time varies based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise systems may take 3-6 months. We provide detailed timelines during the planning phase.,
-      category: 'implementation});)
+      category: 'implementation})';)
 },
     {
       question: 'Do you offer training for our team?,
       answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions. Training includes hands-on workshops, documentation, and ongoing support.,
-      category: 'training});)
+      category: 'training})';)
 },
     {
       question: 'What security measures do you have in place?,
       answer: 'We implement enterprise-grade security including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA.,
-      category: 'security});)
+      category: 'security})';)
 },
     {
       question: 'Can you integrate with our existing systems?,
       answer: 'Absolutely. We specialize in seamless integration with existing systems and can work with most platforms, databases, and APIs to ensure smooth data flow and functionality.,
-      category: 'integration});)
+      category: 'integration})';)
 },
     {
       question: 'What happens if we need to scale up?,
       answer: 'Our solutions are designed to scale with your business. We can easily add more capacity, features, or users as your needs grow, with minimal disruption to your operations.,
-      category: 'scaling});)
+      category: 'scaling})';)
 },
     {
       question: 'Do you provide custom development?,
       answer: 'Yes, we offer custom development services to create tailored solutions that meet your specific business requirements and integrate perfectly with your existing workflows.,
       category: 'development
-    }  ];
+    }  ]';
 
-  const supportChannels = [;;
+  const supportChannels = [';';
 
     {
       name: 'Phone Support,
@@ -93,7 +93,7 @@ const SupportPage: React.FC = () => {
       availability: '24/7 Available,
       color: 'text-blue-400
     },
-      color: 'text-blue-400});)},
+      color: 'text-blue-400})';)},
     {
       name: 'Email Support,
       description: 'Get detailed responses to your questions,
@@ -102,14 +102,14 @@ const SupportPage: React.FC = () => {
       availability: 'Response within 2 hours,
       color: 'text-green-400
     },
-      color: 'text-green-400});)},
+      color: 'text-green-400})';)},
     {
       name: 'Live Chat,
       description: 'Instant help when you need it most,
       icon: MessageCircle,
       contact: 'Available on website,
       availability: 'Mon-Fri 9AM-6PM EST,
-      color: 'text-purple-400});)
+      color: 'text-purple-400})';)
 },
     {
       name: 'Emergency Support,
@@ -125,10 +125,10 @@ const SupportPage: React.FC = () => {
   const filteredFAQs = faqs.filter(faq => {;
     const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase());;
 
-  const toggleFAQ = (index: number) => {;
-    setExpandedFAQ(expandedFAQ === index ? null : index);
+  const toggleFAQ = (index: number) => {';
+    setExpandedFAQ(expandedFAQ === index ? null : index)';
 
-  };
+  }';
 
 const PagePage: React.FC = () => {
   return (
@@ -224,19 +224,19 @@ const PagePage: React.FC = () => {
               <div></div>
                 {categories.map((category) => (
 
-                  <button></button> setSelectedCategory(category);
+                  <button></button> setSelectedCategory(category)'";
 
                     className={px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                       selectedCategory === category
                         ? bg-gradient-to-r from-purple-500 to-blue-500 text-white
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20});)
+                        : 'bg-white/10 text-gray-300 hover:bg-white/20})'"'";)
 }}
 
                   >
-                    {category === 'all' ? All Questions : category.charAt(0).toUpperCase() + category.slice(1);
+                    {category === 'all' ? All Questions : category.charAt(0).toUpperCase() + category.slice(1)'"'"'";
 
                   </button>
-                ));
+                ))'"'"'"'";
 
               </div>
             </div>
@@ -251,7 +251,7 @@ const PagePage: React.FC = () => {
                     className="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors
                   >
                     <h3 className="text-lg font-semibold text-white pr-4>{faq.question}</h3>
-                    <div className={`transform transition-transform ${expandedFAQ === index ? 'rotate-180' : ''}}>
+                    <div className={`transform transition-transform ${expandedFAQ === index ? 'rotate-180' : '}}>
                       <HelpCircle className="w-6 h-6 text-purple-400 />
                     </div>
                   </button>
@@ -304,7 +304,7 @@ const PagePage: React.FC = () => {
     </>
   );
 
-  );  ));)
-};
+  )'";  ))'"'";)
+}'"'"'";
 
-export default PagePage;
+export default PagePage'"'"'"'";

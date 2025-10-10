@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 
 import fs from 'fs;
 
@@ -58,19 +58,19 @@ let content = fs.readFileSync(filePath, utf8);;
     let modified = false;;
 
     // Apply fixes
-    for (const fix of fixes) {;
+    for (const fix of fixes) {';
 
-const newContent = content.replace(fix.pattern, fix.replacement);;
+const newContent = content.replace(fix.pattern, fix.replacement)';';
 
       if (newContent !== content) {
-        content = newContent;
+        content = newContent';
 
         modified = true}
 
     }
 
     if (modified) {
-      fs.writeFileSync(filePath, content, utf8);
+      fs.writeFileSync(filePath, content, utf8)';
 
       // console.log removed for production
 return true}
@@ -83,9 +83,9 @@ return false}
 
 // Main function
 async function main() {
-  // Focus on the most problematic files first;
+  // Focus on the most problematic files first';
 
-const priorityFiles = [;;
+const priorityFiles = [';';
 
     'app/**/*.tsx,
     'app/**/*.ts,
@@ -94,11 +94,11 @@ const priorityFiles = [;;
 
   ;
 
-let allFiles = [];;
+let allFiles = [];';
 
-  for (const pattern of priorityFiles) {;
+  for (const pattern of priorityFiles) {';
 
-const files = await glob(pattern, {;;
+const files = await glob(pattern, {';';
 
       ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**]
     });
@@ -109,9 +109,9 @@ const files = await glob(pattern, {;;
   allFiles = [...new Set(allFiles)];
 
   // console.log removed for production
-;
+';
 
-let fixedCount = 0;;
+let fixedCount = 0';';
 
   for (const file of allFiles) {
     if (fixFile(file)) {
@@ -122,4 +122,4 @@ let fixedCount = 0;;
   // console.log removed for production
 }
 
-main().catch(console.error);
+main().catch(console.error)';

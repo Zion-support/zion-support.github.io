@@ -1,14 +1,14 @@
 impo, r, t {/* TODO: Fix JSX expression *
-} fr, o, m 'luci, d, e-rea, c, t;
+} fr, o, m 'luci, d, e-rea, c, t';
 
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c;
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-;
+';
 
 const NextGenIntelligentAutomationBreakthroug, h = () => {
   return (<React.Fragment>
       <Helm, e, t>
-        <title>          Ne, x, t-Gen, Intelligent, Automation Breakthrou, g, h: AI-Powered, Workflows, Redefining Operatio, n, s | Zion, Tech, Group;
+        <title>          Ne, x, t-Gen, Intelligent, Automation Breakthrou, g, h: AI-Powered, Workflows, Redefining Operatio, n, s | Zion, Tech, Group';
 
         <
         <meta, nam, e = description
@@ -21,16 +21,16 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {
 
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k><
 
-                Octo, b, e, r , 1, 20, 2, 5 • 20, min, read;
+                Octo, b, e, r , 1, 20, 2, 5 • 20, min, read';
 
               <
             <
 
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t>
-              Ne, x, t-Gen, Intelligent, Automation Breakthrou, g, h;
+              Ne, x, t-Gen, Intelligent, Automation Breakthrou, g, h';
 
               <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-cy, a, n-400, m, t-2, tex, t-4, x, l>
-                How, A, I-Powered, Workflows, Are Redefining, Business, Operations;
+                How, A, I-Powered, Workflows, Are Redefining, Business, Operations';
 
             <div, classNam, e = 'flex, item, s-center, ga, p-4, m, b-12>
               <div, className='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-cy, a, n-500, flex, items-center, justif, y-cent, e, r>
@@ -48,11 +48,11 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {
                           <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1 />
                 <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3></h2>
                   <Brain, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0 />
-);
+)';
 
 }
 
-                  Ne, x, t-Gen, Automation, Capabilities;
+                  Ne, x, t-Gen, Automation, Capabilities';
 
 const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expression */}
 
@@ -69,7 +69,7 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expre
                           <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1 /><
                 <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3><
                   <Brain, className='w-8 h-8, tex, t-purp, l, e-4, 0, 0 /><
-                  Ne, x, t-Gen, Automation, Capabilities;
+                  Ne, x, t-Gen, Automation, Capabilities';
 
                     <div, ke, y = { in, d, e, x }, classNa, m, e = bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n
                     ><
@@ -97,7 +97,7 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expre
                             <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1 
                 <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-4><
                   
-                    Book, Free, Assessment;
+                    Book, Free, Assessment';
 
                     <Rocket, classNam, e='w-5 h-5 
                   <TrendingUp, className='w-8 h-8, tex, t-gre, e, n-4, 0, 0 /><
@@ -125,7 +125,7 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expre
                   <Link, t, o=
                     className=inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-cy, a, n-500, tex, t-white, fon, t-bold, rounde, d-lg, hove, r:fr, o, m-gre, e, n-600, hove, r:to-cy, a, n-600, transitio, n-a, l, l
                   ><
-                    Book, Free, Assessment;
+                    Book, Free, Assessment';
 
                     <Rocket, classNam, e='w-5 h-5 /><
-}});
+}})';

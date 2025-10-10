@@ -14,27 +14,27 @@ timestamp: new Date().toISOString()
         source: event.source || 'unknown','
         scanning: {,
           status: 'active','
-          todosFound: 0;
-          lastScan: new Date().toISOString()}})};
+          todosFound: 0';
+          lastScan: new Date().toISOString()}})}';
     return result} catch (error) {
     //     return {
-      statusCode: 500;
+      statusCode: 500';
       headers: {,
         'Content-Type': 'application/json','
         'Access-Control-Allow-Origin': '*'},'
       body: JSON.stringify({)
         error: 'Internal server error')'
-        message: error.message),;
+        message: error.message),';
 function: 'todo-scanner-runner'),'
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
       },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
         })
-      })};
+      })}';
     return result} catch (error) {/* TODO: Fix JSX expression */}
       },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
       })}}
-};
+}';

@@ -1,12 +1,12 @@
-import React from 'react;
+import React from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-;
+';
 
 const Ai2026AutonomousAgentFactoriesPage: React.FC = () => {
   return (
@@ -27,10 +27,10 @@ const Ai2026AutonomousAgentFactoriesPage: React.FC = () => {
       </div>
       <Footer />
     </div>
-);
+)'"'";
 
 }
 
-  )};
+  )}'"'"'";
 
-export default Ai2026AutonomousAgentFactoriesPage;
+export default Ai2026AutonomousAgentFactoriesPage'"'"'"'";

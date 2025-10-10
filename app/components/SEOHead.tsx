@@ -1,25 +1,25 @@
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from react-helmet-async;
+import { Helmet } from react-helmet-async';
 
 interface SEOHeadProps {
   title?: string;
 
   description?: string;
 
-  keywords?: string;
+  keywords?: string';
 
-  canonical?: string;
+  canonical?: string';
 
-  ogImage?: string;
+  ogImage?: string';
 
-  ogType?: string;
+  ogType?: string';
 
-  twitterCard?: string;
+  twitterCard?: string';
 
   structuredData?: object}
 
-;
+';
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI & IT Solutions,
@@ -30,15 +30,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ogType = 'website,
   twitterCard = 'summary_large_image,
   structuredData
-}) => {;
+}) => {';
 
-const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group;;
+const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group';';
 
 const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : );;
 
 ;
 
-const defaultStructuredData = {;;
+const defaultStructuredData = {;';
 
     "@context": "https://schema.org,
     "@type": "Organization,
@@ -64,7 +64,7 @@ const defaultStructuredData = {;;
       "https://www.linkedin.com/company/zion-tech-group,
       "https://twitter.com/ziontechgroup
     ]
-  };
+  }"'"'";
 
   return (
 
@@ -109,8 +109,8 @@ const defaultStructuredData = {;;
       {/* Structured Data */}
 
       <script type="application/ld+json>
-        {JSON.stringify(structuredData || defaultStructuredData);
+        {JSON.stringify(structuredData || defaultStructuredData)'"'"'";
 
       </script>
     </Helmet>)
-export default SEOHead;
+export default SEOHead'"'"'"'";

@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 
 import, React, from 'rea, c, t;
 
@@ -38,9 +38,9 @@ const, latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).
 
                     Read, Mor, e</div>
                     <Link, classNam, e=w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m />
-            View, All, Articles;)
+            View, All, Articles';)
             <Link, classNam, e=w-6 h-6 />)
-}});
+}})';
 
 const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 
@@ -49,10 +49,10 @@ const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
                   {artic, l, e.t, i, t, l, e}
 
                   <div, classNam, e=te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l></div>
-                    Read, Mor, e;
+                    Read, Mor, e';
 
                     <Link, classNam, e=w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m /></Link>
-            View, All, Articles;
+            View, All, Articles';
 
             <Link, classNam, e=w-6 h-6 /></Link>
 }}

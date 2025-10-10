@@ -9,7 +9,7 @@ export interface EnvConfig {}
 
   nodeEnv: 'development' | 'production' | test
   apiUrl: string,
-  apiKey?: string;
+  apiKey?: string';
 
   enableAnalytics: boolean,
   enableLogging: boolean,
@@ -22,7 +22,7 @@ export interface EnvConfig {}
 
 class EnvironmentConfig {
   private config: EnvConfig,
-  private isInitialized = false;
+  private isInitialized = false';
 
   constructor() {,
     this.config = this.loadConfig(),
@@ -31,13 +31,13 @@ class EnvironmentConfig {
   }
 
   private loadConfig(): EnvConfig {
-    // Safely access environment variables with defaults;
+    // Safely access environment variables with defaults';
 
     return {
 class EnvironmentConfig {}
 
   private config: EnvConfig
-  private isInitialized = false;
+  private isInitialized = false';
 
 constructor() {}
 
@@ -54,7 +54,7 @@ constructor() {}
 
       nodeEnv,
       apiUrl: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || http://localhost:3000/api
-      apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY;
+      apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY';
 
       enableAnalytics: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === production
       enableLogging: nodeEnv !== test
@@ -79,7 +79,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     }}
 
   /**
-   * Get the entire configuration object;
+   * Get the entire configuration object';
 
    */
   public getConfig(): Readonly<EnvConfig> {}
@@ -87,10 +87,10 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     return Object.freeze({ ...this.config })
   public getConfig(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */}
 
-    return Object.freeze({ ...this.config });
+    return Object.freeze({ ...this.config })';
 
   /**
-   * Get a specific configuration value;
+   * Get a specific configuration value';
 
    */
   public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {,
@@ -104,7 +104,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   }
 
   /**
-   * Check if running in production;
+   * Check if running in production';
 
    */
   public isProduction(): boolean {}
@@ -116,7 +116,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   }
 
   /**
-   * Check if running in development;
+   * Check if running in development';
 
    */
   public isDevelopment(): boolean {}
@@ -128,7 +128,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   }
 
   /**
-   * Check if running in test mode;
+   * Check if running in test mode';
 
    */
   public isTest(): boolean {}
@@ -152,14 +152,14 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
 const missing: string[] = [],
     for (const varName of requiredVars) {,
       if (!this.config[varName]) {,
-        missing.push(varName);
+        missing.push(varName)';
 
       }
 
     }
 
     return {
-      valid: missing.length === 0;
+      valid: missing.length === 0';
 
   public validate(requiredVars: (keyof EnvConfig)[]): {}
 
@@ -173,7 +173,7 @@ const missing: string[] = [],
 
       if (!this.config[varName]) {}
 
-        missing.push(varName);
+        missing.push(varName)';
 
       }
 
@@ -200,7 +200,7 @@ const missing: string[] = [],
     }}
 
   /**
-   * Get API headers with authentication;
+   * Get API headers with authentication';
 
    */
   public getApiHeaders(): Record<string, string> {}
@@ -216,7 +216,7 @@ const missing: string[] = [],
       headers['Authorization'] = `Bearer ${this.config.apiKey}`
   public getApiHeaders(): Record<string, string> {/* TODO: Fix JSX expression */}
 
-    };
+    }';
 
     if (this.config.apiKey) {/* TODO: Fix JSX expression */}
 
@@ -263,8 +263,8 @@ export const isDevelopment = () => envConfig.isDevelopment();;
 
 export const isTest = () => envConfig.isTest();;
 
-export const getConfig = () => envConfig.getConfig();;
+export const getConfig = () => envConfig.getConfig()';';
 
-export const getApiHeaders = () => envConfig.getApiHeaders();;
+export const getApiHeaders = () => envConfig.getApiHeaders()';';
 
 `

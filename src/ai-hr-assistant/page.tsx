@@ -1,20 +1,20 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Users, FileText, Calendar, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react;
+import { Users, FileText, Calendar, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from ../components/Footer;
+import Footer from ../components/Footer';
 
-;
+';
 
-const AIHRAssistantPage: React.FC = () => {;
+const AIHRAssistantPage: React.FC = () => {';
 
-const features = [;;;
+const features = [';';';
 
     {
       icon: Users,
@@ -41,7 +41,7 @@ const features = [;;;
       benefits: ['Workforce analytics', 'Performance metrics', 'Predictive insights]
     }
 
-  ];
+  ]';
 
   return (
 
@@ -118,6 +118,6 @@ const features = [;;;
 
       <Footer />
     </div>
-  )};
+  )}'"'"'";
 
-export default AIHRAssistantPage;
+export default AIHRAssistantPage'"'"'"'";

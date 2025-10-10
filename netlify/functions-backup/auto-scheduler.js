@@ -15,17 +15,17 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
       },
       body: JSON.stringify({message: Auto-scheduler executed successfully)
-        timestamp: new Date().toISOString();
+        timestamp: new Date().toISOString()';
 
 function: 'auto-scheduler',
         source: event.source || 'unknown',
         scheduling: {,
           status: 'active',
-          tasksScheduled: 0;
+          tasksScheduled: 0';
 
           lastSchedule: new Date().toISOString()}
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */}';';
 
         'Access-Control-Allow-Origin': '*'}
 
@@ -34,15 +34,15 @@ function: 'auto-scheduler',
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   e: new Date().toISOString()}
 
-        }})};
+        }})}';
 
-    return result;
+    return result';
 
 //   } catch (error) {// // console.error removed for production
 error}
 
     return {
-      statusCode: 500;
+      statusCode: 500';
 
       headers: {,
         'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ error}
 
       },
       body: JSON.stringify({error: 'Internal server error'),
-        message: error.message),;
+        message: error.message),';
 
 function: 'auto-scheduler'}
 
@@ -69,12 +69,12 @@ function: 'auto-scheduler'}
   n: 'auto-scheduler'})
       })}}
 
-};
+}';
 
-        timestamp: new Date().toISOString(),' function: 'auto-scheduler',' source: event.source || 'unknown', scheduling: {' status: 'active, tasksScheduled: 0;
+        timestamp: new Date().toISOString(),' function: 'auto-scheduler',' source: event.source || 'unknown', scheduling: {' status: 'active, tasksScheduled: 0';
 
-        lastSchedule: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
-error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'auto-scheduler }) }} };
+        lastSchedule: new Date().toISOString() } }) }'; return result} catch (error) {' // // console.error removed for production
+error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'auto-scheduler }) }} }';
 
         timestam,
   p: new Date().toISOString(),' functio,
@@ -82,7 +82,7 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
   e: event.source || 'unknown', schedulin,
   g: {/* TODO: Fix JSX expression */}
 
-  e: new Date().toISOString() } }) }; return result} catch (error) {/* TODO: Fix JSX expression */}
+  e: new Date().toISOString() } }) }'; return result} catch (error) {/* TODO: Fix JSX expression */}
 
       } return {/* TODO: Fix JSX expression */}
 
@@ -91,4 +91,4 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
 
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'auto-scheduler }) }} };
+  n: 'auto-scheduler }) }} }';

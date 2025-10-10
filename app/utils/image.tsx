@@ -1,9 +1,9 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
 use client
-import React, { useState, useCallback } from react;
+import React, { useState, useCallback } from react';
 
 interface ImageProps {
   src: string,
@@ -19,15 +19,15 @@ interface ImageProps {}
   _quality?: number
   src: string,
   alt: string,
-  width?: number;
+  width?: number';
 
-  height?: number;
+  height?: number';
 
-  className?: string;
+  className?: string';
 
-  priority?: boolean;
+  priority?: boolean';
 
-  _quality?: number;
+  _quality?: number';
 
   _placeholder?: 'blur | empty
   _blurDataURL?: string;
@@ -36,11 +36,11 @@ interface ImageProps {}
 
   sizes?: string;
 
-  style?: React.CSSProperties;
+  style?: React.CSSProperties';
 
-  onLoad?: () => void;
+  onLoad?: () => void';
 
-  onError?: () => void;}
+  onError?: () => void';}
 
 }
 
@@ -49,7 +49,7 @@ export const Image: React.FC<ImageProps> = ({}
 
   src,
 export const Image: React.FC<ImageProps> = ({,
-  src;
+  src';
 
   alt,
   width,
@@ -76,14 +76,14 @@ export const Image: React.FC<ImageProps> = ({,
     if (onLoad) onLoad();}
 
   }, [onLoad])
-  const handleError = useCallback(() => {};;
+  const handleError = useCallback(() => {}';';
 
     setHasError(true)
-    if (onError) onError();}
+    if (onError) onError()';}
 
   }, [onError])
   const imageStyle: React.CSSProperties = {
-    ...style;
+    ...style';
 
     ...(fill && {
       position: 'absolute,
@@ -116,7 +116,7 @@ export const Image: React.FC<ImageProps> = ({,
   if (hasError) {
     return(<div}
 
-'use client;
+'use client';
 
 import React, { useState, useCallback } from react;
 
@@ -130,15 +130,15 @@ export const,
 
   }, [onLoad]);
 
-  const handleError = useCallback(() => {/* TODO: Fix JSX expression */};;
+  const handleError = useCallback(() => {/* TODO: Fix JSX expression */};';
 
-  }, [onError]);
+  }, [onError])';
 
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
 
     })
-  };
+  }';
 
   if (hasError) {/* TODO: Fix JSX expression */}
 
@@ -159,7 +159,7 @@ export const,
     )
   }
 
-  return(<img;
+  return(<img';
 
   return (<img></img>
       src={src}
@@ -195,13 +195,13 @@ export default Image</img>
   )
 }
 
-export default Image;
+export default Image'";
 
     />)
-  );
+  )'"'";
 
-};
+}'"'"'";
 
-export default Image;
+export default Image'"'"'"'";
 
 "

@@ -63,7 +63,7 @@ export class SecurityManager {// TODO: Add content}
   }
 
   /**
-   * Validate and sanitize URL;
+   * Validate and sanitize URL';
 
    */
 
@@ -91,7 +91,7 @@ export class SecurityManager {// TODO: Add content}
   }
 
   /**
-   * Generate secure random token;
+   * Generate secure random token';
 
    */
 
@@ -99,7 +99,7 @@ export class SecurityManager {// TODO: Add content}
 
 }
 
-    const array = new Uint8Array(length);;
+    const array = new Uint8Array(length)';';
 
     if (typeof window !== 'undefined && window.crypto) {/* TODO: Fix JSX expression */}
 
@@ -113,9 +113,9 @@ export class SecurityManager {// TODO: Add content}
 
 }
 
-      // Fallback for Node.js environment;
+      // Fallback for Node.js environment';
 
-const crypto = require(crypto);;
+const crypto = require(crypto)';';
 
       crypto.randomFillSync(array)}
 
@@ -143,9 +143,9 @@ const storage = this.getRateLimitStorage();;
 
     // Remove old requests;
 
-const validRequests = requests.filter((tim);;
+const validRequests = requests.filter((tim)';';
 
-  e: number) => time > windowStart);
+  e: number) => time > windowStart)';
 
     if (validRequests.length >= limit) {/* TODO: Fix JSX expression */}
 
@@ -159,7 +159,7 @@ const validRequests = requests.filter((tim);;
     storage.set(key, validRequests)
     return true}
 
-  private getRateLimitStorage(): Map;
+  private getRateLimitStorage(): Map';
 
           <string, number[]> {/* TODO: Fix JSX expression */}
 

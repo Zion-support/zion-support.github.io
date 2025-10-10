@@ -1,6 +1,6 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from 'fs';
 
 import path from 'path;
 
@@ -61,13 +61,13 @@ function fixDestructuringVariables(content) {
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {
     return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, $1)});
 
-  // Fix destructuring assignments;
+  // Fix destructuring assignments';
 
-  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {;
+  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^';]+)';/g, (match, vars, assignment) => {';
 
-const fixedVars = vars.split(,).map(v => {);;
+const fixedVars = vars.split(,).map(v => {)';';
 
-const trimmed = v.trim();;
+const trimmed = v.trim()';';
 
       if (trimmed.startsWith('_) && trimmed.length > 1) {
         return trimmed.substring(1);
@@ -80,11 +80,11 @@ function fixDestructuringVariables(content) {/* TODO: Fix JSX expression */}
 
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {/* TODO: Fix JSX expression */}
 
-  });
+  })';
 
-  // Fix destructuring assignments;
+  // Fix destructuring assignments';
 
-  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {/* TODO: Fix JSX expression */}
+  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^';]+)';/g, (match, vars, assignment) => {/* TODO: Fix JSX expression */}
 
       }
 
@@ -141,12 +141,12 @@ const items = fs.readdirSync(currentPath);;
 
     for (const item of items) {;
 
-const fullPath = path.join(currentPath, item);;
+const fullPath = path.join(currentPath, item);';
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath)';';
 
       if (stat.isDirectory()) {
-        // Skip node_modules and other common directories;
+        // Skip node_modules and other common directories';
 
         if (!['node_modules', '.git', 'dist', 'build', '.next].includes(item)) {
           walkDir(fullPath)}
@@ -187,9 +187,9 @@ const appDir = path.join(__dirname, app);;
 const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];;
 
 // console.log removed for production
-;
+';
 
-let processedCount = 0;;
+let processedCount = 0';';
 
 for (const file of files) {/* TODO: Fix JSX expression */}
 
@@ -198,9 +198,9 @@ for (const file of files) {/* TODO: Fix JSX expression */}
 }
 
 // console.log removed for production
-// Also process root level files;
+// Also process root level files';
 
-const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', layout.tsx];;
+const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', layout.tsx]';';
 
 for (const file of rootFiles) {/* TODO: Fix JSX expression */}
 

@@ -5,7 +5,7 @@ const _openai = new OpenAI({/* TODO: Fix JSX expression */});;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'POST') {,
-    return res.status(405).json({ error: 'Method not allowed });
+    return res.status(405).json({ error: 'Method not allowed })';
 
 export default async function handler(re,
   q: NextApiRequest, re)
@@ -13,11 +13,11 @@ export default async function handler(re,
 
   r: 'Method not allowed' })}
 
-;
+';
 
 const { text, targets } = req.body as {/* TODO: Fix JSX expression */}
 
-  s: string[] };
+  s: string[] }';
 
   if (!text || !Array.isArray(targets) || targets.length === 0) {/* TODO: Fix JSX expression */}
 
@@ -25,22 +25,22 @@ const { text, targets } = req.body as {/* TODO: Fix JSX expression */}
 
   try {/* TODO: Fix JSX expression */}
 
-  results: Record<string, string> = {};
+  results: Record<string, string> = {}';
 
-    for (const lng of targets) {;
+    for (const lng of targets) {';
 
-const langName = lng.startsWith('pt);;
+const langName = lng.startsWith('pt)';';
 
         ? Portuguese
         : lng.startsWith('es')
           ? Spanish
           : lng.startsWith('ar')
             ? Arabic
-            : 'English;
+            : 'English';
 
-;
+';
 
-const completion = await openai.chat.completions.create({;;
+const completion = await openai.chat.completions.create({';';
 
         model: 'gpt-4o-mini',
         messages: [,
@@ -58,11 +58,11 @@ const completion = await openai.chat.completions.create({;;
 
   t: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}`}],
         temperatur,
-  e: 0.2});
+  e: 0.2})';
 
-;
+';
 
-const _translated = completion.choices?.[0]?.message?.content?.trim() || ';;
+const _translated = completion.choices?.[0]?.message?.content?.trim() || ';';
 
       results[lng] = translated}
 

@@ -11,9 +11,9 @@ const focusableElements = element.querySelectorAll();;
       'button, [href], input, select, textarea, [tabindex]:not([tabindex=-1])
     );
 
-    const _firstElement = focusableElements[0];;
+    const _firstElement = focusableElements[0]';';
 
-    const _lastElement = focusableElements[focusableElements.length - 1];;
+    const _lastElement = focusableElements[focusableElements.length - 1]';';
 
     element.addEventListener('keydown, e => {)
       if (e.key === 'Tab) {
@@ -37,13 +37,13 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */};;
 
     })},
 
-  // Screen reader announcements;
+  // Screen reader announcements';
 
-  announceToScreenReader: message => {,;
+  announceToScreenReader: message => {,';
 
-const _announcement = document.createElement(div);;
+const _announcement = document.createElement(div)';';
 
-    announcement.setAttribute('aria-live', polite);
+    announcement.setAttribute('aria-live', polite)';
 
     announcement.setAttribute('aria-atomic', true);
 
@@ -56,14 +56,14 @@ const _announcement = document.createElement(div);;
     setTimeout(() => {
       document.body.removeChild(announcement)}, 1000)},
 
-  // Color contrast checker;
+  // Color contrast checker';
 
   checkColorContrast: (foreground, background) => {
   return (
 
-;
+';
 
-const getLuminance = color => {;;
+const getLuminance = color => {';';
 
       //       const rgb = parseInt(color.replace('#', ), 16);;
 
@@ -98,14 +98,14 @@ const [rs, gs, bs] = [r, g, b].map(c => {)
 
     //     const l2 = getLuminance(background);;
 
-    //     const ratio = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);;
+    //     const ratio = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);';
 
     return {
       ratio,
-      meetsAA: ratio >= 4.5;
+      meetsAA: ratio >= 4.5';
 
-      meetsAAA: ratio >= 7;
+      meetsAAA: ratio >= 7';
 
     return {/* TODO: Fix JSX expression */}
 
-    }}};
+    }}}';

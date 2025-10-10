@@ -1,23 +1,23 @@
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
 import Navigation from ../components
 import Footer from ../components
 
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-const SolutionsPage: React.FC = () => {;
+const SolutionsPage: React.FC = () => {';
 
-const [activeTab, setActiveTab] = useState(ai);
+const [activeTab, setActiveTab] = useState(ai)';
 
-;
+';
 
-const _solutionCategories = [;;
+const _solutionCategories = [';';
 
     {
       id: 'ai,
@@ -56,11 +56,11 @@ $4},
     n:     ,
 $4}
 
-  ];
+  ]';
 
-;
+';
 
-const solutions = {;;
+const solutions = {';';
 
     ai: [
       {
@@ -221,11 +221,11 @@ $4},
 $4}
 
     ]
-  };
+  }';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     {
       icon: Star,
@@ -270,8 +270,8 @@ $4}
           <div className="mb-12>
             <div className="flex flex-wrap justify-center gap-4 mb-8>)
               {solutionCategories.map((category) => (<button
-                  key = { category.id };)
-                  onClick = { () => setActiveTab(category.id) };
+                  key = { category.id }";)
+                  onClick = { () => setActiveTab(category.id) }";
 
                   className={flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
                     activeTab === category.id
@@ -295,18 +295,18 @@ $4}
 
   const [activeTab, setActiveTab] = useState(ai);
 
-  const _solutionCategories = [;;
+  const _solutionCategories = [;';
 
   /
-  O: Add items;
+  O: Add items';
 
-];
+]';
 
     {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};  i,
+}';  i,
   d: 'ai,
       nam,
   e: 'AI Solutions,
@@ -323,7 +323,7 @@ $4}
 
   O: Add content}
 
-};  i,
+}';  i,
   d: 'it,
       nam,
   e: 'IT Infrastructure,
@@ -340,7 +340,7 @@ $4}
 
   O: Add content}
 
-};  i,
+}';  i,
   d: 'security,
       nam,
   e: 'Cybersecurity,
@@ -357,7 +357,7 @@ $4}
 
   O: Add content}
 
-};  i,
+}';  i,
   d: 'automation,
       nam,
   e: 'Automation,
@@ -371,13 +371,13 @@ $4}
   n: Streamline operations with intelligent automation
     }
 
-  ];
+  ]';
 
-  const solutions = {/* TODO: Fix JSX expression */};
+  const solutions = {/* TODO: Fix JSX expression */}';
 
   O: Add content}
 
-};  a,
+}';  a,
   i: [
   /
   O: Add items]
@@ -385,7 +385,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'AI-Powered Analytics,
         descriptio,
   n: 'Transform raw data into actionable insights with advanced AI analytics,
@@ -402,7 +402,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'AI Marketing Automation,
         descriptio,
   n: 'Revolutionize your marketing with AI-powered automation and personalization,
@@ -419,7 +419,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'AI Customer Support,
         descriptio,
   n: 'Enhance customer experience with intelligent AI-powered support systems,
@@ -436,7 +436,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'AI Process Automation,
         descriptio,
   n: 'Automate complex business processes with intelligent decision-making capabilities,
@@ -459,7 +459,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'Cloud Migration,
         descriptio,
   n: 'Seamlessly migrate your infrastructure to the cloud with zero downtime,
@@ -476,7 +476,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'IT Infrastructure Management,
         descriptio,
   n: 'Comprehensive IT infrastructure management and optimization services,
@@ -493,7 +493,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: DevOps & CI
         descriptio,
   n: 'Streamline development workflows with automated testing and deployment,
@@ -510,7 +510,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'Database Management,
         descriptio,
   n: 'Optimize and manage your databases with AI-powered performance tuning,
@@ -533,7 +533,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'Cybersecurity Suite,
         descriptio,
   n: 'Comprehensive security solutions with threat detection and response,
@@ -550,7 +550,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'AI Security Monitoring,
         descriptio,
   n: 'Real-time security monitoring with AI-powered threat detection,
@@ -567,7 +567,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'Compliance Management,
         descriptio,
   n: 'Ensure regulatory compliance with automated compliance monitoring,
@@ -584,7 +584,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'Security Training,
         descriptio,
   n: 'Comprehensive security awareness training for your organization,
@@ -607,7 +607,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'Business Process Automation,
         descriptio,
   n: 'Automate complex business processes with intelligent workflow management,
@@ -624,7 +624,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'IT Automation,
         descriptio,
   n: 'Automate IT operations and reduce manual tasks with intelligent automation,
@@ -641,7 +641,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'Marketing Automation,
         descriptio,
   n: 'Automate marketing campaigns and customer engagement processes,
@@ -658,7 +658,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'Data Automation,
         descriptio,
   n: 'Automate data processing, analysis, and reporting workflows,
@@ -675,18 +675,18 @@ $4}
 /
   };
 
-  const benefits = [;;
+  const benefits = [;';
 
   /
-  O: Add items;
+  O: Add items';
 
-];
+]';
 
     {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};  ico,
+}';  ico,
   n: Star,
       titl,
   e: 'Proven Results,
@@ -697,7 +697,7 @@ $4}
 
   O: Add content}
 
-};  ico,
+}'";  ico,
   n: Shield,
       titl,
   e: 'Enterprise Security,
@@ -708,7 +708,7 @@ $4}
 
   O: Add content}
 
-};  ico,
+}'"'";  ico,
   n: Globe,
       titl,
   e: 'Global Support,
@@ -719,7 +719,7 @@ $4}
 
   O: Add content}
 
-};  ico,
+}'"'"'";  ico,
   n: Users,
       titl,
   e: 'Expert Team,
@@ -727,7 +727,7 @@ $4}
   n: Certified professionals with years of industry experience
     }
 
-  ];
+  ]"'";
 
   return (<div>Coming Soon<)
   )
@@ -763,7 +763,7 @@ $4}
   // TOD,
   O: Add content}
 
-                    activeTab === category.id;`                      ? `${category.bgColor} ${category.color} border-2 border-current
+                    activeTab === category.id"'"'";`                      ? `${category.bgColor} ${category.color} border-2 border-current
                       : bg-slate-800
   hover:bg-slate-700
                   }}
@@ -974,6 +974,6 @@ $4}
     </React.Fragment>
 
     </div>
-  )};
+  )}'"'"'";
 
-export default SolutionsPage;
+export default SolutionsPage'"'"'"'";

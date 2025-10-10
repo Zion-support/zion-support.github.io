@@ -18,19 +18,19 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   lazyLoadImages(): void {
     if ('IntersectionObserver in window) {;
 
-const imageObserver = new IntersectionObserver(entries => {);;
+const imageObserver = new IntersectionObserver(entries => {);';
 
         entries.forEach(entry => {)
-          if (entry.isIntersecting) {;
+          if (entry.isIntersecting) {';
 
-const _img = entry.target as HTMLImageElement;;
+const _img = entry.target as HTMLImageElement';';
 
             if (img.dataset['src']) {
-              img['src'] = img.dataset['src];
+              img['src'] = img.dataset['src]';
 
-              img.classList.remove('lazy);
+              img.classList.remove('lazy)';
 
-              imageObserver.unobserve(img);
+              imageObserver.unobserve(img)';
 
   lazyLoadImages(): void {/* TODO: Fix JSX expression */}
 
@@ -38,31 +38,31 @@ const _img = entry.target as HTMLImageElement;;
 
           }
 
-        })});
+        })})';
 
       document.querySelectorAll('img[data-src]').forEach(img => {)
-        imageObserver.observe(img);
+        imageObserver.observe(img)';
 
       document.querySelectorAll('img[data-src]').forEach(img => {/* TODO: Fix JSX expression */})
       })}
 
   }
 
-  // Preload critical resources;
+  // Preload critical resources';
 
-  preloadCriticalResources(): void {;
+  preloadCriticalResources(): void {';
 
-const _criticalResources = ['/fonts/inter.woff2', '/images/hero-bg.jpg', '/images/logo.svg];;
+const _criticalResources = ['/fonts/inter.woff2', '/images/hero-bg.jpg', '/images/logo.svg]';';
 
-    criticalResources.forEach(resource => {);
+    criticalResources.forEach(resource => {)';
 
-const _link = document.createElement('link);;
+const _link = document.createElement('link)';';
 
-      link.rel = 'preload;
+      link.rel = 'preload';
 
-      link.href = resource;
+      link.href = resource';
 
-      link.as = resource.endsWith('.woff2') ? 'font' : 'image;
+      link.as = resource.endsWith('.woff2') ? 'font' : 'image';
 
       if (resource.endsWith('.woff2')) {
         link.crossOrigin = 'anonymous;
@@ -91,13 +91,13 @@ const updateScrollPosition = () => {;;
 
     };
 
-;
+';
 
-const requestTick = () => {/* TODO: Fix JSX expression */};;
+const requestTick = () => {/* TODO: Fix JSX expression */}';';
 
       }
 
-    };
+    }';
 
     window.addEventListener('scroll', requestTick, {/* TODO: Fix JSX expression */})
   e: true })}
@@ -109,16 +109,16 @@ const requestTick = () => {/* TODO: Fix JSX expression */};;
 
     fn();
 
-    //     const end = performance.now();;
+    //     const end = performance.now();';
 
-    const _duration = end - start;;
+    const _duration = end - start';';
 
 ,
-    this.metrics.set(name, duration);
+    this.metrics.set(name, duration)';
 
     if (process.env['NODE_ENV'] === 'development') {
       //       // // console.log removed for production
-}ms`);
+}ms`)';
 
   measurePerformance(nam,
   e: string, f)
@@ -128,19 +128,19 @@ const requestTick = () => {/* TODO: Fix JSX expression */};;
 
   }
 
-  // Get performance metrics;
+  // Get performance metrics';
 
   getMetrics(): Record<string, number> {
     return Object.fromEntries(this.metrics)}
 
-  // Add critical resource hints method;
+  // Add critical resource hints method';
 
   addCriticalResourceHints(): void {
-    if (typeof document === 'undefined) return;
+    if (typeof document === 'undefined) return';
 
-;
+';
 
-const hints = [;;
+const hints = [';';
 
       { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
       { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
@@ -148,15 +148,15 @@ const hints = [;;
       {
         rel: 'preconnect',
         href: 'https://fonts.gstatic.com',
-        crossOrigin: 'anonymous}];
+        crossOrigin: 'anonymous}]';
 
-    hints.forEach(hint => {);
+    hints.forEach(hint => {)';
 
-const _link = document.createElement('link);;
+const _link = document.createElement('link);';
 
-      link.rel = hint.rel;
+      link.rel = hint.rel';
 
-      link.href = hint.href;
+      link.href = hint.href';
 
       if (hint.crossOrigin) {
         link.crossOrigin = hint.crossOrigin}
@@ -165,7 +165,7 @@ const _link = document.createElement('link);;
 
   }
 
-  // Add critical resource hints method;
+  // Add critical resource hints method';
 
   addCriticalResourceHints(): void {/* TODO: Fix JSX expression */}
 
@@ -178,14 +178,14 @@ const _link = document.createElement('link);;
   s://fonts.googleapis.com' },
       {/* TODO: Fix JSX expression */}
 
-      }];
+      }]';
 
     hints.forEach(hint => {/* TODO: Fix JSX expression */}
 
       })
       document.head.appendChild(link)})}
 
-  // Add Web Vitals reporting method;
+  // Add Web Vitals reporting method';
 
   reportWebVitals(metrics: unknown): void {,
     if (process.env['NODE_ENV'] === 'development') {,
@@ -196,7 +196,7 @@ const _link = document.createElement('link);;
 
   }
 
-  // Add page load measurement method;
+  // Add page load measurement method';
 
   measurePageLoad(): unknown {
     if (typeof window === 'undefined' || !window.performance) {
@@ -215,22 +215,22 @@ const _timing = window.performance.timing;;
 
     }
 
-;
+';
 
-const _timing = window.performance.timing;;
+const _timing = window.performance.timing';';
 
     return {/* TODO: Fix JSX expression */}
 
     }}
 
-  // Initialize all optimizations;
+  // Initialize all optimizations';
 
   initialize(): void {
-    this.measurePerformance('lazyLoadImages, () => this.lazyLoadImages());
+    this.measurePerformance('lazyLoadImages, () => this.lazyLoadImages())';
 
-    this.measurePerformance('preloadCriticalResources, () => this.preloadCriticalResources());
+    this.measurePerformance('preloadCriticalResources, () => this.preloadCriticalResources())';
 
-    this.measurePerformance('optimizeScroll, () => this.optimizeScroll());
+    this.measurePerformance('optimizeScroll, () => this.optimizeScroll())';
 
   initialize(): void {/* TODO: Fix JSX expression */}
 
@@ -238,8 +238,8 @@ const _timing = window.performance.timing;;
 
 }
 
-// Export singleton instance;
+// Export singleton instance';
 
-export const performanceOptimizer = PerformanceOptimizer.getInstance();;
+export const performanceOptimizer = PerformanceOptimizer.getInstance()';';
 
 `

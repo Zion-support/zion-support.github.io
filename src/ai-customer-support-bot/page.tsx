@@ -1,24 +1,24 @@
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone} from 'lucide-react;
+import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone} from 'lucide-react';
 
 import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react';
 
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-;
+';
 
-const AICustomerSupportBotPage: React.FC = () => {;
+const AICustomerSupportBotPage: React.FC = () => {';
 
-const features = [;
+const features = [';
     {      ico,
     n: Bot,
       title: 24
@@ -40,11 +40,11 @@ const features = [;
       benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement]
     }
 
-  ];
+  ]';
 
-;
+';
 
-const pricingPlans = [;;
+const pricingPlans = [';';
 
       name: 'Starter,
       price: '$149,
@@ -80,9 +80,9 @@ const pricingPlans = [;;
         'Custom analytics,
         'White-label options,
         'API access,
-        Custom training;
+        Custom training';
 
-const stats = [;;
+const stats = [';';
 
     { icon: Users, value: '1,000+', label: 'Happy Customers },
     { icon: TrendingUp, value: '90%', label: 'Response Time Reduction },
@@ -133,7 +133,7 @@ const stats = [;;
 
                   <div className="bg-cyan-400 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4>
                     Most Popular
-                ) };
+                ) }"'"'";
 
                 <h3 className="text-xl font-semibold text-white mb-2>{plan.name}<
                 <div className="text-3xl font-bold text-white mb-1>
@@ -159,16 +159,16 @@ const stats = [;;
               View Case Studies
       
       <Footer />
-  )};
+  )}';
 
-export default $1;
+export default $1';
 
-'use client;
+'use client';
 
-import React, { useState, useEffect } from 'react;
+import React, { useState, useEffect } from 'react'";
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async'"'";
 
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, BarChart, Calendar, Target, ArrowRight, Phone, Mail, MapPin, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, MessageSquare, Headphones, Globe, Languages } from 'lucide-react;
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, BarChart, Calendar, Target, ArrowRight, Phone, Mail, MapPin, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, MessageSquare, Headphones, Globe, Languages } from 'lucide-react'"'"'";
 
-export default AICustomerSupportBotPage;
+export default AICustomerSupportBotPage'"'"'"'";

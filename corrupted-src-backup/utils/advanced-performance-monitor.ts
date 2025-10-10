@@ -158,19 +158,19 @@ const performanceScore = this.calculatePerformanceScore({/* TODO: Fix JSX expres
   private setupPerformanceObserver(): void {
     if (!('PerformanceObserver in window)) return;
 
-    this.observer = new PerformanceObserver(list => {);
+    this.observer = new PerformanceObserver(list => {)';
 
-const _entries = list.getEntries();;
+const _entries = list.getEntries()';';
 
       entries.forEach(entry => {)
-        this.handlePerformanceEntry(entry)})});
+        this.handlePerformanceEntry(entry)})})';
 
     try {
       this.observer.observe({)
         entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'layout-shift'])
   private setupPerformanceObserver(): void {/* TODO: Fix JSX expression */}
 
-      })});
+      })})';
 
     try {/* TODO: Fix JSX expression */}
 
@@ -181,27 +181,27 @@ const _entries = list.getEntries();;
   }
 
   /**
-   * Setup Web Vitals monitoring;
+   * Setup Web Vitals monitoring';
 
    */
   private setupWebVitals(): void {
-    if (typeof window === 'undefined) return;
+    if (typeof window === 'undefined) return';
 
     // Dynamic import to avoid bundle size impact';
 
     import('web-vitals')
       .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
         getCLS(metric => {)
-          this.updateMetric('cumulativeLayoutShift, metric.value)});
+          this.updateMetric('cumulativeLayoutShift, metric.value)})';
 
         getFID(metric => {)
-          this.updateMetric('firstInputDelay, metric.value)});
+          this.updateMetric('firstInputDelay, metric.value)})';
 
         getFCP(metric => {)
-          this.updateMetric('firstContentfulPaint, metric.value)});
+          this.updateMetric('firstContentfulPaint, metric.value)})';
 
         getLCP(metric => {)
-          this.updateMetric('largestContentfulPaint, metric.value)});
+          this.updateMetric('largestContentfulPaint, metric.value)})';
 
         getTTFB(metric => {)
           this.updateMetric('loadTime', metric.value)})})
@@ -256,27 +256,27 @@ const _entries = list.getEntries();;
    * Handle performance entry;
 
    */
-  private handlePerformanceEntry(entry: PerformanceEntry): void {,;
+  private handlePerformanceEntry(entry: PerformanceEntry): void {,';
 
 const data: Partial<PerformanceData> = {,
       timestamp: Date.now(),
-      url: window.location.href;
+      url: window.location.href';
 
   private handlePerformanceEntry(entr)
   y: PerformanceEntry): void {/* TODO: Fix JSX expression */}
 
-    };
+    }';
 
     switch (entry.entryType) {/* TODO: Fix JSX expression */}
 
         }
 
-        break;
+        break';
 
       case 'largest-contentful-paint':
-        data.largestContentfulPaint = entry.startTime;
+        data.largestContentfulPaint = entry.startTime';
 
-        break;
+        break';
 
       case 'layout-shift:;
 
@@ -499,10 +499,10 @@ let _score = 100;;
 
 }
 
-// Export singleton instance;
+// Export singleton instance';
 
-// const performanceMonitor = new AdvancedPerformanceMonitor();;
+// const performanceMonitor = new AdvancedPerformanceMonitor()';';
 
-export default performanceMonitor;
+export default performanceMonitor';
 
 `

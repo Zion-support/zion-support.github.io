@@ -1,4 +1,4 @@
-export const realMicroSaasServices2024 = [{name: 'Real Micro-SaaS Platform 2024,;;
+export const realMicroSaasServices2024 = [{name: 'Real Micro-SaaS Platform 2024,';';
 
     path: '/services/real-micro-saas-platform-2024',
     description: 'Comprehensive micro-SaaS development and management platform',
@@ -10,7 +10,7 @@ export const realMicroSaasServices2024 = [{name: 'Real Micro-SaaS Platform 2024,
       'Multi-tenant support',
       Advanced analytics
     ],
-    pricing: unknown;
+    pricing: unknown';
 
       starter: '$199/month',
       professional: '$399/month'}
@@ -24,7 +24,7 @@ export const realMicroSaasServices2024 = [{name: 'Real Micro-SaaS Platform 2024,
     icon: 'BarChart3',
     category: 'Analytics',
     features: [,
-export const realMicroSaasServices2024 = [{/* TODO: Fix JSX expression */};;
+export const realMicroSaasServices2024 = [{/* TODO: Fix JSX expression */}';';
 
   l: '$399/month'}
 
@@ -50,7 +50,7 @@ export const realMicroSaasServices2024 = [{/* TODO: Fix JSX expression */};;
       'Revenue analytics',
       Churn prediction
     ],
-    pricing: unknown;
+    pricing: unknown';
 
       starter: '$99/month',
       professional: '$199/month',
@@ -67,9 +67,9 @@ export const realMicroSaasServices2024 = [{/* TODO: Fix JSX expression */};;
 
   }
 
-];
+]';
 
-export const realMicroSaasCategories2024 = [;;
+export const realMicroSaasCategories2024 = [';';
 
   'Platform Development',
   'Analytics & Insights',
@@ -87,7 +87,7 @@ export const realMicroSaasStats2024 =;;
 
   activeUsers: 1200;
 
-export const realMicroSaasStats2024 = {};;
+export const realMicroSaasStats2024 = {};';
 
   totalService,
   s: 2,
@@ -96,9 +96,9 @@ export const realMicroSaasStats2024 = {};;
   averageRatin,
   g: 4.7,
   activeUser,
-  s: 1200};
+  s: 1200}';
 
-export const realMicroSaasServices2024 = [ nam,;;
+export const realMicroSaasServices2024 = [ nam,';';
 
   e: 'Real Micro-SaaS Platform 2024',' pat,
   h: '/services/real-micro-saas-platform-2024',' descriptio,
@@ -119,9 +119,9 @@ export const realMicroSaasServices2024 = [ nam,;;
   g: ' starte,
   r: '$99/month',' professiona,
   l: '$199/month',' enterpris,
-  e: 'Custom' } } ]; export const realMicroSaasCategories2024 = [' 'Platform Development',' 'Analytics & Insights',' 'User Management',' 'Revenue Optimization ]; export const realMicroSaasStats2024 = totalService,;;
+  e: 'Custom' } } ]'; export const realMicroSaasCategories2024 = [' 'Platform Development',' 'Analytics & Insights',' 'User Management',' 'Revenue Optimization ]'; export const realMicroSaasStats2024 = totalService,';';
 
   s: 2, categorie,
   s: 4, averageRatin,
   g: 4.7, activeUser,
-  s: 1200 };
+  s: 1200 }';

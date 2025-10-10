@@ -129,8 +129,8 @@ const,
         </div>
       </div>
     </div>
-  )};
+  )}";
 
-export default AdvancedAnalytics;
+export default AdvancedAnalytics";
 
 "

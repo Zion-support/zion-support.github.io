@@ -41,17 +41,17 @@ skippedCount++;
 
       // console.log removed for production
 // console.log removed for production
-.slice(0, 3).join(\n));
+.slice(0, 3).join(\n))';
 
-      // Try to merge the branch;
+      // Try to merge the branch';
 
       // console.log removed for production
-execSync(`git merge ${branch} --no-ff -m "feat: Merge enhancements from ${branch}"`, { stdio: inherit });
+execSync(`git merge ${branch} --no-ff -m "feat: Merge enhancements from ${branch}"`, { stdio: inherit })'";
 
       // console.log removed for production
 mergedCount++} catch (error) {
       // console.log removed for production
-// Try to abort the merge if it failed;
+// Try to abort the merge if it failed'"'";
 
       try {
         execSync('git merge --abort', { stdio: 'pipe })} catch (abortError) {
@@ -64,10 +64,10 @@ mergedCount++} catch (error) {
   // console.log removed for production
 // console.log removed for production
 // console.log removed for production
-// Push all changes;
+// Push all changes'"'"'";
 
   // console.log removed for production
-execSync('git push origin main', { stdio: inherit });
+execSync('git push origin main', { stdio: inherit })'"'"'"'";
 
   // console.log removed for production
 } catch (error) {

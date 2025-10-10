@@ -10,7 +10,7 @@ const, storie, s = [
   y: "TechCorp, Internationa, l
       indust, r, y: "Technolo, g, y
       ic, o, n: <TrendingUp, className="w-8 h-8 /></TrendingUp>resu</TrendingUp>
-);
+)";
 
 }, l, t: "3, 0, 0% Revenue, Growt, h
       descripti, o, n: "Implemented, multimodal, AI achieving, unprecedented, customer engagement, and, conversion rat, e, s.
@@ -51,7 +51,7 @@ const, storie, s = [
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12>,
           {stories.map((story, index) => (
 
-            <div;
+            <div";
 
 key={index}
 
@@ -71,7 +71,7 @@ key={index}
                 <div className="flex items-center gap-3 mb-4>
                   {story.icon}</div>
                   <div></div>
-                    <h3 className="font-bold text-xl>{story.company}</h3>;
+                    <h3 className="font-bold text-xl>{story.company}</h3>";
 
 const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 
@@ -107,13 +107,13 @@ key={index}
                       <div className="w-2 h-2 bg-green-500 rounded-full></div>
                       <span className="text-sm text-gray-700>{metric}</span>
                     </div>
-                  Read Full Story;
+                  Read Full Story"'";
 
                   <Link className="w-4 h-4 />
                 </Link>
               </div>
             </div>
-            View All Success Stories;
+            View All Success Stories"'"'";
 
             <Link className="w-6 h-6 />
               </div>
@@ -126,12 +126,12 @@ key={index}
                       <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                       <span className="text-sm text-gray-700>{metric}</span>
                     </div>
-                  Read Full Story;
+                  Read Full Story'"'"'";
 
                   <Link $2></Link>
               </div>
             </div>
-            View All Success Stories;
+            View All Success Stories'"'"'"'";
 
             <Link $2></Link>
         </div>

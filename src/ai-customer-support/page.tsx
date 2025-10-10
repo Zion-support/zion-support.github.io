@@ -1,8 +1,8 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-;
+';
 
 const AICustomerSupportPage: React.FC = () => {
   return (
@@ -16,12 +16,12 @@ const AICustomerSupportPage: React.FC = () => {
         </a>
       </div>
     </div>
-);
+)'"'";
 
 }
 
-  )};
+  )}'"'"'";
 
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react;
+import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react'"'"'"'";
 
 export default AICustomerSupportPage}

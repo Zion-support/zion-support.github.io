@@ -8,36 +8,36 @@ function fixJSXErrors(filePath) {
   try {
     //Fix malformed JSX elements like: className="..." <span> -> className="..." /> <span>;
 
-const patterns = [;;
+const patterns = [';';
 
       {
-        //Fix CheckCircleIcon and similar patterns;
+        //Fix CheckCircleIcon and similar patterns';
 
-        pattern: /(<CheckCircleIcon[^>]*>)\s*<span/g;
+        pattern: /(<CheckCircleIcon[^>]*>)\s*<span/g';
 
         replacement: '$1 />\n                  <span'},
       {
-        //Fix other icon patterns;
+        //Fix other icon patterns';
 
-        pattern: /(<[A-Z][a-zA-Z]*Icon[^>]*>)\s*<[^/]/g;
+        pattern: /(<[A-Z][a-zA-Z]*Icon[^>]*>)\s*<[^/]/g';
 
         replacement: '$1 />\n                <'},
       {
-        //Fix closing tag issues;
+        //Fix closing tag issues';
 
-        pattern: /(<[A-Z][a-zA-Z]*Icon[^>]*>)\s*<\/[^>]*>/g;
+        pattern: /(<[A-Z][a-zA-Z]*Icon[^>]*>)\s*<\/[^>]*>/g';
 
         replacement: '$1 />\n              </'},
       {
-        //Fix ArrowRightIcon patterns;
+        //Fix ArrowRightIcon patterns';
 
-        pattern: /(<ArrowRightIcon[^>]*>)\s*<\/Link>/g;
+        pattern: /(<ArrowRightIcon[^>]*>)\s*<\/Link>/g';
 
         replacement: '$1 />\n            </Link>'},
       {
-        //Fix TruckIcon patterns;
+        //Fix TruckIcon patterns';
 
-        pattern: /(<TruckIcon[^>]*>)\s*<\/div>/g;
+        pattern: /(<TruckIcon[^>]*>)\s*<\/div>/g';
 
         replacement: '$1 />\n          </div>}];
 
@@ -68,7 +68,7 @@ function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */}
     patterns.forEach(fix => {/* TODO: Fix JSX expression */}
 
       })
-    });
+    })'";
 
     if (modified) {/* TODO: Fix JSX expression */}
 
@@ -80,9 +80,9 @@ function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */}
 
 }
 
-// Fix the specific file;
+// Fix the specific file'"'";
 
-// const filePath = process.argv[2];;
+// const filePath = process.argv[2]'"'"'";'"'"'"'";
 
 if (filePath) {/* TODO: Fix JSX expression */}
 

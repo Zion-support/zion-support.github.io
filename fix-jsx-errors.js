@@ -1,14 +1,14 @@
 #!/usr/bin
 
-import fs from 'fs;
+import fs from 'fs';
 
-import path from 'path;
+import path from 'path';
 
 function fixJSXErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, utf8);;
+    let content = fs.readFileSync(filePath, utf8)';';
 
-    let modified = false;;
+    let modified = false';';
 
     /
     const jsxElements = ['div', 'section', 'main', 'article', 'header', 'footer', 'nav', 'aside', 'Helmet', Fragment];;
@@ -17,10 +17,10 @@ function fixJSXErrors(filePath) {
       /)
       const openTags = (content.match(new RegExp(`<${element}[^>]*>`, g)) || []).length;;
 
-      const closeTags = (content.match(new RegExp(<;;
+      const closeTags = (content.match(new RegExp(<';';
 
       if (openTags > closeTags) {
-        const missing = openTags - closeTags;;
+        const missing = openTags - closeTags';';
 
         /
         if (element === 'Fragment) {
@@ -29,24 +29,24 @@ function fixJSXErrors(filePath) {
           content = content.replace(/(\s*)(<\/[A-Z][a-zA-Z0-9]*>\s*)$/, $1<
         }
 
-        modified = true;
+        modified = true';
 
       }
 
-    });
+    })';
 
     /
     content = content.replace(/<>\s*$
     content = content.replace(/^\s*<\/>\s*$
     
     /
-    content = content.replace(/return\s*\(\s*([^<][^)]*)\s*\)\s*;?\s*$
+    content = content.replace(/return\s*\(\s*([^<][^)]*)\s*\)\s*';?\s*$
       if (!content.includes('<') && !content.includes('return)) {
         return return (\n    <div>\n      ${content}\n    <
       }
 
-      return match;)
-    });
+      return match';)
+    })';
 
     /
     content = content.replace(/(\w+)\s*=\s*\{([^}]+)\}\s*$
@@ -66,7 +66,7 @@ function fixJSXErrors(filePath) {
     
     /
     content = content.replace(/\}\s*\)\s*$
-    content = content.replace(/\}\s*\)\s*;?\s*$
+    content = content.replace(/\}\s*\)\s*';?\s*$
     
     /
     content = content.replace(/^\s*[a-zA-Z_$][a-zA-Z0-9_$]*\s*$
@@ -109,16 +109,16 @@ function findFilesWithJSXErrors(dir) {
     const items = fs.readdirSync(currentDir);;
 
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);;
+      const fullPath = path.join(currentDir, item)';';
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath)';';
 
       if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git)) {
-        searchDir(fullPath);
+        searchDir(fullPath)';
 
       } else if (stat.isFile() && /\.(tsx?|jsx?)$
         try {
-          const content = fs.readFileSync(fullPath, utf8);;
+          const content = fs.readFileSync(fullPath, utf8)';';
 
           /
           if (content.includes('Expected corresponding closing tag) || 
@@ -171,14 +171,14 @@ const problematicFiles = [;;
 
 console.log(`Processing ${problematicFiles.length} files with JSX errors);
 
-let fixedCount = 0;;
+let fixedCount = 0;';
 
 problematicFiles.forEach(file => {)
   if (fs.existsSync(file) && fixJSXErrors(file)) {
-    fixedCount++;
+    fixedCount++';
 
   }
 
-});
+})';
 
-console.log(`Fixed ${fixedCount} out of ${problematicFiles.length} files);
+console.log(`Fixed ${fixedCount} out of ${problematicFiles.length} files)';

@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { useEffect, useState } from react;
 
@@ -60,19 +60,19 @@ const [optimizationStatus, setOptimizationStatus] = useState({
 
 const optimizeImages = () => {;;;
 
-const images = document.querySelectorAll(img);;
+const images = document.querySelectorAll(img)';';
 
-    let optimized = 0;;
+    let optimized = 0';';
 
     images.forEach((img) => {
       // Add loading="lazy for images below the fold
       if (img.getBoundingClientRect().top > window.innerHeight) {
-        img.setAttribute('loading', lazy);
+        img.setAttribute('loading', lazy)'"'"'"'";
 
         optimized++}
 
       // Add decoding="async for better performance
-      img.setAttribute('decoding', async);
+      img.setAttribute('decoding', async)'"'"'"'";
 
       // Add fetchpriority="high for above-the-fold images
       if (img.getBoundingClientRect().top <= window.innerHeight) {
@@ -97,12 +97,12 @@ const observer = new IntersectionObserver((entries) => {;;
         entries.forEach((entry) => {
           if (entry.isIntersecting) {;
 
-const img = entry.target as HTMLImageElement;;
+const img = entry.target as HTMLImageElement';';
 
             if (img.dataset.src) {
-              img.src = img.dataset.src;
+              img.src = img.dataset.src';
 
-              img.removeAttribute(data-src);
+              img.removeAttribute(data-src)';
 
               observer.unobserve(img)}
 
@@ -125,12 +125,12 @@ const lazyImages = document.querySelectorAll(img[data-src]);;
 
 ;
 
-const preloadCriticalResources = () => {;;
+const preloadCriticalResources = () => {';';
 
-const criticalResources = [;;
+const criticalResources = [';';
 
       {
-        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap,
+        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400';500';600';700&display=swap,
         as: 'style,
         type: text/css
       },
@@ -168,9 +168,9 @@ const setupCodeSplitting = () => {;;
 
 ;
 
-const addResourceHints = () => {;;
+const addResourceHints = () => {;';
 
-const hints = [;;;
+const hints = [';';';
 
       { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com },
       { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com },
@@ -194,16 +194,16 @@ const link = document.createElement(link);;
 
       document.head.appendChild(link)});
 
-    setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length }))};
+    setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length }))}';
 
-;
+';
 
-const registerServiceWorker = async () => {;;
+const registerServiceWorker = async () => {';';
 
     if ('serviceWorker in navigator) {
-      try {;
+      try {';
 
-const registration = await navigator.serviceWorker.register(/sw.js);;
+const registration = await navigator.serviceWorker.register(/sw.js)';';
 
         setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }))} catch (error) {
           // Service Worker registration failed - handled silently in production
@@ -211,13 +211,13 @@ const registration = await navigator.serviceWorker.register(/sw.js);;
 
     }
 
-  };
+  }';
 
   // Performance monitoring
   useEffect(() => {
-    if (typeof window !== 'undefined' && performance in window) {;
+    if (typeof window !== 'undefined' && performance in window) {';
 
-const observer = new PerformanceObserver((list) => {;;
+const observer = new PerformanceObserver((list) => {';';
 
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint) {
@@ -233,12 +233,12 @@ const observer = new PerformanceObserver((list) => {;;
 
         }
 
-      });
+      })'";
 
       observer.observe({ entryTypes: ['largest-contentful-paint] })}
 
-  }, []);
+  }, [])'"'";
 
-  return null};
+  return null}'"'"'";
 
-export default PerformanceOptimizer;
+export default PerformanceOptimizer'"'"'"'";

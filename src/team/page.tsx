@@ -1,18 +1,18 @@
-import React from 'react;
+import React from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter } from 'lucide-react;
+import { Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from ../components/Footer;
+import Footer from ../components/Footer';
 
-;
+';
 
-const TeamPage: React.FC = () => {;
+const TeamPage: React.FC = () => {';
 
-const teamMembers = [;;;
+const teamMembers = [';';';
 
     {
       name: 'Kleber Santos,
@@ -69,22 +69,22 @@ const teamMembers = [;;;
       expertise: ['Cybersecurity', 'Risk Assessment', 'Compliance]
     }
 
-  ];
+  ]';
 
-;
+';
 
-const stats = [;;
+const stats = [';';
 
     { icon: Users, label: 'Team Members', value: '50+ },
     { icon: Award, label: 'Awards Won', value: '25+ },
     { icon: Brain, label: 'Years Experience', value: '15+ },
     { icon: Shield, label: 'Client Satisfaction', value: '99% }
 
-  ];
+  ]';
 
-;
+';
 
-const values = [;;
+const values = [';';
 
     {
       title: 'Innovation,
@@ -107,7 +107,7 @@ const values = [;;
       icon: Shield
     }
 
-  ];
+  ]';
 
   return (
 
@@ -270,6 +270,6 @@ const values = [;;
 
       <Footer />
     </div>
-  )};
+  )}'"'"'";
 
-export default TeamPage;
+export default TeamPage'"'"'"'";

@@ -1,16 +1,16 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react}
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'Advanced AI technology integration,
     'Real-time processing and analytics,
@@ -20,7 +20,7 @@ const benefits = [;;
     'Easy integration with existing systems,
     'Cost-effective pricing plans,
     Proven track record of success
-  ];
+  ]';
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
       
@@ -100,4 +100,4 @@ const benefits = [;;
         </div>
       </section>
     </div>)
-export default EnhancedErrorBoundaryPage;
+export default EnhancedErrorBoundaryPage'"'"'"'";

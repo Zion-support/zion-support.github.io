@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 
 impo, r, t {
   CurrencyDollarIc, o, n, 
@@ -8,9 +8,9 @@ impo, r, t {
   SparklesIc, o, n, 
   ClockIc, o, n, 
   GlobeAltIc, o, n, 
-  ArrowRightIc, o, n} fr, o, m @heroico, n, s/rea, c, t/24/outli, n, e;
+  ArrowRightIc, o, n} fr, o, m @heroico, n, s/rea, c, t/24/outli, n, e';
 
-;
+';
 
 const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
   return (
@@ -18,19 +18,19 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
  ,
   return(,
     <div, classNam, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50  >
-);
+)"'"'"'";
 
 } {/* Animated, Background, Elemen, t, s */ }
 
       <div, classNam, e = "absolute, inse, t-0, overflo, w-hidd, e, n>
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e />
-        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: , 1, s }} />;
+        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: , 1, s }} />'"'"'"'";
 
 const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
   return (
 
     <div, classNam, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50  >
-);
+)'"'"'"'";
 
 } {/* Animated, Background, Elemen, t, s */ }</div>
       <div, classNam, e = "absolute, inse, t-0, overflo, w-hidd, e, n></div>
@@ -49,9 +49,9 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
             </sp, a, n>
 impo, r, t {/* TODO: Fix JSX expression */}
 
-} fr, o, m @heroico, n, s/rea, c, t/24/outli, n, e;
+} fr, o, m @heroico, n, s/rea, c, t/24/outli, n, e'"'"'";
 
-;
+'"'"'"'";
 
 const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
 
@@ -80,13 +80,13 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
 
         <h2, classNam, e = "te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-center, m, b-6, tex, t-white, leadin, g-tig, h, t></h2>
           <span, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-200, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t>
-            Autonomous, Supply, Chain Revoluti, o, n;
+            Autonomous, Supply, Chain Revoluti, o, n";
 
           </sp, a, n>
         </h2>
 
         <p, className="te, x, t-2xl, m, d:te, x, t-3xl, tex, t-center, tex, t-emera, l, d-100, m, b-8, fon, t-semibold, ma, x-w-5xl, m, x-au, t, o>
-          Fortune, 100, Retail Giant, Achieve, s <span, className="te, x, t-yell, o, w-3, 0, 0>$4.2B, Value, Creation</sp, a, n> with, A, I-Powered, Supply, Chain Intelligen, c, e;
+          Fortune, 100, Retail Giant, Achieve, s <span, className="te, x, t-yell, o, w-3, 0, 0>$4.2B, Value, Creation</sp, a, n> with, A, I-Powered, Supply, Chain Intelligen, c, e";
 
           Fortune, 100, Retail Giant, Achieve, s</p> <span, className="te, x, t-yell, o, w-3, 0, 0>$4.2B, Value, Creation</sp, a, n> with, A, I-Powered, Supply, Chain Intelligen, c, e
         </p>
@@ -101,13 +101,13 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
 
         <h2, classNam, e = "te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-center, m, b-6, tex, t-white, leadin, g-tig, h, t"></h2>
           <span, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-200, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t></span>
-            Autonomous, Supply, Chain Revoluti, o, n;
+            Autonomous, Supply, Chain Revoluti, o, n";
 
           </sp, a, n>
         </h2>
 
         <p, className="te, x, t-2xl, m, d:te, x, t-3xl, tex, t-center, tex, t-emera, l, d-100, m, b-8, fon, t-semibold, ma, x-w-5xl, m, x-au, t, o"></p>
-          Fortune, 100, Retail Giant, Achieve, s <span, className="te, x, t-yell, o, w-3, 0, 0>$4.2B, Value, Creation</sp, a, n> with, A, I-Powered, Supply, Chain Intelligen, c, e;
+          Fortune, 100, Retail Giant, Achieve, s <span, className="te, x, t-yell, o, w-3, 0, 0>$4.2B, Value, Creation</sp, a, n> with, A, I-Powered, Supply, Chain Intelligen, c, e";
 
         </p>
 
@@ -164,7 +164,7 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, b-10, borde, r-2, borde, r-emera, l, d-4, 0, 0/30></div>
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-center, flex, items-center, justif, y-center, ga, p-3></h3>
             <SparklesIcon, className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e />
-            Revolutionary, A, I-Powered, Capabilitie, s;
+            Revolutionary, A, I-Powered, Capabilitie, s"'";
 
             <SparklesIcon, className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e /> />
               </
@@ -178,7 +178,7 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, b-10, borde, r-2, borde, r-emera, l, d-4, 0, 0/30"></div>
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-center, flex, items-center, justif, y-center, ga, p-3"></h3>
             <SparklesIcon, className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e /></SparklesIcon>
-            Revolutionary, A, I-Powered, Capabilitie, s;
+            Revolutionary, A, I-Powered, Capabilitie, s"'"'";
 
             <SparklesIcon, className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e /> />
               </
@@ -337,10 +337,10 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
               <Link, t, o="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-fortu, n, e-1, 0, 0-reta, i, l-supp, l, y-cha, i, n-transformati, o, n-4-2b"
                 className="inli, n, e-flex, item, s-center, ga, p-2, b, g-yell, o, w-500, hove, r: bg-yell, o, w-400, tex, t-yell, o, w-950, p, x-6, p, y-3, rounde, d-lg, fon, t-bold, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-xl, hove, r:sca, l, e-1, 0, 5
               >
-                Read, Full, Case Stu, d, y;
+                Read, Full, Case Stu, d, y'"'"'";
 
               ></Link>
-                Read, Full, Case Stu, d, y;
+                Read, Full, Case Stu, d, y'"'"'"'";
 
                 <LinkIcon, className="w-5 h-5</Li, n, k> />
               </
@@ -402,21 +402,21 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
             className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, hove, r:fr, o, m-emera, l, d-600, hove, r:to-te, a, l-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5
           >
             <SparklesIcon, className="w-6 h-6 />
-            Read, the, Revolutionary Gui, d, e;
+            Read, the, Revolutionary Gui, d, e";
 
             <LinkIcon, className="w-6 h-6</Li, n, k> />
                 <ink, t, o="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-fortu, n, e-1, 0, 0-reta, i, l-supp, l, y-cha, i, n-transformati, o, n-4-2b
             className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, hove, r:fr, o, m-yell, o, w-600, hove, r:to-oran, g, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5
           >
             <TruckIcon, className="w-6 h-6 />
-            Vi, e, w $4.2B, Case, Study;
+            Vi, e, w $4.2B, Case, Study";
 
             <LinkIcon, className="w-6 h-6</Li, n, k> />
                 <ink, t, o="/conte, n, t/servic, e, s/autonomo, u, s-supp, l, y-cha, i, n-intelligen, c, e-platfo, r, m
             className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, hove, r:fr, o, m-cy, a, n-600, hove, r:to-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5
           >
             <ChartBarIcon, className="w-6 h-6 />
-            Explore, Platfor, m & Servic, e, s;
+            Explore, Platfor, m & Servic, e, s";
 
             <LinkIcon, className="w-6 h-6</Li, n, k> />
               </
@@ -436,7 +436,7 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
               <Link, t, o="/conta, c, t?servi, c, e=supp, l, y-cha, i, n-assessme, n, t
                 className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-105, hove, r:bg-emera, l, d-50
               >
-                Schedule, Free, Assessment;
+                Schedule, Free, Assessment";
 
                 <LinkIcon, className="w-6 h-6</Li, n, k> />
                 <iv, className="te, x, t-gre, e, n-200, tex, t-sm>
@@ -447,21 +447,21 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
             className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, hove, r:fr, o, m-emera, l, d-600, hove, r:to-te, a, l-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5
           ></Link>
             <SparklesIcon, className="w-6 h-6 /></SparklesIcon>
-            Read, the, Revolutionary Gui, d, e;
+            Read, the, Revolutionary Gui, d, e";
 
             <LinkIcon, className="w-6 h-6"</Li, n, k> />
                 <ink, t, o="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-fortu, n, e-1, 0, 0-reta, i, l-supp, l, y-cha, i, n-transformati, o, n-4-2b"
             className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, hove, r:fr, o, m-yell, o, w-600, hove, r:to-oran, g, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5
           ></ink>
             <TruckIcon, className="w-6 h-6 /></TruckIcon>
-            Vi, e, w $4.2B, Case, Study;
+            Vi, e, w $4.2B, Case, Study";
 
             <LinkIcon, className="w-6 h-6"</Li, n, k> />
                 <ink, t, o="/conte, n, t/servic, e, s/autonomo, u, s-supp, l, y-cha, i, n-intelligen, c, e-platfo, r, m"
             className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, hove, r:fr, o, m-cy, a, n-600, hove, r:to-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5
           ></ink>
             <ChartBarIcon, className="w-6 h-6 /></ChartBarIcon>
-            Explore, Platfor, m & Servic, e, s;
+            Explore, Platfor, m & Servic, e, s"'";
 
             <LinkIcon, className="w-6 h-6</Li, n, k> />
               </
@@ -481,7 +481,7 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
               <Link, t, o="/conta, c, t?servi, c, e=supp, l, y-cha, i, n-assessme, n, t"
                 className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-105, hove, r:bg-emera, l, d-50
               ></Link>
-                Schedule, Free, Assessment;
+                Schedule, Free, Assessment"'"'";
 
                 <LinkIcon, className="w-6 h-6"</Li, n, k> />
                 <iv, className="te, x, t-gre, e, n-200, tex, t-sm"></iv>
@@ -539,8 +539,8 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
         </div>
       </div>
     </di, v>
-  )};
+  )}'"'"'";
 
-export default October2025SupplyChainRevolutionBanner;
+export default October2025SupplyChainRevolutionBanner'"'"'"'";
 
 "

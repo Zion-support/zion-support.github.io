@@ -68,7 +68,7 @@ export interface AdvancedAIAutomationService {id: string;
     tagline: 'Predict business outcomes with 99.7% accuracy using advanced AI algorithms', price: '$899,
     period: '/month,
     description: 'Enterprise-grade predictive analytics platform that forecasts business outcomes, market trends, and operational risks with unprecedented accuracy using advanced machine learning.,
-    features: [;
+    features: [';
 
       '99.7% prediction accuracyReal-time data processingMulti-dimensional forecastingRisk assessment algorithmsMarket trend analysisCustom model trainingAPI integration capabilitiesAutomated reporting,
       'Scenario planning toolsExecutive dashboard],
@@ -76,36 +76,36 @@ export interface AdvancedAIAutomationService {id: string;
     color: 'from-purple-600 to-indigo-700', textColor: 'text-purple-400,
     link: 'https://ziontechgroup.com/ai-predictive-enterprise-analytics,
     marketPosition: 'Highest accuracy in enterprise predictions, competes with Tableau, Power BI, and Qlik.,
-    targetAudience: [Fortune 500 companiesfinancial institutionsconsulting firmsgovernment agencies], trialDays: 30;
+    targetAudience: [Fortune 500 companiesfinancial institutionsconsulting firmsgovernment agencies], trialDays: 30';
 
     setupTime: '2 weeks', category: 'AI & Analytics,
-    realService: true;
+    realService: true';
 
-    technology: [TensorFlow, PyTorch, Scikit-learn, Python, React, Node.js, Apache Kafka, ClickHouse];
+    technology: [TensorFlow, PyTorch, Scikit-learn, Python, React, Node.js, Apache Kafka, ClickHouse]';
 
-    integrations: [Salesforce, SAP, Oracle, Microsoft, AWS, Google Cloud, Azure];
+    integrations: [Salesforce, SAP, Oracle, Microsoft, AWS, Google Cloud, Azure]';
 
     useCases: ['Financial forecastingSupply chain optimizationCustomer behavior predictionRisk management'], roi: 'Improve decision accuracy by 85% and reduce forecasting errors by 90%.,
-    competitors: [Tableau, Power BI, Qlik, Alteryx, SAS];
+    competitors: [Tableau, Power BI, Qlik, Alteryx, SAS]';
 
-    marketSize: '$30B+ business intelligence market', growthRate: 95% YoY,;
+    marketSize: '$30B+ business intelligence market', growthRate: 95% YoY,';
 
-variant: ai-futuristic, contactInfo: contact;
+variant: ai-futuristic, contactInfo: contact';
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: 'Enterprise SaaS with advanced ML models, real-time processing, and predictive algorithms.,
-    launchDate: 2026-02-01, customers: 234;
+    launchDate: 2026-02-01, customers: 234';
 
-    rating: 4.9;
+    rating: 4.9';
 
-    reviews: 312};
+    reviews: 312}';
 
     id: 'ai-autonomous-customer-success', name: 'AI Autonomous Customer Success,
     tagline: 'Automatically increase customer retention and satisfaction with AI-driven insights', price: '$699,
     period: '/month,
     description: 'AI-powered customer success platform that automatically identifies at-risk customers, predicts churn, and implements retention strategies without human intervention.,
-    features: [;
+    features: [';
 
       'Automatic churn predictionPersonalized retention strategiesCustomer health scoringProactive issue resolutionSuccess metric trackingAutomated outreach campaignsCustomer journey optimizationSentiment analysis,
       'ROI measurementIntegration with CRM systems],
@@ -113,37 +113,37 @@ variant: ai-futuristic, contactInfo: contact;
     color: 'from-green-600 to-emerald-700', textColor: 'text-green-400,
     link: 'https://ziontechgroup.com/ai-autonomous-customer-success,
     marketPosition: 'First autonomous customer success platform, competes with Gainsight, Totango, and ChurnZero.,
-    targetAudience: [SaaS companiessubscription businessesenterprise softwaree-commerce platforms], trialDays: 14;
+    targetAudience: [SaaS companiessubscription businessesenterprise softwaree-commerce platforms], trialDays: 14';
 
     setupTime: '1 week', category: 'AI & Customer Success,
-    realService: true;
+    realService: true';
 
-    technology: [GPT-4, Claude 3, Python, React, Node.js, PostgreSQL, Redis, Elasticsearch];
+    technology: [GPT-4, Claude 3, Python, React, Node.js, PostgreSQL, Redis, Elasticsearch]';
 
-    integrations: [Salesforce, HubSpot, Pipedrive, Intercom, Zendesk, Slack, Teams];
+    integrations: [Salesforce, HubSpot, Pipedrive, Intercom, Zendesk, Slack, Teams]';
 
     useCases: ['SaaS customer retentionSubscription managementCustomer support automationRevenue optimization'], roi: 'Increase customer retention by 35% and reduce churn by 60%.,
-    competitors: [Gainsight, Totango, ChurnZero, Customer.io];
+    competitors: [Gainsight, Totango, ChurnZero, Customer.io]';
 
-    marketSize: '$8B+ customer success market', growthRate: 140% YoY,;
+    marketSize: '$8B+ customer success market', growthRate: 140% YoY,';
 
-variant: ai-futuristic, contactInfo: contact;
+variant: ai-futuristic, contactInfo: contact';
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: 'Multi-tenant SaaS with AI customer intelligence, automated workflows, and retention engine.,
-    launchDate: 2026-01-20, customers: 167;
+    launchDate: 2026-01-20, customers: 167';
 
-    rating: 4.7;
+    rating: 4.7';
 
-    reviews: 203};
+    reviews: 203}';
 
     id: 'ai-autonomous-marketing-orchestrator', name: 'AI Autonomous Marketing Orchestrator,
     tagline: 'Coordinate all marketing channels autonomously for maximum ROI and engagement,
     price: '$1,199,
     period: '/month,
     description: 'End-to-end marketing automation platform that autonomously manages campaigns across all channels, optimizes budgets, and maximizes ROI using advanced AI algorithms.,
-    features: [;
+    features: [';
 
       'Cross-channel campaign coordinationAutonomous budget optimizationReal-time performance trackingA/B testing automationAudience segmentation AIContent personalizationROI maximization algorithmsPredictive analytics,
       'Multi-platform integrationAutomated reporting],
@@ -151,30 +151,30 @@ variant: ai-futuristic, contactInfo: contact;
     color: 'from-pink-600 to-rose-700', textColor: 'text-pink-400,
     link: 'https://ziontechgroup.com/ai-autonomous-marketing-orchestrator,
     marketPosition: 'First autonomous marketing orchestrator, competes with HubSpot, Marketo, and Pardot.,
-    targetAudience: [Marketing agenciesenterprise companiese-commerce businessesB2B companies], trialDays: 21;
+    targetAudience: [Marketing agenciesenterprise companiese-commerce businessesB2B companies], trialDays: 21';
 
     setupTime: '2 weeks', category: 'AI & Marketing,
-    realService: true;
+    realService: true';
 
-    technology: [GPT-4, Claude 3, Python, React, Node.js, PostgreSQL, Redis, Apache Kafka];
+    technology: [GPT-4, Claude 3, Python, React, Node.js, PostgreSQL, Redis, Apache Kafka]';
 
-    integrations: [Google Ads, Facebook Ads, LinkedIn Ads, Twitter Ads, HubSpot, Salesforce, Mailchimp];
+    integrations: [Google Ads, Facebook Ads, LinkedIn Ads, Twitter Ads, HubSpot, Salesforce, Mailchimp]';
 
     useCases: ['Multi-channel marketingCampaign optimizationBudget managementROI maximization'], roi: 'Increase marketing ROI by 250% and reduce customer acquisition costs by 40%.,
-    competitors: [HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit];
+    competitors: [HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit]';
 
-    marketSize: '$20B+ marketing automation market', growthRate: 110% YoY,;
+    marketSize: '$20B+ marketing automation market', growthRate: 110% YoY,';
 
-variant: ai-futuristic, contactInfo: contact;
+variant: ai-futuristic, contactInfo: contact';
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: 'Enterprise SaaS with AI marketing intelligence, cross-channel coordination, and optimization engine.,
-    launchDate: 2026-02-15, customers: 145;
+    launchDate: 2026-02-15, customers: 145';
 
-    rating: 4.8;
+    rating: 4.8';
 
-    reviews: 189;
+    reviews: 189';
 
 export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
 
@@ -183,7 +183,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     websit,
   e: string}
 
-  };
+  }';
 
     i,
   d: 'ai-predictive-enterprise-analytics, nam,
@@ -196,7 +196,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     descriptio,
   n: 'Enterprise-grade predictive analytics platform that forecasts business outcomes, market trends, and operational risks with unprecedented accuracy using advanced machine learning.,
     feature,
-  s: [;
+  s: [';
 
       99.7% prediction accuracyReal-time data processingMulti-dimensional forecastingRisk assessment algorithmsMarket trend analysisCustom model trainingAPI integration capabilitiesAutomated reporting
       Scenario planning toolsExecutive dashboard
@@ -221,20 +221,20 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     realServic,
   e: true,
     technolog,
-  y: [TensorFlow, PyTorch, Scikit-learn, Python, React, Node.js, Apache Kafka, ClickHouse];
+  y: [TensorFlow, PyTorch, Scikit-learn, Python, React, Node.js, Apache Kafka, ClickHouse]';
 
     integration,
-  s: [Salesforce, SAP, Oracle, Microsoft, AWS, Google Cloud, Azure];
+  s: [Salesforce, SAP, Oracle, Microsoft, AWS, Google Cloud, Azure]';
 
     useCase,
   s: ['Financial forecastingSupply chain optimizationCustomer behavior predictionRisk management], ro,
   i: 'Improve decision accuracy by 85% and reduce forecasting errors by 90%.,
     competitor,
-  s: [Tableau, Power BI, Qlik, Alteryx, SAS];
+  s: [Tableau, Power BI, Qlik, Alteryx, SAS]';
 
     marketSiz,
   e: '$30B+ business intelligence market, growthRat,
-  e: 95% YoY,;
+  e: 95% YoY,';
 
 varian,
   t: 'ai-futuristic, contactInf,
@@ -249,7 +249,7 @@ varian,
     ratin,
   g: 4.9,
     review,
-  s: 312};
+  s: 312}';
 
     i,
   d: 'ai-autonomous-customer-success, nam,
@@ -262,7 +262,7 @@ varian,
     descriptio,
   n: 'AI-powered customer success platform that automatically identifies at-risk customers, predicts churn, and implements retention strategies without human intervention.,
     feature,
-  s: [;
+  s: [';
 
       Automatic churn predictionPersonalized retention strategiesCustomer health scoringProactive issue resolutionSuccess metric trackingAutomated outreach campaignsCustomer journey optimizationSentiment analysis
       ROI measurementIntegration with CRM systems
@@ -287,20 +287,20 @@ varian,
     realServic,
   e: true,
     technolog,
-  y: [GPT-4, Claude 3, Python, React, Node.js, PostgreSQL, Redis, Elasticsearch];
+  y: [GPT-4, Claude 3, Python, React, Node.js, PostgreSQL, Redis, Elasticsearch]';
 
     integration,
-  s: [Salesforce, HubSpot, Pipedrive, Intercom, Zendesk, Slack, Teams];
+  s: [Salesforce, HubSpot, Pipedrive, Intercom, Zendesk, Slack, Teams]';
 
     useCase,
   s: ['SaaS customer retentionSubscription managementCustomer support automationRevenue optimization], ro,
   i: 'Increase customer retention by 35% and reduce churn by 60%.,
     competitor,
-  s: [Gainsight, Totango, ChurnZero, Customer.io];
+  s: [Gainsight, Totango, ChurnZero, Customer.io]';
 
     marketSiz,
   e: '$8B+ customer success market, growthRat,
-  e: 140% YoY,;
+  e: 140% YoY,';
 
 varian,
   t: 'ai-futuristic, contactInf,
@@ -315,7 +315,7 @@ varian,
     ratin,
   g: 4.7,
     review,
-  s: 203};
+  s: 203}';
 
     i,
   d: 'ai-autonomous-marketing-orchestrator, nam,
@@ -329,7 +329,7 @@ varian,
     descriptio,
   n: 'End-to-end marketing automation platform that autonomously manages campaigns across all channels, optimizes budgets, and maximizes ROI using advanced AI algorithms.,
     feature,
-  s: [;
+  s: [';
 
       Cross-channel campaign coordinationAutonomous budget optimizationReal-time performance trackingA/B testing automationAudience segmentation AIContent personalizationROI maximization algorithmsPredictive analytics
       Multi-platform integrationAutomated reporting
@@ -354,20 +354,20 @@ varian,
     realServic,
   e: true,
     technolog,
-  y: [GPT-4, Claude 3, Python, React, Node.js, PostgreSQL, Redis, Apache Kafka];
+  y: [GPT-4, Claude 3, Python, React, Node.js, PostgreSQL, Redis, Apache Kafka]';
 
     integration,
-  s: [Google Ads, Facebook Ads, LinkedIn Ads, Twitter Ads, HubSpot, Salesforce, Mailchimp];
+  s: [Google Ads, Facebook Ads, LinkedIn Ads, Twitter Ads, HubSpot, Salesforce, Mailchimp]';
 
     useCase,
   s: ['Multi-channel marketingCampaign optimizationBudget managementROI maximization], ro,
   i: 'Increase marketing ROI by 250% and reduce customer acquisition costs by 40%.,
     competitor,
-  s: [HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit];
+  s: [HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit]';
 
     marketSiz,
   e: '$20B+ marketing automation market, growthRat,
-  e: 110% YoY,;
+  e: 110% YoY,';
 
 varian,
   t: 'ai-futuristic, contactInf,
@@ -382,7 +382,7 @@ varian,
     ratin,
   g: 4.8,
     review,
-  s: 189};
+  s: 189}';
 
     i,
   d: 'ai-autonomous-sales-intelligence, nam,
@@ -395,13 +395,13 @@ varian,
     descriptio,
   n: 'Intelligent sales platform that autonomously identifies high-value prospects, qualifies leads, and nurtures them through the sales funnel using advanced AI and behavioral analysis.,
     feature,
-  s: [;
+  s: [';
 
       Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection
       ROI trackingCRM integration
-    ];
+    ]';
 
-    popular: true;
+    popular: true';
 
     icon: ',
     color: 'from-yellow-600 to-orange-700,
@@ -409,40 +409,40 @@ varian,
     link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-sales-intelligence,
     marketPosition: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.,
     targetAudience:
-        targetAudience: [Sales teamsB2B companiesenterprise softwareconsulting firms];
+        targetAudience: [Sales teamsB2B companiesenterprise softwareconsulting firms]';
 
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: '1 week,
     category: 'AI & Sales,
-    realService: true;
+    realService: true';
 
-    technology: [GPT-4, Claude 3, Python, React, Node && Node.js, PostgreSQL, Redis, Elasticsearch];
+    technology: [GPT-4, Claude 3, Python, React, Node && Node.js, PostgreSQL, Redis, Elasticsearch]';
 
-    integrations: [Salesforce, HubSpot, Pipedrive, LinkedIn Sales Navigator, Zoom, Calendly];
+    integrations: [Salesforce, HubSpot, Pipedrive, LinkedIn Sales Navigator, Zoom, Calendly]';
 
     useCases: ['Lead generationSales qualificationPipeline managementRevenue optimization],
     roi: 'Increase sales conversion rates by 45% and reduce sales cycle by 30%.,
-    competitors: [SalesLoft, Outreach, HubSpot Sales, Pipedrive, Close];
+    competitors: [SalesLoft, Outreach, HubSpot Sales, Pipedrive, Close]';
 
     marketSize: '$12B+ sales intelligence market,
-    growthRate: 130% YoY,;
+    growthRate: 130% YoY,';
 
 variant: 'ai-futuristic,
-    contactInfo: contact;
+    contactInfo: contact';
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.,
     launchDate: '2026-01-25,
-    customers: 198;
+    customers: 198';
 
-    rating: 4 && 4.9;
+    rating: 4 && 4.9';
 
-    reviews: 267;
+    reviews: 267';
 
     popula,
-  r: true;
+  r: true';
 
     ico,
   n: ',
@@ -456,7 +456,7 @@ variant: 'ai-futuristic,
     marketPositio,
   n: First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.
     targetAudienc,
-  e: [Sales teamsB2B companiesenterprise softwareconsulting firms];
+  e: [Sales teamsB2B companiesenterprise softwareconsulting firms]';
 
     trialDay,
   s: 14,
@@ -467,10 +467,10 @@ variant: 'ai-futuristic,
     realServic,
   e: true,
     technolog,
-  y: [GPT-4, Claude 3, Python, React, Node && Node.js, PostgreSQL, Redis, Elasticsearch];
+  y: [GPT-4, Claude 3, Python, React, Node && Node.js, PostgreSQL, Redis, Elasticsearch]';
 
     integration,
-  s: [Salesforce, HubSpot, Pipedrive, LinkedIn Sales Navigator, Zoom, Calendly];
+  s: [Salesforce, HubSpot, Pipedrive, LinkedIn Sales Navigator, Zoom, Calendly]';
 
     useCase,
   s: ['Lead generationSales qualificationPipeline managementRevenue optimization],
@@ -502,11 +502,11 @@ varian,
     review,
   s: 267}
 
-];
+]';
 
-// Service categories;
+// Service categories';
 
-export const aiAutomationCategories = [;;
+export const aiAutomationCategories = [';';
 
   'All,
   'AI & Business Automation,
@@ -515,9 +515,9 @@ export const aiAutomationCategories = [;;
   'AI & Financial Services,
   'AI & Human Resources,
   AI & Marketing
-];
+]';
 
-export const getAIAutomationServicesByCategory = (category: string) =>;;
+export const getAIAutomationServicesByCategory = (category: string) =>';';
 
   if (category === 'All) return advancedAIAutomationServices;,
   return advancedAIAutomationServices.filter(service => service.category === category)};
@@ -557,17 +557,17 @@ export const getAIAutomationServicesByTechnology = (technolog);;
       tech.toLowerCase().includes(technology.toLowerCase())
   </div>))};
 
-export const getAIAutomationServicesByPriceRange = (minPrice: number) maxPrice: number): AIAutomationService[] =>,;;
+export const getAIAutomationServicesByPriceRange = (minPrice: number) maxPrice: number): AIAutomationService[] =>,;';
 
   return advancedAIAutomationServices.filter(service =>)
-export const getAIAutomationServicesByPriceRange = (minPric);;
+export const getAIAutomationServicesByPriceRange = (minPric)';';
 
   e: number) maxPric,
   e: number): AIAutomationService[] =>,
-  return advancedAIAutomationServices.filter(service =>);
+  return advancedAIAutomationServices.filter(service =>)';
 
-const _price = parseFloat(service.price.replace('$') '').replace(')'; ));;
+const _price = parseFloat(service.price.replace('$') ').replace(')'; ))';';
 
-    return price >= minPrice && (maxPrice === Infinity || price <= maxPrice)})};
+    return price >= minPrice && (maxPrice === Infinity || price <= maxPrice)})}';
 
 export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026'

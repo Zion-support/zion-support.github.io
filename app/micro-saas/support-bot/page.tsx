@@ -1,10 +1,10 @@
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Bot, ArrowRight } from 'lucide-react;
+import { Bot, ArrowRight } from 'lucide-react';
 
-;
+';
 
 const SmartSupportBotPage: React.FC = () => {
   return (<div>
@@ -44,13 +44,13 @@ const SmartSupportBotPage: React.FC = () => {
         <
       <
     <)
-  );
+  )';
 
 )]
-    };
+    }'";
 
-};
+}'"'";
 
-export default SmartSupportBotPage;
+export default SmartSupportBotPage'"'"'";
 
-  );)
+  )'"'"'"'";)

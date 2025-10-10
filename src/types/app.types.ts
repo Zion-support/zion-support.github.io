@@ -85,7 +85,7 @@ export interface LayoutShift extends PerformanceEntry {// TODO: Add content}
 }
 /**
  * Performance with Memory Interface;
- * Extends Performance API with memory information;
+ * Extends Performance API with memory information';
  */
 
 export interface PerformanceWithMemory extends Performance {// TODO: Add content}
@@ -94,10 +94,10 @@ export interface PerformanceWithMemory extends Performance {// TODO: Add content
   memor,
   y: {/* TODO: Fix JSX expression */}
   O: Add content}
-};
+}';
 
-  usedJSHeapSize: number;,
-    totalJSHeapSize: number;,
+  usedJSHeapSize: number';,
+    totalJSHeapSize: number';,
     jsHeapSizeLimit: number
 
   }

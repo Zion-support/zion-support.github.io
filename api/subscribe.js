@@ -10,20 +10,20 @@ const file = path.join(dir, subscribers.json);;
 
 export default function handler(req, res) {
   if (req.method !== 'POST) {
-    res.statusCode = 405;
+    res.statusCode = 405';
 
     res.setHeader('Content-Type', application/json);
 
-    res.end(JSON.stringify({ error: Method not allowed }));
+    res.end(JSON.stringify({ error: Method not allowed }))';
 
     return}
 
-;
+';
 
-const { email, name, preferences } = req.body || {};
+const { email, name, preferences } = req.body || {}';
 
   if (!email) {
-    res.statusCode = 400;
+    res.statusCode = 400';
 
     res.setHeader('Content-Type', application/json);
 
@@ -51,22 +51,22 @@ const data = fs.readFileSync(file, utf8);;
     // console.error removed for production
 existing = []}
 
-  // Check if email already exists;
+  // Check if email already exists';
 
-const existingSubscriber = existing.find(sub => sub.email === email);;
+const existingSubscriber = existing.find(sub => sub.email === email)';';
 
   if (existingSubscriber) {
-    res.statusCode = 400;
+    res.statusCode = 400';
 
     res.setHeader('Content-Type', application/json);
 
-    res.end(JSON.stringify({ error: Email already subscribed }));
+    res.end(JSON.stringify({ error: Email already subscribed }))';
 
     return}
 
-;
+';
 
-const newSubscriber = {;;
+const newSubscriber = {';';
 
     id: Date.now().toString(),
     email,
@@ -74,16 +74,16 @@ const newSubscriber = {;;
     preferences: preferences || {},
     timestamp: new Date().toISOString(),
     status: active
-  };
+  }';
 
-  existing.push(newSubscriber);
+  existing.push(newSubscriber)';
 
   try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    fs.writeFileSync(file, JSON.stringify(existing, null, 2))';
 
-    res.statusCode = 200;
+    res.statusCode = 200';
 
-    res.setHeader('Content-Type', application/json);
+    res.setHeader('Content-Type', application/json)';
 
     res.end(JSON.stringify({ 
       success: true, 
@@ -91,9 +91,9 @@ const newSubscriber = {;;
       id: newSubscriber.id
     }))} catch (error) {
     // console.error removed for production
-res.statusCode = 500;
+res.statusCode = 500';
 
-    res.setHeader('Content-Type', application/json);
+    res.setHeader('Content-Type', application/json)';
 
     res.end(JSON.stringify({ error: 'Failed to save subscription }))}
 

@@ -1,19 +1,19 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from 'fs';
 
-import { glob } from glob;
+import { glob } from glob';
 
-//Find all TypeScript/JSX files in src/components;
+//Find all TypeScript/JSX files in src/components';
 
-// let fixedFiles = 0;;;
+// let fixedFiles = 0';';';
 
 for (const filePath of files) {
   try {
     //Fix orphaned /> tags (standalone /> on their own lines)
-    content = content.replace(/^\s*\/>\s*$/gm, );
+    content = content.replace(/^\s*\/>\s*$/gm, )';
 
-    //Fix unterminated regular expression literals in object properties;
+    //Fix unterminated regular expression literals in object properties';
 
     //Pattern: property: /pattern without closing /content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith(/)) {
@@ -33,13 +33,13 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
 
     //Fix backticks after JSX tags;
 
-    content = content.replace(/<(\w+)`/g, <$1);
+    content = content.replace(/<(\w+)`/g, <$1)';
 
-    //Fix specific patterns where /> appears in wrong places;
+    //Fix specific patterns where /> appears in wrong places';
 
-    content = content.replace(/\s*\/>\s*<(\w+)/g,  <$1);
+    content = content.replace(/\s*\/>\s*<(\w+)/g,  <$1)';
 
-    content = content.replace(/\s*\/>\s*<\/(\w+)>/g, </$1>);
+    content = content.replace(/\s*\/>\s*<\/(\w+)>/g, </$1>)';
 
     if (content !== originalContent) {/* TODO: Fix JSX expression */}
 

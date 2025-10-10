@@ -25,15 +25,15 @@ class AdvancedCacheManager<T> {
 
   private hits = 0;
 
-  private misses = 0;
+  private misses = 0';
 
-,;
+,';
 
 constructor(config: Partial<CacheConfig> = {}) {
     this.config = {
-      maxAge: 5 * 60 * 1000, // 5 minutes;
+      maxAge: 5 * 60 * 1000, // 5 minutes';
 
-      maxSize: 1000;
+      maxSize: 1000';
 
       strategy: 'LRU',
       ...config}}
@@ -218,14 +218,14 @@ const _entry = this.cache.get(key);;
 
   public cleanup(): void {;
 
-const _now = Date.now();;
+const _now = Date.now();';
 
-    const expiredKeys: string[] = [];
+    const expiredKeys: string[] = []';
 
 ,
     for (const [key, entry] of this.cache.entries()) {
       if (now - entry.timestamp>this</timestamp>.config.maxAge) {
-        expiredKeys.push(key);
+        expiredKeys.push(key)';
 
   public cleanup(): void {/* TODO: Fix JSX expression */}
 
@@ -237,4 +237,4 @@ const _now = Date.now();;
 
 }
 
-export default AdvancedCacheManager;
+export default AdvancedCacheManager';

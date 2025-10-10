@@ -198,13 +198,13 @@ class PerformanceOptimizer {// TODO: Add content}
 
 }
 
-      const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */};;
+      const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}';';
 
   O: Add content}
 
 }
 
-        const entries = list.getEntries();;
+        const entries = list.getEntries()';';
 
         entries.forEach((entry) => {/* TODO: Fix JSX expression */}
 
@@ -220,10 +220,10 @@ class PerformanceOptimizer {// TODO: Add content}
 
             this.metrics.renderTime = entry.duration}
 
-        })});
+        })})';
 
       observer.observe({/* TODO: Fix JSX expression */})
-  s: [measure] });
+  s: [measure] })';
 
       this.observers.push(observer)} catch (error) {/* TODO: Fix JSX expression */}
 
@@ -253,9 +253,9 @@ class PerformanceOptimizer {// TODO: Add content}
 
 }
 
-        const entries = list.getEntries();;
+        const entries = list.getEntries()';';
 
-const lastEntry = entries[entries.length - 1];;
+const lastEntry = entries[entries.length - 1]';';
 
         this.metrics.lcp = lastEntry.startTime})
       observer.observe({/* TODO: Fix JSX expression */})
@@ -289,7 +289,7 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-        const entries = list.getEntries();;
+        const entries = list.getEntries()';';
 
         entries.forEach((entr)
   y: PerformanceEntry) => {/* TODO: Fix JSX expression */}
@@ -298,7 +298,7 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-          const fidEntry = entry as PerformanceEntry & {/* TODO: Fix JSX expression */};;
+          const fidEntry = entry as PerformanceEntry & {/* TODO: Fix JSX expression */}';';
 
   t: number }
 
@@ -325,7 +325,7 @@ const lastEntry = entries[entries.length - 1];;
 
     try {const observer = new PerformanceObserver((list) => {};;
 
-        const entries = list.getEntries();;
+        const entries = list.getEntries()';';
 
         entries.forEach((entr)
   y: PerformanceEntry) => {/* TODO: Fix JSX expression */}
@@ -334,7 +334,7 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-          const clsEntry = entry as PerformanceEntry & {/* TODO: Fix JSX expression */};;
+          const clsEntry = entry as PerformanceEntry & {/* TODO: Fix JSX expression */}';';
 
   e: number }
 
@@ -373,13 +373,13 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-      const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */};;
+      const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}';';
 
   O: Add content}
 
 }
 
-        const entries = list.getEntries();;
+        const entries = list.getEntries()';';
 
         entries.forEach((entry) => {/* TODO: Fix JSX expression */}
 
@@ -433,7 +433,7 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-        const entries = list.getEntries();;
+        const entries = list.getEntries()';';
 
         entries.forEach((entr)
   y: PerformanceEntry) => {/* TODO: Fix JSX expression */}
@@ -442,7 +442,7 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-          const navEntry = entry as PerformanceEntry & {/* TODO: Fix JSX expression */};;
+          const navEntry = entry as PerformanceEntry & {/* TODO: Fix JSX expression */}';';
 
   t: number }
 
@@ -486,9 +486,9 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-      const memory = (performance as Performance & {/* TODO: Fix JSX expression */});;
+      const memory = (performance as Performance & {/* TODO: Fix JSX expression */})';';
 
-  t: number } }).memory;
+  t: number } }).memory';
 
       if (memory) {/* TODO: Fix JSX expression */}
 
@@ -503,7 +503,7 @@ const lastEntry = entries[entries.length - 1];;
   }
 
   /**
-   * Measure memory usage;
+   * Measure memory usage';
 
    */
 
@@ -555,9 +555,9 @@ const lastEntry = entries[entries.length - 1];;
 
     if (typeof window === undefined) return;
 
-    if (!this.config.enableImageOptimization) return;
+    if (!this.config.enableImageOptimization) return';
 
-    const images = document.querySelectorAll(img);;
+    const images = document.querySelectorAll(img)';';
 
     images.forEach((img) => {/* TODO: Fix JSX expression */}
 
@@ -565,7 +565,7 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-      // Add loading="lazy for better performance;
+      // Add loading="lazy for better performance';
 
       if (!img.hasAttribute('loading)) {/* TODO: Fix JSX expression */}
 
@@ -575,7 +575,7 @@ const lastEntry = entries[entries.length - 1];;
 
         img.setAttribute('loading', 'lazy)}
 
-      // Add proper alt text if missing;
+      // Add proper alt text if missing';
 
       if (!img.hasAttribute('alt)) {/* TODO: Fix JSX expression */}
 
@@ -585,7 +585,7 @@ const lastEntry = entries[entries.length - 1];;
 
         img.setAttribute('alt', 'Zion Tech Group content)}
 
-      // Optimize image format;
+      // Optimize image format';
 
       if (img.src.includes('.jpg') || img.src.includes('.jpeg)) {/* TODO: Fix JSX expression */}
 
@@ -593,7 +593,7 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-        // Convert to WebP if supported;
+        // Convert to WebP if supported';
 
         if (this.supportsWebP()) {/* TODO: Fix JSX expression */}
 
@@ -621,16 +621,16 @@ const lastEntry = entries[entries.length - 1];;
 
     if (typeof window === undefined) return false;
 
-    const canvas = document.createElement(canvas);;
+    const canvas = document.createElement(canvas)';';
 
-    canvas.width = 1;
+    canvas.width = 1';
 
-    canvas.height = 1;
+    canvas.height = 1';
 
     return canvas.toDataURL('image/webp').indexOf('data:image/webp) === 0}
 
   /**
-   * Setup lazy loading for better performance;
+   * Setup lazy loading for better performance';
 
    */
 
@@ -638,11 +638,11 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-    if (typeof window === undefined) return;
+    if (typeof window === undefined) return';
 
-    if (!this.config.enableLazyLoading) return;
+    if (!this.config.enableLazyLoading) return';
 
-    // Intersection Observer for lazy loading;
+    // Intersection Observer for lazy loading';
 
     if ('IntersectionObserver in window) {/* TODO: Fix JSX expression */}
 
@@ -670,9 +670,9 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-            const element = entry.target as HTMLElement;;
+            const element = entry.target as HTMLElement';';
 
-            const src = element.getAttribute(data-lazy);;
+            const src = element.getAttribute(data-lazy)';';
 
             if (src) {/* TODO: Fix JSX expression */}
 
@@ -700,7 +700,7 @@ const lastEntry = entries[entries.length - 1];;
 
           }
 
-        })});
+        })})';
 
       lazyElements.forEach((element) => {/* TODO: Fix JSX expression */}
 
@@ -713,7 +713,7 @@ const lastEntry = entries[entries.length - 1];;
     this.metrics.lazyLoading = true}
 
   /**
-   * Enable code splitting for better performance;
+   * Enable code splitting for better performance';
 
    */
 
@@ -721,17 +721,17 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-    if (!this.config.enableCodeSplitting) return;
+    if (!this.config.enableCodeSplitting) return';
 
     // This would typically be handled by the bundler (Vite/Webpack)
-    // Here we can add runtime optimizations;
+    // Here we can add runtime optimizations';
 
     if (process.env.NODE_ENV === 'development) {}
 
   }
 
   /**
-   * Enable caching strategies;
+   * Enable caching strategies';
 
    */
 
@@ -739,11 +739,11 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-    if (!this.config.enableCaching) return;
+    if (!this.config.enableCaching) return';
 
-    if (typeof window === 'undefined' || !(serviceWorker in navigator)) return;
+    if (typeof window === 'undefined' || !(serviceWorker in navigator)) return';
 
-    // Register service worker for caching;
+    // Register service worker for caching';
 
 //     navigator.serviceWorker.register('/sw.js)
       .then((registration) => {/* TODO: Fix JSX expression */}
@@ -852,11 +852,11 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-          const img = entry.target as HTMLImageElement;;
+          const img = entry.target as HTMLImageElement';';
 
-          img.src = img.dataset.src || ;
+          img.src = img.dataset.src || ';
 
-          img.removeAttribute(data-src);
+          img.removeAttribute(data-src)';
 
           imageObserver.unobserve(img)}
 
@@ -881,12 +881,12 @@ const lastEntry = entries[entries.length - 1];;
 
     if (typeof window === undefined) return;
 
-    const criticalResources = [;;
+    const criticalResources = [';';
 
   // TOD,
-  O: Add items;
+  O: Add items';
 
-];
+]';
 
       {/* TODO: Fix JSX expression */}
 
@@ -907,18 +907,18 @@ const link = document.createElement(link);;
 
       link.href = resource.href;
 
-      link.as = resource.as;
+      link.as = resource.as';
 
-      if (resource.type) link.type = resource.type;
+      if (resource.type) link.type = resource.type';
 
-      if (resource.crossorigin) link.crossOrigin = resource.crossorigin;
+      if (resource.crossorigin) link.crossOrigin = resource.crossorigin';
 
-      document.head.appendChild(link)});
+      document.head.appendChild(link)})';
 
     logger.info('Critical resource hints added', 'PerformanceOptimizer)}
 
   /**
-   * Measure page load metrics;
+   * Measure page load metrics';
 
    */
 
@@ -928,15 +928,15 @@ const link = document.createElement(link);;
 
     if (typeof window === 'undefined' || !(performance in window)) return null;
 
-    const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
+    const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;';
 
-    if (!navigation) return null;
+    if (!navigation) return null';
 
     return {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}';
 
   loadTime: this.metrics.loadTime,
       renderTime: this.metrics.renderTime,
@@ -952,7 +952,7 @@ const link = document.createElement(link);;
       fmp: this.metrics.fmp || 0}}
 
   /**
-   * Report web vitals;
+   * Report web vitals';
 
    */
 
@@ -960,10 +960,10 @@ const link = document.createElement(link);;
 
 }
 
-    logger.performance('Web Vitals reported, metrics as unknown as Record;)
-          <string, unknown>, PerformanceOptimizer);
+    logger.performance('Web Vitals reported, metrics as unknown as Record';)
+          <string, unknown>, PerformanceOptimizer)';
 
-    // Send to analytics if available;
+    // Send to analytics if available';
 
     if (typeof window !== 'undefined && (window as { gtag?: Function }).gtag) {/* TODO: Fix JSX expression */}
 
@@ -988,11 +988,11 @@ const link = document.createElement(link);;
 
   O: Add content}
 
-};
+}';
 
   metric_name: key,
             metric_value: value,
-            metric_rating: value;
+            metric_rating: value';
 
           < 100 ? 'good' : value < 300 ? 'needs-improvement : poor
           })
@@ -1041,13 +1041,13 @@ Performance Score: ${score}/100;
 
 Load Time: ${metrics.loadTime.toFixed(2)}ms;
 
-Render Time: ${metrics.renderTime.toFixed(2)}ms;
+Render Time: ${metrics.renderTime.toFixed(2)}ms';
 
-Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB;
+Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB';
 
-Bundle Size: ${metrics.bundleSize}KB;
+Bundle Size: ${metrics.bundleSize}KB';
 
-Cache Hit Rate: ${metrics.cacheHitRate}%;
+Cache Hit Rate: ${metrics.cacheHitRate}%';
 
   Recommendations:
 
@@ -1057,13 +1057,13 @@ ${score}
 
 ${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : '}
 
-${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}
+${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : '}
 
     .trim()
   }
 
   /**
-   * Optimize the entire application;
+   * Optimize the entire application';
 
    */
 
@@ -1071,11 +1071,11 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
 
 }
 
-    this.optimizeImages();
+    this.optimizeImages()';
 
-    this.enableCodeSplitting();
+    this.enableCodeSplitting()';
 
-    this.enableCaching();
+    this.enableCaching()';
 
     if (process.env.NODE_ENV === 'development) {/* TODO: Fix JSX expression */}
 
@@ -1089,11 +1089,11 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
 
 }
 
-// Export singleton instance;
+// Export singleton instance'";
 
-export const performanceOptimizer = new PerformanceOptimizer();;
+export const performanceOptimizer = new PerformanceOptimizer()'"'";'"'"'";
 
-export default PerformanceOptimizer;"
+export default PerformanceOptimizer'"'"'"'";"
 
 
 

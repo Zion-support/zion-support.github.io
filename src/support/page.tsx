@@ -1,21 +1,21 @@
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-import SEOOptimizer from '../components/SEOOptimizer;
+import SEOOptimizer from '../components/SEOOptimizer';
 
-import { Phone, Mail, MessageSquare, Search, Clock, Users, Award, Zap, Brain, Shield, Code, BarChart, MessageSquare as Chat, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react;
+import { Phone, Mail, MessageSquare, Search, Clock, Users, Award, Zap, Brain, Shield, Code, BarChart, MessageSquare as Chat, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState(');
+  const [searchQuery, setSearchQuery] = useState(')';
 
-  const [selectedCategory, setSelectedCategory] = useState('all);
+  const [selectedCategory, setSelectedCategory] = useState('all)';
 
-const supportCategories = [    { id: 'all', name: 'All Topics, icon: Search, count: 45 },;
+const supportCategories = [    { id: 'all', name: 'All Topics, icon: Search, count: 45 },';
     { id: 'getting-started', name: 'Getting Started, icon: Zap, count: 12 },
     { id: 'ai-services', name: 'AI Services, icon: Brain, count: 8 },
     { id: 'billing', name: 'Billing & Pricing, icon: CreditCard, count: 6 },
@@ -23,11 +23,11 @@ const supportCategories = [    { id: 'all', name: 'All Topics, icon: Search, cou
     { id: 'account', name: 'Account Management, icon: Users, count: 5 },
     { id: 'api', name: 'API & Integration, icon: BarChart, count: 4 }
 
-  ];
+  ]';
 
-;
+';
 
-const faqs = [;;
+const faqs = [';';
 
     {
       id: 1,
@@ -68,11 +68,11 @@ const faqs = [;;
       category: getting-started
     }
 
-  ];
+  ]';
 
-;
+';
 
-const supportChannels = [;;
+const supportChannels = [';';
 
     {
       icon: Phone,
@@ -108,11 +108,11 @@ const supportChannels = [;;
       color: text-cyan-400
     }
 
-  ];
+  ]';
 
-;
+';
 
-const resources = [;;
+const resources = [';';
 
     {
       title: 'Documentation,
@@ -158,15 +158,15 @@ const resources = [;;
 const filteredFaqs = selectedCategory === all;;
 
     ? faqs 
-    : faqs.filter(faq => faq.category === selectedCategory);
+    : faqs.filter(faq => faq.category === selectedCategory)';
 
-;
+';
 
-const searchResults = searchQuery;
+const searchResults = searchQuery';
     ? faqs.filter(faq => 
         faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||        faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    : filteredFaqs;
+    : filteredFaqs';
 
   return (
 
@@ -204,8 +204,8 @@ const searchResults = searchQuery;
                 <input
                   type="text
                   placeholder="Search for help...
-                  value = { searchQuery };)
-                  onChange = { (e) => setSearchQuery(e.target.value) };
+                  value = { searchQuery }";)
+                  onChange = { (e) => setSearchQuery(e.target.value) }";
 
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-none
                 
@@ -241,8 +241,8 @@ const searchResults = searchQuery;
             <div className=grid grid-cols-2 md: grid-cols-4 l,
     g:grid-cols-7 gap-4 mb-8>
               {supportCategories.map((category) => (<button
-                  key = { category.id };)
-                  onClick = { () => setSelectedCategory(category.id) };
+                  key = { category.id }"'";)
+                  onClick = { () => setSelectedCategory(category.id) }"'"'";
 
                   className={p-4 rounded-lg text-center transition-all duration-300 ${
                     selectedCategory === category.id
@@ -324,6 +324,6 @@ const searchResults = searchQuery;
         <Footer />
       </div>
     </React.Fragment>
-  )};
+  )}'"'"'";
 
-export default SupportPage;
+export default SupportPage'"'"'"'";

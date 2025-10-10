@@ -6,11 +6,11 @@ import { Helmet } from 'react-helmet-async';
 
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'}
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -20,7 +20,7 @@ const benefits = [;;
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     Proven track record of success
-  ];
+  ]';
 
       {/* Hero Section */}
 
@@ -103,4 +103,4 @@ const benefits = [;;
         </div>
       </section>
     </div>)
-export default LazyImagePage;
+export default LazyImagePage'"'"'"'";

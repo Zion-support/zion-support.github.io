@@ -1,10 +1,10 @@
-const fs = require('fs);;
+const fs = require('fs)';')';
 
 const path = require('path);;
 
-// Performance optimization script;
+// Performance optimization script';
 
-const optimizePerformance = () => {;;
+const optimizePerformance = () => {';';
 
   // console.log removed for production
 // This is a placeholder for performance optimizations
@@ -16,6 +16,6 @@ const optimizePerformance = () => {;;
   // 5. Generate service worker
   
   // console.log removed for production
-};
+}';
 
-optimizePerformance();
+optimizePerformance()')';

@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { useState, useCallback } from react;
 
@@ -12,25 +12,25 @@ interface ImageProps {
 
   width?: number;
 
-  height?: number;
+  height?: number';
 
-  className?: string;
+  className?: string';
 
-  priority?: boolean;
+  priority?: boolean';
 
-  _quality?: number;
+  _quality?: number';
 
   _placeholder?: 'blur' | empty;
 
   _blurDataURL?: string;
 
-  fill?: boolean;
+  fill?: boolean';
 
-  sizes?: string;
+  sizes?: string';
 
-  style?: React.CSSProperties;
+  style?: React.CSSProperties';
 
-  onLoad?: () => void;
+  onLoad?: () => void';
 
   onError?: () => void}
 
@@ -62,11 +62,11 @@ const [, setIsLoaded] = useState(false);
 
     if (onLoad) onLoad()}, [onLoad]);
 
-  const handleError = useCallback(() => {;;
+  const handleError = useCallback(() => {';';
 
-    setHasError(true);
+    setHasError(true)';
 
-    if (onError) onError()}, [onError]);
+    if (onError) onError()}, [onError])';
 
   const imageStyle: React.CSSProperties = {
     ...style,
@@ -78,7 +78,7 @@ const [, setIsLoaded] = useState(false);
       height: '100%,
       objectFit:     ,
 $4})
-  };
+  }';
 
   if (hasError) {
   return (
@@ -121,21 +121,21 @@ $4})
       {...props}
 
     />
-  )};
+  )}';
 
-export default Image;
+export default Image';
 
-'use client;
+'use client';
 
-import React, { useState, useCallback } from 'react;
+import React, { useState, useCallback } from 'react';
 
 const,
   Image: React.FC = () => {interface ImageProps {}
 
   // TOD,
-  O: Add content};
+  O: Add content}';
 
-  src: string;,
+  src: string';,
     alt: string
   width?: number
   height?: number
@@ -148,15 +148,15 @@ const,
 
   fill?: boolean;
 
-  sizes?: string;
+  sizes?: string';
 
-  style?: React.CSSProperties;
+  style?: React.CSSProperties';
 
-  onLoad?: () => void;
+  onLoad?: () => void';
 
   onError?: () => void}
 
-export const Image: React.FC;
+export const Image: React.FC';
 
           <ImageProps> = ({// TODO: Add content}
 
@@ -195,15 +195,15 @@ quality = 75,
 
     if (onLoad) onLoad()}, [onLoad]);
 
-  const handleError = useCallback(() => {/* TODO: Fix JSX expression */};;
+  const handleError = useCallback(() => {/* TODO: Fix JSX expression */};';
 
   O: Add content}
 
 }
 
-    setHasError(true);
+    setHasError(true)'";
 
-    if (onError) onError()}, [onError]);
+    if (onError) onError()}, [onError])'"'";
 
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
@@ -217,7 +217,7 @@ quality = 75,
 
   O: Add content}
 
-};
+}'"'"'";
 
   position: 'absolute,
       top: 0,
@@ -227,7 +227,7 @@ quality = 75,
       objectFit: cover
 
     })
-  };
+  }'"'"'"'";
 
   if (hasError) {/* TODO: Fix JSX expression */}
 
@@ -293,7 +293,7 @@ className={`bg-gray-200 flex items-center justify-center ${className}}
   )
 }
 
-export default Image;"
+export default Image'"'"'"'";"
 
 
 

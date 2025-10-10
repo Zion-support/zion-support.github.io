@@ -9,11 +9,11 @@ const stats = [;;;
     { number: '5+', label: 'Years Experience },
     { number: '99%', label: 'Success Rate }
 
-  ];
+  ]';
 
-;
+';
 
-const values = [;;
+const values = [';';
 
     {
       title: 'Innovation First,
@@ -46,7 +46,7 @@ const values = [;;
       )
     }
 
-  ];
+  ]'"'"'"'";
 
   return (
 

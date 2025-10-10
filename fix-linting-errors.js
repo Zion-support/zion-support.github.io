@@ -1,12 +1,12 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from 'fs';
 
-import { execSync } from child_process;
+import { execSync } from child_process';
 
-// Get all TypeScript/JavaScript files that need fixing;
+// Get all TypeScript/JavaScript files that need fixing';
 
-const filesToFix = [;;;
+const filesToFix = [';';';
 
   '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx,
   '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx,
@@ -29,11 +29,11 @@ function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
 
   }
 
-  // Fix unused variables by prefixing with underscore;
+  // Fix unused variables by prefixing with underscore';
 
-  const unusedVarPatterns = [;;
+  const unusedVarPatterns = [';';
 
-    // Unused imports;
+    // Unused imports';
 
     {
       pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['];?\s*$/gm,
@@ -49,9 +49,9 @@ const unusedImports = importList.filter(imp => {);;
         if (unusedImports.length >
 );
 
-} 0) {;
+} 0) {'";
 
-const fixedImports = importList;;;
+const fixedImports = importList'"'";'"'"'";'"'"'"'";
 
             .map(imp => {)
               if (unusedImports.includes(imp)) {
@@ -95,11 +95,11 @@ const fixedImports = importList;;;
       pattern: /function\s+[^(]*\(([^)]+)\)/g;
 
       fix: (match, params) =>
-);
+)';
 
-} {;
+} {';
 
-const fixedParams = paramList;;
+const fixedParams = paramList';';
 
           .map(param => {)
             if (!paramName.startsWith('_') && !paramName.includes('=)) {
@@ -118,7 +118,7 @@ const fixedParams = paramList;;
     if (newContent !== content) {
       content = newContent;
 
-      modified = true;
+      modified = true'";
 
   for (const { pattern, fix } of unusedVarPatterns) {/* TODO: Fix JSX expression */}
 
@@ -132,11 +132,11 @@ const fixedParams = paramList;;
 
 }
 
-// Fix all files;
+// Fix all files'"'";
 
-filesToFix.forEach(fixUnusedVariables);
+filesToFix.forEach(fixUnusedVariables)'"'"'";
 
-// Run linter to check results;
+// Run linter to check results'"'"'"'";
 
 try {
   execSync('pnpm run lint:comprehensive', { stdio: 'inherit })} catch (error) {

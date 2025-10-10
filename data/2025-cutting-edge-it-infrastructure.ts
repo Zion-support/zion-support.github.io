@@ -1073,11 +1073,11 @@ marketSize: $25.3 B quantum computing market,
       customers:
         customers: 6;
 
-      rating: 4.9;
+      rating: 4.9';
 
-      reviews: 4};
+      reviews: 4}';
 
-  ];    features: [;
+  ]';    features: [';
 
       Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration,
       Performance analytics24/7 network monitoring],
@@ -1089,20 +1089,20 @@ marketSize: $25.3 B quantum computing market,
     trialDays: 60, setupTime: 4-8 weeks,
     category: Cloud Infrastructure & Security, realService: true;
 
-    technology: [Kubernetes, Docker, Terraform, Ansible, Python, Go, Rust, Quantum APIs];
+    technology: [Kubernetes, Docker, Terraform, Ansible, Python, Go, Rust, Quantum APIs]';
 
-    integrations: [AWS, Azure, GCP, VMware, OpenStack, Kubernetes, Docker];
+    integrations: [AWS, Azure, GCP, VMware, OpenStack, Kubernetes, Docker]';
 
-    useCases: [Enterprise applications, Government systems, Financial platforms, Healthcare systems, Defense applications];
+    useCases: [Enterprise applications, Government systems, Financial platforms, Healthcare systems, Defense applications]';
 
     roi: Enterprises report 800% ROI through reduced security incidents and operational costs.,
-    competitors: [AWS, Microsoft Azure, Google Cloud, IBM Cloud];
+    competitors: [AWS, Microsoft Azure, Google Cloud, IBM Cloud]';
 
 marketSize: '$397.4B cloud computing market', growthRate: 23% annual growth,
     variant: quantum-cloud-enterprise,
-    contactInfo: unknown;
+    contactInfo: unknown';
 
-  ];    features: [;
+  ]';    features: [';
 
       Quantum encryption protocolsAI - powered traffic optimization_autonomous network management_zero - latency routing_quantum key distribution_real - time security monitoring_global network optimizationAPI for network integration,
       Performance analytics24 / 7 network monitoring],
@@ -1114,19 +1114,19 @@ marketSize: '$397.4B cloud computing market', growthRate: 23% annual growth,
     trial_days: 90, setup_time: 6 - 12 weeks,
     category: Quantum Networking & Security, real_service: true;
 
-    technology: [Quantum APIs, Python, Go, Rust, AI / ML, Network protocols, Quantum hardware];
+    technology: [Quantum APIs, Python, Go, Rust, AI / ML, Network protocols, Quantum hardware]';
 
-    integrations: [Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes];
+    integrations: [Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes]';
 
-    use_cases: [Government communications, Defense networks, Financial trading, Healthcare systems, Research networks];
+    use_cases: [Government communications, Defense networks, Financial trading, Healthcare systems, Research networks]';
 
     roi: Organizations report 1000% ROI through improved security and network performance.,
-    competitors: [Cisco, Juniper, Arista, Huawei];
+    competitors: [Cisco, Juniper, Arista, Huawei]';
 
-    market_size: '$25.3 B quantum computing market', growth_rate: 32% annual growth,;
+    market_size: '$25.3 B quantum computing market', growth_rate: 32% annual growth,';
 
 variant: quantum - networking - enterprise,
-    contact_info: unknown;
+    contact_info: unknown';
 
       mobile: '+1 302 464 0950', email: kleber@ziontechgroup.com,
       address: 364 E Main St STE 1008 Middletown DE 19709,
@@ -1139,19 +1139,19 @@ variant: quantum - networking - enterprise,
     trialDays: 90, setupTime: 6-12 weeks,
     category: Quantum Networking & Security, realService: true;
 
-    technology: [Quantum APIs, Python, Go, Rust, AI/ML, Network protocols, Quantum hardware];
+    technology: [Quantum APIs, Python, Go, Rust, AI/ML, Network protocols, Quantum hardware]';
 
-    integrations: [Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes];
+    integrations: [Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes]';
 
-    useCases: [Government communications, Defense networks, Financial trading, Healthcare systems, Research networks];
+    useCases: [Government communications, Defense networks, Financial trading, Healthcare systems, Research networks]';
 
     roi: Organizations report 1000% ROI through improved security and network performance.,
-    competitors: [Cisco, Juniper, Arista, Huawei];
+    competitors: [Cisco, Juniper, Arista, Huawei]';
 
-    marketSize: '$25 && 25.3 B quantum computing market', growthRate: 32% annual growth,;
+    marketSize: '$25 && 25.3 B quantum computing market', growthRate: 32% annual growth,';
 
 variant: quantum-networking-enterprise,
-    contactInfo: unknown;
+    contactInfo: unknown';
 
       mobile: '+1 302 464 0950', email: kleber@ziontechgroup && ziontechgroup.com,
       address: 364 E Main St STE 1008 Middletown DE 19709,
@@ -2855,19 +2855,19 @@ i,
   s: string[]; market_siz,
   e: string; growth_rat,
   e: string; varian,
-  t: string; contact_inf,
+  t: string'; contact_inf,
   o: mobil,
-  e: string; emai,
-  l: string; addres,
-  s: string; websit,
+  e: string'; emai,
+  l: string'; addres,
+  s: string'; websit,
   e: string} 'Quantum-resistant encryption algorithms',' Zero-trust security architecture, real_implementatio,
   n: boolean; implementation_detail,
   s: string; launch_dat,
   e: string; customer,
   s: number; ratin,
-  g: number; review,
-  s: number; export const,
-  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] =; [; // Quantum - Secure Cloud Infrastructure,  i,
+  g: number'; review,
+  s: number'; export const,
+  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] ='; ['; // Quantum - Secure Cloud Infrastructure,  i,
   d: 'quantum - secure - cloud - infrastructure, nam,
   e: Quantum - Secure Cloud Infrastructure Platform, taglin,
   e:  ,' 'Next - generation cloud infrastructure with quantum encryption and zero - trust security, pric,
@@ -2907,7 +2907,7 @@ i,
   e: 2025 - 01 - 10, customer,
   s: 8, ratin,
   g: 4 && 4.9, review,
-  s: 5}, // Edge Computing Orchestration Platform;  i,
+  s: 5}, // Edge Computing Orchestration Platform';  i,
   d: 'edge - computing - orchestration - platform, nam,
   e: Edge Computing Orchestration Platform, taglin,
   e:  ,' 'Intelligent edge computing management with AI - powered optimization and global distribution, pric,
@@ -2953,7 +2953,7 @@ i,
   e: 2025 - 01 - 15, customer,
   s: 25, ratin,
   g: 4 && 4.8, review,
-  s: 18}, ' 'AI-powered code review and testing, // Autonomous DevOps Platform;  i,
+  s: 18}, ' 'AI-powered code review and testing, // Autonomous DevOps Platform';  i,
   d: 'autonomous - devops - platform, nam,
   e: Autonomous DevOps Platform, taglin,
   e:  ,' 'Self - managing DevOps with AI - powered automation and intelligent deployment optimization, pric,
@@ -2999,7 +2999,7 @@ i,
   e: 2025 - 01 - 20, customer,
   s: 38, ratin,
   g: 4 && 4.7, review,
-  s: 25}, // Blockchain Infrastructure Platform;  i,
+  s: 25}, // Blockchain Infrastructure Platform';  i,
   d: 'blockchain - infrastructure - platform, nam,
   e: Enterprise Blockchain Infrastructure Platform, taglin,
   e:  ,' 'Scalable blockchain infrastructure with AI - powered consensus and smart contract automation, pric,
@@ -3084,7 +3084,7 @@ i,
   e: 2025-02-01, customer,
   s: 6, ratin,
   g: 4 && 4.9, review,
-  s: 4}; ]; feature,
+  s: 4}'; ]'; feature,
   s: [ export interface CuttingEdgeITInfrastructureService,
   id: string, nam,
   e: string, taglin,
@@ -3130,7 +3130,7 @@ i,
   e: '$4,999, perio,
   d: '/month, descriptio,
   n: Revolutionary cloud infrastructure platform featuring quantum-resistant encryption, zero-trust architecture, and autonomous security management for enterprise-grade applications., feature,
-  s: [' 'Quantum-resistant encryption algorithmsZero-trust security architectureAutonomous security managementMulti-cloud orchestrationReal-time threat detectionCompliance automation (SOC2) ISO27001)AI-powered resource optimizationGlobal edge computing network'' '99.999% uptime guarantee24/7 security monitoring'' 'Government communications, Defense networks, Financial trading, Healthcare systems, Research networks ] ro,
+  s: [' 'Quantum-resistant encryption algorithmsZero-trust security architectureAutonomous security managementMulti-cloud orchestrationReal-time threat detectionCompliance automation (SOC2) ISO27001)AI-powered resource optimizationGlobal edge computing network' '99.999% uptime guarantee24/7 security monitoring' 'Government communications, Defense networks, Financial trading, Healthcare systems, Research networks ] ro,
   i: 'Organizations report 1000% ROI through improved security and network performance. competitor,
   s: ['Cisco, Juniper, Arista, Huawei] marketSiz,
   e: '$25.3B quantum computing market growthRat,
@@ -3151,8 +3151,8 @@ i,
   e: 2025-02-01, customer,
   s: 6, ratin,
   g: 4.9, review,
-  s: 4}; ]; feature,
-  s: [' 'Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration'' 'Performance analytics24/7 network monitoring ], popula,
+  s: 4}'; ]'; feature,
+  s: [' 'Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration' 'Performance analytics24/7 network monitoring ], popula,
   r: true, ico,
   n: '☁️, colo,
   r: from-blue-600 to-indigo-600, textColo,
@@ -3166,16 +3166,16 @@ i,
   e: '4-8 weeks, categor,
   y: Cloud Infrastructure & Security, realServic,
   e: true, technolog,
-  y: ['Kubernetes, Docker, Terraform, Ansible, Python, Go, Rust, Quantum APIs]; integration,
-  s: ['AWS, Azure, GCP, VMware, OpenStack, Kubernetes, Docker]; useCase,
-  s: ['Enterprise applications, Government systems, Financial platforms, Healthcare systems, Defense applications]; ro,
+  y: ['Kubernetes, Docker, Terraform, Ansible, Python, Go, Rust, Quantum APIs]'; integration,
+  s: ['AWS, Azure, GCP, VMware, OpenStack, Kubernetes, Docker]'; useCase,
+  s: ['Enterprise applications, Government systems, Financial platforms, Healthcare systems, Defense applications]'; ro,
   i: 'Enterprises report 800% ROI through reduced security incidents and operational costs., competitor,
-  s: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud]; marketSiz,
+  s: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud]'; marketSiz,
   e: $397.4B cloud computing market, growthRat,
   e: '23% annual growth, varian,
   t: quantum-cloud-enterprise, contactInf,
-  o: ]; feature,
-  s: [;' 'Quantum encryption protocolsAI - powered traffic optimization_autonomous network management_zero - latency routing_quantum key distribution_real - time security monitoring_global network optimizationAPI for network integration'' 'Performance analytics24 / 7 network monitoring ], popula,
+  o: ]'; feature,
+  s: [';' 'Quantum encryption protocolsAI - powered traffic optimization_autonomous network management_zero - latency routing_quantum key distribution_real - time security monitoring_global network optimizationAPI for network integration' 'Performance analytics24 / 7 network monitoring ], popula,
   r: true, ico,
   n: '🌌, colo,
   r: from - indigo - 600 to - purple - 600, text_colo,
@@ -3189,11 +3189,11 @@ i,
   e: '6 - 12 weeks, categor,
   y: Quantum Networking & Security, real_servic,
   e: true, technolog,
-  y: ['Quantum APIs, Python, Go, Rust, AI / ML, Network protocols, Quantum hardware]; integration,
-  s: ['Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes]; use_case,
-  s: ['Government communications, Defense networks, Financial trading, Healthcare systems, Research networks]; ro,
+  y: ['Quantum APIs, Python, Go, Rust, AI / ML, Network protocols, Quantum hardware]'; integration,
+  s: ['Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes]'; use_case,
+  s: ['Government communications, Defense networks, Financial trading, Healthcare systems, Research networks]'; ro,
   i: 'Organizations report 1000% ROI through improved security and network performance., competitor,
-  s: ['Cisco, Juniper, Arista, Huawei]; market_siz,
+  s: ['Cisco, Juniper, Arista, Huawei]'; market_siz,
   e: $25.3B quantum computing market, growth_rat,
   e: '32% annual growth, varian,
   t: quantum - networking - enterprise, contact_inf,
@@ -3216,11 +3216,11 @@ i,
   e: '6-12 weeks, categor,
   y: Quantum Networking & Security, realServic,
   e: true,  technolog,
-  y: ['Quantum APIs, Python, Go, Rust, AI/ML, Network protocols, Quantum hardware]; integration,
-  s: ['Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes]; useCase,
-  s: ['Government communications, Defense networks, Financial trading, Healthcare systems, Research networks]; ro,
+  y: ['Quantum APIs, Python, Go, Rust, AI/ML, Network protocols, Quantum hardware]'; integration,
+  s: ['Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes]'; useCase,
+  s: ['Government communications, Defense networks, Financial trading, Healthcare systems, Research networks]'; ro,
   i: 'Organizations report 1000% ROI through improved security and network performance. competitor,
-  s: ['Cisco, Juniper, Arista, Huawei];  marketSiz,
+  s: ['Cisco, Juniper, Arista, Huawei]';  marketSiz,
   e: $25 && 25.3B quantum computing market, growthRat,
   e: '32% annual growth, varian,
   t: quantum-networking-enterprise, contactInf,
@@ -3241,7 +3241,7 @@ i,
   e: 2025 - 02 - 01, customer,
   s: 6, ratin,
   g: 4.9, review,
-  s: 4; ], ' import { ServiceVariant } from ../types/service-variants; export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */}
+  s: 4'; ], ' import { ServiceVariant } from ../types/service-variants; export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */}
 
   s: string} websit,
   e: string} }; realImplementatio,
@@ -3249,64 +3249,64 @@ i,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
-  g: number; review,
-  s: number} ; export const,
-  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [; // Quantum-Secure Cloud Infrastructure; {/* TODO: Fix JSX expression */}
+  g: number'; review,
+  s: number} '; export const,
+  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = ['; // Quantum-Secure Cloud Infrastructure'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Enterprise-grade cloud platform with quantum-resistant encryption, zero-trust architecture, and autonomous security management.; launchDat,
   e: 2025-01-10; customer,
-  s: 8; ratin,
-  g: 4.9; review,
-  s: 5}; // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */}
+  s: 8'; ratin,
+  g: 4.9'; review,
+  s: 5}'; // Edge Computing Orchestration Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Global edge computing platform with AI optimization, real-time monitoring, and intelligent resource management across distributed locations.; launchDat,
   e: 2025-01-15; customer,
-  s: 25; ratin,
-  g: 4.8; review,
-  s: 18}; // Autonomous DevOps Platform; {/* TODO: Fix JSX expression */}
+  s: 25'; ratin,
+  g: 4.8'; review,
+  s: 18}'; // Autonomous DevOps Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'AI-powered DevOps platform with autonomous automation, intelligent monitoring, and comprehensive development workflow management.; launchDat,
   e: 2025-01-20; customer,
-  s: 38; ratin,
-  g: 4.7; review,
-  s: 25}; // Blockchain Infrastructure Platform; {/* TODO: Fix JSX expression */}
+  s: 38'; ratin,
+  g: 4.7'; review,
+  s: 25}'; // Blockchain Infrastructure Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Enterprise blockchain platform with AI-powered consensus, scalable infrastructure, and comprehensive business integration capabilities.; launchDat,
   e: 2025-01-25; customer,
-  s: 15; ratin,
-  g: 4.8; review,
-  s: 12}; // Quantum Networking Platform; {/* TODO: Fix JSX expression */}
+  s: 15'; ratin,
+  g: 4.8'; review,
+  s: 12}'; // Quantum Networking Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.; launchDat,
   e: 2025-02-01; customer,
   s: 6; ratin,
-  g: 4.9; review,
-  s: 4; ]} ]; } ]} ];' import { ServiceVariant } from ../types/service-variants; export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */}
+  g: 4.9'; review,
+  s: 4'; ]} ]'; } ]} ]';' import { ServiceVariant } from ../types/service-variants; export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */}
 
   s: string} websit,
   e: string} }; realImplementatio,
@@ -3314,61 +3314,61 @@ i,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
-  g: number; review,
-  s: number} ; export const,
-  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [; // Quantum-Secure Cloud Infrastructure; {/* TODO: Fix JSX expression */}
+  g: number'; review,
+  s: number} '; export const,
+  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = ['; // Quantum-Secure Cloud Infrastructure'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Enterprise-grade cloud platform with quantum-resistant encryption, zero-trust architecture, and autonomous security management.; launchDat,
   e: 2025-01-10; customer,
-  s: 8; ratin,
-  g: 4.9; review,
-  s: 5}; // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */}
+  s: 8'; ratin,
+  g: 4.9'; review,
+  s: 5}'; // Edge Computing Orchestration Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Global edge computing platform with AI optimization, real-time monitoring, and intelligent resource management across distributed locations.; launchDat,
   e: 2025-01-15; customer,
-  s: 25; ratin,
-  g: 4.8; review,
-  s: 18}; // Autonomous DevOps Platform; {/* TODO: Fix JSX expression */}
+  s: 25'; ratin,
+  g: 4.8'; review,
+  s: 18}'; // Autonomous DevOps Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'AI-powered DevOps platform with autonomous automation, intelligent monitoring, and comprehensive development workflow management.; launchDat,
   e: 2025-01-20; customer,
-  s: 38; ratin,
-  g: 4.7; review,
-  s: 25}; // Blockchain Infrastructure Platform; {/* TODO: Fix JSX expression */}
+  s: 38'; ratin,
+  g: 4.7'; review,
+  s: 25}'; // Blockchain Infrastructure Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Enterprise blockchain platform with AI-powered consensus, scalable infrastructure, and comprehensive business integration capabilities.; launchDat,
   e: 2025-01-25; customer,
-  s: 15; ratin,
-  g: 4.8; review,
-  s: 12}; // Quantum Networking Platform; {/* TODO: Fix JSX expression */}
+  s: 15'; ratin,
+  g: 4.8'; review,
+  s: 12}'; // Quantum Networking Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.; launchDat,
-  e: 2025-02-01; customer,
-  s: 6; ratin,
-  g: 4.9; review,
-  s: 4} ];
+  e: 2025-02-01'; customer,
+  s: 6'; ratin,
+  g: 4.9'; review,
+  s: 4} ]';

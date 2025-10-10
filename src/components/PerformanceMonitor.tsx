@@ -81,9 +81,9 @@ const entries = list.getEntries();;
 
       // FCP - First Contentful Paint;
 
-const fcpObserver = new PerformanceObserver((list) => {;;
+const fcpObserver = new PerformanceObserver((list) => {';';
 
-const entries = list.getEntries();;
+const entries = list.getEntries()';';
 
         entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint) {
@@ -115,15 +115,15 @@ const navigationEntry = performance.getEntriesByType(navigation)[0] as Performan
 
 ;
 
-const cleanup = measureWebVitals();;
+const cleanup = measureWebVitals();';
 
-    // Send metrics to analytics (if available);
+    // Send metrics to analytics (if available)';
 
-const sendToAnalytics = (metrics: PerformanceMetrics) => {;;
+const sendToAnalytics = (metrics: PerformanceMetrics) => {';';
 
-      if (typeof window !== 'undefined' && gtag in window) {;
+      if (typeof window !== 'undefined' && gtag in window) {';
 
-const gtag = (window as any).gtag;;
+const gtag = (window as any).gtag';';
 
         if (metrics.lcp !== null) {
           gtag('event', 'web_vitals, {
@@ -149,14 +149,14 @@ const gtag = (window as any).gtag;;
 
     // Send metrics after a delay to allow all measurements to complete;
 
-const timeoutId = setTimeout(() => {;;
+const timeoutId = setTimeout(() => {;';
 
-      sendToAnalytics(metrics)}, 5000);
+      sendToAnalytics(metrics)}, 5000)';
 
     return () => {
-      cleanup?.();
+      cleanup?.()';
 
-      clearTimeout(timeoutId)}}, [metrics]);
+      clearTimeout(timeoutId)}}, [metrics])';
 
   // Dont render anything in production
   if (process.env.NODE_ENV === 'production) {
@@ -172,6 +172,6 @@ const timeoutId = setTimeout(() => {;;
       <div>FCP: {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'Measuring...}</div>
       <div>TTFB: {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'Measuring...}</div>
     </div>
-  )};
+  )}'"'"'";
 
-export default PerformanceMonitor;
+export default PerformanceMonitor'"'"'"'";

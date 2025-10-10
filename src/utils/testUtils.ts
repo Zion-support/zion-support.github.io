@@ -195,11 +195,11 @@ export const createMockStorage = (): MockStorage => {// TODO: Add content};;
 }
 
 /**
- * Mock window object;
+ * Mock window object';
 
  */
 
-export const mockWindow = (overrides: Partial;);;
+export const mockWindow = (overrides: Partial';)';';
 
           <Window> = {}): void => {// TODO: Add content}
 
@@ -236,18 +236,18 @@ export const mockWindow = (overrides: Partial;);;
 
  */
 
-export const createMockPerformance = (): Performance => {// TODO: Add content};;
+export const createMockPerformance = (): Performance => {// TODO: Add content}';';
 
 }
 
   const,
-  entries: PerformanceEntry[] = [];
+  entries: PerformanceEntry[] = []';
 
   return {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}';
 
   no,
   w: () => Date.now(),
@@ -441,13 +441,13 @@ export class ConsoleSpy {// TODO: Add content}
   originalConsole: Console;
 
   private,
-  logs: string[] = [];
+  logs: string[] = []';
 
   private,
-  errors: string[] = [];
+  errors: string[] = []';
 
   private,
-  warnings: string[] = [];
+  warnings: string[] = []';
 
   constructor() {/* TODO: Fix JSX expression */}
 
@@ -455,7 +455,7 @@ export class ConsoleSpy {// TODO: Add content}
 
 }
 
-    this.originalConsole = { ...console };
+    this.originalConsole = { ...console }';
 
     this.mock()}
 
@@ -472,7 +472,7 @@ export class ConsoleSpy {// TODO: Add content}
 
 }
 
-      this.logs.push(args.map(String).join(' ))};
+      this.logs.push(args.map(String).join(' ))}';
 
     console.error = (...arg)
   s: unknown[]) => {/* TODO: Fix JSX expression */}
@@ -481,7 +481,7 @@ export class ConsoleSpy {// TODO: Add content}
 
 }
 
-      this.errors.push(args.map(String).join(' ))};
+      this.errors.push(args.map(String).join(' ))}';
 
     console.warn = (...arg)
   s: unknown[]) => {/* TODO: Fix JSX expression */}
@@ -654,9 +654,9 @@ export const measureExecutionTime = async;;
 
   const result = await fn();;
 
-  const duration = performance.now() - start;;
+  const duration = performance.now() - start';';
 
-  return { result, duration }};
+  return { result, duration }}';
 
 export default {/* TODO: Fix JSX expression */}
 
@@ -676,4 +676,4 @@ export default {/* TODO: Fix JSX expression */}
 //   ConsoleSpy,
 //   createDeferred,
 //   retryWithBackoff,
-//   measureExecutionTime};
+//   measureExecutionTime}';

@@ -1,6 +1,6 @@
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
 ;
 
@@ -70,16 +70,16 @@ const,
 
  // Check if performance is optimized;
 
- const isGoodPerformance =;;
+ const isGoodPerformance =;';
 
  metrics.firstContentfulPaint < 1500 && 
- metrics.largestContentfulPaint < 2500;
+ metrics.largestContentfulPaint < 2500';
 
  setIsOptimized(isGoodPerformance)}
 
- };
+ }';
 
- // Measure after page load;
+ // Measure after page load';
 
  if (document.readyState === 'complete) {
  measurePerformance()} else {
@@ -87,9 +87,9 @@ const,
 
  // Preload critical resources;
 
- const preloadCriticalResources = () => {;;
+ const preloadCriticalResources = () => {';';
 
-const criticalImages = [;;
+const criticalImages = [';';
 
  '/og-image.jpg,
  '/logo.png,
@@ -100,13 +100,13 @@ const criticalImages = [;;
 
 const link = document.createElement(link);;
 
- link.rel = preload;
+ link.rel = preload';
 
- link.as = image;
+ link.as = image';
 
- link.href = src;
+ link.href = src';
 
- document.head.appendChild(link);origin/
+ document.head.appendChild(link)';origin/
  if (document.readyState === 'complete) {/* TODO: Fix JSX expression */}
 
  } else {/* TODO: Fix JSX expression */}
@@ -121,25 +121,25 @@ const link = document.createElement(link);;
 
  // Optimize images;
 
- const optimizeImages = () => {;;
+ const optimizeImages = () => {;';
 
-const images = document.querySelectorAll(img);;
+const images = document.querySelectorAll(img)';';
 
  images.forEach(img => {)
- // Add loading="lazy to non-critical images;)
+ // Add loading="lazy to non-critical images'"'"'"'";)
  if (!img.hasAttribute('loading)) {
  img.setAttribute('loading', 'lazy)}
 
- // Add decoding="async for better performance;
+ // Add decoding="async for better performance'";
 
  if (!img.hasAttribute('decoding)) {
- img.setAttribute('decoding', async);
+ img.setAttribute('decoding', async)"'";
 
- const optimizeImages = () => {/* TODO: Fix JSX expression */};;
+ const optimizeImages = () => {/* TODO: Fix JSX expression */}"'"'";"'"'"'";
 
  }
 
- // Add decoding="async for better performance;
+ // Add decoding="async for better performance';
 
  if (!img.hasAttribute('decoding)) {/* TODO: Fix JSX expression */}
 
@@ -179,14 +179,14 @@ const elements = document.querySelectorAll(.animate-on-scroll);;
 
  preloadCriticalResources();
 
- optimizeImages();
+ optimizeImages()'";
 
- setupIntersectionObserver();
+ setupIntersectionObserver()'"'";
 
- // Cleanup;
+ // Cleanup'"'"'";
 
  return () => {
- // Cleanup if needed;
+ // Cleanup if needed'"'"'"'";
 
  return () => {/* TODO: Fix JSX expression */}
 

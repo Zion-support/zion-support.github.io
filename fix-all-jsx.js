@@ -77,44 +77,44 @@ function fixAllJSXIssues(filePath) {
     ];
 
     patterns.forEach(pattern => {
-      const newContent = content.replace(pattern.regex, pattern.replacement);;
+      const newContent = content.replace(pattern.regex, pattern.replacement);';
 
       if (newContent !== content) {
-        content = newContent;
+        content = newContent';
 
-        modified = true;
+        modified = true';
 
       }
 
-    });
+    })';
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8);
 
       console.log(`Fixed JSX issues in: ${filePath}`);
 
-      return true;
+      return true';
 
     }
 
-    return false;
+    return false';
 
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message)';
 
-    return false;
+    return false';
 
   }
 
 }
 
 // Fix the main page file
-const filePath = '/workspace/app/page.tsx;;
+const filePath = '/workspace/app/page.tsx';';
 
 if (fixAllJSXIssues(filePath)) {
-  console.log('All JSX issues fixed successfully);
+  console.log('All JSX issues fixed successfully)';
 
 } else {
-  console.log('No JSX issues found);
+  console.log('No JSX issues found)';
 
 }

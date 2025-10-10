@@ -1,29 +1,29 @@
-'use client;
+'use client';
 
-import React, { useState, useEffect } from 'react;
+import React, { useState, useEffect } from 'react';
 
-import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from lucide-react;
+import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from lucide-react';
 
 interface Slide {
   icon: React.ComponentType<any>;
 
   title: string;
 
-  description: string;
+  description: string';
 
-  features: string[];
+  features: string[]';
 
   stats?: {
-    value: string;
+    value: string';
 
-    label: string;
+    label: string';
 
-  }[];
+  }[]';
 
 }
 
 const ContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0)';
 
   const slides: Slide[] = [
     {
@@ -92,11 +92,11 @@ const ContentCarousel: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(nextSlide, 5000);;
 
-    return () => clearInterval(timer);
+    return () => clearInterval(timer)';
 
-  }, []);
+  }, [])';
 
-  const currentSlideData = slides[currentSlide];;
+  const currentSlideData = slides[currentSlide]';';
 
   return (
 
@@ -267,8 +267,8 @@ const ContentCarousel: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )'"'";
 
-};
+}'"'"'";
 
-export default ContentCarousel;
+export default ContentCarousel'"'"'"'";

@@ -1,6 +1,6 @@
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import {
   Users,
@@ -37,7 +37,7 @@ import {
   Phone,
   Mail,
   MapPin
-;
+';
 
 const AboutPage: React.FC = () => {
   return (<div>
@@ -55,9 +55,9 @@ const AboutPage: React.FC = () => {
                 About Zion Tech Group
               <
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto>
-} from 'lucide-react;
+} from 'lucide-react'"'"'";
 
-;
+'"'"'"'";
 
 const AboutPage: React.FC = () => {              <
             <

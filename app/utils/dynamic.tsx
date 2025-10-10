@@ -27,11 +27,11 @@ const LazyComponent = lazy(importFunc)</unknown>;;;
 
     <Suspense fallback={options.loading ? options.loading() : <div></Suspense>Loading...</div>}>
       <LazyComponent {...props} />
-'use client;
+'use client';
 
-import React, { lazy, Suspense, ComponentType } from react;
+import React, { lazy, Suspense, ComponentType } from react';
 
-interface DynamicOptions {/* TODO: Fix JSX expression */});
+interface DynamicOptions {/* TODO: Fix JSX expression */})';
 
 }
 
@@ -50,4 +50,4 @@ export function dynamic<T extends ComponentType<unknown></T>>(importFun)
 )]
     }
 
-export default dynamic;
+export default dynamic';

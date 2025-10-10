@@ -1,16 +1,16 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import Navigation from ../components
 import Footer from ../components
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from lucide-react;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from lucide-react';
 
-;
+';
 
-const PageFixedPage: React.FC = () => {const features = [;;;
+const PageFixedPage: React.FC = () => {const features = [';';';
 
     {
       ico,
@@ -38,7 +38,7 @@ const PageFixedPage: React.FC = () => {const features = [;;;
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization]
     }
 
-  ];
+  ]';
 
   return (
 
@@ -76,4 +76,4 @@ const PageFixedPage: React.FC = () => {const features = [;;;
       </div>
       <Footer />
     </React.Fragment>)
-export default PageFixedPage;
+export default PageFixedPage'"'"'"'";

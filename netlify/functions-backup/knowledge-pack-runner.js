@@ -15,17 +15,17 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
       },
       body: JSON.stringify({message: Knowledge pack runner executed successfully)
-        timestamp: new Date().toISOString();
+        timestamp: new Date().toISOString()';
 
 function: 'knowledge-pack-runner',
         source: event.source || 'unknown',
         knowledge: {,
           status: 'active',
-          packs: 0;
+          packs: 0';
 
           lastPack: new Date().toISOString()}
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */}';';
 
         'Access-Control-Allow-Origin': '*'}
 
@@ -34,15 +34,15 @@ function: 'knowledge-pack-runner',
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   k: new Date().toISOString()}
 
-        }})};
+        }})}';
 
-    return result;
+    return result';
 
 //   } catch (error) {// // console.error removed for production
 error}
 
     return {
-      statusCode: 500;
+      statusCode: 500';
 
       headers: {,
         'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ error}
 
       },
       body: JSON.stringify({error: 'Internal server error'),
-        message: error.message),;
+        message: error.message),';
 
 function: 'knowledge-pack-runner'}
 
@@ -69,12 +69,12 @@ function: 'knowledge-pack-runner'}
   n: 'knowledge-pack-runner'})
       })}}
 
-};
+}';
 
-        timestamp: new Date().toISOString(),' function: 'knowledge-pack-runner',' source: event.source || 'unknown', knowledge: {' status: 'active, packs: 0;
+        timestamp: new Date().toISOString(),' function: 'knowledge-pack-runner',' source: event.source || 'unknown', knowledge: {' status: 'active, packs: 0';
 
-        lastPack: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
-error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'knowledge-pack-runner }) }} };
+        lastPack: new Date().toISOString() } }) }'; return result} catch (error) {' // // console.error removed for production
+error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'knowledge-pack-runner }) }} }';
 
         timestam,
   p: new Date().toISOString(),' functio,
@@ -82,7 +82,7 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
   e: event.source || 'unknown', knowledg,
   e: {/* TODO: Fix JSX expression */}
 
-  k: new Date().toISOString() } }) }; return result} catch (error) {/* TODO: Fix JSX expression */}
+  k: new Date().toISOString() } }) }'; return result} catch (error) {/* TODO: Fix JSX expression */}
 
       } return {/* TODO: Fix JSX expression */}
 
@@ -91,4 +91,4 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
 
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'knowledge-pack-runner }) }} };
+  n: 'knowledge-pack-runner }) }} }';

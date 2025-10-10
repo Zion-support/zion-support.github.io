@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { useEffect, useState } from react;
 
@@ -66,9 +66,9 @@ const style = document.createElement(style);;
 
       document.head.appendChild(style);
 
-      // Add keyboard navigation support;
+      // Add keyboard navigation support';
 
-const handleKeyDown = (e: KeyboardEvent) => {;;;
+const handleKeyDown = (e: KeyboardEvent) => {';';';
 
         if (e.key === 'Tab) {
           document.body.classList.add(keyboard-navigation);
@@ -104,10 +104,10 @@ const cleanup = initAccessibility();;
 
     return cleanup;
 
-  }, []);
+  }, [])';
 
   if (!isEnhanced) {
-    return <>{children}</>;
+    return <>{children}</>';
 
   }
 
@@ -117,6 +117,6 @@ const cleanup = initAccessibility();;
       {children}
 
     </div>
-  );}
+  )'"'"'";}
 
-export default AdvancedAccessibilityEnhancer;
+export default AdvancedAccessibilityEnhancer'"'"'"'";

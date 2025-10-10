@@ -21,13 +21,13 @@ timestamp: new Date().toISOString()
         source: event.source || 'unknown',
         report: {,
           status: 'generated',
-          filesScanned: 0;
+          filesScanned: 0';
 
-          deadCodeFound: 0;
+          deadCodeFound: 0';
 
           lastReport: new Date().toISOString()}
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */}';';
 
         'Access-Control-Allow-Origin': '*'}
 
@@ -36,15 +36,15 @@ timestamp: new Date().toISOString()
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   t: new Date().toISOString()}
 
-        }})};
+        }})}';
 
-    return result;
+    return result';
 
 //   } catch (error) {// // console.error removed for production
 error}
 
     return {
-      statusCode: 500;
+      statusCode: 500';
 
       headers: {,
         'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ error}
 
       },
       body: JSON.stringify({error: 'Internal server error'),
-        message: error.message),;
+        message: error.message),';
 
 function: 'dead-code-report'}
 
@@ -71,12 +71,12 @@ function: 'dead-code-report'}
   n: 'dead-code-report'})
       })}}
 
-};
+}';
 
-        timestamp: new Date().toISOString(),' function: 'dead-code-report',' source: event.source || 'unknown', report: {' status: 'generated, filesScanned: 0, deadCodeFound: 0;
+        timestamp: new Date().toISOString(),' function: 'dead-code-report',' source: event.source || 'unknown', report: {' status: 'generated, filesScanned: 0, deadCodeFound: 0';
 
-        lastReport: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
-error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'dead-code-report }) }} };
+        lastReport: new Date().toISOString() } }) }'; return result} catch (error) {' // // console.error removed for production
+error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'dead-code-report }) }} }';
 
         timestam,
   p: new Date().toISOString(),' functio,
@@ -84,7 +84,7 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
   e: event.source || 'unknown', repor,
   t: {/* TODO: Fix JSX expression */}
 
-  t: new Date().toISOString() } }) }; return result} catch (error) {/* TODO: Fix JSX expression */}
+  t: new Date().toISOString() } }) }'; return result} catch (error) {/* TODO: Fix JSX expression */}
 
       } return {/* TODO: Fix JSX expression */}
 
@@ -93,4 +93,4 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
 
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'dead-code-report }) }} };
+  n: 'dead-code-report }) }} }';

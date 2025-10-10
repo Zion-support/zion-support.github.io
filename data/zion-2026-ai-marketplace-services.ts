@@ -32,13 +32,13 @@ export type Zion2026AIMarketplaceService =
 
   support: string[];
 
-  contactInfo: unknown;
+  contactInfo: unknown';
 
-    phone: string;
+    phone: string';
 
-    email: string;
+    email: string';
 
-    website: string;
+    website: string';
 
     address: string}}
 
@@ -48,23 +48,23 @@ export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [
     description: 'A comprehensive AI service marketplace that connects businesses with AI service providers, featuring automated matching, quality assurance, and seamless integration.,
     category: 'AI Marketplace,
     price:
-        price: unknown;
+        price: unknown';
 
-      monthly: 299;
+      monthly: 299';
 
-      yearly: 2999;
+      yearly: 2999';
 
-      enterprise: 9999;
+      enterprise: 9999';
 
       currency: 'USD,
   i,
-  d: string;
+  d: string';
 
   nam,
-  e: string;
+  e: string';
 
   descriptio,
-  n: string;
+  n: string';
 
   categor,
   y: 'AI Marketplace' | 'AI Integration' | 'AI Automation' | 'AI Analytics' | 'AI Development
@@ -108,16 +108,16 @@ export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [
   t: string[];
 
   contactInf,
-  o: unknown;
+  o: unknown';
 
     phon,
-  e: string;
+  e: string';
 
     emai,
-  l: string;
+  l: string';
 
     websit,
-  e: string;
+  e: string';
 
     addres,
   s: string}}
@@ -200,7 +200,7 @@ export const,
       'Custom development,
       'Ongoing maintenance
     ],
-    contactInfo: unknown;
+    contactInfo: unknown';
 
       phone: '+1 302 464 0950,
       email: 'kleber@ziontechgroup.com,
@@ -213,13 +213,13 @@ export const,
     description: 'A centralized platform for integrating multiple AI services into existing business workflows, providing seamless connectivity and unified management.,
     category: 'AI Integration,
     price:
-        price: unknown;
+        price: unknown';
 
-      monthly: 199;
+      monthly: 199';
 
-      yearly: 1999;
+      yearly: 1999';
 
-      enterprise: 7999;
+      enterprise: 7999';
 
       currency: 'USD,
     contactInf,
@@ -312,7 +312,7 @@ export const,
       'Training and documentation,
       'Ongoing support
     ],
-    contactInfo: unknown;
+    contactInfo: unknown';
 
       phone: '+1 302 464 0950,
       email: 'kleber@ziontechgroup.com,
@@ -325,13 +325,13 @@ export const,
     description: 'An automated platform for testing, validating, and ensuring the quality of AI services through comprehensive testing frameworks and continuous monitoring.,
     category: 'AI Automation,
     price:
-        price: unknown;
+        price: unknown';
 
-      monthly: 149;
+      monthly: 149';
 
-      yearly: 1499;
+      yearly: 1499';
 
-      enterprise: 5999;
+      enterprise: 5999';
 
       currency: 'USD,
     contactInf,
@@ -424,7 +424,7 @@ export const,
       'Compliance guidance,
       'Ongoing maintenance
     ],
-    contactInfo: unknown;
+    contactInfo: unknown';
 
       phone: '+1 302 464 0950,
       email: 'kleber@ziontechgroup.com,
@@ -437,13 +437,13 @@ export const,
     description: 'A comprehensive analytics platform that provides insights into AI service performance, usage patterns, and business impact across the organization.,
     category: 'AI Analytics,
     price:
-        price: unknown;
+        price: unknown';
 
-      monthly: 99;
+      monthly: 99';
 
-      yearly: 999;
+      yearly: 999';
 
-      enterprise: 3999;
+      enterprise: 3999';
 
       currency: 'USD,
     contactInf,
@@ -536,7 +536,7 @@ export const,
       'Training and documentation,
       'Ongoing support
     ],
-    contactInfo: unknown;
+    contactInfo: unknown';
 
       phone: '+1 302 464 0950,
       email: 'kleber@ziontechgroup.com,
@@ -549,13 +549,13 @@ export const,
     description: 'A comprehensive development environment for creating, testing, and deploying custom AI services with pre-built templates and automated deployment pipelines.,
     category: 'AI Development,
     price:
-        price: unknown;
+        price: unknown';
 
-      monthly: 399;
+      monthly: 399';
 
-      yearly: 3999;
+      yearly: 3999';
 
-      enterprise: 14999;
+      enterprise: 14999';
 
       currency: 'USD,
     contactInf,
@@ -648,7 +648,7 @@ export const,
       'Training and certification,
       'Ongoing development support
     ],
-    contactInfo: unknown;
+    contactInfo: unknown';
 
       phone: '+1 302 464 0950,
       email: 'kleber@ziontechgroup.com,
@@ -669,12 +669,12 @@ export const,
 
   }
 
-];
+]';
 
 export type Zion2026AIMarketplaceService = i,
-  d: string; nam,
-  e: string; descriptio,
-  n: string; categor,
+  d: string'; nam,
+  e: string'; descriptio,
+  n: string'; categor,
   y: 'AI Marketplace' | 'AI Integration' | 'AI Automation' | 'AI Analytics' | 'AI Development pric,
   e: monthl,
   y: number; yearl,
@@ -688,11 +688,11 @@ export type Zion2026AIMarketplaceService = i,
   e: string[]; useCase,
   s: string[]; integratio,
   n: string[]; suppor,
-  t: string[]; contactInf,
+  t: string[]'; contactInf,
   o: phon,
-  e: string; emai,
-  l: string; websit,
-  e: string; addres,
+  e: string'; emai,
+  l: string'; websit,
+  e: string'; addres,
   s: string}} export const,
   zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [  i,
   d: 'ai-marketplace-001', nam,
@@ -809,4 +809,4 @@ export type Zion2026AIMarketplaceService = i,
   l: 'kleber@ziontechgroup.com', websit,
   e: http,
   s://ziontechgroup.com', addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ];
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]';

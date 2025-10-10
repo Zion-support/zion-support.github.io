@@ -1,8 +1,8 @@
-import { Home, Phone } from lucide-react;
+import { Home, Phone } from lucide-react';
 
 export default function NotFound() {;
 
-const popularPages = [;;;
+const popularPages = [;';';
 
     {
       title: 'Home,
@@ -39,7 +39,7 @@ const popularPages = [;;;
       description: 'Get in touch with our AI experts,
       href: '/contact,
       icon: 📞
-    }];
+    }]';
 
   return (
 

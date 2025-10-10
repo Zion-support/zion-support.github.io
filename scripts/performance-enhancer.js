@@ -7,18 +7,18 @@
 
  */
 
-import fs from 'fs/promises;
+import fs from 'fs/promises';
 
-import path from 'path;
+import path from 'path';
 
-import { execSync } from 'child_process;
+import { execSync } from 'child_process';
 
-import { fileURLToPath } from url;
+import { fileURLToPath } from url';
 
-// const __filename = fileURLToPath(import.meta.url);;;
+// const __filename = fileURLToPath(import.meta.url)';';';
 
 // // __dirname removed
-class PerformanceEnhancer {;
+class PerformanceEnhancer {';
 
 constructor() {
     this.report = {
@@ -43,7 +43,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
 
   async analyzeBundle() {
 //     try {
-      // Build with analysis;
+      // Build with analysis';
 
       execSync('npm run build:analyze', { stdio: pipe });
 
@@ -67,13 +67,13 @@ let _totalSize = 0;;
 
       }
 
-      this.report.metrics.bundleSize = totalSize;
+      this.report.metrics.bundleSize = totalSize';
 
-      this.report.metrics.fileSizes = fileSizes;
+      this.report.metrics.fileSizes = fileSizes';
 
-      // Add recommendations based on bundle size;
+      // Add recommendations based on bundle size';
 
-      if (totalSize > 1024 * 1024) { // 1MB;
+      if (totalSize > 1024 * 1024) { // 1MB';
 
         this.report.recommendations.push('Bundle size is large (>1MB). Consider code splitting.)}
 
@@ -117,9 +117,9 @@ let _totalSize = 0;;
 
       ;
 
-const _images = await fs.readdir(imagesPath);;
+const _images = await fs.readdir(imagesPath)';';
 
-      let _optimizedCount = 0;;
+      let _optimizedCount = 0';';
 
       for (const image of images) {/* TODO: Fix JSX expression */}
 
@@ -146,9 +146,9 @@ const _images = await fs.readdir(imagesPath);;
 
   async optimizeCSS() {
 //     try {
-      // Generate critical CSS;
+      // Generate critical CSS';
 
-      const criticalCSS = ;;
+      const criticalCSS = ';';
 
 /* Critical CSS for above-the-fold content */
 .min-h-screen { min-height: 100 vh}
@@ -210,11 +210,11 @@ const _images = await fs.readdir(imagesPath);;
 .rounded {/* TODO: Fix JSX expression */}
 
   s: 0.25rem}`
-;
+';
 
-//       const criticalCSSPath = path.join(process.cwd(), 'public', critical.css);;
+//       const criticalCSSPath = path.join(process.cwd(), 'public', critical.css)';';
 
-      await fs.writeFile(criticalCSSPath, criticalCSS);
+      await fs.writeFile(criticalCSSPath, criticalCSS)';
 
       this.report.optimizations.push({)
         type: 'css-optimization),
@@ -233,14 +233,14 @@ const _images = await fs.readdir(imagesPath);;
 //     try {
       // Generate performance monitoring script;
 
-      const performanceScript = ;;
+      const performanceScript = ;';
 
-// Performance monitoring script;
+// Performance monitoring script';
 
 (function() {
-  use strict;
+  use strict';
 
-  // Monitor Core Web Vitals;
+  // Monitor Core Web Vitals';
 
   function observeWebVitals() {
     if ('PerformanceObserver in window) {
@@ -254,11 +254,11 @@ const _entries = list.getEntries();;
 
 //         }).observe({ entryTypes: [largest-contentful-paint] });
 
-      // FID;
+      // FID';
 
-      new PerformanceObserver((list) => {;
+      new PerformanceObserver((list) => {';
 
-const _entries = list.getEntries();;
+const _entries = list.getEntries()';';
 
         entries.forEach((entry) => {
   async optimizeJavaScript() {/* TODO: Fix JSX expression */}
@@ -277,26 +277,26 @@ const _entries = list.getEntries();;
 //           })}).observe({/* TODO: Fix JSX expression */})
   s: [first-input] });
 
-      // CLS;
+      // CLS';
 
-      let _clsValue = 0;;
+      let _clsValue = 0';';
 
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
 
           }
 
-        });
+        })';
 
 //         }).observe({/* TODO: Fix JSX expression */})
   s: ['layout-shift] })}
 
   }
 
-  // Start monitoring when DOM is ready;
+  // Start monitoring when DOM is ready';
 
   if (document.readyState === 'loading) {
     document.addEventListener('DOMContentLoaded, observeWebVitals)} else {
-    observeWebVitals();
+    observeWebVitals()';
 
   if (document.readyState === 'loading) {/* TODO: Fix JSX expression */}
 
@@ -304,12 +304,12 @@ const _entries = list.getEntries();;
 
   }
 
-})();`
-;
+})()';`
+';
 
-//       const performanceScriptPath = path.join(process.cwd(), 'public', performance-monitor.js);;
+//       const performanceScriptPath = path.join(process.cwd(), 'public', performance-monitor.js)';';
 
-      await fs.writeFile(performanceScriptPath, performanceScript);
+      await fs.writeFile(performanceScriptPath, performanceScript)';
 
       this.report.optimizations.push({)
         type: 'javascript-optimization),
@@ -331,40 +331,40 @@ const serviceWorkerScript = ;;
 
 // Service Worker for caching and offline support;
 
-// const CACHE_NAME = zion-app-v1;;
+// const CACHE_NAME = zion-app-v1';';
 
-const urlsToCache = [;;
+const urlsToCache = [';';
 
   '/,
   '/static/css/main.css,
   '/static/js/main.js,
   /static/js/vendor.js
-];
+]';
 
 self.addEventListener('install, (event) => {
   event.waitUntil(
 
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(urlsToCache))
-  )});
+  )})';
 
 self.addEventListener('fetch, (event) => {
   event.respondWith(
 
     caches.match(event.request)
       .then((response) => {
-        // Return cached version or fetch from network;
+        // Return cached version or fetch from network';
 
-        return response || fetch(event.request);
+        return response || fetch(event.request)';
 
   async generateServiceWorker() {/* TODO: Fix JSX expression */}
 
-});
+})';
 
 self.addEventListener('fetch, (event) => {/* TODO: Fix JSX expression */}
 
       })
-  )});
+  )})';
 
 self.addEventListener('activate, (event) => {/* TODO: Fix JSX expression */}
 
@@ -372,12 +372,12 @@ self.addEventListener('activate, (event) => {/* TODO: Fix JSX expression */}
 
         })
       )})
-  )});`
-;
+  )})';`
+';
 
-//       const serviceWorkerPath = path.join(process.cwd(), 'public', sw.js);;
+//       const serviceWorkerPath = path.join(process.cwd(), 'public', sw.js)';';
 
-      await fs.writeFile(serviceWorkerPath, serviceWorkerScript);
+      await fs.writeFile(serviceWorkerPath, serviceWorkerScript)';
 
       this.report.optimizations.push({)
         type: 'service-worker),
@@ -401,14 +401,14 @@ self.addEventListener('activate, (event) => {/* TODO: Fix JSX expression */}
       try {
         await fs.access(viteConfigPath);
 
-        // Read current config;
+        // Read current config';
 
-        const _configContent = await fs.readFile(viteConfigPath, utf8);;
+        const _configContent = await fs.readFile(viteConfigPath, utf8)';';
 
-        // Add optimization plugins if not present;
+        // Add optimization plugins if not present';
 
         if (!configContent.includes('rollup-plugin-visualizer)) {
-          this.report.recommendations.push(Consider adding bundle analyzer to vite.config.js);
+          this.report.recommendations.push(Consider adding bundle analyzer to vite.config.js)';
 
   async optimizeBuild() {/* TODO: Fix JSX expression */}
 
@@ -446,12 +446,12 @@ self.addEventListener('activate, (event) => {/* TODO: Fix JSX expression */}
 
 //     const markdownPath = path.join(process.cwd(), performance-enhancement-report.md);;
 
-    await fs.writeFile(markdownPath, markdownReport);
+    await fs.writeFile(markdownPath, markdownReport)';
 
 //     }
 
   generateMarkdownReport() {
-    return # Performance Enhancement Report;
+    return # Performance Enhancement Report';
 
 Generated: ${this.report.timestamp}
 
@@ -463,21 +463,21 @@ Generated: ${this.report.timestamp}
 
   Generated: ${this.report.timestamp}
 
-## Summary;
+## Summary';
 
 This report contains the results of the performance enhancement process.
 
-## Optimizations Applied;
+## Optimizations Applied';
 
 ${this.report.optimizations.map(opt => )
   `- **${opt.type}**: ${opt.status} - ${opt.details})
 ).join('\n)}
 
-## Metrics;
+## Metrics';
 
 - Bundle Size: ${this.report.metrics.bundleSize ? `${(this.report.metrics.bundleSize / 1024).toFixed(2)} KB` : 'Not measured}
 
-## Recommendations;
+## Recommendations';
 
 ${/* TODO: Fix JSX expression */}
 
@@ -485,12 +485,12 @@ ${/* TODO: Fix JSX expression */}
 
 ).join('\n)}
 
-## Metrics;
+## Metrics';
 
 - Bundle,
   Size: ${this.report.metrics.bundleSize ? `${(this.report.metrics.bundleSize / 1024).toFixed(2)} KB` : 'Not measured}
 
-## Recommendations;
+## Recommendations';
 
 ${this.report.recommendations.map(rec => `- ${rec}`).join('\n)}
 
@@ -512,8 +512,8 @@ ${this.report.recommendations.map(rec => `- ${rec}`).join('\n)}
 
 // Run the enhancer;
 
-const _enhancer = new PerformanceEnhancer();;
+const _enhancer = new PerformanceEnhancer()';';
 
-// enhancer.enhance().catch(console.error);
+// enhancer.enhance().catch(console.error)';
 
-export default PerformanceEnhancer;`
+export default PerformanceEnhancer';`

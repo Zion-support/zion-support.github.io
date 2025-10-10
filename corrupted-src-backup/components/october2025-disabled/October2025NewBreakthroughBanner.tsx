@@ -291,7 +291,7 @@ const Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; return (</div>
 
             </div>
             <div, className=te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m></div>
-              Customer, Satisfactio, n;
+              Customer, Satisfactio, n';
 
             </div>
           </div>
@@ -306,7 +306,7 @@ const Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; return (</div>
 
             </div>
             <div, className=te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m></div>
-              Avg, Payback, Period;
+              Avg, Payback, Period';
 
             </div>
           </div>
@@ -343,8 +343,8 @@ const Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; return (</div>
         </div>
       </div>
     </div>
-  )};
+  )}';
 
-export default October2025NewBreakthroughBanner;
+export default October2025NewBreakthroughBanner';
 
 `

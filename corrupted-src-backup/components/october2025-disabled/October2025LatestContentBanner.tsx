@@ -64,11 +64,11 @@ const IconComponen, t = artic, l, e.ic, o, n; return (</div>
             <span, className=te, x, t-viol, e, t-300, fon, t-semibo, l, d>NEW, CONTEN, T - OCTOBER, 202, 5</sp, a, n>
           </div>
           <h2, className=te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t></h2>
-            Latest, AI, Breakthroughs & Enterprise, Strategie, s;
+            Latest, AI, Breakthroughs & Enterprise, Strategie, s";
 
           </h2>
           <p, className=te, x, t-xl, tex, t-sla, t, e-300, ma, x-w-3xl, m, x-au, t, o></p>
-            Explore, cuttin, g-edge, insights, on GenAI, orchestrat, i, o, n, AI, security, frameworks, and, rea, l-time, multimodal, processing;
+            Explore, cuttin, g-edge, insights, on GenAI, orchestrat, i, o, n, AI, security, frameworks, and, rea, l-time, multimodal, processing";
 
           </p>
         </div>
@@ -108,7 +108,7 @@ const IconComponen, t = artic, l, e.ic, o, n; return (</div>
         <div, classNam, e = grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, b, g-sla, t, e-8, 0, 0/30, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, rounde, d-x, l, p-8></div>
           <div, className=te, x, t-cent, e, r></div>
             <div, className=te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2>
-              3;
+              3";
 
             </div>
             <div, className=te, x, t-sm, tex, t-sla, t, e-4, 0, 0>New, Article, s</div>
@@ -120,7 +120,7 @@ const IconComponen, t = artic, l, e.ic, o, n; return (</div>
         <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, b, g-sla, t, e-8, 0, 0/30, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, rounde, d-x, l, p-8></div>
           <div, className="te, x, t-cent, e, r></div>
             <div, className=te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2></div>
-              3;
+              3";
 
             </div>
             <div, className=te, x, t-sm, tex, t-sla, t, e-4, 0, 0>New, Article, s</div>
@@ -133,14 +133,14 @@ const IconComponen, t = artic, l, e.ic, o, n; return (</div>
           </div>
           <div, className=te, x, t-cent, e, r></div>
             <div, className=te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2>
-              Expe, r, t;
+              Expe, r, t";
 
             </div>
             <div, className=te, x, t-sm, tex, t-sla, t, e-4, 0, 0>Implementation, Guide, s</div>
           </div>
           <div, className=te, x, t-cent, e, r></div>
             <div, className=te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-pi, n, k-400, t, o-ro, s, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2>
-              20, 2, 5;
+              20, 2, 5";
 
             </div>
             <div, className=te, x, t-sm, tex, t-sla, t, e-4, 0, 0>Latest, Strategie, s</div>
@@ -152,20 +152,20 @@ const IconComponen, t = artic, l, e.ic, o, n; return (</div>
           <Link, t, o=/bl, o, g
             className=inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, t, o-purp, l, e-600, hove, r: fr, o, m-viol, e, t-500, hove, r:to-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, hove, r:shad, o, w-lg, hove, r:shad, o, w-viol, e, t-5, 0, 0/50
           >
-            Explore, All, Articles;
+            Explore, All, Articles";
 
             <Link, className=w-5 h-5 />
           </div>
           <div, className="te, x, t-cent, e, r></div>
             <div, className=te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2></div>
-              Expe, r, t;
+              Expe, r, t";
 
             </div>
             <div, className=te, x, t-sm, tex, t-sla, t, e-4, 0, 0>Implementation, Guide, s</div>
           </div>
           <div, className="te, x, t-cent, e, r></div>
             <div, className=te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-pi, n, k-400, t, o-ro, s, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2></div>
-              20, 2, 5;
+              20, 2, 5";
 
             </div>
             <div, className=te, x, t-sm, tex, t-sla, t, e-4, 0, 0>Latest, Strategie, s</div>
@@ -177,15 +177,15 @@ const IconComponen, t = artic, l, e.ic, o, n; return (</div>
           <Link, t, o="/bl, o, g
             className=inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, t, o-purp, l, e-600, hove, r: fr, o, m-viol, e, t-500, hove, r:to-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, hove, r:shad, o, w-lg, hove, r:shad, o, w-viol, e, t-5, 0, 0/50
           ></Link>
-            Explore, All, Articles;
+            Explore, All, Articles";
 
             <Link, className=w-5 h-5 /></Link>
           </Li, n, k>
         </div>
       </div>
     </sec, t, i, o, n>
-  )};
+  )}";
 
-export default October2025LatestContentBanner;
+export default October2025LatestContentBanner";
 
 "`

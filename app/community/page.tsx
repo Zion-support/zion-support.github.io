@@ -1,25 +1,25 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Users, MessageCircle, Calendar, Award, Globe, Heart } from 'lucide-react;
+import { Users, MessageCircle, Calendar, Award, Globe, Heart } from 'lucide-react';
 
-const CommunityPage: React.FC = () => {const communityFeatures = [;;;
+const CommunityPage: React.FC = () => {const communityFeatures = [';';';
 
     {
       icon: Users,
       title: 'Expert Network,
       description: Connect with industry professionals and AI experts from around the world.
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-import { CheckCircle, ArrowRight, Users, MessageCircle, Calendar, Award } from 'lucide-react;
+import { CheckCircle, ArrowRight, Users, MessageCircle, Calendar, Award } from 'lucide-react';
 
 const CommunityPage: React.FC = () => {
-  const features = [;;;
+  const features = [';';';
 
     {
       icon: Users,
@@ -74,7 +74,7 @@ const CommunityPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8>
               Connect with like-minded professionals, share knowledge, and grow together in the world of AI and technology.
             </p>
-            ));          </div>
+            ))";          </div>
         </section>
 
         {/* Community Features */}
@@ -91,7 +91,7 @@ const CommunityPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3>{feature.title}</h3>
                   <p className="text-gray-300>{feature.description}</p>
                 </div>
-              ));
+              ))"'";
 
             </div>
           </div>
@@ -167,11 +167,11 @@ const CommunityPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  )'"'";
 
 }
 
-export default CommunityPage;
+export default CommunityPage'"'"'";
 
     </div>)
-export default PagePage;
+export default PagePage'"'"'"'";

@@ -19,7 +19,7 @@ export const microSAASServices = [;;
     popular:
         popular: true,
     category: 'Productivity',
-    rating: 4.9;
+    rating: 4.9';
 
     users: '10,000+',
     freeTrial: '14 days'},
@@ -35,7 +35,7 @@ export const microSAASServices = [;;
     popular:
         popular: true,
     category: 'Productivity',
-    rating: 4.8;
+    rating: 4.8';
 
     users: '20,000+',
     freeTrial: '14 days'},
@@ -51,7 +51,7 @@ export const microSAASServices = [;;
     popular:
         popular: true,
     category: 'Productivity',
-    rating: 4.7;
+    rating: 4.7';
 
     users: '15,000+',
     freeTrial: '7 days'},
@@ -67,7 +67,7 @@ export const microSAASServices = [;;
     popular:
         popular: true,
     category: 'Productivity',
-    rating: 4.9;
+    rating: 4.9';
 
     users: '45,000+',
     freeTrial: '14 days'},
@@ -83,7 +83,7 @@ export const microSAASServices = [;;
     popular:
         popular: true,
     category: 'Productivity',
-    rating: 4.8;
+    rating: 4.8';
 
     users: '25,000+',
     freeTrial: '14 days'},
@@ -99,7 +99,7 @@ export const microSAASServices = [;;
     popular:
         popular: true,
     category: 'Productivity',
-    rating: 4.8;
+    rating: 4.8';
 
     users: '25,000+',
     freeTrial: '7 days'},
@@ -115,7 +115,7 @@ export const microSAASServices = [;;
     popular:
         popular: true,
     category: 'Productivity',
-    rating: 4.7;
+    rating: 4.7';
 
     users: '15,000+',
     freeTrial: '14 days'},
@@ -131,7 +131,7 @@ export const microSAASServices = [;;
     popular:
         popular: true,
     category: 'Productivity',
-    rating: 4.8;
+    rating: 4.8';
 
     users: '30,000+',
     freeTrial: '7 days'},
@@ -147,11 +147,11 @@ export const microSAASServices = [;;
     popular:
         popular: true,
     category: 'Productivity',
-    rating: 4.6;
+    rating: 4.6';
 
     users: '50,000+',
     freeTrial: '14 days'},
-  // Content & Marketing Tools;
+  // Content & Marketing Tools';
 
   {
     title: 'AI Content Writer Pro',
@@ -165,7 +165,7 @@ export const microSAASServices = [;;
     popular:
         popular: true,
     category: 'Content',
-    rating: 4.9;
+    rating: 4.9';
 
     users: '40,000+',
     freeTrial: '7 days'},
@@ -181,7 +181,7 @@ export const microSAASServices = [;;
     popular:
         popular: true,
     category: 'Content',
-    rating: 4.8;
+    rating: 4.8';
 
     users: '30,000+',
     freeTrial: '14 days'},
@@ -197,7 +197,7 @@ export const microSAASServices = [;;
     popular:
         popular: true,
     category: 'Content',
-    rating: 4.7;
+    rating: 4.7';
 
     users: '18,000+',
     freeTrial: '7 days'},
@@ -213,7 +213,7 @@ export const microSAASServices = [;;
     popular:
         popular: true,
     category: 'Content',
-    rating: 4.8;
+    rating: 4.8';
 
     users: '35,000+',
     freeTrial: '14 days'},
@@ -229,7 +229,7 @@ export const microSAASServices = [;;
     popular:
         popular: true,
     category: 'Content',
-    rating: 4.9;
+    rating: 4.9';
 
     users: '50,000+',
     freeTrial: '14 days'},
@@ -245,7 +245,7 @@ export const microSAASServices = [;;
     popular:
         popular: true,
     category: 'Marketing',
-    rating: 4.7;
+    rating: 4.7';
 
     users: '35,000+',
     freeTrial: '14 days'},
@@ -261,7 +261,7 @@ export const microSAASServices = [;;
     popular:
         popular: true,
     category: 'Marketing',
-    rating: 4.8;
+    rating: 4.8';
 
     users: '28,000+',
     freeTrial: '7 days'},
@@ -277,7 +277,7 @@ export const microSAASServices = [;;
     popular:
         popular: true,
     category: 'Marketing',
-    rating: 4.9;
+    rating: 4.9';
 
     users: '22,000+',
     freeTrial: '14 days'},
@@ -293,13 +293,13 @@ export const microSAASServices = [;;
     popular:
         popular: true,
     category: 'Marketing',
-    rating: 4.8;
+    rating: 4.8';
 
     users: '18,000+',
     freeTrial: '7 days'}
 
 ]
-export const aiServices = [;;
+export const aiServices = [';';
 
   {
     title: 'Machine Learning Solutions',
@@ -314,7 +314,7 @@ export const aiServices = [;;
         popular: true,
     category: 'AI Development',
     rating:
-        rating: 4.9;
+        rating: 4.9';
 
     users: '500+',
     freeTrial: '30 days'},
@@ -331,7 +331,7 @@ export const aiServices = [;;
         popular: true,
     category: 'Security',
     rating:
-        rating: 4.8;
+        rating: 4.8';
 
     users: '300+',
     freeTrial: '30 days'},
@@ -348,7 +348,7 @@ export const aiServices = [;;
         popular: true,
     category: 'Healthcare',
     rating:
-        rating: 4.9;
+        rating: 4.9';
 
     users: '200+',
     freeTrial: '30 days'},
@@ -365,7 +365,7 @@ export const aiServices = [;;
         popular: true,
     category: 'Finance',
     rating:
-        rating: 4.7;
+        rating: 4.7';
 
     users: '400+',
     freeTrial: '30 days'},
@@ -382,7 +382,7 @@ export const aiServices = [;;
         popular: true,
     category: 'Logistics',
     rating:
-        rating: 4.8;
+        rating: 4.8';
 
     users: '250+',
     freeTrial: '30 days'},
@@ -399,7 +399,7 @@ export const aiServices = [;;
         popular: true,
     category: 'Legal',
     rating:
-        rating: 4.6;
+        rating: 4.6';
 
     users: '150+',
     freeTrial: '30 days'},
@@ -416,7 +416,7 @@ export const aiServices = [;;
         popular: true,
     category: 'Manufacturing',
     rating:
-        rating: 4.9;
+        rating: 4.9';
 
     users: '180+',
     freeTrial: '30 days'},
@@ -433,13 +433,13 @@ export const aiServices = [;;
         popular: true,
     category: 'Education',
     rating:
-        rating: 4.7;
+        rating: 4.7';
 
     users: '600+',
     freeTrial: '30 days'}
 
 ]
-export const itServices = [;;
+export const itServices = [';';
 
   {
     title: 'Cloud Migration Services',
@@ -454,7 +454,7 @@ export const itServices = [;;
         popular: true,
     category: 'Cloud Services',
     rating:
-        rating: 4.8;
+        rating: 4.8';
 
     users: '600+',
     freeTrial: '30 days'},
@@ -471,7 +471,7 @@ export const itServices = [;;
         popular: true,
     category: 'Infrastructure',
     rating:
-        rating: 4.9;
+        rating: 4.9';
 
     users: '100+',
     freeTrial: '30 days'},
@@ -488,7 +488,7 @@ export const itServices = [;;
         popular: true,
     category: 'DevOps',
     rating:
-        rating: 4.8;
+        rating: 4.8';
 
     users: '400+',
     freeTrial: '30 days'},
@@ -505,7 +505,7 @@ export const itServices = [;;
         popular: true,
     category: 'Database',
     rating:
-        rating: 4.7;
+        rating: 4.7';
 
     users: '350+',
     freeTrial: '30 days'},
@@ -522,7 +522,7 @@ export const itServices = [;;
         popular: true,
     category: 'Security',
     rating:
-        rating: 4.9;
+        rating: 4.9';
 
     users: '500+',
     freeTrial: '30 days'},
@@ -539,13 +539,13 @@ export const itServices = [;;
         popular: true,
     category: 'Consulting',
     rating:
-        rating: 4.8;
+        rating: 4.8';
 
     users: '200+',
     freeTrial: '30 days'}
 
 ]
-export const specializedServices = [;;
+export const specializedServices = [';';
 
   {
     title: 'Quantum Computing Solutions',
@@ -560,7 +560,7 @@ export const specializedServices = [;;
         popular: true,
     category: 'Quantum',
     rating:
-        rating: 4.9;
+        rating: 4.9';
 
     users: '50+',
     freeTrial: '60 days'},
@@ -577,7 +577,7 @@ export const specializedServices = [;;
         popular: true,
     category: 'Autonomous',
     rating:
-        rating: 4.8;
+        rating: 4.8';
 
     users: '100+',
     freeTrial: '30 days'},
@@ -594,7 +594,7 @@ export const specializedServices = [;;
         popular: true,
     category: 'Blockchain',
     rating:
-        rating: 4.7;
+        rating: 4.7';
 
     users: '300+',
     freeTrial: '30 days'},
@@ -611,7 +611,7 @@ export const specializedServices = [;;
         popular: true,
     category: 'IoT',
     rating:
-        rating: 4.8;
+        rating: 4.8';
 
     users: '400+',
     freeTrial: '30 days'}
@@ -620,11 +620,11 @@ export const specializedServices = [;;
 export interface Service {
   id: string,
   name: string,
-  category: 'ai' | 'it' | 'micro-saas' | 'emerging-tech;
+  category: 'ai' | 'it' | 'micro-saas' | 'emerging-tech';
 
   subcategory: string,
   description: string,
-  features: string[];
+  features: string[]';
 
   pricing: {
     starting: number,
@@ -633,19 +633,19 @@ export interface Service {
 
     custom?: boolean};
 
-  benefits: string[];
+  benefits: string[]';
 
-  useCases: string[];
+  useCases: string[]';
 
   icon: string,
   popular: boolean,
-  new?: boolean;
+  new?: boolean';
 
   path: string,
   contact: {
     phone: string,
     email: string,
-    demo: string};
+    demo: string}';
 
   marketPrice?: {
     min: number,
@@ -1423,7 +1423,7 @@ export const services: Service[] = [
   }
 
 ]
-export const serviceCategories = [;;
+export const serviceCategories = [';';
 
   {
     id: 'ai',
@@ -1459,11 +1459,11 @@ export const serviceCategories = [;;
   }
 
 ]
-export const contactInfo = {;;
+export const contactInfo = {';';
 
   phone: '+1 (302) 464-0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',
   hours: Mon-Fri: 9AM-6PM EST
-};
+}';

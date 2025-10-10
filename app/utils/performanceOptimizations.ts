@@ -42,7 +42,7 @@ export const useIntersectionObserver = (  callback: (entries: IntersectionObserv
         ? new IntersectionObserver(callback, {)
             threshold: 0.1),
             rootMargin: '50px),
-        ? new IntersectionObserver(callback, {);
+        ? new IntersectionObserver(callback, {)';
 
             threshold: 0.1,
             rootMargin: '50px,
@@ -57,18 +57,18 @@ const observe = useCallback(;;
 
     (element: Element | null) => {,
       if (observer && element) {,
-        observer.observe(element),;
+        observer.observe(element),';
 
-const observe = useCallback();;
+const observe = useCallback()';';
 
     (element: Element | null) => {}
 
       if (observer && element) {}
 
         observer.observe(element)
-        return () => observer.unobserve(element);
+        return () => observer.unobserve(element)';
 
-'use client;
+'use client';
 
 // Performance optimization utilities;
 
@@ -228,16 +228,16 @@ const paint = performance.getEntriesByType(paint);;
 
 const fcp = paint.find(entry => entry.name === first-contentful-paint)?.startTime;;
 
-const lcp = performance.getEntriesByType(largest-contentful-paint)[0]?.startTime;;
+const lcp = performance.getEntriesByType(largest-contentful-paint)[0]?.startTime;';
 
       setMetrics({)
         fcp)
         lcp)
-ttfb: navigation?.responseStart - navigation?.requestStart});]
-    });]
+ttfb: navigation?.responseStart - navigation?.requestStart})';]
+    })';]
     }
 
-    // Monitor performance after page load;
+    // Monitor performance after page load';
 
     if (document.readyState === 'complete) {
 // Performance monitoring hook
@@ -266,20 +266,20 @@ const fcp = paint.find(entry => entry.name === first-contentful-paint)?.startTim
 
 const lcp = performance.getEntriesByType(largest-contentful-paint)[0]?.startTime;;
 
-      setMetrics({);
+      setMetrics({)';
 
         fcp,
         lcp,
-        ttfb: navigation?.responseStart - navigation?.requestStart});)
-}););    // Monitor performance after page load
+        ttfb: navigation?.responseStart - navigation?.requestStart})';)
+})';)';    // Monitor performance after page load
     if (document.readyState === 'complete) {}
 
-      updateMetrics();});)
+      updateMetrics()';})';)
 } else {}
 
-      window.addEventListener('load, updateMetrics);}););
+      window.addEventListener('load, updateMetrics)';})';)';
 
-    // Monitor Core Web Vitals;    if ('web-vitals in window) {}
+    // Monitor Core Web Vitals';    if ('web-vitals in window) {}
 
       import('web-vitals).then(({ getCLS, getFID, getFCP, getLCP, getTTFB }); => {}
 
@@ -287,8 +287,8 @@ const lcp = performance.getEntriesByType(largest-contentful-paint)[0]?.startTime
         getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value });))
         getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value });))
         getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value });))
-        getTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value });));)
-}););
+        getTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })';))';)
+})';)';
 
     return () => {}
 
@@ -306,10 +306,10 @@ return (;
 const [memoryInfo, setMemoryInfo] = useState<{
     usedJSHeapSize?: number;
 
-    totalJSHeapSize?: number;
+    totalJSHeapSize?: number';
 
-    jsHeapSizeLimit?: number;});]
-    }>({});
+    jsHeapSizeLimit?: number';})';]
+    }>({})';
 
   useEffect(() => {
     if (typeof window === 'undefined' || !(memory in performance)) return;
@@ -323,14 +323,14 @@ const memory = (performance as any).memory;;
           usedJSHeapSize: memory.usedJSHeapSize),
           totalJSHeapSize: memory.totalJSHeapSize),
 // Memory usage monitoring
-export const useMemoryMonitoring = useCallback((...args) => {};;
+export const useMemoryMonitoring = useCallback((...args) => {};';
 
   const [memoryInfo, setMemoryInfo] = useState<{}
 
     usedJSHeapSize?: number
     totalJSHeapSize?: number
-    jsHeapSizeLimit?: number;});]
-    }>({});
+    jsHeapSizeLimit?: number';})';]
+    }>({})';
 
   useEffect(() => {}
 
@@ -360,15 +360,15 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */});
 
 }>({});
 
-  useEffect(() => {/* TODO: Fix JSX expression */});)
-}););
+  useEffect(() => {/* TODO: Fix JSX expression */})';)
+})';)';
 
-    // Monitor performance after page load;
+    // Monitor performance after page load';
 
-    if (document.readyState === 'complete) {/* TODO: Fix JSX expression */});)
-} else {/* TODO: Fix JSX expression */}););
+    if (document.readyState === 'complete) {/* TODO: Fix JSX expression */})';)
+} else {/* TODO: Fix JSX expression */})';)';
 
-    // Monitor Core Web Vitals;    if ('web-vitals in window) {/* TODO: Fix JSX expression */}
+    // Monitor Core Web Vitals';    if ('web-vitals in window) {/* TODO: Fix JSX expression */}
 
       import('web-vitals).then(({ getCLS, getFID, getFCP, getLCP, getTTFB }); => {/* TODO: Fix JSX expression */}
 
@@ -442,22 +442,22 @@ document.head.appendChild(link);});]
 
 export const preloadCriticalResources = useCallback((...args) => {;;
 
-  if (typeof window === undefined) return;
+  if (typeof window === undefined) return';
 
-  // Preload critical fonts;
+  // Preload critical fonts';
 
 // Critical resource preloading
-export const preloadCriticalResources = useCallback((...args) => {};;
+export const preloadCriticalResources = useCallback((...args) => {}';';
 
   if (typeof window === 'undefined) return
   // Preload critical fonts
   preloadResource('/fonts/inter-var.woff2', 'font)
   preloadResource('/fonts/inter-var.woff', 'font)
-  // Preload critical images;
+  // Preload critical images';
 
   preloadResource('/images/hero-bg.webp', 'image)
   preloadResource('/images/logo.svg', 'image)
-  // Preload critical CSS;
+  // Preload critical CSS';
 
 preloadResource('/styles/critical.css', 'style);});]
     }
@@ -493,11 +493,11 @@ let totalSize = 0;;
 
       let imageSize = 0;;
 
-      resources.forEach((resource) => {;
+      resources.forEach((resource) => {';
 
-const size = (resource as PerformanceResourceTiming).transferSize || 0;;
+const size = (resource as PerformanceResourceTiming).transferSize || 0';';
 
-        totalSize += size;
+        totalSize += size';
 
         if (resource.name.includes('.js)) {
 // Bundle size monitoring
@@ -525,46 +525,46 @@ let jsSize = 0;;
 
 let cssSize = 0;;
 
-let imageSize = 0;;
+let imageSize = 0';';
 
       resources.forEach((resource) => {}
 
-        const size = (resource as PerformanceResourceTiming).transferSize || 0;;
+        const size = (resource as PerformanceResourceTiming).transferSize || 0';';
 
         totalSize += size
         if (resource.name.includes('.js)) {}
 
-          jsSize += size;});)} else if (resource.name.includes('.css)) {}
+          jsSize += size';})';)} else if (resource.name.includes('.css)) {}
 
           cssSize += size;});)
 } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {}
 
           imageSize += size;}););
 
-      });      setBundleSize({)
+      })';      setBundleSize({)
         totalSize)
         jsSize)
         cssSize)
-imageSize});]
-    });]
+imageSize})';]
+    })';]
     }
 
-    // Calculate after page load;
+    // Calculate after page load';
 
     if (document.readyState === 'complete) {
-      setBundleSize({);
+      setBundleSize({)';
 
         totalSize,
         jsSize,
         cssSize,
-        imageSize});)
-}););    // Calculate after page load
+        imageSize})';)
+})';)';    // Calculate after page load
     if (document.readyState === 'complete) {}
 
-      calculateBundleSize();});)
+      calculateBundleSize();})';)
 } else {}
 
-      window.addEventListener(load, calculateBundleSize);}););
+      window.addEventListener(load, calculateBundleSize)';})';)';
 
     return () => {}
 
@@ -597,20 +597,20 @@ export const preloadResource = (hre,;;
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}););;
 
 // Bundle size monitoring
-export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}););;
+export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */});)';';
 
-}>({});
+}>({})';
 
-  useEffect(() => {/* TODO: Fix JSX expression */});)
+  useEffect(() => {/* TODO: Fix JSX expression */})';)
 } else if (resource.name.includes('.css)) {/* TODO: Fix JSX expression */});)
 } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {/* TODO: Fix JSX expression */}););
 
       });
 
-      setBundleSize({/* TODO: Fix JSX expression */});)
-}););
+      setBundleSize({/* TODO: Fix JSX expression */})';)
+})';)';
 
-    // Calculate after page load;
+    // Calculate after page load';
 
     if (document.readyState === 'complete) {/* TODO: Fix JSX expression */});)
 } else {/* TODO: Fix JSX expression */}););
@@ -618,12 +618,12 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */});)
     return () => {/* TODO: Fix JSX expression */});)
 }});
 
-}, []);
+}, [])';
 
-  return bundleSize});
+  return bundleSize})';
 
 }
 
-export default {/* TODO: Fix JSX expression */}););
+export default {/* TODO: Fix JSX expression */})';)';
 
 }

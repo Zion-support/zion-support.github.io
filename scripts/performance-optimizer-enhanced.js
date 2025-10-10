@@ -29,46 +29,46 @@ const optimizations = {;;
       .replace(/\.png/g, '.webp)
       .replace(/\.jpeg/g, '.webp)},
 
-  // Minify inline styles;
+  // Minify inline styles';
 
   minifyInlineStyles: (content) => {,
-    return content.replace(/style="([^"]*)/g, (match, styles) => {;
+    return content.replace(/style="([^"]*)/g, (match, styles) => {';
 
-const minified = styles;;
+const minified = styles';'";
 
         .replace(/\s+/g, ' )
-        .replace(/;\s*/g, ';)
+        .replace(/'"'";\s*/g, '"'"'";)
         .replace(/:\s*/g, ':)
-        .trim();
+        .trim()"'"'";
 
       return `style="${minified}"})},
 
-  // Remove empty lines and extra whitespace;
+  // Remove empty lines and extra whitespace';
 
   removeExtraWhitespace: (content) => {,
-    return content;
+    return content';
 
       .replace(/\n\s*\n\s*\n/g, '\n\n)
       .replace(/[ \t]+$/gm, ')
       .replace(/\n{3}/g, '\n\n)},
 
-  // Optimize React components;
+  // Optimize React components';
 
   optimizeReactComponents: (content) => {
-    // Add React.memo to functional components;
+    // Add React.memo to functional components';
 
     if (content.includes('const ') && content.includes(': React.FC)) {
       content = content.replace(
 
-        /const (\w+): React\.FC = \(/g;
+        /const (\w+): React\.FC = \(/g';
 
         'const $1: React.FC = React.memo(()
-      );
+      )';
 
-      // Add closing parenthesis for React.memo;
+      // Add closing parenthesis for React.memo';
 
       content = content.replace()
-        /(\w+)\.displayName = \w+;/g;
+        /(\w+)\.displayName = \w+';/g';
 
         '$1.displayName = \$1\;\n});
 
@@ -81,15 +81,15 @@ const minified = styles;;
   addPerformanceHints: (content) => {
   return (
 
-    // Add preload hints for critical resources;
+    // Add preload hints for critical resources";
 
-    if (content.includes(<head>)) {;
+    if (content.includes(<head>)) {"'";
 
-const preloadHints = ;;
+const preloadHints = "'"'";"'"'"'";
 
     <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script crossorigin>,
     <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script crossorigin>,
-    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">;
+    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">';
 
       content = content.replace('<head>', <head>
 );
@@ -98,11 +98,11 @@ const preloadHints = ;;
 
     return content}
 
-};
+}';
 
-// Files to process;
+// Files to process';
 
-const filePatterns = [;;
+const filePatterns = [';';
 
   'app/**/*.{ts,tsx,js,jsx},
   'src/**/*.{ts,tsx,js,jsx},
@@ -113,11 +113,11 @@ const filePatterns = [;;
   'lib/**/*.{ts,tsx,js,jsx},
   dist/**/*.{html,css,js}
 
-];
+]';
 
-// Files to exclude;
+// Files to exclude';
 
-const excludePatterns = [;;
+const excludePatterns = [';';
 
   '**/node_modules/**,
   '**/.next/**,
@@ -196,12 +196,12 @@ const files = await glob(pattern, {);;
 
   const uniqueFiles = [...new Set(allFiles)];;
 
-  totalFiles = uniqueFiles.length;
+  totalFiles = uniqueFiles.length'";
 
   // console.log removed for production
-// Process each file;
+// Process each file'"'";
 
-  uniqueFiles.forEach(processFile);
+  uniqueFiles.forEach(processFile)'"'"'";
 
   // console.log removed for production
 // console.log removed for production
@@ -212,4 +212,4 @@ const files = await glob(pattern, {);;
 if (import.meta.url === `file://${process.argv[1]}) {
   main()}
 
-export { processFile, optimizations };
+export { processFile, optimizations }'"'"'"'";

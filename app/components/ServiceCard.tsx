@@ -1,8 +1,8 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { ArrowRight, CheckCircle } from lucide-react;
+import { ArrowRight, CheckCircle } from lucide-react';
 
 interface ServiceCardProps {
   title: string;
@@ -15,13 +15,13 @@ interface ServiceCardProps {
 
   popular?: boolean;
 
-  onClick?: () => void;
+  onClick?: () => void';
 
-  className?: string;
+  className?: string';
 
 }
 
-;
+';
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
@@ -67,11 +67,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         >
           Get Started
           <ArrowRight className=w-4 h-4 ml-2 />
-        </button>);
+        </button>)'"'";
 
     </div>
-  );
+  )'"'"'";
 
 }
 
-export default ServiceCard;
+export default ServiceCard'"'"'"'";

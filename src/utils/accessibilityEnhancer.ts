@@ -34,10 +34,10 @@ class AccessibilityEnhancer {private config: AccessibilityConfig}
 
   private setupKeyboardNavigation(): void {if (typeof document !== 'undefined' {}
 
-      // Add keyboard navigation support;)
+      // Add keyboard navigation support';)
       document.addEventListener('keydown', (event) => {if (event.key === 'Tab') {}
 
-          // Handle tab navigation;
+          // Handle tab navigation';
 
           // console.log removed for production
 }
@@ -51,9 +51,9 @@ class AccessibilityEnhancer {private config: AccessibilityConfig}
 
   private setupFocusIndicators(): void {if (typeof document !== 'undefined') {}
 
-      // Add focus indicators;
+      // Add focus indicators';
 
-      const style = document.createElement('style);;
+      const style = document.createElement('style)';';
 
       style.textContent = `
 
@@ -73,7 +73,7 @@ class AccessibilityEnhancer {private config: AccessibilityConfig}
 
 }
 
-export default AccessibilityEnhancer;`
+export default AccessibilityEnhancer';`
 
 
 

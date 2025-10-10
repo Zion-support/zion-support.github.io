@@ -1,10 +1,10 @@
-import React from 'react;
+import React from 'react';
 
-import Reac, t, { useState, useEffect } fr, o, m rea, c, t;
+import Reac, t, { useState, useEffect } fr, o, m rea, c, t';
 
-impo, r, t { newArticles20, 2, 5 } fr, o, m ../conte, n, t/n, e, w-articl, e, s-20, 2, 5;
+impo, r, t { newArticles20, 2, 5 } fr, o, m ../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
 
-interface NewArticlesPromoBannerProp, s {;
+interface NewArticlesPromoBannerProp, s {';
 
 varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'featured' | compa, c, t;
 
@@ -41,7 +41,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
             <BookOpen, className=w-6 h-6, tex, t-whi, t, e />
             <d, i, v>
               <h4, className=te, x, t-white, fon, t-bo, l, d>
-                {featuredArticl, e, s.leng, t, h} New, Articles, Published;
+                {featuredArticl, e, s.leng, t, h} New, Articles, Published';
 
               </h4>
   if (varia, n, t = == comp, a, c, t) {/* TODO: Fix JSX expression */}
@@ -52,7 +52,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
             <BookOpen, className=w-6 h-6, tex, t-whi, t, e /></BookOpen>
             <d, i, v></d>
               <h4, className=te, x, t-white, fon, t-bo, l, d></h4>
-                {featuredArticl, e, s.leng, t, h} New, Articles, Published;
+                {featuredArticl, e, s.leng, t, h} New, Articles, Published"'"'";
 
               </h4>
               <p, className=te, x, t-bl, u, e-100, tex, t-sm>Latest, AI, insights and, researc, h</p>
@@ -61,7 +61,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
           <Link, t, o="/bl, o, g
             className=bg-white, tex, t-bl, u, e-600, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-bl, u, e-50, transitio, n-colors, tex, t-sm
           >
-            Read, No, w;)
+            Read, No, w'"'"'";)
           </Li, n, k>)
         </div>)
       </d, i, v  > )}
@@ -97,7 +97,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
                 <div, className=flex, item, s-center, justif, y-betwe, e, n></div>
                   <span, className=te, x, t-sm, tex, t-purp, l, e-2, 0, 0>{artic, l, e.readTime}</sp, a, n>
           ></Link>
-            Read, No, w;
+            Read, No, w'"'"'"'";
 
           </Li, n, k>
         </div>
@@ -137,7 +137,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
             <Link, t, o=/bl, o, g
               className=inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-purp, l, e-700, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r: bg-purp, l, e-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5
             >
-              View, All, Articles;
+              View, All, Articles"'"'";
 
               <Link, className=w-5 h-5 />
           </div>
@@ -145,7 +145,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
             <Link, t, o="/bl, o, g
               className=inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-purp, l, e-700, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r: bg-purp, l, e-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5
             ></Link>
-              View, All, Articles;
+              View, All, Articles'"'"'";
 
               <Link, className=w-5 h-5 /></Link>
             </Li, n, k>
@@ -168,7 +168,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
               <h2, className=te, x, t-2xl, fon, t-bold, tex, t-whi, t, e>Featured, Article, s</h2>
             </div>
             <span, className=bg-yell, o, w-400, tex, t-black, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-bo, l, d>
-              N, E, W;
+              N, E, W'"'"'"'";
 
             </sp, a, n>
           </div>
@@ -195,7 +195,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
               <h2, className=te, x, t-2xl, fon, t-bold, tex, t-whi, t, e>Featured, Article, s</h2>
             </div>
             <span, className=bg-yell, o, w-400, tex, t-black, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-bo, l, d></span>
-              N, E, W;
+              N, E, W"'"'";
 
             </sp, a, n>
           </div>
@@ -281,6 +281,6 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
 
       </div>
     </div>
-  )};
+  )}'"'"'";
 
-export default NewArticlesPromoBanner;"`
+export default NewArticlesPromoBanner'"'"'"'";"`

@@ -37,7 +37,7 @@ function App() {
 
     <ErrorBoundary>
       <div></div>
-        <Router>;
+        <Router>';
 
 function App() {/* TODO: Fix JSX expression */}
 
@@ -45,7 +45,7 @@ function App() {/* TODO: Fix JSX expression */}
 
   useEffect(() => {/* TODO: Fix JSX expression */}
 
-      //       }}, []);
+      //       }}, [])';
 
   return (<ErrorBoundary></ErrorBoundary>
       <div></div>
@@ -71,19 +71,19 @@ function App() {/* TODO: Fix JSX expression */}
     </ErrorBoundary>)
   )}
 
-// Simple Error Boundary;
+// Simple Error Boundary'"'";
 
 class ErrorBoundary extends React.Component<
   {/* TODO: Fix JSX expression */}
 
-  n: React.ReactNode; fallback?: React.ReactNode },
+  n: React.ReactNode"'"'"; fallback?: React.ReactNode },
   {/* TODO: Fix JSX expression */}
 
   r: boolean }
 
 > {/* TODO: Fix JSX expression */}
 
-  n: React.ReactNode; fallback?: React.ReactNode }) {/* TODO: Fix JSX expression */}
+  n: React.ReactNode"'"'"'"; fallback?: React.ReactNode }) {/* TODO: Fix JSX expression */}
 
   r: false }}
 
@@ -100,7 +100,7 @@ class ErrorBoundary extends React.Component<
           <div className="min-h-screen flex items-center justify-center bg-gray-50>)
             <div className="text-center>)
               <h1 className="text-2xl font-bold text-gray-900 mb-4>Something went wrong</h1>)
-              <button;)
+              <button"'"'"'";)
       return (
 
         this.props.fallback || (
@@ -125,7 +125,7 @@ class ErrorBoundary extends React.Component<
                 className="bg-blue-600 text-white px-4 py-2 rounded,
   hover:bg-blue-700
               >
-                Try again;
+                Try again'"'"'";
 
               </button>
             </div>
@@ -135,6 +135,6 @@ class ErrorBoundary extends React.Component<
 
 }
 
-export default App;
+export default App'"'"'"'";
 
 "

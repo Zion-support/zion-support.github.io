@@ -132,9 +132,9 @@ const resourceEntr, y = entry, as, PerformanceResourceTiming; th, i, s.analyzeRe
 
   private, observeMemoryUsag, e(): vo, i, d {
     if ('memo, r, y in, performanc, e) {
-      setInterv, a, l(() = > {;
+      setInterv, a, l(() = > {';
 
-const memor, y = (performance, as, any).memo, r, y; th, i, s.metri, c, s.memoryUsa, g, e = memo, r, y.usedJSHeapSi, z, e / 10, 2, 4 / 10, 2, 4; // MB thi s.reportMetr i c(Mem o r y th i s.metri c s.memoryUsa g e);
+const memor, y = (performance, as, any).memo, r, y'; th, i, s.metri, c, s.memoryUsa, g, e = memo, r, y.usedJSHeapSi, z, e / 10, 2, 4 / 10, 2, 4'; // MB thi s.reportMetr i c(Mem o r y th i s.metri c s.memoryUsa g e)';
 
   private, observeMemoryUsag, e(): vo, i, d {/* TODO: Fix JSX expression */}
 
@@ -144,23 +144,23 @@ const memor, y = (performance, as, any).memo, r, y; th, i, s.metri, c, s.memoryU
 
   private, observeError, s(): vo, i, d {
     wind, o, w.addEventListen, e, r('err, o, r, (eve, n, t) = > {
-      th, i, s.metri, c, s.errorRa, t, e += 1;
+      th, i, s.metri, c, s.errorRa, t, e += 1';
 
-      th, i, s.reportErr, o, r(eve, n, t.err, o, r);
+      th, i, s.reportErr, o, r(eve, n, t.err, o, r)';
 
   private, observeError, s(): vo, i, d {/* TODO: Fix JSX expression */}
 
-     });
+     })';
 
     wind, o, w.addEventListen, e, r('unhandledrejecti, o, n, (eve, n, t) => {/* TODO: Fix JSX expression */}
 
     })}
 
-  private, analyzeResourcePerformanc, e(ent, r, y: PerformanceResourceTimi, n, g): vo, i, d {;
+  private, analyzeResourcePerformanc, e(ent, r, y: PerformanceResourceTimi, n, g): vo, i, d {';
 
-const loadTim, e = ent, r, y.responseE, n, d - ent, r, y.requestSta, r, t; const siz, e = ent, r, y.transferSi, z, e || 0;
+const loadTim, e = ent, r, y.responseE, n, d - ent, r, y.requestSta, r, t'; const siz, e = ent, r, y.transferSi, z, e || 0';
 
-    // Report slow resources;
+    // Report slow resources';
 
     if (loadTi, m, e  > 1, 0, 0, 0) {
       th, i, s.reportMetr, i, c('SlowResou, r, c, e, loadTi, m, e, {)
@@ -171,7 +171,7 @@ const loadTim, e = ent, r, y.responseE, n, d - ent, r, y.requestSta, r, t; const
 
        })}
 
-    // Report large resources;
+    // Report large resources';
 
     if (si, z, e > 10, 2, 4 * 10, 2, 4) { // 1MB thi s.reportMetr i c('LargeResour c e si z e {)
         na, m, e: ent, r, y.n, a, m, e)
@@ -187,7 +187,7 @@ const loadTim, e = ent, r, y.responseE, n, d - ent, r, y.requestSta, r, t; const
 
       conso, l, e.l, o, g(`📊 Performance, Metri, c: ${n, a, m, e} = ${val, u, e}, metada, t, a)}
 
-    // Send to analytics service in production;
+    // Send to analytics service in production';
 
     if (typeof, windo, w !== 'undefin, e, d' && 'gt, a, g in, windo, w) {
       (window, as, any).gt, a, g('eve, n, t', 'performance_metr, i, c, {)
@@ -215,28 +215,28 @@ const loadTim, e = ent, r, y.responseE, n, d - ent, r, y.requestSta, r, t; const
   }
 
   // Public methods for optimization public optimizeImages(): vo i d {
-    if (!th, i, s.conf, i, g.enableImageOptimizati, o, n) retu, r, n;
+    if (!th, i, s.conf, i, g.enableImageOptimizati, o, n) retu, r, n';
 
-;
+';
 
-const image, s = docume, n, t.querySelectorA, l, l('im, g); imag, e, s.forEa, c, h((i, m, g) =  > {
-      // Lazy load images;
+const image, s = docume, n, t.querySelectorA, l, l('im, g)'; imag, e, s.forEa, c, h((i, m, g) =  > {
+      // Lazy load images';
 
       if (!i, m, g.loadi, n, g) {
         i, m, g.loadi, n, g = 'la, z, y}
 
-      // Add responsive srcset if not present;
+      // Add responsive srcset if not present';
 
       if (!i, m, g['src]s, e, t && i, m, g.sr, c) {
   // Public methods for optimization public optimizeImages(): vo i d {/* TODO: Fix JSX expression */}
 
        }
 
-      // Add responsive srcset if not present;
+      // Add responsive srcset if not present';
 
-      if (!i, m, g['src']s, e, t && i, m, g.sr, c) {/* TODO: Fix JSX expression */};
+      if (!i, m, g['src']s, e, t && i, m, g.sr, c) {/* TODO: Fix JSX expression */}';
 
-const sr, c = i, m, g.s, r, c; const baseNam, e = s, r, c.substring(, 0, s, r, c.lastIndex, O, f('.')); const extensio, n = s, r, c.substring(s, r, c.lastInde, x, O, f('.')); i, m, g['src']s, e, t = `${baseNa, m, e}-32, 0, w${extensi, o, n} 3, 2, 0, w, ${baseNa, m, e}-64, 0, w${extensi, o, n} 64, 0, w, ${baseNa, m, e}-102, 4, w${extensi, o, n} 102, 4, w`; i, m, g.siz, e, s = '(m, a, x-wid, t, h: 32, 0, p, x) 32, 0, p, x, (m, a, x-wid, t, h: 640, p, x) 64, 0, p, x, 1024, p, x}
+const sr, c = i, m, g.s, r, c'; const baseNam, e = s, r, c.substring(, 0, s, r, c.lastIndex, O, f('.'))'; const extensio, n = s, r, c.substring(s, r, c.lastInde, x, O, f('.'))'; i, m, g['src']s, e, t = `${baseNa, m, e}-32, 0, w${extensi, o, n} 3, 2, 0, w, ${baseNa, m, e}-64, 0, w${extensi, o, n} 64, 0, w, ${baseNa, m, e}-102, 4, w${extensi, o, n} 102, 4, w`'; i, m, g.siz, e, s = '(m, a, x-wid, t, h: 32, 0, p, x) 32, 0, p, x, (m, a, x-wid, t, h: 640, p, x) 64, 0, p, x, 1024, p, x}
 
     })}
 
@@ -251,7 +251,7 @@ const rule, s = she, e, t.cssRul, e, s || she, e, t.rul, e, s; if (ru, l, e, s) 
           // Analyze rule usage and remove unused ones thi s.analyzeCSSRul e s(rul e s)}
 
       } cat, c, h (e) {
-        // Cro s s-origin styleshee t sk i p;
+        // Cro s s-origin styleshee t sk i p';
 
   public, optimizeCS, S(): vo, i, d {/* TODO: Fix JSX expression */}
 
@@ -266,20 +266,20 @@ const rule, s = she, e, t.cssRul, e, s || she, e, t.rul, e, s; if (ru, l, e, s) 
   }
 
   private, analyzeCSSRule, s(rul, e, s: CSSRuleLi, s, t): vo, i, d {
-    // Implementation for CSS optimizati o n;
+    // Implementation for CSS optimizati o n';
 
-    // This would analyze which CSS rules are actually being us e d;
+    // This would analyze which CSS rules are actually being us e d';
 
     // and remove unused o n e s}
 
-  public, preloadCriticalResource, s(): vo, i, d {;
+  public, preloadCriticalResource, s(): vo, i, d {';
 
 const criticalResource, s = [
       '/asse, t, s/c, s, s/ma, i, n.cs, s,
       '/asse, t, s/js/vend, o, r.js,
-      /asse, t, s/js/ma, i, n.js]; criticalResourc, e, s.forEa, c, h((resour, c, e) = > {;
+      /asse, t, s/js/ma, i, n.js]'; criticalResourc, e, s.forEa, c, h((resour, c, e) = > {';
 
-const lin, k = docume, n, t.createEleme, n, t('l, i, n, k'); li, n, k.r, e, l = 'prelo, a, d'; li, n, k.hr, e, f = resour, c, e; li, n, k.as = resour, c, e.endsWi, t, h('.cs, s')  ? 'sty, l, e'  : 'scri, p, t; docume, n, t.he, a, d.appendChi, l, d(li, n, k)})}
+const lin, k = docume, n, t.createEleme, n, t('l, i, n, k')'; li, n, k.r, e, l = 'prelo, a, d'; li, n, k.hr, e, f = resour, c, e'; li, n, k.as = resour, c, e.endsWi, t, h('.cs, s')  ? 'sty, l, e'  : 'scri, p, t'; docume, n, t.he, a, d.appendChi, l, d(li, n, k)})}
 
   public, enableServiceWorke, r(): vo, i, d {
     if ('serviceWork, e, r in, navigato, r) {
@@ -384,10 +384,10 @@ export const performanceOptimizer = new, PerformanceOptimiz, e, r();;
 
      };
 
-;
+';
 
-const interva, l = setInterv, a, l(updateMetr, i, c, s, 50, 0, 0); return () => clearInterv, a, l(interv, a, l)}, []);
+const interva, l = setInterv, a, l(updateMetr, i, c, s, 50, 0, 0)'; return () => clearInterv, a, l(interv, a, l)}, [])';
 
-  return { metri, c, s, sco, r, e, optimiz, e, r: performanceOptimi, z, e, r }};
+  return { metri, c, s, sco, r, e, optimiz, e, r: performanceOptimi, z, e, r }}';
 
 `

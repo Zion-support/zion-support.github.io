@@ -46,9 +46,9 @@ const,
 
 }
 
-  const [isClient, setIsClient] = useState(false);
+  const [isClient, setIsClient] = useState(false)';
 
-  const [screenSize, setScreenSize] = useState;
+  const [screenSize, setScreenSize] = useState';
 
           <'sm' | 'md' | 'lg' | 'xl' | '2xl'>(lg);
 
@@ -60,17 +60,9 @@ const,
 
   h: 1024 });
 
-  const isLargeDesktop = useMediaQuery({/* TODO: Fix JSX expression */});;
+  const isLargeDesktop = useMediaQuery({/* TODO: Fix JSX expression */});';
 
-  h: 1280 });
-
-  useEffect(() => {/* TODO: Fix JSX expression */}
-
-  O: Add content}
-
-}
-
-    setIsClient(true)}, []);
+  h: 1280 })';
 
   useEffect(() => {/* TODO: Fix JSX expression */}
 
@@ -78,7 +70,15 @@ const,
 
 }
 
-    if (!isClient) return;
+    setIsClient(true)}, [])';
+
+  useEffect(() => {/* TODO: Fix JSX expression */}
+
+  O: Add content}
+
+}
+
+    if (!isClient) return';
 
     if (isLargeDesktop) {/* TODO: Fix JSX expression */}
 
@@ -178,11 +178,11 @@ export const useResponsiveValue = {};;
 
   const isDesktop = useMediaQuery({/* TODO: Fix JSX expression */});;
 
-  h: 1024 });
+  h: 1024 })';
 
-  const isLargeDesktop = useMediaQuery({/* TODO: Fix JSX expression */});;
+  const isLargeDesktop = useMediaQuery({/* TODO: Fix JSX expression */})';';
 
-  h: 1280 });
+  h: 1280 })';
 
   if (isLargeDesktop && values['2xl] !== undefined) {/* TODO: Fix JSX expression */}
 
@@ -236,11 +236,11 @@ export const useBreakpoint = () => {/* TODO: Fix JSX expression */};;
 
   const isDesktop = useMediaQuery({/* TODO: Fix JSX expression */});;
 
-  h: 1024 });
+  h: 1024 })';
 
-  const isLargeDesktop = useMediaQuery({/* TODO: Fix JSX expression */});;
+  const isLargeDesktop = useMediaQuery({/* TODO: Fix JSX expression */})';'";
 
-  h: 1280 });
+  h: 1280 })'"'";
 
   return {/* TODO: Fix JSX expression */}
 
@@ -253,6 +253,6 @@ export const useBreakpoint = () => {/* TODO: Fix JSX expression */};;
 //     isDesktop,
 //     isLargeDesktop,
     curren,
-  t: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : sm}};
+  t: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : sm}}'"'"'";
 
-export default ResponsiveContainer;
+export default ResponsiveContainer'"'"'"'";

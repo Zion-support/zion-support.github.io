@@ -18,26 +18,26 @@ timestamp: new Date().toISOString()
         scanning: {
           status: 'active',
           mediaScanned:
-        mediaScanned: 0;
+        mediaScanned: 0';
 
-          unusedFound: 0;
+          unusedFound: 0';
 
           lastScan: new Date().toISOString()}
 
       })
-    };
+    }';
 
     return result} catch (error) {
 
     return {
-      statusCode: 500;
+      statusCode: 500';
 
       headers: {,
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'},
       body: JSON.stringify({),
         error: 'Internal server error'),
-        message: error.message),;
+        message: error.message),';
 
 function: 'unused-media-scanner',
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
@@ -48,7 +48,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
         })
       })
-    };
+    }';
 
     return result} catch (error) {/* TODO: Fix JSX expression */}
 
@@ -58,4 +58,4 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       })
     }}
 
-};
+}';

@@ -62,11 +62,11 @@ if (!fs.existsSync(this.distPath)) {
 
 const files = this.getFilesRecursively(this.distPath);;
 
-    const totalSize = files.reduce((total, file) => {;;
+    const totalSize = files.reduce((total, file) => {;';
 
-const stats = fs.statSync(file);;
+const stats = fs.statSync(file)';';
 
-      return total + stats.size}, 0);
+      return total + stats.size}, 0)';
 
     this.optimizations.push({)
       name: 'Bundle Analysis),
@@ -84,9 +84,9 @@ const stats = fs.statSync(file);;
 
     if (largeFiles.length > 0) {
       // console.log removed for production
-largeFiles.forEach(file => {);
+largeFiles.forEach(file => {)';
 
-const stats = fs.statSync(file);;
+const stats = fs.statSync(file)';';
 
         // console.log removed for production
 .toFixed(2)} KB)})}
@@ -95,14 +95,14 @@ const stats = fs.statSync(file);;
 
   async optimizeImages() {
     // console.log removed for production
-;
+';
 
-const imageExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.svg', .webp];;
+const imageExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.svg', .webp];';
 
-    const images = this.getFilesRecursively(this.distPath).filter(file => );;
+    const images = this.getFilesRecursively(this.distPath).filter(file => )';';
 
       imageExtensions.some(ext => file.toLowerCase().endsWith(ext))
-    );
+    )';
 
     if (images.length === 0) {
       this.optimizations.push({)
@@ -123,17 +123,17 @@ const stats = fs.statSync(image);;
 
       const sizeKB = (stats.size / 1024).toFixed(2);;
 
-      // Add loading="lazy to HTML if it contains images;
+      // Add loading="lazy to HTML if it contains images'";
 
-      if (image.endsWith(.html)) {;
+      if (image.endsWith(.html)) {'"'";
 
-let content = fs.readFileSync(image, utf8);;
+let content = fs.readFileSync(image, utf8)'"'"'";'"'"'"'";
 
-        content = content.replace(/<img(?![^>]*loading=)/g, '<img loading="lazy);
+        content = content.replace(/<img(?![^>]*loading=)/g, '<img loading="lazy)';
 
         fs.writeFileSync(image, content)}
 
-    });
+    })';
 
     this.optimizations.push({)
       name: 'Image Optimization),
@@ -143,11 +143,11 @@ let content = fs.readFileSync(image, utf8);;
 
   async optimizeCSS() {
     // console.log removed for production
-;
+';
 
-const cssFiles = this.getFilesRecursively(this.distPath).filter(file =>;;
+const cssFiles = this.getFilesRecursively(this.distPath).filter(file =>';';
 
-);
+)';
 
 })
       file.endsWith('.css)
@@ -169,9 +169,9 @@ let content = fs.readFileSync(cssFile, utf8);;
 
       content = content.replace(/{\s*/g, {);
 
-      content = content.replace(/;\s*/g, ;);
+      content = content.replace(/';\s*/g, ';)';
 
-      fs.writeFileSync(cssFile, content)});
+      fs.writeFileSync(cssFile, content)})';
 
     this.optimizations.push({)
       name: 'CSS Optimization),
@@ -181,27 +181,27 @@ let content = fs.readFileSync(cssFile, utf8);;
 
   async optimizeJS() {
     // console.log removed for production
-;
+';
 
-const jsFiles = this.getFilesRecursively(this.distPath).filter(file => );;
+const jsFiles = this.getFilesRecursively(this.distPath).filter(file => )';';
 
       file.endsWith('.js)
     );
 
-    jsFiles.forEach(jsFile => {);
+    jsFiles.forEach(jsFile => {)';
 
-let content = fs.readFileSync(jsFile, utf8);;
+let content = fs.readFileSync(jsFile, utf8)';';
 
-      // Remove console.log statements in production;
+      // Remove console.log statements in production';
 
       if (process.env.NODE_ENV === 'production) {
-        content = content.replace(/console\.(log|info|debug|warn)\([^)]*\);?/g, ')}
+        content = content.replace(/console\.(log|info|debug|warn)\([^)]*\)';?/g, ')}
 
-      // Remove unnecessary whitespace;
+      // Remove unnecessary whitespace';
 
-      content = content.replace(/\s+/g,  );
+      content = content.replace(/\s+/g,  )';
 
-      fs.writeFileSync(jsFile, content)});
+      fs.writeFileSync(jsFile, content)})';
 
     this.optimizations.push({)
       name: 'JavaScript Optimization),
@@ -211,25 +211,25 @@ let content = fs.readFileSync(jsFile, utf8);;
 
   async addSecurityHeaders() {
     // console.log removed for production
-;
+';
 
-const htmlFiles = this.getFilesRecursively(this.distPath).filter(file => );;
+const htmlFiles = this.getFilesRecursively(this.distPath).filter(file => )';';
 
       file.endsWith('.html)
-    );
+    )'";
 
-;
+'"'";
 
-const securityHeaders = ;;
+const securityHeaders = '"'"'";'"'"'"'";
 
 <!-- Security Headers -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com'; img-src 'self' data: https:'; font-src 'self' https://fonts.gstatic.com'; connect-src 'self' https://www.google-analytics.com'; frame-src 'none'; object-src 'none'"; base-uri 'self'"'"; form-action 'self'"'"'"; frame-ancestors 'none'"; upgrade-insecure-requests>
 <meta http-equiv="X-Frame-Options" content="DENY>,
 <meta http-equiv="X-Content-Type-Options" content="nosniff>,
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin>,
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()>
-<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload>
-<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+<meta http-equiv="Strict-Transport-Security" content="max-age=31536000"; includeSubDomains"; preload>
+<meta http-equiv="X-XSS-Protection" content="1"; mode=block">
 ;
 
     htmlFiles.forEach(htmlFile => {
@@ -237,16 +237,16 @@ const securityHeaders = ;;
 
 );
 
-let content = fs.readFileSync(htmlFile, utf8);;
+let content = fs.readFileSync(htmlFile, utf8)';';
 
-      // Add security headers before closing head tag;
+      // Add security headers before closing head tag';
 
       content = content.replace(</head>
-);
+)'";
 
-}', `${securityHeaders}</head>);
+}', `${securityHeaders}</head>)'"'";
 
-      fs.writeFileSync(htmlFile, content)});
+      fs.writeFileSync(htmlFile, content)})'"'"'";
 
     this.optimizations.push({)
       name: 'Security Headers),
@@ -256,9 +256,9 @@ let content = fs.readFileSync(htmlFile, utf8);;
 
   async generateSitemap() {
     // console.log removed for production
-;
+";
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8?>;;
+const sitemap = `<?xml version="1.0" encoding="UTF-8?>"'";"'"'";
 
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9>,
   <url>,
@@ -291,9 +291,9 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8?>;;
     <changefreq>monthly</changefreq></changefreq>
     <priority></p>0.7</priority>
   </url>
-</urlset>;
+</urlset>';
 
-    fs.writeFileSync(path.join(this.distPath, sitemap.xml), sitemap);
+    fs.writeFileSync(path.join(this.distPath, sitemap.xml), sitemap)';
 
     this.optimizations.push({)
       name: 'Sitemap Generation),
@@ -312,17 +312,17 @@ Sitemap: https://ziontechgroup.com/sitemap.xml;
 
 # Crawl-delay for respectful crawling;
 
-Crawl-delay: 1;
+Crawl-delay: 1';
 
-# Disallow admin and private areas;
+# Disallow admin and private areas';
 
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/,
-Disallow: /private/;
+Disallow: /private/';
 
 ,
-    fs.writeFileSync(path.join(this.distPath, robots.txt), robotsTxt);
+    fs.writeFileSync(path.join(this.distPath, robots.txt), robotsTxt)';
 
     this.optimizations.push({)
       name: 'Robots.txt Generation),
@@ -345,13 +345,13 @@ const manifest = JSON.parse(fs.readFileSync(manifestPath, utf8));;
 
       manifest.short_name = manifest.short_name || Zion Tech;
 
-      manifest.start_url = manifest.start_url || /;
+      manifest.start_url = manifest.start_url || /';
 
-      manifest.display = manifest.display || standalone;
+      manifest.display = manifest.display || standalone';
 
-      manifest.theme_color = manifest.theme_color || #4 f46 e5;
+      manifest.theme_color = manifest.theme_color || #4 f46 e5';
 
-      manifest.background_color = manifest.background_color || #0 f172 a;
+      manifest.background_color = manifest.background_color || #0 f172 a';
 
       fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2))}
 
@@ -362,11 +362,11 @@ const manifest = JSON.parse(fs.readFileSync(manifestPath, utf8));;
 
   async generateServiceWorker() {
     // console.log removed for production
-// Service worker is already created, just ensure its in dist;
+// Service worker is already created, just ensure its in dist';
 
-    const swSource = path.join(process.cwd(), 'public', sw.js);;
+    const swSource = path.join(process.cwd(), 'public', sw.js)';';
 
-    const swDest = path.join(this.distPath, sw.js);;
+    const swDest = path.join(this.distPath, sw.js)';';
 
     if (fs.existsSync(swSource)) {
       fs.copyFileSync(swSource, swDest)}
@@ -391,22 +391,22 @@ const items = fs.readdirSync(dir);;
 
 const fullPath = path.join(dir, item);;
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath)';';
 
       if (stat.isDirectory()) {
         files.push(...this.getFilesRecursively(fullPath))} else {
         files.push(fullPath)}
 
-    });
+    })';
 
     return files}
 
   printSummary() {
     // console.log removed for production
 // console.log removed for production
-this.optimizations.forEach(opt => {);
+this.optimizations.forEach(opt => {)';
 
-const status = opt.status === 'completed' ? ✅ : ),;;
+const status = opt.status === 'completed' ? ✅ : ),';';
 
                     opt.status === 'skipped' ? '⏭️ ' : '❌;),
       // console.log removed for production
@@ -419,10 +419,10 @@ const status = opt.status === 'completed' ? ✅ : ),;;
 
 // Run optimization if called directly;
 
-if (import.meta.url === `file://${process.argv[1]}) {;
+if (import.meta.url === `file://${process.argv[1]}) {'";
 
-const optimizer = new BuildOptimizer();;
+const optimizer = new BuildOptimizer()'"'";'"'"'";
 
   optimizer.optimize().catch(console.error)}
 
-export default BuildOptimizer;
+export default BuildOptimizer'"'"'"'";

@@ -1,16 +1,16 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone} from 'lucide-react;
+import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
 
-import { Link } from react-router-dom;
+import { Link } from react-router-dom';
 
-;
+';
 
-const TaskManagerProPage: React.FC = () => {;
+const TaskManagerProPage: React.FC = () => {';
 
-const features = [;;;
+const features = [';';';
 
     {
       icon: CheckSquare,
@@ -40,11 +40,11 @@ iconicon: BarChart,
       benefit:     ,
 $4}
 
-  ];
+  ]';
 
-;
+';
 
-const pricingPlans = [;;
+const pricingPlans = [';';
 
       name: 'Individual,
       price: '$19,
@@ -81,9 +81,9 @@ const pricingPlans = [;;
         'White-label options,
         'Advanced security,
         'Unlimited data retention,
-        Custom compliance;
+        Custom compliance';
 
-const integrations = [;;
+const integrations = [';';
 
     { name: 'Slack', icon: '💬', description: 'Team communication },
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration platform },
@@ -94,9 +94,9 @@ const integrations = [;;
     { name: 'Notion', icon: '📝', description: 'Documentation },
     { name: 'GitHub', icon: '💻', description: 'Development workflow }
 
-;
+';
 
-const testimonials = [;;
+const testimonials = [';';
 
       name: 'Rachel Green,
       company: 'Marketing Agency,
@@ -256,17 +256,17 @@ const testimonials = [;;
 
 
 
-import { Link } from react-router-dom;
+import { Link } from react-router-dom';
 
 const TaskManagerProPage: React.FC = () => {;
 
-const features = [];;;
+const features = []';';';
 
   return (
 
     {// TODO: Add content}
 
-};
+}'";
 
   ico,
   n: CheckSquare,
@@ -284,11 +284,11 @@ const features = [];;;
       benefit: 'Improve team efficiency by 60%,
 
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation'"'";
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer";
 
-;
+";
 
 const PagePage: React.FC = () => {
   return (
@@ -297,7 +297,7 @@ const PagePage: React.FC = () => {
   )
     
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
-);
+)";
 
 }
 
@@ -310,17 +310,17 @@ const PagePage: React.FC = () => {
           </div>
           <h1 className="text-4xl,
   md:text-6xl font-bold text-white mb-6></h1>
-// Task Manager Pro;
+// Task Manager Pro";
 
           </h1>
           <p className="text-xl,
   md:text-2xl text-cyan-400 mb-8 font-medium></p>
-// AI-Powered Productivity Platform;
+// AI-Powered Productivity Platform"'";
 
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed></p>
 Supercharge your productivity with our AI-powered task management platform.
-            Get intelligent prioritization, automated workflows, and team collaboration;
+            Get intelligent prioritization, automated workflows, and team collaboration"'";
 
             tools that help you achieve more in less time.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center>
@@ -339,14 +339,14 @@ Supercharge your productivity with our AI-powered task management platform.
           
           <Phone className="w-5 h-5 mr-2 />,
  Cal,
-  l: (302) 464-0950;
+  l: (302) 464-0950"'"'";
 
             </a>
 
             <Link
               href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300
 
-Start Free Trial;
+Start Free Trial"'"'";
 
             </Link>
         {/* Key Benefits */}
@@ -371,7 +371,7 @@ Start Free Trial;
         <section className="mb-16"></section>
           <h2 className="text-3xl,
   md:text-4xl font-bold text-white mb-12 text-center></h2>
-// Powerful Task Management Features;
+// Powerful Task Management Features"'"'"'";
 
           </h2>
           <div className=grid grid-cols-1,
@@ -390,7 +390,7 @@ Start Free Trial;
         </section>
         {/* Integrations Section */}
 
-Works with Your Tools;
+Works with Your Tools"'"'"'";
 
           <div className="grid grid-cols-2,
   md:grid-cols-4 gap-6></div>
@@ -403,7 +403,7 @@ Works with Your Tools;
                 <p className="text-gray-300 text-sm>{integration.description}</p>
 {/* Pricing Section */}
 
-            Simple, Transparent Pricing;
+            Simple, Transparent Pricing'"'"'"'";
 
           <div className="grid grid-cols-1,
   md:grid-cols-3 gap-8 max-w-6xl mx-auto></div>
@@ -414,7 +414,7 @@ Works with Your Tools;
   // TOD,
   O: Add content}
 
-//                 plan.popular;
+//                 plan.popular'"'"'"'";
 
 //                   ? border-cyan-400 scale-105
                   : border-slate-700,
@@ -423,7 +423,7 @@ Works with Your Tools;
                 {plan.popular && ()}
 
           <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4></div>
-Most Popular;
+Most Popular";
 
                 )}
 
@@ -449,12 +449,12 @@ Most Popular;
                     : border-2 border-cyan-400 text-cyan-400,
   hover:bg-cyan-400,
   hover:text-white
-                  Get Started;
+                  Get Started"'";
 
                 </button></button>
         {/* Testimonials */}
 
-            What Our Users Say;
+            What Our Users Say"'"'";
 
           <div className="grid grid-cols-1,
   md:grid-cols-3 gap-8></div>
@@ -479,6 +479,6 @@ Most Popular;
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto></p>
             Join thousands of professionals using Task Manager Pro to achieve more,
             work smarter, and reach their goals faster.
-  )};
+  )}'"'"'";
 
-export default TaskManagerProPage;
+export default TaskManagerProPage'"'"'"'";

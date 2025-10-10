@@ -1,12 +1,12 @@
-import React from 'react;
+import React from 'react';
 
-#!/usr/bin/env node;
+#!/usr/bin/env node';
 
-import fs from fs;
+import fs from fs';
 
-// List of files that need fixing based on the type check errors;
+// List of files that need fixing based on the type check errors';
 
-const filesToFix = [;;;
+const filesToFix = [';';';
 
   '/workspace/app/blog/ai-2025-sept-30-operational-trust-scorecards-v3/page.tsx,
   '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx,
@@ -22,20 +22,20 @@ const filesToFix = [;;;
   '/workspace/app/team/page.tsx,
   /workspace/app/terms/page.tsx];
 
-// // Function to process a single file;
+// // Function to process a single file';
 
 function processFile(filePath) {
   try {
-    // Remove extra empty lines;
+    // Remove extra empty lines';
 
-    content = content.replace(/\n\s*\n\s*\n/g, \n\n);
+    content = content.replace(/\n\s*\n\s*\n/g, \n\n)';
 
-    // Fix JSX fragment issues - ensure proper opening and closing;
+    // Fix JSX fragment issues - ensure proper opening and closing';
 
     if (content.includes('<React.Fragment>') && !content.includes('</React.Fragment>)) {
       // Find the last closing div or main tag and add </React.Fragment> before it;
 
-      for (let i = lines.length - 1; i >= 0; i--) {;;
+      for (let i = lines.length - 1'; i >= 0'; i--) {';';
 
         if (
 
@@ -45,7 +45,7 @@ function processFile(filePath) {
         ) {
           lastClosingTagIndex = i;
 
-          break;
+          break';
 
 function processFile(filePath) {/* TODO: Fix JSX expression */}
 
@@ -59,15 +59,15 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     }
 
-    // Fix function declarations;
+    // Fix function declarations';
 
     content = content.replace(
 
       /export default function (\w+)\(\) \{/,
       const $1: React.FC = () => {
-    );
+    )';
 
-    // Add proper export at the end;
+    // Add proper export at the end';
 
     if (!content.includes('export default') && content.includes('const )) {,
       //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,;;
@@ -76,13 +76,13 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace()
       /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
 
-        content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};);
+        content = content.replace(/^\s*}\s*$/, `  );\n}';\n\nexport default ${componentName}';)';
 
         modified = true}
 
     }
 
-    // Fix any remaining syntax issues;
+    // Fix any remaining syntax issues';
 
     content = content.replace(/\{\s*title:\s*['"`][^'"`]*['"`]\s*,\s*description:\s*['"`][^'"`]*['"`]\s*,\s*type:\s*['"`][^'"`]*['"`]\s*,\s*url:\s*['"`][^'"`]*['"]\s*\}/g)
       
@@ -90,7 +90,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
   l:\s*['"`][^'"`]*['"]\s*\}/g,
       ')
-    );
+    )'"'";
 
     if (modified) {/* TODO: Fix JSX expression */}
 
@@ -102,7 +102,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
 }
 
-// Process all files;
+// Process all files'"'"'";
 
 filesToFix.forEach(file => {)
   if (processFile(file)) {
@@ -111,6 +111,6 @@ filesToFix.forEach(file => {)
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
 
   })
-});
+})'"'"'"'";
 
 // "`

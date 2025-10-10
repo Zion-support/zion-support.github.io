@@ -20,19 +20,19 @@ const importFixes = [;;
 
     // Fix malformed import statements with missing commas
     {
-      pattern: /import\s+{([^}]*),\s*([^}]*),\s*([^}]*)\s+from\s+'([^']*);\s*}/g,
-      replacement: "import { $1, $2, $3 } from '$4';
+      pattern: /import\s+{([^}]*),\s*([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,
+      replacement: "import { $1, $2, $3 } from '$4'"'"'";
 
     },
     // Fix malformed import statements with missing commas
     {
-      pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*);\s*}/g,
-      replacement: "import { $1, $2 } from '$3';
+      pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*)'"'"'"'";\s*}/g,
+      replacement: "import { $1, $2 } from '$3'"'"'";
 
     },
     // Fix malformed import statements
     {
-      pattern: /import\s+{([^}]*)\s+from\s+'([^']*);\s*}/g,
+      pattern: /import\s+{([^}]*)\s+from\s+'([^']*)'"'"'"'";\s*}/g,
       replacement: "import { $1 } from '$2';
 
     }
@@ -115,15 +115,15 @@ const objectFixes = [;;
 const newContent = content.replace(fix.pattern, fix.replacement);;
 
     if (newContent !== content) {
-      content = newContent;
+      content = newContent'";
 
       modified = true}
 
   }
 
-  // Fix malformed JSX;
+  // Fix malformed JSX'"'";
 
-const jsxFixes = [;;
+const jsxFixes = ['"'"'";'"'"'"'";
 
     // Fix malformed JSX attributes
     {
@@ -202,10 +202,10 @@ const result = fixCommonSyntaxErrors(content);;
 
     content = result.content;
 
-    modified = result.modified;
+    modified = result.modified'";
 
     if (modified) {
-      fs.writeFileSync(filePath, content, utf8);
+      fs.writeFileSync(filePath, content, utf8)'"'";
 
       // console.log removed for production
 return true}
@@ -216,12 +216,12 @@ return false}
 
 }
 
-// Function to find files with syntax errors;
+// Function to find files with syntax errors'"'"'";
 
 function findFilesWithSyntaxErrors() {
-  try {;
+  try {'"'"'"'";
 
-const result = execSync('npm run lint 2>&1 | grep -B1 "error.*Parsing error" | grep "^/workspace" | sort -u 2>/dev/null || true', { encoding: utf8 });;
+const result = execSync('npm run lint 2>&1 | grep -B1 "error.*Parsing error" | grep "^/workspace" | sort -u 2>/dev/null || true', { encoding: utf8 })';';
 
     return result.trim().split('\n).filter(file => file.length > 0)} catch (error) {
     // console.error removed for production
@@ -236,9 +236,9 @@ return []}
 const filesWithErrors = findFilesWithSyntaxErrors();;
 
 // console.log removed for production
-;
+'";
 
-let fixedCount = 0;;
+let fixedCount = 0'"'";'"'"'";
 
 for (const file of filesWithErrors) {
   if (fixSyntaxErrors(file)) {
@@ -248,11 +248,11 @@ for (const file of filesWithErrors) {
 
 // console.log removed for production
 // Verify no more syntax errors exist
-try {;
+try {'"'"'"'";
 
-const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: utf8 });;
+const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: utf8 })'";'"'";
 
-  const count = parseInt(remainingErrors.trim());;
+  const count = parseInt(remainingErrors.trim())'"'"'";'"'"'"'";
 
   if (count === 0) {
     // console.log removed for production

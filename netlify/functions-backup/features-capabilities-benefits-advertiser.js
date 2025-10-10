@@ -24,13 +24,13 @@ timestamp: new Date().toISOString()
           features:
         features: 0;
 
-          capabilities: 0;
+          capabilities: 0';
 
-          benefits: 0;
+          benefits: 0';
 
           lastAdvert: new Date().toISOString()}
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */}';';
 
         'Access-Control-Allow-Origin': '*'}
 
@@ -39,15 +39,15 @@ timestamp: new Date().toISOString()
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   t: new Date().toISOString()}
 
-        }})};
+        }})}';
 
-    return result;
+    return result';
 
 //   } catch (error) {// // console.error removed for production
 error}
 
     return {
-      statusCode: 500;
+      statusCode: 500';
 
       headers: {,
         'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ error}
 
       },
       body: JSON.stringify({error: 'Internal server error'),
-        message: error.message),;
+        message: error.message),';
 
 function: 'features-capabilities-benefits-advertiser'}
 
@@ -74,12 +74,12 @@ function: 'features-capabilities-benefits-advertiser'}
   n: 'features-capabilities-benefits-advertiser'})
       })}}
 
-};
+}';
 
-        timestamp: new Date().toISOString(),' function: 'features-capabilities-benefits-advertiser',' source: event.source || 'unknown', advertising: {' status: 'active, features: 0, capabilities: 0, benefits: 0;
+        timestamp: new Date().toISOString(),' function: 'features-capabilities-benefits-advertiser',' source: event.source || 'unknown', advertising: {' status: 'active, features: 0, capabilities: 0, benefits: 0';
 
-        lastAdvert: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
-error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'features-capabilities-benefits-advertiser }) }} };
+        lastAdvert: new Date().toISOString() } }) }'; return result} catch (error) {' // // console.error removed for production
+error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'features-capabilities-benefits-advertiser }) }} }';
 
         timestam,
   p: new Date().toISOString(),' functio,
@@ -87,7 +87,7 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
   e: event.source || 'unknown', advertisin,
   g: {/* TODO: Fix JSX expression */}
 
-  t: new Date().toISOString() } }) }; return result} catch (error) {/* TODO: Fix JSX expression */}
+  t: new Date().toISOString() } }) }'; return result} catch (error) {/* TODO: Fix JSX expression */}
 
       } return {/* TODO: Fix JSX expression */}
 
@@ -96,4 +96,4 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
 
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'features-capabilities-benefits-advertiser }) }} };
+  n: 'features-capabilities-benefits-advertiser }) }} }';

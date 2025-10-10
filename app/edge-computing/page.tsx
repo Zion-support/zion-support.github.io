@@ -1,16 +1,16 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import Navigation from ../components
 import Footer from ../components
-import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi, Server } from lucide-react;
+import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi, Server } from lucide-react';
 
-;
+';
 
-const EdgeComputingPage: React.FC = () => {const features = [;;;
+const EdgeComputingPage: React.FC = () => {const features = [';';';
 
     {
       ico,
@@ -50,11 +50,11 @@ const EdgeComputingPage: React.FC = () => {const features = [;;;
       benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance]
     }
 
-  ];
+  ]';
 
-;
+';
 
-const services = [;;
+const services = [';';
 
     {
       icon: '⚡,
@@ -77,11 +77,11 @@ const services = [;;
       description: Mobile edge computing for 5G and mobile applications
     }
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'Ultra-Low Latency,
     'Reduced Bandwidth Costs,
@@ -89,11 +89,11 @@ const benefits = [;;
     'Enhanced Security,
     'Real-time Processing,
     Global Scalability
-  ];
+  ]';
 
-;
+';
 
-const useCases = [;;
+const useCases = [';';
 
     {
       title: 'Autonomous Vehicles,
@@ -127,7 +127,7 @@ const useCases = [;;
       icon: 🎮
     }
 
-  ];
+  ]';
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900>
       
@@ -285,4 +285,4 @@ const useCases = [;;
 
       <Footer />
     </div>)
-export default EdgeComputingPage;
+export default EdgeComputingPage'"'"'"'";

@@ -18,19 +18,19 @@ const fixes = [;;
 
   // Fix semicolons in object properties;
 
-  { pattern: /color: 'text-\w+-\d+'\};/g, replacement: "color: 'text-\\w+-\\d+' },
-  // Fix semicolons in JSX attributes;
+  { pattern: /color: 'text-\w+-\d+'\}';/g, replacement: "color: 'text-\\w+-\\d+' },
+  // Fix semicolons in JSX attributes';
 
-  { pattern: /className=\{`[^`]+`\};/g, replacement: (match) => match.replace(';', ') },
-  // Fix semicolons in JSX props;
+  { pattern: /className=\{`[^`]+`\}';/g, replacement: (match) => match.replace(';', ') },
+  // Fix semicolons in JSX props';
 
-  { pattern: /keywords=\{[^}]+\}\};/g, replacement: (match) => match.replace('};', '}) },
-  // Fix missing commas in arrays;
+  { pattern: /keywords=\{[^}]+\}\}';/g, replacement: (match) => match.replace('}';', '}) },
+  // Fix missing commas in arrays';
 
-  { pattern: /}\s*;\s*$/gm, replacement: '} },
-  // Fix stray semicolons;
+  { pattern: /}\s*';\s*$/gm, replacement: '} },
+  // Fix stray semicolons';
 
-  { pattern: /;\s*$/gm, replacement: ' },
+  { pattern: /';\s*$/gm, replacement: ' },
   // Fix console statements;
 
   { pattern: /console\.(log|warn|error|info|debug)\([^)]*\);/g, replacement:  }];
@@ -49,14 +49,14 @@ let content = fs.readFileSync(filePath, utf8);;
 const newContent = content.replace(fix.pattern, fix.replacement);;
 
       if (newContent !== content) {
-        content = newContent;
+        content = newContent';
 
         modified = true}
 
-    });
+    })';
 
     if (modified) {
-      fs.writeFileSync(filePath, content);
+      fs.writeFileSync(filePath, content)';
 
       // console.log removed for production
 return true}
@@ -67,7 +67,7 @@ return false}
 
 }
 
-// Find all TypeScript/JavaScript files;
+// Find all TypeScript/JavaScript files';
 
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', .jsx]) {;
 
@@ -79,9 +79,9 @@ const items = fs.readdirSync(dir);;
 
     for (const item of items) {;
 
-const fullPath = path.join(dir, item);;
+const fullPath = path.join(dir, item)';';
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath)';';
 
       if (stat.isDirectory()) {
         if (!['node_modules', '.git', 'dist', 'build', '.next', 'backup-problematic].includes(item)) {
@@ -99,15 +99,15 @@ const fullPath = path.join(dir, item);;
 
 // Main fix process;
 
-const files = findFiles(./app);;
+const files = findFiles(./app);'";
 
-let fixedCount = 0;;
+let fixedCount = 0'"'";'"'"'";
 
 // console.log removed for production
 files.forEach(file => {)
   if (fixFile(file)) {
     fixedCount++}
 
-});
+})'"'"'"'";
 
 // console.log removed for production

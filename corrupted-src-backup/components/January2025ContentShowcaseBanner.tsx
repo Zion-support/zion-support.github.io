@@ -1,20 +1,20 @@
-import React from 'react;
+import React from 'react';
 
-import, React, from 'rea, c, t;
+import, React, from 'rea, c, t';
 
-impo, r, t { Li, n, k } fr, o, m rea, c, t-rout, e, r-d, o, m;
+impo, r, t { Li, n, k } fr, o, m rea, c, t-rout, e, r-d, o, m';
 
 const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {
   return (
 
   retu, r, n(<div, classNam, e = relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0 >
-);
+)';
 
 } {  }
 
           <h2, classNam, e=te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t>
             <span, classNam, e=bg-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t>)
-              Complete, AI, Knowledge H, u, b;)
+              Complete, AI, Knowledge H, u, b';)
           <p, classNam, e=te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12>)
             Access, the, most comprehensive, collection, of AI, insig, h, t, s)
   retu, r, n (
@@ -23,7 +23,7 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {
           <h2, classNam, e=te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t></h2>
             <span, classNam, e=bg-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t>
               Complete, AI, Knowledge H, u, b</span>
-          <p, classNam, e=te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12>;
+          <p, classNam, e=te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12>';
 
 const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 
@@ -101,14 +101,14 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
         <div, classNam, e = bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-12, border, border-whi, t, e/20, m, b-16></div>
           <h3, classNam, e=te, x, t-3xl, fon, t-bold, tex, t-white, tex, t-center, m, b-12>
                   <BookOpen, classNam, e=w-8 h-8, tex, t-bl, u, e-4, 0, 0 /></BookOpen>
-                Read, All, Articles;
+                Read, All, Articles';
 
                 <Link, classNam, e=w-4 h-4 /></Link>
         {/* Statis, t, i, c, s */}
 
         <div, classNam, e = bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-12, border, border-whi, t, e/20, m, b-16></div>
           <h3, classNam, e=te, x, t-3xl, fon, t-bold, tex, t-white, tex, t-center, m, b-12></h3>
-            Content, Library, Overview;
+            Content, Library, Overview';
 
           </h3>
           <div, classNam, e=grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8></div>
@@ -150,14 +150,14 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
               classNa, m, e=inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-pi, n, k-500, t, o-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-semibold, hove, r:fr, o, m-pi, n, k-600, hove, r:to-purp, l, e-600, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-1, 0, 5
             >
               <BookOpen, classNam, e=w-5 h-5 />
-              Explore, Complete, Library;
+              Explore, Complete, Library';
 
               <Users, classNam, e=w-5 h-5 />
               classNa, m, e=inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-pi, n, k-500, t, o-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-semibold, hove, r:fr, o, m-pi, n, k-600, hove, r:to-purp, l, e-600, transitio, n-all, duratio, n-300, transform, hove,
   r:sca, l, e-1, 0, 5
             ></Link>
               <BookOpen, classNam, e=w-5 h-5 /></BookOpen>
-              Explore, Complete, Library;
+              Explore, Complete, Library';
 
               <Users, classNam, e=w-5 h-5 /></Users>
               Join, AI, Community}

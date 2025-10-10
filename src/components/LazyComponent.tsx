@@ -1,7 +1,7 @@
-import React, { Suspense, lazy, ComponentType } from 'react;
+import React, { Suspense, lazy, ComponentType } from 'react';
 
 interface LazyComponentProps {
-  fallback?: React.ReactNode;
+  fallback?: React.ReactNode';
 
   children: React.ReactNode}
 
@@ -102,7 +102,7 @@ export const _withLazyLoading = {};;
 
           <P extends object>()
   Componen,
-  t: ComponentType;
+  t: ComponentType';
 
           <P>,
   fallback?: ReactNode) => {/* TODO: Fix JSX expression */}
@@ -125,12 +125,12 @@ export const _withLazyLoading = {};;
           <Suspense fallback={fallback || <LoadingSpinner />}>
       <Component {...props} /></Component>
     </Suspense>
-  )};
+  )}';
 
-// Lazy component wrapper with intersection observer;
+// Lazy component wrapper with intersection observer';
 
 const,
-  LazyComponent: React.FC;
+  LazyComponent: React.FC';
 
           <LazyComponentProps> = ({/* TODO: Fix JSX expression */}
 
@@ -337,12 +337,12 @@ const fontPreloads = [;;
 
   // Preload critical images;
 
-const imagePreloads = [;;
+const imagePreloads = [';';
 
   // TOD,
-  O: Add items;
+  O: Add items';
 
-];
+]';
 
 //     '/og-image.jpg,
 //     /favicon.ico];
@@ -357,10 +357,10 @@ const imagePreloads = [;;
 
     link.rel = preload;
 
-    link.as = image;
+    link.as = image'";
 
-    link.href = src;
+    link.href = src'"'";
 
-    document.head.appendChild(link)})};
+    document.head.appendChild(link)})}'"'"'";
 
-export default LazyComponent;
+export default LazyComponent'"'"'"'";

@@ -106,10 +106,10 @@ const _cache = new Map();;
 
       }
 
-      //       const result = fn.apply(this, args);;
+      //       const result = fn.apply(this, args)';';
 
-      cache.set(key, result);
+      cache.set(key, result)';
 
-      return result}}};
+      return result}}}';
 
 `

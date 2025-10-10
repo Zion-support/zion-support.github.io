@@ -28,7 +28,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
               <path;
 
                 strokeLinecap=round
-                strokeLinejoin=round;
+                strokeLinejoin=round';
 
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix JSX expression */}
 
@@ -50,7 +50,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
           </pre>
         </div>
         <div className=flex space-x-3>
-          <button;
+          <button';
 
         <div className=mb-4></div>
           <p className=text-sm text-gray-600 mb-2>An unexpected error occurred:</p>
@@ -65,9 +65,9 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
 
             className=bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500
           >)
-            Try again;)
+            Try again';)
           </button>)
-          <button;),
+          <button';),
             onClick={() => window?.location.reload()}
 
             className=bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500
@@ -94,7 +94,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
   focus:ring-2,
   focus:ring-blue-500
           >
-            Try again;
+            Try again'";
 
           </button>
           <button></button>
@@ -106,7 +106,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
   focus:ring-2,
   focus:ring-gray-500
           >
-            Reload page;
+            Reload page'"'";
 
           </button>
         </div>
@@ -121,10 +121,10 @@ interface AppErrorBoundaryState {/* TODO: Fix JSX expression */}
 
 }
 
-export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {;
+export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {'"'"'";
 
 constructor(props: AppErrorBoundaryProps) {,
-    super(props);
+    super(props)'"'"'"'";
 
     this.state = { hasError: false, error: undefined }}
 

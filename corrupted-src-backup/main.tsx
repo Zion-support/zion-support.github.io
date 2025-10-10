@@ -17,13 +17,13 @@ async function reportWebVitals() {/* TODO: Fix JSX expression */}
 
         //         }
 
-    };
+    }';
 
-    onCLS(log);
+    onCLS(log)';
 
-    onLCP(log);
+    onLCP(log)';
 
-    onFCP(log);
+    onFCP(log)';
 
     onTTFB(log)} catch (error) {/* TODO: Fix JSX expression */}
 
@@ -39,13 +39,13 @@ if (!container) {/* TODO: Fix JSX expression */}
 
 ;
 
-const _root = createRoot(container);;
+const _root = createRoot(container)';';
 
 root.render(<React.StrictMode>)
     <App />)
 root.render(<React.StrictMode></React>
     <App /></App>
   </React.StrictMode>)
-);
+)';
 
-reportWebVitals();
+reportWebVitals()';

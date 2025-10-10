@@ -11,9 +11,9 @@ function createProperComponent(filePath) {;
 
 const fileName = path.basename(filePath, path.extname(filePath));;
 
-  const isPage = filePath.includes('/page.tsx') || filePath.includes(/page.jsx);;
+  const isPage = filePath.includes('/page.tsx') || filePath.includes(/page.jsx)';';
 
-  const isComponent = filePath.includes(/components/);;
+  const isComponent = filePath.includes(/components/)';';
 
   const isUtil = filePath.includes('/utils/') || filePath.includes(/hooks/);;
 
@@ -21,12 +21,12 @@ const fileName = path.basename(filePath, path.extname(filePath));;
 
   const isType = filePath.includes(/types/);;
 
-  ;
+  ';
 
-let content = ;;
+let content = ';';
 
   if (isPage) {
-    content = `import React from react;
+    content = `import React from react';
 
 export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}() {
   return(<div className="min-h-screen bg-gray-50>)
@@ -43,10 +43,10 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}(
       </div>
     </div>
   )}} else if (isComponent) {
-    content = `import React from react;
+    content = `import React from react'"'"'";
 
 interface ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}Props {
-  className?: string;
+  className?: string'"'"'"'";
 
   children?: React.ReactNode}
 
@@ -105,9 +105,9 @@ export default function ${fileName}() {
 function fixFile(filePath) {
   try {;
 
-const content = createProperComponent(filePath);;
+const content = createProperComponent(filePath)';';
 
-    fs.writeFileSync(filePath, content);
+    fs.writeFileSync(filePath, content)';
 
     // console.log removed for production
 return true} catch (error) {
@@ -116,7 +116,7 @@ return false}
 
 }
 
-// Function to find all TypeScript/JavaScript files;
+// Function to find all TypeScript/JavaScript files';
 
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', .jsx]) {;
 
@@ -131,12 +131,12 @@ const items = fs.readdirSync(currentDir);;
 
       for (const item of items) {;
 
-const fullPath = path.join(currentDir, item);;
+const fullPath = path.join(currentDir, item);';
 
-        const stat = fs.statSync(fullPath);;
+        const stat = fs.statSync(fullPath)';';
 
         if (stat.isDirectory()) {
-          // Skip node_modules and other common directories;
+          // Skip node_modules and other common directories';
 
           if (!['node_modules', '.git', 'dist', 'build', '.next].includes(item)) {
             traverse(fullPath)}
@@ -170,9 +170,9 @@ const files = findFiles(srcDir);;
 // console.log removed for production
 ;
 
-let fixedCount = 0;;
+let fixedCount = 0'";'"'";
 
-let errorCount = 0;;
+let errorCount = 0'"'"'";'"'"'"'";
 
 for (const file of files) {
   try {

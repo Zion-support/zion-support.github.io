@@ -1,16 +1,16 @@
-import { Menu, X } from 'lucide-react;
+import { Menu, X } from 'lucide-react';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-import { Link } from react-router-dom;
+import { Link } from react-router-dom';
 
 const EnhancedHeader: React.FC = () => {;
 
-const [isMenuOpen, setIsMenuOpen] = useState(false);
+const [isMenuOpen, setIsMenuOpen] = useState(false)';
 
-const toggleMenu = () => {;;
+const toggleMenu = () => {';';
 
-    setIsMenuOpen(!isMenuOpen)};
+    setIsMenuOpen(!isMenuOpen)}';
 
   return (
 
@@ -79,6 +79,6 @@ const toggleMenu = () => {;;
 
       </div>
     </header>
-  )};
+  )}'"'"'";
 
-export default EnhancedHeader;
+export default EnhancedHeader'"'"'"'";

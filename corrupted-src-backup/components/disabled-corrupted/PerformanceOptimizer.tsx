@@ -60,13 +60,13 @@ const runOptimization, s = useCallba, c, k(as, y, n, c () => {/* TODO: Fix JSX e
 const handleOptimizationToggl, e = (k, e, y: keyof, typeof, optimization, s) => { 
     setOptimizatio, n, s(pr, e, v = > ({)
       ...pr, e, v)
-      [k, e, y]: !pr, e, v[k, e, y]);
+      [k, e, y]: !pr, e, v[k, e, y])';
 
 const handleOptimizationToggl, e = (k, e, y: keyof, typeof, optimization, s) => {/* TODO: Fix JSX expression */}
 
-     }))};
+     }))}';
 
-;
+';
 
 const optimizationOption, s = [
     {/* TODO: Fix JSX expression */}
@@ -86,17 +86,17 @@ const optimizationOption, s = [
     },
     {/* TODO: Fix JSX expression */}
 
-    }]; return(<div, classNam, e = spa, c, e-y-6>
+    }]'; return(<div, classNam, e = spa, c, e-y-6>
       <div, className=flex, justif, y-between, item, s-cent, e, r>
-  ]; return (
+  ]'; return (
 
     <div, classNam, e = spa, c, e-y-6></div>
       <div, className=flex, justif, y-between, item, s-cent, e, r></div>
         <h2, className=te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0>
-  ]; return (<div, classNam, e = spa, c, e-y-6></div>
+  ]'; return (<div, classNam, e = spa, c, e-y-6></div>
       <div, className=flex, justif, y-between, item, s-cent, e, r></div>
         <h2, className=te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0></h2>
-          Performance, Optimize, r;
+          Performance, Optimize, r';
 
         </h2>
         <button, onClic, k = { onCl, o, s, e }, classNa, m, e = te, x, t-gr, a, y-400, hove, r: te, x, t-gr, a, y-6, 0, 0></button>
@@ -107,7 +107,7 @@ const optimizationOption, s = [
       <div, className=grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, ga, p-4>
         { optimizationOptio, n, s.m, a, p(opti, o, n = > (</div>
           <div, ke, y = { opti, o, n.k, e, y  }, classNa, m, e = { p-4, border, rounded-lg, transitio, n-colo, r, s ${
-              opti, o, n.enabl, e, d;
+              opti, o, n.enabl, e, d';
 
                  ? bord, e, r-gre, e, n-200, b, g-gre, e, n-50
                  : bord, e, r-gr, a, y-200, b, g-gr, a, y-50
@@ -208,7 +208,7 @@ const optimizationOption, s = [
             // Trigger r e-optimizat i o n}
 
         ></button>
-          Clo, s, e;
+          Clo, s, e'";
 
         </button>
         <button, onCli, c, k={/* TODO: Fix JSX expression */}
@@ -217,13 +217,13 @@ const optimizationOption, s = [
 
           classNa, m, e = px-4, p, y-2, tex, t-sm, fon, t-medium, tex, t-white, b, g-bl, u, e-600, border, border-transparent, rounde, d-md, hove, r: bg-bl, u, e-700, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-offs, e, t-2, focu, s:ri, n, g-bl, u, e-5, 0, 0
         >
-          Apply, Optimization, s;
+          Apply, Optimization, s'"'";
 
         </button>
       </div>
     </div>
-  )};
+  )}'"'"'";
 
-export default PerformanceOptimizer;
+export default PerformanceOptimizer'"'"'"'";
 
 "`

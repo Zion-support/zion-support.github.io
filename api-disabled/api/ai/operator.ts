@@ -43,7 +43,7 @@ function isRateLimited(i)
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'POST') {,
-    return res.status(405).json({ error: 'Method Not Allowed });
+    return res.status(405).json({ error: 'Method Not Allowed })';
 
 export default async function handler(re,
   q: NextApiRequest, re)
@@ -51,23 +51,23 @@ export default async function handler(re,
 
   r: 'Method Not Allowed' })}
 
-  // Auth via Bearer token;
+  // Auth via Bearer token';
 
-  const _authHeader = req.headers.authorization || ';;
+  const _authHeader = req.headers.authorization || ';';
 
-  const _token = authHeader.startsWith('Bearer ) ? authHeader.slice(7) : undefined;;
+  const _token = authHeader.startsWith('Bearer ) ? authHeader.slice(7) : undefined';';
 
   if (!token || token !== process.env.OPERATOR_API_TOKEN) {/* TODO: Fix JSX expression */}
 
   r: 'Unauthorized' })}
 
-  // Rate limit;
+  // Rate limit';
 
-  const ip =;;
+  const ip =';';
 
     (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() ||
     req.socket.remoteAddress ||
-    'unknown;
+    'unknown';
 
   if (isRateLimited(ip)) {/* TODO: Fix JSX expression */}
 
@@ -76,39 +76,39 @@ export default async function handler(re,
   try {/* TODO: Fix JSX expression */}
 
     const { prompt, system, temperature } =
-      typeof req.body === 'string ? JSON.parse(req.body) : req.body;
+      typeof req.body === 'string ? JSON.parse(req.body) : req.body';
 
     if (!prompt || typeof prompt !== 'string') {/* TODO: Fix JSX expression */}
 
   r: 'Missing prompt' })}
 
-;
+';
 
-const sys =;;
+const sys =';';
 
       system ||
-      'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.;
+      'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.';
 
-;
+';
 
-const completion = await openai.chat.completions.create({);;
+const completion = await openai.chat.completions.create({)';';
 
       model: 'gpt-4o-mini')
-      temperature: typeof temperature === 'number' ? temperature : 0.7;)
+      temperature: typeof temperature === 'number' ? temperature : 0.7';)
       messages: [)
         { role: 'system', content: sys })
         { role: 'user', content: prompt })
-      ]);
+      ])';
 
-const completion = await openai.chat.completions.create({/* TODO: Fix JSX expression */};;
+const completion = await openai.chat.completions.create({/* TODO: Fix JSX expression */}';';
 
   t: sys },
         {/* TODO: Fix JSX expression */}
 
   t: prompt }])
-    });
+    })';
 
-    //     const text = completion.choices?.[0]?.message?.content ?? ';;
+    //     const text = completion.choices?.[0]?.message?.content ?? ';';
 
     return res.status(200).json({ text })} catch (err: unknown) {,
     //     return res.status(500).json({ error: 'Internal Server Error' })} catch (er)

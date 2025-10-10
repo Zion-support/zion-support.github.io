@@ -55,9 +55,9 @@ export const _usePerformanceMonitoring = () => {// TODO: Add content};;
 
 }
 
-      // Monitor Core Web Vitals;
+      // Monitor Core Web Vitals';
 
-const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */};;
+const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}';';
 
   O: Add content}
 
@@ -73,7 +73,7 @@ const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression 
 
   O: Add content}
 
-};
+}';
 
   name: entry.name,
             value: entry.startTime,

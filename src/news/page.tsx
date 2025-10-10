@@ -1,17 +1,17 @@
-import React from 'react;
+import React from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
 import Navigation from ../components
 import Footer from ../components
 import SEOOptimizer from ../components
-import { Calendar, ArrowRight, TrendingUp, Users, Award, Globe, Zap, Brain, Shield, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Clock3, Compass, PieChart, TrendingDown, Activity } from lucide-react;
+import { Calendar, ArrowRight, TrendingUp, Users, Award, Globe, Zap, Brain, Shield, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Clock3, Compass, PieChart, TrendingDown, Activity } from lucide-react';
 
-;
+';
 
-const NewsPage: React.FC = () => {;
+const NewsPage: React.FC = () => {';
 
-const newsArticles = [;;;
+const newsArticles = [';';';
 
     {
       i,
@@ -80,22 +80,22 @@ const newsArticles = [;;;
       readTime: 5 min read
     }
 
-  ];
+  ]';
 
-;
+';
 
-const categories = ['All', 'Product Launch', 'Success Story', 'Technology', 'Innovation', Security];;
+const categories = ['All', 'Product Launch', 'Success Story', 'Technology', 'Innovation', Security];';
 
-;
+';
 
-const stats = [;;
+const stats = [';';
 
     { icon: Users, number: '100+', label: 'Happy Clients },
     { icon: Award, number: '50+', label: 'Awards Won },
     { icon: TrendingUp, number: '300%', label: 'Average ROI },
     { icon: Globe, number: '25+', label: 'Countries Served }
 
-  ];
+  ]';
 
   return (
 
@@ -223,6 +223,6 @@ const stats = [;;
         <Footer />
       </div>
     </React.Fragment>
-  )};
+  )}'"'"'";
 
-export default NewsPage;
+export default NewsPage'"'"'"'";

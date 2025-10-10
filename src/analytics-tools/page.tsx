@@ -1,14 +1,14 @@
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin} from 'lucide-react;
+import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin} from 'lucide-react';
 
-import React from react;
+import React from react';
 
-const AnalyticsToolsPage: React.FC = () => {;
+const AnalyticsToolsPage: React.FC = () => {';
 
-const analyticsTools = [;;;
+const analyticsTools = [';';';
 
     {
       titl,
@@ -57,9 +57,9 @@ titletitle: 'AI Financial Analytics,
       category:     ,
 $4}
 
-  ];
+  ]';
 
-  const benefits = [;;
+  const benefits = [';';
 
       icon: TrendingUp,
       title: 'Data-Driven Decisions,
@@ -76,13 +76,13 @@ icon$5: Brain,
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom'";
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation'"'";
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer"'";
 
-;
+"'";
 
 const PagePage: React.FC = () => {
   return (
@@ -96,7 +96,7 @@ const PagePage: React.FC = () => {
         <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month. />
         <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics />
       </Helmet>
-);
+)"'"'";
 
 }
 
@@ -282,20 +282,20 @@ Why Choose Our Analytics Tools?
               className=bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hove,
     r:text-purple-600 transition-colors
               Email Us
-  )};
+  )}"'"'";
 
 Ready to Unlock Your Data?
           <p className="text-xl text-purple-100 mb-8>
             Get started with our AI analytics tools today and transform your data into actionable insights.
           <div className="flex flex-col sm: flex-row gap-4 justify-center>
               href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors
-Call (302) 464-0950;
+Call (302) 464-0950"'"'"'";
 
               href="mailto:kleber@ziontechgroup.com" className=bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hove,
     r:text-purple-600 transition-colors
 
-              Email Us;
+              Email Us'"'";
 
-  )};
+  )}'"'"'";
 
-export default AnalyticsToolsPage;
+export default AnalyticsToolsPage'"'"'"'";

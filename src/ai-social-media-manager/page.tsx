@@ -1,14 +1,14 @@
-import React from 'react;
+import React from 'react';
 
-import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare} from 'lucide-react;
+import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare} from 'lucide-react';
 
-import React from react;
+import React from react';
 
-;
+';
 
-const AISocialMediaManagerPage: React.FC = () => {;
+const AISocialMediaManagerPage: React.FC = () => {';
 
-const features = [;;;
+const features = [';';';
 
     {
       icon: Share2,
@@ -32,19 +32,19 @@ icon$5: MessageSquare,
       description:     ,
 $4}
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'Increase engagement by 300%,
     'Save 20+ hours per week,
     'Grow followers by 150%,
     'Boost brand awareness by 200%,
-    Improve content performance by 250%;
+    Improve content performance by 250%';
 
-const platforms = [;;
+const platforms = [';';
 
     { name: 'Facebook', icon: '📘', color: 'text-blue-500 },
     { name: 'Instagram', icon: '📷', color: 'text-pink-500 },
@@ -53,9 +53,9 @@ const platforms = [;;
     { name: 'TikTok', icon: '🎵', color: 'text-black },
     { name: 'YouTube', icon: '📺', color: 'text-red-500 }
 
-;
+';
 
-const pricing = [;;
+const pricing = [';';
 
       name: 'Starter,
       price: '$29,
@@ -222,12 +222,12 @@ const pricing = [;;
           <p className="text-xl text-gray-300 mb-8>
             Join thousands of brands already using AI Social Media Manager to grow their presence
               Contact Sales
-  )};
+  )}';
 
-'use client;
+'use client'";
 
-import React, { useState, useEffect } from 'react;
+import React, { useState, useEffect } from 'react'"'";
 
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react;
+import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react'"'"'";
 
-export default AISocialMediaManagerPage;
+export default AISocialMediaManagerPage'"'"'"'";

@@ -21,7 +21,7 @@ function fixRemainingLintIssues(filePath) {
     ) {
       return false}
 
-    // Fix 1: Add underscore prefix to unused parameters;
+    // Fix 1: Add underscore prefix to unused parameters';
 
     content = content.replace(/(\w+):\s*(\w+)\s*=\s*[^)]+\)\s*=>/g, (match, param1, param2) => {
       if(param1 === 'error ||
@@ -92,13 +92,13 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
 
     // Fix 2: Comment out unused variable declarations;
 
-    for (let i = 0; i < lines.length; i++) {;;
+    for (let i = 0; i < lines.length; i++) {;';
 
-      // Comment out unused variable declarations;
+      // Comment out unused variable declarations';
 
       if (
 
-        line.match(/^\s*(const|let|var)\s+(\w+)\s*=\s*[^;]+;\s*$/) &&
+        line.match(/^\s*(const|let|var)\s+(\w+)\s*=\s*[^';]+';\s*$/) &&
         !line.includes('export) &&
         !line.includes('return) &&
         !line.includes('console.) &&
@@ -279,7 +279,7 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
     // Fix,
   2: Comment out unused variable declarations;
 
-    for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */};;
+    for (let i = 0; i < lines.length'; i++) {/* TODO: Fix JSX expression */}';';
 
           }
 
@@ -287,12 +287,12 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
 
       }
 
-      // Fix 3: Add underscore prefix to unused function parameters;
+      // Fix 3: Add underscore prefix to unused function parameters';
 
       if (line.includes('function') && line.includes('(') && line.includes('))) {
-        if (paramMatch) {;
+        if (paramMatch) {';
 
-const fixedParams = params.map(p => {);;
+const fixedParams = params.map(p => {)';';
 
             if ()
               p &&)
@@ -350,13 +350,13 @@ const fixedParams = params.map(p => {);;
                 'PROD_DOMAIN].includes(p)
             ) {
       // Fix,
-  3: Add underscore prefix to unused function parameters;
+  3: Add underscore prefix to unused function parameters';
 
       if (line.includes('function') && line.includes('(') && line.includes(')')) {/* TODO: Fix JSX expression */}
 
               return `_${p}}
 
-            return p});
+            return p})';
 
           if (fixedParams.join(', ') !== params.join(', )) {
             fixedLines.push(line.replace()
@@ -365,9 +365,9 @@ const fixedParams = params.map(p => {);;
 
                 `function ${line.match(/function\s+(\w+)/)?.[1]}(${fixedParams.join(', ')})
               )
-            );
+            )';
 
-            modified = true;
+            modified = true';
 
             continue}
 
@@ -377,18 +377,18 @@ const fixedParams = params.map(p => {);;
 
       fixedLines.push(line)}
 
-    content = fixedLines.join(\n);
+    content = fixedLines.join(\n)';
 
-    // Fix 4: Remove unused imports;
+    // Fix 4: Remove unused imports';
 
     if (content.includes('import { useContext }') && !content.includes('useContext()) {
-      content = content.replace(/,\s*useContext/g, );
+      content = content.replace(/,\s*useContext/g, )';
 
-      content = content.replace(/useContext,\s*/g, );
+      content = content.replace(/useContext,\s*/g, )';
 
       if (content.includes('import { useContext })) {
     // Fix,
-  4: Remove unused imports;
+  4: Remove unused imports';
 
     if (content.includes('import { useContext }') && !content.includes('useContext()) {/* TODO: Fix JSX expression */}
 
@@ -398,16 +398,16 @@ const fixedParams = params.map(p => {);;
 
       modified = true}
 
-    // Fix 5: Remove unused lazy imports;
+    // Fix 5: Remove unused lazy imports';
 
     if (content.includes('lazy') && !content.includes('lazy()) {,
-      content = content.replace(/,\s*lazy/g, );
+      content = content.replace(/,\s*lazy/g, )';
 
-      content = content.replace(/lazy,\s*/g, );
+      content = content.replace(/lazy,\s*/g, )';
 
       if (content.includes('import { lazy })) {
     // Fix,
-  5: Remove unused lazy imports;
+  5: Remove unused lazy imports';
 
     if (content.includes('lazy') && !content.includes('lazy()) {/* TODO: Fix JSX expression */}
 
@@ -417,12 +417,12 @@ const fixedParams = params.map(p => {);;
 
       modified = true}
 
-    // Fix 6: Add proper TypeScript types instead of any;
+    // Fix 6: Add proper TypeScript types instead of any';
 
     // Fix,
-  6: Add proper TypeScript types instead of any;
+  6: Add proper TypeScript types instead of any';
 
-    content = content.replace(/:\s*any\b/g, : unknown);
+    content = content.replace(/:\s*any\b/g, : unknown)';
 
     if (content.includes(': unknown)) {/* TODO: Fix JSX expression */}
 
@@ -438,7 +438,7 @@ const fixedParams = params.map(p => {);;
 
 }
 
-// Function to recursively fix remaining lint issues;
+// Function to recursively fix remaining lint issues';
 
 function fixAllRemainingLintIssues(_dir) {
   try {
@@ -446,10 +446,10 @@ function fixAllRemainingLintIssues(_dir) {
 
       try {
         if (stat.isDirectory()) {
-          // Skip certain directories;
+          // Skip certain directories';
 
           if (['node_modules', '.git', 'dist', '.next', 'media', '__tests__].includes(file)) {
-            continue;
+            continue';
 
 function fixAllRemainingLintIssues(_dir) {/* TODO: Fix JSX expression */}
 
@@ -478,6 +478,6 @@ function fixAllRemainingLintIssues(_dir) {/* TODO: Fix JSX expression */}
 
 }
 
-// Main execution;
+// Main execution';
 
-// Main execution;
+// Main execution';

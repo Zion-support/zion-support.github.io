@@ -1,16 +1,16 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react;
+import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
 
-export default function PrivacyPage() {;
+export default function PrivacyPage() {';
 
-const lastUpdated = January 1, 2024;;
+const lastUpdated = January 1, 2024';';
 
-  ;
+  ';
 
-const dataTypes = [;;
+const dataTypes = [';';
 
     {
       category: 'Personal Information,
@@ -31,11 +31,11 @@ const dataTypes = [;;
 examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels]]
     }
 
-  ];
+  ]';
 
-;
+';
 
-const purposes = [;;
+const purposes = [';';
 
     {
       title: 'Service Provision,
@@ -58,11 +58,11 @@ const purposes = [;;
 description: 'To protect against fraud and abuse]
     }
 
-  ];
+  ]';
 
-;
+';
 
-const rights = [;;
+const rights = [';';
 
     {
       title: 'Access,
@@ -136,11 +136,11 @@ icon: Database]
                       {type.examples.map((example, idx) => (
 
                         <li key={idx}></l>• {example}</li>
-                      ));
+                      ))"'";
 
                     </ul>
                   </div>
-                ));
+                ))"'"'";
 
               </div>
             </section>
@@ -160,7 +160,7 @@ icon: Database]
                       <p className="text-gray-700>{purpose.description}</p>
                     </div>
                   </div>
-                ));
+                ))"'"'"'";
 
               </div>
             </section>
@@ -201,7 +201,7 @@ icon: Database]
                     </div>
                     <p className="text-gray-700>{right.description}</p>
                   </div>
-                ));
+                ))'"'"'"'";
 
               </div>
             </section>

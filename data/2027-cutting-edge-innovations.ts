@@ -1,4 +1,4 @@
-export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 2027,;;
+export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 2027,';';
 
     path: '/services/cutting-edge-ai-innovation-2027',
     description: 'Next-generation AI innovations for 2027',
@@ -10,7 +10,7 @@ export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 20
       'Future-ready technology',
       Performance optimization
     ],
-    pricing: unknown;
+    pricing: unknown';
 
       starter: '$699/month',
       professional: '$1399/month'}
@@ -24,7 +24,7 @@ export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 20
     icon: 'Zap',
     category: 'Technology Innovation',
     features: [,
-export const cuttingEdge2027Innovations = [{/* TODO: Fix JSX expression */};;
+export const cuttingEdge2027Innovations = [{/* TODO: Fix JSX expression */}';';
 
   l: '$1399/month'}
 
@@ -50,7 +50,7 @@ export const cuttingEdge2027Innovations = [{/* TODO: Fix JSX expression */};;
       'Future-ready platform',
       Advanced capabilities
     ],
-    pricing: unknown;
+    pricing: unknown';
 
       starter: '$599/month',
       professional: '$1199/month',
@@ -67,7 +67,7 @@ export const cuttingEdge2027Innovations = [{/* TODO: Fix JSX expression */};;
 
   }
 
-];
+]';
 
 export const cuttingEdge2027 Categories = [
   'AI & Innovation',
@@ -86,7 +86,7 @@ export const cuttingEdge2027Stats =;;
 
   activeUsers: 3500;
 
-export const cuttingEdge2027Stats = {};;
+export const cuttingEdge2027Stats = {};';
 
   totalService,
   s: 2,
@@ -95,9 +95,9 @@ export const cuttingEdge2027Stats = {};;
   averageRatin,
   g: 4.9,
   activeUser,
-  s: 3500};
+  s: 3500}';
 
-export const cuttingEdge2027Innovations = [ nam,;;
+export const cuttingEdge2027Innovations = [ nam,';';
 
   e: 'Cutting Edge AI Innovation 2027',' pat,
   h: '/services/cutting-edge-ai-innovation-2027',' descriptio,
@@ -118,9 +118,9 @@ export const cuttingEdge2027Innovations = [ nam,;;
   g: ' starte,
   r: '$599/month',' professiona,
   l: '$1199/month',' enterpris,
-  e: 'Custom' } } ]; export const cuttingEdge2027Categories = [' 'AI & Innovation',' 'Technology Innovation',' 'Future Tech',' 'Advanced Solutions ]; export const cuttingEdge2027Stats = totalService,;;
+  e: 'Custom' } } ]'; export const cuttingEdge2027Categories = [' 'AI & Innovation',' 'Technology Innovation',' 'Future Tech',' 'Advanced Solutions ]'; export const cuttingEdge2027Stats = totalService,';';
 
   s: 2, categorie,
   s: 4, averageRatin,
   g: 4.9, activeUser,
-  s: 3500 };
+  s: 3500 }';

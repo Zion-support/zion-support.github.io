@@ -1,22 +1,22 @@
-import React from 'react;
+import React from 'react';
 
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c;
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t;
+impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t';
 
-impo, r, t { Trending, U, p } fr, o, m 'luci, d, e-rea, c, t;
+impo, r, t { Trending, U, p } fr, o, m 'luci, d, e-rea, c, t';
 
-impo, r, t { Use, r, s } fr, o, m 'luci, d, e-rea, c, t;
+impo, r, t { Use, r, s } fr, o, m 'luci, d, e-rea, c, t';
 
-impo, r, t { Z, a, p } fr, o, m 'luci, d, e-rea, c, t;
+impo, r, t { Z, a, p } fr, o, m 'luci, d, e-rea, c, t';
 
-impo, r, t { CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t;
+impo, r, t { CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t';
 
-impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t;
+impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
 
-impo, r, t { Bra, i, n } fr, o, m 'luci, d, e-rea, c, t;
+impo, r, t { Bra, i, n } fr, o, m 'luci, d, e-rea, c, t';
 
-impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t;
+impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t';
 
 const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
   return (
@@ -24,7 +24,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
  ,
   return(<React.Fragment>,
       <Helm, e, t>
-        <title>          Fortune, 20, Telecom: $4.7B, Cognitive, Computing Success, Stor, y | Zion, Tech, Group;
+        <title>          Fortune, 20, Telecom: $4.7B, Cognitive, Computing Success, Stor, y | Zion, Tech, Group';
 
         <
         <meta, nam, e = description
@@ -39,7 +39,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
 
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k></div>
         <Head, e, r / >
-);
+)';
 
 } {/* Hero, Sect, i, o, n */ }
 
@@ -69,7 +69,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TOD,
             {/* Breadc, r, u, m, b *
             <nav, classNam, e = 'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8><
               <Link, t, o=
-                className='te, x, t-purp, l, e-300, hove, r: te, x, t-white, transitio, n-colo, r, s              >;
+                className='te, x, t-purp, l, e-300, hove, r: te, x, t-white, transitio, n-colo, r, s              >';
 
 const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX expression */}
 
@@ -128,11 +128,11 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
               <
 
               <h1, className=te, x, t-4xl, s, m: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t><
-                Fortune, 20, Global Telecommunications, Provide, r: $4.7B, Cognitive, Computing Transformati, o, n;
+                Fortune, 20, Global Telecommunications, Provide, r: $4.7B, Cognitive, Computing Transformati, o, n';
 
                 <span, classNam, e=flex, item, s-center, ga, p-2><
                   <Zap, classNam, e=w-4 h-4 /><
-                  18, Month, Implementation;
+                  18, Month, Implementation';
 
         <div, classNam, e=bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/30, t, o-emera, l, d-9, 0, 0/30, borde, r-y, borde, r-gre, e, n-5, 0, 0/30, p, y-8><
           <div, classNam, e=m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8><
@@ -141,7 +141,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                   <Zap, className=w-4 h-4 
                   18, Month, Implementation
                   <Zap, className=w-4 h-4 /><
-                  18, Month, Implementation;
+                  18, Month, Implementation';
 
         <div, className=bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/30, t, o-emera, l, d-9, 0, 0/30, borde, r-y, borde, r-gre, e, n-5, 0, 0/30, p, y-8><
           <div, className=m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8><
@@ -154,7 +154,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                 <h2, classNam, e = te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3><
                   <Brain, className=w-8 h-8, tex, t-purp, l, e-4, 0, 0 
                   <Target, className=w-8 h-8, tex, t-r, e, d-4, 0, 0 /><
-                  The, Challeng, e;
+                  The, Challeng, e';
 
                 <h2, classNam, e = te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3><
                   <Brain, classNam, e=w-8 h-8, tex, t-purp, l, e-4, 0, 0 /><
@@ -367,13 +367,13 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
               Ready, to, Transform Your, Enterpris, e?
             <
             <p, className=te, x, t-purp, l, e-100, m, b-6, ma, x-w-2xl, m, x-au, t, o><
-              Achieve, similar, results with, Zion, Tech Gro, u, ps, proven, cognitive;
+              Achieve, similar, results with, Zion, Tech Gro, u, ps, proven, cognitive';
 
               computing, platfor, m. Schedule, a, consultation to, discover, how we, can, help you, reach, your transformation, goal, s.
-                Schedule, Consultatio, n;
+                Schedule, Consultatio, n';
 
                 <Link, classNam, e=ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m /><
-                Schedule, Consultatio, n;
+                Schedule, Consultatio, n';
 
                 <Link, className=ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m /><)
-});
+})';

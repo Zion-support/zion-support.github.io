@@ -1,14 +1,14 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from lucide-react;
+import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from lucide-react';
 
-;
+';
 
-const AccessibilityPage: React.FC = () => {const features = [;;;
+const AccessibilityPage: React.FC = () => {const features = [';';';
 
     {
       ico,
@@ -48,11 +48,11 @@ const AccessibilityPage: React.FC = () => {const features = [;;;
       benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards]
     }
 
-  ];
+  ]';
 
-;
+';
 
-const standards = [;;
+const standards = [';';
 
     {
       name: 'WCAG 2.1 AA,
@@ -75,7 +75,7 @@ const standards = [;;
       status: Fully Compliant
     }
 
-  ];
+  ]';
 
   return (
 
@@ -117,7 +117,7 @@ const standards = [;;
             <div className=grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-4 gap-8>
               {standards.map((standard), index) => (<div
-                  key = { index };
+                  key = { index }"'"'"'";
 
                   className=bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white
                 >
@@ -159,4 +159,4 @@ const standards = [;;
         </section>
       </div>
     </React.Fragment>)
-export default AccessibilityPage;
+export default AccessibilityPage'"'"'"'";

@@ -1,8 +1,8 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import {
   Mail,
@@ -24,11 +24,11 @@ import {
   Database,
   Send,
 
-} from lucide-react;
+} from lucide-react';
 
-;
+';
 
-const EmailMarketingAutomationPage: React.FC = () => {const features = [;;;
+const EmailMarketingAutomationPage: React.FC = () => {const features = [';';';
 
     {
       ico,
@@ -52,11 +52,11 @@ const EmailMarketingAutomationPage: React.FC = () => {const features = [;;;
       description: Behavior-based triggers and workflows to send the right message at the right time.
     }
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'Increase email engagement rates,
     'Automate repetitive marketing tasks,
@@ -66,7 +66,7 @@ const benefits = [;;
     'Improve customer retention,
     'Generate more qualified leads,
     Save time and resources
-  ];
+  ]';
 
   return (
 
@@ -122,4 +122,4 @@ const benefits = [;;
         </section>
       </div>
     </React.Fragment>)
-export default EmailMarketingAutomationPage;
+export default EmailMarketingAutomationPage'"'"'"'";

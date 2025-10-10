@@ -38,11 +38,11 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
     date: '2025-12-01',
     category: 'AI Consciousness',
     tags: ['Quantum AI', 'Consciousness', 'Transcendence', '2025', 'Revolutionary'],
-    featured: true;
+    featured: true';
     readTime: '20 min read',
     image: '/images/quantum-ai-transcendence-revolution-2025.jpg',
-    newBadge: true;
-    trending: true;
+    newBadge: true';
+    trending: true';
     valueProposition: '$1.2B+ annual value creation',
     metrics:
         metrics: {
@@ -70,11 +70,11 @@ export const,
     date: '2025-12-01',
     category: 'Superintelligence',
     tags: ['Superintelligence', 'Consciousness', 'Breakthrough', '2025', 'AI Evolution'],
-    featured: true;
+    featured: true'";
     readTime: '25 min read',
     image: '/images/artificial-superintelligence-breakthrough-2025.jpg',
-    newBadge: true;
-    trending: true;
+    newBadge: true'"'";
+    trending: true'"'"'";
     valueProposition: '$2.5B+ annual value creation',
     metrics:
         metrics: {
@@ -89,4 +89,4 @@ export const,
     transcendenceLeve,
   l: 'Ultimate',
     superintelligenceLeve,
-  l: 'Infinite'}];
+  l: 'Infinite'}]'"'"'"'";

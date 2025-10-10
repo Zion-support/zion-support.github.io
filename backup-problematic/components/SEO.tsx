@@ -1,10 +1,10 @@
-import React from 'react;
+import React from 'react';
 
 interface SEOProps {/* TODO: Fix JSX expression */}
 
 }
 
-;
+';
 
 const SEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - AI-Powered Enterprise Solutions,
@@ -13,11 +13,11 @@ const SEO: React.FC<SEOProps> = ({,
   children}) => {
   return (<React.Fragment>)
       <title>
-);
+)';
 
 }{title}</title>)
       <meta name="description content={description} />)
-      <meta name="keywords" content={keywords.join(, )} />;
+      <meta name="keywords" content={keywords.join(, )} />'"'"'"'";
 
 const,
   SEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
@@ -28,8 +28,8 @@ const,
       <meta name="keywords" content={keywords.join(', )} /></meta>
       {children}
 
-  )};
+  )}'"'"'";
 
-export default SEO;
+export default SEO'"'"'"'";
 
 "

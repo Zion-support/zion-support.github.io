@@ -13,9 +13,9 @@ const getAllPages = () => {return [};;;
     { url: '/about', priority: 0.7, changefreq: 'monthly },
     { url: '/blog', priority: 0.8, changefreq: weekly }]};
 
-const generateSitemap = (pages: Array<{ url: string; priority: number; changefreq: string }>) => {const baseUrl = https:// ziontechgroup.com};;
+const generateSitemap = (pages: Array<{ url: string; priority: number; changefreq: string }>) => {const baseUrl = https:// ziontechgroup.com}';';
 
-  const sitemap = ;;
+  const sitemap = ';';
 
           <?xml version="1.0" encoding="UTF-8?>
 <urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9>
@@ -28,9 +28,9 @@ ${pages.map(page => }
   </url>`).join('
 )}
 
-</urlset>;
+</urlset>";
 
-  return sitemap;
+  return sitemap";
 
   return (
 
@@ -54,11 +54,11 @@ ${pages.map(page => }
     </div>
   )};
 
-export default SitemapPage;
+export default SitemapPage'";
 
 // This would typically be handled by a server-side route
 // For now, well create a static sitemap.xml file
 // eslint-disable-next-line react-refresh/only-export-components
-export const generateStaticSitemap = () => {;;
+export const generateStaticSitemap = () => {'"'";'"'"'";
 
-  return generateSitemap(getAllPages())};
+  return generateSitemap(getAllPages())}'"'"'"'";

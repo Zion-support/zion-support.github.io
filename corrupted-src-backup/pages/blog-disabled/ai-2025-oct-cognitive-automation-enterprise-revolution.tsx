@@ -18,21 +18,21 @@ impo, r, t { Li, n, k } fr, o, m rea, c, t-rout, e, r-d, o, m;
 :src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
 
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k>
-        <Head, e, r />;
+        <Head, e, r />';
 
 const CognitiveAutomationEnterpriseRevolution: () => {
   return (<div>),
       <Helmet>),
         <title>Cognitive Automation: The Enterprise Revolution of 2025 | Zion Tech Group</title>),
-:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
+:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx';
 
-        <meta name=description;
+        <meta name=description';
 
-  content="Discover how cognitive automation is transforming enterprises in 2025. 92% efficiency gains, $3.2M average savings, and 10x productivity increases through intelligent AI systems." /><meta name=keywords;
+  content="Discover how cognitive automation is transforming enterprises in 2025. 92% efficiency gains, $3.2M average savings, and 10x productivity increases through intelligent AI systems." /><meta name=keywords'"'"'";
 
 :src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k></div>
-        <Head, e, r />;
+        <Head, e, r />"'";
 
 const CognitiveAutomationEnterpriseRevolution: () => {
   return (
@@ -45,18 +45,18 @@ const CognitiveAutomationEnterpriseRevolution: () => {
   content="Discover how cognitive automation is transforming enterprises in 2025. 92% efficiency gains, $3.2M average savings, and 10x productivity increases through intelligent AI systems." /><meta name=keywords
   content: "cognitive automation, enterprise AI, intelligent automation, business process automation, AI transformation, digital workforce />
         <meta name="description
-  content: "Discover how cognitive automation is transforming enterprises in 2025. 92% efficiency gains, $3.2M average savings, and 10x productivity increases through intelligent AI systems.", /><meta name: keywords;
+  content: "Discover how cognitive automation is transforming enterprises in 2025. 92% efficiency gains, $3.2M average savings, and 10x productivity increases through intelligent AI systems.", /><meta name: keywords"'"'";
 
   content: "cognitive automation, enterprise AI, intelligent automation, business process automation, AI transformation, digital workforce, /></Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark></div>
         <Header />
         <article className="container mx-auto px-6 py-20>
         <article className="container mx-auto px-6 py-20>
-);
+)'"'"'";
 
 }
 
-          {/* Back Link */};
+          {/* Back Link */}'"'"'"'";
 
           <Link to="/blog>
   className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors>
@@ -77,15 +77,15 @@ const CognitiveAutomationEnterpriseRevolution: () => {
             className=inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s
           >
             <ArrowLeft, className='w-4 h-4, m, r-2 />
-:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
+:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx'"'";
 
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k></div>
-        <Head, e, r /></Head>;
+        <Head, e, r /></Head>'"'"'";
 
 const,
   CognitiveAutomationEnterpriseRevolution: () => {/* TODO: Fix JSX expression */}
 
-          {/* Back Link */};
+          {/* Back Link */}'"'"'"'";
 
           <Link to="/blog"></Link>
   className="inline-flex items-center text-zion-cyan,
@@ -100,17 +100,17 @@ const,
             className=inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s
           ></Link>
             <ArrowLeft, className='w-4 h-4, m, r-2 /></ArrowLeft>
-            Back, to, Blog;
+            Back, to, Blog'";
 
               <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t>22, min, read</sp, a, n>
             </div>
 
-:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
+:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx'"'";
 
             <h1, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t>
               Cognitive, Automatio, n:</h1>
               <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-pi, n, k-400, t, o-cy, a, n-400, m, t-2>
-                The, Enterprise, Revolution of, 202, 5;
+                The, Enterprise, Revolution of, 202, 5'"'"'";
 
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6>
               <div, className='bg-purp, l, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30, tex, t-cent, e, r>
@@ -121,7 +121,7 @@ const,
                   92%
                 </div>
                 <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t>
-                  Efficiency, Gain, s;
+                  Efficiency, Gain, s'"'"'"'";
 
                 </d, i, v>
               <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6>
@@ -135,11 +135,11 @@ const,
           {/* Header */}</h2>
           <div></div>
               <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30>
-                🔥 NEW • October 2025;
+                🔥 NEW • October 2025";
 
               </span>
               <span className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold border border-blue-500/30>
-                🤖 Enterprise AI;
+                🤖 Enterprise AI";
 
               </span>
               <span className="text-zion-slate-light>22 min read</span>
@@ -150,11 +150,11 @@ const,
   Cognitive Automation:</h1> <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 mt-2></span>
           <div></div>
               <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30>
-                🔥 NEW • October 2025;
+                🔥 NEW • October 2025";
 
               </span>
               <span className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold border border-blue-500/30>
-                🤖 Enterprise AI;
+                🤖 Enterprise AI"'";
 
               </span>
               <span className="text-zion-slate-light>22 min read</span>
@@ -163,16 +163,16 @@ const,
   Cognitive Automation:</h1> <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 mt-2></span>
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">
   Cognitive Automation: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 mt-2">
-  The Enterprise Revolution of 2025;
+  The Enterprise Revolution of 2025"'"'";
 
               </span>
             </h1>
 
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8>
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">,
-  How intelligent automation is transforming enterprises from reactive operators to proactive;
+  How intelligent automation is transforming enterprises from reactive operators to proactive'"'"'";
 
-              innovators. Discover the cognitive automation revolution delivering 92% efficiency gains;
+              innovators. Discover the cognitive automation revolution delivering 92% efficiency gains'"'"'"'";
 
   Cognitive Automation:</h1> <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 mt-2">
   The Enterprise Revolution of 2025
@@ -186,7 +186,7 @@ const,
             <h1, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t></h1>
               Cognitive, Automatio, n:
               <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-pi, n, k-400, t, o-cy, a, n-400, m, t-2></span>
-                The, Enterprise, Revolution of, 202, 5;
+                The, Enterprise, Revolution of, 202, 5'"'"'";
 
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6></div>
               <div, className='bg-purp, l, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30, tex, t-cent, e, r></div>
@@ -194,7 +194,7 @@ const,
                   92%
                 </div>
                 <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t></div>
-                  Efficiency, Gain, s;
+                  Efficiency, Gain, s'"'"'"'";
 
                 </d, i, v>
               <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6></h2>
@@ -209,11 +209,11 @@ const,
 
           <div></div>
               <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30></span>
-                🔥 NEW • October 2025;
+                🔥 NEW • October 2025";
 
               </span>
               <span className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold border border-blue-500/30></span>
-                🤖 Enterprise AI;
+                🤖 Enterprise AI";
 
               </span>
               <span className="text-zion-slate-light>22 min read</span>
@@ -228,11 +228,11 @@ const,
   Automation: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 mt-2></span>
           <div></div>
               <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30></span>
-                🔥 NEW • October 2025;
+                🔥 NEW • October 2025";
 
               </span>
               <span className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold border border-blue-500/30></span>
-                🤖 Enterprise AI;
+                🤖 Enterprise AI"'";
 
               </span>
               <span className="text-zion-slate-light>22 min read</span>
@@ -245,16 +245,16 @@ const,
   md: text-6xl font-bold text-white mb-6 leading-tight">
   Cognitive,
   Automation: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 mt-2">
-  The Enterprise Revolution of 2025;
+  The Enterprise Revolution of 2025"'"'";
 
               </span>
             </h1>
 
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8"></p>
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-  How intelligent automation is transforming enterprises from reactive operators to proactive;
+  How intelligent automation is transforming enterprises from reactive operators to proactive'"'"'";
 
-              innovators. Discover the cognitive automation revolution delivering 92% efficiency gains;
+              innovators. Discover the cognitive automation revolution delivering 92% efficiency gains'"'"'"'";
 
               $3.2M average cost savings, and 10x productivity increases across Fortune 500 companies.
             </p>
@@ -291,10 +291,10 @@ const,
             <section >
               <h2 className="text-3xl font-bold text-white mb-6">🚀 The Cognitive Automation Era Has Arrived</h2>
               <p className="text-lg leading-relaxed mb-4">,
-  In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple ;
+  In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple '"'"'"'";
 
                 robotic process automation (RPA) is giving way to</p> <strong className="text-white">cognitive automation</strong> 
-                —intelligent systems that don't just execute tasks, but understand context, make decisions;
+                —intelligent systems that don't just execute tasks, but understand context, make decisions'"'"'"'";
 
               <h2 className="text-3 xl font-bold text-white mb-6>🚀 The Cognitive Automation Era Has Arrived</h2>
               <p className="text-lg leading-relaxed mb-4"></p>
@@ -306,10 +306,10 @@ const,
             <section ></section>
               <h2 className="text-3xl font-bold text-white mb-6">🚀 The Cognitive Automation Era Has Arrived</h2>"
               <p className="text-lg leading-relaxed mb-4">,
-  In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple ';';
+  In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple '"'"'";'"'"'"'";
 
                 robotic process automation (RPA) is giving way to <strong className="text-white">cognitive automation</strong> 
-                —intelligent systems that don't just execute tasks, but understand context, make decisions';';
+                —intelligent systems that don't just execute tasks, but understand context, make decisions'"'"'";'"'"'"'";
 
               <h2 className="text-3xl font-bold text-white mb-6">🚀 The Cognitive Automation Era Has Arrived</h2>
               <p className="text-lg leading-relaxed mb-4">
@@ -319,13 +319,13 @@ const,
                 and continuously learn from outcomes.
               </p>
               <p className="text-lg leading-relaxed mb-4">
-  Unlike traditional automation that follows rigid rules, cognitive automation leverages advanced;
+  Unlike traditional automation that follows rigid rules, cognitive automation leverages advanced";
 
-                AI capabilities including natural language processing, computer vision, machine learning, and;
+                AI capabilities including natural language processing, computer vision, machine learning, and";
 
                 deep reasoning to handle complex, judgment-based tasks that previously required human expertise.
               </p>
-:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
+:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx";
 
               <div>
               <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30>
@@ -342,7 +342,7 @@ const,
               <div></div>
                 <p className="text-lg font-semibold text-white mb-2>
                   💡 Key Insight: </p>
-:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
+:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx";
 
               <div></div>
               <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30"></div>
@@ -360,7 +360,7 @@ const,
                   💡 Key,
   Insight: </p>
                 <p className="text-lg">
-  Companies implementing cognitive automation are seeing average productivity gains of 10x while;
+  Companies implementing cognitive automation are seeing average productivity gains of 10x while";
 
                   reducing operational costs by 68%. The technology has matured from experimental to mission-critical.
                 </p>
@@ -372,7 +372,7 @@ const,
             <section >
               <h2 className="text-3xl font-bold text-white mb-6">🧠 What Makes Automation "Cognitive?</h2>
               <p className="text-lg leading-relaxed mb-6>
-  Cognitive automation systems possess four defining characteristics that separate them from;
+  Cognitive automation systems possess four defining characteristics that separate them from";
 
                 traditional automation: </p>
               <div></section>
@@ -384,13 +384,13 @@ const,
               <div></div>
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2></h3>
                     <Brain className="w-6 h-6 text-cyan-400 />
-  1. Contextual Understanding;
+  1. Contextual Understanding";
 
                   </h3>
                   <p className="mb-4></p>
               <h2 className="text-3xl font-bold text-white mb-6">🧠 What Makes Automation "Cognitive?</h2>
               <p className="text-lg leading-relaxed mb-6>
-  Cognitive automation systems possess four defining characteristics that separate them from;
+  Cognitive automation systems possess four defining characteristics that separate them from";
 
                 traditional automation: </p>
               <div></div>
@@ -399,14 +399,14 @@ const,
               <div></div>
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2></h3>
                     <Brain className="w-6 h-6 text-cyan-400 />
-  1. Contextual Understanding;
+  1. Contextual Understanding";
 
                   </h3>,
                   <p className="mb-4">,
             <section ></section>
               <h2 className="text-3xl font-bold text-white mb-6">🧠 What Makes Automation "Cognitive"?</h2>
               <p className="text-lg leading-relaxed mb-6></p>
-  Cognitive automation systems possess four defining characteristics that separate them from;
+  Cognitive automation systems possess four defining characteristics that separate them from";
 
                 traditional,
   automation: </p>
@@ -419,13 +419,13 @@ const,
               <div></div>
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2"></h3>
                     <Brain className="w-6 h-6 text-cyan-400 /></Brain>
-  1. Contextual Understanding;
+  1. Contextual Understanding";
 
                   </h3>
                   <p className="mb-4"></p>
               <h2 className="text-3xl font-bold text-white mb-6">🧠 What Makes Automation "Cognitive"?</h2>
               <p className="text-lg leading-relaxed mb-6></p>
-  Cognitive automation systems possess four defining characteristics that separate them from;
+  Cognitive automation systems possess four defining characteristics that separate them from";
 
                 traditional,
   automation: </p>
@@ -435,13 +435,13 @@ const,
               <div></div>
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2"></h3>
                     <Brain className="w-6 h-6 text-cyan-400 /></Brain>
-  1. Contextual Understanding;
+  1. Contextual Understanding";
 
                   </h3>
                   <p className="mb-4">
-  Rather than following pre-programmed rules, cognitive systems understand the context and;
+  Rather than following pre-programmed rules, cognitive systems understand the context and";
 
-                    intent behind requests. They can handle variations, exceptions, and nuanced scenarios that;
+                    intent behind requests. They can handle variations, exceptions, and nuanced scenarios that";
 
                     would break traditional automation.
                   </p>
@@ -461,7 +461,7 @@ const,
   e: Processing invoices with missing fields, unusual formats, or partial information,,
                     by inferring context from related documents and historical patterns.
                   </p>
-:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
+:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx";
 
   </div>
                 <div></div>
@@ -470,20 +470,20 @@ const,
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30></div>
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2></h3>
                     <Target className=w-6 h-6 text-purple-400 ,>
-  2. Decision-Making Capability;
+  2. Decision-Making Capability";
 
                   </h3>"
 
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30"></div>
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2"></h3>
                     <Target className=w-6 h-6 text-purple-400 ,></Target>
-  2. Decision-Making Capability;
+  2. Decision-Making Capability";
 
                   </h3>"
                   <p className="mb-4">,
                   </h3>
                   <p className="mb-4>,
-  These systems make judgment calls based on complex criteria, weighing multiple factors;
+  These systems make judgment calls based on complex criteria, weighing multiple factors";
 
                     assessing risks, and optimizing outcomes—capabilities that previously required human expertise.
                   </p>
@@ -492,11 +492,11 @@ const,
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30></div>
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2></h3>
                     <Target className="w-6 h-6 text-purple-400 />
-  2. Decision-Making Capability;
+  2. Decision-Making Capability";
 
                   </h3>
                   <p className="mb-4>
-  These systems make judgment calls based on complex criteria, weighing multiple factors;
+  These systems make judgment calls based on complex criteria, weighing multiple factors";
 
                     assessing risks, and optimizing outcomes—capabilities that previously required human expertise.
                   </p>
@@ -504,7 +504,7 @@ const,
                 <div></div>
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2></h3>
                     <Target className="w-6 h-6 text-purple-400 />
-  2. Decision-Making Capability;
+  2. Decision-Making Capability";
 
                   </h3>
   Exampl,
@@ -512,11 +512,11 @@ const,
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30"></div>
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2"></h3>
                     <Target className="w-6 h-6 text-purple-400 /></Target>
-  2. Decision-Making Capability;
+  2. Decision-Making Capability";
 
                   </h3>
                   <p className="mb-4></p>
-  These systems make judgment calls based on complex criteria, weighing multiple factors;
+  These systems make judgment calls based on complex criteria, weighing multiple factors";
 
                     assessing risks, and optimizing outcomes—capabilities that previously required human expertise.
                   </p>
@@ -524,11 +524,11 @@ const,
                 <div></div>
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2"></h3>
                     <Target className="w-6 h-6 text-purple-400 /></Target>
-  2. Decision-Making Capability;
+  2. Decision-Making Capability";
 
                   </h3>
                   <p className="mb-4">
-  These systems make judgment calls based on complex criteria, weighing multiple factors;
+  These systems make judgment calls based on complex criteria, weighing multiple factors";
 
                     assessing risks, and optimizing outcomes—capabilities that previously required human expertise.
                   </p>
@@ -550,7 +550,7 @@ const,
                 <div></div>
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2></h3>
                     <Shield className="w-6 h-6 text-blue-400 />
-  4. Natural Language Interaction;
+  4. Natural Language Interaction";
 
                   </h3>
                   <p className="mb-4>
@@ -566,11 +566,11 @@ const,
                 <div></div>
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2"></h3>
                     <Shield className="w-6 h-6 text-blue-400 /></Shield>
-  4. Natural Language Interaction;
+  4. Natural Language Interaction";
 
                   </h3>
                   <p className="mb-4></p>
-  Users interact with cognitive systems using natural language—speaking or typing as they;
+  Users interact with cognitive systems using natural language—speaking or typing as they";
 
                     would with a human colleague. No specialized training or technical knowledge required.
                   </p>
@@ -603,7 +603,7 @@ Real-world implementations across industries are delivering transformational res
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0 /></CheckCircle>
                     </li>
                     <li className="flex items-start gap-2>
-:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
+:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx";
 
                       <CheckCircle className= />
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>
@@ -676,7 +676,7 @@ Real-world implementations across industries are delivering transformational res
                     </li>
                     <li className="flex items-start gap-2>
                       <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0 />
-:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
+:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx";
 
                 <div>
                     </li>
@@ -742,7 +742,7 @@ Real-world implementations across industries are delivering transformational res
                     </li>
                     <li className="flex items-start gap-2>
                       <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0 />
-:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
+:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx";
 
                 <div>
                     </li>
@@ -808,7 +808,7 @@ Real-world implementations across industries are delivering transformational res
                     </li>
                     <li className="flex items-start gap-2>
                       <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0 />
-:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
+:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx";
 
                 <div>
                     </li>
@@ -878,7 +878,7 @@ Real-world implementations across industries are delivering transformational,
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0 /></CheckCircle>
                     </li>
                     <li className="flex items-start gap-2></li>
-:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
+:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx"'";
 
                       <CheckCircle className=" /></CheckCircle>
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>"
@@ -954,7 +954,7 @@ Real-world implementations across industries are delivering transformational,
                     </li>
                     <li className="flex items-start gap-2"></li>
                       <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0 /></CheckCircle>
-:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
+:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx"'"'";
 
                 <div></div>
                     </li>
@@ -1020,7 +1020,7 @@ Real-world implementations across industries are delivering transformational,
                     </li>
                     <li className="flex items-start gap-2"></li>
                       <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0 /></CheckCircle>
-:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
+:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx"'"'"'";
 
                 <div></div>
                     </li>
@@ -1086,7 +1086,7 @@ Real-world implementations across industries are delivering transformational,
                     </li>
                     <li className="flex items-start gap-2"></li>
                       <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0 /></CheckCircle>
-:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
+:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx'"'"'"'";
 
                 <div></div>
                     </li>
@@ -1148,19 +1148,19 @@ Real-world implementations across industries are delivering transformational,
               <h2 className="text-3xl font-bold text-white mb-6">🎯 Enterprise Implementation Framework</h2>"
               <p className="text-lg leading-relaxed mb-6></p>
   Successful cognitive automation requires a structured approach. Heres our proven 6-phase,
-  framework: ',';,
+  framework: ','"'"'"'";,
               <h2 className="text-3xl font-bold text-white mb-6">🎯 Enterprise Implementation Framework</h2>
               <p className="text-lg leading-relaxed mb-6>
-  Successful cognitive automation requires a structured approach. Here's our proven 6-phase framework: ,;
+  Successful cognitive automation requires a structured approach. Here's our proven 6-phase framework: ,'"'"'";
 
-  Successful cognitive automation requires a structured approach. Here's our proven 6-phase framework: ',;,</p>
+  Successful cognitive automation requires a structured approach. Here's our proven 6-phase framework: ','"'"'"'";,</p>
               <h2 className="text-3xl font-bold text-white mb-6>🎯 Enterprise Implementation Framework</h2>
               <p className="text-lg leading-relaxed mb-6>
-  Successful cognitive automation requires a structured approach. Here's our proven 6-phase framework: ,;
+  Successful cognitive automation requires a structured approach. Here's our proven 6-phase framework: ,'"'"'"'";
 
               <p className="text-lg leading-relaxed mb-6></p>
   Successful cognitive automation requires a structured approach. Heres our proven 6-phase,
-  framework: ',;,
+  framework: ',";,
               </p>
               
                       <span className="text-2xl font-bold text-cyan-400>1</span>
@@ -1168,7 +1168,7 @@ Real-world implementations across industries are delivering transformational,
                     <div></div>
                       <h3 className="text-2xl font-bold text-white mb-3>Discovery & Assessment (Weeks 1-3)</h3>
                       <p className="mb-4">,
-  Identify high-value automation opportunities through process mining, stakeholder interviews;
+  Identify high-value automation opportunities through process mining, stakeholder interviews";
 
   Identify high-value automation opportunities through process mining, stakeholder interviews</p>
                       <h3 className="text-2xl font-bold text-white mb-3>Discovery & Assessment (Weeks 1-3)</h3>
@@ -1176,11 +1176,11 @@ Real-world implementations across industries are delivering transformational,
                     <div></div>
                       <h3 className="text-2xl font-bold text-white mb-3">Discovery & Assessment (Weeks 1-3)</h3>
                       <p className="mb-4">,
-  Identify high-value automation opportunities through process mining, stakeholder interviews;
+  Identify high-value automation opportunities through process mining, stakeholder interviews";
 
                       <h3 className="text-2xl font-bold text-white mb-3">Discovery & Assessment (Weeks 1-3)</h3>
                       <p className="mb-4">
-  Identify high-value automation opportunities through process mining, stakeholder interviews;
+  Identify high-value automation opportunities through process mining, stakeholder interviews";
 
                         and ROI modeling. Prioritize use cases based on business impact and technical feasibility.
                       </p>
@@ -1218,14 +1218,14 @@ Real-world implementations across industries are delivering transformational,
   </div>
                       <h3 className="text-2xl font-bold text-white mb-3">Pilot Development (Weeks 7-12)</h3>
                       <p className="mb-4></p>
-  Build and train AI models on historical data. Develop automation workflows with;
+  Build and train AI models on historical data. Develop automation workflows with"'";
 
                         appropriate escalation paths. Test with real users in controlled environment.
                       </p>
                       <ul className="space-y-2 text-sm"></ul>
                       <h3 className="text-2xl font-bold text-white mb-3">Pilot Development (Weeks 7-12)</h3>
                       <p className="mb-4">
-  Build and train AI models on historical data. Develop automation workflows with;
+  Build and train AI models on historical data. Develop automation workflows with"'"'";
 
                         appropriate escalation paths. Test with real users in controlled environment.
                       </p>
@@ -1243,14 +1243,14 @@ Real-world implementations across industries are delivering transformational,
   </div>
                       <h3 className="text-2xl font-bold text-white mb-3">Validation & Optimization (Weeks 13-16)</h3>
                       <p className="mb-4></p>
-  Measure accuracy, performance, and business outcomes. Fine-tune models based on;
+  Measure accuracy, performance, and business outcomes. Fine-tune models based on"'"'"'";
 
                         feedback. Establish monitoring dashboards and alerting.
                       </p>
                       <ul className="space-y-2 text-sm"></ul>
                       <h3 className="text-2xl font-bold text-white mb-3">Validation & Optimization (Weeks 13-16)</h3>
                       <p className="mb-4">
-  Measure accuracy, performance, and business outcomes. Fine-tune models based on;
+  Measure accuracy, performance, and business outcomes. Fine-tune models based on'"'"'"'";
 
                         feedback. Establish monitoring dashboards and alerting.
                       </p>
@@ -1320,7 +1320,7 @@ Real-world implementations across industries are delivering transformational,
   Ready to Transform Your Enterprise?
               </h2>
               <p, className='te, x, t-lg, leadin, g-relaxed, m, b-6>
-                Cognitive, automation, systems possess, four, defining;
+                Cognitive, automation, systems possess, four, defining'"'"'";
 
                 characteristics, that, separate them, from traditional automati, o, n: </p>,
               <div, className='spa, c, e-y-4>
@@ -1332,7 +1332,7 @@ Real-world implementations across industries are delivering transformational,
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-cy, a, n-5, 0, 0/30></div>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2></h3>
                     <Brain, className='w-6 h-6, tex, t-cy, a, n-4, 0, 0 />
-                    1. Contextual, Understandin, g;
+                    1. Contextual, Understandin, g'"'"'"'";
 
                   <p, classNam, e = 'te, x, t-sm, tex, t-cy, a, n-3, 0, 0>
                     Examp, l, e: Processing, invoices, with missing, fie, l, d, s, unusual, format, s, or, partial, information by, inferring, context from, related, documents and, historical, patterns.</p>
@@ -1353,14 +1353,14 @@ Real-world implementations across industries are delivering transformational,
   Ready to Transform Your Enterprise?
               </h2>
               <p, className='te, x, t-lg, leadin, g-relaxed, m, b-6></p>
-                Cognitive, automation, systems possess, four, defining;
+                Cognitive, automation, systems possess, four, defining'";
 
                 characteristics, that, separate them, from traditional automati, o, n: </p>
               <div, className='spa, c, e-y-4></div>
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-cy, a, n-5, 0, 0/30></div>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2></h3>
                     <Brain, className='w-6 h-6, tex, t-cy, a, n-4, 0, 0 /></Brain>
-                    1. Contextual, Understandin, g;
+                    1. Contextual, Understandin, g'"'";
 
                   <p, classNam, e = 'te, x, t-sm, tex, t-cy, a, n-3, 0, 0></p>
                     Examp, l, e: Processing, invoices, with missing, fie, l, d, s, unusual, format, s, or, partial, information by, inferring, context from, related, documents and, historical, patterns.
@@ -1375,41 +1375,41 @@ Real-world implementations across industries are delivering transformational,
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2></h3>
                     <Zap, className='w-6 h-6, tex, t-pi, n, k-4, 0, 0 />
                     <Zap, className='w-6 h-6, tex, t-pi, n, k-4, 0, 0 /></Zap>
-                    3. Continuous, Learnin, g;
+                    3. Continuous, Learnin, g'"'"'";
 
                 </div>
 
                 <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30></div>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2></h3>
                     <Shield, className='w-6 h-6, tex, t-bl, u, e-4, 0, 0 />
-                    4. Natural, Language, Interaction;
+                    4. Natural, Language, Interaction'"'"'"'";
 
                   <p, classNam, e='te, x, t-sm, tex, t-bl, u, e-3, 0, 0>
                     Examp, l, e: "Generate, a, quarterly sales, report, for the, Northeast, region focusing, on, accounts that, grew, more than, 2, 0% executed, instantly, with contextual, intelligenc, e.</p>
                     <li, classNam, e='flex, item, s-start, ga, p-2>
                       <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0 />
                       <sp, a, n>
-                        <stro, n, g>98.7% accura, c, y</stro, n, g> in, fraud, detection with, 7, 5% fewer, false, positives;
+                        <stro, n, g>98.7% accura, c, y</stro, n, g> in, fraud, detection with, 7, 5% fewer, false, positives'"'"'";
 
                       </sp, a, n>
                     <li, classNam, e='flex, item, s-start, ga, p-2>
                       <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0 />
                       <sp, a, n>
                     <Shield, className='w-6 h-6, tex, t-bl, u, e-4, 0, 0 /></Shield>
-                    4. Natural, Language, Interaction;
+                    4. Natural, Language, Interaction'"'"'"'";
 
                   <p, classNam, e='te, x, t-sm, tex, t-bl, u, e-3, 0, 0'></p>
                     Examp, l, e: "Generate, a, quarterly sales, report, for the, Northeast, region focusing, on, accounts that, grew, more than, 2, 0% executed, instantly, with contextual, intelligenc, e.
                     <li, classNam, e='flex, item, s-start, ga, p-2></li>
                       <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0 /></CheckCircle>
                       <sp, a, n></sp>
-                        <stro, n, g>98.7% accura, c, y</stro, n, g> in, fraud, detection with, 7, 5% fewer, false, positives;
+                        <stro, n, g>98.7% accura, c, y</stro, n, g> in, fraud, detection with, 7, 5% fewer, false, positives'"'"'";
 
                       </sp, a, n>
                     <li, classNam, e='flex, item, s-start, ga, p-2></li>
                       <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0 /></CheckCircle>
                       <sp, a, n></sp>
-                        <stro, n, g>$8.4M, reductio, n</stro, n, g> in, administrative, overhead annual, l, y;
+                        <stro, n, g>$8.4M, reductio, n</stro, n, g> in, administrative, overhead annual, l, y'"'"'"'";
 
                       </sp, a, n>
                     <li, classNam, e='flex, item, s-start, ga, p-2></li>
@@ -1422,19 +1422,19 @@ Real-world implementations across industries are delivering transformational,
                     <li, className='flex, item, s-start, ga, p-2>
                       <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0 />
                       <sp, a, n>
-                        <stro, n, g>98.7% accura, c, y</stro, n, g> in, fraud, detection with, 7, 5% fewer, false, positives;
+                        <stro, n, g>98.7% accura, c, y</stro, n, g> in, fraud, detection with, 7, 5% fewer, false, positives';
 
                       </sp, a, n>
                     <li, className='flex, item, s-start, ga, p-2>
                       <CheckCircle, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0 />
                       <sp, a, n>
-                        <stro, n, g>$8.4M, reductio, n</stro, n, g> in, administrative, overhead annual, l, y;
+                        <stro, n, g>$8.4M, reductio, n</stro, n, g> in, administrative, overhead annual, l, y';
 
                       </sp, a, n>
                     <li, className='flex, item, s-start, ga, p-2>
                       <CheckCircle, className='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0 />
                       <sp, a, n>
-                        <stro, n, g>$15.7M, annual, savings</stro, n, g> from intelligent, resource allocati, o, n;
+                        <stro, n, g>$15.7M, annual, savings</stro, n, g> from intelligent, resource allocati, o, n';
 
                       </sp, a, n>
                     <li, classNam, e='flex, item, s-start, ga, p-2>
@@ -1442,28 +1442,28 @@ Real-world implementations across industries are delivering transformational,
                     <li, className='flex, item, s-start, ga, p-2>
                       <CheckCircle, className='w-5 h-5, tex, t-cy, a, n-400, m, t-1, fle, x-shri, n, k-0 />
                       <sp, a, n>
-                        <stro, n, g>$9.2M, reductio, n</stro, n, g> in, inventory, carrying;
+                        <stro, n, g>$9.2M, reductio, n</stro, n, g> in, inventory, carrying';
 
-                        cos, t, s;
+                        cos, t, s';
 
                       </sp, a, n>
               <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6>
                     <li, className='flex, item, s-start, ga, p-2></li>
                       <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0 /></CheckCircle>
                       <sp, a, n></sp>
-                        <stro, n, g>98.7% accura, c, y</stro, n, g> in, fraud, detection with, 7, 5% fewer, false, positives;
+                        <stro, n, g>98.7% accura, c, y</stro, n, g> in, fraud, detection with, 7, 5% fewer, false, positives';
 
                       </sp, a, n>
                     <li, className='flex, item, s-start, ga, p-2></li>
                       <CheckCircle, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0 /></CheckCircle>
                       <sp, a, n></sp>
-                        <stro, n, g>$8.4M, reductio, n</stro, n, g> in, administrative, overhead annual, l, y;
+                        <stro, n, g>$8.4M, reductio, n</stro, n, g> in, administrative, overhead annual, l, y';
 
                       </sp, a, n>
                     <li, className='flex, item, s-start, ga, p-2></li>
                       <CheckCircle, className='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0 /></CheckCircle>
                       <sp, a, n></sp>
-                        <stro, n, g>$15.7M, annual, savings</stro, n, g> from intelligent, resource allocati, o, n;
+                        <stro, n, g>$15.7M, annual, savings</stro, n, g> from intelligent, resource allocati, o, n';
 
                       </sp, a, n>
                     <li, classNam, e='flex, item, s-start, ga, p-2></li>
@@ -1471,13 +1471,13 @@ Real-world implementations across industries are delivering transformational,
                     <li, className='flex, item, s-start, ga, p-2></li>
                       <CheckCircle, className='w-5 h-5, tex, t-cy, a, n-400, m, t-1, fle, x-shri, n, k-0 /></CheckCircle>
                       <sp, a, n></sp>
-                        <stro, n, g>$9.2M, reductio, n</stro, n, g> in, inventory, carrying;
+                        <stro, n, g>$9.2M, reductio, n</stro, n, g> in, inventory, carrying';
 
-                        cos, t, s;
+                        cos, t, s';
 
                       </sp, a, n>
               <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6></h2>
-                🎯 Enterprise, Implementation, Framework;
+                🎯 Enterprise, Implementation, Framework';
 
               </h2>
               <p, className='te, x, t-lg, leadin, g-relaxed, m, b-6></p>
@@ -1496,7 +1496,7 @@ Real-world implementations across industries are delivering transformational,
                     <div, className='bg-cy, a, n-5, 0, 0/20, rounde, d-ful, l, w-1, 2, h-12, flex, items-center, justif, y-center, fle, x-shri, n, k-0></div>
                       <span, className='te, x, t-2xl, fon, t-bold, tex, t-cy, a, n-4, 0, 0>
                       <span, className='te, x, t-2xl, fon, t-bold, tex, t-cy, a, n-4, 0, 0></span>
-                        1;
+                        1';
 
                       </sp, a, n>
                     </div>
@@ -1517,10 +1517,10 @@ Real-world implementations across industries are delivering transformational,
                   className=inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, b, g-purp, l, e-500, hove, r:bg-purp, l, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg
                 >
                   <Rocket, className='w-5 h-5 />
-                  Schedule, Consultatio, n;
+                  Schedule, Consultatio, n'";
 
                   <TrendingUp, classNam, e='w-5 h-5 />
-                  Explore, AI, Services;
+                  Explore, AI, Services'"'";
 
                   <TrendingUp, className='w-5 h-5 />
                   Explore, AI, Services}
@@ -1538,10 +1538,10 @@ Real-world implementations across industries are delivering transformational,
                   className=inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, b, g-purp, l, e-500, hove, r:bg-purp, l, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg
                 ></Link>
                   <Rocket, className='w-5 h-5 /></Rocket>
-                  Schedule, Consultatio, n;
+                  Schedule, Consultatio, n'"'"'";
 
                   <TrendingUp, classNam, e='w-5 h-5 /></TrendingUp>
-                  Explore, AI, Services;
+                  Explore, AI, Services'"'"'"'";
 
                   <TrendingUp, className='w-5 h-5 /></TrendingUp>
                   Explore, AI, Services}

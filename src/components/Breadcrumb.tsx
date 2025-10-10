@@ -1,8 +1,8 @@
 import React from react;
 
-import { Link, useLocation } from react-router-dom;
+import { Link, useLocation } from react-router-dom';
 
-import { ChevronRight, Home } from lucide-react;
+import { ChevronRight, Home } from lucide-react';
 
 interface BreadcrumbItem {
   name: string;
@@ -19,25 +19,25 @@ const location = useLocation();;
 
   ;
 
-const generateBreadcrumbs = (): BreadcrumbItem[] => {,;;
+const generateBreadcrumbs = (): BreadcrumbItem[] => {,';';
 
-const pathSegments = location.pathname.split('/).filter(Boolean);;
+const pathSegments = location.pathname.split('/).filter(Boolean)';';
 
     const breadcrumbs: BreadcrumbItem[] = [,
       { name: 'Home', href: 
-    ];
+    ]';
 
-;
+';
 
 let currentPath = ';;
 
     pathSegments.forEach((segment, index) => {
       currentPath += `/${segment};
 
-      const isLast = index === pathSegments.length - 1;;
+      const isLast = index === pathSegments.length - 1';';
 
             /
-      const name = segment;;
+      const name = segment';';
 
         .split('-)
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -50,11 +50,11 @@ let currentPath = ';;
 
     return breadcrumbs};
 
-;
+';
 
-const breadcrumbs = generateBreadcrumbs();;
+const breadcrumbs = generateBreadcrumbs()';';
 
-  // Dont show breadcrumb on home page;
+  // Dont show breadcrumb on home page';
 
   if (location.pathname === '/) {
     return null}
@@ -70,7 +70,7 @@ const structuredData = {;;
       "name: item.name,
       "item": https:/)
     }))
-  };
+  }";
 
   return(<React.Fragment>)
       <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3>)
@@ -92,9 +92,9 @@ const structuredData = {;;
                     {item.name}
 
                   <)
-                ) : (<Link;
+                ) : (<Link";
 
-                    to = { item.href };
+                    to = { item.href }"'";
 
                     className="text-gray-300 hover: text-cyan-400 transition-colors duration-200 flex items-center,
                   >,
@@ -112,13 +112,13 @@ const structuredData = {;;
       <
       
       {/* Structured Data *
-      <script;
+      <script'"'";
 
         type=application
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
 
       /><
     
-  )};
+  )}'"'"'";
 
-export default Breadcrumb;
+export default Breadcrumb'"'"'"'";

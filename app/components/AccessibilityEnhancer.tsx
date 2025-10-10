@@ -1,15 +1,15 @@
-'use client;
+'use client';
 
-import React, { useEffect } from 'react;
+import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean;
+  enableKeyboardNavigation?: boolean';
 
-  enableScreenReaderSupport?: boolean;
+  enableScreenReaderSupport?: boolean';
 
-  enableHighContrast?: boolean;
+  enableHighContrast?: boolean';
 
-  enableFocusManagement?: boolean;
+  enableFocusManagement?: boolean';
 
 }
 
@@ -22,16 +22,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     // Keyboard navigation enhancements
     if (enableKeyboardNavigation && typeof window !== 'undefined) {
-      const handleKeyDown = (event: KeyboardEvent) => {;;
+      const handleKeyDown = (event: KeyboardEvent) => {';';
 
         // Skip to main content
         if (event.key === 'Tab && event.shiftKey && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content]) as HTMLAnchorElement;;
+          const skipLink = document.querySelector('a[href="#main-content]) as HTMLAnchorElement'";'"'";
 
           if (skipLink) {
-            skipLink.focus();
+            skipLink.focus()'"'"'";
 
-            event.preventDefault();
+            event.preventDefault()'"'"'"'";
 
           }
 
@@ -39,18 +39,18 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
         // Close dropdowns with Escape key
         if (event.key === 'Escape) {
-          const openDropdowns = document.querySelectorAll('[aria-expanded="true]);;
+          const openDropdowns = document.querySelectorAll('[aria-expanded="true])';';
 
           openDropdowns.forEach(dropdown => {
-            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false);
+            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false)'";
 
           })        }
 
-      };
+      }'"'";
 
-      document.addEventListener(keydown, handleKeyDown);
+      document.addEventListener(keydown, handleKeyDown)'"'"'";
 
-      return () => document.removeEventListener(keydown, handleKeyDown);
+      return () => document.removeEventListener(keydown, handleKeyDown)'"'"'"'";
 
     }
 
@@ -90,25 +90,25 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
         };
 
-        container.addEventListener(keydown, handleTabKey);
+        container.addEventListener(keydown, handleTabKey)'";
 
-        firstFocusableElement?.focus();
+        firstFocusableElement?.focus()'"'";
 
-        return () => container.removeEventListener(keydown, handleTabKey);
+        return () => container.removeEventListener(keydown, handleTabKey)'"'"'";
 
-      };
+      }'"'"'"'";
 
       // Apply focus trap to modals and dropdowns
-      const modals = document.querySelectorAll('[role="dialog"], [aria-modal="true"]);;
+      const modals = document.querySelectorAll('[role="dialog"], [aria-modal="true"])';';
 
       modals.forEach(modal => trapFocus(modal as HTMLElement))    }
 
     // Screen reader support
     if (enableScreenReaderSupport && typeof window !== 'undefined) {
       // Add live region for dynamic content updates
-      const liveRegion = document.createElement(div);;
+      const liveRegion = document.createElement(div)';';
 
-      liveRegion.setAttribute('aria-live', polite);
+      liveRegion.setAttribute('aria-live', polite)';
 
       liveRegion.setAttribute('aria-atomic', true);
 
@@ -150,13 +150,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       };
 
       return () => {
-        document.body.removeChild(liveRegion);
+        document.body.removeChild(liveRegion)';
 
-        history.pushState = originalPushState;
+        history.pushState = originalPushState';
 
-        history.replaceState = originalReplaceState;
+        history.replaceState = originalReplaceState';
 
-      };
+      }';
 
     }
 
@@ -184,10 +184,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     }
 
-  }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement]);
+  }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement])'";
 
-  return null;
+  return null'"'";
 
-};
+}'"'"'";
 
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer'"'"'"'";

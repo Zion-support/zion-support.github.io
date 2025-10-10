@@ -15,17 +15,17 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
       },
       body: JSON.stringify({message: Homepage advertiser executed successfully)
-        timestamp: new Date().toISOString();
+        timestamp: new Date().toISOString()';
 
 function: 'homepage_advertiser',
         source: event.source || 'unknown',
         advertising: {,
           status: 'active',
-          ads: 0;
+          ads: 0';
 
           lastAd: new Date().toISOString()}
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */}';';
 
         'Access-Control-Allow-Origin': '*'}
 
@@ -34,15 +34,15 @@ function: 'homepage_advertiser',
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   d: new Date().toISOString()}
 
-        }})};
+        }})}';
 
-    return result;
+    return result';
 
 //   } catch (error) {// // console.error removed for production
 error}
 
     return {
-      statusCode: 500;
+      statusCode: 500';
 
       headers: {,
         'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ error}
 
       },
       body: JSON.stringify({error: 'Internal server error'),
-        message: error.message),;
+        message: error.message),';
 
 function: 'homepage_advertiser'}
 
@@ -69,12 +69,12 @@ function: 'homepage_advertiser'}
   n: 'homepage_advertiser'})
       })}}
 
-};
+}';
 
-        timestamp: new Date().toISOString(),' function: 'homepage_advertiser',' source: event.source || 'unknown', advertising: {' status: 'active, ads: 0;
+        timestamp: new Date().toISOString(),' function: 'homepage_advertiser',' source: event.source || 'unknown', advertising: {' status: 'active, ads: 0';
 
-        lastAd: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
-error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'homepage_advertiser }) }} };
+        lastAd: new Date().toISOString() } }) }'; return result} catch (error) {' // // console.error removed for production
+error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'homepage_advertiser }) }} }';
 
         timestam,
   p: new Date().toISOString(),' functio,
@@ -82,7 +82,7 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
   e: event.source || 'unknown', advertisin,
   g: {/* TODO: Fix JSX expression */}
 
-  d: new Date().toISOString() } }) }; return result} catch (error) {/* TODO: Fix JSX expression */}
+  d: new Date().toISOString() } }) }'; return result} catch (error) {/* TODO: Fix JSX expression */}
 
       } return {/* TODO: Fix JSX expression */}
 
@@ -91,4 +91,4 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
 
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'homepage_advertiser }) }} };
+  n: 'homepage_advertiser }) }} }';

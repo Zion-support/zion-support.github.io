@@ -8,7 +8,7 @@
   r: 'Missing required fields' })} // In production, you,
   would: // 1. Store in a database (PostgreSQL, MongoDB) etc.) // 2. Send to analytics services (Google Analytics, Mixpanel) etc.) // 3. Process for real-time dashboards // 4. Apply data retention policies // Log for debugging (remove in production)' // // console.log removed for production
 p: event.timestamp) session_i,
-  d: event.session_id }); // Send to external analytics services await sendToExternalServices(event); res.status(200).json({/* TODO: Fix JSX expression */})
+  d: event.session_id })'; // Send to external analytics services await sendToExternalServices(event)'; res.status(200).json({/* TODO: Fix JSX expression */})
   s: true })} catch (error) {/* TODO: Fix JSX expression */}
   r: 'Internal server error' })} } async function sendToExternalServices(even)
   t: AnalyticsEvent) {/* TODO: Fix JSX expression */}

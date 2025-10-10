@@ -42,7 +42,7 @@ export function validateEmail(emai)
 
   r: 'Email is too long }}
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/';';
 
   if (!emailRegex.test(email)) {/* TODO: Fix JSX expression */}
 
@@ -64,7 +64,7 @@ export function validateEmail(emai)
 
 }
 
-// URL validation;
+// URL validation';
 
 export function validateURL(ur)
   l: string): ValidationResult {/* TODO: Fix JSX expression */}
@@ -89,7 +89,7 @@ export function validateURL(ur)
 
 }
 
-    new URL(url);
+    new URL(url)';
 
     return {/* TODO: Fix JSX expression */}
 
@@ -103,7 +103,7 @@ export function validateURL(ur)
 
 }
 
-// String length validation;
+// String length validation';
 
 export function validateLength()
 
@@ -125,7 +125,7 @@ export function validateLength()
 
   r: `${fieldName} is required }}
 
-  if (value.length;)
+  if (value.length';)
           < minLength) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -156,7 +156,7 @@ export function validateLength()
 
 }
 
-// Password validation;
+// Password validation';
 
 export function validatePassword(passwor)
   d: string): ValidationResult {/* TODO: Fix JSX expression */}
@@ -175,7 +175,7 @@ export function validatePassword(passwor)
 
   r: 'Password is required }}
 
-  if (password.length;)
+  if (password.length';)
           < 8) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -204,11 +204,11 @@ export function validatePassword(passwor)
 
 const hasLowerCase = /[a-z]/.test(password);;
 
-const hasNumbers = /\d/.test(password);;
+const hasNumbers = /\d/.test(password);';
 
-const hasSpecialChar = /[!@#$%^&*(),.?:{}|;;
+const hasSpecialChar = /[!@#$%^&*(),.?:{}|';';
 
-          <React.Fragment>]/.test(password);
+          <React.Fragment>]/.test(password)';
 
   if (!hasUpperCase) {/* TODO: Fix JSX expression */}
 
@@ -260,7 +260,7 @@ const hasSpecialChar = /[!@#$%^&*(),.?:{}|;;
 
 }
 
-// HTML sanitization;
+// HTML sanitization';
 
 export function sanitizeHTML(inpu)
   t: any): string {/* TODO: Fix JSX expression */}
@@ -277,9 +277,9 @@ export function sanitizeHTML(inpu)
 
     return '}
 
-  return input;
+  return input';
 
-    .replace(/&/g, '&amp;)
+    .replace(/&/g, '&amp';)
     .replace(/
           
           
@@ -289,14 +289,14 @@ export function sanitizeHTML(inpu)
           
           
           )
-          </g, '&lt;)
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;)
-    .replace(/'/g, '&#x27;)
-    .replace(/\// g, '&#x2F;)
+          </g, '&lt';)
+    .replace(/>/g, '&gt';')
+    .replace(/"/g, '&quot';)
+    .replace(/'/g, '&#x27';)
+    .replace(/\// g, '&#x2F';)
 }
 
-// Date validation;
+// Date validation';
 
 export function validateDate(dateStrin)
   g: string): ValidationResult {/* TODO: Fix JSX expression */}
@@ -315,7 +315,7 @@ export function validateDate(dateStrin)
 
   r: 'Date is required }}
 
-  const date = new Date(dateString);;
+  const date = new Date(dateString)';';
 
   if (isNaN(date.getTime())) {/* TODO: Fix JSX expression */}
 
@@ -327,9 +327,9 @@ export function validateDate(dateStrin)
 
   r: 'Invalid date format }}
 
-  // Check if the date string matches YYYY-MM-DD format;
+  // Check if the date string matches YYYY-MM-DD format';
 
-const dateRegex = /^\d{4}-\d{2}-\d{2}$/;;
+const dateRegex = /^\d{4}-\d{2}-\d{2}$/';';
 
   if (!dateRegex.test(dateString)) {/* TODO: Fix JSX expression */}
 
@@ -367,11 +367,11 @@ export function validateCreditCard(cardNumber: string): ValidationResult {// TOD
 
   r: 'Credit card number is required }}
 
-  // Remove spaces and non-digits;
+  // Remove spaces and non-digits';
 
-const cleaned = cardNumber.replace(/\D/g, );;
+const cleaned = cardNumber.replace(/\D/g, )';';
 
-  if (cleaned.length;)
+  if (cleaned.length';)
           < 13 || cleaned.length > 19) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -394,7 +394,7 @@ let sum = 0;;
 
 }
 
-    let digit = parseInt(cleaned[i]);;
+    let digit = parseInt(cleaned[i])';';
 
     if (isEven) {/* TODO: Fix JSX expression */}
 
@@ -402,7 +402,7 @@ let sum = 0;;
 
 }
 
-      digit *= 2;
+      digit *= 2';
 
       if (digit > 9) {/* TODO: Fix JSX expression */}
 
@@ -414,7 +414,7 @@ let sum = 0;;
 
     }
 
-    sum += digit;
+    sum += digit';
 
     isEven = !isEven}
 
@@ -436,7 +436,7 @@ let sum = 0;;
 
 }
 
-// JSON validation;
+// JSON validation';
 
 export function validateJSON(jsonStrin)
   g: string): ValidationResult {/* TODO: Fix JSX expression */}
@@ -461,7 +461,7 @@ export function validateJSON(jsonStrin)
 
 }
 
-    JSON.parse(jsonString);
+    JSON.parse(jsonString)';
 
     return {/* TODO: Fix JSX expression */}
 
@@ -493,7 +493,7 @@ export function validateComposite()
 
 }
 
-    const result = validator(value);;
+    const result = validator(value)';';
 
     if (!result.isValid) {/* TODO: Fix JSX expression */}
 
@@ -511,12 +511,12 @@ export function validateComposite()
 
 }
 
-// Async validation;
+// Async validation';
 
 export async function validateAsync()
   validato,
   r: (valu)
-  e: string) => Promise;
+  e: string) => Promise';
 
           <ValidationResult>,
 
@@ -576,11 +576,11 @@ export const isValidDate = (dat);;
 
 export const isValidCreditCard = (car);;
 
-  d: string) => validateCreditCard(card).isValid;
+  d: string) => validateCreditCard(card).isValid'";
 
-export const isValidJSON = (jso);;
+export const isValidJSON = (jso)'"'";'"'"'";
 
-  n: string) => validateJSON(json).isValid;"
+  n: string) => validateJSON(json).isValid'"'"'"'";"
 
 
 

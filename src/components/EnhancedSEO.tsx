@@ -66,21 +66,21 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 //   publishedTime,
 //   modifiedTime,
 //   section,
-  tags = []}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + ... : description};;
+  tags = []}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + ... : description};';
 
-  const keywordsString = Array.isArray(keywords) ? keywords.join(, ) : keywords;;
+  const keywordsString = Array.isArray(keywords) ? keywords.join(, ) : keywords';';
 
   return (
 
-    // Update meta description;
+    // Update meta description';
 
-let metaDescription = document.querySelector('meta[name="description]);;
+let metaDescription = document.querySelector('meta[name="description])'"'";'"'"'";
 
     if (!metaDescription) {/* TODO: Fix JSX expression */}
 
     }
 
-    metaDescription.setAttribute(content, description);
+    metaDescription.setAttribute(content, description)'"'"'"'";
 
           <Helmet>
       {/* Basic Meta Tags */}
@@ -142,9 +142,9 @@ let metaDescription = document.querySelector('meta[name="description]);;
           <link rel="dns-prefetch" href="// www.google-analytics.com" /></link>
           <link rel="dns-prefetch" href="// www.googletagmanager.com /></link>
           </Helmet>
-  )};
+  )}'"'"'";
 
-export default EnhancedSEO;"
+export default EnhancedSEO'"'"'"'";"
 
 
 

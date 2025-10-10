@@ -21,11 +21,11 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       author: 'Zion Tech Group Team,
     {/* TODO: Fix JSX expression */}
 
-    }];
+    }]';
 
-;
+';
 
-const blogPosts = [;;
+const blogPosts = [';';
 
     {
       slug: 'enterprise-ai-transformation-roadmap-2026,
@@ -61,11 +61,11 @@ const blogPosts = [;;
     },
     {/* TODO: Fix JSX expression */}
 
-    }];
+    }]';
 
-;
+';
 
-const featuredPosts = [;;
+const featuredPosts = [';';
 
     {
       slug: 'autonomous-enterprise-operations-2026,
@@ -105,9 +105,9 @@ const featuredPosts = [;;
 
   // Find the current post;
 
-  const currentPost = [...latestArticles, ...blogPosts, ...featuredPosts].find(post => post.slug === slug;);;
+  const currentPost = [...latestArticles, ...blogPosts, ...featuredPosts].find(post => post.slug === slug';)';';
 
-  );
+  )';
 
   if (!currentPost) {
     return(<div className="min-h-screen bg-gray-50>
@@ -120,12 +120,12 @@ const featuredPosts = [;;
           <p className="text-lg text-gray-600 mb-8>
             The blog post you're looking for doesnt exist.
           </p>
-          <a;
+          <a";
 
             href="/blog
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors
           >
-            Back to Blog;)
+            Back to Blog";)
           </a>)
         </div>)
       </div>)
@@ -222,9 +222,9 @@ const featuredPosts = [;;
               <h2>Real-World Applications</h2>
               <p>
               <p></p>
-                Many leading organizations have already implemented {currentPost.title} with;
+                Many leading organizations have already implemented {currentPost.title} with";
 
-                remarkable results. Case studies show consistent improvements in efficiency, cost;
+                remarkable results. Case studies show consistent improvements in efficiency, cost";
 
                 reduction, and competitive advantage.
               </p>
@@ -232,9 +232,9 @@ const featuredPosts = [;;
               <h2>Conclusion</h2>
               <p>
               <p></p>
-                {currentPost.title} represents a significant opportunity for organizations looking;
+                {currentPost.title} represents a significant opportunity for organizations looking"'";
 
-                to stay ahead in todays competitive landscape. With proper implementation and;
+                to stay ahead in todays competitive landscape. With proper implementation and"'"'";
 
                 expert guidance, the benefits can be transformative.
               </p>
@@ -252,7 +252,7 @@ const featuredPosts = [;;
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8>),
               {featuredPosts.slice(0, 3).map((post, index) => (
 
-                <div;
+                <div"'"'"'";
 
                   key={index}
 
@@ -277,7 +277,7 @@ const featuredPosts = [;;
                     <span className="mx-2>•</span>
                     <span>{post.readTime}</span>
                   </div>
-                  <a;
+                  <a'"'"'"'";
 
                     href={`/blog/${post.slug}}
 

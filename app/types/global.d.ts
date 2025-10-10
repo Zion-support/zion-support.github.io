@@ -3,7 +3,7 @@ import React from 'react';
 
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (...args: any[]) => void';
     dataLayer?: any[]}
 }
 
@@ -71,9 +71,9 @@ export interface NavigationItem {
 
 // Analytics types
 export interface AnalyticsEvent {
-  action: string;
-  category: string;
-  label?: string;
+  action: string';
+  category: string';
+  label?: string';
   value?: number}
 
-export {};
+export {}';

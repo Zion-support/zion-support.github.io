@@ -15,17 +15,17 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
       },
       body: JSON.stringify({message: Netlify auto-healer runner executed successfully)
-        timestamp: new Date().toISOString();
+        timestamp: new Date().toISOString()';
 
 function: 'netlify-auto-healer-runner',
         source: event.source || 'unknown',
         healing: {,
           status: 'active',
-          issuesHealed: 0;
+          issuesHealed: 0';
 
           lastHeal: new Date().toISOString()}
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */}';';
 
         'Access-Control-Allow-Origin': '*'}
 
@@ -34,15 +34,15 @@ function: 'netlify-auto-healer-runner',
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   l: new Date().toISOString()}
 
-        }})};
+        }})}';
 
-    return result;
+    return result';
 
 //   } catch (error) {// // console.error removed for production
 error}
 
     return {
-      statusCode: 500;
+      statusCode: 500';
 
       headers: {,
         'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ error}
 
       },
       body: JSON.stringify({error: 'Internal server error'),
-        message: error.message),;
+        message: error.message),';
 
 function: 'netlify-auto-healer-runner'}
 
@@ -69,12 +69,12 @@ function: 'netlify-auto-healer-runner'}
   n: 'netlify-auto-healer-runner'})
       })}}
 
-};
+}';
 
-        timestamp: new Date().toISOString(),' function: 'netlify-auto-healer-runner',' source: event.source || 'unknown', healing: {' status: 'active, issuesHealed: 0;
+        timestamp: new Date().toISOString(),' function: 'netlify-auto-healer-runner',' source: event.source || 'unknown', healing: {' status: 'active, issuesHealed: 0';
 
-        lastHeal: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
-error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'netlify-auto-healer-runner }) }} };
+        lastHeal: new Date().toISOString() } }) }'; return result} catch (error) {' // // console.error removed for production
+error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'netlify-auto-healer-runner }) }} }';
 
         timestam,
   p: new Date().toISOString(),' functio,
@@ -82,7 +82,7 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
   e: event.source || 'unknown', healin,
   g: {/* TODO: Fix JSX expression */}
 
-  l: new Date().toISOString() } }) }; return result} catch (error) {/* TODO: Fix JSX expression */}
+  l: new Date().toISOString() } }) }'; return result} catch (error) {/* TODO: Fix JSX expression */}
 
       } return {/* TODO: Fix JSX expression */}
 
@@ -91,4 +91,4 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
 
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'netlify-auto-healer-runner }) }} };
+  n: 'netlify-auto-healer-runner }) }} }';

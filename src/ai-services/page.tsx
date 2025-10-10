@@ -1,24 +1,24 @@
-import React from 'react;
+import React from 'react';
 
-import { Brain, Zap, Shield, BarChart } from 'lucide-react;
+import { Brain, Zap, Shield, BarChart } from 'lucide-react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react;
+import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import React from 'react;
+import React from 'react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-;
+';
 
-const AIServicesPage: React.FC = () => {;
+const AIServicesPage: React.FC = () => {';
 
-const services = [;
+const services = [';
     {      titl,
     e: 'AI Strategy & Consulting,
       description: 'Comprehensive AI strategy development and implementation consulting,
@@ -43,11 +43,11 @@ titletitle: 'AI Analytics & Insights,
       price:     ,
 $4}
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     '300% Average ROI Increase,
     '95% Process Automation,
@@ -75,34 +75,34 @@ const benefits = [;;
           <
       
       <Footer />
-  )};
+  )}';
 
-export default $1;
+export default $1';
 
-'use client;
+'use client';
 
-import React, { useState, useEffect } from 'react;
+import React, { useState, useEffect } from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import { 
   Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, 
   Phone, Mail, MapPin, Clock, Users, Award, Target, BarChart,
   Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare
-} from lucide-react;
+} from lucide-react';
 
-export default function AIServicesPage() {;
+export default function AIServicesPage() {';
 
-const [activeTab, setActiveTab] = useState(overview);
+const [activeTab, setActiveTab] = useState(overview)';
 
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false)';
 
   useEffect(() => {
-    setIsVisible(true)}, []);
+    setIsVisible(true)}, [])';
 
-;
+';
 
-const aiServices = [;
+const aiServices = [';
     {      id: 'ai-automation,
       title: 'AI Process Automation,
       description: 'Intelligent automation solutions that reduce manual work by 80% and increase efficiency by 300%,
@@ -249,11 +249,11 @@ const aiServices = [;
       popular: false
     }
 
-  ];
+  ]';
 
-;
+'";
 
-const stats = [;;
+const stats = ['"'";'"'"'";
 
     { icon: Users, value: '500+', label: 'AI Models Deployed', color: 'text-cyan-400 },
     { icon: TrendingUp, value: '300%', label: 'Average ROI', color: 'text-green-400 },
@@ -261,7 +261,7 @@ const stats = [;;
     { ico,
     n: Award, value: '99.9%', label: 'Uptime Guarantee', color: 'text-purple-400 }
 
-  ];
+  ]'"'"'"'";
 
   return (
 
@@ -327,7 +327,7 @@ const stats = [;;
     g:grid-cols-2 gap-8>
               {aiServices.map((service), index) => (
 
-                <div key={service.id} className={`quantum-card p-8 ${service.popular ? 'energy-pulse' : ''}}>
+                <div key={service.id} className={`quantum-card p-8 ${service.popular ? 'energy-pulse' : '}}>
                   <div className="flex items-start justify-between mb-6>
                     <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center mb-4}>
                       <service.icon className="w-8 h-8 text-white 

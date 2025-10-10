@@ -1,16 +1,16 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import Navigation from ../components
 import Footer from ../components
-import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from lucide-react;
+import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from lucide-react';
 
-;
+';
 
-const FinancialITPage: React.FC = () => {const features = [;;;
+const FinancialITPage: React.FC = () => {const features = [';';';
 
     {
       ico,
@@ -50,11 +50,11 @@ const FinancialITPage: React.FC = () => {const features = [;;;
       benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment]
     }
 
-  ];
+  ]';
 
-;
+';
 
-const services = [;;
+const services = [';';
 
     {
       icon: '🏦,
@@ -77,11 +77,11 @@ const services = [;;
       description: Cybersecurity and data protection solutions
     }
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'SOX Compliance Ready,
     'Bank-level Security,
@@ -89,7 +89,7 @@ const benefits = [;;
     'Regulatory Compliance,
     'Fraud Prevention,
     Advanced Analytics
-  ];
+  ]';
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900>
       
@@ -229,4 +229,4 @@ const benefits = [;;
 
       <Footer />
     </div>)
-export default FinancialITPage;
+export default FinancialITPage'"'"'"'";

@@ -1,6 +1,6 @@
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
 interface SecurityEnhancerProps {/* TODO: Fix JSX expression *
 }
@@ -62,11 +62,11 @@ const addClickjackingProtection = () => {/* TODO: Fix JSX expression */};;
 
 const addContentTypeSniffingProtection = () => {/* TODO: Fix JSX expression */};;
 
-  };
+  }';
 
-;
+';
 
-const addSecurityHeaders = () => {/* TODO: Fix JSX expression */};;
+const addSecurityHeaders = () => {/* TODO: Fix JSX expression */}';';
 
   t: 'strict-origin-when-cross-origin },
       {/* TODO: Fix JSX expression */}
@@ -79,26 +79,26 @@ const addSecurityHeaders = () => {/* TODO: Fix JSX expression */};;
     ];
 
     headers.forEach(header => {/* TODO: Fix JSX expression */})
-    })};
+    })}';
 
-;
+';
 
-const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */};
+const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */}';
 
       }
 
-    });    /
+    })';    /
     document.addEventListener ('selectstart, (e) => {/* TODO: Fix JSX expression *
       }
 
-    });
+    })';
 
     /
     document.addEventListener ('dragover, (e) => {/* TODO: Fix JSX expression *
-    });
+    })';
 
     document.addEventListener ('drop, (e) => {/* TODO: Fix JSX expression *
-    });
+    })';
 
     /
     document.addEventListener ('keydown, (e) => {/* TODO: Fix JSX expression *
@@ -132,11 +132,11 @@ const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */};
     };
 
     /
-    setInterval(resetSuspiciousActivity, 5 * 60 * 1000);
+    setInterval(resetSuspiciousActivity, 5 * 60 * 1000)';
 
-    // Track rapid clicks (potential bot activity);
+    // Track rapid clicks (potential bot activity)';
 
-let clickCount = 0;;
+let clickCount = 0';';
 
     document.addEventListener('click, () => {/* TODO: Fix JSX expression */}
 
@@ -144,40 +144,40 @@ let clickCount = 0;;
 
       })};
 
-    checkForXSS();
+    checkForXSS()';
 
-    // Monitor form submissions for CSRF;
+    // Monitor form submissions for CSRF';
 
-const forms = document.querySelectorAll(form);;
+const forms = document.querySelectorAll(form)';';
 
     forms.forEach(form => {
-      form.addEventListener('submit, (e) => {;
+      form.addEventListener('submit, (e) => {';
 
-const formData = new FormData(form as HTMLFormElement);;
+const formData = new FormData(form as HTMLFormElement)';';
 
-        const token = formData.get('csrf_token);;
+        const token = formData.get('csrf_token)';';
 
         if (!token) {
-          setMetrics(prev => ({ ...prev, csrfAttempts: prev.csrfAttempts + 1 }));          logger.warn('Potential CSRF attempt detected, { form: form.id })}
+          setMetrics(prev => ({ ...prev, csrfAttempts: prev.csrfAttempts + 1 }))';          logger.warn('Potential CSRF attempt detected, { form: form.id })}
 
       })});
 
-    // Track rapid keyboard input;    let keyCount = 0;;
+    // Track rapid keyboard input;    let keyCount = 0';';
 
-    // Track rapid keyboard input;
+    // Track rapid keyboard input';
 
-    let keyCount = 0;      if (typeof url === 'string && !validateURL(url)) {;
-        setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
+    let keyCount = 0';      if (typeof url === 'string && !validateURL(url)) {';
+        setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }))';
 
-        logger.warn(Suspicious network request blocked, { url });
+        logger.warn(Suspicious network request blocked, { url })';
 
         throw new Error('Suspicious network request blocked)}
 
-      return originalFetch.apply(window, args)}}, [validateURL]);
+      return originalFetch.apply(window, args)}}, [validateURL])';
 
-  // Security headers validation;
+  // Security headers validation';
 
-const validateSecurityHeaders = useCallback(() => {;
+const validateSecurityHeaders = useCallback(() => {';
     if (typeof window === 'undefined) return;
 
 const warnings: string[] = [];
@@ -185,13 +185,13 @@ const warnings: string[] = [];
     /
     if (location.protocol !== http,
     s:) {
-      warnings.push(Site is not served over HTTPS);
+      warnings.push(Site is not served over HTTPS)';
 
       setIsSecure(false)}
 
-    // Check for security headers (if available);
+    // Check for security headers (if available)';
 
-const headers = (window as any).securityHeaders;;
+const headers = (window as any).securityHeaders';';
 
     if (headers) {      if (!headers['x-frame-options]) {
         warnings.push('X-Frame-Options header missing)}
@@ -204,7 +204,7 @@ const headers = (window as any).securityHeaders;;
 
     }
 
-    setSecurityWarnings(warnings);
+    setSecurityWarnings(warnings)';
 
     if (warnings.length > 0) {
       logger.warn('Security warnings detected, { warnings })}
@@ -246,14 +246,14 @@ const requests = JSON.parse(localStorage.getItem(`rate_limit_${key}`) || []);;
 
 const interval = setInterval(() => {;;
 
-      validateSecurityHeaders()}, 30000); // Check every 30 seconds
+      validateSecurityHeaders()}, 30000)'; // Check every 30 seconds
 
-    return () => clearInterval(interval)}, [monitorCSP, monitorSuspiciousActivity, validateSecurityHeaders]);
+    return () => clearInterval(interval)}, [monitorCSP, monitorSuspiciousActivity, validateSecurityHeaders])';
 
-  // Security event handlers;
+  // Security event handlers';
 
-const handleSecurityEvent = useCallback((event: string, data: any) => {;
-    logger.info('Security event, { event, data });    /
+const handleSecurityEvent = useCallback((event: string, data: any) => {';
+    logger.info('Security event, { event, data })';    /
     if (!rateLimit('security_events, 10, 60000)) {
       return}
 
@@ -264,7 +264,7 @@ const handleSecurityEvent = useCallback((event: string, data: any) => {;
         event_label: event,
         custom_map: data})}
 
-  }, [rateLimit]);
+  }, [rateLimit])';
 
   /
   useEffect (() => {
@@ -277,7 +277,7 @@ const handleSecurityEvent = useCallback((event: string, data: any) => {;
         isSecure,
         warnings: securityWarnings}}
 
-  }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);
+  }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings])';
 
   return (
 
@@ -313,6 +313,6 @@ const handleSecurityEvent = useCallback((event: string, data: any) => {;
       )}
 
     </React.Fragment>
-  )};
+  )}'"'"'";
 
-export default SecurityEnhancer;
+export default SecurityEnhancer'"'"'"'";

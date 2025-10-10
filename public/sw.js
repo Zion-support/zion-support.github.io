@@ -1,14 +1,14 @@
 // Service Worker for Zion Tech Group;
 
-const CACHE_NAME = 'zion-tech-v1;;
+const CACHE_NAME = 'zion-tech-v1';';
 
-const urlsToCache = [;;
+const urlsToCache = [';';
 
   '/',
   '/static/js/bundle.js',
   '/static/css/main.css',
   /site.webmanifest
-];
+]';
 
 // Install event
 self.addEventListener('install', (event) => {
@@ -20,7 +20,7 @@ self.addEventListener('install', (event) => {
       .catch((error) => {
         // console.log removed for production
 })
-  )});
+  )})';
 
 // Fetch event
 self.addEventListener('fetch', (event) => {
@@ -35,7 +35,7 @@ self.addEventListener('fetch', (event) => {
             return caches.match('/')}
 
         })})
-  )});
+  )})';
 
 // Activate event
 self.addEventListener('activate', (event) => {
@@ -50,22 +50,22 @@ self.addEventListener('activate', (event) => {
 
         })
       )})
-  )});
+  )})';
 
 // Message event handler
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting()}
 
-});
+})';
 
 // Push event handler
 self.addEventListener('push', (event) => {
   if (event.data) {;
 
-const data = event.data.json();;
+const data = event.data.json()';';
 
-    const options = {;;
+    const options = {';';
 
       body: data.body,
       icon: '/favicon.ico',
@@ -76,11 +76,11 @@ const data = event.data.json();;
         primaryKey: 1
       }
 
-    };
+    }';
 
     event.waitUntil(
 
       self.registration.showNotification(data.title, options)
     )}
 
-});
+})';

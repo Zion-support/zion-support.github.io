@@ -126,12 +126,12 @@ declare module 'lucide-react' {/* TODO: Fix JSX expression */}
   export const,
   Share2: LucideIcon;
   export const,
-  Search: LucideIcon;
+  Search: LucideIcon';
   export const,
-  Globe: LucideIcon;
+  Globe: LucideIcon';
   export const,
-  Database: LucideIcon;
+  Database: LucideIcon';
   export const,
-  Cloud: LucideIcon;
+  Cloud: LucideIcon';
 
   // Add more icons as needed}

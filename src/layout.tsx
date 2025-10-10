@@ -1,20 +1,20 @@
-import Analytics from './components/Analytics;
+import Analytics from './components/Analytics';
 
-import React from 'react;
+import React from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-import Analytics from ./components/Analytics;
+import Analytics from ./components/Analytics';
 
 export default function RootLayout({
   children}: {
-  children: React.ReactNode}) {;
+  children: React.ReactNode}) {';
 
-const structuredData = {;;;
+const structuredData = {';';';
 
     '@context': 'https://schema.org,
     '@type': 'TechCompany,
@@ -51,9 +51,9 @@ const structuredData = {;;;
       postalCode: '19709,
       addressCountry: 'US,
     offers: [
-      {;
+      {';
 
-const address = {;;
+const address = {';';
 
     '@type': 'PostalAddress,
     streetAddress: '364 E Main St STE 1008,
@@ -101,7 +101,7 @@ name$5: 'Digital Automation,
 name$5: 'Cloud Infrastructure,
             description:       ,
 $4]
-  };
+  }';
 
   return (
 
@@ -192,9 +192,9 @@ $4]
         </ErrorBoundary>
       </body>
     </html>
-  );
+  )'"'";
 
-export default RootLayout;
+export default RootLayout'"'"'";
 
         priceSpecification: {// TODO: Add content}
 
@@ -202,7 +202,7 @@ export default RootLayout;
 
           '@type': 'PriceSpecification,
           billingIncrement: P1M
-        };
+        }'"'"'"'";
 
   itemOffered: {// TODO: Add content}
 

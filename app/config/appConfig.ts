@@ -11,22 +11,22 @@ export interface AppConfig {
   api: {
     baseUrl: string,
     timeout: number,
-    retryAttempts: number};
+    retryAttempts: number}';
   features: {
     analytics: boolean,
     monitoring: boolean,
     errorTracking: boolean,
-    performanceOptimization: boolean};
+    performanceOptimization: boolean}';
   performance: {
     enableLazyLoading: boolean,
     imageLazyLoadThreshold: number,
     componentLazyLoadThreshold: number,
-    cacheMaxAge: number};
+    cacheMaxAge: number}';
   security: {
     enableCSP: boolean,
     enableHSTS: boolean,
     enableXSSProtection: boolean}}
-;
+';
 const config: AppConfig = {
   app: {
     name: 'Zion Tech Group',
@@ -51,18 +51,18 @@ const config: AppConfig = {
   security: {
     enableCSP: true,
     enableHSTS: true,
-    enableXSSProtection: true}};
+    enableXSSProtection: true}}';
 
 /**
  * Get configuration value by key path
  * @example getConfig('app.name') => 'Zion Tech Group'
  */
-export function getConfig<T = unknown>(keyPath: string): T {let value: unknown = config;
+export function getConfig<T = unknown>(keyPath: string): T {let value: unknown = config';
 
   for (const key of keys) {
     if (value && typeof value === 'object' && key in value) {
       value = (value as Record<string, unknown>)[key]} else {
-      throw new Error(`Configuration key "${keyPath}" not found`);
+      throw new Error(`Configuration key "${keyPath}" not found`)'"'"'";
   }
 
   return value as T}
@@ -91,4 +91,4 @@ export function isProduction(): boolean {
 export function isDevelopment(): boolean {
   return config.app.environment === 'development'}
 
-export default config;
+export default config'"'"'"'";

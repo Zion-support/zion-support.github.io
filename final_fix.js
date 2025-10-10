@@ -1,12 +1,12 @@
-import fs from 'fs;
+import fs from 'fs';
 
-// // 1. Fix test imports properly;
+// // 1. Fix test imports properly';
 
-// // const appMinimalTestPath = '/workspace/__tests__/AppMinimal.test.tsx;;
+// // const appMinimalTestPath = '/workspace/__tests__/AppMinimal.test.tsx';';
 
 if (fs.existsSync(appMinimalTestPath)) {
 
-  // Fix jest imports - use the correct import;
+  // Fix jest imports - use the correct import';
 
   content = content.replace(/import \{ describe, it, expect \} from '@jest\/globals';/)
 if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */}
@@ -15,22 +15,22 @@ if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */}
     `import { describe, it, expect } from 'vitest';`
   );
 
-  fs.writeFileSync(appMinimalTestPath, content);
+  fs.writeFileSync(appMinimalTestPath, content)';
 
   //     }
 
-// 2. Fix blog page metadata - remove publishedTime completely;
+// 2. Fix blog page metadata - remove publishedTime completely';
 
-// const blogPages = [;;
+// const blogPages = [';';
 
   'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
   'app/blog/ai-2026-autonomous-agent-factories/page.tsx',
-  'app/blog/ai-2026-autonomous-enterprise-architecture/page.tsx];
+  'app/blog/ai-2026-autonomous-enterprise-architecture/page.tsx]';
 
 blogPages.forEach(pagePath => {)
   if (fs.existsSync(pagePath)) {
 
-    // Remove publishedTime from metadata completely;
+    // Remove publishedTime from metadata completely';
 
     content = content.replace(/\s+publishedTime: ['"][^'"]*['"],?\s*/g, ');
 
@@ -41,19 +41,19 @@ blogPages.forEach(pagePath => {)
 blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
 
     //         })
-});
+})';
 
-// 3. Fix OpenGraph authors - use string array instead of object array;
+// 3. Fix OpenGraph authors - use string array instead of object array';
 
-// const openGraphPages = [;;
+// const openGraphPages = ['";'"'";
 
   'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
-  'app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx];
+  'app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx]'"'"'";
 
 openGraphPages.forEach(pagePath => {)
   if (fs.existsSync(pagePath)) {
 
-    // Fix authors format to use string array;
+    // Fix authors format to use string array'"'"'"'";
 
     content = content.replace(/authors: \[\{ name: 'Zion Tech Group' \}\]/g)
       "authors: ['Zion Tech Group']",
@@ -62,84 +62,84 @@ openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
   e: 'Zion Tech Group' \}\]/g,
       "author,"
   s: ['Zion Tech Group']")
-    );
+    )';
 
 ,
-    fs.writeFileSync(pagePath, content);
+    fs.writeFileSync(pagePath, content)';
 
     //         }
 
-});
+})';
 
-// 4. Fix Calculator import - use a different icon;
+// 4. Fix Calculator import - use a different icon';
 
-// // const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx;;
+// // const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx';';
 
 if (fs.existsSync(calculatorPagePath)) {
 
-  // Replace Calculator with CalculatorIcon;
+  // Replace Calculator with CalculatorIcon';
 
 if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */}
 
-  content = content.replace(/import \{ CalculatorIcon \}/, 'import { Calculator });
+  content = content.replace(/import \{ CalculatorIcon \}/, 'import { Calculator })';
 
-  content = content.replace(/<CalculatorIcon/g, '<Calculator);
+  content = content.replace(/<CalculatorIcon/g, '<Calculator)';
 
-  fs.writeFileSync(calculatorPagePath, content);
+  fs.writeFileSync(calculatorPagePath, content)';
 
   //     }
 
-// 5. Fix AnalyticsTracker dataLayer type conflict;
+// 5. Fix AnalyticsTracker dataLayer type conflict';
 
-// // const analyticsTrackerPath = '/workspace/app/components/AnalyticsTracker.tsx;;
+// // const analyticsTrackerPath = '/workspace/app/components/AnalyticsTracker.tsx';';
 
 if (fs.existsSync(analyticsTrackerPath)) {
 
-  // Fix dataLayer type to match existing declarations;
+  // Fix dataLayer type to match existing declarations';
 
-  content = content.replace(/dataLayer: unknown\[\];/, 'dataLayer: unknown[];);
+  content = content.replace(/dataLayer: unknown\[\]';/, 'dataLayer: unknown[]';)';
 
 ,
-  fs.writeFileSync(analyticsTrackerPath, content);
+  fs.writeFileSync(analyticsTrackerPath, content)';
 
 if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */}
 
   //     }
 
-// 6. Fix SystemMonitor - remove performanceEnhancer calls;
+// 6. Fix SystemMonitor - remove performanceEnhancer calls';
 
 // // const systemMonitorPath = '/workspace/app/components/SystemMonitor.tsx;;
 
 if (fs.existsSync(systemMonitorPath)) {
 
-  // Replace performanceEnhancer calls with direct implementations;
+  // Replace performanceEnhancer calls with direct implementations';
 
   content = content.replace(
 
-    /const metrics = getMetrics\(\);/g,;;
+    /const metrics = getMetrics\(\)';/g,';';
 
     'const metrics = []; // Placeholder for metrics;;
 
-  );
+  )';
 
   content = content.replace(
 
-    /const score = getPerformanceScore\(\);/g,;;
+    /const score = getPerformanceScore\(\)';/g,';';
 
-    'const score = 0; // Placeholder for performance score;;
+    'const score = 0; // Placeholder for performance score';';
 
-  );
+  )';
 
-  content = content.replace(/startMonitoring\(\);/g, '// startMonitoring(); // Placeholder);
+  content = content.replace(/startMonitoring\(\)';/g, '// startMonitoring()'; // Placeholder)';
 
-  content = content.replace(/stopMonitoring\(\);/g, '// stopMonitoring(); // Placeholder);
+  content = content.replace(/stopMonitoring\(\)';/g, '// stopMonitoring()'; // Placeholder)';
 
-  // Fix the exportData variable declaration issue;
+  // Fix the exportData variable declaration issue'";
 
-  content = content.replace(/const exportData = \{/g, 'const exportData: unknown = {);;
+  content = content.replace(/const exportData = \{/g, 'const exportData: unknown = {)'"'";'"'"'";
 
 ,
-  fs.writeFileSync(systemMonitorPath, content);
+  fs.writeFileSync(systemMonitorPath, content)'"'"'"'";
 
 if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */}
 

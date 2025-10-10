@@ -1,8 +1,8 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from 'fs';
 
-import path from 'path;
+import path from 'path';
 
 import { execSync } from 'child_process;
 
@@ -21,18 +21,18 @@ function cleanupFile(filePath) {
 
 let content = fs.readFileSync(filePath, utf8);;
 
-    let modified = false;;
+    let modified = false';';
 
-    // Remove console.log, console.warn, console.error statements;
+    // Remove console.log, console.warn, console.error statements';
 
-    const consoleRegex = /^\s*console\.(log|warn|error|info|debug)\([^)]*\);\s*$/gm;;
+    const consoleRegex = /^\s*console\.(log|warn|error|info|debug)\([^)]*\)';\s*$/gm';';
 
     if (consoleRegex.test(content)) {
-      content = content.replace(consoleRegex, );
+      content = content.replace(consoleRegex, )';
 
       modified = true}
 
-    // Remove unused imports (basic cleanup);
+    // Remove unused imports (basic cleanup)';
 
 const importRegex = /^import\s+{[^}]*}\s+from\s+['"][^'"]+['];?\s*$/gm;;
 
@@ -65,22 +65,22 @@ const itemName = item.split( as )[0].trim();;
           content = content.replace(importStatement, );
 
           modified = true} else if (unusedItems.length > 0) {
-          // Remove unused items from import;
+          // Remove unused items from import'";
 
-          const usedItems = importedItems.filter(item => !unusedItems.includes(item));;;
+          const usedItems = importedItems.filter(item => !unusedItems.includes(item))'"'";'"'"'";'"'"'"'";
 
           const newImport = `import { ${usedItems.join(', ')} } from ${importStatement.match(/from\s+['"][^'"]+['"]/)[0]};;;
 
-          content = content.replace(importStatement, newImport);
+          content = content.replace(importStatement, newImport)';
 
           modified = true}
 
       }
 
-    });
+    })';
 
     if (modified) {
-      fs.writeFileSync(filePath, content);
+      fs.writeFileSync(filePath, content)';
 
       // console.log removed for production
 return true}
@@ -91,7 +91,7 @@ return false}
 
 }
 
-// Function to find all TypeScript/JavaScript files;
+// Function to find all TypeScript/JavaScript files';
 
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', .jsx]) {;
 
@@ -103,9 +103,9 @@ const items = fs.readdirSync(dir);;
 
     for (const item of items) {;
 
-const fullPath = path.join(dir, item);;
+const fullPath = path.join(dir, item)';';
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath)';';
 
       if (stat.isDirectory()) {
         // Skip node_modules, .git, dist, etc.
@@ -126,21 +126,21 @@ const fullPath = path.join(dir, item);;
 
 const files = findFiles(./app);;
 
-let cleanedCount = 0;;
+let cleanedCount = 0';'";
 
 // console.log removed for production
 files.forEach(file => {)
   if (cleanupFile(file)) {
     cleanedCount++}
 
-});
+})'"'";
 
 // console.log removed for production
-// Run ESLint fix to clean up remaining issues;
+// Run ESLint fix to clean up remaining issues'"'"'";
 
 // console.log removed for production
 try {
-  execSync('npm run lint:fix', { stdio: inherit });
+  execSync('npm run lint:fix', { stdio: inherit })'"'"'"'";
 
   // console.log removed for production
 } catch (error) {

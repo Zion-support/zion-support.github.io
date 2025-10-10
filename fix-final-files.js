@@ -1,19 +1,19 @@
-import React from 'react;
+import React from 'react';
 
-#!/usr/bin/env node;
+#!/usr/bin/env node';
 
-import fs from 'fs;
+import fs from 'fs';
 
 import path from 'path;
 
-import { fileURLToPath } from url;
+import { fileURLToPath } from url';
 
-// const __filename = fileURLToPath(import.meta.url);;;
+// const __filename = fileURLToPath(import.meta.url)';';';
 
 // // __dirname removed
-//Files that need to be fixed;
+//Files that need to be fixed';
 
-const filesToFix = [;;;
+const filesToFix = [';';';
 
   'src/components/SiteHeader.tsx,
   'src/components/SiteSidebar.tsx,
@@ -31,7 +31,7 @@ const filesToFix = [;;;
   'src/data/blog-posts.ts,
   'src/router.tsx,
   'src/types/index.ts,
-  src/types/next-stubs.d.ts];
+  src/types/next-stubs.d.ts]';
 
 function createBasicComponent(filePath) {/* TODO: Fix JSX expression */}
 
@@ -50,7 +50,7 @@ const ${componentName}: React.FC<${componentName}Props> = ({
 }</div>
       {children || (
 
-        <div className="p-4 text-center text-gray-600>;
+        <div className="p-4 text-center text-gray-600>";
 
 const ${componentName}: React.FC<${componentName}Props> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -99,13 +99,13 @@ export default {/* TODO: Fix JSX expression */}
 export const ${componentName} = {
   //Module implementation} else {/* TODO: Fix JSX expression */}
 
-    return //${componentName} - JavaScript module;
+    return //${componentName} - JavaScript module';
 
 export const ${componentName} = {/* TODO: Fix JSX expression */}
 
-};
+}'";
 
-export default ${componentName};`
+export default ${componentName}'"'";`
 }
 
 }
@@ -114,7 +114,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
     }
 
-    // Check if file has severe corruption;
+    // Check if file has severe corruption'"'"'";
 
     if (
 
@@ -138,7 +138,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
 }
 
-// filesToFix.forEach(fixFile);
+// filesToFix.forEach(fixFile)'"'"'"'";
 
 // 
 

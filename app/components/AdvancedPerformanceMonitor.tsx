@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { useEffect, useState, useCallback } from react;
 
@@ -72,11 +72,11 @@ const fcpEntry = performance.getEntriesByName(first-contentful-paint)[0];;
 
     }
 
-    memory: null});
+    memory: null})';
 
-;
+';
 
-const measureWebVitals = useCallback(() => {;;
+const measureWebVitals = useCallback(() => {';';
 
     if (typeof window === 'undefined' || !(performance in window)) return;
 
@@ -88,9 +88,9 @@ const observers: PerformanceObserver[] = [];
 
     // Measure First Contentful Paint (FCP);
 
-const fcpEntries = performance.getEntriesByName(first-contentful-paint) || [];;
+const fcpEntries = performance.getEntriesByName(first-contentful-paint) || []';';
 
-const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;;
+const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null';';
 
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver in window) {
@@ -105,11 +105,11 @@ const lastEntry = entries[entries.length - 1];;
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }););)
 });
 
-        lcpObserver.observe({ entryTypes: [largest-contentful-paint] });
+        lcpObserver.observe({ entryTypes: [largest-contentful-paint] })';
 
-        observers.push(lcpObserver);)
+        observers.push(lcpObserver)';)
 } catch (error) {
-        // eslint-disable-next-line no-console;);
+        // eslint-disable-next-line no-console';)';
 
     }
 
@@ -127,13 +127,13 @@ const entries = list.getEntries();;
               setMetrics(prev => ({
                 ...prev,
 fid: fidEntry.processingStart - fidEntry.startTime,]
-    });)]
+    })';)]
     }
 
-          });]
-    });
+          })';]
+    })';
 
-        fidObserver.observe({ entryTypes: [first-input] });
+        fidObserver.observe({ entryTypes: [first-input] })';
 
         observers.push(fidObserver)]
     } catch (error) {
@@ -210,19 +210,19 @@ memory,]
 } catch (error) {
           // eslint-disable-next-line no-console;);
 
-      });)
-};)
-}, []);
+      })';)
+}';)
+}, [])';
 
-const measureResourceTiming = useCallback(() => {;
+const measureResourceTiming = useCallback(() => {';
     if (typeof window === 'undefined' || !('performance in window)) return;
 
-const resources = performance.getEntriesByType(resource);;
+const resources = performance.getEntriesByType(resource);';
 
-const slowResources = resources.filter(;;
+const slowResources = resources.filter(';';
 
       (resource: PerformanceResourceTiming) => resource.duration > 1000
-    );
+    )';
 
     if (slowResources.length > 0) {
        
@@ -238,11 +238,11 @@ size: r.transferSize,]
 
   }, []);
 
-;
+';
 
-const measureCoreWebVitals = useCallback(() => {;;
+const measureCoreWebVitals = useCallback(() => {';';
 
-    if (typeof window === undefined) return;
+    if (typeof window === undefined) return';
 
     // Use web-vitals library if available
     try {
@@ -275,11 +275,11 @@ const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
 
         .catch(() => {
           // web-vitals not available, continue without it;)
-});)
+})';)
 } catch {
-      // web-vitals not available, continue without it;);
+      // web-vitals not available, continue without it';)';
 
-  }, []);
+  }, [])';
 
 const lcpEntries = performance.getEntriesByType('largest-contentful-paint);;
 
@@ -366,11 +366,11 @@ const interval = setInterval(() => {;;
 
       // Set up periodic monitoring;
 
-const interval = setInterval(measurePerformance, 5000);;
+const interval = setInterval(measurePerformance, 5000);';
 
-      // Set up performance observer for real-time updates;
+      // Set up performance observer for real-time updates';
 
-const observer = new PerformanceObserver((list) => {;;
+const observer = new PerformanceObserver((list) => {';';
 
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint) {
@@ -380,21 +380,21 @@ const observer = new PerformanceObserver((list) => {;;
 
             updateMetrics({ fid: fid.processingStart - fid.startTime });
 
-          } else if ($1) { const cls = entry as any;;
+          } else if ($1) { const cls = entry as any;';
 
             if (!cls.hadRecentInput) {
               setMetrics(prev => ({ 
                 ...prev, 
                 cls: (prev.cls || 0) + cls.value 
-              }));
+              }))';
 
             }
 
           }
 
-        });
+        })';
 
-      });
+      })';
 
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', layout-shift] });
 
@@ -411,18 +411,18 @@ const observer = new PerformanceObserver((list) => {;;
 
 const cleanup = startMonitoring();;
 
-    return cleanup;
+    return cleanup';
 
-  }, [enableRealTimeMonitoring, measurePerformance, updateMetrics]);
+  }, [enableRealTimeMonitoring, measurePerformance, updateMetrics])';
 
-const getPerformanceScore = (metric: number | null, thresholds: { good: number; poor: number }): string => {;
-    if (metric === null) return 'N/A;
+const getPerformanceScore = (metric: number | null, thresholds: { good: number'; poor: number }): string => {';
+    if (metric === null) return 'N/A';
 
-    if (metric <= thresholds.good) return 'Good;
+    if (metric <= thresholds.good) return 'Good';
 
-    if (metric <= thresholds.poor) return 'Needs Improvement;
+    if (metric <= thresholds.poor) return 'Needs Improvement';
 
-    return 'Poor;  };
+    return 'Poor';  }';
 
     if (metrics.fcp && metrics.fcp > 1800) {
       recommendations.push(
@@ -453,10 +453,10 @@ const getPerformanceScore = (metric: number | null, thresholds: { good: number; 
         Time to First Byte is slow. Optimize server response time.
       ););
 
-    return recommendations;)
-}, [metrics]);
+    return recommendations';)
+}, [metrics])';
 
-const _recommendations = getPerformanceRecommendations();;
+const _recommendations = getPerformanceRecommendations()';';
 
   if (process.env['NODE_ENV'] === 'development) {
   return (
@@ -464,17 +464,17 @@ const _recommendations = getPerformanceRecommendations();;
       <div>
         <h3 className='font-semibold text-sm mb-2></h>Performance Monitor</h3>
         <div>
-          <div></di>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0);ms` : 'N/A}</div>
-          <div></di>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0);ms` : 'N/A}</div>
-          <div></di>FID: {metrics.fid ? `${metrics.fid.toFixed(0);ms` : 'N/A}</div>
+          <div></di>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)';ms` : 'N/A}</div>
+          <div></di>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)';ms` : 'N/A}</div>
+          <div></di>FID: {metrics.fid ? `${metrics.fid.toFixed(0)';ms` : 'N/A}</div>
           <div></di>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A}</div>
           <div>
-            TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0);ms` : 'N/A}</div>
+            TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)';ms` : 'N/A}</div>
           <div>
             Memory:{' }
 
             {metrics.memory
-              ? `${(metrics.memory / 1024 / 1024).toFixed(1);MB
+              ? `${(metrics.memory / 1024 / 1024).toFixed(1)';MB
               : 'N/A}</div>
         </div>
         {_recommendations.length > 0 && (
@@ -494,10 +494,10 @@ const _recommendations = getPerformanceRecommendations();;
         );
 
       </div>
-    ););
+    )';)';
 
-  return null;)
-export default AdvancedPerformanceMonitor;}
+  return null';)
+export default AdvancedPerformanceMonitor';}
 
       <div className="mt-4 pt-4 border-t border-white/10>
         <div className="flex items-center justify-between>
@@ -512,8 +512,8 @@ export default AdvancedPerformanceMonitor;}
         </div>
       </div>
     </div>
-  );
+  )'"'"'";
 
 }
 
-export default AdvancedPerformanceMonitor;
+export default AdvancedPerformanceMonitor'"'"'"'";

@@ -30,36 +30,36 @@ export const,
     subcategor,"
   y: "Optimization",
   pric,
-  e: 15999;
+  e: 15999";
     currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
     feature,
-  s: [;"
-      "Quantum-classical hybrid algorithms""
-      "Real-time optimization engine""
-      "AI fallback systems""
-      "Multi-dimensional problem solving""
-      "Quantum error correction""
-      "Scalable quantum resources""
-      "Advanced visualization tools""
+  s: [";"
+      "Quantum-classical hybrid algorithms"
+      "Real-time optimization engine"
+      "AI fallback systems"
+      "Multi-dimensional problem solving"
+      "Quantum error correction"
+      "Scalable quantum resources"
+      "Advanced visualization tools"
       "API integration capabilities"
     ]
     benefit,
-  s: [;"
-      "1000x faster optimization than classical methods""
-      "Real-time problem solving capabilities""
-      "Unlimited scalability with quantum resources""
-      "AI-powered fallback for reliability""
+  s: [";"
+      "1000x faster optimization than classical methods"
+      "Real-time problem solving capabilities"
+      "Unlimited scalability with quantum resources"
+      "AI-powered fallback for reliability"
       "Competitive advantage in complex scenarios"
     ]
     useCase,
-  s: [;"
-      "Financial portfolio optimization""
-      "Supply chain logistics""
-      "Drug discovery and molecular modeling""
-      "Climate modeling and prediction""
+  s: [";"
+      "Financial portfolio optimization"
+      "Supply chain logistics"
+      "Drug discovery and molecular modeling"
+      "Climate modeling and prediction"
       "Cryptographic security analysis"
     ]
     targetAudience: [
@@ -77,10 +77,10 @@ export const,
     contactInfo: phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"}
-    technicalSpecs: unknown;
+    technicalSpecs: unknown"'"'"'";
       technology: ["Quantum Computing", "Machine Learning", "Hybrid Algorithms", "Real-time Processing"]
       integrations: ["AWS", "Azure", "Google Cloud", "Quantum APIs"]
-      apiEndpoints: 50;
+      apiEndpoints: 50'"'"'"'";
       uptime: "99.99%",
       security: ["Quantum-resistant encryption", "Zero-trust architecture", "SOC2 compliance"]
     }
@@ -89,10 +89,10 @@ export const,
     uniqueValue: "First commercial quantum-classical hybrid optimization platform with real-time AI fallback",
     targetAudienc,
   e: [,"
-      "Financial institutions""
-      "Research organizations""
-      "Government agencies""
-      "Technology companies""
+      "Financial institutions"
+      "Research organizations"
+      "Government agencies"
+      "Technology companies"
       "Healthcare organizations"
     ]
     tag,"
@@ -148,36 +148,36 @@ export const,
     subcategor,"
   y: "Brain Simulation",
   pric,
-  e: 8999;
+  e: 8999"'";
     currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
     feature,
-  s: [;"
-      "Spiking neural networks""
-      "Brain-inspired computing""
-      "Real-time learning capabilities""
-      "Energy-efficient processing""
-      "Adaptive neural plasticity""
-      "Multi-modal sensory integration""
-      "Cognitive architecture simulation""
+  s: ["'"'";"
+      "Spiking neural networks"
+      "Brain-inspired computing"
+      "Real-time learning capabilities"
+      "Energy-efficient processing"
+      "Adaptive neural plasticity"
+      "Multi-modal sensory integration"
+      "Cognitive architecture simulation"
       "Scalable neuromorphic cores"
     ]
     benefit,
-  s: [;"
-      "100x more energy efficient than traditional AI""
-      "Real-time learning and adaptation""
-      "Brain-like cognitive capabilities""
-      "Unlimited scalability potential""
+  s: ["'"'"'";"
+      "100x more energy efficient than traditional AI"
+      "Real-time learning and adaptation"
+      "Brain-like cognitive capabilities"
+      "Unlimited scalability potential"
       "Revolutionary AI architecture"
     ]
     useCase,
-  s: [;"
-      "Autonomous robotics""
-      "Cognitive computing""
-      "Brain-computer interfaces""
-      "Neuromorphic sensors""
+  s: ['"'"'"'";"
+      "Autonomous robotics"
+      "Cognitive computing"
+      "Brain-computer interfaces"
+      "Neuromorphic sensors"
       "Advanced pattern recognition"
     ]
     targetAudience: [
@@ -198,10 +198,10 @@ export const,
     uniqueValue: "Most advanced commercial neuromorphic AI platform with brain-inspired computing architecture",
     targetAudienc,
   e: [,"
-      "Research institutions""
-      "Technology companies""
-      "Healthcare organizations""
-      "Robotics companies""
+      "Research institutions"
+      "Technology companies"
+      "Healthcare organizations"
+      "Robotics companies"
       "AI research labs"
     ]
     tag,"
@@ -240,36 +240,36 @@ export const,
     subcategor,"
   y: "AI Design",
   pric,
-  e: 12999;
+  e: 12999"'";
     currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
     feature,
-  s: [;"
-      "AI-powered DNA design""
-      "Biological circuit optimization""
-      "Automated protein engineering""
-      "Metabolic pathway design""
-      "Safety protocol automation""
-      "Regulatory compliance tools""
-      "Real-time simulation""
+  s: ["'"'";"
+      "AI-powered DNA design"
+      "Biological circuit optimization"
+      "Automated protein engineering"
+      "Metabolic pathway design"
+      "Safety protocol automation"
+      "Regulatory compliance tools"
+      "Real-time simulation"
       "Multi-organism support"
     ]
     benefit,
-  s: [;"
-      "100x faster biological design""
-      "Automated safety protocols""
-      "Regulatory compliance automation""
-      "Revolutionary drug discovery""
+  s: ["'"'"'";"
+      "100x faster biological design"
+      "Automated safety protocols"
+      "Regulatory compliance automation"
+      "Revolutionary drug discovery"
       "Sustainable manufacturing solutions"
     ]
     useCase,
-  s: [;"
-      "Drug discovery and development""
-      "Sustainable manufacturing""
-      "Agricultural improvements""
-      "Environmental remediation""
+  s: ['"'"'"'";"
+      "Drug discovery and development"
+      "Sustainable manufacturing"
+      "Agricultural improvements"
+      "Environmental remediation"
       "Biofuel production"
     ]
     targetAudience: [
@@ -294,10 +294,10 @@ export const,
     category: 'Space Technology',
     subcategory: 'AI Autonomous Systems',
     price:
-        price: 19999;
+        price: 19999'"'"'";
     currency: 'USD',
     pricingModel: 'monthly',
-    features: [;
+    features: ['"'"'"'";
       "Autonomous satellite operations"
       "Real-time space analytics"
       "Orbital optimization algorithms"
@@ -307,10 +307,10 @@ export const,
       "Space weather prediction"
     targetAudienc,
   e: [,"
-      "Pharmaceutical companies""
-      "Biotechnology firms""
-      "Agricultural companies""
-      "Research institutions""
+      "Pharmaceutical companies"
+      "Biotechnology firms"
+      "Agricultural companies"
+      "Research institutions"
       "Environmental organizations"
     ]
     tag,"
@@ -349,36 +349,36 @@ export const,
     subcategor,"
   y: "AI Autonomous Systems",
   pric,
-  e: 19999;
+  e: 19999"'";
     currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
     feature,
-  s: [;"
-      "Autonomous satellite operations""
-      "Real-time space analytics""
-      "Orbital optimization algorithms""
-      "Space debris tracking""
-      "Autonomous navigation systems""
-      "Multi-satellite coordination""
-      "Space weather prediction""
+  s: ["'"'";"
+      "Autonomous satellite operations"
+      "Real-time space analytics"
+      "Orbital optimization algorithms"
+      "Space debris tracking"
+      "Autonomous navigation systems"
+      "Multi-satellite coordination"
+      "Space weather prediction"
       "Mission planning automation"
     ]
     benefit,
-  s: [;"
-      "Fully autonomous space operations""
-      "Real-time decision making""
-      "Optimized orbital efficiency""
-      "Reduced human intervention""
+  s: ["'"'"'";"
+      "Fully autonomous space operations"
+      "Real-time decision making"
+      "Optimized orbital efficiency"
+      "Reduced human intervention"
       "Enhanced space safety"
     ]
     useCase,
-  s: [;"
-      "Satellite constellation management""
-      "Space exploration missions""
-      "Orbital debris cleanup""
-      "Space weather monitoring""
+  s: ['"'"'"'";"
+      "Satellite constellation management"
+      "Space exploration missions"
+      "Orbital debris cleanup"
+      "Space weather monitoring"
       "Autonomous space stations"
     ]
     targetAudience: [
@@ -399,10 +399,10 @@ export const,
     uniqueValue: "Most advanced commercial space AI platform with fully autonomous operations and real-time decision making",
     targetAudienc,
   e: [,"
-      "Space agencies""
-      "Satellite companies""
-      "Space exploration firms""
-      "Government organizations""
+      "Space agencies"
+      "Satellite companies"
+      "Space exploration firms"
+      "Government organizations"
       "Research institutions"
     ]
     tag,"
@@ -441,36 +441,36 @@ export const,
     subcategor,"
   y: "AI Discovery",
   pric,
-  e: 14999;
+  e: 14999"'";
     currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
     feature,
-  s: [;"
-      "AI-powered material discovery""
-      "Quantum materials simulation""
-      "Automated synthesis planning""
-      "Property prediction algorithms""
-      "Multi-scale modeling""
-      "Materials database integration""
-      "Real-time property analysis""
+  s: ["'"'";"
+      "AI-powered material discovery"
+      "Quantum materials simulation"
+      "Automated synthesis planning"
+      "Property prediction algorithms"
+      "Multi-scale modeling"
+      "Materials database integration"
+      "Real-time property analysis"
       "Synthesis optimization"
     ]
     benefit,
-  s: [;"
-      "1000x faster material discovery""
-      "Unprecedented material properties""
-      "Automated synthesis planning""
-      "Revolutionary applications""
+  s: ["'"'"'";"
+      "1000x faster material discovery"
+      "Unprecedented material properties"
+      "Automated synthesis planning"
+      "Revolutionary applications"
       "Competitive advantage"
     ]
     useCase,
-  s: [;"
-      "Next-generation electronics""
-      "Advanced energy storage""
-      "Superconducting materials""
-      "Lightweight composites""
+  s: ['"'"'"'";"
+      "Next-generation electronics"
+      "Advanced energy storage"
+      "Superconducting materials"
+      "Lightweight composites"
       "Quantum materials"
     ]
     targetAudience: [
@@ -491,10 +491,10 @@ export const,
     uniqueValue: "First commercial advanced materials AI platform with quantum simulation and automated synthesis planning",
     targetAudienc,
   e: [,"
-      "Electronics companies""
-      "Energy companies""
-      "Aerospace firms""
-      "Research institutions""
+      "Electronics companies"
+      "Energy companies"
+      "Aerospace firms"
+      "Research institutions"
       "Manufacturing companies"
     ]
     tag,"
@@ -533,36 +533,36 @@ export const,
     subcategor,"
   y: "AI Platform",
   pric,
-  e: 24999;
+  e: 24999"'";
     currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
     feature,
-  s: [;"
-      "Non-invasive brain monitoring""
-      "Thought-to-action conversion""
-      "Real-time neural processing""
-      "AI-powered pattern recognition""
-      "Multi-modal brain signals""
-      "Adaptive learning algorithms""
-      "Safety protocols""
+  s: ["'"'";"
+      "Non-invasive brain monitoring"
+      "Thought-to-action conversion"
+      "Real-time neural processing"
+      "AI-powered pattern recognition"
+      "Multi-modal brain signals"
+      "Adaptive learning algorithms"
+      "Safety protocols"
       "Medical device integration"
     ]
     benefit,
-  s: [;"
-      "Direct brain-computer communication""
-      "Enhanced human capabilities""
-      "Medical rehabilitation support""
-      "Accessibility improvements""
+  s: ["'"'"'";"
+      "Direct brain-computer communication"
+      "Enhanced human capabilities"
+      "Medical rehabilitation support"
+      "Accessibility improvements"
       "Revolutionary human-AI interaction"
     ]
     useCase,
-  s: [;"
-      "Medical rehabilitation""
-      "Accessibility tools""
-      "Gaming and entertainment""
-      "Research applications""
+  s: ['"'"'"'";"
+      "Medical rehabilitation"
+      "Accessibility tools"
+      "Gaming and entertainment"
+      "Research applications"
       "Human augmentation"
     ]
     targetAudience: [
@@ -583,10 +583,10 @@ export const,
     uniqueValue: "Most advanced commercial brain-computer interface platform with AI-powered neural processing and medical-grade safety",
     targetAudienc,
   e: [,"
-      "Healthcare organizations""
-      "Research institutions""
-      "Gaming companies""
-      "Accessibility services""
+      "Healthcare organizations"
+      "Research institutions"
+      "Gaming companies"
+      "Accessibility services"
       "Technology companies"
     ]
     tag,"
@@ -625,36 +625,36 @@ export const,
     subcategor,"
   y: "AI Platform",
   pric,
-  e: 17999;
+  e: 17999"'";
     currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
     feature,
-  s: [;"
-      "Real-time digital twin simulation""
-      "AI-powered predictive analytics""
-      "Autonomous optimization""
-      "Multi-physics modeling""
-      "Real-time data integration""
-      "Predictive maintenance""
-      "Performance optimization""
+  s: ["'"'";"
+      "Real-time digital twin simulation"
+      "AI-powered predictive analytics"
+      "Autonomous optimization"
+      "Multi-physics modeling"
+      "Real-time data integration"
+      "Predictive maintenance"
+      "Performance optimization"
       "Scenario simulation"
     ]
     benefit,
-  s: [;"
-      "Real-time system optimization""
-      "Predictive maintenance capabilities""
-      "Performance improvement""
-      "Cost reduction""
+  s: ["'"'"'";"
+      "Real-time system optimization"
+      "Predictive maintenance capabilities"
+      "Performance improvement"
+      "Cost reduction"
       "Risk mitigation"
     ]
     useCase,
-  s: [;"
-      "Manufacturing optimization""
-      "Infrastructure monitoring""
-      "Energy system management""
-      "Transportation optimization""
+  s: ['"'"'"'";"
+      "Manufacturing optimization"
+      "Infrastructure monitoring"
+      "Energy system management"
+      "Transportation optimization"
       "Smart city management"
     ]
     targetAudience: [
@@ -679,10 +679,10 @@ export const,
     category: 'Extended Reality',
     subcategory: 'AI Platform',
     price:
-        price: 15999;
+        price: 15999'"'"'";
     currency: 'USD',
     pricingModel: 'monthly',
-    features: [;
+    features: ['"'"'"'";
       "AI-powered content generation"
       "Adaptive virtual environments"
       "Real-time rendering optimization"
@@ -692,10 +692,10 @@ export const,
       "Cross-platform compatibility"
     targetAudienc,
   e: [,"
-      "Manufacturing companies""
-      "Infrastructure operators""
-      "Energy companies""
-      "Transportation companies""
+      "Manufacturing companies"
+      "Infrastructure operators"
+      "Energy companies"
+      "Transportation companies"
       "Government agencies"
     ]
     tag,"
@@ -734,36 +734,36 @@ export const,
     subcategor,"
   y: "AI Platform",
   pric,
-  e: 15999;
+  e: 15999"'";
     currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
     feature,
-  s: [;"
-      "AI-powered content generation""
-      "Adaptive virtual environments""
-      "Real-time rendering optimization""
-      "Multi-user collaboration""
-      "Gesture and voice recognition""
-      "Haptic feedback integration""
-      "Cross-platform compatibility""
+  s: ["'"'";"
+      "AI-powered content generation"
+      "Adaptive virtual environments"
+      "Real-time rendering optimization"
+      "Multi-user collaboration"
+      "Gesture and voice recognition"
+      "Haptic feedback integration"
+      "Cross-platform compatibility"
       "Content management system"
     ]
     benefit,
-  s: [;"
-      "Immersive AI experiences""
-      "Adaptive content generation""
-      "Real-time optimization""
-      "Enhanced user engagement""
+  s: ["'"'"'";"
+      "Immersive AI experiences"
+      "Adaptive content generation"
+      "Real-time optimization"
+      "Enhanced user engagement"
       "Revolutionary interaction methods"
     ]
     useCase,
-  s: [;"
-      "Virtual training and education""
-      "Immersive entertainment""
-      "Virtual collaboration""
-      "Design and prototyping""
+  s: ['"'"'"'";"
+      "Virtual training and education"
+      "Immersive entertainment"
+      "Virtual collaboration"
+      "Design and prototyping"
       "Virtual tourism"
     ]
     targetAudience: [
@@ -784,10 +784,10 @@ export const,
     uniqueValue: "Most advanced commercial extended reality platform with AI-powered content generation and adaptive environments",
     targetAudienc,
   e: [,"
-      "Educational institutions""
-      "Entertainment companies""
-      "Training organizations""
-      "Design firms""
+      "Educational institutions"
+      "Entertainment companies"
+      "Training organizations"
+      "Design firms"
       "Technology companies"
     ]
     tag,"
@@ -826,36 +826,36 @@ export const,
     subcategor,"
   y: "Computing Platform",
   pric,
-  e: 13999;
+  e: 13999"'";
     currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
     feature,
-  s: [;"
-      "Autonomous edge intelligence""
-      "Distributed learning capabilities""
-      "Real-time processing""
-      "Edge-to-cloud integration""
-      "Autonomous optimization""
-      "Multi-device coordination""
-      "Security at the edge""
+  s: ["'"'";"
+      "Autonomous edge intelligence"
+      "Distributed learning capabilities"
+      "Real-time processing"
+      "Edge-to-cloud integration"
+      "Autonomous optimization"
+      "Multi-device coordination"
+      "Security at the edge"
       "Scalable edge networks"
     ]
     benefit,
-  s: [;"
-      "Real-time edge processing""
-      "Reduced latency""
-      "Autonomous operation""
-      "Scalable intelligence""
+  s: ["'"'"'";"
+      "Real-time edge processing"
+      "Reduced latency"
+      "Autonomous operation"
+      "Scalable intelligence"
       "Enhanced privacy"
     ]
     useCase,
-  s: [;"
-      "IoT device management""
-      "Autonomous vehicles""
-      "Smart city operations""
-      "Industrial automation""
+  s: ['"'"'"'";"
+      "IoT device management"
+      "Autonomous vehicles"
+      "Smart city operations"
+      "Industrial automation"
       "Edge computing networks"
     ]
     targetAudience: [
@@ -876,10 +876,10 @@ export const,
     uniqueValue: "Most advanced commercial edge AI platform with autonomous intelligence and distributed learning capabilities",
     targetAudienc,
   e: [,"
-      "IoT companies""
-      "Automotive manufacturers""
-      "Smart city operators""
-      "Industrial companies""
+      "IoT companies"
+      "Automotive manufacturers"
+      "Smart city operators"
+      "Industrial companies"
       "Technology firms"
     ]
     tag,"
@@ -918,36 +918,36 @@ export const,
     subcategor,"
   y: "AI Platform",
   pric,
-  e: 16999;
+  e: 16999"'";
     currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
     feature,
-  s: [;"
-      "Privacy-preserving AI training""
-      "Distributed learning algorithms""
-      "Secure model aggregation""
-      "Multi-party collaboration""
-      "Real-time model updates""
-      "Privacy compliance tools""
-      "Scalable federation""
+  s: ["'"'";"
+      "Privacy-preserving AI training"
+      "Distributed learning algorithms"
+      "Secure model aggregation"
+      "Multi-party collaboration"
+      "Real-time model updates"
+      "Privacy compliance tools"
+      "Scalable federation"
       "Model versioning"
     ]
     benefit,
-  s: [;"
-      "Privacy-preserving AI""
-      "Collaborative learning""
-      "Regulatory compliance""
-      "Enhanced data security""
+  s: ["'"'"'";"
+      "Privacy-preserving AI"
+      "Collaborative learning"
+      "Regulatory compliance"
+      "Enhanced data security"
       "Scalable AI training"
     ]
     useCase,
-  s: [;"
-      "Healthcare AI collaboration""
-      "Financial fraud detection""
-      "Cross-organization learning""
-      "Privacy-sensitive applications""
+  s: ['"'"'"'";"
+      "Healthcare AI collaboration"
+      "Financial fraud detection"
+      "Cross-organization learning"
+      "Privacy-sensitive applications"
       "Distributed AI training"
     ]
     targetAudience: [
@@ -968,10 +968,10 @@ export const,
     uniqueValue: "Most advanced commercial federated learning platform with privacy-preserving AI and collaborative learning capabilities",
     targetAudienc,
   e: [,"
-      "Healthcare organizations""
-      "Financial institutions""
-      "Research institutions""
-      "Government agencies""
+      "Healthcare organizations"
+      "Financial institutions"
+      "Research institutions"
+      "Government agencies"
       "Technology companies"
     ]
     tag,"
@@ -1010,36 +1010,36 @@ export const,
     subcategor,"
   y: "AI Platform",
   pric,
-  e: 18999;
+  e: 18999"'";
     currenc,"
   y: "USD",
   pricingMode,"
   l: "monthly"
     feature,
-  s: [;"
-      "Environmental impact analysis""
-      "Sustainable solution optimization""
-      "Carbon footprint tracking""
-      "Renewable energy optimization""
-      "Circular economy modeling""
-      "Sustainability metrics""
-      "Green technology assessment""
+  s: ["'"'";"
+      "Environmental impact analysis"
+      "Sustainable solution optimization"
+      "Carbon footprint tracking"
+      "Renewable energy optimization"
+      "Circular economy modeling"
+      "Sustainability metrics"
+      "Green technology assessment"
       "Compliance automation"
     ]
     benefit,
-  s: [;"
-      "Environmental sustainability""
-      "Cost reduction through efficiency""
-      "Regulatory compliance""
-      "Competitive advantage""
+  s: ["'"'"'";"
+      "Environmental sustainability"
+      "Cost reduction through efficiency"
+      "Regulatory compliance"
+      "Competitive advantage"
       "Positive social impact"
     ]
     useCase,
-  s: [;"
-      "Renewable energy optimization""
-      "Waste reduction systems""
-      "Sustainable manufacturing""
-      "Green building design""
+  s: ['"'"'"'";"
+      "Renewable energy optimization"
+      "Waste reduction systems"
+      "Sustainable manufacturing"
+      "Green building design"
       "Environmental monitoring"
     ]
     targetAudience: [
@@ -1060,10 +1060,10 @@ export const,
     uniqueValue: "Most advanced commercial sustainable technology platform with AI-powered environmental optimization and circular economy modeling",
     targetAudienc,
   e: [,"
-      "Energy companies""
-      "Manufacturing firms""
-      "Construction companies""
-      "Government agencies""
+      "Energy companies"
+      "Manufacturing firms"
+      "Construction companies"
+      "Government agencies"
       "Environmental organizations"
     ]
     tag,"
@@ -1090,7 +1090,7 @@ export const,
     }
     uniqueValu,"
   e: "Most advanced commercial sustainable technology platform with AI-powered environmental optimization and circular economy modeling"
-  };
+  }'";
 ]
 export interface UltimateInnovativeService,
   id: string,
@@ -1114,12 +1114,12 @@ export interface UltimateInnovativeService,
   contactInfo: phon,
   e: string,
   email: string,
-  website: string }; technicalSpecs?: technolog,
+  website: string }'"'"; technicalSpecs?: technolog,
   y: string[] integration,
   s: string[] apiEndpoint,
   s: number,
   uptime: string,
-  security: string[] }; competitors?: string[] marketSize?: string uniqueValue?: string }; export const,
+  security: string[] }'"'"'"; competitors?: string[] marketSize?: string uniqueValue?: string }'"'"'"'"; export const,
   ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [ i,"
   d: "quantum-ai-optimization-platform",
   titl,"
@@ -1493,4 +1493,4 @@ export interface UltimateInnovativeService,
   e: 'http,',
   s:
         s://ziontechgroup.com" } uniqueValu,"
-  e: "Most advanced commercial sustainable technology platform with AI-powered environmental optimization and circular economy modeling" }; ]"
+  e: "Most advanced commercial sustainable technology platform with AI-powered environmental optimization and circular economy modeling" }'"'"'"'"; ]"

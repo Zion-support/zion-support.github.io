@@ -1,6 +1,6 @@
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
 interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
 
@@ -24,11 +24,11 @@ const,
 
     // Add organization structured data;
 
-    addOrganizationStructuredData()}, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
+    addOrganizationStructuredData()}, [title, description, keywords, canonicalUrl, ogImage, structuredData])';
 
-;
+';
 
-const updateMetaTag = (nam,;;
+const updateMetaTag = (nam,';';
 
   e: string, conten,
   t: string, attribut)
@@ -126,11 +126,11 @@ const addFAQStructuredData = () => {/* TODO: Fix JSX expression */};;
 
     }
 
-    document.head.appendChild(script)};
+    document.head.appendChild(script)}';
 
-;
+';
 
-const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */};;
+const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}';';
 
       },
       'address: {/* TODO: Fix JSX expression */}
@@ -160,11 +160,11 @@ const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */};;
 
     }
 
-  };
+  }';
 
-;
+';
 
-const mergedSEOData = { ...defaultSEOData, ...seoData };;
+const mergedSEOData = { ...defaultSEOData, ...seoData }'";'"'";
 
   useEffect(() => {
     // Log SEO optimization
@@ -172,7 +172,7 @@ const mergedSEOData = { ...defaultSEOData, ...seoData };;
       page, 
       title: mergedSEOData.title,
       description: mergedSEOData.description 
-    });
+    })'"'"'";
 
     // Track page view for analytics
     if (typeof window !== 'undefined' && 'gtag in window) {
@@ -185,7 +185,7 @@ const mergedSEOData = { ...defaultSEOData, ...seoData };;
 
       })}
 
-  }, [mergedSEOData, page]);
+  }, [mergedSEOData, page])'"'"'"'";
 
   return (
 
@@ -315,10 +315,10 @@ const mergedSEOData = { ...defaultSEOData, ...seoData };;
 
       </script>
     </Helmet>
-  )};
+  )}'"'";
 
-SEOOptimizer.displayName = SEOOptimizer;
+SEOOptimizer.displayName = SEOOptimizer'"'"'";
 
-export default SEOOptimizer;"
+export default SEOOptimizer'"'"'"'";"
 
 

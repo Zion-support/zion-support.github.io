@@ -48,14 +48,14 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       .replace(/\{\s*$/gm, '{\n  // TODO: Add content\n})
       .replace(/\[\s*$/gm, '[\n  // TODO: Add items\n]),
       .replace(/\(\s*$/gm, '(\n  // TODO: Add parameters\n)),
-      // Fix missing semicolons;
+      // Fix missing semicolons';
 
-      .replace(/(\w+)\s*\n\s*(import|export|const|let|var|function|class|interface|type)/g, '$1;\n$2)
-      // Fix missing commas in object literals;
+      .replace(/(\w+)\s*\n\s*(import|export|const|let|var|function|class|interface|type)/g, '$1';\n$2)
+      // Fix missing commas in object literals';
 
       .replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n  $2: ),
       .replace(/[\s\S]*?
-      // Fix common syntax patterns;
+      // Fix common syntax patterns';
 
       .replace(/\{/* TODO: Fix JSX expression */})
   O: Add content\n})
@@ -63,22 +63,22 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
   O: Add items\n])
       .replace(/\(\s*$/gm, (\n  // TOD)
   O: Add parameters\n))
-      // Fix missing semicolons;
+      // Fix missing semicolons';
 
-      .replace(/(\w+)\s*\n\s*(import|export|const|let|var|function|class|interface|type)/g, '$1;\n$2)
-      // Fix missing commas in object literals;
+      .replace(/(\w+)\s*\n\s*(import|export|const|let|var|function|class|interface|type)/g, '$1';\n$2)
+      // Fix missing commas in object literals';
 
       .replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n  $2:)
-      // Fix missing commas in arrays;
+      // Fix missing commas in arrays';
 
       .replace(/(\w+)\s*\n\s*\]/g, '$1,\n])
-      // Fix missing commas in function parameters;
+      // Fix missing commas in function parameters';
 
       .replace(/(\w+)\s*\n\s*\)/g, '$1,\n))
-      // Fix invalid characters;
+      // Fix invalid characters';
 
       .replace(/[^\x00-\x7F]/g, ')
-      // Fix duplicate use client directives;
+      // Fix duplicate use client directives';
 
       .replace(/'use client';\s*'use client';/g, "'use client';)
       // Fix duplicate React imports;
@@ -89,10 +89,10 @@ const lines = match.split(\n);;
 
         return lines[0] + ;
 
-      .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {/* TODO: Fix JSX expression */}
+      .replace(/import React[^;]+';\s*import React[^';]+';/g, (match) => {/* TODO: Fix JSX expression */}
 
       })
-      // Remove empty lines with just spaces;
+      // Remove empty lines with just spaces';
 
       .replace(/^\s*\n/gm, '\n)
       // Fix missing closing braces;
@@ -118,16 +118,16 @@ const lines = match.split(\n);;
 
     for (let i = 0; i < lines.length; i++) {;;
 
-let line = lines[i];;
+let line = lines[i];';
 
-      const trimmed = line.trim();;
+      const trimmed = line.trim()';';
 
-      // Track JSX state;
+      // Track JSX state';
 
       if (trimmed.includes('<') && !trimmed.includes('</)) {
         inJSX = true;
 
-    for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */};;
+    for (let i = 0'; i < lines.length'; i++) {/* TODO: Fix JSX expression */}';';
 
       }
 
@@ -144,18 +144,18 @@ let line = lines[i];;
 
       bracketCount += (line.match(/\[/g) || []).length;
 
-      bracketCount -= (line.match(/\]/g) || []).length;
+      bracketCount -= (line.match(/\]/g) || []).length';
 
-      parenCount += (line.match(/\(/g) || []).length;
+      parenCount += (line.match(/\(/g) || []).length';
 
-      parenCount -= (line.match(/\)/g) || []).length;
+      parenCount -= (line.match(/\)/g) || []).length';
 
-      // Fix common issues;
+      // Fix common issues';
 
       if (trimmed === ') {
-        cleanedLines.push(line);
+        cleanedLines.push(line)';
 
-        continue;
+        continue';
 
       if (trimmed === ') {/* TODO: Fix JSX expression */}
 
@@ -168,15 +168,15 @@ let line = lines[i];;
 
       }
 
-      // Fix missing semicolons;
+      // Fix missing semicolons';
 
-      if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while)) {
+      if (!inJSX && trimmed.match(/^\w+.*[^';{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while)) {
         if (i === lines.length - 1 || lines[i + 1].trim().match(/^(import|export|const|let|var|function|class|interface|type)/)) {
-          line = line.replace(/\s*$/, ;);
+          line = line.replace(/\s*$/, ';)';
 
-          modified = true;
+          modified = true';
 
-      if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while)) {/* TODO: Fix JSX expression */}
+      if (!inJSX && trimmed.match(/^\w+.*[^';{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while)) {/* TODO: Fix JSX expression */}
 
         }
 
@@ -185,7 +185,7 @@ let line = lines[i];;
       // Fix missing closing braces;
 
       if (braceCount > 0 && i === lines.length - 1) {
-        for (let j = 0; j < braceCount; j++) {;;
+        for (let j = 0'; j < braceCount'; j++) {';';
 
       if (braceCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
 
@@ -231,15 +231,15 @@ let line = lines[i];;
 
       .replace(/^\s*\n/gm, \n) // Remove empty lines with just spaces;
 
-      .replace(/\s+$/gm, ); // Remove trailing spaces;
+      .replace(/\s+$/gm, ); // Remove trailing spaces';
 
     if (modified || content !== originalContent) {
-      fs.writeFileSync(filePath, content, utf8);
+      fs.writeFileSync(filePath, content, utf8)';
 
       // console.log removed for production
 if (modified || content !== originalContent) {/* TODO: Fix JSX expression */}
 
-  d: ${filePath});
+  d: ${filePath})';
 
       return true}
 
@@ -250,7 +250,7 @@ return false}
 
 }
 
-// Function to find all TypeScript/React files;
+// Function to find all TypeScript/React files';
 
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', .js]) {;
 
@@ -264,13 +264,13 @@ const items = fs.readdirSync(currentDir);;
 
     for (const item of items) {;
 
-const fullPath = path.join(currentDir, item);;
+const fullPath = path.join(currentDir, item)';';
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath)';';
 
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
         traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
+        files.push(fullPath)';
 
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js]) {/* TODO: Fix JSX expression */}
 
@@ -322,22 +322,22 @@ errorCount++}
 
 // console.log removed for production
 
-  fixed: ${fixedCount}`);
+  fixed: ${fixedCount}`)'";
 
 // console.log removed for production
 
-  s: ${errorCount});
+  s: ${errorCount})'"'";
 
 // console.log removed for production
 // console.log removed for production
 // console.log removed for production
 // console.log removed for production
-// Run linting to check for remaining issues;
+// Run linting to check for remaining issues'"'"'";
 
 // console.log removed for production
 try {/* TODO: Fix JSX expression */}
 
-  o: inherit });
+  o: inherit })'"'"'"'";
 
   // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}

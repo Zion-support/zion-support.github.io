@@ -1,23 +1,23 @@
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
 import Navigation from ../components
 import Footer from ../components
 
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-const ResearchDevelopmentPage: React.FC = () => {;
+const ResearchDevelopmentPage: React.FC = () => {';
 
-const [activeTab, setActiveTab] = useState(ai);
+const [activeTab, setActiveTab] = useState(ai)';
 
-;
+';
 
-const _researchAreas = [;;
+const _researchAreas = [';';
 
     {
       id: 'ai,
@@ -56,11 +56,11 @@ $4},
     n:     ,
 $4}
 
-  ];
+  ]';
 
-;
+';
 
-const researchProjects = {;;
+const researchProjects = {';';
 
     ai: [
       {
@@ -213,11 +213,11 @@ $4},
 $4}
 
     ]
-  };
+  }';
 
-;
+';
 
-const publications = [;;
+const publications = [';';
 
     {
       title: Consensus Intelligenc,
@@ -253,11 +253,11 @@ $4},
       link:     ,
 $4}
 
-  ];
+  ]';
 
-;
+';
 
-const achievements = [;;
+const achievements = [';';
 
     {
       icon: Award,
@@ -302,8 +302,8 @@ $4}
           <div className="mb-12>
             <div className="flex flex-wrap justify-center gap-4 mb-8>)
               {researchAreas.map((area) => (<button
-                  key = { area.id };)
-                  onClick = { () => setActiveTab(area.id) };
+                  key = { area.id }";)
+                  onClick = { () => setActiveTab(area.id) }";
 
                   className={flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
                     activeTab === area.id
@@ -327,18 +327,18 @@ $4}
 
   const [activeTab, setActiveTab] = useState(ai);
 
-  const _researchAreas = [;;
+  const _researchAreas = [;';
 
   /
-  O: Add items;
+  O: Add items';
 
-];
+]';
 
     {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};  i,
+}';  i,
   d: 'ai,
       nam,
   e: 'Artificial Intelligence,
@@ -355,7 +355,7 @@ $4}
 
   O: Add content}
 
-};  i,
+}';  i,
   d: 'quantum,
       nam,
   e: 'Quantum Computing,
@@ -372,7 +372,7 @@ $4}
 
   O: Add content}
 
-};  i,
+}';  i,
   d: 'autonomous,
       nam,
   e: 'Autonomous Systems,
@@ -389,7 +389,7 @@ $4}
 
   O: Add content}
 
-};  i,
+}';  i,
   d: 'emerging,
       nam,
   e: 'Emerging Technologies,
@@ -403,13 +403,13 @@ $4}
   n: Researching next-generation technologies
     }
 
-  ];
+  ]';
 
-  const researchProjects = {/* TODO: Fix JSX expression */};
+  const researchProjects = {/* TODO: Fix JSX expression */}';
 
   O: Add content}
 
-};  a,
+}';  a,
   i: [
   /
   O: Add items]
@@ -417,7 +417,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'Consensus Intelligence Framework,
         descriptio,
   n: 'Developing a novel AI framework that enables multiple AI systems to reach consensus on complex decisions,
@@ -447,7 +447,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'Autonomous Business Intelligence,
         descriptio,
   n: 'Creating self-managing business intelligence systems that adapt and optimize without human intervention,
@@ -477,7 +477,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'Neural Architecture Search for Enterprise,
         descriptio,
   n: 'Developing automated neural architecture search specifically optimized for enterprise applications,
@@ -513,7 +513,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'Quantum Machine Learning Algorithms,
         descriptio,
   n: 'Developing quantum algorithms for machine learning that leverage quantum advantage,
@@ -543,7 +543,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'Quantum Error Correction for Business Applications,
         descriptio,
   n: 'Researching practical quantum error correction methods for commercial quantum computing,
@@ -579,7 +579,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'Autonomous Enterprise Operations,
         descriptio,
   n: 'Developing fully autonomous systems for enterprise operations and decision-making,
@@ -609,7 +609,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'Multi-Agent Coordination Systems,
         descriptio,
   n: 'Researching coordination mechanisms for multiple autonomous agents in complex environments,
@@ -645,7 +645,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'Neuromorphic Computing for AI,
         descriptio,
   n: 'Exploring brain-inspired computing architectures for more efficient AI processing,
@@ -675,7 +675,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'Edge AI for IoT Systems,
         descriptio,
   n: 'Developing ultra-efficient AI systems for edge computing and IoT applications,
@@ -705,18 +705,18 @@ $4}
 /
   };
 
-  const publications = [;;
+  const publications = [;';
 
   /
-  O: Add items;
+  O: Add items';
 
-];
+]';
 
     {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: Consensus,
   Intelligence: A Framework for Multi-Agent Decision Making,
       author,
@@ -734,7 +734,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'Autonomous Business Process Optimization Using Reinforcement Learning,
       author,
   s: 'Dr. James Wilson, Dr. Lisa Park, et al.,
@@ -751,7 +751,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'Quantum Machine Learning for Financial Risk Assessment,
       author,
   s: 'Dr. Alex Kumar, Dr. Maria Santos, et al.,
@@ -768,7 +768,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'Multi-Agent Coordination in Distributed Systems,
       author,
   s: 'Dr. Robert Kim, Dr. Jennifer Lee, et al.,
@@ -784,18 +784,18 @@ $4}
 
   ];
 
-  const achievements = [;;
+  const achievements = [;';
 
   /
-  O: Add items;
+  O: Add items';
 
-];
+]';
 
     {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};  ico,
+}';  ico,
   n: Award,
       titl,
   e: '50+ Research Papers,
@@ -806,7 +806,7 @@ $4}
 
   O: Add content}
 
-};  ico,
+}'";  ico,
   n: Users,
       titl,
   e: '100+ Researchers,
@@ -817,7 +817,7 @@ $4}
 
   O: Add content}
 
-};  ico,
+}'"'";  ico,
   n: Target,
       titl,
   e: '15+ Patents,
@@ -828,7 +828,7 @@ $4}
 
   O: Add content}
 
-};  ico,
+}'"'"'";  ico,
   n: Globe,
       titl,
   e: 'Global Collaborations,
@@ -836,7 +836,7 @@ $4}
   n: Partnerships with leading universities and research institutions
     }
 
-  ];
+  ]"'"'"'";
 
   return (<div>Coming Soon<)
   )
@@ -872,7 +872,7 @@ $4}
   // TOD,
   O: Add content}
 
-                    activeTab === area.id;`                      ? `${area.bgColor} ${area.color} border-2 border-current
+                    activeTab === area.id'"'"'"'";`                      ? `${area.bgColor} ${area.color} border-2 border-current
                       : bg-slate-800
   hover:bg-slate-700
                   }}
@@ -1031,7 +1031,7 @@ $4}
                         <
                       <
                       <a
-                        href = { pub.link };
+                        href = { pub.link }"'"'"'";
 
                         className="text-cyan-400 hover: text-cyan-300 text-sm font-medium
                       >
@@ -1041,7 +1041,7 @@ $4}
 
           <div className="mb-16"></div>
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text></h2>
-// Recent Publications;
+// Recent Publications'"'"'"'";
 
           </h2>
             <div className="max-w-4xl mx-auto"></div>
@@ -1064,7 +1064,7 @@ $4}
 
                           pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'
                         }}></span>
-                          {pub.impact} Impact;          <
+                          {pub.impact} Impact"'"'";          <
                       <
                       <a><
                         href={pub.link}
@@ -1185,6 +1185,6 @@ $4}
     </React.Fragment>
 
     </div>
-  )};
+  )}'"'"'";
 
-export default ResearchDevelopmentPage;
+export default ResearchDevelopmentPage'"'"'"'";

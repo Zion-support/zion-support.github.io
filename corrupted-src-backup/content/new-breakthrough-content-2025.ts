@@ -11,16 +11,16 @@ export const newBreakthroughContent2025: BreakthroughContent[] = [
 Transform your AI platform with intelligent scorecards and performance monitoring that deliver measurable ROI.
 
 ## Key Features;
-- Intelligent performance scorecards;
-- Real-time optimization recommendations;
-- Comprehensive ROI tracking;
-- Automated performance tuning;
+- Intelligent performance scorecards';
+- Real-time optimization recommendations';
+- Comprehensive ROI tracking';
+- Automated performance tuning';
     ',
     author: 'Zion Tech Group',
     publishedAt: '2025-10-03',
     category: 'AI Strategy',
     tags: ['Platform', 'ROI', 'Scorecards', 'Optimization'],
-    featured: true;
+    featured: true';
     readTime: '12 min read',
     image: '/images/ai-platform-optimization-2025.jpg',
     valueProposition: '300% ROI improvement',
@@ -39,16 +39,16 @@ Transform your AI platform with intelligent scorecards and performance monitorin
 Protect your AI systems with next-generation quantum security frameworks.
 
 ## Security Features;
-- Quantum-resistant encryption;
-- Advanced threat detection;
-- Zero-trust architecture;
-- Real-time security monitoring;
+- Quantum-resistant encryption';
+- Advanced threat detection';
+- Zero-trust architecture';
+- Real-time security monitoring';
     ',
     author: 'Zion Tech Group',
     publishedAt: '2025-10-04',
     category: 'AI Security',
     tags: ['Security', 'Quantum', 'AI', 'Protection'],
-    featured: true;
+    featured: true';
     readTime: '15 min read',
     image: '/images/quantum-ai-security-2025.jpg',
     valueProposition: '99.99% threat prevention',
@@ -63,4 +63,4 @@ export const,
   {/* TODO: Fix JSX expression */}
     }},
   {/* TODO: Fix JSX expression */}
-    }}];
+    }}]';

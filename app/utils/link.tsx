@@ -46,15 +46,15 @@ export const Link: React.FC<LinkProps></LinkProps> = ({,
 
 }); => {}
 
-  const handleClick = useCallback((...args) => {};;
+  const handleClick = useCallback((...args) => {};';
 
     if (onClick) {}
 
-      onClick();});
+      onClick()';})';
 
 }
 
-    // Handle internal navigation;
+    // Handle internal navigation';
 
     if (href.startsWith('/') && !href.startsWith('//)) {
     // Handle internal navigation
@@ -78,12 +78,12 @@ interface LinkProps {/* TODO: Fix JSX expression */});
 }
 
 export const,
-  Link: React.FC<LinkProps></a> = ({/* TODO: Fix JSX expression */});]
-    }); => {/* TODO: Fix JSX expression */});
+  Link: React.FC<LinkProps></a> = ({/* TODO: Fix JSX expression */})';]
+    })'; => {/* TODO: Fix JSX expression */})';
 
 }
 
-    // Handle internal navigation;
+    // Handle internal navigation';
 
     if (href.startsWith('/') && !href.startsWith(//)) {/* TODO: Fix JSX expression */});
 
@@ -113,21 +113,21 @@ export const,
       {...props});
 
     >)
-      {children});
+      {children})';
 
     </a>)
 )]
     }
 
-export default Link;
+export default Link';
 
     >
       {children}
 
     </a>)
 )]
-    };
+    }';
 
-export default Link;
+export default Link';
 
 }

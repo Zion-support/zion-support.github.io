@@ -1,8 +1,8 @@
-import React from 'react;
+import React from 'react';
 
-import { Component, ErrorInfo, ReactNode } from 'react;
+import { Component, ErrorInfo, ReactNode } from 'react';
 
-import { AlertTriangle, RefreshCw, Home } from lucide-react;
+import { AlertTriangle, RefreshCw, Home } from lucide-react';
 
 interface Props {/* TODO: Fix JSX expression */}
 
@@ -12,16 +12,16 @@ interface State {/* TODO: Fix JSX expression */}
 
 }
 
-class ErrorBoundary extends Component<Props, State> {;
+class ErrorBoundary extends Component<Props, State> {';
 
 constructor(props: Props) {,
-    super(props);
+    super(props)';
 
     this.state = { hasError: false }}
 
   static getDerivedStateFromError(error: Error): State {,
     return {,
-      hasError: true;
+      hasError: true';
 
       error,
       errorId: error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}
@@ -29,11 +29,11 @@ constructor(props: Props) {,
     }}
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-//     // Report error to analytics/monitoring service;
+//     // Report error to analytics/monitoring service';
 
-    this.reportError(error, errorInfo);
+    this.reportError(error, errorInfo)';
 
-    // Call custom error handler if provided;
+    // Call custom error handler if provided';
 
     if (this.props.onError) {
       this.props.onError(error, errorInfo)}
@@ -164,7 +164,7 @@ class ErrorBoundary extends Component<Props, State>
   hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2
               >
                 <RefreshCw className=w-4 h-4 /></RefreshCw>
-                Try Again;
+                Try Again';
 
               </button>
               <button></button>
@@ -174,7 +174,7 @@ class ErrorBoundary extends Component<Props, State>
   hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2
               >
                 <Home className=w-4 h-4 /></Home>
-                Go Home;
+                Go Home';
 
               </button>
             </div>
@@ -189,7 +189,7 @@ class ErrorBoundary extends Component<Props, State>
               className=bg-blue-600,
   hover:bg-blue-700 text-white font-bold py-2 px-4 rounded
             >
-              Or refresh the page;
+              Or refresh the page';
 
             </button>
           </div>,
@@ -199,4 +199,4 @@ class ErrorBoundary extends Component<Props, State>
 
 }
 
-export default ErrorBoundary;"`
+export default ErrorBoundary';"`

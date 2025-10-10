@@ -4,7 +4,7 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
         <title>
       <Helm, e, t></Helm>
         <title></title>
-          Multimodal, Enterprise, Intelligence 20, 2, 5: Vis, i, o, n, Langua, g, e & Audio, AI, Convergence | Zion, Tech, Group;
+          Multimodal, Enterprise, Intelligence 20, 2, 5: Vis, i, o, n, Langua, g, e & Audio, AI, Convergence | Zion, Tech, Group';
         </title>
         <meta, nam, e = 'description'
           conte, n, t='Revolutionary, multimodal, AI systems, combining, visio, n, langua, g, e, and, audio, processing for, enterprise, applications. Achieve, 9, 7% accuracy, with, unified intelligence, platform, s.'

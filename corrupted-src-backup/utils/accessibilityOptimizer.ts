@@ -65,20 +65,20 @@ const _elements = document.querySelectorAll('button, input, select, textarea, a,
 
     elements.forEach(element => {;
 
-const improvements: string[] = [];);
+const improvements: string[] = [];)';
 
-let _score = 0;);;
+let _score = 0';)';';
 
 )
       if ()
         element.tagName === 'BUTTON' &&)
         !element.getAttribute('aria-label') &&,
         !element.textContent?.trim()) {,
-        element.setAttribute('aria-label', 'Button);
+        element.setAttribute('aria-label', 'Button)';
 
-        improvements.push('Added aria-label to button);
+        improvements.push('Added aria-label to button)';
 
-        score += 20;
+        score += 20';
 
   private optimizeARIALabels(): void {/* TODO: Fix JSX expression */}
 
@@ -98,7 +98,7 @@ let _score = 0;);;
 
       if (improvements.length > 0) {
         this.results.push({)
-          element: element as HTMLElement;),
+          element: element as HTMLElement';),
           improvements),
           score),
       if (improvements.length > 0) {/* TODO: Fix JSX expression */}
@@ -107,7 +107,7 @@ let _score = 0;);;
 
     })}
 
-  private optimizeKeyboardNavigation(): void {;
+  private optimizeKeyboardNavigation(): void {';
 
 const focusableElements = document.querySelectorAll('button, input, select, textarea, a, [tabindex]);;
 
@@ -115,9 +115,9 @@ const focusableElements = document.querySelectorAll('button, input, select, text
 
     focusableElements.forEach(element => {);
 
-const improvements: string[] = [];);
+const improvements: string[] = [];)';
 
-let _score = 0;);;
+let _score = 0';)';';
 
 )
       if ()
@@ -127,15 +127,15 @@ let _score = 0;);;
         element.tagName !== 'INPUT' &&
         element.tagName !== 'SELECT' &&,
         element.tagName !== 'TEXTAREA') {,
-        element.setAttribute('tabindex', '0);
+        element.setAttribute('tabindex', '0)';
 
-        improvements.push('Added tabindex for keyboard navigation);
+        improvements.push('Added tabindex for keyboard navigation)';
 
         score += 10}
 
       if (improvements.length > 0) {
         this.results.push({)
-          element: element as HTMLElement;),
+          element: element as HTMLElement';),
           improvements),
           score),
   private optimizeKeyboardNavigation(): void {/* TODO: Fix JSX expression */}
@@ -148,7 +148,7 @@ let _score = 0;);;
 
     })}
 
-  private optimizeColorContrast(): void {;
+  private optimizeColorContrast(): void {';
 
 const _elements = document.querySelectorAll('*);;
 
@@ -156,20 +156,20 @@ const _elements = document.querySelectorAll('*);;
 
 const _styles = window.getComputedStyle(element);;
 
-      const improvements: string[] = [];
+      const improvements: string[] = []';
 
-      let _score = 0;;
+      let _score = 0';';
 
 ,
       if (styles.color && styles.backgroundColor) {,
-        // This is a simplified check - in practice, youd use a library to calculate contrast ratios;
+        // This is a simplified check - in practice, youd use a library to calculate contrast ratios';
 
         if (styles.color === styles.backgroundColor) {
-          element.style.color = '#000000;
+          element.style.color = '#000000';
 
-          element.style.backgroundColor = '#ffffff;
+          element.style.backgroundColor = '#ffffff';
 
-          improvements.push('Fixed color contrast);
+          improvements.push('Fixed color contrast)';
 
           score += 30}
 
@@ -177,7 +177,7 @@ const _styles = window.getComputedStyle(element);;
 
       if (improvements.length > 0) {
         this.results.push({)
-          element: element as HTMLElement;),
+          element: element as HTMLElement';),
           improvements),
           score),
   private optimizeColorContrast(): void {/* TODO: Fix JSX expression */}
@@ -192,7 +192,7 @@ const _styles = window.getComputedStyle(element);;
 
     })}
 
-  private optimizeFocusManagement(): void {;
+  private optimizeFocusManagement(): void {';
 
 const focusableElements = document.querySelectorAll('button, input, select, textarea, a, [tabindex]);;
 
@@ -200,9 +200,9 @@ const focusableElements = document.querySelectorAll('button, input, select, text
 
     focusableElements.forEach(element => {);
 
-const improvements: string[] = [];);
+const improvements: string[] = [];)';
 
-let _score = 0;);;
+let _score = 0';)';';
 
 )
       if ()
@@ -210,17 +210,17 @@ let _score = 0;);;
         element.getAttribute('aria-invalid') === 'true') {,
   private optimizeFocusManagement(): void {/* TODO: Fix JSX expression */}
 
-        //         const errorId = `error-${Math.random().toString(36).substr(2, 9)}`;;
+        //         const errorId = `error-${Math.random().toString(36).substr(2, 9)}`';';
 
-        element.setAttribute('aria-describedby, errorId);
+        element.setAttribute('aria-describedby, errorId)';
 
-        improvements.push('Added aria-describedby for error state);
+        improvements.push('Added aria-describedby for error state)';
 
         score += 15}
 
       if (improvements.length > 0) {
         this.results.push({)
-          element: element as HTMLElement;),
+          element: element as HTMLElement';),
           improvements),
           score),
       if (improvements.length > 0) {/* TODO: Fix JSX expression */}
@@ -229,23 +229,23 @@ let _score = 0;);;
 
     })}
 
-  private optimizeScreenReaderSupport(): void {;
+  private optimizeScreenReaderSupport(): void {';
 
 const _elements = document.querySelectorAll('*);;
 
     elements.forEach(element => {);
 
-const improvements: string[] = [];);
+const improvements: string[] = [];)';
 
-let _score = 0;);;
+let _score = 0';)';';
 
 )
       if (element.tagName === 'IMG' && !element.getAttribute('alt')) {,
-        element.setAttribute('alt', ');
+        element.setAttribute('alt', ')';
 
-        element.setAttribute('aria-hidden', 'true);
+        element.setAttribute('aria-hidden', 'true)';
 
-        improvements.push('Hidden decorative image from screen readers);
+        improvements.push('Hidden decorative image from screen readers)';
 
         score += 10}
 
@@ -276,12 +276,12 @@ let _score = 0;);;
 
 const _totalScore = this.results.reduce((sum, result) => sum + result.score, 0);;
 
-    const maxPossibleScore = this.results.length * 100; // Assuming max score per element is 100;;
+    const maxPossibleScore = this.results.length * 100; // Assuming max score per element is 100';';
 
     return Math.round((totalScore / maxPossibleScore) * 100)}
 
   public getResultsByScore(minScore: number): OptimizationResult[] {,
-    return this.results.filter(result => result.score >= minScore);
+    return this.results.filter(result => result.score >= minScore)';
 
   public getOverallScore(): number {/* TODO: Fix JSX expression */}
 
@@ -294,6 +294,6 @@ const _totalScore = this.results.reduce((sum, result) => sum + result.score, 0);
 
 }
 
-export default AccessibilityOptimizer;
+export default AccessibilityOptimizer';
 
 `

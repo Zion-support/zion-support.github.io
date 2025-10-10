@@ -4,19 +4,19 @@ import fs from 'fs';
 
 import path from 'path';
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from 'url';
 
-;
+';
 
-const __filename = fileURLToPath(import.meta.url);;
+const __filename = fileURLToPath(import.meta.url)';';
 
 // __dirname removed
-// Performance monitoring script;
+// Performance monitoring script';
 
-const performanceReport = {;;
+const performanceReport = {';';
 
   timestamp: new Date().toISOString()
-  buildSize: 0;
+  buildSize: 0';
 
   pageCount: 0';
 
@@ -24,13 +24,13 @@ const performanceReport = {;;
 
 // Analyze build output';
 
-const buildDir = path.join(process.cwd(), '.next);;
+const buildDir = path.join(process.cwd(), '.next)';';
 
-const staticDir = path.join(buildDir, 'static);;
+const staticDir = path.join(buildDir, 'static);';
 
-if (fs.existsSync(staticDir)) {;
+if (fs.existsSync(staticDir)) {';
 
-const files = fs.readdirSync(staticDir, { recursive: true });;
+const files = fs.readdirSync(staticDir, { recursive: true })';';
 
   const jsFiles = files.filter(file => file.endsWith('.js));;
 
@@ -38,13 +38,13 @@ const files = fs.readdirSync(staticDir, { recursive: true });;
 
 const filePath = path.join(staticDir, file);;
 
-    const stats = fs.statSync(filePath);;
+    const stats = fs.statSync(filePath);';
 
-    performanceReport.buildSize += stats.size});
+    performanceReport.buildSize += stats.size})';
 
-  performanceReport.buildSize = Math.round(performanceReport.buildSize / 1024); // Convert to KB}
+  performanceReport.buildSize = Math.round(performanceReport.buildSize / 1024)'; // Convert to KB}
 
-// Performance recommendations;
+// Performance recommendations';
 
 if (performanceReport.buildSize > 500) {
   performanceReport.recommendations.push('Consider code splitting to reduce bundle size')}
@@ -52,15 +52,15 @@ if (performanceReport.buildSize > 500) {
 if (performanceReport.buildSize > 1000) {
   performanceReport.recommendations.push('Bundle size is large - consider lazy loading components')}
 
-performanceReport.recommendations.push('Enable gzip compression on server);
+performanceReport.recommendations.push('Enable gzip compression on server)';
 
-performanceReport.recommendations.push('Consider using a CDN for static assets);
+performanceReport.recommendations.push('Consider using a CDN for static assets)';
 
-// Write report;
+// Write report';
 
-const reportPath = path.join(process.cwd(), 'performance-report.json);;
+const reportPath = path.join(process.cwd(), 'performance-report.json)';';
 
-fs.writeFileSync(reportPath, JSON.stringify(performanceReport, null, 2));
+fs.writeFileSync(reportPath, JSON.stringify(performanceReport, null, 2))';
 
 // console.log removed for production
 // console.log removed for production

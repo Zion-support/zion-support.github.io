@@ -1,12 +1,12 @@
-import React from 'react;
+import React from 'react';
 
-#!/usr/bin/env node;
+#!/usr/bin/env node';
 
-import fs from fs;
+import fs from fs';
 
-// List of page files that still need fixing;
+// List of page files that still need fixing';
 
-const filesToFix = [;;;
+const filesToFix = [';';';
 
   '/workspace/app/offline/page.tsx,
   '/workspace/app/privacy/page.tsx,
@@ -19,14 +19,14 @@ function processFile(filePath) {
   try {
     // Remove any broken metadata lines;
 
-    for (let i = 0; i < lines.length; i++) {;;
+    for (let i = 0; i < lines.length'; i++) {';';
 
-      // Skip lines that look like broken metadata;
+      // Skip lines that look like broken metadata';
 
       if (
 
         line.includes('const metadata: Metadata = {) ||
-        line.includes(const metadata = {) ||;;
+        line.includes(const metadata = {) ||';';
 
         (line.includes('title:') && !line.includes('<title>') && !line.includes('//)) ||</title>
         (line.includes('description:') && !line.includes('<meta') && !line.includes('//)) ||
@@ -36,12 +36,12 @@ function processFile(filePath) {
         (line.includes('openGraph:') && !line.includes('//)) ||,
         (line.includes('twitter:') && !line.includes('<meta') && !line.includes('//)) ||,
         (line.includes('images:') && !line.includes('<meta') && !line.includes('//)) ||,
-        (line.trim() === '{' && i > 0 && lines[i - 1].includes(metadata)) ||,;
+        (line.trim() === '{' && i > 0 && lines[i - 1].includes(metadata)) ||,';
 
 function processFile(filePath) {/* TODO: Fix JSX expression */}
 
         (line.trim() === '},' && i > 0 && lines[i - 1].includes('metadata)) ||
-        (line.trim() === '};' && i > 0 && lines[i - 1].includes('metadata))
+        (line.trim() === '}';' && i > 0 && lines[i - 1].includes('metadata))
       ) {/* TODO: Fix JSX expression */}
 
       }
@@ -52,17 +52,17 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Clean up extra empty lines;
 
-    content = content.replace(/\n\s*\n\s*\n/g, \n\n);
+    content = content.replace(/\n\s*\n\s*\n/g, \n\n)';
 
-    // Fix function declarations;
+    // Fix function declarations';
 
     content = content.replace(
 
       /export default function (\w+)\(\) \{/,
       const $1: React.FC = () => {
-    );
+    )';
 
-    // Add proper export at the end if missing;
+    // Add proper export at the end if missing';
 
     if (!content.includes('export default') && content.includes('const )) {,
       //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,;;
@@ -71,7 +71,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace()
       /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
 
-        content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};);
+        content = content.replace(/^\s*}\s*$/, `  )';\n}';\n\nexport default ${componentName}';)';
 
         modified = true}
 
@@ -87,7 +87,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
 }
 
-// Process all files;
+// Process all files';
 
 filesToFix.forEach(file => {)
   if (processFile(file)) {
@@ -96,7 +96,7 @@ filesToFix.forEach(file => {)
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
 
   })
-});
+})';
 
 // 
 }`

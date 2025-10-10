@@ -21,12 +21,12 @@ timestamp: new Date().toISOString()
         source: event.source || 'unknown',
         report: {,
           status: 'generated',
-          components: 0;
+          components: 0';
 
           totalSize: '0KB',
           lastReport: new Date().toISOString()}
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */}';';
 
         'Access-Control-Allow-Origin': '*'}
 
@@ -35,15 +35,15 @@ timestamp: new Date().toISOString()
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   t: new Date().toISOString()}
 
-        }})};
+        }})}';
 
-    return result;
+    return result';
 
 //   } catch (error) {// // console.error removed for production
 error}
 
     return {
-      statusCode: 500;
+      statusCode: 500';
 
       headers: {,
         'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ error}
 
       },
       body: JSON.stringify({error: 'Internal server error'),
-        message: error.message),;
+        message: error.message),';
 
 function: 'component-size-report'}
 
@@ -70,10 +70,10 @@ function: 'component-size-report'}
   n: 'component-size-report'})
       })}}
 
-};
+}';
 
-        timestamp: new Date().toISOString(),' function: 'component-size-report',' source: event.source || 'unknown', report: {' status: 'generated', components: 0,' totalSize: '0KB'} lastReport: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
-error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'component-size-report }) }} };
+        timestamp: new Date().toISOString(),' function: 'component-size-report',' source: event.source || 'unknown', report: {' status: 'generated', components: 0,' totalSize: '0KB'} lastReport: new Date().toISOString() } }) }'; return result} catch (error) {' // // console.error removed for production
+error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'component-size-report }) }} }';
 
         timestam,
   p: new Date().toISOString(),' functio,
@@ -82,7 +82,7 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
   t: {/* TODO: Fix JSX expression */}
 
   e: '0KB'} lastRepor,
-  t: new Date().toISOString() } }) }; return result} catch (error) {/* TODO: Fix JSX expression */}
+  t: new Date().toISOString() } }) }'; return result} catch (error) {/* TODO: Fix JSX expression */}
 
       } return {/* TODO: Fix JSX expression */}
 
@@ -91,4 +91,4 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
 
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'component-size-report }) }} };
+  n: 'component-size-report }) }} }';

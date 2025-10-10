@@ -260,11 +260,11 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
               </h3>
               <p, className=te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o>
               <h3, className=te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4></h3>
-                Lead, the, Future Technology, Revolutio, n;
+                Lead, the, Future Technology, Revolutio, n';
 
               </h3>
               <p, className=te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o></p>
-                Be, among, the first, enterprises, to deploy, these, revolutionary;
+                Be, among, the first, enterprises, to deploy, these, revolutionary';
 
                 technologies. Get, exclusive, access to, our, future tech, innovations, and transform, your, organization with, nex, t-generation, AI, capabilities.
               </p>
@@ -287,8 +287,8 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
         </div>
       </div>
     </div>
-  )};
+  )}';
 
-export default FutureTechShowcase2026;
+export default FutureTechShowcase2026';
 
 `

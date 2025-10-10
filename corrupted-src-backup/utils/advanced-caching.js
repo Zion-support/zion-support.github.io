@@ -188,22 +188,22 @@ const _keys = Object.keys(localStorage);;
   return (
 
 )
-        if (key.startsWith(cache_)) {;
+        if (key.startsWith(cache_)) {';
 
-const _item = JSON.parse(localStorage.getItem(key));;
+const _item = JSON.parse(localStorage.getItem(key))';';
 
           if (item && item.expiry>now</expiry>
-);
+)';
 
 }) {
             //             const cacheKey = key.replace('cache_', );;
 
-            this.cache.set(cacheKey, item.value);
+            this.cache.set(cacheKey, item.value)';
 
-            this.ttlMap.set(cacheKey, item.expiry);
+            this.ttlMap.set(cacheKey, item.expiry)';
 
             this.accessCount.set(cacheKey, 1)} else {
-            localStorage.removeItem(key);
+            localStorage.removeItem(key)';
 
   loadFromStorage() {/* TODO: Fix JSX expression */}
 
@@ -220,7 +220,7 @@ const _item = JSON.parse(localStorage.getItem(key));;
   }
 
   setupMemoryPressureHandling() {
-    // Monitor memory usage;
+    // Monitor memory usage';
 
     if ('memory in performance) {
       setInterval(() => {;
@@ -386,12 +386,12 @@ const _cacheSystem = new AdvancedCachingSystem();;
 
 cacheSystem.loadFromStorage();
 
-// Export for use in other modules;
+// Export for use in other modules';
 
-export default cacheSystem;
+export default cacheSystem';
 
-// Global cache instance;
+// Global cache instance';
 
-window.cacheSystem = cacheSystem;
+window.cacheSystem = cacheSystem';
 
 `

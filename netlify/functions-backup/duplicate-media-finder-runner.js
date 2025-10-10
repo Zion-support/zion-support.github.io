@@ -21,13 +21,13 @@ timestamp: new Date().toISOString()
         source: event.source || 'unknown',
         finding: {,
           status: 'active',
-          mediaScanned: 0;
+          mediaScanned: 0';
 
-          duplicatesFound: 0;
+          duplicatesFound: 0';
 
           lastScan: new Date().toISOString()}
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */}';';
 
         'Access-Control-Allow-Origin': '*'}
 
@@ -36,15 +36,15 @@ timestamp: new Date().toISOString()
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   n: new Date().toISOString()}
 
-        }})};
+        }})}';
 
-    return result;
+    return result';
 
 //   } catch (error) {// // console.error removed for production
 error}
 
     return {
-      statusCode: 500;
+      statusCode: 500';
 
       headers: {,
         'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ error}
 
       },
       body: JSON.stringify({error: 'Internal server error'),
-        message: error.message),;
+        message: error.message),';
 
 function: 'duplicate-media-finder-runner'}
 
@@ -71,12 +71,12 @@ function: 'duplicate-media-finder-runner'}
   n: 'duplicate-media-finder-runner'})
       })}}
 
-};
+}';
 
-        timestamp: new Date().toISOString(),' function: 'duplicate-media-finder-runner',' source: event.source || 'unknown', finding: {' status: 'active, mediaScanned: 0, duplicatesFound: 0;
+        timestamp: new Date().toISOString(),' function: 'duplicate-media-finder-runner',' source: event.source || 'unknown', finding: {' status: 'active, mediaScanned: 0, duplicatesFound: 0';
 
-        lastScan: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
-error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'duplicate-media-finder-runner }) }} };
+        lastScan: new Date().toISOString() } }) }'; return result} catch (error) {' // // console.error removed for production
+error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'duplicate-media-finder-runner }) }} }';
 
         timestam,
   p: new Date().toISOString(),' functio,
@@ -84,7 +84,7 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
   e: event.source || 'unknown', findin,
   g: {/* TODO: Fix JSX expression */}
 
-  n: new Date().toISOString() } }) }; return result} catch (error) {/* TODO: Fix JSX expression */}
+  n: new Date().toISOString() } }) }'; return result} catch (error) {/* TODO: Fix JSX expression */}
 
       } return {/* TODO: Fix JSX expression */}
 
@@ -93,4 +93,4 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
 
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'duplicate-media-finder-runner }) }} };
+  n: 'duplicate-media-finder-runner }) }} }';

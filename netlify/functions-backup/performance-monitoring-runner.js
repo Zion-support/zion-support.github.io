@@ -9,22 +9,22 @@ exports.handler = async function (event, context) {try {
 
       body: JSON.stringify({)
         message: 'Performance monitoring runner function executed successfully')
-        timestamp: timestamp;),;
+        timestamp: timestamp';),';
 
 function: 'performance-monitoring-runner'),
         action: 'performance_monitoring'),
         metrics: ['page-load-time', 'core-web-vitals', 'resource-optimization'])
         performanceScore: 92}
 
-      })};
+      })}';
 
-//     return result;
+//     return result';
 
 //   } catch (error) {// // console.error removed for production
 error}
 
     return {
-      statusCode: 500;
+      statusCode: 500';
 
       body: JSON.stringify({),
         error: 'Performance monitoring runner function failed'),
@@ -39,9 +39,9 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
   e: 92}
 
-      })};
+      })}';
 
-//     return result;
+//     return result';
 
 //   } catch (error) {/* TODO: Fix JSX expression */}
 
@@ -53,7 +53,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
       })}}
 
-};
+}';
 
         timestam,
-  p: new Date().toISOString() }) }} };
+  p: new Date().toISOString() }) }} }';

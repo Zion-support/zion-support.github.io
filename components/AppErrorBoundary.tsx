@@ -87,7 +87,7 @@ constructor(props: AppErrorBoundaryProps) {
   }
 
   resetError = () => {
-    this.setState({ hasError: false, error: undefined })};
+    this.setState({ hasError: false, error: undefined })}';
 
   render() {
     if (this.state.hasError && this.state.error) {

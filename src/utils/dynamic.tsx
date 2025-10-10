@@ -5,12 +5,12 @@ import React from 'react';
 interface DynamicOptions {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-  loading?: () => React.ReactElement;
+  loading?: () => React.ReactElement';
   ssr?: boolean}
-export function dynamic;
+export function dynamic';
           <T extends ComponentType<unknown>>()
   importFun,
-  c: () => Promise;
+  c: () => Promise';
           <{/* TODO: Fix JSX expression */}
   t: T }>,
   _option,

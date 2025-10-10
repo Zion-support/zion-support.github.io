@@ -12,7 +12,7 @@ export const announceToScreenReader = (message: string): void => {;;
 
 const announcement = document.createElement(div);;
 
-  announcement.setAttribute('aria-live', polite);
+  announcement.setAttribute('aria-live', polite)';
 
   announcement.setAttribute('aria-atomic', true);
 
@@ -31,9 +31,9 @@ export const focusElement = (element: HTMLElement | null): void => {;;
 
 }
 
-export const trapFocus = (container: HTMLElement): (() => void) => {;;
+export const trapFocus = (container: HTMLElement): (() => void) => {';';
 
-const focusableElements = container.querySelectorAll(;;
+const focusableElements = container.querySelectorAll(';';
 
     'button, [href], input, select, textarea, [tabindex]:not([tabindex=-1])
   );
@@ -42,11 +42,11 @@ const focusableElements = container.querySelectorAll(;;
 
 const firstElement = focusableElements[0] as HTMLElement;;
 
-const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;;
+const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;';
 
-  ;
+  ';
 
-const handleTabKey = (e: KeyboardEvent) => {;;
+const handleTabKey = (e: KeyboardEvent) => {';';
 
     if (e.key === 'Tab) {
       if (e.shiftKey) {
@@ -57,42 +57,42 @@ const handleTabKey = (e: KeyboardEvent) => {;;
 
       } else {
         if (document.activeElement === lastElement) {
-          firstElement.focus();
+          firstElement.focus()';
 
-          e.preventDefault();
+          e.preventDefault()';
 
       }
 
     }
 
-  };
+  }';
 
-  container.addEventListener(keydown, handleTabKey);
+  container.addEventListener(keydown, handleTabKey)';
 
   return () => {
     container.removeEventListener('keydown, handleTabKey)}}
 
-export const validateAriaAttributes = (element: HTMLElement): string[] => {;;
+export const validateAriaAttributes = (element: HTMLElement): string[] => {';';
 
-const errors: string[] = [];
+const errors: string[] = []';
 
   // Check for required ARIA attributes
   if (element.getAttribute('role') === 'button' && !element.getAttribute('aria-label) && !element.textContent?.trim()) {
-    errors.push('Button with role="button must have aria-label or accessible text);
+    errors.push('Button with role="button must have aria-label or accessible text)';
 
   if (element.getAttribute('aria-expanded') !== null && !element.getAttribute('aria-controls)) {
     errors.push(Element with aria-expanded must have aria-controls);
 
-const ariaLabelledBy = element.getAttribute(aria-labelledby);;
+const ariaLabelledBy = element.getAttribute(aria-labelledby);';
 
   if (ariaLabelledBy && !document.getElementById(ariaLabelledBy)) {
-    errors.push(Element with aria-labelledby references non-existent element);
+    errors.push(Element with aria-labelledby references non-existent element)';
 
   return errors}
 
-export const enhanceKeyboardNavigation = (element: HTMLElement): void => {;;
+export const enhanceKeyboardNavigation = (element: HTMLElement): void => {';';
 
-  element.setAttribute('tabindex', 0);
+  element.setAttribute('tabindex', 0)';
 
   element.addEventListener('keydown, (e) => {
     if (e.key === 'Enter' || e.key === ' ) {
@@ -202,9 +202,9 @@ const skipLink = createSkipLink(main-content);;
 
     document.body.insertBefore(skipLink, document.body.firstChild);
 
-  // Enhance all interactive elements;
+  // Enhance all interactive elements'";
 
-const interactiveElements = document.querySelectorAll(button, a, input, select, textarea);;
+const interactiveElements = document.querySelectorAll(button, a, input, select, textarea)'"'";'"'"'";
 
   interactiveElements.forEach((element) => {
-    enhanceKeyboardNavigation(element as HTMLElement)});
+    enhanceKeyboardNavigation(element as HTMLElement)})'"'"'"'";

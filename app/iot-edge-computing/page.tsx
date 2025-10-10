@@ -1,14 +1,14 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from lucide-react;
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from lucide-react';
 
-;
+';
 
-const features = [;;;
+const features = [';';';
 
     {
       icon: Brain,
@@ -31,11 +31,11 @@ const features = [;;;
 description: 'Worldwide deployment and support for international businesses]
     }
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'Advanced AI technology integration,
     'Real-time processing and analytics,
@@ -69,7 +69,7 @@ const benefits = [;;
           </div>
 
           <div $2></div>
-            ));
+            ))"'";
 
           </div>
         </div>
@@ -79,7 +79,7 @@ const benefits = [;;
 
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5></section>
               </div>
-            ));
+            ))"'"'";
 
           </div>
         </div>
@@ -93,6 +93,6 @@ const benefits = [;;
       </section>
     </div>
 )]
-    };
+    }'"'"'";
 
-export default PagePage;
+export default PagePage'"'"'"'";

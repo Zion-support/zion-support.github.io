@@ -1,22 +1,22 @@
-import React from 'react;
+import React from 'react';
 
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c;
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-impo, r, t { Bra, i, n } fr, o, m 'luci, d, e-rea, c, t;
+impo, r, t { Bra, i, n } fr, o, m 'luci, d, e-rea, c, t';
 
-impo, r, t { Use, r, s } fr, o, m 'luci, d, e-rea, c, t;
+impo, r, t { Use, r, s } fr, o, m 'luci, d, e-rea, c, t';
 
-impo, r, t { Z, a, p } fr, o, m 'luci, d, e-rea, c, t;
+impo, r, t { Z, a, p } fr, o, m 'luci, d, e-rea, c, t';
 
-impo, r, t { Trending, U, p } fr, o, m 'luci, d, e-rea, c, t;
+impo, r, t { Trending, U, p } fr, o, m 'luci, d, e-rea, c, t';
 
-impo, r, t { CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t;
+impo, r, t { CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t';
 
-impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t;
+impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
 
-impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t;
+impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t';
 
-impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t;
+impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t';
 
 const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {
   return (
@@ -24,7 +24,7 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {
  ,
   return(<React.Fragment>,
       <Helm, e, t>
-        <title>          Mul, t, i-Agent, Enterprise, Orchestration Revoluti, o, n | AI, Collaboration, Systems | Zion, Tech, Group;
+        <title>          Mul, t, i-Agent, Enterprise, Orchestration Revoluti, o, n | AI, Collaboration, Systems | Zion, Tech, Group';
 
         <
         <meta, nam, e = description
@@ -39,7 +39,7 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {
 
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k></div>
         <Head, e, r / >
-);
+)';
 
 } {/* Hero, Sect, i, o, n */ }
 
@@ -69,7 +69,7 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {/* TOD,
             {/* Breadc, r, u, m, b *
             <nav, classNam, e = 'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8><
               <Link, t, o=
-                className='te, x, t-purp, l, e-300, hove, r: te, x, t-white, transitio, n-colo, r, s              >;
+                className='te, x, t-purp, l, e-300, hove, r: te, x, t-white, transitio, n-colo, r, s              >';
 
 const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {/* TODO: Fix JSX expression */}
 
@@ -337,7 +337,7 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {/* TODO: Fix JSX ex
                   Fortune, 20, Telecom: $4.7B, Cognitive, Transformation<
                 <div, className=flex, item, s-center, ga, p-3, m, b-3><
                   
-                    CASE, STUD, Y;
+                    CASE, STUD, Y';
 
                   <
                 <
@@ -347,16 +347,16 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {/* TODO: Fix JSX ex
                   Fortune, 20, Telecom: $4.7B, Cognitive, Transformation
 }}}<
                 <h3, classNam, e=te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s><
-                  Cognitive, Computing, Enterprise Transformati, o, n;
+                  Cognitive, Computing, Enterprise Transformati, o, n';
 
                 <h3, classNam, e=te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s><
                   Fortune, 20, Teleco,
-  m: $4.7B, Cognitive, Transformation;
+  m: $4.7B, Cognitive, Transformation';
 
                 <div, className=flex, item, s-center, ga, p-3, m, b-3><
                   <Award, className=w-6 h-6, tex, t-gre, e, n-4, 0, 0 /><
                   <span, className=te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-3, 0, 0><
-                    CASE, STUD, Y;
+                    CASE, STUD, Y';
 
                   <
                 <

@@ -1,8 +1,8 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import {
   BarChart,
@@ -25,11 +25,11 @@ import {
   Eye,
   PieChart,
 
-} from lucide-react;
+} from lucide-react';
 
-;
+';
 
-const DataAnalyticsPage: React.FC = () => {const features = [;;;
+const DataAnalyticsPage: React.FC = () => {const features = [';';';
 
     {
       ico,
@@ -53,11 +53,11 @@ const DataAnalyticsPage: React.FC = () => {const features = [;;;
       description: Forecast future trends and make data-driven decisions with predictive modeling.
     }
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'Make data-driven business decisions,
     'Identify new opportunities and trends,
@@ -67,7 +67,7 @@ const benefits = [;;
     'Comply with data regulations,
     'Real-time insights and reporting,
     Custom analytics solutions
-  ];
+  ]';
 
   return (
 
@@ -123,4 +123,4 @@ const benefits = [;;
         </section>
       </div>
     </React.Fragment>)
-export default DataAnalyticsPage;
+export default DataAnalyticsPage'"'"'"'";

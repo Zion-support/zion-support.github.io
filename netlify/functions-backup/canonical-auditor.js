@@ -21,13 +21,13 @@ timestamp: new Date().toISOString()
         source: event.source || 'unknown',
         auditing: {,
           status: 'active',
-          pagesAudited: 0;
+          pagesAudited: 0';
 
-          issuesFound: 0;
+          issuesFound: 0';
 
           lastAudit: new Date().toISOString()}
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */}';';
 
         'Access-Control-Allow-Origin': '*'}
 
@@ -36,15 +36,15 @@ timestamp: new Date().toISOString()
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   t: new Date().toISOString()}
 
-        }})};
+        }})}';
 
-    return result;
+    return result';
 
 //   } catch (error) {// // console.error removed for production
 error}
 
     return {
-      statusCode: 500;
+      statusCode: 500';
 
       headers: {,
         'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ error}
 
       },
       body: JSON.stringify({error: 'Internal server error'),
-        message: error.message),;
+        message: error.message),';
 
 function: 'canonical-auditor'}
 
@@ -71,12 +71,12 @@ function: 'canonical-auditor'}
   n: 'canonical-auditor'})
       })}}
 
-};
+}';
 
-        timestamp: new Date().toISOString(),' function: 'canonical-auditor',' source: event.source || 'unknown', auditing: {' status: 'active, pagesAudited: 0, issuesFound: 0;
+        timestamp: new Date().toISOString(),' function: 'canonical-auditor',' source: event.source || 'unknown', auditing: {' status: 'active, pagesAudited: 0, issuesFound: 0';
 
-        lastAudit: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
-error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'canonical-auditor }) }} };
+        lastAudit: new Date().toISOString() } }) }'; return result} catch (error) {' // // console.error removed for production
+error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'canonical-auditor }) }} }';
 
         timestam,
   p: new Date().toISOString(),' functio,
@@ -84,7 +84,7 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
   e: event.source || 'unknown', auditin,
   g: {/* TODO: Fix JSX expression */}
 
-  t: new Date().toISOString() } }) }; return result} catch (error) {/* TODO: Fix JSX expression */}
+  t: new Date().toISOString() } }) }'; return result} catch (error) {/* TODO: Fix JSX expression */}
 
       } return {/* TODO: Fix JSX expression */}
 
@@ -93,4 +93,4 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
 
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'canonical-auditor }) }} };
+  n: 'canonical-auditor }) }} }';

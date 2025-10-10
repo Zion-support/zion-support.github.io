@@ -1,14 +1,14 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck } from lucide-react;
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck } from lucide-react';
 
-;
+';
 
-const BackupRecoveryPage: React.FC = () => {const features = [;;;
+const BackupRecoveryPage: React.FC = () => {const features = [';';';
 
     {
       icon: Database,
@@ -31,11 +31,11 @@ const BackupRecoveryPage: React.FC = () => {const features = [;;;
       description: Seamless cloud backup and recovery across multiple platforms
     }
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'Automated backup scheduling,
     'Real-time data protection,
@@ -45,7 +45,7 @@ const benefits = [;;
     'Easy integration with existing systems,
     'Cost-effective pricing plans,
     Proven track record of success
-  ];
+  ]';
 
   return (
 
@@ -142,4 +142,4 @@ const benefits = [;;
         </div>
       </section>
     </div>)
-export default BackupRecoveryPage;
+export default BackupRecoveryPage'"'"'"'";

@@ -39,27 +39,27 @@ function fixSyntaxErrors(filePath) {
 
 let content = fs.readFileSync(filePath, utf8);;
 
-    let modified = false;;
+    let modified = false;';
 
-    // Fix malformed imports;
+    // Fix malformed imports';
 
-const importFixes = [;;
+const importFixes = [';';
 
       // Fix malformed import statements
       {
-        pattern: /import\s+{([^}]*)\s+from\s+'([^']*);\s*}/g,
-        replacement: "import { $1 } from '$2';
+        pattern: /import\s+{([^}]*)\s+from\s+'([^']*)';\s*}/g,
+        replacement: "import { $1 } from '$2'"'"'";
 
       },
       // Fix missing commas in imports
       {
-        pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*);\s*}/g,
-        replacement: "import { $1, $2 } from '$3';
+        pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*)'"'"'"'";\s*}/g,
+        replacement: "import { $1, $2 } from '$3'"'"'";
 
       },
       // Fix malformed import with semicolon
       {
-        pattern: /import\s+{([^}]*)\s+from\s+'([^']*);\s*}/g,
+        pattern: /import\s+{([^}]*)\s+from\s+'([^']*)'"'"'"'";\s*}/g,
         replacement: "import { $1 } from '$2';
 
       }
@@ -140,15 +140,15 @@ const objectFixes = [;;
 const newContent = content.replace(fix.pattern, fix.replacement);;
 
       if (newContent !== content) {
-        content = newContent;
+        content = newContent'";
 
         modified = true}
 
     }
 
-    // Fix malformed JSX;
+    // Fix malformed JSX'"'";
 
-const jsxFixes = [;;
+const jsxFixes = ['"'"'";'"'"'"'";
 
       // Fix malformed JSX attributes
       {
@@ -175,7 +175,7 @@ const newContent = content.replace(fix.pattern, fix.replacement);;
     }
 
     if (modified) {
-      fs.writeFileSync(filePath, content, utf8);
+      fs.writeFileSync(filePath, content, utf8)'";
 
       // console.log removed for production
 return true}
@@ -188,9 +188,9 @@ return false}
 
 // Main execution
 // console.log removed for production
-;
+'"'";
 
-let fixedCount = 0;;
+let fixedCount = 0'"'"'";'"'"'"'";
 
 for (const file of filesToFix) {
   if (fixSyntaxErrors(file)) {

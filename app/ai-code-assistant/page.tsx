@@ -1,24 +1,24 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import Navigation from ../components
 import Footer from ../components
-import { CheckCircle, ArrowRight } from 'lucide-react;
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
-;
+';
 
-const PagePage: React.FC = () => {const features = [;
+const PagePage: React.FC = () => {const features = [';
     {
       title: 'Feature 1,
       description: 'Description of feature 1,
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3]
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const PagePage: React.FC = () => {
-  const features = [;;;
+  const features = [';';';
 
     {
       ico,
@@ -53,16 +53,16 @@ import { CheckCircle, ArrowRight } from 'lucide-react';    'Reduce costs by 30% 
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support]
     }
 
-  ];
+  ]';
 
-  const benefits = [;;
+  const benefits = [';';
 
     'Transform your business with AI technology,
     'Make data-driven decisions with confidence,
     'Identify trends and opportunities early,
     'Optimize business processes and workflows,
     'Reduce costs through intelligent automation,
-    'Gain competitive advantage with advanced technology  ];
+    'Gain competitive advantage with advanced technology  ]';
 
   return (
 
@@ -118,11 +118,11 @@ import { CheckCircle, ArrowRight } from 'lucide-react';    'Reduce costs by 30% 
               </p>
             </div>
                         </li>
-                      ));
+                      ))'"'";
 
-                    </ul>);
+                    </ul>)'"'"'";
 
-const benefits = [;
+const benefits = ['"'"'"'";
                 <
                 <h3 className="text-xl font-semibold text-white mb-3>{feature.title}<
                 <p className="text-gray-300 mb-4>{feature.description}<
@@ -135,7 +135,7 @@ const benefits = [;
     'Benefit 4,
     'Benefit 5,
     Benefit 6
-  ];
+  ]'"'"'"'";
 
   return (
 
@@ -203,11 +203,11 @@ const benefits = [;
                       {benefit}
 
                     </li>
-                  ));
+                  ))";
 
                 </ul>
               </div>
-            ));
+            ))";
 
           </div>
         </div>
@@ -244,7 +244,7 @@ const benefits = [;
 
                   </ul>
                 </div>
-              ));
+              ))";
 
             </div>
           </div>
@@ -333,11 +333,11 @@ const benefits = [;
       <
       <Footer 
     <
-  );
+  )";
 
-};
+}";
 
-export default AiCodeAssistantPage;
+export default AiCodeAssistantPage";
 
               </div>            </div>
           </div>
@@ -365,7 +365,7 @@ export default AiCodeAssistantPage;
                 </div>
                 <h3 className="text-lg font-semibold text-white>{benefit}</h3>
               </div>
-            ));
+            ))"'";
 
           </div>        </section>
 
@@ -390,11 +390,11 @@ export default AiCodeAssistantPage;
 
       <Footer />
     </div>
-  );
+  )'"'";
 
-};
+}'"'"'";
 
     </div>)
 export default PagePage
 export default AiCodeAssistantPage
-export default PagePage;
+export default PagePage'"'"'"'";

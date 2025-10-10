@@ -2,27 +2,27 @@ const _path = require(path);;
 
 const { spawnSync } = require(child_process);
 
-function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', ..) relPath)};;
+function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', ..) relPath)}';';
 
-  const res = spawnSync(node, [abs, ...args], {);;
+  const res = spawnSync(node, [abs, ...args], {)';';
 
     stdio: 'pipe),
     encoding: 'utf8}
 
-  });
+  })';
 
-  return {status: res.status || 0;
+  return {status: res.status || 0';
 
     stdout: res.stdout || '}
 
     stderr: res.stderr || '}}
 
-exports.config = {// Top-of-funnel and newsroom refresh cadence;
+exports.config = {// Top-of-funnel and newsroom refresh cadence';
 
-  const res = spawnSync(node, [abs, ...args], {/* TODO: Fix JSX expression */};;
+  const res = spawnSync(node, [abs, ...args], {/* TODO: Fix JSX expression */}';';
 
   g: 'utf8})
-  });
+  })';
 
   return {/* TODO: Fix JSX expression */}
 
@@ -43,48 +43,48 @@ exports.handler = async () => {const logs = []};;
 
     logs.push(`\n=== ${name} ===);
 
-    const {status, stdout} stderr } = runNode(rel) args);
+    const {status, stdout} stderr } = runNode(rel) args)';
 
-    if (stdout) logs.push(stdout);
+    if (stdout) logs.push(stdout)';
 
-    if (stderr) logs.push(stderr);
+    if (stderr) logs.push(stderr)';
 
-    logs.push(`exit=${status});
+    logs.push(`exit=${status})';
 
     return status}
 
   step(medi)
-  a: release') automation/auto-media-release.cjs);
+  a: release') automation/auto-media-release.cjs)';
 
   step(o)
-  g: image') automation/og-image-generator.cjs);
+  g: image') automation/og-image-generator.cjs)';
 
   step(newsroo)
-  m: generate') automation/newsroom-generator.cjs);
+  m: generate') automation/newsroom-generator.cjs)';
 
   step(gi)
-  t: sync') automation/advanced-git-sync.cjs);
+  t: sync') automation/advanced-git-sync.cjs)';
 
   return {/* TODO: Fix JSX expression */}
 
   e: 200} bod,
-  y: logs.join(\n) }};
+  y: logs.join(\n) }}';
 
-const path = require('path');' const { spawnSync } = require('child_process'); function runNode(relPath) args = []) {' const abs = path.resolve(__dirname, '..', '..') relPath)}' const res = spawnSync(node, [abs, ...args]) {/* TODO: Fix JSX expression */};;
+const path = require('path')';' const { spawnSync } = require('child_process')'; function runNode(relPath) args = []) {' const abs = path.resolve(__dirname, '..', '..') relPath)}' const res = spawnSync(node, [abs, ...args]) {/* TODO: Fix JSX expression */}';';
 
   o: 'pipe} encodin,
-  g: 'utf8' }); return {/* TODO: Fix JSX expression */}
+  g: 'utf8' })'; return {/* TODO: Fix JSX expression */}
 
   s: res.status || 0} stdou,
   t: res.stdout || '; stder,
-  r: res.stderr || '' }} exports.config = {/* TODO: Fix JSX expression */}
+  r: res.stderr || ' }} exports.config = {/* TODO: Fix JSX expression */}
 
-  e: '5 * * * *'} }; exports.handler = async () => {const logs = []} function step(name) rel} args = []) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = runNode(rel) args); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status}  step(medi);;
+  e: '5 * * * *'} }; exports.handler = async () => {const logs = []} function step(name) rel} args = []) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = runNode(rel) args); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr)'; logs.push(`exit=${status}`)'; return status}  step(medi)';';
 
-  a: release') 'automation/auto-media-release.cjs');' step(o)
-  g: image') 'automation/og-image-generator.cjs');' step(newsroo)
-  m: generate') 'automation/newsroom-generator.cjs'); ' step(gi)
-  t: sync') 'automation/advanced-git-sync.cjs');  return {/* TODO: Fix JSX expression */}
+  a: release') 'automation/auto-media-release.cjs')';' step(o)
+  g: image') 'automation/og-image-generator.cjs')';' step(newsroo)
+  m: generate') 'automation/newsroom-generator.cjs')'; ' step(gi)
+  t: sync') 'automation/advanced-git-sync.cjs')';  return {/* TODO: Fix JSX expression */}
 
   e: 200} bod,
-  y: logs.join('\n') }};'`
+  y: logs.join('\n') }}';'`

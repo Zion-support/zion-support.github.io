@@ -8,17 +8,17 @@ exports.handler = async function (event, context) {try {
 
       body: JSON.stringify({),
         message: 'fast_front_promoter function executed successfully'),
-        timestamp: timestamp),;
+        timestamp: timestamp),';
 
 function: 'fast_front_promoter'}
 
-      })};
+      })}';
 
 //   } catch (error) {// // console.error removed for production
 error}
 
     return {
-      statusCode: 500;
+      statusCode: 500';
 
       body: JSON.stringify({),
         error: 'fast_front_promoter function failed'),
@@ -27,13 +27,13 @@ error}
 
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 
-    const timestamp = new Date().toISOString()};;
+    const timestamp = new Date().toISOString()}';';
 
     return {/* TODO: Fix JSX expression */}
 
   n: 'fast_front_promoter'}
 
-      })};
+      })}';
 
 //   } catch (error) {/* TODO: Fix JSX expression */}
 
@@ -45,7 +45,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
       })}}
 
-};
+}';
 
         timestam,
-  p: new Date().toISOString() }) }} };
+  p: new Date().toISOString() }) }} }';

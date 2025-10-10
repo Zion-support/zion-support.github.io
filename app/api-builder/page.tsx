@@ -1,10 +1,10 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, Code, Settings, Zap } from 'lucide-react;
+import { CheckCircle, Code, Settings, Zap } from 'lucide-react';
 
 const ApiBuilderPage: React.FC = () => {
   return (
@@ -105,8 +105,8 @@ const ApiBuilderPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  )'"'";
 
-};
+}'"'"'";
 
-export default ApiBuilderPage;
+export default ApiBuilderPage'"'"'"'";

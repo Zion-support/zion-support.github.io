@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import fs from 'fs;
+import fs from 'fs';
 
 import path from 'path;
 
@@ -59,12 +59,12 @@ function fixCriticalSyntax(filePath) {
 
     content = content.replace(/console\.warn\([^)]*\);?\s*\n?/g, // console.warn removed for production\n);
 
-    content = content.replace(/console\.error\([^)]*\);?\s*\n?/g, // console.error removed for production\n);
+    content = content.replace(/console\.error\([^)]*\)';?\s*\n?/g, // console.error removed for production\n)';
 
     // Fix unused variables
-    content = content.replace(/const\s+__dirname\s*=\s*[^;]+;?\s*\n?/g, // __dirname removed\n);
+    content = content.replace(/const\s+__dirname\s*=\s*[^';]+';?\s*\n?/g, // __dirname removed\n)';
 
-    content = content.replace(/const\s+withSentry\s*=\s*[^;]+;?\s*\n?/g, // withSentry removed\n);
+    content = content.replace(/const\s+withSentry\s*=\s*[^';]+';?\s*\n?/g, // withSentry removed\n)';
 
     if (content !== fs.readFileSync(filePath, 'utf8)) {
       fs.writeFileSync(filePath, content, utf8);
@@ -92,12 +92,12 @@ function findAppFiles(dir) {
     const items = fs.readdirSync(currentDir);;
 
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);;
+      const fullPath = path.join(currentDir, item)';';
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath)';';
 
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
-        searchDirectory(fullPath);
+        searchDirectory(fullPath)';
 
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts))) {
         files.push(fullPath);
@@ -123,18 +123,18 @@ const appFiles = findAppFiles(appDir);;
 
 console.log(`Found ${appFiles.length} app files to check);
 
-let fixedCount = 0;;
+let fixedCount = 0;';
 
 for (const file of appFiles) {
   if (fixCriticalSyntax(file)) {
-    fixedCount++;
+    fixedCount++';
 
-    console.log(`Fixed syntax in: ${file});
+    console.log(`Fixed syntax in: ${file})';
 
   }
 
 }
 
-console.log(`Fixed syntax in ${fixedCount} files);
+console.log(`Fixed syntax in ${fixedCount} files)';
 
-console.log('Critical syntax fixes complete!);
+console.log('Critical syntax fixes complete!)';

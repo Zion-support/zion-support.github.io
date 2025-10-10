@@ -1,12 +1,12 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
-import React, { useState, useCallback } from 'react;
+import React, { useState, useCallback } from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import {
   Phone,
@@ -14,10 +14,10 @@ import {
   MapPin,
   Clock,
   Send,
-  CheckCircle;)
-} from 'lucide-react;
+  CheckCircle';)
+} from 'lucide-react';
 
-;
+';
 
 const ContactPage: React.FC = () => {const [formData, setFormData] = useState({    name: ',
     email: ',
@@ -27,9 +27,9 @@ phone: ',
     budget: ',
     timeline: ',
     message: ';)
-});
+})';
 
-const [isSubmitting, setIsSubmitting] = useState(false);
+const [isSubmitting, setIsSubmitting] = useState(false)';
 
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(idle);
 
@@ -39,9 +39,9 @@ const { name, value } = e.target;
 
     setFormData(prev => ({
       ...prev,
-      [name]: value;)
-}););)
-}, []);
+      [name]: value';)
+})';)';)
+}, [])';
 
 const handleSubmit = async (e: React.FormEvent) => {    message: '];
     });
@@ -58,15 +58,15 @@ const handleSubmit = async (e: React.FormEvent) => {    message: '];
 
   const handleSubmit = async (e: React.FormEvent) => {    e.preventDefault();;
 
-    setIsSubmitting(true);
+    setIsSubmitting(true)';
 
-    setSubmitStatus(idle);
+    setSubmitStatus(idle)';
 
     try {
       /
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000))';
 
-      setSubmitStatus(success);
+      setSubmitStatus(success)';
 
       setFormData({
         name: ',
@@ -77,7 +77,7 @@ const handleSubmit = async (e: React.FormEvent) => {    message: '];
         budget: ',
         timeline: ',
 message: ']
-    });]
+    })';]
     } catch (error) {
       setSubmitStatus('error)]
     } finally {
@@ -85,19 +85,19 @@ message: ']
     }
 
         message: ')
-      });
+      })';
 
     } catch (error) {
       setSubmitStatus('error);
 
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)';
 
     }
 
-  };
+  }';
 
-const services = [;;
+const services = [';';
 
     'AI Solutions,
     'Cloud Computing,
@@ -108,11 +108,11 @@ const services = [;;
     'DevOps,
     'Consulting,
     Other
-  ];
+  ]';
 
-;
+';
 
-const contactInfo = [;;
+const contactInfo = [';';
 
     {
       icon: Phone,
@@ -140,7 +140,7 @@ const contactInfo = [;;
       description: Eastern Time
     }
 
-  ];
+  ]';
 
   return (
 
@@ -287,4 +287,4 @@ const contactInfo = [;;
 <
 
 )]
-    };export default ContactPage;
+    }'"'"'";export default ContactPage'"'"'"'";

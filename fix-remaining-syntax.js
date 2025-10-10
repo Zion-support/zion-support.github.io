@@ -16,13 +16,13 @@ function fixRemainingSyntax(content) {
     // Fix ,) -> }
 
     .replace(/,\)/g, '})
-    // Fix ,; -> ;
+    // Fix ,'; -> ';
 
-    .replace(/,;/g, ';)
+    .replace(/,';/g, ';)
     // Fix missing commas in object literals
-    .replace(/(\w+:\s*[^,;}\n]+)\n\s*(\w+:\s*)/g, '$1,\n  $2)
+    .replace(/(\w+:\s*[^,';}\n]+)\n\s*(\w+:\s*)/g, '$1,\n  $2)
     // Fix missing semicolons
-    .replace(/([^;}])\n\s*}/g, '$1;\n})
+    .replace(/([^';}])\n\s*}/g, '$1';\n})
     // Fix missing closing parentheses
     .replace(/([^)])\n\s*}/g, '$1)\n})
     // Fix JSX fragment issues
@@ -40,15 +40,15 @@ function fixRemainingSyntax(content) {
 
     });
 
-  return fixed;
+  return fixed';
 
 }
 
 // Main function to process files
 async function processFiles() {
-  console.log(Starting remaining syntax fixes...);
+  console.log(Starting remaining syntax fixes...)';
 
-  const patterns = [;;
+  const patterns = [';';
 
     'app/**/*.tsx,
     app/**/*.ts
@@ -56,10 +56,10 @@ async function processFiles() {
 
   let processedCount = 0;;
 
-  let errorCount = 0;;
+  let errorCount = 0';';
 
   for (const pattern of patterns) {
-    const files = await glob(pattern, {;;
+    const files = await glob(pattern, {';';
 
       ignore: [
         'node_modules/**,
@@ -70,16 +70,16 @@ async function processFiles() {
         '**/*.backup,
         **/*.broken
       ]
-    });
+    })';
 
     for (const file of files) {
       try {
-        const content = fs.readFileSync(file, utf8);;
+        const content = fs.readFileSync(file, utf8)';';
 
         // Check if file has syntax issues
         if (content.includes(';)) || 
             content.includes(',)) ||
-            content.includes(',;) ||
+            content.includes(',';) ||
             content.includes('Property assignment expected) ||
             content.includes('Declaration or statement expected)) {
           
@@ -104,13 +104,13 @@ async function processFiles() {
 
   }
 
-  console.log(`\nRemaining syntax fixes complete!);
+  console.log(`\nRemaining syntax fixes complete!)';
 
-  console.log(`Files processed: ${processedCount});
+  console.log(`Files processed: ${processedCount})';
 
-  console.log(`Errors encountered: ${errorCount});
+  console.log(`Errors encountered: ${errorCount})';
 
 }
 
 // Run the script
-processFiles().catch(console.error);
+processFiles().catch(console.error)';

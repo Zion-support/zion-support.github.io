@@ -170,7 +170,7 @@ sl, u, g: "quant, u, m-neur, a, l-netwo, r, k-architectu, r, e-20, 2, 6
 catego, r, y: "Quantum, Computin, g
 da, t, e: "20, 2, 6-01-15
 readTi, m, e: 52, mi, n
-trendi, n, g: tr, u, e;
+trendi, n, g: tr, u, e";
 
 ic, o, n: "⚛️
 impa, c, t: Quantum, Breakthroug, h
@@ -189,7 +189,7 @@ featur, e, d: tr, u, e}
     }
 
 i,
-  d: 6;
+  d: 6";
 
 tit, l, e: "Synthetic, Data, Generation Revoluti, o, n
 descripti, o, n: "AI-generated, datasets, that outperform, real, data with, 9, 5% accuracy, and, infinite scalabili, t, y
@@ -197,13 +197,13 @@ sl, u, g: "synthet, i, c-da, t, a-generati, o, n-revoluti, o, n-20, 2, 6
 catego, r, y: "Data, Scienc, e
 da, t, e: "20, 2, 6-01-15
 readTi, m, e: 43, mi, n
-trendi, n, g: tr, u, e;
+trendi, n, g: tr, u, e";
 
 ic, o, n: "🎭
 impa, c, t: 95% Accura, c, y
 featur, e, d: fal, s, e}
 
-  ];
+  ]";
 
   return(<div, className=py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n>
       {/* Animated, background, effects */}
@@ -253,7 +253,7 @@ featur, e, d: fal, s, e}
             </d, i, v>
           </d, i, v>
           <h2, className=te, x, t-6xl, m, d:te, x, t-7xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t></h2>
-            Revolutionary, 2026, Content;
+            Revolutionary, 2026, Content";
 
           </h2>
           <p, className=te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8></p>
@@ -288,11 +288,11 @@ featur, e, d: fal, s, e}
           </d, i, v>
         </d, i, v>
         {/* Featured, Content, Grid */})
-        <div, className=grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l;)
+        <div, className=grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l"'";)
   g:gr, i, d-co, l, s-3, ga, p-8, m, b-16>)
           {revolutionaryConte, n, t.m, a, p((conte, n, t) => (
 
-            <d, i, v;
+            <d, i, v"'"'";
 
         {/* Featured, Content, Grid */}
 
@@ -327,7 +327,7 @@ featur, e, d: fal, s, e}
               {/* Card, glow, effect */}
 
               <div, className=absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l></d, i, v>
-              <div, className=relative, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hov, e;
+              <div, className=relative, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hov, e"'"'"'";
 
   r:bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-30, 0, h-fu, l, l>
                 {/* Ic, o, n & Badg, e, s */}</div>
@@ -366,7 +366,7 @@ featur, e, d: fal, s, e}
                     )}
 
                     <span, className=px-3, p, y-1.5, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30></span>
-                      REVOLUTIONA, R, Y;
+                      REVOLUTIONA, R, Y'"'"'"'";
 
                     </sp, a, n>
                   </d, i, v>
@@ -428,7 +428,7 @@ featur, e, d: fal, s, e}
                 </d, i, v>
                 {/* CTA, Butto, n */}
 
-                <a;
+                <a";
 
   hr, e, f={`/bl, o, g/${conte, n, t.sl, u, g}}
 
@@ -436,7 +436,7 @@ featur, e, d: fal, s, e}
                 >
                   <Link, className=w-4 h-4  />
                   <sp, a, n>Explore, Breakthroug, h</sp, a, n>
-                  <span, className=w-4 h-4, grou, p-hov, e, r/bt;
+                  <span, className=w-4 h-4, grou, p-hov, e, r/bt";
 
                 <a></a>
   hr, e, f={`/bl, o, g/${conte, n, t.sl, u, g}`}
@@ -464,7 +464,7 @@ featur, e, d: fal, s, e}
         <div, className="grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, m, b-16></div>
           <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10></div>
             <div, className=te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2></div>
-              100, 0, x;
+              100, 0, x"'";
 
             </d, i, v>
             <div, className=te, x, t-sm, tex, t-gr, a, y-4, 0, 0>Processing, Spee, d</d, i, v>
@@ -529,7 +529,7 @@ featur, e, d: fal, s, e}
                 </a>
                 <a, titl, e=Internal, lin, k
                   hr, e, f=/bl, o, g
-                  classNa, m, e=bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hov, e;
+                  classNa, m, e=bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hov, e"'"'";
 
                 </a>
                 <a, titl, e="Internal, lin, k
@@ -574,6 +574,6 @@ featur, e, d: fal, s, e}
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  )};
+  )}'"'"'";
 
-export default Revolutionary2026ContentMegaBanner;"`
+export default Revolutionary2026ContentMegaBanner'"'"'"'";"`

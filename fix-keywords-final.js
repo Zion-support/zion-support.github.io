@@ -1,30 +1,30 @@
-import fs from 'fs;
+import fs from 'fs';
 
-import path from 'path;
+import path from 'path';
 
-import { fileURLToPath } from url;
+import { fileURLToPath } from url';
 
-;
+';
 
 function processFile(filePath) {
   try {
-    // Fix keywords type issues - convert string to array;
+    // Fix keywords type issues - convert string to array';
 
-    const replacements = [;;;
+    const replacements = [';';';
 
       {
         pattern: /keywords:\s*'([^']+),/g,
-        replacement: "keywords: ['$1'],,;
+        replacement: "keywords: ['$1'],,';
 
 function processFile(filePath) {/* TODO: Fix JSX expression */}
 
-      }];
+      }]';
 
     replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
 
       }
 
-    });
+    })';
 
     if (modified) {/* TODO: Fix JSX expression */}
 
@@ -36,7 +36,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
 }
 
-;
+'";
 
 function processDirectory(dirPath) {
 
@@ -45,7 +45,7 @@ function processDirectory(dirPath) {
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts)) {
       if (processFile(fullPath)) {
-        totalFixed++;
+        totalFixed++'"'";
 
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
 
@@ -55,8 +55,8 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
 
     }
 
-  });
+  })'"'"'";
 
   return totalFixed}
 
-// Process the app directory;
+// Process the app directory'"'"'"'";

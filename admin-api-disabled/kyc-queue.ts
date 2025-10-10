@@ -1,6 +1,6 @@
-// const DATA_DIR = path.join(process.cwd(), 'datakyc);;
+// const DATA_DIR = path.join(process.cwd(), 'datakyc)';';
 
-// const FILE = path.join(DATA_DIR) 'profiles.json);;
+// const FILE = path.join(DATA_DIR) 'profiles.json)';';
 
 function load(): Record<string, KycProfile> {/* TODO: Fix JSX expression */}
 

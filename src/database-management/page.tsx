@@ -1,18 +1,18 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Database, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Clock, Settings, TrendingUp } from 'lucide-react;
+import { Database, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Clock, Settings, TrendingUp } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from ../components/Footer;
+import Footer from ../components/Footer';
 
-;
+';
 
-const DatabaseManagementPage: React.FC = () => {;
+const DatabaseManagementPage: React.FC = () => {';
 
-const features = [;;;
+const features = [';';';
 
     {
       icon: Database,
@@ -39,7 +39,7 @@ const features = [;;;
       benefits: ['Automated backups', 'Patch management', 'Health checks]
     }
 
-  ];
+  ]';
 
   return (
 
@@ -116,6 +116,6 @@ const features = [;;;
 
       <Footer />
     </div>
-  )};
+  )}'"'"'";
 
-export default DatabaseManagementPage;
+export default DatabaseManagementPage'"'"'"'";

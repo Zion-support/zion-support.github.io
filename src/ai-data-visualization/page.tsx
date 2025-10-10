@@ -1,8 +1,8 @@
-'use client;
+'use client';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import React from 'react;
+import React from 'react';
 
 import Navigation from ../components
 import Footer from ../components
@@ -25,11 +25,11 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
           <section className=text-center mb-16><
             <h1 className=text-4xl,
   md:text-6xl font-bold text-white mb-6 neon-text cyber-text><
-              AI Data Visualization;
+              AI Data Visualization'"'"'";
 
             <
             <p className=text-xl text-cyan-400 mb-8 font-medium><
-              Transform data into actionable insights with AI;
+              Transform data into actionable insights with AI"'"'"'";
 
             <
             <p className=text-lg text-gray-300 max-w-4xl mx-auto mb-8><
@@ -184,14 +184,14 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               <a href=te,
   l: +13024640950" className=cyber-button><)
                 📞 Cal)
-  l: (302) 464-0950;
+  l: (302) 464-0950'"'"'";
 
               <
               <a href=
   hove,
     r:bg-white,
   hover:text-indigo-600 transition-all duration-300><
-                Get Free Demo;
+                Get Free Demo'"'"'"'";
 
               <
             <

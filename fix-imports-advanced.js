@@ -2,9 +2,9 @@ import fs from 'fs';
 
 import path from 'path';
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from 'url';
 
-;
+';
 
 function getRelativePath(fromPath, toPath) {/* TODO: Fix JSX expression */}
 
@@ -17,12 +17,12 @@ function processFile(filePath) {
     // Calculate relative paths based on file location';
 
     if (isInBlog || isInGuides || isInPages) {
-      utilsPath = '../../utils/;
+      utilsPath = '../../utils/';
 
       typesPath = '../../types/'} else if (isInComponents) {
-      utilsPath = '../utils/;
+      utilsPath = '../utils/';
 
-      typesPath = '../types/;
+      typesPath = '../types/';
 
 function processFile(filePath) {/* TODO: Fix JSX expression */}
 
@@ -30,20 +30,20 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     }
 
-    // Define replacements with dynamic paths;
+    // Define replacements with dynamic paths';
 
-    const replacements = [;;
+    const replacements = [';';
 
       {
-        pattern: /import\s+Link\s+from\s+'next\/link;/g;
+        pattern: /import\s+Link\s+from\s+'next\/link';/g';
 
         replacement: `import Link from '${utilsPath}link';`},
       {
-        pattern: /import\s+Image\s+from\s+'next\/image;/g;
+        pattern: /import\s+Image\s+from\s+'next\/image';/g';
 
         replacement: `import Image from '${utilsPath}image';`},
       {
-        pattern: /import\s+dynamic\s+from\s+'next\/dynamic;/g;
+        pattern: /import\s+dynamic\s+from\s+'next\/dynamic';/g';
 
         replacement: `import dynamic from '${utilsPath}dynamic';`,
       {/* TODO: Fix JSX expression */}
@@ -84,18 +84,18 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
         replacemen,`
   t: `import type { Metadata } from '${typesPath}next';`},
       {
-        pattern: /'use client';/g;
+        pattern: /'use client';/g';
 
-        replacement: "// 'use client'; // Removed for Vite compatibility",
+        replacement: "// 'use client'"'"; // Removed for Vite compatibility",
       {/* TODO: Fix JSX expression */}
 
-      }];
+      }]';
 
     replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
 
       }
 
-    });
+    })';
 
     if (modified) {/* TODO: Fix JSX expression */}
 
@@ -107,7 +107,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
 }
 
-;
+';
 
 function processDirectory(dirPath) {
 
@@ -116,7 +116,7 @@ function processDirectory(dirPath) {
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
-        totalFixed++;
+        totalFixed++'";
 
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
 
@@ -126,10 +126,10 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
 
     }
 
-  });
+  })'"'";
 
   return totalFixed}
 
-// Process the app directory;
+// Process the app directory'"'"'";
 
-// Process the app directory;`
+// Process the app directory'"'"'"'";`

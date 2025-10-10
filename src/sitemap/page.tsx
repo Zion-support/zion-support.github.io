@@ -1,15 +1,15 @@
-import React from 'react;
+import React from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
 import Navigation from ../components
 import Footer from ../components
 import SEOOptimizer from ../components
-import { ArrowRight, Globe, FileText, Users, Settings, Brain, Zap, Shield, Database, Cloud, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText as FileTextIcon, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity } from 'lucide-react;
+import { ArrowRight, Globe, FileText, Users, Settings, Brain, Zap, Shield, Database, Cloud, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText as FileTextIcon, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity } from 'lucide-react';
 
-const SitemapPage: React.FC = () => {;
+const SitemapPage: React.FC = () => {';
 
-const mainPages = [;;;
+const mainPages = [';';';
 
     { name: 'Home', path: '/', description: 'Main homepage with company overview },
     { name: 'About Us', path: '/about', description: 'Learn about our company and mission },
@@ -25,11 +25,11 @@ const mainPages = [;;;
     { name: 'Privacy Policy', path: '/privacy', description: 'Data protection and privacy },
     { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions }
 
-  ];
+  ]';
 
-;
+';
 
-const microSaasServices = [;;
+const microSaasServices = [';';
 
     { name: 'AI Project Manager', path: '/ai-project-manager', description: 'Intelligent project planning and management },
     { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management },
@@ -44,11 +44,11 @@ const microSaasServices = [;;
     { name: 'AI E-commerce Assistant', path: '/ai-ecommerce-solutions', description: 'E-commerce optimization tools },
     { name: 'AI Financial Analyzer', path: '/ai-financial-analyzer', description: 'Financial analysis and forecasting }
 
-  ];
+  ]';
 
-;
+';
 
-const aiServices = [;;
+const aiServices = [';';
 
     { name: 'Machine Learning Solutions', path: '/machine-learning', description: 'Custom ML models and algorithms },
     { name: 'Natural Language Processing', path: '/nlp', description: 'Text analysis and language understanding },
@@ -57,11 +57,11 @@ const aiServices = [;;
     { name: 'Quantum AI Computing', path: '/quantum-ai', description: 'Next-generation quantum algorithms },
     { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI-powered security solutions }
 
-  ];
+  ]';
 
-;
+';
 
-const itServices = [;;
+const itServices = [';';
 
     { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration and infrastructure },
     { name: 'Cybersecurity', path: '/cybersecurity', description: 'Advanced security solutions },
@@ -70,11 +70,11 @@ const itServices = [;;
     { name: 'Network Infrastructure', path: '/network-infrastructure', description: 'Enterprise networking solutions },
     { name: 'IT Support & Helpdesk', path: '/it-support', description: '24/7 technical support }
 
-  ];
+  ]';
 
-;
+';
 
-const specializedServices = [;;
+const specializedServices = [';';
 
     { name: 'Quantum Computing', path: '/quantum-computing', description: 'Quantum algorithms and security },
     { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems },
@@ -83,11 +83,11 @@ const specializedServices = [;;
     { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights },
     { name: 'Robotics Solutions', path: '/robotics', description: 'Intelligent automation }
 
-  ];
+  ]';
 
-;
+';
 
-const blogCategories = [;;
+const blogCategories = [';';
 
     { name: 'AI Trends', path: '/blog?category=AI Trends', description: 'Latest AI trends and developments },
     { name: 'Enterprise Transformation', path: '/blog?category=Transformation', description: 'Business transformation insights },
@@ -95,7 +95,7 @@ const blogCategories = [;;
     { name: 'Technical Guides', path: '/blog?category=Architecture', description: 'Technical implementation guides },
     { name: 'Cost Optimization', path: '/blog?category=Cost Optimization', description: 'Efficiency and cost reduction }
 
-  ];
+  ]';
 
   return (
 
@@ -288,6 +288,6 @@ const blogCategories = [;;
         <Footer />
       </div>
     </React.Fragment>
-  )};
+  )}'"'"'";
 
-export default SitemapPage;
+export default SitemapPage'"'"'"'";

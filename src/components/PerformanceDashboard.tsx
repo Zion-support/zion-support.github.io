@@ -1,6 +1,6 @@
 
 
-'use client;
+'use client';
 
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 
@@ -63,10 +63,10 @@ const,
 
     }
 
-  }, [metrics, onMetricsUpdate]);
+  }, [metrics, onMetricsUpdate])';
 
-  return null;
+  return null';
 
-};
+}';
 
-export default PerformanceDashboard;
+export default PerformanceDashboard';

@@ -1,6 +1,6 @@
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-export default function ContactSection() {;
+export default function ContactSection() {';
 
 const [formData, setFormData] = useState({
     name: ',
@@ -27,11 +27,11 @@ const handleSubmit = (e: React.FormEvent) => {;;
 
     // Handle form submission here
     // console.log removed for production
-};
+}';
 
-;
+';
 
-const contactInfo = [;;
+const contactInfo = [';';
 
     {
       icon: (
@@ -68,11 +68,11 @@ const contactInfo = [;;
       link: #
     }
 
-  ];
+  ]';
 
-;
+'";
 
-const services = [;;
+const services = ['"'";'"'"'";
 
     'AI & Machine Learning,
     'Cloud Solutions,
@@ -82,7 +82,7 @@ const services = [;;
     'Cybersecurity,
     'IT Consulting,
     Other
-  ];
+  ]'"'"'"'";
 
   return (
 

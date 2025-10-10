@@ -34,7 +34,7 @@ const topArticle, s = newArticles20, 2, 5.sl, i, c, e(, 0, 3); const topService,
           </p>
         </div>
         <div, className=grid, l, g: gr, i, d-co, l, s-2, ga, p-12, m, b-12  >
-);
+)';
 
 } {/* Articles, Sect, i, o, n */ }</div>
           <d, i, v>
@@ -57,7 +57,7 @@ const topArticle, s = newArticles20, 2, 5.sl, i, c, e(, 0, 3); const topService,
                   <div, className=flex, item, s-center, justif, y-between, tex, t-sm></div>
                     <span, className=te, x, t-gr, a, y-5, 0, 0>{artic, l, e.readTime}</sp, a, n>
                     <span, className=te, x, t-indi, g, o-600, fon, t-semibold, flex, items-center, ga, p-1>
-                      Read, Mor, e</span> <Link, className=w-4 h-4 />;
+                      Read, Mor, e</span> <Link, className=w-4 h-4 />';
 
 const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
 
@@ -90,7 +90,7 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
               <Link, t, o=/bl, o, g
                 className=inli, n, e-flex, item, s-center, ga, p-2, tex, t-indi, g, o-600, fon, t-bold, hove, r: te, x, t-indi, g, o-8, 0, 0
               >
-                View, All, Articles;
+                View, All, Articles"'"'";
 
                 <Link, className=w-5 h-5 />
             </div>
@@ -98,7 +98,7 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
               <Link, t, o="/bl, o, g
                 className=inli, n, e-flex, item, s-center, ga, p-2, tex, t-indi, g, o-600, fon, t-bold, hove, r: te, x, t-indi, g, o-8, 0, 0
               ></Link>
-                View, All, Articles;
+                View, All, Articles"'"'";
 
                 <Link, className=w-5 h-5 /></Link>
               </Li, n, k>
@@ -155,7 +155,7 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
               <Link, t, o=/servic, e, s
                 className=inli, n, e-flex, item, s-center, ga, p-2, tex, t-purp, l, e-600, fon, t-bold, hove, r: te, x, t-purp, l, e-8, 0, 0
               >
-                View, All, Services;
+                View, All, Services"'"'"'";
 
                 <Link, className=w-5 h-5 />
             </div>
@@ -163,7 +163,7 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
               <Link, t, o="/servic, e, s
                 className=inli, n, e-flex, item, s-center, ga, p-2, tex, t-purp, l, e-600, fon, t-bold, hove, r: te, x, t-purp, l, e-8, 0, 0
               ></Link>
-                View, All, Services;
+                View, All, Services'"'";
 
                 <Link, className=w-5 h-5 /></Link>
               </Li, n, k>
@@ -172,6 +172,6 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
         </div>
       </div>
     </sec, t, i, o, n>
-  )};
+  )}'"'"'";
 
-export default NewContentShowcase;"
+export default NewContentShowcase'"'"'"'";"

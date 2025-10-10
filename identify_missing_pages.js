@@ -2,17 +2,17 @@ import fs from 'fs';
 
 // Read existing pages';
 
-const existingPages = fs.readFileSync('existing_pages.txt', 'utf8').split('\n').filter(page => page.trim() && page !== 'page.tsx);;
+const existingPages = fs.readFileSync('existing_pages.txt', 'utf8').split('\n').filter(page => page.trim() && page !== 'page.tsx);';
 
-// Navigation links from the Navigation component;
+// Navigation links from the Navigation component';
 
-const navigationLinks = [;;
+const navigationLinks = [';';
 
   // Main navigation';
 
   '/about', '/blog', '/case-studies', '/pricing', '/contact', '/services', '/specialized-services',
   
-  // Micro SAAS Services;
+  // Micro SAAS Services';
 
   '/ai-project-manager', '/ai-writing-assistant', '/ai-crm', '/ai-healthcare', '/ai-fintech',
   '/ai-mobile-app-development', '/ai-cybersecurity', '/ai-marketing', '/task-manager-pro',
@@ -23,7 +23,7 @@ const navigationLinks = [;;
   '/ai-fashion-design', '/ai-fitness-coach', '/ai-workflow-automation', '/ai-sales-automation',
   '/ai-data-visualization', '/ai-3 d-generation',
   
-  // AI Services;
+  // AI Services';
 
   '/machine-learning', '/ai-business-intelligence', '/ai-supply-chain', '/ai-quality-assurance',
   '/ai-hr', '/ai-legal', '/ai-real-estate', '/ai-manufacturing', '/ai-transportation',
@@ -31,7 +31,7 @@ const navigationLinks = [;;
   '/quantum-ai', '/ai-cybersecurity', '/ai-healthcare', '/ai-fintech', '/ai-mobile-app-development',
   '/ai-crm', '/ai-email-assistant', '/ai-scheduler',
   
-  // IT Services;
+  // IT Services';
 
   '/cloud-services', '/enterprise-security', '/it-infrastructure', '/data-center',
   '/network-security', '/it-consulting', '/managed-it', '/cloud-security', '/it-asset-management',
@@ -39,7 +39,7 @@ const navigationLinks = [;;
   '/database-services', '/network-infrastructure', '/it-support', '/cloud-migration',
   '/compliance', '/developer-tools', '/marketing-tools', '/productivity',
   
-  // Specialized Services;
+  // Specialized Services';
 
   '/quantum-computing', '/autonomous-systems', '/blockchain', '/iot-edge', '/business-intelligence',
   '/robotics', '/enterprise', '/analytics-tools', '/business-apps', '/expense-tracker',
@@ -52,15 +52,15 @@ const navigationPages = navigationLinks.map(link => link.substring(1));;
 
 // Find missing pages;
 
-const missingPages = navigationPages.filter(page => !existingPages.includes(page));;
+const missingPages = navigationPages.filter(page => !existingPages.includes(page))';';
 
 // console.log removed for production
 missingPages.forEach(page => // console.log removed for production
-);
+)';
 
 // console.log removed for production
 // console.log removed for production
 // console.log removed for production
-// Write missing pages to file;
+// Write missing pages to file';
 
-fs.writeFileSync('missing_pages.txt', missingPages.join('\n'));
+fs.writeFileSync('missing_pages.txt', missingPages.join('\n'))';

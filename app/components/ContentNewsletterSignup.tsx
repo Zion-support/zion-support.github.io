@@ -31,13 +31,13 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
 }) => {
 }); => {;
 
-const [email, setEmail] = useState(');
+const [email, setEmail] = useState(')';
 
-const [isSubscribed, setIsSubscribed] = useState(false);
+const [isSubscribed, setIsSubscribed] = useState(false)';
 
-const [isLoading, setIsLoading] = useState(false);
+const [isLoading, setIsLoading] = useState(false)';
 
-const handleSubmit = async (e: React.FormEvent) => {;
+const handleSubmit = async (e: React.FormEvent) => {';
   const [email, setEmail] = useState(');  const [isSubscribed, setIsSubscribed] = useState(false);
 
   const [isLoading, setIsLoading] = useState(false);
@@ -53,29 +53,29 @@ const handleSubmit = async (e: React.FormEvent) => {;
         await onSubscribe(email)]
     } else {
         // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000)););
+        await new Promise(resolve => setTimeout(resolve, 1000));)';
 
-        await onSubscribe(email);
+        await onSubscribe(email)';
 
       } else {
         /
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 1000))';
 
       }
 
-            setIsSubscribed(true);
+            setIsSubscribed(true)';
 
-      setEmail(');)
+      setEmail(')';)
 } catch (error) {
       // console.error removed for production
 )
 } finally {
-      setIsLoading(false););
+      setIsLoading(false)'";)'"'";
 
         await new Promise(resolve => setTimeout(resolve, 1000))]
     }
 
-      setIsSubscribed(true);
+      setIsSubscribed(true)'"'"'";
 
       setEmail(')]
     } catch (error) {
@@ -84,7 +84,7 @@ const handleSubmit = async (e: React.FormEvent) => {;
       setIsLoading(false)]
     }
 
-  };
+  }";
 
   if (isSubscribed) {
     return (<div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4>
@@ -97,7 +97,7 @@ const handleSubmit = async (e: React.FormEvent) => {;
             Thank you for subscribing. Youll receive our latest insights and updates soon.
           <
           <button)
-            onClick = { () => setIsSubscribed(false) };
+            onClick = { () => setIsSubscribed(false) }";
 
             className="text-white underline hover:text-blue-200 transition-colors
           >
@@ -105,7 +105,7 @@ const handleSubmit = async (e: React.FormEvent) => {;
           <
         <
       <
-    );
+    )";
 
   }
 
@@ -143,11 +143,11 @@ const handleSubmit = async (e: React.FormEvent) => {;
                 <input
                   type="email
                   id="email
-                  value = { email };
+                  value = { email }";
 
-                  onChange = { (e) => setEmail(e.target.value) };
+                  onChange = { (e) => setEmail(e.target.value) }";
 
-                  placeholder = { placeholder };
+                  placeholder = { placeholder }";
 
                   className=w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus: outline-none focus:ring-2 focu,
     s:ring-white
@@ -156,7 +156,7 @@ const handleSubmit = async (e: React.FormEvent) => {;
               
               <button
                 type="submit
-                disabled = { isLoading || !email };
+                disabled = { isLoading || !email }";
 
                 className=w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover: bg-blue-50 disabled:opacity-50 disable,
     d:cursor-not-allowed transition-all duration-300 flex items-center justify-center
@@ -181,11 +181,11 @@ const handleSubmit = async (e: React.FormEvent) => {;
         <
       <
     <
-  );
+  )'";
 
 )]
-    };
+    }'"'";
 
-};
+}'"'"'";
 
-export default ContentNewsletterSignup;}
+export default ContentNewsletterSignup'"'"'"'";}

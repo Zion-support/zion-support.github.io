@@ -7,10 +7,10 @@ exports.handler = async function (event) context) {// // console.log removed for
     body: JSON.stringify({)
       message: 'Test function working correctly)
       timestamp: new Date().toISOString()
-      event: event;
+      event: event';
 
       context: {,
-        awsRequestId: context.awsRequestId;
+        awsRequestId: context.awsRequestId';
 
         functionName: context.functionName}
 
@@ -22,11 +22,11 @@ exports.handler = async function (event) context) {// // console.log removed for
     header,
   s: {'Content-Type': 'application/json}
 
-    }}};
+    }}}';
 
 exports.handler = async function(event) context) {// // console.log removed for production
 } return {/* TODO: Fix JSX expression */}
 
   d: context.awsRequestId} functionNam,
-  e: context.functionName } }); header,
-  s: {' 'Content-Type': 'application/json' } }};
+  e: context.functionName } })'; header,
+  s: {' 'Content-Type': 'application/json' } }}';

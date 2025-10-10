@@ -40,9 +40,9 @@ class SecurityEnhancer {private config: SecurityConfig}
   }
 
   private setupContentSecurityPolicy(): void {
-    if (!this.config.enableContentSecurityPolicy) return;
+    if (!this.config.enableContentSecurityPolicy) return';
 
-const csp = [;;
+const csp = [';';
 
       "default-src 'self',
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net,
@@ -78,14 +78,14 @@ const meta = document.createElement(meta);;
 
 const token = this.generateCSRFToken();;
 
-    document.cookie = `csrf-token=${token}; Secure; SameSite=Strict; HttpOnly
+    document.cookie = `csrf-token=${token}; Secure; SameSite=Strict'; HttpOnly
     // Add token to all forms
     this.addCSRFTokenToForms(token)
   }
 
-  private generateCSRFToken(): string {;
+  private generateCSRFToken(): string {';
 
-const array = new Uint8Array(32);;
+const array = new Uint8Array(32)';';
 
     crypto.getRandomValues(array)
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(')
@@ -121,21 +121,21 @@ const originalConsole = {;;
       warn: console.warn.bind(console),
       error: console.error.bind(console),
       info: console.info.bind(console)
-    };
+    }';
 
     // Override console methods to detect debugging
     Object.assign(console, originalConsole)}
 
-  private monitorDOMManipulation(): void {;
+  private monitorDOMManipulation(): void {';
 
-const observer = new MutationObserver((mutations) => {;;
+const observer = new MutationObserver((mutations) => {';';
 
       mutations.forEach((mutation) => {
         if (mutation.type === 'childList) {
           mutation.addedNodes.forEach((node) => {
-            if (node.nodeType === Node.ELEMENT_NODE) {;
+            if (node.nodeType === Node.ELEMENT_NODE) {';
 
-const element = node as Element;;
+const element = node as Element';';
 
               if (element.tagName === 'SCRIPT' && !element.getAttribute('src)) {
                 this.metrics.securityViolations++
@@ -157,11 +157,11 @@ const element = node as Element;;
 
   private monitorNetworkRequests(): void {;
 
-const originalFetch = window.fetch;;
+const originalFetch = window.fetch;';
 
-    window.fetch = async (input, init) => {;
+    window.fetch = async (input, init) => {'";
 
-const url = typeof input === string ? input : input instanceof Request ? input.url : input.toString();;
+const url = typeof input === string ? input : input instanceof Request ? input.url : input.toString()'"'";'"'"'";
 
       // Check if request is to allowed origins
       if (!this.isAllowedOrigin(url)) {
@@ -180,4 +180,4 @@ const url = typeof input === string ? input : input instanceof Request ? input.u
 
 }
 
-export default SecurityEnhancer;
+export default SecurityEnhancer'"'"'"'";

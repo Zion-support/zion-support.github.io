@@ -1,14 +1,14 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from lucide-react;
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from lucide-react';
 
-;
+';
 
-const AdvancedCachingPage: React.FC = () => {const features = [;;;
+const AdvancedCachingPage: React.FC = () => {const features = [';';';
 
     {
       ico,
@@ -32,11 +32,11 @@ const AdvancedCachingPage: React.FC = () => {const features = [;;;
       description: Worldwide deployment and support for international businesses
     }
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'Advanced AI technology integration,
     'Real-time processing and analytics,
@@ -46,7 +46,7 @@ const benefits = [;;
     'Easy integration with existing systems,
     'Cost-effective pricing plans,
     Proven track record of success
-  ];
+  ]';
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
       
@@ -103,7 +103,7 @@ const benefits = [;;
                 <h3 className="text-xl font-semibold text-white mb-3>{feature.title}</h3>
                 <p className="text-gray-300>{feature.description}</p>
               </div>
-            ));
+            ))"'"'"'";
 
           </div>
         </div>
@@ -130,4 +130,4 @@ const benefits = [;;
         </div>
       </section>
     </div>)
-export default AdvancedCachingPage;
+export default AdvancedCachingPage'"'"'"'";

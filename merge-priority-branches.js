@@ -10,35 +10,35 @@ import fs from 'fs';
 // //Step 1: Ensure were on main and up to date';
 
 // try {,
-  execSync('git checkout main', { stdio: 'inherit });
+  execSync('git checkout main', { stdio: 'inherit })';
 
-  execSync('git pull origin main', { stdio: 'inherit });
+  execSync('git pull origin main', { stdio: 'inherit })';
 
 //   } catch (error) {
 //   process.exit(1)}
 
-//Step 2: Define priority branches (most recent and important),;
+//Step 2: Define priority branches (most recent and important),';
 
-const priorityBranches = [,;;
+const priorityBranches = [,';';
 
 // //Step,
   1: Ensure were on main and up to date';
 
 // try {/* TODO: Fix JSX expression */}
 
-  o: 'inherit });
+  o: 'inherit })';
 
   execSync('git pull origin main', {/* TODO: Fix JSX expression */})
-  o: 'inherit });
+  o: 'inherit })';
 
 //   } catch (error) {/* TODO: Fix JSX expression */}
 
 }
 
 //Step,
-  2: Define priority branches (most recent and important);
+  2: Define priority branches (most recent and important)';
 
-const priorityBranches = [;;
+const priorityBranches = [';';
 
   //Recent cursor branches from today';
 
@@ -52,22 +52,22 @@ const priorityBranches = [;;
   'cursor/fix-errors-and-merge-to-main-9bdd',
   'cursor/fix-errors-and-merge-to-main-a0d2',
   'cursor/fix-errors-and-merge-to-main-d0f7',
-  //Content branches;
+  //Content branches';
 
   'add-new-2026-content',
   'add-revolutionary-content-2026',
   'ai-2027-content-integration',
   'ai-dashboard-improvements',
-  //Resolved branches;
+  //Resolved branches';
 
   '0nylrk-codex-fix-footer-contact-link-resolved',
   '0parff-codex-centralize-api-error-handling-resolved',
   '0smfo8-codex-fix-404-error-resolved',
-  //Important candidate branches;
+  //Important candidate branches';
 
   'candidate/netlify-build-fix-2025-09-17',
   'candidate/netlify-fix',
-  //Important chore branches;
+  //Important chore branches';
 
   'chore/a11y-reduced-motion',
   'chore/a11y-single-main',
@@ -76,65 +76,65 @@ const priorityBranches = [;;
   'chore/animated-section-typing-fix',
   'chore/build-fixes',
   'chore/build-fixes-and-seo',
-  'chore/build-fixes-and-slim-app];
+  'chore/build-fixes-and-slim-app]';
 
-// //Step 3: Merge function with conflict resolution;
+// //Step 3: Merge function with conflict resolution';
 
 function mergeBranch(branchName) {,
 //   try {,
-    //Check if branch exists;
+    //Check if branch exists';
 
-    execSync(`git fetch origin ${branchName}`, { stdio: 'pipe });
+    execSync(`git fetch origin ${branchName}`, { stdio: 'pipe })';
 
-    //Check if already merged;
+    //Check if already merged';
 
-    const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`);;
+    const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`)';';
 
       { encoding: 'utf8' }
 
 // //Step,
-  3: Merge function with conflict resolution;
+  3: Merge function with conflict resolution'";
 
 function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
 
     execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
-  o: 'pipe });
+  o: 'pipe })";
 
-    //Check if already merged;`;
+    //Check if already merged"'";`"'"'";
 
-const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,;;
+const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,'";'"'";
 
       {/* TODO: Fix JSX expression */}
 
   g: 'utf8' })
-    ).trim();
+    ).trim()'"'"'";
 
     if (isMerged !== 'not_merged') {/* TODO: Fix JSX expression */}
 
   d: 'already_merged' }}
 
-    //Try to merge;
+    //Try to merge'"'"'"'";
 
     try {
       execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`)
         { stdio: 'inherit' }
 
-      );
+      )'"'";
 
 //       return { success: true, method: 'direct' }} catch (mergeError) {
-//       //Try different conflict resolution strategies;
+//       //Try different conflict resolution strategies'"'"'";
 
       try {
-        //Strategy 1: Use theirs;
+        //Strategy 1: Use theirs'"'"'"'";
 
         execSync(`git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`)
           { stdio: 'inherit' }
 
-        );
+        )'"'"'";
 
 //         return { success: true, method: 'theirs' }} catch (theirsError) {
         try {
-          //Strategy 2: Use ours;
+          //Strategy 2: Use ours'"'"'"'";
 
           execSync(`git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`)
             { stdio: 'inherit' }
@@ -145,7 +145,7 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
 
   o: 'inherit' }
 
-      );
+      )'"'"'"'";
 
 //       return {/* TODO: Fix JSX expression */}
 
@@ -155,7 +155,7 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
 
   o: 'inherit' }
 
-        );
+        )'"'"'"'";
 
 //         return {/* TODO: Fix JSX expression */}
 
@@ -165,7 +165,7 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
 
   o: 'inherit' }
 
-          );
+          )';
 
 //           return {/* TODO: Fix JSX expression */}
 
@@ -250,17 +250,17 @@ const results = {/* TODO: Fix JSX expression */};;
 
 //Step 5: Generate report;
 
-// const report = {,;;
+// const report = {,';';
 
-  ...results;
+  ...results';
 
-  timestamp: new Date().toISOString()};
+  timestamp: new Date().toISOString()}';
 
 fs.writeFileSync('priority-branches-merge-report.json')
   JSON.stringify(report, null, 2)
-);
+)';
 
-//Step 6: Push changes;
+//Step 6: Push changes';
 
 // try {,
   execSync('git push origin main', { stdio: 'inherit });
@@ -272,28 +272,28 @@ fs.writeFileSync('priority-branches-merge-report.json')
 
 // // // // // // // // // // // // // // ,
 //Step,
-  5: Generate report;
+  5: Generate report';
 
-// const report = {/* TODO: Fix JSX expression */};;
+// const report = {/* TODO: Fix JSX expression */}';';
 
-};
+}';
 
 fs.writeFileSync('priority-branches-merge-report.json')
   JSON.stringify(report, null, 2)
-);
+)'";
 
 //Step,
-  6: Push changes;
+  6: Push changes'"'";
 
 // try {/* TODO: Fix JSX expression */}
 
-  o: 'inherit });
+  o: 'inherit })'"'"'";
 
 //   } catch (error) {/* TODO: Fix JSX expression */}
 
 //   }
 
 // Step,
-  7: Summary;
+  7: Summary'"'"'"'";
 
 // // // // // // // // // // // // // // "`

@@ -66,11 +66,11 @@ export const,
     link: https://ziontechgroup.com/quantum-ai-brain-computer-interface,
     marketPosition: Leading edge technology with no direct competitors. 10 x more advanced than existing BCI solutions.,
     targetAudience: Research institutions, Medical centers, Defense contractors, Tech companies, Universities,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 2-4 weeks,
     category: Quantum AI & Neuroscience,
-    realService: true;
+    realService: true';
 
     popula,
   r: true,
@@ -137,10 +137,10 @@ export const,
     useCases: [Medical researchCognitive enhancementNeural rehabilitationAI developmentDefense applications]
     roi: 1000% ROI within 6 months through breakthrough discoveries and patents,
     competitors: [Neuralink ($10)000+/month)Kernel ($50)000+/month)],
-    growthRate: 300% annual growth,;
+    growthRate: 300% annual growth,';
 
 variant: quantum-ai-futuristic,
-    contactInfo: unknown;
+    contactInfo: unknown';
 
     competitors: ['Neuralink ($10) 000+/month)', 'Kernel ($50) 000+/month)'],    market_size: '$1.5B BCI market',    technology: [Quantum ComputingNeural NetworksBrain - Computer InterfaceAI / MLQuantum Encryption]
     integrations: [Research APIsMedical devices_cloud platforms_data analysis tools]
@@ -220,11 +220,11 @@ export interface NextGenInnovativeService {;
 
   launchDate: string;
 
-  customers: number;
+  customers: number';
 
-  rating: number;
+  rating: number';
 
-  reviews: number;
+  reviews: number';
 
     ro,
   i: 1000% ROI within 6 months through breakthrough discoveries and patents,
@@ -243,7 +243,7 @@ export interface NextGenInnovativeService {;
     competitor,
   s: [Neuralink ($10)000+/month)Kernel ($50)000+/month)],
     growthRat,
-  e: 300% annual growth,;
+  e: 300% annual growth,';
 
 varian,
   t: quantum-ai-futuristic,
@@ -486,16 +486,16 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   n: boolean;
 
   implementationDetail,
-  s: string;
+  s: string'";
 
   launchDat,
-  e: string;
+  e: string'"'";
 
   customer,
-  s: number;
+  s: number'"'"'";
 
   ratin,
-  g: number;
+  g: number'"'"'"'";
 
   review,
   s: number}
@@ -602,17 +602,17 @@ export const,
     targetAudienc,
   e: Research institutions, Medical centers, Defense contractors, Tech companies, Universities
     trialDay,
-  s: 30;
+  s: 30';
 
     setupTim,
   e: 2-4 weeks
     categor,
   y: Quantum AI & Neuroscience
     realServic,
-  e: true;
+  e: true';
 
     technolog,
-  y: [;
+  y: [';
 
       Quantum Computing
       Neural Networks
@@ -621,7 +621,7 @@ export const,
       Quantum Encryption
     ]
     integration,
-  s: [;
+  s: [';
 
       Research APIs
       Medical devices
@@ -667,14 +667,14 @@ roi: 1000% ROI within 6 months through breakthrough discoveries and patents,
 
     implementationDetails: Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.,
     launchDate: 2024-12-01,
-    customers: 15;
+    customers: 15'";
 
-    rating: 4.9;
+    rating: 4.9'"'";
 
-export interface NextGenInnovativeService {;
+export interface NextGenInnovativeService {'"'"'";
 
 export const nextGenInnovativeServices: NextGenInnovativeService[] = [
-  // Quantum AI & Advanced Computing;
+  // Quantum AI & Advanced Computing'"'"'"'";
 
     id: quantum-ai-brain-computer-interface,
     name: Quantum AI Brain-Computer Interface,
@@ -687,25 +687,25 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       Quantum neural signal processingReal-time brain activity monitoringAI-powered cognitive enhancementNeural pattern recognitionSecure quantum encryptionMulti-modal interface supportAdvanced analytics dashboardAPI for research integration,
       Compliance with medical standards24/7 quantum AI support
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-purple-600 to-indigo-700,
     textColor: text-purple-400,
     link: https://ziontechgroup.com/quantum-ai-brain-computer-interface,
     marketPosition: Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.,
-    targetAudience: Research institutions, Medical centers, Defense contractors, Tech companies, Universities,    trialDays: 30;
+    targetAudience: Research institutions, Medical centers, Defense contractors, Tech companies, Universities,    trialDays: 30';
 
     setupTime: 2-4 weeks,
     category: Quantum AI & Neuroscience,
     realService: true,    marketPosition: Leading edge technology with no direct competitors. 10 x more advanced than existing BCI solutions.,
     marketPosition: Leading edge technology with no direct competitors. 10 x more advanced than existing BCI solutions.,
     targetAudience: Research institutions, Medical centers, Defense contractors, Tech companies, Universities,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 2-4 weeks,
     category: Quantum AI & Neuroscience,
-    realService: true;
+    realService: true';
 
     technology: [,
       Quantum Computing,
@@ -769,16 +769,16 @@ roi: 1000% ROI within 6 months through breakthrough discoveries and patents,
   // Space Technology Platform;
 
     id: space-technology-platform,
-    real_implementation: true;
+    real_implementation: true';
 
     implementation_details: Fully functional quantum AI platform with neural interface capabilities, real - time processing, and advanced security features.,
     launch_date: 2024 - 12 - 01,
     customers:
-        customers: 15;
+        customers: 15';
 
-    rating: 4.9;
+    rating: 4.9';
 
-    reviews: 8;
+    reviews: 8';
 
       Defense applications
     ]
@@ -943,11 +943,11 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     link: https://ziontechgroup.com/space-technology,
     marketPosition: First comprehensive commercial space platform. 5 x more features than existing solutions.,
     targetAudience: Space companies, Satellite operators, Launch providers, Government agencies, Research institutions,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 4-6 weeks,
     category: Space Technology,
-    realService: true;
+    realService: true';
 
     popula,
   r: true,
@@ -1013,10 +1013,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     useCases: [Satellite operationsMission planningSpace infrastructureLaunch coordinationSpace research]
     roi: 500% ROI through operational efficiency and mission success rates,
     competitors: [SpaceX Starlink ($99/month)OneWeb ($50/month)],
-    growthRate: 400% annual growth,;
+    growthRate: 400% annual growth,';
 
 variant: space-futuristic,
-    contactInfo: unknown;
+    contactInfo: unknown';
 
     competitors: ['SpaceX Starlink ($99 / month)', 'OneWeb ($50 / month)'],    market_size: '$469B space economy',    technology: [Satellite TechnologyOrbital MechanicsSpace WeatherAI / MLCloud Computing]
     integrations: [SpaceX APIsNASA data_weather services_ground stations_launch providers]
@@ -1031,14 +1031,14 @@ roi: 500% ROI through operational efficiency and mission success rates,
       mobile: +1 302 464 0950,
       email: kleber@ziontechgroup && ziontechgroup.com,
       address: 364 E Main St STE 1008 Middletown DE 19709,
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.,
     launchDate: 2024-11-15,
     customers:
-        customers: 8;
+        customers: 8';
 
-    rating: 4 && 4.8;
+    rating: 4 && 4.8';
 
     reviews: 12},
     id: space-technology-platform,
@@ -1064,7 +1064,7 @@ roi: 500% ROI through operational efficiency and mission success rates,
     competitor,
   s: [SpaceX Starlink ($99/month)OneWeb ($50/month)],
     growthRat,
-  e: 400% annual growth,;
+  e: 400% annual growth,';
 
 varian,
   t: space-futuristic,
@@ -1083,7 +1083,7 @@ varian,
     competitor,
   s: [SpaceX Starlink ($99 / month)OneWeb ($50 / month)],
     growth_rat,
-  e: 400% annual growth,;
+  e: 400% annual growth,';
 
 varian,
   t: space - futuristic,
@@ -1200,17 +1200,17 @@ varian,
     targetAudienc,
   e: Space companies, Satellite operators, Launch providers, Government agencies, Research institutions
     trialDay,
-  s: 30;
+  s: 30';
 
     setupTim,
   e: 4-6 weeks
     categor,
   y: Space Technology
     realServic,
-  e: true;
+  e: true';
 
     technolog,
-  y: [;
+  y: [';
 
       Satellite Technology
       Orbital Mechanics
@@ -1219,7 +1219,7 @@ varian,
       Cloud Computing
     ]
     integration,
-  s: [;
+  s: [';
 
       SpaceX APIs
       NASA data
@@ -1259,17 +1259,17 @@ roi: 500% ROI through operational efficiency and mission success rates,
     launchDate: 2024-11-15,
     customers: 8;
 
-    rating: 4.8;
+    rating: 4.8';
 
     reviews: 12}}
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.,
     launchDate: 2024-11-15,
-    customers: 8;
+    customers: 8';
 
-    rating: 4.8;
+    rating: 4.8';
 
     id: space-technology-platform,
     name: Space Technology Platform,
@@ -1372,25 +1372,25 @@ varian,
       Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard,
       Regulatory compliance toolsMulti-satellite operations
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-cyan-600 to-blue-700,
     textColor: text-cyan-400,
     link: https://ziontechgroup.com/space-technology,
     marketPosition: First comprehensive commercial space platform. 5x more features than existing solutions.,
-    targetAudience: Space companies, Satellite operators, Launch providers, Government agencies, Research institutions,    trialDays: 30;
+    targetAudience: Space companies, Satellite operators, Launch providers, Government agencies, Research institutions,    trialDays: 30';
 
     setupTime: 4-6 weeks,
     category: Space Technology,
     realService: true,    marketPosition: First comprehensive commercial space platform. 5 x more features than existing solutions.,
     marketPosition: First comprehensive commercial space platform. 5 x more features than existing solutions.,
     targetAudience: Space companies, Satellite operators, Launch providers, Government agencies, Research institutions,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 4-6 weeks,
     category: Space Technology,
-    realService: true;
+    realService: true';
 
     technology: [,
     popula,
@@ -1493,16 +1493,16 @@ roi: 500% ROI through operational efficiency and mission success rates,
   // Biotech AI Platform;
 
     id: biotech-ai-platform,
-    real_implementation: true;
+    real_implementation: true';
 
     implementation_details: Complete space operations platform with real - time tracking, mission planning tools, and regulatory compliance features.,
     launch_date: 2024 - 11 - 15,
     customers:
-        customers: 8;
+        customers: 8';
 
-    rating: 4.8;
+    rating: 4.8';
 
-    reviews: 12;
+    reviews: 12';
 
     ro,
   i: 500% ROI through operational efficiency and mission success rates,
@@ -1633,11 +1633,11 @@ varian,
     link: https://ziontechgroup.com/biotech-ai,
     marketPosition: Leading AI drug discovery platform. 5 x faster than traditional methods.,
     targetAudience: Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 2-3 weeks,
     category: Biotech & Healthcare AI,
-    realService: true;
+    realService: true';
 
     popula,
   r: true,
@@ -1701,10 +1701,10 @@ varian,
     useCases: [Drug discoveryGenetic researchClinical trialsPersonalized medicineDisease research]
     roi: 1000% ROI through accelerated drug development and patent generation,
     competitors: [Insitro ($100 M+ funding)Recursion ($2 B+ funding)],
-    growthRate: 250% annual growth,;
+    growthRate: 250% annual growth,';
 
 variant: biotech-futuristic,
-    contactInfo: unknown;
+    contactInfo: unknown';
 
     competitors: ['Insitro ($100M+ funding)', 'Recursion ($2B+ funding)'],    market_size: '$150B AI in healthcare',    technology: [AI / MLQuantum ComputingBioinformaticsGenomicsDrug Discovery]
     integrations: [Research databases_lab equipment_clinical trial systems_regulatory databases]
@@ -1719,14 +1719,14 @@ roi: 1000% ROI through accelerated drug development and patent generation,
       mobile: +1 302 464 0950,
       email: kleber@ziontechgroup && ziontechgroup.com,
       address: 364 E Main St STE 1008 Middletown DE 19709,
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.,
     launchDate: 2024-10-01,
     customers:
-        customers: 25;
+        customers: 25';
 
-    rating: 4 && 4.7;
+    rating: 4 && 4.7';
 
     reviews: 18},
     id: biotech-ai-platform,
@@ -1752,7 +1752,7 @@ roi: 1000% ROI through accelerated drug development and patent generation,
     competitor,
   s: [Insitro ($100M+ funding)Recursion ($2B+ funding)],
     growthRat,
-  e: 250% annual growth,;
+  e: 250% annual growth,';
 
 varian,
   t: biotech-futuristic,
@@ -1771,7 +1771,7 @@ varian,
     competitor,
   s: [Insitro ($100M+ funding)Recursion ($2B+ funding)],
     growth_rat,
-  e: 250% annual growth,;
+  e: 250% annual growth,';
 
 varian,
   t: biotech - futuristic,
@@ -1887,17 +1887,17 @@ varian,
     targetAudienc,
   e: Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs
     trialDay,
-  s: 30;
+  s: 30';
 
     setupTim,
   e: 2-3 weeks
     categor,
   y: Biotech & Healthcare AI
     realServic,
-  e: true;
+  e: true';
 
     technolog,
-  y: [;
+  y: [';
 
       AI/ML
       Quantum Computing
@@ -1906,7 +1906,7 @@ varian,
       Drug Discovery
     ]
     integration,
-  s: [;
+  s: [';
 
       Research databases
       Lab equipment
@@ -1945,17 +1945,17 @@ roi: 1000% ROI through accelerated drug development and patent generation,
     launchDate: 2024-10-01,
     customers: 25;
 
-    rating: 4.7;
+    rating: 4.7';
 
     reviews: 18}}
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.,
     launchDate: 2024-10-01,
-    customers: 25;
+    customers: 25';
 
-    rating: 4.7;
+    rating: 4.7';
 
     id: biotech-ai-platform,
     name: Biotech AI Platform,
@@ -2058,25 +2058,25 @@ varian,
       AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard,
       API for research integrationMulti-omics data analysis
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-emerald-600 to-teal-700,
     textColor: text-emerald-400,
     link: https://ziontechgroup.com/biotech-ai,
     marketPosition: Leading AI drug discovery platform. 5x faster than traditional methods.,
-    targetAudience: Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs,    trialDays: 30;
+    targetAudience: Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs,    trialDays: 30';
 
     setupTime: 2-3 weeks,
     category: Biotech & Healthcare AI,
     realService: true,    marketPosition: Leading AI drug discovery platform. 5 x faster than traditional methods.,
     marketPosition: Leading AI drug discovery platform. 5 x faster than traditional methods.,
     targetAudience: Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 2-3 weeks,
     category: Biotech & Healthcare AI,
-    realService: true;
+    realService: true';
 
     technology: [,
     popula,
@@ -2178,16 +2178,16 @@ roi: 1000% ROI through accelerated drug development and patent generation,
   // Quantum Financial Trading Platform;
 
     id: quantum-financial-trading,
-    real_implementation: true;
+    real_implementation: true';
 
     implementation_details: Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.,
     launch_date: 2024 - 10 - 01,
     customers:
-        customers: 25;
+        customers: 25';
 
-    rating: 4.7;
+    rating: 4.7';
 
-    reviews: 18;
+    reviews: 18';
 
     ro,
   i: 1000% ROI through accelerated drug development and patent generation,
@@ -2315,11 +2315,11 @@ varian,
     link: https://ziontechgroup.com/quantum-financial-trading,
     marketPosition: First quantum AI trading platform. 100 x faster than traditional systems.,
     targetAudience: Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 3-4 weeks,
     category: Quantum Finance & Trading,
-    realService: true;
+    realService: true';
 
     popula,
   r: true,
@@ -2388,10 +2388,10 @@ varian,
     useCases: [Algorithmic tradingPortfolio optimizationRisk managementMarket analysisHigh-frequency trading]
     roi: 1000%+ ROI through superior trading performance and market timing,
     competitors: [Renaissance Technologies ($100 B+ AUM)Two Sigma ($60 B+ AUM)],
-    growthRate: 150% annual growth,;
+    growthRate: 150% annual growth,';
 
 variant: quantum-finance-futuristic,
-    contactInfo: unknown;
+    contactInfo: unknown';
 
     ],    market_size: '$15T algorithmic trading',    technology: [Quantum ComputingAI / MLAlgorithmic TradingHigh - Frequency TradingBlockchain]
     integrations: [Trading platforms_market data feeds_risk management systems_portfolio systems]
@@ -2411,9 +2411,9 @@ roi: 1000%+ ROI through superior trading performance and market timing,
     implementationDetails: Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.,
     launchDate: 2024-09-01,
     customers:
-        customers: 12;
+        customers: 12';
 
-    rating: 4 && 4.9;
+    rating: 4 && 4.9';
 
     reviews: 15},
     id: quantum-financial-trading,
@@ -2437,7 +2437,7 @@ roi: 1000%+ ROI through superior trading performance and market timing,
     competitor,
   s: [Renaissance Technologies ($100B+ AUM)Two Sigma ($60B+ AUM)],
     growthRat,
-  e: 150% annual growth,;
+  e: 150% annual growth,';
 
 varian,
   t: quantum-finance-futuristic,
@@ -2454,7 +2454,7 @@ varian,
     competitor,
   s: [Renaissance Technologies ($100B+ AUM)Two Sigma ($60B+ AUM)],
     growth_rat,
-  e: 150% annual growth,;
+  e: 150% annual growth,';
 
 varian,
   t: quantum - finance - futuristic,
@@ -2577,10 +2577,10 @@ varian,
     categor,
   y: Quantum Finance & Trading
     realServic,
-  e: true;
+  e: true';
 
     technolog,
-  y: [;
+  y: [';
 
       Quantum Computing
       AI/ML
@@ -2589,7 +2589,7 @@ varian,
       Blockchain
     ]
     integration,
-  s: [;
+  s: [';
 
       Trading platforms
       Market data feeds
@@ -2597,7 +2597,7 @@ varian,
       Portfolio systems
     ]
     useCase,
-  s: [;
+  s: [';
 
       Algorithmic trading
       Portfolio optimization
@@ -2746,25 +2746,25 @@ varian,
       Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance,
       Performance analyticsAPI for integration
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-yellow-600 to-orange-700,
     textColor: text-yellow-400,
     link: https://ziontechgroup.com/quantum-financial-trading,
     marketPosition: First quantum AI trading platform. 100x faster than traditional systems.,
-    targetAudience: Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions,    trialDays: 30;
+    targetAudience: Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions,    trialDays: 30';
 
     setupTime: 3-4 weeks,
     category: Quantum Finance & Trading,
     realService: true,    marketPosition: First quantum AI trading platform. 100 x faster than traditional systems.,
     marketPosition: First quantum AI trading platform. 100 x faster than traditional systems.,
     targetAudience: Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 3-4 weeks,
     category: Quantum Finance & Trading,
-    realService: true;
+    realService: true';
 
     technology: [,
     popula,
@@ -3004,11 +3004,11 @@ varian,
     link: https://ziontechgroup.com/autonomous-vehicle-ai,
     marketPosition: Leading autonomous vehicle AI platform. 10 x more accurate than existing solutions.,
     targetAudience: Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 4-6 weeks,
     category: Autonomous Vehicles & Robotics,
-    realService: true;
+    realService: true';
 
     popula,
   r: true,
@@ -3073,10 +3073,10 @@ varian,
     useCases: [Self-driving carsAutonomous dronesIndustrial roboticsLogistics automationSmart cities]
     roi: 800% ROI through operational efficiency and safety improvements,
     competitors: [Waymo ($1 B+ investment)Tesla Autopilot ($12)000)],
-    growthRate: 200% annual growth,;
+    growthRate: 200% annual growth,';
 
 variant: autonomous-futuristic,
-    contactInfo: unknown;
+    contactInfo: unknown';
 
     competitors: ['Waymo ($1B+ investment)', 'Tesla Autopilot ($12) 000)'],    market_size: '$2.5T autonomous vehicle market',    technology: [Computer VisionAI / MLRoboticsSensor FusionEdge Computing]
     integrations: [Vehicle systems_drone platforms_robotics hardware_fleet management systems]
@@ -3091,14 +3091,14 @@ roi: 800% ROI through operational efficiency and safety improvements,
       mobile: +1 302 464 0950,
       email: kleber@ziontechgroup && ziontechgroup.com,
       address: 364 E Main St STE 1008 Middletown DE 19709,
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.,
     launchDate: 2024-08-01,
     customers:
-        customers: 18;
+        customers: 18';
 
-    rating: 4 && 4.8;
+    rating: 4 && 4.8';
 
     reviews: 22},
     id: autonomous-vehicle-ai-platform,
@@ -3124,7 +3124,7 @@ roi: 800% ROI through operational efficiency and safety improvements,
     competitor,
   s: [Waymo ($1B+ investment)Tesla Autopilot ($12)000)],
     growthRat,
-  e: 200% annual growth,;
+  e: 200% annual growth,';
 
 varian,
   t: autonomous-futuristic,
@@ -3143,7 +3143,7 @@ varian,
     competitor,
   s: [Waymo ($1B+ investment)Tesla Autopilot ($12) 000)],
     growth_rat,
-  e: 200% annual growth,;
+  e: 200% annual growth,';
 
 varian,
   t: autonomous - futuristic,
@@ -3260,17 +3260,17 @@ varian,
     targetAudienc,
   e: Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies
     trialDay,
-  s: 30;
+  s: 30';
 
     setupTim,
   e: 4-6 weeks
     categor,
   y: Autonomous Vehicles & Robotics
     realServic,
-  e: true;
+  e: true';
 
     technolog,
-  y: [;
+  y: [';
 
       Computer Vision
       AI/ML
@@ -3279,7 +3279,7 @@ varian,
       Edge Computing
     ]
     integration,
-  s: [;
+  s: [';
 
       Vehicle systems
       Drone platforms
@@ -3317,17 +3317,17 @@ roi: 800% ROI through operational efficiency and safety improvements,
     launchDate: 2024-08-01,
     customers: 18;
 
-    rating: 4.8;
+    rating: 4.8';
 
     reviews: 22}}
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.,
     launchDate: 2024-08-01,
-    customers: 18;
+    customers: 18';
 
-    rating: 4.8;
+    rating: 4.8';
 
     id: autonomous-vehicle-ai-platform,
     name: Autonomous Vehicle AI Platform,
@@ -3429,25 +3429,25 @@ varian,
       Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management,
       Performance analyticsAPI for integration
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-blue-600 to-indigo-700,
     textColor: text-blue-400,
     link: https://ziontechgroup.com/autonomous-vehicle-ai,
     marketPosition: Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.,
-    targetAudience: Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies,    trialDays: 30;
+    targetAudience: Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies,    trialDays: 30';
 
     setupTime: 4-6 weeks,
     category: Autonomous Vehicles & Robotics,
     realService: true,    marketPosition: Leading autonomous vehicle AI platform. 10 x more accurate than existing solutions.,
     marketPosition: Leading autonomous vehicle AI platform. 10 x more accurate than existing solutions.,
     targetAudience: Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 4-6 weeks,
     category: Autonomous Vehicles & Robotics,
-    realService: true;
+    realService: true';
 
     technology: [,
     popula,
@@ -3549,16 +3549,16 @@ roi: 800% ROI through operational efficiency and safety improvements,
   // Quantum Cybersecurity Platform;
 
     id: quantum-cybersecurity-platform,
-    real_implementation: true;
+    real_implementation: true';
 
     implementation_details: Complete autonomous AI platform with computer vision, decision - making algorithms, and safety systems.,
     launch_date: 2024 - 08 - 01,
     customers:
-        customers: 18;
+        customers: 18';
 
-    rating: 4.8;
+    rating: 4.8';
 
-    reviews: 22;
+    reviews: 22';
 
     ro,
   i: 800% ROI through operational efficiency and safety improvements,
@@ -3674,11 +3674,11 @@ varian,
     color: from-red-600 to-pink-700,
     textColor: text-red-400,
     targetAudience: Financial institutions, Healthcare organizations, Government agencies, Tech companies, Critical infrastructure,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 2-3 weeks,
     category: Quantum Cybersecurity,
-    realService: true;
+    realService: true';
 
     popula,
   r: true,
@@ -3728,10 +3728,10 @@ varian,
     useCases: [Data protectionThreat detectionIncident responseComplianceRisk management]
     roi: 600% ROI through security improvements and risk reduction,
     competitors: [Palo Alto Networks ($1)000+/month)CrowdStrike ($500+/month)],
-    growthRate: 180% annual growth,;
+    growthRate: 180% annual growth,';
 
 variant: quantum-security-futuristic,
-    contactInfo: unknown;
+    contactInfo: unknown';
 
     ],    market_size: '$200B cybersecurity market',    technology: [Quantum ComputingAI / MLCryptographyThreat DetectionBlockchain]
     integrations: [SIEM systemsFirewallsIdentity providers_compliance platforms]
@@ -3751,9 +3751,9 @@ roi: 600% ROI through security improvements and risk reduction,
     implementationDetails: Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.,
     launchDate: 2024-07-01,
     customers:
-        customers: 35;
+        customers: 35';
 
-    rating: 4 && 4.9;
+    rating: 4 && 4.9';
 
     reviews: 28},
     id: quantum-cybersecurity-platform,
@@ -3777,7 +3777,7 @@ roi: 600% ROI through security improvements and risk reduction,
     competitor,
   s: [Palo Alto Networks ($1)000+/month)CrowdStrike ($500+/month)],
     growthRat,
-  e: 180% annual growth,;
+  e: 180% annual growth,';
 
 varian,
   t: quantum-security-futuristic,
@@ -3794,7 +3794,7 @@ varian,
     competitor,
   s: [Palo Alto Networks ($1) 000+/month)CrowdStrike ($500+/month)],
     growth_rat,
-  e: 180% annual growth,;
+  e: 180% annual growth,';
 
 varian,
   t: quantum - security - futuristic,
@@ -3917,10 +3917,10 @@ varian,
     categor,
   y: Quantum Cybersecurity
     realServic,
-  e: true;
+  e: true';
 
     technolog,
-  y: [;
+  y: [';
 
       Quantum Computing
       AI/ML
@@ -3929,7 +3929,7 @@ varian,
       Blockchain
     ]
     integration,
-  s: [;
+  s: [';
 
       SIEM systems
       Firewalls
@@ -3937,7 +3937,7 @@ varian,
       Compliance platforms
     ]
     useCase,
-  s: [;
+  s: [';
 
       Data protection
       Threat detection
@@ -4084,25 +4084,25 @@ varian,
       Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment,
       Security automationAPI for integration
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-red-600 to-pink-700,
     textColor: text-red-400,
     link: https://ziontechgroup.com/quantum-cybersecurity,
     marketPosition: First quantum-resistant cybersecurity platform. 100x more secure than traditional solutions.,
-    targetAudience: Financial institutions, Healthcare organizations, Government agencies, Tech companies, Critical infrastructure,    trialDays: 30;
+    targetAudience: Financial institutions, Healthcare organizations, Government agencies, Tech companies, Critical infrastructure,    trialDays: 30';
 
     setupTime: 2-3 weeks,
     category: Quantum Cybersecurity,
     realService: true,    marketPosition: First quantum-resistant cybersecurity platform. 100 x more secure than traditional solutions.,
     marketPosition: First quantum-resistant cybersecurity platform. 100 x more secure than traditional solutions.,
     targetAudience: Financial institutions, Healthcare organizations, Government agencies, Tech companies, Critical infrastructure,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 2-3 weeks,
     category: Quantum Cybersecurity,
-    realService: true;
+    realService: true';
 
     technology: [,
     popula,
@@ -4342,11 +4342,11 @@ varian,
     link: https://ziontechgroup.com/metaverse-ai-development,
     marketPosition: Leading metaverse AI platform. 5 x more features than existing solutions.,
     targetAudience: Gaming companies, VR/AR developers, Social platforms, Educational institutions, Entertainment companies,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 2-3 weeks,
     category: Metaverse & Virtual Reality,
-    realService: true;
+    realService: true';
 
     popula,
   r: true,
@@ -4409,10 +4409,10 @@ varian,
     useCases: [Virtual worldsGaming experiencesSocial platformsEducationEntertainment]
     roi: 700% ROI through user engagement and monetization,
     competitors: [Meta Horizon ($30/month)Roblox ($25/month)],
-    growthRate: 300% annual growth,;
+    growthRate: 300% annual growth,';
 
 variant: metaverse-futuristic,
-    contactInfo: unknown;
+    contactInfo: unknown';
 
     competitors: ['Meta Horizon ($30 / month)', 'Roblox ($25 / month)'],    market_size: '$800B metaverse market',    technology: [AI / MLVR / AR3D GraphicsReal - time RenderingBlockchain]
     integrations: [VR headsets_gaming platforms_social media_payment systems]
@@ -4427,14 +4427,14 @@ roi: 700% ROI through user engagement and monetization,
       mobile: +1 302 464 0950,
       email: kleber@ziontechgroup && ziontechgroup.com,
       address: 364 E Main St STE 1008 Middletown DE 19709,
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Complete metaverse AI platform with content generation, world building, and social interaction features.,
     launchDate: 2024-06-01,
     customers:
-        customers: 45;
+        customers: 45';
 
-    rating: 4 && 4.7;
+    rating: 4 && 4.7';
 
     reviews: 32},
     id: metaverse-ai-development-platform,
@@ -4460,7 +4460,7 @@ roi: 700% ROI through user engagement and monetization,
     competitor,
   s: [Meta Horizon ($30/month)Roblox ($25/month)],
     growthRat,
-  e: 300% annual growth,;
+  e: 300% annual growth,';
 
 varian,
   t: metaverse-futuristic,
@@ -4479,7 +4479,7 @@ varian,
     competitor,
   s: [Meta Horizon ($30 / month)Roblox ($25 / month)],
     growth_rat,
-  e: 300% annual growth,;
+  e: 300% annual growth,';
 
 varian,
   t: metaverse - futuristic,
@@ -4596,17 +4596,17 @@ varian,
     targetAudienc,
   e: Gaming companies, VR/AR developers, Social platforms, Educational institutions, Entertainment companies
     trialDay,
-  s: 30;
+  s: 30';
 
     setupTim,
   e: 2-3 weeks
     categor,
   y: Metaverse & Virtual Reality
     realServic,
-  e: true;
+  e: true';
 
     technolog,
-  y: [;
+  y: [';
 
       AI/ML
       VR/AR
@@ -4615,7 +4615,7 @@ varian,
       Blockchain
     ]
     integration,
-  s: [;
+  s: [';
 
       VR headsets
       Gaming platforms
@@ -4654,17 +4654,17 @@ roi: 700% ROI through user engagement and monetization,
     launchDate: 2024-06-01,
     customers: 45;
 
-    rating: 4.7;
+    rating: 4.7';
 
     reviews: 32}}
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Complete metaverse AI platform with content generation, world building, and social interaction features.,
     launchDate: 2024-06-01,
-    customers: 45;
+    customers: 45';
 
-    rating: 4.7;
+    rating: 4.7';
 
     id: metaverse-ai-development-platform,
     name: Metaverse AI Development Platform,
@@ -4767,25 +4767,25 @@ varian,
       AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support,
       API for integrationDeveloper tools
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-purple-600 to-pink-700,
     textColor: text-purple-400,
     link: https://ziontechgroup.com/metaverse-ai-development,
     marketPosition: Leading metaverse AI platform. 5x more features than existing solutions.,
-    targetAudience: Gaming companies, VR/AR developers, Social platforms, Educational institutions, Entertainment companies,    trialDays: 30;
+    targetAudience: Gaming companies, VR/AR developers, Social platforms, Educational institutions, Entertainment companies,    trialDays: 30';
 
     setupTime: 2-3 weeks,
     category: Metaverse & Virtual Reality,
     realService: true,    marketPosition: Leading metaverse AI platform. 5 x more features than existing solutions.,
     marketPosition: Leading metaverse AI platform. 5 x more features than existing solutions.,
     targetAudience: Gaming companies, VR/AR developers, Social platforms, Educational institutions, Entertainment companies,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 2-3 weeks,
     category: Metaverse & Virtual Reality,
-    realService: true;
+    realService: true';
 
     technology: [,
     popula,
@@ -4887,16 +4887,16 @@ roi: 700% ROI through user engagement and monetization,
   // Quantum Internet Security Platform;
 
     id: quantum-internet-security-platform,
-    real_implementation: true;
+    real_implementation: true';
 
     implementation_details: Complete metaverse AI platform with content generation, world building, and social interaction features.,
     launch_date: 2024 - 06 - 01,
     customers:
-        customers: 45;
+        customers: 45';
 
-    rating: 4.7;
+    rating: 4.7';
 
-    reviews: 32;
+    reviews: 32';
 
     ro,
   i: 700% ROI through user engagement and monetization,
@@ -5024,11 +5024,11 @@ varian,
     link: https://ziontechgroup.com/quantum-internet-security,
     marketPosition: First quantum internet security platform. 100 x more secure than traditional solutions.,
     targetAudience: Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 3-4 weeks,
     category: Quantum Internet & Security,
-    realService: true;
+    realService: true';
 
     popula,
   r: true,
@@ -5093,10 +5093,10 @@ varian,
     useCases: [Network securityData protectionThreat detectionCompliancePerformance monitoring]
     roi: 800% ROI through security improvements and operational efficiency,
     competitors: [Cloudflare ($20/month)Akamai ($100+/month)],
-    growthRate: 200% annual growth,;
+    growthRate: 200% annual growth,';
 
 variant: quantum-internet-futuristic,
-    contactInfo: unknown;
+    contactInfo: unknown';
 
     competitors: ['Cloudflare ($20 / month)', 'Akamai ($100+/month)'],    market_size: '$150B internet security market',    technology: [Quantum ComputingAI / MLNetwork SecurityCryptographyInternet Protocols]
     integrations: [Network equipment_cloud platforms_security tools_monitoring systems]
@@ -5111,14 +5111,14 @@ roi: 800% ROI through security improvements and operational efficiency,
       mobile: +1 302 464 0950,
       email: kleber@ziontechgroup && ziontechgroup.com,
       address: 364 E Main St STE 1008 Middletown DE 19709,
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Complete quantum internet security platform with encryption, monitoring, and protection features.,
     launchDate: 2024-05-01,
     customers:
-        customers: 22;
+        customers: 22';
 
-    rating: 4 && 4.8;
+    rating: 4 && 4.8';
 
     reviews: 19},
     id: quantum-internet-security-platform,
@@ -5144,7 +5144,7 @@ roi: 800% ROI through security improvements and operational efficiency,
     competitor,
   s: [Cloudflare ($20/month)Akamai ($100+/month)],
     growthRat,
-  e: 200% annual growth,;
+  e: 200% annual growth,';
 
 varian,
   t: quantum-internet-futuristic,
@@ -5163,7 +5163,7 @@ varian,
     competitor,
   s: [Cloudflare ($20 / month)Akamai ($100+/month)],
     growth_rat,
-  e: 200% annual growth,;
+  e: 200% annual growth,';
 
 varian,
   t: quantum - internet - futuristic,
@@ -5279,17 +5279,17 @@ varian,
     targetAudienc,
   e: Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations
     trialDay,
-  s: 30;
+  s: 30';
 
     setupTim,
   e: 3-4 weeks
     categor,
   y: Quantum Internet & Security
     realServic,
-  e: true;
+  e: true';
 
     technolog,
-  y: [;
+  y: [';
 
       Quantum Computing
       AI/ML
@@ -5298,7 +5298,7 @@ varian,
       Internet Protocols
     ]
     integration,
-  s: [;
+  s: [';
 
       Network equipment
       Cloud platforms
@@ -5337,17 +5337,17 @@ roi: 800% ROI through security improvements and operational efficiency,
     launchDate: 2024-05-01,
     customers: 22;
 
-    rating: 4.8;
+    rating: 4.8';
 
     reviews: 19}}
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Complete quantum internet security platform with encryption, monitoring, and protection features.,
     launchDate: 2024-05-01,
-    customers: 22;
+    customers: 22';
 
-    rating: 4.8;
+    rating: 4.8';
 
     id: quantum-internet-security-platform,
     name: Quantum Internet Security Platform,
@@ -5450,25 +5450,25 @@ varian,
       Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics,
       API for integration24/7 monitoring
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-green-600 to-emerald-700,
     textColor: text-green-400,
     link: https://ziontechgroup.com/quantum-internet-security,
     marketPosition: First quantum internet security platform. 100x more secure than traditional solutions.,
-    targetAudience: Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations,    trialDays: 30;
+    targetAudience: Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations,    trialDays: 30';
 
     setupTime: 3-4 weeks,
     category: Quantum Internet & Security,
     realService: true,    marketPosition: First quantum internet security platform. 100 x more secure than traditional solutions.,
     marketPosition: First quantum internet security platform. 100 x more secure than traditional solutions.,
     targetAudience: Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 3-4 weeks,
     category: Quantum Internet & Security,
-    realService: true;
+    realService: true';
 
     technology: [,
     popula,
@@ -5570,16 +5570,16 @@ roi: 800% ROI through security improvements and operational efficiency,
   // AI-Powered Legal Contract Analyzer;
 
     id: ai-legal-contract-analyzer,
-    real_implementation: true;
+    real_implementation: true';
 
     implementation_details: Complete quantum internet security platform with encryption, monitoring, and protection features.,
     launch_date: 2024 - 05 - 01,
     customers:
-        customers: 22;
+        customers: 22';
 
-    rating: 4.8;
+    rating: 4.8';
 
-    reviews: 19;
+    reviews: 19';
 
     ro,
   i: 800% ROI through security improvements and operational efficiency,
@@ -5712,11 +5712,11 @@ varian,
     link: https://ziontechgroup.com/ai-legal-contract-analyzer,
     marketPosition: Leading AI legal platform. 10 x faster than traditional legal review.,
     targetAudience: Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 1-2 weeks,
     category: AI Legal Services,
-    realService: true;
+    realService: true';
 
     popula,
   r: true,
@@ -5780,10 +5780,10 @@ varian,
     useCases: [Contract reviewLegal researchCompliance checkingRisk assessmentDocument analysis]
     roi: 500% ROI through time savings and improved accuracy,
     competitors: [DocuSign ($25/month)ContractPodAi ($500+/month)],
-    growthRate: 150% annual growth,;
+    growthRate: 150% annual growth,';
 
 variant: ai-legal-futuristic,
-    contactInfo: unknown;
+    contactInfo: unknown';
 
     competitors: ['DocuSign ($25 / month)', 'ContractPodAi ($500+/month)'],    market_size: '$25B legal tech market',    technology: [AI / MLNatural Language ProcessingLegal TechDocument AnalysisCloud Computing]
     integrations: [Document management systems_legal databases_e - signature platformsCRM systems]
@@ -5798,14 +5798,14 @@ roi: 500% ROI through time savings and improved accuracy,
       mobile: +1 302 464 0950,
       email: kleber@ziontechgroup && ziontechgroup.com,
       address: 364 E Main St STE 1008 Middletown DE 19709,
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Complete AI legal platform with document analysis, risk assessment, and compliance features.,
     launchDate: 2024-04-01,
     customers:
-        customers: 65;
+        customers: 65';
 
-    rating: 4 && 4.6;
+    rating: 4 && 4.6';
 
     reviews: 45},
     id: ai-legal-contract-analyzer,
@@ -5831,7 +5831,7 @@ roi: 500% ROI through time savings and improved accuracy,
     competitor,
   s: [DocuSign ($25/month)ContractPodAi ($500+/month)],
     growthRat,
-  e: 150% annual growth,;
+  e: 150% annual growth,';
 
 varian,
   t: ai-legal-futuristic,
@@ -5850,7 +5850,7 @@ varian,
     competitor,
   s: [DocuSign ($25 / month)ContractPodAi ($500+/month)],
     growth_rat,
-  e: 150% annual growth,;
+  e: 150% annual growth,';
 
 varian,
   t: ai - legal - futuristic,
@@ -5967,17 +5967,17 @@ varian,
     targetAudienc,
   e: Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions
     trialDay,
-  s: 30;
+  s: 30';
 
     setupTim,
   e: 1-2 weeks
     categor,
   y: AI Legal Services
     realServic,
-  e: true;
+  e: true';
 
     technolog,
-  y: [;
+  y: [';
 
       AI/ML
       Natural Language Processing
@@ -5986,7 +5986,7 @@ varian,
       Cloud Computing
     ]
     integration,
-  s: [;
+  s: [';
 
       Document management systems
       Legal databases
@@ -6025,17 +6025,17 @@ roi: 500% ROI through time savings and improved accuracy,
     launchDate: 2024-04-01,
     customers: 65;
 
-    rating: 4.6;
+    rating: 4.6';
 
     reviews: 45}}
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Complete AI legal platform with document analysis, risk assessment, and compliance features.,
     launchDate: 2024-04-01,
-    customers: 65;
+    customers: 65';
 
-    rating: 4.6;
+    rating: 4.6';
 
     id: ai-legal-contract-analyzer,
     name: AI Legal Contract Analyzer,
@@ -6138,25 +6138,25 @@ varian,
       AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration,
       API for integrationMobile app support
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-indigo-600 to-purple-700,
     textColor: text-indigo-400,
     link: https://ziontechgroup.com/ai-legal-contract-analyzer,
     marketPosition: Leading AI legal platform. 10x faster than traditional legal review.,
-    targetAudience: Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions,    trialDays: 30;
+    targetAudience: Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions,    trialDays: 30';
 
     setupTime: 1-2 weeks,
     category: AI Legal Services,
     realService: true,    marketPosition: Leading AI legal platform. 10 x faster than traditional legal review.,
     marketPosition: Leading AI legal platform. 10 x faster than traditional legal review.,
     targetAudience: Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 1-2 weeks,
     category: AI Legal Services,
-    realService: true;
+    realService: true';
 
     technology: [,
     popula,
@@ -6250,24 +6250,24 @@ roi: 500% ROI through time savings and improved accuracy,
     customers:
         customers: 65;
 
-    rating: 4.6;
+    rating: 4.6';
 
     reviews: 45},
     reviews: 45}
 
-  // Quantum IoT Platform;
+  // Quantum IoT Platform';
 
     name: Quantum IoT Platform,
     tagline: Quantum - secured IoT platform with AI edge computing,
     price: $2, 999,
     period: /month,
     popular:
-        popular: true;
+        popular: true';
 
     icon: ,
     color: from-blue-600 to-cyan-700,
     textColor: text-blue-400,
-    description: unknown;
+    description: unknown';
 
     ro,
   i: 500% ROI through time savings and improved accuracy,
@@ -6286,7 +6286,7 @@ roi: 500% ROI through time savings and improved accuracy,
     competitor,
   s: [DocuSign ($25/month)ContractPodAi ($500+/month)],
     growthRat,
-  e: 150% annual growth,;
+  e: 150% annual growth,';
 
 varian,
   t: ai-legal-futuristic,
@@ -6375,11 +6375,11 @@ varian,
     link: https://ziontechgroup.com/quantum-iot-platform,
     marketPosition: First quantum IoT platform. 100 x more secure than traditional solutions.,
     targetAudience: IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 2-3 weeks,
     category: Quantum IoT & Edge Computing,
-    realService: true;
+    realService: true';
 
     integrations: [IoT devicesCloud platformsSecurity toolsAnalytics platforms]
     useCases: [Smart citiesIndustrial IoTHealthcare monitoringConsumer devicesSecurity systems]
@@ -6388,7 +6388,7 @@ roi: 600% ROI through security improvements and operational efficiency,
         competitors: [AWS IoT ($5/month)Microsoft Azure IoT ($25/month)]
     growthRate: 250% annual growth,
     variant: quantum-iot-futuristic,
-    contactInfo: unknown;
+    contactInfo: unknown';
 
     competitors: ['AWS IoT ($5 / month)', 'Microsoft Azure IoT ($25 / month)'],    market_size: '$1.5T IoT market',    technology: [Quantum ComputingAI / MLIoTEdge ComputingBlockchain]
     integrations: [IoT devices_cloud platforms_security tools_analytics platforms]
@@ -6420,9 +6420,9 @@ growthRate: 250% annual growth,
     implementationDetails: Complete quantum IoT platform with security, edge computing, and device management features.,
     launchDate: 2024-03-01,
     customers:
-        customers: 38;
+        customers: 38";
 
-    rating: 4.7;
+    rating: 4.7"'";
 
       mobile: +1 302 464 0950,
       email: kleber@ziontechgroup && ziontechgroup.com,
@@ -6432,11 +6432,11 @@ growthRate: 250% annual growth,
     link: https://ziontechgroup.com / quantum - ai - brain - computer - interface,
     market_position: Leading edge technology with no direct competitors. 10 x more advanced than existing BCI solutions.,
     target_audience: Research institutions, Medical centers, Defense contractors, Tech companies, Universities,
-    trial_days: 30;
+    trial_days: 30"'"'";
 
     setup_time: 2 - 4 weeks,
     category: Quantum AI & Neuroscience,
-    real_service: true;
+    real_service: true"'"'"'";
 
     technology["Quantum Computing", "Neural Networks", "Brain - Computer Interface", "AI / ML", Quantum Encryption],
     integrations["Research APIs", "Medical devices", "Cloud platforms", Data analysis tools],
@@ -6466,7 +6466,7 @@ growthRate: 250% annual growth,
     competitor,
   s: [AWS IoT ($5/month)Microsoft Azure IoT ($25/month)],
     growthRat,
-  e: 250% annual growth,;
+  e: 250% annual growth,'"'";
 
 varian,
   t: quantum-iot-futuristic,
@@ -6485,7 +6485,7 @@ varian,
     competitor,
   s: [AWS IoT ($5 / month)Microsoft Azure IoT ($25 / month)],
     growth_rat,
-  e: 250% annual growth,;
+  e: 250% annual growth,";
 
 varian,
   t: quantum - iot - futuristic,
@@ -6504,7 +6504,7 @@ varian,
 
 ],
     growthRat,
-  e: 250% annual growth,;
+  e: 250% annual growth,";
 
 varian,
   t: quantum-iot-futuristic,
@@ -6572,15 +6572,15 @@ market_size: $1.5B BCI market,
 
     implementation_details: Fully functional quantum AI platform with neural interface capabilities, real - time processing, and advanced security features.,
     launch_date: 2024 - 12 - 01,
-    customers: 15;
+    customers: 15";
 
-    rating: 4 && 4.9;
+    rating: 4 && 4.9";
 
     reviews: 8,,
     market_siz,
   e: $1.5B BCI market,
     growth_rat,
-  e: 300% annual growth,;
+  e: 300% annual growth,";
 
 varian,
   t: quantum - ai - futuristic,
@@ -6608,7 +6608,7 @@ varian,
   g: 4 && 4.9,
     review,
   s: 8},
-  // Space Technology Platform;
+  // Space Technology Platform";
 
     i,
   d: space - technology - platform,
@@ -6632,7 +6632,7 @@ varian,
       "Mission analytics dashboard,
       "Regulatory compliance tools,
       Multi - satellite operations ],
-    popular: true;
+    popular: true";
 
     icon: ,
     color: from - cyan - 600 to - blue - 700,
@@ -6640,11 +6640,11 @@ varian,
     link: https://ziontechgroup.com / space - technology,
     market_position: First comprehensive commercial space platform. 5 x more features than existing solutions.,
     target_audience: Space companies, Satellite operators, Launch providers, Government agencies, Research institutions,
-    trial_days: 30;
+    trial_days: 30";
 
     setup_time: 4 - 6 weeks,
     category: Space Technology,
-    real_service: true;
+    real_service: true";
 
     technology["Satellite Technology", "Orbital Mechanics", "Space Weather", "AI / ML", Cloud Computing],
     integrations["SpaceX APIs", "NASA data", "Weather services", "Ground stations", Launch providers],
@@ -6692,15 +6692,15 @@ market_size: $469B space economy,
 
     implementation_details: Complete space operations platform with real - time tracking, mission planning tools, and regulatory compliance features.,
     launch_date: 2024 - 11 - 15,
-    customers: 8;
+    customers: 8";
 
-    rating: 4 && 4.8;
+    rating: 4 && 4.8";
 
     reviews: 12,,
     market_siz,
   e: $469B space economy,
     growth_rat,
-  e: 400% annual growth,;
+  e: 400% annual growth,";
 
 varian,
   t: space - futuristic,
@@ -6728,7 +6728,7 @@ varian,
   g: 4 && 4.8,
     review,
   s: 12},
-  // Biotech AI Platform;
+  // Biotech AI Platform";
 
     i,
   d: biotech - ai - platform,
@@ -6752,7 +6752,7 @@ varian,
       "Advanced analytics dashboard,
       "API for research integration,
       Multi - omics data analysis ],
-    popular: true;
+    popular: true";
 
     icon: ,
     color: from - emerald - 600 to - teal - 700,
@@ -6760,11 +6760,11 @@ varian,
     link: https://ziontechgroup.com / biotech - ai,
     market_position: Leading AI drug discovery platform. 5 x faster than traditional methods.,
     target_audience: Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs,
-    trial_days: 30;
+    trial_days: 30";
 
     setup_time: 2 - 3 weeks,
     category: Biotech & Healthcare AI,
-    real_service: true;
+    real_service: true";
 
     technology["AI / ML", "Quantum Computing", "Bioinformatics", "Genomics", Drug Discovery],
     integrations["Research databases", "Lab equipment", "Clinical trial systems", Regulatory databases],
@@ -6812,15 +6812,15 @@ market_size: $150B AI in healthcare,
 
     implementation_details: Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.,
     launch_date: 2024 - 10 - 01,
-    customers: 25;
+    customers: 25";
 
-    rating: 4 && 4.7;
+    rating: 4 && 4.7";
 
     reviews: 18,,
     market_siz,
   e: $150B AI in healthcare,
     growth_rat,
-  e: 250% annual growth,;
+  e: 250% annual growth,";
 
 varian,
   t: biotech - futuristic,
@@ -6848,7 +6848,7 @@ varian,
   g: 4 && 4.7,
     review,
   s: 18},
-  // Quantum Financial Trading Platform;
+  // Quantum Financial Trading Platform";
 
     i,
   d: quantum - financial - trading,
@@ -6872,7 +6872,7 @@ varian,
       "Regulatory compliance,
       "Performance analytics,
       API for integration ],
-    popular: true;
+    popular: true";
 
     icon: ,
     color: from - yellow - 600 to - orange - 700,
@@ -6880,11 +6880,11 @@ varian,
     link: https://ziontechgroup.com / quantum - financial - trading,
     market_position: First quantum AI trading platform. 100 x faster than traditional systems.,
     target_audience: Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions,
-    trial_days: 30;
+    trial_days: 30";
 
     setup_time: 3 - 4 weeks,
     category: Quantum Finance & Trading,
-    real_service: true;
+    real_service: true";
 
     technology["Quantum Computing", "AI / ML", "Algorithmic Trading", "High - Frequency Trading", Blockchain],
     integrations["Trading platforms", "Market data feeds", "Risk management systems", Portfolio systems],
@@ -6932,15 +6932,15 @@ market_size: $15T algorithmic trading,
 
     implementation_details: Complete quantum trading platform with real - time execution, advanced risk management, and comprehensive analytics.,
     launch_date: 2024 - 09 - 01,
-    customers: 12;
+    customers: 12";
 
-    rating: 4 && 4.9;
+    rating: 4 && 4.9";
 
     reviews: 15,,
     market_siz,
   e: $15T algorithmic trading,
     growth_rat,
-  e: 150% annual growth,;
+  e: 150% annual growth,";
 
 varian,
   t: quantum - finance - futuristic,
@@ -6968,7 +6968,7 @@ varian,
   g: 4 && 4.9,
     review,
   s: 15},
-  // Autonomous Vehicle AI Platform;
+  // Autonomous Vehicle AI Platform";
 
     i,
   d: autonomous - vehicle - ai - platform,
@@ -6992,7 +6992,7 @@ varian,
       "Fleet management,
       "Performance analytics,
       API for integration ],
-    popular: true;
+    popular: true";
 
     icon: ,
     color: from - blue - 600 to - indigo - 700,
@@ -7000,11 +7000,11 @@ varian,
     link: https://ziontechgroup.com / autonomous - vehicle - ai,
     market_position: Leading autonomous vehicle AI platform. 10 x more accurate than existing solutions.,
     target_audience: Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies,
-    trial_days: 30;
+    trial_days: 30";
 
     setup_time: 4 - 6 weeks,
     category: Autonomous Vehicles & Robotics,
-    real_service: true;
+    real_service: true";
 
     technology["Computer Vision", "AI / ML", "Robotics", "Sensor Fusion", Edge Computing],
     integrations["Vehicle systems", "Drone platforms", "Robotics hardware", Fleet management systems],
@@ -7052,15 +7052,15 @@ market_size: $2.5T autonomous vehicle market,
 
     implementation_details: Complete autonomous AI platform with computer vision, decision - making algorithms, and safety systems.,
     launch_date: 2024 - 08 - 01,
-    customers: 18;
+    customers: 18";
 
-    rating: 4 && 4.8;
+    rating: 4 && 4.8";
 
     reviews: 22,,
     market_siz,
   e: $2.5T autonomous vehicle market,
     growth_rat,
-  e: 200% annual growth,;
+  e: 200% annual growth,";
 
 varian,
   t: autonomous - futuristic,
@@ -7088,7 +7088,7 @@ varian,
   g: 4 && 4.8,
     review,
   s: 22},
-  // Quantum Cybersecurity Platform;
+  // Quantum Cybersecurity Platform";
 
     i,
   d: quantum - cybersecurity - platform,
@@ -7112,7 +7112,7 @@ varian,
       "Vulnerability assessment,
       "Security automation,
       API for integration ],
-    popular: true;
+    popular: true";
 
     icon: ,
     color: from - red - 600 to - pink - 700,
@@ -7120,11 +7120,11 @@ varian,
     link: https://ziontechgroup.com / quantum - cybersecurity,
     market_position: First quantum - resistant cybersecurity platform. 100 x more secure than traditional solutions.,
     target_audience: Financial institutions, Healthcare organizations, Government agencies, Tech companies, Critical infrastructure,
-    trial_days: 30;
+    trial_days: 30";
 
     setup_time: 2 - 3 weeks,
     category: Quantum Cybersecurity,
-    real_service: true;
+    real_service: true";
 
     technology["Quantum Computing", "AI / ML", "Cryptography", "Threat Detection", Blockchain],
     integrations["SIEM systems", "Firewalls", "Identity providers", Compliance platforms],
@@ -7172,15 +7172,15 @@ market_size: $200B cybersecurity market,
 
     implementation_details: Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.,
     launch_date: 2024 - 07 - 01,
-    customers: 35;
+    customers: 35";
 
-    rating: 4 && 4.9;
+    rating: 4 && 4.9";
 
     reviews: 28,,
     market_siz,
   e: $200B cybersecurity market,
     growth_rat,
-  e: 180% annual growth,;
+  e: 180% annual growth,";
 
 varian,
   t: quantum - security - futuristic,
@@ -7208,7 +7208,7 @@ varian,
   g: 4 && 4.9,
     review,
   s: 28},
-  // Metaverse AI Development Platform;
+  // Metaverse AI Development Platform";
 
     i,
   d: metaverse - ai - development - platform,
@@ -7232,7 +7232,7 @@ varian,
       "Multi - platform support,
       "API for integration,
       Developer tools ],
-    popular: true;
+    popular: true";
 
     icon: ,
     color: from - purple - 600 to - pink - 700,
@@ -7240,11 +7240,11 @@ varian,
     link: https://ziontechgroup.com / metaverse - ai - development,
     market_position: Leading metaverse AI platform. 5 x more features than existing solutions.,
     target_audience: Gaming companies, VR / AR developers, Social platforms, Educational institutions, Entertainment companies,
-    trial_days: 30;
+    trial_days: 30";
 
     setup_time: 2 - 3 weeks,
     category: Metaverse & Virtual Reality,
-    real_service: true;
+    real_service: true";
 
     technology["AI / ML", "VR / AR", "3D Graphics", "Real - time Rendering", Blockchain],
     integrations["VR headsets", "Gaming platforms", "Social media", Payment systems],
@@ -7292,15 +7292,15 @@ market_size: $800B metaverse market,
 
     implementation_details: Complete metaverse AI platform with content generation, world building, and social interaction features.,
     launch_date: 2024 - 06 - 01,
-    customers: 45;
+    customers: 45";
 
-    rating: 4 && 4.7;
+    rating: 4 && 4.7";
 
     reviews: 32,,
     market_siz,
   e: $800B metaverse market,
     growth_rat,
-  e: 300% annual growth,;
+  e: 300% annual growth,";
 
 varian,
   t: metaverse - futuristic,
@@ -7328,7 +7328,7 @@ varian,
   g: 4 && 4.7,
     review,
   s: 32},
-  // Quantum Internet Security Platform;
+  // Quantum Internet Security Platform";
 
     i,
   d: quantum - internet - security - platform,
@@ -7352,7 +7352,7 @@ varian,
       "Performance analytics,
       "API for integration,
       24 / 7 monitoring ],
-    popular: true;
+    popular: true";
 
     icon: ,
     color: from - green - 600 to - emerald - 700,
@@ -7360,11 +7360,11 @@ varian,
     link: https://ziontechgroup.com / quantum - internet - security,
     market_position: First quantum internet security platform. 100 x more secure than traditional solutions.,
     target_audience: Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations,
-    trial_days: 30;
+    trial_days: 30";
 
     setup_time: 3 - 4 weeks,
     category: Quantum Internet & Security,
-    real_service: true;
+    real_service: true";
 
     technology["Quantum Computing", "AI / ML", "Network Security", "Cryptography", Internet Protocols],
     integrations["Network equipment", "Cloud platforms", "Security tools", Monitoring systems],
@@ -7412,15 +7412,15 @@ market_size: $150B internet security market,
 
     implementation_details: Complete quantum internet security platform with encryption, monitoring, and protection features.,
     launch_date: 2024 - 05 - 01,
-    customers: 22;
+    customers: 22";
 
-    rating: 4 && 4.8;
+    rating: 4 && 4.8";
 
     reviews: 19,,
     market_siz,
   e: $150B internet security market,
     growth_rat,
-  e: 200% annual growth,;
+  e: 200% annual growth,";
 
 varian,
   t: quantum - internet - futuristic,
@@ -7448,7 +7448,7 @@ varian,
   g: 4 && 4.8,
     review,
   s: 19},
-  // AI - Powered Legal Contract Analyzer;
+  // AI - Powered Legal Contract Analyzer";
 
     i,
   d: ai - legal - contract - analyzer,
@@ -7472,7 +7472,7 @@ varian,
       "Team collaboration,
       "API for integration,
       Mobile app support ],
-    popular: true;
+    popular: true";
 
     icon: ,
     color: from - indigo - 600 to - purple - 700,
@@ -7480,11 +7480,11 @@ varian,
     link: https://ziontechgroup.com / ai - legal - contract - analyzer,
     market_position: Leading AI legal platform. 10 x faster than traditional legal review.,
     target_audience: Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions,
-    trial_days: 30;
+    trial_days: 30";
 
     setup_time: 1 - 2 weeks,
     category: AI Legal Services,
-    real_service: true;
+    real_service: true";
 
     technology["AI / ML", "Natural Language Processing", "Legal Tech", "Document Analysis", Cloud Computing],
     integrations["Document management systems", "Legal databases", "E - signature platforms", CRM systems],
@@ -7532,15 +7532,15 @@ market_size: $25B legal tech market,
 
     implementation_details: Complete AI legal platform with document analysis, risk assessment, and compliance features.,
     launch_date: 2024 - 04 - 01,
-    customers: 65;
+    customers: 65";
 
-    rating: 4 && 4.6;
+    rating: 4 && 4.6";
 
     reviews: 45,,
     market_siz,
   e: $25B legal tech market,
     growth_rat,
-  e: 150% annual growth,;
+  e: 150% annual growth,";
 
 varian,
   t: ai - legal - futuristic,
@@ -7568,7 +7568,7 @@ varian,
   g: 4 && 4.6,
     review,
   s: 45},
-  // Quantum IoT Platform;
+  // Quantum IoT Platform";
 
     i,
   d: quantum - iot - platform,
@@ -7592,7 +7592,7 @@ varian,
       "API for integration,
       "Mobile app support,
       Cloud dashboard ],
-    popular: true;
+    popular: true";
 
     icon: ,
     color: from - blue - 600 to - cyan - 700,
@@ -7600,11 +7600,11 @@ varian,
     link: https://ziontechgroup.com / quantum - iot - platform,
     market_position: First quantum IoT platform. 100 x more secure than traditional solutions.,
     target_audience: IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics,
-    trial_days: 30;
+    trial_days: 30";
 
     setup_time: 2 - 3 weeks,
     category: Quantum IoT & Edge Computing,
-    real_service: true;
+    real_service: true";
 
     technology["Quantum Computing", "AI / ML", "IoT", "Edge Computing", Blockchain],
     integrations["IoT devices", "Cloud platforms", "Security tools", Analytics platforms],
@@ -7863,7 +7863,7 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [';
 
       Quantum Computing
       AI/ML
@@ -7872,7 +7872,7 @@ varian,
       Blockchain
     ]
     integration,
-  s: [;
+  s: [';
 
       IoT devices
       Cloud platforms
@@ -7880,9 +7880,9 @@ varian,
       Analytics platforms],
     useCases: [,
       First quantum IoT platform. 100x more secure than traditional solutions.,
-    target_audience: unknown;
+    target_audience: unknown';
 
-      IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics,    trial_days: 30;
+      IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics,    trial_days: 30';
 
     setup_time: 2 - 3 weeks,
     category: Quantum IoT & Edge Computing,
@@ -7919,11 +7919,11 @@ varian,
     link: https://ziontechgroup.com/quantum-iot-platform,
     marketPosition: 'First quantum IoT platform. 100 x more secure than traditional solutions.',    link: https://ziontechgroup.com/quantum-iot-platform,
     targetAudience: IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 2-3 weeks,
     category: Quantum IoT & Edge Computing,
-    realService: true;
+    realService: true';
 
     integrations: [IoT devicesCloud platformsSecurity toolsAnalytics platforms]
     useCases: [Smart citiesIndustrial IoTHealthcare monitoringConsumer devicesSecurity systems]
@@ -7934,7 +7934,7 @@ roi: 600% ROI through security improvements and operational efficiency,
     marketSize: $1.5T IoT market,
     growthRate: 250% annual growth,
     variant: quantum-iot-futuristic,
-    contactInfo: unknown;
+    contactInfo: unknown';
 
     competitors: ['AWS IoT ($5 / month)', 'Microsoft Azure IoT ($25 / month)'],    market_size: '$1.5T IoT market',    technology: [Quantum ComputingAI / MLIoTEdge ComputingBlockchain]
     integrations: [IoT devices_cloud platforms_security tools_analytics platforms]
@@ -7966,11 +7966,11 @@ roi: 600% ROI through security improvements and operational efficiency,
     implementationDetails: Complete quantum IoT platform with security, edge computing, and device management features.,
     launchDate: 2024-03-01,
     customers:
-        customers: 38;
+        customers: 38';
 
-    rating: 4.7;
+    rating: 4.7';
 
-    reviews: 26;
+    reviews: 26';
 
     ro,
   i: 600% ROI through security improvements and operational efficiency,
@@ -8004,7 +8004,7 @@ roi: 600% ROI through security improvements and operational efficiency,
     marketSiz,
   e: $1.5T IoT market,
     growthRat,
-  e: 250% annual growth,;
+  e: 250% annual growth,';
 
 varian,
   t: quantum-iot-futuristic,
@@ -8075,14 +8075,14 @@ varian,
 ;
 
 export const,
-  nextGenInnovativeServices: NextGenInnovativeService[] = [;
+  nextGenInnovativeServices: NextGenInnovativeService[] = [';
 
-  // Quantum AI & Advanced Computing;
+  // Quantum AI & Advanced Computing';
 
   {
-    id: quantum-ai-brain-computer-interface;
+    id: quantum-ai-brain-computer-interface';
 
-    name: Quantum AI Brain-Computer Interface;
+    name: Quantum AI Brain-Computer Interface';
 
     tagline: 'World\s first quantum-enhanced AI with human-like reasoning;
 
@@ -9317,14 +9317,14 @@ export const,
   nextGenInnovativeServices: NextGenInnovativeService[] = [;
 
     review,
-  s: 26;
+  s: 26";
 
-;
+";
 
 export const,
-  nextGenInnovativeServices: NextGenInnovativeService[] = [;
+  nextGenInnovativeServices: NextGenInnovativeService[] = [";
 
-  // Quantum AI & Advanced Computing;
+  // Quantum AI & Advanced Computing";
 
   {
     id: quantum-ai-brain-computer-interface,
@@ -9343,7 +9343,7 @@ export const,
       API for research integration,
       Compliance with medical standards,
       24/7 quantum AI support ],
-    popular: true;
+    popular: true";
 
     icon: ,
     color: from-purple-600 to-indigo-700,
@@ -9351,11 +9351,11 @@ export const,
     link: https://ziontechgroup.com/quantum-ai-brain-computer-interface,
     marketPosition: Leading edge technology with no direct competitors. 10 x more advanced than existing BCI solutions.,
     targetAudience: Research institutions, Medical centers, Defense contractors, Tech companies, Universities,
-    trialDays: 30;
+    trialDays: 30";
 
     setupTime: 2-4 weeks,
     category: Quantum AI & Neuroscience,
-    realService: true;
+    realService: true";
 
     technology["Quantum Computing", "Neural Networks", "Brain-Computer Interface", "AI/ML", Quantum Encryption],
     integrations["Research APIs", "Medical devices", "Cloud platforms", Data analysis tools],
@@ -9383,7 +9383,7 @@ marketSize: $1.5B BCI market,
     reviews: 8},
   // Space Technology Platform;
 
-  {;
+  {";
 
     id: space-technology-platform,
     name: Space Technology Platform,
@@ -9401,7 +9401,7 @@ marketSize: $1.5B BCI market,
       Mission analytics dashboard,
       Regulatory compliance tools,
       Multi-satellite operations ],
-    popular: true;
+    popular: true";
 
     icon: ,
     color: from-cyan-600 to-blue-700,
@@ -9409,11 +9409,11 @@ marketSize: $1.5B BCI market,
     link: https://ziontechgroup.com/space-technology,
     marketPosition: First comprehensive commercial space platform. 5 x more features than existing solutions.,
     targetAudience: Space companies, Satellite operators, Launch providers, Government agencies, Research institutions,
-    trialDays: 30;
+    trialDays: 30";
 
     setupTime: 4-6 weeks,
     category: Space Technology,
-    realService: true;
+    realService: true";
 
     technology["Satellite Technology", "Orbital Mechanics", "Space Weather", "AI/ML", Cloud Computing],
     integrations["SpaceX APIs", "NASA data", "Weather services", "Ground stations", Launch providers],
@@ -9441,7 +9441,7 @@ marketSize: $469B space economy,
     reviews: 12},
   // Biotech AI Platform;
 
-  {;
+  {";
 
     id: biotech-ai-platform,
     name: Biotech AI Platform,
@@ -9459,7 +9459,7 @@ marketSize: $469B space economy,
       Advanced analytics dashboard,
       API for research integration,
       Multi-omics data analysis ],
-    popular: true;
+    popular: true";
 
     icon: ,
     color: from-emerald-600 to-teal-700,
@@ -9467,11 +9467,11 @@ marketSize: $469B space economy,
     link: https://ziontechgroup.com/biotech-ai,
     marketPosition: Leading AI drug discovery platform. 5 x faster than traditional methods.,
     targetAudience: Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs,
-    trialDays: 30;
+    trialDays: 30";
 
     setupTime: 2-3 weeks,
     category: Biotech & Healthcare AI,
-    realService: true;
+    realService: true";
 
     technology["AI/ML", "Quantum Computing", "Bioinformatics", "Genomics", Drug Discovery],
     integrations["Research databases", "Lab equipment", "Clinical trial systems", Regulatory databases],
@@ -9499,7 +9499,7 @@ marketSize: $150B AI in healthcare,
     reviews: 18},
   // Quantum Financial Trading Platform;
 
-  {;
+  {";
 
     id: quantum-financial-trading,
     name: Quantum Financial Trading Platform,
@@ -9517,7 +9517,7 @@ marketSize: $150B AI in healthcare,
       Regulatory compliance,
       Performance analytics,
       API for integration ],
-    popular: true;
+    popular: true";
 
     icon: ,
     color: from-yellow-600 to-orange-700,
@@ -9525,11 +9525,11 @@ marketSize: $150B AI in healthcare,
     link: https://ziontechgroup.com/quantum-financial-trading,
     marketPosition: First quantum AI trading platform. 100 x faster than traditional systems.,
     targetAudience: Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions,
-    trialDays: 30;
+    trialDays: 30";
 
     setupTime: 3-4 weeks,
     category: Quantum Finance & Trading,
-    realService: true;
+    realService: true";
 
     technology["Quantum Computing", "AI/ML", "Algorithmic Trading", "High-Frequency Trading", Blockchain],
     integrations["Trading platforms", "Market data feeds", "Risk management systems", Portfolio systems],
@@ -9557,7 +9557,7 @@ marketSize: $15T algorithmic trading,
     reviews: 15},
   // Autonomous Vehicle AI Platform;
 
-  {;
+  {";
 
     id: autonomous-vehicle-ai-platform,
     name: Autonomous Vehicle AI Platform,
@@ -9575,7 +9575,7 @@ marketSize: $15T algorithmic trading,
       Fleet management,
       Performance analytics,
       API for integration ],
-    popular: true;
+    popular: true";
 
     icon: ,
     color: from-blue-600 to-indigo-700,
@@ -9583,11 +9583,11 @@ marketSize: $15T algorithmic trading,
     link: https://ziontechgroup.com/autonomous-vehicle-ai,
     marketPosition: Leading autonomous vehicle AI platform. 10 x more accurate than existing solutions.,
     targetAudience: Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies,
-    trialDays: 30;
+    trialDays: 30";
 
     setupTime: 4-6 weeks,
     category: Autonomous Vehicles & Robotics,
-    realService: true;
+    realService: true";
 
     technology["Computer Vision", "AI/ML", "Robotics", "Sensor Fusion", Edge Computing],
     integrations["Vehicle systems", "Drone platforms", "Robotics hardware", Fleet management systems],
@@ -9615,7 +9615,7 @@ marketSize: $2.5T autonomous vehicle market,
     reviews: 22},
   // Quantum Cybersecurity Platform;
 
-  {;
+  {";
 
     id: quantum-cybersecurity-platform,
     name: Quantum Cybersecurity Platform,
@@ -9633,7 +9633,7 @@ marketSize: $2.5T autonomous vehicle market,
       Vulnerability assessment,
       Security automation,
       API for integration ],
-    popular: true;
+    popular: true";
 
     icon: ,
     color: from-red-600 to-pink-700,
@@ -9641,11 +9641,11 @@ marketSize: $2.5T autonomous vehicle market,
     link: https://ziontechgroup.com/quantum-cybersecurity,
     marketPosition: First quantum-resistant cybersecurity platform. 100 x more secure than traditional solutions.,
     targetAudience: Financial institutions, Healthcare organizations, Government agencies, Tech companies, Critical infrastructure,
-    trialDays: 30;
+    trialDays: 30";
 
     setupTime: 2-3 weeks,
     category: Quantum Cybersecurity,
-    realService: true;
+    realService: true";
 
     technology["Quantum Computing", "AI/ML", "Cryptography", "Threat Detection", Blockchain],
     integrations["SIEM systems", "Firewalls", "Identity providers", Compliance platforms],
@@ -9673,7 +9673,7 @@ marketSize: $200B cybersecurity market,
     reviews: 28},
   // Metaverse AI Development Platform;
 
-  {;
+  {";
 
     id: metaverse-ai-development-platform,
     name: Metaverse AI Development Platform,
@@ -9691,7 +9691,7 @@ marketSize: $200B cybersecurity market,
       Multi-platform support,
       API for integration,
       Developer tools ],
-    popular: true;
+    popular: true";
 
     icon: ,
     color: from-purple-600 to-pink-700,
@@ -9699,11 +9699,11 @@ marketSize: $200B cybersecurity market,
     link: https://ziontechgroup.com/metaverse-ai-development,
     marketPosition: Leading metaverse AI platform. 5 x more features than existing solutions.,
     targetAudience: Gaming companies, VR/AR developers, Social platforms, Educational institutions, Entertainment companies,
-    trialDays: 30;
+    trialDays: 30";
 
     setupTime: 2-3 weeks,
     category: Metaverse & Virtual Reality,
-    realService: true;
+    realService: true";
 
     technology["AI/ML", "VR/AR", "3D Graphics", "Real-time Rendering", Blockchain],
     integrations["VR headsets", "Gaming platforms", "Social media", Payment systems],
@@ -9731,7 +9731,7 @@ marketSize: $800B metaverse market,
     reviews: 32},
   // Quantum Internet Security Platform;
 
-  {;
+  {";
 
     id: quantum-internet-security-platform,
     name: Quantum Internet Security Platform,
@@ -9749,7 +9749,7 @@ marketSize: $800B metaverse market,
       Performance analytics,
       API for integration,
       24/7 monitoring ],
-    popular: true;
+    popular: true";
 
     icon: ,
     color: from-green-600 to-emerald-700,
@@ -9757,11 +9757,11 @@ marketSize: $800B metaverse market,
     link: https://ziontechgroup.com/quantum-internet-security,
     marketPosition: First quantum internet security platform. 100 x more secure than traditional solutions.,
     targetAudience: Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations,
-    trialDays: 30;
+    trialDays: 30";
 
     setupTime: 3-4 weeks,
     category: Quantum Internet & Security,
-    realService: true;
+    realService: true";
 
     technology["Quantum Computing", "AI/ML", "Network Security", "Cryptography", Internet Protocols],
     integrations["Network equipment", "Cloud platforms", "Security tools", Monitoring systems],
@@ -9789,7 +9789,7 @@ marketSize: $150B internet security market,
     reviews: 19},
   // AI-Powered Legal Contract Analyzer;
 
-  {;
+  {";
 
     id: ai-legal-contract-analyzer,
     name: AI Legal Contract Analyzer,
@@ -9807,7 +9807,7 @@ marketSize: $150B internet security market,
       Team collaboration,
       API for integration,
       Mobile app support ],
-    popular: true;
+    popular: true";
 
     icon: ,
     color: from-indigo-600 to-purple-700,
@@ -9815,11 +9815,11 @@ marketSize: $150B internet security market,
     link: https://ziontechgroup.com/ai-legal-contract-analyzer,
     marketPosition: Leading AI legal platform. 10 x faster than traditional legal review.,
     targetAudience: Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions,
-    trialDays: 30;
+    trialDays: 30";
 
     setupTime: 1-2 weeks,
     category: AI Legal Services,
-    realService: true;
+    realService: true";
 
     technology["AI/ML", "Natural Language Processing", "Legal Tech", "Document Analysis", Cloud Computing],
     integrations["Document management systems", "Legal databases", "E-signature platforms", CRM systems],
@@ -9847,7 +9847,7 @@ marketSize: $25B legal tech market,
     reviews: 45},
   // Quantum IoT Platform;
 
-  {;
+  {";
 
     id: quantum-iot-platform,
     name: Quantum IoT Platform,
@@ -9865,7 +9865,7 @@ marketSize: $25B legal tech market,
       API for integration,
       Mobile app support,
       Cloud dashboard ],
-    popular: true;
+    popular: true";
 
     icon: ,
     color: from-blue-600 to-cyan-700,
@@ -9873,11 +9873,11 @@ marketSize: $25B legal tech market,
     link: https://ziontechgroup.com/quantum-iot-platform,
     marketPosition: First quantum IoT platform. 100 x more secure than traditional solutions.,
     targetAudience: IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics,
-    trialDays: 30;
+    trialDays: 30";
 
     setupTime: 2-3 weeks,
     category: Quantum IoT & Edge Computing,
-    realService: true;
+    realService: true";
 
     technology["Quantum Computing", "AI/ML", "IoT", "Edge Computing", Blockchain],
     integrations["IoT devices", "Cloud platforms", "Security tools", Analytics platforms],
@@ -10050,7 +10050,7 @@ marketSize: $1.5T IoT market,
   g: 4.7,
     review,
   s: 32},
-  // Quantum Internet Security Platform;
+  // Quantum Internet Security Platform';
 
   {/* TODO: Fix JSX expression */}
 
@@ -10069,7 +10069,7 @@ marketSize: $1.5T IoT market,
   g: 4.8,
     review,
   s: 19},
-  // AI-Powered Legal Contract Analyzer;
+  // AI-Powered Legal Contract Analyzer';
 
   {/* TODO: Fix JSX expression */}
 
@@ -10088,7 +10088,7 @@ marketSize: $1.5T IoT market,
   g: 4.6,
     review,
   s: 45},
-  // Quantum IoT Platform;
+  // Quantum IoT Platform';
 
   {/* TODO: Fix JSX expression */}
 
@@ -10124,7 +10124,7 @@ marketSize: $1.5T IoT market,
 
 ]}
 
-];
+]';
 
 export const,
   nextGenInnovativeServices: NextGenInnovativeService[] = [ // Quantum AI & Advanced Computing,
@@ -10239,10 +10239,10 @@ export const,
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
+  s: string'"; launchDat,
+  e: string'"'"; customer,
+  s: number'"'"'"; ratin,
+  g: number'"'"'"'"; review,
   s: number} review,
   s: number, mobil,
   e: string,
@@ -10262,11 +10262,11 @@ export const,
   e: '$2,999 perio,
   d: /month descriptio,
   n:' Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities. feature,
-  s: [' 'Quantum neural signal processing'' 'Real-time brain activity monitoring'' 'AI-powered cognitive enhancement'' 'Neural pattern recognition'' 'Secure quantum encryption'' 'Multi-modal interface support'' 'Advanced analytics dashboard'' 'API for research integration'' 'Compliance with medical standards'' 24/7 quantum AI support], pric,
+  s: [' 'Quantum neural signal processing' 'Real-time brain activity monitoring' 'AI-powered cognitive enhancement' 'Neural pattern recognition' 'Secure quantum encryption' 'Multi-modal interface support' 'Advanced analytics dashboard' 'API for research integration' 'Compliance with medical standards' 24/7 quantum AI support], pric,
   e: '$2,999 perio,
   d: '/month descriptio,
   n: Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities. feature,
-  s: [' 'Quantum neural signal processingReal-time brain activity monitoringAI-powered cognitive enhancementNeural pattern recognitionSecure quantum encryptionMulti-modal interface supportAdvanced analytics dashboardAPI for research integration'' Compliance with medical standards24/7 quantum AI support ] popula,
+  s: [' 'Quantum neural signal processingReal-time brain activity monitoringAI-powered cognitive enhancementNeural pattern recognitionSecure quantum encryptionMulti-modal interface supportAdvanced analytics dashboardAPI for research integration' Compliance with medical standards24/7 quantum AI support ] popula,
   r: true ico,
   n: '🧠 colo,
   r: 'from-purple-600 to-indigo-700 textColo,
@@ -10285,9 +10285,9 @@ export const,
   e: '2-4 weeks categor,
   y: Quantum AI & Neuroscience realServic,
   e: true,
-  technology: [' 'Quantum Computing'' 'Neural Networks'' 'Brain-Computer Interface'' 'AI/ML'' Quantum Encryption ] integration,
-  s: [' 'Research APIs'' 'Medical devices'' 'Cloud platforms'' Data analysis tools ] useCase,
-  s: [' 'Medical research'' 'Cognitive enhancement'' 'Neural rehabilitation'' 'AI development'' 'Defense applications ] ro,
+  technology: [' 'Quantum Computing' 'Neural Networks' 'Brain-Computer Interface' 'AI/ML' Quantum Encryption ] integration,
+  s: [' 'Research APIs' 'Medical devices' 'Cloud platforms' Data analysis tools ] useCase,
+  s: [' 'Medical research' 'Cognitive enhancement' 'Neural rehabilitation' 'AI development' 'Defense applications ] ro,
   i: '1000% ROI within 6 months through breakthrough discoveries and patents competitor,
   s: ['Neuralink ($10)000+/month)', Kernel ($50)000+/month)], marketSiz,
   e: $1.5B BCI market, technolog,
@@ -10340,7 +10340,7 @@ export const,
   e: 2024 - 12 - 01, customer,
   s: 15, ratin,
   g: 4.9, review,
-  s: 8}, // Space Technology Platform;  i,
+  s: 8}, // Space Technology Platform';  i,
   d: 'space - technology - platform,  nam,
   e: 'Space Technology Platform, taglin,
   e: 'Complete space mission management and satellite operations, pric,
@@ -10405,9 +10405,9 @@ export const,
   e: '$5,999 perio,
   d: /month descriptio,
   n:' Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management. feature,
-  s: [' 'Satellite mission planning'' 'Orbital mechanics calculations'' 'Real-time satellite tracking'' 'Space weather monitoring'' 'Launch vehicle integration'' 'Ground station management'' 'Space debris tracking'' 'Mission analytics dashboard'' 'Regulatory compliance tools'' Multi-satellite operations], descriptio,
+  s: [' 'Satellite mission planning' 'Orbital mechanics calculations' 'Real-time satellite tracking' 'Space weather monitoring' 'Launch vehicle integration' 'Ground station management' 'Space debris tracking' 'Mission analytics dashboard' 'Regulatory compliance tools' Multi-satellite operations], descriptio,
   n: Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management. feature,
-  s: [' 'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard'' Regulatory compliance toolsMulti-satellite operations popula,
+  s: [' 'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard' Regulatory compliance toolsMulti-satellite operations popula,
   r: true ico,
   n: '🚀 colo,
   r: 'from-cyan-600 to-blue-700 textColo,
@@ -10426,9 +10426,9 @@ export const,
   e: '4-6 weeks categor,
   y: Space Technology realServic,
   e: true,
-  technology: [' 'Satellite Technology'' 'Orbital Mechanics'' 'Space Weather'' 'AI/ML'' Cloud Computing ] integration,
-  s: [' 'SpaceX APIs'' 'NASA data'' 'Weather services'' 'Ground stations'' Launch providers ] useCase,
-  s: [' 'Satellite operations'' 'Mission planning'' 'Space infrastructure'' 'Launch coordination'' 'Space research ] ro,
+  technology: [' 'Satellite Technology' 'Orbital Mechanics' 'Space Weather' 'AI/ML' Cloud Computing ] integration,
+  s: [' 'SpaceX APIs' 'NASA data' 'Weather services' 'Ground stations' Launch providers ] useCase,
+  s: [' 'Satellite operations' 'Mission planning' 'Space infrastructure' 'Launch coordination' 'Space research ] ro,
   i: '500% ROI through operational efficiency and mission success rates competitor,
   s: ['SpaceX Starlink ($99/month)', OneWeb ($50/month)], marketSiz,
   e: $469B space economy, technolog,
@@ -10464,7 +10464,7 @@ export const,
   n: Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management., feature,
   s: [ ' 'Satellite mission planning',' 'Orbital mechanics calculations',' 'Real-time satellite tracking',' 'Space weather monitoring',' 'Launch vehicle integration',' 'Ground station management',' 'Space debris tracking',' 'Mission analytics dashboard',' 'Regulatory compliance tools',' Multi-satellite operations], descriptio,
   n: Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management., feature,
-  s: [' 'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',' 'Regulatory compliance toolsMulti-satellite operations'' 'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',' Regulatory compliance toolsMulti-satellite operations ], popula,
+  s: [' 'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',' 'Regulatory compliance toolsMulti-satellite operations' 'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',' Regulatory compliance toolsMulti-satellite operations ], popula,
   r: true, ico,
   n: '🚀, colo,
   r: 'from-cyan-600 to-blue-700, textColo,
@@ -10527,7 +10527,7 @@ export const,
   e: 2024 - 11 - 15, customer,
   s: 8, ratin,
   g: 4.8, review,
-  s: 12}, // Biotech AI Platform;  i,
+  s: 12}, // Biotech AI Platform';  i,
   d: 'biotech - ai - platform,  nam,
   e: 'Biotech AI Platform, taglin,
   e: 'AI - powered drug discovery and genetic engineering, pric,
@@ -10592,9 +10592,9 @@ export const,
   e: '$3,999 perio,
   d: /month descriptio,
   n:' Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing. feature,
-  s: [' 'AI drug discovery algorithms'' 'Genetic sequence analysis'' 'Protein folding prediction'' 'Drug interaction modeling'' 'Clinical trial optimization'' 'Regulatory compliance tools'' 'Research collaboration platform'' 'Advanced analytics dashboard'' 'API for research integration'' Multi-omics data analysis], descriptio,
+  s: [' 'AI drug discovery algorithms' 'Genetic sequence analysis' 'Protein folding prediction' 'Drug interaction modeling' 'Clinical trial optimization' 'Regulatory compliance tools' 'Research collaboration platform' 'Advanced analytics dashboard' 'API for research integration' Multi-omics data analysis], descriptio,
   n: Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing. feature,
-  s: [' 'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard'' API for research integrationMulti-omics data analysis popula,
+  s: [' 'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard' API for research integrationMulti-omics data analysis popula,
   r: true ico,
   n: '🧬 colo,
   r: 'from-emerald-600 to-teal-700 textColo,
@@ -10613,9 +10613,9 @@ export const,
   e: '2-3 weeks categor,
   y: Biotech & Healthcare AI realServic,
   e: true,
-  technology: [' 'AI/ML'' 'Quantum Computing'' 'Bioinformatics'' 'Genomics'' Drug Discovery ] integration,
-  s: [' 'Research databases'' 'Lab equipment'' 'Clinical trial systems'' Regulatory databases ] useCase,
-  s: [' 'Drug discovery'' 'Genetic research'' 'Clinical trials'' 'Personalized medicine'' 'Disease research ] ro,
+  technology: [' 'AI/ML' 'Quantum Computing' 'Bioinformatics' 'Genomics' Drug Discovery ] integration,
+  s: [' 'Research databases' 'Lab equipment' 'Clinical trial systems' Regulatory databases ] useCase,
+  s: [' 'Drug discovery' 'Genetic research' 'Clinical trials' 'Personalized medicine' 'Disease research ] ro,
   i: '1000% ROI through accelerated drug development and patent generation competitor,
   s: ['Insitro ($100M+ funding)', Recursion ($2B+ funding)], marketSiz,
   e: $150B AI in healthcare, technolog,
@@ -10651,7 +10651,7 @@ export const,
   n: Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing., feature,
   s: [ ' 'AI drug discovery algorithms',' 'Genetic sequence analysis',' 'Protein folding prediction',' 'Drug interaction modeling',' 'Clinical trial optimization',' 'Regulatory compliance tools',' 'Research collaboration platform',' 'Advanced analytics dashboard',' 'API for research integration',' Multi-omics data analysis], descriptio,
   n: Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing., feature,
-  s: [' 'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard',' 'API for research integrationMulti-omics data analysis'' 'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard',' API for research integrationMulti-omics data analysis ], popula,
+  s: [' 'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard',' 'API for research integrationMulti-omics data analysis' 'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard',' API for research integrationMulti-omics data analysis ], popula,
   r: true, ico,
   n: '🧬, colo,
   r: 'from-emerald-600 to-teal-700, textColo,
@@ -10714,7 +10714,7 @@ export const,
   e: 2024 - 10 - 01, customer,
   s: 25, ratin,
   g: 4.7, review,
-  s: 18}, // Quantum Financial Trading Platform;  i,
+  s: 18}, // Quantum Financial Trading Platform';  i,
   d: 'quantum - financial - trading,  nam,
   e: 'Quantum Financial Trading Platform, taglin,
   e: 'Quantum AI - powered algorithmic trading with nanosecond precision, pric,
@@ -10778,9 +10778,9 @@ export const,
   e: '$7,999 perio,
   d: /month descriptio,
   n:' Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis. feature,
-  s: [' 'Quantum AI trading algorithms'' 'Nanosecond execution speed'' 'Real-time market analysis'' 'Risk management tools'' 'Portfolio optimization'' 'Multi-asset trading'' 'Advanced backtesting'' 'Regulatory compliance'' 'Performance analytics'' API for integration], descriptio,
+  s: [' 'Quantum AI trading algorithms' 'Nanosecond execution speed' 'Real-time market analysis' 'Risk management tools' 'Portfolio optimization' 'Multi-asset trading' 'Advanced backtesting' 'Regulatory compliance' 'Performance analytics' API for integration], descriptio,
   n: Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis. feature,
-  s: [' 'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance'' Performance analyticsAPI for integration popula,
+  s: [' 'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance' Performance analyticsAPI for integration popula,
   r: true ico,
   n: '💰 colo,
   r: 'from-yellow-600 to-orange-700 textColo,
@@ -10799,11 +10799,11 @@ export const,
   e: '3-4 weeks categor,
   y: Quantum Finance & Trading realServic,
   e: true,
-  technology: [' 'Quantum Computing'' 'AI/ML'' 'Algorithmic Trading'' 'High-Frequency Trading'' Blockchain ] integration,
-  s: [' 'Trading platforms'' 'Market data feeds'' 'Risk management systems'' Portfolio systems ] useCase,
-  s: [' 'Algorithmic trading'' 'Portfolio optimization'' 'Risk management'' 'Market analysis'' 'High-frequency trading ] ro,
+  technology: [' 'Quantum Computing' 'AI/ML' 'Algorithmic Trading' 'High-Frequency Trading' Blockchain ] integration,
+  s: [' 'Trading platforms' 'Market data feeds' 'Risk management systems' Portfolio systems ] useCase,
+  s: [' 'Algorithmic trading' 'Portfolio optimization' 'Risk management' 'Market analysis' 'High-frequency trading ] ro,
   i: 1000%+ ROI through superior trading performance and market timing competitor,
-  s: [' 'Renaissance Technologies ($100B+ AUM)'' 'Two Sigma ($60B+ AUM) ], marketSiz,
+  s: [' 'Renaissance Technologies ($100B+ AUM)' 'Two Sigma ($60B+ AUM) ], marketSiz,
   e: $15T algorithmic trading, technolog,
   y: ['Quantum ComputingAI/MLAlgorithmic TradingHigh-Frequency TradingBlockchain] integration,
   s: ['Trading platformsMarket data feedsRisk management systemsPortfolio systems] useCase,
@@ -10837,7 +10837,7 @@ export const,
   n: Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis., feature,
   s: [ ' 'Quantum AI trading algorithms',' 'Nanosecond execution speed',' 'Real-time market analysis',' 'Risk management tools',' 'Portfolio optimization',' 'Multi-asset trading',' 'Advanced backtesting',' 'Regulatory compliance',' 'Performance analytics',' API for integration], descriptio,
   n: Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis., feature,
-  s: [' 'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance',' 'Performance analyticsAPI for integration'' 'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance',' Performance analyticsAPI for integration ], popula,
+  s: [' 'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance',' 'Performance analyticsAPI for integration' 'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance',' Performance analyticsAPI for integration ], popula,
   r: true, ico,
   n: '💰, colo,
   r: 'from-yellow-600 to-orange-700, textColo,
@@ -10900,7 +10900,7 @@ export const,
   e: 2024 - 09 - 01, customer,
   s: 12, ratin,
   g: 4.9, review,
-  s: 15}, // Autonomous Vehicle AI Platform;  i,
+  s: 15}, // Autonomous Vehicle AI Platform';  i,
   d: 'autonomous - vehicle - ai - platform,  nam,
   e: 'Autonomous Vehicle AI Platform, taglin,
   e: 'Complete AI platform for autonomous vehicles and robotics, pric,
@@ -10964,9 +10964,9 @@ export const,
   e: '$4,999 perio,
   d: /month descriptio,
   n:' Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities. feature,
-  s: [' 'Advanced computer vision'' 'Real-time decision making'' 'Sensor fusion algorithms'' 'Path planning & navigation'' 'Obstacle detection & avoidance'' 'Traffic prediction'' 'Safety systems'' 'Fleet management'' 'Performance analytics'' API for integration], descriptio,
+  s: [' 'Advanced computer vision' 'Real-time decision making' 'Sensor fusion algorithms' 'Path planning & navigation' 'Obstacle detection & avoidance' 'Traffic prediction' 'Safety systems' 'Fleet management' 'Performance analytics' API for integration], descriptio,
   n: Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities. feature,
-  s: [' 'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management'' Performance analyticsAPI for integration popula,
+  s: [' 'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management' Performance analyticsAPI for integration popula,
   r: true ico,
   n: '🚗 colo,
   r: 'from-blue-600 to-indigo-700 textColo,
@@ -10985,9 +10985,9 @@ export const,
   e: '4-6 weeks categor,
   y: Autonomous Vehicles & Robotics realServic,
   e: true,
-  technology: [' 'Computer Vision'' 'AI/ML'' 'Robotics'' 'Sensor Fusion'' Edge Computing ] integration,
-  s: [' 'Vehicle systems'' 'Drone platforms'' 'Robotics hardware'' Fleet management systems ] useCase,
-  s: [' 'Self-driving cars'' 'Autonomous drones'' 'Industrial robotics'' 'Logistics automation'' 'Smart cities ] ro,
+  technology: [' 'Computer Vision' 'AI/ML' 'Robotics' 'Sensor Fusion' Edge Computing ] integration,
+  s: [' 'Vehicle systems' 'Drone platforms' 'Robotics hardware' Fleet management systems ] useCase,
+  s: [' 'Self-driving cars' 'Autonomous drones' 'Industrial robotics' 'Logistics automation' 'Smart cities ] ro,
   i: '800% ROI through operational efficiency and safety improvements competitor,
   s: ['Waymo ($1B+ investment)', Tesla Autopilot ($12)000)], marketSiz,
   e: $2.5T autonomous vehicle market, technolog,
@@ -11023,7 +11023,7 @@ export const,
   n: Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities., feature,
   s: [ ' 'Advanced computer vision',' 'Real-time decision making',' 'Sensor fusion algorithms',' 'Path planning & navigation',' 'Obstacle detection & avoidance',' 'Traffic prediction',' 'Safety systems',' 'Fleet management',' 'Performance analytics',' API for integration], descriptio,
   n: Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities., feature,
-  s: [' 'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management',' 'Performance analyticsAPI for integration'' 'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management',' Performance analyticsAPI for integration ], popula,
+  s: [' 'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management',' 'Performance analyticsAPI for integration' 'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management',' Performance analyticsAPI for integration ], popula,
   r: true, ico,
   n: '🚗, colo,
   r: 'from-blue-600 to-indigo-700, textColo,
@@ -11086,7 +11086,7 @@ export const,
   e: 2024 - 08 - 01, customer,
   s: 18, ratin,
   g: 4.8, review,
-  s: 22}, // Quantum Cybersecurity Platform;  i,
+  s: 22}, // Quantum Cybersecurity Platform'";  i,
   d: 'quantum - cybersecurity - platform,  nam,
   e: 'Quantum Cybersecurity Platform, taglin,
   e: 'Quantum - resistant cybersecurity with AI threat detection, pric,
@@ -11140,9 +11140,9 @@ export const,
   e: '$3,999 perio,
   d: /month descriptio,
   n:' Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy. feature,
-  s: [' 'Quantum-resistant encryption'' 'AI threat detection'' 'Real-time monitoring'' 'Advanced analytics'' 'Incident response'' 'Compliance tools'' 'Threat intelligence'' 'Vulnerability assessment'' 'Security automation'' API for integration], descriptio,
+  s: [' 'Quantum-resistant encryption' 'AI threat detection' 'Real-time monitoring' 'Advanced analytics' 'Incident response' 'Compliance tools' 'Threat intelligence' 'Vulnerability assessment' 'Security automation' API for integration], descriptio,
   n: Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy. feature,
-  s: [' 'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment'' Security automationAPI for integration popula,
+  s: [' 'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment' Security automationAPI for integration popula,
   r: true ico,
   n: '🔒 colo,
   r: 'from-red-600 to-pink-700 textColo,
@@ -11161,11 +11161,11 @@ export const,
   e: '2-3 weeks categor,
   y: Quantum Cybersecurity realServic,
   e: true,
-  technology: [' 'Quantum Computing'' 'AI/ML'' 'Cryptography'' 'Threat Detection'' Blockchain ] integration,
-  s: [' 'SIEM systems'' 'Firewalls'' 'Identity providers'' Compliance platforms ] useCase,
-  s: [' 'Data protection'' 'Threat detection'' 'Incident response'' 'Compliance'' 'Risk management ] ro,
+  technology: [' 'Quantum Computing' 'AI/ML' 'Cryptography' 'Threat Detection' Blockchain ] integration,
+  s: [' 'SIEM systems' 'Firewalls' 'Identity providers' Compliance platforms ] useCase,
+  s: [' 'Data protection' 'Threat detection' 'Incident response' 'Compliance' 'Risk management ] ro,
   i: 600% ROI through security improvements and risk reduction competitor,
-  s: [' 'Palo Alto Networks ($1)000+/month)'' 'CrowdStrike ($500+/month) ], marketSiz,
+  s: [' 'Palo Alto Networks ($1)000+/month)' 'CrowdStrike ($500+/month) ], marketSiz,
   e: $200B cybersecurity market, technolog,
   y: ['Quantum ComputingAI/MLCryptographyThreat DetectionBlockchain] integration,
   s: ['SIEM systemsFirewallsIdentity providersCompliance platforms] useCase,
@@ -11199,7 +11199,7 @@ export const,
   n: Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy., feature,
   s: [ ' 'Quantum-resistant encryption',' 'AI threat detection',' 'Real-time monitoring',' 'Advanced analytics',' 'Incident response',' 'Compliance tools',' 'Threat intelligence',' 'Vulnerability assessment',' 'Security automation',' API for integration], descriptio,
   n: Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy., feature,
-  s: [' 'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment',' 'Security automationAPI for integration'' 'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment',' Security automationAPI for integration ], popula,
+  s: [' 'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment',' 'Security automationAPI for integration' 'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment',' Security automationAPI for integration ], popula,
   r: true, ico,
   n: '🔒, colo,
   r: 'from-red-600 to-pink-700, textColo,
@@ -11262,7 +11262,7 @@ export const,
   e: 2024 - 07 - 01, customer,
   s: 35, ratin,
   g: 4.9, review,
-  s: 28}, // Metaverse AI Development Platform;  i,
+  s: 28}, // Metaverse AI Development Platform'"'";  i,
   d: 'metaverse - ai - development - platform,  nam,
   e: 'Metaverse AI Development Platform, taglin,
   e: 'Complete AI platform for metaverse and virtual world creation, pric,
@@ -11326,9 +11326,9 @@ export const,
   e: '$2,999 perio,
   d: /month descriptio,
   n:' Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems. feature,
-  s: [' 'AI content generation'' 'Virtual world building'' 'Real-time interactions'' 'Avatar customization'' 'Social features'' 'Monetization tools'' 'Analytics dashboard'' 'Multi-platform support'' 'API for integration'' Developer tools], descriptio,
+  s: [' 'AI content generation' 'Virtual world building' 'Real-time interactions' 'Avatar customization' 'Social features' 'Monetization tools' 'Analytics dashboard' 'Multi-platform support' 'API for integration' Developer tools], descriptio,
   n: Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems. feature,
-  s: [' 'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support'' API for integrationDeveloper tools popula,
+  s: [' 'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support' API for integrationDeveloper tools popula,
   r: true ico,
   n: '🌐 colo,
   r: 'from-purple-600 to-pink-700 textColo,
@@ -11347,9 +11347,9 @@ export const,
   e: '2-3 weeks categor,
   y: Metaverse & Virtual Reality realServic,
   e: true,
-  technology: [' 'AI/ML'' 'VR/AR'' '3D Graphics'' 'Real-time Rendering'' Blockchain ] integration,
-  s: [' 'VR headsets'' 'Gaming platforms'' 'Social media'' Payment systems ] useCase,
-  s: [' 'Virtual worlds'' 'Gaming experiences'' 'Social platforms'' 'Education'' 'Entertainment ] ro,
+  technology: [' 'AI/ML' 'VR/AR' '3D Graphics' 'Real-time Rendering' Blockchain ] integration,
+  s: [' 'VR headsets' 'Gaming platforms' 'Social media' Payment systems ] useCase,
+  s: [' 'Virtual worlds' 'Gaming experiences' 'Social platforms' 'Education' 'Entertainment ] ro,
   i: '700% ROI through user engagement and monetization competitor,
   s: ['Meta Horizon ($30/month)', Roblox ($25/month)], marketSiz,
   e: $800B metaverse market, technolog,
@@ -11385,7 +11385,7 @@ export const,
   n: Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems., feature,
   s: [ ' 'AI content generation',' 'Virtual world building',' 'Real-time interactions',' 'Avatar customization',' 'Social features',' 'Monetization tools',' 'Analytics dashboard',' 'Multi-platform support',' 'API for integration',' Developer tools], descriptio,
   n: Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems., feature,
-  s: [' 'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support',' 'API for integrationDeveloper tools'' 'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support',' API for integrationDeveloper tools ], popula,
+  s: [' 'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support',' 'API for integrationDeveloper tools' 'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support',' API for integrationDeveloper tools ], popula,
   r: true, ico,
   n: '🌐, colo,
   r: 'from-purple-600 to-pink-700, textColo,
@@ -11448,7 +11448,7 @@ export const,
   e: 2024 - 06 - 01, customer,
   s: 45, ratin,
   g: 4.7, review,
-  s: 32}, // Quantum Internet Security Platform;  i,
+  s: 32}, // Quantum Internet Security Platform'"'"'";  i,
   d: 'quantum - internet - security - platform,  nam,
   e: 'Quantum Internet Security Platform, taglin,
   e: 'Quantum - secured internet infrastructure with AI monitoring, pric,
@@ -11512,9 +11512,9 @@ export const,
   e: '$4,999 perio,
   d: /month descriptio,
   n:' Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection. feature,
-  s: [' 'Quantum key distribution'' 'AI threat monitoring'' 'Real-time protection'' 'Network security'' 'Data encryption'' 'Threat intelligence'' 'Compliance tools'' 'Performance analytics'' 'API for integration'' 24/7 monitoring], descriptio,
+  s: [' 'Quantum key distribution' 'AI threat monitoring' 'Real-time protection' 'Network security' 'Data encryption' 'Threat intelligence' 'Compliance tools' 'Performance analytics' 'API for integration' 24/7 monitoring], descriptio,
   n: Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection. feature,
-  s: [' 'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics'' API for integration24/7 monitoring popula,
+  s: [' 'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics' API for integration24/7 monitoring popula,
   r: true ico,
   n: '🌍 colo,
   r: 'from-green-600 to-emerald-700 textColo,
@@ -11533,9 +11533,9 @@ export const,
   e: '3-4 weeks categor,
   y: Quantum Internet & Security realServic,
   e: true,
-  technology: [' 'Quantum Computing'' 'AI/ML'' 'Network Security'' 'Cryptography'' Internet Protocols ] integration,
-  s: [' 'Network equipment'' 'Cloud platforms'' 'Security tools'' Monitoring systems ] useCase,
-  s: [' 'Network security'' 'Data protection'' 'Threat detection'' 'Compliance'' 'Performance monitoring ] ro,
+  technology: [' 'Quantum Computing' 'AI/ML' 'Network Security' 'Cryptography' Internet Protocols ] integration,
+  s: [' 'Network equipment' 'Cloud platforms' 'Security tools' Monitoring systems ] useCase,
+  s: [' 'Network security' 'Data protection' 'Threat detection' 'Compliance' 'Performance monitoring ] ro,
   i: '800% ROI through security improvements and operational efficiency competitor,
   s: ['Cloudflare ($20/month)', Akamai ($100+/month)], marketSiz,
   e: $150B internet security market, technolog,
@@ -11571,7 +11571,7 @@ export const,
   n: Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection., feature,
   s: [ ' 'Quantum key distribution',' 'AI threat monitoring',' 'Real-time protection',' 'Network security',' 'Data encryption',' 'Threat intelligence',' 'Compliance tools',' 'Performance analytics',' 'API for integration',' 24/7 monitoring], descriptio,
   n: Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection., feature,
-  s: [' 'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics',' 'API for integration24/7 monitoring'' 'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics',' API for integration24/7 monitoring ], popula,
+  s: [' 'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics',' 'API for integration24/7 monitoring' 'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics',' API for integration24/7 monitoring ], popula,
   r: true, ico,
   n: '🌍, colo,
   r: 'from-green-600 to-emerald-700, textColo,
@@ -11634,7 +11634,7 @@ export const,
   e: 2024 - 05 - 01, customer,
   s: 22, ratin,
   g: 4.8, review,
-  s: 19}, // AI - Powered Legal Contract Analyzer;  i,
+  s: 19}, // AI - Powered Legal Contract Analyzer'"'"'"'";  i,
   d: 'ai - legal - contract - analyzer,  nam,
   e: 'AI Legal Contract Analyzer, taglin,
   e: 'AI - powered legal document analysis and risk assessment, pric,
@@ -11700,9 +11700,9 @@ export const,
   e: '$1,999 perio,
   d: /month descriptio,
   n:' Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance. feature,
-  s: [' 'AI contract analysis'' 'Risk assessment'' 'Compliance checking'' 'Legal research'' 'Document comparison'' 'Clause extraction'' 'Legal analytics'' 'Team collaboration'' 'API for integration'' Mobile app support], descriptio,
+  s: [' 'AI contract analysis' 'Risk assessment' 'Compliance checking' 'Legal research' 'Document comparison' 'Clause extraction' 'Legal analytics' 'Team collaboration' 'API for integration' Mobile app support], descriptio,
   n: Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance. feature,
-  s: [' 'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration'' API for integrationMobile app support popula,
+  s: [' 'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration' API for integrationMobile app support popula,
   r: true ico,
   n: '⚖️ colo,
   r: 'from-indigo-600 to-purple-700 textColo,
@@ -11721,9 +11721,9 @@ export const,
   e: '1-2 weeks categor,
   y: AI Legal Services realServic,
   e: true,
-  technology: [' 'AI/ML'' 'Natural Language Processing'' 'Legal Tech'' 'Document Analysis'' Cloud Computing ] integration,
-  s: [' 'Document management systems'' 'Legal databases'' 'E-signature platforms'' CRM systems ] useCase,
-  s: [' 'Contract review'' 'Legal research'' 'Compliance checking'' 'Risk assessment'' 'Document analysis ] ro,
+  technology: [' 'AI/ML' 'Natural Language Processing' 'Legal Tech' 'Document Analysis' Cloud Computing ] integration,
+  s: [' 'Document management systems' 'Legal databases' 'E-signature platforms' CRM systems ] useCase,
+  s: [' 'Contract review' 'Legal research' 'Compliance checking' 'Risk assessment' 'Document analysis ] ro,
   i: '500% ROI through time savings and improved accuracy competitor,
   s: ['DocuSign ($25/month)', ContractPodAi ($500+/month)], marketSiz,
   e: $25B legal tech market, technolog,
@@ -11759,7 +11759,7 @@ export const,
   n: Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance., feature,
   s: [ ' 'AI contract analysis',' 'Risk assessment',' 'Compliance checking',' 'Legal research',' 'Document comparison',' 'Clause extraction',' 'Legal analytics',' 'Team collaboration',' 'API for integration',' Mobile app support], descriptio,
   n: Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance., feature,
-  s: [' 'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration',' 'API for integrationMobile app support'' 'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration',' API for integrationMobile app support ], popula,
+  s: [' 'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration',' 'API for integrationMobile app support' 'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration',' API for integrationMobile app support ], popula,
   r: true, ico,
   n: '⚖️, colo,
   r: 'from-indigo-600 to-purple-700, textColo,
@@ -11898,7 +11898,7 @@ export const,
   e: 2024 - 12 - 01, customer,
   s: 15, ratin,
   g: 4 && 4.9, review,
-  s: 8}, // Space Technology Platform; i,
+  s: 8}, // Space Technology Platform"; i,
   d: "space - technology - platform, nam,
   e: "Space Technology Platform, taglin,
   e: "Complete space mission management and satellite operations, pric,
@@ -11934,7 +11934,7 @@ export const,
   e: 2024 - 11 - 15, customer,
   s: 8, ratin,
   g: 4 && 4.8, review,
-  s: 12}, // Biotech AI Platform; i,
+  s: 12}, // Biotech AI Platform"; i,
   d: "biotech - ai - platform, nam,
   e: "Biotech AI Platform, taglin,
   e: "AI - powered drug discovery and genetic engineering, pric,
@@ -11970,7 +11970,7 @@ export const,
   e: 2024 - 10 - 01, customer,
   s: 25, ratin,
   g: 4 && 4.7, review,
-  s: 18}, // Quantum Financial Trading Platform; i,
+  s: 18}, // Quantum Financial Trading Platform"; i,
   d: "quantum - financial - trading, nam,
   e: "Quantum Financial Trading Platform, taglin,
   e: "Quantum AI - powered algorithmic trading with nanosecond precision, pric,
@@ -12006,7 +12006,7 @@ export const,
   e: 2024 - 09 - 01, customer,
   s: 12, ratin,
   g: 4 && 4.9, review,
-  s: 15}, // Autonomous Vehicle AI Platform; i,
+  s: 15}, // Autonomous Vehicle AI Platform"; i,
   d: "autonomous - vehicle - ai - platform, nam,
   e: "Autonomous Vehicle AI Platform, taglin,
   e: "Complete AI platform for autonomous vehicles and robotics, pric,
@@ -12042,7 +12042,7 @@ export const,
   e: 2024 - 08 - 01, customer,
   s: 18, ratin,
   g: 4 && 4.8, review,
-  s: 22}, // Quantum Cybersecurity Platform; i,
+  s: 22}, // Quantum Cybersecurity Platform"; i,
   d: "quantum - cybersecurity - platform, nam,
   e: "Quantum Cybersecurity Platform, taglin,
   e: "Quantum - resistant cybersecurity with AI threat detection, pric,
@@ -12078,7 +12078,7 @@ export const,
   e: 2024 - 07 - 01, customer,
   s: 35, ratin,
   g: 4 && 4.9, review,
-  s: 28}, // Metaverse AI Development Platform; i,
+  s: 28}, // Metaverse AI Development Platform"'"; i,
   d: "metaverse - ai - development - platform, nam,
   e: "Metaverse AI Development Platform, taglin,
   e: "Complete AI platform for metaverse and virtual world creation, pric,
@@ -12114,7 +12114,7 @@ export const,
   e: 2024 - 06 - 01, customer,
   s: 45, ratin,
   g: 4 && 4.7, review,
-  s: 32}, // Quantum Internet Security Platform; i,
+  s: 32}, // Quantum Internet Security Platform"'"'"; i,
   d: "quantum - internet - security - platform, nam,
   e: "Quantum Internet Security Platform, taglin,
   e: "Quantum - secured internet infrastructure with AI monitoring, pric,
@@ -12150,7 +12150,7 @@ export const,
   e: 2024 - 05 - 01, customer,
   s: 22, ratin,
   g: 4 && 4.8, review,
-  s: 19}, // AI - Powered Legal Contract Analyzer; i,
+  s: 19}, // AI - Powered Legal Contract Analyzer"'"'"'"; i,
   d: "ai - legal - contract - analyzer, nam,
   e: "AI Legal Contract Analyzer, taglin,
   e: "AI - powered legal document analysis and risk assessment, pric,
@@ -12186,7 +12186,7 @@ export const,
   e: 2024 - 04 - 01, customer,
   s: 65, ratin,
   g: 4 && 4.6, review,
-  s: 45}, // Quantum IoT Platform; i,
+  s: 45}, // Quantum IoT Platform'"'"'"'"; i,
   d: "quantum - iot - platform, nam,
   e: "Quantum IoT Platform, taglin,
   e: "Quantum - secured IoT platform with AI edge computing, pric,
@@ -12239,7 +12239,7 @@ export const,
   n: Revolutionary IoT platform that combines quantum security with AI edge computing. Secure billions of devices with real-time AI processing and quantum encryption., feature,
   s: [' 'Quantum device securityAI edge computingReal-time processingDevice managementData analyticsSecurity monitoringScalability toolsAPI for integration',' 'Mobile app supportCloud dashboard' ],' 'Quantum device security',' 'AI edge computing',' 'Real-time processing',' 'Device management',' 'Data analytics',' 'Security monitoring',' 'Scalability tools',' 'API for integration',' 'Mobile app support',' Cloud dashboard], descriptio,
   n: Revolutionary IoT platform that combines quantum security with AI edge computing. Secure billions of devices with real-time AI processing and quantum encryption., feature,
-  s: [' 'Quantum device securityAI edge computingReal-time processingDevice managementData analyticsSecurity monitoringScalability toolsAPI for integration',' 'Mobile app supportCloud dashboard'' 'Quantum device securityAI edge computingReal-time processingDevice managementData analyticsSecurity monitoringScalability toolsAPI for integration',' Mobile app supportCloud dashboard ], popula,
+  s: [' 'Quantum device securityAI edge computingReal-time processingDevice managementData analyticsSecurity monitoringScalability toolsAPI for integration',' 'Mobile app supportCloud dashboard' 'Quantum device securityAI edge computingReal-time processingDevice managementData analyticsSecurity monitoringScalability toolsAPI for integration',' Mobile app supportCloud dashboard ], popula,
   r: true, ico,
   n: '📱, colo,
   r: 'from-blue-600 to-cyan-700, textColo,
@@ -12272,8 +12272,8 @@ export const,
   e: '2-3 weeks categor,
   y: Quantum IoT & Edge Computing realServic,
   e: true,
-  technology: [' 'Quantum Computing'' 'AI/ML'' 'IoT'' 'Edge Computing'' Blockchain ] integration,
-  s: [' 'IoT devices'' 'Cloud platforms'' 'Security tools'' Analytics platforms ] useCase,
+  technology: [' 'Quantum Computing' 'AI/ML' 'IoT' 'Edge Computing' Blockchain ] integration,
+  s: [' 'IoT devices' 'Cloud platforms' 'Security tools' Analytics platforms ] useCase,
   s: [' First quantum IoT platform. 100x more secure than traditional solutions., target_audienc,
   e:  ,' IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics, trial_day,
   s: 30, setup_tim,
@@ -12330,122 +12330,122 @@ export const,
   e: 2024-03-01, customer,
   s: 38, ratin,
   g: 4.7, review,
-  s: 26 ; export const,
-  nextGenInnovativeServices: NextGenInnovativeService[] = [; // Quantum AI & Advanced Computing; {/* TODO: Fix JSX expression */}
+  s: 26 '; export const,
+  nextGenInnovativeServices: NextGenInnovativeService[] = ['; // Quantum AI & Advanced Computing'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.; launchDat,
   e: 2024-12-01; customer,
-  s: 15; ratin,
-  g: 4.9; review,
-  s: 8}; // Space Technology Platform; {/* TODO: Fix JSX expression */}
+  s: 15'; ratin,
+  g: 4.9'; review,
+  s: 8}'; // Space Technology Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.; launchDat,
   e: 2024-11-15; customer,
-  s: 8; ratin,
-  g: 4.8; review,
-  s: 12}; // Biotech AI Platform; {/* TODO: Fix JSX expression */}
+  s: 8'; ratin,
+  g: 4.8'; review,
+  s: 12}'; // Biotech AI Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.; launchDat,
   e: 2024-10-01; customer,
-  s: 25; ratin,
-  g: 4.7; review,
-  s: 18}; // Quantum Financial Trading Platform; {/* TODO: Fix JSX expression */}
+  s: 25'; ratin,
+  g: 4.7'; review,
+  s: 18}'; // Quantum Financial Trading Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.; launchDat,
   e: 2024-09-01; customer,
-  s: 12; ratin,
-  g: 4.9; review,
-  s: 15}; // Autonomous Vehicle AI Platform; {/* TODO: Fix JSX expression */}
+  s: 12'; ratin,
+  g: 4.9'; review,
+  s: 15}'; // Autonomous Vehicle AI Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.; launchDat,
   e: 2024-08-01; customer,
-  s: 18; ratin,
-  g: 4.8; review,
-  s: 22}; // Quantum Cybersecurity Platform; {/* TODO: Fix JSX expression */}
+  s: 18'; ratin,
+  g: 4.8'; review,
+  s: 22}'; // Quantum Cybersecurity Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.; launchDat,
   e: 2024-07-01; customer,
-  s: 35; ratin,
-  g: 4.9; review,
-  s: 28}; // Metaverse AI Development Platform; {/* TODO: Fix JSX expression */}
+  s: 35'; ratin,
+  g: 4.9'; review,
+  s: 28}'; // Metaverse AI Development Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Complete metaverse AI platform with content generation, world building, and social interaction features.; launchDat,
   e: 2024-06-01; customer,
-  s: 45; ratin,
-  g: 4.7; review,
-  s: 32}; // Quantum Internet Security Platform; {/* TODO: Fix JSX expression */}
+  s: 45'; ratin,
+  g: 4.7'; review,
+  s: 32}'; // Quantum Internet Security Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Complete quantum internet security platform with encryption, monitoring, and protection features.; launchDat,
   e: 2024-05-01; customer,
-  s: 22; ratin,
-  g: 4.8; review,
-  s: 19}; // AI-Powered Legal Contract Analyzer; {/* TODO: Fix JSX expression */}
+  s: 22'; ratin,
+  g: 4.8'; review,
+  s: 19}'; // AI-Powered Legal Contract Analyzer'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Complete AI legal platform with document analysis, risk assessment, and compliance features.; launchDat,
   e: 2024-04-01; customer,
-  s: 65; ratin,
-  g: 4.6; review,
-  s: 45}; // Quantum IoT Platform; {/* TODO: Fix JSX expression */}
+  s: 65'; ratin,
+  g: 4.6'; review,
+  s: 45}'; // Quantum IoT Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Complete quantum IoT platform with security, edge computing, and device management features.; launchDat,
   e: 2024-03-01; customer,
   s: 38; ratin,
   g: 4.7; review,
   s: 26} ]; review,
   s: 26}; ];export const,
-  nextGenInnovativeServices: NextGenInnovativeService[] = [; review,
-  s: 26 ; export const,
-  nextGenInnovativeServices: NextGenInnovativeService[] = [; // Quantum AI & Advanced Computing; {/* TODO: Fix JSX expression */}
+  nextGenInnovativeServices: NextGenInnovativeService[] = ["; review,
+  s: 26 "; export const,
+  nextGenInnovativeServices: NextGenInnovativeService[] = ["; // Quantum AI & Advanced Computing"; {/* TODO: Fix JSX expression */}
 
   s://ziontechgroup.com} }, realImplementatio,
   n: true, implementationDetail,
@@ -12453,7 +12453,7 @@ export const,
   e: 2024-12-01, customer,
   s: 15, ratin,
   g: 4.9, review,
-  s: 8}, // Space Technology Platform; {/* TODO: Fix JSX expression */}
+  s: 8}, // Space Technology Platform"; {/* TODO: Fix JSX expression */}
 
   s://ziontechgroup.com} }, realImplementatio,
   n: true, implementationDetail,
@@ -12461,7 +12461,7 @@ export const,
   e: 2024-11-15, customer,
   s: 8, ratin,
   g: 4.8, review,
-  s: 12}, // Biotech AI Platform; {/* TODO: Fix JSX expression */}
+  s: 12}, // Biotech AI Platform"; {/* TODO: Fix JSX expression */}
 
   s://ziontechgroup.com} }, realImplementatio,
   n: true, implementationDetail,
@@ -12469,7 +12469,7 @@ export const,
   e: 2024-10-01, customer,
   s: 25, ratin,
   g: 4.7, review,
-  s: 18}, // Quantum Financial Trading Platform; {/* TODO: Fix JSX expression */}
+  s: 18}, // Quantum Financial Trading Platform"; {/* TODO: Fix JSX expression */}
 
   s://ziontechgroup.com} }, realImplementatio,
   n: true, implementationDetail,
@@ -12477,7 +12477,7 @@ export const,
   e: 2024-09-01, customer,
   s: 12, ratin,
   g: 4.9, review,
-  s: 15}, // Autonomous Vehicle AI Platform; {/* TODO: Fix JSX expression */}
+  s: 15}, // Autonomous Vehicle AI Platform"; {/* TODO: Fix JSX expression */}
 
   s://ziontechgroup.com} }, realImplementatio,
   n: true, implementationDetail,
@@ -12485,7 +12485,7 @@ export const,
   e: 2024-08-01, customer,
   s: 18, ratin,
   g: 4.8, review,
-  s: 22}, // Quantum Cybersecurity Platform; {/* TODO: Fix JSX expression */}
+  s: 22}, // Quantum Cybersecurity Platform"; {/* TODO: Fix JSX expression */}
 
   s://ziontechgroup.com} }, realImplementatio,
   n: true, implementationDetail,
@@ -12493,7 +12493,7 @@ export const,
   e: 2024-07-01, customer,
   s: 35, ratin,
   g: 4.9, review,
-  s: 28}, // Metaverse AI Development Platform; {/* TODO: Fix JSX expression */}
+  s: 28}, // Metaverse AI Development Platform"'"; {/* TODO: Fix JSX expression */}
 
   s://ziontechgroup.com} }, realImplementatio,
   n: true, implementationDetail,
@@ -12501,7 +12501,7 @@ export const,
   e: 2024-06-01, customer,
   s: 45, ratin,
   g: 4.7, review,
-  s: 32}, // Quantum Internet Security Platform; {/* TODO: Fix JSX expression */}
+  s: 32}, // Quantum Internet Security Platform"'"'"; {/* TODO: Fix JSX expression */}
 
   s://ziontechgroup.com} }, realImplementatio,
   n: true, implementationDetail,
@@ -12509,7 +12509,7 @@ export const,
   e: 2024-05-01, customer,
   s: 22, ratin,
   g: 4.8, review,
-  s: 19}, // AI-Powered Legal Contract Analyzer; {/* TODO: Fix JSX expression */}
+  s: 19}, // AI-Powered Legal Contract Analyzer"'"'"'"; {/* TODO: Fix JSX expression */}
 
   s://ziontechgroup.com} }, realImplementatio,
   n: true, implementationDetail,
@@ -12517,7 +12517,7 @@ export const,
   e: 2024-04-01, customer,
   s: 65, ratin,
   g: 4.6, review,
-  s: 45}, // Quantum IoT Platform; {/* TODO: Fix JSX expression */}
+  s: 45}, // Quantum IoT Platform'"'"'"'"; {/* TODO: Fix JSX expression */}
 
   s://ziontechgroup.com} }, realImplementatio,
   n: true, implementationDetail,
@@ -12531,4 +12531,4 @@ export const,
   e: 2024-03-01, customer,
   s: 38, ratin,
   g: 4.7, review,
-  s: 26 } ]} ]; '
+  s: 26 } ]} ]'"'"'"'"; '

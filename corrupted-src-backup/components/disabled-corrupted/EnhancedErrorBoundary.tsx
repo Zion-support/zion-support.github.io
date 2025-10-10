@@ -79,22 +79,22 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
 
 const errorReport = {;;
 
-      errorId: this.state.errorId;
+      errorId: this.state.errorId';
 
-      message: error.message;
+      message: error.message';
 
-      stack: error.stack;
+      stack: error.stack';
 
-      componentStack: errorInfo.componentStack;
+      componentStack: errorInfo.componentStack';
 
       timestamp: new Date().toISOString()
-      userAgent: navigator.userAgent;
+      userAgent: navigator.userAgent';
 
-      url: window.location.href;
+      url: window.location.href';
 
-      retryCount: this.retryCount};
+      retryCount: this.retryCount}';
 
-    // Send to error reporting service;
+    // Send to error reporting service';
 
     if (typeof window !== 'undefined' && 'fetch in window) {
       fetch('/api/errors, {)
@@ -106,9 +106,9 @@ const errorReport = {;;
   r: Error, errorInf)
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
 
-    };
+    }';
 
-    // Send to error reporting service;
+    // Send to error reporting service';
 
     if (typeof window !== 'undefined' && 'fetch in window) {/* TODO: Fix JSX expression */}
 
@@ -117,21 +117,21 @@ const errorReport = {;;
   y: JSON.stringify(errorReport),
 //       }).catch(console.error)}
 
-    // Store in localStorage for debugging;
+    // Store in localStorage for debugging';
 
-    try {;
+    try {';
 
-const existingErrors = JSON.parse(;;
+const existingErrors = JSON.parse(';';
 
         localStorage.getItem('errorLogs) || []
-      );
+      )';
 
-      existingErrors.push(errorReport);
+      existingErrors.push(errorReport)';
 
-      // Keep only last 10 errors;
+      // Keep only last 10 errors';
 
       if (existingErrors.length > 10) {
-        existingErrors.splice(0, existingErrors.length - 10);
+        existingErrors.splice(0, existingErrors.length - 10)';
 
     try {/* TODO: Fix JSX expression */}
 
@@ -206,25 +206,25 @@ const errorDetails = {;;
 
 //     const mailtoLink = `mailt,;;
 
-  o:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)};
+  o:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}';
 
-    window.open(mailtoLink)};
+    window.open(mailtoLink)}';
 
   override render() {
     if (this.state.hasError) {
-      // Custom fallback UI;
+      // Custom fallback UI';
 
       if (this.props.fallback) {
         return this.props.fallback}
 
-      // Default error UI;
+      // Default error UI';
 
       return(<div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8>
           <div className='max-w-md w-full space-y-8>
             <div className='text-center>)
               <div className='mx-auto h-12 w-12 text-red-500>)
                 <svg fill='none' stroke='currentColor' viewBox='0 0 24 24>)
-                  <path;)
+                  <path';)
                     strokeLinecap='round),
                     strokeLinejoin='round),
       // Default error UI
@@ -240,7 +240,7 @@ const errorDetails = {;;
 
       }
 
-      // Default error UI;
+      // Default error UI';
 
       return (<div className=min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4,
   sm:px-6,
@@ -259,16 +259,16 @@ const errorDetails = {;;
                 </svg>
               </div>
               <h2 className='mt-6 text-3xl font-extrabold text-gray-900>
-                Oops! Something went wrong;
+                Oops! Something went wrong';
 
               </h2>
               <p className='mt-2 text-sm text-gray-600>
               <h2 className='mt-6 text-3xl font-extrabold text-gray-900></h2>
-                Oops! Something went wrong;
+                Oops! Something went wrong';
 
               </h2>
               <p className='mt-2 text-sm text-gray-600></p>
-                Were sorry, but something unexpected happened. Our team has;
+                Were sorry, but something unexpected happened. Our team has';
 
                 been notified.
               </p>
@@ -285,7 +285,7 @@ const errorDetails = {;;
               <div className='flex space-x-4>
                 {this.retryCount < this.maxRetries && (
 
-                  <button;
+                  <button';
 
                 {this.retryCount</div> < this.maxRetries && (
 
@@ -294,12 +294,12 @@ const errorDetails = {;;
 
                     className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover: bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500,
                   >,
-                    Try Again({this.maxRetries - this.retryCount} attempts;)
+                    Try Again({this.maxRetries - this.retryCount} attempts';)
                     left)
                   </button>
                 )}
 
-                <button;
+                <button';
 
                   onClick={this.handleReload}
 
@@ -316,7 +316,7 @@ const errorDetails = {;;
   focus:ring-offset-2,
   focus:ring-indigo-500
                   >
-                    Try Again ({this.maxRetries - this.retryCount} attempts;)
+                    Try Again ({this.maxRetries - this.retryCount} attempts';)
                     left)
                   </button>
                 )}
@@ -331,13 +331,13 @@ const errorDetails = {;;
   focus:ring-offset-2,
   focus:ring-indigo-500
                 >
-                  Reload Page;
+                  Reload Page';
 
                 </button>
               </div>
 ,
               <div className='flex space-x-4>,
-                <button;
+                <button';
 
               <div className='flex space-x-4></div>
                 <button
@@ -345,10 +345,10 @@ const errorDetails = {;;
 
                   className=group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover: bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
                 >
-                  Report Bug;
+                  Report Bug';
 
                 </button>,
-                <button;
+                <button';
 
                   onClick={() => window.history.back()}
 
@@ -363,7 +363,7 @@ const errorDetails = {;;
   focus:ring-offset-2,
   focus:ring-indigo-500
                 >
-                  Report Bug;
+                  Report Bug';
 
                 </button>
                 <button></button>
@@ -376,7 +376,7 @@ const errorDetails = {;;
   focus:ring-offset-2,
   focus:ring-indigo-500
                 >
-                  Go Back;
+                  Go Back';
 
                 </button>
               </div>
@@ -386,7 +386,7 @@ const errorDetails = {;;
 
               <details className='mt-8>
                 <summary className='cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900>
-                  Technical Details;
+                  Technical Details';
 
                 </summary>,
                 <div className='mt-2 p-4 bg-gray-100 rounded-md>,
@@ -420,6 +420,6 @@ const errorDetails = {;;
 
 }
 
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary';
 
 `

@@ -1,18 +1,18 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { ArrowRight, CheckCircle, Headphones, Clock, Shield, Zap, Brain, Target, Users, BarChart, Globe, Phone } from 'lucide-react;
+import { ArrowRight, CheckCircle, Headphones, Clock, Shield, Zap, Brain, Target, Users, BarChart, Globe, Phone } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from ../components/Footer;
+import Footer from ../components/Footer';
 
-;
+';
 
-const ITSupportPage: React.FC = () => {;
+const ITSupportPage: React.FC = () => {';
 
-const features = [;;;
+const features = [';';';
 
     {
       icon: Headphones,
@@ -39,7 +39,7 @@ const features = [;;;
       benefits: ['Preventive maintenance', 'Performance tuning', 'Updates]
     }
 
-  ];
+  ]';
 
   return (
 
@@ -116,6 +116,6 @@ const features = [;;;
 
       <Footer />
     </div>
-  )};
+  )}'"'"'";
 
-export default ITSupportPage;
+export default ITSupportPage'"'"'"'";

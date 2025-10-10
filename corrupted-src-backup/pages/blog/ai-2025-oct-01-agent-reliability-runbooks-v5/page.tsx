@@ -34,7 +34,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
 
             <div, classNam, e = mt-8></div>
               <a, hre, f='/bl, o, g' className=te, x, t-cy, a, n-300, hove, r: underli, n, e>
-                ← Back, to, Blog;
+                ← Back, to, Blog';
 
               </a>
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}

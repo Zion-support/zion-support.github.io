@@ -30,7 +30,7 @@ $4}
 
   O: Add content}
 
-};
+}';
 
   car,
   d: 'summary_large_image',
@@ -48,7 +48,7 @@ $4}
 
   O: Add content}
 
-};
+}';
 
   inde,
   x: true,
@@ -59,7 +59,7 @@ $4}
 
   O: Add content}
 
-};
+}';
 
   inde,
   x: true,
@@ -76,11 +76,11 @@ $4}
     canonical:   ,
 $4}
 
-};
+}';
 
   alternate,
   s: {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}';

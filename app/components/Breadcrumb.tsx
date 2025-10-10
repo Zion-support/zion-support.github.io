@@ -1,12 +1,12 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { useLocation } from 'react-router-dom;
+import { useLocation } from 'react-router-dom';
 
-import { ChevronRight, Home } from 'lucide-react;
+import { ChevronRight, Home } from 'lucide-react';
 
-import { Link } from react-router-dom;
+import { Link } from react-router-dom';
 
 interface BreadcrumbItem {
   name: string;
@@ -18,11 +18,11 @@ interface BreadcrumbItem {
 }
 
 const Breadcrumb: React.FC = () => {
-  const location = useLocation();;;
+  const location = useLocation()';';';
 
-  const generateBreadcrumbs = (): BreadcrumbItem[] => {;;;
+  const generateBreadcrumbs = (): BreadcrumbItem[] => {';';';
 
-    const pathSegments = location.pathname.split('/').filter(segment => segment !== );;
+    const pathSegments = location.pathname.split('/').filter(segment => segment !== )';';
 
     const breadcrumbs: BreadcrumbItem[] = [
       { name: 'Home', href: '/ }
@@ -34,10 +34,10 @@ const Breadcrumb: React.FC = () => {
     pathSegments.forEach((segment, index) => {
       currentPath += `/${segment};
 
-      const isLast = index === pathSegments.length - 1;;
+      const isLast = index === pathSegments.length - 1';';
 
       // Convert segment to readable name
-      const name = segment;;
+      const name = segment';';
 
         .split('-)
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -51,15 +51,15 @@ const Breadcrumb: React.FC = () => {
 
     });
 
-    return breadcrumbs;
+    return breadcrumbs';
 
-  };
+  }';
 
-  const breadcrumbs = generateBreadcrumbs();;
+  const breadcrumbs = generateBreadcrumbs()';';
 
   // Dont show breadcrumb on home page
   if (location.pathname === '/) {
-    return null;
+    return null';
 
   }
 
@@ -111,8 +111,8 @@ const Breadcrumb: React.FC = () => {
         </ol>
       </div>
     </nav>
-  );
+  )'"'";
 
-};
+}'"'"'";
 
-export default Breadcrumb;
+export default Breadcrumb'"'"'"'";

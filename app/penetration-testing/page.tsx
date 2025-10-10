@@ -1,8 +1,8 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import {
   Shield,
@@ -26,11 +26,11 @@ import {
   Database,
   Target,
 
-} from lucide-react;
+} from lucide-react';
 
-;
+';
 
-const PenetrationTestingPage: React.FC = () => {const features = [;;;
+const PenetrationTestingPage: React.FC = () => {const features = [';';';
 
     {
       ico,
@@ -54,11 +54,11 @@ const PenetrationTestingPage: React.FC = () => {const features = [;;;
       description: Professional security experts conduct thorough testing using industry-standard methodologies.
     }
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'Identify security vulnerabilities before attackers do,
     'Comply with industry regulations and standards,
@@ -68,7 +68,7 @@ const benefits = [;;
     'Validate security controls effectiveness,
     'Expert analysis and reporting,
     Ongoing security improvement guidance
-  ];
+  ]';
 
   return (
 
@@ -124,4 +124,4 @@ const benefits = [;;
         </section>
       </div>
     </React.Fragment>)
-export default PenetrationTestingPage;
+export default PenetrationTestingPage'"'"'"'";

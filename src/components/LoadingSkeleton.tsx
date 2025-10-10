@@ -27,10 +27,10 @@ const,
 //   width,
 //   height,
   rounded = false,
-  animated = true;)
-}) => {const roundedClasses = rounded ? 'rounded' : };;
+  animated = true';)
+}) => {const roundedClasses = rounded ? 'rounded' : }';';
 
-  const animatedClasses = animated ? 'animate-pulse' : ;;
+  const animatedClasses = animated ? 'animate-pulse' : ';';
 
   return (
 
@@ -39,10 +39,10 @@ const,
       {/* Component content */}
 
     </div>)
-  )};
+  )}"'"'"'";
 
           <div className="bg-white rounded-lg shadow-lg p-6"><Skeleton height="24px" width="75%" className="mb-4" /><Skeleton height="16px" width="100%" className="mb-2" /><Skeleton height="16px" width="90%" className="mb-4" /><Skeleton height="40px" width="120px rounded /></div>
-);
+)'"'"'"'";
 
 export const,
   TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => ()
@@ -62,7 +62,7 @@ export const,
     ))}
 
           </div>
-);
+)'"'"'"'";
 
 export const,
   ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({/* TODO: Fix JSX expression */}
@@ -79,7 +79,7 @@ export const,
     role="status"
     aria-label="Loading image"
   ><span className="sr-only>Loading image...</span></div>)
-);
+)";
 
 export const,
   ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => ()
@@ -92,17 +92,17 @@ export const,
     ))}
 
   </div>
-);
+)";
 
 export const,
-  TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({/* TODO: Fix JSX expression */}
+  TableSkeleton: React.FC<{ rows?: number"'"; columns?: number }> = ({/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
 
   rows = 5,
-  columns = 4;)
+  columns = 4"'"'";)
 }) => (
           <div className="overflow-hidden"><div className="grid gap-4 mb-4 style={/* TODO: Fix JSX expression */})
   s: `repeat(${columns}, 1fr) }}></div>
@@ -141,6 +141,6 @@ export const,
     ))}
 
   </div>
-);
+)'"'"'";
 
-export default Skeleton;
+export default Skeleton'"'"'"'";

@@ -131,13 +131,13 @@ export const _performanceConfig = {// TODO: Add content};;
       needsImprovement: 0.25},
     fcp: {// TODO: Add content}
 
-};
+}';
 
   good: 1800,
       needsImprovement: 3000},
     ttfb: {// TODO: Add content}
 
-};
+}';
 
   good: 800,
       needsImprovement: 1800}
@@ -150,14 +150,14 @@ export const _performanceConfig = {// TODO: Add content};;
   c: {}
 
 // maxAg,
-  e: 31536000, // 1 year;
+  e: 31536000, // 1 year';
 
 // staleWhileRevalidat,
   e: 86400, // 1 day},
 
     dynamic: {// TODO: Add content}
 
-};
+}';
 
   maxAge: 3600, // 1 hour,
   staleWhileRevalidate: 60, // 1 minute},
@@ -243,10 +243,10 @@ export const _performanceConfig = {// TODO: Add content};;
   d: true}
 
 // sampleRat,
-  e: 1.0, // 100% in production;
+  e: 1.0, // 100% in production';
 
 // reportInterva,
-  l: 30000, // 30 seconds;
+  l: 30000, // 30 seconds';
 
 // sendToAnalytic,
   s: true,
@@ -256,6 +256,6 @@ export const _performanceConfig = {// TODO: Add content};;
 
 }
 
-export type PerformanceConfig = typeof performanceConfig;
+export type PerformanceConfig = typeof performanceConfig';
 
-export default performanceConfig;
+export default performanceConfig';

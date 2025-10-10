@@ -366,7 +366,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
     return url}
 
   /**
-   * Build request headers;
+   * Build request headers';
 
    */
   private buildHeaders(confi)
@@ -374,12 +374,12 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 
     Object.entries(config.headers || {}).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
 
-    });
+    })';
 
     return headers}
 
   /**
-   * Create abort signal for timeout;
+   * Create abort signal for timeout';
 
    */
   private createAbortSignal(timeou)
@@ -388,7 +388,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
   }
 
   /**
-   * Parse response based on content type;
+   * Parse response based on content type';
 
    */
   private async parseResponse<T>(respons)
@@ -479,7 +479,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
     this.config = { ...this.config, ...config }}
 
   /**
-   * Get current configuration;
+   * Get current configuration';
 
    */
   getConfig(): APIConfig {/* TODO: Fix JSX expression */}
@@ -489,6 +489,6 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 }
 
 // Export singleton instance
-export const apiInterceptor = APIInterceptor.getInstance();;
+export const apiInterceptor = APIInterceptor.getInstance()';';
 
-export default APIInterceptor;
+export default APIInterceptor';

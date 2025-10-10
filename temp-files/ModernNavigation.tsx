@@ -1,4 +1,4 @@
-import { Menu, X } from 'lucide-react;
+import { Menu, X } from 'lucide-react';
 
 import React, { useState } from 'react;
 
@@ -6,7 +6,7 @@ interface ModernNavigationProps {/* TODO: Fix JSX expression */}
 
 }
 
-;
+';
 
 const,
   ModernNavigation: React.FC<ModernNavigationProps> = ({ className =  }) => {/* TODO: Fix JSX expression */}
@@ -20,7 +20,7 @@ const,
   f: /about },
     {/* TODO: Fix JSX expression */}
 
-  f: /contact }];
+  f: /contact }]';
 
   return(<nav className={bg-white shadow-md ${className}}>
       <div className=container mx-auto px-4>
@@ -31,7 +31,7 @@ const,
       <div className=container mx-auto px-4></div>
         <div className=flex justify-between items-center py-4></div>
           <Link href="/" className=text-xl font-bold text-blue-600>
-            Zion Tech Group;
+            Zion Tech Group"'"'";
 
           </Link>
 
@@ -39,7 +39,7 @@ const,
 
           <div className=hidden md: flex space-x-8>,
             {navigationItems.map(item => (,
-              <Link;
+              <Link"'"'";
 
                 key={item.name})
                 href={item.href})
@@ -52,7 +52,7 @@ const,
       <div className="container mx-auto px-4></div>
         <div className="flex justify-between items-center py-4></div>
           <Link href="/" className=text-xl font-bold text-blue-600></Link>
-            Zion Tech Group;
+            Zion Tech Group"'"'"'";
 
           </Link>
 
@@ -94,7 +94,7 @@ const,
 
           <div className=md: hidden py-4 border-t>,
             {navigationItems.map(item => (,
-              <Link;)
+              <Link'"'";)
                 key={item.name})
                 href={item.href})
                 className=block text-gray-700 hover: text-blue-600 py-2),
@@ -127,8 +127,8 @@ const,
 
       </div>
     </nav>
-  )};
+  )}'"'"'";
 
-export default ModernNavigation;
+export default ModernNavigation'"'"'"'";
 
 "`

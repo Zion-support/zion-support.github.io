@@ -342,7 +342,7 @@ export const,
 
       mobile: +1 302 464 0950,
       email: kleber@ziontechgroup && ziontechgroup.com,
-      address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: +1 302 464 0950,
+      address: '364 E Main St STE 1008 Middletown DE 19709'}}]';      mobile: +1 302 464 0950,
     id: ai-automation-suite,
     name: AI Automation Suite,
     tagline: Intelligent automation for modern businesses,
@@ -357,9 +357,9 @@ export const,
     ],
     link: /services/ai-automation-suite,
     category: AI & Automation,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: unknown;
+    contactInfo: unknown';
 
       mobile: +1 302 464 0950,
       email: kleber@ziontechgroup.com,
@@ -380,7 +380,7 @@ export const,
     ],
     link: /services/data-warehouse-solution,
     category: Data & Analytics,
-    realImplementation: true;
+    realImplementation: true';
 
     contactInfo: address: 364 E Main St STE 1008 Middletown DE 19709,
       email: kleber@ziontechgroup.com,
@@ -472,9 +472,9 @@ export const,
 
 ];
 
-;
+";
 
-];
+]";
 
     id: ai-automation-suite,
     name: AI Automation Suite,
@@ -490,9 +490,9 @@ export const,
     ],
     link: /services/ai-automation-suite,
     category: AI & Automation,
-    realImplementation: true;
+    realImplementation: true";
 
-    contactInfo: unknown;
+    contactInfo: unknown";
 
       mobile: +1 302 464 0950,
       email: kleber@ziontechgroup.com,
@@ -1456,11 +1456,11 @@ marketSize: $8.9B martech genAI,
 
     implementationDetails: Brand presets + asset generator.,
     launchDate: 2025-07-15,
-    customers: 33;
+    customers: 33";
 
-    rating: 4.6;
+    rating: 4.6";
 
-    reviews: 13;
+    reviews: 13";
 
     popula,
   r: true,
@@ -1498,7 +1498,7 @@ marketSize: $8.9B martech genAI,
     marketSiz,
   e: $8.9B martech genAI,
     growthRat,
-  e: 22% CAGR,;
+  e: 22% CAGR,";
 
 varian,
   t: quantum-holographic,
@@ -1546,7 +1546,7 @@ varian,
 
     rating: 4.6;
 
-    reviews: 54;
+    reviews: 54';
 
     lin,
   k: /services/data-warehouse-solution,
@@ -1583,7 +1583,7 @@ varian,
       Connection pool tuning,
       Capacity forecasting
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-purple-600 to-indigo-700,
@@ -1591,11 +1591,11 @@ varian,
     link: https://ziontechgroup.com/database-performance-monitor,
     marketPosition: Modern alternative with AI-first insights and simple pricing.,
     targetAudience: DBAs, platform, backend teams,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 30 minutes,
     category: Observability,
-    realService: true;
+    realService: true';
 
     technology: ['PostgreSQL', 'MySQL', OpenTelemetry],
     integrations: ['Grafana', 'Datadog', New Relic],
@@ -1608,15 +1608,15 @@ marketSize: $6B DB monitoring,
     contactInfo:
         contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Agent collectors with SaaS UI and AI advisory.,
     launchDate: 2024-12-12,
-    customers: 60;
+    customers: 60';
 
-    rating: 4.6;
+    rating: 4.6';
 
-    reviews: 38;
+    reviews: 38';
 
     popula,
   r: true,
@@ -1654,7 +1654,7 @@ marketSize: $6B DB monitoring,
     marketSiz,
   e: $6B DB monitoring,
     growthRat,
-  e: 15% CAGR,;
+  e: 15% CAGR,';
 
 varian,
   t: holographic-advanced,
@@ -1691,7 +1691,7 @@ varian,
       Changelogs and versions,
       Full-text search and themes
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-cyan-600 to-blue-700,
@@ -1699,11 +1699,11 @@ varian,
     link: https://ziontechgroup.com/api-documentation-generator,
     marketPosition: Faster setup and authoring vs. traditional doc platforms.,
     targetAudience: Developers, platform, API teams,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 20 minutes,
     category: Developer Experience,
-    realService: true;
+    realService: true';
 
     technology: ['Next.js', 'MDX', OpenAPI],
     integrations: ['GitHub', 'GitLab', Bitbucket],
@@ -1716,16 +1716,16 @@ varian,
 variant: neural-quantum,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Schema importers, doc themes, and CI publishers.,
     launchDate: 2024-10-05,
     customers:
-        customers: 110;
+        customers: 110';
 
-    rating: 4.7;
+    rating: 4.7';
 
-    reviews: 81;
+    reviews: 81';
 
     popula,
   r: true,
@@ -1763,7 +1763,7 @@ variant: neural-quantum,
     marketSiz,
   e: $1.5B dev docs,
     growthRat,
-  e: 18% CAGR,;
+  e: 18% CAGR,';
 
 varian,
   t: neural-quantum,
@@ -1800,7 +1800,7 @@ varian,
       Blocklist monitoring,
       Domain reputation score
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-indigo-600 to-blue-700,
@@ -1808,11 +1808,11 @@ varian,
     link: https://ziontechgroup.com/email-deliverability-monitor,
     marketPosition: Simple, affordable monitoring for marketing and transactional systems.,
     targetAudience: Growth, marketing, platform,
-    trialDays: 7;
+    trialDays: 7';
 
     setupTime: 15 minutes,
     category: Marketing Ops,
-    realService: true;
+    realService: true';
 
     technology: ['DNS', Postfix/SES APIs],
     integrations: ['SendGrid', 'SES', Mailgun],
@@ -1825,16 +1825,16 @@ varian,
 variant: holographic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: DNS checkers, seed inbox tests, and alerting.,
     launchDate: 2025-01-01,
     customers:
-        customers: 45;
+        customers: 45';
 
-    rating: 4.5;
+    rating: 4.5';
 
-    reviews: 22;
+    reviews: 22';
 
     popula,
   r: false,
@@ -1872,7 +1872,7 @@ variant: holographic,
     marketSiz,
   e: $2B email tools,
     growthRat,
-  e: 12% CAGR,;
+  e: 12% CAGR,';
 
 varian,
   t: holographic,
@@ -1909,7 +1909,7 @@ varian,
       Data discovery connectors,
       Audit logs and exports
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-rose-600 to-fuchsia-700,
@@ -1917,11 +1917,11 @@ varian,
     link: https://ziontechgroup.com/gdpr-dsar-automation,
     marketPosition: Compliant automation for legal and privacy teams.,
     targetAudience: Privacy, legal, security,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 1 day,
     category: Compliance,
-    realService: true;
+    realService: true';
 
     technology: ['OAuth', 'PII discovery', Storage APIs],
     integrations: ['Google Workspace', 'OneDrive', Okta],
@@ -1934,16 +1934,16 @@ varian,
 variant: cyberpunk-holographic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Secure portal, workflows, connectors, and exports.,
     launchDate: 2024-09-20,
     customers:
-        customers: 33;
+        customers: 33';
 
-    rating: 4.6;
+    rating: 4.6';
 
-    reviews: 19;
+    reviews: 19';
 
     popula,
   r: false,
@@ -1981,7 +1981,7 @@ variant: cyberpunk-holographic,
     marketSiz,
   e: $3B privacy ops,
     growthRat,
-  e: 20% CAGR,;
+  e: 20% CAGR,';
 
 varian,
   t: cyberpunk-holographic,
@@ -2018,7 +2018,7 @@ varian,
       OWASP API Top 10 checks,
       CI pipeline integration
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-red-600 to-pink-700,
@@ -2026,11 +2026,11 @@ varian,
     link: https://ziontechgroup.com/api-security-scanner,
     marketPosition: Developer-friendly API security with schema awareness.,
     targetAudience: Security, platform, backend,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 30 minutes,
     category: Security,
-    realService: true;
+    realService: true';
 
     technology: ['OpenAPI', 'Fuzzing', Auth testing],
     integrations: ['GitHub Actions', 'GitLab CI', Jenkins],
@@ -2043,15 +2043,15 @@ marketSize: $4B API security,
     contactInfo:
         contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Hosted scanner with agents and reports.,
     launchDate: 2025-02-10,
-    customers: 52;
+    customers: 52';
 
-    rating: 4.5;
+    rating: 4.5';
 
-    reviews: 28;
+    reviews: 28';
 
     popula,
   r: true,
@@ -2089,7 +2089,7 @@ marketSize: $4B API security,
     marketSiz,
   e: $4B API security,
     growthRat,
-  e: 23% CAGR,;
+  e: 23% CAGR,';
 
 varian,
   t: quantum-cyberpunk,
@@ -2128,7 +2128,7 @@ varian,
       Exporters for popular backends,
       Auto-ingest OpenAPI metadata
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-indigo-600 to-blue-700,
@@ -2136,11 +2136,11 @@ varian,
     link: https://ziontechgroup.com/api-observability-starter,
     marketPosition: Get 80% of value with 20% of setup for SMB teams.,
     targetAudience: SMB, startups, dev teams starting observability,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 30 minutes,
     category: Observability,
-    realService: true;
+    realService: true';
 
     technology: ['OpenTelemetry', 'Grafana', 'Tempo/Loki/Prom', Node.js],
     integrations: ['Datadog', 'Honeycomb', 'Grafana Cloud', New Relic],
@@ -2153,16 +2153,16 @@ varian,
 variant: neural-quantum-cyberpunk,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Opinionated OTel setup, token-based ingestion, curated dashboards and SLO primitives.,
     launchDate: 2025-02-01,
     customers:
-        customers: 33;
+        customers: 33';
 
-    rating: 4.5;
+    rating: 4.5';
 
-reviews: 11;
+reviews: 11';
 
   },
     id: status-pages-slo,
@@ -2208,7 +2208,7 @@ reviews: 11;
     marketSiz,
   e: $30B+ observability,
     growthRat,
-  e: 18% CAGR,;
+  e: 18% CAGR,';
 
 varian,
   t: neural-quantum-cyberpunk,
@@ -2245,7 +2245,7 @@ varian,
       Incident posts & timelines,
       Subscriber notifications
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-teal-600 to-emerald-700,
@@ -2253,11 +2253,11 @@ varian,
     link: https://ziontechgroup.com/status-pages-slo,
     marketPosition: Integrated SLOs with customer-facing status for trust and transparency.,
     targetAudience: DevOps, SRE, product,
-    trialDays: 7;
+    trialDays: 7';
 
     setupTime: 30 minutes,
     category: Operations,
-    realService: true;
+    realService: true';
 
     technology: ['Next.js', 'OpenTelemetry', Webhook],
     integrations: ['Datadog', 'New Relic', PagerDuty],
@@ -2270,15 +2270,15 @@ marketSize: $1B status pages,
     contactInfo:
         contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Hosted status pages driven by metrics and incidents.,
     launchDate: 2024-07-22,
-    customers: 75;
+    customers: 75';
 
-    rating: 4.6;
+    rating: 4.6';
 
-    reviews: 35;
+    reviews: 35';
 
     popula,
   r: false,
@@ -2316,7 +2316,7 @@ marketSize: $1B status pages,
     marketSiz,
   e: $1B status pages,
     growthRat,
-  e: 10% CAGR,;
+  e: 10% CAGR,';
 
 varian,
   t: neural-cyberpunk,
@@ -2353,7 +2353,7 @@ varian,
       Error budget policy,
       Burn rate alerts
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-blue-600 to-indigo-700,
@@ -2361,11 +2361,11 @@ varian,
     link: https://ziontechgroup.com/uptime-slo-monitor,
     marketPosition: Straightforward reliability toolkit with cost-effective pricing.,
     targetAudience: SRE, platform, engineering,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 15 minutes,
     category: Reliability,
-    realService: true;
+    realService: true';
 
     technology: ['Node.js', 'Playwright', Prometheus],
     integrations: ['PagerDuty', 'Slack', Email],
@@ -2378,15 +2378,15 @@ marketSize: $1.2B synthetic,
     contactInfo:
         contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Distributed workers with central analytics.,
     launchDate: 2024-11-10,
-    customers: 130;
+    customers: 130';
 
-    rating: 4.7;
+    rating: 4.7';
 
-    reviews: 64;
+    reviews: 64';
 
     popula,
   r: true,
@@ -2424,7 +2424,7 @@ marketSize: $1.2B synthetic,
     marketSiz,
   e: $1.2B synthetic,
     growthRat,
-  e: 14% CAGR,;
+  e: 14% CAGR,';
 
 varian,
   t: quantum-matrix,
@@ -2461,7 +2461,7 @@ varian,
       Replay & DLQ,
       Traffic mirroring
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-sky-600 to-cyan-700,
@@ -2469,11 +2469,11 @@ varian,
     link: https://ziontechgroup.com/webhook-relay-replay,
     marketPosition: Developer-friendly webhook reliability without custom infra.,
     targetAudience: Developers, QA, platform,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 10 minutes,
     category: Developer Experience,
-    realService: true;
+    realService: true';
 
     technology: ['Node.js', 'Redis', S3],
     integrations: ['Stripe', 'Shopify', GitHub],
@@ -2487,15 +2487,15 @@ roi: Reduce missed events to near-zero,
     contactInfo:
         contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: SaaS relay with signed storage and replay workers.,
     launchDate: 2024-06-30,
-    customers: 58;
+    customers: 58';
 
-    rating: 4.6;
+    rating: 4.6';
 
-    reviews: 27;
+    reviews: 27';
 
     popula,
   r: false,
@@ -2533,7 +2533,7 @@ roi: Reduce missed events to near-zero,
     marketSiz,
   e: $500M webhook tools,
     growthRat,
-  e: 16% CAGR,;
+  e: 16% CAGR,';
 
 varian,
   t: holographic-quantum,
@@ -2570,7 +2570,7 @@ varian,
       SDKs and audit logs,
       Kill switches
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-fuchsia-600 to-pink-700,
@@ -2578,11 +2578,11 @@ varian,
     link: https://ziontechgroup.com/feature-flags-edge,
     marketPosition: Edge-native flags for performance-critical apps.,
     targetAudience: Frontend, platform, product,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 45 minutes,
     category: Developer Experience,
-    realService: true;
+    realService: true';
 
     technology: ['Edge runtimes', KV storage],
     integrations: ['Vercel', 'Netlify', Cloudflare],
@@ -2595,15 +2595,15 @@ marketSize: $1.8B flags,
     contactInfo:
         contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Edge worker evaluators and admin UI.,
     launchDate: 2024-09-01,
-    customers: 42;
+    customers: 42';
 
-    rating: 4.5;
+    rating: 4.5';
 
-    reviews: 23;
+    reviews: 23';
 
     popula,
   r: false,
@@ -2641,7 +2641,7 @@ marketSize: $1.8B flags,
     marketSiz,
   e: $1.8B flags,
     growthRat,
-  e: 20% CAGR,;
+  e: 20% CAGR,';
 
 varian,
   t: quantum-holographic-advanced,
@@ -2678,7 +2678,7 @@ varian,
       Branding & JIT,
       User/role sync
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-emerald-600 to-green-700,
@@ -2686,11 +2686,11 @@ varian,
     link: https://ziontechgroup.com/sso-in-a-box,
     marketPosition: Minutes to enterprise SSO without reinventing auth.,
     targetAudience: B2B SaaS, platform, security,
-    trialDays: 21;
+    trialDays: 21';
 
     setupTime: 2 hours,
     category: Security,
-    realService: true;
+    realService: true';
 
     technology: ['SAML', 'OIDC', SCIM],
     integrations: ['Okta', 'Azure AD', Google],
@@ -2703,15 +2703,15 @@ marketSize: $6B identity,
     contactInfo:
         contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Hosted IdP brokering and SCIM sync service.,
     launchDate: 2024-10-30,
-    customers: 150;
+    customers: 150';
 
-    rating: 4.8;
+    rating: 4.8';
 
-    reviews: 96;
+    reviews: 96';
 
     popula,
   r: true,
@@ -2749,7 +2749,7 @@ marketSize: $6B identity,
     marketSiz,
   e: $6B identity,
     growthRat,
-  e: 24% CAGR,;
+  e: 24% CAGR,';
 
 varian,
   t: neural-quantum-cyberpunk,
@@ -2786,7 +2786,7 @@ varian,
       SDKs and relevance tuning,
       Observability and quotas
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-cyan-600 to-blue-700,
@@ -2794,11 +2794,11 @@ varian,
     link: https://ziontechgroup.com/vector-search-starter,
     marketPosition: Launch semantic search in hours, not weeks.,
     targetAudience: Search teams, AI product,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 1 hour,
     category: AI & Machine Learning,
-    realService: true;
+    realService: true';
 
     technology: ['Embeddings', 'FAISS/PGV', Rerankers],
     integrations: ['Pinecone', 'Weaviate', Postgres],
@@ -2811,16 +2811,16 @@ varian,
 variant: ai-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Hosted ingestion, embeddings pipeline, and query APIs.,
     launchDate: 2024-08-15,
     customers:
-        customers: 70;
+        customers: 70';
 
-    rating: 4.6;
+    rating: 4.6';
 
-    reviews: 33;
+    reviews: 33';
 
     popula,
   r: false,
@@ -2858,7 +2858,7 @@ variant: ai-futuristic,
     marketSiz,
   e: $3B search AI,
     growthRat,
-  e: 22% CAGR,;
+  e: 22% CAGR,';
 
 varian,
   t: ai-futuristic,
@@ -2895,7 +2895,7 @@ varian,
       Anomaly alerts,
       Dashboard and lineage hints
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-amber-600 to-orange-700,
@@ -2903,11 +2903,11 @@ varian,
     link: https://ziontechgroup.com/data-quality-monitor,
     marketPosition: Simple quality guardrails for modern ELT.,
     targetAudience: Data engineering, analytics,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 2 hours,
     category: Data,
-    realService: true;
+    realService: true';
 
     technology: ['Great Expectations', OpenLineage],
     integrations: ['Airflow', 'dbt', Snowflake],
@@ -2920,16 +2920,16 @@ varian,
 variant: holographic-advanced,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Connectors, rules engine, alerts, and lineage context.,
     launchDate: 2024-09-05,
     customers:
-        customers: 39;
+        customers: 39';
 
-    rating: 4.5;
+    rating: 4.5';
 
-    reviews: 20;
+    reviews: 20';
 
     popula,
   r: false,
@@ -2967,7 +2967,7 @@ variant: holographic-advanced,
     marketSiz,
   e: $1.2B data observability,
     growthRat,
-  e: 26% CAGR,;
+  e: 26% CAGR,';
 
 varian,
   t: holographic-advanced,
@@ -3004,7 +3004,7 @@ varian,
       Predictive failure alerts,
       Dashboards & reports
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-blue-700 to-indigo-700,
@@ -3012,11 +3012,11 @@ varian,
     link: https://ziontechgroup.com/data-pipeline-observability,
     marketPosition: Unify view across orchestration and warehouses.,
     targetAudience: Data engineering, analytics,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 2 hours,
     category: Data,
-    realService: true;
+    realService: true';
 
     technology: ['Airflow', 'dbt', OpenLineage],
     integrations: ['Airflow', 'dbt', Snowflake],
@@ -3029,15 +3029,15 @@ marketSize: $1.2B data observability,
     contactInfo:
         contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Collectors and SaaS dashboards with lineage.,
     launchDate: 2024-10-10,
-    customers: 44;
+    customers: 44';
 
-    rating: 4.6;
+    rating: 4.6';
 
-    reviews: 26;
+    reviews: 26';
 
     popula,
   r: true,
@@ -3075,7 +3075,7 @@ marketSize: $1.2B data observability,
     marketSiz,
   e: $1.2B data observability,
     growthRat,
-  e: 26% CAGR,;
+  e: 26% CAGR,';
 
 varian,
   t: quantum-holographic,
@@ -3112,7 +3112,7 @@ varian,
       Eval and red team runs,
       Audit and exceptions
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-rose-600 to-red-700,
@@ -3120,11 +3120,11 @@ varian,
     link: https://ziontechgroup.com/ai-guardrails,
     marketPosition: Practical governance layer for production AI.,
     targetAudience: AI platform, risk, compliance,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 1 day,
     category: AI & Machine Learning,
-    realService: true;
+    realService: true';
 
     technology: ['LLM APIs', Safety models],
     integrations: ['OpenAI-compatible', Anthropic-compatible],
@@ -3137,16 +3137,16 @@ varian,
 variant: quantum-neural-advanced,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Policy engine, runtime checks, and eval harness.,
     launchDate: 2024-12-01,
     customers:
-        customers: 36;
+        customers: 36';
 
-    rating: 4.5;
+    rating: 4.5';
 
-    reviews: 18;
+    reviews: 18';
 
     popula,
   r: true,
@@ -3184,7 +3184,7 @@ variant: quantum-neural-advanced,
     marketSiz,
   e: $1B AI safety,
     growthRat,
-  e: 30% CAGR,;
+  e: 30% CAGR,';
 
 varian,
   t: quantum-neural-advanced,
@@ -3221,7 +3221,7 @@ varian,
       Meeting prep copilot,
       Pipeline analytics
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-cyan-600 to-blue-700,
@@ -3229,11 +3229,11 @@ varian,
     link: https://ziontechgroup.com/ai-sales-automation,
     marketPosition: Practical automation layered on CRM workflows.,
     targetAudience: Sales, revenue ops,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 1 day,
     category: Sales,
-    realService: true;
+    realService: true';
 
     technology: ['LLM APIs', CRM APIs],
     integrations: ['Salesforce', HubSpot],
@@ -3246,15 +3246,15 @@ marketSize: $4B sales tech,
     contactInfo:
         contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Orchestrator with CRM connectors and copilot UI.,
     launchDate: 2024-08-28,
-    customers: 66;
+    customers: 66';
 
-    rating: 4.5;
+    rating: 4.5';
 
-    reviews: 31;
+    reviews: 31';
 
     popula,
   r: false,
@@ -3292,7 +3292,7 @@ marketSize: $4B sales tech,
     marketSiz,
   e: $4B sales tech,
     growthRat,
-  e: 18% CAGR,;
+  e: 18% CAGR,';
 
 varian,
   t: ai-futuristic,
@@ -3329,7 +3329,7 @@ varian,
       Utility and drift reports,
       REST API & SDKs (Python/JS)
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-indigo-600 to-purple-700,
@@ -3337,11 +3337,11 @@ varian,
     link: https://ziontechgroup.com/services/synthetic-data-generator,
     marketPosition: Faster than in-house approaches, simpler than research toolkits while maintaining privacy guarantees.,
     targetAudience: Data science, product, QA, compliance,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 2 hours,
     category: Data,
-    realService: true;
+    realService: true';
 
     technology: ['Python', 'DP-SGD', 'Timeseries models', NLP],
     integrations: ['S3', 'Snowflake', 'BigQuery', Postgres],
@@ -3354,15 +3354,15 @@ marketSize: $1.5B privacy tech,
     contactInfo:
         contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: DP pipelines with evaluators and dataset catalog.,
     launchDate: 2025-02-01,
-    customers: 25;
+    customers: 25';
 
-    rating: 4.6;
+    rating: 4.6';
 
-    reviews: 12;
+    reviews: 12';
 
     popula,
   r: true,
@@ -3400,7 +3400,7 @@ marketSize: $1.5B privacy tech,
     marketSiz,
   e: $1.5B privacy tech,
     growthRat,
-  e: 25% CAGR,;
+  e: 25% CAGR,';
 
 varian,
   t: holographic-advanced,
@@ -3437,7 +3437,7 @@ varian,
       Webhook delivery with retries & DLQ,
       Inspector and secure replays
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-cyan-600 to-blue-700,
@@ -3445,11 +3445,11 @@ varian,
     link: https://ziontechgroup.com/services/email-parsing-routing-api,
     marketPosition: Developer-first alternative to heavy ESB/ETL for email channels.,
     targetAudience: Developers, ops, support tooling,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 30 minutes,
     category: Developer Experience,
-    realService: true;
+    realService: true';
 
     technology: ['Mail hooks', 'Webhook', Virus scan],
     integrations: ['SendGrid Inbound', 'Mailgun Routes', SES],
@@ -3462,16 +3462,16 @@ varian,
 variant: quantum-holographic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Inbound endpoints, parsing engines, and replayer.,
     launchDate: 2025-02-10,
     customers:
-        customers: 18;
+        customers: 18';
 
-    rating: 4.5;
+    rating: 4.5';
 
-    reviews: 9;
+    reviews: 9';
 
     popula,
   r: false,
@@ -3509,7 +3509,7 @@ variant: quantum-holographic,
     marketSiz,
   e: $800M parsing tools,
     growthRat,
-  e: 14% CAGR,;
+  e: 14% CAGR,';
 
 varian,
   t: quantum-holographic,
@@ -3546,7 +3546,7 @@ varian,
       Binpacking recommendations,
       Chargeback/showback reports
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-emerald-600 to-teal-700,
@@ -3554,11 +3554,11 @@ varian,
     link: https://ziontechgroup.com/services/kubernetes-cost-analyzer,
     marketPosition: Actionable K8 s FinOps without cluster vendor lock-in.,
     targetAudience: Platform, FinOps, SRE,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 1 hour,
     category: Cloud & Infrastructure,
-    realService: true;
+    realService: true';
 
     technology: ['Prometheus', 'Kube-state-metrics', Grafana],
     integrations: ['Datadog', 'New Relic', Slack],
@@ -3571,16 +3571,16 @@ varian,
 variant: neural-quantum,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Collectors, policy engine, and reports.,
     launchDate: 2025-02-05,
     customers:
-        customers: 22;
+        customers: 22';
 
-    rating: 4.6;
+    rating: 4.6';
 
-    reviews: 11;
+    reviews: 11';
 
     popula,
   r: true,
@@ -3618,7 +3618,7 @@ variant: neural-quantum,
     marketSiz,
   e: $2B K8s mgmt,
     growthRat,
-  e: 20% CAGR,;
+  e: 20% CAGR,';
 
 varian,
   t: neural-quantum,
@@ -3655,7 +3655,7 @@ varian,
       Audit logging & SIEM hooks,
       Budgets & anomaly alerts
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-sky-600 to-blue-700,
@@ -3663,11 +3663,11 @@ varian,
     link: https://ziontechgroup.com/cloud-landing-zone,
     marketPosition: Faster time-to-compliance vs. bespoke landing zones.,
     targetAudience: Platform, security, compliance,
-    trialDays: 7;
+    trialDays: 7';
 
     setupTime: 35 days,
     category: Cloud & Infrastructure,
-    realService: true;
+    realService: true';
 
     technology: ['Terraform', 'Guardrails', CI/CD],
     integrations: ['AWS Control Tower', 'Azure Policy', GCP Org],
@@ -3680,16 +3680,16 @@ varian,
 variant: holographic-quantum,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: IaC modules, policy packs, and CI workflows.,
     launchDate: 2025-01-22,
     customers:
-        customers: 14;
+        customers: 14';
 
-    rating: 4.7;
+    rating: 4.7';
 
-    reviews: 8;
+    reviews: 8';
 
     popula,
   r: true,
@@ -3727,7 +3727,7 @@ variant: holographic-quantum,
     marketSiz,
   e: $5B platform eng,
     growthRat,
-  e: 18% CAGR,;
+  e: 18% CAGR,';
 
 varian,
   t: holographic-quantum,
@@ -3764,7 +3764,7 @@ varian,
       PR annotations & diffs,
       Alerting & weekly reports
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-rose-600 to-fuchsia-700,
@@ -3772,11 +3772,11 @@ varian,
     link: https://ziontechgroup.com/services/security-headers-scanner,
     marketPosition: Shift-left security posture checks for frontends.,
     targetAudience: Frontend, security,
-    trialDays: 7;
+    trialDays: 7';
 
     setupTime: 20 minutes,
     category: Security,
-    realService: true;
+    realService: true';
 
     technology: ['Headless browser', CI annotations],
     integrations: ['GitHub', 'GitLab', Slack],
@@ -3790,15 +3790,15 @@ roi: Reduce security review cycles 50%,
     contactInfo:
         contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Scanner fleet with report UI and CI plugins.,
     launchDate: 2025-02-12,
-    customers: 10;
+    customers: 10';
 
-    rating: 4.5;
+    rating: 4.5';
 
-    reviews: 6;
+    reviews: 6';
 
     popula,
   r: false,
@@ -3836,7 +3836,7 @@ roi: Reduce security review cycles 50%,
     marketSiz,
   e: $3B AppSec,
     growthRat,
-  e: 15% CAGR,;
+  e: 15% CAGR,';
 
 varian,
   t: quantum-cyberpunk,
@@ -3873,7 +3873,7 @@ varian,
       Actionable suggestions,
       Dashboards & trends
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-amber-600 to-orange-700,
@@ -3881,11 +3881,11 @@ varian,
     link: https://ziontechgroup.com/services/frontend-bundle-analyzer-ci,
     marketPosition: Developer-centric insights integrated into reviews.,
     targetAudience: Frontend teams,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 30 minutes,
     category: Developer Experience,
-    realService: true;
+    realService: true';
 
     technology: ['Webpack/Vite analyzers', CI bots],
     integrations: ['GitHub', 'GitLab', Vercel],
@@ -3898,16 +3898,16 @@ varian,
 variant: holographic-advanced,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Analyzer CLI, CI bot, and dashboard.,
     launchDate: 2025-01-30,
     customers:
-        customers: 12;
+        customers: 12';
 
-    rating: 4.5;
+    rating: 4.5';
 
-    reviews: 7;
+    reviews: 7';
 
     popula,
   r: false,
@@ -3945,7 +3945,7 @@ variant: holographic-advanced,
     marketSiz,
   e: $1B web perf,
     growthRat,
-  e: 12% CAGR,;
+  e: 12% CAGR,';
 
 varian,
   t: holographic-advanced,
@@ -3982,7 +3982,7 @@ varian,
       Backfills & reprocess,
       Lineage & monitoring
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-blue-700 to-indigo-700,
@@ -3990,11 +3990,11 @@ varian,
     link: https://ziontechgroup.com/services/s3-to-snowflake-ingestion,
     marketPosition: Operationally simple compared to DIY pipelines.,
     targetAudience: Data engineering,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 2 hours,
     category: Data,
-    realService: true;
+    realService: true';
 
     technology: ['Snowflake', 'S3', Airflow/dbt],
     integrations: ['AWS', 'Snowflake', dbt],
@@ -4007,15 +4007,15 @@ marketSize: $3B data ingest,
     contactInfo:
         contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Connector jobs with schema registry and monitor.,
     launchDate: 2025-02-08,
-    customers: 9;
+    customers: 9';
 
-    rating: 4.4;
+    rating: 4.4';
 
-    reviews: 5;
+    reviews: 5';
 
     popula,
   r: false,
@@ -4053,7 +4053,7 @@ marketSize: $3B data ingest,
     marketSiz,
   e: $3B data ingest,
     growthRat,
-  e: 20% CAGR,;
+  e: 20% CAGR,';
 
 varian,
   t: neural-quantum,
@@ -4090,7 +4090,7 @@ varian,
       Baselines & environments,
       Alerting & history
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-violet-600 to-purple-700,
@@ -4098,11 +4098,11 @@ varian,
     link: https://ziontechgroup.com/services/visual-regression-monitor,
     marketPosition: Simple setup vs. bespoke Playwright configs.,
     targetAudience: Frontend QA, design systems,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 45 minutes,
     category: Developer Experience,
-    realService: true;
+    realService: true';
 
     technology: ['Playwright', Headless Chrome],
     integrations: ['GitHub', 'GitLab', Slack],
@@ -4115,16 +4115,16 @@ varian,
 variant: holographic-matrix,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Snapshot store, comparator, and CI bot.,
     launchDate: 2025-02-03,
     customers:
-        customers: 15;
+        customers: 15';
 
-    rating: 4.5;
+    rating: 4.5';
 
-reviews: 7;
+reviews: 7';
 
   },
     id: data-masking-proxy,
@@ -4170,7 +4170,7 @@ reviews: 7;
     marketSiz,
   e: $600M visual test,
     growthRat,
-  e: 16% CAGR,;
+  e: 16% CAGR,';
 
 varian,
   t: holographic-matrix,
@@ -4207,7 +4207,7 @@ varian,
       Schema-aware transforms,
       Audit logs & approvals
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-green-600 to-emerald-700,
@@ -4215,11 +4215,11 @@ varian,
     link: https://ziontechgroup.com/services/data-masking-proxy,
     marketPosition: Lighter alternative to legacy DLP stacks for data teams.,
     targetAudience: Data, platform, compliance,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 1 day,
     category: Security,
-    realService: true;
+    realService: true';
 
     technology: ['FPE', Kafka/connectors],
     integrations: ['Debezium', 'Snowflake', BigQuery],
@@ -4232,16 +4232,16 @@ varian,
 variant: neural-quantum-cyberpunk,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Policy engine, connectors, and audit trails.,
     launchDate: 2025-02-06,
     customers:
-        customers: 13;
+        customers: 13';
 
-    rating: 4.6;
+    rating: 4.6';
 
-    reviews: 6;
+    reviews: 6';
 
     popula,
   r: true,
@@ -4279,7 +4279,7 @@ variant: neural-quantum-cyberpunk,
     marketSiz,
   e: $2B data security,
     growthRat,
-  e: 18% CAGR,;
+  e: 18% CAGR,';
 
 varian,
   t: neural-quantum-cyberpunk,
@@ -4316,7 +4316,7 @@ varian,
       Summaries & highlights,
       CRM/PM sync
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-cyan-600 to-blue-700,
@@ -4324,11 +4324,11 @@ varian,
     link: https://ziontechgroup.com/services/ai-meeting-notes-agent,
     marketPosition: Business-ready outputs with governance and auditability.,
     targetAudience: Sales, success, product,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 30 minutes,
     category: AI & Machine Learning,
-    realService: true;
+    realService: true';
 
     technology: ['ASR', 'LLM summarization', RAG],
     integrations: ['Zoom', 'Teams', 'GMeet', 'HubSpot', Jira],
@@ -4341,16 +4341,16 @@ varian,
 variant: ai-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Recording bot, processing pipeline, and sync.,
     launchDate: 2025-02-04,
     customers:
-        customers: 28;
+        customers: 28';
 
-    rating: 4.6;
+    rating: 4.6';
 
-reviews: 13;
+reviews: 13';
 
   },
     id: compliance-policy-as-code,
@@ -4396,7 +4396,7 @@ reviews: 13;
     marketSiz,
   e: $1.2B meeting AI,
     growthRat,
-  e: 30% CAGR,;
+  e: 30% CAGR,';
 
 varian,
   t: ai-futuristic,
@@ -4433,7 +4433,7 @@ varian,
       Evidence reports,
       Drift detection
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-purple-600 to-indigo-700,
@@ -4441,11 +4441,11 @@ varian,
     link: https://ziontechgroup.com/services/compliance-policy-as-code,
     marketPosition: Unifies cloud and IaC checks with audit-ready outputs.,
     targetAudience: Security, compliance, platform,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 1 day,
     category: Compliance,
-    realService: true;
+    realService: true';
 
     technology: ['OPA/Rego', 'Terraform', Cloud APIs],
     integrations: ['AWS', 'Azure', 'GCP', GitHub],
@@ -4458,16 +4458,16 @@ varian,
 variant: holographic-neural,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Policy catalog, scanners, and evidence builder.,
     launchDate: 2025-02-07,
     customers:
-        customers: 17;
+        customers: 17';
 
-    rating: 4.6;
+    rating: 4.6';
 
-    reviews: 8;
+    reviews: 8';
 
     popula,
   r: true,
@@ -4505,7 +4505,7 @@ variant: holographic-neural,
     marketSiz,
   e: $3B cloud security,
     growthRat,
-  e: 22% CAGR,;
+  e: 22% CAGR,';
 
 varian,
   t: holographic-neural,
@@ -4544,7 +4544,7 @@ varian,
       Storage destinations (S3/GCS/Azure),
       Usage analytics and quotas
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-purple-600 to-pink-700,
@@ -4552,11 +4552,11 @@ varian,
     link: https://ziontechgroup.com/services/pdf-render-api,
     marketPosition: Simple, predictable pricing with dev-first DX.,
     targetAudience: SaaS, finance, legal, ops automation,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 10 minutes,
     category: Developer Tools,
-    realService: true;
+    realService: true';
 
     technology: ['Node.js', 'Headless Chrome', 'S3', Redis],
     integrations: ['Zapier', 'Make.com', 'Webhook', S3],
@@ -4569,16 +4569,16 @@ varian,
 variant: cyberpunk-holographic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: API with queue-based workers, async callbacks, asset cache, and template store.,
     launchDate: 2025-02-01,
     customers:
-        customers: 75;
+        customers: 75';
 
-    rating: 4.7;
+    rating: 4.7';
 
-    reviews: 28;
+    reviews: 28';
 
     popula,
   r: true,
@@ -4616,7 +4616,7 @@ variant: cyberpunk-holographic,
     marketSiz,
   e: $500M+ doc rendering,
     growthRat,
-  e: 10% CAGR,;
+  e: 10% CAGR,';
 
 varian,
   t: cyberpunk-holographic,
@@ -4655,7 +4655,7 @@ varian,
       CSV/JSON export and webhooks,
       Native integrations (Xero/QuickBooks)
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-cyan-600 to-blue-700,
@@ -4663,11 +4663,11 @@ varian,
     link: https://ziontechgroup.com/services/invoice-ocr-extraction-api,
     marketPosition: Accurate extraction without expensive enterprise contracts.,
     targetAudience: Accounting, fintech, back-office automation, marketplaces,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 20 minutes,
     category: AI & Data,
-    realService: true;
+    realService: true';
 
     technology: ['Python', 'Tesseract/Cloud Vision', 'FastAPI/Node', Postgres],
     integrations: ['Xero', 'QuickBooks', 'Webhook', S3],
@@ -4680,16 +4680,16 @@ varian,
 variant: neural-quantum,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Ensembled OCR with field post-processing, validation, and HITL review queue.,
     launchDate: 2025-02-15,
     customers:
-        customers: 29;
+        customers: 29';
 
-    rating: 4.6;
+    rating: 4.6';
 
-    reviews: 9;
+    reviews: 9';
 
     popula,
   r: true,
@@ -4727,7 +4727,7 @@ variant: neural-quantum,
     marketSiz,
   e: $1B+ document AI,
     growthRat,
-  e: 32% CAGR,;
+  e: 32% CAGR,';
 
 varian,
   t: neural-quantum,
@@ -4766,7 +4766,7 @@ varian,
       Alerting and dashboards,
       PII redaction and tokenization
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-emerald-600 to-teal-700,
@@ -4774,11 +4774,11 @@ varian,
     link: https://ziontechgroup.com/services/log-archive-search,
     marketPosition: Cost-efficient alternative to full APM suites for logs.,
     targetAudience: SRE, platform, security teams,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 30 minutes,
     category: Observability,
-    realService: true;
+    realService: true';
 
     technology: ['Vector/FluentBit', 'ClickHouse/OpenSearch', 'S3', Node/Go],
     integrations: ['Grafana', 'Promtail', 'CloudWatch', Stackdriver],
@@ -4791,16 +4791,16 @@ varian,
 variant: quantum-matrix,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Ingestion gateway, retention engine, archive to S3, and query federation.,
     launchDate: 2025-02-20,
     customers:
-        customers: 21;
+        customers: 21';
 
-    rating: 4.5;
+    rating: 4.5';
 
-    reviews: 7;
+    reviews: 7';
 
     popula,
   r: false,
@@ -4838,7 +4838,7 @@ variant: quantum-matrix,
     marketSiz,
   e: $15B+ log analytics,
     growthRat,
-  e: 18% CAGR,;
+  e: 18% CAGR,';
 
 varian,
   t: quantum-matrix,
@@ -4876,7 +4876,7 @@ varian,
       Retention rules with defensible deletion,
       Evidence export for auditors
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-purple-600 to-fuchsia-700,
@@ -4884,11 +4884,11 @@ varian,
     link: https://ziontechgroup.com/gdpr-privacyops,
     marketPosition: Practical privacy orchestration that complements security tooling with verifiable evidence.,
     targetAudience: Legal, Security, Data Governance,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 1 day,
     category: Compliance & Security,
-    realService: true;
+    realService: true';
 
     technology: ['Next.js', 'Node.js', 'PostgreSQL', 'S3', Webhooks],
     integrations: ['Okta', 'Workday', 'Salesforce', 'Google Workspace', Microsoft 365],
@@ -4901,16 +4901,16 @@ varian,
 variant: ai-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Workflow engine with connectors, evidence registry, and audit trail exports.,
     launchDate: 2025-03-01,
     customers:
-        customers: 18;
+        customers: 18';
 
-    rating: 4.6;
+    rating: 4.6';
 
-    reviews: 11;
+    reviews: 11';
 
     popula,
   r: true,
@@ -4948,7 +4948,7 @@ variant: ai-futuristic,
     marketSiz,
   e: $2.1B privacy tech,
     growthRat,
-  e: 22% CAGR,;
+  e: 22% CAGR,';
 
 varian,
   t: ai-futuristic,
@@ -4986,7 +4986,7 @@ varian,
       PR comments and SARIF outputs,
       Risk heatmaps and trends
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-cyan-600 to-blue-700,
@@ -4994,11 +4994,11 @@ varian,
     link: https://ziontechgroup.com/ai-code-review-copilot,
     marketPosition: Faster feedback than manual reviews with governance for safety-critical repos.,
     targetAudience: Engineering teams, platform engineering, QA,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 30 minutes,
     category: Developer Tools,
-    realService: true;
+    realService: true';
 
     technology: ['TypeScript', 'AST parsers', 'OpenAI-compatible APIs', GitHub/GitLab CI],
     integrations: ['GitHub', 'GitLab', 'Bitbucket', Azure DevOps],
@@ -5011,16 +5011,16 @@ varian,
 variant: quantum,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: CI plugin, policy pack, and dashboard with PR bot comments.,
     launchDate: 2025-02-15,
     customers:
-        customers: 42;
+        customers: 42';
 
-    rating: 4.5;
+    rating: 4.5';
 
-    reviews: 29;
+    reviews: 29';
 
     popula,
   r: false,
@@ -5058,7 +5058,7 @@ variant: quantum,
     marketSiz,
   e: $4.5B DevSecOps,
     growthRat,
-  e: 21% CAGR,;
+  e: 21% CAGR,';
 
 varian,
   t: quantum,
@@ -5095,7 +5095,7 @@ varian,
       Auto-remediation playbooks,
       Executive reporting
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-emerald-600 to-teal-700,
@@ -5103,11 +5103,11 @@ varian,
     link: https://ziontechgroup.com/m365-security-hardening,
     marketPosition: Brings cloud security posture management to M365 tenants with quick wins.,
     targetAudience: IT, Security, MSPs,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 2 hours,
     category: Security & IT,
-    realService: true;
+    realService: true';
 
     technology: ['Microsoft Graph', 'Azure AD', 'PowerShell', Terraform],
     integrations: ['Azure AD', 'Defender', Intune],
@@ -5120,16 +5120,16 @@ varian,
 variant: matrix,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Baseline templates, drift engine, and remediation actions via Graph API.,
     launchDate: 2025-03-10,
     customers:
-        customers: 15;
+        customers: 15';
 
-    rating: 4.4;
+    rating: 4.4';
 
-    reviews: 8;
+    reviews: 8';
 
     popula,
   r: true,
@@ -5167,7 +5167,7 @@ variant: matrix,
     marketSiz,
   e: $3.2B SaaS security posture,
     growthRat,
-  e: 28% CAGR,;
+  e: 28% CAGR,';
 
 varian,
   t: matrix,
@@ -5204,7 +5204,7 @@ varian,
       RAG source attribution validation,
       Compliance and brand guardrails
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-indigo-600 to-violet-700,
@@ -5212,11 +5212,11 @@ varian,
     link: https://ziontechgroup.com/ai-customer-qa-benchmark,
     marketPosition: Production-focused QA for AI agents covering safety, accuracy, and CX.,
     targetAudience: CX, AI platform teams, compliance,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 1 hour,
     category: AI Quality,
-    realService: true;
+    realService: true';
 
     technology: ['Playwright', 'Prompt evaluation', 'Embeddings', Synthetic data],
     integrations: ['Zendesk', 'Intercom', Salesforce],
@@ -5229,16 +5229,16 @@ varian,
 variant: ai-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Test runner, metrics dashboard, and data labeling workflows.,
     launchDate: 2025-01-30,
     customers:
-        customers: 22;
+        customers: 22';
 
-    rating: 4.3;
+    rating: 4.3';
 
-reviews: 13;
+reviews: 13';
 
   },
     id: quantum-ai-fusion-platform,
@@ -5284,7 +5284,7 @@ reviews: 13;
     marketSiz,
   e: $1.1B AI eval tooling,
     growthRat,
-  e: 30% CAGR,;
+  e: 30% CAGR,';
 
 varian,
   t: ai-futuristic,
@@ -5322,7 +5322,7 @@ varian,
       Real-time analytics,
       API integration
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-indigo-600 to-purple-700,
@@ -5330,11 +5330,11 @@ varian,
     link: https://ziontechgroup.com/services/quantum-ai-fusion-platform,
     marketPosition: First-to-market quantum-AI fusion platform for enterprise optimization.,
     targetAudience: Research, finance, logistics, pharmaceuticals,
-    trialDays: 21;
+    trialDays: 21';
 
     setupTime: 1 week,
     category: Quantum Technology,
-    realService: true;
+    realService: true';
 
     technology: ['Quantum algorithms', 'AI/ML', Cloud computing],
     integrations: ['AWS Braket', 'Azure Quantum', Google Quantum],
@@ -5347,16 +5347,16 @@ varian,
 variant: quantum-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Quantum simulators, hybrid algorithms, cloud deployment.,
     launchDate: 2025-08-01,
     customers:
-        customers: 15;
+        customers: 15';
 
-    rating: 4.8;
+    rating: 4.8';
 
-    reviews: 8;
+    reviews: 8';
 
     popula,
   r: true,
@@ -5394,7 +5394,7 @@ variant: quantum-futuristic,
     marketSiz,
   e: $8.5B quantum computing,
     growthRat,
-  e: 25% CAGR,;
+  e: 25% CAGR,';
 
 varian,
   t: quantum-futuristic,
@@ -5432,7 +5432,7 @@ varian,
       Threat intelligence,
       Compliance reporting
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-red-600 to-orange-700,
@@ -5440,11 +5440,11 @@ varian,
     link: https://ziontechgroup.com/services/ai-cybersecurity-sentinel,
     marketPosition: Next-generation AI-powered cybersecurity with zero false positives.,
     targetAudience: Enterprise security, SOC teams, compliance officers,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 2 days,
     category: Cybersecurity,
-    realService: true;
+    realService: true';
 
     technology: ['Machine Learning', 'Behavioral Analysis', Threat Intelligence],
     integrations: ['SIEM systems', 'EDR platforms', Cloud providers],
@@ -5457,16 +5457,16 @@ varian,
 variant: security-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: ML models, API integrations, real-time monitoring.,
     launchDate: 2025-07-15,
     customers:
-        customers: 45;
+        customers: 45';
 
-    rating: 4.7;
+    rating: 4.7';
 
-    reviews: 32;
+    reviews: 32';
 
     popula,
   r: true,
@@ -5504,7 +5504,7 @@ variant: security-futuristic,
     marketSiz,
   e: $45B cybersecurity,
     growthRat,
-  e: 22% CAGR,;
+  e: 22% CAGR,';
 
 varian,
   t: security-futuristic,
@@ -5542,7 +5542,7 @@ varian,
       Cost management,
       Multi-cloud orchestration
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-green-600 to-teal-700,
@@ -5550,11 +5550,11 @@ varian,
     link: https://ziontechgroup.com/services/autonomous-devops-orchestrator,
     marketPosition: First autonomous DevOps platform with AI-driven decision making.,
     targetAudience: ['DevOps engineers', 'Platform teams', SREs],
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 3 days,
     category: DevOps & Infrastructure,
-    realService: true;
+    realService: true';
 
     technology: ['AI/ML', 'Kubernetes', 'Terraform', Cloud APIs],
     integrations: ['AWS', 'Azure', 'GCP', 'Kubernetes', GitHub],
@@ -5567,16 +5567,16 @@ varian,
 variant: ai-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: AI models, infrastructure as code, monitoring integration.,
     launchDate: 2025-06-20,
     customers:
-        customers: 28;
+        customers: 28';
 
-    rating: 4.6;
+    rating: 4.6';
 
-    reviews: 19;
+    reviews: 19';
 
     popula,
   r: false,
@@ -5614,7 +5614,7 @@ variant: ai-futuristic,
     marketSiz,
   e: $12B DevOps tools,
     growthRat,
-  e: 19% CAGR,;
+  e: 19% CAGR,';
 
 varian,
   t: ai-futuristic,
@@ -5652,7 +5652,7 @@ varian,
       Scalability solutions,
       Integration APIs
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-blue-600 to-indigo-700,
@@ -5660,11 +5660,11 @@ varian,
     link: https://ziontechgroup.com/services/blockchain-enterprise-platform,
     marketPosition: Enterprise blockchain platform with built-in compliance and scalability.,
     targetAudience: ['Financial services', 'Supply chain', Healthcare],
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 2 weeks,
     category: Blockchain & Web3,
-    realService: true;
+    realService: true';
 
     technology: ['Ethereum', 'Hyperledger', 'Polkadot', Smart contracts],
     integrations: ['Enterprise systems', 'Cloud providers', Payment gateways],
@@ -5677,16 +5677,16 @@ varian,
 variant: blockchain-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Multi-chain architecture, smart contracts, enterprise APIs.,
     launchDate: 2025-05-10,
     customers:
-        customers: 22;
+        customers: 22';
 
-    rating: 4.5;
+    rating: 4.5';
 
-    reviews: 15;
+    reviews: 15';
 
     popula,
   r: true,
@@ -5724,7 +5724,7 @@ variant: blockchain-futuristic,
     marketSiz,
   e: $19B blockchain,
     growthRat,
-  e: 87% CAGR,;
+  e: 87% CAGR,';
 
 varian,
   t: blockchain-futuristic,
@@ -5762,7 +5762,7 @@ varian,
       Multi-language support,
       Brand voice consistency
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-purple-600 to-pink-700,
@@ -5770,11 +5770,11 @@ varian,
     link: https://ziontechgroup.com/services/ai-content-intelligence-suite,
     marketPosition: AI content platform with built-in SEO and brand consistency.,
     targetAudience: ['Marketing teams', 'Content creators', SEO specialists],
-    trialDays: 7;
+    trialDays: 7';
 
     setupTime: 1 hour,
     category: Content & Marketing,
-    realService: true;
+    realService: true';
 
     technology: ['GPT-4', 'BERT', 'NLP', Machine Learning],
     integrations: ['WordPress', 'Shopify', 'HubSpot', Google Analytics],
@@ -5787,16 +5787,16 @@ varian,
 variant: ai-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: AI models, content templates, analytics dashboard.,
     launchDate: 2025-04-25,
     customers:
-        customers: 67;
+        customers: 67';
 
-    rating: 4.4;
+    rating: 4.4';
 
-    reviews: 41;
+    reviews: 41';
 
     popula,
   r: false,
@@ -5834,7 +5834,7 @@ variant: ai-futuristic,
     marketSiz,
   e: $7.8B content marketing,
     growthRat,
-  e: 16% CAGR,;
+  e: 16% CAGR,';
 
 varian,
   t: ai-futuristic,
@@ -5872,7 +5872,7 @@ varian,
       Automation workflows,
       Security & compliance
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-teal-600 to-green-700,
@@ -5880,11 +5880,11 @@ varian,
     link: https://ziontechgroup.com/services/iot-enterprise-platform,
     marketPosition: Enterprise IoT platform with built-in security and scalability.,
     targetAudience: ['Manufacturing', 'Smart cities', Energy companies],
-    trialDays: 21;
+    trialDays: 21';
 
     setupTime: 1 week,
     category: IoT & Edge Computing,
-    realService: true;
+    realService: true';
 
     technology: ['MQTT', 'WebSocket', 'Time-series databases', Edge computing],
     integrations: ['AWS IoT', 'Azure IoT', Google Cloud IoT],
@@ -5897,16 +5897,16 @@ varian,
 variant: iot-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Smartphone SDKs, cloud infrastructure, analytics engine.,
     launchDate: 2025-03-15,
     customers:
-        customers: 38;
+        customers: 38';
 
-    rating: 4.6;
+    rating: 4.6';
 
-    reviews: 25;
+    reviews: 25';
 
     popula,
   r: true,
@@ -5944,7 +5944,7 @@ variant: iot-futuristic,
     marketSiz,
   e: $35B IoT platforms,
     growthRat,
-  e: 28% CAGR,;
+  e: 28% CAGR,';
 
 varian,
   t: iot-futuristic,
@@ -5982,7 +5982,7 @@ varian,
       Success playbooks,
       Analytics dashboard
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-emerald-600 to-teal-700,
@@ -5990,11 +5990,11 @@ varian,
     link: https://ziontechgroup.com/services/ai-customer-success-platform,
     marketPosition: AI-driven customer success with predictive analytics and automation.,
           targetAudience: ['Customer success teams', 'Account managers', Growth teams],
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 2 days,
     category: Customer Success,
-    realService: true;
+    realService: true';
 
     technology: ['Machine Learning', 'Predictive Analytics', Automation],
     integrations: ['Salesforce', 'HubSpot', 'Intercom', Slack],
@@ -6007,16 +6007,16 @@ varian,
 variant: ai-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: ML models, automation engine, integration APIs.,
     launchDate: 2025-02-20,
     customers:
-        customers: 52;
+        customers: 52';
 
-    rating: 4.7;
+    rating: 4.7';
 
-reviews: 38;
+reviews: 38';
 
   },
     id: quantum-cryptography-suite,
@@ -6062,7 +6062,7 @@ reviews: 38;
     marketSiz,
   e: $4.2B customer success,
     growthRat,
-  e: 17% CAGR,;
+  e: 17% CAGR,';
 
 varian,
   t: ai-futuristic,
@@ -6100,7 +6100,7 @@ varian,
       Performance optimization,
       Compliance standards
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-indigo-600 to-blue-700,
@@ -6108,11 +6108,11 @@ varian,
     link: https://ziontechgroup.com/services/quantum-cryptography-suite,
     marketPosition: First post-quantum cryptography platform for enterprise security.,
     targetAudience: ['Financial services', 'Government', Healthcare],
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 2 weeks,
     category: Quantum Security,
-    realService: true;
+    realService: true';
 
     technology: ['Post-quantum algorithms', 'Quantum key distribution', Hybrid encryption],
     integrations: ['PKI systems', 'VPN solutions', Cloud providers],
@@ -6125,16 +6125,16 @@ varian,
 variant: quantum-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Cryptographic libraries, key management, performance optimization.,
     launchDate: 2025-01-15,
     customers:
-        customers: 18;
+        customers: 18';
 
-    rating: 4.8;
+    rating: 4.8';
 
-    reviews: 12;
+    reviews: 12';
 
     popula,
   r: false,
@@ -6172,7 +6172,7 @@ variant: quantum-futuristic,
     marketSiz,
   e: $3.2B quantum security,
     growthRat,
-  e: 45% CAGR,;
+  e: 45% CAGR,';
 
 varian,
   t: quantum-futuristic,
@@ -6210,7 +6210,7 @@ varian,
       Risk assessment,
       Real-time analytics
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-orange-600 to-red-700,
@@ -6218,11 +6218,11 @@ varian,
     link: https://ziontechgroup.com/services/ai-supply-chain-optimizer,
     marketPosition: AI-driven supply chain optimization with real-time insights.,
     targetAudience: ['Logistics', 'Manufacturing', Retail],
-    trialDays: 21;
+    trialDays: 21';
 
     setupTime: 1 week,
     category: Supply Chain & Logistics,
-    realService: true;
+    realService: true';
 
     technology: ['Machine Learning', 'Predictive Analytics', Optimization algorithms],
     integrations: ['ERP systems', 'WMS', 'TMS', Supplier portals],
@@ -6235,16 +6235,16 @@ varian,
 variant: ai-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: ML models, optimization engine, integration APIs.,
     launchDate: 2024-12-01,
     customers:
-        customers: 41;
+        customers: 41';
 
-    rating: 4.6;
+    rating: 4.6';
 
-    reviews: 28;
+    reviews: 28';
 
     popula,
   r: true,
@@ -6282,7 +6282,7 @@ variant: ai-futuristic,
     marketSiz,
   e: $18B supply chain management,
     growthRat,
-  e: 15% CAGR,;
+  e: 15% CAGR,';
 
 varian,
   t: ai-futuristic,
@@ -6320,7 +6320,7 @@ varian,
       Goal-based planning,
       Real-time monitoring
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-green-600 to-emerald-700,
@@ -6328,11 +6328,11 @@ varian,
     link: https://ziontechgroup.com/services/autonomous-financial-advisor,
     marketPosition: AI financial advisor with institutional-grade investment strategies.,
     targetAudience: ['Financial advisors', 'Wealth management', Individual investors],
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 3 days,
     category: FinTech & Wealth Management,
-    realService: true;
+    realService: true';
 
     technology: ['Machine Learning', 'Portfolio optimization', Risk modeling],
     integrations: ['Brokerage APIs', 'Banking systems', Tax software],
@@ -6345,16 +6345,16 @@ varian,
 variant: ai-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: ML models, portfolio engine, compliance framework.,
     launchDate: 2024-11-15,
     customers:
-        customers: 35;
+        customers: 35';
 
-    rating: 4.7;
+    rating: 4.7';
 
-    reviews: 22;
+    reviews: 22';
 
     popula,
   r: true,
@@ -6392,7 +6392,7 @@ variant: ai-futuristic,
     marketSiz,
   e: $12B robo-advisory,
     growthRat,
-  e: 23% CAGR,;
+  e: 23% CAGR,';
 
 varian,
   t: ai-futuristic,
@@ -6430,7 +6430,7 @@ varian,
       Self-awareness algorithms,
       Ethical decision making
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-violet-600 to-purple-700,
@@ -6438,11 +6438,11 @@ varian,
     link: https://ziontechgroup.com/services/ai-consciousness-evolution-platform,
     marketPosition: First AI consciousness platform for research and development.,
           targetAudience: ['AI researchers', 'Universities', Tech companies],
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 2 weeks,
     category: AI Consciousness,
-    realService: true;
+    realService: true';
 
     technology: ['Neural networks', 'Consciousness algorithms', Emotional AI],
     integrations: ['Research platforms', 'AI frameworks', Cloud computing],
@@ -6455,16 +6455,16 @@ varian,
 variant: consciousness-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Consciousness algorithms, emotional models, research tools.,
     launchDate: 2025-09-01,
     customers:
-        customers: 8;
+        customers: 8';
 
-    rating: 4.9;
+    rating: 4.9';
 
-    reviews: 5;
+    reviews: 5';
 
     popula,
   r: true,
@@ -6502,7 +6502,7 @@ variant: consciousness-futuristic,
     marketSiz,
   e: $2.1B AI consciousness,
     growthRat,
-  e: 35% CAGR,;
+  e: 35% CAGR,';
 
 varian,
   t: consciousness-futuristic,
@@ -6540,7 +6540,7 @@ varian,
       Quantum communications,
       Mission planning
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-indigo-600 to-blue-700,
@@ -6548,11 +6548,11 @@ varian,
     link: https://ziontechgroup.com/services/quantum-space-technology-suite,
     marketPosition: First quantum computing platform specifically designed for space applications.,
     targetAudience: ['Space agencies', 'Satellite companies', Aerospace],
-    trialDays: 45;
+    trialDays: 45';
 
     setupTime: 1 month,
     category: Space Technology,
-    realService: true;
+    realService: true';
 
     technology: ['Quantum computing', 'Space algorithms', Satellite tech],
     integrations: ['NASA APIs', 'ESA systems', Commercial satellites],
@@ -6565,16 +6565,16 @@ varian,
 variant: space-quantum-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Quantum algorithms, space APIs, mission planning tools.,
     launchDate: 2025-10-01,
     customers:
-        customers: 12;
+        customers: 12';
 
-    rating: 4.7;
+    rating: 4.7';
 
-    reviews: 8;
+    reviews: 8';
 
     popula,
   r: false,
@@ -6612,7 +6612,7 @@ variant: space-quantum-futuristic,
     marketSiz,
   e: $4.8B space technology,
     growthRat,
-  e: 28% CAGR,;
+  e: 28% CAGR,';
 
 varian,
   t: space-quantum-futuristic,
@@ -6650,7 +6650,7 @@ varian,
       Supply chain automation,
       Real-time analytics
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-orange-600 to-red-700,
@@ -6658,11 +6658,11 @@ varian,
     link: https://ziontechgroup.com/services/autonomous-manufacturing-ai,
     marketPosition: AI-driven autonomous manufacturing platform for Industry 4.0.,
     targetAudience: ['Manufacturing', 'Factories', Industrial companies],
-    trialDays: 21;
+    trialDays: 21';
 
     setupTime: 2 weeks,
     category: Manufacturing & Industry 4.0,
-    realService: true;
+    realService: true';
 
     technology: ['AI/ML', 'IoT', 'Robotics', Computer vision],
     integrations: ['ERP systems', 'MES platforms', IoT devices],
@@ -6675,16 +6675,16 @@ varian,
 variant: manufacturing-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: AI models, IoT integration, analytics dashboard.,
     launchDate: 2025-08-15,
     customers:
-        customers: 31;
+        customers: 31';
 
-    rating: 4.6;
+    rating: 4.6';
 
-    reviews: 24;
+    reviews: 24';
 
     popula,
   r: true,
@@ -6722,7 +6722,7 @@ variant: manufacturing-futuristic,
     marketSiz,
   e: $22B smart manufacturing,
     growthRat,
-  e: 18% CAGR,;
+  e: 18% CAGR,';
 
 varian,
   t: manufacturing-futuristic,
@@ -6760,7 +6760,7 @@ varian,
       Clinical trial optimization,
       Personalized medicine
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-green-600 to-emerald-700,
@@ -6768,11 +6768,11 @@ varian,
     link: https://ziontechgroup.com/services/biotech-ai-research-platform,
     marketPosition: AI-driven biotech research platform for pharmaceutical companies.,
     targetAudience: ['Pharmaceutical companies', 'Research labs', Biotech startups],
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 3 weeks,
     category: Biotechnology & Healthcare,
-    realService: true;
+    realService: true';
 
     technology: ['AI/ML', 'Bioinformatics', Computational biology],
     integrations: ['Research databases', 'Lab equipment', Clinical systems],
@@ -6785,16 +6785,16 @@ varian,
 variant: biotech-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: AI models, bioinformatics tools, research platform.,
     launchDate: 2025-07-20,
     customers:
-        customers: 19;
+        customers: 19';
 
-    rating: 4.8;
+    rating: 4.8';
 
-    reviews: 15;
+    reviews: 15';
 
     popula,
   r: true,
@@ -6832,7 +6832,7 @@ variant: biotech-futuristic,
     marketSiz,
   e: $15B AI in biotech,
     growthRat,
-  e: 32% CAGR,;
+  e: 32% CAGR,';
 
 varian,
   t: biotech-futuristic,
@@ -6870,7 +6870,7 @@ varian,
       Virtual meetings,
       Integration APIs
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-purple-600 to-pink-700,
@@ -6878,11 +6878,11 @@ varian,
     link: https://ziontechgroup.com/services/metaverse-enterprise-platform,
     marketPosition: Enterprise metaverse platform for remote collaboration and virtual events.,
     targetAudience: ['Enterprises', 'Remote teams', Event organizers],
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 1 week,
     category: Metaverse & Virtual Reality,
-    realService: true;
+    realService: true';
 
     technology: ['VR/AR', '3D graphics', 'WebGL', WebRTC],
     integrations: ['Slack', 'Microsoft Teams', 'Zoom', Webex],
@@ -6895,16 +6895,16 @@ varian,
 variant: metaverse-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: 3D engine, collaboration tools, integration APIs.,
     launchDate: 2025-06-25,
     customers:
-        customers: 26;
+        customers: 26';
 
-    rating: 4.5;
+    rating: 4.5';
 
-    reviews: 18;
+    reviews: 18';
 
     popula,
   r: false,
@@ -6942,7 +6942,7 @@ variant: metaverse-futuristic,
     marketSiz,
   e: $8.9B metaverse,
     growthRat,
-  e: 45% CAGR,;
+  e: 45% CAGR,';
 
 varian,
   t: metaverse-futuristic,
@@ -6980,7 +6980,7 @@ varian,
       Market prediction,
       High-frequency trading
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-emerald-600 to-green-700,
@@ -6988,11 +6988,11 @@ varian,
     link: https://ziontechgroup.com/services/quantum-financial-trading-platform,
     marketPosition: Quantum computing platform specifically designed for financial markets.,
     targetAudience: ['Investment banks', 'Hedge funds', Trading firms],
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 1 month,
     category: Quantum Finance,
-    realService: true;
+    realService: true';
 
     technology: ['Quantum computing', 'Financial algorithms', Risk modeling],
     integrations: ['Bloomberg', 'Reuters', Trading platforms],
@@ -7005,16 +7005,16 @@ varian,
 variant: quantum-finance-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Quantum algorithms, financial models, trading APIs.,
     launchDate: 2025-09-15,
     customers:
-        customers: 15;
+        customers: 15';
 
-    rating: 4.9;
+    rating: 4.9';
 
-    reviews: 12;
+    reviews: 12';
 
     popula,
   r: true,
@@ -7052,7 +7052,7 @@ variant: quantum-finance-futuristic,
     marketSiz,
   e: $6.2B quantum finance,
     growthRat,
-  e: 38% CAGR,;
+  e: 38% CAGR,';
 
 varian,
   t: quantum-finance-futuristic,
@@ -7090,7 +7090,7 @@ varian,
       Predictive maintenance,
       Real-time tracking
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-blue-600 to-cyan-700,
@@ -7098,11 +7098,11 @@ varian,
     link: https://ziontechgroup.com/services/ai-autonomous-vehicle-platform,
     marketPosition: AI platform for autonomous vehicle fleet management and optimization.,
     targetAudience: ['Transportation companies', 'Logistics', Ride-sharing],
-    trialDays: 21;
+    trialDays: 21';
 
     setupTime: 2 weeks,
     category: Autonomous Vehicles & Transportation,
-    realService: true;
+    realService: true';
 
     technology: ['AI/ML', 'Computer vision', 'IoT', 5G],
     integrations: ['Vehicle APIs', 'GPS systems', Traffic data],
@@ -7115,16 +7115,16 @@ varian,
 variant: autonomous-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: AI models, fleet management, safety systems.,
     launchDate: 2025-07-30,
     customers:
-        customers: 22;
+        customers: 22';
 
-    rating: 4.6;
+    rating: 4.6';
 
-reviews: 16;
+reviews: 16';
 
   },
     id: quantum-cybersecurity-suite,
@@ -7170,7 +7170,7 @@ reviews: 16;
     marketSiz,
   e: $12B autonomous vehicles,
     growthRat,
-  e: 42% CAGR,;
+  e: 42% CAGR,';
 
 varian,
   t: autonomous-futuristic,
@@ -7208,7 +7208,7 @@ varian,
       Compliance frameworks,
       Migration tools
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-red-600 to-pink-700,
@@ -7216,11 +7216,11 @@ varian,
     link: https://ziontechgroup.com/services/quantum-cybersecurity-suite,
     marketPosition: Comprehensive quantum-resistant cybersecurity platform.,
     targetAudience: ['Financial services', 'Government', Healthcare],
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: 3 weeks,
     category: Quantum Security,
-    realService: true;
+    realService: true';
 
     technology: ['Post-quantum algorithms', 'Quantum key distribution', Hybrid encryption],
     integrations: ['PKI systems', 'VPN solutions', Cloud providers],
@@ -7233,16 +7233,16 @@ varian,
 variant: quantum-security-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Cryptographic libraries, key management, migration tools.,
     launchDate: 2025-08-25,
     customers:
-        customers: 28;
+        customers: 28';
 
-    rating: 4.7;
+    rating: 4.7';
 
-    reviews: 20;
+    reviews: 20';
 
     popula,
   r: true,
@@ -7280,7 +7280,7 @@ variant: quantum-security-futuristic,
     marketSiz,
   e: $3.2B quantum security,
     growthRat,
-  e: 45% CAGR,;
+  e: 45% CAGR,';
 
 varian,
   t: quantum-security-futuristic,
@@ -7318,7 +7318,7 @@ varian,
       Privacy controls,
       Audit reporting
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-blue-600 to-indigo-700,
@@ -7326,11 +7326,11 @@ varian,
     link: https://ziontechgroup.com/services/enterprise-data-governance-platform,
     marketPosition: Comprehensive data governance platform for enterprise compliance.,
     targetAudience: ['Enterprises', 'Financial services', Healthcare],
-    trialDays: 21;
+    trialDays: 21';
 
     setupTime: 2 weeks,
     category: Data & Analytics,
-    realService: true;
+    realService: true';
 
     technology: ['Data governance', 'Compliance frameworks', Data quality],
     integrations: ['Data warehouses', 'BI tools', Compliance systems],
@@ -7343,16 +7343,16 @@ varian,
 variant: data-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Governance framework, quality tools, compliance monitoring.,
     launchDate: 2025-05-20,
     customers:
-        customers: 34;
+        customers: 34';
 
-    rating: 4.5;
+    rating: 4.5';
 
-    reviews: 22;
+    reviews: 22';
 
     popula,
   r: false,
@@ -7390,7 +7390,7 @@ variant: data-futuristic,
     marketSiz,
   e: $7.2B data governance,
     growthRat,
-  e: 16% CAGR,;
+  e: 16% CAGR,';
 
 varian,
   t: data-futuristic,
@@ -7428,7 +7428,7 @@ varian,
       Diversity metrics,
       Recruitment optimization
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-purple-600 to-pink-700,
@@ -7436,11 +7436,11 @@ varian,
     link: https://ziontechgroup.com/services/ai-powered-hr-analytics-suite,
     marketPosition: AI-driven HR analytics for modern workforce management.,
     targetAudience: ['HR departments', 'People operations', Talent acquisition],
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 1 week,
     category: HR & People Analytics,
-    realService: true;
+    realService: true';
 
     technology: ['AI/ML', 'People analytics', Predictive modeling],
     integrations: ['HRIS systems', 'ATS platforms', Performance tools],
@@ -7453,16 +7453,16 @@ varian,
 variant: hr-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Analytics engine, predictive models, HR integrations.,
     launchDate: 2025-04-15,
     customers:
-        customers: 47;
+        customers: 47';
 
-    rating: 4.6;
+    rating: 4.6';
 
-    reviews: 31;
+    reviews: 31';
 
     popula,
   r: true,
@@ -7500,7 +7500,7 @@ variant: hr-futuristic,
     marketSiz,
   e: $3.8B HR analytics,
     growthRat,
-  e: 19% CAGR,;
+  e: 19% CAGR,';
 
 varian,
   t: hr-futuristic,
@@ -7538,7 +7538,7 @@ varian,
       Security compliance,
       Multi-cloud support
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-cyan-600 to-blue-700,
@@ -7546,11 +7546,11 @@ varian,
     link: https://ziontechgroup.com/services/cloud-migration-automation-platform,
     marketPosition: Automated cloud migration platform for enterprise transformation.,
     targetAudience: ['Enterprises', 'IT departments', Cloud architects],
-    trialDays: 21;
+    trialDays: 21';
 
     setupTime: 2 weeks,
     category: Cloud & Infrastructure,
-    realService: true;
+    realService: true';
 
     technology: ['Automation', 'Cloud APIs', Migration tools],
     integrations: ['AWS', 'Azure', 'GCP', On-premise systems],
@@ -7563,16 +7563,16 @@ varian,
 variant: cloud-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Migration engine, cost optimization, monitoring tools.,
     launchDate: 2025-03-25,
     customers:
-        customers: 29;
+        customers: 29';
 
-    rating: 4.7;
+    rating: 4.7';
 
-    reviews: 19;
+    reviews: 19';
 
     popula,
   r: true,
@@ -7610,7 +7610,7 @@ variant: cloud-futuristic,
     marketSiz,
   e: $18B cloud migration,
     growthRat,
-  e: 24% CAGR,;
+  e: 24% CAGR,';
 
 varian,
   t: cloud-futuristic,
@@ -7648,7 +7648,7 @@ varian,
       Process optimization,
       Implementation support
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-orange-600 to-red-700,
@@ -7656,11 +7656,11 @@ varian,
     link: https://ziontechgroup.com/services/digital-transformation-consulting,
     marketPosition: Strategic digital transformation consulting for enterprise success.,
     targetAudience: ['Enterprises', 'Government', Non-profits],
-    trialDays: 0;
+    trialDays: 0';
 
     setupTime: 1 day,
     category: Consulting & Strategy,
-    realService: true;
+    realService: true';
 
     technology: ['Strategy frameworks', 'Change management', Process optimization],
     integrations: ['Project management', 'Communication tools', Analytics platforms],
@@ -7673,16 +7673,16 @@ varian,
 variant: consulting-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Strategy frameworks, change management, implementation support.,
     launchDate: 2025-02-10,
     customers:
-        customers: 12;
+        customers: 12';
 
-    rating: 4.9;
+    rating: 4.9';
 
-    reviews: 8;
+    reviews: 8';
 
     popula,
   r: false,
@@ -7720,7 +7720,7 @@ variant: consulting-futuristic,
     marketSiz,
   e: $45B digital transformation,
     growthRat,
-  e: 21% CAGR,;
+  e: 21% CAGR,';
 
 varian,
   t: consulting-futuristic,
@@ -7758,7 +7758,7 @@ varian,
       Transparency tools,
       Audit frameworks
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-green-600 to-emerald-700,
@@ -7766,11 +7766,11 @@ varian,
     link: https://ziontechgroup.com/services/ai-ethics-compliance-framework,
     marketPosition: Comprehensive AI ethics and compliance framework.,
     targetAudience: ['AI companies', 'Enterprises', Government],
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 1 week,
     category: AI Ethics & Compliance,
-    realService: true;
+    realService: true';
 
     technology: ['Ethics frameworks', 'Compliance tools', Bias detection],
     integrations: ['AI platforms', 'Compliance systems', Audit tools],
@@ -7783,16 +7783,16 @@ varian,
 variant: ethics-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Ethics framework, compliance tools, audit systems.,
     launchDate: 2025-01-20,
     customers:
-        customers: 18;
+        customers: 18';
 
-    rating: 4.8;
+    rating: 4.8';
 
-    reviews: 12;
+    reviews: 12';
 
     popula,
   r: true,
@@ -7830,7 +7830,7 @@ variant: ethics-futuristic,
     marketSiz,
   e: $2.8B AI ethics,
     growthRat,
-  e: 28% CAGR,;
+  e: 28% CAGR,';
 
 varian,
   t: ethics-futuristic,
@@ -7868,7 +7868,7 @@ varian,
       Resource allocation,
       Performance monitoring
     ],
-    popular: false;
+    popular: false';
 
     icon: ,
     color: from-teal-600 to-green-700,
@@ -7876,11 +7876,11 @@ varian,
     link: https://ziontechgroup.com/services/edge-computing-optimization-platform,
     marketPosition: Edge computing optimization platform for IoT and distributed systems.,
     targetAudience: ['IoT companies', 'Manufacturing', Smart cities],
-    trialDays: 21;
+    trialDays: 21';
 
     setupTime: 1 week,
     category: Edge Computing & IoT,
-    realService: true;
+    realService: true';
 
     technology: ['Edge computing', 'IoT management', Optimization algorithms],
     integrations: ['IoT platforms', 'Cloud providers', Edge devices],
@@ -7893,16 +7893,16 @@ varian,
 variant: edge-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Edge optimization, IoT management, performance monitoring.,
     launchDate: 2024-12-15,
     customers:
-        customers: 25;
+        customers: 25';
 
-    rating: 4.5;
+    rating: 4.5';
 
-    reviews: 17;
+    reviews: 17';
 
     popula,
   r: false,
@@ -7940,7 +7940,7 @@ variant: edge-futuristic,
     marketSiz,
   e: $11B edge computing,
     growthRat,
-  e: 32% CAGR,;
+  e: 32% CAGR,';
 
 varian,
   t: edge-futuristic,
@@ -7978,7 +7978,7 @@ varian,
       Threat detection,
       Compliance reporting
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-red-600 to-orange-700,
@@ -7986,11 +7986,11 @@ varian,
     link: https://ziontechgroup.com/services/zero-trust-security-implementation,
     marketPosition: Comprehensive zero trust security implementation platform.,
     targetAudience: ['Enterprises', 'Government', Financial services],
-    trialDays: 21;
+    trialDays: 21';
 
     setupTime: 2 weeks,
     category: Cybersecurity,
-    realService: true;
+    realService: true';
 
     technology: ['Zero trust', 'Identity management', Network security],
     integrations: ['Identity providers', 'Network equipment', Security tools],
@@ -8003,16 +8003,16 @@ varian,
 variant: security-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Zero trust framework, identity management, monitoring tools.,
     launchDate: 2024-11-25,
     customers:
-        customers: 36;
+        customers: 36';
 
-    rating: 4.7;
+    rating: 4.7';
 
-    reviews: 25;
+    reviews: 25';
 
     popula,
   r: true,
@@ -8050,7 +8050,7 @@ variant: security-futuristic,
     marketSiz,
   e: $38B zero trust security,
     growthRat,
-  e: 26% CAGR,;
+  e: 26% CAGR,';
 
 varian,
   t: security-futuristic,
@@ -8088,7 +8088,7 @@ varian,
       Omnichannel support,
       Experience optimization
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-pink-600 to-purple-700,
@@ -8096,11 +8096,11 @@ varian,
     link: https://ziontechgroup.com/services/ai-powered-customer-experience-platform,
     marketPosition: AI-driven customer experience optimization platform.,
     targetAudience: ['E-commerce', 'Retail', Service companies],
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 1 week,
     category: Customer Experience,
-    realService: true;
+    realService: true';
 
     technology: ['AI/ML', 'Personalization', Predictive analytics],
     integrations: ['CRM systems', 'E-commerce platforms', Marketing tools],
@@ -8113,16 +8113,16 @@ varian,
 variant: cx-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: Personalization engine, journey mapping, analytics tools.,
     launchDate: 2024-10-30,
     customers:
-        customers: 53;
+        customers: 53';
 
-    rating: 4.6;
+    rating: 4.6';
 
-    reviews: 38;
+    reviews: 38';
 
     popula,
   r: true,
@@ -8160,7 +8160,7 @@ variant: cx-futuristic,
     marketSiz,
   e: $14B customer experience,
     growthRat,
-  e: 22% CAGR,;
+  e: 22% CAGR,';
 
 varian,
   t: cx-futuristic,
@@ -8197,7 +8197,7 @@ varian,
       Calendar booking and routing,
       Compliance and opt-out handling
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-indigo-600 to-blue-700,
@@ -8205,11 +8205,11 @@ varian,
     link: https://ziontechgroup.com/services/ai-sales-agent-suite,
     marketPosition: Purpose-built AI SDR that integrates with existing CRMs and sequences.,
     targetAudience: Sales, growth, founders,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 2 hours,
     category: AI & Automation,
-    realService: true;
+    realService: true';
 
     technology: ['LLMs', 'RAG', 'Email APIs', LinkedIn automation],
     integrations: ['HubSpot', 'Salesforce', 'Pipedrive', Outreach],
@@ -8220,15 +8220,15 @@ marketSize: $12B sales tech,
     growthRate: 19% CAGR,
     variant: agentic-suite,
     contactInfo:
-        contactInfo: unknown;
+        contactInfo: unknown';
 
       mobile: +1 302 464 0950,
       email: kleber@ziontechgroup.com,
       mobile: +1 302 464 0950,
       email: kleber@ziontechgroup.com,
-      address: 364 E Main St STE 1008 Middletown DE 19709}};
+      address: 364 E Main St STE 1008 Middletown DE 19709}}';
 
-];      mobile: +1 302 464 0950,
+]';      mobile: +1 302 464 0950,
       email: kleber@ziontechgroup.com,
       mobile: +1 302 464 0950,
       email: kleber@ziontechgroup.com,
@@ -8310,14 +8310,14 @@ export interface AdditionalRealService,
   n: string; feature,
   s: string[]; lin,
   k: string; categor,
-  y: string; real_implementatio,
-  n: boolean; contact_inf,
+  y: string'; real_implementatio,
+  n: boolean'; contact_inf,
   o: mobil,
-  e: string; emai,
+  e: string'; emai,
   l: string} addres,
   s: string} export const,
   additionalEnhancedServices: AdditionalRealService[] = [ addres,
-  s: string} ; export const,
+  s: string} '; export const,
   additionalEnhancedServices: AdditionalRealService[] = [, i,
   d: 'ai - automation - suite, nam,
   e: 'AI Automation Suite, taglin,
@@ -8352,11 +8352,11 @@ export interface AdditionalRealService,
   n: string; feature,
   s: string[]; lin,
   k: string; categor,
-  y: string; realImplementatio,
-  n: boolean; contactInf,
+  y: string'; realImplementatio,
+  n: boolean'"; contactInf,
   o: mobil,
-  e: string; emai,
-  l: string; addres,
+  e: string'"'"; emai,
+  l: string'"'"'"; addres,
   s: string}} } addres,
   s: string} export const,
   additionalEnhancedServices: AdditionalRealService[] = [  i,
@@ -8365,7 +8365,7 @@ export interface AdditionalRealService,
   e: 'Intelligent automation for modern businesses pric,
   e: $79/month descriptio,
   n:' Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency. feature,
-  s: [' 'Workflow automation'' 'AI decision making'' 'Integration APIs'' 'Custom workflows'' 'Analytics dashboard ] lin,
+  s: [' 'Workflow automation' 'AI decision making' 'Integration APIs' 'Custom workflows' 'Analytics dashboard ] lin,
   k: '/services/ai-automation-suite categor,
   y: AI & Automation realImplementatio,
   n: true,
@@ -8378,14 +8378,14 @@ export interface AdditionalRealService,
   e: 'Enterprise-grade data management and analytics pric,
   e: $149/month descriptio,
   n:' Scalable data warehouse solution with advanced analytics and business intelligence capabilities. feature,
-  s: [' 'Data integration'' 'Real-time processing'' 'Advanced analytics'' 'Scalable architecture'' 'Security compliance ] lin,
+  s: [' 'Data integration' 'Real-time processing' 'Advanced analytics' 'Scalable architecture' 'Security compliance ] lin,
   k: '/services/data-warehouse-solution categor,
   y: Data & Analytics realImplementatio,
   n: true,
   contactInfo:  mobil,
   e: '+1 302 464 0950 emai,
   l: 'kleber@ziontechgroup.com addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]; mobil,
+  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]'"'"'"'"; mobil,
   e: +1 302 464 0950,
   emai,
   l: "kleber@ziontechgroup.com i,
@@ -8401,7 +8401,7 @@ export interface AdditionalRealService,
   o:  mobil,
   e: '+1 302 464 0950, emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com, addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}}]; mobil,
+  s: '364 E Main St STE 1008 Middletown DE 19709}}]"'"'"; mobil,
   e: +1 302 464 0950,
   i,
   d: "ai-automation-suite, nam,
@@ -8430,7 +8430,7 @@ export interface AdditionalRealService,
   s: 364 E Main St STE 1008 Middletown DE 19709,
   emai,
   l: "kleber@ziontechgroup.com addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709 } } ]; ]; i,
+  s: "364 E Main St STE 1008 Middletown DE 19709 } } ]'"'"'"; ]'"'"'"'"; i,
   d: "ai-automation-suite, nam,
   e: "AI Automation Suite, taglin,
   e: "Intelligent automation for modern businesses, pric,
@@ -10837,10 +10837,10 @@ export interface AdditionalRealService,
   l: "kleber@ziontechgroup.com", mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com', addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}"'"'"; ]"'"'"'"; mobil,
   e: "+1 302 464 0950,
   emai,
   l: "kleber@ziontechgroup.com" mobil,
   e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com", addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]'"'"'"'"; '"

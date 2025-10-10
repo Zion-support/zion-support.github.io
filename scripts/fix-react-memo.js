@@ -1,24 +1,24 @@
-import React from 'react;
+import React from 'react';
 
-#!/usr/bin/env node;
+#!/usr/bin/env node';
 
-import fs from 'fs;
+import fs from 'fs';
 
-import { glob } from 'glob;
+import { glob } from 'glob';
 
-// Files to process;
+// Files to process';
 
-const filePatterns = [;;
+const filePatterns = [';';
 
   'app/**/*.{ts,tsx}',
   'src/**/*.{ts,tsx}',
   components/**/*.{ts,tsx}
 
-];
+]';
 
-// Files to exclude;
+// Files to exclude';
 
-const excludePatterns = [;;
+const excludePatterns = [';';
 
   '**/node_modules/**',
   '**/dist/**',
@@ -51,74 +51,74 @@ let newContent = content;;
 
   let fixed = false;;
 
-  // Fix React.memo syntax issues;
+  // Fix React.memo syntax issues';
 
-  // Pattern 1: const Component: React.FC = React.memo(() => {,;
+  // Pattern 1: const Component: React.FC = React.memo(() => {,';
 
-const pattern1 = /const\s+(\w+):\s*React\.FC\s*=\s*React\.memo\(\(\)\s*=>\s*\{/g;;
+const pattern1 = /const\s+(\w+):\s*React\.FC\s*=\s*React\.memo\(\(\)\s*=>\s*\{/g';';
 
   if (pattern1.test(newContent)) {,
     newContent = newContent.replace(pattern1, 'const $1: React.FC = () => {);
 
     fixed = true}
 
-  // Pattern 2: const Component = React.memo(() => {,;;
+  // Pattern 2: const Component = React.memo(() => {,';';
 
-const pattern2 = /const\s+(\w+)\s*=\s*React\.memo\(\(\)\s*=>\s*\{/g;;
+const pattern2 = /const\s+(\w+)\s*=\s*React\.memo\(\(\)\s*=>\s*\{/g';';
 
   if (pattern2.test(newContent)) {,
     newContent = newContent.replace(pattern2, 'const $1 = () => {);
 
     fixed = true}
 
-  // Pattern 3: const Component: React.FC = React.memo((props) => {,;
+  // Pattern 3: const Component: React.FC = React.memo((props) => {,';
 
-const pattern3 = /const\s+(\w+):\s*React\.FC\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,;;
+const pattern3 = /const\s+(\w+):\s*React\.FC\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g';,';';
 
   if (pattern3.test(newContent)) {,
     newContent = newContent.replace(pattern3, 'const $1: React.FC = () => {);
 
     fixed = true}
 
-  // Pattern 4: const Component = React.memo((props) => {,;;
+  // Pattern 4: const Component = React.memo((props) => {,;';
 
-const pattern4 = /const\s+(\w+)\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,;;
+const pattern4 = /const\s+(\w+)\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g';,';';
 
   if (pattern4.test(newContent)) {,
-    newContent = newContent.replace(pattern4, 'const $1 = () => {);
+    newContent = newContent.replace(pattern4, 'const $1 = () => {)';
 
     fixed = true}
 
-  // Remove React.memo closing parentheses;
+  // Remove React.memo closing parentheses';
 
-  // Pattern: }); at the end of component;
+  // Pattern: })'; at the end of component';
 
-  const closingPattern = /(\w+)\.displayName\s*=\s*['"][^'"]+['"];\s*\}\);/g;;
+  const closingPattern = /(\w+)\.displayName\s*=\s*['"][^'"]+['"]';\s*\}\)';/g';';
 
   if (closingPattern.test(newContent)) {
     newContent = newContent.replace(closingPattern, '$1.displayName = \'$1\';);
 
     fixed = true}
 
-  // Alternative closing pattern;
+  // Alternative closing pattern';
 
-  const closingPattern2 = /^\s*\}\);\s*$/gm;;
+  const closingPattern2 = /^\s*\}\)';\s*$/gm';';
 
   if (closingPattern2.test(newContent)) {
-    newContent = newContent.replace(closingPattern2, ');
+    newContent = newContent.replace(closingPattern2, ')';
 
     fixed = true}
 
   return { content: newContent, fixed }}
 
-;
+';
 
 function processFile(filePath) {
-  try {;
+  try {';
 
-const content = fs.readFileSync(filePath, 'utf8);;
+const content = fs.readFileSync(filePath, 'utf8)';';
 
-    const result = fixReactMemo(content);;
+    const result = fixReactMemo(content)';';
 
     if (result.fixed) {
       fs.writeFileSync(filePath, result.content, 'utf8);
@@ -151,12 +151,12 @@ const files = await glob(pattern, {);;
 
   const uniqueFiles = [...new Set(allFiles)];;
 
-  totalFiles = uniqueFiles.length;
+  totalFiles = uniqueFiles.length'";
 
   // console.log removed for production
-// Process each file;
+// Process each file'"'";
 
-  uniqueFiles.forEach(processFile);
+  uniqueFiles.forEach(processFile)'"'"'";
 
   // console.log removed for production
 // console.log removed for production
@@ -167,4 +167,4 @@ const files = await glob(pattern, {);;
 if (import.meta.url === `file://${process.argv[1]}`) {
   main()}
 
-export { processFile, fixReactMemo };
+export { processFile, fixReactMemo }'"'"'"'";

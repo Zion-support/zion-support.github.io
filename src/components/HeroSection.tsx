@@ -110,7 +110,7 @@ export default function HeroSection() {
         <div className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center>
           <div $2></div>
     </section>
-  )};
+  )}";
 
-export default HeroSection;"
+export default HeroSection";"
 

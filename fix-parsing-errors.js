@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 
-import fs from 'fs;
+import fs from 'fs';
 
-import path from 'path;
+import path from 'path';
 
-import { glob } from glob;
+import { glob } from glob';
 
-// Function to fix emoji characters in JSX;
+// Function to fix emoji characters in JSX';
 
-function fixEmojis(content) {;
+function fixEmojis(content) {';
 
-const emojiMap = {;;;
+const emojiMap = {';';';
 
     '🎧': 'headphones,
     '📈': 'trending-up,
@@ -62,11 +62,11 @@ const emojiMap = {;;;
     '🎮': 'gamepad,
     '🎲': 'dice,
     '🎯: target
-  };
+  }';
 
-;
+';
 
-let fixed = content;;
+let fixed = content';';
 
   for (const [emoji, replacement] of Object.entries(emojiMap)) {
     fixed = fixed.replace(new RegExp(emoji, 'g), replacement)}
@@ -75,18 +75,18 @@ let fixed = content;;
 
 // Function to fix common JSX parsing issues;
 
-function fixJSXIssues(content) {;
+function fixJSXIssues(content) {';
 
-let fixed = content;;
+let fixed = content';';
 
   // Fix unclosed JSX elements by checking for common patterns
   // This is a basic fix - more sophisticated parsing would be needed for complex cases
   
   // Fix common emoji issues in JSX
-  fixed = fixEmojis(fixed);
+  fixed = fixEmojis(fixed)';
 
   // Fix common syntax issues
-  fixed = fixed.replace(/\{\s*'([^']*)'\s*\}/g, '"$1"); // Fix single quotes in JSX expressions
+  fixed = fixed.replace(/\{\s*'([^']*)'\s*\}/g, '"$1")'"'"'"'"; // Fix single quotes in JSX expressions
   fixed = fixed.replace(/\{\s*"([^"]*)"\s*\}/g, '"$1"); // Normalize quotes
   
   return fixed}
@@ -103,7 +103,7 @@ const lines = content.split(\n);;
 
 const openDivs = (content.match(/<div/g) || []).length;;
 
-  const closeDivs = (content.match(/<\/div>/g) || []).length;;
+  const closeDivs = (content.match(/<\/div>/g) || []).length;';
 
   if (openDivs > closeDivs) {
     // console.log removed for production
@@ -113,9 +113,9 @@ const openDivs = (content.match(/<div/g) || []).length;;
   return fixed}
 
 // Main function to process files
-async function processFiles() {;
+async function processFiles() {';
 
-const patterns = [;;
+const patterns = [';';
 
     'app/**/*.tsx,
     'app/**/*.ts,
@@ -126,11 +126,11 @@ const patterns = [;;
 
 let processedCount = 0;;
 
-  let errorCount = 0;;
+  let errorCount = 0;';
 
-  for (const pattern of patterns) {;
+  for (const pattern of patterns) {';
 
-const files = await glob(pattern, {;;
+const files = await glob(pattern, {';';
 
       ignore: [
         'node_modules/**,
@@ -149,13 +149,13 @@ const content = fs.readFileSync(file, utf8);;
         let fixed = content;;
 
         // Apply fixes
-        fixed = fixJSXIssues(fixed);
+        fixed = fixJSXIssues(fixed)'";
 
-        fixed = fixJSXStructure(fixed);
+        fixed = fixJSXStructure(fixed)'"'";
 
         // Only write if content changed
         if (fixed !== content) {
-          fs.writeFileSync(file, fixed, utf8);
+          fs.writeFileSync(file, fixed, utf8)'"'"'";
 
           // console.log removed for production
 processedCount++}
@@ -172,4 +172,4 @@ errorCount++}
 }
 
 // Run the script
-processFiles().catch(console.error);
+processFiles().catch(console.error)'"'"'"'";

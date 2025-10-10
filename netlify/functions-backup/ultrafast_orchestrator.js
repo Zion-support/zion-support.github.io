@@ -6,12 +6,12 @@ exports.handler = async function (event, context) {
       statusCode: 200;
       body: JSON.stringify({)
         message: 'ultrafast_orchestrator function executed successfully'),'
-        timestamp: timestamp),;
+        timestamp: timestamp),';
 function: 'ultrafast_orchestrator'})'
     }} catch (error) {
 
     return {
-      statusCode: 500;
+      statusCode: 500';
       body: JSON.stringify({)
         error: 'ultrafast_orchestrator function failed'),'
         message: error.message),
@@ -21,4 +21,4 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     }} catch (error) {/* TODO: Fix JSX expression */}
       })
     }}
-};
+}';

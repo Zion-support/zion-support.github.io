@@ -7,7 +7,7 @@
 
  */
 
-import fs from 'fs;
+import fs from 'fs';
 
 import path from 'path;
 
@@ -55,24 +55,24 @@ const skipLink = document.createElement(a);;
 
             left: 6 px;
 
-            background: #000;
+            background: #000';
 
-            color: #fff;
+            color: #fff';
 
-            padding: 8 px;
+            padding: 8 px';
 
-            text-decoration: none;
+            text-decoration: none';
 
-            z-index: 1000;
+            z-index: 1000';
 
-            border-radius: 4 px;
+            border-radius: 4 px';
 
-            transition: top 0.3 s;
+            transition: top 0.3 s';
 
-          \;
+          \';
 
           skipLink.addEventListener('focus, function() {
-            this.style.top = 6 px});
+            this.style.top = 6 px})';
 
           skipLink.addEventListener('blur, function() {
             this.style.top = -40 px});
@@ -106,16 +106,16 @@ const toggle = document.createElement(button);;
 
             padding: 8 px 16 px;
 
-            border-radius: 4 px;
+            border-radius: 4 px';
 
-            cursor: pointer;
+            cursor: pointer';
 
-            font-size: 14 px;
+            font-size: 14 px';
 
-          \;
+          \';
 
           toggle.addEventListener('click, function() {
-            document.body.classList.toggle(high-contrast);
+            document.body.classList.toggle(high-contrast)';
 
             this.textContent = document.body.classList.contains('high-contrast') ? 'Normal Contrast' : High Contrast});
 
@@ -178,52 +178,52 @@ const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSi
 
             document.documentElement.style.fontSize = Math.max(currentSize - 2, 12) + px});
 
-          ;
+          ';
 
-const resetBtn = document.createElement(button);;
+const resetBtn = document.createElement(button)';';
 
-          resetBtn.textContent = Reset;
+          resetBtn.textContent = Reset';
 
           resetBtn.addEventListener('click, () => {
             document.documentElement.style.fontSize = 16 px});
 
-          controls.appendChild(increaseBtn);
+          controls.appendChild(increaseBtn)';
 
-          controls.appendChild(decreaseBtn);
+          controls.appendChild(decreaseBtn)';
 
-          controls.appendChild(resetBtn);
+          controls.appendChild(resetBtn)';
 
           document.body.appendChild(controls)}
 
-        // Focus management for modals and dropdowns;
+        // Focus management for modals and dropdowns';
 
 function enhanceFocusManagement() {
           // Trap focus in modals
           document.addEventListener('keydown, function(e) {
-            if (e.key === Tab) {;
+            if (e.key === Tab) {';
 
-const modal = document.querySelector('.modal:not([style*="display: none]));;
+const modal = document.querySelector('.modal:not([style*="display: none]));';
 
-              if (modal) {;
+              if (modal) {';
 
-const focusableElements = modal.querySelectorAll(;;
+const focusableElements = modal.querySelectorAll(';';
 
                   'button, [href], input, select, textarea, [tabindex]:not([tabindex=-1])
                 );
 
                 const firstElement = focusableElements[0];;
 
-                const lastElement = focusableElements[focusableElements.length - 1];;
+                const lastElement = focusableElements[focusableElements.length - 1];'";
 
                 if (e.shiftKey) {
                   if (document.activeElement === firstElement) {
-                    lastElement.focus();
+                    lastElement.focus()'"'";
 
                     e.preventDefault()}
 
                 } else {
                   if (document.activeElement === lastElement) {
-                    firstElement.focus();
+                    firstElement.focus()'"'"'";
 
                     e.preventDefault()}
 
@@ -234,11 +234,11 @@ const focusableElements = modal.querySelectorAll(;;
             }
 
             // Close modals with Escape key
-            if (e.key === Escape) {;
+            if (e.key === Escape) {'"'"'"'";
 
-const modal = document.querySelector('.modal:not([style*="display: none]));;
+const modal = document.querySelector('.modal:not([style*="display: none]))'"'";'"'"'";
 
-              if (modal) {;
+              if (modal) {'"'"'"'";
 
 const closeBtn = modal.querySelector('[aria-label="Close], .close-btn);;
 
@@ -257,31 +257,31 @@ const iconButtons = document.querySelectorAll(button:not([aria-label]):not([aria
 
           iconButtons.forEach(button => {;
 
-const icon = button.querySelector(svg, i);;
+const icon = button.querySelector(svg, i);';
 
-            if (icon) {;
+            if (icon) {'";
 
-const iconName = icon.getAttribute(class) || icon.tagName.toLowerCase();;
+const iconName = icon.getAttribute(class) || icon.tagName.toLowerCase()'"'";'"'"'";
 
               button.setAttribute('aria-label', \`\${iconName} button\)}
 
-          });
+          })"'"'"'";
 
-          // Add role="button to clickable divs;
+          // Add role="button to clickable divs'"'"'"'";
 
-const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer]);;
+const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer])';'";
 
           clickableDivs.forEach(div => {
             if (!div.getAttribute('role)) {
-              div.setAttribute('role', button);
+              div.setAttribute('role', button)'"'";
 
               div.setAttribute('tabindex', '0)}
 
-          });
+          })'"'"'";
 
-          // Add aria-expanded to collapsible elements;
+          // Add aria-expanded to collapsible elements'"'"'"'";
 
-const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="collapse]);;
+const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="collapse])';';
 
           collapsibles.forEach(element => {
             if (!element.getAttribute('aria-expanded)) {
@@ -289,13 +289,13 @@ const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="co
 
           })}
 
-        // Announce page changes to screen readers;
+        // Announce page changes to screen readers';
 
-function addLiveRegion() {;
+function addLiveRegion() {';
 
-const liveRegion = document.createElement(div);;
+const liveRegion = document.createElement(div)';';
 
-          liveRegion.setAttribute('aria-live', polite);
+          liveRegion.setAttribute('aria-live', polite)';
 
           liveRegion.setAttribute('aria-atomic', true);
 
@@ -324,12 +324,12 @@ const liveRegion = document.createElement(div);;
 
           document.body.appendChild(liveRegion);
 
-          // Announce navigation changes;
+          // Announce navigation changes';
 
-const originalPushState = history.pushState;;
+const originalPushState = history.pushState';';
 
           history.pushState = function() {
-            originalPushState.apply(history, arguments);
+            originalPushState.apply(history, arguments)';
 
             liveRegion.textContent = 'Page navigation complete}}
 
@@ -365,14 +365,14 @@ const highContrastStyles = \;;
 
         ;
 
-const styleSheet = document.createElement(style);;
+const styleSheet = document.createElement(style);';
 
-        styleSheet.textContent = highContrastStyles;
+        styleSheet.textContent = highContrastStyles';
 
-        document.head.appendChild(styleSheet)})();
+        document.head.appendChild(styleSheet)})()';
 
     </script>
-  ;
+  ';
 
   // Insert accessibility script before closing body tag
   indexContent = indexContent.replace('</body>', `${accessibilityScript}</body>);
@@ -386,23 +386,23 @@ const styleSheet = document.createElement(style);;
 
 const accessibilityStatement = # Accessibility Statement;;
 
-// 1. Generate accessibility report;
+// 1. Generate accessibility report';
 
 function generateAccessibilityReport() {
   // console.log removed for production
-;
+';
 
-const accessibilityReport = {;;
+const accessibilityReport = {';'";
 
     timestamp: new Date().toISOString()
     version: '1.0.0,
     summary:
         summary: {
-      totalIssues: 0;
+      totalIssues: 0"'";
 
-      criticalIssues: 0;
+      criticalIssues: 0"'"'";
 
-      warnings: 0;
+      warnings: 0"'"'"'";
 
       passed: 0},
     checks: [
@@ -456,7 +456,7 @@ const accessibilityReport = {;;
       "Maintain color contrast standards,
       "Keep ARIA labels up to date
     ]
-  };
+  }';
 
   fs.writeFileSync(
 
@@ -467,13 +467,13 @@ const accessibilityReport = {;;
   // console.log removed for production
 }
 
-// 2. Generate accessibility checklist;
+// 2. Generate accessibility checklist'";
 
 function generateAccessibilityChecklist() {
   // console.log removed for production
-;
+'"'";
 
-const checklist = {;;
+const checklist = {'"'"'";'"'"'"'";
 
     title: "Zion Tech Group Accessibility Checklist
     version: "1.0.0"

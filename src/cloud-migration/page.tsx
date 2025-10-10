@@ -1,16 +1,16 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock, Phone } from 'lucide-react;
+import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock, Phone } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-;
+';
 
 const,
   CloudMigrationPage: React.FC = () => {/* TODO: Fix JSX expression */}
@@ -66,11 +66,11 @@ const,
 
     }
 
-  ];
+  ]';
 
-;
+';
 
-const migrationSteps = [;;
+const migrationSteps = [';';
 
       titl,
   e: 'Assessment & Planning,
@@ -119,9 +119,9 @@ const migrationSteps = [;;
       ico,
   n: TrendingUp,
       duratio,
-  n: Ongoing;
+  n: Ongoing';
 
-const pricingPlans = [;;
+const pricingPlans = [';';
 
       nam,
   e: 'Small Business,
@@ -174,9 +174,9 @@ const pricingPlans = [;;
         'Full monitoring suite,
         'Multi-cloud architecture,
         'Dedicated account manager,
-        Custom integrations;
+        Custom integrations';
 
-const benefits = [;;
+const benefits = [';';
 
       titl,
   e: 'Cost Reduction,
@@ -215,7 +215,7 @@ const benefits = [;;
                 <Cloud className="w-8 h-8 text-white /></Cloud>
               </div>
               <h1 className="text-5xl font-bold text-white neon-text></h1>
-                Cloud Migration;
+                Cloud Migration";
 
               </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed></p>
@@ -228,13 +228,13 @@ const benefits = [;;
                 href="/contact"
                 className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold
               >
-                Start Migration;
+                Start Migration";
 
                 <ArrowRight className="w-5 h-5 ml-2 /></ArrowRight>
               </Link>
                 href="/demo"
                 className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold
-                Free Assessment;
+                Free Assessment";
 
       {/* Features Section */}
 
@@ -270,27 +270,27 @@ const benefits = [;;
             <h1 className=text-4xl,
   sm:text-5xl,
   md:text-6xl font-bold text-white mb-6></h1>
-              Cloud Migration Services;
+              Cloud Migration Services";
 
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8></p>
-              Seamlessly migrate your applications and data to the cloud with our expert migration services;
+              Seamlessly migrate your applications and data to the cloud with our expert migration services";
 
               <a></a>
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-blue-700 transition-colors inline-flex items-center
-                Get Started;
+                Get Started";
 
               </a>
                 className=border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold,
   hover:bg-blue-600,
   hover:text-white transition-all duration-300 inline-flex items-center
-                View Demo;
+                View Demo";
 
           </section>
 
           <section className="mb-16"></section>
             <h2 className="text-3xl font-bold text-center text-white mb-12></h2>
-              Our Migration Services;
+              Our Migration Services";
 
             </h2>
             <div className=grid grid-cols-1,
@@ -317,7 +317,7 @@ const benefits = [;;
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 /></CheckCircle>
           {/* Migration Process */}
 
-              Our Migration Process;
+              Our Migration Process";
 
             <div className=grid grid-cols-1,
   md:grid-cols-2,
@@ -337,7 +337,7 @@ const benefits = [;;
             <h2 className="text-3xl font-bold text-white mb-6></h2>
               Ready to Migrate to the Cloud?
             <p className="text-xl text-gray-300 mb-8></p>
-              Let our experts help you migrate to the cloud safely and efficiently;
+              Let our experts help you migrate to the cloud safely and efficiently";
 
               <div key={index} className="cyber-card p-8 group,
   hover:scale-105 transition-transform duration-300"></div>
@@ -392,21 +392,21 @@ const benefits = [;;
                 Our experts will provide a detailed migration plan and cost estimate.
               <div className="space-y-4"></div>
                   className="cyber-button w-full inline-flex items-center justify-center py-3
-                  Get Free Assessment;
+                  Get Free Assessment";
 
                   className="cyber-button-outline w-full inline-flex items-center justify-center py-3
-                  Schedule Consultation;
+                  Schedule Consultation"'";
 
       <div className="py-20"></div>
         <div className="container mx-auto px-4 text-center"></div>
           <h2 className="text-4xl font-bold text-white mb-6></h2>
-            Accelerate Your Cloud Journey;
+            Accelerate Your Cloud Journey"'"'";
 
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto></p>
-            Dont let outdated infrastructure hold your business back. Our cloud migration;
+            Dont let outdated infrastructure hold your business back. Our cloud migration'"'"'";
 
             services will help you modernize, scale, and compete in the digital economy.
-              Start Your Migration;
+              Start Your Migration'"'"'"'";
 
       <section className="py-16 px-4"></section>
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Cloud Migration?</h2>
@@ -428,7 +428,7 @@ const benefits = [;;
 
             {/* TODO: Fix JSX expression */}
 
-              <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}}></div>
+              <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : '}}></div>
                 {/* TODO: Fix JSX expression */}
 
                 )}
@@ -452,7 +452,7 @@ const benefits = [;;
             Join hundreds of businesses that have successfully migrated to the cloud with our expert team.
             <button className="cyber-button px-8 py-4 text-lg"></button>
             <button className="cyber-button-outline px-8 py-4 text-lg></button>
-              Contact Our Experts;
+              Contact Our Experts"'";
 
       <Footer /></Footer>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
@@ -461,11 +461,11 @@ const benefits = [;;
         <p className="text-gray-300 mb-8">Coming Soon - Seamless cloud migration services</p>
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,
   hover:bg-cyan-600 transition-colors></a>
-          Contact Us;
+          Contact Us'"'";
 
-  )};
+  )}'"'"'";
 
-export default CloudMigrationPage;
+export default CloudMigrationPage'"'"'"'";
 
 "
 

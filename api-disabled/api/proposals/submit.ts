@@ -18,15 +18,15 @@ async function submitByEmail(to: string;)
   if (!host || !user || !pass) {,
     throw new Error('Email not configured')}
 
-;
+';
 
-const transporter = nodemailer.createTransporter({);;
+const transporter = nodemailer.createTransporter({)';';
 
     host)
     port)
     secure: port === 465),
     auth: { user, pass })
-  });
+  })';
 
   await transporter.sendMail({)
     from)
@@ -52,12 +52,12 @@ async function submitByEmail(t,
 
   }
 
-;
+';
 
-const transporter = nodemailer.createTransporter({/* TODO: Fix JSX expression */};;
+const transporter = nodemailer.createTransporter({/* TODO: Fix JSX expression */}';';
 
   h: { user, pass })
-  });
+  })';
 
   await transporter.sendMail({/* TODO: Fix JSX expression */})
   })}
@@ -70,32 +70,32 @@ export default async function handler(re,
 
   try {/* TODO: Fix JSX expression */}
 
-    const { id, channels = ['email], emailTo, delegateNote } = req.body || {};
+    const { id, channels = ['email], emailTo, delegateNote } = req.body || {}';
 
     if (!id) {/* TODO: Fix JSX expression */}
 
   r: 'Proposal ID required' })}
 
-;
+';
 
-const _meta = getProposal(id);;
+const _meta = getProposal(id)';';
 
     if (!meta) {/* TODO: Fix JSX expression */}
 
   r: 'Proposal not found' })}
 
-    // Email submission;
+    // Email submission';
 
     if (channels.includes('email')) {
-      //       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org;;
+      //       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';';
 
-      //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;;
+      //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`';';
 
     if (channels.includes('email')) {/* TODO: Fix JSX expression */}
 
-      //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;`;;
+      //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;`';';
 
-const text = `Please find the proposal attached.;;
+const text = `Please find the proposal attached.';';
 
 Titl,
   e: ${meta.title}
@@ -114,35 +114,35 @@ Budget/Resolutio,
 
 DAO Governance: See document.,
 ,
-Delegate Note: ${delegateNote || 'N/A'}`;
+Delegate Note: ${delegateNote || 'N/A'}`';
 
 DAO,
   Governance: See document.
 
 Delegate,`
-  Note: ${delegateNote || 'N/A'}`;
+  Note: ${delegateNote || 'N/A'}`';
 
       await submitByEmail(to, subject, text)}
 
-    // ENS record hash (default: compute and store hash only);
+    // ENS record hash (default: compute and store hash only)';
 
-let ensRecordHash: string | undefined;
+let ensRecordHash: string | undefined';
 
-    try {,;
+    try {,';
 
 const _hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex);;
 
-      ensRecordHash = `0 x${hash}`;
+      ensRecordHash = `0 x${hash}`';
 
       updateArtifacts(id, { ensRecordHash })} catch {
       // ignore}
 
-;
+';
 
-const updated = updateProposalMeta(id, m => ({);;
+const updated = updateProposalMeta(id, m => ({)';';
 
       ...m)
-      status: 'Submitted)}));
+      status: 'Submitted)}))';
 
     return res.status(200).json({ meta: updated })} catch (error: unknown) {,
     return res.status(500).json({ error: error?.message || 'Submission failed });
@@ -160,11 +160,11 @@ let,
 
     }
 
-;
+';
 
-const updated = updateProposalMeta(id, m => ({/* TODO: Fix JSX expression */});;
+const updated = updateProposalMeta(id, m => ({/* TODO: Fix JSX expression */})';';
 
-    }));
+    }))';
 
     return res.status(200).json({/* TODO: Fix JSX expression */})
   a: updated })} catch (erro)

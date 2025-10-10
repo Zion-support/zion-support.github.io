@@ -1,22 +1,22 @@
-import React from 'react;
+import React from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-import { Settings, Target, BarChart, Shield, CheckCircle, Star,  Settings,  Target,  Shield } from lucide-react;
+import { Settings, Target, BarChart, Shield, CheckCircle, Star,  Settings,  Target,  Shield } from lucide-react';
 
-const ITInfrastructureDesignPage: React.FC = () => {;
+const ITInfrastructureDesignPage: React.FC = () => {';
 
-const features = [];;;
+const features = []';';';
 
   return (
 
     {// TODO: Add content}
 
-};
+}';
 
   ico,
   n: Settings,
@@ -54,35 +54,35 @@ const features = [];;;
         <section className="text-center mb-16>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse>
 
-// IT Infrastructure Design;
+// IT Infrastructure Design";
 
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse></p>
-// Custom Infrastructure Solutions;
+// Custom Infrastructure Solutions";
 
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed></p>
-            Design and build robust IT infrastructure that scales with your business. Our experts create custom solutions;
+            Design and build robust IT infrastructure that scales with your business. Our experts create custom solutions";
 
             that are secure, efficient, and future-ready.
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center>
             <a
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300
 // >
-//               Get Started;
+//               Get Started";
 
           </a>
               href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300
 <Settings className="w-5 h-5 />
 
-              +1 302 464 0950;
+              +1 302 464 0950"'";
 
           </div>
         </section>
         <section className="mb-16"></section>
           <h2 className="text-3xl,
   md:text-4xl font-bold text-white mb-12 text-center neon-text></h2>
-// Design Services;
+// Design Services"'"'";
 
           </h2>
           <div className=grid grid-cols-1,
@@ -116,6 +116,6 @@ const features = [];;;
       <Footer /></Footer>
 
     </div>
-  )};
+  )}'"'"'";
 
-export default ItInfrastructureDesignPage;
+export default ItInfrastructureDesignPage'"'"'"'";

@@ -1,18 +1,18 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from lucide-react;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from lucide-react';
 
-;
+';
 
-const AiAnalyticsPage: React.FC = () => {const features = [;;;
+const AiAnalyticsPage: React.FC = () => {const features = [';';';
 
     {
       ico,
@@ -40,9 +40,9 @@ const AiAnalyticsPage: React.FC = () => {const features = [;;;
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization]
     },
     {
-      icon: Globe,;
+      icon: Globe,';
 
-const benefits = [;;
+const benefits = [';';
 
     'Increase efficiency by up to 50%,
     'Reduce costs by 30% with automation,
@@ -54,13 +54,13 @@ const benefits = [;;
   return (<title>Ai Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai analytics solution for modern businesses. />
         <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation />
-const useCases = [;;
+const useCases = [";";
 
         <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation />  const useCases = [;;
 
-const useCases = [;;
+const useCases = [';';
 
-  const benefits = [;;
+  const benefits = [';'";
 
     'Transform raw data into actionable insights,
     'Make data-driven decisions with confidence,
@@ -68,9 +68,9 @@ const useCases = [;;
     'Optimize business processes and workflows,
     'Reduce costs through intelligent automation,
     Gain competitive advantage with advanced technology
-  ];
+  ]'"'";
 
-  const useCases = [    {;
+  const useCases = [    {'"'"'";
       title: 'Business Intelligence,
       description: 'Transform raw data into actionable business insights,
       icon: BarChart
@@ -91,7 +91,7 @@ const useCases = [;;
       icon: Users
     }
 
-  ];
+  ]'"'"'"'";
 
   return (
 
@@ -185,9 +185,9 @@ const useCases = [;;
                           {benefit}
 
                         </li>
-                      ));
+                      ))";
 
-                    </ul>);
+                    </ul>)";
 
                   <h3 className="text-xl font-semibold text-white mb-4>{feature.title}</h3>
                   <p className="text-gray-300 mb-6>{feature.description}</p>
@@ -281,7 +281,7 @@ const useCases = [;;
                     </div>
                   </div>
                 </div>
-              ));
+              ))";
 
         <section className="py-20 px-4">          <div className="max-w-7xl mx-auto>
             <div className="text-center mb-16>
@@ -344,12 +344,12 @@ const useCases = [;;
     </>
   );}
 
-export default AiAnalyticsPage;
+export default AiAnalyticsPage'";
 
     </React.Fragment>)
     </>
-  );
+  )'"'";
 
-};
+}'"'"'";
 
-export default AiAnalyticsPage;
+export default AiAnalyticsPage'"'"'"'";

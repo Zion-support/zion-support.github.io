@@ -86,13 +86,13 @@ const easeOutQuart = 1 - Math.pow(1 - progress, 4);;
     animationFrame = requestAnimationFrame(animate);
 
     return () =>
-);
+)';
 
 } {
       if (animationFrame) {
         cancelAnimationFrame(animationFrame)}
 
-    }}, [isVisible, end, duration]);
+    }}, [isVisible, end, duration])';
 
   return (
 
@@ -100,6 +100,6 @@ const easeOutQuart = 1 - Math.pow(1 - progress, 4);;
       {prefix}{count.toLocaleString()}{suffix}
 
     </div>
-  )};
+  )}';
 
-export default AnimatedCounter;
+export default AnimatedCounter';

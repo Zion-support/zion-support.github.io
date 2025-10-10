@@ -1,12 +1,12 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Shield, CheckCircle, FileText, Lock, Award, Globe } from 'lucide-react;
+import { Shield, CheckCircle, FileText, Lock, Award, Globe } from 'lucide-react';
 
-const CompliancePage: React.FC = () => {const complianceStandards = [;;;
+const CompliancePage: React.FC = () => {const complianceStandards = [';';';
 
     {
       icon: Shield,
@@ -39,7 +39,7 @@ const CompliancePage: React.FC = () => {const complianceStandards = [;;;
       description: California Consumer Privacy Act compliance and data rights.
     }
 
-  ];
+  ]';
 
   return (
 
@@ -78,7 +78,7 @@ const CompliancePage: React.FC = () => {const complianceStandards = [;;;
                   <h3 className="text-xl font-semibold text-white mb-3>{standard.title}</h3>
                   <p className="text-gray-300>{standard.description}</p>
                 </div>
-              ));
+              ))'"'"'"'";
 
             </div>
           </div>
@@ -103,14 +103,14 @@ const CompliancePage: React.FC = () => {const complianceStandards = [;;;
         </section>
       </div>
     </>
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-import { CheckCircle, ArrowRight, Shield, FileCheck, Lock, Award } from 'lucide-react;
+import { CheckCircle, ArrowRight, Shield, FileCheck, Lock, Award } from 'lucide-react';
 
 const CompliancePage: React.FC = () => {
-  const features = [;;;
+  const features = [';';';
 
     {
       icon: Shield,
@@ -133,9 +133,9 @@ const CompliancePage: React.FC = () => {
       description: Industry-recognized certifications and audits
     }
 
-  ];
+  ]'";
 
-  const benefits = [;;
+  const benefits = ['"'";'"'"'";
 
     'GDPR compliance,
     'HIPAA compliance,
@@ -145,7 +145,7 @@ const CompliancePage: React.FC = () => {
     'Data encryption,
     'Access controls,
     Compliance monitoring
-  ];
+  ]"'";
 
   return (
 
@@ -267,12 +267,12 @@ const CompliancePage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  )'"'";
 
 }
 
-export default CompliancePage;
+export default CompliancePage'"'"'";
 
 }
 
-export default PagePage;
+export default PagePage'"'"'"'";

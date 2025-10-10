@@ -54,7 +54,7 @@ export const,
 //     'upgrade-insecure-requests'].join('; '),
   // HTTP Strict Transport Security (HSTS)
   strictTransportSecurit,
-  y: 'max-age=63072000; includeSubDomains; preload',
+  y: 'max-age=63072000'; includeSubDomains'; preload',
   // Prevent clickjacking,
   xFrameOption,
   s: 'DENY',
@@ -82,20 +82,20 @@ export const,
 }
 
 /**
- * Get security headers as key-value pairs;
+ * Get security headers as key-value pairs';
 
  */
 export function getSecurityHeaders()
-  customConfig?: Partial;
+  customConfig?: Partial';
 
           <SecurityHeadersConfig>
 ): Record<string, string> {const headers: Record<string, string> = {}
 
   // TODO: Add content}
 
-    'X-XSS-Protection': '1; mode=block',
+    'X-XSS-Protection': '1'; mode=block',
     'X-DNS-Prefetch-Control': on
-  };
+  }';
 
   if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}
 
@@ -161,7 +161,7 @@ export function getNextSecurityHeaders()
 
 }
 
-  const headers = getSecurityHeaders(customConfig);;
+  const headers = getSecurityHeaders(customConfig)'";'"'";
 
   return Object.entries(headers).map(([key, value]) => ({/* TODO: Fix JSX expression */}
 
@@ -170,10 +170,10 @@ export function getNextSecurityHeaders()
 }
 
 //     key,
-//     value;)
+//     value'"'"'";)
   }))}
 
-export default defaultSecurityHeaders;"
+export default defaultSecurityHeaders'"'"'"'";"
 
 
 

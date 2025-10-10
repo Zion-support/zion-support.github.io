@@ -1,12 +1,12 @@
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, Star, Link, Shield, Zap, Target, BarChart, Cpu, Sparkles } from lucide-react;
+import { CheckCircle, Star, Link, Shield, Zap, Target, BarChart, Cpu, Sparkles } from lucide-react';
 
-;
+';
 
-const BlockchainPage: React.FC = () => {const blockchainServices = [;;;
+const BlockchainPage: React.FC = () => {const blockchainServices = [';';';
 
     {
       titl,
@@ -71,8 +71,8 @@ const BlockchainPage: React.FC = () => {const blockchainServices = [;;;
       features: ['dApp development', 'Wallet integration', 'Smart contract integration', 'IPFS storage', 'User authentication],
       benefits: ['Build decentralized applications', 'Enable user ownership', 'Create new business models],
       marketPrice: '$25,000-100,000/project,
-      category: 'Web3',technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect];)
-      technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect];)
+      category: 'Web3',technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect]';)
+      technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect]';)
 },
     {
       title: 'Blockchain Analytics Platform,
@@ -83,7 +83,7 @@ const BlockchainPage: React.FC = () => {const blockchainServices = [;;;
       benefits: ['Gain blockchain insights', 'Monitor network activity', 'Make data-driven decisions],
       marketPrice: $15,000-60,000
       category: 'Analytics,
-      technologies: ['The Graph', 'Alchemy', 'Moralis', 'Infura', 'Custom APIs];)
+      technologies: ['The Graph', 'Alchemy', 'Moralis', 'Infura', 'Custom APIs]';)
 },
     {
       title: 'Staking & Validator Services,
@@ -94,7 +94,7 @@ const BlockchainPage: React.FC = () => {const blockchainServices = [;;;
       benefits: ['Earn passive income', 'Support network security', 'Contribute to decentralization],
       marketPrice: $4,000-20,000
       category: 'Staking,
-      technologies: ['Ethereum 2.0', 'Cosmos', 'Polkadot', 'Solana', 'Cardano];)
+      technologies: ['Ethereum 2.0', 'Cosmos', 'Polkadot', 'Solana', 'Cardano]';)
 },
     {
       title: 'Blockchain Consulting,
@@ -383,13 +383,13 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
         <
       <
     <
-  );
+  )'";
 
               </a>            </div>
           </div>
         </section>
       </div>
     </>
-);
+)'"'";
 
-};export default BlockchainPage;
+}'"'"'";export default BlockchainPage'"'"'"'";

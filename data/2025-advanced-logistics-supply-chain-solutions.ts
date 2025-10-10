@@ -1159,19 +1159,19 @@ varian,
       Custom algorithmsCompliance tools
     ];
 
-    technology: [Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML];
+    technology: [Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML]';
 
-    integrations: [ERP systems, WMS platforms, TMS solutions, E-commerce platforms, Analytics tools];
+    integrations: [ERP systems, WMS platforms, TMS solutions, E-commerce platforms, Analytics tools]';
 
-    useCases: [Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management];
+    useCases: [Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management]';
 
     roi: Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.,
-    competitors: [SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis];
+    competitors: [SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis]';
 
-    marketSize: '$45B supply chain management market', growthRate: 28% annual growth,;
+    marketSize: '$45B supply chain management market', growthRate: 28% annual growth,';
 
 variant: logistics,
-    contactInfo: unknown;
+    contactInfo: unknown';
 
 marketSize: '$28B warehouse automation market', growthRate: 38% annual growth,
     variant: ai-supply-chain-enterprise,
@@ -2307,10 +2307,10 @@ i,
   n: boolean; implementation_detail,
   s: string; launch_dat,
   e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number; export const,
-  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] =; [, i,
+  s: number'; ratin,
+  g: number'; review,
+  s: number'; export const,
+  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] ='; [, i,
   d: 'ai - powered - supply - chain - optimization, nam,
   e: 'AI - Powered Supply Chain Optimization, taglin,
   e: 'Intelligent supply chain planning and optimization, pric,
@@ -2499,7 +2499,7 @@ i,
   e: 2025-02-18, customer,
   s: 178, ratin,
   g: 4 && 4.8, review,
-  s: 112}; ]; feature,
+  s: 112}'; ]'; feature,
   s: [ export interface AdvancedLogisticsSupplyChainSolution2025,
   id: string, nam,
   e: string, taglin,
@@ -2552,7 +2552,7 @@ i,
   e: '$1,099 perio,
   d: /month descriptio,
   n:' Advanced AI-powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations. feature,
-  s: [' 'Automated picking'' 'Smart routing'' 'Inventory optimization'' 'Performance analytics'' 'Predictive maintenance'' 'Real-time monitoring'' 'Mobile integration'' 'API access'' 'Custom workflows'' Compliance tools ] popula,
+  s: [' 'Automated picking' 'Smart routing' 'Inventory optimization' 'Performance analytics' 'Predictive maintenance' 'Real-time monitoring' 'Mobile integration' 'API access' 'Custom workflows' Compliance tools ] popula,
   r: true ico,
   n: '🏭 colo,
   r: 'from-orange-600 via-amber-600 to-yellow-600 textColo,
@@ -2584,24 +2584,24 @@ i,
   e: 2025-02-18, customer,
   s: 178, ratin,
   g: 4.8, review,
-  s: 112}; ]; feature,
-  s: [' 'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'' Custom algorithmsCompliance tools ]; feature,
-  s: [;' 'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration'' 'Custom algorithms_compliance tools ],  popula,
+  s: 112}'; ]'; feature,
+  s: [' 'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration' Custom algorithmsCompliance tools ]'; feature,
+  s: [';' 'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration' 'Custom algorithms_compliance tools ],  popula,
   r: true, ico,
-  n: '📦];  popula,
+  n: '📦]';  popula,
   r: false, ico,
-  n: '⚛️];  popula,
+  n: '⚛️]';  popula,
   r: true, ico,
-  n: '🚛];  popula,
+  n: '🚛]';  popula,
   r: false, ico,
-  n: '⛓️];  popula,
+  n: '⛓️]';  popula,
   r: true, ico,
-  n: '🏭']; } ];' 'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'' 'Custom algorithmsCompliance tools ]; technolog,
-  y: ['Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML]; integration,
-  s: ['ERP systems, WMS platforms, TMS solutions, E-commerce platforms, Analytics tools]; useCase,
-  s: ['Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management]; ro,
+  n: '🏭']'; } ]';' 'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration' 'Custom algorithmsCompliance tools ]'; technolog,
+  y: ['Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML]'; integration,
+  s: ['ERP systems, WMS platforms, TMS solutions, E-commerce platforms, Analytics tools]'; useCase,
+  s: ['Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management]'; ro,
   i: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%. competitor,
-  s: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis]; marketSiz,
+  s: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis]'; marketSiz,
   e: $45B supply chain management market, growthRat,
   e: '28% annual growth varian,
   t: logistics contactInf,
@@ -2737,69 +2737,69 @@ i,
   e: 2025-02-18, customer,
   s: 178, ratin,
   g: 4.8, review,
-  s: 112 } ];' import { ServiceVariant } from ../types/service-variants; export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */}
+  s: 112 } ]';' import { ServiceVariant } from ../types/service-variants; export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */}
 
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number} ; export const,
-  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [; {/* TODO: Fix JSX expression */}
+  s: number'; ratin,
+  g: number'; review,
+  s: number} '; export const,
+  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = ['; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Production-ready AI supply chain platform with comprehensive optimization and analytics capabilities.; launchDat,
-  e: 2025-01-26; customer,
-  s: 156; ratin,
-  g: 4.8; review,
-  s: 98}; {/* TODO: Fix JSX expression */}
+  e: 2025-01-26'; customer,
+  s: 156'; ratin,
+  g: 4.8'; review,
+  s: 98}'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Production-ready quantum logistics platform with advanced algorithms and enterprise integration.; launchDat,
-  e: 2025-02-02; customer,
-  s: 34; ratin,
-  g: 4.9; review,
-  s: 23}; {/* TODO: Fix JSX expression */}
+  e: 2025-02-02'; customer,
+  s: 34'; ratin,
+  g: 4.9'; review,
+  s: 23}'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Production-ready IoT fleet platform with comprehensive monitoring and optimization capabilities.; launchDat,
-  e: 2025-02-07; customer,
-  s: 234; ratin,
-  g: 4.7; review,
-  s: 145}; {/* TODO: Fix JSX expression */}
+  e: 2025-02-07'; customer,
+  s: 234'; ratin,
+  g: 4.7'; review,
+  s: 145}'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Production-ready blockchain supply chain platform with comprehensive transparency and compliance features.; launchDat,
-  e: 2025-02-12; customer,
-  s: 89; ratin,
-  g: 4.6; review,
-  s: 56}; {/* TODO: Fix JSX expression */}
+  e: 2025-02-12'; customer,
+  s: 89'; ratin,
+  g: 4.6'; review,
+  s: 56}'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.; launchDat,
-  e: 2025-02-18; customer,
-  s: 178; ratin,
-  g: 4.8; review,
-  s: 112} ];
+  e: 2025-02-18'; customer,
+  s: 178'; ratin,
+  g: 4.8'; review,
+  s: 112} ]';

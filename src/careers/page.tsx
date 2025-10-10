@@ -1,18 +1,18 @@
-import React from 'react;
+import React from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield } from 'lucide-react;
+import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from ../components/Footer;
+import Footer from ../components/Footer';
 
-;
+';
 
-const CareersPage: React.FC = () => {;
+const CareersPage: React.FC = () => {';
 
-const openPositions = [;;;
+const openPositions = [';';';
 
     {
       id: 'senior-ai-engineer,
@@ -117,11 +117,11 @@ const openPositions = [;;;
       benefits: ['Competitive salary + commission', 'Health insurance', 'Travel budget', 'Sales training', 'Performance bonuses]
     }
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     {
       icon: Heart,
@@ -144,11 +144,11 @@ const benefits = [;;
       description: Performance bonuses, stock options, and recognition programs
     }
 
-  ];
+  ]';
 
-;
+';
 
-const culture = [;;
+const culture = [';';
 
     'Innovation-driven environment where creativity is encouraged,
     'Collaborative team culture with diverse perspectives,
@@ -156,7 +156,7 @@ const culture = [;;
     'Mentorship programs and career development support,
     'Regular team events and company retreats,
     Open communication and transparent leadership
-  ];
+  ]';
 
   return (
 
@@ -388,6 +388,6 @@ const culture = [;;
 
       <Footer />
     </div>
-  )};
+  )}'"'"'";
 
-export default CareersPage;
+export default CareersPage'"'"'"'";

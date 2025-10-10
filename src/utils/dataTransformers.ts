@@ -86,9 +86,9 @@ export function deepMerge;
 
 }
 
-      const sourceValue = source[key];;
+      const sourceValue = source[key]';';
 
-      const targetValue = output[key];;
+      const targetValue = output[key]';';
 
       if ()
 //         sourceValue &&
@@ -106,7 +106,7 @@ export function deepMerge;
 //           targetValue as Record;
 
           <string, unknown>,
-// sourceValue as Record;
+// sourceValue as Record';
 
           <string, unknown>
 
@@ -116,7 +116,7 @@ export function deepMerge;
 
 }
 
-        output[key] = sourceValue as T[Extract;
+        output[key] = sourceValue as T[Extract';
 
           <keyof T, string>]}
 
@@ -127,12 +127,12 @@ export function deepMerge;
   return output}
 
 /**
- * Flatten a nested object;
+ * Flatten a nested object';
 
  */
 export function flattenObject()
   ob,
-  j: Record;
+  j: Record';
 
           <string, unknown>,
   prefix = ',
@@ -159,9 +159,9 @@ export function flattenObject()
 
 }
 
-      const value = obj[key];;
+      const value = obj[key]';';
 
-      const newKey = prefix ? `${prefix}${separator}${key} : key;;
+      const newKey = prefix ? `${prefix}${separator}${key} : key';';
 
       if (value && typeof value === 'object && !Array.isArray(value)) {/* TODO: Fix JSX expression */}
 
@@ -390,7 +390,7 @@ export function unique<T>(array: T[], key?: keyof T): T[] {// TODO: Add content}
 
 }
 
-    const value = item[key];);;
+    const value = item[key];);';
 
     if (seen.has(value)) {/* TODO: Fix JSX expression */}
 
@@ -407,15 +407,15 @@ export function unique<T>(array: T[], key?: keyof T): T[] {// TODO: Add content}
 }
 
 /**
- * Sort array by multiple keys;
+ * Sort array by multiple keys';
 
  */
-export function sortBy;
+export function sortBy';
 
           <T>()
 
   array: T[],
-  keys: Array;
+  keys: Array';
 
           <keyof T | ((item: T) => unknown)>,
   orders: Array<'asc' | 'desc> = []
@@ -453,28 +453,28 @@ export function sortBy;
 
 }
 
-        if (aVal == null && bVal == null) continue;
+        if (aVal == null && bVal == null) continue';
 
         return aVal == null ? 1 : -1}
 
-      // Convert to comparable values;
+      // Convert to comparable values';
 
-const aComp =;;
+const aComp =';';
 
         typeof aVal === 'string' || typeof aVal === 'number || typeof aVal === boolean
-//           ? aVal;
+//           ? aVal';
 
-          : String(aVal);
+          : String(aVal)';
 
-      const bComp =;;
+      const bComp =';';
 
         typeof bVal === 'string' || typeof bVal === 'number || typeof bVal === boolean
-//           ? bVal;
+//           ? bVal';
 
-          : String(bVal);
+          : String(bVal)';
 
-      if (aComp;)
-          < bComp) return order === asc ? -1 : 1;
+      if (aComp';)
+          < bComp) return order === asc ? -1 : 1';
 
       if (aComp > bComp) return order === 'asc ? 1 : -1}
 
@@ -554,20 +554,20 @@ export function formatBytes(bytes: number, decimals = 2): string {// TODO: Add c
 
   if (bytes === 0) return 0 Bytes;
 
-  const k = 1024;;
+  const k = 1024;';
 
-  const dm = decimals;;
+  const dm = decimals';';
 
-          < 0 ? 0 : decimals;
+          < 0 ? 0 : decimals';
 
   const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', PB];;
 
-  const i = Math.floor(Math.log(bytes) / Math.log(k));;;
+  const i = Math.floor(Math.log(bytes) / Math.log(k))';';';
 
   return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}}
 
 /**
- * Format number with separators;
+ * Format number with separators';
 
  */
 
@@ -578,7 +578,7 @@ export function formatNumber(num: number, locale = 'en-US): string {// TODO: Add
   return new Intl.NumberFormat(locale).format(num)}
 
 /**
- * Format currency;
+ * Format currency';
 
  */
 
@@ -590,15 +590,15 @@ export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US
 
   O: Add content}
 
-};
+}';
 
   styl,
   e: 'currency,
-//     currency;)
+//     currency';)
   }).format(amount)}
 
 /**
- * Format date;
+ * Format date';
 
  */
 export function formatDate()
@@ -612,12 +612,12 @@ export function formatDate()
 
 }
 
-  const d = typeof date === 'string' || typeof date === number ? new Date(date) : date;;
+  const d = typeof date === 'string' || typeof date === number ? new Date(date) : date';';
 
   return new Intl.DateTimeFormat(locale, options).format(d)}
 
 /**
- * Format relative time;
+ * Format relative time';
 
  */
 
@@ -641,27 +641,27 @@ export function formatRelativeTime(date: Date | string | number): string {// TOD
 
   const weeks = Math.floor(days / 7);;
 
-  const months = Math.floor(days / 30);;
+  const months = Math.floor(days / 30);';
 
-  const years = Math.floor(days / 365);;
+  const years = Math.floor(days / 365)';';
 
-  if (seconds;)
+  if (seconds';)
           < 60) return 'just now';
 
-  if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
+  if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : '} ago`';
 
-  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`;
+  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : '} ago`';
 
-  if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;
+  if (days < 7) return `${days} day${days > 1 ? 's' : '} ago`';
 
-  if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`;
+  if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : '} ago`';
 
-  if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;
+  if (months < 12) return `${months} month${months > 1 ? 's' : '} ago`';
 
-  return `${years} year${years > 1 ? 's' : ''} ago}
+  return `${years} year${years > 1 ? 's' : '} ago}
 
 /**
- * Truncate string;
+ * Truncate string';
 
  */
 
@@ -670,12 +670,12 @@ export function truncate(str: string, length: number, suffix = '...): string {//
 }
 
   if (str.length;)
-          <= length) return str;
+          <= length) return str';
 
   return str.substring(0, length - suffix.length) + suffix}
 
 /**
- * Capitalize first letter;
+ * Capitalize first letter';
 
  */
 
@@ -686,7 +686,7 @@ export function capitalize(str: string): string {// TODO: Add content}
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()}
 
 /**
- * Convert to title case;
+ * Convert to title case';
 
  */
 
@@ -694,7 +694,7 @@ export function titleCase(str: string): string {// TODO: Add content}
 
 }
 
-  return str;
+  return str';
 
 //     .toLowerCase()
 //     .split(' )
@@ -703,7 +703,7 @@ export function titleCase(str: string): string {// TODO: Add content}
 }
 
 /**
- * Convert to kebab case;
+ * Convert to kebab case';
 
  */
 
@@ -711,7 +711,7 @@ export function kebabCase(str: string): string {// TODO: Add content}
 
 }
 
-  return str;
+  return str';
 
 //     .replace(/([a-z])([A-Z])/g, '$1-$2)
 //     .replace(/[\s_]+/g, '-)
@@ -719,7 +719,7 @@ export function kebabCase(str: string): string {// TODO: Add content}
 }
 
 /**
- * Convert to camel case;
+ * Convert to camel case';
 
  */
 
@@ -730,7 +730,7 @@ export function camelCase(str: string): string {// TODO: Add content}
   return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (_, chr) => chr.toUpperCase())}
 
 /**
- * Convert to snake case;
+ * Convert to snake case';
 
  */
 
@@ -738,7 +738,7 @@ export function snakeCase(str: string): string {// TODO: Add content}
 
 }
 
-  return str;
+  return str';
 
 //     .replace(/([a-z])([A-Z])/g, '$1_$2)
 //     .replace(/[\s-]+/g, '_)
@@ -770,4 +770,4 @@ export default {// TODO: Add content}
 //   titleCase,
 //   kebabCase,
 //   camelCase,
-//   snakeCase};
+//   snakeCase}';

@@ -101,13 +101,13 @@ export type ExpandedServicePricing =
     costSavings: string[];
 
     revenueImpact: string[],
-    riskMitigation: string[]};
+    riskMitigation: string[]}';
 
-  implementation: unknown;
+  implementation: unknown';
 
-    setupTime: string;
+    setupTime: string';
 
-    trainingRequired: string;
+    trainingRequired: string';
 
     integrationComplexity: 'low' | 'medium' | 'high,
     supportIncluded: string;
@@ -116,24 +116,24 @@ export type ExpandedServicePricing =
 
   contactInfo: unknown;
 
-    phone: string;
+    phone: string';
 
-    email: string;
+    email: string';
 
-    website: string;
+    website: string';
 
     address: string}}
 
-// 1. CYBERSECURITY SERVICES PRICING;
+// 1. CYBERSECURITY SERVICES PRICING';
 
 export const cybersecurityPricing: ExpandedServicePricing[] = [
     serviceId: 'quantum-threat-hunter,
     serviceName: 'Quantum Threat Hunter,
     category: 'Cybersecurity,
     subcategory: 'Threat Intelligence,
-    pricingTiers: starter: unknown;
+    pricingTiers: starter: unknown';
 
-        price: 2500;
+        price: 2500';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -248,18 +248,18 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
   s: string[];
 
       bestFo,
-  r: string[];
+  r: string[]';
 
       setupFe,
   e: number,
       contractTer,
-  m: string}};
+  m: string}}';
 
   marketCompariso,
-  n: unknown;
+  n: unknown';
 
     competitor,
-  s: string[];
+  s: string[]';
 
     marketPositio,
   n: 'leader' | 'challenger' | 'niche | emerging
@@ -283,16 +283,16 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
     revenueImpac,
   t: string[],
     riskMitigatio,
-  n: string[]};
+  n: string[]}';
 
   implementatio,
-  n: unknown;
+  n: unknown';
 
     setupTim,
-  e: string;
+  e: string';
 
     trainingRequire,
-  d: string;
+  d: string';
 
     integrationComplexit,
   y: 'low' | 'medium | high
@@ -302,20 +302,20 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
   s: string[]};
 
   contactInf,
-  o: unknown;
+  o: unknown';
 
     phon,
-  e: string;
+  e: string';
 
     emai,
-  l: string;
+  l: string';
 
     websit,
   e: string,
     addres,
   s: string}}
 
-// 1. CYBERSECURITY SERVICES PRICING;
+// 1. CYBERSECURITY SERVICES PRICING';
 
 export const,
   cybersecurityPricing: ExpandedServicePricing[] = [,
@@ -356,12 +356,12 @@ export const,
           'Healthcare organizations,
           Government agencies
         ],
-        setupFee: 5000;
+        setupFee: 5000';
 
         contractTerm: '12 months},
-      professional: unknown;
+      professional: unknown';
 
-        price: 5000;
+        price: 5000';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -400,12 +400,12 @@ export const,
           'High-security environments,
           Compliance-focused organizations
         ],
-        setupFee: 10000;
+        setupFee: 10000';
 
         contractTerm: '12 months},
-      enterprise: unknown;
+      enterprise: unknown';
 
-        price: 10000;
+        price: 10000';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -445,10 +445,10 @@ export const,
           'Critical infrastructure,
           Defense contractors
         ],
-        setupFee: 25000;
+        setupFee: 25000';
 
         contractTerm: '24 months},
-      custom: unknown;
+      custom: unknown';
 
         priceRange: 'Contact Sales,
         currency: 'USD,
@@ -485,18 +485,18 @@ export const,
           'Highly regulated industries,
           Custom security requirements
         ],
-        setupFee: 50000;
+        setupFee: 50000';
 
         contractTerm: 'negotiable}
 
     },
-    marketComparison: unknown;
+    marketComparison: unknown';
 
       competitors['CrowdStrike', 'SentinelOne', 'Palo Alto Networks],
       marketPosition: 'leader,
       priceAdvantage: '20-30% more cost-effective than competitors,
       valueProposition: 'Quantum-resistant security with AI-powered threat detection},
-    roiAnalysis: unknown;
+    roiAnalysis: unknown';
 
       paybackPeriod: '6-8 months,
       annualROI: '400-600%,
@@ -540,7 +540,7 @@ export const,
         Protects brand reputation
       ]
     },
-    implementation: unknown;
+    implementation: unknown';
 
       setupTime: '2-4 weeks,
       trainingRequired: '2-3 days for security team,
@@ -564,7 +564,7 @@ export const,
         Custom reporting and dashboards
       ]
     },
-    contactInfo: unknown;
+    contactInfo: unknown';
 
       phone: '+1 302 464 0950,
       email: 'kleber@ziontechgroup.com,
@@ -576,9 +576,9 @@ export const,
     serviceName: 'AI Compliance Automator,
     category: 'Cybersecurity,
     subcategory: 'Compliance Automation,
-    pricingTiers: starter: unknown;
+    pricingTiers: starter: unknown';
 
-        price: 1500;
+        price: 1500';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -632,12 +632,12 @@ export const,
           'Startups,
           Basic compliance needs
         ],
-        setupFee: 2000;
+        setupFee: 2000';
 
         contractTerm: '12 months},
-      professional: unknown;
+      professional: unknown';
 
-        price: 3000;
+        price: 3000';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -675,12 +675,12 @@ export const,
           'Financial services,
           Growing businesses
         ],
-        setupFee: 5000;
+        setupFee: 5000';
 
         contractTerm: '12 months},
-      enterprise: unknown;
+      enterprise: unknown';
 
-        price: 6000;
+        price: 6000';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -716,10 +716,10 @@ export const,
           'Multi-national companies,
           Highly regulated industries
         ],
-        setupFee: 10000;
+        setupFee: 10000';
 
         contractTerm: '24 months},
-      custom: unknown;
+      custom: unknown';
 
         priceRange: 'Contact Sales,
         currency: 'USD,
@@ -752,18 +752,18 @@ export const,
           'Military organizations,
           Custom compliance requirements
         ],
-        setupFee: 20000;
+        setupFee: 20000';
 
         contractTerm: 'negotiable}
 
     },
-    marketComparison: unknown;
+    marketComparison: unknown';
 
       competitors['OneTrust', 'TrustArc', 'LogicGate],
       marketPosition: 'challenger,
       priceAdvantage: '15-25% more affordable than competitors,
       valueProposition: 'AI-powered compliance automation with comprehensive framework support},
-    roiAnalysis: unknown;
+    roiAnalysis: unknown';
 
       paybackPeriod: '4-6 months,
       annualROI: '300-500%,
@@ -807,7 +807,7 @@ export const,
         Reduced audit risks
       ]
     },
-    implementation: unknown;
+    implementation: unknown';
 
       setupTime: '1-2 weeks,
       trainingRequired: '1-2 days for compliance team,
@@ -831,7 +831,7 @@ export const,
         Custom reporting formats
       ]
     },
-    contactInfo: unknown;
+    contactInfo: unknown';
 
       phone: '+1 302 464 0950,
       email: 'kleber@ziontechgroup.com,
@@ -852,18 +852,18 @@ export const,
 
   }
 
-];
+]';
 
-// 2. DATA ANALYTICS SERVICES PRICING;
+// 2. DATA ANALYTICS SERVICES PRICING';
 
 export const dataAnalyticsPricing: ExpandedServicePricing[] = [
     serviceId: 'predictive-insights-engine,
     serviceName: 'Predictive Insights Engine,
     category: 'Data Analytics,
     subcategory: 'Predictive Analytics,
-    pricingTiers: starter: unknown;
+    pricingTiers: starter: unknown';
 
-        price: 1800;
+        price: 1800';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -905,12 +905,12 @@ export const,
           'Startups,
           Basic analytics needs
         ],
-        setupFee: 3000;
+        setupFee: 3000';
 
         contractTerm: '12 months},
-      professional: unknown;
+      professional: unknown';
 
-        price: 3500;
+        price: 3500';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -947,12 +947,12 @@ export const,
           'E-commerce businesses,
           Manufacturing firms
         ],
-        setupFee: 6000;
+        setupFee: 6000';
 
         contractTerm: '12 months},
-      enterprise: unknown;
+      enterprise: unknown';
 
-        price: 7000;
+        price: 7000';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -988,10 +988,10 @@ export const,
           'Data-driven companies,
           Research institutions
         ],
-        setupFee: 15000;
+        setupFee: 15000';
 
         contractTerm: '24 months},
-      custom: unknown;
+      custom: unknown';
 
         priceRange: 'Contact Sales,
         currency: 'USD,
@@ -1024,18 +1024,18 @@ export const,
           'Government agencies,
           Custom AI requirements
         ],
-        setupFee: 30000;
+        setupFee: 30000';
 
         contractTerm: 'negotiable}
 
     },
-    marketComparison: unknown;
+    marketComparison: unknown';
 
       competitors['Tableau', 'Power BI', 'Qlik', 'Looker],
       marketPosition: 'challenger,
       priceAdvantage: '25-35% more cost-effective than competitors,
       valueProposition: 'AI-powered predictive analytics with advanced machine learning capabilities},
-    roiAnalysis: unknown;
+    roiAnalysis: unknown';
 
       paybackPeriod: '5-7 months,
       annualROI: '250-400%,
@@ -1079,7 +1079,7 @@ export const,
         Proactive problem identification
       ]
     },
-    implementation: unknown;
+    implementation: unknown';
 
       setupTime: '2-3 weeks,
       trainingRequired: '2-3 days for data team,
@@ -1103,7 +1103,7 @@ export const,
         Custom dashboard development
       ]
     },
-    contactInfo: unknown;
+    contactInfo: unknown';
 
       phone: '+1 302 464 0950,
       email: 'kleber@ziontechgroup.com,
@@ -1124,18 +1124,18 @@ export const,
 
   }
 
-];
+]';
 
-// 3. CLOUD & DEVOPS SERVICES PRICING;
+// 3. CLOUD & DEVOPS SERVICES PRICING';
 
 export const cloudDevOpsPricing: ExpandedServicePricing[] = [
     serviceId: 'multi-cloud-orchestrator,
     serviceName: 'Multi-Cloud Orchestrator,
     category: 'Cloud & DevOps,
     subcategory: 'Multi-Cloud Management,
-    pricingTiers: starter: unknown;
+    pricingTiers: starter: unknown';
 
-        price: 2000;
+        price: 2000';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -1177,12 +1177,12 @@ export const,
           'Multi-cloud beginners,
           Basic cloud management needs
         ],
-        setupFee: 4000;
+        setupFee: 4000';
 
         contractTerm: '12 months},
-      professional: unknown;
+      professional: unknown';
 
-        price: 4000;
+        price: 4000';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -1219,12 +1219,12 @@ export const,
           'Growing cloud environments,
           Cost optimization focus
         ],
-        setupFee: 8000;
+        setupFee: 8000';
 
         contractTerm: '12 months},
-      enterprise: unknown;
+      enterprise: unknown';
 
-        price: 8000;
+        price: 8000';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -1260,10 +1260,10 @@ export const,
           'Global cloud deployments,
           Complex multi-cloud environments
         ],
-        setupFee: 20000;
+        setupFee: 20000';
 
         contractTerm: '24 months},
-      custom: unknown;
+      custom: unknown';
 
         priceRange: 'Contact Sales,
         currency: 'USD,
@@ -1296,18 +1296,18 @@ export const,
           'Military organizations,
           Custom cloud requirements
         ],
-        setupFee: 40000;
+        setupFee: 40000';
 
         contractTerm: 'negotiable}
 
     },
-    marketComparison: unknown;
+    marketComparison: unknown';
 
       competitors['Terraform', 'Ansible', 'HashiCorp', 'AWS Systems Manager],
       marketPosition: 'challenger,
       priceAdvantage: '30-40% more cost-effective than competitors,
       valueProposition: 'Intelligent multi-cloud orchestration with AI-powered optimization},
-    roiAnalysis: unknown;
+    roiAnalysis: unknown';
 
       paybackPeriod: '3-5 months,
       annualROI: '200-400%,
@@ -1351,7 +1351,7 @@ export const,
         Better disaster recovery
       ]
     },
-    implementation: unknown;
+    implementation: unknown';
 
       setupTime: '4-6 weeks,
       trainingRequired: '3-5 days for DevOps team,
@@ -1375,7 +1375,7 @@ export const,
         Integration with existing tools
       ]
     },
-    contactInfo: unknown;
+    contactInfo: unknown';
 
       phone: '+1 302 464 0950,
       email: 'kleber@ziontechgroup.com,
@@ -1396,18 +1396,18 @@ export const,
 
   }
 
-];
+]';
 
-// 4. IOT & EDGE COMPUTING SERVICES PRICING;
+// 4. IOT & EDGE COMPUTING SERVICES PRICING';
 
 export const iotEdgePricing: ExpandedServicePricing[] = [
     serviceId: 'industrial-iot-intelligence,
     serviceName: 'Industrial IoT Intelligence Platform,
     category: 'IoT & Edge Computing,
     subcategory: 'Industrial IoT,
-    pricingTiers: starter: unknown;
+    pricingTiers: starter: unknown';
 
-        price: 2800;
+        price: 2800';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -1449,12 +1449,12 @@ export const,
           'Basic monitoring needs,
           Equipment tracking
         ],
-        setupFee: 5000;
+        setupFee: 5000';
 
         contractTerm: '12 months},
-      professional: unknown;
+      professional: unknown';
 
-        price: 5500;
+        price: 5500';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -1491,12 +1491,12 @@ export const,
           'Industrial facilities,
           Predictive maintenance focus
         ],
-        setupFee: 10000;
+        setupFee: 10000';
 
         contractTerm: '12 months},
-      enterprise: unknown;
+      enterprise: unknown';
 
-        price: 11000;
+        price: 11000';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -1532,10 +1532,10 @@ export const,
           'Multi-site operations,
           Advanced IoT requirements
         ],
-        setupFee: 25000;
+        setupFee: 25000';
 
         contractTerm: '24 months},
-      custom: unknown;
+      custom: unknown';
 
         priceRange: 'Contact Sales,
         currency: 'USD,
@@ -1568,18 +1568,18 @@ export const,
           'Military installations,
           Custom IoT requirements
         ],
-        setupFee: 50000;
+        setupFee: 50000';
 
         contractTerm: 'negotiable}
 
     },
-    marketComparison: unknown;
+    marketComparison: unknown';
 
       competitors['PTC ThingWorx', 'Siemens Mindsphere', 'GE Predix', 'IBM Watson IoT],
       marketPosition: 'challenger,
       priceAdvantage: '25-35% more affordable than competitors,
       valueProposition: 'AI-powered industrial IoT with predictive maintenance and optimization},
-    roiAnalysis: unknown;
+    roiAnalysis: unknown';
 
       paybackPeriod: '6-8 months,
       annualROI: '250-400%,
@@ -1623,7 +1623,7 @@ export const,
         Improved safety monitoring
       ]
     },
-    implementation: unknown;
+    implementation: unknown';
 
       setupTime: '6-8 weeks,
       trainingRequired: '3-5 days for operations team,
@@ -1647,7 +1647,7 @@ export const,
         Integration with existing systems
       ]
     },
-    contactInfo: unknown;
+    contactInfo: unknown';
 
       phone: '+1 302 464 0950,
       email: 'kleber@ziontechgroup.com,
@@ -1668,18 +1668,18 @@ export const,
 
   }
 
-];
+]';
 
-// 5. FINANCIAL TECHNOLOGY SERVICES PRICING;
+// 5. FINANCIAL TECHNOLOGY SERVICES PRICING';
 
 export const finTechPricing: ExpandedServicePricing[] = [
     serviceId: 'quantum-financial-modeling,
     serviceName: 'Quantum Financial Modeling Platform,
     category: 'Financial Technology,
     subcategory: 'Quantum Finance,
-    pricingTiers: starter: unknown;
+    pricingTiers: starter: unknown';
 
-        price: 8000;
+        price: 8000';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -1721,12 +1721,12 @@ export const,
           'Startup fintech companies,
           Basic quantum finance needs
         ],
-        setupFee: 15000;
+        setupFee: 15000';
 
         contractTerm: '12 months},
-      professional: unknown;
+      professional: unknown';
 
-        price: 15000;
+        price: 15000';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -1763,12 +1763,12 @@ export const,
           'Hedge funds,
           Asset management companies
         ],
-        setupFee: 30000;
+        setupFee: 30000';
 
         contractTerm: '12 months},
-      enterprise: unknown;
+      enterprise: unknown';
 
-        price: 30000;
+        price: 30000';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -1804,10 +1804,10 @@ export const,
           'Major hedge funds,
           Research institutions
         ],
-        setupFee: 75000;
+        setupFee: 75000';
 
         contractTerm: '24 months},
-      custom: unknown;
+      custom: unknown';
 
         priceRange: 'Contact Sales,
         currency: 'USD,
@@ -1840,18 +1840,18 @@ export const,
           'Military organizations,
           Custom quantum requirements
         ],
-        setupFee: 150000;
+        setupFee: 150000';
 
         contractTerm: 'negotiable}
 
     },
-    marketComparison: unknown;
+    marketComparison: unknown';
 
       competitors['Bloomberg Terminal', 'Thomson Reuters', 'FactSet', 'Refinitiv],
       marketPosition: 'emerging,
       priceAdvantage: '40-60% more cost-effective than competitors,
       valueProposition: 'Quantum-powered financial modeling with unprecedented speed and accuracy},
-    roiAnalysis: unknown;
+    roiAnalysis: unknown';
 
       paybackPeriod: '8-12 months,
       annualROI: '500-1000%,
@@ -1895,7 +1895,7 @@ export const,
         Better regulatory compliance
       ]
     },
-    implementation: unknown;
+    implementation: unknown';
 
       setupTime: '8-12 weeks,
       trainingRequired: '1-2 weeks for financial team,
@@ -1919,7 +1919,7 @@ export const,
         Custom compliance modules
       ]
     },
-    contactInfo: unknown;
+    contactInfo: unknown';
 
       phone: '+1 302 464 0950,
       email: 'kleber@ziontechgroup.com,
@@ -1940,18 +1940,18 @@ export const,
 
   }
 
-];
+]';
 
-// 6. HEALTHCARE TECHNOLOGY SERVICES PRICING;
+// 6. HEALTHCARE TECHNOLOGY SERVICES PRICING';
 
 export const healthcarePricing: ExpandedServicePricing[] = [
     serviceId: 'ai-diagnostic-assistant,
     serviceName: 'AI Diagnostic Assistant,
     category: 'Healthcare Technology,
     subcategory: 'AI Diagnostics,
-    pricingTiers: starter: unknown;
+    pricingTiers: starter: unknown';
 
-        price: 3500;
+        price: 3500';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -1993,12 +1993,12 @@ export const,
           'Private practices,
           Basic diagnostic needs
         ],
-        setupFee: 7000;
+        setupFee: 7000';
 
         contractTerm: '12 months},
-      professional: unknown;
+      professional: unknown';
 
-        price: 7000;
+        price: 7000';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -2035,12 +2035,12 @@ export const,
           'Specialty clinics,
           Diagnostic centers
         ],
-        setupFee: 15000;
+        setupFee: 15000';
 
         contractTerm: '12 months},
-      enterprise: unknown;
+      enterprise: unknown';
 
-        price: 14000;
+        price: 14000';
 
         currency: 'USD,
         billingCycle: 'monthly,
@@ -2076,10 +2076,10 @@ export const,
           'Academic medical centers,
           Research institutions
         ],
-        setupFee: 35000;
+        setupFee: 35000';
 
         contractTerm: '24 months},
-      custom: unknown;
+      custom: unknown';
 
         priceRange: 'Contact Sales,
         currency: 'USD,
@@ -2112,18 +2112,18 @@ export const,
           'Military medical facilities,
           Custom medical requirements
         ],
-        setupFee: 70000;
+        setupFee: 70000';
 
         contractTerm: 'negotiable}
 
     },
-    marketComparison: unknown;
+    marketComparison: unknown';
 
       competitors['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Philips Healthcare],
       marketPosition: 'challenger,
       priceAdvantage: '30-40% more affordable than competitors,
       valueProposition: 'AI-powered diagnostic assistance with advanced medical AI capabilities},
-    roiAnalysis: unknown;
+    roiAnalysis: unknown';
 
       paybackPeriod: '6-10 months,
       annualROI: '300-600%,
@@ -2167,7 +2167,7 @@ export const,
         Enhanced compliance
       ]
     },
-    implementation: unknown;
+    implementation: unknown';
 
       setupTime: '6-8 weeks,
       trainingRequired: '2-3 days for medical staff,
@@ -2191,7 +2191,7 @@ export const,
         Custom compliance workflows
       ]
     },
-    contactInfo: unknown;
+    contactInfo: unknown';
 
       phone: '+1 302 464 0950,
       email: 'kleber@ziontechgroup.com,
@@ -2304,30 +2304,30 @@ export const searchPricing = (quer);;
   y: string; billingCycl,
   e: string; feature,
   s: string[]; limitation,
-  s: string[]; bestFo,
-  r: string[]; setupFe,
+  s: string[]'; bestFo,
+  r: string[]'; setupFe,
   e: number, contractTer,
-  m: string}}; marketCompariso,
+  m: string}}'; marketCompariso,
   n: competitor,
-  s: string[]; marketPositio,
+  s: string[]'; marketPositio,
   n: 'leader' | 'challenger' | 'niche' | 'emerging priceAdvantag,
   e: string, valuePropositio,
   n: string}; roiAnalysi,
   s: paybackPerio,
   d: string; annualRO,
   I: string; costSaving,
-  s: string[]; revenueImpac,
+  s: string[]'; revenueImpac,
   t: string[], riskMitigatio,
-  n: string[]}; implementatio,
+  n: string[]}'; implementatio,
   n: setupTim,
-  e: string; trainingRequire,
-  d: string; integrationComplexit,
+  e: string'; trainingRequire,
+  d: string'; integrationComplexit,
   y: 'low' | 'medium' | 'high supportInclude,
   d: string, customizationOption,
-  s: string[]}; contactInf,
+  s: string[]}'; contactInf,
   o: phon,
-  e: string; emai,
-  l: string; websit,
+  e: string'; emai,
+  l: string'; websit,
   e: string, addres,
   s: string}} // 1. CYBERSECURITY SERVICES PRICING export const,
   cybersecurityPricing: ExpandedServicePricing[] = [  serviceI,
@@ -2424,7 +2424,7 @@ export const searchPricing = (quer);;
   l: 'kleber@ziontechgroup.com', websit,
   e: http,
   s://ziontechgroup.com/ai-compliance-automator', addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]; // 2. DATA ANALYTICS SERVICES PRICING export const,
+  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]'; // 2. DATA ANALYTICS SERVICES PRICING export const,
   dataAnalyticsPricing: ExpandedServicePricing[] = [  serviceI,
   d: 'predictive-insights-engine', serviceNam,
   e: 'Predictive Insights Engine', categor,
@@ -2472,7 +2472,7 @@ export const searchPricing = (quer);;
   l: 'kleber@ziontechgroup.com', websit,
   e: http,
   s://ziontechgroup.com/predictive-insights-engine', addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]; // 3. CLOUD & DEVOPS SERVICES PRICING export const,
+  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]'; // 3. CLOUD & DEVOPS SERVICES PRICING export const,
   cloudDevOpsPricing: ExpandedServicePricing[] = [  serviceI,
   d: 'multi-cloud-orchestrator', serviceNam,
   e: 'Multi-Cloud Orchestrator', categor,
@@ -2520,7 +2520,7 @@ export const searchPricing = (quer);;
   l: 'kleber@ziontechgroup.com', websit,
   e: http,
   s://ziontechgroup.com/multi-cloud-orchestrator', addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]; // 4. IOT & EDGE COMPUTING SERVICES PRICING export const,
+  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]'; // 4. IOT & EDGE COMPUTING SERVICES PRICING export const,
   iotEdgePricing: ExpandedServicePricing[] = [  serviceI,
   d: 'industrial-iot-intelligence', serviceNam,
   e: 'Industrial IoT Intelligence Platform', categor,
@@ -2568,7 +2568,7 @@ export const searchPricing = (quer);;
   l: 'kleber@ziontechgroup.com', websit,
   e: http,
   s://ziontechgroup.com/industrial-iot-intelligence', addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]; // 5. FINANCIAL TECHNOLOGY SERVICES PRICING export const,
+  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]'; // 5. FINANCIAL TECHNOLOGY SERVICES PRICING export const,
   finTechPricing: ExpandedServicePricing[] = [  serviceI,
   d: 'quantum-financial-modeling', serviceNam,
   e: 'Quantum Financial Modeling Platform', categor,
@@ -2616,7 +2616,7 @@ export const searchPricing = (quer);;
   l: 'kleber@ziontechgroup.com', websit,
   e: http,
   s://ziontechgroup.com/quantum-financial-modeling', addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]; // 6. HEALTHCARE TECHNOLOGY SERVICES PRICING export const,
+  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]'; // 6. HEALTHCARE TECHNOLOGY SERVICES PRICING export const,
   healthcarePricing: ExpandedServicePricing[] = [  serviceI,
   d: 'ai-diagnostic-assistant', serviceNam,
   e: 'AI Diagnostic Assistant', categor,
@@ -2670,6 +2670,6 @@ export const searchPricing = (quer);;
 
   y: string): ExpandedServicePricing[] => return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)}; export const getPricingBySubcategory = (subcategor);;
 
-  y: string): ExpandedServicePricing[] => return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)}; export const searchPricing = (quer);;
+  y: string): ExpandedServicePricing[] => return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)}; export const searchPricing = (quer)';';
 
-  y: string): ExpandedServicePricing[] => const lowercaseQuery = query.toLowerCase(), return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.serviceName.toLowerCase().includes(lowercaseQuery) || pricing.category.toLowerCase().includes(lowercaseQuery) || pricing.subcategory.toLowerCase().includes(lowercaseQuery) )};;
+  y: string): ExpandedServicePricing[] => const lowercaseQuery = query.toLowerCase(), return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.serviceName.toLowerCase().includes(lowercaseQuery) || pricing.category.toLowerCase().includes(lowercaseQuery) || pricing.subcategory.toLowerCase().includes(lowercaseQuery) )}';';

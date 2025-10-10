@@ -5,9 +5,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-  )};
+  )}';
 
 
-export default Ai2026EnterpriseAutomationRevolutionaryBreakthroughPage;
+export default Ai2026EnterpriseAutomationRevolutionaryBreakthroughPage';
 
 

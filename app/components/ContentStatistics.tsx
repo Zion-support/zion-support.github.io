@@ -1,8 +1,8 @@
-'use client;
+'use client';
 
-import React, { useState, useEffect } from 'react;
+import React, { useState, useEffect } from 'react';
 
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from lucide-react;
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from lucide-react';
 
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
@@ -14,7 +14,7 @@ const ContentStatistics: React.FC = () => {
     uptime: 0
   })
 
-  const targetCounters = {;;
+  const targetCounters = {';';
 
     clients: 10000,
     projects: 5000,
@@ -22,9 +22,9 @@ const ContentStatistics: React.FC = () => {
     years: 15,
     countries: 50,
     uptime: 99
-  };
+  }';
 
-  const statistics = [;;;
+  const statistics = [';';';
 
     {
       icon: Users,
@@ -75,9 +75,9 @@ const ContentStatistics: React.FC = () => {
       description: Service reliability
     }
 
-  ];
+  ]';
 
-  const features = [;;
+  const features = [';';
 
     {
       icon: Brain,
@@ -104,9 +104,9 @@ const ContentStatistics: React.FC = () => {
       stats: ['50+ Countries', '15+ Languages', '24/7 Support]
     }
 
-  ];
+  ]';
 
-  const benefits = [;;
+  const benefits = [';';
 
     'Advanced AI technology integration,
     'Real-time processing and analytics,
@@ -116,9 +116,9 @@ const ContentStatistics: React.FC = () => {
     'Easy integration with existing systems,
     'Cost-effective pricing plans,
     Proven track record of success
-  ];
+  ]';
 
-  const achievements = [;;
+  const achievements = [';';
 
     {
       icon: Star,
@@ -175,7 +175,7 @@ const ContentStatistics: React.FC = () => {
     return () => {
       timers.forEach(timer => clearInterval(timer))    };
 
-  }, []);
+  }, [])';
 
   return (
 
@@ -316,8 +316,8 @@ const ContentStatistics: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )'"'";
 
-};
+}'"'"'";
 
-export default ContentStatistics;
+export default ContentStatistics'"'"'"'";

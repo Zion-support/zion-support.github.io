@@ -1,14 +1,14 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-;
+';
 
 const QuantumComputingPage: React.FC = () => {
 return (          <div className="text-center mb-16>
@@ -88,14 +88,14 @@ return (          <div className="text-center mb-16>
       
       <Footer />
     </React.Fragment>
-);
+)'";
 
 }
 
-  )};
+  )}'"'";
 
 }
 
-  )};
+  )}'"'"'";
 
-export default QuantumComputingPage;
+export default QuantumComputingPage'"'"'"'";

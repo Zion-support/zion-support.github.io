@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react;
+import React, { useEffect } from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {/* TODO: Fix JSX expression *
 }
 
-;
+';
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',  description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Discover cutting-edge technology solutions for modern businesses.,
@@ -27,11 +27,11 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
   return (
 
   useEffect(() => {
-    // Add structured data to the page;
+    // Add structured data to the page';
 
-    if (structuredData) {;
+    if (structuredData) {';
 
-const _script = document.createElement('script);;
+const _script = document.createElement('script)';';
 
       script.type = 'application/ld+json;
 
@@ -46,27 +46,27 @@ const _script = document.createElement('script);;
 
 const,
   SEOEnhancer: React.FC<SEOEnhancerProps>
-);
+)';
 
 } = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
 
       }}
 
-  }, [structuredData]);
+  }, [structuredData])';
 
   /
-  const defaultStructuredData = {;;
+  const defaultStructuredData = {';';
 
     '@context': https: /
     '@type': 'Organization,
     name: 'Zion Tech Group,
-    description: description;
+    description: description';
 
-    url: canonicalUrl || window.location.origin;
+    url: canonicalUrl || window.location.origin';
 
     log,
-    o: ${window.location.origin };
+    o: ${window.location.origin }';
 
     sameAs: [http,
     s://linkedin.com/company/zion-tech-group', https: //twitter.com
@@ -95,9 +95,9 @@ const defaultStructuredData = {/* TODO: Fix JSX expression */};
       <Helmet>)
         {/* Basic Meta Tags *
         <title>{title}<
-        <meta name="description content = { description };
+        <meta name="description content = { description }";
 
-        <meta name="keywords" content = { keywords.join(, ) };
+        <meta name="keywords" content = { keywords.join(, ) }";
 
         <meta name="author" content="Zion Tech Group 
         <meta name="robots" content="index, follow 
@@ -106,28 +106,28 @@ const defaultStructuredData = {/* TODO: Fix JSX expression */};
         {canonicalUrl && <link rel="canonical href={canonicalUrl} />}<
 
         {/* Open Graph Meta Tags *
-        <meta property="og:title content = { title };
+        <meta property="og:title content = { title }";
 
-        <meta property="og:description content = { description };
+        <meta property="og:description content = { description }";
 
-        <meta property="og:type content = { ogType };
+        <meta property="og:type content = { ogType }";
 
-        <meta property="og:image content = { ogImage };
+        <meta property="og:image content = { ogImage }";
 
-        <meta property="og:url content = { canonicalUrl || window.location.href };
+        <meta property="og:url content = { canonicalUrl || window.location.href }";
 
         <meta property="og: site_name" content="Zion Tech Group 
         <meta property=o,
     g:locale" content="en_US 
 ,
         {/* Twitter Card Meta Tags *
-        <meta name="twitter:card content = { twitterCard };
+        <meta name="twitter:card content = { twitterCard }"'";
 
-        <meta name="twitter:title content = { title };
+        <meta name="twitter:title content = { title }"'"'";
 
-        <meta name="twitter:description content = { description };
+        <meta name="twitter:description content = { description }"'"'"'";
 
-        <meta name="twitter:image content = { ogImage };
+        <meta name="twitter:image content = { ogImage }'"'"'"'";
 
         <meta name="twitter: site" content="@ziontechgroup 
         <meta name=twitte,
@@ -231,8 +231,8 @@ const defaultStructuredData = {/* TODO: Fix JSX expression */};
       </Helmet>
       {children}
 
-  )};
+  )}'"'"'";
 
-export default SEOEnhancer;
+export default SEOEnhancer'"'"'"'";
 
 "`

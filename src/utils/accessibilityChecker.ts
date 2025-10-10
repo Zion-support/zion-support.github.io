@@ -1,13 +1,13 @@
-'use client;
+'use client';
 
 /**
  * Accessibility Checker Utility
 
-import React from 'react;
+import React from 'react';
 
 use client
 /**
- * Accessibility Checker Utility;
+ * Accessibility Checker Utility';
 
  *
  * Provides tools for checking and improving accessibility (a11y) in React applications.
@@ -21,15 +21,15 @@ use client
  * Accessibility issue severity levels
  */
 export enum A11ySeverity {
- * @module accessibilityChecker;
+ * @module accessibilityChecker';
 
- * @author Zion Tech Group;
+ * @author Zion Tech Group';
 
- * @version 1.0.0;
+ * @version 1.0.0';
 
  */
 /**
- * Accessibility issue severity levels;
+ * Accessibility issue severity levels';
 
  */
 
@@ -51,7 +51,7 @@ export enum A11ySeverity {// TODO: Add content}
  * WCAG success criteria levels
  */
 export enum WCAGLevel {
- * WCAG success criteria levels;
+ * WCAG success criteria levels';
 
  */
 
@@ -99,21 +99,21 @@ export interface A11yIssue {// TODO: Add content}
 
   /** Unique identifier for the issue */;
 
-  id: string;
+  id: string";
 
   /** Issue type/category */,
     typ,
-  e: string;
+  e: string";
 
   /** Severity level */,
 
   severit,
-  y: A11ySeverity;
+  y: A11ySeverity";
 
   /** WCAG level this issue violates */,
 
   wcagLeve,
-  l: WCAGLevel;
+  l: WCAGLevel";
 
   /** WCAG success criterion (e.g., "1.1.1", "2.4.7) */
   wcagCriterio,
@@ -266,9 +266,9 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
 
     this.checkARIA(element);
 
-    this.checkLandmarks(element);
+    this.checkLandmarks(element)';
 
-    const score = this.calculateScore();;;
+    const score = this.calculateScore()';';';
 
     return {
       passed: this.issues.length === 0,
@@ -307,9 +307,9 @@ const images = element.querySelectorAll(img);;
 
     images.forEach((img, index) => {;
 
-const alt = img.getAttribute(alt);;
+const alt = img.getAttribute(alt)';';
 
-      const role = img.getAttribute(role);;
+      const role = img.getAttribute(role)';';
 
       // Check for missing alt attribute
       if (alt === null && role !== 'presentation) {
@@ -319,7 +319,7 @@ const alt = img.getAttribute(alt);;
 
   O: Add content}
 
-};
+}';
 
   passed: this.issues.length === 0,
       issueCount: this.issues.length,
@@ -329,10 +329,10 @@ const alt = img.getAttribute(alt);;
 //       score}}
 
   /**
-   * Check entire document for accessibility issues;
+   * Check entire document for accessibility issues';
 
    *
-   * @returns Accessibility check result;
+   * @returns Accessibility check result';
 
    */
 
@@ -383,11 +383,11 @@ const alt = img.getAttribute(alt);;
 
 }
 
-      const alt = img.getAttribute(alt);;
+      const alt = img.getAttribute(alt);';
 
-      const role = img.getAttribute(role);;
+      const role = img.getAttribute(role)'";'"'";
 
-      // Check for missing alt attribute;
+      // Check for missing alt attribute'"'"'";
 
       if (alt === null && role !== 'presentation) {/* TODO: Fix JSX expression */}
 
@@ -399,7 +399,7 @@ const alt = img.getAttribute(alt);;
 
   O: Add content}
 
-};
+}'"'"'"'";
 
   type: 'missing-alt-text,
           severity: A11ySeverity.CRITICAL,
@@ -412,7 +412,7 @@ const alt = img.getAttribute(alt);;
         })}
 
       // Check for empty alt on decorative images without role
-      if (alt === '' && role !== 'presentation) {
+      if (alt === ' && role !== 'presentation) {
         this.addIssue({
           type: 'empty-alt-without-role,
           codeExample: 
@@ -431,9 +431,9 @@ const alt = img.getAttribute(alt);;
   )
       }
 
-      // Check for empty alt on decorative images without role;
+      // Check for empty alt on decorative images without role'"'"'";
 
-      if (alt === '' && role !== 'presentation) {/* TODO: Fix JSX expression */}
+      if (alt === ' && role !== 'presentation) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -443,7 +443,7 @@ const alt = img.getAttribute(alt);;
 
   O: Add content}
 
-};
+}'"'"'"'";
 
   type: 'empty-alt-without-role,
           severity: A11ySeverity.MODERATE,
@@ -452,7 +452,7 @@ const alt = img.getAttribute(alt);;
           message: `Image ${index + 1} has empty alt without role="presentation",
           element: `img[src="${img['src']}"],
           fix: 'Add role="presentation" to decorative images,
-          codeExample: '<img src="..." alt="" role=presentation />
+          codeExample: '<img src="..." alt=" role=presentation />
         })}
 
     })}
@@ -467,14 +467,14 @@ const alt = img.getAttribute(alt);;
 
 const headings = Array.from(element.querySelectorAll(h1, h2, h3, h4, h5, h6));;
 
-    if (headings.length === 0) return;
+    if (headings.length === 0) return'";
 
     headings.forEach((heading, index) => {
   return (
 
-;
+'"'";
 
-const level = parseInt(heading.tagName.charAt(1));;
+const level = parseInt(heading.tagName.charAt(1))'"'"'";'"'"'"'";
 
       // Check for skipped heading levels
       if (level > previousLevel + 1 && previousLevel !== 0) {
@@ -491,7 +491,7 @@ const level = parseInt(heading.tagName.charAt(1));;
           
           
           
-          <img src="..." alt="" role="presentation />
+          <img src="..." alt=" role="presentation />
 );
 
 }
@@ -529,9 +529,9 @@ const level = parseInt(heading.tagName.charAt(1));;
 
 }
 
-      const level = parseInt(heading.tagName.charAt(1));;
+      const level = parseInt(heading.tagName.charAt(1))';';
 
-      // Check for skipped heading levels;
+      // Check for skipped heading levels';
 
       if (level > previousLevel + 1 && previousLevel !== 0) {/* TODO: Fix JSX expression */}
 
@@ -543,7 +543,7 @@ const level = parseInt(heading.tagName.charAt(1));;
 
   O: Add content}
 
-};
+}';
 
   type: 'skipped-heading-level,
           severity: A11ySeverity.MODERATE,
@@ -564,7 +564,7 @@ const level = parseInt(heading.tagName.charAt(1));;
   )
       }
 
-      // Check for empty headings;
+      // Check for empty headings';
 
       if (!heading.textContent?.trim()) {/* TODO: Fix JSX expression */}
 
@@ -576,7 +576,7 @@ const level = parseInt(heading.tagName.charAt(1));;
 
   O: Add content}
 
-};
+}';
 
   type: 'empty-heading,
           severity: A11ySeverity.SERIOUS,
@@ -587,11 +587,11 @@ const level = parseInt(heading.tagName.charAt(1));;
           fix:         ,
 $4})}
 
-      previousLevel = level});
+      previousLevel = level})';
 
-    // Check for multiple h1s;
+    // Check for multiple h1s';
 
-const h1Count = element.querySelectorAll(h1).length;;
+const h1Count = element.querySelectorAll(h1).length';';
 
     if (h1Count > 1) {
       this.addIssue({
@@ -605,9 +605,9 @@ const h1Count = element.querySelectorAll(h1).length;;
 
       previousLevel = level});
 
-    // Check for multiple h1s;
+    // Check for multiple h1s';
 
-const h1Count = element.querySelectorAll(h1).length;;
+const h1Count = element.querySelectorAll(h1).length';';
 
     if (h1Count > 1) {/* TODO: Fix JSX expression */}
 
@@ -619,7 +619,7 @@ const h1Count = element.querySelectorAll(h1).length;;
 
   O: Add content}
 
-};
+}';
 
   type: 'multiple-h1,
         severity: A11ySeverity.MODERATE,
@@ -678,15 +678,15 @@ const links = element.querySelectorAll(a);;
 
       const ariaLabel = link.getAttribute(aria-label);;
 
-      const ariaLabelledBy = link.getAttribute(aria-labelledby);;
+      const ariaLabelledBy = link.getAttribute(aria-labelledby)';';
 
-      const title = link.getAttribute(title);;
+      const title = link.getAttribute(title)'";'"'";
 
       // Check for links without accessible text
       if (!text && !ariaLabel && !ariaLabelledBy && !title) {
         this.addIssue({
           type: 'link-no-text,
-      // Check for links without accessible text;
+      // Check for links without accessible text'"'"'";
 
       if (!text && !ariaLabel && !ariaLabelledBy && !title) {/* TODO: Fix JSX expression */}
 
@@ -698,7 +698,7 @@ const links = element.querySelectorAll(a);;
 
   O: Add content}
 
-};
+}'"'"'"'";
 
   type: 'link-no-text,
           severity: A11ySeverity.CRITICAL,
@@ -731,7 +731,7 @@ const links = element.querySelectorAll(a);;
   )
       }
 
-      // Check for generic link text;
+      // Check for generic link text'"'"'";
 
       if (text && ['click here', 'read more', 'more', 'link].includes(text.toLowerCase())) {/* TODO: Fix JSX expression */}
 
@@ -743,7 +743,7 @@ const links = element.querySelectorAll(a);;
 
   O: Add content}
 
-};
+}'"'"'"'";
 
   type: 'generic-link-text,
           severity: A11ySeverity.MODERATE,
@@ -755,9 +755,9 @@ const links = element.querySelectorAll(a);;
           codeExample: 'Use "Read full article" instead of Read more
         })}
 
-      // Check for links opening in new window without warning;
+      // Check for links opening in new window without warning';
 
-const target = link.getAttribute(target);;
+const target = link.getAttribute(target)';';
 
       if (
 
@@ -771,9 +771,9 @@ const target = link.getAttribute(target);;
   )
       }
 
-      // Check for links opening in new window without warning;
+      // Check for links opening in new window without warning'";
 
-const target = link.getAttribute(target);;
+const target = link.getAttribute(target)'"'";'"'"'";
 
       if ()
         target === '_blank &&
@@ -788,7 +788,7 @@ const target = link.getAttribute(target);;
 
   O: Add content}
 
-};
+}'"'"'"'";
 
   type: 'new-window-no-warning,
           severity: A11ySeverity.MINOR,
@@ -820,9 +820,9 @@ const buttons = element.querySelectorAll(button);;
 
 const text = button.textContent?.trim();;
 
-      const ariaLabel = button.getAttribute(aria-label);;
+      const ariaLabel = button.getAttribute(aria-label)'";'"'";
 
-      const ariaLabelledBy = button.getAttribute(aria-labelledby);;
+      const ariaLabelledBy = button.getAttribute(aria-labelledby)'"'"'";'"'"'"'";
 
       // Check for buttons without accessible text
       if (!text && !ariaLabel && !ariaLabelledBy) {
@@ -879,9 +879,9 @@ const text = button.textContent?.trim();;
 
       const ariaLabel = button.getAttribute(aria-label);;
 
-      const ariaLabelledBy = button.getAttribute(aria-labelledby);;
+      const ariaLabelledBy = button.getAttribute(aria-labelledby)';';
 
-      // Check for buttons without accessible text;
+      // Check for buttons without accessible text';
 
       if (!text && !ariaLabel && !ariaLabelledBy) {/* TODO: Fix JSX expression */}
 
@@ -893,7 +893,7 @@ const text = button.textContent?.trim();;
 
   O: Add content}
 
-};
+}';
 
   type: 'button-no-text,
           severity: A11ySeverity.CRITICAL,
@@ -921,16 +921,16 @@ const inputs = element.querySelectorAll(input, select, textarea);;
 
 const id = input.getAttribute(id);;
 
-      const ariaLabel = input.getAttribute(aria-label);;
+      const ariaLabel = input.getAttribute(aria-label)";";
 
-      const ariaLabelledBy = input.getAttribute(aria-labelledby);;
+      const ariaLabelledBy = input.getAttribute(aria-labelledby)";";
 
-      const label = id ? element.querySelector(`label[for="${id}"]) : null;;
+      const label = id ? element.querySelector(`label[for="${id}"]) : null';';
 
-      const type = input.getAttribute(type);;
+      const type = input.getAttribute(type)';';
 
       // Skip hidden and submit inputs
-      if (type === 'hidden' || type === 'submit' || type === button) return;
+      if (type === 'hidden' || type === 'submit' || type === button) return';
 
       // Check for form controls without labels
       if (!label && !ariaLabel && !ariaLabelledBy) {
@@ -979,21 +979,21 @@ const id = input.getAttribute(id);;
 
 }
 
-      const id = input.getAttribute(id);;
+      const id = input.getAttribute(id)';'";
 
-      const ariaLabel = input.getAttribute(aria-label);;
+      const ariaLabel = input.getAttribute(aria-label)'"'";'"'"'";
 
-      const ariaLabelledBy = input.getAttribute('aria-labelledby');";;
+      const ariaLabelledBy = input.getAttribute('aria-labelledby')";";";
 
-const label = id ? element.querySelector(`label[for="${id}"]) : null;;
+const label = id ? element.querySelector(`label[for="${id}"]) : null;';
 
-      const type = input.getAttribute(type);;
+      const type = input.getAttribute(type)';';
 
-      // Skip hidden and submit inputs;
+      // Skip hidden and submit inputs'";
 
-      if (type === 'hidden' || type === 'submit' || type === button) return;
+      if (type === 'hidden' || type === 'submit' || type === button) return'"'";
 
-      // Check for form controls without labels;
+      // Check for form controls without labels'"'"'";
 
       if (!label && !ariaLabel && !ariaLabelledBy) {/* TODO: Fix JSX expression */}
 
@@ -1005,7 +1005,7 @@ const label = id ? element.querySelector(`label[for="${id}"]) : null;;
 
   O: Add content}
 
-};
+}'"'"'"'";
 
   type: 'form-no-label,
           severity: A11ySeverity.CRITICAL,
@@ -1017,7 +1017,7 @@ const label = id ? element.querySelector(`label[for="${id}"]) : null;;
           codeExample: '<label for="email">Email:</label><input id="email" name=email />
         })}
 
-    });
+    })"'"'"'";
 
           codeExample: 
 
@@ -1049,20 +1049,20 @@ const label = id ? element.querySelector(`label[for="${id}"]) : null;;
    */
   private checkColors(element: Element): void {
     // This is a simplified check - full color contrast checking requires
-    // computing actual rendered colors which is complex;
+    // computing actual rendered colors which is complex'"'"'"'";
 
-const elementsWithColor = element.querySelectorAll('[style*="color]);;
+const elementsWithColor = element.querySelectorAll('[style*="color]);';
 
-    elementsWithColor.forEach(el => {;
+    elementsWithColor.forEach(el => {';
 
-const style = el.getAttribute(style);;
+const style = el.getAttribute(style)';';
 
       if (style?.includes('color:') && !style.includes('background)) {
         this.addIssue({
           type: 'color-without-background,
    * @private;
 
-   * @param element - Root element to check;
+   * @param element - Root element to check'";
 
    */
 
@@ -1070,19 +1070,19 @@ const style = el.getAttribute(style);;
 
 }
 
-    // This is a simplified check - full color contrast checking requires;
+    // This is a simplified check - full color contrast checking requires'"'";
 
-    // computing actual rendered colors which is complex;;
+    // computing actual rendered colors which is complex'"'"'";'"'"'"'";
 
-const elementsWithColor = element.querySelectorAll('[style*="color]);;
+const elementsWithColor = element.querySelectorAll('[style*="color]);';
 
     elementsWithColor.forEach(el => {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-});
+})'";
 
-const style = el.getAttribute(style);;
+const style = el.getAttribute(style)'"'";'"'"'";
 
       if (style?.includes(colo)
   r: ') && !style.includes('background)) {/* TODO: Fix JSX expression */}
@@ -1095,7 +1095,7 @@ const style = el.getAttribute(style);;
 
   O: Add content}
 
-};
+}'"'"'"'";
 
   type: 'color-without-background,
           severity: A11ySeverity.MINOR,
@@ -1117,11 +1117,11 @@ $4})}
   private checkKeyboardAccess(element: Element): void {
     // Check for interactive elements with tabindex="-1;
 
-const interactiveElements = element.querySelectorAll(a, button, input, select, textarea);;
+const interactiveElements = element.querySelectorAll(a, button, input, select, textarea);';
 
-    interactiveElements.forEach(el => {;
+    interactiveElements.forEach(el => {';
 
-const tabindex = el.getAttribute(tabindex);;
+const tabindex = el.getAttribute(tabindex)';'";
 
       if (tabindex === '-1) {
         this.addIssue({
@@ -1139,12 +1139,12 @@ const tabindex = el.getAttribute(tabindex);;
   }
 
   /**
-   * Check keyboard accessibility;
+   * Check keyboard accessibility";
 
    *
-   * @private;
+   * @private";
 
-   * @param element - Root element to check;
+   * @param element - Root element to check";
 
    */
 
@@ -1154,15 +1154,15 @@ const tabindex = el.getAttribute(tabindex);;
 
     // Check for interactive elements with tabindex="-1;
 
-const interactiveElements = element.querySelectorAll(a, button, input, select, textarea);;
+const interactiveElements = element.querySelectorAll(a, button, input, select, textarea);';
 
     interactiveElements.forEach(el => {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-});
+})'";
 
-const tabindex = el.getAttribute(tabindex);;
+const tabindex = el.getAttribute(tabindex)'"'";'"'"'";
 
       if (tabindex === '-1) {/* TODO: Fix JSX expression */}
 
@@ -1174,7 +1174,7 @@ const tabindex = el.getAttribute(tabindex);;
 
   O: Add content}
 
-};
+}'"'"'"'";
 
   type: 'interactive-not-focusable,
           severity: A11ySeverity.SERIOUS,
@@ -1199,9 +1199,9 @@ const clickableNonInteractive = element.querySelectorAll([onclick]:not(a):not(bu
 
 const role = el.getAttribute(role);;
 
-      const tabindex = el.getAttribute(tabindex);;
+      const tabindex = el.getAttribute(tabindex)'";'"'";
 
-      const onKeyDown = el.getAttribute(onkeydown);;
+      const onKeyDown = el.getAttribute(onkeydown)'"'"'";'"'"'"'";
 
       if (!role || !tabindex || !onKeyDown) {
         this.addIssue({
@@ -1241,9 +1241,9 @@ const clickableNonInteractive = element.querySelectorAll([onclick]:not(a):not(bu
 
 const role = el.getAttribute(role);;
 
-      const tabindex = el.getAttribute(tabindex);;
+      const tabindex = el.getAttribute(tabindex);';
 
-      const onKeyDown = el.getAttribute(onkeydown);;
+      const onKeyDown = el.getAttribute(onkeydown)';';
 
       if (!role || !tabindex || !onKeyDown) {/* TODO: Fix JSX expression */}
 
@@ -1255,7 +1255,7 @@ const role = el.getAttribute(role);;
 
   O: Add content}
 
-};
+}';
 
   type: 'click-without-keyboard,
           severity: A11ySeverity.SERIOUS,
@@ -1287,11 +1287,11 @@ const elementsWithAria = element.querySelectorAll(;;
 
 ;
 
-const role = el.getAttribute(role);;
+const role = el.getAttribute(role);';
 
-      // Check for invalid ARIA roles;
+      // Check for invalid ARIA roles';
 
-const validRoles = [;;
+const validRoles = [';';
 
         'alert,
         'button,
@@ -1309,7 +1309,7 @@ const validRoles = [;;
         'main,
         'article,
         'note,
-        presentation];
+        presentation]';
 
       if (role && !validRoles.includes(role)) {
         this.addIssue({
@@ -1367,12 +1367,12 @@ const role = el.getAttribute(role);;
 
       // Check for invalid ARIA roles;
 
-const validRoles = [;;
+const validRoles = [';';
 
   // TOD,
-  O: Add items;
+  O: Add items'";
 
-];
+]'"'";
 
 //         'alert,
 //         'button,
@@ -1390,7 +1390,7 @@ const validRoles = [;;
 //         'main,
 //         'article,
 //         'note,
-//         presentation];
+//         presentation]'"'"'";
 
       if (role && !validRoles.includes(role)) {/* TODO: Fix JSX expression */}
 
@@ -1402,7 +1402,7 @@ const validRoles = [;;
 
   O: Add content}
 
-};
+}'"'"'"'";
 
   type: 'invalid-aria-role,
           severity: A11ySeverity.MODERATE,
@@ -1415,11 +1415,11 @@ $4})}
 
       // Check aria-labelledby references;
 
-const labelledBy = el.getAttribute(aria-labelledby);;
+const labelledBy = el.getAttribute(aria-labelledby);';
 
-      if (labelledBy) {;
+      if (labelledBy) {';
 
-const referencedElement = document.getElementById(labelledBy);;
+const referencedElement = document.getElementById(labelledBy)';';
 
         if (!referencedElement) {
           this.addIssue({
@@ -1433,7 +1433,7 @@ const referencedElement = document.getElementById(labelledBy);;
 
       // Check aria-labelledby references;
 
-const labelledBy = el.getAttribute(aria-labelledby);;
+const labelledBy = el.getAttribute(aria-labelledby);'";
 
       if (labelledBy) {/* TODO: Fix JSX expression */}
 
@@ -1441,7 +1441,7 @@ const labelledBy = el.getAttribute(aria-labelledby);;
 
 }
 
-        const referencedElement = document.getElementById(labelledBy);;
+        const referencedElement = document.getElementById(labelledBy)'"'";'"'"'";
 
         if (!referencedElement) {/* TODO: Fix JSX expression */}
 
@@ -1453,7 +1453,7 @@ const labelledBy = el.getAttribute(aria-labelledby);;
 
   O: Add content}
 
-};
+}'"'"'"'";
 
   type: 'aria-labelledby-missing,
             severity: A11ySeverity.SERIOUS,
@@ -1474,11 +1474,11 @@ $4})}
    * @private
    * @param element - Root element to check
    */
-  private checkLandmarks(element: Element): void {;
+  private checkLandmarks(element: Element): void {'"'"'"'";
 
-const hasMain = element.querySelector('main, [role="main]);;
+const hasMain = element.querySelector('main, [role="main])'"'"'";'"'"'"'";
 
-    // const hasNav = element.querySelector('nav, [role="navigation]);;
+    // const hasNav = element.querySelector('nav, [role="navigation])';'";
 
     if (!hasMain) {
       this.addIssue({
@@ -1498,12 +1498,12 @@ const hasMain = element.querySelector('main, [role="main]);;
   }
 
   /**
-   * Check for proper use of landmark regions;
+   * Check for proper use of landmark regions'"'";
 
    *
-   * @private;
+   * @private'"'"'";
 
-   * @param element - Root element to check;
+   * @param element - Root element to check'"'"'"'";
 
    */
 
@@ -1511,9 +1511,9 @@ const hasMain = element.querySelector('main, [role="main]);;
 
 }
 
-    const hasMain = element.querySelector('main, [role="main]);;
+    const hasMain = element.querySelector('main, [role="main])'"'"'";'"'"'"'";
 
-    // const hasNav = element.querySelector('nav, [role="navigation]);;
+    // const hasNav = element.querySelector('nav, [role="navigation])'"'";'"'"'";
 
     if (!hasMain) {/* TODO: Fix JSX expression */}
 
@@ -1525,7 +1525,7 @@ const hasMain = element.querySelector('main, [role="main]);;
 
   O: Add content}
 
-};
+}'"'"'"'";
 
   type: 'missing-main-landmark,
         severity: A11ySeverity.MODERATE,
@@ -1580,9 +1580,9 @@ $4})}
 
       return sum + severityWeights[issue.severity]}, 0);
 
-    // Score decreases with more/severe issues;
+    // Score decreases with more/severe issues';
 
-const score = Math.max(0, 100 - totalPenalty);;;
+const score = Math.max(0, 100 - totalPenalty)'";'"'";'"'"'";
 
     return Math.round(score)}
 
@@ -1617,7 +1617,7 @@ const score = Math.max(0, 100 - totalPenalty);;;
 
 }
 
-        fix: Add a;
+        fix: Add a"'";
 
           <main> element or role="main",
         codeExampl,
@@ -1629,12 +1629,12 @@ const score = Math.max(0, 100 - totalPenalty);;;
   }
 
   /**
-   * Add an issue to the list;
+   * Add an issue to the list';
 
    *
-   * @private;
+   * @private';
 
-   * @param issue - Partial issue object;
+   * @param issue - Partial issue object';
 
    */
 
@@ -1729,9 +1729,9 @@ const score = Math.max(0, 100 - totalPenalty);;
    * Get issues by WCAG level;
 
    *
-   * @param level - WCAG level to filter by;
+   * @param level - WCAG level to filter by'";
 
-   * @returns Array of issues that violate the specified WCAG level;
+   * @returns Array of issues that violate the specified WCAG level'"'";
 
    */
 
@@ -1742,10 +1742,10 @@ const score = Math.max(0, 100 - totalPenalty);;
     return this.issues.filter(issue => issue.wcagLevel === level)}
 
   /**
-   * Generate accessibility report;
+   * Generate accessibility report'"'"'";
 
    *
-   * @returns Formatted report string;
+   * @returns Formatted report string'"'"'"'";
 
    */
 

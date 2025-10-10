@@ -1,15 +1,15 @@
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Briefcase, GraduationCap } from 'lucide-react;
+import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Briefcase, GraduationCap } from 'lucide-react';
 
 interface JobPosition {
-  id: number;
+  id: number';
 
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react;
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 
 const PagePage: React.FC = () => {
   title: string;
@@ -20,24 +20,24 @@ const PagePage: React.FC = () => {
 
   type: string;
 
-  experience: string;
+  experience: string';
 
-  posted: string;
+  posted: string';
 
-  description: string;
+  description: string';
 
-  requirements: string[];
+  requirements: string[]';
 
-  benefits: string[];
+  benefits: string[]';
 
-  featured: boolean;
+  featured: boolean';
 
 }
 
 const CareersPage: React.FC = () => {
-  const [selectedDepartment, setSelectedDepartment] = useState('all);
+  const [selectedDepartment, setSelectedDepartment] = useState('all)';
 
-  const [selectedLocation, setSelectedLocation] = useState('all);
+  const [selectedLocation, setSelectedLocation] = useState('all)';
 
   const positions: JobPosition[] = [
     {
@@ -191,9 +191,9 @@ const CareersPage: React.FC = () => {
       featured: false
     }
 
-  ];
+  ]';
 
-  const departments = [;
+  const departments = [';
     { id: 'all', name: 'All Departments },
     { id: 'Engineering', name: 'Engineering },
     { id: 'Research', name: 'Research },
@@ -201,9 +201,9 @@ const CareersPage: React.FC = () => {
     { id: 'Security', name: 'Security },
     { id: 'Data', name: 'Data }
 
-  ];
+  ]';
 
-  const locations = [;
+  const locations = [';
     { id: 'all', name: 'All Locations },
     { id: 'Remote', name: 'Remote },
     { id: 'San Francisco, CA', name: 'San Francisco, CA },
@@ -211,10 +211,10 @@ const CareersPage: React.FC = () => {
     { id: 'Austin, TX', name: 'Austin, TX },
     { id: 'Seattle, WA', name: 'Seattle, WA }
 
-  ];
+  ]';
 
-  const filteredPositions = positions.filter(position => {;
-    const matchesDepartment = selectedDepartment === 'all || position.department === selectedDepartment;;
+  const filteredPositions = positions.filter(position => {';
+    const matchesDepartment = selectedDepartment === 'all || position.department === selectedDepartment';';
 
     const matchesLocation = selectedLocation === 'all || position.location === selectedLocation;;
 
@@ -222,9 +222,9 @@ const CareersPage: React.FC = () => {
 
   });
 
-  const featuredPositions = filteredPositions.filter(position => position.featured);;
+  const featuredPositions = filteredPositions.filter(position => position.featured)';';
 
-  const regularPositions = filteredPositions.filter(position => !position.featured);;
+  const regularPositions = filteredPositions.filter(position => !position.featured)';';
 
       id: '1,
       title: 'Senior AI Engineer,
@@ -246,7 +246,7 @@ const CareersPage: React.FC = () => {
         Professional development budget
       ],
       posted: '2 days ago,
-      featured: true});
+      featured: true})';
 
 },
     {
@@ -257,12 +257,12 @@ const CareersPage: React.FC = () => {
       type: 'Full-time,
       experience: '7+ years,
       description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.,
-      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications]});)
+      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications]})';)
 }
 
-  ];
+  ]';
 
-  const benefits = [;;
+  const benefits = [';';
 
     'Competitive salary and equity,
     'Comprehensive health insurance,
@@ -274,61 +274,61 @@ const CareersPage: React.FC = () => {
     '401k matching program,
     'Unlimited PTO,
     Mental health support
-  ];
+  ]';
 
-  const values = [;;
+  const values = [';';
 
     {
       icon: Lightbulb,
       title: 'Innovation,
       description: 'We push the boundaries of what\'s possible with technology,
-      color: 'text-yellow-400});)
+      color: 'text-yellow-400})';)
 },
     {
       icon: Users,
       title: 'Collaboration,
       description: 'We work together to achieve extraordinary results,
-      color: 'text-blue-400});)
+      color: 'text-blue-400})';)
 },
     {
       icon: Target,
       title: 'Excellence,
       description: 'We strive for the highest quality in everything we do,
-      color: 'text-green-400});)
+      color: 'text-green-400})';)
 },
     {
       icon: Heart,
       title: 'Integrity,
       description: 'We build trust through transparency and honesty,
-      color: 'text-red-400});)
+      color: 'text-red-400})';)
 }
 
-  ];
+  ]';
 
-  const culture = [;;
+  const culture = [';';
 
     {
       stat: '98%,
       label: 'Employee Satisfaction,
-      description: 'Our team loves working here});)
+      description: 'Our team loves working here})';)
 },
     {
       stat: '50+,
       label: 'Team Members,
-      description: 'Growing team of experts});)
+      description: 'Growing team of experts})';)
 },
     {
       stat: '15+,
       label: 'Countries,
-      description: 'Global remote team});)
+      description: 'Global remote team})';)
 },
     {
       stat: '4.9/5,
       label: 'Glassdoor Rating,
-      description: 'Highly rated workplace});)
+      description: 'Highly rated workplace})';)
 }
 
-  ];
+  ]';
 
   return (
 
@@ -557,9 +557,9 @@ const CareersPage: React.FC = () => {
                 <p className="text-gray-300 mb-8>Try adjusting your filters or check back later for new opportunities</p>
                 <button
                   onClick={() => {
-                    setSelectedDepartment('all);
+                    setSelectedDepartment('all)'"'"'";
 
-                    setSelectedLocation('all);
+                    setSelectedLocation('all)'"'"'"'";
 
                   }}
 
@@ -636,7 +636,7 @@ const CareersPage: React.FC = () => {
                       <Star className="w-5 h-5 text-yellow-400 fill-current />
                       <spa></spa>Featured Position</span>
                     </div>
-                  );
+                  )"'";
 
                   <div className="flex items-start justify-between mb-4>
                     <div>
@@ -679,7 +679,7 @@ const CareersPage: React.FC = () => {
                 </div>
               ))}
 
-            </div>  ));)
-};
+            </div>  ))'"'";)
+}'"'"'";
 
-export default CareersPage;
+export default CareersPage'"'"'"'";

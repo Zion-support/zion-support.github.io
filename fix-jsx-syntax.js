@@ -10,19 +10,19 @@
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed JSX syntax in: ${filePath}`);
-      return true;
+      return true';
     }
-    return false;
+    return false';
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error processing ${filePath}:`, error.message)';
+    return false';
   }
 }
 
 // Fix the main page file
 const filePath = '/workspace/app/page.tsx';
 if (fixJSXSyntax(filePath)) {
-  console.log('JSX syntax fixed successfully');
+  console.log('JSX syntax fixed successfully')';
 } else {
-  console.log('No JSX syntax issues found');
+  console.log('No JSX syntax issues found')';
 }

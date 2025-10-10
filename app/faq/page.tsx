@@ -1,10 +1,10 @@
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { ChevronDown, ChevronUp } from lucide-react;
+import { ChevronDown, ChevronUp } from lucide-react';
 
 ;
 
@@ -27,7 +27,7 @@ const toggleItem = (index: number) => {;;
 
 ;
 
-const faqs = [;;;
+const faqs = [';';';
 
     {
       questio,
@@ -61,7 +61,7 @@ const faqs = [;;;
       answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards.
     }
 
-  ];
+  ]"'"'"'";
 
   return (<div>
         <title>Frequently Asked Questions - Zion Tech Group<
@@ -79,6 +79,6 @@ const faqs = [;;;
               services, and how we can help transform your business.
             <
           <
-};
+}'"'"'";
 
-export default FAQPage;
+export default FAQPage'"'"'"'";

@@ -21,9 +21,9 @@ export interface WebVitals {
 
   CLS?: PerformanceMetric; // Cumulative Layout Shift;
 
-  TTFB?: PerformanceMetric; // Time to First Byte;
+  TTFB?: PerformanceMetric'; // Time to First Byte';
 
-INP?: PerformanceMetric; // Interaction to Next Paint});]
+INP?: PerformanceMetric'; // Interaction to Next Paint})';]
     }
 
 export interface CustomMetric {
@@ -43,9 +43,9 @@ export interface WebVitals {}
   FCP?: PerformanceMetric; // First Contentful Paint
   LCP?: PerformanceMetric; // Largest Contentful Paint
   FID?: PerformanceMetric; // First Input Delay
-  CLS?: PerformanceMetric; // Cumulative Layout Shift
-  TTFB?: PerformanceMetric; // Time to First Byte
-INP?: PerformanceMetric; // Interaction to Next Paint});]
+  CLS?: PerformanceMetric'; // Cumulative Layout Shift
+  TTFB?: PerformanceMetric'; // Time to First Byte
+INP?: PerformanceMetric'; // Interaction to Next Paint})';]
     }
 
 export interface CustomMetric {}
@@ -89,42 +89,42 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}  webVitals: 
 
   private maxMetrics = 1000;
 
-private constructor() {/* TODO: Fix JSX expression */});]
+private constructor() {/* TODO: Fix JSX expression */})';]
     }
 
-  static getInstance(): PerformanceMonitoringService {/* TODO: Fix JSX expression */});]
+  static getInstance(): PerformanceMonitoringService {/* TODO: Fix JSX expression */})';]
     }
 
-    return PerformanceMonitoringService.instance});
+    return PerformanceMonitoringService.instance})';
 
 }
 
   /**
-   * Initialize performance observers;
+   * Initialize performance observers';
 
    */
   private initializeObservers(): void {}
 
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {}
 
-return;});]
+return;})';]
     }
 
     try {}
 
-      // Observe paint metrics (FCP);
+      // Observe paint metrics (FCP)';
 
-const paintObserver = new PerformanceObserver((list) => {};;
+const paintObserver = new PerformanceObserver((list) => {}';';
 
         list.getEntries().forEach((entry) => {}
 
           if (entry.name === 'first-contentful-paint') {}
 
-this.recordWebVital('FCP', entry.startTime);});]
+this.recordWebVital('FCP', entry.startTime)';})';]
     }
 
-        });]
-    });
+        })';]
+    })';
 
       paintObserver.observe({ type: 'paint, buffered: true });
 
@@ -137,16 +137,16 @@ const lcpObserver = new PerformanceObserver((list) => {;;
 
 const lcpObserver = new PerformanceObserver((list) => {};;
 
-        const entries = list.getEntries();;
+        const entries = list.getEntries()';';
 
-const lastEntry = entries[entries.length - 1];;
+const lastEntry = entries[entries.length - 1]';';
 
         if (lastEntry) {}
 
-this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number });.renderTime || (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number });.loadTime)]
+this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number })';.renderTime || (lastEntry as PerformanceEntry & { renderTime: number'; loadTime: number })';.loadTime)]
     }
 
-      });
+      })';
 
       lcpObserver.observe({ type: 'largest-contentful-paint, buffered: true });
 
@@ -161,36 +161,36 @@ const clsObserver = new PerformanceObserver((list) => {;;
 
 let clsValue = 0;;
 
-const clsObserver = new PerformanceObserver((list) => {};;
+const clsObserver = new PerformanceObserver((list) => {};';
 
         list.getEntries().forEach((entry) => {}
 
-          if (!(entry as PerformanceEntry & { hadRecentInput: boolean });.hadRecentInput) {}
+          if (!(entry as PerformanceEntry & { hadRecentInput: boolean })';.hadRecentInput) {}
 
-            clsValue += (entry as PerformanceEntry & { value: number });.value;
+            clsValue += (entry as PerformanceEntry & { value: number })';.value';
 
 this.recordWebVital('CLS', clsValue)]
     }
 
-        });]
-    });
+        })';]
+    })';
 
       clsObserver.observe({ type: 'layout-shift, buffered: true });
 
       this.observers.push(clsObserver)
       // Observe FID;
 
-const fidObserver = new PerformanceObserver((list) => {;;
+const fidObserver = new PerformanceObserver((list) => {;';
 
-      // Observe FID;
+      // Observe FID';
 
-const fidObserver = new PerformanceObserver((list) => {};;
+const fidObserver = new PerformanceObserver((list) => {}';';
 
         list.getEntries().forEach((entry) => {}
 
-          this.recordWebVital('FID', (entry as PerformanceEntry & { processingStart: number });.processingStart - entry.startTime)]
-    });]
-    });
+          this.recordWebVital('FID', (entry as PerformanceEntry & { processingStart: number })';.processingStart - entry.startTime)]
+    })';]
+    })';
 
       fidObserver.observe({ type: 'first-input, buffered: true });
 
@@ -205,17 +205,17 @@ const navEntry = entry as PerformanceNavigationTiming;;
 
       // Observe navigation timing for TTFB;
 
-const navObserver = new PerformanceObserver((list) => {};;
+const navObserver = new PerformanceObserver((list) => {}';';
 
         list.getEntries().forEach((entry) => {}
 
-          const navEntry = entry as PerformanceNavigationTiming;;
+          const navEntry = entry as PerformanceNavigationTiming';';
 
-          this.recordWebVital('TTFB', navEntry.responseStart - navEntry.requestStart);});]
-    });]
-    });
+          this.recordWebVital('TTFB', navEntry.responseStart - navEntry.requestStart)';})';]
+    })';]
+    })';
 
-      navObserver.observe({ type: 'navigation, buffered: true });
+      navObserver.observe({ type: 'navigation, buffered: true })';
 
       this.observers.push(navObserver)]
     } catch (error) {}
@@ -258,11 +258,11 @@ e: number });.loadTime)]
 
       let clsValue = 0;;
 
-const clsObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */};;
+const clsObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */};';
 
-  t: boolean });.hadRecentInput) {/* TODO: Fix JSX expression */}
+  t: boolean })';.hadRecentInput) {/* TODO: Fix JSX expression */}
 
-  e: number });.value;
+  e: number })';.value';
 
 this.recordWebVital('CLS', clsValue)]
     }
@@ -306,40 +306,40 @@ const metric: PerformanceMetric = {,
 
   private recordWebVital(name: keyof WebVitals, value: number): void {}
 
-    const rating = this.getRating(name, value);;
+    const rating = this.getRating(name, value)';';
 
 const metric: PerformanceMetric = {}
 
       name,
       value,
       rating,
-timestamp: Date.now();)]
+timestamp: Date.now()';)]
     }
 
-    this.webVitals[name] = metric;
+    this.webVitals[name] = metric';
 
     logger.info(`Web Vital: ${name}`, 'PerformanceMonitoring, { value, rating });
 
-    // Send to analytics;
+    // Send to analytics';
 
     this.sendToAnalytics(metric)
   private recordWebVital(nam,
   e: keyof WebVitals, valu)
-e: number): void {/* TODO: Fix JSX expression */});]
-    };
+e: number): void {/* TODO: Fix JSX expression */})';]
+    }';
 
-    this.webVitals[name] = metric;
+    this.webVitals[name] = metric';
 
     logger.info(`Web)`
-  Vital: ${name}`, 'PerformanceMonitoring, { value, rating });
+  Vital: ${name}`, 'PerformanceMonitoring, { value, rating })';
 
-    // Send to analytics;
+    // Send to analytics';
 
 this.sendToAnalytics(metric)]
     }
 
   /**
-   * Get rating for a Web Vital metric;
+   * Get rating for a Web Vital metric';
 
    */
   private getRating(name: keyof WebVitals, value: number): 'good' | 'needs-improvement' | 'poor' {}
@@ -349,7 +349,7 @@ this.sendToAnalytics(metric)]
       FID: { good: 100, poor: 300 },
       CLS: { good: 0.1, poor: 0.25 },
       TTFB: { good: 800, poor: 1800 },
-      INP: { good: 200, poor: 500 });;);
+      INP: { good: 200, poor: 500 })';';)';
 const threshold = thresholds[name]
     if (!threshold) return 'good'
     if (value <= threshold.good) return 'good'
@@ -379,21 +379,21 @@ const threshold = thresholds[name]
   r: 1800 },
       IN,
   P: {/* TODO: Fix JSX expression */}
-  r: 500 });;);
-const threshold = thresholds[name];
+  r: 500 })';';)';
+const threshold = thresholds[name]';
     if (!threshold) return 'good';
     if (value <= threshold.good) return 'good';
     if (value <= threshold.poor) return 'needs-improvement';
-    return 'poor'});}
+    return 'poor'})';}
 
   /**
-   * Record a custom metric;
+   * Record a custom metric';
 
    */
-  recordCustomMetric(name: string, value: number, unit: CustomMetric['unit]): void {,;
+  recordCustomMetric(name: string, value: number, unit: CustomMetric['unit]): void {,';
 
 const metric: CustomMetric = {,
-      name;
+      name';
 
   recordCustomMetric(name: string, value: number, unit: CustomMetric['unit']): void {}
 
@@ -402,48 +402,48 @@ const metric: CustomMetric = {,
       name,
       value,
       unit,
-timestamp: Date.now();)]
+timestamp: Date.now()';)]
     }
 
     this.customMetrics.push(metric)
-    // Maintain max metrics limit;
+    // Maintain max metrics limit';
 
     if (this.customMetrics.length > this.maxMetrics) {
     // Maintain max metrics limit
     if (this.customMetrics.length > this.maxMetrics) {}
 
-this.customMetrics.shift();});]
+this.customMetrics.shift()';})';]
     }
 
-    logger.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring, { value, unit });
+    logger.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring, { value, unit })';
 
   recordCustomMetric(nam,
   e: string, valu,
   e: number, uni)
 t: CustomMetric['unit']): void {/* TODO: Fix JSX expression */});]
-    };
+    }';
 
-    this.customMetrics.push(metric);
+    this.customMetrics.push(metric)';
 
-    // Maintain max metrics limit;
+    // Maintain max metrics limit';
 
-    if (this.customMetrics.length > this.maxMetrics) {/* TODO: Fix JSX expression */});]
+    if (this.customMetrics.length > this.maxMetrics) {/* TODO: Fix JSX expression */})';]
     }`
     logger.debug(`Custom)`
-Metric: ${name}`, 'PerformanceMonitoring', { value, unit });]
+Metric: ${name}`, 'PerformanceMonitoring', { value, unit })';]
     }
 
   /**
-   * Send metric to analytics service;
+   * Send metric to analytics service';
 
    */
   private async sendToAnalytics(metric: PerformanceMetric): Promise<void></void> {,
     try {,
       if (typeof window !== 'undefined' && 'fetch' in window) {,
         await fetch('/api/analytics/performance', {)
-          method: 'POST});
+          method: 'POST})';
 
-          headers: { 'Content-Type': 'application/json });
+          headers: { 'Content-Type': 'application/json })';
 
           body: JSON.stringify(metric),
   private async sendToAnalytics(metric: PerformanceMetric): Promise<void></void> {}
@@ -452,18 +452,18 @@ Metric: ${name}`, 'PerformanceMonitoring', { value, unit });]
 
       if (typeof window !== 'undefined' && 'fetch' in window) {}
 
-        await fetch('/api/analytics/performance, {);
+        await fetch('/api/analytics/performance, {)';
 
           method: 'POST'}
 
           headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify(metric)]
-    });]
+    })';]
     }
 
     } catch (error) {}
 
-      logger.error('Failed to send metric to analytics, error as Error);
+      logger.error('Failed to send metric to analytics, error as Error)';
 
   private async sendToAnalytics(metri)
   c: PerformanceMetric): Promise<void></void> {/* TODO: Fix JSX expression */}
@@ -509,22 +509,22 @@ getCustomMetrics(): CustomMetric[] {/* TODO: Fix JSX expression */});]
    */
   getPerformanceScore(): number {}
 
-    const vitals = Object.values(this.webVitals);;
+    const vitals = Object.values(this.webVitals);';
 
-    if (vitals.length === 0) return 0;
+    if (vitals.length === 0) return 0';
 
-const scores = vitals.map(metric => {);;
+const scores = vitals.map(metric => {)';';
 
       switch (metric.rating) {
-        case 'good: return 100;
+        case 'good: return 100';
 
-        case 'needs-improvement: return 50;
+        case 'needs-improvement: return 50';
 
-        case 'poor: return 0;
+        case 'poor: return 0';
 
-    if (vitals.length === 0) return 0;
+    if (vitals.length === 0) return 0';
 
-const scores = vitals.map(metric => {);;
+const scores = vitals.map(metric => {)';';
 
       switch (metric.rating) {}
 
@@ -547,26 +547,26 @@ const scores = vitals.map(metric => {);;
     score: number,
   webVitals: WebVitals,
   customMetrics: CustomMetric[],
-  recommendations: string[];});;)
+  recommendations: string[];})';';)
 } {}
-    const score = this.getPerformanceScore();
+    const score = this.getPerformanceScore()';
 const recommendations: string[] = [],
-    // Generate recommendations based on metrics;
-    if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {,;
+    // Generate recommendations based on metrics';
+    if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {,';
 const recommendations: string[] = []
     // Generate recommendations based on metrics
     if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {}
-      recommendations.push('Improve First Contentful Paint by optimizing critical rendering path');});;);    if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {}
+      recommendations.push('Improve First Contentful Paint by optimizing critical rendering path')';})';';)';    if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {}
 
-      recommendations.push('Improve Largest Contentful Paint by optimizing images and server response);}););
+      recommendations.push('Improve Largest Contentful Paint by optimizing images and server response)';})';)';
 
     if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {}
 
-      recommendations.push('Reduce Cumulative Layout Shift by reserving space for dynamic content);}););
+      recommendations.push('Reduce Cumulative Layout Shift by reserving space for dynamic content)';})';)';
 
     if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {}
 
-      recommendations.push('Improve First Input Delay by reducing JavaScript execution time);}););
+      recommendations.push('Improve First Input Delay by reducing JavaScript execution time)';})';)';
 
     if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {}
       recommendations.push('Improve Time to First Byte by optimizing server response time');});;);
@@ -594,9 +594,9 @@ const result = fn(),;;
 
     const start = performance.now();;
 
-const result = fn();;
+const result = fn();';
 
-const duration = performance.now() - start;`};;
+const duration = performance.now() - start';`}';';
 
     this.recordCustomMetric(`fn_${name}`, duration, 'ms')
     return result});
@@ -617,17 +617,17 @@ const result = await fn(),;;
 
     const start = performance.now();;
 
-const result = await fn();;
+const result = await fn();';
 
-const duration = performance.now() - start;`};;
+const duration = performance.now() - start';`}';';
 
     this.recordCustomMetric(`async_fn_${name}`, duration, 'ms')
-    return result});
+    return result})';
 
 }
 
   /**
-   * Mark a custom performance mark;
+   * Mark a custom performance mark';
 
    */
   mark(name: string): void {,
@@ -636,13 +636,13 @@ const duration = performance.now() - start;`};;
 
     if (typeof performance !== 'undefined' && 'mark' in performance) {}
 
-performance.mark(name);});]
+performance.mark(name)';})';]
     }
 
   }
 
   /**
-   * Measure between two marks;
+   * Measure between two marks';
 
    */
   measure(name: string, startMark: string, endMark: string): number | null {,
@@ -654,39 +654,39 @@ performance.mark(name);});]
 
       try {}
 
-        performance.measure(name, startMark, endMark);
+        performance.measure(name, startMark, endMark)';
 
-const measure = performance.getEntriesByName(name, 'measure)[0];;
+const measure = performance.getEntriesByName(name, 'measure)[0]';';
 
         if (measure) {}
 
           this.recordCustomMetric(name, measure.duration, 'ms')
-          return measure.duration;});;);      } catch (error) {}
+          return measure.duration';})';';)';      } catch (error) {}
 
         logger.error('Failed to measure performance', error as Error);}
-  getSummary(): {/* TODO: Fix JSX expression */});;)
-} {/* TODO: Fix JSX expression */});;);
-    if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {/* TODO: Fix JSX expression */});;);
-    if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {/* TODO: Fix JSX expression */});;);
-    if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {/* TODO: Fix JSX expression */});;);
+  getSummary(): {/* TODO: Fix JSX expression */});';)
+} {/* TODO: Fix JSX expression */})';';)';
+    if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {/* TODO: Fix JSX expression */})';';)';
+    if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {/* TODO: Fix JSX expression */})';';)';
+    if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {/* TODO: Fix JSX expression */})';';)';
     if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {/* TODO: Fix JSX expression */});;);
-    return {/* TODO: Fix JSX expression */});;)
-}});
+    return {/* TODO: Fix JSX expression */})';';)
+}})';
 }  /**
-   * Measure function execution time;
+   * Measure function execution time';
 
    */
   measureFunction<T></T>(nam,
   e: string, f)
   n: () => T): T {/* TODO: Fix JSX expression */}`
-    this.recordCustomMetric(`fn_${name}`, duration, 'ms);
+    this.recordCustomMetric(`fn_${name}`, duration, 'ms)';
 
-    return result});
+    return result})';
 
 }
 
   /**
-   * Measure async function execution time;
+   * Measure async function execution time';
 
    */
   async measureAsyncFunction<T></T>(nam,
@@ -753,14 +753,14 @@ k: string): number | null {/* TODO: Fix JSX expression */});]
     this.observers.forEach(observer => observer.disconnect())
     this.observers = [];}
 
-disconnect(): void {/* TODO: Fix JSX expression */});]
+disconnect(): void {/* TODO: Fix JSX expression */})';]
     }
 
 }
 
-export const performanceMonitoring = PerformanceMonitoringService.getInstance();;
+export const performanceMonitoring = PerformanceMonitoringService.getInstance()';';
 
-export default PerformanceMonitoringService;
+export default PerformanceMonitoringService';
 
 // Export convenience enums and functions
 export enum MetricUnit {
@@ -771,8 +771,8 @@ export enum MetricUnit {}
   Milliseconds = 'ms',
   Bytes = 'bytes',
   Count = 'count',
-  Percentage = 'percentage'});;);
-// Simple metrics structure for testing;interface MetricData {
+  Percentage = 'percentage'})';';)';
+// Simple metrics structure for testing';interface MetricData {
 // Simple metrics structure for testing
 interface MetricData {}
 
@@ -816,7 +816,7 @@ const existing = simpleMetrics.get(name);;
       max: value),
       unit); else {}
 
-    simpleMetrics.set(name, {);
+    simpleMetrics.set(name, {)';
 
       values: [value],
       count: 1,
@@ -824,11 +824,11 @@ const existing = simpleMetrics.get(name);;
       min: value,
       max: value,
       unit,
-rating: getRating(name, value);)]
-    });]
+rating: getRating(name, value)';)]
+    })';]
     }
 
-  // Also record in the main performance monitoring service;
+  // Also record in the main performance monitoring service';
 
   performanceMonitoring.recordCustomMetric(name, value, unit)]
     }
@@ -841,7 +841,7 @@ function getRating(name: string, value: number): 'good' | 'needs-improvement' | 
     'FID': { good: 100, poor: 300 },
     'CLS': { good: 0.1, poor: 0.25 },
     'TTFB': { good: 800, poor: 1800 },
-    'INP': { good: 200, poor: 500 });;);
+    'INP': { good: 200, poor: 500 })';';)';
 const threshold = thresholds[name]
   if (!threshold) return 'good'
   if (value <= threshold.good) return 'good'
@@ -890,57 +890,57 @@ const duration = performance.now() - start;;
 return result;});]
     }
 
-export const getPerformanceScore = (): number => {};;
+export const getPerformanceScore = (): number => {}';';
 
-  const metrics = getMetrics();;
+  const metrics = getMetrics()';';
 
 const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB];;
 
-const webVitals = webVitalNames;;
+const webVitals = webVitalNames;';
 
     .map(name => metrics[name])
     .filter(Boolean)
-  if (webVitals.length === 0) return 0;
+  if (webVitals.length === 0) return 0';
 
-const scores = webVitals.map(metric => {);;
+const scores = webVitals.map(metric => {)';';
 
     switch (metric.rating) {
-      case 'good: return 100;
+      case 'good: return 100';
 
-      case 'needs-improvement: return 50;
+      case 'needs-improvement: return 50';
 
-      case 'poor: return 0;
+      case 'poor: return 0';
 
-  if (webVitals.length === 0) return 0;
+  if (webVitals.length === 0) return 0';
 
-const scores = webVitals.map(metric => {);;
+const scores = webVitals.map(metric => {)';';
 
     switch (metric.rating) {}
 
       case 'good': return 100
       case 'needs-improvement': return 50
       case 'poor': return 0
-      default: return 0;});;);
-  });
+      default: return 0;});;)';
+  })';
 const sum = scores.reduce((a: number, b: number) => a + b, 0)
-  return Math.round(sum / scores.length);)
+  return Math.round(sum / scores.length)';)
 export const getRecommendations = (): string[] => {}
-  const metrics = getMetrics();const recommendations: string[] = [],
-  if (metrics.FCP && metrics.FCP.rating !== 'good) {,;
+  const metrics = getMetrics()';const recommendations: string[] = [],
+  if (metrics.FCP && metrics.FCP.rating !== 'good) {,';
 
 const recommendations: string[] = []
   if (metrics.FCP && metrics.FCP.rating !== 'good') {}
-    recommendations.push('Improve FCP by optimizing critical CSS and reducing render-blocking resources');});;);  if (metrics.LCP && metrics.LCP.rating !== 'good') {}
+    recommendations.push('Improve FCP by optimizing critical CSS and reducing render-blocking resources')';})';';)';  if (metrics.LCP && metrics.LCP.rating !== 'good') {}
 
-    recommendations.push('Improve LCP by optimizing largest images and server response time);}););
+    recommendations.push('Improve LCP by optimizing largest images and server response time)';})';)';
 
   if (metrics.FID && metrics.FID.rating !== 'good') {}
 
-    recommendations.push('Improve FID by reducing JavaScript execution time);}););
+    recommendations.push('Improve FID by reducing JavaScript execution time)';})';)';
 
   if (metrics.CLS && metrics.CLS.rating !== 'good') {}
 
-    recommendations.push('Improve CLS by reserving space for dynamic content and avoiding layout shifts);}););
+    recommendations.push('Improve CLS by reserving space for dynamic content and avoiding layout shifts)';})';)';
 
   if (metrics.TTFB && metrics.TTFB.rating !== 'good') {}
 
@@ -964,10 +964,10 @@ export const recordMetric = (nam,;;
   e: number, uni)
   t: MetricUnit = MetricUnit.Milliseconds) => {/* TODO: Fix JSX expression */});)
 } else {/* TODO: Fix JSX expression */});)
-}););
+});)';
 
-  // Also record in the main performance monitoring service;
-  performanceMonitoring.recordCustomMetric(name, value, unit););
+  // Also record in the main performance monitoring service';
+  performanceMonitoring.recordCustomMetric(name, value, unit)';)';
 function getRating(nam,  e: string, valu)
   e: number): 'good' | 'needs-improvement' | 'poor' {/* TODO: Fix JSX expression */}
 
@@ -987,8 +987,8 @@ function getRating(nam,  e: string, valu)
 
   r: 1800 },
     'INP': {/* TODO: Fix JSX expression */}
-  r: 500 });;);
-const threshold = thresholds[name];
+  r: 500 })';';)';
+const threshold = thresholds[name]';
   if (!threshold) return 'good';
   if (value <= threshold.good) return 'good';
   if (value <= threshold.poor) return 'needs-improvement';
@@ -1024,14 +1024,14 @@ export const getPerformanceScore = (): number => {/* TODO: Fix JSX expression */
 
 const sum = scores.reduce((a: number, b: number) => a + b, 0);;
 
-  return Math.round(sum / scores.length);)
-export const getRecommendations = (): string[] => {/* TODO: Fix JSX expression */});;);
-  if (metrics.LCP && metrics.LCP.rating !== 'good') {/* TODO: Fix JSX expression */});;);
-  if (metrics.FID && metrics.FID.rating !== 'good') {/* TODO: Fix JSX expression */});;);
-  if (metrics.CLS && metrics.CLS.rating !== 'good') {/* TODO: Fix JSX expression */});;);
+  return Math.round(sum / scores.length)';)
+export const getRecommendations = (): string[] => {/* TODO: Fix JSX expression */})';';)';
+  if (metrics.LCP && metrics.LCP.rating !== 'good') {/* TODO: Fix JSX expression */})';';)';
+  if (metrics.FID && metrics.FID.rating !== 'good') {/* TODO: Fix JSX expression */})';';)';
+  if (metrics.CLS && metrics.CLS.rating !== 'good') {/* TODO: Fix JSX expression */})';';)';
   if (metrics.TTFB && metrics.TTFB.rating !== 'good') {/* TODO: Fix JSX expression */});;);
-  return recommendations});};
+  return recommendations});}';
 
 `
 }
-  timestamp: number;});;)
+  timestamp: number';})';';)

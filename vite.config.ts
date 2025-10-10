@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite;
+import { defineConfig } from 'vite';
 
-import react from '@vitejs/plugin-react;
+import react from '@vitejs/plugin-react';
 
-import { resolve } from 'path;
+import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
@@ -64,9 +64,9 @@ export default defineConfig({
           return 'app},
         chunkFileNames: 'assets/[name]-[hash].js,
         entryFileNames: 'assets/[name]-[hash].js,
-        assetFileNames: (assetInfo) => {;
+        assetFileNames: (assetInfo) => {';
 
-const ext = assetInfo.name?.split(.).pop();;
+const ext = assetInfo.name?.split(.).pop()';';
 
           if (/\.(css)$/i.test(assetInfo.name || ')) {
             return `assets/css/[name]-[hash].${ext}}
@@ -120,4 +120,4 @@ const ext = assetInfo.name?.split(.).pop();;
     devSourcemap: true
   }
 
-});
+})';

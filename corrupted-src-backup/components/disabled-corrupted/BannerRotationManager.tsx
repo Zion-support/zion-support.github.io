@@ -38,13 +38,13 @@ interface BannerRotationManagerProps {/* TODO: Fix JSX expression */}
  * BannerRotationManager - Manages the rotation and display of promotional banners;
 
  *
- * Features: * - Lazy loads banner components for better performance;
+ * Features: * - Lazy loads banner components for better performance';
 
- * - Rotates banners at specified intervals;
+ * - Rotates banners at specified intervals';
 
- * - Limits the number of visible banners;
+ * - Limits the number of visible banners';
 
- * - Provides fallback loading states;
+ * - Provides fallback loading states';
 
  */,
 export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
@@ -114,12 +114,12 @@ export const,
 
   }
 
-//   const currentBanner = visibleBanners[currentIndex];;
+//   const currentBanner = visibleBanners[currentIndex];';
 
-//   const BannerComponent = bannerComponents[currentBanner];;
+//   const BannerComponent = bannerComponents[currentBanner]';';
 
   return(<div className={`banner-rotation-manager ${className}}></div>
-      <Suspense;
+      <Suspense';
 
         fallback={
           <div className='flex items-center justify-center py-16></Suspense>
@@ -138,14 +138,14 @@ export const,
         <div className='flex justify-center mt-4 space-x-2></div>)
           {visibleBanners.map((_, index) => (
 
-            <button;
+            <button';
 
               key={index}
 
               onClick={() => setCurrentIndex(index)}
 
               className={w-3 h-3 rounded-full transition-colors ${
-                index === currentIndex;
+                index === currentIndex';
 
                   ? 'bg-blue-600}
 
@@ -183,8 +183,8 @@ export const,
       )}
 
     </div>
-  )};
+  )}';
 
-export default BannerRotationManager;
+export default BannerRotationManager';
 
 `

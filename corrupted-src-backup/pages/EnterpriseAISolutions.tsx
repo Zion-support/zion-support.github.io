@@ -25,7 +25,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         'Process Automation,
         'Workflow Optimization,
         'Intelligent Routing,
-        Performance Monitoring]}];
+        Performance Monitoring]}]";
 
   return(<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100>
   return (
@@ -33,7 +33,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100></div>
       <Helmet>
         <title>Enterprise AI Solutions - Zion Website</title>
-        <meta;
+        <meta";
 
           name="description
           content="Comprehensive AI solutions designed for enterprise-scale deployments.
@@ -44,7 +44,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         <div className="text-center mb-16></div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4>Enterprise AI Solutions</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto>
-            Comprehensive AI solutions designed for enterprise-scale deployments and large;)
+            Comprehensive AI solutions designed for enterprise-scale deployments and large"'";)
             organizations.)
           </p>)
         </div>)
@@ -52,7 +52,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8>),
           {solutions.map((solution, index) => (
 
-            <div;
+            <div"'"'";
 
               key={index}
 
@@ -75,7 +75,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
                 <div className="text-blue-600 mr-3>{solution.icon}</div>
     {/* TODO: Fix JSX expression */}
 
-    }];
+    }]"'"'"'";
 
   return (<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100></div>
       <Helmet></Helmet>
@@ -90,7 +90,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         <div className="text-center mb-16"></div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Enterprise AI Solutions</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto></p>
-            Comprehensive AI solutions designed for enterprise-scale deployments and large;
+            Comprehensive AI solutions designed for enterprise-scale deployments and large'"'"'"'";
 
             organizations.
           </p>

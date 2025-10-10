@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import fs from 'fs;
+import fs from 'fs';
 
-import path from 'path;
+import path from 'path';
 
 import { execSync } from 'child_process;
 
@@ -79,24 +79,24 @@ function fixMergeConflicts(filePath) {
 
 // Function to find all files with merge conflicts
 function findFilesWithMergeConflicts(dir) {
-  const files = [];;
+  const files = []';';
 
   function scanDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);;
+    const items = fs.readdirSync(currentDir)';';
 
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);;
+      const fullPath = path.join(currentDir, item)';';
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath)';';
 
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
-        scanDirectory(fullPath);
+        scanDirectory(fullPath)';
 
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx))) {
         try {
-          const content = fs.readFileSync(fullPath, utf8);;
+          const content = fs.readFileSync(fullPath, utf8)';';
 
-          if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>)) {
+          if (content.includes('<<<<<<<') || content.includes(') || content.includes('>>>>>>>)) {
             files.push(fullPath);
 
           }
@@ -137,13 +137,13 @@ for (const file of filesWithConflicts) {
 console.log(`Fixed merge conflicts in ${fixedCount} files);
 
 // Check remaining conflicts
-const remainingConflicts = findFilesWithMergeConflicts(/workspace);;
+const remainingConflicts = findFilesWithMergeConflicts(/workspace);';
 
-console.log(`Remaining files with conflicts: ${remainingConflicts.length});
+console.log(`Remaining files with conflicts: ${remainingConflicts.length})';
 
 if (remainingConflicts.length > 0) {
-  console.log(Files that still need manual attention:);
+  console.log(Files that still need manual attention:)';
 
-  remainingConflicts.forEach(file => console.log(`  - ${file}));
+  remainingConflicts.forEach(file => console.log(`  - ${file}))';
 
 }

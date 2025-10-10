@@ -1,10 +1,10 @@
-import React from 'react;
+import React from 'react';
 
-#!/usr/bin/env node;
+#!/usr/bin/env node';
 
-import fs from 'fs;
+import fs from 'fs';
 
-import path from 'path;
+import path from 'path';
 
 import { execSync } from 'child_process;
 
@@ -26,22 +26,22 @@ let content = fs.readFileSync(filePath, utf8);;
 
     // Remove merge conflict markers and keep the HEAD version (first part);
 
-const conflictRegex = /\n([\s\S]*?)\n;;
+const conflictRegex = /\n([\s\S]*?)\n;';
 
-    const originalContent = content;;
+    const originalContent = content';';
 
     content = content.replace(conflictRegex, (match, headContent, otherContent) => {
-      modified = true;
+      modified = true';
 
-      return headContent.trim();
+      return headContent.trim()';
 
 function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}
 
-    });
+    })';
 
-    // Remove any remaining conflict markers;
+    // Remove any remaining conflict markers';
 
-    content = content;
+    content = content';
 
       .replace(/[\s\S]*?)
       .replace(//g, ')
@@ -57,15 +57,15 @@ function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}
 
       .replace(/^\s*\n/gm, \n) // Remove empty lines with just spaces;
 
-      .replace(/\s+$/gm, ); // Remove trailing spaces;
+      .replace(/\s+$/gm, ); // Remove trailing spaces';
 
     if (modified || content !== originalContent) {
-      fs.writeFileSync(filePath, content, utf8);
+      fs.writeFileSync(filePath, content, utf8)';
 
       // console.log removed for production
 if (modified || content !== originalContent) {/* TODO: Fix JSX expression */}
 
-  d: ${filePath});
+  d: ${filePath})';
 
       return true}
 
@@ -76,7 +76,7 @@ return false}
 
 }
 
-// Function to find all TypeScript/React files;
+// Function to find all TypeScript/React files';
 
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', .js]) {;
 
@@ -90,13 +90,13 @@ const items = fs.readdirSync(currentDir);;
 
     for (const item of items) {;
 
-const fullPath = path.join(currentDir, item);;
+const fullPath = path.join(currentDir, item)';';
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath)';';
 
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
         traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
+        files.push(fullPath)';
 
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js]) {/* TODO: Fix JSX expression */}
 
@@ -158,24 +158,24 @@ errorCount++}
 // console.log removed for production
 // console.log removed for production
 // console.log removed for production
-// Run linting to check for remaining issues;
+// Run linting to check for remaining issues';
 
 // console.log removed for production
 try {/* TODO: Fix JSX expression */}
 
-  o: inherit });
+  o: inherit })';
 
   // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}
 
 }
 
-// Try building;
+// Try building';
 
 // console.log removed for production
 try {/* TODO: Fix JSX expression */}
 
-  o: inherit });
+  o: inherit })';
 
   // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}

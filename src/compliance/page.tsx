@@ -1,18 +1,18 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react;
+import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from ../components/Footer;
+import Footer from ../components/Footer';
 
-const CompliancePage: React.FC = () => {;
+const CompliancePage: React.FC = () => {';
 
-const certifications = [];;;
+const certifications = []';';';
 
   return (
 
@@ -25,18 +25,18 @@ const certifications = [];;;
 
   ];
 
-  const complianceAreas = [;;
+  const complianceAreas = [;';
 
   // TOD,
-  O: Add items;
+  O: Add items';
 
-];
+]';
 
     {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}';
 
   ico,
   n: Shield,
@@ -90,7 +90,7 @@ const certifications = [];;;
           
           
           <ArrowLeft className="w-4 h-4 mr-2 /></ArrowLeft>
-// Back to Privacy Policy;
+// Back to Privacy Policy";
 
           </Link>
               <h1 className="text-2xl font-bold text-gray-900>Compliance & Certifications</h1>
@@ -104,12 +104,12 @@ const certifications = [];;;
           <section className="mb-16"></section>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4></h2>
-// Our Commitment to Compliance;
+// Our Commitment to Compliance";
 
           </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto></p>
 // At Zion Tech Group, we maintain the highest standards of compliance and security.
-                Our certifications and adherence to industry standards ensure your data is protected;
+                Our certifications and adherence to industry standards ensure your data is protected";
 
 //                 and our services meet the most stringent requirements.
               
@@ -140,7 +140,7 @@ const certifications = [];;;
           {/* Compliance Areas */}
 
             <h2 className="text-2xl font-bold text-gray-900 text-center mb-12></h2>
-Compliance Areas;
+Compliance Areas"'";
 
             <div className="grid grid-cols-1,
   md:grid-cols-2 gap-8></div>
@@ -173,7 +173,7 @@ Compliance Areas;
             <a
               href="mailto:compliance@ziontechgroup.com" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200
 
-              Contact Compliance Team;
+              Contact Compliance Team"'"'";
 
             </a>
             <div className="mt-8 text-sm text-blue-200></div>
@@ -182,6 +182,6 @@ Compliance Areas;
 
         <Footer />
 
-  )};
+  )}'"'"'";
 
-export default CompliancePage;
+export default CompliancePage'"'"'"'";

@@ -1,20 +1,20 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, BarChart3, Brain, Target, Zap, Shield, Clock, Users, Star, ArrowRight, Database, Cpu, Eye, Globe, Lock } from 'lucide-react;
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, BarChart3, Brain, Target, Zap, Shield, Clock, Users, Star, ArrowRight, Database, Cpu, Eye, Globe, Lock } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from ../components/Footer;
+import Footer from ../components/Footer';
 
-;
+';
 
-const AIPredictiveAnalyticsPage: React.FC = () => {;
+const AIPredictiveAnalyticsPage: React.FC = () => {';
 
-const features = [;;;
+const features = [';';';
 
     {
       icon: TrendingUp,
@@ -41,7 +41,7 @@ const features = [;;;
       benefits: ['Model customization', 'Algorithm tuning', 'Performance optimization]
     }
 
-  ];
+  ]';
 
   return (
 
@@ -118,6 +118,6 @@ const features = [;;;
 
       <Footer />
     </div>
-  )};
+  )}'"'"'";
 
-export default AIPredictiveAnalyticsPage;
+export default AIPredictiveAnalyticsPage'"'"'"'";

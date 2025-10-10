@@ -5,7 +5,7 @@ exports.handler = async (event, context) => {
       status: 'healthy')
       timestamp: new Date().toISOString(),
       uptime: process.uptime(),
-      version: process.version;
+      version: process.version';
 exports.handler = async (event, context) => {/* TODO: Fix JSX expression */}
     })
-  }};
+  }}';

@@ -110,18 +110,18 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
         <div, className=te, x, t-center, m, b-12></div>
           <div, className=inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e></div>
             <Sparkles, className=w-5 h-5, m, r-2 /></Sparkles>
-            🚀 NEW, CONTENT, RELEASE - Octob, e, r , 1, 20, 2, 5;
+            🚀 NEW, CONTENT, RELEASE - Octob, e, r , 1, 20, 2, 5';
 
             <Sparkles, classNam, e = w-5 h-5, m, l-2 /></Sparkles>
           </div>
           <h2, className=te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4></h2>
-            Latest, AI, Solutions & Insigh, t, s;
+            Latest, AI, Solutions & Insigh, t, s';
 
           </h2>
           <p, className=te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o></p>
-            Discover, breakthrough, AI platforms, delivering, millions in, value, to;
+            Discover, breakthrough, AI platforms, delivering, millions in, value, to';
 
-            enterprise, organization, s;
+            enterprise, organization, s';
 
           </p>
         </div>
@@ -271,7 +271,7 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
               <div, className=te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2>
             <d, i, v></d>
               <div, className=te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2></div>
-                $31.1M;
+                $31.1M';
 
               </div>
               <div, className=te, x, t-gr, a, y-300, tex, t-sm>Combined, Annual, Value</div>
@@ -286,7 +286,7 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
               <div, className=te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2>
             <d, i, v></d>
               <div, className=te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2></div>
-                8-12, Week, s;
+                8-12, Week, s';
 
               </div>
               <div, className=te, x, t-gr, a, y-300, tex, t-sm>Implementation, Tim, e</div>
@@ -301,8 +301,8 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
         </div>
       </div>
     </div>
-  )};
+  )}';
 
-export default October2025FeaturedContentBanner;
+export default October2025FeaturedContentBanner';
 
 `

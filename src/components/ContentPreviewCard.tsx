@@ -65,9 +65,9 @@ const,
 
       return (num / 1000).toFixed(1) + 'k}
 
-    return num.toString()};
+    return num.toString()}';
 
-  const getCategoryColor = (categor);;
+  const getCategoryColor = (categor)';';
 
   y: string): string => {/* TODO: Fix JSX expression */}
 
@@ -92,9 +92,9 @@ const,
       'Intelligence': 'from-indigo-500 to-purple-600,
       'Transformation': 'from-teal-500 to-blue-600,
       'default: from-gray-500 to-gray-600
-    };
+    }';
 
-    return colors[category] || colors.default};
+    return colors[category] || colors.default}';
 
   return (<div>Coming Soon</div>)
   )
@@ -121,7 +121,7 @@ const,
 
           <div className="absolute top-4 left-4"></div>
             <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold></span>
-// Featured;
+// Featured"'";
 
           </span>
           </div>
@@ -201,7 +201,7 @@ const,
             className="inline-flex items-center text-indigo-600,
   hover:text-indigo-700 font-medium text-sm
 // >
-//             Read Article;
+//             Read Article"'"'";
 
           <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7 /></path>
@@ -210,9 +210,9 @@ const,
         </div>
       </div>
     </article>
-  )};
+  )}'"'"'";
 
-export default ContentPreviewCard;"
+export default ContentPreviewCard'"'"'"'";"
 
 
 

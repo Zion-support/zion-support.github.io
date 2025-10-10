@@ -1,6 +1,6 @@
-/** @type {import('next).NextConfig} */;
+/** @type {import('next).NextConfig} */';
 
-const nextConfig = {;;
+const nextConfig = {';';
 
   reactStrictMode: true,
   swcMinify: true,
@@ -16,7 +16,7 @@ const nextConfig = {;;
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"},
+    contentSecurityPolicy: "default-src 'self'"'"; script-src 'none'"'"'"; sandbox'"'"'"'";"},
   async headers() {
     return [
       {
@@ -36,6 +36,6 @@ const nextConfig = {;;
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=3600, s-maxage=3600}]}]}};
+            value: 'public, max-age=3600, s-maxage=3600}]}]}}'"'"'";
 
-module.exports = nextConfig;
+module.exports = nextConfig'"'"'"'";

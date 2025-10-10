@@ -8,9 +8,9 @@ export default function NewServices2026Bann, e, r({);
 varia, n, t = 'showc, a, s, e)
   showCou, n, t =  , 6)
   classNa, m, e = ')
-}: NewServices2026BannerPro, p, s) {;
+}: NewServices2026BannerPro, p, s) {';
 
-const services = [;;
+const services = [';';
 
     {
       title: 'AI, Autonomous, Cloud O, p, s,
@@ -34,7 +34,7 @@ export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression *
     },
     {/* TODO: Fix JSX expression */}
 
-    }].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return(<section, classNam, e = { w-fu, l, l ${;
+    }].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t))'; return(<section, classNam, e = { w-fu, l, l ${';
 
 varia, n, t === he, r, o
           ? bg-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-6, 0, 0
@@ -45,7 +45,7 @@ varia, n, t === he, r, o
 
     >
       <div, className='container, m, x-auto, p, x-6></section>
-        <div, className='te, x, t-center, m, b-8' ></div> <div, className={ inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, m, b-4 ${;
+        <div, className='te, x, t-center, m, b-8' ></div> <div, className={ inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, m, b-4 ${';
 
 varia, n, t === in, f, o
                  ? 'bg-white, tex, t-gr, a, y-9, 0, 0}
@@ -55,14 +55,14 @@ varia, n, t === in, f, o
              }}
 
           >
-            NEW, 2026, SERVICES;
+            NEW, 2026, SERVICES';
 
           </d, i, v > <h2, className={ `te, x, t-3xl, fon, t-bold, m, b-2 ${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' }}
 
           >
-            Latest, AI, Services;
+            Latest, AI, Services';
 
-  ].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return (<section, classNam, e = {/* TODO: Fix JSX expression */}
+  ].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t))'; return (<section, classNam, e = {/* TODO: Fix JSX expression */}
 
        } ${ varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' } py-12 ${classNa, m, e}}
 
@@ -73,12 +73,12 @@ varia, n, t === in, f, o
              }}
 
           ></div>
-            NEW, 2026, SERVICES;
+            NEW, 2026, SERVICES';
 
           </d, i, v > <h2, className={ `te, x, t-3xl, fon, t-bold, m, b-2 ${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' }}
 
           ></h2>
-            Latest, AI, Services;
+            Latest, AI, Services';
 
           </h2 > <p, classNam, e = {  `${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-6, 0, 0'  : 'te, x, t-whi, t, e/8, 0'  }, m, a, x-w-3xl, m, x-au, t, o}
 

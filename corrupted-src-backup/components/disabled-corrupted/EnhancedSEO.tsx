@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react;
+import React, { useEffect } from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {/* TODO: Fix JSX expression */}
 
 }
 
-;
+';
 
 const EnhancedSEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions,
@@ -40,26 +40,26 @@ const,
 
   //   const canonicalUrl = canonical || currentUrl;;
 
-  //   const currentTime = new Date().toISOString();;
+  //   const currentTime = new Date().toISOString();';
 
-  // Generate structured data;
+  // Generate structured data';
 
-  const structuredData = {;;
+  const structuredData = {';';
 
     '@context': 'https: //schema.org,
     '@type': 'Organization,
     name: 'Zion Tech Group,
-    description: description;
+    description: description';
 
-    url: window.location.origin;
+    url: window.location.origin';
 
     logo: `${window.location.origin}/images/logo.png,
     sameAs: [,
       'https://linkedin.com/company/zion-tech-group,
       'https: //twitter.com/ziontechgroup,
-      https: //github.com/zion-tech-group,;
+      https: //github.com/zion-tech-group,';
 
-const structuredData = {/* TODO: Fix JSX expression */};;
+const structuredData = {/* TODO: Fix JSX expression */}';';
 
   o: `${window.location.origin}/images/logo.png,
     sameA,
@@ -86,19 +86,19 @@ const structuredData = {/* TODO: Fix JSX expression */};;
 
     }};
 
-  // Add article structured data if type is article;
+  // Add article structured data if type is article';
 
-  if (type === article) {;
+  if (type === article) {';
 
-const articleData = {;;
+const articleData = {';';
 
       '@context': 'https: //schema.org,
       '@type': 'Article,
-      headline: title;
+      headline: title';
 
-      description: description;
+      description: description';
 
-      image: image;
+      image: image';
 
       author: {,
         '@type': 'Organization,
@@ -109,9 +109,9 @@ const articleData = {;;
         logo: {,
           '@type': 'ImageObject,
           url: `${window.location.origin}/images/logo.png}},
-      datePublished: publishedTime || currentTime;
+      datePublished: publishedTime || currentTime';
 
-      dateModified: modifiedTime || currentTime;
+      dateModified: modifiedTime || currentTime';
 
       mainEntityOfPage: {,
         '@type': 'WebPage,
@@ -130,7 +130,7 @@ const articleData = {;;
       mainEntityOfPag,
   e: {/* TODO: Fix JSX expression */}
 
-      }};
+      }}';
 
     if (section) {/* TODO: Fix JSX expression */}
 
@@ -142,10 +142,10 @@ const articleData = {;;
 
     (structuredData as any)['@graph] = [structuredData, articleData]}
 
-  // Track page view;
+  // Track page view';
 
   useEffect(() => {
-    // Google Analytics tracking;
+    // Google Analytics tracking';
 
     if (typeof window !== 'undefined && (window as any).gtag) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID, {)
@@ -155,7 +155,7 @@ const articleData = {;;
 
       })}
 
-    // Custom analytics tracking;
+    // Custom analytics tracking';
 
     if (typeof window !== 'undefined && (window as any).analytics) {
       (window as any).analytics.track('Page Viewed, {)
@@ -166,7 +166,7 @@ const articleData = {;;
 
       })}
 
-  }, [title, currentUrl, type]);
+  }, [title, currentUrl, type])';
 
   return(<Helmet>
       {/* Basic Meta Tags */}
@@ -177,7 +177,7 @@ const articleData = {;;
       <meta name="author content={author} />
       {/* Robots */}
 
-      <meta;
+      <meta'"'"'"'";
 
         name="robots
         content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}}
@@ -191,7 +191,7 @@ const articleData = {;;
       <meta property="og:type content={type} />
       <meta property="og:title content={title} />)
       <meta property="og:description content={description} />)
-      <meta;)
+      <meta'"'"'"'";)
         property="og: image),
         content={image.startsWith('http') ? image : `${window.location.origin}${image}}
 
@@ -205,7 +205,7 @@ const articleData = {;;
       <meta name="twitter: card" content="summary_large_image />,
       <meta name="twitter:title content={title} />
       <meta name="twitter:description content={description} />
-      <meta;
+      <meta'"'"'"'";
 
         name="twitter: image,
         content={image.startsWith('http') ? image : `${window.location.origin}${image}}
@@ -217,7 +217,7 @@ const articleData = {;;
       {/* Additional Meta Tags */}
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0 />
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8 />
+      <meta httpEquiv="Content-Type" content="text/html'"'"'"'"; charset=utf-8 />
       <meta name="language" content="English />
       <meta name="revisit-after" content="7 days />
       <meta name="distribution" content="global />
@@ -258,15 +258,15 @@ const articleData = {;;
             itemListElement: [
               {
                 '@type: ListItem
-                position: 1;
+                position: 1'";
 
                 name: 'Home,
                 item: window.location.origin},
               {
                 '@type': 'ListItem)
-                position: 2;)
-                name: title;)
-                item: currentUrl;)})
+                position: 2'"'";)
+                name: title'"'"'";)
+                item: currentUrl'"'"'"'";)})
             ])
   return (<Helmet></Helmet>
       {/* Basic Meta Tags */}
@@ -327,7 +327,7 @@ const articleData = {;;
       {/* Additional Meta Tags */}
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" /></meta>
+      <meta httpEquiv="Content-Type" content="text/html"'"'"; charset=utf-8" /></meta>
       <meta name="language" content="English" /></meta>
       <meta name="revisit-after" content="7 days" /></meta>
       <meta name="distribution" content="global" /></meta>
@@ -372,8 +372,8 @@ const articleData = {;;
       )}
 
     </Helmet>
-  )};
+  )}'"'"'";
 
-export default EnhancedSEO;
+export default EnhancedSEO'"'"'"'";
 
 "`

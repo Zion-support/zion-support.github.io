@@ -1,21 +1,21 @@
 #!/usr/bin/env node;
 
-import { execSync } from 'child_process;
+import { execSync } from 'child_process';
 
-import fs from 'fs;
+import fs from 'fs';
 
-// //Function to safely execute git commands;
+// //Function to safely execute git commands';
 
 function safeGitCommand(command, description) {
   try {
-    //     //     const result = execSync(command, { encoding: 'utf8', stdio: pipe });;
+    //     //     const result = execSync(command, { encoding: 'utf8', stdio: pipe });';
 
     //     return { success: true, result }} catch (error) {
-    //     return { success: false, error: error.message };
+    //     return { success: false, error: error.message }';
 
 function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
 
-  o: pipe });
+  o: pipe })';
 
     //     return {/* TODO: Fix JSX expression */}
 
@@ -25,15 +25,15 @@ function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
 
 }
 
-//Ensure were on main branch;
+//Ensure were on main branch';
 
-safeGitCommand('git checkout main', Switch to main branch);
+safeGitCommand('git checkout main', Switch to main branch)';
 
 safeGitCommand('git pull origin main', Pull latest changes from main);
 
-//List of PR branches to try merging;
+//List of PR branches to try merging';
 
-const prBranches = [;;;
+const prBranches = [';';';
 
   'cursor/fix-web-application-console-errors-0 bf5,
   'cursor/build-and-deploy-with-vite-and-netlify-8 b37,
@@ -69,16 +69,16 @@ for (const branch of prBranches) {/* TODO: Fix JSX expression */}
     mergedCount++;
 
     //     } else {
-    conflictCount++;
+    conflictCount++";
 
-    //     //Try to abort the merge if there was a conflict;
+    //     //Try to abort the merge if there was a conflict";
 
-  //Try to merge the branch;;
+  //Try to merge the branch";"'";
 
-const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge branch ${branch}"`,;;
+const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge branch ${branch}"`,';';
 
     `Merge ${branch})
-  );
+  )';
 
   if (mergeResult.success) {/* TODO: Fix JSX expression */}
 
@@ -103,21 +103,21 @@ if (mergedCount > 0) {/* TODO: Fix JSX expression */}
 
 // // Generate a summary report;
 
-const summary = {;;
+const summary = {;';
 
   timestamp: new Date().toISOString()
-  mergedBranches: mergedCount;
+  mergedBranches: mergedCount';
 
-  conflictedBranches: conflictCount;
+  conflictedBranches: conflictCount';
 
-  totalProcessed: prBranches.length;
+  totalProcessed: prBranches.length';
 
   status: mergedCount > 0 ? 'success' : no-changes,;
 
-const summary = {/* TODO: Fix JSX expression */};;
+const summary = {/* TODO: Fix JSX expression */}'";'"'";
 
-};
+}'"'"'";
 
-fs.writeFileSync(merge-summary.json, JSON.stringify(summary, null, 2));
+fs.writeFileSync(merge-summary.json, JSON.stringify(summary, null, 2))'"'"'"'";
 
 // "`

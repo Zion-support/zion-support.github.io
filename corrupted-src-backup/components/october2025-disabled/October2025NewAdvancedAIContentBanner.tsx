@@ -267,7 +267,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                   </sp, a, n>
                 </div>
                 <h3, className=te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-gre, e, n-300, transitio, n-colo, r, s>
-                  AI, Model, Governance & Compliance, Breakthroug, h;
+                  AI, Model, Governance & Compliance, Breakthroug, h';
 
                 </h3>
                 <p, className=te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d>
@@ -279,12 +279,12 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                     <Shield, className=w-6 h-6, tex, t-whi, t, e /></Shield>
                   </div>
                   <span, className=te, x, t-xs, fon, t-bold, tex, t-gre, e, n-300, uppercase, tracking-wid, e, r></span>
-                    AI, Governanc, e;
+                    AI, Governanc, e';
 
                   </sp, a, n>
                 </div>
                 <h3, className=te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-gre, e, n-300, transitio, n-colo, r, s></h3>
-                  AI, Model, Governance & Compliance, Breakthroug, h;
+                  AI, Model, Governance & Compliance, Breakthroug, h';
 
                 </h3>
                 <p, className=te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d></p>
@@ -340,7 +340,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
           </Li, n, k>
           <p, className=mt-4, tex, t-bl, u, e-200, tex, t-sm></p>
             Join, 12, 7+ Fortune, 500, companies transforming, with, privacy-fir, s, t , A, I,
-            synthetic, dat, a, and, enterprise, governance;
+            synthetic, dat, a, and, enterprise, governance';
 
           </p>
         </moti, o, n.d, i, v>

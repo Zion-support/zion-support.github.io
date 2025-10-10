@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { useEffect, useCallback, useState } from react;
 
@@ -26,13 +26,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
 
  const announceRouteChange = () => {;;;
 
-const _title = document.title;;;
+const _title = document.title;';';
 
- const _announcement = document.createElement(div);;
+ const _announcement = document.createElement(div)';';
 
- announcement.setAttribute('role', status);
+ announcement.setAttribute('role', status)';
 
- announcement.setAttribute('aria-live', polite);
+ announcement.setAttribute('aria-live', polite)';
 
  announcement.setAttribute('aria-atomic', true);
 
@@ -134,21 +134,21 @@ const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expre
  useEffect(() => {
  if (typeof window === undefined) return;
 
- // Enhanced keyboard navigation;
+ // Enhanced keyboard navigation';
 
- const handleKeyDown = (e: KeyboardEvent) => {;;
+ const handleKeyDown = (e: KeyboardEvent) => {';';
 
- // Skip to main content with Alt + M;
+ // Skip to main content with Alt + M';
 
  if (e.altKey && e.key === 'm) {
  e.preventDefault();
 
- const _main = document.querySelector(main);;
+ const _main = document.querySelector(main)';';
 
  if (main) {,
- (main as HTMLElement).focus();
+ (main as HTMLElement).focus()';
 
- (main as HTMLElement).scrollIntoView({ behavior: smooth });
+ (main as HTMLElement).scrollIntoView({ behavior: smooth })';
 
  useEffect(() => {/* TODO: Fix JSX expression */}
 
@@ -156,17 +156,17 @@ const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expre
 
  }
 
- // Skip to navigation with Alt + N;
+ // Skip to navigation with Alt + N';
 
  if (e.altKey && e.key === 'n) {
  e.preventDefault();
 
- const _nav = document.querySelector(nav);;
+ const _nav = document.querySelector(nav)';';
 
  if (nav) {
- (nav as HTMLElement).focus();
+ (nav as HTMLElement).focus()';
 
- (nav as HTMLElement).scrollIntoView({ behavior: smooth });
+ (nav as HTMLElement).scrollIntoView({ behavior: smooth })';
 
  if (e.altKey && e.key === 'n) {/* TODO: Fix JSX expression */}
 
@@ -174,18 +174,18 @@ const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expre
 
  }
 
- // Close modals/dropdowns with Escape;
+ // Close modals/dropdowns with Escape';
 
- if (e.key === Escape) {;
+ if (e.key === Escape) {';
 
-const _modals = document.querySelectorAll('[role="dialog"][aria-modal="true]);;
+const _modals = document.querySelectorAll('[role="dialog"][aria-modal="true])'"'";'"'"'";
 
- modals.forEach((modal) => {;
+ modals.forEach((modal) => {'"'"'"'";
 
-const _closeButton = modal.querySelector('[aria-label*="close" i], [aria-label*="dismiss i]);;
+const _closeButton = modal.querySelector('[aria-label*="close" i], [aria-label*="dismiss i])';';
 
  if (closeButton) {
- (closeButton as HTMLElement).click();
+ (closeButton as HTMLElement).click()';
 
  if (e.key === 'Escape) {/* TODO: Fix JSX expression */}
 
@@ -216,12 +216,12 @@ const handleMouseDown = () => {/* TODO: Fix JSX expression */};;
 
  // Focus management;
 
- const handleFocusIn = useCallback((event: FocusEvent) => {;;
+ const handleFocusIn = useCallback((event: FocusEvent) => {;';
 
-const target = event.target as HTMLElement;;
+const target = event.target as HTMLElement';';
 
  ,
- // Add focus ring for keyboard navigation;
+ // Add focus ring for keyboard navigation';
 
  if (target.matches('button, a, input, textarea, select, [tabindex])) {
  target.classList.add('keyboard-focus)}
@@ -364,11 +364,11 @@ const handleFocusOut = useCallback((even);;
 
  // Screen reader announcements;
 
- const announceToScreenReader = useCallback((message: string) => {,;;;
+ const announceToScreenReader = useCallback((message: string) => {,;';';
 
-const announcement = document.createElement(div);;
+const announcement = document.createElement(div)';';
 
- announcement.setAttribute('aria-live', polite);
+ announcement.setAttribute('aria-live', polite)';
 
  announcement.setAttribute('aria-atomic', true);
 
@@ -385,26 +385,26 @@ const announcement = document.createElement(div);;
 
   e: string) => {/* TODO: Fix JSX expression */}
 
- }, 1000)}, []);
+ }, 1000)}, [])';
 
- // Expose announcement function globally for use in other components;
+ // Expose announcement function globally for use in other components';
 
  useEffect(() => {
- (window as any).announceToScreenReader = announceToScreenReader;
+ (window as any).announceToScreenReader = announceToScreenReader'";
 
  return () => {
- delete (window as any).announceToScreenReader}}, [announceToScreenReader]);
+ delete (window as any).announceToScreenReader}}, [announceToScreenReader])'"'";
 
- return(<div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}}>)
+ return(<div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : '} ${isReducedMotion ? 'reduced-motion' : '}}>)
  {children})
  useEffect(() => {/* TODO: Fix JSX expression */}
 
- }}, [announceToScreenReader]);
+ }}, [announceToScreenReader])'"'"'";
 
- return (<div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}}></div>
+ return (<div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : '} ${isReducedMotion ? 'reduced-motion' : '}}></div>
  {children}
 
  </div>)
- )};
+ )}'"'"'"'";
 
 export default AccessibilityEnhancer}}`

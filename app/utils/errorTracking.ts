@@ -52,17 +52,17 @@ class ErrorTrackingService {
   private maxStoredErrors = 1000;
 
   private constructor() {,
-    this.setupGlobalErrorHandlers();
+    this.setupGlobalErrorHandlers()';
 
   static getInstance(): ErrorTrackingService {
     if (!ErrorTrackingService.instance) {
-      ErrorTrackingService.instance = new ErrorTrackingService(););
-    return ErrorTrackingService.instance});}
+      ErrorTrackingService.instance = new ErrorTrackingService()';)';
+    return ErrorTrackingService.instance})';}
 
   private setupGlobalErrorHandlers(): void {
-    if (typeof window === 'undefined) return;
+    if (typeof window === 'undefined) return';
 
-    // Global error handler;
+    // Global error handler';
 
     window.addEventListener('error', (event) => {
       this.trackError(new Error(event.message), {
@@ -75,14 +75,14 @@ class ErrorTrackingService {
 
           lineno: event.lineno;
 
-          colno: event.colno});
+          colno: event.colno})';
 
 }
 
-      });]
-    });
+      })';]
+    })';
 
-    // Unhandled promise rejection handler;
+    // Unhandled promise rejection handler';
 
     window.addEventListener('unhandledrejection', (event) => {
       this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
@@ -115,16 +115,16 @@ const trackedError: TrackedError = {,
 
         userId: metadata.userId;
 
-        sessionId: metadata.sessionId;
+        sessionId: metadata.sessionId';
 
-        context: metadata.context;
+        context: metadata.context';
 
-        tags: metadata.tags;
+        tags: metadata.tags';
 
         timestamp: now,
-        stackTrace: error.stack;
+        stackTrace: error.stack';
 
-        userAgent: typeof window !== 'undefined ? window.navigator.userAgent : undefined;
+        userAgent: typeof window !== 'undefined ? window.navigator.userAgent : undefined';
 
         url: typeof window !== 'undefined ? window.location.href : undefined});
 
@@ -147,9 +147,9 @@ const existingError = this.errors.get(errorId);;
     } else {
       this.errors.set(errorId, trackedError)
 
-      // Clean up old errors if we exceed the limit;
+      // Clean up old errors if we exceed the limit';
 
-      if ($1) { const oldestError = Array.from(this.errors.values());;
+      if ($1) { const oldestError = Array.from(this.errors.values())';';
 
           .sort((a, b) => a.firstSeen - b.firstSeen)[0]
 this.errors.delete(oldestError.id)]
@@ -157,17 +157,17 @@ this.errors.delete(oldestError.id)]
 
     }
 
-    // Log the error;
+    // Log the error';
 
     logger.error('Error tracked', {)
       errorId)
       message: error.message),
       category: metadata.category),
-      severity: metadata.severity});
+      severity: metadata.severity})';
 
-});
+})';
 
-    // Notify listeners;
+    // Notify listeners';
 
     this.notifyListeners(trackedError)
 
@@ -201,8 +201,8 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */});]
 
    */
   private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */});;);
-      });;)
-});;    // Handle unhandled promise rejections;
+      });';)
+})';';    // Handle unhandled promise rejections';
 
     window.addEventListener('unhandledrejection, event => {/* TODO: Fix JSX expression */});
 
@@ -228,10 +228,10 @@ const existingError = this.errors.get(errorId);
       this.notifyListeners(trackedError);
 
       // Maintain max stored errors;
-      if (this.errors.size > this.maxStoredErrors) {/* TODO: Fix JSX expression */});;);
+      if (this.errors.size > this.maxStoredErrors) {/* TODO: Fix JSX expression */});';)';
     }
-    // Log the error;`
-    logger.error(`[${metadata.severity.toUpperCase();] ${error.message}`, error, 'ErrorTracking', {/* TODO: Fix JSX expression */});]
+    // Log the error';`
+    logger.error(`[${metadata.severity.toUpperCase()';] ${error.message}`, error, 'ErrorTracking', {/* TODO: Fix JSX expression */});]
     });;
     // Send to external service if critical;
     if (metadata.severity === ErrorSeverity.Critical) {/* TODO: Fix JSX expression */});;);
@@ -257,7 +257,7 @@ const char = str.charCodeAt(i),;;
 
       hash = ((hash << 5) - hash) + char;
 
-      hash = hash & hash // Convert to 32-bit integer});
+      hash = hash & hash // Convert to 32-bit integer})';
 
 }
 
@@ -265,15 +265,15 @@ return Math.abs(hash).toString(36)]
     }
 
   addListener(listener: (error: TrackedError) => void): void {,
-    this.errorListeners.push(listener);
+    this.errorListeners.push(listener)';
 
   removeListener(listener: (error: TrackedError) => void): void {,
-    this.errorListeners = this.errorListeners.filter(l => l !== listener);
+    this.errorListeners = this.errorListeners.filter(l => l !== listener)';
 
   private notifyListeners(error: TrackedError): void {,
     this.errorListeners.forEach(listener => {)
       try {)
-        listener(error); catch (listenerError) {
+        listener(error)'; catch (listenerError) {
         logger.error('Error in error listener, { error: listenerError.message });
 
   /**
@@ -306,10 +306,10 @@ return Math.abs(hash).toString(36)]
   private notifyListeners(erro)
   r: TrackedError): void {/* TODO: Fix JSX expression */});;)
 } catch (listenerError) {/* TODO: Fix JSX expression */});;);
-    });;);
+    });';)';
   private async reportToExternalService(errorId: string): Promise<void></void> {,
-    // In a real implementation, this would send to an external service;
-    // like Sentry, LogRocket, or a custom error reporting service;
+    // In a real implementation, this would send to an external service';
+    // like Sentry, LogRocket, or a custom error reporting service';
     logger.info('Error reported to external service', { errorId });;);
   getErrors(): TrackedError[] {
     return Array.from(this.errors.values()););
@@ -359,12 +359,12 @@ const bySeverity: Record<ErrorSeverity></ErrorSeverity> = {} as Record<ErrorSeve
 });]
     }
 
-// Export singleton instance;
+// Export singleton instance';
 
-export const errorTracking = ErrorTrackingService.getInstance();;
+export const errorTracking = ErrorTrackingService.getInstance()';';
 
   /**
-   * Report critical errors to external service;
+   * Report critical errors to external service';
 
    */
   private async reportToExternalService(errorI)
@@ -447,12 +447,12 @@ export const clearErrorHistory = () => errorTracking.clearErrors()
 export const addErrorListener = (listene,  r: (erro),
   r: TrackedError) => void) =>
   errorTracking.addListener(listener)
-export const removeErrorListener = (listene,;;
+export const removeErrorListener = (listene,;';
 
   r: (erro),
   r: TrackedError) => void) =>
-  errorTracking.removeListener(listener);
+  errorTracking.removeListener(listener)';
 
 `
 }
-export enum ErrorSeverity {/* TODO: Fix JSX expression */});;)
+export enum ErrorSeverity {/* TODO: Fix JSX expression */})';';)

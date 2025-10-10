@@ -40,11 +40,11 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
         </div>)
         {/* Articles, G, r, i, d */})
         <div, classNam, e = grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12>)
-          { newArticl, e, s.m, a, p((arti, c, l, e) = > {;
+          { newArticl, e, s.m, a, p((arti, c, l, e) = > {";
 
-const Ico, n = artic, l, e.ic, o, n; return(<Link, ke, y = { artic, l, e.slug  }, to = {/bl, o, g/${artic, l, e.slug}}
+const Ico, n = artic, l, e.ic, o, n"; return(<Link, ke, y = { artic, l, e.slug  }, to = {/bl, o, g/${artic, l, e.slug}}
 
-            const Ico, n = artic, l, e.ic, o, n; return (</div>
+            const Ico, n = artic, l, e.ic, o, n"; return (</div>
               <Link, ke, y = { artic, l, e.slug  }, to = {/bl, o, g/${artic, l, e.slug}}
 
                 className=group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hove, r:-transla, t, e-y-1
@@ -63,7 +63,7 @@ const Ico, n = artic, l, e.ic, o, n; return(<Link, ke, y = { artic, l, e.slug  }
                 {/* Conte, n, t */}
 
                 <h3, className=te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s>
-  ]; return (
+  ]"; return (
 
     <section, classNam, e = py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n></section>
       {/* Animated, background, elements */}
@@ -81,11 +81,11 @@ const Ico, n = artic, l, e.ic, o, n; return(<Link, ke, y = { artic, l, e.slug  }
             <span, className=te, x, t-purp, l, e-300, fon, t-semibo, l, d>FRESH, INSIGHT, S | October, 202, 5</sp, a, n>
           </div>
           <h2, className=te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4></h2>
-            Latest, AI, Breakthroughs & Innovatio, n, s;
+            Latest, AI, Breakthroughs & Innovatio, n, s";
 
           </h2>
           <p, className=te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o></p>
-            Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation;
+            Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation";
 
           </p>
         </div>
@@ -156,8 +156,8 @@ const Ico, n = artic, l, e.ic, o, n; return(<Link, ke, y = { artic, l, e.slug  }
         </div>
       </div>
     </sec, t, i, o, n>
-  )};
+  )}";
 
-export default October2025NewContentBanner2;
+export default October2025NewContentBanner2";
 
 "`

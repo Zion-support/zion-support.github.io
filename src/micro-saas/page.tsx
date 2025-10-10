@@ -1,18 +1,18 @@
-import React from 'react;
+import React from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap, Mail, Calendar, PieChart, Search, Filter, Download, Upload, Share, Edit, Trash2, Plus, Minus, Refresh, Play, Pause, Stop, Volume2, Camera, Image, File, Folder, Archive, Bookmark, Tag, Link as LinkIcon, ExternalLink, ArrowRight, ChevronRight, Award, Gift, Rocket, Lightbulb, Wrench, Hammer, Scissors, Paintbrush, Palette, Layers, Grid, List, Layout, Monitor, Laptop, Tablet, Smartphone as PhoneIcon, Headphones, Microphone, Speaker, Wifi, Bluetooth, Battery, Power, Zap as Lightning, Sun, Moon, CloudRain, Wind, Thermometer, Droplets, Snowflake, Cloud, CloudSnow, CloudLightning, CloudDrizzle, CloudFog, Eye as EyeIcon, EyeOff, Lock as LockIcon, Unlock, Key, Fingerprint, Shield as ShieldIcon, AlertTriangle, AlertCircle, Info, HelpCircle, X, Check, XCircle, CheckCircle2, PlusCircle, MinusCircle, XSquare, CheckSquare, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Heart as HeartIcon, ThumbsUp, ThumbsDown, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10 } from 'lucide-react;
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap, Mail, Calendar, PieChart, Search, Filter, Download, Upload, Share, Edit, Trash2, Plus, Minus, Refresh, Play, Pause, Stop, Volume2, Camera, Image, File, Folder, Archive, Bookmark, Tag, Link as LinkIcon, ExternalLink, ArrowRight, ChevronRight, Award, Gift, Rocket, Lightbulb, Wrench, Hammer, Scissors, Paintbrush, Palette, Layers, Grid, List, Layout, Monitor, Laptop, Tablet, Smartphone as PhoneIcon, Headphones, Microphone, Speaker, Wifi, Bluetooth, Battery, Power, Zap as Lightning, Sun, Moon, CloudRain, Wind, Thermometer, Droplets, Snowflake, Cloud, CloudSnow, CloudLightning, CloudDrizzle, CloudFog, Eye as EyeIcon, EyeOff, Lock as LockIcon, Unlock, Key, Fingerprint, Shield as ShieldIcon, AlertTriangle, AlertCircle, Info, HelpCircle, X, Check, XCircle, CheckCircle2, PlusCircle, MinusCircle, XSquare, CheckSquare, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Heart as HeartIcon, ThumbsUp, ThumbsDown, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10 } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-import SEOOptimizer from ../components/SEOOptimizer;
+import SEOOptimizer from ../components/SEOOptimizer';
 
-export default function MicroSaasPage() {;
+export default function MicroSaasPage() {';
 
-const microSaasServices = [;;;
+const microSaasServices = [';';';
 
     {
       icon: BarChart3,
@@ -246,11 +246,11 @@ const microSaasServices = [;;;
       benefits: ['Increase productivity by 25%', 'Better time management', 'Detailed insights]
     }
 
-  ];
+  ]';
 
-;
+';
 
-const categories = [;;
+const categories = [';';
 
     { name: 'All, count: microSaasServices.length },
     { name: 'Analytics', count: microSaasServices.filter(s => s.category === 'Analytics).length },
@@ -268,11 +268,11 @@ const categories = [;;
     { name: 'Automation', count: microSaasServices.filter(s => s.category === 'Automation).length },
     { name: 'Content Creation', count: microSaasServices.filter(s => s.category === 'Content Creation).length }
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     {
       icon: TrendingUp,
@@ -295,18 +295,18 @@ const benefits = [;;
       description: Enterprise-grade security with 99.9% uptime guarantee
     }
 
-  ];
+  ]';
 
-;
+';
 
-const stats = [;;
+const stats = [';';
 
     { label: 'Active Users', value: '10,000+ },
     { label: 'Apps Available', value: '50+ },
     { label: 'Uptime Guarantee', value: '99.9% },
     { label: 'Support Available', value: '24/7 }
 
-  ];
+  ]';
 
   return (
 
@@ -398,7 +398,7 @@ const stats = [;;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8>
             {microSaasServices.map((service, index) => (
 
-              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}}>
+              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : '}}>
                 {service.popular && (
 
                   <div className="flex items-center justify-center mb-4>

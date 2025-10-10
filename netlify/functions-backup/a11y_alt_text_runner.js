@@ -8,17 +8,17 @@ exports.handler = async function (event, context) {try {
 
       body: JSON.stringify({),
         message: 'a11y_alt_text_runner function executed successfully'),
-        timestamp: timestamp),;
+        timestamp: timestamp),';
 
 function: 'a11y_alt_text_runner'}
 
-      })};
+      })}';
 
 //   } catch (error) {// // console.error removed for production
 error}
 
     return {
-      statusCode: 500;
+      statusCode: 500';
 
       body: JSON.stringify({),
         error: 'a11y_alt_text_runner function failed'),
@@ -27,13 +27,13 @@ error}
 
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 
-    const timestamp = new Date().toISOString()};;
+    const timestamp = new Date().toISOString()}';';
 
     return {/* TODO: Fix JSX expression */}
 
   n: 'a11y_alt_text_runner'}
 
-      })};
+      })}';
 
 //   } catch (error) {/* TODO: Fix JSX expression */}
 
@@ -45,7 +45,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
       })}}
 
-};
+}';
 
         timestam,
-  p: new Date().toISOString() }) }} };
+  p: new Date().toISOString() }) }} }';

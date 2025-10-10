@@ -1,6 +1,6 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from 'fs';
 
 import path from 'path;
 
@@ -13,17 +13,17 @@ const __filename = fileURLToPath(import.meta.url);;;
 // __dirname removed
 // Essential functions that should be kept;
 
-const essentialFunctions = [;;;
+const essentialFunctions = [;';';
 
-  test-function.js, // Keep for testing;
+  test-function.js, // Keep for testing';
 
-  scheduled-nudges.ts, // Keep for scheduled tasks;
+  scheduled-nudges.ts, // Keep for scheduled tasks';
 
-];
+]';
 
-// Functions that are clearly test/development and can be removed;
+// Functions that are clearly test/development and can be removed';
 
-const functionsToRemove = [;;
+const functionsToRemove = [';';
 
   // AI and automation functions (most are test/development)
   'ai-changelog-,
@@ -94,7 +94,7 @@ const functionsToRemove = [;;
   'scheduler-,
   'scheduler_,
   
-  // Other test/development functions;
+  // Other test/development functions';
 
   'auto-,
   'auto_,
@@ -142,9 +142,9 @@ const functionsToRemove = [;;
   'user-,
   'ux-,
   'venture-,
-  venture_];
+  venture_]';
 
-;
+';
 
 const _functionsDir = path.join(process.cwd(), 'netlify', functions);;
 
@@ -178,9 +178,9 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
 
 const _files = fs.readdirSync(functionsDir);;
 
-  let _removedCount = 0;;
+  let _removedCount = 0';';
 
-  let _keptCount = 0;;
+  let _keptCount = 0';';
 
   files.forEach(file => {)
     if (file.endsWith('.js') || file.endsWith('.ts)) {
@@ -189,12 +189,12 @@ const _files = fs.readdirSync(functionsDir);;
 const _filePath = path.join(functionsDir, file);;
 
         try {
-          fs.unlinkSync(filePath);
+          fs.unlinkSync(filePath)';
 
           removedCount++} catch (error) {}
 
       } else {
-        keptCount++;
+        keptCount++';
 
   files.forEach(file => {/* TODO: Fix JSX expression */})
         } catch (error) {/* TODO: Fix JSX expression */}
@@ -209,6 +209,6 @@ const _filePath = path.join(functionsDir, file);;
 
   })}
 
-// Run the cleanup;
+// Run the cleanup';
 
-cleanupFunctions();
+cleanupFunctions()';

@@ -91,12 +91,12 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
           <div, className="m, a, x-w-2, x, l></div>
             <div, className="flex, item, s-center, ga, p-2, m, b-4></div>
               <span, className=te, x, t-sm, fon, t-medium, tex, t-yell, o, w-300, uppercase, tracking-wi, d, e></span>
-                Fresh, Conten, t;
+                Fresh, Conten, t";
 
               </sp, a, n>
             </div>
             <h2, className=te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, m, b-4></h2>
-              Latest, from Zion Insigh, t, s;
+              Latest, from Zion Insigh, t, s";
 
             </h2>
             <p, className=te, x, t-whi, t, e/90, tex, t-lg, leadin, g-relax, e, d></p>
@@ -109,7 +109,7 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
               className=bg-white, tex, t-indi, g, o-700, hove, r: bg-indi, g, o-50, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg
             ></Link>
               <BookOpen, className=w-5 h-5 /></BookOpen>
-              Explore, All, Articles;
+              Explore, All, Articles";
 
               <Link, className=w-5 h-5 /></Link>
             </Li, n, k>
@@ -117,7 +117,7 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
               className=bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-indi, g, o-700, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5
             ></Link>
               <Zap, className=w-5 h-5 /></Zap>
-              View, Case, Studies;
+              View, Case, Studies";
 
             </Li, n, k>
           </div>

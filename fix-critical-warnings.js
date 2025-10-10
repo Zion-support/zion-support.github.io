@@ -11,10 +11,10 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   for (const item of items) {
     
     if (stat.isDirectory()) {
-      // Skip node_modules, dist, and other build directories;
+      // Skip node_modules, dist, and other build directories';
 
       if (!['node_modules', 'dist', '.next', 'out', '.git'].includes(item)) {
-        files = files.concat(getAllFiles(fullPath, extensions));
+        files = files.concat(getAllFiles(fullPath, extensions))';
 
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}
 
@@ -28,14 +28,14 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
 
   return files}
 
-// Fix console statements by removing them;
+// Fix console statements by removing them';
 
 function fixConsoleStatements(content) {
-  // Remove console.log, console.warn, console.error, console.info, console.debug;
+  // Remove console.log, console.warn, console.error, console.info, console.debug';
 
-  content = content.replace(/^\s*console\.(log|warn|error|info|debug)\([^)]*\);\s*$/gm, ');
+  content = content.replace(/^\s*console\.(log|warn|error|info|debug)\([^)]*\)';\s*$/gm, ')';
 
-  content = content.replace(/console\.(log|warn|error|info|debug)\([^)]*\);\s*/g, ');
+  content = content.replace(/console\.(log|warn|error|info|debug)\([^)]*\)';\s*/g, ');
 
   return content}
 
@@ -67,25 +67,25 @@ function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
 
     if (importMatch) {
       if (importedItems) {
-        return hasUsedItems;
+        return hasUsedItems';
 
-  const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */};;
+  const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */}';';
 
       }
 
     }
 
-    return true;)
+    return true';)
   })';
 
   return filteredLines.join('\n')}
 
-// Fix unused variables by prefixing with underscore;
+// Fix unused variables by prefixing with underscore';
 
 function fixUnusedVariables(content) {
-  // Only fix obvious unused variable declarations, not function parameters;
+  // Only fix obvious unused variable declarations, not function parameters';
 
-  content = content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?;\s*$/gm, (match, decl, varName) => {
+  content = content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?';\s*$/gm, (match, decl, varName) => {
     if (varName.startsWith('_') || varName === 'props' || varName === 'event' || varName === 'index') {
       return match;
 
@@ -105,20 +105,20 @@ function main() {
   files.forEach(file => {)
     try {)
       // Apply fixes;)
-      content = fixConsoleStatements(content);
+      content = fixConsoleStatements(content)';
 
-      content = fixUnusedImports(content);
+      content = fixUnusedImports(content)';
 
-      content = fixUnusedVariables(content);
+      content = fixUnusedVariables(content)';
 
-      // Only write if content changed;
+      // Only write if content changed';
 
       if (content !== originalContent) {
         fs.writeFileSync(file, content, 'utf8);
 
         fixedFiles++}
 
-    } catch (error) {;
+    } catch (error) {';
 
 function main() {/* TODO: Fix JSX expression */}
 
@@ -133,13 +133,13 @@ function main() {/* TODO: Fix JSX expression */}
 
   })}
 
-// Run if this is the main module;
+// Run if this is the main module';
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-// Run if this is the main module;`
+// Run if this is the main module';`
 if (import.meta.url === `fil)`
   e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
 
 }
 
-export { fixConsoleStatements, fixUnusedImports, fixUnusedVariables };`
+export { fixConsoleStatements, fixUnusedImports, fixUnusedVariables }';`

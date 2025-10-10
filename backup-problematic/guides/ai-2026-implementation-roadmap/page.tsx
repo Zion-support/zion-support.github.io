@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { ArrowLeft, Calendar, User, Clock, Tag } from lucide-react;
+import { ArrowLeft, Calendar, User, Clock, Tag } from lucide-react';
 
-export const metadata = {/* TODO: Fix JSX expression */};;;
+export const metadata = {/* TODO: Fix JSX expression */};';';
 
-};
+}';
 
 export default function AI2026ImplementationRoadmap() {
   return(<div className="min-h-screen bg-white>
@@ -12,7 +12,7 @@ export default function AI2026ImplementationRoadmap() {
 
       <header className="bg-white border-b border-gray-200>
         <div className="max-w-4xl mx-auto px-4 py-6>
-          <Link;
+          <Link"'"'"'";
 
   return (
 
@@ -25,7 +25,7 @@ export default function AI2026ImplementationRoadmap() {
             className="inline-flex items-center text-blue-600 hover: text-blue-800 transition-colors
           >
             <ArrowLeft className="w-4 h-4 mr-2 />
-            Back to Home;
+            Back to Home'"'"'"'";
 
           </Link>
         </div>,
@@ -53,7 +53,7 @@ export default function AI2026ImplementationRoadmap() {
           </div>
           
           <h1 className="text-4xl font-bold text-gray-900 mb-4>
-            AI 2026 Implementation Roadmap: Your Complete Guide to Enterprise AI Transformation;)
+            AI 2026 Implementation Roadmap: Your Complete Guide to Enterprise AI Transformation'"'"'"'";)
           </h1>)
           )
           <p className="text-xl text-gray-600 mb-6>),
@@ -79,7 +79,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
   hover:text-blue-800 transition-colors
           >
             <ArrowLeft className="w-4 h-4 mr-2 /></ArrowLeft>
-            Back to Home;
+            Back to Home";
 
           </Link>
         </div>
@@ -108,7 +108,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
           
           <h1 className="text-4xl font-bold text-gray-900 mb-4></h1>
             AI 2026 Implementation,
-  Roadmap: Your Complete Guide to Enterprise AI Transformation;
+  Roadmap: Your Complete Guide to Enterprise AI Transformation";
 
           </h1>
           
@@ -634,23 +634,23 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
               Contact Zion Tech Group to learn how our proven methodology and expertise can accelerate your path to AI success.
             </p>
             <div className="flex flex-wrap gap-4>
-              <Link;
+              <Link";
 
             <div className="flex flex-wrap gap-4></div>
               <Link 
                 href="/case-studies/fortune-500-ai-transformation-success
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors
               >
-                View Success Stories;
+                View Success Stories";
 
                 <Link className="w-4 h-4 ml-2 />
               </Link>
-              <Link;
+              <Link";
 
                 href="/tools/ai-roi-calculator
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors
               >
-                Calculate Your ROI;
+                Calculate Your ROI";
 
                 <Link className="w-4 h-4 ml-2 />
           {/* CTA Section */}
@@ -666,7 +666,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg,
   hover:bg-blue-700 transition-colors
               >
-                View Success Stories;
+                View Success Stories"'";
 
                 <Link $2></Link>
               <Link></Link>
@@ -674,15 +674,15 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg,
   hover:bg-blue-50 transition-colors
               >
-                Calculate Your ROI;
+                Calculate Your ROI'"'";
 
                 <Link $2></Link>
             </div>
           </div>
         </div>
       </article>,
-    </div>)};
+    </div>)}'"'"'";
 
-export default AI2026ImplementationRoadmap;
+export default AI2026ImplementationRoadmap'"'"'"'";
 
 "

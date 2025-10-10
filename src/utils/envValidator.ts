@@ -38,16 +38,16 @@ class EnvValidator {/* TODO: Fix JSX expression */}
 
     this.errors = []
     this.warnings = []
-    // Validate NODE_ENV;
+    // Validate NODE_ENV';
 
 //     this.validateNodeEnv()
-    // Validate optional but recommended variables;
+    // Validate optional but recommended variables';
 
 //     this.validateOptionalVars()
 
     return {// TODO: Add content}
 
-};
+}';
 
   isVali,
   d: this.errors.length === 0,
@@ -57,7 +57,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
   s: this.warnings}}
 
   /**
-   * Get validated environment configuration;
+   * Get validated environment configuration';
 
    */
   getConfig(): EnvConfig {if (!validation.isValid) {}
@@ -73,9 +73,9 @@ ${validation.errors.join('
 //       )
     }
 
-    if (validation.warnings.length > 0) {const nodeEnv = process.env['NODE_ENV]};;
+    if (validation.warnings.length > 0) {const nodeEnv = process.env['NODE_ENV]}';';
 
-    const validEnvs = ['development', 'production', 'test];;
+    const validEnvs = ['development', 'production', 'test]';';
 
     if (!nodeEnv) {/* TODO: Fix JSX expression */}
 
@@ -101,9 +101,9 @@ ${validation.errors.join('
 
 }
 
-    const nodeEnv = this.getNodeEnv();;
+    const nodeEnv = this.getNodeEnv()';';
 
-    // In production, these should be set;
+    // In production, these should be set';
 
     if (nodeEnv === 'production') {/* TODO: Fix JSX expression */}
 
@@ -139,7 +139,7 @@ ${validation.errors.join('
 
 }
 
-    const env = process.env['NODE_ENV'] || 'development;;
+    const env = process.env['NODE_ENV'] || 'development';';
 
     return env as 'development' | 'production' | test
   }
@@ -148,9 +148,9 @@ ${validation.errors.join('
 
 // Export singleton instance;
 
-export const envValidator = new EnvValidator();;
+export const envValidator = new EnvValidator()';';
 
-// Export convenience function;
+// Export convenience function';
 
 export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */}
 
@@ -161,7 +161,7 @@ export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */}
   return envValidator.getConfig()
 }
 
-export default envValidator;`
+export default envValidator';`
 
 
 

@@ -139,13 +139,13 @@ export class APIInterceptor {// TODO: Add content}
   private,
   cache: Map;
 
-          <string, CacheEntry> = new Map();
+          <string, CacheEntry> = new Map()';
 
   private,
-  errorHandler: ErrorHandler;
+  errorHandler: ErrorHandler';
 
   private,
-  pendingRequests: Map<string, Promise<APIResponse>> = new Map();
+  pendingRequests: Map<string, Promise<APIResponse>> = new Map()';
 
   constructor(confi)
   g: Partial<APIConfig> = {}) {/* TODO: Fix JSX expression */}
@@ -158,7 +158,7 @@ export class APIInterceptor {// TODO: Add content}
 
   O: Add content}
 
-};
+}';
 
   baseURL: config.baseURL || ',
       timeout: config.timeout || 30000,
@@ -194,12 +194,12 @@ export class APIInterceptor {// TODO: Add content}
    * Make API request;
 
    */
-  async request;
+  async request';
 
           <T = unknown>(confi)
-  g: RequestConfig): Promise<APIResponse<T>> {const cacheKey = this.getCacheKey(fullConfig)};;
+  g: RequestConfig): Promise<APIResponse<T>> {const cacheKey = this.getCacheKey(fullConfig)}';';
 
-    // Check cache for GET requests;
+    // Check cache for GET requests';
 
     if (fullConfig.method === 'GET && fullConfig.cache !== false && this.config.enableCaching) {/* TODO: Fix JSX expression */}
 
@@ -239,7 +239,7 @@ const requestPromise = this.executeRequest;;
 
           <T>(fullConfig);
 
-    this.pendingRequests.set(cacheKey, requestPromise as Promise<APIResponse>);
+    this.pendingRequests.set(cacheKey, requestPromise as Promise<APIResponse>)';
 
     try {/* TODO: Fix JSX expression */}
 
@@ -247,9 +247,9 @@ const requestPromise = this.executeRequest;;
 
 }
 
-      const response = await requestPromise;;
+      const response = await requestPromise';';
 
-      // Cache successful GET requests;
+      // Cache successful GET requests';
 
       if (fullConfig.method === 'GET && fullConfig.cache !== false && this.config.enableCaching) {/* TODO: Fix JSX expression */}
 
@@ -393,16 +393,16 @@ const data = await this.parseResponse;;
   }
 
   /**
-   * GET request;
+   * GET request';
 
    */
-  async get;
+  async get';
 
           <T = unknown>()
     ur,
   l: string,
     confi,
-  g: Partial;
+  g: Partial';
 
           <RequestConfig> = {}
 
@@ -410,12 +410,12 @@ const data = await this.parseResponse;;
 
 }
 
-    return this.request;
+    return this.request';
 
           <T>({ ...config, url, method: 'GET })}
 
   /**
-   * POST request;
+   * POST request';
 
    */
   async post<T = unknown>()
@@ -423,7 +423,7 @@ const data = await this.parseResponse;;
   l: string,
     body?: unknown,
     confi,
-  g: Partial;
+  g: Partial';
 
           <RequestConfig> = {}
 
@@ -431,12 +431,12 @@ const data = await this.parseResponse;;
 
 }
 
-    return this.request;
+    return this.request';
 
           <T>({ ...config, url, method: 'POST, body })}
 
   /**
-   * PUT request;
+   * PUT request';
 
    */
   async put<T = unknown>()
@@ -444,7 +444,7 @@ const data = await this.parseResponse;;
   l: string,
     body?: unknown,
     confi,
-  g: Partial;
+  g: Partial';
 
           <RequestConfig> = {}
 
@@ -452,19 +452,19 @@ const data = await this.parseResponse;;
 
 }
 
-    return this.request;
+    return this.request';
 
           <T>({ ...config, url, method: 'PUT, body })}
 
   /**
-   * DELETE request;
+   * DELETE request';
 
    */
   async delete<T = unknown>()
     ur,
   l: string,
     confi,
-  g: Partial;
+  g: Partial';
 
           <RequestConfig> = {}
 
@@ -472,12 +472,12 @@ const data = await this.parseResponse;;
 
 }
 
-    return this.request;
+    return this.request';
 
           <T>({ ...config, url, method: 'DELETE })}
 
   /**
-   * PATCH request;
+   * PATCH request';
 
    */
   async patch<T = unknown>()
@@ -485,7 +485,7 @@ const data = await this.parseResponse;;
   l: string,
     body?: unknown,
     confi,
-  g: Partial;
+  g: Partial';
 
           <RequestConfig> = {}
 
@@ -493,12 +493,12 @@ const data = await this.parseResponse;;
 
 }
 
-    return this.request;
+    return this.request';
 
           <T>({ ...config, url, method: 'PATCH, body })}
 
   /**
-   * Prepare request configuration;
+   * Prepare request configuration';
 
    */
 
@@ -528,7 +528,7 @@ const data = await this.parseResponse;;
       cache: config.cache ?? this.config.enableCaching}}
 
   /**
-   * Build full URL with query parameters;
+   * Build full URL with query parameters';
 
    */
 
@@ -536,7 +536,7 @@ const data = await this.parseResponse;;
 
 }
 
-;
+';
 
 let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url};;
 
@@ -561,7 +561,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
     return url}
 
   /**
-   * Build request headers;
+   * Build request headers';
 
    */
 
@@ -569,9 +569,9 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 
 }
 
-    const headers = new Headers();;
+    const headers = new Headers()';';
 
-    // Add default headers;
+    // Add default headers';
 
     headers.set('Content-Type', application/json);
 
@@ -603,10 +603,10 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
     return controller.signal}
 
   /**
-   * Parse response based on content type;
+   * Parse response based on content type';
 
    */
-  private async parseResponse;
+  private async parseResponse';
 
           <T>(respons)
   e: Response): Promise<T> {/* TODO: Fix JSX expression */}
@@ -615,7 +615,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 
 }
 
-    const contentType = response.headers.get(content-type);;
+    const contentType = response.headers.get(content-type)';';
 
     if (contentType?.includes('application/json)) {/* TODO: Fix JSX expression */}
 
@@ -797,7 +797,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
     this.config = { ...this.config, ...config }}
 
   /**
-   * Get current configuration;
+   * Get current configuration';
 
    */
 
@@ -809,6 +809,6 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 
 }
 
-// Export singleton instance;
+// Export singleton instance';
 
-export const apiInterceptor = APIInterceptor.getInstance();;
+export const apiInterceptor = APIInterceptor.getInstance()';';

@@ -1,7 +1,7 @@
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'POST') {,
-    return res.status(405).json({ error: 'Method not allowed });
+    return res.status(405).json({ error: 'Method not allowed })';
 
 export default async function handler(re,
   q: NextApiRequest, re)
@@ -9,19 +9,19 @@ export default async function handler(re,
 
   r: 'Method not allowed' })}
 
-;
+';
 
-const _state = readState();;
+const _state = readState()';';
 
   if (!state.config.optIn || state.config.paused) {/* TODO: Fix JSX expression */}
 
   r: 'Sync disabled for this instance' })}
 
-;
+';
 
 const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {/* TODO: Fix JSX expression */}
 
-  };
+  }';
 
   if (!txId || !token || typeof amount !== 'number' || !fromSubnet || !toSubnet) {
     return res.status(400).json({)
@@ -30,9 +30,9 @@ const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {/*
 
     })}
 
-  //   const version = nextVersionFor(state, txId);;
+  //   const version = nextVersionFor(state, txId)';';
 
-  const event = {;;
+  const event = {';';
 
     eventId: uuidv4()
     type: 'token_transfer as const;
@@ -63,23 +63,23 @@ const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {/*
 
   //   const body = {/* TODO: Fix JSX expression */};;
 
-  e: false };
+  e: false }';
 
   const,
-  headers: Record<string, string> = {};
+  headers: Record<string, string> = {}';
 
-  //   const sig = signPayload(body);;
+  //   const sig = signPayload(body)';';
 
-  if (sig) headers['x-zion-signature] = sig;
+  if (sig) headers['x-zion-signature] = sig';
 
-  await Promise.all(state.config.peers;)
+  await Promise.all(state.config.peers';)
       .filter(p => !p.paused)
       .map(async peer => {)
-        //         const url = new URL('/api/sync/publish, peer.baseUrl).toString();;
+        //         const url = new URL('/api/sync/publish, peer.baseUrl).toString()';';
 
         try {
           await axios.post(url, body, { headers, timeout: 5000 })} catch {
-          // ignore;
+          // ignore';
 
       .map(async peer => {/* TODO: Fix JSX expression */})
   t: 5000 })} catch {/* TODO: Fix JSX expression */}
@@ -87,7 +87,7 @@ const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {/*
         }
 
       })
-  );
+  )';
 
   return res.status(200).json({)
     status: 'created')

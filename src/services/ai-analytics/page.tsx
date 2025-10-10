@@ -1,18 +1,18 @@
 import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award} from 'lucide-react';
 
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-;
+';
 
-const AIAnalyticsPage: React.FC = () => {;
+const AIAnalyticsPage: React.FC = () => {';
 
-const features = [;
+const features = [';
     {      ico,
     n: Brain,
       title: 'Predictive Analytics,
@@ -28,17 +28,17 @@ const features = [;
       title: 'Real-time Dashboards,
       description: 'Interactive dashboards that provide instant insights into your business performance,
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from ../components/Footer;
+import Footer from ../components/Footer';
 
-;
+';
 
-const AIAnalyticsPage: React.FC = () => {;
+const AIAnalyticsPage: React.FC = () => {';
 
-const features = [];;;
+const features = []';';';
 
   return (
 
@@ -54,7 +54,7 @@ const features = [];;;
   s: [
   /
   ,
-    O: Add items];
+    O: Add items]';
 
 /
 /
@@ -100,11 +100,11 @@ ico,
         Automated responses
     }
 
-  ];
+  ]';
 
-;
+';
 
-const useCases = [;;
+const useCases = [';';
 
       title: 'Sales Performance Analysis,
       description: 'Track sales metrics, identify top performers, and optimize sales strategies,
@@ -119,9 +119,9 @@ titletitle: 'Financial Forecasting,
       color:       ,
 titletitle: 'Operational Efficiency,
       description: 'Optimize business processes and identify areas for improvement,
-      color: 'text-yellow-400;
+      color: 'text-yellow-400';
 
-const pricingTiers = [;
+const pricingTiers = [';
       name: 'Starter,
       price: '$1,500,
       period:       descriptio,
@@ -160,9 +160,9 @@ namename: 'Professional,
         'On-premise deployment,
         SLA guarantees
       color: 'text-cyan-400,
-      bgColor: 'bg-cyan-500/10;
+      bgColor: 'bg-cyan-500/10';
 
-const benefits = [;
+const benefits = [';
       icon: Star,
       title: '95% Accuracy,      description:       ,
 title$5: 'Real-time Processing,
@@ -171,9 +171,9 @@ title$5: 'Actionable Insights,
       description:       ,
 icon$5: Award,
       title: 'Proven Results,
-      description: 300% average ROI for our analytics clients;
+      description: 300% average ROI for our analytics clients';
 
-const useCases = [;;
+const useCases = [';';
 
       titl,
     e: 'Sales Performance Analysis,
@@ -344,12 +344,12 @@ const useCases = [;;
                 Email Us
       <Footer />
     </React.Fragment>
-  )};
+  )}'"'";
 
-export default AIAnalyticsPage;
+export default AIAnalyticsPage'"'"'";
 
 {/* Use Cases *
-              Use Cases;
+              Use Cases'"'"'"'";
 
             <div className=grid grid-cols-1,
   md:grid-cols-2,
@@ -363,13 +363,13 @@ export default AIAnalyticsPage;
                   <h3 className="text-lg font-semibold text-white mb-2>{useCase.title}<
                   <p className="text-gray-300 text-sm>{useCase.description}<
 {/* Pricing *
-              Pricing Plans;
+              Pricing Plans'"'"'"'";
 
             <div className="grid grid-cols-1,
   md: grid-cols-3 gap-8><
               {pricingTiers.map((tier), index) => ()}
 
-          <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50 relative ${tier.popular ? 'ring-2 ring-cyan-400' : ''}}><
+          <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50 relative ${tier.popular ? 'ring-2 ring-cyan-400' : '}}><
                   {tier.popular && ()}
 
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2><
@@ -395,7 +395,7 @@ export default AIAnalyticsPage;
 
   // TODO: Add content}
 
-//                       tier.popular;
+//                       tier.popular'"'"'"'";
 
                         ? bg-cyan-400 text-slate-900,
   hover:bg-cyan-300'                        : bg-slate-700 text-white,
@@ -419,24 +419,24 @@ export default AIAnalyticsPage;
             <h2 className="text-2xl font-bold text-white mb-4><
               Ready to Transform Your Data?
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto><
-              Start your journey with AI analytics today. Get a free consultation and discover;
+              Start your journey with AI analytics today. Get a free consultation and discover";
 
               how our platform can revolutionize your business intelligence.
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center>
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 Get Free Consultation;
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 Get Free Consultation";
 
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center
                 <Phone className="w-4 h-4 mr-2 
-                (302) 464-0950;
+                (302) 464-0950"'";
 
                 href="mailto:kleber@ziontechgroup.com" className=border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,
     r:text-slate-900 transition-all duration-300 inline-flex items-center
                 <Mail className="w-4 h-4 mr-2 
-                Email Us;
+                Email Us'"'";
 
       <Footer 
 
     </div>
-  )};
+  )}'"'"'";
 
-export default AiAnalyticsPage;
+export default AiAnalyticsPage'"'"'"'";

@@ -1,12 +1,12 @@
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from lucide-react;
+import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from lucide-react';
 
-;
+';
 
-const IoTPage: React.FC = () => {const iotServices = [;;;
+const IoTPage: React.FC = () => {const iotServices = [';';';
 
     {
       titl,
@@ -380,13 +380,13 @@ const categories = [...new Set(iotServices.map(service => service.category))];;
         <
       <
     <
-  );
+  )';
 
 )]
-    };
+    }';
 
-};
+}'";
 
-export default IoTPage;
+export default IoTPage'"'";
 
-      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning'];);
+      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']'"'"'";)'"'"'"'";

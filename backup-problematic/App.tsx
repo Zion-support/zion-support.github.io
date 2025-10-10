@@ -22,73 +22,73 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 
 // Lazy load components for better performance';
 
-// const ContentShowcase = lazy(() => import('./components/ContentShowcase));;
+// const ContentShowcase = lazy(() => import('./components/ContentShowcase))';';
 
-// const InteractiveContentShowcase2026 = lazy();;
+// const InteractiveContentShowcase2026 = lazy()';';
 
 // () => import('./components/InteractiveContentShowcase2026')
-// );
+// )';
 
-// const InteractiveAIROICalculator = lazy();;
+// const InteractiveAIROICalculator = lazy()';';
 
 // () => import('./components/InteractiveAIROICalculator')
-// );
+// )';
 
-// Lazy load pages for better performance;
+// Lazy load pages for better performance';
 
-const _HomePage = lazy(() => import('./page));;
+const _HomePage = lazy(() => import('./page))';';
 
-const _AboutPage = lazy(() => import('./about/page));;
+const _AboutPage = lazy(() => import('./about/page))';';
 
-const _ServicesPage = lazy(() => import('./services/page));;
+const _ServicesPage = lazy(() => import('./services/page))';';
 
-const _ContactPage = lazy(() => import('./contact/page));;
+const _ContactPage = lazy(() => import('./contact/page))';';
 
-const _TeamPage = lazy(() => import('./team/page));;
+const _TeamPage = lazy(() => import('./team/page))';';
 
-const _PrivacyPage = lazy(() => import('./privacy/page));;
+const _PrivacyPage = lazy(() => import('./privacy/page))';';
 
-const _TermsPage = lazy(() => import('./terms/page));;
+const _TermsPage = lazy(() => import('./terms/page))';';
 
-const _EnterprisePage = lazy(() => import('./enterprise/page));;
+const _EnterprisePage = lazy(() => import('./enterprise/page))';';
 
-const _ServicesAdvertisingPage = lazy(() => import('./services-advertising/page));;
+const _ServicesAdvertisingPage = lazy(() => import('./services-advertising/page))';';
 
-const _CaseStudiesPage = lazy(() => import('./case-studies/page));;
+const _CaseStudiesPage = lazy(() => import('./case-studies/page))';';
 
-// Additional service pages;
+// Additional service pages';
 
-const AiServicesPage = lazy(() => import('./ai-services/page));;
+const AiServicesPage = lazy(() => import('./ai-services/page))';';
 
-const ItServicesPage = lazy(() => import('./it-services/page));;
+const ItServicesPage = lazy(() => import('./it-services/page))';';
 
-const MicroSaasPage = lazy(() => import('./micro-saas/page));;
+const MicroSaasPage = lazy(() => import('./micro-saas/page))';';
 
-const QuantumComputingPage = lazy(() => import('./quantum-computing/page));;
+const QuantumComputingPage = lazy(() => import('./quantum-computing/page))';';
 
-const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page));;
+const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page))';';
 
-const BlockchainWeb3 Page = lazy(() => import('./blockchain-web3/page));
+const BlockchainWeb3 Page = lazy(() => import('./blockchain-web3/page))';
 
-const CybersecurityPage = lazy(() => import('./cybersecurity/page));;
+const CybersecurityPage = lazy(() => import('./cybersecurity/page))';';
 
-const BusinessIntelligencePage = lazy(() => import('./business-intelligence/page));;
+const BusinessIntelligencePage = lazy(() => import('./business-intelligence/page))';';
 
-const IotEdgeComputingPage = lazy(() => import('./iot-edge-computing/page));;
+const IotEdgeComputingPage = lazy(() => import('./iot-edge-computing/page))';';
 
-// Additional pages;
+// Additional pages';
 
-const BlogPage = lazy(() => import('./blog-index));;
+const BlogPage = lazy(() => import('./blog-index))';';
 
-const GuidesPage = lazy(() => import('./guides/page));;
+const GuidesPage = lazy(() => import('./guides/page))';';
 
-const SitemapPage = lazy(() => import('./sitemap/page));;
+const SitemapPage = lazy(() => import('./sitemap/page))';';
 
-const NotFoundPage = lazy(() => import('./not-found));;
+const NotFoundPage = lazy(() => import('./not-found))';';
 
-const OfflinePage = lazy(() => import('./offline/page));;
+const OfflinePage = lazy(() => import('./offline/page))';';
 
-// Utils;
+// Utils';
 
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 

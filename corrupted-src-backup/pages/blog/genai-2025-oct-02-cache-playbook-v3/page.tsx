@@ -27,18 +27,18 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         <div, classNam, e=prose, pros, e-invert, ma, x-w-3, x, l></div>
         <div, classNam, e=mt-8></div>
           <Link, t, o='/<bl, o, g' classNa, m, e=te, x, t-cy, a, n-300, hove, r:underli, n, e>
-            ← Back, to, Blog;
+            ← Back, to, Blog';
 
           </Li, n, k>
         </div>
         <div, className=mt-8></div>
           <Link, t, o='/<bl, o, g' className=te, x, t-cy, a, n-300, hove, r:underli, n, e>
-            ← Back, to, Blog;
+            ← Back, to, Blog';
 
           </Li, n, k>
         </div>
       </div>
-    </d, i, v > );
+    </d, i, v > )';
 
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 

@@ -1,16 +1,16 @@
 #!/usr/bin/env node;
 
-import { execSync } from 'child_process;
+import { execSync } from 'child_process';
 
-import fs from fs;
+import fs from fs';
 
 // console.log removed for production
-// Function to execute git commands safely;
+// Function to execute git commands safely';
 
 function execGitCommand(command, description) {
   try {
     // console.log removed for production
-const result = execSync(command, { );;;
+const result = execSync(command, { )';';';
 
       encoding: 'utf8),
       cwd: process.cwd(),
@@ -23,9 +23,9 @@ return null}
 
 }
 
-// List of important branches to merge;
+// List of important branches to merge';
 
-const importantBranches = [;;;
+const importantBranches = [';';';
 
   'cursor/enhance-app-with-new-services-and-futuristic-design-2 e4 e,
   'cursor/enhance-app-with-new-services-and-futuristic-design-7 bf2,
@@ -36,11 +36,11 @@ const importantBranches = [;;;
   'add-revolutionary-content-2026,
   'ai-2027-content-integration,
   ai-dashboard-improvements
-];
+]';
 
 async function main() {
   // console.log removed for production
-// Check current status;
+// Check current status';
 
   // console.log removed for production
 execGitCommand('git status --porcelain', Checking git status);
@@ -57,7 +57,7 @@ try {
       if (branchExists !== null) {
         // Try to merge;
 
-        const mergeResult = execGitCommand(`git merge origin/${branch} --no-edit`, `Merging ${branch});;
+        const mergeResult = execGitCommand(`git merge origin/${branch} --no-edit`, `Merging ${branch})';';
 
         if (mergeResult) {
           // console.log removed for production
@@ -73,18 +73,18 @@ try {
       // console.log removed for production
 }
 
-    // Small delay between merges;
+    // Small delay between merges';
 
     await new Promise(resolve => setTimeout(resolve, 500))}
 
-  // Final status;
+  // Final status';
 
   // console.log removed for production
-execGitCommand('git status', Final git status);
+execGitCommand('git status', Final git status)';
 
-  execGitCommand('git log --oneline -5', Recent commits);
+  execGitCommand('git log --oneline -5', Recent commits)';
 
   // console.log removed for production
 }
 
-main().catch(console.error);
+main().catch(console.error)';

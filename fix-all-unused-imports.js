@@ -27,11 +27,11 @@ findPageFiles(srcDir);
 function cleanUnusedImports(filePath) {
   try {;
 
-let content = fs.readFileSync(filePath, utf8);;
+let content = fs.readFileSync(filePath, utf8);';
 
-    let modified = false;;
+    let modified = false';';
 
-    // Fix lucide-react imports;
+    // Fix lucide-react imports';
 
     const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['];?/);;
 
@@ -55,37 +55,37 @@ const cleanImp = imp.replace(/\s*as\s+\w+/, ).trim();;
 
       if (usedImports.length !== imports.length) {;
 
-const newImport = usedImports.length >;;
+const newImport = usedImports.length >'";'"'";
 
-);
+)'"'"'";
 
-} 0;
+} 0'"'"'"'";
 
 function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
 
-    const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['];?/);;
+    const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react[']';?/)';';
 
     if (lucideImportMatch) {/* TODO: Fix JSX expression */}
 
         if (content.includes(`<${cleanImp}`) || content.includes(`${cleanImp}.`) || content.includes(`${cleanImp}()) {/* TODO: Fix JSX expression */}
 
-      });
+      })';
 
       if (usedImports.length !== imports.length) {/* TODO: Fix JSX expression */}
 
           ? `import { ${usedImports.join(', ')} } from 'lucide-react';
 
-          : ;
+          : ';
 
-        content = content.replace(lucideImportMatch[0], newImport);
+        content = content.replace(lucideImportMatch[0], newImport)';
 
-        modified = true;
+        modified = true';
 
-    // Remove unused component imports;
+    // Remove unused component imports'";
 
-    const componentImports = ['Navigation', 'Footer', SEOOptimizer];;
+    const componentImports = ['Navigation', 'Footer', SEOOptimizer]'"'";'"'"'";
 
-    componentImports.forEach(comp => {);
+    componentImports.forEach(comp => {)'"'"'"'";
 
 const importRegex = new RegExp(`import\\s+${comp}\\s+from\\s+['"][^'"]+['"];?\\s*`, g);;
 
@@ -118,35 +118,35 @@ const varName = varMatch[1];;
       newLines.push(line);
 
     if (newLines.length !== lines.length) {
-      content = newLines.join(\n);
+      content = newLines.join(\n)";
 
     if (modified) {
-      fs.writeFileSync(filePath, content);
+      fs.writeFileSync(filePath, content)"'";
 
       // console.log removed for production
 })} catch (error) {
     // console.error removed for production
-// Process all page files;
+// Process all page files"'"'";
 
 pageFiles.forEach(file => {)
-  cleanUnusedImports(file);
+  cleanUnusedImports(file)"'"'"'";
 
-    componentImports.forEach(comp => {/* TODO: Fix JSX expression */}");
+    componentImports.forEach(comp => {/* TODO: Fix JSX expression */}")'"'"'"'";
 
-const importRegex = new RegExp(`import\\s+${comp}\\s+from\\s+['"][^'"]+['"];?\\s*`, 'g');;;
+const importRegex = new RegExp(`import\\s+${comp}\\s+from\\s+['"][^'"]+['"]';?\\s*`, 'g');;;
 
       if (importRegex.test(content) && !content.includes(`<${comp}`) && !content.includes(`${comp}.`)) {/* TODO: Fix JSX expression */}
 
   d: ${path.relative(__dirname, filePath)}`)} catch (error) {/* TODO: Fix JSX expression */}
 
     // console.error removed for production
-// Process all page files;
+// Process all page files';
 
 pageFiles.forEach(file => {/* TODO: Fix JSX expression */})
 // console.log removed for production
-const trimmedLine = line.trim();;
+const trimmedLine = line.trim()';';
 
-      // Check if this is an import line;
+      // Check if this is an import line';
 
       if (trimmedLine.startsWith('import )) {
         // Extract the imported names from the import line;
@@ -192,12 +192,12 @@ const name = defaultImportMatch[1];;
             if (contentWithoutImport.includes(name) && 
                 !contentWithoutImport.includes(`import ${name})) {
             // If not used, skip the line (dont add it)
-            // Other import types, keep them;
+            // Other import types, keep them';
 
-    const newContent = newLines.join(\n);;
+    const newContent = newLines.join(\n)';';
 
     if (newContent !== content) {
-      fs.writeFileSync(filePath, newContent, utf8);
+      fs.writeFileSync(filePath, newContent, utf8)';
 
       // console.log removed for production
 if (trimmedLine.startsWith('import )) {/* TODO: Fix JSX expression */}
@@ -218,24 +218,24 @@ if (trimmedLine.startsWith('import )) {/* TODO: Fix JSX expression */}
 
                 !contentWithoutImport.includes(`import ${name}`)) {/* TODO: Fix JSX expression */}
 
-  in: ${filePath});
+  in: ${filePath})';
 
-      return true;
+      return true';
 
-  return false;
+  return false';
 
-// Get all TypeScript/JavaScript files in src directory;
+// Get all TypeScript/JavaScript files in src directory';
 
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', .jsx]) {;
 
-let results = [];;
+let results = [];';
 
-  const list = fs.readdirSync(dir);;
+  const list = fs.readdirSync(dir)';';
 
   list.forEach(file => {)
     )
     if (stat && stat.isDirectory()) {
-      // Skip node_modules and other common directories;
+      // Skip node_modules and other common directories';
 
       if (!['node_modules', '.git', 'dist', '.next', 'out', 'build].includes(file)) {
         results = results.concat(getAllFiles(filePath, extensions));
@@ -243,26 +243,26 @@ let results = [];;
       const ext = path.extname(file);;
 
       if (extensions.includes(ext)) {
-        results.push(filePath);
+        results.push(filePath)';
 
-  return results;
+  return results';
 
-// Main execution;
+// Main execution';
 
 // console.log removed for production
-;
+';
 
 const files = getAllFiles('./src', ['.ts', '.tsx', '.js', .jsx]);;
 
 ;
 
-let fixedCount = 0;;
+let fixedCount = 0'";'"'";
 
 files.forEach(file => {)
   if (removeUnusedImportsFromFile(file)) {
-    fixedCount++;
+    fixedCount++'"'"'";
 
-;
+'"'"'"'";
 
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}
 

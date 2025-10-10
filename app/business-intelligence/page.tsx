@@ -1,14 +1,14 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp } from lucide-react;
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp } from lucide-react';
 
-;
+';
 
-const BusinessIntelligencePage: React.FC = () => {const features = [;;;
+const BusinessIntelligencePage: React.FC = () => {const features = [';';';
 
     {
       icon: BarChart,
@@ -31,11 +31,11 @@ const BusinessIntelligencePage: React.FC = () => {const features = [;;;
       description: Machine learning algorithms for predictive analytics and trend analysis
     }
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'Advanced AI technology integration,
     'Real-time processing and analytics,
@@ -45,7 +45,7 @@ const benefits = [;;
     'Easy integration with existing systems,
     'Cost-effective pricing plans,
     Proven track record of success
-  ];
+  ]';
 
   return (
 
@@ -142,4 +142,4 @@ const benefits = [;;
         </div>
       </section>
     </div>)
-export default BusinessIntelligencePage;
+export default BusinessIntelligencePage'"'"'"'";

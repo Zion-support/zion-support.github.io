@@ -60,24 +60,24 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   }
 
   /**
-   * Validate and sanitize URL;
+   * Validate and sanitize URL';
 
    */
   sanitizeUrl(url: string): string {,
-    try {,;
+    try {,';
 
-const parsed = new URL(url),;;
+const parsed = new URL(url),';';
 
       if (!['http:', 'https: ].includes(parsed.protocol)) {,
   sanitizeUrl(url: string): string {}
 
     try {}
 
-      const parsed = new URL(url);;
+      const parsed = new URL(url)';';
 
       if (!['http:', 'https:].includes(parsed.protocol)) {}
 
-        throw new Error(Invalid protocol);
+        throw new Error(Invalid protocol)';
 
       }
 
@@ -98,22 +98,22 @@ const parsed = new URL(url),;;
   }
 
   /**
-   * Generate secure random token;
+   * Generate secure random token';
 
    */
-  generateSecureToken(length: number = 32): string {,;
+  generateSecureToken(length: number = 32): string {,';
 
-const array = new Uint8Array(length),;;
+const array = new Uint8Array(length),';';
 
     if (typeof window !== 'undefined && window.crypto) {,
-      window.crypto.getRandomValues(array);
+      window.crypto.getRandomValues(array)';
 
     } else {
-      // Fallback for Node.js environment;
+      // Fallback for Node.js environment';
 
   generateSecureToken(length: number = 32): string {}
 
-    const array = new Uint8Array(length);;
+    const array = new Uint8Array(length)';';
 
     if (typeof window !== 'undefined && window.crypto) {}
 
@@ -121,11 +121,11 @@ const array = new Uint8Array(length),;;
 
     } else {}
 
-      // Fallback for Node.js environment;
+      // Fallback for Node.js environment';
 
-const crypto = import("crypto);;
+const crypto = import("crypto)';';
 
-      crypto.randomFillSync(array);
+      crypto.randomFillSync(array)';
 
   generateSecureToken(lengt)
   h: number = 32): string {/* TODO: Fix JSX expression */}
@@ -159,7 +159,7 @@ const validRequests = requests.filter((time: number) => time > windowStart),;;
     if (validRequests.length >= limit) {,
     // Remove old requests;
 
-const validRequests = requests.filter((time: number) => time > windowStart);;
+const validRequests = requests.filter((time: number) => time > windowStart)'";'"'";
 
     if (validRequests.length >= limit) {}
 
@@ -180,7 +180,7 @@ const validRequests = requests.filter((time: number) => time > windowStart);;
 
     if (!global._rateLimitStorage) {}
 
-      global._rateLimitStorage = new Map();
+      global._rateLimitStorage = new Map()'"'"'";
 
   private getRateLimitStorage(): Map<string, number[]> {/* TODO: Fix JSX expression */}
 
@@ -190,4 +190,4 @@ const validRequests = requests.filter((time: number) => time > windowStart);;
 
 }
 
-export default SecurityManager.getInstance();
+export default SecurityManager.getInstance()'"'"'"'";

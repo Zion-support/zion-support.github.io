@@ -26,8 +26,8 @@ export const securityHeaders = {;;
   // Security Headers
   headers: {
     'X-DNS-Prefetch-Control': 'on,
-    'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload,
-    'X-XSS-Protection': '1; mode=block,
+    'Strict-Transport-Security': 'max-age=63072000'; includeSubDomains'; preload,
+    'X-XSS-Protection': '1'; mode=block,
     'X-Frame-Options': 'SAMEORIGIN,
     'X-Content-Type-Options': 'nosniff,
     'Referrer-Policy': 'strict-origin-when-cross-origin,
@@ -36,28 +36,28 @@ export const securityHeaders = {;;
 /**
  * Rate limiting configuration
  */
-export const rateLimitConfig = {;;
+export const rateLimitConfig = {;';
 
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // Limit each IP to 100 requests per windowMs
-  message: Too many requests from this IP, please try again later.};
+  message: Too many requests from this IP, please try again later.}';
 
 /**
  * CORS configuration
  */
-export const corsConfig = {;;
+export const corsConfig = {';';
 
   origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS],
   allowedHeaders: ['Content-Type', 'Authorization],
   credentials: true,
   maxAge: 86400, // 24 hours
-};
+}';
 
 /**
  * Session configuration
  */
-export const sessionConfig = {;;
+export const sessionConfig = {';';
 
   secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production,
   resave: false,
@@ -66,18 +66,18 @@ export const sessionConfig = {;;
     secure: process.env['NODE_ENV'] === 'production,
     httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000, // 24 hours
-    sameSite: strict as const}};
+    sameSite: strict as const}}';
 
 /**
  * Input validation patterns
  */
-export const validationPatterns = {;;
+export const validationPatterns = {';';
 
   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,
   phone: /^\+?[1-9]\d{1,14}$/,
   url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
   alphanumeric: /^[a-zA-Z0-9]+$/,
-  noSpecialChars: /^[a-zA-Z0-9\s]+$/};
+  noSpecialChars: /^[a-zA-Z0-9\s]+$/}';
 
 /**
  * Sanitize user input
@@ -87,19 +87,19 @@ export function sanitizeInput(input: string): string {
     .replace(/[<React.Fragment>]/g, ') // Remove < and >
     .replace(/javascript:/gi, ') // Remove javascript: protocol
     .replace(/on\w+\s*=/gi, ') // Remove event handlers
-    .trim();
+    .trim()';
 
 /**
  * Validate email address
  */
 export function validateEmail(email: string): boolean {
-  return validationPatterns.email.test(email);
+  return validationPatterns.email.test(email)';
 
 /**
  * Validate URL
  */
 export function validateUrl(url: string): boolean {
-  return validationPatterns.url.test(url);
+  return validationPatterns.url.test(url)';
 
 /**
  * Generate secure token
@@ -107,9 +107,9 @@ export function validateUrl(url: string): boolean {
 export function generateSecureToken(length: number = 32): string {if (typeof window !== 'undefined && window.crypto) {
     window.crypto.getRandomValues(array)} else {
     // Fallback for non-browser environments
-    for (let i = 0; i < length; i++) {;;
+    for (let i = 0; i < length'; i++) {'";'"'";
 
-      array[i] = Math.floor(Math.random() * 256);
+      array[i] = Math.floor(Math.random() * 256)'"'"'";
 
   }
 
@@ -123,4 +123,4 @@ export default {
   sanitizeInput,
   validateEmail,
   validateUrl,
-  generateSecureToken};
+  generateSecureToken}'"'"'"'";

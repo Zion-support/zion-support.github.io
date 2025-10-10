@@ -1,18 +1,18 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
 import Navigation from ../components
 import Footer from ../components
 import SEOOptimizer from ../components
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from lucide-react;
+import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from lucide-react';
 
-const AICustomerSupportPage: React.FC = () => {;
+const AICustomerSupportPage: React.FC = () => {';
 
-const features = [;;;
+const features = [';';';
 
     {
-      icon: MessageCircle;
+      icon: MessageCircle';
 
       title: 24
       descriptio,
@@ -20,7 +20,7 @@ const features = [;;;
       benefits: ['Instant Response', 'Multi-language Support', 'Context Awareness', 'Escalation to Humans]
     },
     {
-      icon: Users;
+      icon: Users';
 
       titl,
     e: 'Smart Ticket Routing,
@@ -28,7 +28,7 @@ const features = [;;;
       benefits: ['Intelligent Routing', 'Priority Classification', 'Load Balancing', 'Expert Matching]
     },
     {
-      icon: Clock;
+      icon: Clock';
 
       titl,
     e: 'Predictive Analytics,
@@ -36,7 +36,7 @@ const features = [;;;
       benefits: ['Issue Prediction', 'Proactive Support', 'Trend Analysis', 'Prevention Strategies]
     },
     {
-      icon: Shield;
+      icon: Shield';
 
       titl,
     e: 'Knowledge Base Integration,
@@ -58,7 +58,7 @@ const,
 
 ;
 
-const pricing = [;
+const pricing = [';
     {/* TODO: Fix JSX expression */}
 
     },    {/* TODO: Fix JSX expression *
@@ -66,9 +66,9 @@ const pricing = [;
     {/* TODO: Fix JSX expression *
     }
 
-  ];
+  ]';
 
-  const stats = [;;
+  const stats = [';';
 
     {/* TODO: Fix JSX expression *
   ,
@@ -83,14 +83,14 @@ const pricing = [;
   ,
     l: 'Languages Supported }
 
-  ];
+  ]';
 
   return(<React.Fragment>
-      <SEOOptimizer;
+      <SEOOptimizer';
 
         title="AI Customer Support Solutions - Zion Tech Group
         description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%.
-        keywords = { ['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', AI helpdesk] };
+        keywords = { ['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', AI helpdesk] }"'";
 
         canonicalUrl=https: //ziontechgroup.com
       
@@ -105,19 +105,19 @@ const pricing = [;
           <section className="container mx-auto px-4 py-16 text-center>
             <div className="max-w-4xl mx-auto>
               <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text>
-                AI Customer Support Solutions;
+                AI Customer Support Solutions"'"'";
 
               <)
               <p className=text-xl m,
     d:text-2xl text-cyan-400 mb-8>)
-                Transform your customer service with intelligent AI that never sleeps;)
+                Transform your customer service with intelligent AI that never sleeps"'"'"'";)
               <
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto>),
                 Our AI-powered customer support platform combines advanced chatbots, omnichannel communication)
                 and intelligent automation to deliver exceptional customer experiences while reducing costs by up to 60%.
               <
               <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16>
-                <a;
+                <a'"'"'"'";
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16><
                 <a
@@ -137,12 +137,12 @@ const pricing = [;
             <div className="max-w-4xl mx-auto><
               <h1 className="text-4xl,
   md:text-6xl font-bold text-white mb-6 neon-text><
-                AI Customer Support Solutions;
+                AI Customer Support Solutions"'"'";
 
               <
               <p className="text-xl,
   md:text-2xl text-cyan-400 mb-8><
-                Transform your customer service with intelligent AI that never sleeps;
+                Transform your customer service with intelligent AI that never sleeps"'"'"'";
 
               <
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto><
@@ -159,7 +159,7 @@ const pricing = [;
                   <Phone className="w-5 h-5 /><
                   <span>Call (302) 464-0950<
                 <
-                <a;
+                <a'"'"'"'";
 
                   href=mailt,
     o:kleber@ziontechgroup.com,
@@ -210,15 +210,15 @@ const pricing = [;
       </div>
     </div>
     </React.Fragment>
-  )};
+  )}";
 
-;
+";
 
 const AICustomerSupportPage2: React.FC = () => {
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg>)      <Navigation 
       <main className="pt-24 pb-16 px-4>)
         <div className="max-w-7xl mx-auto>
-);
+)";
 
 }),
           {/* Hero Section */}
@@ -232,7 +232,7 @@ const AICustomerSupportPage2: React.FC = () => {
           <section className="text-center mb-16>
             <h1 className=text-4xl sm: text-5xl m,
     d:text-6xl font-bold text-white mb-6 neon-text>
-              AI Customer Support;
+              AI Customer Support";
 
             <
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto>,
@@ -240,7 +240,7 @@ const AICustomerSupportPage2: React.FC = () => {
               smart ticket routing, and predictive analytics.
             <
             <div className="flex flex-col sm: flex-row gap-4 justify-center>
-              <a;
+              <a";
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center><
               <a
@@ -250,12 +250,12 @@ const AICustomerSupportPage2: React.FC = () => {
                 <MessageCircle className="w-4 h-4 /></MessageCircl><
                 <<<<span>Get</span></span></<<span>Started</span></span><
               <
-              <a;
+              <a";
 
                 href=
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300
               >
-                Learn More;
+                Learn More";
 
               <
             <
@@ -263,7 +263,7 @@ const AICustomerSupportPage2: React.FC = () => {
           {/* Features Section *
           <section className="mb-16>
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text>
-              Key Features;
+              Key Features";
 
             <
             <div className=grid grid-cols-1 md:grid-cols-2 l,
@@ -297,12 +297,12 @@ const AICustomerSupportPage2: React.FC = () => {
           {/* Pricing Section *
           <section className="mb-16>
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text>
-              Pricing Plans;
+              Pricing Plans"'";
 
             <
             <div className=grid grid-cols-1 m,
     d:grid-cols-3 gap-8 max-w-6xl mx-auto>,
-              {pricingPlans.map((plan, index) => (<div;
+              {pricingPlans.map((plan, index) => (<div"'"'";
 
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text>
               Pricing Plans
@@ -311,9 +311,9 @@ const AICustomerSupportPage2: React.FC = () => {
     d:grid-cols-3 gap-8 max-w-6xl mx-auto>)
               {pricingPlans.map((plan), index) => (<
                 <div
-                  key = { index };
+                  key = { index }'"'"'";
 
-                  className = { cyber-card p-8 relative ${ };
+                  className = { cyber-card p-8 relative ${ }'"'"'"'";
 
                     plan.popular ? 'ring-2 ring-cyan-400 scale-105' : '}
 
@@ -323,7 +323,7 @@ const AICustomerSupportPage2: React.FC = () => {
                   {plan.popular && (<
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2><
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold>
-                        Most Popular;
+                        Most Popular";
 
                       <
                     <
@@ -341,13 +341,13 @@ const AICustomerSupportPage2: React.FC = () => {
                     ))}
 
                   <
-                  <a;
+                  <a";
 
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan}
 
                     className="cyber-button w-full text-center block
                   >
-                    Get Started;
+                    Get Started"'";
 
                   <
                 <
@@ -364,11 +364,11 @@ const AICustomerSupportPage2: React.FC = () => {
                 Ready to Transform Your Customer Support?
               <
               <p className="text-xl text-gray-300 mb-8>
-                Join 500+ companies already using our AI customer support solutions;
+                Join 500+ companies already using our AI customer support solutions"'"'";
 
               <
               <div className="flex flex-col sm:flex-row gap-4 justify-center>
-                <a;
+                <a"'"'"'";
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center><
                 <a
@@ -378,7 +378,7 @@ const AICustomerSupportPage2: React.FC = () => {
                   <Phone className="w-5 h-5 /></Phon><
                   <<<<span>Call</span></span></span> (302) 464-0950<
                 <
-                <a;
+                <a'"'"'"'";
 
                   href=mailt,
     o:kleber@ziontechgroup.com,
@@ -406,6 +406,6 @@ const AICustomerSupportPage2: React.FC = () => {
         </div>
       </main>
     </div>
-  )};
+  )}'"'"'";
 
-export default AICustomerSupportPage;
+export default AICustomerSupportPage'"'"'"'";

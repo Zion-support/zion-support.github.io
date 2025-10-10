@@ -71,15 +71,15 @@ return false}
 
 function findTsxFiles(dir) {;
 
-const files = [];;
+const files = [];';
 
-  const items = fs.readdirSync(dir);;
+  const items = fs.readdirSync(dir)';';
 
-  for (const item of items) {;
+  for (const item of items) {';
 
-const fullPath = path.join(dir, item);;
+const fullPath = path.join(dir, item)';';
 
-    const stat = fs.statSync(fullPath);;
+    const stat = fs.statSync(fullPath)';';
 
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
       files.push(...findTsxFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.ts)) {
@@ -93,15 +93,15 @@ const fullPath = path.join(dir, item);;
 // console.log removed for production
 ;
 
-const tsxFiles = findTsxFiles(/workspace);;
+const tsxFiles = findTsxFiles(/workspace);';
 
-let fixedCount = 0;;
+let fixedCount = 0';';
 
 tsxFiles.forEach(file => {
   if (fixJsxFile(file)) {
     fixedCount++}
 
-});
+})';
 
 // console.log removed for production
 // console.log removed for production

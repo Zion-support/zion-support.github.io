@@ -19,11 +19,11 @@ import React from react;
       Alternative to basic autoresponders, focuses on triage quality and CRM integration.
     targetAudience: 'Support teams, sales ops, founders,
     trialDays:
-        trialDays: 14;
+        trialDays: 14';
 
     setupTime: '1 day,
     category: 'AI & Data,
-    realService: true;
+    realService: true';
 
     technology: ['Next.js', 'TypeScript', 'OpenAI', 'PostgreSQL]
     integrations: ['Zendesk', 'Freshdesk', 'HubSpot', 'Gmail', 'Microsoft 365]
@@ -31,18 +31,18 @@ import React from react;
     roi: 'Reduce manual triage time by 6080% and improve first-response SLAs.,
     competitors: ['Superhuman AI', 'Zendesk AI', 'HubSpot AI]
     marketSize: 'Helpdesk software $20B+,
-    growthRate: 25% YoY,;
+    growthRate: 25% YoY,';
 
 variant: 'ai-futuristic,
     contactInfo: contact;
 
-    realImplementation: true;
+    realImplementation: true';
 
     popula,
-  r: true;
+  r: true';
 
     ico,
-  n: ;
+  n: ';
 
     colo,
   r: from-cyan-600 to-blue-700
@@ -57,7 +57,7 @@ variant: 'ai-futuristic,
     targetAudienc,
   e: Support teams, sales ops, founders
     trialDay,
-  s: 14;
+  s: 14';
 
     setupTim,
   e: 1 day
@@ -78,12 +78,12 @@ variant: 'ai-futuristic,
     marketSiz,
   e: Helpdesk software $20B+
     growthRat,
-  e: 25% YoY;
+  e: 25% YoY';
 
 varian,
   t: ai-futuristic
     contactInf,
-  o: contact;
+  o: contact';
 
     realImplementatio,
   n: true,
@@ -98,21 +98,21 @@ varian,
       'PII redaction and allowlist domains,
       'SLA - aware escalations and summaries',      Analytic,
   s: response time, CSAT impact, volume by topic],
-    popular: true;
+    popular: true';
 
     icon: ',
     color: 'from - cyan - 600 to - blue - 700,
     text_color: 'text - cyan - 300,
     link: 'https://ziontechgroup.com / services / ai - email - triage - copilot,
-    market_position: unknown;
+    market_position: unknown';
 
       'Alternative to basic autoresponders, focuses on triage quality and CRM integration.,
     target_audience: 'Support teams, sales ops, founders,
-    trial_days: 14;
+    trial_days: 14';
 
     setup_time: '1 day,
     category: 'AI & Data,
-    real_service: true;
+    real_service: true';
 
     technology: ['Next.js', 'TypeScript', 'OpenAI', 'PostgreSQL],
     integrations: ['Zendesk', 'Freshdesk', 'HubSpot', 'Gmail', 'Microsoft 365],
@@ -123,28 +123,28 @@ market_size: 'Helpdesk software $20B+,
     growth_rate: '25% YoY,
     variant: 'ai - futuristic,
     contact_info:
-        contact_info: contact;
+        contact_info: contact';
 
-    real_implementation: true;
+    real_implementation: true';
 
-    implementation_details: unknown;
+    implementation_details: unknown';
 
       'Shared inbox connectors, rules engine, and prompt templates with human - in - the - loop.,
     launch_date: '2029 - 10 - 12,
     customers:
-        customers: 120;
+        customers: 120';
 
-    rating: 4 && 4.8;
+    rating: 4 && 4.8';
 
     reviews: 74},
     id: 'mobile - survey - studio,
     name: 'Mobile Survey Studio,
-    tagline: unknown;
+    tagline: unknown';
 
       'Conversational, mobile - first surveys with branching logic and realtime dashboards,
     price: '$59,
     period: '/month,
-    description: unknown;
+    description: unknown';
 
     popula,
   r: true,
@@ -158,7 +158,7 @@ market_size: 'Helpdesk software $20B+,
   k: http,
   s://ziontechgroup.com / services / ai - email - triage - copilot,
     market_positio,
-  n: unknown;
+  n: unknown';
 
       'Alternative to basic autoresponders, focuses on triage quality and CRM integration.,
     target_audienc,
@@ -184,7 +184,7 @@ market_size: 'Helpdesk software $20B+,
     market_siz,
   e: 'Helpdesk software $20B+,
     growth_rat,
-  e: 25% YoY,;
+  e: 25% YoY,';
 
 varian,
   t: 'ai - futuristic,
@@ -216,7 +216,7 @@ varian,
   d: '/month,
     descriptio,
   n: unknown,
-      'Launch high - conversion mobile surveys with skip logic, NPS / CSAT templates, and shareable dashboards. Embed on sites or share links; export to CSV and data warehouses.,
+      'Launch high - conversion mobile surveys with skip logic, NPS / CSAT templates, and shareable dashboards. Embed on sites or share links'; export to CSV and data warehouses.,
     feature,
   s: [,
       'Branching logic and progress - save,
@@ -228,9 +228,9 @@ varian,
       Real-time charts and cohort filters
       GDPR/CCPA consent and deletion tools
     ]
-    popular: false;
+    popular: false';
 
-    icon: ;
+    icon: ';
 
     color: 'from-emerald-600 to-teal-700,
     textColor: 'text-emerald-300,
@@ -239,19 +239,19 @@ varian,
       Lightweight alternative to enterprise survey suites, optimized for mobile.
     targetAudience: 'Growth teams, product managers, agencies,
     trialDays:
-        trialDays: 7;
+        trialDays: 7';
 
     setupTime: 'Same day,
     category: 'Developer Tools,
-    realService: true;
+    realService: true';
 
     technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge]
     integrations: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery]
     popula,
-  r: false;
+  r: false';
 
     ico,
-  n: ;
+  n: ';
 
     colo,
   r: from-emerald-600 to-teal-700
@@ -266,7 +266,7 @@ varian,
     targetAudienc,
   e: Growth teams, product managers, agencies
     trialDay,
-  s: 7;
+  s: 7';
 
     setupTim,
   e: Same day
@@ -285,7 +285,7 @@ varian,
       'Webhooks and Zapier integration,
       'Real-time charts and cohort filters,
       'GDPR/CCPA consent and deletion tools],
-    popular: false;
+    popular: false';
 
       'Question bank: CSAT, NPS, PMF, churn,
     popula,
@@ -296,17 +296,17 @@ varian,
       'Webhooks and Zapier integration,
       'Real - time charts and cohort filters,
       'GDPR / CCPA consent and deletion tools],
-    popular: false;
+    popular: false';
 
     icon: ',
     color: 'from - emerald - 600 to - teal - 700,
     text_color: 'text - emerald - 300,
     link: 'https://ziontechgroup.com / services / mobile - survey - studio,
-    market_position: unknown;
+    market_position: unknown';
 
       'Lightweight alternative to enterprise survey suites, optimized for mobile.,
     targetAudience: 'Growth teams, product managers, agencies,
-    trialDays: 7;
+    trialDays: 7';
 
     setupTime: 'Same day,
     category: 'Developer Tools,
@@ -322,13 +322,13 @@ marketSize: 'Survey market $9 B+,
     growthRate: '14% YoY,
     variant: 'ai-futuristic,
     contactInfo:
-        contactInfo: contact;
+        contactInfo: contact';
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: 'Responsive renderer with schema-driven forms and analytics.,
     launchDate: '2029-11-05,
-    real_service: true;
+    real_service: true';
 
     technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge],
     integrations: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery],
@@ -345,7 +345,7 @@ marketSize: 'Survey market $9 B+,
   k: http,
   s://ziontechgroup.com / services / mobile - survey - studio,
     market_positio,
-  n: unknown;
+  n: unknown';
 
       'Lightweight alternative to enterprise survey suites, optimized for mobile.,
     targetAudienc,
@@ -371,12 +371,12 @@ marketSize: 'Survey market $9 B+,
     marketSiz,
   e: Survey market $9B+
     growthRat,
-  e: 14% YoY;
+  e: 14% YoY';
 
 varian,
   t: ai-futuristic
     contactInf,
-  o: contact;
+  o: contact';
 
     realImplementatio,
   n: true,
@@ -402,20 +402,20 @@ market_size: 'Survey market $9B+,
     growth_rate: '14% YoY,
     variant: 'ai - futuristic,
     contact_info:
-        contact_info: contact;
+        contact_info: contact';
 
-    real_implementation: true;
+    real_implementation: true';
 
-    implementation_details: unknown;
+    implementation_details: unknown';
 
       'Responsive renderer with schema - driven forms and analytics.,
     launch_date: '2029 - 11 - 05,
     customers:
-        customers: 60;
+        customers: 60';
 
-    rating: 4 && 4.6;
+    rating: 4 && 4.6';
 
-    reviews: 33;
+    reviews: 33';
 
     ro,
   i: 'Increase response rates 25x and de - risk product decisions.,
@@ -424,7 +424,7 @@ market_size: 'Survey market $9B+,
     market_siz,
   e: 'Survey market $9B+,
     growth_rat,
-  e: 14% YoY,;
+  e: 14% YoY,';
 
 varian,
   t: 'ai - futuristic,
@@ -450,12 +450,12 @@ varian,
       'Budget tracker and P&L exports,
     id: 'event - ops - dashboard,
     name: 'EventOps Dashboard,
-    tagline: unknown;
+    tagline: unknown';
 
       'Ticketing, invitations, run - of - show, and post - event analytics in one place,
     price: '$149,
     period: '/month,
-    description: unknown;
+    description: unknown';
 
     i,
   d: 'event - ops - dashboard,
@@ -479,7 +479,7 @@ varian,
       'Feedback / NPS post - event forms,
       'Budget tracker and P & L exports,
       'Embeddable agendas and live updates],
-    popular: true;
+    popular: true';
 
     icon: ',
     integrations: ['Stripe', 'Resend', 'Mailchimp', 'Twilio],
@@ -490,28 +490,28 @@ market_size: 'Event tech $6B+,
     growth_rate: '18% YoY,
     variant: 'ai - futuristic,
     contact_info:
-        contact_info: contact;
+        contact_info: contact';
 
-    real_implementation: true;
+    real_implementation: true';
 
-    implementation_details: unknown;
+    implementation_details: unknown';
 
       'Ticketing service with role - based portals and exportable analytics.,
     launch_date: '2029 - 09 - 23,
     customers:
-        customers: 48;
+        customers: 48';
 
-    rating: 4 && 4.7;
+    rating: 4 && 4.7';
 
     reviews: 29},
     id: 'oncall - scheduler - pro,
     name: 'OnCall Scheduler Pro,
-    tagline: unknown;
+    tagline: unknown';
 
       'Policy - based shift planning, rotations, and escalations with Slack / Teams,
     price: '$129,
     period: '/month,
-    description: unknown;
+    description: unknown';
 
     popula,
   r: true,
@@ -528,7 +528,7 @@ market_size: 'Event tech $6B+,
     market_siz,
   e: 'Event tech $6B+,
     growth_rat,
-  e: 18% YoY,;
+  e: 18% YoY,';
 
 varian,
   t: 'ai - futuristic,
@@ -569,11 +569,11 @@ varian,
       'Vacation / holiday calendars,
       'Incident reports and postmortem templates,
       'SLO and error budget reminders],
-    popular: false;
+    popular: false';
 
-      'Lean alternative for SMBs; complements enterprise incident suites.,
+      'Lean alternative for SMBs'; complements enterprise incident suites.,
     target_audience: 'SRE teams, startups, agencies,
-    trial_days: 14;
+    trial_days: 14';
 
     setup_time: '1 day,
     category: 'Observability,
@@ -585,29 +585,29 @@ market_size: 'Incident management $3B+,
     growth_rate: '20% YoY,
     variant: 'ai - futuristic,
     contact_info:
-        contact_info: contact;
+        contact_info: contact';
 
-    real_implementation: true;
+    real_implementation: true';
 
     implementation_details: 'Rotations engine and integrations with chat tools.,
     launch_date: '2029 - 10 - 30,
-    customers: 32;
+    customers: 32';
 
-    rating: 4 && 4.5;
+    rating: 4 && 4.5';
 
     reviews: 19},
     id: 'seo - content - optimizer - pro,
     name: 'SEO Content Optimizer Pro,
-    tagline: unknown;
+    tagline: unknown';
 
       'AI - assisted briefs, outlines, and on - page optimization with live SERP data,
     price: '$89,
     period: '/month,
-    description: unknown;
+    description: unknown';
 
     popula,
   r: false,
-      'Lean alternative for SMBs; complements enterprise incident suites.,
+      'Lean alternative for SMBs'; complements enterprise incident suites.,
     target_audienc,
   e: 'SRE teams, startups, agencies,
     trial_day,
@@ -627,7 +627,7 @@ market_size: 'Incident management $3B+,
     market_siz,
   e: 'Incident management $3B+,
     growth_rat,
-  e: 20% YoY,;
+  e: 20% YoY,';
 
 varian,
   t: 'ai - futuristic,
@@ -667,7 +667,7 @@ varian,
       'On - page audit and schema suggestions,
       'Rank tracking and change logs,
       'CMS export (Markdown / Headless)],
-    popular: true;
+    popular: true';
 
     popula,
   r: true,
@@ -681,25 +681,25 @@ market_size: 'SEO software $6B+,
     growth_rate: '16% YoY,
     variant: 'ai - futuristic,
     contact_info:
-        contact_info: contact;
+        contact_info: contact';
 
-    real_implementation: true;
+    real_implementation: true';
 
     implementation_details: 'SERP fetchers with caching and AI summarization.,
     launch_date: '2029 - 09 - 10,
-    customers: 95;
+    customers: 95';
 
-    rating: 4 && 4.6;
+    rating: 4 && 4.6';
 
     reviews: 54},
     id: 'feature - flags - lite,
     name: 'Feature Flags Lite,
-    tagline: unknown;
+    tagline: unknown';
 
       'Simple kill switches, gradual rollouts, and A / B targeting for web apps,
     price: '$49,
     period: '/month,
-    description: unknown;
+    description: unknown';
 
     use_case,
   s: ['Page optimization', 'Content planning', 'Brief creation],
@@ -710,7 +710,7 @@ market_size: 'SEO software $6B+,
     market_siz,
   e: 'SEO software $6B+,
     growth_rat,
-  e: 16% YoY,;
+  e: 16% YoY,';
 
 varian,
   t: 'ai - futuristic,
@@ -750,11 +750,11 @@ varian,
       'Audit logs and environment scoping,
       'Server and client SDKs,
       'Webhook notifications],
-    popular: false;
+    popular: false';
 
       'Minimal alternative to enterprise flag platforms for SMBs.,
     target_audience: 'Startups, agencies, indie devs,
-    trial_days: 14;
+    trial_days: 14';
 
     setup_time: 'Same day,
     category: 'Developer Tools,
@@ -762,11 +762,11 @@ varian,
     use_cases: ['Kill switches', 'Safe migrations', 'Cohort experiments],
     roi: 'Reduce incident impact and deploy more frequently.,
     competitors: ['LaunchDarkly (entry)', 'Flagsmith],
-    customers: 70;
+    customers: 70';
 
-    rating: 4 && 4.5;
+    rating: 4 && 4.5';
 
-    reviews: 21;
+    reviews: 21';
 
     popula,
   r: false,
@@ -799,7 +799,7 @@ varian,
       'CRM enrichment workflows,
       'Confidence scores and data provenance,
       'Usage - based pricing tiers],
-    popular: true;
+    popular: true';
 
     integrations: ['HubSpot', 'Salesforce (export)', 'Airtable],
     use_cases: ['Lead scoring', 'ICP matching', 'Outbound targeting],
@@ -809,20 +809,20 @@ market_size: 'Sales intelligence $30B+,
     growth_rate: '12% YoY,
     variant: 'ai - futuristic,
     contact_info:
-        contact_info: contact;
+        contact_info: contact';
 
-    real_implementation: true;
+    real_implementation: true';
 
-    implementation_details: unknown;
+    implementation_details: unknown';
 
       'Data aggregation with caching and scoring heuristics.,
     launch_date: '2029 - 11 - 18,
     customers:
-        customers: 40;
+        customers: 40';
 
-    rating: 4 && 4.4;
+    rating: 4 && 4.4';
 
-    reviews: 17;
+    reviews: 17';
 
     popula,
   r: true,
@@ -837,7 +837,7 @@ market_size: 'Sales intelligence $30B+,
     market_siz,
   e: 'Sales intelligence $30B+,
     growth_rat,
-  e: 12% YoY,;
+  e: 12% YoY,';
 
 varian,
   t: 'ai - futuristic,
@@ -862,7 +862,7 @@ varian,
       'Export to CSV, JSON, or webhook,
       'ERP connectors and retry policies,
       'PII redaction and retention policies],
-    popular: false;
+    popular: false';
 
     integrations: ['QuickBooks (export)', 'Xero (export)', 'SAP (export)],
     use_cases: ['AP automation', 'Expense processing],
@@ -872,28 +872,28 @@ market_size: 'Document AI $5B+,
     growth_rate: '24% YoY,
     variant: 'ai - futuristic,
     contact_info:
-        contact_info: contact;
+        contact_info: contact';
 
-    real_implementation: true;
+    real_implementation: true';
 
-    implementation_details: unknown;
+    implementation_details: unknown';
 
       'Template - free extraction with feedback loops for edge cases.,
     launch_date: '2029 - 12 - 01,
     customers:
-        customers: 27;
+        customers: 27';
 
-    rating: 4 && 4.5;
+    rating: 4 && 4.5';
 
     reviews: 14},
     id: 'rpa - browser - automation,
     name: 'RPA Browser Automation Kit,
-    tagline: unknown;
+    tagline: unknown';
 
       'Headless browser workflows with queues, retries, and human review,
     price: '$139,
     period: '/month,
-    description: unknown;
+    description: unknown';
 
       'Create robotic process automations for web workflows: login, scrape, form - fill, download, and upload. Includes scheduling, proxy support, and error screenshots.,
     features: [,
@@ -910,7 +910,7 @@ market_size: 'Document AI $5B+,
     market_siz,
   e: 'Document AI $5B+,
     growth_rat,
-  e: 24% YoY,;
+  e: 24% YoY,';
 
 varian,
   t: 'ai - futuristic,
@@ -952,35 +952,35 @@ varian,
       'File storage and PII redaction,
       'Job queue, metrics, and alerts,
       'Human approval steps],
-    popular: true;
+    popular: true';
 
     competitors: ['UiPath (SMB)', 'Robocorp],
 market_size: 'RPA $13B+,
     growth_rate: '20% YoY,
     variant: 'ai - futuristic,
     contact_info:
-        contact_info: contact;
+        contact_info: contact';
 
-    real_implementation: true;
+    real_implementation: true';
 
-    implementation_details: unknown;
+    implementation_details: unknown';
 
       'Playwright runners with job queues and storage integrations.,
     launch_date: '2029 - 11 - 28,
     customers:
-        customers: 38;
+        customers: 38';
 
-    rating: 4 && 4.4;
+    rating: 4 && 4.4';
 
     reviews: 18},
     id: 'redaction - compliance - api,
     name: 'Redaction & Compliance API,
-    tagline: unknown;
+    tagline: unknown';
 
       'PII detection and redaction for text and documents with audit logs,
     price: '$79,
     period: '/month,
-    description: unknown;
+    description: unknown';
 
     popula,
   r: true,
@@ -989,7 +989,7 @@ market_size: 'RPA $13B+,
     market_siz,
   e: 'RPA $13B+,
     growth_rat,
-  e: 20% YoY,;
+  e: 20% YoY,';
 
 varian,
   t: 'ai - futuristic,
@@ -1030,7 +1030,7 @@ varian,
       'Batch processing and streaming,
       'Webhook retries and DLQs,
       'Export to S3 / R2 and BigQuery],
-    popular: false;
+    popular: false';
 
     icon: ',
     color: 'from - teal - 600 to - cyan - 700,
@@ -1038,11 +1038,11 @@ varian,
     link: 'https://ziontechgroup.com / services / redaction - compliance - api,
     market_position: 'Developer - first compliance tooling.,
     target_audience: 'Developers, compliance teams,
-    trial_days: 14;
+    trial_days: 14';
 
     setup_time: 'Same day,
     category: 'Quality & Monitoring,
-    real_service: true;
+    real_service: true';
 
     technology: ['Next.js', 'LLMs', 'Regex engines],
     integrations: ['S3 / R2', 'GCS', 'BigQuery],
@@ -1053,15 +1053,15 @@ market_size: 'Data security $20B+,
     growth_rate: '18% YoY,
     variant: 'ai - futuristic,
     contact_info:
-        contact_info: contact;
+        contact_info: contact';
 
-    real_implementation: true;
+    real_implementation: true';
 
     implementation_details: 'Detectors with policy engine and audit export.,
     launch_date: '2029 - 12 - 03,
-    customers: 22;
+    customers: 22';
 
-    rating: 4 && 4.3;
+    rating: 4 && 4.3';
 
     reviews: 12},
     id: 'kpi-scorecards-studio,
@@ -1106,7 +1106,7 @@ market_size: 'Data security $20B+,
     market_siz,
   e: 'Data security $20B+,
     growth_rat,
-  e: 18% YoY,;
+  e: 18% YoY,';
 
 varian,
   t: 'ai - futuristic,
@@ -1138,7 +1138,7 @@ varian,
   n:
       Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.
     feature,
-  s: [;
+  s: [';
 
       Goal trees and KPI ownership
       Weekly executive summaries
@@ -1147,7 +1147,7 @@ varian,
       Shareable links with permissions
       Annotations and change logs
     ]
-    popular: false;
+    popular: false';
 
     icon: ',
     color: 'from-green-600 to-emerald-700,
@@ -1156,11 +1156,11 @@ varian,
     marketPosition: 'Simple executive dashboards without BI bloat.,
     targetAudience: 'Founders, execs, ops,
     trialDays:
-        trialDays: 7;
+        trialDays: 7';
 
     setupTime: 'Same day,
     category: 'Business Intelligence,
-    realService: true;
+    realService: true';
 
     technology: ['Next.js', 'Supabase', 'BigQuery]
     integrations: ['Google Sheets', 'BigQuery', 'Snowflake (export)]
@@ -1171,15 +1171,15 @@ marketSize: 'BI $30 B+,
     growthRate: '11% YoY,
     variant: 'ai-futuristic,
     contactInfo:
-        contactInfo: contact;
+        contactInfo: contact';
 
-    realImplementation: true;
+    realImplementation: true';
 
     implementationDetails: 'Metrics ingestion and templated reporting.,
     launchDate: '2029-10-20,
-    customers: 36;
+    customers: 36';
 
-    rating: 4.4;
+    rating: 4.4';
 
     reviews: 16}
 
@@ -1188,10 +1188,10 @@ marketSize: 'BI $30 B+,
     tagline: 'OKR / KPI dashboards with goals, alerts, and executive summaries,
     price: '$69,
     period: '/month,
-    description: unknown;
+    description: unknown';
 
     popula,
-  r: false;
+  r: false';
 
     ico,
   n: ',
@@ -1207,7 +1207,7 @@ marketSize: 'BI $30 B+,
     targetAudienc,
   e: Founders, execs, ops
     trialDay,
-  s: 7;
+  s: 7';
 
     setupTim,
   e: Same day
@@ -1233,20 +1233,20 @@ marketSize: 'BI $30 B+,
 varian,
   t: ai-futuristic
     contactInf,
-  o: contact;
+  o: contact';
 
     realImplementatio,
-  n: true;
+  n: true';
 
     implementationDetail,
   s: Metrics ingestion and templated reporting.
     launchDat,
   e: 2029-10-20
     customer,
-  s: 36;
+  s: 36';
 
     ratin,
-  g: 4.4;
+  g: 4.4';
 
     review,
   s: 16}
@@ -1272,7 +1272,7 @@ varian,
       'Warehouse connectors,
       'Shareable links with permissions,
       'Annotations and change logs],
-    popular: false;
+    popular: false';
 
     icon: ',
     color: 'from - green - 600 to - emerald - 700,
@@ -1280,11 +1280,11 @@ varian,
     link: 'https://ziontechgroup.com / services / kpi - scorecards - studio,
     market_position: 'Simple executive dashboards without BI bloat.,
     target_audience: 'Founders, execs, ops,
-    trial_days: 7;
+    trial_days: 7';
 
     setup_time: 'Same day,
     category: 'Business Intelligence,
-    real_service: true;
+    real_service: true';
 
     technology: ['Next.js', 'Supabase', 'BigQuery],
     integrations: ['Google Sheets', 'BigQuery', 'Snowflake (export)],
@@ -1295,9 +1295,9 @@ market_size: 'BI $30B+,
     growth_rate: '11% YoY,
     variant: 'ai - futuristic,
     contact_info:
-        contact_info: contact;
+        contact_info: contact';
 
-    real_implementation: true;
+    real_implementation: true';
 
     implementation_details: 'Metrics ingestion and templated reporting.,
     launch_date: '2029 - 10 - 20,
@@ -1305,11 +1305,11 @@ market_size: 'BI $30B+,
 
     rating: 4 && 4.4;
 
-    reviews: 16};
+    reviews: 16}';
 
-];
+]';
 
-const contact =;;
+const contact =';';
 
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com,
 	address: '364 E Main St STE 1008 Middletown DE 19709,
@@ -1350,7 +1350,7 @@ const contact =;;
     market_siz,
   e: 'BI $30B+,
     growth_rat,
-  e: 11% YoY,;
+  e: 11% YoY,';
 
 varian,
   t: 'ai - futuristic,
@@ -1367,11 +1367,11 @@ varian,
     ratin,
   g: 4 && 4.4,
     review,
-  s: 16};
+  s: 16}';
 
-];
+]';
 
-const contact =;;
+const contact =';';
 
 	mobil,
   e: '+1 302 464 0950, emai,
@@ -1381,7 +1381,7 @@ const contact =;;
 	websit,
   e: http,
   s://ziontechgroup.com
-};
+}';
 
 export const,
   real2029Q4Additions: RealMarketService[] = [,
@@ -1396,14 +1396,14 @@ export const,
 		descriptio,
   n: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.,
     feature,
-  s: [;
+  s: [';
 
 ],
 			Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and,
   summariesAnalytics: response time, CSAT impact, volume by topic
-		];
+		]';
 
-		popular: true;
+		popular: true';
 
 		icon: ',
 		color: 'from-cyan-600 to-blue-700,
@@ -1411,34 +1411,34 @@ export const,
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-email-triage-copilot,
 		marketPosition: 'Alternative to basic autoresponders, focuses on triage quality and CRM integration.,
 		targetAudience: 'Support teams, sales ops, founders,
-		trialDays: 14;
+		trialDays: 14';
 
 		setupTime: '1 day,
 		category: 'AI & Data,
-		realService: true;
+		realService: true';
 
-		technology: [Next && Next.jsTypeScriptOpenAIPostgreSQL];
+		technology: [Next && Next.jsTypeScriptOpenAIPostgreSQL]';
 
-		integrations: [ZendeskFreshdeskHubSpotGmailMicrosoft 365];
+		integrations: [ZendeskFreshdeskHubSpotGmailMicrosoft 365]';
 
-		useCases: [Customer support triageLead routingInternal helpdesk];
+		useCases: [Customer support triageLead routingInternal helpdesk]';
 
 roi: 'Reduce manual triage time by 6080% and improve first-response SLAs.,
 		competitors:
-        competitors: [Superhuman AIZendesk AIHubSpot AI];
+        competitors: [Superhuman AIZendesk AIHubSpot AI]';
 
 		marketSize: 'Helpdesk software $20 B+,
 		growthRate: '25% YoY,
 		variant: 'ai-futuristic,
-		contactInfo: contact;
+		contactInfo: contact';
 
-		realImplementation: true;
+		realImplementation: true';
 
 		implementationDetails: 'Shared inbox connectors, rules engine, and prompt templates with human-in-the-loop.,
 		launchDate: '2029-10-12,
-		customers: 120;
+		customers: 120';
 
-		rating: 4 && 4.8;
+		rating: 4 && 4.8';
 
 		reviews: 74}
 
@@ -1451,9 +1451,9 @@ roi: 'Reduce manual triage time by 6080% and improve first-response SLAs.,
 		features:
         features: [,
 			Branching logic and progress-saveQuestion bank: CSAT, NPS, PMF, churnAnonymous or identified responsesWebhooks and Zapier integrationReal-time charts and cohort filtersGDPR/CCPA consent and deletion tools
-		];
+		]';
 
-		popular: false;
+		popular: false';
 
 		icon: ',
 		color: 'from-emerald-600 to-teal-700,
@@ -1461,35 +1461,35 @@ roi: 'Reduce manual triage time by 6080% and improve first-response SLAs.,
 		link: 'https://ziontechgroup && ziontechgroup.com/services/mobile-survey-studio,
 		marketPosition: 'Lightweight alternative to enterprise survey suites, optimized for mobile.,
 		targetAudience: 'Growth teams, product managers, agencies,
-		trialDays: 7;
+		trialDays: 7';
 
 		setupTime: 'Same day,
 		category: 'Developer Tools,
-		realService: true;
+		realService: true';
 
-		technology: [Next && Next.jsPostgreSQLTailwindVercel Edge];
+		technology: [Next && Next.jsPostgreSQLTailwindVercel Edge]';
 
-		integrations: [Google SheetsZapierSegmentBigQuery];
+		integrations: [Google SheetsZapierSegmentBigQuery]';
 
-		useCases: [Landing page surveysIn-product pollsExit intent feedback];
+		useCases: [Landing page surveysIn-product pollsExit intent feedback]';
 
 roi: 'Increase response rates 25 x and de-risk product decisions.,
 		competitors:
-        competitors: [TypeformSurveyMonkey];
+        competitors: [TypeformSurveyMonkey]';
 
 		marketSize: 'Survey market $9 B+,
 		growthRate: '14% YoY,
 		variant: 'ai-futuristic,
 		contactInfo:
-        contactInfo: contact;
+        contactInfo: contact';
 
-		realImplementation: true;
+		realImplementation: true';
 
 		implementationDetails: 'Responsive renderer with schema-driven forms and analytics.,
 		launchDate: '2029-11-05,
-		customers: 60;
+		customers: 60';
 
-		rating: 4 && 4.6;
+		rating: 4 && 4.6';
 
 		reviews: 33}
 
@@ -1500,12 +1500,12 @@ roi: 'Increase response rates 25 x and de-risk product decisions.,
 		period: '/month,
 		description: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.,
 		features:
-        features: [;
+        features: [';
 
 			QR tickets and check-in appSpeaker/sponsor asset managementAutomated reminders and WhatsApp/SMS alertsFeedback/NPS post-event formsBudget tracker and P&L exportsEmbeddable agendas and live updates
-		];
+		]';
 
-		popular: true;
+		popular: true';
 
 		icon: ',
 		color: 'from-purple-600 to-pink-600,
@@ -1514,35 +1514,35 @@ roi: 'Increase response rates 25 x and de-risk product decisions.,
 		marketPosition: 'Focused micro-SaaS alternative to all-in-one event platforms.,
 		targetAudience: 'Marketing teams, conference organizers, communities,
 		trialDays:
-        trialDays: 14;
+        trialDays: 14';
 
 		setupTime: '2 days,
 		category: 'Developer Tools,
-		realService: true;
+		realService: true';
 
-		technology: [Next && Next.jsStripeResendPostgreSQL];
+		technology: [Next && Next.jsStripeResendPostgreSQL]';
 
-		integrations: [StripeResendMailchimpTwilio];
+		integrations: [StripeResendMailchimpTwilio]';
 
-		useCases: [MeetupsWebinarsConferences];
+		useCases: [MeetupsWebinarsConferences]';
 
 roi: 'Cut ops overhead by 50% and improve attendance by 1530%.,
 		competitors:
-        competitors: [EventbriteHopin];
+        competitors: [EventbriteHopin]';
 
 		marketSize: 'Event tech $6 B+,
 		growthRate: '18% YoY,
 		variant: 'ai-futuristic,
 		contactInfo:
-        contactInfo: contact;
+        contactInfo: contact';
 
-		realImplementation: true;
+		realImplementation: true';
 
 		implementationDetails: 'Ticketing service with role-based portals and exportable analytics.,
 		launchDate: '2029-09-23,
-		customers: 48;
+		customers: 48';
 
-		rating: 4 && 4.7;
+		rating: 4 && 4.7';
 
 		reviews: 29}
 
@@ -1553,12 +1553,12 @@ roi: 'Cut ops overhead by 50% and improve attendance by 1530%.,
 		period: '/month,
 		description: 'Create and manage on-call schedules with handoff workflows, time-zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.,
 		features:
-        features: [;
+        features: [';
 
 			Flexible rotations and override rulesEscalation policies and schedulesSlack/Teams integration and on-call handoffsVacation/holiday calendarsIncident reports and postmortem templatesSLO and error budget reminders
-		];
+		]';
 
-		popular: false;
+		popular: false';
 
 		icon: ',
 		color: 'from-indigo-600 to-blue-700,
@@ -1566,35 +1566,35 @@ roi: 'Cut ops overhead by 50% and improve attendance by 1530%.,
 		link: 'https://ziontechgroup && ziontechgroup.com/services/oncall-scheduler-pro,
 		marketPosition: 'Lean alternative for SMBs, complements enterprise incident suites.,
 		targetAudience: 'SRE teams, startups, agencies,
-		trialDays: 14;
+		trialDays: 14';
 
 		setupTime: '1 day,
 		category: 'Observability,
-		realService: true;
+		realService: true';
 
-		technology: [Next && Next.jsPostgreSQLTwilio];
+		technology: [Next && Next.jsPostgreSQLTwilio]';
 
-		integrations: [SlackMicrosoft TeamsTwilio];
+		integrations: [SlackMicrosoft TeamsTwilio]';
 
-		useCases: [On-call managementIncident response];
+		useCases: [On-call managementIncident response]';
 
 roi: 'Reduce paging confusion and missed alerts by 3050%.,
 		competitors:
-        competitors: [PagerDutyOpsgenie];
+        competitors: [PagerDutyOpsgenie]';
 
 		marketSize: 'Incident management $3 B+,
 		growthRate: '20% YoY,
 		variant: 'ai-futuristic,
 		contactInfo:
-        contactInfo: contact;
+        contactInfo: contact';
 
-		realImplementation: true;
+		realImplementation: true';
 
 		implementationDetails: 'Rotations engine and integrations with chat tools.,
 		launchDate: '2029-10-30,
-		customers: 32;
+		customers: 32';
 
-		rating: 4 && 4.5;
+		rating: 4 && 4.5';
 
 		reviews: 19}
 
@@ -1605,12 +1605,12 @@ roi: 'Reduce paging confusion and missed alerts by 3050%.,
 		period: '/month,
 		description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.,
 		features:
-        features: [;
+        features: [';
 
 			Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)
-		];
+		]';
 
-		popular: true;
+		popular: true';
 
 		icon: ',
 		color: 'from-amber-600 to-orange-700,
@@ -1619,35 +1619,35 @@ roi: 'Reduce paging confusion and missed alerts by 3050%.,
 		marketPosition: 'Practical mid-market tool between basic plugins and enterprise suites.,
 		targetAudience: 'Content teams, agencies, solo founders,
 		trialDays:
-        trialDays: 7;
+        trialDays: 7';
 
 		setupTime: 'Same day,
 		category: 'Developer Tools,
-		realService: true;
+		realService: true';
 
-		technology: [Next && Next.jsOpenAISerpAPI];
+		technology: [Next && Next.jsOpenAISerpAPI]';
 
-		integrations: [Google Search ConsoleAhrefs (export)Semrush (export)];
+		integrations: [Google Search ConsoleAhrefs (export)Semrush (export)]';
 
-		useCases: [Page optimizationContent planningBrief creation];
+		useCases: [Page optimizationContent planningBrief creation]';
 
 roi: 'Improve organic traffic 2050% over 36 months.,
 		competitors:
-        competitors: [SurferSEOFraseClearScope];
+        competitors: [SurferSEOFraseClearScope]';
 
 		marketSize: 'SEO software $6 B+,
 		growthRate: '16% YoY,
 		variant: 'ai-futuristic,
 		contactInfo:
-        contactInfo: contact;
+        contactInfo: contact';
 
-		realImplementation: true;
+		realImplementation: true';
 
 		implementationDetails: 'SERP fetchers with caching and AI summarization.,
 		launchDate: '2029-09-10,
-		customers: 95;
+		customers: 95';
 
-		rating: 4 && 4.6;
+		rating: 4 && 4.6';
 
 		reviews: 54}
 
@@ -1660,9 +1660,9 @@ roi: 'Improve organic traffic 2050% over 36 months.,
 		features:
         features: [,
 			Boolean, multivariate, and JSON flagsUser and cohort targetingGradual rollouts and percentage splitsAudit logs and environment scopingServer and client SDKsWebhook notifications
-		];
+		]';
 
-		popular: false;
+		popular: false';
 
 		icon: ',
 		color: 'from-slate-700 to-gray-800,
@@ -1671,35 +1671,35 @@ roi: 'Improve organic traffic 2050% over 36 months.,
 		marketPosition: 'Minimal alternative to enterprise flag platforms for SMBs.,
 		targetAudience: 'Startups, agencies, indie devs,
 		trialDays:
-        trialDays: 14;
+        trialDays: 14';
 
 		setupTime: 'Same day,
 		category: 'Developer Tools,
-		realService: true;
+		realService: true';
 
-		technology: [Next && Next.jsEdge KV/Redis];
+		technology: [Next && Next.jsEdge KV/Redis]';
 
-		integrations: [VercelNetlify];
+		integrations: [VercelNetlify]';
 
-		useCases: [Kill switchesSafe migrationsCohort experiments];
+		useCases: [Kill switchesSafe migrationsCohort experiments]';
 
 roi: 'Reduce incident impact and deploy more frequently.,
 		competitors:
-        competitors: [LaunchDarkly (entry)Flagsmith];
+        competitors: [LaunchDarkly (entry)Flagsmith]';
 
 		marketSize: 'Feature management $1 && 1.5 B+,
 		growthRate: '22% YoY,
 		variant: 'ai-futuristic,
 		contactInfo:
-        contactInfo: contact;
+        contactInfo: contact';
 
-		realImplementation: true;
+		realImplementation: true';
 
 		implementationDetails: 'Rules engine with SDKs and environment isolation.,
 		launchDate: '2029-10-02,
-		customers: 70;
+		customers: 70';
 
-		rating: 4 && 4.5;
+		rating: 4 && 4.5';
 
 		reviews: 21}
 
@@ -1710,12 +1710,12 @@ roi: 'Reduce incident impact and deploy more frequently.,
 		period: '/month,
 		description: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.,
 		features:
-        features: [;
+        features: [';
 
 			Company/person enrich via email or domainTech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflowsConfidence scores and data provenanceUsage-based pricing tiers
-		];
+		]';
 
-		popular: true;
+		popular: true';
 
 		icon: ',
 		color: 'from-sky-600 to-blue-700,
@@ -1724,35 +1724,35 @@ roi: 'Reduce incident impact and deploy more frequently.,
 		marketPosition: 'Affordable enrichment focused on actionable signals.,
 		targetAudience: 'Sales teams, SDRs, growth marketers,
 		trialDays:
-        trialDays: 7;
+        trialDays: 7';
 
 		setupTime: 'Same day,
 		category: 'Developer Tools,
-		realService: true;
+		realService: true';
 
-		technology: [Next && Next.jsNodeExternal data partners];
+		technology: [Next && Next.jsNodeExternal data partners]';
 
-		integrations: [HubSpotSalesforce (export)Airtable];
+		integrations: [HubSpotSalesforce (export)Airtable]';
 
-		useCases: [Lead scoringICP matchingOutbound targeting];
+		useCases: [Lead scoringICP matchingOutbound targeting]';
 
 roi: 'Improve conversion rates by 1025%.,
 		competitors:
-        competitors: [ClearbitZoomInfo (export)];
+        competitors: [ClearbitZoomInfo (export)]';
 
 		marketSize: 'Sales intelligence $30 B+,
 		growthRate: '12% YoY,
 		variant: 'ai-futuristic,
 		contactInfo:
-        contactInfo: contact;
+        contactInfo: contact';
 
-		realImplementation: true;
+		realImplementation: true';
 
 		implementationDetails: 'Data aggregation with caching and scoring heuristics.,
 		launchDate: '2029-11-18,
-		customers: 40;
+		customers: 40';
 
-		rating: 4 && 4.4;
+		rating: 4 && 4.4';
 
 		reviews: 17}
 
@@ -1765,9 +1765,9 @@ roi: 'Improve conversion rates by 1025%.,
 		features:
         features: [,
 			High-accuracy OCR and field mappingLine item extraction and taxesValidation UI and review queuesExport to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies
-		];
+		]';
 
-		popular: false;
+		popular: false';
 
 		icon: ',
 		color: 'from-rose-600 to-pink-700,
@@ -1776,35 +1776,35 @@ roi: 'Improve conversion rates by 1025%.,
 		marketPosition: 'Cost-effective alternative with human review for accuracy.,
 		targetAudience: 'Finance teams, accounting firms, SMBs,
 		trialDays:
-        trialDays: 7;
+        trialDays: 7';
 
 		setupTime: '2 days,
 		category: 'AI & Data,
-		realService: true;
+		realService: true';
 
-		technology: [Next && Next.jsTesseract/LLMsPostgreSQL];
+		technology: [Next && Next.jsTesseract/LLMsPostgreSQL]';
 
-		integrations: [QuickBooks (export)Xero (export)SAP (export)];
+		integrations: [QuickBooks (export)Xero (export)SAP (export)]';
 
-		useCases: [AP automationExpense processing];
+		useCases: [AP automationExpense processing]';
 
 roi: 'Reduce manual data entry by 7090%.,
 		competitors:
-        competitors: [VeryfiRossum];
+        competitors: [VeryfiRossum]';
 
 		marketSize: 'Document AI $5 B+,
 		growthRate: '24% YoY,
 		variant: 'ai-futuristic,
 		contactInfo:
-        contactInfo: contact;
+        contactInfo: contact';
 
-		realImplementation: true;
+		realImplementation: true';
 
 		implementationDetails: 'Template-free extraction with feedback loops for edge cases.,
 		launchDate: '2029-12-01,
-		customers: 27;
+		customers: 27';
 
-		rating: 4 && 4.5;
+		rating: 4 && 4.5';
 
 		reviews: 14}
 
@@ -1817,9 +1817,9 @@ roi: 'Reduce manual data entry by 7090%.,
 		features:
         features: [,
 			Workflow editor and step recorderRetry logic and backoff policiesCaptcha solving hooks and proxiesFile storage and PII redactionJob queue, metrics, and alertsHuman approval steps
-		];
+		]';
 
-		popular: true;
+		popular: true';
 
 		icon: ',
 		color: 'from-fuchsia-600 to-purple-700,
@@ -1828,37 +1828,37 @@ roi: 'Reduce manual data entry by 7090%.,
 		marketPosition: 'Builder-focused alternative to heavyweight RPA suites.,
 		targetAudience: 'Ops teams, agencies, internal tools,
 		trialDays:
-        trialDays: 14;
+        trialDays: 14';
 
 		setupTime: '3 days,
 		category: 'Developer Tools,
-		realService: true;
+		realService: true';
 
-		technology: [PlaywrightNext && PlaywrightNext.jsPostgreSQL];
+		technology: [PlaywrightNext && PlaywrightNext.jsPostgreSQL]';
 
-		integrations: [ZapierMake && ZapierMake.comS3/R2];
+		integrations: [ZapierMake && ZapierMake.comS3/R2]';
 
-		useCases: [Partner portal automationsData collectionBulk updates];
+		useCases: [Partner portal automationsData collectionBulk updates]';
 
 roi: 'Automate repetitive tasks and cut manual hours by 5090%.,
 		competitors:
-        competitors: [UiPath (SMB)Robocorp];
+        competitors: [UiPath (SMB)Robocorp]';
 
 		marketSize: 'RPA $13 B+,
 		growthRate: '20% YoY,
 		variant: 'ai-futuristic,
 		contactInfo:
-        contactInfo: contact;
+        contactInfo: contact';
 
-		realImplementation: true;
+		realImplementation: true';
 
 		implementationDetails: 'Playwright runners with job queues and storage integrations.,
 		launchDate: '2029-11-28,
-		customers: 38;
+		customers: 38';
 
-		rating: 4 && 4.4;
+		rating: 4 && 4.4';
 
-reviews: 18;
+reviews: 18';
 
 	}
 
@@ -1870,9 +1870,9 @@ reviews: 18;
   description: 'Detect and redact sensitive data (PII/PHI/PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.,
 		features: [,
 			Configurable detectors (SSN, phone, email) credit card)Context-aware redaction and maskingAudit logs and retention policiesBatch processing and streamingWebhook retries and DLQsExport to S3/R2 and BigQuery
-		];
+		]';
 
-		popular: false;
+		popular: false';
 
 		icon: ',
 		color: 'from-teal-600 to-cyan-700,
@@ -1881,35 +1881,35 @@ reviews: 18;
 		marketPosition: 'Developer-first compliance tooling.,
 		targetAudience: 'Developers, compliance teams,
 		trialDays:
-        trialDays: 14;
+        trialDays: 14';
 
 		setupTime: 'Same day,
 		category: 'Quality & Monitoring,
-		realService: true;
+		realService: true';
 
-		technology: [Next && Next.jsLLMsRegex engines];
+		technology: [Next && Next.jsLLMsRegex engines]';
 
-		integrations: [S3/R2 GCSBigQuery];
+		integrations: [S3/R2 GCSBigQuery]';
 
-		useCases: [Data minimizationCompliance workflowsPII scrubbing];
+		useCases: [Data minimizationCompliance workflowsPII scrubbing]';
 
 roi: 'Reduce compliance risk and review time.,
 		competitors:
-        competitors: [NightfallVery Good Security];
+        competitors: [NightfallVery Good Security]';
 
 		marketSize: 'Data security $20 B+,
 		growthRate: '18% YoY,
 		variant: 'ai-futuristic,
 		contactInfo:
-        contactInfo: contact;
+        contactInfo: contact';
 
-		realImplementation: true;
+		realImplementation: true';
 
 		implementationDetails: 'Detectors with policy engine and audit export.,
 		launchDate: '2029-12-03,
-		customers: 22;
+		customers: 22';
 
-		rating: 4 && 4.3;
+		rating: 4 && 4.3';
 
 		reviews: 12}
 
@@ -1920,12 +1920,12 @@ roi: 'Reduce compliance risk and review time.,
 		period: '/month,
 		description: 'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.,
 		features:
-        features: [;
+        features: [';
 
 			Goal trees and KPI ownershipWeekly executive summariesAlerting on thresholds and trendsWarehouse connectorsShareable links with permissionsAnnotations and change logs
-		];
+		]';
 
-		popular: false;
+		popular: false';
 
 		icon: ',
 		color: 'from-green-600 to-emerald-700,
@@ -1934,39 +1934,39 @@ roi: 'Reduce compliance risk and review time.,
 		marketPosition: 'Simple executive dashboards without BI bloat.,
 		targetAudience: 'Founders, execs, ops,
 		trialDays:
-        trialDays: 7;
+        trialDays: 7';
 
 		setupTime: 'Same day,
 		category: 'Business Intelligence,
-		realService: true;
+		realService: true';
 
-		technology: [Next && Next.jsSupabaseBigQuery];
+		technology: [Next && Next.jsSupabaseBigQuery]';
 
-		integrations: [Google SheetsBigQuerySnowflake (export)];
+		integrations: [Google SheetsBigQuerySnowflake (export)]';
 
-		useCases: [OKRs/scorecardsExec reporting];
+		useCases: [OKRs/scorecardsExec reporting]';
 
 roi: 'Improve visibility and accountability.,
 		competitors:
-        competitors: [GridGrow];
+        competitors: [GridGrow]';
 
 		marketSize: 'BI $30 B+,
 		growthRate: '11% YoY,
 		variant: 'ai-futuristic,
 		contactInfo:
-        contactInfo: contact;
+        contactInfo: contact';
 
-		realImplementation: true;
+		realImplementation: true';
 
 		implementationDetails: 'Metrics ingestion and templated reporting.,
 		launchDate: '2029-10-20,
-		customers: 36;
+		customers: 36';
 
-		rating: 4 && 4.4;
+		rating: 4 && 4.4';
 
 		reviews: 16}
 
-];
+]';
 
   id: 'ai - email - triage - copilot,
   name: 'AI Email Triage Copilot,
@@ -1977,9 +1977,9 @@ roi: 'Improve visibility and accountability.,
   features:
         features: [,
   Intent classification and priority scoring_one - click reply drafts with tone controls_auto - tagging and routing to teamsPII redaction and allowlist domainsSLA - aware escalations and summaries_analytics: response time, CSAT impact, volume by topic
-  ];
+  ]';
 
-  popular: true;
+  popular: true';
 
   icon: ',
   color: 'from - cyan - 600 to - blue - 700,
@@ -1987,34 +1987,34 @@ roi: 'Improve visibility and accountability.,
   link: 'https://ziontechgroup.com / services / ai - email - triage - copilot,
   market_position: 'Alternative to basic autoresponders, focuses on triage quality and CRM integration.,
   target_audience: 'Support teams, sales ops, founders,
-  trial_days: 14;
+  trial_days: 14';
 
   setup_time: '1 day,
   category: 'AI & Data,
-  real_service: true;
+  real_service: true';
 
-  technology: [Next.jsTypeScriptOpenAIPostgreSQL];
+  technology: [Next.jsTypeScriptOpenAIPostgreSQL]';
 
-  integrations: [ZendeskFreshdeskHubSpotGmailMicrosoft 365];
+  integrations: [ZendeskFreshdeskHubSpotGmailMicrosoft 365]';
 
-  use_cases: [Customer support triage_lead routing_internal helpdesk];
+  use_cases: [Customer support triage_lead routing_internal helpdesk]';
 
 roi: 'Reduce manual triage time by 6080% and improve first - response SLAs.,
   competitors:
-        competitors: [Superhuman AIZendesk AIHubSpot AI];
+        competitors: [Superhuman AIZendesk AIHubSpot AI]';
 
   market_size: 'Helpdesk software $20 B+,
   growth_rate: '25% YoY,
   variant: 'ai - futuristic,
-  contact_info: contact;
+  contact_info: contact';
 
-  real_implementation: true;
+  real_implementation: true';
 
   implementation_details: 'Shared inbox connectors, rules engine, and prompt templates with human - in - the - loop.,
   launch_date: '2029 - 10 - 12,
-  customers: 120;
+  customers: 120';
 
-  rating: 4.8;
+  rating: 4.8';
 
   reviews: 74}
 
@@ -2027,9 +2027,9 @@ roi: 'Reduce manual triage time by 6080% and improve first - response SLAs.,
   features:
         features: [,
   Branching logic and progress - save_question bank: CSAT, NPS, PMF, churn_anonymous or identified responses_webhooks and Zapier integration_real - time charts and cohort filtersGDPR / CCPA consent and deletion tools
-  ];
+  ]';
 
-  popular: false;
+  popular: false';
 
   icon: ',
   color: 'from - emerald - 600 to - teal - 700,
@@ -2037,35 +2037,35 @@ roi: 'Reduce manual triage time by 6080% and improve first - response SLAs.,
   link: 'https://ziontechgroup.com / services / mobile - survey - studio,
   market_position: 'Lightweight alternative to enterprise survey suites, optimized for mobile.,
   target_audience: 'Growth teams, product managers, agencies,
-  trial_days: 7;
+  trial_days: 7';
 
   setup_time: 'Same day,
   category: 'Developer Tools,
-  real_service: true;
+  real_service: true';
 
-  technology: [Next.jsPostgreSQLTailwindVercel Edge];
+  technology: [Next.jsPostgreSQLTailwindVercel Edge]';
 
-  integrations: [Google SheetsZapierSegmentBigQuery];
+  integrations: [Google SheetsZapierSegmentBigQuery]';
 
-  use_cases: [Landing page surveys_in - product polls_exit intent feedback];
+  use_cases: [Landing page surveys_in - product polls_exit intent feedback]';
 
 roi: 'Increase response rates 25 x and de - risk product decisions.,
   competitors:
-        competitors: [TypeformSurveyMonkey];
+        competitors: [TypeformSurveyMonkey]';
 
   market_size: 'Survey market $9 B+,
   growth_rate: '14% YoY,
   variant: 'ai - futuristic,
   contact_info:
-        contact_info: contact;
+        contact_info: contact';
 
-  real_implementation: true;
+  real_implementation: true';
 
   implementation_details: 'Responsive renderer with schema - driven forms and analytics.,
   launch_date: '2029 - 11 - 05,
-  customers: 60;
+  customers: 60';
 
-  rating: 4.6;
+  rating: 4.6';
 
   reviews: 33}
 
@@ -2076,12 +2076,12 @@ roi: 'Increase response rates 25 x and de - risk product decisions.,
   period: '/month,
   description: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.,
   features:
-        features: [;
+        features: [';
 
   QR tickets and check - in app_speaker / sponsor asset management_automated reminders and WhatsApp / SMS alerts_feedback / NPS post - event forms_budget tracker and P & L exports_embeddable agendas and live updates
-  ];
+  ]';
 
-  popular: true;
+  popular: true';
 
   icon: ',
   color: 'from - purple - 600 to - pink - 600,
@@ -2090,35 +2090,35 @@ roi: 'Increase response rates 25 x and de - risk product decisions.,
   market_position: 'Focused micro - SaaS alternative to all - in - one event platforms.,
   target_audience: 'Marketing teams, conference organizers, communities,
   trial_days:
-        trial_days: 14;
+        trial_days: 14';
 
   setup_time: '2 days,
   category: 'Developer Tools,
-  real_service: true;
+  real_service: true';
 
-  technology: [Next.jsStripeResendPostgreSQL];
+  technology: [Next.jsStripeResendPostgreSQL]';
 
-  integrations: [StripeResendMailchimpTwilio];
+  integrations: [StripeResendMailchimpTwilio]';
 
-  use_cases: [MeetupsWebinarsConferences];
+  use_cases: [MeetupsWebinarsConferences]';
 
 roi: 'Cut ops overhead by 50% and improve attendance by 1530%.,
   competitors:
-        competitors: [EventbriteHopin];
+        competitors: [EventbriteHopin]';
 
   market_size: 'Event tech $6 B+,
   growth_rate: '18% YoY,
   variant: 'ai - futuristic,
   contact_info:
-        contact_info: contact;
+        contact_info: contact';
 
-  real_implementation: true;
+  real_implementation: true';
 
   implementation_details: 'Ticketing service with role - based portals and exportable analytics.,
   launch_date: '2029 - 09 - 23,
-  customers: 48;
+  customers: 48';
 
-  rating: 4.7;
+  rating: 4.7';
 
   reviews: 29}
 
@@ -2129,12 +2129,12 @@ roi: 'Cut ops overhead by 50% and improve attendance by 1530%.,
   period: '/month,
   description: 'Create and manage on - call schedules with handoff workflows, time - zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.,
   features:
-        features: [;
+        features: [';
 
   Flexible rotations and override rules_escalation policies and schedules_slack / Teams integration and on - call handoffs_vacation / holiday calendars_incident reports and postmortem templatesSLO and error budget reminders
-  ];
+  ]';
 
-  popular: false;
+  popular: false';
 
   icon: ',
   color: 'from - indigo - 600 to - blue - 700,
@@ -2142,35 +2142,35 @@ roi: 'Cut ops overhead by 50% and improve attendance by 1530%.,
   link: 'https://ziontechgroup.com / services / oncall - scheduler - pro,
   market_position: 'Lean alternative for SMBs, complements enterprise incident suites.,
   target_audience: 'SRE teams, startups, agencies,
-  trial_days: 14;
+  trial_days: 14';
 
   setup_time: '1 day,
   category: 'Observability,
-  real_service: true;
+  real_service: true';
 
-  technology: [Next.jsPostgreSQLTwilio];
+  technology: [Next.jsPostgreSQLTwilio]';
 
-  integrations: [SlackMicrosoft TeamsTwilio];
+  integrations: [SlackMicrosoft TeamsTwilio]';
 
-  use_cases: [On - call management_incident response];
+  use_cases: [On - call management_incident response]';
 
 roi: 'Reduce paging confusion and missed alerts by 3050%.,
   competitors:
-        competitors: [PagerDutyOpsgenie];
+        competitors: [PagerDutyOpsgenie]';
 
   market_size: 'Incident management $3 B+,
   growth_rate: '20% YoY,
   variant: 'ai - futuristic,
   contact_info:
-        contact_info: contact;
+        contact_info: contact';
 
-  real_implementation: true;
+  real_implementation: true';
 
   implementation_details: 'Rotations engine and integrations with chat tools.,
   launch_date: '2029 - 10 - 30,
-  customers: 32;
+  customers: 32';
 
-  rating: 4.5;
+  rating: 4.5';
 
   reviews: 19}
 
@@ -2181,12 +2181,12 @@ roi: 'Reduce paging confusion and missed alerts by 3050%.,
   period: '/month,
   description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.,
   features:
-        features: [;
+        features: [';
 
   Keyword clustering and topical maps_competitor gap analysis_outline and brief generation_on - page audit and schema suggestions_rank tracking and change logsCMS export (Markdown / Headless)
-  ];
+  ]';
 
-  popular: true;
+  popular: true';
 
   icon: ',
   color: 'from - amber - 600 to - orange - 700,
@@ -2195,35 +2195,35 @@ roi: 'Reduce paging confusion and missed alerts by 3050%.,
   market_position: 'Practical mid - market tool between basic plugins and enterprise suites.,
   target_audience: 'Content teams, agencies, solo founders,
   trial_days:
-        trial_days: 7;
+        trial_days: 7';
 
   setup_time: 'Same day,
   category: 'Developer Tools,
-  real_service: true;
+  real_service: true';
 
-  technology: [Next.jsOpenAISerpAPI];
+  technology: [Next.jsOpenAISerpAPI]';
 
-  integrations: [Google Search ConsoleAhrefs (export)Semrush (export)];
+  integrations: [Google Search ConsoleAhrefs (export)Semrush (export)]';
 
-  use_cases: [Page optimization_content planning_brief creation];
+  use_cases: [Page optimization_content planning_brief creation]';
 
 roi: 'Improve organic traffic 2050% over 36 months.,
   competitors:
-        competitors: [SurferSEOFraseClearScope];
+        competitors: [SurferSEOFraseClearScope]';
 
   market_size: 'SEO software $6 B+,
   growth_rate: '16% YoY,
   variant: 'ai - futuristic,
   contact_info:
-        contact_info: contact;
+        contact_info: contact';
 
-  real_implementation: true;
+  real_implementation: true';
 
   implementation_details: 'SERP fetchers with caching and AI summarization.,
   launch_date: '2029 - 09 - 10,
-  customers: 95;
+  customers: 95';
 
-  rating: 4.6;
+  rating: 4.6';
 
   reviews: 54}
 
@@ -2236,9 +2236,9 @@ roi: 'Improve organic traffic 2050% over 36 months.,
   features:
         features: [,
   Boolean, multivariate, and JSON flags_user and cohort targeting_gradual rollouts and percentage splits_audit logs and environment scoping_server and client SDKsWebhook notifications
-  ];
+  ]';
 
-  popular: false;
+  popular: false';
 
   icon: ',
   color: 'from - slate - 700 to - gray - 800,
@@ -2247,35 +2247,35 @@ roi: 'Improve organic traffic 2050% over 36 months.,
   market_position: 'Minimal alternative to enterprise flag platforms for SMBs.,
   target_audience: 'Startups, agencies, indie devs,
   trial_days:
-        trial_days: 14;
+        trial_days: 14';
 
   setup_time: 'Same day,
   category: 'Developer Tools,
-  real_service: true;
+  real_service: true';
 
-  technology: [Next.js_edge KV / Redis];
+  technology: [Next.js_edge KV / Redis]';
 
-  integrations: [VercelNetlify];
+  integrations: [VercelNetlify]';
 
-  use_cases: [Kill switches_safe migrations_cohort experiments];
+  use_cases: [Kill switches_safe migrations_cohort experiments]';
 
 roi: 'Reduce incident impact and deploy more frequently.,
   competitors:
-        competitors: [LaunchDarkly (entry)Flagsmith];
+        competitors: [LaunchDarkly (entry)Flagsmith]';
 
   market_size: 'Feature management $1.5 B+,
   growth_rate: '22% YoY,
   variant: 'ai - futuristic,
   contact_info:
-        contact_info: contact;
+        contact_info: contact';
 
-  real_implementation: true;
+  real_implementation: true';
 
   implementation_details: 'Rules engine with SDKs and environment isolation.,
   launch_date: '2029 - 10 - 02,
-  customers: 70;
+  customers: 70';
 
-  rating: 4.5;
+  rating: 4.5';
 
   reviews: 21}
 
@@ -2286,12 +2286,12 @@ roi: 'Reduce incident impact and deploy more frequently.,
   period: '/month,
   description: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.,
   features:
-        features: [;
+        features: [';
 
   Company / person enrich via email or domain_tech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflows_confidence scores and data provenance_usage - based pricing tiers
-  ];
+  ]';
 
-  popular: true;
+  popular: true';
 
   icon: ',
   color: 'from - sky - 600 to - blue - 700,
@@ -2300,35 +2300,35 @@ roi: 'Reduce incident impact and deploy more frequently.,
   market_position: 'Affordable enrichment focused on actionable signals.,
   target_audience: 'Sales teams, SDRs, growth marketers,
   trial_days:
-        trial_days: 7;
+        trial_days: 7';
 
   setup_time: 'Same day,
   category: 'Developer Tools,
-  real_service: true;
+  real_service: true';
 
-  technology: [Next.jsNodeExternal data partners];
+  technology: [Next.jsNodeExternal data partners]';
 
-  integrations: [HubSpotSalesforce (export)Airtable];
+  integrations: [HubSpotSalesforce (export)Airtable]';
 
-  use_cases: [Lead scoringICP matching_outbound targeting];
+  use_cases: [Lead scoringICP matching_outbound targeting]';
 
 roi: 'Improve conversion rates by 1025%.,
   competitors:
-        competitors: [ClearbitZoomInfo (export)];
+        competitors: [ClearbitZoomInfo (export)]';
 
   market_size: 'Sales intelligence $30 B+,
   growth_rate: '12% YoY,
   variant: 'ai - futuristic,
   contact_info:
-        contact_info: contact;
+        contact_info: contact';
 
-  real_implementation: true;
+  real_implementation: true';
 
   implementation_details: 'Data aggregation with caching and scoring heuristics.,
   launch_date: '2029 - 11 - 18,
-  customers: 40;
+  customers: 40';
 
-  rating: 4.4;
+  rating: 4.4';
 
   reviews: 17}
 
@@ -2341,9 +2341,9 @@ roi: 'Improve conversion rates by 1025%.,
   features:
         features: [,
   High - accuracy OCR and field mapping_line item extraction and taxes_validation UI and review queues_export to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies
-  ];
+  ]';
 
-  popular: false;
+  popular: false';
 
   icon: ',
   color: 'from - rose - 600 to - pink - 700,
@@ -2352,35 +2352,35 @@ roi: 'Improve conversion rates by 1025%.,
   market_position: 'Cost - effective alternative with human review for accuracy.,
   target_audience: 'Finance teams, accounting firms, SMBs,
   trial_days:
-        trial_days: 7;
+        trial_days: 7';
 
   setup_time: '2 days,
   category: 'AI & Data,
-  real_service: true;
+  real_service: true';
 
-  technology: [Next.js_tesseract / LLMsPostgreSQL];
+  technology: [Next.js_tesseract / LLMsPostgreSQL]';
 
-  integrations: [QuickBooks (export)Xero (export)SAP (export)];
+  integrations: [QuickBooks (export)Xero (export)SAP (export)]';
 
-  use_cases: [AP automation_expense processing];
+  use_cases: [AP automation_expense processing]';
 
 roi: 'Reduce manual data entry by 7090%.,
   competitors:
-        competitors: [VeryfiRossum];
+        competitors: [VeryfiRossum]';
 
   market_size: 'Document AI $5 B+,
   growth_rate: '24% YoY,
   variant: 'ai - futuristic,
   contact_info:
-        contact_info: contact;
+        contact_info: contact';
 
-  real_implementation: true;
+  real_implementation: true';
 
   implementation_details: 'Template - free extraction with feedback loops for edge cases.,
   launch_date: '2029 - 12 - 01,
-  customers: 27;
+  customers: 27';
 
-  rating: 4.5;
+  rating: 4.5';
 
   reviews: 14}
 
@@ -2393,9 +2393,9 @@ roi: 'Reduce manual data entry by 7090%.,
   features:
         features: [,
   Workflow editor and step recorder_retry logic and backoff policies_captcha solving hooks and proxies_file storage and PII redaction_job queue, metrics, and alerts_human approval steps
-  ];
+  ]';
 
-  popular: true;
+  popular: true';
 
   icon: ',
   color: 'from - fuchsia - 600 to - purple - 700,
@@ -2404,37 +2404,37 @@ roi: 'Reduce manual data entry by 7090%.,
   market_position: 'Builder - focused alternative to heavyweight RPA suites.,
   target_audience: 'Ops teams, agencies, internal tools,
   trial_days:
-        trial_days: 14;
+        trial_days: 14';
 
   setup_time: '3 days,
   category: 'Developer Tools,
-  real_service: true;
+  real_service: true';
 
-  technology: [PlaywrightNext.jsPostgreSQL];
+  technology: [PlaywrightNext.jsPostgreSQL]';
 
-  integrations: [ZapierMake.comS3 / R2];
+  integrations: [ZapierMake.comS3 / R2]';
 
-  use_cases: [Partner portal automations_data collection_bulk updates];
+  use_cases: [Partner portal automations_data collection_bulk updates]';
 
 roi: 'Automate repetitive tasks and cut manual hours by 5090%.,
   competitors:
-        competitors: [UiPath (SMB)Robocorp];
+        competitors: [UiPath (SMB)Robocorp]';
 
   market_size: 'RPA $13 B+,
   growth_rate: '20% YoY,
   variant: 'ai - futuristic,
   contact_info:
-        contact_info: contact;
+        contact_info: contact';
 
-  real_implementation: true;
+  real_implementation: true';
 
   implementation_details: 'Playwright runners with job queues and storage integrations.,
   launch_date: '2029 - 11 - 28,
-  customers: 38;
+  customers: 38';
 
-  rating: 4.4;
+  rating: 4.4';
 
-reviews: 18;
+reviews: 18';
 
 }
 
@@ -2446,9 +2446,9 @@ reviews: 18;
   description: 'Detect and redact sensitive data (PII / PHI / PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.,
   features: [,
   Configurable detectors (SSN, phone, email) credit card)Context - aware redaction and masking_audit logs and retention policies_batch processing and streaming_webhook retries and DLQsExport to S3 / R2 and BigQuery
-  ];
+  ]';
 
-  popular: false;
+  popular: false';
 
   icon: ',
   color: 'from - teal - 600 to - cyan - 700,
@@ -2457,35 +2457,35 @@ reviews: 18;
   market_position: 'Developer - first compliance tooling.,
   target_audience: 'Developers, compliance teams,
   trial_days:
-        trial_days: 14;
+        trial_days: 14';
 
   setup_time: 'Same day,
   category: 'Quality & Monitoring,
-  real_service: true;
+  real_service: true';
 
-  technology: [Next.jsLLMsRegex engines];
+  technology: [Next.jsLLMsRegex engines]';
 
-  integrations: [S3 / R2 GCSBigQuery];
+  integrations: [S3 / R2 GCSBigQuery]';
 
-  use_cases: [Data minimization_compliance workflowsPII scrubbing];
+  use_cases: [Data minimization_compliance workflowsPII scrubbing]';
 
 roi: 'Reduce compliance risk and review time.,
   competitors:
-        competitors: [NightfallVery Good Security];
+        competitors: [NightfallVery Good Security]';
 
   market_size: 'Data security $20 B+,
   growth_rate: '18% YoY,
   variant: 'ai - futuristic,
   contact_info:
-        contact_info: contact;
+        contact_info: contact';
 
-  real_implementation: true;
+  real_implementation: true';
 
   implementation_details: 'Detectors with policy engine and audit export.,
   launch_date: '2029 - 12 - 03,
-  customers: 22;
+  customers: 22';
 
-  rating: 4.3;
+  rating: 4.3';
 
   reviews: 12}
 
@@ -2496,12 +2496,12 @@ roi: 'Reduce compliance risk and review time.,
   period: '/month,
   description: 'Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.,
   features:
-        features: [;
+        features: [';
 
   Goal trees and KPI ownership_weekly executive summaries_alerting on thresholds and trends_warehouse connectors_shareable links with permissions_annotations and change logs
-  ];
+  ]';
 
-  popular: false;
+  popular: false';
 
   icon: ',
   color: 'from - green - 600 to - emerald - 700,
@@ -2510,29 +2510,29 @@ roi: 'Reduce compliance risk and review time.,
   market_position: 'Simple executive dashboards without BI bloat.,
   target_audience: 'Founders, execs, ops,
   trial_days:
-        trial_days: 7;
+        trial_days: 7';
 
   setup_time: 'Same day,
   category: 'Business Intelligence,
-  real_service: true;
+  real_service: true';
 
-  technology: [Next.jsSupabaseBigQuery];
+  technology: [Next.jsSupabaseBigQuery]';
 
-  integrations: [Google SheetsBigQuerySnowflake (export)];
+  integrations: [Google SheetsBigQuerySnowflake (export)]';
 
-  use_cases: [OKRs / scorecards_exec reporting];
+  use_cases: [OKRs / scorecards_exec reporting]';
 
 roi: 'Improve visibility and accountability.,
   competitors:
-        competitors: [GridGrow];
+        competitors: [GridGrow]';
 
   market_size: 'BI $30 B+,
   growth_rate: '11% YoY,
   variant: 'ai - futuristic,
   contact_info:
-        contact_info: contact;
+        contact_info: contact';
 
-  real_implementation: true;
+  real_implementation: true';
 
   implementation_details: 'Metrics ingestion and templated reporting.,
   launch_date: '2029 - 10 - 20,
@@ -2546,17 +2546,17 @@ roi: 'Improve visibility and accountability.,
 
 		reviews: 16;
 
-// const contact = {;;
+// const contact = {';';
 
-	mobile: +1 302 464 0950;
+	mobile: +1 302 464 0950';
 
-	email: kleber@ziontechgroup.com;
+	email: kleber@ziontechgroup.com';
 
 	address: '364 E Main St STE 1008 Middletown DE 19709}
 
 	website: 'https://ziontechgroup.com,
 		popula,
-  r: true;
+  r: true';
 
 		ico,
   n: ',
@@ -2598,12 +2598,12 @@ roi: 'Improve visibility and accountability.,
 		marketSiz,
   e: Helpdesk software $20B+
 		growthRat,
-  e: 25% YoY;
+  e: 25% YoY';
 
 varian,
   t: ai-futuristic
 		contactInf,
-  o: contact;
+  o: contact';
 
 		realImplementatio,
   n: true,
@@ -2634,10 +2634,10 @@ varian,
   s: [,
 			Branching logic and progress-saveQuestion,
   bank: CSAT, NPS, PMF, churnAnonymous or identified responsesWebhooks and Zapier integrationReal-time charts and cohort filtersGDPR/CCPA consent and deletion tools
-		];
+		]';
 
 		popula,
-  r: false;
+  r: false';
 
 		ico,
   n: ',
@@ -2687,7 +2687,7 @@ varian,
   o: contact;
 
 		realImplementatio,
-  n: true;
+  n: true';
 
 		implementationDetail,
   s: Responsive renderer with schema-driven forms and analytics.
@@ -2713,13 +2713,13 @@ varian,
 		descriptio,
   n: Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.
 		feature,
-  s: [;
+  s: [';
 
 			QR tickets and check-in appSpeaker/sponsor asset managementAutomated reminders and WhatsApp/SMS alertsFeedback/NPS post-event formsBudget tracker and P&L exportsEmbeddable agendas and live updates
-		];
+		]';
 
 		popula,
-  r: true;
+  r: true';
 
 		ico,
   n: ',
@@ -2769,7 +2769,7 @@ varian,
   o: contact;
 
 		realImplementatio,
-  n: true;
+  n: true';
 
 		implementationDetail,
   s: Ticketing service with role-based portals and exportable analytics.
@@ -2795,13 +2795,13 @@ varian,
 		descriptio,
   n: Create and manage on-call schedules with handoff workflows, time-zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.
 		feature,
-  s: [;
+  s: [';
 
 			Flexible rotations and override rulesEscalation policies and schedulesSlack/Teams integration and on-call handoffsVacation/holiday calendarsIncident reports and postmortem templatesSLO and error budget reminders
-		];
+		]';
 
 		popula,
-  r: false;
+  r: false';
 
 		ico,
   n: ',
@@ -2851,7 +2851,7 @@ varian,
   o: contact;
 
 		realImplementatio,
-  n: true;
+  n: true';
 
 		implementationDetail,
   s: Rotations engine and integrations with chat tools.
@@ -2877,13 +2877,13 @@ varian,
 		descriptio,
   n: Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.
 		feature,
-  s: [;
+  s: [';
 
 			Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)
-		];
+		]';
 
 		popula,
-  r: true;
+  r: true';
 
 		ico,
   n: ',
@@ -2930,10 +2930,10 @@ varian,
 varian,
   t: ai-futuristic
 		contactInf,
-  o: contact;
+  o: contact';
 
 		realImplementatio,
-  n: true;
+  n: true';
 
 		implementationDetail,
   s: SERP fetchers with caching and AI summarization.
@@ -2961,10 +2961,10 @@ varian,
 		feature,
   s: [,
 			Boolean, multivariate, and JSON flagsUser and cohort targetingGradual rollouts and percentage splitsAudit logs and environment scopingServer and client SDKsWebhook notifications
-		];
+		]';
 
 		popula,
-  r: false;
+  r: false';
 
 		ico,
   n: ',
@@ -3014,7 +3014,7 @@ varian,
   o: contact;
 
 		realImplementatio,
-  n: true;
+  n: true';
 
 		implementationDetail,
   s: Rules engine with SDKs and environment isolation.
@@ -3040,13 +3040,13 @@ varian,
 		descriptio,
   n: Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.
 		feature,
-  s: [;
+  s: [';
 
 			Company/person enrich via email or domainTech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflowsConfidence scores and data provenanceUsage-based pricing tiers
-		];
+		]';
 
 		popula,
-  r: true;
+  r: true';
 
 		ico,
   n: ',
@@ -3093,10 +3093,10 @@ varian,
 varian,
   t: ai-futuristic
 		contactInf,
-  o: contact;
+  o: contact';
 
 		realImplementatio,
-  n: true;
+  n: true';
 
 		implementationDetail,
   s: Data aggregation with caching and scoring heuristics.
@@ -3124,10 +3124,10 @@ varian,
 		feature,
   s: [,
 			High-accuracy OCR and field mappingLine item extraction and taxesValidation UI and review queuesExport to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies
-		];
+		]';
 
 		popula,
-  r: false;
+  r: false';
 
 		ico,
   n: ',
@@ -3174,10 +3174,10 @@ varian,
 varian,
   t: ai-futuristic
 		contactInf,
-  o: contact;
+  o: contact';
 
 		realImplementatio,
-  n: true;
+  n: true';
 
 		implementationDetail,
   s: Template-free extraction with feedback loops for edge cases.
@@ -3206,10 +3206,10 @@ varian,
 		feature,
   s: [,
 			Workflow editor and step recorderRetry logic and backoff policiesCaptcha solving hooks and proxiesFile storage and PII redactionJob queue, metrics, and alertsHuman approval steps
-		];
+		]';
 
 		popula,
-  r: true;
+  r: true';
 
 		ico,
   n: ',
@@ -3246,20 +3246,20 @@ varian,
 		ro,
   i: Automate repetitive tasks and cut manual hours by 5090%.
 		competitor,
-  s: [UiPath (SMB)Robocorp];
+  s: [UiPath (SMB)Robocorp]';
 
 		marketSiz,
   e: RPA $13B+
 		growthRat,
-  e: 20% YoY;
+  e: 20% YoY';
 
 varian,
   t: ai-futuristic
 		contactInf,
-  o: contact;
+  o: contact';
 
 		realImplementatio,
-  n: true;
+  n: true';
 
 		implementationDetail,
   s: Playwright runners with job queues and storage integrations.
@@ -3287,10 +3287,10 @@ varian,
 		feature,
   s: [,
 			Configurable detectors (SSN, phone, email) credit card)Context-aware redaction and maskingAudit logs and retention policiesBatch processing and streamingWebhook retries and DLQsExport to S3/R2 and BigQuery
-		];
+		]';
 
 		popula,
-  r: false;
+  r: false';
 
 		ico,
   n: ',
@@ -3340,7 +3340,7 @@ varian,
   o: contact;
 
 		realImplementatio,
-  n: true;
+  n: true';
 
 		implementationDetail,
   s: Detectors with policy engine and audit export.
@@ -3366,13 +3366,13 @@ varian,
 		descriptio,
   n: Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.
 		feature,
-  s: [;
+  s: [';
 
 			Goal trees and KPI ownershipWeekly executive summariesAlerting on thresholds and trendsWarehouse connectorsShareable links with permissionsAnnotations and change logs
-		];
+		]';
 
 		popula,
-  r: false;
+  r: false';
 
 		ico,
   n: ',
@@ -3414,15 +3414,15 @@ varian,
 		marketSiz,
   e: BI $30B+
 		growthRat,
-  e: 11% YoY;
+  e: 11% YoY';
 
 varian,
   t: ai-futuristic
 		contactInf,
-  o: contact;
+  o: contact';
 
 		realImplementatio,
-  n: true;
+  n: true';
 
 		implementationDetail,
   s: Metrics ingestion and templated reporting.
@@ -3435,7 +3435,7 @@ varian,
 		review,
   s: 16}
 
-];
+]';
 
   i,
   d: ai - email - triage - copilot
@@ -3453,10 +3453,10 @@ varian,
   s: [,
   Intent classification and priority scoring_one - click reply drafts with tone controls_auto - tagging and routing to teamsPII redaction and allowlist domainsSLA - aware escalations and,
   summaries_analytics: response time, CSAT impact, volume by topic
-  ];
+  ]';
 
   popula,
-  r: true;
+  r: true';
 
   ico,
   n: ',
@@ -3485,20 +3485,20 @@ varian,
   y: [Next.jsTypeScriptOpenAIPostgreSQL];
 
   integration,
-  s: [ZendeskFreshdeskHubSpotGmailMicrosoft 365];
+  s: [ZendeskFreshdeskHubSpotGmailMicrosoft 365]';
 
   use_case,
-  s: [Customer support triage_lead routing_internal helpdesk];
+  s: [Customer support triage_lead routing_internal helpdesk]';
 
   ro,
   i: Reduce manual triage time by 6080% and improve first - response SLAs.
   competitor,
-  s: [Superhuman AIZendesk AIHubSpot AI];
+  s: [Superhuman AIZendesk AIHubSpot AI]';
 
   market_siz,
   e: Helpdesk software $20B+
   growth_rat,
-  e: 25% YoY;
+  e: 25% YoY';
 
 varian,
   t: ai - futuristic
@@ -3533,10 +3533,10 @@ varian,
   s: [,
   Branching logic and progress - save_question,
   bank: CSAT, NPS, PMF, churn_anonymous or identified responses_webhooks and Zapier integration_real - time charts and cohort filtersGDPR / CCPA consent and deletion tools
-  ];
+  ]';
 
   popula,
-  r: false;
+  r: false';
 
   ico,
   n: ',
@@ -3573,20 +3573,20 @@ varian,
   ro,
   i: Increase response rates 25x and de - risk product decisions.
   competitor,
-  s: [TypeformSurveyMonkey];
+  s: [TypeformSurveyMonkey]';
 
   market_siz,
   e: Survey market $9B+
   growth_rat,
-  e: 14% YoY;
+  e: 14% YoY';
 
 varian,
   t: ai - futuristic
   contact_inf,
-  o: contact;
+  o: contact';
 
   real_implementatio,
-  n: true;
+  n: true';
 
   implementation_detail,
   s: Responsive renderer with schema - driven forms and analytics.
@@ -3612,13 +3612,13 @@ varian,
   descriptio,
   n: Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.
   feature,
-  s: [;
+  s: [';
 
   QR tickets and check - in app_speaker / sponsor asset management_automated reminders and WhatsApp / SMS alerts_feedback / NPS post - event forms_budget tracker and P & L exports_embeddable agendas and live updates
-  ];
+  ]';
 
   popula,
-  r: true;
+  r: true';
 
   ico,
   n: ',
@@ -3655,20 +3655,20 @@ varian,
   ro,
   i: Cut ops overhead by 50% and improve attendance by 1530%.
   competitor,
-  s: [EventbriteHopin];
+  s: [EventbriteHopin]';
 
   market_siz,
   e: Event tech $6B+
   growth_rat,
-  e: 18% YoY;
+  e: 18% YoY';
 
 varian,
   t: ai - futuristic
   contact_inf,
-  o: contact;
+  o: contact';
 
   real_implementatio,
-  n: true;
+  n: true';
 
   implementation_detail,
   s: Ticketing service with role - based portals and exportable analytics.
@@ -3694,13 +3694,13 @@ varian,
   descriptio,
   n: Create and manage on - call schedules with handoff workflows, time - zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.
   feature,
-  s: [;
+  s: [';
 
   Flexible rotations and override rules_escalation policies and schedules_slack / Teams integration and on - call handoffs_vacation / holiday calendars_incident reports and postmortem templatesSLO and error budget reminders
-  ];
+  ]';
 
   popula,
-  r: false;
+  r: false';
 
   ico,
   n: ',
@@ -3737,20 +3737,20 @@ varian,
   ro,
   i: Reduce paging confusion and missed alerts by 3050%.
   competitor,
-  s: [PagerDutyOpsgenie];
+  s: [PagerDutyOpsgenie]';
 
   market_siz,
   e: Incident management $3B+
   growth_rat,
-  e: 20% YoY;
+  e: 20% YoY';
 
 varian,
   t: ai - futuristic
   contact_inf,
-  o: contact;
+  o: contact';
 
   real_implementatio,
-  n: true;
+  n: true';
 
   implementation_detail,
   s: Rotations engine and integrations with chat tools.
@@ -3776,13 +3776,13 @@ varian,
   descriptio,
   n: Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.
   feature,
-  s: [;
+  s: [';
 
   Keyword clustering and topical maps_competitor gap analysis_outline and brief generation_on - page audit and schema suggestions_rank tracking and change logsCMS export (Markdown / Headless)
-  ];
+  ]';
 
   popula,
-  r: true;
+  r: true';
 
   ico,
   n: ',
@@ -3819,20 +3819,20 @@ varian,
   ro,
   i: Improve organic traffic 2050% over 36 months.
   competitor,
-  s: [SurferSEOFraseClearScope];
+  s: [SurferSEOFraseClearScope]';
 
   market_siz,
   e: SEO software $6B+
   growth_rat,
-  e: 16% YoY;
+  e: 16% YoY';
 
 varian,
   t: ai - futuristic
   contact_inf,
-  o: contact;
+  o: contact';
 
   real_implementatio,
-  n: true;
+  n: true';
 
   implementation_detail,
   s: SERP fetchers with caching and AI summarization.
@@ -3860,10 +3860,10 @@ varian,
   feature,
   s: [,
   Boolean, multivariate, and JSON flags_user and cohort targeting_gradual rollouts and percentage splits_audit logs and environment scoping_server and client SDKsWebhook notifications
-  ];
+  ]';
 
   popula,
-  r: false;
+  r: false';
 
   ico,
   n: ',
@@ -3900,20 +3900,20 @@ varian,
   ro,
   i: Reduce incident impact and deploy more frequently.
   competitor,
-  s: [LaunchDarkly (entry)Flagsmith];
+  s: [LaunchDarkly (entry)Flagsmith]';
 
   market_siz,
   e: Feature management $1.5B+
   growth_rat,
-  e: 22% YoY;
+  e: 22% YoY';
 
 varian,
   t: ai - futuristic
   contact_inf,
-  o: contact;
+  o: contact';
 
   real_implementatio,
-  n: true;
+  n: true';
 
   implementation_detail,
   s: Rules engine with SDKs and environment isolation.
@@ -3939,13 +3939,13 @@ varian,
   descriptio,
   n: Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.
   feature,
-  s: [;
+  s: [';
 
   Company / person enrich via email or domain_tech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflows_confidence scores and data provenance_usage - based pricing tiers
-  ];
+  ]';
 
   popula,
-  r: true;
+  r: true';
 
   ico,
   n: ',
@@ -3982,20 +3982,20 @@ varian,
   ro,
   i: Improve conversion rates by 1025%.
   competitor,
-  s: [ClearbitZoomInfo (export)];
+  s: [ClearbitZoomInfo (export)]';
 
   market_siz,
   e: Sales intelligence $30B+
   growth_rat,
-  e: 12% YoY;
+  e: 12% YoY';
 
 varian,
   t: ai - futuristic
   contact_inf,
-  o: contact;
+  o: contact';
 
   real_implementatio,
-  n: true;
+  n: true';
 
   implementation_detail,
   s: Data aggregation with caching and scoring heuristics.
@@ -4023,10 +4023,10 @@ varian,
   feature,
   s: [,
   High - accuracy OCR and field mapping_line item extraction and taxes_validation UI and review queues_export to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies
-  ];
+  ]';
 
   popula,
-  r: false;
+  r: false';
 
   ico,
   n: ',
@@ -4063,20 +4063,20 @@ varian,
   ro,
   i: Reduce manual data entry by 7090%.
   competitor,
-  s: [VeryfiRossum];
+  s: [VeryfiRossum]';
 
   market_siz,
   e: Document AI $5B+
   growth_rat,
-  e: 24% YoY;
+  e: 24% YoY';
 
 varian,
   t: ai - futuristic
   contact_inf,
-  o: contact;
+  o: contact';
 
   real_implementatio,
-  n: true;
+  n: true';
 
   implementation_detail,
   s: Template - free extraction with feedback loops for edge cases.
@@ -4105,10 +4105,10 @@ varian,
   feature,
   s: [,
   Workflow editor and step recorder_retry logic and backoff policies_captcha solving hooks and proxies_file storage and PII redaction_job queue, metrics, and alerts_human approval steps
-  ];
+  ]';
 
   popula,
-  r: true;
+  r: true';
 
   ico,
   n: ',
@@ -4145,20 +4145,20 @@ varian,
   ro,
   i: Automate repetitive tasks and cut manual hours by 5090%.
   competitor,
-  s: [UiPath (SMB)Robocorp];
+  s: [UiPath (SMB)Robocorp]';
 
   market_siz,
   e: RPA $13B+
   growth_rat,
-  e: 20% YoY;
+  e: 20% YoY';
 
 varian,
   t: ai - futuristic
   contact_inf,
-  o: contact;
+  o: contact';
 
   real_implementatio,
-  n: true;
+  n: true';
 
   implementation_detail,
   s: Playwright runners with job queues and storage integrations.
@@ -4186,10 +4186,10 @@ varian,
   feature,
   s: [,
   Configurable detectors (SSN, phone, email) credit card)Context - aware redaction and masking_audit logs and retention policies_batch processing and streaming_webhook retries and DLQsExport to S3 / R2 and BigQuery
-  ];
+  ]';
 
   popula,
-  r: false;
+  r: false';
 
   ico,
   n: ',
@@ -4226,20 +4226,20 @@ varian,
   ro,
   i: Reduce compliance risk and review time.
   competitor,
-  s: [NightfallVery Good Security];
+  s: [NightfallVery Good Security]';
 
   market_siz,
   e: Data security $20B+
   growth_rat,
-  e: 18% YoY;
+  e: 18% YoY';
 
 varian,
   t: ai - futuristic
   contact_inf,
-  o: contact;
+  o: contact';
 
   real_implementatio,
-  n: true;
+  n: true';
 
   implementation_detail,
   s: Detectors with policy engine and audit export.
@@ -4265,13 +4265,13 @@ varian,
   descriptio,
   n: Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.
   feature,
-  s: [;
+  s: [';
 
   Goal trees and KPI ownership_weekly executive summaries_alerting on thresholds and trends_warehouse connectors_shareable links with permissions_annotations and change logs
-  ];
+  ]';
 
   popula,
-  r: false;
+  r: false';
 
   ico,
   n: ',
@@ -4321,7 +4321,7 @@ varian,
   o: contact;
 
   real_implementatio,
-  n: true;
+  n: true';
 
   implementation_detail,
   s: Metrics ingestion and templated reporting.
@@ -4335,11 +4335,11 @@ varian,
   s: 16}
 
 		ratin,
-  g: 4.4;
+  g: 4.4';
 
 		review,
   s: 16,
-// const contact = {/* TODO: Fix JSX expression */};;
+// const contact = {/* TODO: Fix JSX expression */}';';
 
   s: '364 E Main St STE 1008 Middletown DE 19709}
 
@@ -4801,11 +4801,11 @@ export const,
 
 ;
 
-// const contact = {;;
+// const contact = {';';
 
-	mobile: +1 302 464 0950;
+	mobile: +1 302 464 0950';
 
-	email: kleber@ziontechgroup.com;
+	email: kleber@ziontechgroup.com';
 
 	address: '364 E Main St STE 1008 Middletown DE 19709}
 
@@ -4819,11 +4819,11 @@ export const,
 
 	}
 
-];
+]';
 
-;
+';
 
-// const contact = {/* TODO: Fix JSX expression */};;
+// const contact = {/* TODO: Fix JSX expression */}';';
 
   s: '364 E Main St STE 1008 Middletown DE 19709}
 
@@ -5269,11 +5269,11 @@ export const,
 
 		realImplementation: true;
 
-		implementationDetails: Metrics ingestion and templated reporting.;
+		implementationDetails: Metrics ingestion and templated reporting.';
 
-		launchDate: 2029-10-20;
+		launchDate: 2029-10-20';
 
-		customers: 36;
+		customers: 36';
 
 		rating: 4.4}
 
@@ -5288,9 +5288,9 @@ export const,
 
 	}
 
-];
+]';
 
-'Intent classification and priority scoring'' 'One-click reply drafts with tone controls'' 'Auto-tagging and routing to teams'' 'PII redaction and allowlist domains'' 'SLA-aware escalations and summaries'' Analytic,
+'Intent classification and priority scoring' 'One-click reply drafts with tone controls' 'Auto-tagging and routing to teams' 'PII redaction and allowlist domains' 'SLA-aware escalations and summaries' Analytic,
   s: response time, CSAT impact, volume by topic ] popula,
   r: true ico,
   n: '✉️' colo,
@@ -5321,7 +5321,7 @@ export const,
   r: 'text - cyan - 300', lin,
   k: http,
   s://ziontechgroup.com / services / ai - email - triage - copilot, market_positio,
-  n: ; ' 'Alternative to basic autoresponders, focuses on triage quality and CRM integration.', target_audienc,
+  n: '; ' 'Alternative to basic autoresponders, focuses on triage quality and CRM integration.', target_audienc,
   e: 'Support teams, sales ops, founders, trial_day,
   s: 14, setup_tim,
   e: '1 day', categor,
@@ -5347,9 +5347,9 @@ export const,
   e:  ,' 'Conversational, mobile - first surveys with branching logic and realtime dashboards', pric,
   e: '$59', perio,
   d: '/month, descriptio,
-  n:  ,' 'Launch high - conversion mobile surveys with skip logic, NPS / CSAT templates, and shareable dashboards. Embed on sites or share links; export to CSV and data warehouses., feature,
-  s: [,' 'Branching logic and progress - save', ' 'Branching logic and progress-save'' Question,
-  bank: CSAT, NPS, PMF, churn'' 'Anonymous or identified responses'' 'Webhooks and Zapier integration'' 'Real-time charts and cohort filters'' 'GDPR/CCPA consent and deletion tools ] popula,
+  n:  ,' 'Launch high - conversion mobile surveys with skip logic, NPS / CSAT templates, and shareable dashboards. Embed on sites or share links'; export to CSV and data warehouses., feature,
+  s: [,' 'Branching logic and progress - save', ' 'Branching logic and progress-save' Question,
+  bank: CSAT, NPS, PMF, churn' 'Anonymous or identified responses' 'Webhooks and Zapier integration' 'Real-time charts and cohort filters' 'GDPR/CCPA consent and deletion tools ] popula,
   r: false ico,
   n: '📱' colo,
   r: 'from-emerald-600 to-teal-700' textColo,
@@ -5373,13 +5373,13 @@ export const,
   r: 'text - emerald - 300', lin,
   k: http,
   s://ziontechgroup.com / services / mobile - survey - studio, market_positio,
-  n: ; ' 'Lightweight alternative to enterprise survey suites, optimized for mobile.', targetAudienc,
+  n: '; ' 'Lightweight alternative to enterprise survey suites, optimized for mobile.', targetAudienc,
   e: 'Growth teams, product managers, agencies, trialDay,
   s: 7, setupTim,
   e: 'Same day', categor,
   y: 'Developer Tools',  categor,
   y: 'Developer Tools, useCase,
-  s: [' 'Landing page surveys'' 'In-product polls'' 'Exit intent feedback' ] ro,
+  s: [' 'Landing page surveys' 'In-product polls' 'Exit intent feedback' ] ro,
   i: 'Increase response rates 2–5x and de-risk product decisions.' competitor,
   s: ['Typeform', 'SurveyMonkey'] marketSiz,
   e: 'Survey market $9B+' growthRat,
@@ -5435,7 +5435,7 @@ export const,
   d: '/month, descriptio,
   n:  ,' 'Create and manage on - call schedules with handoff workflows, time - zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders., feature,
   s: [, ' 'Flexible rotations and override rules',' 'Escalation policies and schedules',' 'Slack / Teams integration and on - call handoffs',' 'Vacation / holiday calendars',' 'Incident reports and postmortem templates',' 'SLO and error budget reminders], popula,
-  r: false,' 'Lean alternative for SMBs; complements enterprise incident suites.', target_audienc,
+  r: false,' 'Lean alternative for SMBs'; complements enterprise incident suites.', target_audienc,
   e: 'SRE teams, startups, agencies, trial_day,
   s: 14, setup_tim,
   e: '1 day', categor,
@@ -5584,7 +5584,7 @@ export const,
   e: '$69' perio,
   d: '/month descriptio,
   n:' 'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders. feature,
-  s: [' 'Goal trees and KPI ownership'' 'Weekly executive summaries'' 'Alerting on thresholds and trends'' 'Warehouse connectors'' 'Shareable links with permissions'' 'Annotations and change logs ] popula,
+  s: [' 'Goal trees and KPI ownership' 'Weekly executive summaries' 'Alerting on thresholds and trends' 'Warehouse connectors' 'Shareable links with permissions' 'Annotations and change logs ] popula,
   r: false ico,
   n: '📊' colo,
   r: 'from-green-600 to-emerald-700' textColo,
@@ -5645,13 +5645,13 @@ export const,
   e: '2029 - 10 - 20, customer,
   s: 36, ratin,
   g: 4 && 4.4, review,
-  s: 16}; ]; const contact =  mobil,;;
+  s: 16}'; ]'; const contact =  mobil,';';
 
   e: '+1 302 464 0950, emai,
   l: 'kleber@ziontechgroup.com', addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', websit,
   e: http,
-  s://ziontechgroup.com }; export const,
+  s://ziontechgroup.com }'; export const,
   real2029Q4Additions: RealMarketService[] = [  i,
   d: 'ai-email-triage-copilot, nam,
   e: 'AI Email Triage Copilot', taglin,
@@ -5660,7 +5660,7 @@ export const,
   d: '/month', descriptio,
   n: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks., feature,
   s: [], ' Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and,
-  summariesAnalytics: response time, CSAT impact, volume by topic ]; popula,
+  summariesAnalytics: response time, CSAT impact, volume by topic ]'; popula,
   r: true, ico,
   n: '✉️' colo,
   r: 'from-cyan-600 to-blue-700' textColo,
@@ -5669,15 +5669,15 @@ export const,
   s://ziontechgroup && ziontechgroup.com/services/ai-email-triage-copilot',  marketPositio,
   n: 'Alternative to basic autoresponders, focuses on triage quality and CRM integration.' targetAudienc,
   e: 'Support teams, sales ops, founders trialDay,
-  s: 14; setupTim,
+  s: 14'; setupTim,
   e: '1 day' categor,
   y: 'AI & Data realServic,
-  e: true; technolog,
-  y: ['Next && Next.jsTypeScriptOpenAIPostgreSQL']; integration,
-  s: ['ZendeskFreshdeskHubSpotGmailMicrosoft 365']; useCase,
-  s: ['Customer support triageLead routingInternal helpdesk']; ro,
+  e: true'; technolog,
+  y: ['Next && Next.jsTypeScriptOpenAIPostgreSQL']'; integration,
+  s: ['ZendeskFreshdeskHubSpotGmailMicrosoft 365']'; useCase,
+  s: ['Customer support triageLead routingInternal helpdesk']'; ro,
   i: 'Reduce manual triage time by 60–80% and improve first-response SLAs.' competitor,
-  s: ['Superhuman AIZendesk AIHubSpot AI']; marketSiz,
+  s: ['Superhuman AIZendesk AIHubSpot AI']'; marketSiz,
   e: 'Helpdesk software $20B+' growthRat,
   e: '25% YoY' varian,
   t: 'ai-futuristic contactInf,
@@ -5695,7 +5695,7 @@ export const,
   d: '/month' descriptio,
   n: 'Launch high-conversion mobile surveys with skip logic, NPS/CSAT templates, and shareable dashboards. Embed on sites or share links, export to CSV and data warehouses. feature,
   s: [' Branching logic and progress-saveQuestion,
-  bank: CSAT, NPS, PMF, churnAnonymous or identified responsesWebhooks and Zapier integrationReal-time charts and cohort filtersGDPR/CCPA consent and deletion tools ]; popula,
+  bank: CSAT, NPS, PMF, churnAnonymous or identified responsesWebhooks and Zapier integrationReal-time charts and cohort filtersGDPR/CCPA consent and deletion tools ]'; popula,
   r: false, ico,
   n: '📱' colo,
   r: 'from-emerald-600 to-teal-700' textColo,
@@ -5704,20 +5704,20 @@ export const,
   s://ziontechgroup && ziontechgroup.com/services/mobile-survey-studio',  marketPositio,
   n: 'Lightweight alternative to enterprise survey suites, optimized for mobile.' targetAudienc,
   e: 'Growth teams, product managers, agencies trialDay,
-  s: 7; setupTim,
+  s: 7'; setupTim,
   e: 'Same day' categor,
   y: 'Developer Tools realServic,
-  e: true; technolog,
-  y: ['Next && Next.jsPostgreSQLTailwindVercel Edge']; integration,
-  s: ['Google SheetsZapierSegmentBigQuery']; useCase,
-  s: ['Landing page surveysIn-product pollsExit intent feedback']; ro,
+  e: true'; technolog,
+  y: ['Next && Next.jsPostgreSQLTailwindVercel Edge']'; integration,
+  s: ['Google SheetsZapierSegmentBigQuery']'; useCase,
+  s: ['Landing page surveysIn-product pollsExit intent feedback']'; ro,
   i: 'Increase response rates 2–5x and de-risk product decisions.' competitor,
-  s: ['TypeformSurveyMonkey']; marketSiz,
+  s: ['TypeformSurveyMonkey']'; marketSiz,
   e: 'Survey market $9B+' growthRat,
   e: '14% YoY' varian,
   t: 'ai-futuristic contactInf,
-  o: contact; realImplementatio,
-  n: true; implementationDetail,
+  o: contact'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Responsive renderer with schema-driven forms and analytics.' launchDat,
   e: '2029-11-05 customer,
   s: 60, ratin,
@@ -5729,7 +5729,7 @@ export const,
   e: '$149' perio,
   d: '/month' descriptio,
   n: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers. feature,
-  s: [' 'QR tickets and check-in appSpeaker/sponsor asset managementAutomated reminders and WhatsApp/SMS alertsFeedback/NPS post-event formsBudget tracker and P&L exportsEmbeddable agendas and live updates ]; popula,
+  s: [' 'QR tickets and check-in appSpeaker/sponsor asset managementAutomated reminders and WhatsApp/SMS alertsFeedback/NPS post-event formsBudget tracker and P&L exportsEmbeddable agendas and live updates ]'; popula,
   r: true, ico,
   n: '🎟️' colo,
   r: 'from-purple-600 to-pink-600' textColo,
@@ -5738,20 +5738,20 @@ export const,
   s://ziontechgroup && ziontechgroup.com/services/event-ops-dashboard' marketPositio,
   n: 'Focused micro-SaaS alternative to all-in-one event platforms.',  targetAudienc,
   e: 'Marketing teams, conference organizers, communities trialDay,
-  s: 14; setupTim,
+  s: 14'; setupTim,
   e: '2 days' categor,
   y: 'Developer Tools realServic,
-  e: true; technolog,
-  y: ['Next && Next.jsStripeResendPostgreSQL']; integration,
-  s: ['StripeResendMailchimpTwilio']; useCase,
-  s: ['MeetupsWebinarsConferences']; ro,
+  e: true'; technolog,
+  y: ['Next && Next.jsStripeResendPostgreSQL']'; integration,
+  s: ['StripeResendMailchimpTwilio']'; useCase,
+  s: ['MeetupsWebinarsConferences']'; ro,
   i: 'Cut ops overhead by 50% and improve attendance by 15–30%.' competitor,
-  s: ['EventbriteHopin']; marketSiz,
+  s: ['EventbriteHopin']'; marketSiz,
   e: 'Event tech $6B+' growthRat,
   e: '18% YoY' varian,
   t: 'ai-futuristic contactInf,
-  o: contact; realImplementatio,
-  n: true; implementationDetail,
+  o: contact'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Ticketing service with role-based portals and exportable analytics.' launchDat,
   e: '2029-09-23 customer,
   s: 48, ratin,
@@ -5763,7 +5763,7 @@ export const,
   e: '$129' perio,
   d: '/month' descriptio,
   n: 'Create and manage on-call schedules with handoff workflows, time-zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders. feature,
-  s: [' 'Flexible rotations and override rulesEscalation policies and schedulesSlack/Teams integration and on-call handoffsVacation/holiday calendarsIncident reports and postmortem templatesSLO and error budget reminders ]; popula,
+  s: [' 'Flexible rotations and override rulesEscalation policies and schedulesSlack/Teams integration and on-call handoffsVacation/holiday calendarsIncident reports and postmortem templatesSLO and error budget reminders ]'; popula,
   r: false, ico,
   n: '📆' colo,
   r: 'from-indigo-600 to-blue-700' textColo,
@@ -5772,20 +5772,20 @@ export const,
   s://ziontechgroup && ziontechgroup.com/services/oncall-scheduler-pro',  marketPositio,
   n: 'Lean alternative for SMBs, complements enterprise incident suites.' targetAudienc,
   e: 'SRE teams, startups, agencies trialDay,
-  s: 14; setupTim,
+  s: 14'; setupTim,
   e: '1 day' categor,
   y: 'Observability realServic,
-  e: true; technolog,
-  y: ['Next && Next.jsPostgreSQLTwilio']; integration,
-  s: ['SlackMicrosoft TeamsTwilio']; useCase,
-  s: ['On-call managementIncident response']; ro,
+  e: true'; technolog,
+  y: ['Next && Next.jsPostgreSQLTwilio']'; integration,
+  s: ['SlackMicrosoft TeamsTwilio']'; useCase,
+  s: ['On-call managementIncident response']'; ro,
   i: 'Reduce paging confusion and missed alerts by 30–50%.' competitor,
-  s: ['PagerDutyOpsgenie']; marketSiz,
+  s: ['PagerDutyOpsgenie']'; marketSiz,
   e: 'Incident management $3B+' growthRat,
   e: '20% YoY' varian,
   t: 'ai-futuristic contactInf,
-  o: contact; realImplementatio,
-  n: true; implementationDetail,
+  o: contact'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Rotations engine and integrations with chat tools.' launchDat,
   e: '2029-10-30 customer,
   s: 32, ratin,
@@ -5797,7 +5797,7 @@ export const,
   e: '$89' perio,
   d: '/month' descriptio,
   n: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time. feature,
-  s: [' 'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless) ]; popula,
+  s: [' 'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless) ]'; popula,
   r: true, ico,
   n: '🔎' colo,
   r: 'from-amber-600 to-orange-700' textColo,
@@ -5806,20 +5806,20 @@ export const,
   s://ziontechgroup && ziontechgroup.com/services/seo-content-optimizer-pro' marketPositio,
   n: 'Practical mid-market tool between basic plugins and enterprise suites.',  targetAudienc,
   e: 'Content teams, agencies, solo founders trialDay,
-  s: 7; setupTim,
+  s: 7'; setupTim,
   e: 'Same day' categor,
   y: 'Developer Tools realServic,
-  e: true; technolog,
-  y: ['Next && Next.jsOpenAISerpAPI']; integration,
-  s: ['Google Search ConsoleAhrefs (export)Semrush (export)']; useCase,
-  s: ['Page optimizationContent planningBrief creation']; ro,
+  e: true'; technolog,
+  y: ['Next && Next.jsOpenAISerpAPI']'; integration,
+  s: ['Google Search ConsoleAhrefs (export)Semrush (export)']'; useCase,
+  s: ['Page optimizationContent planningBrief creation']'; ro,
   i: 'Improve organic traffic 20–50% over 3–6 months.' competitor,
-  s: ['SurferSEOFraseClearScope']; marketSiz,
+  s: ['SurferSEOFraseClearScope']'; marketSiz,
   e: 'SEO software $6B+' growthRat,
   e: '16% YoY' varian,
   t: 'ai-futuristic contactInf,
-  o: contact; realImplementatio,
-  n: true; implementationDetail,
+  o: contact'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'SERP fetchers with caching and AI summarization.' launchDat,
   e: '2029-09-10 customer,
   s: 95, ratin,
@@ -5831,7 +5831,7 @@ export const,
   e: '$49' perio,
   d: '/month' descriptio,
   n: 'Add feature flags to your app with SDKs for React/Node, rule targeting, and environments. Includes audit logs and safe defaulting. feature,
-  s: [' 'Boolean, multivariate, and JSON flagsUser and cohort targetingGradual rollouts and percentage splitsAudit logs and environment scopingServer and client SDKsWebhook notifications ]; popula,
+  s: [' 'Boolean, multivariate, and JSON flagsUser and cohort targetingGradual rollouts and percentage splitsAudit logs and environment scopingServer and client SDKsWebhook notifications ]'; popula,
   r: false, ico,
   n: '🚩' colo,
   r: 'from-slate-700 to-gray-800' textColo,
@@ -5840,20 +5840,20 @@ export const,
   s://ziontechgroup && ziontechgroup.com/services/feature-flags-lite' marketPositio,
   n: 'Minimal alternative to enterprise flag platforms for SMBs.',  targetAudienc,
   e: 'Startups, agencies, indie devs trialDay,
-  s: 14; setupTim,
+  s: 14'; setupTim,
   e: 'Same day' categor,
   y: 'Developer Tools realServic,
-  e: true; technolog,
-  y: ['Next && Next.jsEdge KV/Redis']; integration,
-  s: ['VercelNetlify']; useCase,
-  s: ['Kill switchesSafe migrationsCohort experiments']; ro,
+  e: true'; technolog,
+  y: ['Next && Next.jsEdge KV/Redis']'; integration,
+  s: ['VercelNetlify']'; useCase,
+  s: ['Kill switchesSafe migrationsCohort experiments']'; ro,
   i: 'Reduce incident impact and deploy more frequently.' competitor,
-  s: ['LaunchDarkly (entry)Flagsmith']; marketSiz,
+  s: ['LaunchDarkly (entry)Flagsmith']'; marketSiz,
   e: 'Feature management $1 && 1.5B+' growthRat,
   e: '22% YoY' varian,
   t: 'ai-futuristic contactInf,
-  o: contact; realImplementatio,
-  n: true; implementationDetail,
+  o: contact'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Rules engine with SDKs and environment isolation.' launchDat,
   e: '2029-10-02 customer,
   s: 70, ratin,
@@ -5865,7 +5865,7 @@ export const,
   e: '$129' perio,
   d: '/month' descriptio,
   n: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly. feature,
-  s: [' 'Company/person enrich via email or domainTech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflowsConfidence scores and data provenanceUsage-based pricing tiers ]; popula,
+  s: [' 'Company/person enrich via email or domainTech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflowsConfidence scores and data provenanceUsage-based pricing tiers ]'; popula,
   r: true, ico,
   n: '🧭' colo,
   r: 'from-sky-600 to-blue-700' textColo,
@@ -5874,20 +5874,20 @@ export const,
   s://ziontechgroup && ziontechgroup.com/services/sales-lead-enrichment' marketPositio,
   n: 'Affordable enrichment focused on actionable signals.',  targetAudienc,
   e: 'Sales teams, SDRs, growth marketers trialDay,
-  s: 7; setupTim,
+  s: 7'; setupTim,
   e: 'Same day' categor,
   y: 'Developer Tools realServic,
-  e: true; technolog,
-  y: ['Next && Next.jsNodeExternal data partners']; integration,
-  s: ['HubSpotSalesforce (export)Airtable']; useCase,
-  s: ['Lead scoringICP matchingOutbound targeting']; ro,
+  e: true'; technolog,
+  y: ['Next && Next.jsNodeExternal data partners']'; integration,
+  s: ['HubSpotSalesforce (export)Airtable']'; useCase,
+  s: ['Lead scoringICP matchingOutbound targeting']'; ro,
   i: 'Improve conversion rates by 10–25%.' competitor,
-  s: ['ClearbitZoomInfo (export)']; marketSiz,
+  s: ['ClearbitZoomInfo (export)']'; marketSiz,
   e: 'Sales intelligence $30B+' growthRat,
   e: '12% YoY' varian,
   t: 'ai-futuristic contactInf,
-  o: contact; realImplementatio,
-  n: true; implementationDetail,
+  o: contact'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Data aggregation with caching and scoring heuristics.' launchDat,
   e: '2029-11-18 customer,
   s: 40, ratin,
@@ -5899,7 +5899,7 @@ export const,
   e: '$79' perio,
   d: '/month' descriptio,
   n: 'Upload PDFs/images and get structured outputs (vendor, dates, taxes) line items). Human-in-the-loop validation and retraining for edge cases. feature,
-  s: [' 'High-accuracy OCR and field mappingLine item extraction and taxesValidation UI and review queuesExport to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies ]; popula,
+  s: [' 'High-accuracy OCR and field mappingLine item extraction and taxesValidation UI and review queuesExport to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies ]'; popula,
   r: false, ico,
   n: '🧾' colo,
   r: 'from-rose-600 to-pink-700' textColo,
@@ -5908,20 +5908,20 @@ export const,
   s://ziontechgroup && ziontechgroup.com/services/invoice-ocr-processor' marketPositio,
   n: 'Cost-effective alternative with human review for accuracy.',  targetAudienc,
   e: 'Finance teams, accounting firms, SMBs trialDay,
-  s: 7; setupTim,
+  s: 7'; setupTim,
   e: '2 days' categor,
   y: 'AI & Data realServic,
-  e: true; technolog,
-  y: ['Next && Next.jsTesseract/LLMsPostgreSQL']; integration,
-  s: ['QuickBooks (export)Xero (export)SAP (export)']; useCase,
-  s: ['AP automationExpense processing']; ro,
+  e: true'; technolog,
+  y: ['Next && Next.jsTesseract/LLMsPostgreSQL']'; integration,
+  s: ['QuickBooks (export)Xero (export)SAP (export)']'; useCase,
+  s: ['AP automationExpense processing']'; ro,
   i: 'Reduce manual data entry by 70–90%.' competitor,
-  s: ['VeryfiRossum']; marketSiz,
+  s: ['VeryfiRossum']'; marketSiz,
   e: 'Document AI $5B+' growthRat,
   e: '24% YoY' varian,
   t: 'ai-futuristic contactInf,
-  o: contact; realImplementatio,
-  n: true; implementationDetail,
+  o: contact'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Template-free extraction with feedback loops for edge cases.' launchDat,
   e: '2029-12-01 customer,
   s: 27, ratin,
@@ -5934,7 +5934,7 @@ export const,
   d: '/month' descriptio,
   n: Create robotic process automations for web,
   workflows: login, scrape, form-fill, download, and upload. Includes scheduling, proxy support, and error screenshots. feature,
-  s: [' 'Workflow editor and step recorderRetry logic and backoff policiesCaptcha solving hooks and proxiesFile storage and PII redactionJob queue, metrics, and alertsHuman approval steps ]; popula,
+  s: [' 'Workflow editor and step recorderRetry logic and backoff policiesCaptcha solving hooks and proxiesFile storage and PII redactionJob queue, metrics, and alertsHuman approval steps ]'; popula,
   r: true, ico,
   n: '🤖' colo,
   r: 'from-fuchsia-600 to-purple-700' textColo,
@@ -5943,20 +5943,20 @@ export const,
   s://ziontechgroup && ziontechgroup.com/services/rpa-browser-automation' marketPositio,
   n: 'Builder-focused alternative to heavyweight RPA suites.',  targetAudienc,
   e: 'Ops teams, agencies, internal tools trialDay,
-  s: 14; setupTim,
+  s: 14'; setupTim,
   e: '3 days' categor,
   y: 'Developer Tools realServic,
-  e: true; technolog,
-  y: ['PlaywrightNext && PlaywrightNext.jsPostgreSQL']; integration,
-  s: ['ZapierMake && ZapierMake.comS3/R2']; useCase,
-  s: ['Partner portal automationsData collectionBulk updates']; ro,
+  e: true'; technolog,
+  y: ['PlaywrightNext && PlaywrightNext.jsPostgreSQL']'; integration,
+  s: ['ZapierMake && ZapierMake.comS3/R2']'; useCase,
+  s: ['Partner portal automationsData collectionBulk updates']'; ro,
   i: 'Automate repetitive tasks and cut manual hours by 50–90%.' competitor,
-  s: ['UiPath (SMB)Robocorp']; marketSiz,
+  s: ['UiPath (SMB)Robocorp']'; marketSiz,
   e: 'RPA $13B+' growthRat,
   e: '20% YoY' varian,
   t: 'ai-futuristic contactInf,
-  o: contact; realImplementatio,
-  n: true; implementationDetail,
+  o: contact'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Playwright runners with job queues and storage integrations.' launchDat,
   e: '2029-11-28 customer,
   s: 38, ratin,
@@ -5968,7 +5968,7 @@ export const,
   e: '$79' perio,
   d: '/month', descriptio,
   n: 'Detect and redact sensitive data (PII/PHI/PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams. feature,
-  s: [' 'Configurable detectors (SSN, phone, email) credit card)Context-aware redaction and maskingAudit logs and retention policiesBatch processing and streamingWebhook retries and DLQsExport to S3/R2 and BigQuery ]; popula,
+  s: [' 'Configurable detectors (SSN, phone, email) credit card)Context-aware redaction and maskingAudit logs and retention policiesBatch processing and streamingWebhook retries and DLQsExport to S3/R2 and BigQuery ]'; popula,
   r: false, ico,
   n: '🧼' colo,
   r: 'from-teal-600 to-cyan-700' textColo,
@@ -5977,20 +5977,20 @@ export const,
   s://ziontechgroup && ziontechgroup.com/services/redaction-compliance-api' marketPositio,
   n: 'Developer-first compliance tooling.',  targetAudienc,
   e: 'Developers, compliance teams trialDay,
-  s: 14; setupTim,
+  s: 14'; setupTim,
   e: 'Same day' categor,
   y: 'Quality & Monitoring realServic,
-  e: true; technolog,
-  y: ['Next && Next.jsLLMsRegex engines']; integration,
-  s: ['S3/R2GCSBigQuery']; useCase,
-  s: ['Data minimizationCompliance workflowsPII scrubbing']; ro,
+  e: true'; technolog,
+  y: ['Next && Next.jsLLMsRegex engines']'; integration,
+  s: ['S3/R2GCSBigQuery']'; useCase,
+  s: ['Data minimizationCompliance workflowsPII scrubbing']'; ro,
   i: 'Reduce compliance risk and review time.' competitor,
-  s: ['NightfallVery Good Security']; marketSiz,
+  s: ['NightfallVery Good Security']'; marketSiz,
   e: 'Data security $20B+' growthRat,
   e: '18% YoY' varian,
   t: 'ai-futuristic contactInf,
-  o: contact; realImplementatio,
-  n: true; implementationDetail,
+  o: contact'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Detectors with policy engine and audit export.' launchDat,
   e: '2029-12-03 customer,
   s: 22, ratin,
@@ -6002,7 +6002,7 @@ export const,
   e: '$69' perio,
   d: '/month' descriptio,
   n: 'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders. feature,
-  s: [' 'Goal trees and KPI ownershipWeekly executive summariesAlerting on thresholds and trendsWarehouse connectorsShareable links with permissionsAnnotations and change logs ]; popula,
+  s: [' 'Goal trees and KPI ownershipWeekly executive summariesAlerting on thresholds and trendsWarehouse connectorsShareable links with permissionsAnnotations and change logs ]'; popula,
   r: false, ico,
   n: '📊' colo,
   r: 'from-green-600 to-emerald-700' textColo,
@@ -6011,25 +6011,25 @@ export const,
   s://ziontechgroup && ziontechgroup.com/services/kpi-scorecards-studio' marketPositio,
   n: 'Simple executive dashboards without BI bloat.',  targetAudienc,
   e: 'Founders, execs, ops trialDay,
-  s: 7; setupTim,
+  s: 7'; setupTim,
   e: 'Same day' categor,
   y: 'Business Intelligence realServic,
-  e: true; technolog,
-  y: ['Next && Next.jsSupabaseBigQuery']; integration,
-  s: ['Google SheetsBigQuerySnowflake (export)']; useCase,
-  s: ['OKRs/scorecardsExec reporting']; ro,
+  e: true'; technolog,
+  y: ['Next && Next.jsSupabaseBigQuery']'; integration,
+  s: ['Google SheetsBigQuerySnowflake (export)']'; useCase,
+  s: ['OKRs/scorecardsExec reporting']'; ro,
   i: 'Improve visibility and accountability.' competitor,
-  s: ['GridGrow']; marketSiz,
+  s: ['GridGrow']'; marketSiz,
   e: 'BI $30B+' growthRat,
   e: '11% YoY' varian,
   t: 'ai-futuristic contactInf,
-  o: contact; realImplementatio,
-  n: true; implementationDetail,
+  o: contact'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Metrics ingestion and templated reporting.' launchDat,
   e: '2029-10-20 customer,
   s: 36, ratin,
   g: 4 && 4.4, review,
-  s: 16 } ];  i,
+  s: 16 } ]';  i,
   d: 'ai - email - triage - copilot' nam,
   e: 'AI Email Triage Copilot', taglin,
   e: 'Auto - categorize, summarize, and draft replies for inbound email' pric,
@@ -6037,7 +6037,7 @@ export const,
   d: '/month', descriptio,
   n: 'An AI - driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks. feature,
   s: [,' Intent classification and priority scoring_one - click reply drafts with tone controls_auto - tagging and routing to teamsPII redaction and allowlist domainsSLA - aware escalations and,
-  summaries_analytics: response time, CSAT impact, volume by topic ]; popula,
+  summaries_analytics: response time, CSAT impact, volume by topic ]'; popula,
   r: true, ico,
   n: '✉️' colo,
   r: 'from - cyan - 600 to - blue - 700' text_colo,
@@ -6046,15 +6046,15 @@ export const,
   s://ziontechgroup.com / services / ai - email - triage - copilot', market_positio,
   n: 'Alternative to basic autoresponders, focuses on triage quality and CRM integration.' target_audienc,
   e: 'Support teams, sales ops, founders trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: '1 day' categor,
   y: 'AI & Data real_servic,
-  e: true; technolog,
-  y: ['Next.jsTypeScriptOpenAIPostgreSQL']; integration,
-  s: ['ZendeskFreshdeskHubSpotGmailMicrosoft 365']; use_case,
-  s: ['Customer support triage_lead routing_internal helpdesk']; ro,
+  e: true'; technolog,
+  y: ['Next.jsTypeScriptOpenAIPostgreSQL']'; integration,
+  s: ['ZendeskFreshdeskHubSpotGmailMicrosoft 365']'; use_case,
+  s: ['Customer support triage_lead routing_internal helpdesk']'; ro,
   i: 'Reduce manual triage time by 60–80% and improve first - response SLAs.' competitor,
-  s: ['Superhuman AIZendesk AIHubSpot AI']; market_siz,
+  s: ['Superhuman AIZendesk AIHubSpot AI']'; market_siz,
   e: 'Helpdesk software $20B+' growth_rat,
   e: '25% YoY' varian,
   t: 'ai - futuristic contact_inf,
@@ -6072,7 +6072,7 @@ export const,
   d: '/month', descriptio,
   n: 'Launch high - conversion mobile surveys with skip logic, NPS / CSAT templates, and shareable dashboards. Embed on sites or share links, export to CSV and data warehouses. feature,
   s: [,' Branching logic and progress - save_question,
-  bank: CSAT, NPS, PMF, churn_anonymous or identified responses_webhooks and Zapier integration_real - time charts and cohort filtersGDPR / CCPA consent and deletion tools ]; popula,
+  bank: CSAT, NPS, PMF, churn_anonymous or identified responses_webhooks and Zapier integration_real - time charts and cohort filtersGDPR / CCPA consent and deletion tools ]'; popula,
   r: false, ico,
   n: '📱' colo,
   r: 'from - emerald - 600 to - teal - 700' text_colo,
@@ -6081,20 +6081,20 @@ export const,
   s://ziontechgroup.com / services / mobile - survey - studio', market_positio,
   n: 'Lightweight alternative to enterprise survey suites, optimized for mobile.' target_audienc,
   e: 'Growth teams, product managers, agencies trial_day,
-  s: 7; setup_tim,
+  s: 7'; setup_tim,
   e: 'Same day' categor,
   y: 'Developer Tools real_servic,
-  e: true; technolog,
-  y: ['Next.jsPostgreSQLTailwindVercel Edge']; integration,
-  s: ['Google SheetsZapierSegmentBigQuery']; use_case,
-  s: ['Landing page surveys_in - product polls_exit intent feedback']; ro,
+  e: true'; technolog,
+  y: ['Next.jsPostgreSQLTailwindVercel Edge']'; integration,
+  s: ['Google SheetsZapierSegmentBigQuery']'; use_case,
+  s: ['Landing page surveys_in - product polls_exit intent feedback']'; ro,
   i: 'Increase response rates 2–5x and de - risk product decisions.' competitor,
-  s: ['TypeformSurveyMonkey']; market_siz,
+  s: ['TypeformSurveyMonkey']'; market_siz,
   e: 'Survey market $9B+' growth_rat,
   e: '14% YoY' varian,
   t: 'ai - futuristic contact_inf,
-  o: contact; real_implementatio,
-  n: true; implementation_detail,
+  o: contact'; real_implementatio,
+  n: true'; implementation_detail,
   s: 'Responsive renderer with schema - driven forms and analytics.' launch_dat,
   e: '2029 - 11 - 05 customer,
   s: 60, ratin,
@@ -6106,7 +6106,7 @@ export const,
   e: '$149' perio,
   d: '/month', descriptio,
   n: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers. feature,
-  s: [;' 'QR tickets and check - in app_speaker / sponsor asset management_automated reminders and WhatsApp / SMS alerts_feedback / NPS post - event forms_budget tracker and P & L exports_embeddable agendas and live updates ]; popula,
+  s: [';' 'QR tickets and check - in app_speaker / sponsor asset management_automated reminders and WhatsApp / SMS alerts_feedback / NPS post - event forms_budget tracker and P & L exports_embeddable agendas and live updates ]'; popula,
   r: true, ico,
   n: '🎟️' colo,
   r: 'from - purple - 600 to - pink - 600' text_colo,
@@ -6115,20 +6115,20 @@ export const,
   s://ziontechgroup.com / services / event - ops - dashboard' market_positio,
   n: 'Focused micro - SaaS alternative to all - in - one event platforms.', target_audienc,
   e: 'Marketing teams, conference organizers, communities trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: '2 days' categor,
   y: 'Developer Tools real_servic,
-  e: true; technolog,
-  y: ['Next.jsStripeResendPostgreSQL']; integration,
-  s: ['StripeResendMailchimpTwilio']; use_case,
-  s: ['MeetupsWebinarsConferences']; ro,
+  e: true'; technolog,
+  y: ['Next.jsStripeResendPostgreSQL']'; integration,
+  s: ['StripeResendMailchimpTwilio']'; use_case,
+  s: ['MeetupsWebinarsConferences']'; ro,
   i: 'Cut ops overhead by 50% and improve attendance by 15–30%.' competitor,
-  s: ['EventbriteHopin']; market_siz,
+  s: ['EventbriteHopin']'; market_siz,
   e: 'Event tech $6B+' growth_rat,
   e: '18% YoY' varian,
   t: 'ai - futuristic contact_inf,
-  o: contact; real_implementatio,
-  n: true; implementation_detail,
+  o: contact'; real_implementatio,
+  n: true'; implementation_detail,
   s: 'Ticketing service with role - based portals and exportable analytics.' launch_dat,
   e: '2029 - 09 - 23 customer,
   s: 48, ratin,
@@ -6140,7 +6140,7 @@ export const,
   e: '$129' perio,
   d: '/month', descriptio,
   n: 'Create and manage on - call schedules with handoff workflows, time - zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders. feature,
-  s: [;' 'Flexible rotations and override rules_escalation policies and schedules_slack / Teams integration and on - call handoffs_vacation / holiday calendars_incident reports and postmortem templatesSLO and error budget reminders ]; popula,
+  s: [';' 'Flexible rotations and override rules_escalation policies and schedules_slack / Teams integration and on - call handoffs_vacation / holiday calendars_incident reports and postmortem templatesSLO and error budget reminders ]'; popula,
   r: false, ico,
   n: '📆' colo,
   r: 'from - indigo - 600 to - blue - 700' text_colo,
@@ -6149,20 +6149,20 @@ export const,
   s://ziontechgroup.com / services / oncall - scheduler - pro', market_positio,
   n: 'Lean alternative for SMBs, complements enterprise incident suites.' target_audienc,
   e: 'SRE teams, startups, agencies trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: '1 day' categor,
   y: 'Observability real_servic,
-  e: true; technolog,
-  y: ['Next.jsPostgreSQLTwilio']; integration,
-  s: ['SlackMicrosoft TeamsTwilio']; use_case,
-  s: ['On - call management_incident response']; ro,
+  e: true'; technolog,
+  y: ['Next.jsPostgreSQLTwilio']'; integration,
+  s: ['SlackMicrosoft TeamsTwilio']'; use_case,
+  s: ['On - call management_incident response']'; ro,
   i: 'Reduce paging confusion and missed alerts by 30–50%.' competitor,
-  s: ['PagerDutyOpsgenie']; market_siz,
+  s: ['PagerDutyOpsgenie']'; market_siz,
   e: 'Incident management $3B+' growth_rat,
   e: '20% YoY' varian,
   t: 'ai - futuristic contact_inf,
-  o: contact; real_implementatio,
-  n: true; implementation_detail,
+  o: contact'; real_implementatio,
+  n: true'; implementation_detail,
   s: 'Rotations engine and integrations with chat tools.' launch_dat,
   e: '2029 - 10 - 30 customer,
   s: 32, ratin,
@@ -6174,7 +6174,7 @@ export const,
   e: '$89' perio,
   d: '/month', descriptio,
   n: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time. feature,
-  s: [;' 'Keyword clustering and topical maps_competitor gap analysis_outline and brief generation_on - page audit and schema suggestions_rank tracking and change logsCMS export (Markdown / Headless) ]; popula,
+  s: [';' 'Keyword clustering and topical maps_competitor gap analysis_outline and brief generation_on - page audit and schema suggestions_rank tracking and change logsCMS export (Markdown / Headless) ]'; popula,
   r: true, ico,
   n: '🔎' colo,
   r: 'from - amber - 600 to - orange - 700' text_colo,
@@ -6183,20 +6183,20 @@ export const,
   s://ziontechgroup.com / services / seo - content - optimizer - pro' market_positio,
   n: 'Practical mid - market tool between basic plugins and enterprise suites.', target_audienc,
   e: 'Content teams, agencies, solo founders trial_day,
-  s: 7; setup_tim,
+  s: 7'; setup_tim,
   e: 'Same day' categor,
   y: 'Developer Tools real_servic,
-  e: true; technolog,
-  y: ['Next.jsOpenAISerpAPI']; integration,
-  s: ['Google Search ConsoleAhrefs (export)Semrush (export)']; use_case,
-  s: ['Page optimization_content planning_brief creation']; ro,
+  e: true'; technolog,
+  y: ['Next.jsOpenAISerpAPI']'; integration,
+  s: ['Google Search ConsoleAhrefs (export)Semrush (export)']'; use_case,
+  s: ['Page optimization_content planning_brief creation']'; ro,
   i: 'Improve organic traffic 20–50% over 3–6 months.' competitor,
-  s: ['SurferSEOFraseClearScope']; market_siz,
+  s: ['SurferSEOFraseClearScope']'; market_siz,
   e: 'SEO software $6B+' growth_rat,
   e: '16% YoY' varian,
   t: 'ai - futuristic contact_inf,
-  o: contact; real_implementatio,
-  n: true; implementation_detail,
+  o: contact'; real_implementatio,
+  n: true'; implementation_detail,
   s: 'SERP fetchers with caching and AI summarization.' launch_dat,
   e: '2029 - 09 - 10 customer,
   s: 95, ratin,
@@ -6208,7 +6208,7 @@ export const,
   e: '$49' perio,
   d: '/month', descriptio,
   n: 'Add feature flags to your app with SDKs for React / Node, rule targeting, and environments. Includes audit logs and safe defaulting. feature,
-  s: [,' 'Boolean, multivariate, and JSON flags_user and cohort targeting_gradual rollouts and percentage splits_audit logs and environment scoping_server and client SDKsWebhook notifications ]; popula,
+  s: [,' 'Boolean, multivariate, and JSON flags_user and cohort targeting_gradual rollouts and percentage splits_audit logs and environment scoping_server and client SDKsWebhook notifications ]'; popula,
   r: false, ico,
   n: '🚩' colo,
   r: 'from - slate - 700 to - gray - 800' text_colo,
@@ -6217,20 +6217,20 @@ export const,
   s://ziontechgroup.com / services / feature - flags - lite' market_positio,
   n: 'Minimal alternative to enterprise flag platforms for SMBs.', target_audienc,
   e: 'Startups, agencies, indie devs trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: 'Same day' categor,
   y: 'Developer Tools real_servic,
-  e: true; technolog,
-  y: ['Next.js_edge KV / Redis']; integration,
-  s: ['VercelNetlify']; use_case,
-  s: ['Kill switches_safe migrations_cohort experiments']; ro,
+  e: true'; technolog,
+  y: ['Next.js_edge KV / Redis']'; integration,
+  s: ['VercelNetlify']'; use_case,
+  s: ['Kill switches_safe migrations_cohort experiments']'; ro,
   i: 'Reduce incident impact and deploy more frequently.' competitor,
-  s: ['LaunchDarkly (entry)Flagsmith']; market_siz,
+  s: ['LaunchDarkly (entry)Flagsmith']'; market_siz,
   e: 'Feature management $1.5B+' growth_rat,
   e: '22% YoY' varian,
   t: 'ai - futuristic contact_inf,
-  o: contact; real_implementatio,
-  n: true; implementation_detail,
+  o: contact'; real_implementatio,
+  n: true'; implementation_detail,
   s: 'Rules engine with SDKs and environment isolation.' launch_dat,
   e: '2029 - 10 - 02 customer,
   s: 70, ratin,
@@ -6242,7 +6242,7 @@ export const,
   e: '$129' perio,
   d: '/month', descriptio,
   n: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly. feature,
-  s: [;' 'Company / person enrich via email or domain_tech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflows_confidence scores and data provenance_usage - based pricing tiers ]; popula,
+  s: [';' 'Company / person enrich via email or domain_tech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflows_confidence scores and data provenance_usage - based pricing tiers ]'; popula,
   r: true, ico,
   n: '🧭' colo,
   r: 'from - sky - 600 to - blue - 700' text_colo,
@@ -6251,20 +6251,20 @@ export const,
   s://ziontechgroup.com / services / sales - lead - enrichment' market_positio,
   n: 'Affordable enrichment focused on actionable signals.', target_audienc,
   e: 'Sales teams, SDRs, growth marketers trial_day,
-  s: 7; setup_tim,
+  s: 7'; setup_tim,
   e: 'Same day' categor,
   y: 'Developer Tools real_servic,
-  e: true; technolog,
-  y: ['Next.jsNodeExternal data partners']; integration,
-  s: ['HubSpotSalesforce (export)Airtable']; use_case,
-  s: ['Lead scoringICP matching_outbound targeting']; ro,
+  e: true'; technolog,
+  y: ['Next.jsNodeExternal data partners']'; integration,
+  s: ['HubSpotSalesforce (export)Airtable']'; use_case,
+  s: ['Lead scoringICP matching_outbound targeting']'; ro,
   i: 'Improve conversion rates by 10–25%.' competitor,
-  s: ['ClearbitZoomInfo (export)']; market_siz,
+  s: ['ClearbitZoomInfo (export)']'; market_siz,
   e: 'Sales intelligence $30B+' growth_rat,
   e: '12% YoY' varian,
   t: 'ai - futuristic contact_inf,
-  o: contact; real_implementatio,
-  n: true; implementation_detail,
+  o: contact'; real_implementatio,
+  n: true'; implementation_detail,
   s: 'Data aggregation with caching and scoring heuristics.' launch_dat,
   e: '2029 - 11 - 18 customer,
   s: 40, ratin,
@@ -6276,7 +6276,7 @@ export const,
   e: '$79' perio,
   d: '/month', descriptio,
   n: 'Upload PDFs / images and get structured outputs (vendor, dates, taxes) line items). Human - in - the - loop validation and retraining for edge cases. feature,
-  s: [,' 'High - accuracy OCR and field mapping_line item extraction and taxes_validation UI and review queues_export to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies ]; popula,
+  s: [,' 'High - accuracy OCR and field mapping_line item extraction and taxes_validation UI and review queues_export to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies ]'; popula,
   r: false, ico,
   n: '🧾' colo,
   r: 'from - rose - 600 to - pink - 700' text_colo,
@@ -6285,20 +6285,20 @@ export const,
   s://ziontechgroup.com / services / invoice - ocr - processor' market_positio,
   n: 'Cost - effective alternative with human review for accuracy.', target_audienc,
   e: 'Finance teams, accounting firms, SMBs trial_day,
-  s: 7; setup_tim,
+  s: 7'; setup_tim,
   e: '2 days' categor,
   y: 'AI & Data real_servic,
-  e: true; technolog,
-  y: ['Next.js_tesseract / LLMsPostgreSQL']; integration,
-  s: ['QuickBooks (export)Xero (export)SAP (export)']; use_case,
-  s: ['AP automation_expense processing']; ro,
+  e: true'; technolog,
+  y: ['Next.js_tesseract / LLMsPostgreSQL']'; integration,
+  s: ['QuickBooks (export)Xero (export)SAP (export)']'; use_case,
+  s: ['AP automation_expense processing']'; ro,
   i: 'Reduce manual data entry by 70–90%.' competitor,
-  s: ['VeryfiRossum']; market_siz,
+  s: ['VeryfiRossum']'; market_siz,
   e: 'Document AI $5B+' growth_rat,
   e: '24% YoY' varian,
   t: 'ai - futuristic contact_inf,
-  o: contact; real_implementatio,
-  n: true; implementation_detail,
+  o: contact'; real_implementatio,
+  n: true'; implementation_detail,
   s: 'Template - free extraction with feedback loops for edge cases.' launch_dat,
   e: '2029 - 12 - 01 customer,
   s: 27, ratin,
@@ -6311,7 +6311,7 @@ export const,
   d: '/month', descriptio,
   n: Create robotic process automations for web,
   workflows: login, scrape, form - fill, download, and upload. Includes scheduling, proxy support, and error screenshots. feature,
-  s: [,' 'Workflow editor and step recorder_retry logic and backoff policies_captcha solving hooks and proxies_file storage and PII redaction_job queue, metrics, and alerts_human approval steps ]; popula,
+  s: [,' 'Workflow editor and step recorder_retry logic and backoff policies_captcha solving hooks and proxies_file storage and PII redaction_job queue, metrics, and alerts_human approval steps ]'; popula,
   r: true, ico,
   n: '🤖' colo,
   r: 'from - fuchsia - 600 to - purple - 700' text_colo,
@@ -6320,20 +6320,20 @@ export const,
   s://ziontechgroup.com / services / rpa - browser - automation' market_positio,
   n: 'Builder - focused alternative to heavyweight RPA suites.', target_audienc,
   e: 'Ops teams, agencies, internal tools trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: '3 days' categor,
   y: 'Developer Tools real_servic,
-  e: true; technolog,
-  y: ['PlaywrightNext.jsPostgreSQL']; integration,
-  s: ['ZapierMake.comS3 / R2']; use_case,
-  s: ['Partner portal automations_data collection_bulk updates']; ro,
+  e: true'; technolog,
+  y: ['PlaywrightNext.jsPostgreSQL']'; integration,
+  s: ['ZapierMake.comS3 / R2']'; use_case,
+  s: ['Partner portal automations_data collection_bulk updates']'; ro,
   i: 'Automate repetitive tasks and cut manual hours by 50–90%.' competitor,
-  s: ['UiPath (SMB)Robocorp']; market_siz,
+  s: ['UiPath (SMB)Robocorp']'; market_siz,
   e: 'RPA $13B+' growth_rat,
   e: '20% YoY' varian,
   t: 'ai - futuristic contact_inf,
-  o: contact; real_implementatio,
-  n: true; implementation_detail,
+  o: contact'; real_implementatio,
+  n: true'; implementation_detail,
   s: 'Playwright runners with job queues and storage integrations.' launch_dat,
   e: '2029 - 11 - 28 customer,
   s: 38, ratin,
@@ -6345,7 +6345,7 @@ export const,
   e: '$79' perio,
   d: '/month', descriptio,
   n: 'Detect and redact sensitive data (PII / PHI / PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams., feature,
-  s: [,' 'Configurable detectors (SSN, phone, email) credit card)Context - aware redaction and masking_audit logs and retention policies_batch processing and streaming_webhook retries and DLQsExport to S3 / R2 and BigQuery ]; popula,
+  s: [,' 'Configurable detectors (SSN, phone, email) credit card)Context - aware redaction and masking_audit logs and retention policies_batch processing and streaming_webhook retries and DLQsExport to S3 / R2 and BigQuery ]'; popula,
   r: false, ico,
   n: '🧼' colo,
   r: 'from - teal - 600 to - cyan - 700' text_colo,
@@ -6354,20 +6354,20 @@ export const,
   s://ziontechgroup.com / services / redaction - compliance - api' market_positio,
   n: 'Developer - first compliance tooling.', target_audienc,
   e: 'Developers, compliance teams trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: 'Same day' categor,
   y: 'Quality & Monitoring real_servic,
-  e: true; technolog,
-  y: ['Next.jsLLMsRegex engines']; integration,
-  s: ['S3 / R2GCSBigQuery']; use_case,
-  s: ['Data minimization_compliance workflowsPII scrubbing']; ro,
+  e: true'; technolog,
+  y: ['Next.jsLLMsRegex engines']'; integration,
+  s: ['S3 / R2GCSBigQuery']'; use_case,
+  s: ['Data minimization_compliance workflowsPII scrubbing']'; ro,
   i: 'Reduce compliance risk and review time.' competitor,
-  s: ['NightfallVery Good Security']; market_siz,
+  s: ['NightfallVery Good Security']'; market_siz,
   e: 'Data security $20B+' growth_rat,
   e: '18% YoY' varian,
   t: 'ai - futuristic contact_inf,
-  o: contact; real_implementatio,
-  n: true; implementation_detail,
+  o: contact'; real_implementatio,
+  n: true'; implementation_detail,
   s: 'Detectors with policy engine and audit export.' launch_dat,
   e: '2029 - 12 - 03 customer,
   s: 22, ratin,
@@ -6379,7 +6379,7 @@ export const,
   e: '$69' perio,
   d: '/month', descriptio,
   n: 'Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders. feature,
-  s: [;' 'Goal trees and KPI ownership_weekly executive summaries_alerting on thresholds and trends_warehouse connectors_shareable links with permissions_annotations and change logs ]; popula,
+  s: [';' 'Goal trees and KPI ownership_weekly executive summaries_alerting on thresholds and trends_warehouse connectors_shareable links with permissions_annotations and change logs ]'; popula,
   r: false, ico,
   n: '📊' colo,
   r: 'from - green - 600 to - emerald - 700' text_colo,
@@ -6388,27 +6388,27 @@ export const,
   s://ziontechgroup.com / services / kpi - scorecards - studio' market_positio,
   n: 'Simple executive dashboards without BI bloat.', target_audienc,
   e: 'Founders, execs, ops trial_day,
-  s: 7; setup_tim,
+  s: 7'; setup_tim,
   e: 'Same day' categor,
   y: 'Business Intelligence real_servic,
-  e: true; technolog,
-  y: ['Next.jsSupabaseBigQuery']; integration,
-  s: ['Google SheetsBigQuerySnowflake (export)']; use_case,
-  s: ['OKRs / scorecards_exec reporting']; ro,
+  e: true'; technolog,
+  y: ['Next.jsSupabaseBigQuery']'; integration,
+  s: ['Google SheetsBigQuerySnowflake (export)']'; use_case,
+  s: ['OKRs / scorecards_exec reporting']'; ro,
   i: 'Improve visibility and accountability.' competitor,
-  s: ['GridGrow']; market_siz,
+  s: ['GridGrow']'; market_siz,
   e: 'BI $30B+' growth_rat,
   e: '11% YoY' varian,
   t: 'ai - futuristic contact_inf,
-  o: contact; real_implementatio,
-  n: true; implementation_detail,
+  o: contact'; real_implementatio,
+  n: true'; implementation_detail,
   s: 'Metrics ingestion and templated reporting.' launch_dat,
   e: '2029 - 10 - 20 customer,
   s: 36, ratin,
   g: 4.4, review,
   s: 16} ratin,
   g: 4.4,
-  reviews: 16 ' import { RealMarketService } from ./real-market-services; const contact = {/* TODO: Fix JSX expression */};;
+  reviews: 16 ' import { RealMarketService } from ./real-market-services'; const contact = {/* TODO: Fix JSX expression */}';';
 
   l: 'kleber@ziontechgroup.com'} addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}; websit,
@@ -6438,16 +6438,16 @@ export const,
   s: 17} }; {/* TODO: Fix JSX expression */}
 
   g: 4.5} review,
-  s: 14} }; {/* TODO: Fix JSX expression */}
+  s: 14} }'; {/* TODO: Fix JSX expression */}
 
   g: 4.4} review,
-  s: 18} }; {/* TODO: Fix JSX expression */}
+  s: 18} }'; {/* TODO: Fix JSX expression */}
 
   g: 4.3} review,
-  s: 12} }; {/* TODO: Fix JSX expression */}
+  s: 12} }'; {/* TODO: Fix JSX expression */}
 
   g: 4.4} review,
-  s: 16} } ]; ' import { RealMarketService } from ./real-market-services; const contact = {/* TODO: Fix JSX expression */};;
+  s: 16} } ]'; ' import { RealMarketService } from ./real-market-services'; const contact = {/* TODO: Fix JSX expression */}';';
 
   l: 'kleber@ziontechgroup.com'} addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}; websit,
@@ -6477,13 +6477,13 @@ export const,
   s: 17} }; {/* TODO: Fix JSX expression */}
 
   g: 4.5} review,
-  s: 14} }; {/* TODO: Fix JSX expression */}
+  s: 14} }'; {/* TODO: Fix JSX expression */}
 
   g: 4.4} review,
-  s: 18} }; {/* TODO: Fix JSX expression */}
+  s: 18} }'; {/* TODO: Fix JSX expression */}
 
   g: 4.3} review,
-  s: 12} }; {/* TODO: Fix JSX expression */}
+  s: 12} }'; {/* TODO: Fix JSX expression */}
 
   g: 4.4} review,
-  s: 16} } ];
+  s: 16} } ]';

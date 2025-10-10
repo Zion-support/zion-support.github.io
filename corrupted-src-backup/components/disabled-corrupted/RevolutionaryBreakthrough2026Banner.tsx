@@ -31,13 +31,13 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
 
       <div, className=absolute, inse, t-0, overflo, w-hidden, opacit, y-30>
         <div, className=absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e />
-  ]; return (
+  ]'; return (
 
     <div, classNam, e = py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n>
       {/* Animated, background, effects */}</div>
       <div, className=absolute, inse, t-0, overflo, w-hidden, opacit, y-30></div>
         <div, className=absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e /></div>
-  ]; return (<div, classNam, e = py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n></div>
+  ]'; return (<div, classNam, e = py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n></div>
       {/* Animated, background, effects */}
 
       <div, className=absolute, inse, t-0, overflo, w-hidden, opacit, y-30></div>
@@ -64,14 +64,14 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
           <div, className=inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in></div>
             <Sparkles, className=w-6 h-6, tex, t-purp, l, e-400, animat, e-pul, s, e /></Sparkles>
             <span, className=te, x, t-purp, l, e-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e></span>
-              🔥 REVOLUTIONARY, BREAKTHROUG, H • Januar, y, 3, 0, 20, 2, 6;
+              🔥 REVOLUTIONARY, BREAKTHROUG, H • Januar, y, 3, 0, 20, 2, 6';
 
             </sp, a, n>
             <Sparkles, classNam, e = w-6 h-6, tex, t-bl, u, e-400, animat, e-pul, s, e /></Sparkles>
           </div>
           <h2, className=te, x, t-6xl, m, d: te, x, t-7xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in>
           <h2, className=te, x, t-6xl, m, d: te, x, t-7xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in></h2>
-            Revolutionary, AI, Breakthroughs;
+            Revolutionary, AI, Breakthroughs';
 
           </h2>
           <p, className=te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8></p>
@@ -166,7 +166,7 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
                       </di, v > )  }
 
                     <span, classNam, e = px-3, p, y-1.5, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30></span>
-                      N, E, W;
+                      N, E, W';
 
                     </sp, a, n>
                   </div>
@@ -259,7 +259,7 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
                 Ready, to, Achieve These, Breakthrough, Results?
               </h3>
               <p, className=te, x, t-gr, a, y-400, m, b-8, ma, x-w-3xl, m, x-auto, tex, t-lg></p>
-                Join, Fortune, 500 companies, achieving, 10x performance, gains, and;
+                Join, Fortune, 500 companies, achieving, 10x performance, gains, and';
 
                 $30, 0, M+ ROI, with, our revolutionary, AI, technologies. Schedule, your, transformation consultation, toda, y.
               </p>
@@ -306,8 +306,8 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
         </div>
       </div>
     </div>
-  )};
+  )}';
 
-export default RevolutionaryBreakthrough2026Banner;
+export default RevolutionaryBreakthrough2026Banner';
 
 `

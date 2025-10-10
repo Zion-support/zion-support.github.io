@@ -22,29 +22,29 @@ export const securityConfig = {;
       'form-action': ["'self'"]},"
     reportOnly: false},
 
-  // Security Headers;
+  // Security Headers';
   headers: {,
     'X-Frame-Options': 'DENY','
     'X-Content-Type-Options': 'nosniff','
-    'X-XSS-Protection': '1; mode=block','
+    'X-XSS-Protection': '1'; mode=block','
     'Referrer-Policy': 'strict-origin-when-cross-origin','
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()','
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'},'
+    'Strict-Transport-Security': 'max-age=31536000'; includeSubDomains'; preload'},'
 
-  // Input validation;
+  // Input validation';
   validation: {,
-    maxInputLength: 10000;
+    maxInputLength: 10000';
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'application/pdf'],'
     maxFileSize: 10 * 1024 * 1024, // 10MB},
 
   // Rate limiting;
   rateLimit: {,
-    windowMs: 15 * 60 * 1000, // 15 minutes;
-    maxRequests: 100;
-    skipSuccessfulRequests: false;
+    windowMs: 15 * 60 * 1000, // 15 minutes';
+    maxRequests: 100';
+    skipSuccessfulRequests: false';
     skipFailedRequests: false},
 
-  // CORS configuration;
+  // CORS configuration';
   cors: {,
     origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],'
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],'
@@ -67,8 +67,8 @@ export const securityConfig = {;
     stripHtml: true;
     encodeSpecialChars: true;
     trimWhitespace: true;
-    removeNullBytes: true;
-export const securityConfig = {/* TODO: Fix JSX expression */};
+    removeNullBytes: true'";
+export const securityConfig = {/* TODO: Fix JSX expression */}'"'";
     },
     reportOnl,
   y: false},
@@ -95,6 +95,6 @@ export const securityConfig = {/* TODO: Fix JSX expression */};
 
   // Data sanitization,
   sanitization: {/* TODO: Fix JSX expression */}
-  }};
+  }}'"'"'";
 
-export default securityConfig;
+export default securityConfig'"'"'"'";

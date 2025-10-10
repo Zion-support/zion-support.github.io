@@ -1,28 +1,28 @@
-import React from 'react;
+import React from 'react';
 
-import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react;
+import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react;
+import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
 
-import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react;
+import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-;
+';
 
-const AIMLPlatformPage: React.FC = () => {;
+const AIMLPlatformPage: React.FC = () => {';
 
-const features = [;
+const features = [';
     {      ico,
     n: Brain,
       title: 'Complete ML Platform,
@@ -43,11 +43,11 @@ const features = [;
       benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing]
     }
 
-  ];
+  ]';
 
-;
+';
 
-const pricingPlans = [;;
+const pricingPlans = [';';
 
       name: 'Developer,
       price: '$999,
@@ -65,15 +65,15 @@ const pricingPlans = [;;
       nam,
     e: 'Team,
       price: '$2,499,
-      description: Ideal for development teams,;
+      description: Ideal for development teams,';
 
-const features = [];;
+const features = []';';
 
   return (
 
     {// TODO: Add content}
 
-};
+}';
 
   ico,
   n: Brain,
@@ -101,9 +101,9 @@ const features = [];;
   s: ['Shared workspaces', 'Version control', 'Knowledge sharing]
     }
 
-  ];
+  ]';
 
-  const pricingPlans = [;;
+  const pricingPlans = [';';
 
       nam,
   e: 'Team,
@@ -140,13 +140,13 @@ const features = [];;
         'White-label options,
         'API access;
 
-const stats = [;;
+const stats = [;';
 
-const stats = [;
+const stats = [';
   // TOD,
-  O: Add items;
+  O: Add items';
 
-];
+]';
 
     { ico,
     n: Users, value: '500+', label: 'Data Scientists },
@@ -191,15 +191,15 @@ const stats = [;
             <button className=border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg),
   hover:bg-cyan-400,
   hover:text-slate-900 transition-colors><
-Learn More;
+Learn More'";
 
           <
 
       <Footer 
     <
 
-  )};
+  )}'"'";
 
-export default $1;
+export default $1'"'"'";
 
-export default AiMlPlatformPage;
+export default AiMlPlatformPage'"'"'"'";

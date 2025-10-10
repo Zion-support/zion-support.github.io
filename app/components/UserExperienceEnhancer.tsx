@@ -1,8 +1,8 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
 import React, { useEffect, useState } from react;
 
@@ -24,11 +24,11 @@ const [loadingStates, setLoadingStates] = useState<Record<string, boolean>
 const enhanceUX = () => {;;;
 
       // Add smooth scrolling
-      document.documentElement.style.scrollBehavior = smooth;
+      document.documentElement.style.scrollBehavior = smooth';
 
-      // Add loading states for interactive elements;
+      // Add loading states for interactive elements';
 
-const interactiveElements = document.querySelectorAll(button, a, input);;
+const interactiveElements = document.querySelectorAll(button, a, input)';';
 
       interactiveElements.forEach((element, index) => {
         element.addEventListener('click, () => {
@@ -45,12 +45,12 @@ const style = document.createElement(style);;
 
           outline-offset: 2px}
 
-      ;
+      ';
 
-      document.head.appendChild(style);
+      document.head.appendChild(style)';
 
-    enhanceUX()}, []);
+    enhanceUX()}, [])';
 
   return <React.Fragment>{children}</React.Fragment>}
 
-export default UserExperienceEnhancer;
+export default UserExperienceEnhancer';

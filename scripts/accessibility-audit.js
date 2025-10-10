@@ -1,18 +1,18 @@
-import fs from 'fs;
+import fs from 'fs';
 
 import path from 'path;
 
 import { fileURLToPath } from url;
 
-;
+';
 
-const __filename = fileURLToPath(import.meta.url);;;
+const __filename = fileURLToPath(import.meta.url)';';';
 
 // __dirname removed
 // console.log removed for production
-// Accessibility checklist;
+// Accessibility checklist';
 
-const accessibilityChecklist = {;;;
+const accessibilityChecklist = {';';';
 
   semanticHTML: {,
     description: 'Use semantic HTML elements,
@@ -93,12 +93,12 @@ const distDir = path.join(__dirname, ../dist);;
 
   htmlFiles.forEach(file => {);
 
-const filePath = path.join(distDir, file);;
+const filePath = path.join(distDir, file);';
 
-    const content = fs.readFileSync(filePath, utf8);;
+    const content = fs.readFileSync(filePath, utf8)';';
 
     // console.log removed for production
-// Check for semantic HTML;
+// Check for semantic HTML';
 
     if (!content.includes('<main)) {
       // console.log removed for production
@@ -110,9 +110,9 @@ const filePath = path.join(distDir, file);;
 </nav>
     }
 
-    // Check for alt attributes;
+    // Check for alt attributes';
 
-    const imgTags = content.match(/<img[^>]*>/g) || [];;
+    const imgTags = content.match(/<img[^>]*>/g) || []';';
 
     imgTags.forEach(img => {)
       if (!img.includes('alt=)) {
@@ -121,15 +121,15 @@ const filePath = path.join(distDir, file);;
 
     });
 
-    // Check for heading hierarchy;
+    // Check for heading hierarchy';
 
-    const headings = content.match(/<h[1-6][^>]*>/g) || [];;
+    const headings = content.match(/<h[1-6][^>]*>/g) || []';';
 
     if (headings.length === 0) {
       // console.log removed for production
 }
 
-    // Check for skip links;
+    // Check for skip links';
 
     if (!content.includes('skip') && !content.includes('Skip)) {
       // console.log removed for production
@@ -149,24 +149,24 @@ const distDir = path.join(__dirname, ../dist);;
 
   cssFiles.forEach(file => {);
 
-const filePath = path.join(distDir, file);;
+const filePath = path.join(distDir, file);';
 
-    const content = fs.readFileSync(filePath, utf8);;
+    const content = fs.readFileSync(filePath, utf8)';';
 
     // console.log removed for production
-// Check for focus styles;
+// Check for focus styles';
 
     if (!content.includes(':focus)) {
       // console.log removed for production
 }
 
-    // Check for high contrast support;
+    // Check for high contrast support';
 
     if (!content.includes('prefers-contrast)) {
       // console.log removed for production
 }
 
-    // Check for reduced motion support;
+    // Check for reduced motion support';
 
     if (!content.includes('prefers-reduced-motion)) {
       // console.log removed for production
@@ -178,12 +178,12 @@ const filePath = path.join(distDir, file);;
 
 function generateAccessibilityReport() {
   // console.log removed for production
-;
+';
 
-const report = {;;
+const report = {';';
 
     timestamp: new Date().toISOString()
-    checklist: accessibilityChecklist;
+    checklist: accessibilityChecklist';
 
     recommendations: [,
       'Add ARIA labels to interactive elements,
@@ -205,7 +205,7 @@ const report = {;;
       'Keyboard-only navigation testing,
       Color contrast analyzers
     ]
-  };
+  }';
 
   fs.writeFileSync(
 
@@ -234,28 +234,28 @@ const improvements = ;;
 
 // 2. Implement focus management;
 
-const trapFocus = (element) => {;;
+const trapFocus = (element) => {';';
 
-const focusableElements = element.querySelectorAll(;;
+const focusableElements = element.querySelectorAll(';';
 
     'button, [href], input, select, textarea, [tabindex]:not([tabindex=-1])
   );
 
-  const firstElement = focusableElements[0];;
+  const firstElement = focusableElements[0]';';
 
-  const lastElement = focusableElements[focusableElements.length - 1];;
+  const lastElement = focusableElements[focusableElements.length - 1]';';
 
   element.addEventListener('keydown, (e) => {
     if (e.key === 'Tab) {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
-          lastElement.focus();
+          lastElement.focus()";
 
           e.preventDefault()}
 
       } else {
         if (document.activeElement === lastElement) {
-          firstElement.focus();
+          firstElement.focus()";
 
           e.preventDefault()}
 
@@ -263,29 +263,29 @@ const focusableElements = element.querySelectorAll(;;
 
     }
 
-  })};
+  })}";
 
-// 3. Add live regions for dynamic content;
+// 3. Add live regions for dynamic content";
 
 <div aria-live="polite" aria-atomic="true" className="sr-only>
   {announcement}
 
 </div>
 
-// 4. Ensure proper heading hierarchy;
+// 4. Ensure proper heading hierarchy";
 
 <h1>Main Page Title</h1>
   <h2>Section Title</h2>
     <h3>Subsection Title</h3>
 
-// 5. Add skip links;
+// 5. Add skip links";
 
 <a href="#main-content" className="skip-link>
-  Skip to main content;
+  Skip to main content";
 
 </a>
 
-// 6. Use semantic HTML;
+// 6. Use semantic HTML";
 
 <main>
   <nav aria-label="Main navigation>
@@ -301,17 +301,17 @@ const focusableElements = element.querySelectorAll(;;
   </section>
 </main>
 
-// 7. Form accessibility;
+// 7. Form accessibility";
 
 <form>
   <fieldset>
     <legend>Contact Information</legend>
     <label htmlFor="email>Email Address</label>
-    <input;
+    <input";
 
       id="email 
       type="email 
-      required;
+      required";
 
       aria-describedby="email-error
     /></input>
@@ -322,9 +322,9 @@ const focusableElements = element.querySelectorAll(;;
   </fieldset>
 </form>
 
-// 8. Image accessibility;
+// 8. Image accessibility";
 
-<img;
+<img";
 
   src="chart.png 
   alt="Sales chart showing 25% increase in Q3 2024
@@ -343,13 +343,13 @@ const focusableElements = element.querySelectorAll(;;
 // All interactive elements should be:
 // - Focusable with Tab key;
 
-// - Activable with Enter/Space;
+// - Activable with Enter/Space';
 
-// - Have visible focus indicators;
+// - Have visible focus indicators';
 
-// - Follow logical tab order;
+// - Follow logical tab order';
 
-;
+';
 
 ,
   fs.writeFileSync()
@@ -369,9 +369,9 @@ function audit() {
 
     auditCSSFiles();
 
-    generateAccessibilityReport();
+    generateAccessibilityReport()'";
 
-    generateAccessibilityImprovements();
+    generateAccessibilityImprovements()'"'";
 
     // console.log removed for production
 // console.log removed for production
@@ -382,6 +382,6 @@ process.exit(1)}
 
 }
 
-// Run audit;
+// Run audit'"'"'";
 
-audit();
+audit()'"'"'"'";

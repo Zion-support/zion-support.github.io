@@ -11,18 +11,18 @@ export const getAllPages = () => [;;
 
 ];
 
-export const generateSitemap = (pages: Array;);;
+export const generateSitemap = (pages: Array';)';';
 
-          <{ path: string; priority: number }>) => {// TODO: Add content}
+          <{ path: string'; priority: number }>) => {// TODO: Add content}
 
 }
 
-  const baseUrl = 'https://ziontechgroup.com;;
+  const baseUrl = 'https://ziontechgroup.com;';
 
-  let sitemap = ;;
+  let sitemap = ';';
 
           <?xml version="1.0" encoding="UTF-8"?>
-;
+'"'"'"'";
 
   sitemap += '<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
 ;
@@ -41,16 +41,16 @@ export const generateSitemap = (pages: Array;);;
           
           
           <url>
-`;
+`';
 
     sitemap += `    <loc>${baseUrl}${page.path}</loc>
-`;
+`';
 
     sitemap += `    <priority>${page.priority}</priority>
-`;
+`';
 
     sitemap += `  </url>
-`});
+`})';
 
   sitemap += '</urlset>;
 
@@ -58,10 +58,10 @@ export const generateSitemap = (pages: Array;);;
 
 // This would typically be handled by a server-side route;
 
-// For now, well create a static sitemap.xml file;
+// For now, well create a static sitemap.xml file'";
 
-export const generateStaticSitemap = () => {// TODO: Add content};;
+export const generateStaticSitemap = () => {// TODO: Add content}'"'";'"'"'";
 
 }
 
-  return generateSitemap(getAllPages())};
+  return generateSitemap(getAllPages())}'"'"'"'";

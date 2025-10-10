@@ -1,10 +1,10 @@
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Share2, ArrowRight } from 'lucide-react;
+import { Share2, ArrowRight } from 'lucide-react';
 
-;
+';
 
 const SocialMediaManagerPage: React.FC = () => {
   return (<div>
@@ -45,13 +45,13 @@ const SocialMediaManagerPage: React.FC = () => {
         <
       <
     <)
-  );
+  )';
 
 )]
-    };
+    }'";
 
-};
+}'"'";
 
-export default SocialMediaManagerPage;
+export default SocialMediaManagerPage'"'"'";
 
-  );)
+  )'"'"'"'";)

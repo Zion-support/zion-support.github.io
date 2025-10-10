@@ -1,9 +1,9 @@
 
 
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { ArrowLeft, ArrowRight, Target, CheckCircle, Star } from 'lucide-react;
+import { ArrowLeft, ArrowRight, Target, CheckCircle, Star } from 'lucide-react';
 
 export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression */}
 
@@ -24,9 +24,9 @@ export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression *
           <Link href="/" className=inline-flex items-center text-blue-600,
   hover:text-blue-800 transition-colors duration-200></Link>
             <ArrowLeft className=w-4 h-4 mr-2 /></ArrowLeft>
-// Back to Home;
+// Back to Home'"'"'";
 
-import React from 'react;
+import React from 'react";
 
 export default function ServicesAdvertisingPage() {
   return (
@@ -52,21 +52,21 @@ export default function ServicesAdvertisingPage() {
           <div className="text-center></div>
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600 text-sm font-semibold mb-6></div>
               <Target className=w-4 h-4 mr-2 /></Target>
-AI-Powered Advertising Solutions;
+AI-Powered Advertising Solutions";
 
             <h1 className=text-4xl,
   md:text-6xl font-bold mb-6></h1>
-// AI Advertising Services;
+// AI Advertising Services";
 
           </h1>
             <p className=text-xl,
   md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto></p>
-// Revolutionize Your Marketing with 300% ROI Guaranteed;
+// Revolutionize Your Marketing with 300% ROI Guaranteed";
 
           </p>
             <p className=text-lg mb-8 text-gray-300 max-w-4xl mx-auto></p>
 // Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy,
-//               60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven;
+//               60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven";
 
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
             
@@ -83,12 +83,12 @@ AI-Powered Advertising Solutions;
               <Link
                 href="/contact" className=bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center
 // >
-//                 Start Free Consultation;
+//                 Start Free Consultation";
 
           <ArrowRight className=w-4 h-4 ml-2 />
 href="#services" className=border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200
 
-                View Our Services;
+                View Our Services";
 
       </section>
       {/* Key Metrics */}
@@ -100,11 +100,11 @@ href="#services" className=border-2 border-white text-white hover:bg-white hover
           <div className="text-center mb-12></div>
             <h2 className=text-3xl,
   md:text-4xl font-bold text-gray-900 mb-4></h2>
-// Proven Advertising Results;
+// Proven Advertising Results";
 
           </h2>
             <p className=text-xl text-gray-600></p>
-Our AI-powered advertising delivers measurable business impact;
+Our AI-powered advertising delivers measurable business impact";
 
           <div className=grid grid-cols-1,
   md:grid-cols-2,
@@ -120,9 +120,9 @@ Our AI-powered advertising delivers measurable business impact;
       {/* Services Section */}
 
       <section id="services" className=py-16 bg-gray-50></section>
-AI Advertising Solutions;
+AI Advertising Solutions";
 
-              Comprehensive AI-powered advertising services for maximum impact;
+              Comprehensive AI-powered advertising services for maximum impact";
 
           <div className=grid grid-cols-1,
   md:grid-cols-2,
@@ -143,7 +143,7 @@ Advanced machine learning algorithms that identify and target your ideal custome
               <div className=mt-4 text-sm text-green-600 font-semibold></div>
                 Market,
   Price: $2,000-5,000/month | Our,
-  Price: $1,200/month;
+  Price: $1,200/month";
 
 <div className="text-green-600 text-4xl mb-4>📊</div>
               <h3 className=text-xl font-semibold mb-3>Campaign Optimization</h3>
@@ -155,7 +155,7 @@ Advanced machine learning algorithms that identify and target your ideal custome
                 <li>• Landing page optimization</li>
                 Market,
   Price: $3,000-7,000/month | Our,
-  Price: $1,800/month;
+  Price: $1,800/month";
 
               <div className="text-purple-600 text-4xl mb-4>🤖</div>
               <h3 className=text-xl font-semibold mb-3>Creative Generation</h3>
@@ -167,7 +167,7 @@ Advanced machine learning algorithms that identify and target your ideal custome
                 <li>• Brand consistency maintenance</li>
                 Market,
   Price: $2,500-6,000/month | Our,
-  Price: $1,500/month;
+  Price: $1,500/month";
 
               <div className="text-orange-600 text-4xl mb-4>📱</div>
               <h3 className=text-xl font-semibold mb-3>Social Media Advertising</h3>
@@ -187,7 +187,7 @@ Advanced machine learning algorithms that identify and target your ideal custome
                 <li>• Performance tracking</li>
                 Market,
   Price: $1,500-4,000/month | Our,
-  Price: $900/month;
+  Price: $900/month";
 
               <div className="text-indigo-600 text-4xl mb-4>📈</div>
               <h3 className=text-xl font-semibold mb-3>Analytics & Reporting</h3>
@@ -199,13 +199,13 @@ Advanced machine learning algorithms that identify and target your ideal custome
                 <li>• Competitive analysis</li>
                 Market,
   Price: $1,000-3,000/month | Our,
-  Price: $600/month;
+  Price: $600/month";
 
       {/* Pricing Section */}
 
-Transparent Pricing;
+Transparent Pricing"'";
 
-              Choose the plan that fits your advertising needs;
+              Choose the plan that fits your advertising needs"'";
 
           <div className=grid grid-cols-1,
   md:grid-cols-3 gap-8></div>
@@ -225,7 +225,7 @@ Transparent Pricing;
                   <span>2 platforms included</span>
               <button className=w-full bg-blue-600,
   hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200></button>
-// Get Started;
+// Get Started"'"'";
 
           </button>
             <div className="bg-blue-600 text-white rounded-lg p-8 relative></div>
@@ -252,7 +252,7 @@ Transparent Pricing;
                   <span>24/7 support</span>
                   <span>Custom integrations</span>
                   <span>White-label options</span>
-                Contact Sales;
+                Contact Sales"'"'";
 
       {/* CTA Section */}
 
@@ -262,12 +262,12 @@ Transparent Pricing;
 Ready to Transform Your Advertising?
           <p className=text-xl mb-8 text-blue-100>
             Get a free AI advertising assessment and discover how we can boost your ROI by 300%
-              className=bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center Get Free Assessment;
+              className=bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center Get Free Assessment"'"'"'";
 
               href="/case-studies" className=border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200
 
-              View Success Stories;
+              View Success Stories'"'";
 
-  )};
+  )}'"'"'";
 
-export default ServicesAdvertisingPage;
+export default ServicesAdvertisingPage'"'"'"'";

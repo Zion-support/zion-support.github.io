@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react;
+import React, { useState, useEffect } from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from lucide-react;
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from lucide-react';
 
 ;
 
@@ -60,18 +60,18 @@ const closeAllMenus = () => {;;
 
 ;
 
-const toggleMenu = () => {;;
+const toggleMenu = () => {;';
 
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen)';
 
     if (isOpen) {
       closeAllMenus()}
 
-  };
+  }';
 
-;
+';
 
-const serviceCategories = [;;
+const serviceCategories = [';';
 
     {
       title: 'Micro SAAS Solutions,
@@ -205,7 +205,7 @@ const serviceCategories = [;;
       ]
     }
 
-  ];
+  ]';
 
   return (
 
@@ -251,7 +251,7 @@ const serviceCategories = [;;
               >
                 <Brain className="w-4 h-4 />
                 <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : '}} />
               </button>
               
               {servicesOpen && (
@@ -414,7 +414,7 @@ const serviceCategories = [;;
                     <Brain className="w-4 h-4 />
                     <span>Services</span>
                   </span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}} />
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : '}} />
                 </button>
                 {servicesOpen && (
 
@@ -533,6 +533,6 @@ const serviceCategories = [;;
 
       </div>
     </nav>
-  )};
+  )}'"'"'";
 
-export default Navigation;
+export default Navigation'"'"'"'";

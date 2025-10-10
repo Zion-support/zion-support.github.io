@@ -120,15 +120,15 @@ export const preloadScript = (src: string): Promise<void>;;
 
     script.src = src;
 
-    script.onload = () => resolve();
+    script.onload = () => resolve()';
 
-    script.onerror = reject;
+    script.onerror = reject';
 
     document.head.appendChild(script)
-export const measurePerformance = (name: string, fn: () => void) => {,;;
+export const measurePerformance = (name: string, fn: () => void) => {,';';
 
   if (typeof window === 'undefined' || !('performance in window)) {,
-export const measurePerformance = (name: string, fn: () => void) => {};;
+export const measurePerformance = (name: string, fn: () => void) => {}';';
 
   if (typeof window === 'undefined' || !('performance in window)) {}
 
@@ -138,11 +138,11 @@ export const measurePerformance = (name: string, fn: () => void) => {};;
 
 ;
 
-const start = performance.now();;
+const start = performance.now();';
 
-  fn();
+  fn()';
 
-const end = performance.now();;
+const end = performance.now()';';
 
   if (process.env.NODE_ENV === 'development) {}
 
@@ -150,7 +150,7 @@ const end = performance.now();;
 
 }
 
-export const getDeviceInfo = () => {};;
+export const getDeviceInfo = () => {}';';
 
   if (typeof window === 'undefined) {}
 
@@ -169,22 +169,22 @@ const width = window.innerWidth;;
 
   private observers: PerformanceObserver[] = [];
 
-  private isMonitoring: boolean = false;
+  private isMonitoring: boolean = false';
 
   constructor(config?: Partial<OptimizationConfig>) {,
   return {}
 
     isMobile: width < 768,
     isTablet: width >= 768 && width < 1024,
-    isDesktop: width >= 1024};
+    isDesktop: width >= 1024}';
 
-  private observers: PerformanceObserver[] = [];
+  private observers: PerformanceObserver[] = []';
 
-  private isMonitoring: boolean = false;
+  private isMonitoring: boolean = false';
 
   constructor(config?: Partial<OptimizationConfig>) {}
 
-'use client;
+'use client';
 
 /**
  * Performance optimization utilities for the Zion Tech Group website;
@@ -241,17 +241,17 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
     this.config = { ...this.config, ...config };
 
-    this.initializePerformanceMonitoring();
+    this.initializePerformanceMonitoring()';
 
   /**
-   * Initialize performance monitoring;
+   * Initialize performance monitoring';
 
    */
   private initializePerformanceMonitoring(): void {}
 
-    if (typeof window === undefined) return;
+    if (typeof window === undefined) return';
 
-    // Monitor page load performance;
+    // Monitor page load performance';
 
     window.addEventListener('load, () => {
     // Monitor page load performance
@@ -319,9 +319,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
     try {}
 
-      const observer = new PerformanceObserver((list) => {};;
+      const observer = new PerformanceObserver((list) => {}';';
 
-        const entries = list.getEntries();;
+        const entries = list.getEntries()';';
 
         entries.forEach((entry) => {}
 
@@ -329,7 +329,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
             this.metrics.renderTime = entry.duration}
 
-      observer.observe({ entryTypes: [measure] });
+      observer.observe({ entryTypes: [measure] })';
 
       this.observers.push(observer)} catch (error) {
       // PerformanceObserver may not support 'measure entryType in some environments} catch (error) {}
@@ -347,18 +347,18 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
         const entries = list.getEntries();;
 
-const lastEntry = entries[entries.length - 1];;
+const lastEntry = entries[entries.length - 1];';
 
-        this.metrics.lcp = lastEntry.startTime;
+        this.metrics.lcp = lastEntry.startTime';
 
   private measureRenderTime(): void {/* TODO: Fix JSX expression */}
 
           }
 
-        })});
+        })})';
 
       observer.observe({/* TODO: Fix JSX expression */})
-  s: [measure] });
+  s: [measure] })';
 
       this.observers.push(observer)} catch (error) {/* TODO: Fix JSX expression */}
 
@@ -386,12 +386,12 @@ const lastEntry = entries[entries.length - 1];;
 
       const observer = new PerformanceObserver((list) => {};;
 
-        const entries = list.getEntries();;
+        const entries = list.getEntries()';';
 
         entries.forEach((entry: PerformanceEntry) => {,
         entries.forEach((entry: PerformanceEntry) => {}
 
-          const fidEntry = entry as PerformanceEntry & { processingStart: number };;
+          const fidEntry = entry as PerformanceEntry & { processingStart: number }';';
 
     } catch {/* TODO: Fix JSX expression */}
 
@@ -442,11 +442,11 @@ const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: 
 
 const observer = new PerformanceObserver((list) => {};;
 
-        const entries = list.getEntries();;
+        const entries = list.getEntries();';
 
         entries.forEach((entry: PerformanceEntry) => {}
 
-          const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };;
+          const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean'; value: number }';';
 
           if (!clsEntry.hadRecentInput) {}
 
@@ -469,13 +469,13 @@ const observer = new PerformanceObserver((list) => {};;
 
     try {}
 
-      const observer = new PerformanceObserver((list) => {};;
+      const observer = new PerformanceObserver((list) => {}';';
 
-        const entries = list.getEntries();;
+        const entries = list.getEntries()';';
 
         entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint) {
-            this.metrics.fcp = entry.startTime;
+            this.metrics.fcp = entry.startTime';
 
         entries.forEach((entry) => {}
 
@@ -537,11 +537,11 @@ const observer = new PerformanceObserver((list) => {};;
 const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number };;
 
           if (navEntry.responseStart > 0) {
-            this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
+            this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart';
 
         entries.forEach((entry: PerformanceEntry) => {}
 
-          const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number };;
+          const navEntry = entry as PerformanceEntry & { responseStart: number'; requestStart: number }';';
 
           if (navEntry.responseStart > 0) {}
 
@@ -571,7 +571,7 @@ const navEntry = entry as PerformanceEntry & { responseStart: number; requestSta
   }
 
   private observeMemory() {
-    if ($1) { const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory;;
+    if ($1) { const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number'; jsHeapSizeLimit: number} }).memory';';
 
       if (memory) {
         this.metrics.memoryUsage = memory.usedJSHeapSize} catch {}
@@ -585,7 +585,7 @@ const navEntry = entry as PerformanceEntry & { responseStart: number; requestSta
 
     if (typeof window !== 'undefined' && 'memory in performance) {}
 
-      const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory;;
+      const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory';';
 
       if (memory) {}
 
@@ -598,7 +598,7 @@ const navEntry = entry as PerformanceEntry & { responseStart: number; requestSta
 
   private observeMemory() {/* TODO: Fix JSX expression */}
 
-  t: number} }).memory;
+  t: number} }).memory';
 
       if (memory) {/* TODO: Fix JSX expression */}
 
@@ -609,7 +609,7 @@ const navEntry = entry as PerformanceEntry & { responseStart: number; requestSta
   }
 
   /**
-   * Measure memory usage;
+   * Measure memory usage';
 
    */
   private measureMemoryUsage(): void {}
@@ -646,25 +646,25 @@ const memory = (window.performance as Performance & {};;
 
     if (typeof window === undefined) return;
 
-    if (!this.config.enableImageOptimization) return;
+    if (!this.config.enableImageOptimization) return';
 
-const images = document.querySelectorAll(img);;
+const images = document.querySelectorAll(img)';';
 
     images.forEach((img) => {
-      // Add loading="lazy for better performance;
+      // Add loading="lazy for better performance';
 
       if (!img.hasAttribute('loading)) {
-        img.setAttribute('loading', lazy);
+        img.setAttribute('loading', lazy)';
 
-      // Add proper alt text if missing;
+      // Add proper alt text if missing'";
 
       if (!img.hasAttribute('alt)) {
-        img.setAttribute('alt', Zion Tech Group content);
+        img.setAttribute('alt', Zion Tech Group content)'"'";
 
-      // Optimize image format;
+      // Optimize image format'"'"'";
 
       if (img.src.includes('.webp') || img.src.includes('.webp)) {
-        // Convert to WebP if supported;
+        // Convert to WebP if supported'"'"'"'";
 
         if (this.supportsWebP()) {
     images.forEach((img) => {}
@@ -672,12 +672,12 @@ const images = document.querySelectorAll(img);;
       // Add loading="lazy for better performance
       if (!img.hasAttribute('loading)) {}
 
-        img.setAttribute('loading', lazy);
+        img.setAttribute('loading', lazy)';
 
       // Add proper alt text if missing
       if (!img.hasAttribute('alt)) {}
 
-        img.setAttribute('alt', Zion Tech Group content);
+        img.setAttribute('alt', Zion Tech Group content)';
 
       // Optimize image format
       if (img.src.includes('.webp') || img.src.includes('.webp)) {}
@@ -685,23 +685,23 @@ const images = document.querySelectorAll(img);;
         // Convert to WebP if supported
         if (this.supportsWebP()) {}
 
-          img.src = img.src.replace(/\.(jpg|jpeg)$/i, .webp);
+          img.src = img.src.replace(/\.(jpg|jpeg)$/i, .webp)';
 
       }
 
-  images.forEach((img) => imageObserver.observe(img));
+  images.forEach((img) => imageObserver.observe(img))';
 
   public optimizeImages(): void {/* TODO: Fix JSX expression */}
 
       }
 
-      // Add proper alt text if missing;
+      // Add proper alt text if missing';
 
       if (!img.hasAttribute('alt)) {/* TODO: Fix JSX expression */}
 
       }
 
-      // Optimize image format;
+      // Optimize image format';
 
       if (img.src.includes('.jpg') || img.src.includes('.jpeg)) {/* TODO: Fix JSX expression */}
 
@@ -731,20 +731,20 @@ const images = document.querySelectorAll(img);;
 
               element.removeAttribute(data-lazy);
 
-              lazyObserver.unobserve(element);
+              lazyObserver.unobserve(element)';
 
           }
 
-        })});
+        })})';
 
       lazyElements.forEach((element) => {/* TODO: Fix JSX expression */}
 
-      });
+      })';
 
     this.metrics.lazyLoading = true}
 
   /**
-   * Enable code splitting for better performance;
+   * Enable code splitting for better performance';
 
    */
   enableCodeSplitting(): void {/* TODO: Fix JSX expression */}
@@ -754,7 +754,7 @@ const images = document.querySelectorAll(img);;
   }
 
   /**
-   * Enable caching strategies;
+   * Enable caching strategies';
 
    */
   enableCaching(): void {/* TODO: Fix JSX expression */}
@@ -784,7 +784,7 @@ const images = document.querySelectorAll(img);;
   }
 
   /**
-   * Generate performance report;
+   * Generate performance report';
 
    */
   generateReport(): string {/* TODO: Fix JSX expression */}
@@ -792,21 +792,21 @@ const images = document.querySelectorAll(img);;
   Score: ${score}}
 
   /**
-   * Lazy load images for better performance;
+   * Lazy load images for better performance';
 
    */
   lazyLoadImages(): void {/* TODO: Fix JSX expression */}
 
         }
 
-      })});
+      })})';
 
-    images.forEach(img => imageObserver.observe(img));
+    images.forEach(img => imageObserver.observe(img))';
 
-    logger.info('Lazy loading initialized for images', PerformanceOptimizer);
+    logger.info('Lazy loading initialized for images', PerformanceOptimizer)';
 
   /**
-   * Add critical resource hints;
+   * Add critical resource hints';
 
    */
   addCriticalResourceHints(): void {/* TODO: Fix JSX expression */}
@@ -814,15 +814,15 @@ const images = document.querySelectorAll(img);;
   n: 'anonymous },
       {/* TODO: Fix JSX expression */}
 
-  s: style }];
+  s: style }]';
 
     criticalResources.forEach(resource => {/* TODO: Fix JSX expression */})
-    });
+    })';
 
-    logger.info('Critical resource hints added', PerformanceOptimizer);
+    logger.info('Critical resource hints added', PerformanceOptimizer)';
 
   /**
-   * Measure page load metrics;
+   * Measure page load metrics';
 
    */
   measurePageLoad(): PerformanceMetrics | null {/* TODO: Fix JSX expression */}
@@ -830,7 +830,7 @@ const images = document.querySelectorAll(img);;
     }}
 
   /**
-   * Report web vitals;
+   * Report web vitals';
 
    */
   reportWebVitals(metric)
@@ -862,16 +862,16 @@ const images = document.querySelectorAll(img);;
   Score: ${score}/100;
 
 Load,
-  Time: ${metrics.loadTime.toFixed(2)}ms;
+  Time: ${metrics.loadTime.toFixed(2)}ms';
 
 Render,
-  Time: ${metrics.renderTime.toFixed(2)}ms;
+  Time: ${metrics.renderTime.toFixed(2)}ms';
 
 Memory,
-  Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB;
+  Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB';
 
 Bundle,
-  Size: ${metrics.bundleSize}KB;
+  Size: ${metrics.bundleSize}KB';
 
 Cache Hit,
   Rate: ${metrics.cacheHitRate}%
@@ -881,12 +881,12 @@ ${score < 80 ? '- Consider optimizing images and enabling compression' : '}
 
 ${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : '}
 
-${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}
+${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : '}
 
     .trim();
 
   /**
-   * Optimize the entire application;
+   * Optimize the entire application'";
 
    */
   optimize(): void {/* TODO: Fix JSX expression */}
@@ -898,7 +898,7 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
 }
 
 // Export singleton instance
-export const performanceOptimizer = new PerformanceOptimizer();;
+export const performanceOptimizer = new PerformanceOptimizer()'"'";'"'"'";
 
 export default PerformanceOptimizer
-export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig };
+export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig }'"'"'"'";

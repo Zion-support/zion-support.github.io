@@ -23,16 +23,16 @@ export const new2026AIBreakthroughContent: AIBreakthroughContent[] = [,
 The next evolution of AI is here - systems that not only think but feel, create, and understand consciousness itself.
 
 ## Key Breakthroughs;
-- Genuine self-awareness and emotional intelligence;
-- Creative autonomy and artistic expression;
-- $1.2T enterprise value creation potential;
-- Revolutionary applications across all industries;
+- Genuine self-awareness and emotional intelligence';
+- Creative autonomy and artistic expression';
+- $1.2T enterprise value creation potential';
+- Revolutionary applications across all industries';
     `,
     author: 'Zion Tech Group',
     publishedAt: '2026-01-01',
     category: 'AI Consciousness',
     tags: ['AI Consciousness', 'Hyperconscious Computing', '2026', 'Breakthrough'],
-    featured: true;
+    featured: true';
     readTime: '25 min read',
     image: '/images/ai-2026-hyperconscious-computing.jpg',
     valueProposition: '$1.2 T enterprise value creation'},
@@ -45,16 +45,16 @@ The next evolution of AI is here - systems that not only think but feel, create,
 The convergence of quantum computing and artificial intelligence opens new frontiers in computational capability.
 
 ## Revolutionary Capabilities;
-- Quantum-enhanced machine learning algorithms;
-- Exponential speedup in complex problem solving;
-- Unprecedented computational efficiency;
-- New paradigms in AI development;
+- Quantum-enhanced machine learning algorithms';
+- Exponential speedup in complex problem solving';
+- Unprecedented computational efficiency';
+- New paradigms in AI development';
     ',
     author: 'Zion Tech Group',
     publishedAt: '2026-01-02',
     category: 'Quantum AI',
     tags: ['Quantum AI', 'Synthesis', '2026', 'Computing'],
-    featured: true;
+    featured: true';
     readTime: '20 min read',
     image: '/images/quantum-ai-synthesis-2026.jpg',
     valueProposition: 'Exponential computational capabilities',
@@ -66,4 +66,4 @@ export const,
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
+  }]';

@@ -2,28 +2,28 @@
 
 import fs from 'fs;
 
-import { glob } from glob;
+import { glob } from glob';
 
-// Function to optimize React components for better performance;
+// Function to optimize React components for better performance';
 
 function optimizeComponent(filePath) {
-  try {;
+  try {';
 
-let content = fs.readFileSync(filePath, utf8);;
+let content = fs.readFileSync(filePath, utf8)';';
 
-    let modified = false;;
+    let modified = false';';
 
-    // Add React.memo to functional components that dont have it;
+    // Add React.memo to functional components that dont have it';
 
     if (content.includes('const ') && content.includes(': React.FC') && !content.includes('React.memo)) {
-      // This is a basic optimization - in practice, youd want more sophisticated detection;
+      // This is a basic optimization - in practice, youd want more sophisticated detection';
 
 function optimizeComponent(filePath) {/* TODO: Fix JSX expression */}
 
       // // console.log removed for production
 }
 
-    // Add useCallback to event handlers;
+    // Add useCallback to event handlers';
 
     if (content.includes('onClick') && !content.includes('useCallback)) {
     if (content.includes('onClick') && !content.includes('useCallback')) {/* TODO: Fix JSX expression */}
@@ -31,7 +31,7 @@ function optimizeComponent(filePath) {/* TODO: Fix JSX expression */}
       // // console.log removed for production
 }
 
-    // Check for missing key props in lists;
+    // Check for missing key props in lists';
 
     if (content.includes('.map(') && !content.includes('key=)) {
     if (content.includes('.map(') && !content.includes('key=')) {/* TODO: Fix JSX expression */}
@@ -39,7 +39,7 @@ function optimizeComponent(filePath) {/* TODO: Fix JSX expression */}
       // // console.log removed for production
 without key props)}
 
-    // Check for inline object/function definitions in JSX;
+    // Check for inline object/function definitions in JSX';
 
     if (content.includes('style={{') || content.includes('onClick={())) {}
 
@@ -54,11 +54,11 @@ return false}
 
 }
 
-// Function to add performance optimizations;
+// Function to add performance optimizations';
 
-async function addPerformanceOptimizations() {;
+async function addPerformanceOptimizations() {';
 
-const componentFiles = await glob(app/components/**/*.{ts,tsx}, {);;
+const componentFiles = await glob(app/components/**/*.{ts,tsx}, {)';';
 
     ignore: ['**/node_modules/**', '**/dist/**', '**/build/**])
 async function addPerformanceOptimizations() {/* TODO: Fix JSX expression */}
@@ -93,21 +93,21 @@ function createPerformanceMonitor() {
   
   // // console.log removed for production
 
-  Summary:`);
+  Summary:`)';
 
   // // console.log removed for production
 
-  analyzed: ${totalFiles}`);
+  analyzed: ${totalFiles}`)';
 
   // // console.log removed for production
 
   opportunities: ${optimizedFiles})}
 
-// Function to create a performance monitoring component;
+// Function to create a performance monitoring component';
 
 function createPerformanceMonitor() {/* TODO: Fix JSX expression */}
 
-};
+}';
 
 const performanceMonitorContent = `import React, { useEffect, useState } from 'react;;;
 
@@ -118,36 +118,36 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 export default PerformanceMonitor;`
 `;
 
-  fs.writeFileSync(app/components/PerformanceMonitor.tsx, performanceMonitorContent);
+  fs.writeFileSync(app/components/PerformanceMonitor.tsx, performanceMonitorContent)';
 
   // // console.log removed for production
 }
 
-// Function to optimize images;
+// Function to optimize images';
 
-function createImageOptimization() {;
+function createImageOptimization() {';
 
 function createImageOptimization() {/* TODO: Fix JSX expression */}
 
-};
+}';
 
-const imageOptimizationContent = `import React from react;;
+const imageOptimizationContent = `import React from react';';
 
 interface OptimizedImageProps {/* TODO: Fix JSX expression */}
 
 }
 
-;
+';
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({,
-  src;
+  src';
 
   alt,
   width,
   height,
   className = ',
   priority = false}) => {
-  return (<img;
+  return (<img';
 
       src={src}
 
@@ -161,11 +161,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,
       decoding="async)
       style={{})
         width: width ? \`\${width}px\` : 'auto)
-        height: height ? \`\${height}px\` : auto;
+        height: height ? \`\${height}px\` : auto'"'"'";
 
 const,
   OptimizedImage: React.FC<OptimizedImageProps>
-);
+)'"'"'"'";
 
 } = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -201,7 +201,7 @@ export default OptimizedImage;`
   // // console.log removed for production
 }
 
-// Main function;
+// Main function'";
 
 async function main() {
 async function main() {/* TODO: Fix JSX expression */}
@@ -209,11 +209,11 @@ async function main() {/* TODO: Fix JSX expression */}
 }
 
   // // console.log removed for production
-await addPerformanceOptimizations();
+await addPerformanceOptimizations()'"'";
 
-  createPerformanceMonitor();
+  createPerformanceMonitor()'"'"'";
 
-  createImageOptimization();
+  createImageOptimization()'"'"'"'";
 
   // // console.log removed for production
 }

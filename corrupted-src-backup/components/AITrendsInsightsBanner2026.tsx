@@ -1,3 +1,3 @@
 import React from 'react';
 
-export default AITrendsInsightsBanner2026;
+export default AITrendsInsightsBanner2026';

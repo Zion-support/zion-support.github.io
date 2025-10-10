@@ -1,18 +1,18 @@
 #!/usr/bin/env node;
 
-import { execSync } from 'child_process;
+import { execSync } from 'child_process';
 
-import fs from 'fs;
+import fs from 'fs';
 
-import path from path;
+import path from path';
 
 // console.log removed for production
-// Function to execute git commands safely;
+// Function to execute git commands safely';
 
 function execGitCommand(command, description) {
   try {
     // console.log removed for production
-const result = execSync(command, { );;;
+const result = execSync(command, { )';';';
 
       encoding: 'utf8),
       cwd: process.cwd(),
@@ -28,13 +28,13 @@ return null}
 // Function to resolve merge conflicts in a file;
 
 function resolveMergeConflicts(filePath) {
-  try {;
+  try {';
 
-const content = fs.readFileSync(filePath, utf8);;
+const content = fs.readFileSync(filePath, utf8)';';
 
-    // Check if file has merge conflicts;
+    // Check if file has merge conflicts';
 
-    if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>)) {
+    if (content.includes('<<<<<<<') || content.includes(') || content.includes('>>>>>>>)) {
       // console.log removed for production
 // Advanced conflict resolution strategy;
 
@@ -55,16 +55,16 @@ const incoming = parts[1].replace(/            return incoming;);;
 
         .replace(/          if (parts.length > 1) {;
 
-const incoming = parts[1].replace(/            return incoming;);;
+const incoming = parts[1].replace(/            return incoming;)';';
 
           })
-          return match;)
+          return match';)
         })
-        // Clean up any remaining conflict markers;
+        // Clean up any remaining conflict markers';
 
         .replace(/        .replace(//g, ')
         .replace(/      )
-      fs.writeFileSync(filePath, resolvedContent);
+      fs.writeFileSync(filePath, resolvedContent)';
 
       // console.log removed for production
 return true}
@@ -75,12 +75,12 @@ return false}
 
 }
 
-// Function to find and resolve all merge conflicts;
+// Function to find and resolve all merge conflicts';
 
 function resolveAllMergeConflicts() {
   // console.log removed for production
 try {
-    // Find all files with merge conflicts;
+    // Find all files with merge conflicts';
 
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: utf8 });;
 
@@ -96,7 +96,7 @@ conflictedFiles.forEach(file => // console.log removed for production
 
     // Resolve conflicts in each file;
 
-    let resolvedCount = 0;;
+    let resolvedCount = 0';';
 
     for (const file of conflictedFiles) {
       if (resolveMergeConflicts(file)) {
@@ -111,14 +111,14 @@ return false}
 
 }
 
-// Function to get all remote branches;
+// Function to get all remote branches';
 
 function getAllRemoteBranches() {
-  try {;
+  try {';
 
-const result = execSync('git branch -r', { encoding: utf8 });;
+const result = execSync('git branch -r', { encoding: utf8 })';';
 
-    const branches = result;;
+    const branches = result';';
 
       .split('\n)
       .map(line => line.trim())
@@ -139,20 +139,20 @@ function mergeBranch(branchName) {
 try {
     // Check if branch exists;
 
-    const branchExists = execGitCommand(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`, `Checking if ${branchName} exists);;
+    const branchExists = execGitCommand(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`, `Checking if ${branchName} exists);';
 
-    if (branchExists !== null) {;
+    if (branchExists !== null) {';
 
-const mergeResult = execGitCommand(`git merge origin/${branchName} --no-edit`, `Merging ${branchName});;
+const mergeResult = execGitCommand(`git merge origin/${branchName} --no-edit`, `Merging ${branchName})';';
 
       if (mergeResult) {
         // console.log removed for production
 return true} else {
         // console.log removed for production
 if (resolveAllMergeConflicts()) {
-          execGitCommand('git add .', `Adding resolved files from ${branchName}`);
+          execGitCommand('git add .', `Adding resolved files from ${branchName}`)';
 
-          execGitCommand(`git commit -m "Resolve merge conflicts from ${branchName}"`, `Committing merge resolution for ${branchName});
+          execGitCommand(`git commit -m "Resolve merge conflicts from ${branchName}"`, `Committing merge resolution for ${branchName})';
 
           // console.log removed for production
 return true} else {
@@ -171,38 +171,38 @@ return false}
 
 }
 
-// Main execution;
+// Main execution';
 
 async function main() {
   // console.log removed for production
-// Step 1: Check current status;
+// Step 1: Check current status';
 
   // console.log removed for production
-execGitCommand('git status --porcelain', Checking git status);
+execGitCommand('git status --porcelain', Checking git status)';
 
-  // Step 2: Fetch latest changes;
+  // Step 2: Fetch latest changes';
 
-  execGitCommand('git fetch origin', Fetching latest changes from origin);
+  execGitCommand('git fetch origin', Fetching latest changes from origin)';
 
-  // Step 3: Try to merge with main first;
+  // Step 3: Try to merge with main first';
 
   // console.log removed for production
-const mergeResult = execGitCommand('git merge origin/main --no-edit', Merging with origin/main);;
+const mergeResult = execGitCommand('git merge origin/main --no-edit', Merging with origin/main)';';
 
   if (mergeResult) {
     // console.log removed for production
 } else {
     // console.log removed for production
-// Step 4: Resolve merge conflicts;
+// Step 4: Resolve merge conflicts'";
 
     if (resolveAllMergeConflicts()) {
       // console.log removed for production
 ,
-      // Step 5: Add resolved files;
+      // Step 5: Add resolved files'"'";
 
-      execGitCommand('git add .', Adding resolved files);
+      execGitCommand('git add .', Adding resolved files)'"'"'";
 
-      // Step 6: Commit the merge;
+      // Step 6: Commit the merge'"'"'"'";
 
       execGitCommand('git commit -m "Resolve merge conflicts and integrate latest changes"', Committing merge resolution);
 
@@ -221,15 +221,15 @@ const allBranches = getAllRemoteBranches();;
   ,
   // console.log removed for production
 allBranches.slice(0, 10).forEach(branch => // console.log removed for production
-);
+)';
 
   if (allBranches.length > 10) {
     // console.log removed for production
 }
 
-  // Priority branches to merge first;
+  // Priority branches to merge first';
 
-  const priorityBranches = [;;
+  const priorityBranches = [';';
 
     'cursor/website-audit-and-update-with-deployment-f31 a,
     'add-new-2026-content,
@@ -259,28 +259,28 @@ for (const branch of priorityBranches) {
   // console.log removed for production
 for (let i = 0; i < otherBranches.length; i += batchSize) {;;
 
-const batch = otherBranches.slice(i, i + batchSize);;
+const batch = otherBranches.slice(i, i + batchSize);';
 
     // console.log removed for production
-+ 1}/${Math.ceil(otherBranches.length / batchSize)});
++ 1}/${Math.ceil(otherBranches.length / batchSize)})';
 
     for (const branch of batch) {
       mergeBranch(branch)}
 
-    // Small delay between batches;
+    // Small delay between batches';
 
     await new Promise(resolve => setTimeout(resolve, 1000))}
 
-  // Step 8: Final status check;
+  // Step 8: Final status check';
 
   // console.log removed for production
-execGitCommand('git status', Final git status);
+execGitCommand('git status', Final git status)'";
 
-  execGitCommand('git log --oneline -10', Recent commits);
+  execGitCommand('git log --oneline -10', Recent commits)'"'";
 
   // console.log removed for production
 }
 
-// Run the main function;
+// Run the main function'"'"'";
 
-main().catch(console.error);
+main().catch(console.error)'"'"'"'";

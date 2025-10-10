@@ -1,4 +1,4 @@
-import fs from 'fs;
+import fs from 'fs';
 
 import path from 'path;
 
@@ -19,28 +19,28 @@ constructor() {
     // console.log removed for production
 ;
 
-const htmlFiles = await glob(dist/**/*.html);;
+const htmlFiles = await glob(dist/**/*.html)';';
 
     for (const file of htmlFiles) {
-      try {;
+      try {';
 
-const content = fs.readFileSync(file, utf8);;
+const content = fs.readFileSync(file, utf8)';';
 
-        // Check for essential meta tags;
+        // Check for essential meta tags';
 
-        const hasTitle = content.includes(<title>);;
+        const hasTitle = content.includes(<title>)';';
 
-        const hasDescription = content.includes('name="description);;
+        const hasDescription = content.includes('name="description)'"'"'";'"'"'"'";
 
-        const hasViewport = content.includes('name="viewport);;
+        const hasViewport = content.includes('name="viewport)'";'"'";
 
-        const hasCharset = content.includes(charset=);;
+        const hasCharset = content.includes(charset=)'"'"'";'"'"'"'";
 
-        const hasOgTitle = content.includes('property="og: title);;
+        const hasOgTitle = content.includes('property="og: title)'"'"'";'"'"'"'";
 
-        const hasOgDescription = content.includes('property="og:description);;
+        const hasOgDescription = content.includes('property="og:description)'"'"'";'"'"'"'";
 
-        const hasOgImage = content.includes('property="og:image);;
+        const hasOgImage = content.includes('property="og:image)'"'"'";'"'"'"'";
 
         const hasTwitterCard = content.includes('name="twitter: card);;
 
@@ -51,13 +51,13 @@ const content = fs.readFileSync(file, utf8);;
 
         if (!hasViewport) this.issues.push(`${file}: Missing viewport meta tag);
 
-        if (!hasCharset) this.issues.push(`${file}: Missing charset declaration);
+        if (!hasCharset) this.issues.push(`${file}: Missing charset declaration)';
 
-        if (!hasOgTitle) this.issues.push(`${file}: Missing Open Graph title);
+        if (!hasOgTitle) this.issues.push(`${file}: Missing Open Graph title)';
 
-        if (!hasOgDescription) this.issues.push(`${file}: Missing Open Graph description);
+        if (!hasOgDescription) this.issues.push(`${file}: Missing Open Graph description)';
 
-        if (!hasOgImage) this.issues.push(`${file}: Missing Open Graph image);
+        if (!hasOgImage) this.issues.push(`${file}: Missing Open Graph image)';
 
         if (!hasTwitterCard) this.issues.push(`${file}: Missing Twitter card meta)} catch (error) {
         // console.error removed for production
@@ -68,13 +68,13 @@ const content = fs.readFileSync(file, utf8);;
     // console.log removed for production
 this.optimizations.push('Meta tags validation)}
 
-  // Check heading structure;
+  // Check heading structure';
 
   async checkHeadingStructure() {
     // console.log removed for production
-;
+';
 
-const tsxFiles = await glob(src/**/*.tsx, {);;
+const tsxFiles = await glob(src/**/*.tsx, {)';';
 
       ignore: ['**/node_modules/**', '**/dist/**])
     });
@@ -94,15 +94,15 @@ const content = fs.readFileSync(file, utf8);;
 
         const h2Count = (content.match(/<h2/g) || []).length;;
 
-        const h3Count = (content.match(/<h3/g) || []).length;;
+        const h3Count = (content.match(/<h3/g) || []).length';';
 
         if (h1 Count === 0) {
-          this.issues.push(`${file}: No h1 tag found);
+          this.issues.push(`${file}: No h1 tag found)';
 
           headingIssues++}
 
         if (h1 Count ></h3></h2></h1> 1) {
-          this.issues.push(`${file}: Multiple h1 tags found (${h1 Count}));
+          this.issues.push(`${file}: Multiple h1 tags found (${h1 Count}))';
 
           headingIssues++}
 
@@ -119,13 +119,13 @@ if (headingIssues > 0) {
 
     this.optimizations.push('Heading structure validation)}
 
-  // Check alt attributes;
+  // Check alt attributes';
 
   async checkAltAttributes() {
     // console.log removed for production
-;
+';
 
-const tsxFiles = await glob(src/**/*.tsx, {);;
+const tsxFiles = await glob(src/**/*.tsx, {)';';
 
       ignore: ['**/node_modules/**', '**/dist/**])
     });
@@ -137,15 +137,15 @@ let altIssues = 0;;
     for (const file of tsxFiles) {
       try {;
 
-const content = fs.readFileSync(file, utf8);;
+const content = fs.readFileSync(file, utf8);';
 
-        // Find img tags without alt attributes;
+        // Find img tags without alt attributes';
 
-        const imgTags = content.match(/<img[^>]*>/g) || [];;
+        const imgTags = content.match(/<img[^>]*>/g) || []';';
 
         for (const imgTag of imgTags) {
           if (!imgTag.includes('alt=)) {
-            this.issues.push(`${file}: Image without alt attribute);
+            this.issues.push(`${file}: Image without alt attribute)';
 
             altIssues++}
 
@@ -164,13 +164,13 @@ if (altIssues > 0) {
 
     this.optimizations.push('Alt attributes validation)}
 
-  // Check internal links;
+  // Check internal links';
 
   async checkInternalLinks() {
     // console.log removed for production
-;
+';
 
-const tsxFiles = await glob(src/**/*.tsx, {);;
+const tsxFiles = await glob(src/**/*.tsx, {)';';
 
       ignore: ['**/node_modules/**', '**/dist/**])
     });
@@ -180,13 +180,13 @@ const tsxFiles = await glob(src/**/*.tsx, {);;
 let linkCount = 0;;
 
     for (const file of tsxFiles) {
-      try {;
+      try {'";
 
-const content = fs.readFileSync(file, utf8);;
+const content = fs.readFileSync(file, utf8)'"'";'"'"'";
 
-        // Count internal links;
+        // Count internal links'"'"'"'";
 
-        const internalLinks = content.match(/href=["']\/(?!\/)[^"']*[]/g) || [];;
+        const internalLinks = content.match(/href=["']\/(?!\/)[^"']*[]/g) || []';';
 
         linkCount += internalLinks.length} catch (error) {
         // console.error removed for production
@@ -300,13 +300,13 @@ generateStructuredData();
   // // console.log removed for production
 }
 
-;
+';
 
 function generateSitemap() {/* TODO: Fix JSX expression */}
 
 }
 
-  const pages = [;;;
+  const pages = [';'";'"'";
 
     '/,
     '/about,
@@ -361,11 +361,11 @@ function generateSitemap() {/* TODO: Fix JSX expression */}
     '/support,
     '/task-manager-pro,
     /team
-  ];
+  ]"'";
 
-  ;
+  "'"'";
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;;
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>'"'"'";'"'"'"'";
 
 <urlset xmlns="htt,
   p://www.sitemaps.org/schemas/sitemap/0.9></urlset>
@@ -384,15 +384,15 @@ ${/* TODO: Fix JSX expression */}
   // // console.log removed for production
 generated: public/sitemap.xml)}
 
-;
+';
 
 function optimizeMetaTags() {/* TODO: Fix JSX expression */}
 
 }
 
-  const metaOptimizations = {/* TODO: Fix JSX expression */};;
+  const metaOptimizations = {/* TODO: Fix JSX expression */}';';
 
-  };
+  }';
 
   fs.writeFileSync()
     path.join(__dirname, '../seo-optimizations.json),
@@ -436,18 +436,18 @@ Allo,
   Allow: /ai-services,
   Allow: /it-services`;
 
-  fs.writeFileSync(path.join(__dirname, ../public/robots.txt), robotsTxt);
+  fs.writeFileSync(path.join(__dirname, ../public/robots.txt), robotsTxt)";
 
   // // console.log removed for production
 generated: public/robots.txt)}
 
-;
+"'";
 
 function generateStructuredData() {/* TODO: Fix JSX expression */}
 
 }
 
-  const structuredData = {/* TODO: Fix JSX expression */};;
+  const structuredData = {/* TODO: Fix JSX expression */}"'"'";"'"'"'";
 
     },
     "address: {/* TODO: Fix JSX expression */}
@@ -459,16 +459,16 @@ function generateStructuredData() {/* TODO: Fix JSX expression */}
       "http,
   s://linkedin.com/company/ziontechgroup
     ]
-  };
+  }'";
 
   fs.writeFileSync()
     path.join(__dirname, '../public/structured-data.json),
     JSON.stringify(structuredData, null, 2)
-  );
+  )'"'";
 
   // // console.log removed for production
 generated: public/structured-data.json)}
 
-// Run SEO optimization;
+// Run SEO optimization'"'"'";
 
-optimizeSEO();"
+optimizeSEO()'"'"'"'";"

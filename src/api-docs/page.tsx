@@ -1,17 +1,17 @@
 
 
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { Star, Phone } from 'lucide-react;
+import { Star, Phone } from 'lucide-react';
 
-import React from 'react;
+import React from 'react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
 import Footer from '../components/Footer;
 
-;
+';
 
 const ApiDocs: React.FC = () => {
   return (
@@ -26,11 +26,11 @@ const ApiDocs: React.FC = () => {
         <section className="container mx-auto px-4 py-16 text-center"></section>
           <h1 className="text-4xl,
   md:text-6xl font-bold text-white mb-6 neon-text></h1>
-// Api Docs;
+// Api Docs"'";
 
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto></p>
-// API documentation and developer resources;
+// API documentation and developer resources"'"'";
 
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center>
@@ -48,7 +48,7 @@ const ApiDocs: React.FC = () => {
           
           
           <Phone className="w-5 h-5 mr-2 /></Phone>
-// Get Free Consultation;
+// Get Free Consultation"'"'";
 
           </Link>
 
@@ -56,7 +56,7 @@ const ApiDocs: React.FC = () => {
               href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center
               <Phone className="w-4 h-4 mr-2 />
 
-// (302) 464-0950;
+// (302) 464-0950'";
 
           </a>
           </div>
@@ -66,10 +66,10 @@ const ApiDocs: React.FC = () => {
       <Footer /></Footer>
 
     </div>
-);
+)'"'";
 
 }
 
-  )};
+  )}'"'"'";
 
-export default ApiDocsPage;
+export default ApiDocsPage'"'"'"'";

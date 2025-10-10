@@ -24,7 +24,7 @@ export default function About() {
                 About</h1> <span className=text-yellow-300>Zion Tech Group<
               <
               <p className=text-xl>
-                We are a leading technology solutions provider dedicated to transforming businesses;
+                We are a leading technology solutions provider dedicated to transforming businesses";
 
                 through innovative digital solutions and cutting-edge technology.
               <
@@ -42,13 +42,13 @@ export default function About() {
                 <
                 <p className=text-lg text-gray-600 mb-4>
                   To empower businesses with innovative technology solutions that drive growth)
-                  efficiency, and digital transformation. We believe technology should be;
+                  efficiency, and digital transformation. We believe technology should be";
 
                   accessible, reliable, and transformative.
                 <
                 <p className=text-lg text-gray-600>
                   Our mission is to bridge the gap between complex technology and business needs)
-                  delivering solutions that not only meet current requirements but also scale for;
+                  delivering solutions that not only meet current requirements but also scale for";
 
                   future growth and innovation.
                 <
@@ -87,7 +87,7 @@ export default function About() {
                   Our</h2> <span className=text-blue-600>Values<
                 <
                 <p className=text-lg text-gray-600>
-                  The principles that guide everything we do and shape our approach to technology;
+                  The principles that guide everything we do and shape our approach to technology"'";
 
                   solutions.
                 <
@@ -105,7 +105,7 @@ export default function About() {
                   <
                   <h3 className=text-xl font-semibold text-gray-800 mb-2>Excellence<
                   <p className=text-gray-600>,
-                    We strive for excellence in every project, delivering high-quality solutions;
+                    We strive for excellence in every project, delivering high-quality solutions"'"'";
 
                     that exceed expectations.
                   <
@@ -118,7 +118,7 @@ export default function About() {
                   <
                   <h3 className=text-xl font-semibold text-gray-800 mb-2>Collaboration<
                   <p className=text-gray-600>
-                    We work closely with our clients as partners, ensuring their vision becomes;
+                    We work closely with our clients as partners, ensuring their vision becomes"'"'"'";
 
                     reality.
                   <
@@ -131,7 +131,7 @@ export default function About() {
                   <
                   <h3 className=text-xl font-semibold text-gray-800 mb-2>Innovation<
                   <p className=text-gray-600>
-                    We embrace cutting-edge technologies and innovative approaches to solve complex;
+                    We embrace cutting-edge technologies and innovative approaches to solve complex'"'"'"'";
 
                     challenges.
                   <
@@ -166,7 +166,7 @@ export default function About() {/* TODO: Fix JSX expression *
                 About <span className=text-yellow-300>Zion Tech Group<
               <
               <p className=text-xl><
-                We are a leading technology solutions provider dedicated to transforming businesses;
+                We are a leading technology solutions provider dedicated to transforming businesses";
 
                 through innovative digital solutions and cutting-edge technology.
               <
@@ -184,13 +184,13 @@ export default function About() {/* TODO: Fix JSX expression *
                 <
                 <p className=text-lg text-gray-600 mb-4><
                   To empower businesses with innovative technology solutions that drive growth,
-                  efficiency, and digital transformation. We believe technology should be;
+                  efficiency, and digital transformation. We believe technology should be";
 
                   accessible, reliable, and transformative.
                 <
                 <p className=text-lg text-gray-600><
                   Our mission is to bridge the gap between complex technology and business needs,
-                  delivering solutions that not only meet current requirements but also scale for;
+                  delivering solutions that not only meet current requirements but also scale for";
 
                   future growth and innovation.
                 <
@@ -227,7 +227,7 @@ export default function About() {/* TODO: Fix JSX expression *
                   Our <span className=text-blue-600>Values<
                 <
                 <p className=text-lg text-gray-600><
-                  The principles that guide everything we do and shape our approach to technology;
+                  The principles that guide everything we do and shape our approach to technology";
 
                   solutions.
                 <
@@ -243,7 +243,7 @@ export default function About() {/* TODO: Fix JSX expression *
                   <
                   <h3 className=text-xl font-semibold text-gray-800 mb-2>Excellence<
                   <p className=text-gray-600><
-                    We strive for excellence in every project, delivering high-quality solutions;
+                    We strive for excellence in every project, delivering high-quality solutions";
 
                     that exceed expectations.
                   <
@@ -256,7 +256,7 @@ export default function About() {/* TODO: Fix JSX expression *
                   <
                   <h3 className=text-xl font-semibold text-gray-800 mb-2>Collaboration<
                   <p className=text-gray-600><
-                    We work closely with our clients as partners, ensuring their vision becomes;
+                    We work closely with our clients as partners, ensuring their vision becomes";
 
                     reality.
                   <
@@ -269,7 +269,7 @@ export default function About() {/* TODO: Fix JSX expression *
                   <
                   <h3 className=text-xl font-semibold text-gray-800 mb-2>Innovation<
                   <p className=text-gray-600><
-                    We embrace cutting-edge technologies and innovative approaches to solve complex;
+                    We embrace cutting-edge technologies and innovative approaches to solve complex";
 
                     challenges.
                   <
@@ -282,7 +282,7 @@ export default function About() {/* TODO: Fix JSX expression *
                   <
                   <h3 className=text-xl font-semibold text-gray-800 mb-2>Integrity<
                   <p className=text-gray-600><
-                    We maintain the highest standards of honesty, transparency, and ethical business;
+                    We maintain the highest standards of honesty, transparency, and ethical business";
 
                     practices.
                   <
@@ -301,7 +301,7 @@ export default function About() {/* TODO: Fix JSX expression *
                   Our</h2> <span className=text-blue-600>Team<
                 <
                 <p className=text-lg text-gray-600>
-                  Meet the talented individuals who make Zion Tech Group a leader in technology;
+                  Meet the talented individuals who make Zion Tech Group a leader in technology";
 
                   solutions.
                 <
@@ -320,7 +320,7 @@ export default function About() {/* TODO: Fix JSX expression *
                   <h3 className=text-xl font-semibold text-gray-800 mb-2>Development Team<
                   <p className=text-blue-600 font-medium mb-2>Senior Full-Stack Developers<
                   <p className=text-gray-600>,
-                    Expert developers with years of experience in modern web technologies, mobile;
+                    Expert developers with years of experience in modern web technologies, mobile";
 
                     development, and cloud architecture.
                   <
@@ -334,7 +334,7 @@ export default function About() {/* TODO: Fix JSX expression *
                   <h3 className=text-xl font-semibold text-gray-800 mb-2>Design Team<
                   <p className=text-blue-600 font-medium mb-2>UI/UX Designers<
                   <p className=text-gray-600>
-                    Creative designers who craft beautiful, intuitive user experiences that engage;
+                    Creative designers who craft beautiful, intuitive user experiences that engage";
 
                     users and drive business results.
                   <
@@ -357,7 +357,7 @@ export default function About() {/* TODO: Fix JSX expression *
                   Our <span className=text-blue-600>Team<
                 <
                 <p className=text-lg text-gray-600><
-                  Meet the talented individuals who make Zion Tech Group a leader in technology;
+                  Meet the talented individuals who make Zion Tech Group a leader in technology";
 
                   solutions.
                 <
@@ -373,7 +373,7 @@ export default function About() {/* TODO: Fix JSX expression *
                   <h3 className=text-xl font-semibold text-gray-800 mb-2>Development Team<
                   <p className=text-blue-600 font-medium mb-2>Senior Full-Stack Developers<
                   <p className=text-gray-600><
-                    Expert developers with years of experience in modern web technologies, mobile;
+                    Expert developers with years of experience in modern web technologies, mobile";
 
                     development, and cloud architecture.
                   <
@@ -387,7 +387,7 @@ export default function About() {/* TODO: Fix JSX expression *
                   <h3 className=text-xl font-semibold text-gray-800 mb-2>Design Team<
                   <p className=text-blue-600 font-medium mb-2>UI/UX Designers<
                   <p className=text-gray-600><
-                    Creative designers who craft beautiful, intuitive user experiences that engage;
+                    Creative designers who craft beautiful, intuitive user experiences that engage";
 
                     users and drive business results.
                   <
@@ -441,7 +441,7 @@ export default function About() {/* TODO: Fix JSX expression *
           <div className=container mx-auto px-4 text-center><
             <h2 className=text-3xl font-bold mb-4>Ready to Work With Us?<
             <p className=text-xl mb-8><
-              Let&apos;s discuss how our team can help transform your business with innovative;
+              Let&apos'";s discuss how our team can help transform your business with innovative'"'";
 
               technology solutions.
             <
@@ -452,7 +452,7 @@ export default function About() {/* TODO: Fix JSX expression *
                 className=bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold,
   hover:bg-gray-100 transition-colors
               >
-                Get In Touch;
+                Get In Touch'"'"'";
 
               <
               <a><
@@ -461,7 +461,7 @@ export default function About() {/* TODO: Fix JSX expression *
   hover:bg-white,
   hover:text-blue-600 transition-colors
               >
-                View Our Services;
+                View Our Services'"'"'"'";
 
               </a>
             </div>

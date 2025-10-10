@@ -96,6 +96,6 @@ const interval = setInterval(updateMetrics, 1000);;;
       )}
 
     </div>
-  )};
+  )}'"'"'";
 
-export default PerformanceDashboard;
+export default PerformanceDashboard'"'"'"'";

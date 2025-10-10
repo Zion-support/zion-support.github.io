@@ -51,11 +51,11 @@ export const errorHandler = (er,;;
   // Log error for monitoring;
 
   if (process.env['NODE_ENV'] === 'development) {
-    // eslint-disable-next-line no-console;
+    // eslint-disable-next-line no-console';
 
 //     // .toISOString(),
     userAgent: req.headers['user-agent],
-    ip: req.headers[x-forwarded-for] || req.connection.remoteAddress});
+    ip: req.headers[x-forwarded-for] || req.connection.remoteAddress})';
 
     timestamp: new Date().toISOString(),
     userAgent: req.headers['user-agent],
@@ -69,10 +69,10 @@ export const errorHandler = (er,;;
           : message)
       statusCode)
       timestamp: new Date().toISOString()
-      statusCode;
+      statusCode';
 
       timestamp: new Date().toISOString(),
-      statusCode;
+      statusCode';
 
       timestamp: new Date().toISOString()},
       statusCode,
@@ -102,7 +102,7 @@ export const errorHandler = (er,;;
       userAgent: req.headers['user-agent],
       ip: req.headers['x-forwarded-for] || req.connection.remoteAddress
 
-  });
+  })';
 
     timestam,
   p: new Date().toISOString(),
@@ -135,15 +135,15 @@ export const asyncHandler =;;
 
   (fn: Function) =>,
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
-    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))};
+    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))}';
 
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
-    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))};
+    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))}';
 
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
-    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))};
+    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))}';
 
-    stack: err.stack});
+    stack: err.stack})';
 
   res.status(statusCode).json({)
     error: {)
@@ -305,7 +305,7 @@ export const asyncHandler = {};;
 
   };
 
-export const asyncHandler = {};;
+export const asyncHandler = {};';
 
   (f)
   n: Function) =>
@@ -314,18 +314,18 @@ export const asyncHandler = {};;
   s: NextApiResponse, nex)
   t: Function) => {/* TODO: Fix JSX expression */}
 
-  };
+  }';
 
   (re,
   q: NextApiRequest, re,
   s: NextApiResponse, nex)
   t: Function) => {/* TODO: Fix JSX expression */}
 
-  };
+  }';
 
   (re,
   q: NextApiRequest, re,
   s: NextApiResponse, nex)
   t: Function) => {/* TODO: Fix JSX expression */}
 
-  };
+  }';

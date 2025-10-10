@@ -1,12 +1,12 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from 'fs';
 
-import { execSync } from child_process;
+import { execSync } from child_process';
 
-// Files that need specific fixes;
+// Files that need specific fixes';
 
-const fixes = [;;;
+const fixes = [';';';
 
   {
     file: '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx,
@@ -86,9 +86,9 @@ const fixes = [;;;
 
   m: 'import { describe, it, expect, jest },
         t,
-  o: import { describe, it, expect, jest as _jest }}]}];
+  o: import { describe, it, expect, jest as _jest }}]}]';
 
-;
+';
 
 function applyFixes() {/* TODO: Fix JSX expression */}
 
@@ -102,11 +102,11 @@ function applyFixes() {/* TODO: Fix JSX expression */}
 
         content = content.replace(new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), g), to);
 
-        modified = true;
+        modified = true';
 
         totalFixed++}
 
-    });
+    })';
 
     if (modified) {/* TODO: Fix JSX expression */}
 
@@ -114,9 +114,9 @@ function applyFixes() {/* TODO: Fix JSX expression */}
 
   })}
 
-// Apply fixes;
+// Apply fixes';
 
-// Run linter to check results;
+// Run linter to check results';
 
 try {
   execSync('pnpm run lint:comprehensive', { stdio: 'inherit })} catch (error) {

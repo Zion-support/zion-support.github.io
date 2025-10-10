@@ -1,16 +1,16 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react;
+import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react';
 
-import { Link } from react-router-dom;
+import { Link } from react-router-dom';
 
-;
+';
 
-const ExpenseTrackerPage: React.FC = () => {;
+const ExpenseTrackerPage: React.FC = () => {';
 
-const features = [;;;
+const features = [';';';
 
     {
       icon: Receipt,
@@ -40,11 +40,11 @@ iconicon: Shield,
       benefit:     ,
 $4}
 
-  ];
+  ]';
 
-;
+';
 
-const pricingPlans = [;;
+const pricingPlans = [';';
 
       name: 'Personal,
       price: '$9,
@@ -81,9 +81,9 @@ const pricingPlans = [;;
         'Dedicated support,
         'White-label options,
         'Unlimited data retention,
-        Custom compliance rules;
+        Custom compliance rules';
 
-const integrations = [;;
+const integrations = [';';
 
     { name: 'QuickBooks', icon: '📊', description: 'Accounting software },
     { name: 'Xero', icon: '💰', description: 'Cloud accounting },
@@ -94,9 +94,9 @@ const integrations = [;;
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration },
     { name: 'Google Workspace', icon: '📧', description: 'Productivity suite }
 
-;
+';
 
-const testimonials = [;;
+const testimonials = [';';
 
       name: 'Michael Johnson,
       company: 'Small Business Owner,
@@ -256,17 +256,17 @@ const testimonials = [;;
 
 
 
-import { Link } from react-router-dom;
+import { Link } from react-router-dom';
 
 const ExpenseTrackerPage: React.FC = () => {;
 
-const features = [];;;
+const features = []';';';
 
   return (
 
     {// TODO: Add content}
 
-};
+}'";
 
   ico,
   n: Receipt,
@@ -284,11 +284,11 @@ const features = [];;;
       benefit: 'Reduce expenses by 25%,
 
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation'"'";
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer";
 
-;
+";
 
 const PagePage: React.FC = () => {
   return (
@@ -297,7 +297,7 @@ const PagePage: React.FC = () => {
   )
     
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
-);
+)";
 
 }
 
@@ -310,17 +310,17 @@ const PagePage: React.FC = () => {
           </div>
           <h1 className="text-4xl,
   md:text-6xl font-bold text-white mb-6></h1>
-// AI Expense Tracker;
+// AI Expense Tracker";
 
           </h1>
           <p className="text-xl,
   md:text-2xl text-cyan-400 mb-8 font-medium></p>
-// Smart Financial Management;
+// Smart Financial Management"'";
 
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed></p>
 Transform your expense management with AI-powered receipt scanning, automated categorization,
-            and intelligent financial insights. Save time, reduce errors, and gain complete control;
+            and intelligent financial insights. Save time, reduce errors, and gain complete control"'";
 
             over your business finances.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center>
@@ -339,14 +339,14 @@ Transform your expense management with AI-powered receipt scanning, automated ca
           
           <Phone className="w-5 h-5 mr-2 />,
  Cal,
-  l: (302) 464-0950;
+  l: (302) 464-0950"'"'";
 
             </a>
 
             <Link
               href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300
 
-Start Free Trial;
+Start Free Trial"'"'";
 
             </Link>
         {/* Key Benefits */}
@@ -371,7 +371,7 @@ Start Free Trial;
         <section className="mb-16"></section>
           <h2 className="text-3xl,
   md:text-4xl font-bold text-white mb-12 text-center></h2>
-// Powerful Expense Management Features;
+// Powerful Expense Management Features"'"'"'";
 
           </h2>
           <div className=grid grid-cols-1,
@@ -390,7 +390,7 @@ Start Free Trial;
         </section>
         {/* Integrations Section */}
 
-Integrates with Your Tools;
+Integrates with Your Tools"'"'"'";
 
           <div className="grid grid-cols-2,
   md:grid-cols-4 gap-6></div>
@@ -403,7 +403,7 @@ Integrates with Your Tools;
                 <p className="text-gray-300 text-sm>{integration.description}</p>
 {/* Pricing Section */}
 
-            Simple, Transparent Pricing;
+            Simple, Transparent Pricing'"'"'"'";
 
           <div className="grid grid-cols-1,
   md:grid-cols-3 gap-8 max-w-6xl mx-auto></div>
@@ -414,7 +414,7 @@ Integrates with Your Tools;
   // TOD,
   O: Add content}
 
-//                 plan.popular;
+//                 plan.popular'"'"'"'";
 
 //                   ? border-cyan-400 scale-105
                   : border-slate-700,
@@ -423,7 +423,7 @@ Integrates with Your Tools;
                 {plan.popular && ()}
 
           <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4></div>
-Most Popular;
+Most Popular";
 
                 )}
 
@@ -449,12 +449,12 @@ Most Popular;
                     : border-2 border-cyan-400 text-cyan-400,
   hover:bg-cyan-400,
   hover:text-white
-                  Get Started;
+                  Get Started";
 
                 </button></button>
         {/* Testimonials */}
 
-            What Our Customers Say;
+            What Our Customers Say"'";
 
           <div className="grid grid-cols-1,
   md:grid-cols-3 gap-8></div>
@@ -477,9 +477,9 @@ Most Popular;
   md:text-4xl font-bold text-white mb-6></h2>
             Ready to Master Your Expenses?
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto></p>
-            Join thousands of businesses using AI Expense Tracker to streamline financial;
+            Join thousands of businesses using AI Expense Tracker to streamline financial'"'";
 
             management and gain better control over their spending.
-  )};
+  )}'"'"'";
 
-export default ExpenseTrackerPage;
+export default ExpenseTrackerPage'"'"'"'";

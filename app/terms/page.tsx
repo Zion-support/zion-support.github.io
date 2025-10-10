@@ -1,16 +1,16 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react;
+import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
 
-export default function TermsPage() {;
+export default function TermsPage() {';
 
-const lastUpdated = January 1, 2024;;
+const lastUpdated = January 1, 2024';';
 
-  ;
+  ';
 
-const sections = [;;
+const sections = [';';
 
     {
       title: 'Acceptance of Terms,
@@ -53,7 +53,7 @@ const sections = [;;
 content: 'These terms shall be governed by and construed in accordance with the laws of the United States.]
     }
 
-  ];
+  ]';
 
   return (
 
@@ -96,7 +96,7 @@ content: 'These terms shall be governed by and construed in accordance with the 
                     </div>
                   </div>
                 </div>
-              ));
+              ))'"'"'"'";
 
             </div>
 

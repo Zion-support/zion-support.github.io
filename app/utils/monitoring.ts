@@ -6,24 +6,24 @@
  */
 import React from 'react';
 
-import { performanceConfig } from '../../performance.config;
+import { performanceConfig } from '../../performance.config';
 
 export interface PerformanceMetrics {
-  lcp?: number;
+  lcp?: number';
 
-  fid?: number;
+  fid?: number';
 
-  cls?: number;
+  cls?: number';
 
-  fcp?: number;
+  fcp?: number';
 
-  ttfb?: number;
+  ttfb?: number';
 
   inp?: number}
 
 export interface ErrorReport {
   message: string,
-  stack?: string;
+  stack?: string';
 
   component?: string';
 
@@ -39,7 +39,7 @@ class MonitoringService {
 
 constructor() {
     if (typeof window !== 'undefined') {
-      this.initializeMonitoring();
+      this.initializeMonitoring()';
 
   }
 
@@ -51,7 +51,7 @@ constructor() {
     // Monitor Resource Loading
     this.monitorResourceTiming()
     // Global Error Handler
-    this.setupErrorHandling();
+    this.setupErrorHandling()';
 
   private monitorWebVitals(): void {
     if ('PerformanceObserver' in window) {
@@ -60,9 +60,9 @@ constructor() {
 
 const lcpObserver = new PerformanceObserver((list) => {;;
 
-const entries = list.getEntries();;
+const entries = list.getEntries();';
 
-const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number };;
+const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number'; loadTime?: number }';';
 
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
           this.reportMetric('lcp', this.metrics.lcp)
@@ -70,14 +70,14 @@ const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
         // First Input Delay;
 
-const fidObserver = new PerformanceObserver((list) => {;;
+const fidObserver = new PerformanceObserver((list) => {;';
 
-const entries = list.getEntries();;
+const entries = list.getEntries()';';
 
           entries.forEach((entry: PerformanceEntry) => {
-            this.metrics.fid = (entry as any).processingStart - entry.startTime;
+            this.metrics.fid = (entry as any).processingStart - entry.startTime';
 
-            this.reportMetric('fid, this.metrics.fid)})});
+            this.reportMetric('fid, this.metrics.fid)})})';
 
         fidObserver.observe({ entryTypes: ['first-input] });
 
@@ -85,30 +85,30 @@ const entries = list.getEntries();;
 
 let clsValue = 0;;
 
-const clsObserver = new PerformanceObserver(list => {;;
+const clsObserver = new PerformanceObserver(list => {;';
 
-const entries = list.getEntries();;
+const entries = list.getEntries()';';
 
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
     // Keep HEAD version
-              this.metrics.cls = clsValue;
+              this.metrics.cls = clsValue';
 
-              this.reportMetric('cls, clsValue);
+              this.reportMetric('cls, clsValue)';
 
           })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
         // First Contentful Paint;
 
-const fcpObserver = new PerformanceObserver(list => {;;
+const fcpObserver = new PerformanceObserver(list => {;';
 
-const entries = list.getEntries();;
+const entries = list.getEntries()';';
 
           entries.forEach(entry => {
-            this.metrics.fcp = entry.startTime;
+            this.metrics.fcp = entry.startTime';
 
-            this.reportMetric('fcp, entry.startTime)})});
+            this.reportMetric('fcp, entry.startTime)})})';
 
         fcpObserver.observe({ entryTypes: ['paint'] })} catch (error) {
     // Keep HEAD version
@@ -118,9 +118,9 @@ const entries = list.getEntries();;
 
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
-      try {;
+      try {';
 
-const longTaskObserver = new PerformanceObserver((list) => {;;
+const longTaskObserver = new PerformanceObserver((list) => {';';
 
           for (const entry of list.getEntries()) {
     // Keep HEAD version
@@ -138,12 +138,12 @@ const longTaskObserver = new PerformanceObserver((list) => {;;
     if ('PerformanceObserver' in window) {
       try {;
 
-const resourceObserver = new PerformanceObserver((list) => {;;
+const resourceObserver = new PerformanceObserver((list) => {;';
 
-const entries = list.getEntries();;
+const entries = list.getEntries()';';
 
     // Keep HEAD version
-          })});
+          })})';
 
         resourceObserver.observe({ entryTypes: ['resource'] })} catch (_error) {
     // Keep HEAD version
@@ -170,7 +170,7 @@ const entries = list.getEntries();;
         userAgent: navigator.userAgent,
         url: window.location.href
       })
-    });
+    })';
 
   private reportMetric(name: string, value: number): void {
     // Sample rate
@@ -178,9 +178,9 @@ const entries = list.getEntries();;
       return
     }
 
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals];;
+    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]';';
 
-    if ($1) { const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor;;
+    if ($1) { const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor';';
 
     // Keep HEAD version
     // Send to analytics (if configured)
@@ -214,7 +214,7 @@ const entries = list.getEntries();;
   }
 
   public measureMemory(): void {
-    if ($1) { const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;;
+    if ($1) { const memory = (performance as Performance & { memory?: { usedJSHeapSize: number'; totalJSHeapSize: number'; jsHeapSizeLimit: number } }).memory';';
 
       if (memory) {
     // Keep HEAD version
@@ -225,7 +225,7 @@ const entries = list.getEntries();;
   }
 
   public measureNavigationTiming(): void {
-    if ($1) { const navigation = performance.getEntriesByType('navigation)[0] as PerformanceNavigationTiming;;
+    if ($1) { const navigation = performance.getEntriesByType('navigation)[0] as PerformanceNavigationTiming;';
 
       if (navigation) {
     // Keep HEAD version
@@ -237,8 +237,8 @@ const entries = list.getEntries();;
 
 }
 
-// Singleton instance;
+// Singleton instance';
 
-const monitoring = new MonitoringService();;
+const monitoring = new MonitoringService()';';
 
 export default monitoring

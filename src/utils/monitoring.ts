@@ -79,9 +79,9 @@ constructor() {
 
 const lcpObserver = new PerformanceObserver((list) => {;;
 
-const entries = list.getEntries();;
+const entries = list.getEntries();';
 
-const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number };;
+const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number'; loadTime?: number }';';
 
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
           this.reportMetric('lcp', this.metrics.lcp)
@@ -90,14 +90,14 @@ const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime
 
         // First Input Delay;
 
-const fidObserver = new PerformanceObserver((list) => {;;
+const fidObserver = new PerformanceObserver((list) => {;';
 
-const entries = list.getEntries();;
+const entries = list.getEntries()';';
 
           entries.forEach((entry: PerformanceEntry) => {
-            this.metrics.fid = (entry as any).processingStart - entry.startTime;
+            this.metrics.fid = (entry as any).processingStart - entry.startTime';
 
-            this.reportMetric('fid, this.metrics.fid)})});
+            this.reportMetric('fid, this.metrics.fid)})})';
 
         fidObserver.observe({ entryTypes: ['first-input] });
 
@@ -107,13 +107,13 @@ let clsValue = 0;;
 
         const clsObserver = new PerformanceObserver(list => {;;
 
-const entries = list.getEntries();;
+const entries = list.getEntries()';';
 
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value || 0;
+              clsValue += (entry as any).value || 0';
 
-              this.metrics.cls = clsValue;
+              this.metrics.cls = clsValue';
 
               this.reportMetric('cls', clsValue)}
 
@@ -123,14 +123,14 @@ const entries = list.getEntries();;
 
         // First Contentful Paint;
 
-const fcpObserver = new PerformanceObserver(list => {;;
+const fcpObserver = new PerformanceObserver(list => {;';
 
-const entries = list.getEntries();;
+const entries = list.getEntries()';';
 
           entries.forEach(entry => {
-            this.metrics.fcp = entry.startTime;
+            this.metrics.fcp = entry.startTime';
 
-            this.reportMetric('fcp, entry.startTime)})});
+            this.reportMetric('fcp, entry.startTime)})})';
 
         fcpObserver.observe({ entryTypes: ['paint'] })} catch (error) {
         // // console.error removed for production
@@ -142,9 +142,9 @@ const entries = list.getEntries();;
 
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
-      try {;
+      try {';
 
-const longTaskObserver = new PerformanceObserver((list) => {;;
+const longTaskObserver = new PerformanceObserver((list) => {';';
 
           for (const entry of list.getEntries()) {
             // // console.warn removed for production
@@ -168,15 +168,15 @@ const resourceObserver = new PerformanceObserver((list) => {;;
 
 const entries = list.getEntries();;
 
-          entries.forEach((entry: PerformanceEntry) => {;
+          entries.forEach((entry: PerformanceEntry) => {';
 
-const resourceEntry = entry as PerformanceResourceTiming;;
+const resourceEntry = entry as PerformanceResourceTiming';';
 
             if (resourceEntry.duration && resourceEntry.duration > 1000) {
               // // console.warn removed for production
 }
 
-          })});
+          })})';
 
         resourceObserver.observe({ entryTypes: ['resource'] })} catch (_error) {
         // // console.error removed for production
@@ -213,11 +213,11 @@ const resourceEntry = entry as PerformanceResourceTiming;;
       return
     }
 
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals];;
+    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]';';
 
-    if (thresholds) {;
+    if (thresholds) {';
 
-const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor;;
+const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor';';
 
     }
 
@@ -255,7 +255,7 @@ const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImpr
   public measureMemory(): void {
     if ('memory in performance && performanceConfig.monitoring.enableMemoryMonitoring) {;
 
-const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;;
+const memory = (performance as Performance & { memory?: { usedJSHeapSize: number'; totalJSHeapSize: number'; jsHeapSizeLimit: number } }).memory';';
 
       if (memory) {
         // // console.log removed for production
@@ -270,9 +270,9 @@ const memory = (performance as Performance & { memory?: { usedJSHeapSize: number
   }
 
   public measureNavigationTiming(): void {
-    if ('performance' in window && 'getEntriesByType in performance) {;
+    if ('performance' in window && 'getEntriesByType in performance) {';
 
-const navigation = performance.getEntriesByType('navigation)[0] as PerformanceNavigationTiming;;
+const navigation = performance.getEntriesByType('navigation)[0] as PerformanceNavigationTiming';';
 
       if (navigation) {
         // // console.log removed for production
@@ -292,10 +292,10 @@ const navigation = performance.getEntriesByType('navigation)[0] as PerformanceNa
 
 }
 
-;
+';
 
-const monitoring = new MonitoringService();;
+const monitoring = new MonitoringService()';';
 
-export default monitoring;`
+export default monitoring';`
 
 

@@ -1,6 +1,6 @@
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
 interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
 
@@ -39,19 +39,19 @@ interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
     contactInf,
   o: string;
 
-    link?: string;
+    link?: string';
 
     popular?: boolean}}
 
-;
+';
 
-const MicroSAASCard: React.FC;
+const MicroSAASCard: React.FC';
 
           <MicroSAASCardProps> = ({ service }) => {// TODO: Add content}
 
 }
 
-;
+';
 
 const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
   return (
@@ -59,8 +59,8 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
           <div>Coming Soon</div>
   )
     
-          <div className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}}>
-);
+          <div className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : '}}>
+)';
 
 }
 
@@ -68,7 +68,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
 
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
           <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium></span>
-// Most Popular;
+// Most Popular'"'"'"'";
 
           </span>
         </div>
@@ -145,7 +145,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
   hover:from-cyan-600,
   hover:to-blue-700 transition-all duration-300 flex items-center justify-center text-sm font-medium
 // >
-//             Get Started;
+//             Get Started"'"'";
 
           <ArrowRight className="w-4 h-4 ml-2 /></ArrowRight>
           </a>
@@ -153,9 +153,9 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
         </div>
       </div>
     </div>
-  )};
+  )}'"'"'";
 
-export default MicroSAASCard;"
+export default MicroSAASCard'"'"'"'";"
 
 
 

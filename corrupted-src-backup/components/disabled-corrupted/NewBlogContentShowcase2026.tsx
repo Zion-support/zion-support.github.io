@@ -25,7 +25,7 @@ const blogPost, s = [
 
 }, n, t: fr, o, m-bl, u, e-500, t, o-purp, l, e-50, 0,
       bad, g, e: FEATU, R, E, D,
-      tags: ['A, I', 'Revoluti, o, n', 'Enterpri, s, e', Gui, d, e];
+      tags: ['A, I', 'Revoluti, o, n', 'Enterpri, s, e', Gui, d, e]';
 
 const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */}
 
@@ -46,19 +46,19 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
 
      }
 
-  ]; const blogStat, s = [
+  ]'; const blogStat, s = [
     {  val, u, e: '5, 0, 0+', lab, e, l: 'Published, Articl, e, s', ic, o, n: <Award, classNam, e = "w-6 , h-, 6 / >  },
     {  val, u, e: '2, M+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-6 , h-, 6 / >  },
     {  val, u, e: '4., 8', lab, e, l: 'Average, Rati, n, g', ic, o, n: <Star, classNam, e = "w-6 , h-, 6 / >  },
     {  val, u, e: '15, 0+', lab, e, l: 'Expert, Autho, r, s', ic, o, n: <Brain, classNam, e = w-6 , h-, 6 / >  }
 
-  ]; return(<div, classNam, e = py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n>
+  ]"; return(<div, classNam, e = py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n>
       {/* Animated, background, effects */}
 
       <div, className=absolute, inse, t-0, overflo, w-hidden, opacit, y-20>
         <div, className=absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e />
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: , 2, s }} />
-  ]; return (
+  ]"'"; return (
 
     <div, classNam, e = py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n>
       {/* Animated, background, effects */}</div>
@@ -73,17 +73,17 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
           <div, className=inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in></div>
             <Sparkles, className=w-5 h-5, tex, t-bl, u, e-400, animat, e-pul, s, e />
             <span, className=te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e>
-              📚 NEW, BLOG, CONTENT • January, 202, 6;
+              📚 NEW, BLOG, CONTENT • January, 202, 6'"'";
 
             </sp, a, n>
             <Sparkles, className=w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e /></Sparkles>
           </div>
           <h2, className=te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in>
-            New, Blog, Content Showcase, 202, 6;
+            New, Blog, Content Showcase, 202, 6'"'"'";
 
           </h2>
           <p, className=te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8>
-  ]; return (
+  ]'"'"'"'"; return (
 
     <div, classNam, e = py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n></div>
       {/* Animated, background, effects */}
@@ -100,13 +100,13 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in></div>
             <Sparkles, className="w-5 h-5, tex, t-bl, u, e-400, animat, e-pul, s, e /></Sparkles>
             <span, className=te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e></span>
-              📚 NEW, BLOG, CONTENT • January, 202, 6;
+              📚 NEW, BLOG, CONTENT • January, 202, 6";
 
             </sp, a, n>
             <Sparkles, className=w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e /></Sparkles>
           </div>
           <h2, className=te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in></h2>
-            New, Blog, Content Showcase, 202, 6;
+            New, Blog, Content Showcase, 202, 6";
 
           </h2>
           <p, className=te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8></p>
@@ -317,12 +317,12 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
             <div, className=inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6></div>
               <Star, className=w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t />
               <span, className=te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e>
-                PREMIUM, CONTEN, T;
+                PREMIUM, CONTEN, T";
 
               </sp, a, n>
             </div>
             <h3, className=te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4>
-              Get, Exclusive, Blog Updat, e, s;
+              Get, Exclusive, Blog Updat, e, s";
 
             </h3>
             <p, className=te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2 xl, m, x-au, t, o>
@@ -339,12 +339,12 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
             <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6></div>
               <Star, className="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t /></Star>
               <span, className=te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e></span>
-                PREMIUM, CONTEN, T;
+                PREMIUM, CONTEN, T";
 
               </sp, a, n>
             </div>
             <h3, className=te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4></h3>
-              Get, Exclusive, Blog Updat, e, s;
+              Get, Exclusive, Blog Updat, e, s";
 
             </h3>
             <p, className=te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o></p>
@@ -372,7 +372,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
           <div, className=inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, vi, a-purp, l, e-500, t, o-cy, a, n-5, 0, 0></div>
             <div, className=bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10></div>
               <h3, className=te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4>
-                Explore, Our, Complete Blog, Librar, y;
+                Explore, Our, Complete Blog, Librar, y"'";
 
               </h3>
               <p, className=te, x, t-gr, a, y-400, m, b-8, ma, x-w-2 xl, m, x-au, t, o>
@@ -387,7 +387,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, vi, a-purp, l, e-500, t, o-cy, a, n-5, 0, 0></div>
             <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10></div>
               <h3, className=te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4></h3>
-                Explore, Our, Complete Blog, Librar, y;
+                Explore, Our, Complete Blog, Librar, y"'"'";
 
               </h3>
               <p, className=te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o></p>
@@ -413,6 +413,6 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
         </div>
       </div>
     </div>
-  )};
+  )}'"'"'";
 
-export default NewBlogContentShowcase2026;"`
+export default NewBlogContentShowcase2026'"'"'"'";"`

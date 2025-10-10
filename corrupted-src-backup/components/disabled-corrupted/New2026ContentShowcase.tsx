@@ -1,3 +1,3 @@
 import React from 'react';
 
-export default New2026 ContentShowcase;
+export default New2026 ContentShowcase';

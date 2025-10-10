@@ -1,14 +1,14 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database } from lucide-react;
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database } from lucide-react';
 
-;
+';
 
-const CloudMigrationServicesPage: React.FC = () => {const features = [;;;
+const CloudMigrationServicesPage: React.FC = () => {const features = [';';';
 
     {
       icon: Cloud,
@@ -31,11 +31,11 @@ const CloudMigrationServicesPage: React.FC = () => {const features = [;;;
       description: Enterprise-grade security and compliance standards
     }
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'Seamless cloud migration,
     'Minimal downtime during migration,
@@ -45,7 +45,7 @@ const benefits = [;;
     'Easy integration with existing systems,
     'Cost-effective pricing plans,
     Proven track record of success
-  ];
+  ]';
 
   return (
 
@@ -142,4 +142,4 @@ const benefits = [;;
         </div>
       </section>
     </div>)
-export default CloudMigrationServicesPage;
+export default CloudMigrationServicesPage'"'"'"'";

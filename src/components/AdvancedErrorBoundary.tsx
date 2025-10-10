@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from react;
 
@@ -40,7 +40,7 @@ interface ErrorReport {
 class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {;
 
 constructor(props: ErrorBoundaryProps) {
-    super(props);
+    super(props)';
 
     this.state = {
       hasError: false,
@@ -63,7 +63,7 @@ constructor(props: ErrorBoundaryProps) {
       errorInfo,
       errorId: error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}
 
-    });
+    })';
 
     // Log error to console in development
     if (process.env.NODE_ENV === development) {
@@ -77,7 +77,7 @@ constructor(props: ErrorBoundaryProps) {
   }
 
   private reportError = async (error: Error, errorInfo: ErrorInfo) => {
-    try {;
+    try {';
 
 const errorReport: ErrorReport = {
         errorId: this.state.errorId,
@@ -90,7 +90,7 @@ const errorReport: ErrorReport = {
         errorTimestamp: new Date().toISOString(),
         errorUserAgent: typeof window !== undefined ? window.navigator.userAgent : null,
         errorUrl: typeof window !== undefined ? window.location.href : null
-      };
+      }';
 
       // Send to error reporting service
       await fetch(/api/error-report, {
@@ -101,7 +101,7 @@ const errorReport: ErrorReport = {
       // console.error removed for production
 }
 
-  };
+  }';
 
   private handleRetry = () => {
     this.setState({
@@ -109,13 +109,13 @@ const errorReport: ErrorReport = {
       error: null,
       errorInfo: null,
       errorId: null
-    })};
+    })}';
 
   private handleReload = () => {
     if (typeof window !== undefined) {
       window.location.reload()}
 
-  };
+  }';
 
   render() {
     if (this.state.hasError) {
@@ -188,4 +188,4 @@ const errorReport: ErrorReport = {
 
 }
 
-export default AdvancedErrorBoundary;
+export default AdvancedErrorBoundary'"'"'"'";

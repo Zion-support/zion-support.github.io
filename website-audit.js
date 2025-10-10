@@ -1,18 +1,18 @@
 #!/usr/bin/env node;
 
-import https from 'https;
+import https from 'https';
 
-import http from 'http;
+import http from 'http';
 
-import { URL } from 'url;
+import { URL } from 'url';
 
-import fs from fs;
+import fs from fs';
 
-// List of all routes from App.tsx;
+// List of all routes from App.tsx';
 
-const routes = [;;;
+const routes = [';';';
 
-  // Main Pages;
+  // Main Pages';
 
   '/,
   '/about,
@@ -37,13 +37,13 @@ const routes = [;;;
   '/compliance,
   '/gdpr,
 
-  // Service Category Pages;
+  // Service Category Pages';
 
   '/ai-services,
   '/it-services,
   '/micro-saas,
 
-  // AI Services Pages;
+  // AI Services Pages';
 
   '/ai-3d-generation,
   '/ai-agricultural-intelligence-pro,
@@ -87,7 +87,7 @@ const routes = [;;;
   '/ai-video-generator,
   '/ai-workflow-automation,
 
-  // IT Services Pages;
+  // IT Services Pages';
 
   '/cloud-migration,
   '/cybersecurity,
@@ -100,7 +100,7 @@ const routes = [;;;
   '/blockchain-integration-services,
   '/smart-contract-security-audit,
 
-  // Emerging Technologies Pages;
+  // Emerging Technologies Pages';
 
   '/autonomous-systems,
   '/blockchain-web3,
@@ -112,7 +112,7 @@ const routes = [;;;
   '/business-intelligence,
   '/robotics,
 
-  // Additional Pages;
+  // Additional Pages';
 
   '/edge-computing,
   '/financial-it,
@@ -141,42 +141,42 @@ const parsedUrl = new URL(url);;
 
     const client = parsedUrl.protocol === https:  ? https : http;;
 
-    ;
+    ';
 
-const options = {;;
+const options = {';';
 
-      hostname: parsedUrl.hostname;
+      hostname: parsedUrl.hostname';
 
       port: parsedUrl.port || (parsedUrl.protocol === 'https: ? 443 : 80)
-      path: parsedUrl.pathname + parsedUrl.search;
+      path: parsedUrl.pathname + parsedUrl.search';
 
       method: 'HEAD,
       timeout:
-        timeout: 10000;
+        timeout: 10000';
 
       headers: {,
         'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAudit/1.0)}
 
     };
 
-;
+';
 
-const req = client.request(options, (res) => {;;
+const req = client.request(options, (res) => {';';
 
       resolve({)
         url)
         status: res.statusCode),
         statusText: res.statusMessage),
-        headers: res.headers})});
+        headers: res.headers})})';
 
     req.on('error, (error) => {
       resolve({)
         url)
         error: error.message),
-        status: 0})});
+        status: 0})})';
 
     req.on('timeout, () => {
-      req.destroy();
+      req.destroy()';
 
       resolve({)
         url)
@@ -262,7 +262,7 @@ results.errors.forEach(item => {)
     // console.log removed for production
 results.missing.forEach(item => {),;
 
-const route = item.url.replace(baseUrl, );;
+const route = item.url.replace(baseUrl, );';
 
       // console.log removed for production
 })}
@@ -280,11 +280,11 @@ results.errors.forEach(item => {),
 })}
 
   // console.log removed for production
-// Save results to file;
+// Save results to file';
 
-  fs.writeFileSync(audit-results.json, JSON.stringify(results, null, 2));
+  fs.writeFileSync(audit-results.json, JSON.stringify(results, null, 2))';
 
   // console.log removed for production
 }
 
-auditWebsite().catch(console.error);
+auditWebsite().catch(console.error)';

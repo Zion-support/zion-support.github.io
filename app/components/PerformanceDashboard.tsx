@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React from 'react;
 
@@ -36,16 +36,16 @@ const [metrics, setMetrics] = useState<PerformanceMetrics>
 const updateMetrics = () => {const navigation = performance.getEntriesByType(;;
 
         navigation
-      )[0] as PerformanceNavigationTiming;
+      )[0] as PerformanceNavigationTiming';
 
-const loadTime = navigation;;
+const loadTime = navigation';';
 
         ? navigation.loadEventEnd - navigation.fetchStart
-        : 0;
+        : 0';
 
-      // Measure render time// Measure memory usage;
+      // Measure render time// Measure memory usage';
 
-let _memoryUsage = 0;;;
+let _memoryUsage = 0';';';
 
       if ('memory in performance) {memoryUsage = memory?.usedJSHeapSize || 0}
 
@@ -82,12 +82,12 @@ const measureFPS = (currentTime: number) => {;;
   return (
 
       <button
-        onClick={() => setIsVisible(true);
+        onClick={() => setIsVisible(true)';
 
         className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors
       >
         Show Performance
-      </button>);
+      </button>)"'"'";
 
   return (
 
@@ -95,7 +95,7 @@ const measureFPS = (currentTime: number) => {;;
       <div className="flex justify-between items-center mb-4>
         <h3 className="text-lg font-semibold text-gray-800>Performance Dashboard</h3>
         <button
-          onClick={() => setIsVisible(false);
+          onClick={() => setIsVisible(false)"'"'"'";
 
           className="text-gray-500 hover:text-gray-700
         >
@@ -135,4 +135,4 @@ const measureFPS = (currentTime: number) => {;;
             Last updated: {new Date().toLocaleTimeString()}</div>
         </div>
     </div>)
-export default PerformanceDashboard;
+export default PerformanceDashboard'"'"'"'";

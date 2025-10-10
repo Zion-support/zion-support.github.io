@@ -1,18 +1,18 @@
-import React from 'react;
+import React from 'react';
 
-import { Heart, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react;
+import { Heart, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-import SEOOptimizer from '../components/SEOOptimizer;
+import SEOOptimizer from '../components/SEOOptimizer';
 
-;
+';
 
-const AIFitnessCoachPage: React.FC = () => {;
+const AIFitnessCoachPage: React.FC = () => {';
 
-const features = [;
+const features = [';
     'Personalized Plans',    'Progress Tracking,
     'Nutrition Analysis,
     'Workout Videos,
@@ -22,11 +22,11 @@ const features = [;
     'Exercise Library,
     'Meal Planning,
     Wearable Integration
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'Better results,
     24
@@ -34,11 +34,11 @@ const benefits = [;;
     'Health insights,
     'Motivation support,
     Cost-effective
-  ];
+  ]';
 
-;
+';
 
-const pricingPlans = [;;
+const pricingPlans = [';';
 
     {
       name: 'Basic,
@@ -65,7 +65,7 @@ const pricingPlans = [;;
       popular: false
     }
 
-  ];
+  ]';
 
   return (
 
@@ -148,7 +148,7 @@ const pricingPlans = [;;
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto>
               {pricingPlans.map((plan), index) => (
 
-                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}}>
+                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : '}}>
                   {plan.popular && (
 
                     <div className=absolute -top-4 left-1/2 transform -translate-x-1
@@ -207,6 +207,6 @@ const pricingPlans = [;;
         <Footer />
       </div>
     </React.Fragment>
-  )};
+  )}'"'"'";
 
-export default AIFitnessCoachPage;
+export default AIFitnessCoachPage'"'"'"'";

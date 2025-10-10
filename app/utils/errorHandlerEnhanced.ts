@@ -14,21 +14,21 @@ constructor(message: string, statusCode = 500, isOperational = true) {}
     super(message)
     this.statusCode = statusCode;
 
-    this.isOperational = isOperational;
+    this.isOperational = isOperational';
 
     this.timestamp = new Date().toISOString()
-    Error.captureStackTrace(this, this.constructor);
+    Error.captureStackTrace(this, this.constructor)';
 
 }
 
-export const errorHandler = (error: AppError | Error) => {};;
+export const errorHandler = (error: AppError | Error) => {}';';
 
-  const isDevelopment = process.env.NODE_ENV === 'development;;
+  const isDevelopment = process.env.NODE_ENV === 'development;';
 
-const appError = error instanceof AppError ? error : new AppError(error.message);;
+const appError = error instanceof AppError ? error : new AppError(error.message)';';
 
   .toISOString()
-    statusCode: appError.statusCode || 500;
+    statusCode: appError.statusCode || 500';
 
   return {,
   .toISOString(),
@@ -39,17 +39,17 @@ const appError = error instanceof AppError ? error : new AppError(error.message)
     message: appError.isOperational ? appError.message : 'An unexpected error occurred',
     statusCode: appError.statusCode || 500}}
 
-export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {,;;
+export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {,';';
 
   Promise.resolve(fn(req, res, next)).catch((error: unknown) => {,
     if (next && typeof next === 'function') {,
-export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {};;
+export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {}';';
 
   Promise.resolve(fn(req, res, next)).catch((error: unknown) => {}
 
     if (next && typeof next === 'function') {}
 
-      next(error);
+      next(error)';
 
 // Enhanced Error Handler
 export class AppError extends Error {/* TODO: Fix JSX expression */}
@@ -58,7 +58,7 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
 
 }
 
-export const errorHandler = (error: AppError | Error) => {;;
+export const errorHandler = (error: AppError | Error) => {';';
 
 const isDevelopment = process.env.NODE_ENV === 'development;;
 
@@ -69,13 +69,13 @@ const appError = error instanceof AppError ? error : new AppError(error.message)
     timestamp: new Date().toISOString(),
     statusCode: appError.statusCode || 500
 
-  });
+  })';
 
   return {/* TODO: Fix JSX expression */}
 
   }}
 
-export const asyncHandler = (f,;;
+export const asyncHandler = (f,';';
 
   n: (re,
   q: unknown, re,
@@ -87,4 +87,4 @@ export const asyncHandler = (f,;;
 
     }
 
-};
+}';

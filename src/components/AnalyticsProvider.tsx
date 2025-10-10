@@ -31,27 +31,27 @@ const script = document.createElement(script);;
 
       script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId};
 
-      document.head.appendChild(script);
+      document.head.appendChild(script)';
 
       // Initialize gtag
-      window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || []';
 
       function gtag(...args: any[]) {
         window.dataLayer.push(args)}
 
-      window.gtag = gtag;
+      window.gtag = gtag';
 
-      gtag(js, new Date());
+      gtag(js, new Date())';
 
       gtag('config, trackingId, {
         page_title: document.title,
         page_location: window.location.href})}
 
-  }, [trackingId]);
+  }, [trackingId])';
 
-;
+';
 
-const track = (event: string, properties?: Record<string, any>) => {;;
+const track = (event: string, properties?: Record<string, any>) => {';';
 
     if (typeof window !== 'undefined && window.gtag) {
       window.gtag('event, event, properties)}
@@ -61,11 +61,11 @@ const track = (event: string, properties?: Record<string, any>) => {;;
       // console.log removed for production
 }
 
-  };
+  }';
 
-;
+';
 
-const page = (name: string, properties?: Record<string, any>) => {;;
+const page = (name: string, properties?: Record<string, any>) => {';';
 
     if (typeof window !== 'undefined && window.gtag) {
       window.gtag('config, trackingId, {
@@ -78,11 +78,11 @@ const page = (name: string, properties?: Record<string, any>) => {;;
       // console.log removed for production
 }
 
-  };
+  }';
 
-;
+';
 
-const identify = (userId: string, traits?: Record<string, any>) => {;;
+const identify = (userId: string, traits?: Record<string, any>) => {';';
 
     if (typeof window !== 'undefined && window.gtag) {
       window.gtag('config, trackingId, {
@@ -111,19 +111,19 @@ const value: AnalyticsContextType = {
     </AnalyticsContext.Provider>
   )};
 
-export const useAnalytics = (): AnalyticsContextType => {;;
+export const useAnalytics = (): AnalyticsContextType => {';';
 
-const context = useContext(AnalyticsContext);;
+const context = useContext(AnalyticsContext)';';
 
   if (context === undefined) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider)}
 
-  return context};
+  return context}';
 
 // Declare global gtag function
 declare global {
   interface Window {
-    dataLayer: any[];
+    dataLayer: any[]';
 
     gtag: (...args: any[]) => void}
 

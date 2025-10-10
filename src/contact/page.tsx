@@ -1,19 +1,19 @@
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield} from 'lucide-react;
+import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield} from 'lucide-react';
 
 import Navigation from ../components
 import Footer from ../components
-import React from 'react;
+import React from 'react';
 
-;
+';
 
 const ContactPage: React.FC = () => {
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, User, Building, Globe, Shield, Brain, Zap, Cloud, Database, Code, BarChart, Users, Award, Target, Star, TrendingUp, ArrowRight } from 'lucide-react;
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, User, Building, Globe, Shield, Brain, Zap, Cloud, Database, Code, BarChart, Users, Award, Target, Star, TrendingUp, ArrowRight } from 'lucide-react';
 
-export default function ContactPage() {;
+export default function ContactPage() {';
 
 const [formData, setFormData] = useState({
     name: ',
@@ -26,11 +26,11 @@ $4});
 
 ;
 
-const [isSubmitted, setIsSubmitted] = useState(false);
+const [isSubmitted, setIsSubmitted] = useState(false)';
 
-;
+';
 
-const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;;
+const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {';';
 
     message: ',
     budget: ',
@@ -81,22 +81,22 @@ setIsSubmitted(true);
 
     setIsSubmitted(true);
 
-    setIsSubmitting(false)};
+    setIsSubmitting(false)}';
 
-;
+';
 
-const contactInfo = {;;
+const contactInfo = {';';
 
     phone: '+1 (302) 464-0950,
     email: 'kleber@ziontechgroup.com,
     address: '364 E Main St STE 1008, Middletown, DE 19709,
     hours: Mon-Fr,
     i: 9AM-6PM EST
-  };
+  }';
 
-;
+';
 
-const services = [;;
+const services = [';';
 
     'AI Services,
     'IT Services,
@@ -108,11 +108,11 @@ const services = [;;
     'Mobile App Development,
     'Custom Development,
     Other
-  ];
+  ]';
 
-;
+';
 
-const achievements = [;;
+const achievements = [';';
 
     { icon: Users, text: '100+ Happy Clients },
     { icon: Award, text: '50+ Successful Projects },
@@ -127,9 +127,9 @@ const achievements = [;;
           Contact Us
         <
       <)
-  );
+  )';
 
-export default ContactPage;
+export default ContactPage';
 
     'Quantum Computing,
     'Cybersecurity,
@@ -138,11 +138,11 @@ export default ContactPage;
     'Custom Development,
     'Consulting,
     Other
-  ];
+  ]';
 
-;
+';
 
-const budgetRanges = [;;
+const budgetRanges = [';';
 
     'Under $10K,
     '$10K - $50K,
@@ -150,11 +150,11 @@ const budgetRanges = [;;
     '$100K - $500K,
     '$500K+,
     Not sure
-  ];
+  ]';
 
-;
+';
 
-const timelines = [;;
+const timelines = [';';
 
     'ASAP,
     'Within 1 month,
@@ -162,11 +162,11 @@ const timelines = [;;
     '3-6 months,
     '6+ months,
     Just exploring
-  ];
+  ]';
 
-;
+';
 
-const offices = [;;
+const offices = [';';
 
     {
       city: 'Middletown, DE,
@@ -196,11 +196,11 @@ const offices = [;;
       timezone: Greenwich Mean Time
     }
 
-  ];
+  ]';
 
-;
+'";
 
-const faqs = [;;
+const faqs = ['"'";'"'"'";
 
     {
       question: 'How quickly can you start my project?,
@@ -219,7 +219,7 @@ const faqs = [;;
       answer: Absolutely! We offer scalable solutions for businesses of all sizes, from startups to enterprise organizations.
     }
 
-  ];
+  ]";
 
   if (isSubmitted) {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center>
@@ -309,9 +309,9 @@ const faqs = [;;
                     <input
                       type="text
                       name="name
-                      value = { formData.name };
+                      value = { formData.name }";
 
-                      onChange = { handleInputChange };
+                      onChange = { handleInputChange }";
 
                       className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,
     s:border-cyan-400 transition-colors
@@ -325,9 +325,9 @@ const faqs = [;;
                     <input
                       type="email
                       name="email
-                      value = { formData.email };
+                      value = { formData.email }";
 
-                      onChange = { handleInputChange };
+                      onChange = { handleInputChange }";
 
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 transition-colors
                       placeholder="your@email.com
@@ -344,9 +344,9 @@ const faqs = [;;
                     <input
                       type="text
                       name="company
-                      value = { formData.company };
+                      value = { formData.company }";
 
-                      onChange = { handleInputChange };
+                      onChange = { handleInputChange }";
 
                       className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,
     s:border-cyan-400 transition-colors
@@ -360,9 +360,9 @@ const faqs = [;;
                     <input
                       type="tel
                       name="phone
-                      value = { formData.phone };
+                      value = { formData.phone }";
 
-                      onChange = { handleInputChange };
+                      onChange = { handleInputChange }";
 
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 transition-colors)
                       placeholder="+1 (555) 123-4567
@@ -378,9 +378,9 @@ const faqs = [;;
                     <
                     <select
                       name="service
-                      value = { formData.service };
+                      value = { formData.service }";
 
-                      onChange = { handleInputChange };
+                      onChange = { handleInputChange }";
 
                       className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,
     s:border-cyan-400 transition-colors
@@ -397,9 +397,9 @@ const faqs = [;;
                     <
                     <select
                       name="budget
-                      value = { formData.budget };
+                      value = { formData.budget }";
 
-                      onChange = { handleInputChange };
+                      onChange = { handleInputChange }";
 
                       className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,
     s:border-cyan-400 transition-colors
@@ -418,9 +418,9 @@ const faqs = [;;
                   <
                   <select
                     name="timeline
-                    value = { formData.timeline };
+                    value = { formData.timeline }";
 
-                    onChange = { handleInputChange };
+                    onChange = { handleInputChange }";
 
                     className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,
     s:border-cyan-400 transition-colors
@@ -438,11 +438,11 @@ const faqs = [;;
                   <
                   <textarea
                     name="message
-                    value = { formData.message };
+                    value = { formData.message }"'";
 
-                    onChange = { handleInputChange };
+                    onChange = { handleInputChange }"'"'";
 
-                    rows = { 5 };
+                    rows = { 5 }"'"'"'";
 
                     className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,
     s:border-cyan-400 transition-colors resize-none
@@ -452,7 +452,7 @@ const faqs = [;;
 
                 <button
                   type="submit
-                  disabled = { isSubmitting };
+                  disabled = { isSubmitting }'"'"'"'";
 
                   className=w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-bold hover: from-cyan-600 hover:to-purple-700 transition-all disabled:opacity-50 disable,
     d:cursor-not-allowed flex items-center justify-center

@@ -1,19 +1,19 @@
-'use client;
+'use client';
 
 import React, { useState, useEffect } from react;
 
 interface AnimatedCounterProps {
   end: number;
 
-  duration?: number;
+  duration?: number';
 
-  prefix?: string;
+  prefix?: string';
 
-  suffix?: string;
+  suffix?: string';
 
   className?: string}
 
-;
+';
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   end,
@@ -54,13 +54,13 @@ const currentCount = Math.floor(easeOutQuart * end);;
     animationFrame = requestAnimationFrame(animate);
 
     return () =>
-);
+)';
 
 } {
       if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
+        cancelAnimationFrame(animationFrame)';
 
-    }}, [end, duration]);
+    }}, [end, duration])';
 
   return (
 
@@ -68,4 +68,4 @@ const currentCount = Math.floor(easeOutQuart * end);;
       {prefix}{count.toLocaleString()}{suffix}
 
     </span>)
-export default AnimatedCounter;
+export default AnimatedCounter';

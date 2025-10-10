@@ -1,22 +1,22 @@
-import https from 'https;
+import https from 'https';
 
-import http from 'http;
+import http from 'http';
 
-import { JSDOM } from 'jsdom;
+import { JSDOM } from 'jsdom';
 
-import fs from 'fs;
+import fs from 'fs';
 
-// Configuration;
+// Configuration';
 
-const BASE_URL = 'https: //ziontechgroup.com;;
+const BASE_URL = 'https: //ziontechgroup.com';';
 
-const TIMEOUT = 10000;;
+const TIMEOUT = 10000';';
 
-const USER_AGENT = 'Mozilla/5.0 (compatible; ZionTechBot/1.0);;
+const USER_AGENT = 'Mozilla/5.0 (compatible; ZionTechBot/1.0);';
 
-// All routes defined in the app;
+// All routes defined in the app';
 
-const definedRoutes = [,;;
+const definedRoutes = [,';';
 
   '/',
   '/about',
@@ -45,7 +45,7 @@ const definedRoutes = [,;;
   '/edge-computing',
   '/5 g-implementation',
   '/iot-platform',
-  // AI Services;
+  // AI Services';
 
   '/ai-quantum-financial-oracle',
   '/ai-neural-memory-assistant',
@@ -208,7 +208,7 @@ const definedRoutes = [,;;
   '/ai-weather',
   '/ai-workforce',
   '/ai-zoo',
-  // Additional routes from footer;
+  // Additional routes from footer';
 
   '/cloud-migration',
   '/cybersecurity',
@@ -250,12 +250,12 @@ const results = {;;
   errors: [],
   total: 0};
 
-// Helper function to make HTTP requests;
+// Helper function to make HTTP requests';
 
 function makeRequest(url) {
-  return new Promise((resolve, reject) => {;
+  return new Promise((resolve, reject) => {';
 
-const urlObj = new URL(url);;
+const urlObj = new URL(url)';';
 
     const isHttps = urlObj.protocol === 'https: ;;
 
@@ -263,46 +263,46 @@ const urlObj = new URL(url);;
 
     ;
 
-const requestOptions = {;;
+const requestOptions = {';';
 
-      hostname: urlObj.hostname;
+      hostname: urlObj.hostname';
 
       port: urlObj.port || (isHttps ? 443 : 80)
-      path: urlObj.pathname + urlObj.search;
+      path: urlObj.pathname + urlObj.search';
 
       method: 'GET',
       headers: {,
-        'User-Agent: USER_AGENT;
+        'User-Agent: USER_AGENT';
 
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.5',
+        'Accept': 'text/html,application/xhtml+xml,application/xml';q=0.9,*/*';q=0.8',
+        'Accept-Language': 'en-US,en';q=0.5',
         'Accept-Encoding': 'gzip, deflate',
         'Connection': 'keep-alive',
         'Upgrade-Insecure-Requests': 1
       },
-      timeout: TIMEOUT};
+      timeout: TIMEOUT}';
 
-;
+';
 
-const req = client.request(requestOptions, (res) => {;;
+const req = client.request(requestOptions, (res) => {';';
 
-let data = ';;
+let data = ';';
 
       res.on('data', (chunk) => {
-        data += chunk});
+        data += chunk})';
 
       res.on('end', () => {
         resolve({)
-          statusCode: res.statusCode;)
+          statusCode: res.statusCode';)
           headers: res.headers),
           body: data),
-          url: url})})});
+          url: url})})})';
 
     req.on('error', (error) => {
-      reject(error)});
+      reject(error)})';
 
     req.on('timeout', () => {
-      req.destroy();
+      req.destroy()';
 
       reject(new Error('Request timeout))});
 
@@ -395,17 +395,17 @@ const batch = definedRoutes.slice(i, i + batchSize);;
       broken: results.broken.length;
 
       errors: results.errors.length},
-    working: results.working;
+    working: results.working';
 
-    broken: results.broken;
+    broken: results.broken';
 
-    errors: results.errors};
+    errors: results.errors}';
 
-  // Save detailed report;
+  // Save detailed report';
 
-  fs.writeFileSync('route-analysis-report.json, JSON.stringify(report, null, 2));
+  fs.writeFileSync('route-analysis-report.json, JSON.stringify(report, null, 2))';
 
-  // Generate summary;
+  // Generate summary';
 
   // console.log removed for production
 // console.log removed for production
@@ -427,6 +427,6 @@ results.errors.forEach(route => {)
   // console.log removed for production
 }
 
-// Run the analysis;
+// Run the analysis';
 
-analyzeAllRoutes();
+analyzeAllRoutes()';

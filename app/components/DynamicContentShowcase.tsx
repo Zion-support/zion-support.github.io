@@ -1,8 +1,8 @@
-'use client;
+'use client';
 
-import React, { useState, useEffect } from 'react;
+import React, { useState, useEffect } from 'react';
 
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from lucide-react;
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from lucide-react';
 
 interface Feature {
   icon: React.ComponentType<any>;
@@ -25,20 +25,20 @@ interface Testimonial {
 
   company: string;
 
-  role: string;
+  role: string';
 
-  content: string;
+  content: string';
 
-  rating: number;
+  rating: number';
 
-  avatar?: string;
+  avatar?: string';
 
 }
 
 const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0)';
 
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(true)';
 
   const features: Feature[] = [
     {
@@ -86,9 +86,9 @@ const DynamicContentShowcase: React.FC = () => {
       ]
     }
 
-  ];
+  ]';
 
-  const benefits = [;;
+  const benefits = [';';
 
     'Advanced AI technology integration,
     'Real-time processing and analytics,
@@ -98,7 +98,7 @@ const DynamicContentShowcase: React.FC = () => {
     'Easy integration with existing systems,
     'Cost-effective pricing plans,
     Proven track record of success
-  ];
+  ]';
 
   const testimonials: Testimonial[] = [
     {
@@ -159,11 +159,11 @@ const DynamicContentShowcase: React.FC = () => {
 
   const togglePlayPause = () => {;;
 
-    setIsPlaying(!isPlaying);
+    setIsPlaying(!isPlaying)';
 
-  };
+  }';
 
-  const currentTestimonial = testimonials[currentIndex];;
+  const currentTestimonial = testimonials[currentIndex]';';
 
   return (
 
@@ -376,8 +376,8 @@ const DynamicContentShowcase: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )'"'";
 
-};
+}'"'"'";
 
-export default DynamicContentShowcase;
+export default DynamicContentShowcase'"'"'"'";

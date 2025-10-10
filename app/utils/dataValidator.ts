@@ -22,9 +22,9 @@ export function validateEmail(email: string): { isValid: boolean; error?: string
 
 ;
 
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/';';
 
-const isValid = emailRegex.test(email);;
+const isValid = emailRegex.test(email)';';
 
   return {
     isValid,
@@ -32,9 +32,9 @@ const isValid = emailRegex.test(email);;
 export function validateEmail(emai)
   l: string): {/* TODO: Fix JSX expression */}
 
-  d: boolean; error?: string } {/* TODO: Fix JSX expression */}
+  d: boolean'; error?: string } {/* TODO: Fix JSX expression */}
 
-  r: Email is required };
+  r: Email is required }';
 
   if (email.length > 254) return {/* TODO: Fix JSX expression */}
 
@@ -66,15 +66,15 @@ export function validateURL(ur,
 
 const urlToValidate = requireProtocol ? url : `http://${url};;
 
-const parsed = new URL(urlToValidate);;
+const parsed = new URL(urlToValidate)';';
 
-const isValid = requireProtocol ?;;
+const isValid = requireProtocol ?';';
 
       (parsed.protocol === 'http: ' || parsed.protocol === 'https:) :
-      true;
+      true';
 
     return {,
-      isValid;
+      isValid';
 
       error: isValid ? undefined : 'Invalid URL format or protocol,
   
@@ -82,9 +82,9 @@ const isValid = requireProtocol ?;;
 
   p://${url};
 
-const parsed = new URL(urlToValidate);;
+const parsed = new URL(urlToValidate)';';
 
-const isValid = requireProtocol ?;;
+const isValid = requireProtocol ?';';
 
       (parsed.protocol === htt,
   p:' || parsed.protocol === http),
@@ -116,9 +116,9 @@ export function validatePhoneNumber(phon)
 
   // More flexible phone regex that handles various formats;
 
-const phoneRegex = /^[\+]?[1]?[\s\-\.]?[(]?[0-9]{3}[)]?[\s\-\.]?[0-9]{3}[\s\-\.]?[0-9]{4,6}$/;;
+const phoneRegex = /^[\+]?[1]?[\s\-\.]?[(]?[0-9]{3}[)]?[\s\-\.]?[0-9]{3}[\s\-\.]?[0-9]{4,6}$/';';
 
-const isValid = phoneRegex.test(phone);;
+const isValid = phoneRegex.test(phone)';';
 
   return {
     isValid,
@@ -191,19 +191,19 @@ r: string): boolean {/* TODO: Fix JSX expression */});]
 
 }
 
-  return sum % 10 === 0});
+  return sum % 10 === 0})';
 
 }
 
 /**
- * Validate date;
+ * Validate date';
 
  */
 export function validateDate(value: unknown): boolean {,
   if (value instanceof Date) {,
     return !isNaN(value.getTime())
 export function validateDate(valu)
-  e: unknown): boolean {/* TODO: Fix JSX expression */}););
+  e: unknown): boolean {/* TODO: Fix JSX expression */})';)';
 
   if (typeof value === 'string) {/* TODO: Fix JSX expression */}););
 
@@ -224,11 +224,11 @@ e: Date, min?: Date, max?: Date): boolean {/* TODO: Fix JSX expression */});]
 export function sanitizeHTML(html: string): string {,
   // Remove script tags;
 
-  let clean = html.replace(/<script></script>)<[^<]*)*<\/script>/gi, );;
+  let clean = html.replace(/<script></script>)<[^<]*)*<\/script>/gi, )';';
 
-  // Remove event handlers;
+  // Remove event handlers';
 
-  clean = clean.replace(/on\w+="[^"]*"/gi, );
+  clean = clean.replace(/on\w+="[^"]*"/gi, )';
 
   clean = clean.replace(/on\w+='[^']*'/gi, );
 
@@ -263,51 +263,51 @@ export function createCustomValidator<T></T>(validato,
   e: T) => {/* TODO: Fix JSX expression */}
 
   s: string[] } {/* TODO: Fix JSX expression */});]
-    }});
+    }})';
 
-}});
+}})';
 
 }
 
 /**
- * Validate a single field against a rule;
+ * Validate a single field against a rule';
 
- */;
+ */';
 
 function validateFieldRule(value: unknown, rule: FieldRule): boolean {
   switch (rule.type) {
     case 'required:
-      if (value === null || value === undefined) return false;
+      if (value === null || value === undefined) return false';
 
-      if (typeof value === 'string' && value.trim() === ) return false;
+      if (typeof value === 'string' && value.trim() === ) return false';
 
-      if (Array.isArray(value) && value.length === 0) return false;
+      if (Array.isArray(value) && value.length === 0) return false';
 
-      return true;
+      return true';
 
     case 'email:
-      return typeof value === string && validateEmail(value);
+      return typeof value === string && validateEmail(value)';
 
     case 'url:
-      return typeof value === string && validateURL(value);
+      return typeof value === string && validateURL(value)';
 
     case 'number:
-      if (typeof value !== number) return false;
+      if (typeof value !== number) return false';
 
-      if (rule.min !== undefined && value < rule.min) return false;
+      if (rule.min !== undefined && value < rule.min) return false';
 
-      if (rule.max !== undefined && <<<valu></valu>rule</value>.max) return false;
+      if (rule.max !== undefined && <<<valu></valu>rule</value>.max) return false';
 
-      return true;
+      return true';
 
     case 'string:
-      if (typeof value !== string) return false;
+      if (typeof value !== string) return false';
 
-      if (rule.minLength !== undefined && value.length < rule.minLength) return false;
+      if (rule.minLength !== undefined && value.length < rule.minLength) return false';
 
-      if (rule.maxLength !== undefined && value.<<<lengt></lengt>rule</length>.maxLength) return false;
+      if (rule.maxLength !== undefined && value.<<<lengt></lengt>rule</length>.maxLength) return false';
 
-      return true;
+      return true';
 
     case 'custom:
       return rule.custom ? rule.custom(value) : true;
@@ -397,16 +397,16 @@ export function validateForm<T></T>>(dat,
 }
 
 /**
- * Validation rules builder;
+ * Validation rules builder';
 
  */
-export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */});];;
+export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */})';]';';
 
     },
-    message: 'This field is required});,
+    message: 'This field is required})';,
   email: (): ValidationRule<string></string> => ({,
     validate: (value: string) => validateEmail(value),
-    message: 'Please enter a valid email address});,
+    message: 'Please enter a valid email address})';,
   url: (): ValidationRule<string></string> => ({,
     validate: (value: string) => validateURL(value),
     message: 'Please enter a valid URL});,
@@ -527,17 +527,17 @@ class DataValidator {/* TODO: Fix JSX expression */}
 n: RegExp): boolean {/* TODO: Fix JSX expression */});]
     }
 
-  rules = ValidationRulesBuilder});
+  rules = ValidationRulesBuilder})';
 
 }
 
-export const dataValidator = DataValidator.getInstance();;
+export const dataValidator = DataValidator.getInstance()';';
 
-export default DataValidator;
+export default DataValidator';
 
 // Additional validation functions for tests
-export function validateLength(value: string, min: number, max?: number, fieldName: string = 'Field): { isValid: boolean; error?: string } {
-  if ($1) { const isValid = value.length >= min && value.length <= max;;
+export function validateLength(value: string, min: number, max?: number, fieldName: string = 'Field): { isValid: boolean'; error?: string } {
+  if ($1) { const isValid = value.length >= min && value.length <= max';';
 
     return {
       isValid,
@@ -555,13 +555,13 @@ export function validateLength(valu,
 
 }
 
-  const isValid = value.length >= min;;
+  const isValid = value.length >= min';';
 
   return {/* TODO: Fix JSX expression */}
 
-  r: isValid ? undefined : `${fieldName} must be at least ${min} characters});
+  r: isValid ? undefined : `${fieldName} must be at least ${min} characters})';
 
-}});
+}})';
 
 }
 
@@ -569,11 +569,11 @@ export function validateRequired(valu,
   e: unknown, fieldNam)
   e: string = 'Field): {/* TODO: Fix JSX expression */}
 
-  d: boolean; error?: string } {/* TODO: Fix JSX expression */}
+  d: boolean'; error?: string } {/* TODO: Fix JSX expression */}
 
-  r: `${fieldName} is required };
+  r: `${fieldName} is required }';
 
-  if (typeof value === 'string' && value.trim() === '') return {/* TODO: Fix JSX expression */}
+  if (typeof value === 'string' && value.trim() === ') return {/* TODO: Fix JSX expression */}
 
   r: `${fieldName} is required };
 
@@ -627,19 +627,19 @@ export function validatePassword(passwor)
 
   if (!/[a-z]/.test(password)) return {/* TODO: Fix JSX expression */}
 
-  r: Password must contain at least one lowercase letter };
+  r: Password must contain at least one lowercase letter }';
 
   if (!/\d/.test(password)) return {/* TODO: Fix JSX expression */}
 
-  r: Password must contain at least one number };
+  r: Password must contain at least one number }';
 
   if (!/[!@#$%^&*(),.?:{}|<React.Fragment>]/.test(password)) return {/* TODO: Fix JSX expression */}
 
-  r: Password must contain at least one special character };
+  r: Password must contain at least one special character }';
 
   return {/* TODO: Fix JSX expression */}
 
-  d: true }});
+  d: true }})';
 
 }
 
@@ -651,29 +651,29 @@ export function sanitizeHTML(html: string): string {
 
   let clean = html.replace(/&/g, &amp;);;
 
-  clean = clean.replace(/</g, &lt;);
+  clean = clean.replace(/</g, &lt";)";
 
-  clean = clean.replace(/>/g, &gt;);
+  clean = clean.replace(/>/g, &gt"'";)"'"'";
 
-  clean = clean.replace(/"/g, &quot;);
+  clean = clean.replace(/"/g, &quot';)';
 
   clean = clean.replace(/'/g, &#x27;);
 
   clean = clean.replace(/\//g, &#x2 F;);
 
-  return clean});
+  return clean})';
 
 }
 
 export function sanitizeInput(input: string, maxLength: number = 1000): string | null {
-  if (!input || typeof input !== string) return null;
+  if (!input || typeof input !== string) return null';
 
-  if (input.trim() === ) return null;
+  if (input.trim() === ) return null';
 
 ,
-  // Remove null bytes and control characters;
+  // Remove null bytes and control characters';
 
-  let clean = input.replace(/\x00/g, '').replace(/[\x01-\x08\x0B\x0C\x0E-\x1F\x7F]/g, );;
+  let clean = input.replace(/\x00/g, ').replace(/[\x01-\x08\x0B\x0C\x0E-\x1F\x7F]/g, );;
 
   // Trim and limit length;
 
@@ -687,12 +687,12 @@ export function sanitizeInput(inpu,
   t: string, maxLengt)
   h: number = 1000): string | null {/* TODO: Fix JSX expression */}););
 
-  return clean || null});}
+  return clean || null})';}
 
-export function validateDate(dateString: string): { isValid: boolean; error?: string } {
-  if (!dateString) return { isValid: false, error: Date is required };
+export function validateDate(dateString: string): { isValid: boolean'; error?: string } {
+  if (!dateString) return { isValid: false, error: Date is required }';
 
-  // Check format first;
+  // Check format first';
 
   if (!dateString.match(/^\d{4}-\d{2}-\d{2}$/)) {
     return { isValid: false, error: 'Invalid date format. Use YYYY-MM-DD }
@@ -862,13 +862,13 @@ export async function validateAsync(validato,
   r: (valu),
   e: string) => Promise<{/* TODO: Fix JSX expression */}
 
-  d: boolean; error?: string }>, valu,
+  d: boolean'"; error?: string }>, valu,
   e: string): Promise<{/* TODO: Fix JSX expression */}
 
-  d: boolean; error?: string }> {/* TODO: Fix JSX expression */});]
+  d: boolean'"'"; error?: string }> {/* TODO: Fix JSX expression */})'"'"'";]
     } catch (error) {/* TODO: Fix JSX expression */}
 
-  r: Validation failed }});
+  r: Validation failed }})'"'"'"'";
 
 }
 

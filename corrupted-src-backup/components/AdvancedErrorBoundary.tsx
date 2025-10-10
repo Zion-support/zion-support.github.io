@@ -41,7 +41,7 @@ export class AdvancedErrorBoundary extends Component<Props, State> {/* TODO: Fix
     if (typeof window !== 'undefined' && gtag in window) {
       (window as any).gtag('event', exception, {)
         description: error.toString(),
-        fatal: false;
+        fatal: false';
 
     if (typeof window !== 'undefined' && gtag in window) {/* TODO: Fix JSX expression */}
 
@@ -79,4 +79,4 @@ export class AdvancedErrorBoundary extends Component<Props, State> {/* TODO: Fix
 
 }
 
-export default AdvancedErrorBoundary;
+export default AdvancedErrorBoundary';

@@ -1,16 +1,16 @@
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
         return (
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-const _UltimateBusinessIntelligenceShowcase2025 = () => {;;;
+const _UltimateBusinessIntelligenceShowcase2025 = () => {';';';
 
-const [selectedCategory, setSelectedCategory] = useState(all);
+const [selectedCategory, setSelectedCategory] = useState(all)';
 
-  const content = [;;
+  const content = [';';
 
     {
       id: 'ultimate-business-intelligence-revolution,
@@ -52,19 +52,19 @@ readingTimereadingTime: '45 min read,
       tags: ['Implementation', 'Guide', '30,000% ROI', 'Roadmap', 'Best Practices]
     }
 
-  ];
+  ]';
 
-  const categories = [;;
+  const categories = [';';
 
     { id: 'all', name: 'All Content },
     { id: 'blog', name: 'Blog Posts },
     { id: 'case-study', name: 'Case Studies },
     { id: 'resource', name: 'Resources }
 
-  const filteredContent = selectedCategory === all;;
+  const filteredContent = selectedCategory === all';';
 
     ? content 
-    : content.filter(item => item.category === selectedCategory);
+    : content.filter(item => item.category === selectedCategory)';
 
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden>
       {/* Animated Background Effects */}
@@ -88,7 +88,7 @@ readingTimereadingTime: '45 min read,
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">Revolutionary Content<span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent>Showcase 2025</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto>Explore our comprehensive collection of AI-powered business intelligence
-            content that&apos;s transforming enterprises worldwide</p>
+            content that&apos'"'"'"'";s transforming enterprises worldwide</p>
         {/* Category Filter */}
 
           {categories.map((category) => (
@@ -181,16 +181,16 @@ readingTimereadingTime: '45 min read,
                 to="/services
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover:bg-blue-400/10 transition-all duration-300
               >Learn More</Link>
-    </section>);
+    </section>)';
 
 export default UltimateBusinessIntelligenceShowcase2025
 
 
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-        return (import { Link } from 'react-router-dom;);
+        return (import { Link } from 'react-router-dom';);
 
 const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expression */};;;
 
@@ -198,20 +198,20 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
 
 }
 
-  const [selectedCategory, setSelectedCategory] = useState(all);
+  const [selectedCategory, setSelectedCategory] = useState(all)';
 
-  const content = [;;
+  const content = [';';
 
   // TOD,
-  O: Add items;
+  O: Add items';
 
-];
+]';
 
     {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}'";
 
   i,
   d: 'ultimate-business-intelligence-revolution,
@@ -221,7 +221,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
       descriptio,
   n: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.,
       ur,
-  l: /blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough;
+  l: /blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough'"'";
 
       typ,
   e: 'Blog Post,
@@ -232,7 +232,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
 
   O: Add content}
 
-};
+}'"'"'";
 
   ro,
   i: '30,000%,
@@ -268,7 +268,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
       descriptio,
   n: 'Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.,
       ur,
-  l: /resources/ai-2025-ultimate-business-intelligence-implementation-guide;
+  l: /resources/ai-2025-ultimate-business-intelligence-implementation-guide'"'"'"'";
 
       typ,
   e: 'Implementation Guide,
@@ -347,6 +347,6 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl,
   hover:bg-blue-400/10 transition-all duration-300
 >Learn More</Link>
-    </section>);
+    </section>)'"'"'";
 
-export default UltimateBusinessIntelligenceShowcase2025;
+export default UltimateBusinessIntelligenceShowcase2025'"'"'"'";

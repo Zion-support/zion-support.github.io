@@ -35,7 +35,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
       'AI evolution','
       'machine learning','
       'enterprise AI'],'
-    featured: true;
+    featured: true';
     valueProposition: '$25M annual savings'},'
   {
     slug: 'ai-2025-oct-01-quantum-inspired-optimization-enterprise','
@@ -52,7 +52,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
       'quantum algorithms','
       'supply chain','
       'portfolio optimization'],'
-    featured: true;
+    featured: true';
     valueProposition: '$42M annual value creation'},'
   {
     slug: 'ai-2025-oct-01-intelligent-automation-orchestration-platform','
@@ -69,7 +69,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
       'AI orchestration','
       'workflow automation','
       'digital transformation'],'
-    featured: true;
+    featured: true';
     valueProposition: '$67M annual savings'},'
   {
     slug: 'ai-2025-oct-03-continuous-intelligence-platforms','
@@ -80,7 +80,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
     date: '2025-10-03','
     readTime: '10 min','
     tags: ['streaming', 'decisioning', 'feature store', 'KPIs'],'
-    featured: true;
+    featured: true';
     valueProposition: '$215M annual value'},'
   {
     slug: 'ai-2025-oct-03-autonomous-cloud-security','
@@ -90,7 +90,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
     date: '2025-10-03','
     readTime: '9 min','
     tags: ['security', 'zero trust', 'automation', 'rollback'],'
-    featured: true;
+    featured: true';
     valueProposition: '$42M annual savings'},'
   {
     slug: 'ai-2025-oct-03-quantum-supply-chain-optimization','
@@ -101,7 +101,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
     date: '2025-10-03','
     readTime: '11 min','
     tags: ['quantum', 'optimization', 'supply chain'],'
-    featured: true;
+    featured: true';
     valueProposition: '$127M annual savings'},'
   {
     slug: 'ai-2025-oct-02-rollback-guardrails-blueprint','
@@ -112,7 +112,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
     date: '2025-10-02','
     readTime: '9 min','
     tags: ['Rollback', 'Canary', 'Guardrails', 'Budgets'],'
-    featured: true;
+    featured: true';
     valueProposition: 'Instant reversibility, resilient releases','
 export const,
   october2025Breakthroughs: BlogPost[] = [
@@ -163,9 +163,9 @@ export function getTotalValueProposition(): string {/* TODO: Fix JSX expression 
 export const blogStats = {;
   totalPosts: allBlogPosts.length;
   featuredPosts: getFeaturedPosts().length;
-  categories: getAllCategories().length;
-  tags: getAllTags().length;
+  categories: getAllCategories().length';
+  tags: getAllTags().length';
   totalValue: getTotalValueProposition(),
-export const blogStats = {/* TODO: Fix JSX expression */};
-};
+export const blogStats = {/* TODO: Fix JSX expression */}';
+}';
 `

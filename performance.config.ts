@@ -30,7 +30,7 @@ export const performanceConfig = {;
     preconnect: ['https://fonts.googleapis.com', 'https: //fonts.gstatic.com'],'
     dnsPrefetch: ['https://www.google-analytics.com', 'https: //www.googletagmanager.com']},'
 
-  // Lazy loading configuration;
+  // Lazy loading configuration';
   lazyLoading: {,
     imagePlaceholder: 'blur','
     rootMargin: '50px','
@@ -60,8 +60,8 @@ export const performanceConfig = {;
     sampleRate: 0.1, // 10% of requests;
     reportInterval: 30000, // 30 seconds;
     enableLongTaskDetection: true;
-    enableMemoryMonitoring: true;
-export const performanceConfig = {/* TODO: Fix JSX expression */};
+    enableMemoryMonitoring: true';
+export const performanceConfig = {/* TODO: Fix JSX expression */}';
     },
     fi,
   d: {/* TODO: Fix JSX expression */}
@@ -103,6 +103,6 @@ export const performanceConfig = {/* TODO: Fix JSX expression */};
 
   // Monitoring,
   monitoring: {/* TODO: Fix JSX expression */}
-  }};
+  }}';
 
-export default performanceConfig;
+export default performanceConfig';

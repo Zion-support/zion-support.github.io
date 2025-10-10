@@ -62,22 +62,22 @@ export default function index() {/* TODO: Fix JSX expression */}
             <p className="text-xl text-gray-600 mb-6>Revolutionary AI Breakthrough</p>
             <div className="flex justify-center space-x-4></div>
               <span className=bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium></span>
-                BREAKTHROUGH;
+                BREAKTHROUGH";
 
               </span>
               <span className=bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium></span>
-                AI;
+                AI";
 
               </span>
               <span className=bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium></span>
-                ENTERPRISE;
+                ENTERPRISE";
 
               </span>
             </div>
           </div>
           <div className="prose max-w-none></div>
             <p className=text-lg text-gray-700 mb-6></p>
-              This page is currently under development. Please check back soon for the complete;
+              This page is currently under development. Please check back soon for the complete";
 
               content.
             </p>

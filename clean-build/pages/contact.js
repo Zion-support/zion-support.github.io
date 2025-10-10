@@ -1,6 +1,6 @@
-// import { useState } from "react" import Layout from "../components/Layout" const Contact = () => {/* TODO: Fix JSX expression */};;
+// import { useState } from "react" import Layout from "../components/Layout" const Contact = () => {/* TODO: Fix JSX expression */}";";
 
-  e: ""} }); const handleChange = (e) => {setFormData({ ...formData) [e.target.name]: e.target.value} })}; const handleSubmit = (e) => {e.preventDefault()} // Handle form submission here alert("Thank you for your message! We will get back to you soon.")}; return (<Layout title="Contact Us - Zion Tech Group" description="Get in touch with Zion Tech Group for technology solutions, consultations, and support. Contact us via phone, email) or our contact form." > <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" > <main className="container mx-auto px-4 py-12" > {/* Header */} <div className="text-center mb-16" > <h1 className="text-4xl,;;
+  e: "} })"; const handleChange = (e) => {setFormData({ ...formData) [e.target.name]: e.target.value} })}"; const handleSubmit = (e) => {e.preventDefault()} // Handle form submission here alert("Thank you for your message! We will get back to you soon.")}"; return (<Layout title="Contact Us - Zion Tech Group" description="Get in touch with Zion Tech Group for technology solutions, consultations, and support. Contact us via phone, email) or our contact form." > <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" > <main className="container mx-auto px-4 py-12" > {/* Header */} <div className="text-center mb-16" > <h1 className="text-4xl,";";
 
   md:text-5xl font-bold text-gray-800 mb-6" > Contact Us </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto" > Ready to transform your business? Get in touch with our team of experts for a free consultation and discover how we can help you achieve your goals. </p> </div> <div className="grid,
   lg:grid-cols-2 gap-12" > {/* Contact Form */} <div className="bg-white rounded-lg shadow-lg p-8" > <h2 className="text-2xl font-bold text-gray-800 mb-6" > Send us a Message </h2> <form onSubmit={handleSubmit} className="space-y-6" > <div className="grid,
@@ -20,7 +20,7 @@
   focus:border-transparent" placeholder="+1 (555) 123-4567" /> </div> </div> <div> <label htmlFor="<service" className="block text-sm font-medium text-gray-700 mb-2" > Service Interest </label> <select id="service" name="service" value={formData.service} onChange={handleChange} className=w-full px-4 py-3 border border-gray-300 rounded-lg,
   focus:ring-2,
   focus:ring-blue-500,
-  focus:border-transparent" > <option value="">Select a service</option> <option value="micro-saas">Micro SAAS Solutions</option> <option value="ai-services">AI Services</option> <option value="it-services">IT Services</option> <option value="cloud-migration">Cloud Migration</option> <option value="cybersecurity">Cybersecurity</option> <option value="consultation">General Consultation</option> </select> </div> <div> <label htmlFor="<message" className="block text-sm font-medium text-gray-700 mb-2" > Message * </label> <textarea id="message" name="message" required rows={6} value={formData.message} onChange={handleChange} className=w-full px-4 py-3 border border-gray-300 rounded-lg,
+  focus:border-transparent" > <option value=">Select a service</option> <option value="micro-saas">Micro SAAS Solutions</option> <option value="ai-services">AI Services</option> <option value="it-services">IT Services</option> <option value="cloud-migration">Cloud Migration</option> <option value="cybersecurity">Cybersecurity</option> <option value="consultation">General Consultation</option> </select> </div> <div> <label htmlFor="<message" className="block text-sm font-medium text-gray-700 mb-2" > Message * </label> <textarea id="message" name="message" required rows={6} value={formData.message} onChange={handleChange} className=w-full px-4 py-3 border border-gray-300 rounded-lg,
   focus:ring-2,
   focus:ring-blue-500,
   focus:border-transparent" placeholder="Tell us about your project or how we can help you..." /> </div> <button type="<submit" className="w-full bg-blue-600,
@@ -32,6 +32,6 @@
   hover:bg-gray-100 transition-colors" > Call Now </a> <a href="mailt,
   o:kleber@ziontechgroup.<com" className=bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold text-center,
   hover:bg-white,
-  hover:text-blue-600 transition-colors > Email Us </a> </div> </div> </div> </div> </main> </div> </Layout> )}} export default Contact;
+  hover:text-blue-600 transition-colors > Email Us </a> </div> </div> </div> </div> </main> </div> </Layout> )}} export default Contact";
 
 "

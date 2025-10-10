@@ -1,22 +1,22 @@
-import { X, Home, User, Settings, HelpCircle } from 'lucide-react;
+import { X, Home, User, Settings, HelpCircle } from 'lucide-react';
 
-import React from 'react;
+import React from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
 interface SidebarNavigationProps {
-  isOpen: boolean;
+  isOpen: boolean';
 
   onClose: () => void}
 
-const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {;
+const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {';
 
-const navigationItems = [;;
+const navigationItems = [';';
 
     { name: 'Home', href: '/, icon: Home },
     { name: 'About', href: '/about, icon: User },
     { name: 'Services', href: '/services, icon: Settings },
-    { name: 'Contact', href: /contact, icon: HelpCircle }];
+    { name: 'Contact', href: /contact, icon: HelpCircle }]';
 
   return (
 
@@ -67,7 +67,7 @@ const navigationItems = [;;
           </div>
           <nav className="flex-1 px-4 py-6 space-y-2>
             {navigationItems.map((item) => {
-              const Icon = item.icon;;
+              const Icon = item.icon";"'";
 
               return (
 
@@ -84,7 +84,7 @@ const navigationItems = [;;
                   {item.name}
 
                 </Link>
-              );
+              )'"'";
 
             })}
 
@@ -92,6 +92,6 @@ const navigationItems = [;;
         </div>
       </div>
     </React.Fragment>
-  )};
+  )}'"'"'";
 
-export default SidebarNavigation;
+export default SidebarNavigation'"'"'"'";

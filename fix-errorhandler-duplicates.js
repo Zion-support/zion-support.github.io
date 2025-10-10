@@ -14,17 +14,17 @@ content = content.replace(/export const errorHandler = \{/* TODO: Fix JSX expres
 
   r: Error, context\?: string\) => \{[\s\S]*?\}\s*;\s*$/g,
   
-);
+)';
 
-// Also remove the setupGlobalHandlers call since it doesnt exist;
+// Also remove the setupGlobalHandlers call since it doesnt exist';
 
 content = content.replace(
 
 content = content.replace()
-  /\/\/Setup global handlers[\s\S]*?errorHandler\.setupGlobalHandlers\(\);\s*\}/g,
+  /\/\/Setup global handlers[\s\S]*?errorHandler\.setupGlobalHandlers\(\)';\s*\}/g,
   // Setup global handlers - removed for now
-);
+)';
 
-fs.writeFileSync('src/utils/errorHandler.ts, content);
+fs.writeFileSync('src/utils/errorHandler.ts, content)';
 
 // 

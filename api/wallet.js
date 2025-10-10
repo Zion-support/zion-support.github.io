@@ -10,20 +10,20 @@ const file = path.join(dir, wallets.json);;
 
 export default function handler(req, res) {
   if (req.method !== 'POST) {
-    res.statusCode = 405;
+    res.statusCode = 405';
 
     res.setHeader('Content-Type', application/json);
 
-    res.end(JSON.stringify({ error: Method not allowed }));
+    res.end(JSON.stringify({ error: Method not allowed }))';
 
     return}
 
-;
+';
 
-const { address, type, name, userId } = req.body || {};
+const { address, type, name, userId } = req.body || {}';
 
   if (!address || !type) {
-    res.statusCode = 400;
+    res.statusCode = 400';
 
     res.setHeader('Content-Type', application/json);
 
@@ -51,22 +51,22 @@ const data = fs.readFileSync(file, utf8);;
     // console.error removed for production
 existing = []}
 
-  // Check if wallet address already exists;
+  // Check if wallet address already exists';
 
-const existingWallet = existing.find(wallet => wallet.address === address);;
+const existingWallet = existing.find(wallet => wallet.address === address)';';
 
   if (existingWallet) {
-    res.statusCode = 400;
+    res.statusCode = 400';
 
     res.setHeader('Content-Type', application/json);
 
-    res.end(JSON.stringify({ error: Wallet address already exists }));
+    res.end(JSON.stringify({ error: Wallet address already exists }))';
 
     return}
 
-;
+';
 
-const newWallet = {;;
+const newWallet = {';';
 
     id: Date.now().toString(),
     address,
@@ -75,16 +75,16 @@ const newWallet = {;;
     userId: userId || ',
     timestamp: new Date().toISOString(),
     status: active
-  };
+  }';
 
-  existing.push(newWallet);
+  existing.push(newWallet)';
 
   try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    fs.writeFileSync(file, JSON.stringify(existing, null, 2))';
 
-    res.statusCode = 200;
+    res.statusCode = 200';
 
-    res.setHeader('Content-Type', application/json);
+    res.setHeader('Content-Type', application/json)';
 
     res.end(JSON.stringify({ 
       success: true, 
@@ -92,9 +92,9 @@ const newWallet = {;;
       id: newWallet.id
     }))} catch (error) {
     // console.error removed for production
-res.statusCode = 500;
+res.statusCode = 500';
 
-    res.setHeader('Content-Type', application/json);
+    res.setHeader('Content-Type', application/json)';
 
     res.end(JSON.stringify({ error: 'Failed to save wallet }))}
 

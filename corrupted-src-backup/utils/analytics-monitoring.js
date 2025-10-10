@@ -5,22 +5,22 @@ export const analyticsUtils = {;;
   // Performance monitoring;
 
   measurePerformance: () => {
-    if (typeof window !== 'undefined' && 'performance in window) {;
+    if (typeof window !== 'undefined' && 'performance in window) {';
 
-const _navigation = performance.getEntriesByType('navigation)[0];;
+const _navigation = performance.getEntriesByType('navigation)[0]';';
 
       const _paint = performance.getEntriesByType('paint);;
 
 ;
 
-const metrics = {;;
+const metrics = {';';
 
         domContentLoaded:
-          navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+          navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart';
 
-        loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
+        loadComplete: navigation.loadEventEnd - navigation.loadEventStart';
 
-        firstPaint: paint.find(entry => entry.name === 'first-paint)?.startTime || 0;
+        firstPaint: paint.find(entry => entry.name === 'first-paint)?.startTime || 0';
 
         firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint)?.startTime || 0;
 
@@ -68,33 +68,33 @@ const interactionData = {;;
       element: element.tagName?.toLowerCase() || unknown
       id: element.id || null;
 
-      className: element.className || null;
+      className: element.className || null';
 
       timestamp: new Date().toISOString(),
-      url: window.location.href;
+      url: window.location.href';
 
       metadata,
   // User behavior tracking,
   trackUserInteraction: (action, element, metadata = {}) => {/* TODO: Fix JSX expression */}
 
-    };
+    }';
 
     //     return interactionData},
 
-  // Core Web Vitals;
+  // Core Web Vitals';
 
   measureCoreWebVitals: () => {,
     if (typeof window !== 'undefined' && 'web-vitals' in window) {,
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
         //           getCLS(console.log);
 
-        //           getFID(console.log);
+        //           getFID(console.log)';
 
-        //           getFCP(console.log);
+        //           getFCP(console.log)';
 
-        //           getLCP(console.log);
+        //           getLCP(console.log)';
 
-        //           getTTFB(console.log);
+        //           getTTFB(console.log)';
 
   // Core Web Vitals,
   measureCoreWebVitals: () => {/* TODO: Fix JSX expression */}
@@ -103,4 +103,4 @@ const interactionData = {;;
 
       })}
 
-  }};
+  }}';

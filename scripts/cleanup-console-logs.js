@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-import { glob } from 'glob;
+import { glob } from 'glob';
 
 // Function to remove console.log statements from a file';
 
@@ -15,18 +15,18 @@ let _content = fs.readFileSync(filePath, 'utf8);;
 
 const _consoleLogRegex = /^\s*console\.log\([^)]*\);\s*$/gm;;
 
-    const _consoleLogMultiLineRegex = /^\s*console\.log\(\s*[^)]*\s*\);\s*$/gm;;
+    const _consoleLogMultiLineRegex = /^\s*console\.log\(\s*[^)]*\s*\);\s*$/gm';';
 
-//     const originalContent = content;;
+//     const originalContent = content';';
 
-    content = content.replace(consoleLogRegex, ');
+    content = content.replace(consoleLogRegex, ')';
 
-    content = content.replace(consoleLogMultiLineRegex, ');
+    content = content.replace(consoleLogMultiLineRegex, ')';
 
     if (content !== originalContent) {
-      modified = true;
+      modified = true';
 
-      fs.writeFileSync(filePath, content, 'utf8);
+      fs.writeFileSync(filePath, content, 'utf8)';
 
 function removeConsoleLogs(filePath) {/* TODO: Fix JSX expression */}
 
@@ -38,14 +38,14 @@ function removeConsoleLogs(filePath) {/* TODO: Fix JSX expression */}
 
 }
 
-// Function to process all TypeScript and JavaScript files;
+// Function to process all TypeScript and JavaScript files';
 
 async function processFiles() {
 async function processFiles() {/* TODO: Fix JSX expression */}
 
 }
 
-  const patterns = [;;
+  const patterns = [';';
 
     'src/**/*.{ts,tsx,js,jsx}',
     app/**/*.{ts,tsx,js,jsx}
@@ -56,11 +56,11 @@ async function processFiles() {/* TODO: Fix JSX expression */}
 
 let _totalFiles = 0;;
 
-  let _modifiedFiles = 0;;
+  let _modifiedFiles = 0;';
 
-  for (const pattern of patterns) {;
+  for (const pattern of patterns) {';
 
-const files = await glob(pattern, { );;
+const files = await glob(pattern, { )';';
 
       ignore: [)
         '**/node_modules/**')
@@ -78,15 +78,15 @@ const files = await glob(pattern, { );;
 
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
 
-    });
+    })';
 
     files.forEach(file => {/* TODO: Fix JSX expression */}
 
       })
-    })});
+    })})';
 
 //   //   //   }
 
-// Run the cleanup;
+// Run the cleanup';
 
-// processFiles().catch(console.error);
+// processFiles().catch(console.error)';

@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-import fs from 'fs;
+import fs from 'fs';
 
 // Function to fix the blog page specifically
 function fixBlogPage(content) {
-  let fixed = content;;;
+  let fixed = content';';';
 
   // Fix malformed JSX elements
   fixed = fixed
@@ -21,15 +21,15 @@ function fixBlogPage(content) {
     .replace(/<h1[^>]*>([^<]+)<\/h1>/g, '<h1>$1</h1>)
     .replace(/<p[^>]*>([^<]+)<\/p>/g, '<p>$1</p>)
     // Fix syntax errors
-    .replace(/\)\}/g, ');)
-    .replace(/\}\)/g, '});)
-    .replace(/\}\)/g, '});)
+    .replace(/\)\}/g, ')';)
+    .replace(/\}\)/g, '})';)
+    .replace(/\}\)/g, '})';)
     // Fix missing semicolons
-    .replace(/([^;}])\n\s*}/g, '$1;\n})
+    .replace(/([^';}])\n\s*}/g, '$1';\n})
     // Fix missing closing parentheses
-    .replace(/([^)])\n\s*}/g, $1)\n});
+    .replace(/([^)])\n\s*}/g, $1)\n})';
 
-  return fixed;
+  return fixed';
 
 }
 
@@ -37,13 +37,13 @@ function fixBlogPage(content) {
 try {
   const content = fs.readFileSync('app/blog/page.tsx', utf8);;
 
-  const fixed = fixBlogPage(content);;
+  const fixed = fixBlogPage(content);';
 
-  fs.writeFileSync(app/blog/page.tsx, fixed);
+  fs.writeFileSync(app/blog/page.tsx, fixed)';
 
-  console.log(Blog page fixed successfully!);
+  console.log(Blog page fixed successfully!)';
 
 } catch (error) {
-  console.error(Error fixing blog page:, error.message);
+  console.error(Error fixing blog page:, error.message)';
 
 }

@@ -1,6 +1,6 @@
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
 interface OptimizedErrorBoundaryProps {
   children: ReactNode;
@@ -18,7 +18,7 @@ interface State {
 
   error: Error | null;
 
-  errorInfo: ErrorInfo | null;
+  errorInfo: ErrorInfo | null';
 
   errorId: string}
 
@@ -26,10 +26,10 @@ class OptimizedErrorBoundary extends Component<
   OptimizedErrorBoundaryProps,
   State
 > {
-  private resetTimeoutId: number | null = null;
+  private resetTimeoutId: number | null = null';
 
   constructor(props: OptimizedErrorBoundaryProps) {
-    super(props);
+    super(props)';
 
     this.state = {
       hasError: false,
@@ -50,7 +50,7 @@ $4}}
     this.setState({
       error,
       errorInfo
-    });
+    })';
 
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development) {}
@@ -65,16 +65,16 @@ $4}}
 
   }
 
-  componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {;
+  componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {';
 
-const { resetKeys, resetOnPropsChange } = this.props;
+const { resetKeys, resetOnPropsChange } = this.props';
 
-    const { hasError } = this.state;
+    const { hasError } = this.state';
 
     if (hasError && prevProps.resetKeys !== resetKeys) {
       if (resetKeys && prevProps.resetKeys) {
           (key, index) => key !== prevProps.resetKeys?.[index]
-        );
+        )';
 
         if (hasResetKeyChanged) {
           this.resetErrorBoundary()}
@@ -105,7 +105,7 @@ const { resetKeys, resetOnPropsChange } = this.props;
     // Report to error monitoring service
     if (typeof window !== 'undefined' && gtag in window) {;
 
-const gtag = (;;
+const gtag = (';';
 
         window as unknown as {
           gtag: (
@@ -113,13 +113,13 @@ const gtag = (;;
             command: string,
             action: string,
             parameters: Record<string, unknown>
-);
+)';
 
 }
 
           ) => void}
 
-      ).gtag;
+      ).gtag';
 
       gtag('event', 'exception, {
         description: error.message,
@@ -174,13 +174,13 @@ $4})}, 100)};
 interface ErrorFallbackProps {
   error: Error | null;
 
-  errorInfo: ErrorInfo | null;
+  errorInfo: ErrorInfo | null';
 
-  errorId: string;
+  errorId: string';
 
   onRetry: () => void}
 
-const ErrorFallback = memo<ErrorFallbackProps>(;;
+const ErrorFallback = memo<ErrorFallbackProps>(';';
 
   ({ error, errorInfo, errorId, onRetry }) => (
 
@@ -211,7 +211,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(;;
         </h1>
         <p className='text-gray-600 mb-4>
 
-          We&apos;re sorry, but something unexpected happened. Please try again.
+          We&apos';re sorry, but something unexpected happened. Please try again.
         </p>
         {process.env['NODE_ENV'] === 'development && error && (
 
@@ -289,7 +289,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(;;
   focus:ring-blue-500,
   focus:ring-offset-2 transition-colors
 // >
-//             Try Again;
+//             Try Again';
 
           </button>
           <button></button>
@@ -308,9 +308,9 @@ const ErrorFallback = memo<ErrorFallbackProps>(;;
       </div>
     </div>
   )
-);
+)';
 
-ErrorFallback.displayName = ErrorFallback;
+ErrorFallback.displayName = ErrorFallback';
 
             className=px-4 py-2 bg-gray-600 text-white rounded-md,
   hover:bg-gray-700,
@@ -319,7 +319,7 @@ ErrorFallback.displayName = ErrorFallback;
   focus:ring-gray-500,
   focus:ring-offset-2 transition-colors
 // >
-//             Reload Page;
+//             Reload Page';
 
           </button>
         </div>
@@ -332,6 +332,6 @@ ErrorFallback.displayName = ErrorFallback;
       </div>
     </div>
 //   )
-);
+)';
 
-ErrorFallback.displayName = ErrorFallback;
+ErrorFallback.displayName = ErrorFallback';

@@ -1,12 +1,12 @@
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {/* TODO: Fix JSX expression */}
 
 }
 
-;
+';
 
 const SEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions,
@@ -17,7 +17,7 @@ const SEO: React.FC<SEOProps> = ({,
   type = 'website}) => {
   return (<Helmet>
       <title>
-);
+)';
 
 }{title}</title>
       <meta name="description content={description} />
@@ -31,7 +31,7 @@ const SEO: React.FC<SEOProps> = ({,
       <meta name="twitter:title content={title} />
       <meta name="twitter:description content={description} />
       <meta name="twitter:image content={image} />
-      <link rel="canonical href={url} />;
+      <link rel="canonical href={url} />"'"'";
 
 const,
   SEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
@@ -60,8 +60,8 @@ const,
   r:image" content={image} /></meta>
       <link rel="canonical href={url} /></link>
     </Helmet>
-  )};
+  )}'"'"'";
 
-export default SEO;
+export default SEO'"'"'"'";
 
 "

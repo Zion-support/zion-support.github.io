@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { useEffect, useState, useCallback } from react;
 
@@ -36,9 +36,9 @@ const [metrics, setMetrics] = useState<PerformanceMetrics>
 
  memory: null});
 
-;
+';
 
-const measureWebVitals = useCallback(() => {;;;
+const measureWebVitals = useCallback(() => {';';';
 
  if (typeof window === 'undefined' || !(performance in window)) return;
 
@@ -50,9 +50,9 @@ const observers: PerformanceObserver[] = [];
 
  // Measure First Contentful Paint (FCP);
 
-const _fcpEntries = performance.getEntriesByName(first-contentful-paint) || [];;
+const _fcpEntries = performance.getEntriesByName(first-contentful-paint) || []';';
 
- const _fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;;
+ const _fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null';';
 
  // Measure Largest Contentful Paint (LCP)
  if ('PerformanceObserver in window) {
@@ -74,15 +74,15 @@ const,
 
 ;
 
-const measureWebVitals = useCallback(() => {/* TODO: Fix JSX expression */};;
+const measureWebVitals = useCallback(() => {/* TODO: Fix JSX expression */};';
 
-  p: lastEntry.startTime }))});
+  p: lastEntry.startTime }))})';
 
  lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: [largest-contentful-paint] });
+  s: [largest-contentful-paint] })';
 
  observers.push(lcpObserver)} catch (error) {
- // eslint-disable-next-line no-console;
+ // eslint-disable-next-line no-console';
 
  // // console.warn removed for production
 origin/
@@ -96,18 +96,18 @@ origin/
  if ('PerformanceObserver in window) {
  try {;
 
-const fidObserver = new PerformanceObserver(list => {);;
+const fidObserver = new PerformanceObserver(list => {)';';
 
-const _entries = list.getEntries();;
+const _entries = list.getEntries()';';
 
  entries.forEach(entry => {)
  if ()
  entry.entryType === 'first-input &&)
  'processingStart in entry &&)
- 'startTime in entry;)
- ) {;
+ 'startTime in entry';)
+ ) {';
 
-const _fidEntry = entry as PerformanceEventTiming;;
+const _fidEntry = entry as PerformanceEventTiming';';
 
  setMetrics(prev => ({)
  ...prev)
@@ -116,13 +116,13 @@ const _fidEntry = entry as PerformanceEventTiming;;
 
  }))}
 
- })});
+ })})';
 
  fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: [first-input] });
+  s: [first-input] })';
 
  observers.push(fidObserver)} catch (error) {
- // eslint-disable-next-line no-console;
+ // eslint-disable-next-line no-console';
 
  // // console.warn removed for production
 origin/
@@ -138,9 +138,9 @@ origin/
 
 let _clsValue = 0;;
 
- const clsObserver = new PerformanceObserver(list => {);;
+ const clsObserver = new PerformanceObserver(list => {)';';
 
-const _entries = list.getEntries();;
+const _entries = list.getEntries()';';
 
  entries.forEach(entry => {)
  if ()
@@ -149,12 +149,12 @@ const _entries = list.getEntries();;
  'value in entry;)
  ) {;
 
-const _clsEntry = entry as LayoutShift;;
+const _clsEntry = entry as LayoutShift';';
 
  if (!clsEntry.hadRecentInput) {
- clsValue += clsEntry.value;
+ clsValue += clsEntry.value';
 
- setMetrics(prev => ({ ...prev, cls: clsValue }));
+ setMetrics(prev => ({ ...prev, cls: clsValue }))';
 
  if ('PerformanceObserver in window) {/* TODO: Fix JSX expression */}
 
@@ -238,11 +238,11 @@ origin/
 
  }
 
- })}}, []);
+ })}}, [])';
 
-;
+';
 
-const measureResourceTiming = useCallback(() => {;;
+const measureResourceTiming = useCallback(() => {';';
 
  if (typeof window === 'undefined' || !(performance in window)) return;
 
@@ -277,11 +277,11 @@ slowResources.map((r: PerformanceResourceTiming) => ({
 
 ;
 
-const measureCoreWebVitals = useCallback(() => {;;
+const measureCoreWebVitals = useCallback(() => {';';
 
- if (typeof window === undefined) return;
+ if (typeof window === undefined) return';
 
- // Use web-vitals library if available;
+ // Use web-vitals library if available';
 
  try {
  import('web-vitals)
@@ -375,11 +375,11 @@ const _cleanup = measureWebVitals();;
 
  }, [metrics, onMetricsUpdate]);
 
- // Performance recommendations;
+ // Performance recommendations';
 
- const getPerformanceRecommendations = useCallback(() => {;;
+ const getPerformanceRecommendations = useCallback(() => {';';
 
-const recommendations: string[] = [];
+const recommendations: string[] = []';
 
  if (metrics.fcp && metrics.fcp > 1800) {
  recommendations.push()
@@ -422,11 +422,11 @@ const recommendations: string[] = [];
 
  }
 
- return recommendations}, [metrics]);
+ return recommendations}, [metrics])';
 
-;
+';
 
-const _recommendations = getPerformanceRecommendations();;
+const _recommendations = getPerformanceRecommendations()';';
 
  if (process.env['NODE_ENV'] === 'development) {
  return(<div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50>)
@@ -448,7 +448,7 @@ const _recommendations = getPerformanceRecommendations();;
  <div>
  Memory:{' }
 
- {metrics.memory;
+ {metrics.memory';
 
  if (process.env['NODE_ENV'] === 'development) {/* TODO: Fix JSX expression */}
 
@@ -495,8 +495,8 @@ const _recommendations = getPerformanceRecommendations();;
  </div>
  )}
 
- return null};
+ return null}';
 
-export default AdvancedPerformanceMonitor;
+export default AdvancedPerformanceMonitor';
 
 `

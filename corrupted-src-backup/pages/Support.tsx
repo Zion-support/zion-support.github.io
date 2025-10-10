@@ -1,4 +1,4 @@
-import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t;
+import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";
 
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m;
 
@@ -106,20 +106,20 @@ const, Suppor, t: Rea, c, t.FC = () =>
   n: Premi, u, m (30, minute, s), Standa, r, d (2, hour, s), Bas, i, c (24, hour, s).
     }
 
-  ];
+  ]";
 
   const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q => )
     {/* TODO: Fix JSX expression *
     }
 
-  ];
+  ]";
 
   const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q =>)
-    selectedCatego, r, y === a, l, l || f, a, q.catego, r, y === selectedCatego, r, y;)
+    selectedCatego, r, y === a, l, l || f, a, q.catego, r, y === selectedCatego, r, y";)
   ).filt, e, r(f, a, q =>)
     f, a, q.questi, o, n.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e()) ||
     f, a, q.answ, e, r.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e())
-  );
+  )";
 
   return(<React.Fragment>
       <Helmet>
@@ -132,7 +132,7 @@ const, Suppor, t: Rea, c, t.FC = () =>
         <section, className=bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20>)
           <div, className=m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8>),
             <div, className=te, x, t-cent, e, r>
-              <h1, className=te, x, t-4x, l, m;
+              <h1, className=te, x, t-4x, l, m";
 
       <div, className=m, i, n-h-screen, b, g-gr, a, y-50>
         {/* Hero, Sectio, n */}<
@@ -169,16 +169,16 @@ const, Suppor, t: Rea, c, t.FC = () =>
 
   ty, p, e=te, x, t
                     placehold, e, r=Search, for, help articl, e, s, FA, Q, s, or, topic, s...
-                    val, u, e = { searchQue, r, y };)
-                    onChan, g, e = { (e) => setSearchQue, r, y(e.targ, e, t.val, u, e) };
+                    val, u, e = { searchQue, r, y }";)
+                    onChan, g, e = { (e) => setSearchQue, r, y(e.targ, e, t.val, u, e) }";
 
-                    classNa, m, e=w-full, p, l-10, p, r-4, p, y-3, rounde, d-lg, tex, t-gr, a, y-900, focu, s: outli, n, e-none, focu, s:ri, n, g-2, foc, u;
+                    classNa, m, e=w-full, p, l-10, p, r-4, p, y-3, rounde, d-lg, tex, t-gr, a, y-900, focu, s: outli, n, e-none, focu, s:ri, n, g-2, foc, u";
 
               {/* Search, Ba, r *
               <div, className=m, a, x-w-2xl, m, x-au, t, o><
                 <div, className=relati, v, e><
                   <Search, className=absolute, lef, t-3, to, p-1/2, transfor, m -transla, t, e-y-1/2, tex, t-gr, a, y-40, 0, h-5 w-5  /><
-                  <inp, u, t;
+                  <inp, u, t";
 
   ty, p, e="te, x, t
                     placehold, e, r=Search, for, help articl, e, s, FA, Q, s, or, topic, s...
@@ -215,7 +215,7 @@ const, Suppor, t: Rea, c, t.FC = () =>
 
               <
             <
-            <div, className=grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2 l;
+            <div, className=grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2 l'";
 
   g:gr, i, d-co, l, s-4, ga, p-8>
               {supportChanne, l, s.m, a, p((chann, e, l, ind, e, x) => (<
@@ -281,15 +281,15 @@ const, Suppor, t: Rea, c, t.FC = () =>
           <div, className=m, a, x-w-7xl, m, x-au, t, o><
             <div, className=te, x, t-center, m, b-16><
               <h2, className=te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4><
-                Frequently, Asked, Questions;
+                Frequently, Asked, Questions'"'";
 
               <
               <p, className=te, x, t-xl, tex, t-gr, a, y-6, 0, 0><
-                Find, quick, answers to, common, questions;
+                Find, quick, answers to, common, questions'"'"'";
 
               <
             <
-      quest, i, o;
+      quest, i, o'"'"'"'";
 
   n: Is, there, a community, where, I can, get, help from, other, users?
       quest, i, o,
@@ -297,7 +297,7 @@ const, Suppor, t: Rea, c, t.FC = () =>
       answ, e, r: "Y, e, s! We, have, an active, community, forum where, users, can ask, question, s, share, best, practices, and, get, help from, both, our team, and, other experienced, user, s. Its, a, great place, to, learn and, networ, k.
     }
 
-  ];
+  ]'"'"'"'";
 
   const, quickAction, s = [
     { tit, l, e: 'Report, a, Bug', descripti, o, n: 'Found, an, issue? Let, us, know, li, n, k: 
@@ -346,17 +346,17 @@ const, Suppor, t: Rea, c, t.FC = () =>
 
   ty, p, e=te, x, t
                   placehold, e, r=Search, our, knowledge ba, s, e...
-                  val, u, e = { searchQue, r, y };
+                  val, u, e = { searchQue, r, y }";
 
-                  onChan, g, e = { (e) => setSearchQue, r, y(e.targ, e, t.val, u, e) };
+                  onChan, g, e = { (e) => setSearchQue, r, y(e.targ, e, t.val, u, e) }";
 
-                  classNa, m, e=w-full, p, l-12, p, r-4, p, y-4, rounde, d-lg, tex, t-gr, a, y-900, tex, t-lg, focu, s: ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, foc, u;
+                  classNa, m, e=w-full, p, l-12, p, r-4, p, y-4, rounde, d-lg, tex, t-gr, a, y-900, tex, t-lg, focu, s: ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, foc, u";
 
             {/* Search, Ba, r *
             <div, className=m, a, x-w-2xl, m, x-au, t, o><
               <div, className=relati, v, e><
                 <Search, className=absolute, lef, t-4, to, p-1/2, transfor, m -transla, t, e-y-1/2, tex, t-gr, a, y-40, 0, w-5 h-5  /><
-                <inp, u, t;
+                <inp, u, t";
 
   ty, p, e="te, x, t
                   placehold, e, r=Search, our, knowledge ba, s, e...
@@ -490,18 +490,18 @@ const, Suppor, t: Rea, c, t.FC = () =>
 
                 <MessageCircle, className=ml-2 h-5 w-5  /><
               <
-              <Li, n, k;
+              <Li, n, k";
 
   to=
-                classNa, m, e=inli, n, e-flex, item, s-center, p, x-8, p, y-3, border, border-white, tex, t-base, fon, t-medium, rounde, d-md, tex, t-white, hov, e;
+                classNa, m, e=inli, n, e-flex, item, s-center, p, x-8, p, y-3, border, border-white, tex, t-base, fon, t-medium, rounde, d-md, tex, t-white, hov, e";
 
-              <Li, n, k;
+              <Li, n, k"'";
 
   to=
                 classNa, m, e=inli, n, e-flex, item, s-center, p, x-8, p, y-3, border, border-white, tex, t-base, fon, t-medium, rounde, d-md, tex, t-white, hov, e,
   r:bg-whi, t, e
               ><
-                View, Documentatio, n;
+                View, Documentatio, n"'"'";
 
                 <BookOpen, className="ml-2 h-5 w-5  /></BookOpen>              </Li, n, k>
             </d, i, v>
@@ -512,6 +512,6 @@ const, Suppor, t: Rea, c, t.FC = () =>
         </d, i, v>
       </secti, o, n>
     </d, i, v>
-  )};
+  )}'"'"'";
 
-export default Support;"`
+export default Support'"'"'"'";"`

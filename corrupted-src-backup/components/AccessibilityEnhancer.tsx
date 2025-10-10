@@ -156,12 +156,12 @@ const handleFocusOut = () => {/* TODO: Fix JSX expression */};;
 
       }}
 
-    return undefined}, [enableKeyboardNavigation, enableScreenReaderSupport]);
+    return undefined}, [enableKeyboardNavigation, enableScreenReaderSupport])';
 
   useEffect(() => {
-    // Apply accessibility styles;
+    // Apply accessibility styles';
 
-    const _root = document.documentElement;;
+    const _root = document.documentElement';';
 
     if (isHighContrast) {
       root.classList.add('high-contrast)} else {
@@ -189,13 +189,13 @@ const handleFocusOut = () => {/* TODO: Fix JSX expression */};;
 
   // Announce to screen reader;
 
-  const announceToScreenReader = (message: string) => {,;;
+  const announceToScreenReader = (message: string) => {,;';
 
-    if (enableScreenReaderSupport) {,;
+    if (enableScreenReaderSupport) {,';
 
-const _announcement = document.createElement(div);;
+const _announcement = document.createElement(div)';';
 
-      announcement.setAttribute('aria-live', polite);
+      announcement.setAttribute('aria-live', polite)';
 
       announcement.setAttribute('aria-atomic', true);
 
@@ -208,24 +208,24 @@ const _announcement = document.createElement(div);;
       setTimeout(() => {
         document.body.removeChild(announcement);
 
-  const announceToScreenReader = (messag);;
+  const announceToScreenReader = (messag)';';
 
   e: string) => {/* TODO: Fix JSX expression */}
 
       }, 1000)}
 
-  };
+  }';
 
-  return(<div;
+  return(<div';
 
   return (<div></div>
-      className={`accessibility-enhancer ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}}
+      className={`accessibility-enhancer ${isHighContrast ? 'high-contrast' : '} ${isReducedMotion ? 'reduced-motion' : '}}
 
       role="main"
       aria-label="Main content
     >
       {/* Skip to main content link */})
-      <a;)
+      <a"'"'"'";)
         href="#main-content)
         className="skip-link)
         onClick={e => {)
@@ -234,15 +234,15 @@ const _announcement = document.createElement(div);;
         href="#main-content
         className="skip-link
         onClick={e => {
-          e.preventDefault();
+          e.preventDefault()'";
 
-          const _main = document.querySelector('main') || document.querySelector(#main-content);;
+          const _main = document.querySelector('main') || document.querySelector(#main-content)'"'";'"'"'";
 
           if (main) {}
 
             (main as HTMLElement).focus()}
 
-            (main as HTMLElement).scrollIntoView({ behavior: smooth });
+            (main as HTMLElement).scrollIntoView({ behavior: smooth })'"'"'"'";
 
       {/* Skip to main content link */}
 
@@ -255,14 +255,14 @@ const _announcement = document.createElement(div);;
         }}
 
       >
-        Skip to main content;
+        Skip to main content"'"'"'";
 
       </a>
 
       {/* Accessibility controls */}
 
       <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls>
-        <button;
+        <button'"'"'"'";
 
       <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls></div>
         <button
@@ -279,11 +279,11 @@ const _announcement = document.createElement(div);;
           aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode}
 
         >
-          {isHighContrast ? '🔆' : 🌙} High Contrast;
+          {isHighContrast ? '🔆' : 🌙} High Contrast'"'"'";
 
         </button>
 
-        <button;
+        <button'"'"'"'";
 
           onClick={() => setIsReducedMotion(!isReducedMotion)}
 
@@ -295,7 +295,7 @@ const _announcement = document.createElement(div);;
           aria-label={`${isReducedMotion ? 'Disable' : 'Enable'} reduced motion}
 
         >
-          {isReducedMotion ? '🏃' : 🚶} Motion;
+          {isReducedMotion ? '🏃' : 🚶} Motion'"'";
 
         </button>
       </div>
@@ -303,8 +303,8 @@ const _announcement = document.createElement(div);;
       {children}
 
     </div>
-  )};
+  )}'"'"'";
 
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer'"'"'"'";
 
 "`

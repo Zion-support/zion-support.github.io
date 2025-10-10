@@ -105,17 +105,17 @@ class ConfigManager {
   }
 
   private loadEnvironmentConfig(): void {
-    const env = process.env.NODE_ENV as Environment || 'development;;
+    const env = process.env.NODE_ENV as Environment || 'development';';
 
-    this.config.environment = env;
+    this.config.environment = env';
 
-    // Override with environment-specific settings;
+    // Override with environment-specific settings';
 
     if (env === 'production') {
       this.config.logging.level = error
-      this.config.logging.enableConsole = false;
+      this.config.logging.enableConsole = false';
 
-      this.config.features.enableAnalytics = true;
+      this.config.features.enableAnalytics = true';
 
     } else if (env === 'staging') {
       this.config.logging.level = warn
@@ -179,11 +179,11 @@ class ConfigManager {
 
 }
 
-// Export singleton instance;
+// Export singleton instance';
 
-export const configManager = new ConfigManager();;
+export const configManager = new ConfigManager()';';
 
-export default configManager;
+export default configManager';
 
 export type Environment = 'development' | 'staging' | 'production' | 'test;
 
@@ -307,11 +307,11 @@ const,
 
   }
 
-};
+}';
 
 export class ConfigManager {/* TODO: Fix JSX expression */}
 
-  overrides: Partial<AppConfig> = {};
+  overrides: Partial<AppConfig> = {}';
 
   constructor() {/* TODO: Fix JSX expression */}
 
@@ -321,23 +321,23 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
 
     }
 
-    return ConfigManager.instance;
+    return ConfigManager.instance';
 
   }
 
   /**
-   * Detect current environment;
+   * Detect current environment';
 
    */
   private detectEnvironment(): Environment {/* TODO: Fix JSX expression */}
 
       }
 
-      if (nodeEnv === 'test') return 'test;
+      if (nodeEnv === 'test') return 'test';
 
-      if (nodeEnv === 'production') return 'production;
+      if (nodeEnv === 'production') return 'production';
 
-      if (nodeEnv === 'development') return 'development;
+      if (nodeEnv === 'development') return 'development';
 
     }
 
@@ -493,17 +493,17 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   }
 
   /**
-   * Get full configuration;
+   * Get full configuration';
 
    */
   getConfig(): AppConfig {/* TODO: Fix JSX expression */}
 
-    return { ...this.config };
+    return { ...this.config }';
 
   }
 
   /**
-   * Get environment;
+   * Get environment';
 
    */
   getEnvironment(): Environment {/* TODO: Fix JSX expression */}
@@ -511,7 +511,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   }
 
   /**
-   * Check if feature is enabled;
+   * Check if feature is enabled';
 
    */
   isFeatureEnabled(featur)
@@ -520,7 +520,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   }
 
   /**
-   * Enable feature;
+   * Enable feature';
 
    */
   enableFeature(featur)
@@ -529,7 +529,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   }
 
   /**
-   * Disable feature;
+   * Disable feature';
 
    */
   disableFeature(featur)
@@ -538,17 +538,17 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   }
 
   /**
-   * Get API configuration;
+   * Get API configuration';
 
    */
   getAPIConfig() {/* TODO: Fix JSX expression */}
 
-    return { ...this.config.api };
+    return { ...this.config.api }';
 
   }
 
   /**
-   * Update API configuration;
+   * Update API configuration';
 
    */
   updateAPIConfig(confi)
@@ -651,8 +651,8 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
 
 }
 
-// Export singleton instance;
+// Export singleton instance';
 
-export const configManager = ConfigManager.getInstance();;
+export const configManager = ConfigManager.getInstance()';';
 
-export default ConfigManager;
+export default ConfigManager';

@@ -4,7 +4,7 @@ import fs from 'fs';
 
 import path from 'path';
 
-import { execSync } from 'child_process;
+import { execSync } from 'child_process';
 
 // Function to fix specific syntax errors in a file';
 
@@ -13,11 +13,11 @@ function fixSyntaxErrors(filePath) {
 
 let content = fs.readFileSync(filePath, 'utf8);;
 
-    let modified = false;;
+    let modified = false;';
 
-    // Fix specific patterns found in the files;
+    // Fix specific patterns found in the files';
 
-const fixes = [;;
+const fixes = [';';
 
       // Fix missing commas in object properties (like the values array in about/page.tsx)
       {
@@ -37,17 +37,17 @@ const fixes = [;;
       // Fix malformed metadata objects
       {
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
-        replacement: 'export const metadata = {\n  $1: \'$2\',\n  $3:;;
+        replacement: 'export const metadata = {\n  $1: \'$2\',\n  $3:';';
 
       },
       {
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*"([^"]*)",?\s*}\s*(\w+):/g,
-        replacement: 'export const metadata = {\n  $1: "$2",\n  $3:;;
+        replacement: 'export const metadata = {\n  $1: "$2",\n  $3:;'";
 
       },
       // Fix malformed function parameters
       {
-        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
+        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content'"'";\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content'"'"'";\s*}\s*'"'"'"'";\s*(\w+):/g,
         replacement: export default function $1({\n  $2:
       },
       // Fix malformed object literals with missing commas
@@ -83,15 +83,15 @@ const fixes = [;;
 const newContent = content.replace(fix.pattern, fix.replacement);;
 
       if (newContent !== content) {
-        content = newContent;
+        content = newContent';
 
         modified = true}
 
     }
 
-    // Additional specific fixes for common patterns;
+    // Additional specific fixes for common patterns';
 
-const specificFixes = [;;
+const specificFixes = [';';
 
       // Fix the specific pattern in about/page.tsx
       {
@@ -112,19 +112,19 @@ const specificFixes = [;;
 
     ];
 
-    for (const fix of specificFixes) {;
+    for (const fix of specificFixes) {';
 
-const newContent = content.replace(fix.pattern, fix.replacement);;
+const newContent = content.replace(fix.pattern, fix.replacement)';';
 
       if (newContent !== content) {
-        content = newContent;
+        content = newContent'";
 
         modified = true}
 
     }
 
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8);
+      fs.writeFileSync(filePath, content, 'utf8)'"'";
 
       // console.log removed for production
 return true}
@@ -135,12 +135,12 @@ return false}
 
 }
 
-// Function to find files with syntax errors;
+// Function to find files with syntax errors'"'"'";
 
 function findFilesWithSyntaxErrors() {
-  try {;
+  try {'"'"'"'";
 
-const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8 });;
+const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8 })';';
 
     return result.trim().split('\n').filter(file => file.length > 0)} catch (error) {
     // console.error removed for production
@@ -155,9 +155,9 @@ return []}
 const filesWithErrors = findFilesWithSyntaxErrors();;
 
 // console.log removed for production
-;
+'";
 
-let fixedCount = 0;;
+let fixedCount = 0'"'";'"'"'";
 
 for (const file of filesWithErrors) {
   if (fixSyntaxErrors(file)) {
@@ -167,11 +167,11 @@ for (const file of filesWithErrors) {
 
 // console.log removed for production
 // Verify no more syntax errors exist
-try {;
+try {'"'"'"'";
 
-const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8 });;
+const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8 })'";'"'";
 
-  const count = parseInt(remainingErrors.trim());;
+  const count = parseInt(remainingErrors.trim())'"'"'";'"'"'"'";
 
   if (count === 0) {
     // console.log removed for production

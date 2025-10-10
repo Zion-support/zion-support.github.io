@@ -15,7 +15,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
       },
       body: JSON.stringify({message: Adaptive orchestrator executed successfully)
-        timestamp: new Date().toISOString();
+        timestamp: new Date().toISOString()';
 
 function: 'adaptive-orchestrator',
         source: event.source || 'unknown',
@@ -24,7 +24,7 @@ function: 'adaptive-orchestrator',
           mode: 'adaptive',
           lastUpdate: new Date().toISOString()}
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */}';';
 
         'Access-Control-Allow-Origin': '*'}
 
@@ -33,15 +33,15 @@ function: 'adaptive-orchestrator',
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   e: new Date().toISOString()}
 
-        }})};
+        }})}';
 
-    return result;
+    return result';
 
 //   } catch (error) {// // console.error removed for production
 error}
 
     return {
-      statusCode: 500;
+      statusCode: 500';
 
       headers: {,
         'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ error}
 
       },
       body: JSON.stringify({error: 'Internal server error'),
-        message: error.message),;
+        message: error.message),';
 
 function: 'adaptive-orchestrator'}
 
@@ -68,10 +68,10 @@ function: 'adaptive-orchestrator'}
   n: 'adaptive-orchestrator'})
       })}}
 
-};
+}';
 
-        timestamp: new Date().toISOString(),' function: 'adaptive-orchestrator',' source: event.source || 'unknown', orchestration: {' status: 'active',' mode: 'adaptive'} lastUpdate: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
-error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'adaptive-orchestrator }) }} };
+        timestamp: new Date().toISOString(),' function: 'adaptive-orchestrator',' source: event.source || 'unknown', orchestration: {' status: 'active',' mode: 'adaptive'} lastUpdate: new Date().toISOString() } }) }'; return result} catch (error) {' // // console.error removed for production
+error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'adaptive-orchestrator }) }} }';
 
         timestam,
   p: new Date().toISOString(),' functio,
@@ -80,7 +80,7 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
   n: {/* TODO: Fix JSX expression */}
 
   e: 'adaptive'} lastUpdat,
-  e: new Date().toISOString() } }) }; return result} catch (error) {/* TODO: Fix JSX expression */}
+  e: new Date().toISOString() } }) }'; return result} catch (error) {/* TODO: Fix JSX expression */}
 
       } return {/* TODO: Fix JSX expression */}
 
@@ -89,4 +89,4 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
 
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'adaptive-orchestrator }) }} };
+  n: 'adaptive-orchestrator }) }} }';

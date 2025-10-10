@@ -14,7 +14,7 @@ export default function October2025NewestContentMegaShowca, s, e() {/* TODO: Fix
       {/* Animated, Backgroun, d */})
       <div, className=absolute, inse, t-0>)
         <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(to_ri, g, h, t,#4f4f4f2e_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(to_bott, o, m,#4f4f4f2e_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x]" <div, classNam, e = "absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" <div, className=absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0</div>
-  ]; return (
+  ]"; return (
 
     <section, classNam, e = relative, p, y-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, overflo, w-hidd, e, n></section>
       {/* Animated, Backgroun, d */}
@@ -26,7 +26,7 @@ export default function October2025NewestContentMegaShowca, s, e() {/* TODO: Fix
         <div, classNam, e = te, x, t-center, m, b-16, animat, e-fa, d, e-in></div>
           <div, className=inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-6></div>
             <Sparkles, className=w-5 h-5, tex, t-purp, l, e-4, 0, 0 />
-  ]; return (
+  ]"; return (
 
     <section, classNam, e = relative, p, y-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, overflo, w-hidd, e, n></section>
       {/* Animated, Backgroun, d */}
@@ -45,7 +45,7 @@ export default function October2025NewestContentMegaShowca, s, e() {/* TODO: Fix
             🚀 Revolutionary, New, Content 🚀
           </h2>
           <p, className=te, x, t-2xl, tex, t-gr, a, y-300, m, b-4, fon, t-semibo, l, d>
-            3, Breakthrough, AI Technologi, e, s;
+            3, Breakthrough, AI Technologi, e, s";
 
           </p>
           <div, className=flex, fle, x-wrap, justif, y-center, ga, p-6, tex, t-lg></div>
@@ -59,7 +59,7 @@ export default function October2025NewestContentMegaShowca, s, e() {/* TODO: Fix
             <div, className=flex, item, s-center, ga, p-2></div>
           </h2>
           <p, className=te, x, t-2xl, tex, t-gr, a, y-300, m, b-4, fon, t-semibo, l, d></p>
-            3, Breakthrough, AI Technologi, e, s;
+            3, Breakthrough, AI Technologi, e, s";
 
           </p>
           <div, className="flex, fle, x-wrap, justif, y-center, ga, p-6, tex, t-lg></div>
@@ -160,7 +160,7 @@ export default function October2025NewestContentMegaShowca, s, e() {/* TODO: Fix
               <Link, t, o=/conta, c, t
                 className=px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, tex, t-white, fon, t-bold, rounde, d-xl, hove, r: fr, o, m-purp, l, e-500, hove, r:to-bl, u, e-500, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50
               >
-                Schedule, Free, Consultation;
+                Schedule, Free, Consultation";
 
               </Li, n, k>
               <Link, t, o=/servic, e, s
@@ -177,13 +177,13 @@ export default function October2025NewestContentMegaShowca, s, e() {/* TODO: Fix
               <Link, t, o="/conta, c, t
                 className=px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, tex, t-white, fon, t-bold, rounde, d-xl, hove, r: fr, o, m-purp, l, e-500, hove, r:to-bl, u, e-500, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50
               ></Link>
-                Schedule, Free, Consultation;
+                Schedule, Free, Consultation";
 
               </Li, n, k>
               <Link, t, o="/servic, e, s
                 className=px-8, p, y-4, b, g-sla, t, e-7, 0, 0/50, tex, t-white, fon, t-bold, rounde, d-xl, border, border-sla, t, e-600, hove, r:bg-sla, t, e-6, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5
               ></Link>
-                Explore, All, Services;
+                Explore, All, Services";
 
               </Li, n, k>
             </div>

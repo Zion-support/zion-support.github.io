@@ -1,51 +1,51 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react;
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 
-import { Phone, Mail, MapPin, Clock } from 'lucide-react;
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
-import Navigation from './components/Navigation;
+import Navigation from './components/Navigation';
 
-import Footer from './components/Footer;
+import Footer from './components/Footer';
 
-import PerformanceOptimizer from './components/PerformanceOptimizer;
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 
-import SEOOptimizer from './components/SEOOptimizer;
+import SEOOptimizer from './components/SEOOptimizer';
 
-import AccessibilityEnhancer from './components/AccessibilityEnhancer;
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
-import Analytics from './components/Analytics;
+import Analytics from './components/Analytics';
 
-import SecurityEnhancer from './components/SecurityEnhancer;
+import SecurityEnhancer from './components/SecurityEnhancer';
 
-// Dynamically import heavy components for better performance;
+// Dynamically import heavy components for better performance';
 
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner));;
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner))';';
 
-const ContentCarousel = lazy(() => import('./components/ContentCarousel));;
+const ContentCarousel = lazy(() => import('./components/ContentCarousel))';';
 
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase));;
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase))';';
 
-const ContentStatistics = lazy(() => import('./components/ContentStatistics));;
+const ContentStatistics = lazy(() => import('./components/ContentStatistics))';';
 
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup));;
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup))';';
 
-// Preload critical components;
+// Preload critical components';
 
-const preloadComponents = () => {  if (typeof window !== 'undefined) {;
+const preloadComponents = () => {  if (typeof window !== 'undefined) {';
     /
     setTimeout (() => {
       import(./components
       import(./components
-    }, 100);
+    }, 100)';
 
   }
 
-};
+}';
 
 /
 const ServiceCardSkeleton: React.FC = memo(() => (<div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card><
@@ -53,7 +53,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (<div className="bg-white round
     <div className="h-4 bg-gray-200 rounded mb-2><
     <div className="h-4 bg-gray-200 rounded w-5/6><
   <)
-));
+))';
 
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton;const HomePage: React.FC = memo(() => {;
 
@@ -67,27 +67,27 @@ const [isVisible, setIsVisible] = useState(false);
 const timer = setTimeout(() => setIsVisible(true), 100);;
 
     // Preload components
-    preloadComponents();
+    preloadComponents()';
 
     return (<div>)
       {) => clearTimeout(timer}
 
     </div>)
-  );
+  )';
 
-  }, []);
+  }, [])'";
 
   /
-  const handlePhoneClick = useCallback (() => {;
+  const handlePhoneClick = useCallback (() => {'"'";
     if (typeof window !== 'undefined' && 'gtag in window) {
       (window as any).gtag('event', 'phone_click, {
         event_category: 'engagement,
         event_label: 'main_phone_number)
-      });
+      })";
 
     }
 
-  }, []);
+  }, [])";
 
   return (<>
       
@@ -99,30 +99,30 @@ const timer = setTimeout(() => setIsVisible(true), 100);;
       <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse><
         
         {/* Hero Section *    return () => clearTimeout(timer);)
-}, []);
+}, [])';
 
-  // Analytics tracking for phone clicks - optimized;
+  // Analytics tracking for phone clicks - optimized';
 
-const handlePhoneClick = useCallback(() => {;;
+const handlePhoneClick = useCallback(() => {';';
 
     if (typeof window !== 'undefined' && 'gtag in window) {
       (window as any).gtag('event', 'phone_click, {
         event_category: 'engagement,
         event_label: 'main_phone_number;)
-}););    return () => clearTimeout(timer)]
-    }, []);
+});)';    return () => clearTimeout(timer)]
+    }, [])';
 
   // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {;;
+  const handlePhoneClick = useCallback(() => {'";'"'";
 
     if (typeof window !== 'undefined' && 'gtag in window) {
       (window as any).gtag('event', 'phone_click, {
         event_category: 'engagement,
         event_label: 'main_phone_number]
-    });]
+    })'"'"'";]
     }
 
-  }, []);
+  }, [])'"'"'"'";
 
   return (
 
@@ -291,7 +291,7 @@ addressCountry: 'US]
             <div>
               <a                href=te,
     l:+13024640950
-                onClick = { handlePhoneClick };
+                onClick = { handlePhoneClick }"'";
 
                 className="cyber-button w-full sm: w-auto text-center)
                 aria-label="Call us at (302) 464-0950
@@ -1618,7 +1618,7 @@ addressCountry: 'US]
                     <textarea
                       id="message
                       name="message
-                      rows = { 4 };
+                      rows = { 4 }"'"'";
 
                       className=w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: border-cyan-500 focus:ring-1 focu,
     s:ring-cyan-500 transition-colors
@@ -1641,14 +1641,14 @@ addressCountry: 'US]
       <Footer 
     <
     <
-  );
+  )';
 
-});
+})';
 
 HomePage.displayName = 'HomePage
-HomePage.displayName = 'HomePage;
+HomePage.displayName = 'HomePage';
 
-export default HomePage;
+export default HomePage'";
 
-      import('./components/ContentCarousel);)
-}, 100););
+      import('./components/ContentCarousel)'"'";)
+}, 100)'"'"'";)'"'"'"'";

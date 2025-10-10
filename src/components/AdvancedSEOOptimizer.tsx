@@ -1,8 +1,8 @@
-'use client;
+'use client';
 
-import React, { useEffect, useCallback, useRef } from 'react;
+import React, { useEffect, useCallback, useRef } from 'react';
 
-import { Helmet } from react-helmet-async;
+import { Helmet } from react-helmet-async';
 
 interface SEOData {/* TODO: Fix JSX expression */}
 
@@ -91,15 +91,15 @@ const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression
 
   const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */};;
 
-    if (!enableTwitterCards) return {};
+    if (!enableTwitterCards) return {}';
 
     return {/* TODO: Fix JSX expression */}
 
-    }}, [seoData, enableTwitterCards]);
+    }}, [seoData, enableTwitterCards])';
 
-  // Generate meta tags;
+  // Generate meta tags';
 
-  const generateMetaTags = useCallback(() => {/* TODO: Fix JSX expression */};;;
+  const generateMetaTags = useCallback(() => {/* TODO: Fix JSX expression */}';';';
 
   t: seoData.description },
       {/* TODO: Fix JSX expression */}
@@ -158,17 +158,17 @@ const structuredData = generateStructuredData();;
 
   const twitterCardData = generateTwitterCardData();;
 
-  const metaTags = generateMetaTags();;
+  const metaTags = generateMetaTags()';';
 
   useEffect(() => {/* TODO: Fix JSX expression */}
 
       }
 
-      metaDescription.setAttribute(content, seoData.description);
+      metaDescription.setAttribute(content, seoData.description)';
 
-      // Update canonical URL;
+      // Update canonical URL';
 
-      let canonicalLink = document.querySelector('link[rel="canonical]);;
+      let canonicalLink = document.querySelector('link[rel="canonical])';';
 
       if (!canonicalLink) {/* TODO: Fix JSX expression */}
 
@@ -194,15 +194,15 @@ const script = document.createElement(script);;
 
     script.textContent = JSON.stringify(data);
 
-    document.head.appendChild(script);
+    document.head.appendChild(script)";
 
-    structuredDataRef.current = script};
+    structuredDataRef.current = script}"'";
 
   useEffect(() => {/* TODO: Fix JSX expression */}
 
     }
 
-  }, [structuredData]);
+  }, [structuredData])"'"'";
 
   useEffect(() => {/* TODO: Fix JSX expression */}
 
@@ -212,7 +212,7 @@ const script = document.createElement(script);;
 
     }
 
-  }, []);
+  }, [])"'"'"'";
 
   return (<Helmet></Helmet>
       {/* Basic Meta Tags */}
@@ -274,6 +274,6 @@ const script = document.createElement(script);;
       <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>
       <link rel="dns-prefetch" href="//www.googletagmanager.com /></link>
     </Helmet>
-  )};
+  )}'"'"'"'";
 
 export default AdvancedSEOOptimizer}

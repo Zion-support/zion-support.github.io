@@ -1,19 +1,19 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from lucide-react;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from lucide-react';
 
 const PagePage: React.FC = () => {
-return (;
+return (';
 
-const features = [;;;
+const features = [';';';
 
     {
       icon: Brain,
@@ -52,9 +52,9 @@ const features = [;;;
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support]
     }
 
-  ];
+  ]';
 
-  const benefits = [;;
+  const benefits = [';';
 
     'Transform your business with AI technology,
     'Make data-driven decisions with confidence,
@@ -107,7 +107,7 @@ const features = [;;;
           </div>
         </div>
       </section>
-);
+)"'";
 
 }
 
@@ -144,7 +144,7 @@ const features = [;;;
                 <h3 className="text-xl font-semibold text-white mb-3>{feature.title}</h3>
                 <p className="text-gray-300>{feature.description}</p>
               </div>
-            ));
+            ))"'"'";
 
           </div>
         </div>
@@ -170,7 +170,7 @@ const features = [;;;
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0 />
                 <p className="text-gray-300 text-lg>{benefit}</p>
               </div>
-            ));
+            ))"'"'"'";
 
           </div>
         </div>
@@ -201,8 +201,8 @@ const features = [;;;
         </div>
       </section>
     </div>)
-export default PagePage;
+export default PagePage'"'";
 
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react;
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'"'"'";
 
-;
+'"'"'"'";

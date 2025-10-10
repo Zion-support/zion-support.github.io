@@ -36,12 +36,12 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
 
         <div, className=mt-8></div>
           <Link, t, o='/<bl, o, g' className=te, x, t-cy, a, n-300, hove, r: underli, n, e>
-            ← Back, to, Blog;
+            ← Back, to, Blog';
 
           </Li, n, k>
         </div>
       </div>
-    </d, i, v > );
+    </d, i, v > )';
 
 export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 

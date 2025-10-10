@@ -1,28 +1,28 @@
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from lucide-react;
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from lucide-react';
 
 interface FormData {
-  name: string;
+  name: string';
 
-  email: string;
+  email: string';
 
-  company: string;
+  company: string';
 
-  phone: string;
+  phone: string';
 
-  service: string;
+  service: string';
 
-  message: string;
+  message: string';
 
 }
 
 interface FormStatus {
-  type: 'idle' | 'loading' | 'success' | 'error;
+  type: 'idle' | 'loading' | 'success' | 'error';
 
-  message: string;
+  message: string';
 
-};
+}';
 
 const ContactForm: React.FC = () => {const [formData, setFormData] = useState<FormData>({
     name: ',
@@ -31,9 +31,9 @@ const ContactForm: React.FC = () => {const [formData, setFormData] = useState<Fo
     phone: ',
     service: ',
     message: ')
-  });
+  })';
 
-;
+';
 
 const [status, setStatus] = useState<FormStatus>({
   const [status, setStatus] = useState<FormStatus>({
@@ -53,18 +53,18 @@ const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
+    }))';
 
-const handleSubmit = async (e: React.FormEvent) => {;;
+const handleSubmit = async (e: React.FormEvent) => {';';
 
-    e.preventDefault();
+    e.preventDefault()';
 
     setStatus({ typ,
-    e: 'loading', message: Sending message... });
+    e: 'loading', message: Sending message... })';
 
     try {
       /
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 2000))';
 
       setStatus({
         type: 'success,
@@ -81,11 +81,11 @@ const handleSubmit = async (e: React.FormEvent) => {;;
       })} catch (error) {
       setStatus({        type: 'error,
         message: 'Sorry, there was an error sending your message. Please try again.)
-      });
+      })';
 
   }
 
-const services = [;;
+const services = [';';
 
     'AI & Machine Learning,
     'Cloud Computing,
@@ -96,7 +96,7 @@ const services = [;;
     'DevOps,
     'IT Consulting,
     Other
-  ];
+  ]';
 
   return (
 
@@ -254,7 +254,7 @@ const services = [;;
               <>
                 Send Message
                 <Send className="w-5 h-5 ml-2 />
-              </>);
+              </>)"'"'";
 
           </button>
         </form>
@@ -280,6 +280,6 @@ const services = [;;
         </div>
       </div>
     </div>
-  );}
+  )'"'"'";}
 
-export default ContactForm;
+export default ContactForm'"'"'"'";

@@ -1,3 +1,3 @@
 import React from 'react';
 
-export default September30 NewContentMegaBanner;
+export default September30 NewContentMegaBanner';

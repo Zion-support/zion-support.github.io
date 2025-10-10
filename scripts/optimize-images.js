@@ -1,5 +1,5 @@
 
-import sharp from 'sharp;
+import sharp from 'sharp';
 
 import fs from 'fs;
 
@@ -34,14 +34,14 @@ const _files = fs.readdirSync(this.inputDir);;
 
   async optimizeImage(filename) {/* TODO: Fix JSX expression */}
 
-//       const outputPath = path.join(this.outputDir, `${baseName}-${size}.webp);;
+//       const outputPath = path.join(this.outputDir, `${baseName}-${size}.webp)';';
 
       try {/* TODO: Fix JSX expression */}
 
   t: true })
           .webp({/* TODO: Fix JSX expression */})
   y: 80 })
-          .toFile(outputPath);
+          .toFile(outputPath)';
 
 //         } catch (error) {/* TODO: Fix JSX expression */}
 
@@ -53,10 +53,10 @@ const _files = fs.readdirSync(this.inputDir);;
 
 }
 
-;
+';
 
-const _optimizer = new ImageOptimizer();;;
+const _optimizer = new ImageOptimizer()';';';
 
-optimizer.optimizeImages();
+optimizer.optimizeImages()';
 
 `

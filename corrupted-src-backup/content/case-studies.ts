@@ -6,10 +6,10 @@ export type CaseStudy = {
   industry: string;
   challenge: string;
   solution: string;
-  results: string[];
-  technologies: string[];
-  duration: string;
-  imageUrl?: string};
+  results: string[]';
+  technologies: string[]';
+  duration: string';
+  imageUrl?: string}';
 
 export const caseStudies: CaseStudy[] = [
   {
@@ -171,7 +171,7 @@ export const caseStudies: CaseStudy[] = [
     duration: '10 weeks',
     imageUrl: '/images/case-studies/enterprise-rag.jpg',
 export type CaseStudy = {/* TODO: Fix JSX expression */}
-};
+}'"'"'";
 
 export const,
   caseStudies: CaseStudy[] = [
@@ -192,4 +192,4 @@ export const,
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
+  }]'"'"'"'";

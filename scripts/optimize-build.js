@@ -1,6 +1,6 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from 'fs';
 
 import path from 'path;
 
@@ -47,25 +47,25 @@ function optimizeJS() {/* TODO: Fix JSX expression */}
 }
 
   // // console.log removed for production
-// This would typically use webpack-bundle-analyzer or similar;
+// This would typically use webpack-bundle-analyzer or similar';
 
-  // For now, well just log the process;
+  // For now, well just log the process';
 
   // // console.log removed for production
 }
 
-// Function to generate sitemap;
+// Function to generate sitemap';
 
-function generateSitemap() {;
+function generateSitemap() {';
 
 function generateSitemap() {/* TODO: Fix JSX expression */}
 
 }
 
   // // console.log removed for production
-;
+';
 
-const pages = [;;;
+const pages = [';';';
 
     {/* TODO: Fix JSX expression */}
 
@@ -93,13 +93,13 @@ const pages = [;;;
 
 ;
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8?>;;
+const sitemap = `<?xml version="1.0" encoding="UTF-8?>";"'";
 
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9>,
 ${pages.map(page =>   <url>),
-    <loc>https://ziontechgroup.com${page.url}</loc>;
+    <loc>https://ziontechgroup.com${page.url}</loc>"'"'";
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;;
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>'"'"'";'"'"'"'";
 
 <urlset xmlns="htt,
   p://www.sitemaps.org/schemas/sitemap/0.9></urlset>
@@ -183,11 +183,11 @@ const stats = fs.statSync(file);;
   }
 
   if (issues.length > 0) {
-// console.log(⚠️  Performance issues found: );
+// console.log(⚠️  Performance issues found: )';
 
   for (const file of files) {/* TODO: Fix JSX expression */},
   detected:
-        detected: ${file} (${Math.round(stats.size / 1024)}KB));
+        detected: ${file} (${Math.round(stats.size / 1024)}KB))';
 
     }
 
@@ -202,12 +202,12 @@ const stats = fs.statSync(file);;
 
 }
 
-// Main optimization function;
+// Main optimization function';
 
 async function optimize() {
   // // console.log removed for production
 try {
-    // Create public directory if it doesnt exist;
+    // Create public directory if it doesnt exist';
 
     if (!fs.existsSync('public)) {
       fs.mkdirSync(public);
@@ -236,7 +236,7 @@ try {/* TODO: Fix JSX expression */}
     // // console.log removed for production
 // // console.log removed for production
 // // console.log removed for production
-Summary:);
+Summary:)'";
 
     // // console.log removed for production
 // // console.log removed for production
@@ -251,8 +251,8 @@ process.exit(1)} catch (error) {/* TODO: Fix JSX expression */}
 
 }
 
-// Run optimization;
+// Run optimization'"'";
 
-optimize();
+optimize()'"'"'";
 
-optimize();"
+optimize()'"'"'"'";"

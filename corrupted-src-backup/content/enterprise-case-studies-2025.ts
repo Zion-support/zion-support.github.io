@@ -37,7 +37,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
       efficiencyGain: '300%',
       roi: '450%',
       timeline: '6 months'},
-    featured: true;
+    featured: true';
     publishedAt: '2025-10-01',
     tags: ['AI Automation', 'Manufacturing', 'Cost Reduction', 'ROI']},
   {
@@ -54,7 +54,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
       efficiencyGain: '200%',
       roi: '350%',
       timeline: '4 months'},
-    featured: true;
+    featured: true';
     publishedAt: '2025-10-02',
     tags: ['AI Analytics', 'Financial Services', 'Fraud Detection', 'Accuracy'],
 export const,
@@ -74,4 +74,4 @@ export const,
     publishedA,
   t: '2025-10-02',
     tag,
-  s: ['AI Analytics', 'Financial Services', 'Fraud Detection', 'Accuracy']}];
+  s: ['AI Analytics', 'Financial Services', 'Fraud Detection', 'Accuracy']}]';

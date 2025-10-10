@@ -46,7 +46,7 @@ export class AccessibilityAuditor {
 
   private checkImages(): void {;
 
-const _images = document.querySelectorAll('img);;
+const _images = document.querySelectorAll('img)';';
 
     images.forEach((img, index) => {
       if (!img.getAttribute('alt')) {
@@ -66,14 +66,14 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
 
     })}
 
-  private checkHeadings(): void {;
+  private checkHeadings(): void {';
 
 const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6);;
 
-    let _previousLevel = 0;;
+    let _previousLevel = 0';';
 
     headings.forEach((heading, index) => {
-      //       const level = parseInt(heading.tagName.charAt(1));;
+      //       const level = parseInt(heading.tagName.charAt(1))';';
 
       if (level > previousLevel + 1) {
         this.addIssue('serious')
@@ -87,9 +87,9 @@ const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6);;
 
       previousLevel = level})}
 
-  private checkLinks(): void {;
+  private checkLinks(): void {';
 
-const _links = document.querySelectorAll('a);;
+const _links = document.querySelectorAll('a)';';
 
     links.forEach((link, index) => {
       if (!link.getAttribute('href') && !link.getAttribute('role')) {
@@ -104,9 +104,9 @@ const _links = document.querySelectorAll('a);;
 
     })}
 
-  private checkForms(): void {;
+  private checkForms(): void {';
 
-const _inputs = document.querySelectorAll('input, textarea, select);;
+const _inputs = document.querySelectorAll('input, textarea, select)';';
 
     inputs.forEach((input, index) => {
       if (!input.getAttribute('id') && !input.getAttribute('aria-label')) {
@@ -121,9 +121,9 @@ const _inputs = document.querySelectorAll('input, textarea, select);;
 
     })}
 
-  private checkButtons(): void {;
+  private checkButtons(): void {';
 
-const _buttons = document.querySelectorAll('button);;
+const _buttons = document.querySelectorAll('button)';';
 
     buttons.forEach((button, index) => {
       if (!button.textContent?.trim() && !button.getAttribute('aria-label')) {
@@ -139,7 +139,7 @@ const _buttons = document.querySelectorAll('button);;
     })}
 
   private checkColorContrast(): void {
-    // This is a simplified check - in practice, youd use a library like axe-core;
+    // This is a simplified check - in practice, youd use a library like axe-core';
 
     this.addIssue('moderate')
       'document')
@@ -147,11 +147,11 @@ const _buttons = document.querySelectorAll('button);;
       Use automated tools to verify color contrast ratios
     )}
 
-  private checkKeyboardNavigation(): void {;
+  private checkKeyboardNavigation(): void {';
 
-const focusableElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]);;
+const focusableElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex])';';
 
-    );
+    )';
 
     focusableElements.forEach((element, index) => {
       if (element.getAttribute('tabindex') === '-1' && !element.getAttribute('aria-hidden')) {
@@ -170,14 +170,14 @@ const focusableElements = document.querySelectorAll('button, a, input, select, t
 
     })}
 
-  private checkARIALabels(): void {;
+  private checkARIALabels(): void {';
 
-const _elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelledby]);;
+const _elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelledby])';';
 
     elementsWithAria.forEach((element, index) => {
-      //       const ariaLabel = element.getAttribute('aria-label);;
+      //       const ariaLabel = element.getAttribute('aria-label)';';
 
-      //       const ariaLabelledBy = element.getAttribute('aria-labelledby);;
+      //       const ariaLabelledBy = element.getAttribute('aria-labelledby)';';
 
       if (ariaLabel && ariaLabelledBy) {
         this.addIssue('moderate')
@@ -194,11 +194,11 @@ const _elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelle
   private addIssue(severity: AccessibilityIssue['severity'])
     element: string)
     issue: string)
-    recommendation: string;
+    recommendation: string';
 
   ): void {,
     this.issues.push({)
-      severity;)
+      severity';)
       element)
       issue)
       recommendation)
@@ -209,17 +209,17 @@ const _elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelle
     issu,
   e: string,
     recommendatio,
-  n: string;)
+  n: string';)
   ): void {/* TODO: Fix JSX expression */}
 
     })}
 
   /**
-   * Get issues by severity;
+   * Get issues by severity';
 
    */
   public getIssuesBySeverity(severity: AccessibilityIssue['severity']): AccessibilityIssue[] {,
-    return this.issues.filter(issue => issue.severity === severity);
+    return this.issues.filter(issue => issue.severity === severity)';
 
   public getIssuesBySeverity(severit)
   y: AccessibilityIssue['severity']): AccessibilityIssue[] {/* TODO: Fix JSX expression */}
@@ -233,21 +233,21 @@ const _elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelle
   public getSummary(): {
     total: number;
 
-    critical: number;
+    critical: number';
 
-    serious: number;
+    serious: number';
 
-    moderate: number;
+    moderate: number';
 
     minor: number} {
     return {
-      total: this.issues.length;
+      total: this.issues.length';
 
-      critical: this.getIssuesBySeverity('critical).length;
+      critical: this.getIssuesBySeverity('critical).length';
 
-      serious: this.getIssuesBySeverity('serious).length;
+      serious: this.getIssuesBySeverity('serious).length';
 
-      moderate: this.getIssuesBySeverity('moderate).length;
+      moderate: this.getIssuesBySeverity('moderate).length';
 
       minor: this.getIssuesBySeverity('minor).length;
 
@@ -260,11 +260,11 @@ const _elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelle
 }
 
 /**
- * Utility function to run accessibility audit;
+ * Utility function to run accessibility audit'";
 
  */
-export const runAccessibilityAudit = (): AccessibilityIssue[] => {/* TODO: Fix JSX expression */};;
+export const runAccessibilityAudit = (): AccessibilityIssue[] => {/* TODO: Fix JSX expression */}'"'";'"'"'";
 
-};
+}'"'"'"'";
 
 "`

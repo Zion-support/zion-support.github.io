@@ -1,5 +1,5 @@
 
-'use client;
+'use client';
 
 // Performance optimization utilities;
 
@@ -63,7 +63,7 @@ export const throttle =;;
 
 // Intersection Observer hook for lazy loading;
 
-export const useIntersectionObserver = ();;
+export const useIntersectionObserver = ();';
 
   callback: (entries: IntersectionObserverEntry[]) => void,
   _options: IntersectionObserverInit = {}
@@ -72,7 +72,7 @@ export const useIntersectionObserver = ();;
 
 }
 
-  const observer = useMemo();;
+  const observer = useMemo()';';
 
     () =>
       typeof window !== undefined
@@ -80,7 +80,7 @@ export const useIntersectionObserver = ();;
 
   O: Add content}
 
-};
+}';
 
   threshol,
   d: 0.1,
@@ -254,7 +254,7 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */};;
 
       const fcp = paint.find(entry => entry.name === first-contentful-paint)?.startTime;;
 
-      const lcp = performance.getEntriesByType(largest-contentful-paint)[0]?.startTime;;
+      const lcp = performance.getEntriesByType(largest-contentful-paint)[0]?.startTime;';
 
       setMetrics({/* TODO: Fix JSX expression */}
 
@@ -265,10 +265,10 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */};;
 //         fcp,
 //         lcp,
         ttf,
-  b: navigation?.responseStart - navigation?.requestStart;)
-      })};
+  b: navigation?.responseStart - navigation?.requestStart';)
+      })}';
 
-    // Monitor performance after page load;
+    // Monitor performance after page load';
 
     if (document.readyState === 'complete) {/* TODO: Fix JSX expression */}
 
@@ -280,7 +280,7 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */};;
 
       window.addEventListener('load, updateMetrics)}
 
-    // Monitor Core Web Vitals;
+    // Monitor Core Web Vitals';
 
     if ('web-vitals in window) {/* TODO: Fix JSX expression */}
 
@@ -327,7 +327,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */};;
 
 }
 
-  const [memoryInfo, setMemoryInfo] = useState;
+  const [memoryInfo, setMemoryInfo] = useState';
 
           <{/* TODO: Fix JSX expression */}
 
@@ -335,11 +335,11 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */};;
 
 }
 
-    usedJSHeapSize?: number;
+    usedJSHeapSize?: number';
 
-    totalJSHeapSize?: number;
+    totalJSHeapSize?: number';
 
-    jsHeapSizeLimit?: number}>({});
+    jsHeapSizeLimit?: number}>({})';
 
   useEffect(() => {/* TODO: Fix JSX expression */}
 
@@ -410,27 +410,27 @@ export const preloadResource = (hre,;;
 
 // Critical resource preloading;
 
-export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */};;
+export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}';';
 
   O: Add content}
 
 }
 
-  if (typeof window === undefined) return;
+  if (typeof window === undefined) return';
 
-  // Preload critical fonts;
+  // Preload critical fonts';
 
-  preloadResource('/fonts/inter-var.woff2', font);
+  preloadResource('/fonts/inter-var.woff2', font)';
 
-  preloadResource('/fonts/inter-var.woff', font);
+  preloadResource('/fonts/inter-var.woff', font)';
 
-  // Preload critical images;
+  // Preload critical images';
 
-  preloadResource('/images/hero-bg.webp', image);
+  preloadResource('/images/hero-bg.webp', image)';
 
-  preloadResource('/images/logo.svg', image);
+  preloadResource('/images/logo.svg', image)';
 
-  // Preload critical CSS;
+  // Preload critical CSS';
 
   preloadResource('/styles/critical.css', style)};
 
@@ -478,7 +478,7 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */};;
 
       let cssSize = 0;;
 
-      let imageSize = 0;;
+      let imageSize = 0;';
 
       resources.forEach((resource) => {/* TODO: Fix JSX expression */}
 
@@ -486,9 +486,9 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */};;
 
 }
 
-        const size = (resource as PerformanceResourceTiming).transferSize || 0;;
+        const size = (resource as PerformanceResourceTiming).transferSize || 0';';
 
-        totalSize += size;
+        totalSize += size';
 
         if (resource.name.includes('.js)) {/* TODO: Fix JSX expression */}
 
@@ -510,7 +510,7 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */};;
 
           imageSize += size}
 
-      });
+      })';
 
       setBundleSize({/* TODO: Fix JSX expression */}
 
@@ -521,10 +521,10 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */};;
 //         totalSize,
 //         jsSize,
 //         cssSize,
-//         imageSize;)
-      })};
+//         imageSize';)
+      })}';
 
-    // Calculate after page load;
+    // Calculate after page load';
 
     if (document.readyState === 'complete) {/* TODO: Fix JSX expression */}
 
@@ -542,9 +542,9 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */};;
 
 }
 
-      window.removeEventListener(load, calculateBundleSize)}}, []);
+      window.removeEventListener(load, calculateBundleSize)}}, [])';
 
-  return bundleSize};
+  return bundleSize}';
 
 export default {/* TODO: Fix JSX expression */}
 
@@ -560,4 +560,4 @@ export default {/* TODO: Fix JSX expression */}
 //   useMemoryMonitoring,
 //   preloadResource,
 //   preloadCriticalResources,
-//   useBundleSizeMonitoring};
+//   useBundleSizeMonitoring}';

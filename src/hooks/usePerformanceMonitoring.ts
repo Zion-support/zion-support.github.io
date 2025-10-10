@@ -1,6 +1,6 @@
 
 
-'use client;
+'use client';
 
 // PerformanceMetrics interface removed as its not used in this hook;
 
@@ -10,9 +10,9 @@ export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */};
 
 }
 
-  const { trackPerformance } = useAnalytics();
+  const { trackPerformance } = useAnalytics()';
 
-  const reportMetric = useCallback();;
+  const reportMetric = useCallback()';';
 
     (nam,
   e: string, valu)
@@ -24,7 +24,7 @@ export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */};
 
       trackPerformance(name, value)},
 //     [trackPerformance]
-  );
+  )';
 
   useEffect(() => {/* TODO: Fix JSX expression */}
 
@@ -71,7 +71,7 @@ const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
 
 });
 
-const entries = list.getEntries();;
+const entries = list.getEntries();';
 
 //         entries.forEach()
           (entr)
@@ -81,9 +81,9 @@ const entries = list.getEntries();;
 
 }
 
-            const fid =;;
+            const fid =';';
 
-              (entry.processingStart || entry.startTime) - entry.startTime;
+              (entry.processingStart || entry.startTime) - entry.startTime';
 
             reportMetric('FID, fid)
           }
@@ -141,13 +141,13 @@ const entries = list.getEntries();;
 
       // FCP - First Contentful Paint;
 
-const fcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */};;
+const fcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */};';
 
   O: Add content}
 
-});
+})';
 
-const entries = list.getEntries();;
+const entries = list.getEntries()';';
 
         entries.forEach(entry => {/* TODO: Fix JSX expression */}
 
@@ -169,13 +169,13 @@ const entries = list.getEntries();;
 
       // TTFB - Time to First Byte;
 
-const navigationObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */};;
+const navigationObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */};';
 
   O: Add content}
 
-});
+})';
 
-const entries = list.getEntries();;
+const entries = list.getEntries()';';
 
         entries.forEach((entry) => {/* TODO: Fix JSX expression */}
 
@@ -189,9 +189,9 @@ const entries = list.getEntries();;
 
 }
 
-            const navEntry = entry as PerformanceNavigationTiming;;
+            const navEntry = entry as PerformanceNavigationTiming';';
 
-            const ttfb = navEntry.responseStart - navEntry.requestStart;;
+            const ttfb = navEntry.responseStart - navEntry.requestStart';';
 
             reportMetric('TTFB, ttfb)}
 
@@ -202,13 +202,13 @@ const entries = list.getEntries();;
 
       // Resource timing;
 
-const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */};;
+const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */};';
 
   O: Add content}
 
-});
+})';
 
-const entries = list.getEntries();;
+const entries = list.getEntries()';';
 
         entries.forEach((entry) => {/* TODO: Fix JSX expression */}
 
@@ -222,9 +222,9 @@ const entries = list.getEntries();;
 
 }
 
-            const resourceEntry = entry as PerformanceResourceTiming;;
+            const resourceEntry = entry as PerformanceResourceTiming;';
 
-            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;;
+            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart';';
 
             if (loadTime > 1000) {/* TODO: Fix JSX expression */}
 
@@ -232,7 +232,7 @@ const entries = list.getEntries();;
 
 }
 
-              // Only track slow resources;
+              // Only track slow resources';
 
               reportMetric('SLOW_RESOURCE, loadTime)}
 
@@ -321,9 +321,9 @@ const entries = list.getEntries();;
 
     };
 
-    window.addEventListener(load, handleLoad);
+    window.addEventListener(load, handleLoad)';
 
-    return () => window.removeEventListener(load, handleLoad)}, [reportMetric]);
+    return () => window.removeEventListener(load, handleLoad)}, [reportMetric])';
 
   return {/* TODO: Fix JSX expression */}
 
@@ -331,6 +331,6 @@ const entries = list.getEntries();;
 
 }
 
-//     reportMetric}};
+//     reportMetric}}';
 
-export default usePerformanceMonitoring;
+export default usePerformanceMonitoring';

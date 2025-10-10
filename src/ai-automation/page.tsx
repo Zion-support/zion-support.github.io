@@ -1,22 +1,22 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Zap, ArrowRight } from 'lucide-react;
+import { Zap, ArrowRight } from 'lucide-react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react;
+import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from ../components/Footer;
+import Footer from ../components/Footer';
 
-;
+';
 
-const AIAutomationPage: React.FC = () => {;
+const AIAutomationPage: React.FC = () => {';
 
-const features = [;;;
+const features = [';';';
 
     {
       icon: Settings,
@@ -43,11 +43,11 @@ const features = [;;;
       benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities]
     }
 
-  ];
+  ]';
 
-;
+';
 
-const pricingPlans = [;;
+const pricingPlans = [';';
 
     {
       name: 'Starter,
@@ -95,18 +95,18 @@ const pricingPlans = [;;
       popular: false
     }
 
-  ];
+  ]';
 
-;
+';
 
-const stats = [;;
+const stats = [';';
 
     { icon: Users, value: '200+', label: 'Automated Processes },
     { icon: TrendingUp, value: '80%', label: 'Efficiency Increase },
     { icon: Clock, value: '60%', label: 'Time Saved },
     { icon: Star, value: '4.9/5', label: 'Client Rating }
 
-  ];
+  ]';
 
 export default function AIAutomationPage() {
   return (

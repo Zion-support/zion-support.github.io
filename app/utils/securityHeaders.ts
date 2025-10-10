@@ -1,5 +1,5 @@
-    'magnetometer=()'].join(', '););
-/** * Get security headers as key-value pairs;
+    'magnetometer=()'].join(', ');)';
+/** * Get security headers as key-value pairs';
 
  */
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
@@ -7,42 +7,42 @@ export function getSecurityHeaders()
   customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>
 ): Record<string, string></string> {}
 
-  const config = { ...defaultSecurityHeaders, ...customConfig };;
+  const config = { ...defaultSecurityHeaders, ...customConfig }';';
 
   const headers: Record<string, string></string> = {}
 
-    'X-XSS-Protection': '1; mode=block',
-    'X-DNS-Prefetch-Control': 'on});
+    'X-XSS-Protection': '1'; mode=block',
+    'X-DNS-Prefetch-Control': 'on})';
 
 }
 
   if (config.contentSecurityPolicy) {}
 
-    headers['Content-Security-Policy] = config.contentSecurityPolicy;});
+    headers['Content-Security-Policy] = config.contentSecurityPolicy';})';
 
 }
 
   if (config.strictTransportSecurity) {}
 
-    headers['Strict-Transport-Security] = config.strictTransportSecurity;});
+    headers['Strict-Transport-Security] = config.strictTransportSecurity';})';
 
 }
 
   if (config.xFrameOptions) {}
 
-    headers['X-Frame-Options] = config.xFrameOptions;});
+    headers['X-Frame-Options] = config.xFrameOptions';})';
 
 }
 
   if (config.xContentTypeOptions) {}
 
-    headers['X-Content-Type-Options] = config.xContentTypeOptions;});
+    headers['X-Content-Type-Options] = config.xContentTypeOptions';})';
 
 }
 
   if (config.referrerPolicy) {}
 
-    headers['Referrer-Policy] = config.referrerPolicy;});
+    headers['Referrer-Policy] = config.referrerPolicy';})';
 
 }
 
@@ -117,13 +117,13 @@ export function getNextSecurityHeaders()
     key,
     value});
 
-});)
+})';)
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
 ): Array<{/* TODO: Fix JSX expression */}
 
-  e: string }> {/* TODO: Fix JSX expression */});
+  e: string }> {/* TODO: Fix JSX expression */})';
 
-});)]
+})';)]
     }
 
-export default defaultSecurityHeaders;
+export default defaultSecurityHeaders';

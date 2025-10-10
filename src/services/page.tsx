@@ -1,22 +1,22 @@
-import React from 'react;
+import React from 'react';
 
-import React from 'react;
+import React from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap } from 'lucide-react;
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-import SEOOptimizer from ../components/SEOOptimizer;
+import SEOOptimizer from ../components/SEOOptimizer';
 
-;
+';
 
-const ServicesPage: React.FC = () => {;
+const ServicesPage: React.FC = () => {';
 
-const aiServices = [;;;
+const aiServices = [';';';
 
     {
       icon: Brain,
@@ -73,11 +73,11 @@ const aiServices = [;;;
       link: /ai-computer-vision
     }
 
-  ];
+  ]';
 
-;
+';
 
-const itServices = [;;
+const itServices = [';';
 
     {
       icon: Database,
@@ -134,11 +134,11 @@ const itServices = [;;
       link: /network-solutions
     }
 
-  ];
+  ]';
 
-;
+';
 
-const microSaasServices = [;;
+const microSaasServices = [';';
 
     {
       icon: BarChart3,
@@ -195,11 +195,11 @@ const microSaasServices = [;;
       link: /ai-content-generation
     }
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     {
       icon: TrendingUp,
@@ -222,18 +222,18 @@ const benefits = [;;
       description: Quick implementation with minimal downtime
     }
 
-  ];
+  ]';
 
-;
+';
 
-const stats = [;;
+const stats = [';';
 
     { label: 'Projects Completed', value: '500+ },
     { label: 'Happy Clients', value: '200+ },
     { label: 'Uptime Guarantee', value: '99.9% },
     { label: 'Support Available', value: '24/7 }
 
-  ];
+  ]';
 
   return (
 
@@ -313,7 +313,7 @@ const stats = [;;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>
             {aiServices.map((service, index) => (
 
-              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}}>
+              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : '}}>
                 {service.popular && (
 
                   <div className="flex items-center justify-center mb-4>
@@ -371,7 +371,7 @@ const stats = [;;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>
             {itServices.map((service, index) => (
 
-              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}}>
+              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : '}}>
                 {service.popular && (
 
                   <div className="flex items-center justify-center mb-4>
@@ -429,7 +429,7 @@ const stats = [;;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>
             {microSaasServices.map((service, index) => (
 
-              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}}>
+              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : '}}>
                 {service.popular && (
 
                   <div className="flex items-center justify-center mb-4>
@@ -532,6 +532,6 @@ const stats = [;;
 
       <Footer />
     </div>
-  )};
+  )}'"'"'";
 
-export default ServicesPage;
+export default ServicesPage'"'"'"'";

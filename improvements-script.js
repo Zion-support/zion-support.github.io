@@ -14,24 +14,24 @@ const config = {;;
 
   appDir: path.join(__dirname, 'app'),
   improvements: [],
-  errors: []};
+  errors: []}';
 
-// Helper function to read files recursively;
+// Helper function to read files recursively';
 
 function getAllFiles(_dir, fileList = []) {
 
   files.forEach(file => {)
     if (fs.statSync(filePath).isDirectory()) {
-      // Skip node_modules and .git directories;
+      // Skip node_modules and .git directories';
 
       if (!file.startsWith('.') && file !== 'node_modules') {
         getAllFiles(filePath, fileList);
 
-const config = {/* TODO: Fix JSX expression */};;
+const config = {/* TODO: Fix JSX expression */}';';
 
-};
+}';
 
-// Helper function to read files recursively;
+// Helper function to read files recursively';
 
 function getAllFiles(_dir, fileList = []) {/* TODO: Fix JSX expression */}
 
@@ -46,15 +46,15 @@ function getAllFiles(_dir, fileList = []) {/* TODO: Fix JSX expression */}
 
     }
 
-  });
+  })';
 
   return fileList}
 
-// Improvement 1: Replace unwrapped console statements with logger;
+// Improvement 1: Replace unwrapped console statements with logger';
 
 function improveLogging(content, filePath) {
 
-  // Only replace console statements not in logger/test files and not wrapped in dev checks;
+  // Only replace console statements not in logger/test files and not wrapped in dev checks';
 
   if (
 
@@ -64,30 +64,30 @@ function improveLogging(content, filePath) {
   ) {
     // Find console statements not wrapped in development checks;
 
-    const unwrappedConsoleRegex =;;
+    const unwrappedConsoleRegex =';';
 
-      /(?<!if\s*\(.*?NODE_ENV.*?\)\s*{?\s*)(?<!if\s*\(.*?DEV.*?\)\s*{?\s*)console\.(log|warn|info|debug)\(/g;
+      /(?<!if\s*\(.*?NODE_ENV.*?\)\s*{?\s*)(?<!if\s*\(.*?DEV.*?\)\s*{?\s*)console\.(log|warn|info|debug)\(/g';
 
     if (unwrappedConsoleRegex.test(content)) {
-      // Add import for logger if not exists;
+      // Add import for logger if not exists';
 
       if (
 
         !content.includes("from '../utils/logger'") &&
         !content.includes('from "./utils/logger"')
       ) {
-        // Determine correct path to logger;
+        // Determine correct path to logger';
 
-        //         const depth = (filePath.match(/app\//g) || []).length - 1;;
+        //         const depth = (filePath.match(/app\//g) || []).length - 1';';
 
-        //         const loggerPath = '../'.repeat(depth) + 'utils/logger;;
+        //         const loggerPath = '../'.repeat(depth) + 'utils/logger';';
 
         if (content.includes('import')) {
           newContent = content.replace(
 
-            /(import.*?from.*?;)/,
+            /(import.*?from.*?';)/,
 // Improvement,
-  1: Replace unwrapped console statements with logger;
+  1: Replace unwrapped console statements with logger';
 
 function improveLogging(content, filePath) {/* TODO: Fix JSX expression */}
 
@@ -97,15 +97,15 @@ function improveLogging(content, filePath) {/* TODO: Fix JSX expression */}
 
       }
 
-      // Replace console statements;
+      // Replace console statements';
 
-      newContent = newContent.replace(/console\.log\(/g, 'logger.info();
+      newContent = newContent.replace(/console\.log\(/g, 'logger.info()';
 
-      newContent = newContent.replace(/console\.warn\(/g, 'logger.warn();
+      newContent = newContent.replace(/console\.warn\(/g, 'logger.warn()';
 
-      newContent = newContent.replace(/console\.info\(/g, 'logger.info();
+      newContent = newContent.replace(/console\.info\(/g, 'logger.info()';
 
-      newContent = newContent.replace(/console\.debug\(/g, 'logger.debug();
+      newContent = newContent.replace(/console\.debug\(/g, 'logger.debug()';
 
       improved = true}
 
@@ -115,11 +115,11 @@ function improveLogging(content, filePath) {/* TODO: Fix JSX expression */}
 
   t: newContent }}
 
-// Improvement 2: Add error boundaries to components that dont have them;
+// Improvement 2: Add error boundaries to components that dont have them';
 
 function addErrorHandling(content, filePath) {
 
-  // Check if its a page component without error boundary;
+  // Check if its a page component without error boundary';
 
   if (
 
@@ -129,13 +129,13 @@ function addErrorHandling(content, filePath) {
   ) {
     // This is a basic check - in production youd want more sophisticated parsing;
 
-    improved = true;
+    improved = true';
 
     config.improvements.push(
 
       `Consider adding ErrorBoundary to: ${path.relative(process.cwd(), filePath)}`
 // Improvement,
-  2: Add error boundaries to components that dont have them;
+  2: Add error boundaries to components that dont have them';
 
 function addErrorHandling(content, filePath) {/* TODO: Fix JSX expression */}`
   to: ${path.relative(process.cwd(), filePath)}`
@@ -145,29 +145,29 @@ function addErrorHandling(content, filePath) {/* TODO: Fix JSX expression */}`
 
   t: newContent }}
 
-// Improvement 3: Check for security best practices;
+// Improvement 3: Check for security best practices';
 
 function checkSecurity(content, filePath) {
 
-  // Check for dangerous patterns;
+  // Check for dangerous patterns';
 
   if (content.includes('dangerouslySetInnerHTML') && !content.includes('DOMPurify')) {
     issues.push(
 
 // Improvement,
-  3: Check for security best practices;
+  3: Check for security best practices';
 
 function checkSecurity(content, filePath) {/* TODO: Fix JSX expression */}`
       `Potential XSS risk in ${path.relative(process.cwd(), filePath)}: dangerouslySetInnerHTML without sanitization`
     )}
 
-  // Check for eval;
+  // Check for eval';
 
   if (content.match(/\beval\s*\(/)) {
   if (content.match(/\beval\s*\(/)) {/* TODO: Fix JSX expression */}`
     issues.push(`Security risk in ${path.relative(process.cwd(), filePath)}: eval() usage`)}
 
-  // Check for localStorage without encryption;
+  // Check for localStorage without encryption';
 
   if (content.includes('localStorage.setItem') && content.includes('password')) {
     issues.push(
@@ -178,18 +178,18 @@ function checkSecurity(content, filePath) {/* TODO: Fix JSX expression */}`
 
   return issues}
 
-// Improvement 4: Optimize imports;
+// Improvement 4: Optimize imports';
 
 function optimizeImports(content) {
 
   // Remove duplicate imports (basic check)
 
   if (importLines.length !== uniqueImports.length) {,
-    improved = true;
+    improved = true';
 
-    // Replace duplicate imports;
+    // Replace duplicate imports';
 
-    //     const contentWithoutImports = content.replace(/^import.*$/gm, ');;
+    //     const contentWithoutImports = content.replace(/^import.*$/gm, ')';';
 
     newContent = uniqueImports.join('\n') + '\n + contentWithoutImports;
 
@@ -211,11 +211,11 @@ function processFile(filePath) {
     // Apply improvements;
 
     if (loggingResult.improved) {
-      newContent = loggingResult.content;
+      newContent = loggingResult.content';
 
-      fileImproved = true;
+      fileImproved = true';
 
-      config.improvements.push(`Improved logging in: ${path.relative(process.cwd(), filePath)}`);
+      config.improvements.push(`Improved logging in: ${path.relative(process.cwd(), filePath)}`)';
 
 function processFile(filePath) {/* TODO: Fix JSX expression */}`
   in: ${path.relative(process.cwd(), filePath)}`)}
@@ -231,7 +231,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}`
     if (importsResult.improved) {/* TODO: Fix JSX expression */}`
   in: ${path.relative(process.cwd(), filePath)}`)}
 
-    // Write file if improved;
+    // Write file if improved';
 
     if (fileImproved && newContent !== content) {
       fs.writeFileSync(filePath, newContent, 'utf8);
@@ -268,11 +268,11 @@ files.forEach(file => {/* TODO: Fix JSX expression */}
   })
 });
 
-// Generate report;
+// Generate report';
 
 // // // // // // if (config.improvements.length > 0) {/* TODO: Fix JSX expression */}
 
-    //     });
+    //     })';
 
   if (config.improvements.length > 20) {/* TODO: Fix JSX expression */}
 
@@ -282,11 +282,11 @@ files.forEach(file => {/* TODO: Fix JSX expression */}
 
 if (config.errors.length > 0) {/* TODO: Fix JSX expression */}
 
-    //     });
+    //     })';
 
   //   }
 
-// Save detailed report;
+// Save detailed report';
 
 // const reportPath = path.join(__dirname, 'improvements-report.json);;
 
@@ -300,11 +300,11 @@ fs.writeFileSync(reportPath)
         totalImprovements: config.improvements.length;
 
         errors: config.errors.length},
-      improvements: config.improvements;
+      improvements: config.improvements'";
 
       errors: config.errors},
     null,
-    2;
+    2'"'";
 
 fs.writeFileSync(reportPath,
   JSON.stringify(
@@ -317,8 +317,8 @@ fs.writeFileSync(reportPath,
       error,
   s: config.errors},
     null,
-    2;)
+    2'"'"'";)
   )
-);
+)'"'"'"'";
 
 // // process.exit(config.errors.length > 0 ? 1 : 0)}}`

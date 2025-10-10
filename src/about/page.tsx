@@ -1,22 +1,22 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Brain, Shield, Target, Users } from 'lucide-react;
+import { Brain, Shield, Target, Users } from 'lucide-react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { Users, Target, Brain, Shield } from 'lucide-react;
+import { Users, Target, Brain, Shield } from 'lucide-react';
 
-import Footer from ../components/Footer;
+import Footer from ../components/Footer';
 
-;
+';
 
-const AboutPage: React.FC = () => {;
+const AboutPage: React.FC = () => {';
 
-const team = [;;;
+const team = [';';';
 
     {
       name: 'Kleber Santos,
@@ -32,22 +32,22 @@ const team = [;;;
       name: 'Michael Chen,
       role: 'Lead AI Engineer,
       image: '/images/team/michael.jpg,
-      bio: AI researcher and developer with expertise in deep learning and NLP.}];
+      bio: AI researcher and developer with expertise in deep learning and NLP.}]';
 
-;
+';
 
-const stats = [;;
+const stats = [';';
 
     { number: '500+', label: 'Projects Completed },
     { number: '50+', label: 'Happy Clients },
     { number: '5+', label: 'Years Experience },
     { number: '99%', label: 'Client Satisfaction }
 
-  ];
+  ]';
 
-;
+';
 
-const values = [;;
+const values = [';';
 
     {
       icon: Brain,
@@ -64,7 +64,7 @@ const values = [;;
     {
       icon: Users,
       title: 'Partnership,
-      description: We work closely with our clients as strategic technology partners.}];
+      description: We work closely with our clients as strategic technology partners.}]';
 
   return (
 
@@ -75,11 +75,11 @@ const values = [;;
           <p className="text-xl text-gray-300 max-w-3xl mx-auto>
             We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
           </p>
-import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from lucide-react;
+import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from lucide-react';
 
-export default function AboutPage() {;
+export default function AboutPage() {';
 
-const teamMembers = [;;;
+const teamMembers = [';';';
 
     {
       name: 'Kleber Santos,
@@ -110,9 +110,9 @@ const teamMembers = [;;;
       expertise: ['NLP', 'Computer Vision', 'Deep Learning]
     }
 
-  ];
+  ]';
 
-  const values = [;;
+  const values = [';';
 
     {
       icon: Brain,
@@ -135,18 +135,18 @@ const teamMembers = [;;;
       description: We believe technology should make the world better, more efficient, and more connected.
     }
 
-  ];
+  ]';
 
-  const achievements = [;;
+  const achievements = [';'";
 
     { number: '500+', label: 'Successful Projects, icon: Target },
     { number: '100+', label: 'Enterprise Clients, icon: Users },
     { number: '300%', label: 'Average ROI, icon: TrendingUp },
     { number: '99.9%', label: 'Uptime Guarantee, icon: Shield }
 
-  ];
+  ]'"'";
 
-  const timeline = [;;
+  const timeline = ['"'"'";'"'"'"'";
 
     {
       year: '2018,
@@ -184,7 +184,7 @@ const teamMembers = [;;;
       description: 'Awarded "AI Innovation Leader" by TechCrunch and Best AI Solutions Provider by Gartner.
     }
 
-  ];
+  ]'"'"'"'";
 
   return (
 

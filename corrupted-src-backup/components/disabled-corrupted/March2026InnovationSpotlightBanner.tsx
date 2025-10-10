@@ -189,7 +189,7 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
 
             </h3>
             <p, className=te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-2xl, m, x-au, t, o></p>
-              See, how, our innovations, are, transforming industries, and, creating;
+              See, how, our innovations, are, transforming industries, and, creating';
 
               unprecedented, valu, e.
             </p>
@@ -240,7 +240,7 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
             <div, className=bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10></div>
               <h3, className=te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4>
               <h3, className=te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4></h3>
-                Join, the, Innovation Revoluti, o, n;
+                Join, the, Innovation Revoluti, o, n';
 
               </h3>
               <p, className=te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o></p>
@@ -265,8 +265,8 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
         </div>
       </div>
     </div>
-  )};
+  )}';
 
-export default March2026InnovationSpotlightBanner;
+export default March2026InnovationSpotlightBanner';
 
 "`

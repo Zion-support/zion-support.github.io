@@ -1,18 +1,18 @@
-import React from 'react;
+import React from 'react';
 
-import { Music, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react;
+import { Music, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-import SEOOptimizer from '../components/SEOOptimizer;
+import SEOOptimizer from '../components/SEOOptimizer';
 
-;
+';
 
-const AIMusicCompositionPage: React.FC = () => {;
+const AIMusicCompositionPage: React.FC = () => {';
 
-const features = [;
+const features = [';
     'AI Composition',    'Multiple Genres,
     'Custom Length,
     'Royalty-free,
@@ -22,11 +22,11 @@ const features = [;
     'Instrument Selection,
     'Tempo Control,
     Export Options
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'Unlimited music,
     'No copyright issues,
@@ -34,11 +34,11 @@ const benefits = [;;
     'Professional quality,
     'Fast generation,
     Cost-effective
-  ];
+  ]';
 
-;
+';
 
-const pricingPlans = [;;
+const pricingPlans = [';';
 
     {
       name: 'Starter,
@@ -65,7 +65,7 @@ const pricingPlans = [;;
       popular: false
     }
 
-  ];
+  ]';
 
   return (
 
@@ -148,7 +148,7 @@ const pricingPlans = [;;
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto>
               {pricingPlans.map((plan), index) => (
 
-                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}}>
+                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : '}}>
                   {plan.popular && (
 
                     <div className=absolute -top-4 left-1/2 transform -translate-x-1
@@ -207,6 +207,6 @@ const pricingPlans = [;;
         <Footer />
       </div>
     </React.Fragment>
-  )};
+  )}'"'"'";
 
-export default AIMusicCompositionPage;
+export default AIMusicCompositionPage'"'"'"'";

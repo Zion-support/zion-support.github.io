@@ -9,7 +9,7 @@ export const january2026NewContent = {;
       link: '/blog/ai-2026-january-autonomous-enterprise-mesh','
       type: 'article','
       featured:
-        featured: true;
+        featured: true';
       publishDate: '2026-01-15','
       category: 'Enterprise AI','
       tags: ['autonomous', 'mesh', 'enterprise', 'intelligence', '2026'],'
@@ -22,7 +22,7 @@ export const january2026NewContent = {;
       link: '/blog/ai-2026-january-quantum-edge-computing','
       type: 'article','
       featured:
-        featured: true;
+        featured: true';
       publishDate: '2026-01-15','
       category: 'Quantum Computing','
       tags: ['quantum', 'edge', 'computing', 'latency', '2026'],'
@@ -35,7 +35,7 @@ export const january2026NewContent = {;
         'Revolutionary AI achieving genuine consciousness, emotional intelligence, and creative autonomy with $500B enterprise value','
       link: '/blog/ai-2026-january-synthetic-consciousness','
       type: 'article','
-      featured: true;
+      featured: true';
       publishDate: '2026-01-15','
       category: 'Artificial Consciousness','
       tags: ['consciousness', 'synthetic', 'awareness', 'emotion', '2026'],'
@@ -50,7 +50,7 @@ export const january2026NewContent = {;
       link: '/services/ai-2026-autonomous-enterprise-solutions','
       type: 'service','
       featured:
-        featured: true;
+        featured: true';
       category: 'Enterprise AI','
       pricing: 'Custom','
       features: [,
@@ -65,7 +65,7 @@ export const january2026NewContent = {;
       link: '/services/ai-2026-quantum-edge-platform','
       type: 'service','
       featured:
-        featured: true;
+        featured: true';
       category: 'Quantum Computing','
       pricing: 'Starting at $50K/month','
       features: [,
@@ -81,7 +81,7 @@ export const january2026NewContent = {;
       link: '/case-studies/fortune-100-autonomous-transformation','
       type: 'case-study','
       featured:
-        featured: true;
+        featured: true'";
       industry: 'Enterprise','
       results: [,
         '95% automation rate','
@@ -89,7 +89,7 @@ export const january2026NewContent = {;
         '99.7% efficiency','
         'Zero human error'],'
       duration: '6 months','
-export const january2026NewContent = {/* TODO: Fix JSX expression */};
+export const january2026NewContent = {/* TODO: Fix JSX expression */}'"'";
     },
     {/* TODO: Fix JSX expression */}
     },
@@ -104,6 +104,6 @@ export const january2026NewContent = {/* TODO: Fix JSX expression */};
   caseStudie,
   s: [
     {/* TODO: Fix JSX expression */}
-    }]};
+    }]}'"'"'";
 
-export default january2026 NewContent;
+export default january2026 NewContent'"'"'"'";

@@ -3,4 +3,4 @@ import { CheckCircle, Star, Zap, Globe, Brain, Target, BarChart, MessageSquare, 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-export default AIContentGenerationPage;
+export default AIContentGenerationPage';

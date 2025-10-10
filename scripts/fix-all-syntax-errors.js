@@ -1,37 +1,37 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from 'fs';
 
 import path from 'path;
 
 import { fileURLToPath } from url;
 
-;
+';
 
-const __filename = fileURLToPath(import.meta.url);;
+const __filename = fileURLToPath(import.meta.url)';';
 
 // __dirname removed
 // console.log removed for production
-// Common syntax fixes;
+// Common syntax fixes';
 
-const fixes = [;;;
+const fixes = [';';';
 
-  // Fix missing commas in object arrays;
+  // Fix missing commas in object arrays';
 
   { pattern: /color: 'text-\w+-\d+'}[\s]*},/g, replacement: (match) => match.replace('}', ') },
-  // Fix missing opening parentheses in map functions;
+  // Fix missing opening parentheses in map functions';
 
   { pattern: /\.map\([^)]*\)\s*=>\s*\(}/g, replacement: (match) => match.replace('(}', '() },
-  // Fix stray backticks;
+  // Fix stray backticks';
 
   { pattern: /`\s*$/gm, replacement: ' },
-  // Fix missing closing parentheses;
+  // Fix missing closing parentheses';
 
-  { pattern: /\)\s*;[\s]*$/gm, replacement: '); },
-  // Fix template literal issues;
+  { pattern: /\)\s*';[\s]*$/gm, replacement: ')'; },
+  // Fix template literal issues';
 
   { pattern: /className=\{`([^`]+)`\}/g, replacement: 'className={`$1`} },
-  // Fix missing semicolons;
+  // Fix missing semicolons';
 
   { pattern: /}\s*$/gm, replacement: '}; },
   // Fix console statements;
@@ -52,14 +52,14 @@ let content = fs.readFileSync(filePath, utf8);;
 const newContent = content.replace(fix.pattern, fix.replacement);;
 
       if (newContent !== content) {
-        content = newContent;
+        content = newContent';
 
         modified = true}
 
-    });
+    })';
 
     if (modified) {
-      fs.writeFileSync(filePath, content);
+      fs.writeFileSync(filePath, content)';
 
       // console.log removed for production
 return true}
@@ -70,7 +70,7 @@ return false}
 
 }
 
-// Find all TypeScript/JavaScript files;
+// Find all TypeScript/JavaScript files';
 
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', .jsx]) {;
 
@@ -82,9 +82,9 @@ const items = fs.readdirSync(dir);;
 
     for (const item of items) {;
 
-const fullPath = path.join(dir, item);;
+const fullPath = path.join(dir, item)';';
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath)';';
 
       if (stat.isDirectory()) {
         if (!['node_modules', '.git', 'dist', 'build', '.next', 'backup-problematic].includes(item)) {
@@ -102,15 +102,15 @@ const fullPath = path.join(dir, item);;
 
 // Main fix process;
 
-const files = findFiles(./app);;
+const files = findFiles(./app);';
 
-let fixedCount = 0;;
+let fixedCount = 0';';
 
 // console.log removed for production
 files.forEach(file => {)
   if (fixFile(file)) {
     fixedCount++}
 
-});
+})';
 
 // console.log removed for production

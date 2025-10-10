@@ -1,8 +1,8 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import {
   Cloud,
@@ -26,11 +26,11 @@ import {
   Database,
   Server,
 
-} from lucide-react;
+} from lucide-react';
 
-;
+';
 
-const CloudInfrastructureManagerPage: React.FC = () => {const features = [;;;
+const CloudInfrastructureManagerPage: React.FC = () => {const features = [';';';
 
     {
       ico,
@@ -54,11 +54,11 @@ const CloudInfrastructureManagerPage: React.FC = () => {const features = [;;;
       description: Seamless integration with CI
     }
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'Centralized cloud infrastructure management,
     'Automated scaling and optimization,
@@ -68,7 +68,7 @@ const benefits = [;;
     'Easy deployment and configuration,
     'Multi-cloud support,
     Expert technical support
-  ];
+  ]';
 
   return (
 
@@ -124,4 +124,4 @@ const benefits = [;;
         </section>
       </div>
     </React.Fragment>)
-export default CloudInfrastructureManagerPage;
+export default CloudInfrastructureManagerPage'"'"'"'";

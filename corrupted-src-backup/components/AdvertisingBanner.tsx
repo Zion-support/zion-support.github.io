@@ -15,12 +15,12 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
   imageUrl,
   backgroundColor = '#3 b82 f6,
   textColor = '#ffffff}) => {
-  return (<div;
+  return (<div';
 
       className="advertising-banner
       style={{
         backgroundColor,
-        color: textColor;
+        color: textColor'"'"'";
 
         padding: '2rem,
         borderRadius: '0.5rem)
@@ -33,14 +33,14 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
       }}
 
     >
-);
+)"'"'"'";
 
 }
 
       {imageUrl && (
 
         <div className="banner-image>
-          <img;
+          <img'"'"'"'";
 
       {imageUrl && (</div>
         <div className="banner-image></div>
@@ -79,7 +79,7 @@ const,
       <div className="banner-content style={{ flex: 1 }}></div>
         <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem }}>{title}</h2>
         <p style={{ margin: '0 0 1.5rem 0', fontSize: '1rem, opacity: 0.9 }}>{description}</p>
-        <a;
+        <a'"'"'";
 
           href={ctaUrl}
 
@@ -87,7 +87,7 @@ const,
             display: 'inline-block,
             padding: '0.75 rem 1.5 rem,
             backgroundColor: 'rgba(255, 255, 255, 0.2),
-            color: textColor;
+            color: textColor'"'"'"'";
 
             textDecoration: 'none,
             borderRadius: '0.25rem,
@@ -137,8 +137,8 @@ const,
         </a>
       </div>
     </div>
-  )};
+  )}'"'"'";
 
-export default AdvertisingBanner;
+export default AdvertisingBanner'"'"'"'";
 
 "

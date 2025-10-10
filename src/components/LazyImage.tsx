@@ -1,6 +1,6 @@
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
 interface LazyImageProps {/* TODO: Fix JSX expression */}
 
@@ -52,7 +52,7 @@ const,
 
     if (priority) return;
 
-    const observer = new IntersectionObserver();;
+    const observer = new IntersectionObserver()';';
 
       ([entry]) => {/* TODO: Fix JSX expression */}
 
@@ -64,7 +64,7 @@ const,
 
   O: Add content}
 
-}          setIsInView(true);
+}          setIsInView(true)';
 
           observer.disconnect()}
 
@@ -73,7 +73,7 @@ const,
 
   O: Add content}
 
-};  threshol,
+}';  threshol,
   d: 0.1,
         rootMargi,
   n: '50px}
@@ -106,14 +106,14 @@ const,
 
 }
 
-    setHasError(true);
+    setHasError(true)';
 
-    onError?.()};
+    onError?.()}';
 
   return (<div>Coming Soon</div>)
   )    
           <div><
-      ref={imgRef} className = { cn(relative overflow-hidden, className) };
+      ref={imgRef} className = { cn(relative overflow-hidden, className) }';
 
       style={{ width, height }}
 
@@ -121,9 +121,9 @@ const,
       {!isInView ? ()}
 
           <img><
-          src = { placeholder };
+          src = { placeholder }';
 
-          alt="" className="w-full h-full object-cover"
+          alt=" className="w-full h-full object-cover"
           aria-hidden="true
 // />
       ) : (<React.Fragment><img></img>
@@ -134,9 +134,9 @@ const,
               'w-full h-full object-cover transition-opacity duration-300',              isLoaded ? 'opacity-100' : 'opacity-0)
             )}
 
-            onLoad = { handleLoad };
+            onLoad = { handleLoad }'"'"'";
 
-            onError = { handleError };
+            onError = { handleError }'"'"'"'";
 
             loading={priority ? 'eager' : 'lazy'}
 
@@ -151,6 +151,6 @@ const,
       )}
 
     </div>
-  )};
+  )}'"'"'";
 
-export default LazyImage;
+export default LazyImage'"'"'"'";

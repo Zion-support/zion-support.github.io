@@ -4,4 +4,4 @@ import { TrendingUp, Target, Users, BarChart, CheckCircle, Phone, Mail } from 'l
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-export default AISalesAutomationPage;
+export default AISalesAutomationPage';

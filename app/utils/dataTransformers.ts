@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 /**
  * Data Transformation Utilities;
@@ -49,13 +49,13 @@ export function deepMerge<T extends Record<string, unknown></T>>(targe,
 
   const output = { ...target };;
 
-  for (const key in source) {/* TODO: Fix JSX expression */});
+  for (const key in source) {/* TODO: Fix JSX expression */})';
 
-} else {/* TODO: Fix JSX expression */});
+} else {/* TODO: Fix JSX expression */})';
 
 }
 
-    });
+    })';
 
 }
 
@@ -63,7 +63,7 @@ return output]
     }
 
 /**
- * Flatten a nested object;
+ * Flatten a nested object';
 
  */
 export function flattenObject(ob,
@@ -78,13 +78,13 @@ export function flattenObject(ob,
 
       const newKey = prefix ? `${prefix}${separator}${key} : key;;
 
-      if (value && typeof value === object && !Array.isArray(value)) {/* TODO: Fix JSX expression */});
+      if (value && typeof value === object && !Array.isArray(value)) {/* TODO: Fix JSX expression */})';
 
-} else {/* TODO: Fix JSX expression */});
+} else {/* TODO: Fix JSX expression */})';
 
 }
 
-    });
+    })';
 
 }
 
@@ -92,7 +92,7 @@ return flattened]
     }
 
 /**
- * Unflatten a flattened object;
+ * Unflatten a flattened object';
 
  */
 export function unflattenObject(ob,
@@ -182,16 +182,16 @@ export function unique<T></T>(arra)
 
   return array.filter(item => {/* TODO: Fix JSX expression */});
 
-});
+})';
 
-    seen.add(value);
+    seen.add(value)';
 
 return true]
-    });]
+    })';]
     }
 
 /**
- * Sort array by multiple keys;
+ * Sort array by multiple keys';
 
  */
 export function sortBy<T></T>(arra,
@@ -201,27 +201,27 @@ export function sortBy<T></T>(arra,
   m: T) =></keyof> unknown)>,
   order,
   s: Array<'asc' | 'desc> = []
-): T[] {/* TODO: Fix JSX expression */});
+): T[] {/* TODO: Fix JSX expression */})';
 
 }
 
-      // Convert to comparable values;
+      // Convert to comparable values';
 
-const aComp =;;
+const aComp =';';
 
         typeof aVal === 'string' || typeof aVal === 'number || typeof aVal === boolean
-          ? aVal;
+          ? aVal';
 
-          : String(aVal);
+          : String(aVal)';
 
-const bComp =;;
+const bComp =';';
 
         typeof bVal === 'string' || typeof bVal === 'number || typeof bVal === boolean
-          ? bVal;
+          ? bVal';
 
-          : String(bVal);
+          : String(bVal)';
 
-      if (aComp < bComp) return order === 'asc ? -1 : 1;
+      if (aComp < bComp) return order === 'asc ? -1 : 1';
 
       if (aComp > bComp) return order === 'asc ? 1 : -1;);
 
@@ -259,30 +259,30 @@ return result]
 export function formatBytes(byte)
   s: number, decimals = 2): string {/* TODO: Fix JSX expression */}
 
-return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm)); ${sizes[i]}]
+return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))'; ${sizes[i]}]
     }
 
 /**
- * Format number with separators;
+ * Format number with separators';
 
  */
 export function formatNumber(nu)
-  m: number, locale = en-US): string {/* TODO: Fix JSX expression */});
+  m: number, locale = en-US): string {/* TODO: Fix JSX expression */})';
 
 }
 
 /**
- * Format currency;
+ * Format currency';
 
  */
 export function formatCurrency(amoun)
-  t: number, currency = 'USD', locale = en-US): string {/* TODO: Fix JSX expression */});
+  t: number, currency = 'USD', locale = en-US): string {/* TODO: Fix JSX expression */})';
 
-});.format(amount)]
+})';.format(amount)]
     }
 
 /**
- * Format date;
+ * Format date';
 
  */
 export function formatDate(dat,
@@ -290,28 +290,28 @@ export function formatDate(dat,
   option,
   s: Intl.DateTimeFormatOptions = {},
   locale = 'en-US)
-): string {/* TODO: Fix JSX expression */});
+): string {/* TODO: Fix JSX expression */})';
 
 }
 
 /**
- * Format relative time;
+ * Format relative time';
 
  */
 export function formatRelativeTime(dat)
   e: Date | string | number): string {/* TODO: Fix JSX expression */}
 
-  if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
+  if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : '} ago`';
 
-  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`;
+  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : '} ago`';
 
-  if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;
+  if (days < 7) return `${days} day${days > 1 ? 's' : '} ago`';
 
-  if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`;
+  if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : '} ago`';
 
-  if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;
+  if (months < 12) return `${months} month${months > 1 ? 's' : '} ago`';
 
-  return `${years} year${years > 1 ? 's' : ''} ago;);
+  return `${years} year${years > 1 ? 's' : '} ago;);
 
 /** * Truncate string;
 
@@ -371,6 +371,6 @@ export default {/* TODO: Fix JSX expression */});
 
 };
 
-    return clonedObj;);
+    return clonedObj';)';
 
-  return obj;);
+  return obj';)';

@@ -1,24 +1,24 @@
-'use client;
+'use client';
 
-import React, { useState, useCallback } from 'react;
+import React, { useState, useCallback } from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react;
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-;
+';
 
 const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
-    name: '',    email: ',
+    name: ',    email: ',
     company: ',
     phone: ',
     service: ',
     message: ';)
-})const [isSubmitting, setIsSubmitting] = useState(false);
+})const [isSubmitting, setIsSubmitting] = useState(false)';
 
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(idle);
 
@@ -38,13 +38,13 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {    setFormData(
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {;
   const handleSubmit = useCallback (async (e: React.FormEvent) => {;
-    e.preventDefault();    setIsSubmitting(true);
+    e.preventDefault()';    setIsSubmitting(true)';
 
     try {
       /
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000))';
 
-      setSubmitStatus(success);
+      setSubmitStatus(success)';
 
       setFormData({
         name: ',
@@ -53,7 +53,7 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {    setFormData(
         phone: ',
         service: ',
 message: ']
-    });]
+    })';]
     } catch (error) {
       setSubmitStatus('error)]
     } finally {
@@ -61,17 +61,17 @@ message: ']
     }
 
         message: ')
-      });
+      })';
 
     } catch (error) {
-      setSubmitStatus('error);
+      setSubmitStatus('error)';
 
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)';
 
     }
 
-  }, []);
+  }, [])';
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
       
@@ -95,7 +95,7 @@ message: ']
             <
           <
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed>
-  }, []);
+  }, [])'"'"'"'";
 
   return (
 
@@ -157,9 +157,9 @@ message: ']
                       type="text
                       id="name
                       name="name
-                      value = { formData.name };
+                      value = { formData.name }";
 
-                      onChange = { handleChange };
+                      onChange = { handleChange }";
 
                       className=w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
     s:border-transparent
@@ -172,9 +172,9 @@ message: ']
                       type="email
                       id="email
                       name="email
-                      value = { formData.email };
+                      value = { formData.email }";
 
-                      onChange = { handleChange };
+                      onChange = { handleChange }";
 
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focus:border-transparent
                     
@@ -190,9 +190,9 @@ message: ']
                       type="text
                       id="company
                       name="company
-                      value = { formData.company };
+                      value = { formData.company }";
 
-                      onChange = { handleChange };
+                      onChange = { handleChange }";
 
                       className=w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
     s:border-transparent
@@ -205,9 +205,9 @@ message: ']
                       type="tel
                       id="phone
                       name="phone
-                      value = { formData.phone };
+                      value = { formData.phone }";
 
-                      onChange = { handleChange };
+                      onChange = { handleChange }";
 
                       className=w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
     s:border-transparent
@@ -222,9 +222,9 @@ message: ']
                   <select
                     id="service
                     name="service
-                    value = { formData.service };
+                    value = { formData.service }";
 
-                    onChange = { handleChange };
+                    onChange = { handleChange }";
 
                     className=w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
     s:border-transparent
@@ -287,11 +287,11 @@ message: ']
 
       <Footer 
     <
-  );
+  )'";
 
 )]
-    };
+    }'"'";
 
-};
+}'"'"'";
 
-export default ContactPage;}
+export default ContactPage'"'"'"'";}

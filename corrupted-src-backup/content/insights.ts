@@ -30,7 +30,7 @@ export const insights: Insight[] = [,
       'Optimize RAG systems with quality budgets, freshness windows, and tiered caching strategies for cost-effective performance.',
     category: 'RAG Engineering',
     date: '2025-10-03',
-    readMinutes: 10;
+    readMinutes: 10';
 export interface Insight {/* TODO: Fix JSX expression */}
 }
 
@@ -41,4 +41,4 @@ export const,
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
+  }]';

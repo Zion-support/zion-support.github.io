@@ -19,11 +19,11 @@ const handleKeyDown = (event: KeyboardEvent) => {;
 
     };
 
-;
+';
 
-    // Add focus indicators;
+    // Add focus indicators';
 
-const addFocusIndicators = () => {;;
+const addFocusIndicators = () => {';';
 
 const style = document.createElement('style);;
 
@@ -37,9 +37,9 @@ const style = document.createElement('style);;
 
     // Add ARIA labels to interactive elements;
 
-const enhanceAccessibility = () => {;;;
+const enhanceAccessibility = () => {;';';
 
-const buttons = document.querySelectorAll(button:not([aria-label]));;
+const buttons = document.querySelectorAll(button:not([aria-label]))';';
 
       buttons.forEach(button => {
         if (!button.getAttribute('aria-label) && button.textContent) {
@@ -49,39 +49,39 @@ const buttons = document.querySelectorAll(button:not([aria-label]));;
         if (!button.getAttribute('role)) {
           button.setAttribute('role', 'button)}
 
-;
+';
 
-const links = document.querySelectorAll(a:not([aria-label]));;
+const links = document.querySelectorAll(a:not([aria-label]))';';
 
       links.forEach(link => {
         if (!link.getAttribute('aria-label) && link.textContent) {
           link.setAttribute('aria-label, link.textContent.trim())}
 
         // Add external link indicators
-        if (link.getAttribute('href')?.startsWith('http') && !link.getAttribute('href')?.includes('ziontechgroup.com')) {          link.setAttribute('aria-label', `${link.textContent?.trim()} (opens in new tab));
+        if (link.getAttribute('href')?.startsWith('http') && !link.getAttribute('href')?.includes('ziontechgroup.com')) {          link.setAttribute('aria-label', `${link.textContent?.trim()} (opens in new tab))';
 
-          link.setAttribute('target', _blank);
+          link.setAttribute('target', _blank)';
 
           link.setAttribute('rel', 'noopener noreferrer)}
 
-      });
+      })';
 
-      // Add ARIA labels to images;
+      // Add ARIA labels to images';
 
-const images = document.querySelectorAll('img:not([alt]));;
+const images = document.querySelectorAll('img:not([alt]))';';
 
       images.forEach(img => {
         if (!img.getAttribute('alt')) {          img.setAttribute('alt', ')}
 
       });
 
-      // Add ARIA labels to form inputs;
+      // Add ARIA labels to form inputs';
 
-const inputs = document.querySelectorAll(input:not([aria-label]));;
+const inputs = document.querySelectorAll(input:not([aria-label]))';';
 
-      inputs.forEach(input => {;
+      inputs.forEach(input => {';
 
-const label = document.querySelector(`label[for="${input.getAttribute('id')}"]);;
+const label = document.querySelector(`label[for="${input.getAttribute('id')}"])';';
 
         if (label && !input.getAttribute('aria-label')) {          input.setAttribute('aria-label', label.textContent?.trim() || ')}
 
@@ -103,55 +103,55 @@ const skipLink = document.createElement(a);;
 
     enhanceAccessibility();
 
-    document.addEventListener(keydown, handleKeyDown);
+    document.addEventListener(keydown, handleKeyDown)';
 
-    document.addEventListener(mousedown, handleMouseDown);
+    document.addEventListener(mousedown, handleMouseDown)';
 
     return () => {
-      document.removeEventListener(keydown, handleKeyDown);
+      document.removeEventListener(keydown, handleKeyDown)';
 
-  return <React.Fragment>{children}</React.Fragment>;
+  return <React.Fragment>{children}</React.Fragment>';
 
-import React, { useEffect, useState } from 'react;
+import React, { useEffect, useState } from 'react';
 
 interface AccessibilitySettings {
-  highContrast: boolean;
+  highContrast: boolean';
 
-  reducedMotion: boolean;
+  reducedMotion: boolean';
 
-  fontSize: 'small' | 'medium' | 'large;
+  fontSize: 'small' | 'medium' | 'large';
 
   focusVisible: boolean}
 
-;
+';
 
 const AccessibilityEnhancer: React.FC = () => {
-return (;
+return (';
 
 const [settings, setSettings] = useState<AccessibilitySettings>
-);
+)';
 
 }({
     highContrast: false,
     reducedMotion: false,
     fontSize: 'medium,)
-    focusVisible: false});
+    focusVisible: false})';
 
   useEffect(() => {
-    // Check for user preferences;
+    // Check for user preferences';
 
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)).matches;;
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)).matches';';
 
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)).matches;;
 
         setSettings(prev => ({
       ...prev,
       reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast}));
+      highContrast: prefersHighContrast}))';
 
-    // Apply accessibility settings;
+    // Apply accessibility settings';
 
-const root = document.documentElement;;
+const root = document.documentElement';';
 
         if (settings.highContrast) {
       root.classList.add('high-contrast)} else {
@@ -162,25 +162,25 @@ const root = document.documentElement;;
       root.classList.remove('reduced-motion)}
 
     /
-    root.classList.remove('font-small', 'font-medium', font-large);
+    root.classList.remove('font-small', 'font-medium', font-large)';
 
-    root.classList.add(`font-${settings.fontSize});
+    root.classList.add(`font-${settings.fontSize})';
 
     /
     if (settings.focusVisible) {
       root.classList.add('focus-visible)} else {
       root.classList.remove('focus-visible)}
 
-    // Add keyboard navigation support;
+    // Add keyboard navigation support'";
 
-const handleKeyDown = (e: KeyboardEvent) => {;;
+const handleKeyDown = (e: KeyboardEvent) => {'"'";'"'"'";
 
       // Skip to main content
-      if (e.key === 'Tab && e.shiftKey && e.target === document.body) {;
+      if (e.key === 'Tab && e.shiftKey && e.target === document.body) {'"'"'"'";
 
-const mainContent = document.querySelector('main, [role="main"]);;
+const mainContent = document.querySelector('main, [role="main"])';';
 
-        if (mainContent) {          (mainContent as HTMLElement).focus();
+        if (mainContent) {          (mainContent as HTMLElement).focus()';
 
           e.preventDefault()}
 
@@ -195,29 +195,29 @@ const activeElement = document.activeElement as HTMLElement;;
 
       }
 
-    };
+    }';
 
-    document.addEventListener(keydown, handleKeyDown);
+    document.addEventListener(keydown, handleKeyDown)';
 
     return () => {
-      document.removeEventListener(keydown, handleKeyDown)}}, [settings]);
+      document.removeEventListener(keydown, handleKeyDown)}}, [settings])';
 
   // Add ARIA live region for announcements
-  useEffect(() => {;
+  useEffect(() => {';
 
-const liveRegion = document.createElement('div);;
+const liveRegion = document.createElement('div)';';
 
-    liveRegion.setAttribute('aria-live', 'polite);
+    liveRegion.setAttribute('aria-live', 'polite)';
 
-    liveRegion.setAttribute('aria-atomic', 'true);
+    liveRegion.setAttribute('aria-atomic', 'true)';
 
-    liveRegion.className = 'sr-only;
+    liveRegion.className = 'sr-only';
 
-    liveRegion.id = 'live-region;
+    liveRegion.id = 'live-region';
 
-    document.body.appendChild(liveRegion);
+    document.body.appendChild(liveRegion)';
 
-    return () => {;
+    return () => {';
 
 const existingLiveRegion = document.getElementById('live-region);;
 
@@ -240,11 +240,11 @@ const pageTitle = document.title;;
 
     };
 
-    // Announce after a short delay to ensure content is loaded;
+    // Announce after a short delay to ensure content is loaded'";
 
-const timeoutId = setTimeout(announcePageChange, 1000);;
+const timeoutId = setTimeout(announcePageChange, 1000)'"'";'"'"'";
 
-    return () => clearTimeout(timeoutId)}, []);
+    return () => clearTimeout(timeoutId)}, [])'"'"'"'";
 
   /
   if (process.env.NODE_ENV === 'production) {
@@ -256,7 +256,7 @@ const timeoutId = setTimeout(announcePageChange, 1000);;
         <label className="flex items-center space-x-2>
           <input
             type="checkbox
-            checked = { settings.highContrast };)
+            checked = { settings.highContrast }";)
             onChange={(e) => setSettings(prev => ({ ...prev, highContrast: e.target.checked }))}
 
             className="rounded
@@ -266,7 +266,7 @@ const timeoutId = setTimeout(announcePageChange, 1000);;
         <label className="flex items-center space-x-2>
           <input
             type="checkbox
-            checked = { settings.reducedMotion };
+            checked = { settings.reducedMotion }";
 
             onChange={(e) => setSettings(prev => ({ ...prev, reducedMotion: e.target.checked }))}
 
@@ -277,7 +277,7 @@ const timeoutId = setTimeout(announcePageChange, 1000);;
         <div>
           <label className="block mb-1>Font Size:<
           <select
-            value = { settings.fontSize };
+            value = { settings.fontSize }"'";
 
             onChange={(e) => setSettings(prev => ({ ...prev, fontSize: e.target.value as any }))}
 
@@ -291,7 +291,7 @@ const timeoutId = setTimeout(announcePageChange, 1000);;
         <label className="flex items-center space-x-2>
           <input
             type="checkbox
-            checked = { settings.focusVisible };
+            checked = { settings.focusVisible }"'"'";
 
             onChange={(e) => setSettings(prev => ({ ...prev, focusVisible: e.target.checked }))}
 
@@ -301,6 +301,6 @@ const timeoutId = setTimeout(announcePageChange, 1000);;
         </label>
       </div>
     </div>
-  )};
+  )}'"'"'";
 
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer'"'"'"'";

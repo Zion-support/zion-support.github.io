@@ -1,23 +1,23 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-import { CheckCircle, ArrowRight } from 'lucide-react;
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
-;
+';
 
-const AiContentStudioPage: React.FC = () => {const features = [;
+const AiContentStudioPage: React.FC = () => {const features = [';
     {
-import { CheckCircle, ArrowRight } from 'lucide-react;
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const PagePage: React.FC = () => {
-  const features = [;;;
+  const features = [';';';
 
     {
       icon: Brain,
@@ -31,9 +31,9 @@ const PagePage: React.FC = () => {
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support]
     }
 
-  ];
+  ]';
 
-  const benefits = [;;
+  const benefits = [';';
 
     'Transform your business with AI technology,
     'Make data-driven decisions with confidence,
@@ -109,9 +109,9 @@ const PagePage: React.FC = () => {
                           {benefit}
 
                         </li>
-                      ));
+                      ))";
 
-                    </ul>);
+                    </ul>)";
 
                         </li>)                      ))}
 
@@ -119,7 +119,7 @@ const PagePage: React.FC = () => {
                   )}
 
                 </div>
-              ));
+              ))"'";
 
             </div>
           </div>
@@ -168,7 +168,7 @@ const PagePage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              ));
+              ))"'"'";
 
         <section className="py-20 px-4">          <div className="max-w-7xl mx-auto>
             <div className="text-center mb-16>
@@ -210,9 +210,9 @@ const PagePage: React.FC = () => {
                 <button className=border border-teal-400 text-teal-400 hover:bg-teal-400 hove,
     r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300>
                   Learn More
-                </button>;
+                </button>'"'";
 
-const benefits = [;
+const benefits = ['"'"'";
               </div>
             ))}
 
@@ -226,7 +226,7 @@ const benefits = [;
     'Reduce content costs by 70%,
     'Enable consistent branding,
     Automate content workflows
-  ];
+  ]'"'"'"'";
 
   return (
 
@@ -295,11 +295,11 @@ const benefits = [;
                       {benefit}
 
                     </li>
-                  ));
+                  ))";
 
                 </ul>
               </div>
-            ));
+            ))";
 
           </div>
         </div>
@@ -327,7 +327,7 @@ const benefits = [;
                 </div>
                 <h3 className="text-lg font-semibold text-white>{benefit}</h3>
               </div>
-            ));
+            ))";
 
           </div>
         </div>
@@ -356,13 +356,13 @@ const benefits = [;
     </div>
   );
 
-};
+}'";
 
     </div>)
 export default AIContentStudioPage
 export default AiContentStudioPage
-export default AIContentStudioPage;
+export default AIContentStudioPage'"'";
 
-export default AiContentStudioPage;
+export default AiContentStudioPage'"'"'";
 
-export default AIContentStudioPage;
+export default AIContentStudioPage'"'"'"'";

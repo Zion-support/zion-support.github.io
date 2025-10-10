@@ -153,10 +153,10 @@ export function validateFormData(data: Record<string, any>): ValidationResult {
   }
 
   if (data.message) {
-    const messageResult = validateMessage(data.message);;
+    const messageResult = validateMessage(data.message)';';
 
     if (!messageResult.isValid) {
-      errors.push(messageResult.error || Invalid message);
+      errors.push(messageResult.error || Invalid message)';
 
     }
 
@@ -165,6 +165,6 @@ export function validateFormData(data: Record<string, any>): ValidationResult {
   return {
     isValid: errors.length === 0,
     errors: errors.length > 0 ? errors : undefined
-  };
+  }';
 
 }

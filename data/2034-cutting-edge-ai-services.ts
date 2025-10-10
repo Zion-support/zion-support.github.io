@@ -81,7 +81,7 @@ export const,
     real_service: true},
     id: ai - product - spec - writer,
     name: AI Product Spec Writer,
-    description: unknown;
+    description: unknown';
 
     integration,
   s: ['Twilio', Slack],
@@ -114,14 +114,14 @@ export const,
     integrations: ['Jira', Linear],
     use_cases: ['Faster planning', Better alignment],
     link: https://ziontechgroup.com / services / ai - product - spec - writer,
-    real_service: true;
+    real_service: true';
 
     use_cases: ['Faster planning', Better alignment],
     link: https://ziontechgroup.com / services / ai - product - spec - writer,
     real_service: true},
     id: ai - creative - studio,
     name: AI Creative Studio,
-    description: unknown;
+    description: unknown';
 
     integration,
   s: ['Jira', Linear],
@@ -161,11 +161,21 @@ export const,
     integrations: ['Canva', Figma],
     use_cases: ['Marketing velocity', Cost savings],
     link: https://ziontechgroup.com / services / ai - creative - studio,
-    real_service: true}];	id: string;
+    real_service: true}]';	id: string';
 
-	id: string, name: string;
+	id: string, name: string';
 
-	description: string;
+	description: string';
+
+    useCases: ['Marketing velocity', Cost savings],
+    link: https://ziontechgroup.com/services/ai-creative-studio,
+    realService: true};
+
+]';	id: string';
+
+	id: string, name: string';
+
+	description: string';
 
     useCases: ['Marketing velocity', Cost savings],
     link: https://ziontechgroup.com/services/ai-creative-studio,
@@ -173,21 +183,11 @@ export const,
 
 ];	id: string;
 
-	id: string, name: string;
+]';	id: string';
 
-	description: string;
+	id: string, name: string';
 
-    useCases: ['Marketing velocity', Cost savings],
-    link: https://ziontechgroup.com/services/ai-creative-studio,
-    realService: true};
-
-];	id: string;
-
-];	id: string;
-
-	id: string, name: string;
-
-	description: string;
+	description: string';
 
 	category: | AI Consciousness
     integration,
@@ -198,7 +198,7 @@ export const,
   k: http,
   s://ziontechgroup.com / services / ai - creative - studio,
     real_servic,
-  e: true}];	i,
+  e: true}]';	i,
   d: string,
 	i,
   d: string, nam,
@@ -211,9 +211,9 @@ export const,
   k: http,
   s://ziontechgroup.com/services/ai-creative-studio,
     realServic,
-  e: true};
+  e: true}';
 
-];	i,
+]';	i,
   d: string,
 	i,
   d: string, nam,
@@ -1025,16 +1025,16 @@ export const,
   s: [CanvaFigma];
 
 		useCase,
-  s: [Marketing velocityCost savings];
+  s: [Marketing velocityCost savings]';
 
 		lin,
   k: http,
-  s://ziontechgroup.com/services/ai-creative-studio;
+  s://ziontechgroup.com/services/ai-creative-studio';
 
 		realServic,
   e: true}
 
-];
+]';
 
 export type CuttingEdgeAIService =
   i,
@@ -1042,7 +1042,7 @@ export type CuttingEdgeAIService =
   nam,
   e: string,
   descriptio,
-  n: string;
+  n: string';
 
   categor,
   y: unknown,
@@ -1394,7 +1394,7 @@ export const,
   s: [Brand kit_image & video gen_review & approvals_rights management];
 
   integration,
-  s: [CanvaFigma];
+  s: [CanvaFigma]';
 
   use_case,
   s: [Marketing velocity_cost savings],
@@ -1404,20 +1404,20 @@ export const,
   real_servic,
   e: true}
 
-];
+]';
 
-;
+';
 
 i,
   d: string, nam,
   e: string, descriptio,
-  n: string; categor,
-  y: | 'AI Consciousness'' | 'AI Emotional Intelligence'' | 'AI Creativity'' | 'AI Psychology'' | 'AI Business Management'' | 'AI Healthcare'' | 'AI Neural Interfaces'' | AI Quantum Computing pricin,
+  n: string'; categor,
+  y: | 'AI Consciousness' | 'AI Emotional Intelligence' | 'AI Creativity' | 'AI Psychology' | 'AI Business Management' | 'AI Healthcare' | 'AI Neural Interfaces' | AI Quantum Computing pricin,
   g: {/* TODO: Fix JSX expression */}
 
   r: string} professional?: string} enterprise?: string } feature,
-  s: string[]; integrations?: string[]; useCases?: string[]; lin,
-  k: string; rating?: number; launchDate?: string; realService?: boolean} export const,
+  s: string[]; integrations?: string[]; useCases?: string[]'; lin,
+  k: string'; rating?: number'; launchDate?: string'; realService?: boolean} export const,
   cuttingEdgeAIServices: CuttingEdgeAIService[] = [  i,
   d: 'ai - emotional - support - agent, nam,
   e: AI Emotional Support Agent, descriptio,
@@ -1461,7 +1461,7 @@ i,
   s: ['Marketing velocity', 'Cost savings], lin,
   k: http,
   s://ziontechgroup.com / services / ai - creative - studio, real_servic,
-  e: true}]; i,
+  e: true}]'; i,
   d: string, i,
   d: string, nam,
   e: string, descriptio,
@@ -1469,7 +1469,7 @@ i,
   s: ['Marketing velocity', 'Cost savings], lin,
   k: http,
   s://ziontechgroup.com/services/ai-creative-studio, realServic,
-  e: true}; ]; i,
+  e: true}'; ]'; i,
   d: string, i,
   d: string, nam,
   e: string, descriptio,
@@ -1477,18 +1477,18 @@ i,
   s: ['Marketing velocity', 'Cost savings], lin,
   k: http,
   s://ziontechgroup.com/services/ai-creative-studio, realServic,
-  e: true}; ]; i,
-  d: string; ]; i,
+  e: true}'; ]'; i,
+  d: string'; ]'; i,
   d: string, i,
   d: string, nam,
   e: string, descriptio,
   n: string, categor,
-  y: ' | 'AI Consciousness'' | 'AI Emotional Intelligence'' | 'AI Creativity'' | 'AI Psychology'' | 'AI Business Management'' | 'AI Healthcare'' | 'AI Neural Interfaces'' | AI Quantum Computing pricin,
+  y: ' | 'AI Consciousness' | 'AI Emotional Intelligence' | 'AI Creativity' | 'AI Psychology' | 'AI Business Management' | 'AI Healthcare' | 'AI Neural Interfaces' | AI Quantum Computing pricin,
   g: {/* TODO: Fix JSX expression */}
 
   r: string, professional?: string} enterprise?: string } feature,
-  s: string[]; integrations?: string[]; useCases?: string[]; lin,
-  k: string; rating?: number, launchDate?: string realService?: boolean } export const,
+  s: string[]'; integrations?: string[]'; useCases?: string[]'; lin,
+  k: string'; rating?: number, launchDate?: string realService?: boolean } export const,
   cuttingEdgeAIServices: CuttingEdgeAIService[] = [  i,
   d: 'ai-emotional-support-agent nam,
   e: 'AI Emotional Support Agent, descriptio,
@@ -1497,8 +1497,8 @@ i,
   g: {/* TODO: Fix JSX expression */}
 
   r: '$99/mo } feature,
-  s: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes]; integration,
-  s: ['TwilioSlack]; useCase,
+  s: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes]'; integration,
+  s: ['TwilioSlack]'; useCase,
   s: ['Employee wellness24/7 support],  lin,
   k: http,
   s://ziontechgroup && ziontechgroup.com/services/ai-emotional-support-agent, realServic,
@@ -1510,8 +1510,8 @@ i,
   g: {/* TODO: Fix JSX expression */}
 
   r: '$79/mo } feature,
-  s: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment]; integration,
-  s: ['JiraLinear]; useCase,
+  s: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment]'; integration,
+  s: ['JiraLinear]'; useCase,
   s: ['Faster planningBetter alignment],  lin,
   k: http,
   s://ziontechgroup && ziontechgroup.com/services/ai-product-spec-writer, realServic,
@@ -1523,20 +1523,20 @@ i,
   g: {/* TODO: Fix JSX expression */}
 
   r: '$149/mo } feature,
-  s: ['Brand kitImage & video genReview & approvalsRights management]; integration,
-  s: ['CanvaFigma]; useCase,
+  s: ['Brand kitImage & video genReview & approvalsRights management]'; integration,
+  s: ['CanvaFigma]'; useCase,
   s: ['Marketing velocityCost savings],  lin,
   k: http,
   s://ziontechgroup && ziontechgroup.com/services/ai-creative-studio, realServic,
-  e: true } ]; nam,
-  e: string; descriptio,
-  n: string; categor,
-  y:,' | 'AI Consciousness'' | 'AI Emotional Intelligence'' | 'AI Creativity'' | 'AI Psychology'' | 'AI Business Management'' | 'AI Healthcare'' | 'AI Neural Interfaces'' | AI Quantum Computing, pricin,
+  e: true } ]'; nam,
+  e: string'; descriptio,
+  n: string'; categor,
+  y:,' | 'AI Consciousness' | 'AI Emotional Intelligence' | 'AI Creativity' | 'AI Psychology' | 'AI Business Management' | 'AI Healthcare' | 'AI Neural Interfaces' | AI Quantum Computing, pricin,
   g: {/* TODO: Fix JSX expression */}
 
   r: string, professional?: string} enterprise?: string } feature,
-  s: string[]; integrations?: string[]; use_cases?: string[]; lin,
-  k: string; rating?: number, launch_date?: string, real_service?: boolean} ; export const,
+  s: string[]; integrations?: string[]'; use_cases?: string[]'; lin,
+  k: string'; rating?: number, launch_date?: string, real_service?: boolean} '; export const,
   cuttingEdgeAIServices: CuttingEdgeAIService[] = [,  i,
   d: 'ai - emotional - support - agent nam,
   e: 'AI Emotional Support Agent, descriptio,
@@ -1545,8 +1545,8 @@ i,
   g: {/* TODO: Fix JSX expression */}
 
   r: '$99 / mo } feature,
-  s: ['CBT - guided prompts_mood tracking_crisis escalationHIPAA - friendly modes]; integration,
-  s: ['TwilioSlack]; use_case,
+  s: ['CBT - guided prompts_mood tracking_crisis escalationHIPAA - friendly modes]'; integration,
+  s: ['TwilioSlack]'; use_case,
   s: ['Employee wellness24 / 7 support], lin,
   k: http,
   s://ziontechgroup.com / services / ai - emotional - support - agent, real_servic,
@@ -1558,8 +1558,8 @@ i,
   g: {/* TODO: Fix JSX expression */}
 
   r: '$79 / mo } feature,
-  s: ['PRD templates_story generation_acceptance criteria_analytics alignment]; integration,
-  s: ['JiraLinear]; use_case,
+  s: ['PRD templates_story generation_acceptance criteria_analytics alignment]'; integration,
+  s: ['JiraLinear]'; use_case,
   s: ['Faster planning_better alignment], lin,
   k: http,
   s://ziontechgroup.com / services / ai - product - spec - writer, real_servic,
@@ -1571,113 +1571,113 @@ i,
   g: {/* TODO: Fix JSX expression */}
 
   r: '$149 / mo } feature,
-  s: ['Brand kit_image & video gen_review & approvals_rights management]; integration,
-  s: ['CanvaFigma]; use_case,
+  s: ['Brand kit_image & video gen_review & approvals_rights management]'; integration,
+  s: ['CanvaFigma]'; use_case,
   s: ['Marketing velocity_cost savings], lin,
   k: http,
   s://ziontechgroup.com / services / ai - creative - studio, real_servic,
-  e: true} export type CuttingEdgeAIService = {} ]; export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
+  e: true} export type CuttingEdgeAIService = {} ]'; export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
 
-  y:  ,' | 'AI Consciousness'' | 'AI Emotional Intelligence'' | 'AI Creativity'' | 'AI Psychology'' | 'AI Business Management'' | 'AI Healthcare'' | 'AI Neural Interfaces'' | AI Quantum Computing} pricin,
+  y:  ,' | 'AI Consciousness' | 'AI Emotional Intelligence' | 'AI Creativity' | 'AI Psychology' | 'AI Business Management' | 'AI Healthcare' | 'AI Neural Interfaces' | AI Quantum Computing} pricin,
   g: {/* TODO: Fix JSX expression */}
 
   r: string, professional?: string} enterprise?: string }; feature,
   s: string[]; integrations?: string[]; useCases?: string[]; lin,
-  k: string; rating?: number; launchDate?: string; realService?: boolean}; export const,
-  cuttingEdgeAIServices: CuttingEdgeAIService[] = [; {/* TODO: Fix JSX expression */}
+  k: string; rating?: number'; launchDate?: string'; realService?: boolean}'; export const,
+  cuttingEdgeAIServices: CuttingEdgeAIService[] = ['; {/* TODO: Fix JSX expression */}
 
   n: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.} categor,
-  y: 'AI Emotional Intelligence}; pricin,
+  y: 'AI Emotional Intelligence}'; pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$99/mo }; feature,
-  s: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes]; integration,
-  s: ['TwilioSlack]; useCase,
-  s: ['Employee wellness24/7 support]; lin,
+  r: '$99/mo }'; feature,
+  s: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes]'; integration,
+  s: ['TwilioSlack]'; useCase,
+  s: ['Employee wellness24/7 support]'; lin,
   k: http,
-  s://ziontechgroup.com/services/ai-emotional-support-agent; realServic,
-  e: true}; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/services/ai-emotional-support-agent'; realServic,
+  e: true}'; {/* TODO: Fix JSX expression */}
 
   n: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.} categor,
-  y: 'AI Business Management}; pricin,
+  y: 'AI Business Management}'; pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$79/mo }; feature,
-  s: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment]; integration,
-  s: ['JiraLinear]; useCase,
-  s: ['Faster planningBetter alignment]; lin,
+  r: '$79/mo }'; feature,
+  s: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment]'; integration,
+  s: ['JiraLinear]'; useCase,
+  s: ['Faster planningBetter alignment]'; lin,
   k: http,
-  s://ziontechgroup.com/services/ai-product-spec-writer; realServic,
-  e: true}; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/services/ai-product-spec-writer'; realServic,
+  e: true}'; {/* TODO: Fix JSX expression */}
 
   n: 'Generate brand-consistent images and short-form videos with approvals and rights management.} categor,
-  y: 'AI Creativity}; pricin,
+  y: 'AI Creativity}'; pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$149/mo }; feature,
-  s: ['Brand kitImage & video genReview & approvalsRights management]; integration,
-  s: ['CanvaFigma]; useCase,
-  s: ['Marketing velocityCost savings]; lin,
+  r: '$149/mo }'; feature,
+  s: ['Brand kitImage & video genReview & approvalsRights management]'; integration,
+  s: ['CanvaFigma]'; useCase,
+  s: ['Marketing velocityCost savings]'; lin,
   k: http,
-  s://ziontechgroup.com/services/ai-creative-studio; realServic,
-  e: true} ]; export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/services/ai-creative-studio'; realServic,
+  e: true} ]'; export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
 
-  y:  ,' | 'AI Consciousness'' | 'AI Emotional Intelligence'' | 'AI Creativity'' | 'AI Psychology'' | 'AI Business Management'' | 'AI Healthcare'' | 'AI Neural Interfaces'' | AI Quantum Computing} pricin,
+  y:  ,' | 'AI Consciousness' | 'AI Emotional Intelligence' | 'AI Creativity' | 'AI Psychology' | 'AI Business Management' | 'AI Healthcare' | 'AI Neural Interfaces' | AI Quantum Computing} pricin,
   g: {/* TODO: Fix JSX expression */}
 
   r: string, professional?: string} enterprise?: string }; feature,
   s: string[]; integrations?: string[]; useCases?: string[]; lin,
-  k: string; rating?: number; launchDate?: string; realService?: boolean}; export const,
-  cuttingEdgeAIServices: CuttingEdgeAIService[] = [; {/* TODO: Fix JSX expression */}
+  k: string; rating?: number'; launchDate?: string'; realService?: boolean}'; export const,
+  cuttingEdgeAIServices: CuttingEdgeAIService[] = ['; {/* TODO: Fix JSX expression */}
 
   n: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.} categor,
-  y: 'AI Emotional Intelligence}; pricin,
+  y: 'AI Emotional Intelligence}'; pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$99/mo }; feature,
-  s: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes]; integration,
-  s: ['TwilioSlack]; useCase,
-  s: ['Employee wellness24/7 support]; lin,
+  r: '$99/mo }'; feature,
+  s: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes]'; integration,
+  s: ['TwilioSlack]'; useCase,
+  s: ['Employee wellness24/7 support]'; lin,
   k: http,
-  s://ziontechgroup.com/services/ai-emotional-support-agent; realServic,
-  e: true}; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/services/ai-emotional-support-agent'; realServic,
+  e: true}'; {/* TODO: Fix JSX expression */}
 
   n: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.} categor,
-  y: 'AI Business Management}; pricin,
+  y: 'AI Business Management}'; pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$79/mo }; feature,
-  s: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment]; integration,
-  s: ['JiraLinear]; useCase,
-  s: ['Faster planningBetter alignment]; lin,
+  r: '$79/mo }'; feature,
+  s: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment]'; integration,
+  s: ['JiraLinear]'; useCase,
+  s: ['Faster planningBetter alignment]'; lin,
   k: http,
-  s://ziontechgroup.com/services/ai-product-spec-writer; realServic,
-  e: true}; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/services/ai-product-spec-writer'; realServic,
+  e: true}'; {/* TODO: Fix JSX expression */}
 
   n: 'Generate brand-consistent images and short-form videos with approvals and rights management.} categor,
-  y: 'AI Creativity}; pricin,
+  y: 'AI Creativity}'; pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$149/mo }; feature,
-  s: ['Brand kitImage & video genReview & approvalsRights management]; integration,
-  s: ['CanvaFigma]; useCase,
-  s: ['Marketing velocityCost savings]; lin,
+  r: '$149/mo }'; feature,
+  s: ['Brand kitImage & video genReview & approvalsRights management]'; integration,
+  s: ['CanvaFigma]'; useCase,
+  s: ['Marketing velocityCost savings]'; lin,
   k: http,
-  s://ziontechgroup.com/services/ai-creative-studio; realServic,
-  e: true} ]; export type CuttingEdgeAIService = i,
+  s://ziontechgroup.com/services/ai-creative-studio'; realServic,
+  e: true} ]'; export type CuttingEdgeAIService = i,
   d: string, nam,
   e: string, descriptio,
-  n: string; categor,
+  n: string'; categor,
   y:, ' 'PRD templates',' 'Story generation',' 'Acceptance criteria',' 'Analytics alignment], integration,
   s: ['Jira', 'Linear']}, ' 'Brand kit',' 'Image & video gen',' 'Review & approvals',' 'Rights management], integration,
-  s: ['Canva', Figma]}]; i,
+  s: ['Canva', Figma]}]'; i,
   d: string, categor,
-  y:' | 'AI Consciousness'' | 'AI Emotional Intelligence'' | 'AI Creativity'' | 'AI Psychology'' | 'AI Business Management'' | 'AI Healthcare'' | 'AI Neural Interfaces'' | AI Quantum Computing pricin,
+  y:' | 'AI Consciousness' | 'AI Emotional Intelligence' | 'AI Creativity' | 'AI Psychology' | 'AI Business Management' | 'AI Healthcare' | 'AI Neural Interfaces' | AI Quantum Computing pricin,
   g: {/* TODO: Fix JSX expression */}
 
   r: string, professional?: string} enterprise?: string } feature,
-  s: string[]; integrations?: string[]; useCases?: string[]; lin,
-  k: string; rating?: number, launchDate?: string realService?: boolean } export const,
+  s: string[]'; integrations?: string[]'; useCases?: string[]'; lin,
+  k: string'; rating?: number, launchDate?: string realService?: boolean } export const,
   cuttingEdgeAIServices: CuttingEdgeAIService[] = [  i,
   d: 'ai-emotional-support-agent nam,
   e: 'AI Emotional Support Agent, descriptio,
@@ -1686,8 +1686,8 @@ i,
   g: {/* TODO: Fix JSX expression */}
 
   r: '$99/mo } feature,
-  s: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes]; integration,
-  s: ['TwilioSlack]; useCase,
+  s: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes]'; integration,
+  s: ['TwilioSlack]'; useCase,
   s: [Employee wellness24/7 support], realServic,
   e: true }  i,
   d: 'ai-product-spec-writer nam,
@@ -1697,8 +1697,8 @@ i,
   g: {/* TODO: Fix JSX expression */}
 
   r: '$79/mo } feature,
-  s: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment]; integration,
-  s: ['JiraLinear]; useCase,
+  s: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment]'; integration,
+  s: ['JiraLinear]'; useCase,
   s: [Faster planningBetter alignment], realServic,
   e: true }  i,
   d: 'ai-creative-studio nam,
@@ -1708,18 +1708,18 @@ i,
   g: {/* TODO: Fix JSX expression */}
 
   r: '$149/mo } feature,
-  s: ['Brand kitImage & video genReview & approvalsRights management]; integration,
-  s: ['CanvaFigma]; useCase,
+  s: ['Brand kitImage & video genReview & approvalsRights management]'; integration,
+  s: ['CanvaFigma]'; useCase,
   s: [Marketing velocityCost savings], realServic,
-  e: true } ]; nam,
+  e: true } ]'; nam,
   e: string, descriptio,
-  n: string; categor,
-  y:,' | 'AI Consciousness'' | 'AI Emotional Intelligence'' | 'AI Creativity'' | 'AI Psychology'' | 'AI Business Management'' | 'AI Healthcare'' | 'AI Neural Interfaces'' | AI Quantum Computing, pricin,
+  n: string'; categor,
+  y:,' | 'AI Consciousness' | 'AI Emotional Intelligence' | 'AI Creativity' | 'AI Psychology' | 'AI Business Management' | 'AI Healthcare' | 'AI Neural Interfaces' | AI Quantum Computing, pricin,
   g: {/* TODO: Fix JSX expression */}
 
   r: string, professional?: string} enterprise?: string } feature,
-  s: string[]; integrations?: string[]; use_cases?: string[]; lin,
-  k: string; rating?: number, launch_date?: string, real_service?: boolean} ; export const,
+  s: string[]; integrations?: string[]'; use_cases?: string[]'; lin,
+  k: string'; rating?: number, launch_date?: string, real_service?: boolean} '; export const,
   cuttingEdgeAIServices: CuttingEdgeAIService[] = [,  i,
   d: 'ai - emotional - support - agent nam,
   e: 'AI Emotional Support Agent, descriptio,
@@ -1728,8 +1728,8 @@ i,
   g: {/* TODO: Fix JSX expression */}
 
   r: '$99 / mo } feature,
-  s: ['CBT - guided prompts_mood tracking_crisis escalationHIPAA - friendly modes]; integration,
-  s: ['TwilioSlack]; use_case,
+  s: ['CBT - guided prompts_mood tracking_crisis escalationHIPAA - friendly modes]'; integration,
+  s: ['TwilioSlack]'; use_case,
   s: ['Employee wellness24 / 7 support], lin,
   k: http,
   s://ziontechgroup.com / services / ai - emotional - support - agent, real_servic,
@@ -1741,8 +1741,8 @@ i,
   g: {/* TODO: Fix JSX expression */}
 
   r: '$79 / mo } feature,
-  s: ['PRD templates_story generation_acceptance criteria_analytics alignment]; integration,
-  s: ['JiraLinear]; use_case,
+  s: ['PRD templates_story generation_acceptance criteria_analytics alignment]'; integration,
+  s: ['JiraLinear]'; use_case,
   s: ['Faster planning_better alignment], lin,
   k: http,
   s://ziontechgroup.com / services / ai - product - spec - writer, real_servic,
@@ -1754,9 +1754,9 @@ i,
   g: {/* TODO: Fix JSX expression */}
 
   r: '$149 / mo } feature,
-  s: ['Brand kit_image & video gen_review & approvals_rights management]; integration,
-  s: ['CanvaFigma]; use_case,
+  s: ['Brand kit_image & video gen_review & approvals_rights management]'; integration,
+  s: ['CanvaFigma]'; use_case,
   s: ['Marketing velocity_cost savings], lin,
   k: http,
   s://ziontechgroup.com / services / ai - creative - studio, real_servic,
-  e: true} ]; '
+  e: true} ]'; '

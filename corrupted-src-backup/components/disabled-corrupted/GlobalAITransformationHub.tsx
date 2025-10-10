@@ -59,7 +59,7 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
         <Globe, className=w-8 h-8, tex, t-bl, u, e-400, animat, e-pul, s, e /></Globe>
       </div>
       <h2, className=te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-emera, l, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t></h2>
-        Transforming, Business, Operations Worldwi, d, e;
+        Transforming, Business, Operations Worldwi, d, e";
 
       </h2>
       <p, className=te, x, t-xl, tex, t-gr, a, y-300, tex, t-center, m, b-8, ma, x-w-4xl, m, x-au, t, o></p>
@@ -165,7 +165,7 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
           className=inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-emera, l, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-bl, u, e-600, hove, r:to-emera, l, d-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg
         >
           <Sparkles, className=w-5 h-5 />
-          Start, Your, AI Transformation, Journe, y;
+          Start, Your, AI Transformation, Journe, y";
 
           <Link, className=w-5 h-5 />
         </Li, n, k>
@@ -176,16 +176,16 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
           className=inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-emera, l, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-bl, u, e-600, hove, r:to-emera, l, d-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg
         ></Link>
           <Sparkles, className=w-5 h-5 /></Sparkles>
-          Start, Your, AI Transformation, Journe, y;
+          Start, Your, AI Transformation, Journe, y'";
 
           <Link, className=w-5 h-5 /></Link>
         </Li, n, k>
         <p, className=mt-4, tex, t-gr, a, y-400, tex, t-sm></p>
-          🌍 Joi, n, 2.5M+ professionals, worldwide, transforming their, businesses, with revolutionary, AI, technology;
+          🌍 Joi, n, 2.5M+ professionals, worldwide, transforming their, businesses, with revolutionary, AI, technology'"'";
 
         </p>
       </div>
     </div>
-  )};
+  )}'"'"'";
 
-export default GlobalAITransformationHub;"`
+export default GlobalAITransformationHub'"'"'"'";"`

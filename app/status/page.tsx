@@ -1,10 +1,10 @@
-'use client;
+'use client';
 
-import React, { useState, useEffect } from 'react;
+import React, { useState, useEffect } from 'react';
 
-import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart } from 'lucide-react;
+import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
 import Footer from '../components/Footer;
 
@@ -16,17 +16,17 @@ const [lastUpdated, setLastUpdated] = useState(new Date())const [isRefreshing, s
 
 ;
 
-const refreshStatus = async () => {;;
+const refreshStatus = async () => {';';
 
-    setIsRefreshing(true);
+    setIsRefreshing(true)';
 
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000))
-    setLastUpdated(new Date())    setIsRefreshing(false);
+    setLastUpdated(new Date())    setIsRefreshing(false)';
 
-;
+';
 
-const services = [;;;
+const services = [';';';
 
     {
       name: 'API Services,
@@ -77,11 +77,11 @@ const services = [;;;
       description: System monitoring and alerts
     }
 
-  ];
+  ]';
 
-;
+';
 
-const incidents = [;;
+const incidents = [';';
 
     {
       id: 1,
@@ -104,23 +104,23 @@ const incidents = [;;
       affectedServices: ['Database', 'API Services]
     }
 
-  ];
+  ]';
 
-;
+';
 
-const getStatusIcon = (status: string) => {;;
+const getStatusIcon = (status: string) => {';';
 
 return (
 
     switch (status) {
       case 'operational:
-        return <CheckCircle className="w-5 h-5 text-green-400 />;
+        return <CheckCircle className="w-5 h-5 text-green-400 />'"'"'"'";
 
       case 'degraded:
-        return <AlertTriangle className="w-5 h-5 text-yellow-400 />;
+        return <AlertTriangle className="w-5 h-5 text-yellow-400 />'"'"'"'";
 
       case 'outage:
-        return <XCircle className="w-5 h-5 text-red-400 />;
+        return <XCircle className="w-5 h-5 text-red-400 />";
 
       default:
         return <Clock className="w-5 h-5 text-gray-400 />
@@ -128,54 +128,54 @@ return (
 
 }}
 
-  };
+  }';
 
-;
+';
 
-const getStatusColor = (status: string) => {;;
+const getStatusColor = (status: string) => {';';
 
     switch (status) {
       case 'operational:
-        return text-green-400;
+        return text-green-400';
 
       case 'degraded:
-        return text-yellow-400;
+        return text-yellow-400';
 
       case 'outage:
-        return text-red-400;
+        return text-red-400';
 
       default:
         return 'text-gray-400}
 
-  };
+  }';
 
-;
+';
 
-const getSeverityColor = (severity: string) => {;;
+const getSeverityColor = (severity: string) => {';';
 
     switch (severity) {
       case 'critical:
-        return bg-red-500/20 text-red-400 border-red-500/50;
+        return bg-red-500/20 text-red-400 border-red-500/50';
 
       case 'major:
-        return bg-orange-500/20 text-orange-400 border-orange-500/50;
+        return bg-orange-500/20 text-orange-400 border-orange-500/50';
 
       case 'minor:
-        return bg-yellow-500/20 text-yellow-400 border-yellow-500/50;
+        return bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
 
       default:
         return 'bg-gray-500/20 text-gray-400 border-gray-500/50}
 
-  };
+  }';
 
-;
+'";
 
-const overallStatus = services.every(service => service.status === operational);;
+const overallStatus = services.every(service => service.status === operational)'"'";'"'"'";
 
     ? 'operational 
     : services.some(service => service.status === 'outage) 
       ? 'outage 
-      : degraded;
+      : degraded"'"'"'";
 
   return (
 
@@ -187,7 +187,7 @@ const overallStatus = services.every(service => service.status === operational);
           
           <div className="flex items-center justify-center gap-4 mb-8>
             <div className="flex items-center gap-2>
-              {getStatusIcon(overallStatus);
+              {getStatusIcon(overallStatus)'"'"'"'";
 
               <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}}>
                 {overallStatus === 'operational' ? 'All Systems Operational : 
@@ -202,13 +202,13 @@ const overallStatus = services.every(service => service.status === operational);
 
               className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50
             >
-              <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}} />
+              <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : '}} />
               Refresh
             </button>
           </div>
           
           <p className="text-gray-400 text-sm>
-            Last updated: {lastUpdated.toLocaleString();
+            Last updated: {lastUpdated.toLocaleString()"'"'"'";
 
           </p>
         </div>
@@ -225,7 +225,7 @@ const overallStatus = services.every(service => service.status === operational);
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300>
                 <div className="flex items-center justify-between mb-4>
                   <div className="flex items-center gap-3>
-                    {getStatusIcon(service.status);
+                    {getStatusIcon(service.status)'"'"'"'";
 
                     <h3 className="text-lg font-semibold text-white>{service.name}</h3>
                   </div>

@@ -107,21 +107,21 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
       color: #fff;
 
-      padding: 8 px;
+      padding: 8 px';
 
-      text-decoration: none;
+      text-decoration: none';
 
-      z-index: 1000;
+      z-index: 1000';
 
-    ;
+    ';
 
 ,
     skipLink.addEventListener('focus, () => {
-      skipLink.style.top = 6px;
+      skipLink.style.top = 6px';
 
   private setupScreenReaderSupport(): void {/* TODO: Fix JSX expression */}
 
-    });
+    })';
 
     skipLink.addEventListener('blur, () => {/* TODO: Fix JSX expression */}
 
@@ -197,16 +197,16 @@ const _focusableElements = this.getFocusableElements();;
 
   }
 
-  private getFocusableElements(): HTMLElement[] {;
+  private getFocusableElements(): HTMLElement[] {';
 
-const selectors = [;;;
+const selectors = [';';';
 
       'button: not([disabled]),
       'input: not([disabled]),
       'select: not([disabled]),
       'textarea: not([disabled]),
       'a[href],
-      '[tabindex]:not([tabindex="-1"])'].join(, );
+      '[tabindex]:not([tabindex="-1"])'].join(, )';
 
     return Array.from(document.querySelectorAll(selectors)) as HTMLElement[]}
 
@@ -215,23 +215,23 @@ const selectors = [;;;
       {
         name: 'Focusable Elements,
         value:
-        value: this.getFocusableElements().length;
+        value: this.getFocusableElements().length';
 
-        threshold: 10;
+        threshold: 10';
 
         status: 'pass},
       {
         name: 'Images with Alt Text,
         value:
-        value: this.getImagesWithAltText().length;
+        value: this.getImagesWithAltText().length';
 
-        threshold: 0;
+        threshold: 0';
 
         status: 'pass},
       {
         name: 'Headings Structure,
         value: this.getHeadingStructureScore(),
-        threshold: 80;
+        threshold: 80';
 
         status: 'pass,
   private getFocusableElements(): HTMLElement[] {/* TODO: Fix JSX expression */}
@@ -264,13 +264,13 @@ const _headings = document.querySelectorAll(h1, h2, h3, h4, h5, h6);;
       //       const level = parseInt(heading.tagName.charAt(1));;
 
       if (level > previousLevel + 1) {
-        score -= 20; // Penalty for skipped heading levels;
+        score -= 20'"; // Penalty for skipped heading levels'"'";
 
   private getHeadingStructureScore(): number {/* TODO: Fix JSX expression */}
 
       }
 
-      previousLevel = level});
+      previousLevel = level})'"'"'";
 
     return Math.max(0, score)}
 
@@ -288,6 +288,6 @@ const _headings = document.querySelectorAll(h1, h2, h3, h4, h5, h6);;
 
 }
 
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer'"'"'"'";
 
 `

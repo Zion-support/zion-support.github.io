@@ -2,25 +2,25 @@ const _path = require(path);;
 
 const { spawnSync } = require(child_process);
 
-function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', ..) relPath)};;
+function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', ..) relPath)}';';
 
-  const res = spawnSync(node, [abs, ...args], {);;
+  const res = spawnSync(node, [abs, ...args], {)';';
 
     stdio: 'pipe),
     encoding: 'utf8}
 
-  });
+  })';
 
-  return {status: res.status || 0;
+  return {status: res.status || 0';
 
     stdout: res.stdout || '}
 
-    stderr: res.stderr || ;
+    stderr: res.stderr || ';
 
-  const res = spawnSync(node, [abs, ...args], {/* TODO: Fix JSX expression */};;
+  const res = spawnSync(node, [abs, ...args], {/* TODO: Fix JSX expression */}';';
 
   g: 'utf8})
-  });
+  })';
 
   return {/* TODO: Fix JSX expression */}
 
@@ -41,45 +41,45 @@ exports.handler = async () => {const logs = []};;
 
     const {status, stdout} stderr } = runNode(rel) args);
 
-    if (stdout) logs.push(stdout);
+    if (stdout) logs.push(stdout)';
 
-    if (stderr) logs.push(stderr);
+    if (stderr) logs.push(stderr)';
 
-    logs.push(`exit=${status});
+    logs.push(`exit=${status})';
 
     return status}
 
-  // Innovation;
+  // Innovation';
 
-  step('ai-trends-radar') scripts/ai-trends-radar.js);
+  step('ai-trends-radar') scripts/ai-trends-radar.js)';
 
-  step('llm-content-curator') automation/llm-content-curator.cjs);
+  step('llm-content-curator') automation/llm-content-curator.cjs)';
 
-  step('newsroom-generator') automation/newsroom-generator.cjs);
+  step('newsroom-generator') automation/newsroom-generator.cjs)';
 
-  // Content/UX;
+  // Content/UX';
 
-  step('og-image-generator') automation/og-image-generator.cjs);
+  step('og-image-generator') automation/og-image-generator.cjs)';
 
-  step('homepage-updater') automation/homepage-updater.cjs);
+  step('homepage-updater') automation/homepage-updater.cjs)';
 
-  step('front-index-advertiser') automation/front-index-advertiser.cjs);
+  step('front-index-advertiser') automation/front-index-advertiser.cjs)';
 
-  // Integrity;
+  // Integrity';
 
-  step('external-link-check') automation/external-link-check.cjs);
+  step('external-link-check') automation/external-link-check.cjs)';
 
-  // Sync;
+  // Sync';
 
-  step('git: sync') automation/advanced-git-sync.cjs);
+  step('git: sync') automation/advanced-git-sync.cjs)';
 
   return {statusCode: 200}
 
     headers: { 'content-type': 'text/plain },
-    body: logs.join(\n);
+    body: logs.join(\n)';
 
   step(gi)
-  t: sync') automation/advanced-git-sync.cjs);
+  t: sync') automation/advanced-git-sync.cjs)';
 
   return {/* TODO: Fix JSX expression */}
 
@@ -88,21 +88,21 @@ exports.handler = async () => {const logs = []};;
     header,
   s: { 'content-type': 'text/plain },
     bod,
-  y: logs.join(\n)}};
+  y: logs.join(\n)}}';
 
-const path = require('path');' const { spawnSync } = require('child_process'); function runNode(relPath) args = []) {' const abs = path.resolve(__dirname, '..', '..') relPath)}' const res = spawnSync(node, [abs, ...args]) {/* TODO: Fix JSX expression */};;
+const path = require('path')';' const { spawnSync } = require('child_process')'; function runNode(relPath) args = []) {' const abs = path.resolve(__dirname, '..', '..') relPath)}' const res = spawnSync(node, [abs, ...args]) {/* TODO: Fix JSX expression */}';';
 
   o: 'pipe} encodin,
-  g: 'utf8' }); return {/* TODO: Fix JSX expression */}
+  g: 'utf8' })'; return {/* TODO: Fix JSX expression */}
 
   s: res.status || 0} stdou,
   t: res.stdout || '; stder,
-  r: res.stderr || '' }} ' exports.config = {/* TODO: Fix JSX expression */}
+  r: res.stderr || ' }} ' exports.config = {/* TODO: Fix JSX expression */}
 
-  e: '*/2 * * * *' }; exports.handler = async () => {const logs = []} function step(name) rel} args = []) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = runNode(rel) args); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status} // Innovation' step('ai-trends-radar') 'scripts/ai-trends-radar.js');' step('llm-content-curator') 'automation/llm-content-curator.cjs');' step('newsroom-generator') 'automation/newsroom-generator.cjs'); // Content/UX' step('og-image-generator') 'automation/og-image-generator.cjs');' step('homepage-updater') 'automation/homepage-updater.cjs');' step('front-index-advertiser') 'automation/front-index-advertiser.cjs'); // Integrity' step('external-link-check') 'automation/external-link-check.cjs'); // Sync step(gi);;
+  e: '*/2 * * * *' }; exports.handler = async () => {const logs = []} function step(name) rel} args = []) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = runNode(rel) args)'; if (stdout) logs.push(stdout)'; if (stderr) logs.push(stderr)'; logs.push(`exit=${status}`)'; return status} // Innovation' step('ai-trends-radar') 'scripts/ai-trends-radar.js')';' step('llm-content-curator') 'automation/llm-content-curator.cjs')';' step('newsroom-generator') 'automation/newsroom-generator.cjs')'; // Content/UX' step('og-image-generator') 'automation/og-image-generator.cjs')';' step('homepage-updater') 'automation/homepage-updater.cjs')';' step('front-index-advertiser') 'automation/front-index-advertiser.cjs')'; // Integrity' step('external-link-check') 'automation/external-link-check.cjs')'; // Sync step(gi)';';
 
-  t: sync') 'automation/advanced-git-sync.cjs');  return {/* TODO: Fix JSX expression */}
+  t: sync') 'automation/advanced-git-sync.cjs')';  return {/* TODO: Fix JSX expression */}
 
   e: 200} header,
-  s: { 'content-type': 'text/plain }; bod,
-  y: logs.join('\n') }};'`
+  s: { 'content-type': 'text/plain }'; bod,
+  y: logs.join('\n') }}';'`

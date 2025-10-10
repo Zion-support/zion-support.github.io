@@ -1,14 +1,14 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-;
+';
 
 const CookiesPage: React.FC = () => {  return (<div>
         <title>Cookie Policy - Zion Tech Group<
@@ -51,13 +51,13 @@ const CookiesPage: React.FC = () => {  return (<div>
         <Footer 
       <
     <
-  );
+  )';
 
 )]
-    };
+    }'";
 
-};
+}'"'";
 
-export default CookiesPage;
+export default CookiesPage'"'"'";
 
-  );)
+  )'"'"'"'";)

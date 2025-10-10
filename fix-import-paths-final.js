@@ -1,34 +1,34 @@
-import fs from 'fs;
+import fs from 'fs';
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from 'url';
 
-;
+';
 
 function processFile(filePath) {
   try {
-    // Determine correct relative paths based on file location;
+    // Determine correct relative paths based on file location';
 
-    const isInApp =;;
+    const isInApp =';';
 
-      filePath.includes('/app/) && !isInBlog && !isInComponents && !isInGuides && !isInPages;
+      filePath.includes('/app/) && !isInBlog && !isInComponents && !isInGuides && !isInPages';
 
-;
+';
 
-let utilsPath, typesPath;
+let utilsPath, typesPath';
 
     if (isInBlog || isInGuides || isInPages) {
-      utilsPath = '../../utils/;
+      utilsPath = '../../utils/';
 
       typesPath = '../../types/'} else if (isInComponents) {
-      utilsPath = '../utils/;
+      utilsPath = '../utils/';
 
       typesPath = '../types/'} else if (isInApp) {
-      utilsPath = './utils/;
+      utilsPath = './utils/';
 
       typesPath = './types/'} else {
-      utilsPath = './utils/;
+      utilsPath = './utils/';
 
-      typesPath = './types/;
+      typesPath = './types/';
 
 function processFile(filePath) {/* TODO: Fix JSX expression */}
 
@@ -40,20 +40,20 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     }
 
-    // Fix import paths;
+    // Fix import paths';
 
-    const replacements = [;;
+    const replacements = [';';
 
       {
-        pattern: /import\s+Link\s+from\s+'\.\/utils\/link;/g;
+        pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g';
 
         replacement: `import Link from '${utilsPath}link';`},
       {
-        pattern: /import\s+Image\s+from\s+'\.\/utils\/image;/g;
+        pattern: /import\s+Image\s+from\s+'\.\/utils\/image';/g';
 
         replacement: `import Image from '${utilsPath}image';`},
       {
-        pattern: /import\s+dynamic\s+from\s+'\.\/utils\/dynamic;/g;
+        pattern: /import\s+dynamic\s+from\s+'\.\/utils\/dynamic';/g';
 
         replacement: `import dynamic from '${utilsPath}dynamic';`,
       {/* TODO: Fix JSX expression */}
@@ -92,20 +92,20 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
   n: /import\s+type\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
         replacemen,`
-  t: `import type { Metadata } from '${typesPath}next';`}];
+  t: `import type { Metadata } from '${typesPath}next';`}]';
 
     replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
 
       }
 
-    });
+    })';
 
-    // Fix MetadataRoute namespace issue;
+    // Fix MetadataRoute namespace issue';
 
     if (content.includes('MetadataRoute.')) {
-      content = content.replace(/MetadataRoute\./g, 'MetadataRoute.);
+      content = content.replace(/MetadataRoute\./g, 'MetadataRoute.)';
 
-      modified = true;
+      modified = true';
 
     if (content.includes('MetadataRoute.')) {/* TODO: Fix JSX expression */}
 
@@ -121,7 +121,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
 }
 
-;
+';
 
 function processDirectory(dirPath) {
 
@@ -130,7 +130,7 @@ function processDirectory(dirPath) {
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
-        totalFixed++;
+        totalFixed++';
 
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
 
@@ -140,10 +140,10 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
 
     }
 
-  });
+  })';
 
   return totalFixed}
 
-// Process the app directory;
+// Process the app directory';
 
-// Process the app directory;`
+// Process the app directory';`

@@ -1,16 +1,16 @@
-import fs from 'fs;
+import fs from 'fs';
 
-import path from 'path;
+import path from 'path';
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from 'url';
 
-// Get all blog files;
+// Get all blog files';
 
-const blogDir = path.join(__dirname, 'src', blog);;
+const blogDir = path.join(__dirname, 'src', blog);';
 
-const blogFiles = [];;
+const blogFiles = []';';
 
-;
+';
 
 function findBlogFiles(dir) {/* TODO: Fix JSX expression */}
 
@@ -45,26 +45,26 @@ const line = lines[i];;
 
       // Check if this line ends with }; and the previous line doesnt have a closing parenthesis;
 
-      if (line.trim() === }; && i > 0) {;
+      if (line.trim() === }; && i > 0) {';
 
-const prevLine = lines[i - 1];;
+const prevLine = lines[i - 1]';';
 
-        // If previous line doesnt end with ) or );, add missing )
-        if (!prevLine.trim().endsWith(')') && !prevLine.trim().endsWith(');)) {
-          // Check if this looks like a JSX return statement that needs closing;
+        // If previous line doesnt end with ) or )';, add missing )
+        if (!prevLine.trim().endsWith(')') && !prevLine.trim().endsWith(')';)) {
+          // Check if this looks like a JSX return statement that needs closing';
 
           if (prevLine.includes('</') || prevLine.includes('>)) {
             newLines.push(  ););
 
-            modified = true;
+            modified = true';
 
-            continue;
+            continue';
 
 function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
 
-      // Check if this line ends with }; and the previous line doesnt have a closing parenthesis;
+      // Check if this line ends with }'; and the previous line doesnt have a closing parenthesis';
 
-      if (line.trim() === '}; && i > 0) {/* TODO: Fix JSX expression */}
+      if (line.trim() === '}'; && i > 0) {/* TODO: Fix JSX expression */}
 
           }
 
@@ -85,13 +85,13 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
 
 }
 
-// Process all blog files;
+// Process all blog files';
 
 blogFiles.forEach(file => {)
-  fixParsingErrors(file);
+  fixParsingErrors(file)';
 
 blogFiles.forEach(file => {/* TODO: Fix JSX expression */})
-});
+})';
 
 // console.log removed for production
 `

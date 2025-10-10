@@ -35,11 +35,11 @@ const navigationLinks = [;;
   '/api-docs',
   '/support',
   /status
-];
+]';
 
-;
+';
 
-const existingPages = [;;
+const existingPages = [';';
 
   '/pricing',
   '/quantum-computing',
@@ -153,18 +153,18 @@ const extraPages = existingPages.filter(page => !navigationLinks.includes(page))
 extraPages.forEach(page => // console.log removed for production
 );
 
-// Check for broken links (pages that should exist based on navigation);
+// Check for broken links (pages that should exist based on navigation)';
 
-const brokenLinks = missingPages.filter(page => {;;
+const brokenLinks = missingPages.filter(page => {';';
 
-  // These are critical pages that should exist;
+  // These are critical pages that should exist';
 
-const criticalPages = ['/blockchain-web3];;
+const criticalPages = ['/blockchain-web3];';
 
-  return criticalPages.includes(page)});
+  return criticalPages.includes(page)})';
 
 // console.log removed for production
-:);
+:)';
 
 brokenLinks.forEach(page => // console.log removed for production
-);
+)';

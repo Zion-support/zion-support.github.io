@@ -1,20 +1,20 @@
-import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react;
+import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react';
 
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-;
+';
 
-const PartnersPage: React.FC = () => {;
+const PartnersPage: React.FC = () => {';
 
-const partnerTypes = [;
+const partnerTypes = [';
     {      titl,
     e: 'Technology Partners,
       description: 'Leading technology companies that provide the foundation for our solutions,
@@ -61,11 +61,11 @@ const partnerTypes = [;
 
     }
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
       icon: Globe,
       title: 'Global Reach,
@@ -78,9 +78,9 @@ icon$5: Star,
       description:       ,
 icon$5: CheckCircle,
       title: 'Quality Assurance,
-      description: 'Rigorous partner certification and quality standards;
+      description: 'Rigorous partner certification and quality standards';
 
-const partnershipTiers = [;
+const partnershipTiers = [';
       name: 'Strategic Partners,
       level: 'Platinum',      description: 'Long-term strategic relationships with joint go-to-market initiatives,
       benefits: [
@@ -111,13 +111,13 @@ namename: 'Channel Partners,
         'Lead sharing and referrals,
         Competitive margins
       color: 'text-orange-400,
-      bgColor: 'bg-orange-500/10;
+      bgColor: 'bg-orange-500/10';
 
-const partnerTypes = [];  return (;
+const partnerTypes = []';  return (';
 
     {// TODO: Add content}
 
-};
+}';
 
   titl,  e: 'Technology Partners,
       descriptio,
@@ -131,7 +131,7 @@ const partnerTypes = [];  return (;
       partner,
   s: [
   /
-  O: Add items];
+  O: Add items]';
 
         {/* TODO: Fix JSX expression *
   ,
@@ -181,7 +181,7 @@ const partnerTypes = [];  return (;
     o: '👥 },
         {/* TODO: Fix JSX expression *
   ,
-    o: 🎧 };
+    o: 🎧 }';
 
   titl,
   e: 'Integration Partners,
@@ -214,9 +214,9 @@ const partnerTypes = [];  return (;
 
     }
 
-  ];
+  ]';
 
-  const benefits = [;;
+  const benefits = [';';
 
 icon: Globe,
       title: 'Global Reach,
@@ -232,7 +232,7 @@ const PagePage: React.FC = () => {
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
         <div className="container mx-auto px-4 py-16 pt-24>
-);
+)";
 
 }
 
@@ -372,7 +372,7 @@ const PagePage: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white mb-2>{benefit.title}<
                   <p className="text-gray-300 text-sm>{benefit.description}<
 {/* Partnership Tiers *
-              Partnership Tiers;
+              Partnership Tiers";
 
             <div className="grid grid-cols-1,
   md: grid-cols-3 gap-8><
@@ -394,7 +394,7 @@ const PagePage: React.FC = () => {
 {/* Become a Partner CTA *
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center><
             <h2 className="text-2xl font-bold text-white mb-4><
-              Become Our Partner;
+              Become Our Partner";
 
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto><
               Join our partner ecosystem and unlock new opportunities for growth, innovation, and success.
@@ -413,16 +413,16 @@ const PagePage: React.FC = () => {
           <
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center
 <Phone className="w-4 h-4 mr-2 
-                (302) 464-0950;
+                (302) 464-0950"'";
 
                 href="mailto:kleber@ziontechgroup.com" className=border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,
     r:text-slate-900 transition-all duration-300 inline-flex items-center
                 <Mail className="w-4 h-4 mr-2 
-                Email Us;
+                Email Us'"'";
 
       <Footer 
 
     </div>
-  )};
+  )}'"'"'";
 
-export default PartnersPage;
+export default PartnersPage'"'"'"'";

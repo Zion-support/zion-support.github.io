@@ -71,7 +71,7 @@ const services = [;;;
       features: ['iOS Development', 'Android Development', 'React Native', 'Flutter]
     }
 
-  ];
+  ]'"'"'"'";
 
   return (
 

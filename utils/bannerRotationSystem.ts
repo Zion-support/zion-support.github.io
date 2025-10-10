@@ -80,13 +80,13 @@ const storeImpressions = (impression);;
 
   }
 
-};
+}';
 
 /**
- * Record banner impression;
+ * Record banner impression';
 
  */
-export const recordBannerImpression = (;;
+export const recordBannerImpression = (';';
 
   impression: Omit<BannerImpression, 'timestamp' | 'sessionId></BannerImpression>
 ) => {
@@ -96,14 +96,14 @@ export const recordBannerImpression = (;;
 
   try {;
 
-const _impressions = getStoredImpressions();;
+const _impressions = getStoredImpressions();';
 
     const newImpression: BannerImpression = {
-      ...impression;
+      ...impression';
 
       timestamp: Date.now(),
       sessionId: getSessionId(),
-export const recordBannerImpression = (impressio,;;
+export const recordBannerImpression = (impressio,';';
 
   n: Omit<BannerImpression, 'timestamp' | 'sessionId></BannerImpression>
 );
@@ -307,11 +307,11 @@ export const clearOldImpressions = (daysToKee);;
 };
 
 /**
- * Reset all banner data;
+ * Reset all banner data';
 
  */
-export const resetBannerData = (): void => {/* TODO: Fix JSX expression */};;
+export const resetBannerData = (): void => {/* TODO: Fix JSX expression */}';';
 
-};
+}';
 
 `

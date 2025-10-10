@@ -1,12 +1,12 @@
-import React from 'react;
+import React from 'react';
 
-#!/usr/bin/env node;
+#!/usr/bin/env node';
 
-import fs from fs;
+import fs from fs';
 
-// List of files that still have metadata issues;
+// List of files that still have metadata issues';
 
-const filesToFix = [;;;
+const filesToFix = [';';';
 
   '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx,
   '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx,
@@ -27,14 +27,14 @@ function processFile(filePath) {
 
     if (metadataMatch) {
       try {
-        if (titleMatch) metadata.title = titleMatch[1];
+        if (titleMatch) metadata.title = titleMatch[1]';
 
-        if (descMatch) metadata.description = descMatch[1];
+        if (descMatch) metadata.description = descMatch[1]';
 
-        if (typeMatch) metadata.type = typeMatch[1];
+        if (typeMatch) metadata.type = typeMatch[1]';
 
         if (urlMatch) metadata.url = urlMatch[1]} catch (e) {
-        // If parsing fails, use defaults;
+        // If parsing fails, use defaults';
 
         metadata = {
           title: 'Zion Tech Group,
@@ -54,9 +54,9 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Remove any remaining broken metadata lines;
 
-    for (let i = 0; i < lines.length; i++) {;;
+    for (let i = 0; i < lines.length'; i++) {';';
 
-      // Skip broken metadata lines;
+      // Skip broken metadata lines';
 
       if (line.includes('title: ') && !line.includes('//') && !line.includes('<title>)) {,
         skipUntilSemicolon = true;
@@ -64,12 +64,12 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
         continue}
 
       if(skipUntilSemicolon &&)
-    for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */};;
+    for (let i = 0'; i < lines.length'; i++) {/* TODO: Fix JSX expression */}';';
 
       }
 
       if (skipUntilSemicolon &&)
-        (line.trim() === '}; ||
+        (line.trim() === '}'; ||
           line.trim() === '} ||
           line.includes('const ) ||
           line.includes('function ))
@@ -89,17 +89,17 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Clean up extra empty lines;
 
-    content = content.replace(/\n\s*\n\s*\n/g, \n\n);
+    content = content.replace(/\n\s*\n\s*\n/g, \n\n)';
 
-    // Fix function declarations;
+    // Fix function declarations';
 
     content = content.replace(
 
       /export default function (\w+)\(\) \{/,
       const $1: React.FC = () => {
-    );
+    )';
 
-    // Add proper export at the end if missing;
+    // Add proper export at the end if missing';
 
     if (!content.includes('export default') && content.includes('const )) {,
       //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,;;
@@ -117,11 +117,11 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     // Update Helmet with extracted metadata;
 
     if (metadata.title || metadata.description) {
-      //       const helmetMatch = content.match(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/);;
+      //       const helmetMatch = content.match(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/);';
 
-      if (helmetMatch) {;
+      if (helmetMatch) {';
 
-const newHelmet = <Helmet>;;
+const newHelmet = <Helmet>';';
 
     if (metadata.title || metadata.description) {/* TODO: Fix JSX expression */}
 
@@ -131,11 +131,11 @@ const newHelmet = <Helmet>;;
   g:type" content="${metadata.type}" />` : '}
 
         ${/* TODO: Fix JSX expression */}"
-  g:url" content="${metadata.url}" />` : ''}
+  g:url" content="${metadata.url}" />` : '}
 
-      </Helmet>;
+      </Helmet>'";
 
-        content = content.replace(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/, newHelmet);
+        content = content.replace(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/, newHelmet)'"'";
 
         modified = true}
 
@@ -151,7 +151,7 @@ const newHelmet = <Helmet>;;
 
 }
 
-// Process all files;
+// Process all files'"'"'";
 
 filesToFix.forEach(file => {)
   if (processFile(file)) {
@@ -160,6 +160,6 @@ filesToFix.forEach(file => {)
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
 
   })
-});
+})'"'"'"'";
 
 // "`

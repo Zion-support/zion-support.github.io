@@ -4,4 +4,4 @@ import { Eye, Headphones, Globe, Smartphone, Zap, Shield, Users, Award, CheckCir
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-export default ARVRSolutionsPage;
+export default ARVRSolutionsPage';

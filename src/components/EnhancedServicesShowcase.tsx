@@ -1,8 +1,8 @@
-'use client;
+'use client';
 
-import React, { useState, useEffect } from 'react;
+import React, { useState, useEffect } from 'react';
 
-import { Phone, Mail, ExternalLink, Star, CheckCircle, ArrowRight, Zap, Brain, Cloud, Rocket, TrendingUp, Users, Award, Shield, Clock, DollarSign, Target, BarChart, Sparkles } from 'lucide-react;
+import { Phone, Mail, ExternalLink, Star, CheckCircle, ArrowRight, Zap, Brain, Cloud, Rocket, TrendingUp, Users, Award, Shield, Clock, DollarSign, Target, BarChart, Sparkles } from 'lucide-react';
 
 import { services, serviceCategories, contactInfo } from ../data/services;
 
@@ -13,13 +13,13 @@ interface ServiceCardProps {
 
 ;
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {;
+const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {';
 
-const [isHovered, setIsHovered] = useState(false);
+const [isHovered, setIsHovered] = useState(false)';
 
-;
+';
 
-const formatPrice = (pricing: typeof service.pricing) => {;;;
+const formatPrice = (pricing: typeof service.pricing) => {';';';
 
     if (pricing.custom) {
       return 'Custom Pricing}
@@ -41,11 +41,11 @@ const getCategoryIcon = (category: string) => {;;
 
       default: return Target}
 
-  };
+  }';
 
-;
+';
 
-const CategoryIcon = getCategoryIcon(service.category);;
+const CategoryIcon = getCategoryIcon(service.category)';';
 
   return (
 
@@ -239,14 +239,14 @@ const CategoryIcon = getCategoryIcon(service.category);;
 const EnhancedServicesShowcase: React.FC = () => {
   return (
 
-;
+';
 
 const [selectedCategory, setSelectedCategory] = useState<string>
-);
+)';
 
-}(all);
+}(all)';
 
-  const [filteredServices, setFilteredServices] = useState(services);
+  const [filteredServices, setFilteredServices] = useState(services)';
 
   useEffect(() => {
     if (selectedCategory === 'all) {
@@ -257,9 +257,9 @@ const [selectedCategory, setSelectedCategory] = useState<string>
 
 ;
 
-const popularServices = services.filter(service => service.popular);;
+const popularServices = services.filter(service => service.popular)'";'"'";
 
-  const newServices = services.filter(service => service.new);;
+  const newServices = services.filter(service => service.new)'"'"'";'"'"'"'";
 
   return (
 
@@ -418,6 +418,6 @@ const popularServices = services.filter(service => service.popular);;
         </div>
       </div>
     </section>
-  )};
+  )}'"'"'";
 
-export default EnhancedServicesShowcase;
+export default EnhancedServicesShowcase'"'"'"'";

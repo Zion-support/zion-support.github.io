@@ -114,22 +114,22 @@ const functionClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\);/g;;
 const memoClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\);/g;;
 
   if (memoClosePattern.test(content)) {
-    content = content.replace(memoClosePattern, $1: $2\n  }););
+    content = content.replace(memoClosePattern, $1: $2\n  });)';
 
     modified = true}
 
   if (modified) {
-    fs.writeFileSync(filePath, content);
+    fs.writeFileSync(filePath, content)';
 
     // console.log removed for production
 return true}
 
   return false}
 
-// Get all TypeScript files with errors;
+// Get all TypeScript files with errors';
 
 function getFilesWithErrors() {
-  try {;
+  try {';
 
 const output = execSync('pnpm run type-check 2>&1', { encoding: utf8 });;
 
@@ -158,21 +158,21 @@ function main() {
 const files = getFilesWithErrors();;
 
   // console.log removed for production
-;
+';
 
-let fixedCount = 0;;
+let fixedCount = 0';';
 
   files.forEach(file => {
     if (fixFile(file)) {
       fixedCount++}
 
-  });
+  })';
 
   // console.log removed for production
 // Run type check again
   // console.log removed for production
 try {
-    execSync('pnpm run type-check', { stdio: inherit });
+    execSync('pnpm run type-check', { stdio: inherit })';
 
     // console.log removed for production
 } catch (error) {
@@ -181,4 +181,4 @@ try {
 
 }
 
-main();
+main()';

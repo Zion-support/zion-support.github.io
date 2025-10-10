@@ -1,8 +1,8 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import {
   Shield,
@@ -26,11 +26,11 @@ import {
   Database,
   Target,
 
-} from lucide-react;
+} from lucide-react';
 
-;
+';
 
-const SecurityMonitoringSuitePage: React.FC = () => {const features = [;;;
+const SecurityMonitoringSuitePage: React.FC = () => {const features = [';';';
 
     {
       ico,
@@ -54,11 +54,11 @@ const SecurityMonitoringSuitePage: React.FC = () => {const features = [;;;
       description: Automated incident response and threat mitigation to protect your systems 24
     }
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;
+const benefits = [';
     '24/7 security monitoring and protection,
     'Real-time threat detection and alerts',    'Comprehensive security analytics,
     'Automated incident response,
@@ -66,7 +66,7 @@ const benefits = [;
     'Easy-to-use dashboard interface,
     'Scalable for any business size,
     Expert security team support
-  ];
+  ]';
 
   return (
 
@@ -122,4 +122,4 @@ const benefits = [;
         </section>
       </div>
     </React.Fragment>)
-export default SecurityMonitoringSuitePage;
+export default SecurityMonitoringSuitePage'"'"'"'";

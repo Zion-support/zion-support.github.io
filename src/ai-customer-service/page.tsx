@@ -1,6 +1,6 @@
-'use client;
+'use client';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
 }
@@ -20,7 +20,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
           <section className=text-center mb-16><
             <h1 className=text-4xl,
   md:text-6xl font-bold text-white mb-6 neon-text cyber-text><
-              AI Customer Service Solutions;
+              AI Customer Service Solutions"'"'"'";
 
             <
             <p className=text-xl text-cyan-400 mb-8 font-medium><
@@ -181,14 +181,14 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
               <a href=te,
   l: +13024640950" className=cyber-button><)
                 📞 Cal)
-  l: (302) 464-0950;
+  l: (302) 464-0950'"'"'";
 
               <
               <a href=
   hove,
     r:bg-white,
   hover:text-indigo-600 transition-all duration-300><
-                Get Free Demo;
+                Get Free Demo'"'"'"'";
 
               <
             <

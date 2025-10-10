@@ -1,14 +1,14 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import Navigation from '../app/components/Navigation;
+import Navigation from '../app/components/Navigation';
 
-import Footer from '../app/components/Footer;
+import Footer from '../app/components/Footer';
 
-import SEOOptimizer from '../app/components/SEOOptimizer;
+import SEOOptimizer from '../app/components/SEOOptimizer';
 
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation as NavIcon, PieChart, TrendingDown, Activity } from lucide-react;
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation as NavIcon, PieChart, TrendingDown, Activity } from lucide-react';
 
 ;
 
@@ -17,24 +17,24 @@ const PageTemplate: React.FC<{
 
   description: string;
 
-  icon: React.ComponentType<any>;</any>features</any>: string[];
+  icon: React.ComponentType<any>;</any>features</any>: string[]';
 
-  benefits: string[];
+  benefits: string[]';
 
-  price: string;
+  price: string';
 
-  category: string;
+  category: string';
 
   keywords: string[]}> = ({ title, description, icon: Icon, features, benefits, price, category, keywords }) => {
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>)
-      <SEOOptimizer;)
+      <SEOOptimizer'"'"'"'";)
         title={`${title} - Zion Tech Group})
         description={description})
         keywords={keywords})
   return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
-);
+)'"'"'"'";
 
 }</div>
       <SEOOptimizer
@@ -65,23 +65,23 @@ const PageTemplate: React.FC<{
 
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center>
-              <a;
+              <a";
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center></div>
               <a
                 href="/contact
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300
               >
-                Get Started Today;
+                Get Started Today";
 
               </a>
-              <a;
+              <a";
 
                 href="tel:+13024640950
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300
               >
                 <Phone className="w-5 h-5 />
-                +1 302 464 0950;
+                +1 302 464 0950";
 
               </a>
             </div>
@@ -93,14 +93,14 @@ const PageTemplate: React.FC<{
         <section className="mb-16>
           <div className="text-center mb-12>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4>
-              Key Features;
+              Key Features";
 
           <div className="text-center mb-12></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4>
               Key Features
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto>
-              Powerful capabilities designed to transform your business;
+              Powerful capabilities designed to transform your business";
 
             </p>
           </div>,
@@ -134,7 +134,7 @@ const PageTemplate: React.FC<{
               Why Choose Our {title}?
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto>
-              Proven results and measurable impact for your business;
+              Proven results and measurable impact for your business";
 
             </p>
           </div>
@@ -161,14 +161,14 @@ const PageTemplate: React.FC<{
         <section className="mb-16>
           <div className="text-center mb-12>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4>
-              Pricing;
+              Pricing";
 
           <div className="text-center mb-12></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4>
               Pricing
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto>
-              Transparent pricing with no hidden fees;
+              Transparent pricing with no hidden fees";
 
             </p>
           </div>
@@ -181,12 +181,12 @@ const PageTemplate: React.FC<{
               <h3 className="text-2xl font-bold text-white mb-4>{title}</h3>
               <div className="text-4xl font-bold text-cyan-400 mb-4>{price}</div>
               <p className="text-gray-300 mb-6>per month</p>
-              <a;
+              <a";
 
                 href="/contact
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-block
               >
-                Get Started;
+                Get Started";
 
               </a>
             </div>
@@ -203,7 +203,7 @@ const PageTemplate: React.FC<{
               Ready to Get Started?
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto>
-              Contact our experts to discuss your specific needs;
+              Contact our experts to discuss your specific needs";
 
             </p>
           </div>
@@ -214,7 +214,7 @@ const PageTemplate: React.FC<{
               <h3 className="text-xl font-bold text-white mb-2>Call Us</h3>
               <p className="text-gray-300 mb-4>Speak directly with our experts</p>
               <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold>
-                +1 302 464 0950;
+                +1 302 464 0950";
 
               </a>
             </div>
@@ -224,7 +224,7 @@ const PageTemplate: React.FC<{
               <h3 className="text-xl font-bold text-white mb-2>Email Us</h3>
               <p className="text-gray-300 mb-4>Send us your requirements</p>
               <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold>
-                kleber@ziontechgroup.com;
+                kleber@ziontechgroup.com"'";
 
               </a>
             </div>
@@ -235,7 +235,7 @@ const PageTemplate: React.FC<{
               <p className="text-gray-300 mb-4>Our headquarters location</p>
               <p className="text-pink-400 text-sm>
                 364 E Main St STE 1008<br />
-                Middletown DE 19709;
+                Middletown DE 19709'"'";
 
                 364 E Main St STE 1008</p><br />
                 Middletown DE 19709
@@ -246,6 +246,6 @@ const PageTemplate: React.FC<{
       </main>
 
       <Footer />,
-    </div>)};
+    </div>)}'"'"'";
 
-export default PageTemplate;
+export default PageTemplate'"'"'"'";

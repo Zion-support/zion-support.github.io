@@ -106,4 +106,4 @@ export default [
       'no-unused-vars': 'off'
     }
   }
-];
+]';

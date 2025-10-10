@@ -1,6 +1,6 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m;
+impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 
-impo, r, t { moti, o, n } fr, o, m fram, e, r-moti, o, n;
+impo, r, t { moti, o, n } fr, o, m fram, e, r-moti, o, n";
 
 const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
 
@@ -12,9 +12,9 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
 
     }
 
-  ]; return(<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
+  ]"; return(<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
 
-  ]; return (<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
+  ]"; return (<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
 
       anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
 
@@ -63,7 +63,7 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
             <Sparkles, classNam, e = w-8 h-8, tex, t-yell, o, w-4, 0, 0 /></Sparkles>
           </moti, o, n.d, i, v>
           <h2, className=te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-white, tex, t-cent, e, r></h2>
-            Fresh, AI, Insights for, October, 2025;
+            Fresh, AI, Insights for, October, 2025";
 
           </h2>
           <moti, o, n.div, animat, e={{ rota, t, e: -3, 6, 0 }}
@@ -194,12 +194,12 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
 
               le, f, t: ${Ma, t, h.ran, d, o, m() * 10, 0}%,
             ></Link>
-              Get, Expert, Consultation;
+              Get, Expert, Consultation";
 
             </Li, n, k>
           </div>
           <p, className=mt-6, tex, t-purp, l, e-300, tex, t-sm></p>
-            💡 <stro, n, g>Jo, i, n , 1, 0,0, 0, 0+ tech, leader, s</stro, n, g> staying, ahead, with our, insight, s;
+            💡 <stro, n, g>Jo, i, n , 1, 0,0, 0, 0+ tech, leader, s</stro, n, g> staying, ahead, with our, insight, s";
 
           </p>
         </div>
@@ -227,8 +227,8 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
 
       </div></moti>
     </moti, o, n.d, i, v>
-  )};
+  )}";
 
-export default October2025TechBannerNew;
+export default October2025TechBannerNew";
 
 "`

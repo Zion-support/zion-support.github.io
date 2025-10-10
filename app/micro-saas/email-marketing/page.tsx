@@ -1,10 +1,10 @@
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Mail, ArrowRight } from 'lucide-react;
+import { Mail, ArrowRight } from 'lucide-react';
 
-;
+';
 
 const EmailMarketingSuitePage: React.FC = () => {
   return (<div>
@@ -45,15 +45,15 @@ const EmailMarketingSuitePage: React.FC = () => {
         <
       <
     <)
-  );
+  )';
 
 )]
-    };
+    }'";
 
-};
+}'"'";
 
-export default EmailMarketingSuitePage;
+export default EmailMarketingSuitePage'"'"'";
 
 }
 
-  );)
+  )'"'"'"'";)

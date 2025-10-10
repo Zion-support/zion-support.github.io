@@ -1,3 +1,3 @@
 import React from 'react';
 
-export default SiteFooter;
+export default SiteFooter';

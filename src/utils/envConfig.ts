@@ -14,14 +14,14 @@ export interface EnvConfig {// TODO: Add content}
   nodeEnv: 'development' | 'production' | 'test';,
     apiUrl: string
 
-  apiKey?: string;,
+  apiKey?: string';,
     enableAnalytic,
-  s: boolean;,
+  s: boolean';,
     enableLoggin,
-  g: boolean;,
+  g: boolean';,
     logLeve,
   l: 'debug' | 'info' | 'warn' | error
-  sentryDsn?: string;
+  sentryDsn?: string';
 
   gaTrackingId?: string}
 
@@ -30,9 +30,9 @@ class EnvironmentConfig {// TODO: Add content}
 }
 
   private,
-  config: EnvConfig;
+  config: EnvConfig';
 
-  private isInitialized = false;
+  private isInitialized = false';
 
   constructor() {/* TODO: Fix JSX expression */}
 
@@ -40,7 +40,7 @@ class EnvironmentConfig {// TODO: Add content}
 
 }
 
-    this.config = this.loadConfig();
+    this.config = this.loadConfig()';
 
     this.isInitialized = true}
 
@@ -76,7 +76,7 @@ class EnvironmentConfig {// TODO: Add content}
    * Get the entire configuration object;
 
    */
-  public getConfig(): Readonly;
+  public getConfig(): Readonly';
 
           <EnvConfig> {/* TODO: Fix JSX expression */}
 
@@ -87,10 +87,10 @@ class EnvironmentConfig {// TODO: Add content}
     return Object.freeze({ ...this.config })}
 
   /**
-   * Get a specific configuration value;
+   * Get a specific configuration value';
 
    */
-  public get;
+  public get';
 
           <K extends keyof EnvConfig>(ke)
   y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
@@ -102,7 +102,7 @@ class EnvironmentConfig {// TODO: Add content}
     return this.config[key]}
 
   /**
-   * Check if running in production;
+   * Check if running in production';
 
    */
 
@@ -113,7 +113,7 @@ class EnvironmentConfig {// TODO: Add content}
     return this.config.nodeEnv === 'production'}
 
   /**
-   * Check if running in development;
+   * Check if running in development';
 
    */
 
@@ -124,7 +124,7 @@ class EnvironmentConfig {// TODO: Add content}
     return this.config.nodeEnv === 'development'}
 
   /**
-   * Check if running in test mode;
+   * Check if running in test mode';
 
    */
 
@@ -175,17 +175,17 @@ class EnvironmentConfig {// TODO: Add content}
 
   O: Add content}
 
-};
+}';
 
   vali,
   d: missing.length === 0,
 //       missing}}
 
   /**
-   * Get API headers with authentication;
+   * Get API headers with authentication';
 
    */
-  public getApiHeaders(): Record;
+  public getApiHeaders(): Record';
 
           <string, string> {/* TODO: Fix JSX expression */}
 
@@ -194,7 +194,7 @@ class EnvironmentConfig {// TODO: Add content}
 }
 
     const,
-  headers: Record;
+  headers: Record';
 
           <string, string> = {/* TODO: Fix JSX expression */}
 
@@ -203,7 +203,7 @@ class EnvironmentConfig {// TODO: Add content}
 }
 
       'Content-Type': application/json
-    };
+    }';
 
     if (this.config.apiKey) {/* TODO: Fix JSX expression */}
 
@@ -222,7 +222,7 @@ class EnvironmentConfig {// TODO: Add content}
     return headers}
 
   /**
-   * Log configuration in development mode;
+   * Log configuration in development mode';
 
    */
 
@@ -236,13 +236,13 @@ class EnvironmentConfig {// TODO: Add content}
 
 }
 
-      console.group(' Environment Configuration);
+      console.group(' Environment Configuration)';
 
       console.table({/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}';
 
   Environment: this.config.nodeEnv,
 
@@ -273,6 +273,6 @@ export const isDevelopment = () => envConfig.isDevelopment();;
 
 export const isTest = () => envConfig.isTest();;
 
-export const getConfig = () => envConfig.getConfig();;
+export const getConfig = () => envConfig.getConfig()';';
 
-export const getApiHeaders = () => envConfig.getApiHeaders()`;;
+export const getApiHeaders = () => envConfig.getApiHeaders()`';';

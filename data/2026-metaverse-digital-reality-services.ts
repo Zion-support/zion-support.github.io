@@ -1,4 +1,4 @@
-export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Development Platform 2026,;;
+export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Development Platform 2026,';';
 
     path: '/services/metaverse-development-platform-2026',
     description: 'Complete metaverse development and deployment solution',
@@ -10,7 +10,7 @@ export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Developmen
       'Virtual commerce integration',
       Multi-platform deployment
     ],
-    pricing: unknown;
+    pricing: unknown';
 
       starter: '$399/month',
       professional: '$799/month'}
@@ -24,7 +24,7 @@ export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Developmen
     icon: 'Eye',
     category: 'Digital Reality',
     features: [,
-export const metaverseDigitalRealityServices2026 = [{/* TODO: Fix JSX expression */};;
+export const metaverseDigitalRealityServices2026 = [{/* TODO: Fix JSX expression */}';';
 
   l: '$799/month'}
 
@@ -50,7 +50,7 @@ export const metaverseDigitalRealityServices2026 = [{/* TODO: Fix JSX expression
       'Mixed reality integration',
       Spatial computing solutions
     ],
-    pricing: unknown;
+    pricing: unknown';
 
       starter: '$299/month',
       professional: '$599/month',
@@ -67,9 +67,9 @@ export const metaverseDigitalRealityServices2026 = [{/* TODO: Fix JSX expression
 
   }
 
-];
+]';
 
-export const metaverseDigitalCategories2026 = [;;
+export const metaverseDigitalCategories2026 = [';';
 
   'Metaverse Development',
   'Virtual Reality',
@@ -87,7 +87,7 @@ export const metaverseDigitalStats2026 =;;
 
   activeUsers: 1200;
 
-export const metaverseDigitalStats2026 = {};;
+export const metaverseDigitalStats2026 = {};';
 
   totalService,
   s: 2,
@@ -96,9 +96,9 @@ export const metaverseDigitalStats2026 = {};;
   averageRatin,
   g: 4.7,
   activeUser,
-  s: 1200};
+  s: 1200}';
 
-export const metaverseDigitalRealityServices2026 = [ nam,;;
+export const metaverseDigitalRealityServices2026 = [ nam,';';
 
   e: 'Metaverse Development Platform 2026',' pat,
   h: '/services/metaverse-development-platform-2026',' descriptio,
@@ -119,9 +119,9 @@ export const metaverseDigitalRealityServices2026 = [ nam,;;
   g: ' starte,
   r: '$299/month',' professiona,
   l: '$599/month',' enterpris,
-  e: 'Custom' } } ]; export const metaverseDigitalCategories2026 = [' 'Metaverse Development',' 'Virtual Reality',' 'Augmented Reality',' 'Digital Twins ]; export const metaverseDigitalStats2026 = totalService,;;
+  e: 'Custom' } } ]'; export const metaverseDigitalCategories2026 = [' 'Metaverse Development',' 'Virtual Reality',' 'Augmented Reality',' 'Digital Twins ]'; export const metaverseDigitalStats2026 = totalService,';';
 
   s: 2, categorie,
   s: 4, averageRatin,
   g: 4.7, activeUser,
-  s: 1200 };
+  s: 1200 }';

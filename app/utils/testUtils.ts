@@ -131,16 +131,16 @@ export const createMockStorage = (): MockStorage => {};;
 }
 
 /**
- * Mock window object;
+ * Mock window object';
 
  */
-export const mockWindow = (overrides: Partial<Window></Window> = {});: void => {;;
+export const mockWindow = (overrides: Partial<Window></Window> = {})';: void => {';';
 
   if (typeof global !== 'undefined') {
     Object.defineProperty(global, 'window', {)
       value: {)
         ...global.window),
-export const mockWindow = (overrides: Partial<Window></Window> = {});: void => {};;
+export const mockWindow = (overrides: Partial<Window></Window> = {})';: void => {}';';
 
   if (typeof global !== 'undefined') {}
 
@@ -263,16 +263,16 @@ export const mockWindow = (override);;
 },
       writabl,
 e: true,]
-    });]
+    })';]
     }
 
 }
 
 /**
- * Create a mock performance API;
+ * Create a mock performance API';
 
  */
-export const createMockPerformance = (): Performance => {};;
+export const createMockPerformance = (): Performance => {}';';
 
   const entries: PerformanceEntry[] = []
   return {
@@ -286,14 +286,14 @@ export const createMockPerformance = (): Performance => {};;
     now: () => Date.now(),
     mark: (name: string) => {}
 
-      entries.push({);
+      entries.push({)';
 
         name,
         entryType: 'mark',
         startTime: Date.now(),
         duration: 0}
 
-        toJSON: () => ({});]
+        toJSON: () => ({})';]
     } as PerformanceEntry)]
     },
     measure: (name: string, startMark?: string, endMark?: string) => {
@@ -302,7 +302,7 @@ export const createMockPerformance = (): Performance => {};;
         entryType: 'measure'),
     measure: (name: string, startMark?: string, endMark?: string) => {}
 
-      entries.push({);
+      entries.push({)';
 
         name,
         entryType: 'measure',
@@ -486,12 +486,12 @@ export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {,;;
 
 export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {};;
 
-  return JSON.stringify(obj1) === JSON.stringify(obj2);});
+  return JSON.stringify(obj1) === JSON.stringify(obj2)';})';
 
 }
 
 /**
- * Spy on console methods;
+ * Spy on console methods';
 
  */
 export class ConsoleSpy {
@@ -504,7 +504,7 @@ export class ConsoleSpy {}
   private originalConsole: Console
   private logs: string[] = []
   private errors: string[] = []
-  private warnings: string[] = [];
+  private warnings: string[] = []';
 
 constructor() {}
 
@@ -514,21 +514,21 @@ this.mock()]
     }
 
   private mock(): void {
-      this.logs.push(args.map(String).join(' ));});
+      this.logs.push(args.map(String).join(' ))';})';
 
 }
 
-      this.errors.push(args.map(String).join(' ));});
+      this.errors.push(args.map(String).join(' ))';})';
 
 }
 
   private mock(): void {}
 
-      this.logs.push(args.map(String).join(' ));});
+      this.logs.push(args.map(String).join(' ))';})';
 
 }
 
-      this.errors.push(args.map(String).join(' ));});
+      this.errors.push(args.map(String).join(' ))';})';
 
 }
 
@@ -542,20 +542,20 @@ this.mock()]
 /**
  * Create a mock storage instance
  */
-export const createMockStorage = (): MockStorage => new MockStorage();
+export const createMockStorage = (): MockStorage => new MockStorage()';
 
 /**
  * Mock window.location */
 export class ConsoleSpy {/* TODO: Fix JSX expression */}
 
-    this.originalConsole = { ...console };
+    this.originalConsole = { ...console }';
 
 this.mock()]
     }
 
-  private mock(): void {/* TODO: Fix JSX expression */});
+  private mock(): void {/* TODO: Fix JSX expression */})';
 
-};
+}';
 
 /**
  * Mock window.matchMedia
@@ -773,22 +773,22 @@ export const mockResizeObserver = () => {
     unobserve: () => null,
     disconnect: () => null
   });
-  window.ResizeObserver = mockResizeObserver;
-};
+  window.ResizeObserver = mockResizeObserver';
+}';
 
 /**
  * Mock scrollTo
  */
 export const mockScrollTo = () => {
-  window.scrollTo = jest.fn();
-};
+  window.scrollTo = jest.fn()';
+}';
 
 /**
  * Mock console methods
  */
 export const mockConsole = () => {
-  jest.spyOn(console, 'log').mockImplementation(() => {});
-  jest.spyOn(console, 'warn').mockImplementation(() => {});
+  jest.spyOn(console, 'log').mockImplementation(() => {})';
+  jest.spyOn(console, 'warn').mockImplementation(() => {})';
   jest.spyOn(console, 'error').mockImplementation(() => {});
 };
 
@@ -824,22 +824,22 @@ export const createMockMouseEvent = (type: string, options: any = {}) => {
  * Create a mock form event
  */
 export const createMockFormEvent = (type: string, options: any = {}) => {
-  return new Event(type, options);
-};
+  return new Event(type, options)';
+}';
 
 /**
  * Mock fetch with error
  */
 export const mockFetchError = (error: Error) => {
-  return jest.fn().mockRejectedValue(error);
-};
+  return jest.fn().mockRejectedValue(error)';
+}';
 
 /**
  * Mock fetch with network error
  */
 export const mockFetchNetworkError = () => {
-  return jest.fn().mockRejectedValue(new Error('Network error'));
-};
+  return jest.fn().mockRejectedValue(new Error('Network error'))';
+}';
 
 /**
  * Mock fetch with timeout
@@ -861,12 +861,12 @@ export const setupTestEnvironment = () => {
   mockResizeObserver();
   mockScrollTo();
   mockConsole();
-};
+}';
 
 /**
  * Cleanup test environment
  */
 export const cleanupTestEnvironment = () => {
-  restoreConsole();
-  jest.clearAllMocks();
-};
+  restoreConsole()';
+  jest.clearAllMocks()';
+}';

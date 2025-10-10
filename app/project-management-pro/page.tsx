@@ -1,8 +1,8 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import {
   CheckSquare,
@@ -25,11 +25,11 @@ import {
   Target,
   Calendar,
 
-} from lucide-react;
+} from lucide-react';
 
-;
+';
 
-const ProjectManagementProPage: React.FC = () => {const features = [;;;
+const ProjectManagementProPage: React.FC = () => {const features = [';';';
 
     {
       ico,
@@ -53,11 +53,11 @@ const ProjectManagementProPage: React.FC = () => {const features = [;;;
       description: Automate repetitive tasks and workflows to improve efficiency and productivity.
     }
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'Improve project delivery times,
     'Enhance team collaboration,
@@ -67,7 +67,7 @@ const benefits = [;;
     'Reduce project risks,
     'Increase team productivity,
     Streamline project workflows
-  ];
+  ]';
 
   return (
 
@@ -123,4 +123,4 @@ const benefits = [;;
         </section>
       </div>
     </React.Fragment>)
-export default ProjectManagementProPage;
+export default ProjectManagementProPage'"'"'"'";

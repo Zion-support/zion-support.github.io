@@ -1,16 +1,16 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-import { CheckCircle, ArrowRight, Cloud, Shield, Zap, Globe } from 'lucide-react;
+import { CheckCircle, ArrowRight, Cloud, Shield, Zap, Globe } from 'lucide-react';
 
-const CloudServicesPage: React.FC = () => {const features = [;;;
+const CloudServicesPage: React.FC = () => {const features = [';';';
 
     {
       icon: Cloud,
@@ -32,9 +32,9 @@ const CloudServicesPage: React.FC = () => {const features = [;;;
       description: Worldwide cloud deployment and support for international businesses
     }
 
-  ];
+  ]';
 
-const benefits = [    'Scalable cloud infrastructure,;
+const benefits = [    'Scalable cloud infrastructure,';
     'Enterprise-grade security,
     '24/7 monitoring and support,
     'Cost-effective solutions,
@@ -132,7 +132,7 @@ const benefits = [    'Scalable cloud infrastructure,;
                   <h3 className="text-xl font-semibold text-white mb-3>{feature.title}</h3>
                   <p className="text-gray-300>{feature.description}</p>
                 </div>
-              ));
+              ))";
 
             </div>
           </div>
@@ -150,7 +150,7 @@ const benefits = [    'Scalable cloud infrastructure,;
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 />
                   <span className="text-gray-300 text-lg>{benefit}</span>
                 </div>
-              ));
+              ))";
 
             </div>
           </div>
@@ -182,9 +182,9 @@ const benefits = [    'Scalable cloud infrastructure,;
         </section>
       </div>
     </>
-  );
+  )";
 
-};
+}"'";
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>
             {features.map((feature, index) => (
@@ -253,11 +253,11 @@ const benefits = [    'Scalable cloud infrastructure,;
 
       <Footer />
     </div>
-  );
+  )'"'";
 
 }
 
-export default CloudServicesPage;
+export default CloudServicesPage'"'"'";
 
     </div>)
-export default PagePage;
+export default PagePage'"'"'"'";

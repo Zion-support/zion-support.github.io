@@ -1,11 +1,11 @@
 
 
 
-import React from 'react;
+import React from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { CheckCircle, Star, Phone } from 'lucide-react;
+import { CheckCircle, Star, Phone } from 'lucide-react';
 
 import Navigation from './components/Navigation;
 
@@ -24,7 +24,7 @@ interface ServicePageProps {/* TODO: Fix JSX expression */}
     ico,
   n: React.ComponentType;
 
-          <{ className?: string }>;
+          <{ className?: string }>';
 
   service,
   s: Array<{/* TODO: Fix JSX expression */}
@@ -32,12 +32,12 @@ interface ServicePageProps {/* TODO: Fix JSX expression */}
   s: string[]}
 
     pric,
-  e: string}>;
+  e: string}>';
 
   benefit,
   s: string[]}
 
-;
+';
 
 const,
   ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {/* TODO: Fix JSX expression */}
@@ -74,7 +74,7 @@ const,
           
           
           <Phone className=w-5 h-5 mr-2 /></Phone>
-// Get Free Consultation;
+// Get Free Consultation"'"'";
 
           </Link>
 
@@ -82,7 +82,7 @@ const,
               href="tel:+13024640950" className=border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center
               <Phone className=w-4 h-4 mr-2 />
 
-// (302) 464-0950;
+// (302) 464-0950"'"'"'";
 
           </a>
           </div>
@@ -113,7 +113,7 @@ const,
 
                 </ul>
                 <div className=text-2xl font-bold text-cyan-400 mb-4>{service.price}</div>
-                  className=cyber-button w-full text-center inline-block Get Started;
+                  className=cyber-button w-full text-center inline-block Get Started"'"'"'";
 
         {/* Benefits Section */}
 
@@ -142,6 +142,6 @@ Ready to Transform Your Business?
       </main>
       <Footer /></Footer>
     </div>
-  )};
+  )}'"'"'";
 
-export default ServicePage;
+export default ServicePage'"'"'"'";

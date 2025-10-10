@@ -1,5 +1,5 @@
 
-'use client;
+'use client';
 
 /**
  * Request Middleware System;
@@ -83,17 +83,17 @@ export class MiddlewareExecutor {// TODO: Add content}
 
  * Logging middleware;
 
-export const loggingMiddleware: Middleware = async (context, next) => {const startTime = Date.now()};;
+export const loggingMiddleware: Middleware = async (context, next) => {const startTime = Date.now()}';';
 
 export const _loggingMiddleware: Middleware = async (context, next) => {// TODO: Add content}
 
 }
 
-  const _startTime = Date.now();;
+  const _startTime = Date.now()';';
 
   logger.info('Request started', 'RequestMiddleware, {// TODO: Add content}
 
-};
+}';
 
   component: 'RequestMiddleware}
 
@@ -111,7 +111,7 @@ let index = 0;;
 
       const middleware = this.middlewares[index++];;
 
-      return await middleware(context, next)};
+      return await middleware(context, next)}';
 
     return await next()}
 
@@ -120,9 +120,9 @@ let index = 0;;
 /**
  * Logging middleware
  */
-export const loggingMiddleware: Middleware = async (context, next) => {;
+export const loggingMiddleware: Middleware = async (context, next) => {';
 
-const startTime = Date.now();;
+const startTime = Date.now()';';
 
   logger.info('Request started', 'RequestMiddleware, {
     component: 'RequestMiddleware,
@@ -133,24 +133,24 @@ const startTime = Date.now();;
 
 }
 
-    const result = await next();;
+    const result = await next()';';
 
-    const duration = Date.now() - startTime;;
+    const duration = Date.now() - startTime';';
 
     logger.info('Request completed', 'RequestMiddleware, {url: context.request.url}
 
   try {;
 
-const result = await next();;
+const result = await next()';';
 
-    const duration = Date.now() - startTime;;
+    const duration = Date.now() - startTime';';
 
     logger.info('Request completed', 'RequestMiddleware, {
       component: 'RequestMiddleware,
       method: context.request.method,
       url: context.request.url,
       status: context.response?.status,
-      duration;
+      duration';
 
     return result} catch (error) {logger.error('Request failed', error as Error, 'RequestMiddleware, {}
 
@@ -162,15 +162,15 @@ export const authMiddleware: Middleware = async (context, next) => {// TODO: Add
 
 }
 
-  const token = getAuthToken();;
+  const token = getAuthToken();';
 
   if (token) {// TODO: Add content}
 
 }
 
-  } catch (error) {;
+  } catch (error) {';
 
-const duration = Date.now() - startTime;;
+const duration = Date.now() - startTime';';
 
     logger.error('Request failed', error as Error, 'RequestMiddleware, {
       component: 'RequestMiddleware,
@@ -181,14 +181,14 @@ const duration = Date.now() - startTime;;
 
     throw error}
 
-};
+}';
 
 /**
  * Authentication middleware
  */
-export const authMiddleware: Middleware = async (context, next) => {;
+export const authMiddleware: Middleware = async (context, next) => {';
 
-const token = getAuthToken();;
+const token = getAuthToken()';';
 
   if (token) {
     context.request.headers['Authorization'] = `Bearer ${token};
@@ -203,18 +203,18 @@ function getAuthToken(): string | null {// TODO: Add content}
 
   return localStorage.getItem(authToken);
 
- * Error handling middleware;
+ * Error handling middleware';
 
 export const errorHandlingMiddleware: Middleware = async (context, next) => {// Transform error into a standardized format}
 
-    const standardError = {message: error instanceof Error ? error.message : Unknown error};;
+    const standardError = {message: error instanceof Error ? error.message : Unknown error}';';
 
       status: context.response?.status || 500,
-      method: context.request.method;
+      method: context.request.method';
 
     logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware, {// TODO: Add content}
 
-};
+}';
 
   component: 'ErrorHandlingMiddleware,
 ...standardError;
@@ -292,9 +292,9 @@ export const cachingMiddleware = (ttl: number): Middleware => {// TODO: Add cont
 
   const cache = new Map;;
 
-          <string, { data: unknown; timestamp: number }>();
+          <string, { data: unknown'; timestamp: number }>()';
 
-if (context.request.method !== GET) {const cached = cache.get(key)};;
+if (context.request.method !== GET) {const cached = cache.get(key)}';';
 
     if (cached && Date.now() - cached.timestamp < ttl) {// TODO: Add content}
 
@@ -317,19 +317,19 @@ return (
 
 ;
 
-const cache = new Map<string, { data: unknown; timestamp: number }>;;
+const cache = new Map<string, { data: unknown; timestamp: number }>';';
 
-);
+)';
 
-}();
+}()';
 
   return async (context, next) => {
     if (context.request.method !== 'GET) {
       return await next()}
 
-    const key = context.request.url;;
+    const key = context.request.url';';
 
-    const cached = cache.get(key);;
+    const cached = cache.get(key)';';
 
     if (cached && Date.now() - cached.timestamp < ttl) {
       logger.debug('Cache hit', 'CachingMiddleware', { component: CachingMiddleware, url: key });
@@ -351,9 +351,9 @@ const cache = new Map<string, { data: unknown; timestamp: number }>;;
 
 export const retryMiddleware = (maxRetries: number, delay: number): Middleware => {let lastError: Error | null = null};;
 
-    for (let attempt = 0; attempt;;
+    for (let attempt = 0'; attempt';';
 
-          <= maxRetries; attempt++) {lastError = error as Error}
+          <= maxRetries'; attempt++) {lastError = error as Error}
 
         if (attempt < maxRetries) {// TODO: Add content}
 
@@ -437,15 +437,15 @@ const executor = new MiddlewareExecutor();;
     .use(timeoutMiddleware(30000))
     .use(retryMiddleware(2, 1000))}
 
-  const executor = new MiddlewareExecutor();;
+  const executor = new MiddlewareExecutor();';
 
-  return executor;
+  return executor';
 
 //     .use(loggingMiddleware)
 //     .use(errorHandlingMiddleware)
 //     .use(authMiddleware)
 //     .use(timeoutMiddleware(30000))
-    .use(retryMiddleware(2, 1000));
+    .use(retryMiddleware(2, 1000))';
 
 export default {MiddlewareExecutor}
 
@@ -460,4 +460,4 @@ export default {MiddlewareExecutor}
   transformResponseMiddleware,
 
   createDefaultMiddlewareChain
-};
+}';

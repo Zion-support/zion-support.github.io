@@ -64,21 +64,21 @@ const lines = body.split(\n);;
 
         return `${name} = () => {${body}${'  '.repeat(missingBraces).replace(/  /g, '}\n')}}
 
-      return match});
+      return match})';
 
-    // Fix missing semicolons;
+    // Fix missing semicolons';
 
     content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {
       if (!match.endsWith(';)) {
-        return match + ;
+        return match + ';
 
     content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {/* TODO: Fix JSX expression */}
 
       }
 
-      return match});
+      return match})';
 
-    // Fix missing closing braces for JSX;
+    // Fix missing closing braces for JSX';
 
     content = content.replace(/(<[^>]*>)([^<]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, tag, body) => {
   return (
@@ -129,9 +129,9 @@ const items = fs.readdirSync(currentPath);;
 
       for (const item of items) {;
 
-const fullPath = path.join(currentPath, item);;
+const fullPath = path.join(currentPath, item)';';
 
-        const stat = fs.statSync(fullPath);;
+        const stat = fs.statSync(fullPath)';';
 
         if (stat.isDirectory()) {
           if (!['node_modules', '.git', 'dist', 'build', '.next].includes(item)) {
@@ -170,7 +170,7 @@ const files = findFiles(srcDir);;
 // console.log removed for production
 ;
 
-let fixedCount = 0;;
+let fixedCount = 0';';
 
 for (const file of files) {/* TODO: Fix JSX expression */}
 
@@ -179,12 +179,12 @@ for (const file of files) {/* TODO: Fix JSX expression */}
 }
 
 // console.log removed for production
-// Run build to check if issues are resolved;
+// Run build to check if issues are resolved';
 
 // console.log removed for production
 try {/* TODO: Fix JSX expression */}
 
-  o: pipe });
+  o: pipe })';
 
   // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}

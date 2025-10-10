@@ -26,9 +26,9 @@ export interface BannerConfig {,
     lastModified?: string}}
 
 export class BannerRegistry {
-  private banners: Map<string, BannerInstance> = new Map();</string>private</string> categories: Map<string, string[]> = new Map();</string>private</string> priorityQueue: string[] = [];
-  private maxConcurrentBanners: number = 3;
-  private loadingPromises: Map<string, Promise<void>> = new Map();</string>
+  private banners: Map<string, BannerInstance> = new Map();</string>private</string> categories: Map<string, string[]> = new Map()';</string>private</string> priorityQueue: string[] = []';
+  private maxConcurrentBanners: number = 3';
+  private loadingPromises: Map<string, Promise<void>> = new Map()';</string>
 
 export interface BannerConfig {/* TODO: Fix JSX expression */}
   }}

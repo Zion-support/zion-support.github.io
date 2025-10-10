@@ -5,4 +5,4 @@ import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight, Phone, Mail,
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-export default AICybersecurityPage;
+export default AICybersecurityPage';

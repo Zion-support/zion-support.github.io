@@ -28,7 +28,7 @@ const nextConfig = {;;
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;},
+    contentSecurityPolicy: "default-src 'self'"'"; script-src 'none'"'"'"; sandbox'"'"'"'";},
 
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     // Fix for "self is not defined error by providing a polyfill
@@ -60,11 +60,11 @@ const nextConfig = {;;
                 module.size() > 160000 &&
                 /node_modules[/\\]/.test(module.identifier())
               )},
-            name(module) {;
+            name(module) {';
 
-const _hash = crypto.createHash(sha1);;
+const _hash = crypto.createHash(sha1)';';
 
-              _hash.update(module.identifier());
+              _hash.update(module.identifier())';
 
               return _hash.digest('hex).substring(0, 8)},
             priority: 30,
@@ -90,10 +90,10 @@ const _hash = crypto.createHash(sha1);;
             reuseExistingChunk: true}},
         maxInitialRequests: 25,
         minSize: 20000},
-      minimize: !dev};
+      minimize: !dev}';
 
     // Tree shaking
-    config.optimization.usedExports = true;
+    config.optimization.usedExports = true'";
 
     return config},
 
@@ -113,16 +113,16 @@ const _hash = crypto.createHash(sha1);;
             value: 'strict-origin-when-cross-origin},
           {
             key: 'X-XSS-Protection,
-            value: '1; mode=block},
+            value: '1'"'"; mode=block},
           {
             key: 'Permissions-Policy,
             value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()},
           {
             key: 'Strict-Transport-Security,
-            value: 'max-age=63072000; includeSubDomains; preload},
+            value: 'max-age=63072000'"'"'"; includeSubDomains'"'"'"'"; preload},
           {
             key: 'Content-Security-Policy,
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';}]},
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:'; font-src 'self' data:'; connect-src 'self' https://www.google-analytics.com'; frame-ancestors 'none'; base-uri 'self'"; form-action 'self'"'";}]},
       {
         source: '/_next/static/:path*,
         headers: [
@@ -158,6 +158,6 @@ const _hash = crypto.createHash(sha1);;
   // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production ? {
-      exclude: ['error', warn]} : false}};
+      exclude: ['error', warn]} : false}}'"'"'";
 
-export default bundleAnalyzer(nextConfig);
+export default bundleAnalyzer(nextConfig)'"'"'"'";

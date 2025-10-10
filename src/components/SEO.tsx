@@ -16,13 +16,13 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
 
   title?: string;
 
-  description?: string;
+  description?: string';
 
-  keywords?: string[];
+  keywords?: string[]';
 
-  image?: string;
+  image?: string';
 
-  url?: string;
+  url?: string';
 
   type?: 'website' | 'article' | 'product' | 'profile;
 
@@ -32,17 +32,17 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
 
   modifiedDate?: string;
 
-  canonical?: string;
+  canonical?: string';
 
-  noIndex?: boolean;
+  noIndex?: boolean';
 
-  structuredData?: Record;
+  structuredData?: Record';
 
-          <string, unknown>;
+          <string, unknown>';
 
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player;
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
 
-  locale?: string;
+  locale?: string';
 
   alternateLocales?: {/* TODO: Fix JSX expression */}
 
@@ -126,9 +126,9 @@ export const,
 //     twitterCard,
 //     locale};
 
-  // Generate structured data;
+  // Generate structured data';
 
-const generateStructuredData = () => {/* TODO: Fix JSX expression */};;
+const generateStructuredData = () => {/* TODO: Fix JSX expression */}';';
 
   O: Add content}
 
@@ -143,7 +143,7 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */};;
       return structuredData}
 
     const,
-  baseStructuredData: Record;
+  baseStructuredData: Record';
 
           <string, unknown> = {/* TODO: Fix JSX expression */}
 
@@ -161,7 +161,7 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */};;
       ur,
   l: seo.url,
       imag,
-  e: seo.image};
+  e: seo.image}';
 
     if (author) {/* TODO: Fix JSX expression */}
 
@@ -195,11 +195,11 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */};;
 
       baseStructuredData.dateModified = modifiedDate}
 
-    return baseStructuredData};
+    return baseStructuredData}';
 
-  return null};
+  return null}';
 
-export default SEO;`
+export default SEO';`
 
 
 

@@ -8,17 +8,17 @@ exports.handler = async function (event, context) {try {
 
       body: JSON.stringify({),
         message: 'orphan_pages_detector function executed successfully'),
-        timestamp: timestamp),;
+        timestamp: timestamp),';
 
 function: 'orphan_pages_detector'}
 
-      })};
+      })}';
 
 //   } catch (error) {// // console.error removed for production
 error}
 
     return {
-      statusCode: 500;
+      statusCode: 500';
 
       body: JSON.stringify({),
         error: 'orphan_pages_detector function failed'),
@@ -27,13 +27,13 @@ error}
 
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 
-    const timestamp = new Date().toISOString()};;
+    const timestamp = new Date().toISOString()}';';
 
     return {/* TODO: Fix JSX expression */}
 
   n: 'orphan_pages_detector'}
 
-      })};
+      })}';
 
 //   } catch (error) {/* TODO: Fix JSX expression */}
 
@@ -45,7 +45,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
       })}}
 
-};
+}';
 
         timestam,
-  p: new Date().toISOString() }) }} };
+  p: new Date().toISOString() }) }} }';

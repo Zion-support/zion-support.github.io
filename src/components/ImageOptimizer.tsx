@@ -49,13 +49,13 @@ const [isLoaded, setIsLoaded] = useState(false);
 }(() => {
     if (priority) return;
 
-;
+';
 
-const observer = new IntersectionObserver(;;
+const observer = new IntersectionObserver(';';
 
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true);
+          setIsInView(true)';
 
           observer.disconnect()}
 
@@ -100,7 +100,7 @@ return (
 const svg = ;;
 
       <svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg>
-);
+)";
 
 }
 
@@ -113,13 +113,13 @@ const svg = ;;
           Loading...,
         </text>,
       </svg>,
-    ;
+    ";
 
     ,
-    return `data:image/svg+xml;base64,${btoa(svg)}};
+    return `data:image/svg+xml";base64,${btoa(svg)}}"'";
 
   if (hasError) {
-    return(<div;
+    return(<div"'"'";
 
         className={`bg-slate-800 flex items-center justify-center ${className}}
 
@@ -133,7 +133,7 @@ const svg = ;;
       </div>)
     )}
 
-  return(<div;
+  return(<div'"'"'";
 
       ref={imgRef}
 
@@ -144,7 +144,7 @@ const svg = ;;
     >
       {/* Placeholder */})
       {!isLoaded && ()
-        <img;)
+        <img'"'"'"'";)
       {/* Placeholder */}
 
       {!isLoaded && (</div>
@@ -162,7 +162,7 @@ const svg = ;;
 
       {isInView && (
 
-        <img;
+        <img'"'"'"'";
 
           src={src}
 
@@ -187,6 +187,6 @@ const svg = ;;
       )}
 
     </div>
-  )};
+  )}'"'"'";
 
-export default ImageOptimizer;
+export default ImageOptimizer'"'"'"'";

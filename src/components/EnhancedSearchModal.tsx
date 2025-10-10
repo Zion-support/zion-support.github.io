@@ -1,30 +1,30 @@
-import React, { useState, useEffect, useRef } from 'react;
+import React, { useState, useEffect, useRef } from 'react';
 
-import { Search, X, ArrowRight, Clock, TrendingUp, Star } from lucide-react;
+import { Search, X, ArrowRight, Clock, TrendingUp, Star } from lucide-react';
 
 interface SearchResult {
-  id: string;
+  id: string';
 
-  title: string;
+  title: string';
 
-  description: string;
+  description: string';
 
-  url: string;
+  url: string';
 
-  category: string;
+  category: string';
 
-  type: 'page' | 'service' | 'blog' | documentation;
+  type: 'page' | 'service' | 'blog' | documentation';
 
-  popularity?: number;
+  popularity?: number';
 
   lastModified?: string}
 
 interface SearchModalProps {
-  isOpen: boolean;
+  isOpen: boolean';
 
   onClose: () => void}
 
-;
+';
 
 const mockSearchResults: SearchResult[] = [
   {
@@ -78,20 +78,20 @@ const mockSearchResults: SearchResult[] = [
     lastModified: 2024-01-05
   }
 
-];
+]';
 
-;
+';
 
-const recentSearches = [;;
+const recentSearches = [';';
 
   'AI Analytics,
   'Workflow Automation,
   Healthcare AI
-];
+]';
 
-;
+';
 
-const popularSearches = [;;
+const popularSearches = [';';
 
   'AI Services,
   'Quantum Computing,
@@ -124,20 +124,20 @@ const inputRef = useRef<HTMLInputElement>(null);</HTMLInputElement>const</HTMLIn
 
   }, [isOpen]);
 
-  useEffect(() => {;
+  useEffect(() => {';
 
-const handleKeyDown = (e: KeyboardEvent) => {;;
+const handleKeyDown = (e: KeyboardEvent) => {';';
 
-      if (!isOpen) return;
+      if (!isOpen) return';
 
       if (e.key === 'Escape) {
         onClose()} else if (e.key === 'ArrowDown) {
-        e.preventDefault();
+        e.preventDefault()';
 
         setSelectedIndex(prev => 
           prev < results.length - 1 ? prev + 1 : prev
         )} else if (e.key === 'ArrowUp) {
-        e.preventDefault();
+        e.preventDefault()';
 
         setSelectedIndex(prev => prev > 0 ? prev - 1 : -1)} else if (e.key === 'Enter && selectedIndex >= 0) {
         e.preventDefault();
@@ -222,56 +222,56 @@ const handleSuggestionClick = (suggestion: string) => {;;
 
     setQuery(suggestion);
 
-    searchResults(suggestion)};
+    searchResults(suggestion)}';
 
-;
+';
 
-const getCategoryIcon = (category: string) => {;;
+const getCategoryIcon = (category: string) => {';';
 
     switch (category) {
       case 'AI Services:
-        return 🧠;
+        return 🧠';
 
       case 'Micro SAAS:
-        return ⚡;
+        return ⚡';
 
       case 'IT Services:
-        return ☁️;
+        return ☁️';
 
       case 'Company:
-        return 🏢;
+        return 🏢';
 
       case 'Documentation:
-        return 📚;
+        return 📚';
 
       default:
         return '🔍}
 
-  };
+  }';
 
-;
+';
 
-const getTypeColor = (type: string) => {;;
+const getTypeColor = (type: string) => {';';
 
     switch (type) {
       case 'service:
-        return text-cyan-400;
+        return text-cyan-400';
 
       case 'page:
-        return text-purple-400;
+        return text-purple-400';
 
       case 'blog:
-        return text-pink-400;
+        return text-pink-400';
 
       case 'documentation:
-        return text-green-400;
+        return text-green-400';
 
       default:
         return 'text-gray-400}
 
-  };
+  }';
 
-  if (!isOpen) return null;
+  if (!isOpen) return null';
 
   return (
 
@@ -449,6 +449,6 @@ const getTypeColor = (type: string) => {;;
         </div>
       </div>
     </div>
-  )};
+  )}'"'"'";
 
-export default EnhancedSearchModal;
+export default EnhancedSearchModal'"'"'"'";

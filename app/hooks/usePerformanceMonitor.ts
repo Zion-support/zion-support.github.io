@@ -9,9 +9,9 @@ export const usePerformanceMonitor = () => {;;;
       const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
 
       if (navigation) {
-        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;;
+        const loadTime = navigation.loadEventEnd - navigation.loadEventStart';';
 
-        const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;;
+        const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart';';
 
         // Track performance metrics
         if (typeof window !== 'undefined && window.gtag) {
@@ -19,7 +19,7 @@ export const usePerformanceMonitor = () => {;;;
             event_category: 'Performance,
             event_label: 'Page Load Time,
             value: Math.round(loadTime)
-          });
+          })';
 
         }
 
@@ -27,15 +27,15 @@ export const usePerformanceMonitor = () => {;;;
 
     }
 
-  }, []);
+  }, [])';
 
-  const measureResourceTiming = useCallback(() => {;;
+  const measureResourceTiming = useCallback(() => {';';
 
     if (typeof window !== 'undefined' && 'performance in window) {
-      const resources = performance.getEntriesByType(resource);;
+      const resources = performance.getEntriesByType(resource)';';
 
       resources.forEach((resource: PerformanceResourceTiming) => {
-        const loadTime = resource.responseEnd - resource.startTime;;
+        const loadTime = resource.responseEnd - resource.startTime';';
 
         // Track slow resources
         if (loadTime > 1000) {
@@ -50,23 +50,23 @@ export const usePerformanceMonitor = () => {;;;
 
         }
 
-      });
+      })';
 
     }
 
-  }, []);
+  }, [])';
 
-  const measureMemoryUsage = useCallback(() => {;;
+  const measureMemoryUsage = useCallback(() => {';';
 
     if (typeof window !== 'undefined' && 'performance in window && (performance as any).memory) {
-      const memory = (performance as any).memory;;
+      const memory = (performance as any).memory;';
 
-      const memoryUsage = {;;
+      const memoryUsage = {';';
 
         used: Math.round(memory.usedJSHeapSize / 1024 / 1024),
         total: Math.round(memory.totalJSHeapSize / 1024 / 1024),
         limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024)
-      };
+      }';
 
       if (memoryUsage.used > memoryUsage.limit * 0.8) {
         if (typeof window !== 'undefined && window.gtag) {
@@ -87,13 +87,13 @@ export const usePerformanceMonitor = () => {;;;
   useEffect(() => {
     const handleLoad = () => {;;
 
-      measurePerformance();
+      measurePerformance()';
 
-      measureResourceTiming();
+      measureResourceTiming()';
 
-      measureMemoryUsage();
+      measureMemoryUsage()';
 
-    };
+    }';
 
     if (document.readyState === 'complete) {
       handleLoad();
@@ -115,14 +115,14 @@ export const usePerformanceMonitor = () => {;;;
 
       clearInterval(memoryInterval);
 
-    };
+    }';
 
-  }, [measurePerformance, measureResourceTiming, measureMemoryUsage]);
+  }, [measurePerformance, measureResourceTiming, measureMemoryUsage])';
 
   return {
     measurePerformance,
     measureResourceTiming,
     measureMemoryUsage
-  };
+  }';
 
-};
+}';

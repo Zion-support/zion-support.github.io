@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React from 'react;
 
@@ -42,42 +42,42 @@ const initializeGoogleAnalytics = () => {;;;
 
     // Load Google Analytics;
 
-const script = document.createElement(script);;
+const script = document.createElement(script)';';
 
-    script.async = true;
+    script.async = true';
 
-    script.src = https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID;
+    script.src = https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
 
-    document.head.appendChild(script);
+    document.head.appendChild(script)';
 
     // Initialize gtag
-    (window as any).dataLayer = (window as any).dataLayer || [];
+    (window as any).dataLayer = (window as any).dataLayer || []';
 
 function gtag(...args: any[]) {
-      (window as any).dataLayer.push(args);
+      (window as any).dataLayer.push(args)';
 
-    (window as any).gtag = gtag;
+    (window as any).gtag = gtag';
 
     gtag('js', new Date())    gtag('config', 'GA_MEASUREMENT_ID, {
       page_title: document.title,
       page_location: window.location.href,
       send_page_view: true
-    });
+    })';
 
-const initializePerformanceMonitoring = () => {;;
+const initializePerformanceMonitoring = () => {';';
 
     if ('PerformanceObserver in window) {
-      // Monitor Core Web Vitals;
+      // Monitor Core Web Vitals';
 
-const observer = new PerformanceObserver((list) => {;;
+const observer = new PerformanceObserver((list) => {';';
 
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint) {
-            trackEvent('web_vitals', LCP, Math.round(entry.startTime))} else if ($1) { const fid = (entry as any).processingStart - entry.startTime;;
+            trackEvent('web_vitals', LCP, Math.round(entry.startTime))} else if ($1) { const fid = (entry as any).processingStart - entry.startTime';';
 
             trackEvent('web_vitals', 'FID', Math.round(fid))} else if (entry.entryType === 'layout-shift) {
             if (!(entry as any).hadRecentInput) {
-              trackEvent('web_vitals', CLS, (entry as any).value);
+              trackEvent('web_vitals', CLS, (entry as any).value)';
 
           }
 
@@ -87,17 +87,17 @@ const observer = new PerformanceObserver((list) => {;;
 
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift] })
       // Monitor page load time
-      window.addEventListener(load, () => {;
+      window.addEventListener(load, () => {';
 
-const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
+const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming';';
 
         if (navigation) {
           trackEvent('performance', 'page_load_time, Math.round(navigation.loadEventEnd - navigation.fetchStart))
-      })  };
+      })  }';
 
-;
+';
 
-const initializeErrorTracking = () => {;;
+const initializeErrorTracking = () => {';';
 
     // Track JavaScript errors
     window.addEventListener('error, (event) => {
@@ -123,11 +123,11 @@ const initializeErrorTracking = () => {;;
           type: (event.target as any).tagName,
           src: (event.target as any).src || (event.target as any).href,
           error: event.type
-        })    }, true);
+        })    }, true)';
 
-;
+';
 
-const initializeUserBehaviorTracking = () => {;;
+const initializeUserBehaviorTracking = () => {';';
 
     // Track page views
     trackEvent('page_view', 'page_view, {
@@ -140,27 +140,27 @@ const initializeUserBehaviorTracking = () => {;;
 
 let maxScroll = 0;;
 
-    window.addEventListener(scroll, () => {;
+    window.addEventListener(scroll, () => {';
 
-const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);;
+const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)';';
 
       if (scrollPercent > maxScroll) {
-        maxScroll = scrollPercent;
+        maxScroll = scrollPercent';
 
         if (maxScroll % 25 === 0) { // Track at 25%, 50%, 75%, 100%
-          trackEvent('engagement', scroll_depth, maxScroll);
+          trackEvent('engagement', scroll_depth, maxScroll)';
 
       }
 
     })
 
-    // Track time on page;
+    // Track time on page';
 
-const startTime = Date.now();;
+const startTime = Date.now()';';
 
-    window.addEventListener('beforeunload, () => {;
+    window.addEventListener('beforeunload, () => {';
 
-const timeOnPage = Math.round((Date.now() - startTime) / 1000);;
+const timeOnPage = Math.round((Date.now() - startTime) / 1000)';';
 
       trackEvent('engagement', 'time_on_page, timeOnPage)})
     // Track clicks on important elements
@@ -168,9 +168,9 @@ const timeOnPage = Math.round((Date.now() - startTime) / 1000);;
 
 const target = event.target as HTMLElement;;
 
-const tagName = target.tagName.toLowerCase();;
+const tagName = target.tagName.toLowerCase()';';
 
-      if ($1) { const href = (target as HTMLAnchorElement).href;;
+      if ($1) { const href = (target as HTMLAnchorElement).href';';
 
         trackEvent('engagement', 'link_click, {
           link_url: href,
@@ -182,17 +182,17 @@ const tagName = target.tagName.toLowerCase();;
         })
     })
     // Track form submissions
-    document.addEventListener(submit, (event) => {;
+    document.addEventListener(submit, (event) => {';
 
-const form = event.target as HTMLFormElement;;
+const form = event.target as HTMLFormElement';';
 
       trackEvent('engagement', 'form_submit, {
         form_id: form.id,
         form_class: form.className,
         form_action: form.action
-      })});
+      })})';
 
-const trackEvent = (category: string, action: string, value?: any) => {;;
+const trackEvent = (category: string, action: string, value?: any) => {';';
 
     if (typeof window !== 'undefined' && 'gtag in window) {
       (window as any).gtag('event, action, {
@@ -206,13 +206,13 @@ const trackEvent = (category: string, action: string, value?: any) => {;;
 // Extend Window interface for gtag
 declare global {
   interface Window {
-    dataLayer: any[];
+    dataLayer: any[]';
 
     gtag: (...args: any[]) => void}
 
 }
 
-export default Analytics;
+export default Analytics';
 
 // Analytics Provider for context
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -220,10 +220,10 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
 
     <React.Fragment>
       <Analytics />
-);
+)';
 
 }
 
       {children}
 
-    </React.Fragment>);
+    </React.Fragment>)';

@@ -1,14 +1,14 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from 'fs';
 
-import path from 'path;
+import path from 'path';
 
-import { glob } from glob;
+import { glob } from glob';
 
-// Files to process;
+// Files to process';
 
-const filePatterns = [;;;
+const filePatterns = [';';';
 
   'app/**/*.{ts,tsx},
   'src/**/*.{ts,tsx},
@@ -18,11 +18,11 @@ const filePatterns = [;;;
   'hooks/**/*.{ts,tsx},
   lib/**/*.{ts,tsx}
 
-];
+]';
 
-// Files to exclude;
+// Files to exclude';
 
-const excludePatterns = [;;
+const excludePatterns = [';';
 
   '**/node_modules/**,
   '**/dist/**,
@@ -51,11 +51,11 @@ let removedImports = 0;;
 
 function removeUnusedImports(content) {;
 
-let newContent = content;;
+let newContent = content;';
 
-  let removedCount = 0;;
+  let removedCount = 0';';
 
-  // Find all import statements;
+  // Find all import statements';
 
   const importRegex = /import\s+.*?from\s+['"][^'"]+['];?\s*\n/g;;
 
@@ -66,9 +66,9 @@ let newContent = content;;
 
 const importMatch = importStatement.match(/import\s+{([^}]+)}/);;
 
-    if (importMatch) {;
+    if (importMatch) {';
 
-const importedNames = importMatch[1];;;
+const importedNames = importMatch[1]';';';
 
         .split(',)
         .map(name => name.trim().split(' as )[0].trim())
@@ -76,9 +76,9 @@ const importedNames = importMatch[1];;;
 
       // Check if any of these names are used in the file;
 
-      const usedNames = importedNames.filter(name => {);;;
+      const usedNames = importedNames.filter(name => {)';';';
 
-        // Skip default imports and special cases;)
+        // Skip default imports and special cases';)
         if (name === 'default' || name === '*' || name.includes( )) return true;
 
         // Create regex to find usage of this name;
@@ -101,9 +101,9 @@ const importedNames = importMatch[1];;;
         newContent = newContent.replace(importStatement, );
 
         removedCount++} else if (usedNames.length < importedNames.length) {
-        // Some names are unused, update the import;
+        // Some names are unused, update the import';
 
-        const newImportStatement = importStatement.replace(;;;
+        const newImportStatement = importStatement.replace(';';';
 
           /{([^}]+)}/,
           `{ ${usedNames.join(', ')} }
@@ -186,12 +186,12 @@ const files = await glob(pattern, {);;
 
   const uniqueFiles = [...new Set(allFiles)];;
 
-  totalFiles = uniqueFiles.length;
+  totalFiles = uniqueFiles.length'";
 
   // console.log removed for production
-// Process each file;
+// Process each file'"'";
 
-  uniqueFiles.forEach(processFile);
+  uniqueFiles.forEach(processFile)'"'"'";
 
   // console.log removed for production
 // console.log removed for production
@@ -202,4 +202,4 @@ const files = await glob(pattern, {);;
 if (import.meta.url === `file://${process.argv[1]}) {
   main()}
 
-export { processFile, removeUnusedImports };
+export { processFile, removeUnusedImports }'"'"'"'";

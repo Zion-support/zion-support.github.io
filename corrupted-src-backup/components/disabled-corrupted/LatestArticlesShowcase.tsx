@@ -43,7 +43,7 @@ const latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).s
                   </sp, a, n>
                   {  artic, l, e.featured  && ()
                     <span, classNam, e = bg-yell, o, w-100, tex, t-yell, o, w-800, tex, t-xs, p, x-2, p, y-1, rounde, d-full, fon, t-medi, u, m>)
-                      Featur, e, d;);
+                      Featur, e, d';)';
 
 const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
 
@@ -75,7 +75,7 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
 
                   </div>
                   <div, className=te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l>
-                    Read, Mor, e;
+                    Read, Mor, e';
 
                     Read, Mor, e</div>
                     <Link, className=w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m />
@@ -92,7 +92,7 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
 
                   </div>
                   <div, className=te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l></div>
-                    Read, Mor, e;
+                    Read, Mor, e';
 
                     <Link, className=w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m /></Link>
                   </div>
@@ -117,17 +117,17 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
           <Link, t, o=/bl, o, g
             className=inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg
           >
-            View, All, Articles;
+            View, All, Articles';
 
             <Link, className=w-6 h-6 />
           ></Link>
-            View, All, Articles;
+            View, All, Articles';
 
             <Link, className=w-6 h-6 /></Link>
           </Li, n, k>
         </div>
       </div>
     </sec, t, i, o, n>
-  )};
+  )}';
 
-export default LatestArticlesShowcase;
+export default LatestArticlesShowcase';

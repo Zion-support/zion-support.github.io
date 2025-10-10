@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 
 const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
 
@@ -10,13 +10,13 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
 
     }
 
-  ]; return(<div, classNam, e = py-16, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-viol, e, t-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n>
+  ]'; return(<div, classNam, e = py-16, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-viol, e, t-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n>
       {/* Animated, background, effects */}
 
       <div, className=absolute, inse, t-0, overflo, w-hidden, opacit, y-20>
         <div, className=absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-viol, e, t-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e />
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: , 2, s }} />
-  ]; return (
+  ]"'"'"'"; return (
 
     <div, classNam, e = py-16, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-viol, e, t-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n>
       {/* Animated, background, effects */}</div>
@@ -31,17 +31,17 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
           <div, className=inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-viol, e, t-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-viol, e, t-5, 0, 0/30, m, b-6></div>
             <Globe, className=w-6 h-6, tex, t-viol, e, t-400, animat, e-pul, s, e />
             <span, className=te, x, t-viol, e, t-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e>
-              🌍 NEW, 2026, CONTENT REVOLUTI, O, N;
+              🌍 NEW, 2026, CONTENT REVOLUTI, O, N'"'";
 
             </sp, a, n>
             <Globe, className=w-6 h-6, tex, t-purp, l, e-400, animat, e-pul, s, e /></Globe>
           </div>
           <h2, className=te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t>
-            Revolutionary, Content, Just Releas, e, d;
+            Revolutionary, Content, Just Releas, e, d'"'"'";
 
           </h2>
           <p, className=te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8>
-  ]; return (<div, classNam, e = py-16, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-viol, e, t-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n></div>
+  ]'"'"'"'"; return (<div, classNam, e = py-16, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-viol, e, t-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n></div>
       {/* Animated, background, effects */}
 
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20></div>
@@ -56,13 +56,13 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-viol, e, t-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-viol, e, t-5, 0, 0/30, m, b-6></div>
             <Globe, className="w-6 h-6, tex, t-viol, e, t-400, animat, e-pul, s, e /></Globe>
             <span, className=te, x, t-viol, e, t-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e></span>
-              🌍 NEW, 2026, CONTENT REVOLUTI, O, N;
+              🌍 NEW, 2026, CONTENT REVOLUTI, O, N'"'"'";
 
             </sp, a, n>
             <Globe, className=w-6 h-6, tex, t-purp, l, e-400, animat, e-pul, s, e /></Globe>
           </div>
           <h2, className=te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t></h2>
-            Revolutionary, Content, Just Releas, e, d;
+            Revolutionary, Content, Just Releas, e, d'"'"'"'";
 
           </h2>
           <p, className=te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8></p>
@@ -171,7 +171,7 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
         <div, classNam, e = bg-gradie, n, t-to-r, fro, m-viol, e, t-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3x, l, p-8, border, border-viol, e, t-5, 0, 0/20, m, b-12></div>
           <div, className=te, x, t-center, m, b-8></div>
             <h3, className=te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-4>
-              Global, Impact, of Our, Revolutionary, Content;
+              Global, Impact, of Our, Revolutionary, Content'"'"'"'";
 
             </h3>
             <p, className=te, x, t-lg, tex, t-gr, a, y-300, ma, x-w-2 xl, m, x-au, t, o>
@@ -193,7 +193,7 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-viol, e, t-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3x, l, p-8, border, border-viol, e, t-5, 0, 0/20, m, b-12></div>
           <div, className="te, x, t-center, m, b-8></div>
             <h3, className=te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-4></h3>
-              Global, Impact, of Our, Revolutionary, Content;
+              Global, Impact, of Our, Revolutionary, Content'"'"'"'";
 
             </h3>
             <p, className=te, x, t-lg, tex, t-gr, a, y-300, ma, x-w-2xl, m, x-au, t, o></p>
@@ -232,7 +232,7 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
           <div, className=inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-viol, e, t-500, vi, a-purp, l, e-500, t, o-bl, u, e-5, 0, 0></div>
             <div, className=bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10></div>
               <h3, className=te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4>
-                Join, the, Content Revoluti, o, n;
+                Join, the, Content Revoluti, o, n"'";
 
               </h3>
               <p, className=te, x, t-gr, a, y-400, m, b-8, ma, x-w-2 xl, m, x-au, t, o>
@@ -247,7 +247,7 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-viol, e, t-500, vi, a-purp, l, e-500, t, o-bl, u, e-5, 0, 0></div>
             <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10></div>
               <h3, className=te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4></h3>
-                Join, the, Content Revoluti, o, n;
+                Join, the, Content Revoluti, o, n"'"'";
 
               </h3>
               <p, className=te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o></p>
@@ -273,6 +273,6 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
         </div>
       </div>
     </div>
-  )};
+  )}'"'"'";
 
-export default React.me, m, o(NewContentPromotionalBanner20, 2, 6);"`
+export default React.me, m, o(NewContentPromotionalBanner20, 2, 6)'"'"'"'";"`

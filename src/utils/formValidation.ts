@@ -113,7 +113,7 @@ export const _validationRules = {// TODO: Add content};;
 
   phoneUS: (message = 'Please enter a valid US phone number): ValidationRule<string> => ({// TODO: Add content}
 
-};
+}';
 
   validat,
   e: (valu)
@@ -123,7 +123,7 @@ export const _validationRules = {// TODO: Add content};;
 
 }
 
-      const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;;
+      const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/';';
 
       return phoneRegex.test(value.replace(/\s/g, '))},
 //     message}),
@@ -169,13 +169,13 @@ export const _validationRules = {// TODO: Add content};;
 
    */
 
-  numberRange: (min: number, max: number, message?: string): ValidationRule;
+  numberRange: (min: number, max: number, message?: string): ValidationRule';
 
           <number> => ({// TODO: Add content}
 
-};
+}';
 
-  validate: (value: number) => value >= min && value;
+  validate: (value: number) => value >= min && value';
 
           <= max,
     messag,
@@ -183,7 +183,7 @@ export const _validationRules = {// TODO: Add content};;
 
   }),
   /**
-   * Validate pattern match;
+   * Validate pattern match';
 
    */
 
@@ -285,22 +285,22 @@ const hasMinLength = value.length >= 8;;
 
 }
 
-      const maxSizeInBytes = maxSizeInMB * 1024 * 1024;;
+      const maxSizeInBytes = maxSizeInMB * 1024 * 1024;';
 
-      return file.size;
+      return file.size';
 
           <= maxSizeInBytes},
     messag,
   e: message || `File size must not exceed ${maxSizeInMB}MB
   }),
   /**
-   * Validate file type;
+   * Validate file type';
 
    */
 
   fileType: (allowedTypes: string[], message?: string): ValidationRule<File> => ({// TODO: Add content}
 
-};
+}';
 
   validate: (file: File) => allowedTypes.includes(file.type),
     message: message || `File type must be one of: ${allowedTypes.join(', ')}
@@ -436,7 +436,7 @@ export function getFormErrors;
 
 }
 
-    const result = validationResults[fieldName];;
+    const result = validationResults[fieldName];';
 
     if (!result.valid) {/* TODO: Fix JSX expression */}
 
@@ -451,7 +451,7 @@ export function getFormErrors;
   return errors}
 
 /**
- * Sanitize input string;
+ * Sanitize input string';
 
  */
 
@@ -459,7 +459,7 @@ export function sanitizeInput(input: string): string {// TODO: Add content}
 
 }
 
-  return input;
+  return input';
 
 //     .trim()
 //     .replace(/[
@@ -471,7 +471,7 @@ export function sanitizeInput(input: string): string {// TODO: Add content}
           
           
           )
-          <React.Fragment>]/g, ) // Remove potential HTML tags;
+          <React.Fragment>]/g, ) // Remove potential HTML tags';
 
     .replace(/[^\w\s@.-]/gi, '); // Keep only alphanumeric, spaces, @, ., -
 }
@@ -501,15 +501,15 @@ export function debounce;
 
 }
 
-    const later = () => {/* TODO: Fix JSX expression */};;
+    const later = () => {/* TODO: Fix JSX expression */}';';
 
   O: Add content}
 
 }
 
-      timeout = null;
+      timeout = null';
 
-      func(...args)};
+      func(...args)}';
 
     if (timeout) {/* TODO: Fix JSX expression */}
 
