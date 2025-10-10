@@ -1,106 +1,209 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {
-  // Fix missing closing tags
-  content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
-  content = content.replace(/<section([^>]*)>\s*$/gm, '<section$1></section>');
-  content = content.replace(/<main([^>]*)>\s*$/gm, '<main$1></main>');
-  content = content.replace(/<article([^>]*)>\s*$/gm, '<article$1></article>');
-  content = content.replace(/<header([^>]*)>\s*$/gm, '<header$1></header>');
-  content = content.replace(/<footer([^>]*)>\s*$/gm, '<footer$1></footer>');
-  
-  // Fix JSX fragments
-  content = content.replace(/<>\s*$/gm, '<></>');
-  content = content.replace(/<>([^<]*)$/gm, '<>{$1}</>');
-  
-  // Fix missing semicolons in JSX
-  content = content.replace(/([^;}])\s*$/gm, '$1;');
-  
-  // Fix common JSX syntax issues
-  content = content.replace(/className\s*=\s*"([^"]*)"\s*$/gm, 'className="$1"');
-  content = content.replace(/onClick\s*=\s*{([^}]*)}\s*$/gm, 'onClick={$1}');
-  
-  // Fix missing closing braces
-  content = content.replace(/\{\s*$/gm, '{}');
-  
-  // Fix malformed JSX expressions
-  content = content.replace(/\{\s*([^}]*)\s*$/gm, '{$1}');
-  
-  // Fix missing return statements
-  content = content.replace(/const\s+(\w+)\s*=\s*\([^)]*\)\s*=>\s*\{([^}]*)\s*$/gm, 'const $1 = ($2) => {\n  return (\n    $3\n  );\n};');
-  
-  return content;
-}
-
-// Function to fix specific file patterns
-function fixSpecificFile(filePath, content) {
-  // Fix common patterns in AI pages
-  if (filePath.includes('/ai-')) {
-    // Ensure proper component structure
-    if (!content.includes('export default')) {
-      content = content.replace(/(const\s+\w+\s*=\s*\([^)]*\)\s*=>\s*\{[\s\S]*?)(\s*\});?$/m, '$1\n};\n\nexport default $1;');
-    }
-    
-    // Fix missing React import
-    if (!content.includes("import React")) {
-      content = "'use client';\nimport React from 'react';\n" + content;
-    }
-  }
-  
-  return content;
-}
-
-// Function to process a single file
-function processFile(filePath) {
+// Function to fix common syntax errors after merge conflict resolution
+function fixSyntaxErrors(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
     
-    let fixedContent = fixSyntaxErrors(content);
-    fixedContent = fixSpecificFile(filePath, fixedContent);
+    // Fix common patterns that cause syntax errors
+    const fixes = [
+      // Fix malformed JSX closing tags
+      {
+        pattern: /(\s+)<\/div>\s*<\/p>/g,
+        replacement: '$1</p>'
+      },
+      {
+        pattern: /(\s+)<\/p>\s*<\/div>/g,
+        replacement: '$1</div>'
+      },
+      {
+        pattern: /(\s+)<\/span>\s*<\/button>/g,
+        replacement: '$1</button>'
+      },
+      {
+        pattern: /(\s+)<\/button>\s*<\/span>/g,
+        replacement: '$1</span>'
+      },
+      {
+        pattern: /(\s+)<\/h1>\s*<\/button>/g,
+        replacement: '$1</h1>'
+      },
+      {
+        pattern: /(\s+)<\/h2>\s*<\/button>/g,
+        replacement: '$1</h2>'
+      },
+      {
+        pattern: /(\s+)<\/h3>\s*<\/button>/g,
+        replacement: '$1</h3>'
+      },
+      {
+        pattern: /(\s+)<\/p>\s*<\/button>/g,
+        replacement: '$1</p>'
+      },
+      {
+        pattern: /(\s+)<\/button>\s*<\/h1>/g,
+        replacement: '$1</h1>'
+      },
+      {
+        pattern: /(\s+)<\/button>\s*<\/h2>/g,
+        replacement: '$1</h2>'
+      },
+      {
+        pattern: /(\s+)<\/button>\s*<\/h3>/g,
+        replacement: '$1</h3>'
+      },
+      {
+        pattern: /(\s+)<\/button>\s*<\/p>/g,
+        replacement: '$1</p>'
+      },
+      
+      // Fix malformed closing tags with semicolons
+      {
+        pattern: /(\s+)<\/div>\s*;\s*<\/p>/g,
+        replacement: '$1</p>'
+      },
+      {
+        pattern: /(\s+)<\/p>\s*;\s*<\/div>/g,
+        replacement: '$1</div>'
+      },
+      {
+        pattern: /(\s+)<\/span>\s*;\s*<\/button>/g,
+        replacement: '$1</button>'
+      },
+      {
+        pattern: /(\s+)<\/button>\s*;\s*<\/span>/g,
+        replacement: '$1</span>'
+      },
+      
+      // Fix orphaned semicolons
+      {
+        pattern: /;\s*<\/[^>]+>/g,
+        replacement: (match) => match.replace(';', '')
+      },
+      
+      // Fix malformed JSX expressions
+      {
+        pattern: /(\s+)<\/React\.Fragment>\s*;\s*<\/[^>]+>/g,
+        replacement: '$1</React.Fragment>'
+      },
+      
+      // Fix broken JSX attributes
+      {
+        pattern: /(\s+)<\/[^>]+>\s*;\s*<\/[^>]+>/g,
+        replacement: (match) => {
+          const parts = match.split(';');
+          if (parts.length === 2) {
+            return parts[0] + parts[1];
+          }
+          return match;
+        }
+      },
+      
+      // Fix broken closing tags with extra characters
+      {
+        pattern: /(\s+)<\/[^>]+>\s*[^<]*<\/[^>]+>/g,
+        replacement: (match) => {
+          const tagMatch = match.match(/(\s+)(<\/[^>]+>)/);
+          if (tagMatch) {
+            return tagMatch[1] + tagMatch[2];
+          }
+          return match;
+        }
+      },
+      
+      // Fix malformed JSX with unexpected characters
+      {
+        pattern: /(\s+)<\/[^>]+>\s*[^<\s][^<]*<\/[^>]+>/g,
+        replacement: (match) => {
+          const cleanMatch = match.replace(/[^<\s>\/]+<\/[^>]+>/, '');
+          return cleanMatch;
+        }
+      }
+    ];
     
-    // Only write if content changed
-    if (fixedContent !== content) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`✓ Fixed syntax errors in: ${filePath}`);
+    // Apply fixes
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+    
+    // Additional specific fixes for common patterns
+    const specificFixes = [
+      // Fix Footer.tsx specific issues
+      {
+        pattern: /(\s+)<\/p>\s*<\/div>\s*<div className="flex space-x-6">/g,
+        replacement: '$1</p>\n              <div className="flex space-x-6">'
+      },
+      {
+        pattern: /Privacy Policy;\s*<\/\s*<a href="\/terms"/g,
+        replacement: 'Privacy Policy\n                </a>\n                <a href="/terms"'
+      },
+      {
+        pattern: /Terms of Service;\s*<\/\s*<\/div>/g,
+        replacement: 'Terms of Service\n                </a>\n              </div>'
+      }
+    ];
+    
+    specificFixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+    
+    // Write back if modified
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      return true;
     }
+    
+    return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing syntax in ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Function to find all TypeScript/TSX files with syntax errors
-function findFilesWithErrors(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
-        files.push(fullPath);
-      }
-    }
+// Function to find all TypeScript/JavaScript files
+function findSourceFiles() {
+  try {
+    const { execSync } = require('child_process');
+    const result = execSync(
+      'find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | head -50',
+      { encoding: 'utf8' }
+    );
+    return result.trim().split('\n').filter(file => file.trim());
+  } catch (error) {
+    console.log('Error finding source files');
+    return [];
   }
-  
-  traverse(dir);
-  return files;
 }
 
 // Main execution
-console.log('🔍 Searching for files with syntax errors...');
-const filesToProcess = findFilesWithErrors('./app');
+console.log('Starting syntax error fixes...');
 
-console.log(`Found ${filesToProcess.length} files to process`);
+const sourceFiles = findSourceFiles();
+console.log(`Found ${sourceFiles.length} source files to check`);
 
-filesToProcess.forEach(file => {
-  processFile(file);
+let fixedCount = 0;
+let errorCount = 0;
+
+sourceFiles.forEach(filePath => {
+  if (fixSyntaxErrors(filePath)) {
+    console.log(`Fixed syntax errors in: ${filePath}`);
+    fixedCount++;
+  }
 });
 
-console.log('✅ Syntax error fixing complete!');
+console.log(`\nSyntax fix complete:`);
+console.log(`- Files processed: ${sourceFiles.length}`);
+console.log(`- Files fixed: ${fixedCount}`);
+console.log(`- Errors: ${errorCount}`);
