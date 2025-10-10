@@ -57,54 +57,62 @@ const App: React.FC = () => {
   return (
     <EnhancedErrorBoundary>
       <HelmetProvider>
-        <SEOHead />
+        <SEOHead 
+          title="Zion Tech Group - AI & IT Solutions"
+          description="Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
+          keywords={['AI solutions', 'IT services', 'quantum computing', 'digital transformation', 'enterprise software', 'automation', 'machine learning']}
+          canonicalUrl="https://ziontechgroup.com"
+        />
         <SkipLink />
         <ServiceWorker />
         <Router>
           <AppWithPerformanceMonitoring>
             <AnalyticsProvider>
               <PerformanceOptimizer>
-                <EnhancedAccessibility>
-                  <AccessibilityEnhancer>
-                    <PerformanceMonitor />
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
-                      <FuturisticBackground />
-                      <Navigation />
-                      <Breadcrumb />
-                      <main id="main-content" className="flex-1" tabIndex={-1}>
-                        <Suspense fallback={<PageLoader />}>
-                          <Routes>
-                            <Route path="/" element={<HomePage />} />
-                            <Route path="/about" element={<AboutPage />} />
-                            <Route path="/contact" element={<ContactPage />} />
-                            <Route path="/services" element={<ServicesPage />} />
-                            <Route path="/pricing" element={<PricingPage />} />
-                            <Route path="/blog" element={<BlogPage />} />
-                            <Route path="/case-studies" element={<CaseStudiesPage />} />
-                            <Route path="/careers" element={<CareersPage />} />
-                            <Route path="/partners" element={<PartnersPage />} />
-                            <Route path="/support" element={<SupportPage />} />
-                            <Route path="/faq" element={<FAQPage />} />
-                            <Route path="/demo" element={<DemoPage />} />
-                            <Route path="/consultation" element={<ConsultationPage />} />
-                            <Route path="/micro-saas" element={<MicroSaasPage />} />
-                            <Route path="/ai-services" element={<AiServicesPage />} />
-                            <Route path="/it-services" element={<ItServicesPage />} />
-                            <Route path="/privacy" element={<PrivacyPage />} />
-                            <Route path="/terms" element={<TermsPage />} />
-                            <Route path="/cookies" element={<CookiesPage />} />
-                            <Route path="/docs" element={<DocsPage />} />
-                            <Route path="/community" element={<CommunityPage />} />
-                            <Route path="/api" element={<ApiPage />} />
-                            <Route path="/tutorials" element={<TutorialsPage />} />
-                            <Route path="/sitemap" element={<SitemapPage />} />
-                          </Routes>
-                        </Suspense>
-                      </main>
-                      <Footer />
-                    </div>
-                  </AccessibilityEnhancer>
-                </EnhancedAccessibility>
+                <AccessibilityEnhancer
+                  enableKeyboardNavigation={true}
+                  enableScreenReaderSupport={true}
+                  enableHighContrast={false}
+                  enableFocusManagement={true}
+                >
+                  <PerformanceMonitor />
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+                    <FuturisticBackground />
+                    <Navigation />
+                    <Breadcrumb />
+                    <main id="main-content" className="flex-1" tabIndex={-1}>
+                      <Suspense fallback={<PageLoader />}>
+                        <Routes>
+                          <Route path="/" element={<HomePage />} />
+                          <Route path="/about" element={<AboutPage />} />
+                          <Route path="/contact" element={<ContactPage />} />
+                          <Route path="/services" element={<ServicesPage />} />
+                          <Route path="/pricing" element={<PricingPage />} />
+                          <Route path="/blog" element={<BlogPage />} />
+                          <Route path="/case-studies" element={<CaseStudiesPage />} />
+                          <Route path="/careers" element={<CareersPage />} />
+                          <Route path="/partners" element={<PartnersPage />} />
+                          <Route path="/support" element={<SupportPage />} />
+                          <Route path="/faq" element={<FAQPage />} />
+                          <Route path="/demo" element={<DemoPage />} />
+                          <Route path="/consultation" element={<ConsultationPage />} />
+                          <Route path="/micro-saas" element={<MicroSaasPage />} />
+                          <Route path="/ai-services" element={<AiServicesPage />} />
+                          <Route path="/it-services" element={<ItServicesPage />} />
+                          <Route path="/privacy" element={<PrivacyPage />} />
+                          <Route path="/terms" element={<TermsPage />} />
+                          <Route path="/cookies" element={<CookiesPage />} />
+                          <Route path="/docs" element={<DocsPage />} />
+                          <Route path="/community" element={<CommunityPage />} />
+                          <Route path="/api" element={<ApiPage />} />
+                          <Route path="/tutorials" element={<TutorialsPage />} />
+                          <Route path="/sitemap" element={<SitemapPage />} />
+                        </Routes>
+                      </Suspense>
+                    </main>
+                    <Footer />
+                  </div>
+                </AccessibilityEnhancer>
               </PerformanceOptimizer>
             </AnalyticsProvider>
           </AppWithPerformanceMonitoring>
