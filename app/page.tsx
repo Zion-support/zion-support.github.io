@@ -209,7 +209,6 @@ const HomePage: React.FC = () => {
       freeTrial: '7 days'
     },
     {
->>>>>>> cursor/website-audit-and-update-with-deployment-74f7
       title: 'AI Task Manager Pro',
       description: 'Smart task management with AI prioritization, deadline prediction, and productivity insights. Boost your productivity by 60%.',
       icon: '✅',
