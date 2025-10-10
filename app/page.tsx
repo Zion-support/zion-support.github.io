@@ -1,18 +1,13 @@
 'use client';
-import React, {useCallback, useState, useEffect, Suspense, lazy, memo}from 'react';
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-<<<<<<< HEAD
-// import {ServiceCardSkeleton, StatsSkeleton}}from './components/EnhancedLoadingStates';
-import {Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, DollarSign, Award, Rocket, Layers, Workflow, BarChart3, MessageSquare, Headphones, Monitor, HardDrive, Wifi, Printer, Router, Package, Heart, DollarSign as Dollar, Award as Trophy, Rocket as Launch, Layers as Stack, Workflow as Process, BarChart3 as Analytics, MessageSquare as Chat, Headphones as Support, Monitor as Screen, HardDrive as Storage, Wifi as Network, Printer as Print, Router as Gateway, Package as Box, Eye, Mic}}from 'lucide-react';
-=======
 // import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
 import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, DollarSign, Award, Rocket, Layers, Workflow, BarChart3, MessageSquare, Headphones, Monitor, HardDrive, Wifi, Printer, Router, Package, Heart, DollarSign as Dollar, Award as Trophy, Rocket as Launch, Layers as Stack, Workflow as Process, BarChart3 as Analytics, MessageSquare as Chat, Headphones as Support, Monitor as Screen, HardDrive as Storage, Wifi as Network, Printer as Print, Router as Gateway, Package as Box, Eye, Mic } from 'lucide-react';
 import { usePageTracking, useEventTracking } from './components/EnhancedAnalytics';
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 
 // Dynamically import heavy components for better performance;
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -21,17 +16,19 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
-// Preload critical components;
-const preloadComponents = () => {if (typeof window !== 'undefined') {
-    // Preload critical components after initial render;
+// Preload critical components
+const preloadComponents = () => {
+  if (typeof window !== 'undefined') {
+    // Preload critical components after initial render
     setTimeout(() => {
       import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');}, 100);
+      import('./components/ContentCarousel');
+    }, 100);
   }
-}
+};
 
-// Loading skeleton component;
-const ServiceCardSkeleton: React.FC = memo(() => (,
+// Loading skeleton component
+const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
@@ -40,7 +37,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (,
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
-const HomePage: React.FC = () => {,
+const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   
@@ -51,22 +48,26 @@ const HomePage: React.FC = () => {,
   useEffect(() => {
     preloadComponents();
     setIsLoaded(true);
-    // Trigger visibility animation;
+    // Trigger visibility animation
     const timer = setTimeout(() => setIsVisible(true), 100);
-    return () => clearTimeout(timer);}, []);
+    return () => clearTimeout(timer);
+  }, []);
   
-  // Analytics tracking for phone clicks - optimized;
-  const handlePhoneClick = useCallback(() => {if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}).gtag;
-      gtag('event', 'phone_click', {)
+  // Analytics tracking for phone clicks - optimized
+  const handlePhoneClick = useCallback(() => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}).gtag;
+      gtag('event', 'phone_click', {
         event_category: 'engagement',
-        event_label: 'main_phone_number',})
+        event_label: 'main_phone_number'
+      });
     }
   }, []);
 
-  // Real AI Services with actual capabilities and pricing;
+  // Real AI Services with actual capabilities and pricing
   const aiServices = [
-    {icon: Brain,
+    {
+      icon: Brain,
       title: 'AI-Powered Chatbots',
       description: 'Advanced conversational AI with natural language processing and sentiment analysis',
       price: '$299/month',
@@ -74,8 +75,10 @@ const HomePage: React.FC = () => {,
       features: ['Natural language processing', 'Multi-language support', 'Sentiment analysis', 'CRM integration', 'Real-time learning'],
       benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions'],
       category: 'Customer Service',
-      popular: true;,},
-    {icon: FileText,
+      popular: true
+    },
+    {
+      icon: FileText,
       title: 'AI Content Generation',
       description: 'Automated content creation using advanced language models for blogs, social media, and marketing',
       price: '$199/month',
@@ -83,8 +86,10 @@ const HomePage: React.FC = () => {,
       features: ['Blog post generation', 'Social media content', 'Email marketing campaigns', 'SEO optimization', 'Brand voice customization'],
       benefits: ['Save 80% content creation time', 'Consistent brand voice', 'SEO optimization', 'Multi-platform publishing'],
       category: 'Content',
-      popular: true;,},
-    {icon: BarChart3,
+      popular: true
+    },
+    {
+      icon: BarChart3,
       title: 'AI Data Analytics',
       description: 'Advanced analytics and business intelligence powered by machine learning algorithms',
       price: '$399/month',
@@ -92,8 +97,10 @@ const HomePage: React.FC = () => {,
       features: ['Predictive analytics', 'Real-time dashboards', 'Automated reporting', 'Anomaly detection', 'Custom data models'],
       benefits: ['Data-driven insights', 'Predictive forecasting', 'Automated reporting', 'ROI optimization'],
       category: 'Analytics',
-      popular: false;,},
-    {icon: Eye,
+      popular: false
+    },
+    {
+      icon: Eye,
       title: 'AI Computer Vision',
       description: 'Image and video analysis solutions for quality control, security, and automation',
       price: '$599/month',
@@ -101,8 +108,10 @@ const HomePage: React.FC = () => {,
       features: ['Object detection and recognition', 'Quality control automation', 'Facial recognition systems', 'Video analytics', 'Real-time processing'],
       benefits: ['Automated quality control', 'Enhanced security', 'Real-time monitoring', 'Cost reduction'],
       category: 'Computer Vision',
-      popular: false;,},
-    {icon: Mic,
+      popular: false
+    },
+    {
+      icon: Mic,
       title: 'AI Voice Processing',
       description: 'Speech recognition, synthesis, and voice analytics for customer interactions',
       price: '$249/month',
@@ -110,8 +119,10 @@ const HomePage: React.FC = () => {,
       features: ['Speech-to-text conversion', 'Voice synthesis', 'Voice biometrics', 'Call analytics', 'Multi-language support'],
       benefits: ['Improved accessibility', 'Voice automation', 'Call quality insights', 'Multi-language support'],
       category: 'Voice AI',
-      popular: false;,},
-    {icon: Workflow,
+      popular: false
+    },
+    {
+      icon: Workflow,
       title: 'AI Workflow Automation',
       description: 'Intelligent process automation that learns and optimizes business workflows',
       price: '$349/month',
@@ -119,8 +130,10 @@ const HomePage: React.FC = () => {,
       features: ['Process mining', 'Workflow optimization', 'Task automation', 'Exception handling', 'Performance monitoring'],
       benefits: ['Process efficiency', 'Error reduction', 'Cost savings', 'Scalable automation'],
       category: 'Automation',
-      popular: true;,},
-    {icon: Heart,
+      popular: true
+    },
+    {
+      icon: Heart,
       title: 'AI Healthcare Solutions',
       description: 'Medical AI for diagnosis assistance, drug discovery, and patient care optimization',
       price: '$799/month',
@@ -128,22 +141,30 @@ const HomePage: React.FC = () => {,
       features: ['Medical image analysis', 'Drug discovery algorithms', 'Patient risk assessment', 'Treatment recommendations', 'Clinical trial optimization', 'Diagnostic assistance', 'Patient monitoring', 'Drug interaction checking'],
       benefits: ['Improved diagnosis accuracy', 'Faster drug development', 'Better patient outcomes', 'Cost reduction', 'Faster treatment decisions', 'Reduced medical errors'],
       category: 'Healthcare',
-      popular: false;,},
-    {icon: DollarSign,
+      popular: false
+    },
+    {
+      icon: DollarSign,
       title: 'AI Financial Services',
-description: 'Advanced AI for fraud detection, algorithmic trading, and financial risk management Intelligent financial analysis, fraud detection, and investment optimization',
+      description: 'Advanced AI for fraud detection, algorithmic trading, and financial risk management',
       price: '$699/month',
       marketPrice: '$1200-4000/month',
       features: ['Fraud detection algorithms', 'Algorithmic trading systems', 'Credit risk assessment', 'Market prediction models', 'Regulatory compliance', 'Investment portfolio optimization', 'Algorithmic trading'],
       benefits: ['Reduced fraud losses', 'Better trading performance', 'Risk mitigation', 'Compliance automation', 'Better risk management', 'Optimized investments'],
-      popular: true;,},
-    {icon: Globe,
-description: 'AI-powered solutions for product recommendations, pricing, and customer experience Intelligent supply chain management with predictive analytics and demand forecasting',
+      category: 'Financial',
+      popular: true
+    },
+    {
+      icon: Globe,
+      title: 'AI E-commerce Solutions',
+      description: 'AI-powered solutions for product recommendations, pricing, and customer experience',
       price: '$449/month',
       marketPrice: '$800-2500/month',
       features: ['Personalized recommendations', 'Dynamic pricing optimization', 'Inventory management', 'Customer behavior analysis', 'Conversion optimization', 'Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier risk assessment', 'Quality prediction'],
-      benefits: ['Increased sales', 'Better customer experience', 'Optimized pricing', 'Reduced inventory costs', 'Reduced inventory costs', 'Improved delivery times', 'Better demand planning', 'Risk mitigation'],
-      popular: false;,},
+      benefits: ['Increased sales', 'Better customer experience', 'Optimized pricing', 'Reduced inventory costs', 'Improved delivery times', 'Better demand planning', 'Risk mitigation'],
+      category: 'E-commerce',
+      popular: false
+    },
     {icon: Shield,
       title: 'AI Cybersecurity',
       description: 'Advanced AI-powered security solutions for threat detection and prevention',
@@ -152,8 +173,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Behavioral anomaly detection', 'Threat intelligence analysis', 'Automated incident response', 'Vulnerability assessment', 'Security orchestration', 'Real-time threat monitoring', 'AI-powered risk scoring', 'Automated security patching'],
       benefits: ['Proactive threat detection', 'Faster incident response', 'Reduced security risks', 'Compliance automation'],
       category: 'Cybersecurity',
-      popular: true;,},
-    {icon: Cpu,
+      popular: true
+    },
+    {
+      icon: Cpu,
       title: 'AI Edge Computing',
       description: 'Distributed AI processing for real-time decision making at the edge',
       price: '$549/month',
@@ -161,8 +184,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Edge AI model deployment', 'Real-time processing', 'Low-latency inference', 'Offline capability', 'Resource optimization', 'IoT device integration', 'Predictive maintenance', 'Energy efficiency optimization'],
       benefits: ['Ultra-low latency', 'Offline operation', 'Reduced bandwidth usage', 'Real-time decisions'],
       category: 'Edge Computing',
-      popular: false;,},
-    {icon: Heart,
+      popular: false
+    },
+    {
+      icon: Heart,
       title: 'AI Healthcare Solutions',
       description: 'Medical AI for diagnosis assistance, drug discovery, and patient care optimization',
       price: '$799/month',
@@ -170,8 +195,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Medical image analysis', 'Drug discovery algorithms', 'Patient risk assessment', 'Treatment recommendations', 'Clinical trial optimization', 'Diagnostic assistance', 'Patient monitoring', 'Drug interaction checking'],
       benefits: ['Improved diagnosis accuracy', 'Faster drug development', 'Better patient outcomes', 'Cost reduction'],
       category: 'Healthcare',
-      popular: false;,},
-    {icon: DollarSign,
+      popular: false
+    },
+    {
+      icon: DollarSign,
       title: 'AI Financial Services',
       description: 'Intelligent financial analysis, fraud detection, and investment optimization',
       price: '$699/month',
@@ -179,8 +206,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Algorithmic trading systems', 'Credit risk assessment', 'Market prediction models', 'Regulatory compliance', 'Investment portfolio optimization', 'Real-time fraud detection', 'Risk management', 'Financial forecasting'],
       benefits: ['Better risk management', 'Optimized investments', 'Reduced fraud losses', 'Compliance automation'],
       category: 'Financial Services',
-      popular: true;,},
-    {icon: Globe,
+      popular: true
+    },
+    {
+      icon: Globe,
       title: 'AI E-commerce Solutions',
       description: 'Intelligent supply chain management with predictive analytics and demand forecasting',
       price: '$449/month',
@@ -188,8 +217,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier risk assessment', 'Quality prediction', 'Price optimization', 'Customer behavior analysis', 'Supply chain visibility'],
       benefits: ['Reduced inventory costs', 'Improved delivery times', 'Better demand planning', 'Risk mitigation'],
       category: 'E-commerce',
-      popular: false;,},
-    {icon: Users,
+      popular: false
+    },
+    {
+      icon: Users,
       title: 'AI HR Solutions',
       description: 'Intelligent human resources management with AI-powered recruitment and analytics',
       price: '$299/month',
@@ -197,8 +228,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['AI-powered resume screening', 'Candidate matching algorithms', 'Employee performance analytics', 'Predictive attrition modeling', 'Skills gap analysis', 'Automated interview scheduling', 'Employee sentiment analysis', 'Workforce planning'],
       benefits: ['Faster hiring process', 'Better candidate matching', 'Reduced HR workload', 'Data-driven insights'],
       category: 'Human Resources',
-      popular: true;,},
-    {icon: FileText,
+      popular: true
+    },
+    {
+      icon: FileText,
       title: 'AI Document Processing',
       description: 'Intelligent document analysis, extraction, and processing with OCR and NLP',
       price: '$199/month',
@@ -206,8 +239,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['OCR and text extraction', 'Document classification', 'Data extraction and validation', 'Contract analysis', 'Invoice processing', 'Compliance checking', 'Multi-language support', 'Automated workflows'],
       benefits: ['90% faster document processing', 'Reduced manual errors', 'Automated data entry', 'Better compliance'],
       category: 'Document Processing',
-      popular: true;,},
-    {icon: BarChart3,
+      popular: true
+    },
+    {
+      icon: BarChart3,
       title: 'AI Predictive Analytics',
       description: 'Advanced predictive modeling and forecasting for business intelligence',
       price: '$399/month',
@@ -215,8 +250,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Predictive modeling', 'Time series forecasting', 'Anomaly detection', 'Customer lifetime value prediction', 'Churn prediction', 'Sales forecasting', 'Risk assessment', 'Performance optimization'],
       benefits: ['Data-driven decisions', 'Predictive insights', 'Risk mitigation', 'Performance optimization'],
       category: 'Predictive Analytics',
-      popular: true;,},
-    {icon: Mic,
+      popular: true
+    },
+    {
+      icon: Mic,
       title: 'AI Voice Solutions',
       description: 'Advanced speech recognition, synthesis, and voice analytics for customer interactions',
       price: '$249/month',
@@ -224,8 +261,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Speech-to-text conversion', 'Voice synthesis', 'Voice biometrics', 'Call analytics', 'Multi-language support', 'Real-time transcription', 'Voice emotion analysis', 'Automated call routing'],
       benefits: ['Improved accessibility', 'Voice automation', 'Call quality insights', 'Multi-language support'],
       category: 'Voice AI',
-      popular: false;,},
-    {icon: Eye,
+      popular: false
+    },
+    {
+      icon: Eye,
       title: 'AI Computer Vision',
       description: 'Image and video analysis solutions for quality control, security, and automation',
       price: '$599/month',
@@ -233,8 +272,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Object detection and recognition', 'Quality control automation', 'Facial recognition systems', 'Video analytics', 'Real-time processing', 'Medical image analysis', 'Autonomous vehicle vision', 'Industrial inspection'],
       benefits: ['Automated quality control', 'Enhanced security', 'Real-time monitoring', 'Cost reduction'],
       category: 'Computer Vision',
-      popular: false;,},
-    {icon: Brain,
+      popular: false
+    },
+    {
+      icon: Brain,
       title: 'AI Quantum Computing Solutions',
       description: 'Quantum-enhanced AI algorithms for complex optimization and machine learning problems',
       price: '$2,999/month',
@@ -242,8 +283,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Quantum machine learning algorithms', 'Optimization problem solving', 'Cryptographic security enhancement', 'Drug discovery acceleration', 'Financial modeling optimization', 'Climate simulation and analysis', 'Quantum neural networks', 'Hybrid classical-quantum processing'],
       benefits: ['Exponential speed improvements', 'Breakthrough problem solving', 'Future-proof technology', 'Competitive advantage'],
       category: 'Quantum AI',
-      popular: false;,},
-    {icon: Cpu,
+      popular: false
+    },
+    {
+      icon: Cpu,
       title: 'AI Autonomous Systems',
       description: 'Self-operating AI systems for robotics, vehicles, and industrial automation',
       price: '$1,499/month',
@@ -251,8 +294,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Autonomous vehicle AI', 'Robotic process automation', 'Smart manufacturing systems', 'Predictive maintenance AI', 'Autonomous drone operations', 'Smart city infrastructure', 'Industrial IoT integration', 'Real-time decision making'],
       benefits: ['24/7 autonomous operation', 'Reduced human intervention', 'Improved efficiency', 'Cost optimization'],
       category: 'Autonomous Systems',
-      popular: false;,},
-    {icon: Link,
+      popular: false
+    },
+    {
+      icon: Link,
       title: 'AI Blockchain Solutions',
       description: 'Decentralized AI applications with blockchain integration for secure, transparent operations',
       price: '$899/month',
@@ -260,8 +305,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Decentralized AI model training', 'Blockchain-based data verification', 'Smart contract AI integration', 'Cryptocurrency trading algorithms', 'NFT generation and analysis', 'DeFi protocol optimization', 'Supply chain transparency', 'Secure multi-party computation'],
       benefits: ['Enhanced security', 'Transparent operations', 'Decentralized control', 'Innovation leadership'],
       category: 'Blockchain AI',
-      popular: false;,},
-    {icon: Server,
+      popular: false
+    },
+    {
+      icon: Server,
       title: 'AI Edge Computing',
       description: 'Distributed AI processing for real-time decision making at the edge of networks',
       price: '$549/month',
@@ -269,8 +316,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Edge AI model deployment', 'Real-time processing', 'Low-latency inference', 'Offline capability', 'Resource optimization', 'IoT device integration', 'Predictive maintenance', 'Energy efficiency optimization'],
       benefits: ['Ultra-low latency', 'Offline operation', 'Reduced bandwidth usage', 'Real-time decisions'],
       category: 'Edge Computing',
-      popular: false;,},
-    {icon: Monitor,
+      popular: false
+    },
+    {
+      icon: Monitor,
       title: 'AI Holographic Workspace',
       description: 'Immersive 3D workspace with AI-powered collaboration and visualization tools',
       price: '$1,299/month',
@@ -278,8 +327,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['3D holographic interfaces', 'AI-powered spatial computing', 'Virtual collaboration tools', 'Immersive data visualization', 'Gesture and voice control', 'Real-time 3D rendering', 'Multi-user virtual environments', 'AR/VR integration'],
       benefits: ['Immersive experience', 'Enhanced collaboration', '3D data visualization', 'Future workspace'],
       category: 'Immersive Tech',
-      popular: false;,},
-    {icon: Box,
+      popular: false
+    },
+    {
+      icon: Box,
       title: 'AI 3D Generation',
       description: 'AI-powered 3D content creation and modeling for games, architecture, and manufacturing',
       price: '$799/month',
@@ -287,8 +338,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['AI 3D model generation', 'Text-to-3D conversion', 'Automated texture mapping', '3D animation creation', 'Architectural visualization', 'Product design automation', 'Virtual reality content', '3D printing optimization'],
       benefits: ['Faster 3D creation', 'Cost reduction', 'Creative automation', 'Professional quality'],
       category: '3D Technology',
-      popular: false;,},
-    {icon: Zap,
+      popular: false
+    },
+    {
+      icon: Zap,
       title: 'AI 5G Implementation',
       description: '5G network optimization and AI-powered connectivity solutions for ultra-fast communication',
       price: '$1,199/month',
@@ -296,8 +349,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['5G network optimization', 'AI-powered traffic management', 'Edge computing integration', 'IoT device management', 'Network slicing automation', 'Real-time performance monitoring', 'Predictive network maintenance', 'Ultra-low latency applications'],
       benefits: ['Ultra-fast connectivity', 'Network optimization', 'IoT enablement', 'Future-ready infrastructure'],
       category: '5G Technology',
-      popular: false;,},
-    {icon: Heart,
+      popular: false
+    },
+    {
+      icon: Heart,
       title: 'AI Drug Discovery Pro',
       description: 'Advanced AI platform for pharmaceutical research, drug discovery, and clinical trial optimization',
       price: '$2,499/month',
@@ -305,8 +360,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Molecular design and optimization', 'Drug-target interaction prediction', 'Clinical trial design optimization', 'Side effect prediction', 'Drug repurposing analysis', 'Biomarker discovery', 'Regulatory compliance assistance', 'Real-world evidence analysis'],
       benefits: ['Faster drug development', 'Reduced research costs', 'Better success rates', 'Life-saving innovations'],
       category: 'Pharmaceutical AI',
-      popular: false;,},
-    {icon: Globe,
+      popular: false
+    },
+    {
+      icon: Globe,
       title: 'AI Climate Solutions Pro',
       description: 'AI-powered climate modeling, carbon tracking, and environmental impact optimization',
       price: '$1,599/month',
@@ -314,8 +371,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Climate change modeling', 'Carbon footprint tracking', 'Renewable energy optimization', 'Environmental impact assessment', 'Weather prediction enhancement', 'Sustainability planning', 'Green technology recommendations', 'ESG reporting automation'],
       benefits: ['Environmental impact', 'Sustainability optimization', 'Climate resilience', 'Green innovation'],
       category: 'Climate Tech',
-      popular: false;,},
-    {icon: DollarSign,
+      popular: false
+    },
+    {
+      icon: DollarSign,
       title: 'AI Financial Crime Detection Pro',
       description: 'Advanced AI system for detecting money laundering, fraud, and financial crimes in real-time',
       price: '$1,899/month',
@@ -323,8 +382,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Real-time transaction monitoring', 'Money laundering detection', 'Sanctions screening', 'Risk scoring and profiling', 'Regulatory compliance automation', 'Cross-border transaction analysis', 'Behavioral pattern recognition', 'Investigation case management'],
       benefits: ['Enhanced security', 'Regulatory compliance', 'Risk mitigation', 'Cost savings'],
       category: 'Financial Security',
-      popular: false;,},
-    {icon: BarChart3,
+      popular: false
+    },
+    {
+      icon: BarChart3,
       title: 'AI Agricultural Intelligence Pro',
       description: 'Smart farming solutions with AI-powered crop monitoring, yield optimization, and precision agriculture',
       price: '$999/month',
@@ -332,8 +393,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Crop health monitoring', 'Yield prediction and optimization', 'Precision irrigation systems', 'Pest and disease detection', 'Soil analysis and recommendations', 'Weather-based farming decisions', 'Automated equipment control', 'Supply chain optimization'],
       benefits: ['Increased crop yields', 'Resource optimization', 'Sustainable farming', 'Cost reduction'],
       category: 'AgTech',
-      popular: false;,},
-    {icon: Zap,
+      popular: false
+    },
+    {
+      icon: Zap,
       title: 'AI Energy Grid Management Pro',
       description: 'Intelligent energy grid optimization with AI-powered demand forecasting and renewable integration',
       price: '$1,799/month',
@@ -341,9 +404,11 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Smart grid optimization', 'Renewable energy integration', 'Demand response management', 'Energy storage optimization', 'Grid stability monitoring', 'Predictive maintenance', 'Carbon footprint reduction', 'Real-time energy trading'],
       benefits: ['Grid efficiency', 'Renewable integration', 'Cost optimization', 'Sustainability'],
       category: 'Energy Tech',
-      popular: false;,}]
-
-  // Real IT Services with actual capabilities and pricing;
+      popular: false
+    }
+  ];
+  
+  // Real IT Services with actual capabilities and pricing
   const itServices = [
     {icon: Cloud,
       title: 'Cloud Infrastructure & Migration',
@@ -353,8 +418,10 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Cloud architecture design', 'Multi-cloud strategies', 'Cost optimization', 'Disaster recovery', 'Auto-scaling solutions', 'Security compliance'],
       benefits: ['99.9% uptime guarantee', 'Cost reduction up to 40%', 'Scalable infrastructure', 'Expert migration support'],
       category: 'Cloud',
-      popular: true;,},
-    {icon: Shield,
+      popular: true
+    },
+    {
+      icon: Shield,
       title: 'Cybersecurity Solutions',
       description: 'Comprehensive security services including threat detection, compliance, and incident response',
       price: '$1,800/month',

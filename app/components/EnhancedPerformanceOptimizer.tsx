@@ -1,16 +1,22 @@
 'use client';
-import React, {useEffect, useCallback}from 'react';
+import React, { useEffect, useCallback } from 'react';
 
-interface PerformanceOptimizerProps {children: React.ReactNode;,}
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;}const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
+  enableCodeSplitting?: boolean;
+}
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
-  enableCodeSplitting = true;}) => {// Image optimization;
+  enableCodeSplitting = true
+}) => {
+  // Image optimization
   useEffect(() => {
     if (!enableImageOptimization) return;
 
@@ -28,17 +34,21 @@ interface PerformanceOptimizerProps {children: React.ReactNode;,}
     return () => clearTimeout(timer);
   }, [enableImageOptimization]);
 
-  // Lazy loading;
-  useEffect(() => {if (!enableLazyLoading) return;
+  // Lazy loading
+  useEffect(() => {
+    if (!enableLazyLoading) return;
 
-    const observer = new IntersectionObserver()
+    const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const target = entry.target as HTMLElement;
-            target.classList.add('loaded');}})
+            target.classList.add('loaded');
+          }
+        });
       },
-      {threshold: 0.1 ,})
+      { threshold: 0.1 }
+    );
 
     const lazyElements = document.querySelectorAll('[data-lazy]');
     lazyElements.forEach((el) => observer.observe(el));
@@ -57,14 +67,17 @@ interface PerformanceOptimizerProps {children: React.ReactNode;,}
       criticalCSS.as = 'style';
       document.head.appendChild(criticalCSS);
 
-      // Preload critical fonts;
+      // Preload critical fonts
       const criticalFont = document.createElement('link');
       criticalFont.rel = 'preload';
       criticalFont.href = '/fonts/inter-var.woff2';
       criticalFont.as = 'font';
       criticalFont.type = 'font/woff2';
       criticalFont.crossOrigin = 'anonymous';
-      document.head.appendChild(criticalFont);}preloadCriticalResources();
+      document.head.appendChild(criticalFont);
+    };
+    
+    preloadCriticalResources();
   }, [enablePreloading]);
 
   // Code splitting optimization;
