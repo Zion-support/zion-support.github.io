@@ -248,7 +248,6 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* CTA Section */}
-<<<<<<< HEAD
           <section className="mb-16" aria-labelledby="cta-heading">
             <div className="cyber-card-enhanced hologram-card-enhanced p-8 text-center">
               <h2 id="cta-heading" className="text-2xl font-bold text-white mb-6 neon-text-enhanced">Get Free Consultation</h2>
@@ -258,7 +257,6 @@ const HomePage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
-                  onClick={handlePhoneClick}
                   className="cyber-button-enhanced"
                   aria-label="Call us at (302) 464-0950"
                 >
@@ -743,26 +741,6 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
-=======
-          <section className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Contact us today to learn how our AI and IT solutions can help you achieve your goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                Get Started
-              </a>
-              <a 
-                href="/about"
-                className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Learn More
-              </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7
             </div>
           </div>
         </section>
