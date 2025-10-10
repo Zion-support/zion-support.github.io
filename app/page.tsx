@@ -28,6 +28,15 @@ import {
   Smartphone
 } from 'lucide-react';
 
+const ServiceCardSkeleton: React.FC = () => (
+  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 animate-pulse">
+    <div className="h-8 bg-gray-600 rounded mb-4"></div>
+    <div className="h-4 bg-gray-600 rounded mb-2"></div>
+    <div className="h-4 bg-gray-600 rounded mb-2"></div>
+    <div className="h-4 bg-gray-600 rounded w-3/4"></div>
+  </div>
+);
+
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -283,21 +292,34 @@ const HomePage: React.FC = () => {
                       </span>
                     )}
                   </div>
-<<<<<<< HEAD
-=======
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
-                <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-purple-400 mb-2">{service.price}</div>
-                  <a href={service.link} className="text-purple-400 hover:text-purple-300 font-medium text-sm transition-all duration-300">
-                    Learn More →
-                  </a>
+
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {service.name}
+                </h3>
+
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+
+                <div className="flex items-center justify-between mb-6">
+                  <div className="text-2xl font-bold text-white">
+                    {service.price}
+                  </div>
+                  <div className="text-sm text-gray-400">
+                    {service.category}
+                  </div>
                 </div>
+
+                <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                  Get Started
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </button>
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Additional Services Section */}
         <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
@@ -928,15 +950,9 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
         <Footer />
-        <PerformanceMonitor />
       </div>
     </ErrorBoundary>
-=======
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-24cb
   );
 };
 
