@@ -1235,12 +1235,32 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
             postalCode: '19709',
             addressCountry: 'US',}}}
       />
+<<<<<<< HEAD
       <PerformanceOptimizer;
         enableImageOptimization={true}enableLazyLoading={true}enablePreloading={true}enableCodeSplitting={true}/>
       <AccessibilityEnhancer;
         enableKeyboardNavigation={true}enableScreenReaderSupport={true}enableHighContrast={true}enableFocusManagement={true}/>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">{/* Navigation */</div>} <Navigation />
         {/* Skip to main content for accessibility */} <a;
+=======
+      <PerformanceOptimizer
+        enableImageOptimization={true}
+        enableLazyLoading={true}
+        enablePreloading={true}
+        enableCodeSplitting={true}
+      />
+      <AccessibilityEnhancer
+        enableKeyboardNavigation={true}
+        enableScreenReaderSupport={true}
+        enableHighContrast={true}
+        enableFocusManagement={true}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg matrix-bg quantum-particles neural-connections">
+        {/* Navigation */}
+        <Navigation />
+        {/* Skip to main content for accessibility */}
+        <a
+>>>>>>> cursor/analyze-improve-and-deploy-application-e11d
           href="#main-content"
           className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">,
           Skip to main content;
@@ -1537,7 +1557,30 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                 </a>
               </div>
             </div>
+<<<<<<< HEAD
           </section>
+=======
+          
+          {/* CTA Buttons */}
+          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="tel:+13024640950"
+              onClick={handlePhoneClick}
+              className="cyber-button w-full sm:w-auto text-center"
+              aria-label="Call us at (302) 464-0950"
+            >
+              📞 Call Now: (302) 464-0950
+            </a>
+            <a
+              href="/contact"
+              className="cyber-button w-full sm:w-auto text-center"
+              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+            >
+              Get Free Consultation
+            </a>
+          </div>
+        </section>
+>>>>>>> cursor/analyze-improve-and-deploy-application-e11d
 
         {/* Services Section */} <section className="mb-16" aria-labelledby="services-heading">
           <h2 id="services-heading" className="text-2xl sm: text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">,</h2>
