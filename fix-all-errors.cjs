@@ -1,6 +1,24 @@
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+
+// Get all .tsx files in the app directory
+function getAllTsxFiles(dir) {
+  let results = [];
+  const list = fs.readdirSync(dir);
+  
+  list.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat && stat.isDirectory()) {
+      results = results.concat(getAllTsxFiles(filePath));
+    } else if (file.endsWith('.tsx')) {
+      results.push(filePath);
+    }
+  });
+  
+  return results;
+}
 
 // Template for a basic page component
 const createBasicPage = (pageName, title, description) => `'use client';
@@ -179,49 +197,57 @@ function getDescription(filePath) {
   return `Professional ${title.toLowerCase()} solutions by Zion Tech Group. Advanced AI and IT solutions for your business.`;
 }
 
-// Get list of files with errors from type check
-function getFilesWithErrors() {
+// Function to check if a file has syntax errors
+function hasSyntaxErrors(filePath) {
   try {
-    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8', cwd: '/workspace' });
-    const lines = output.split('\n');
-    const filesWithErrors = new Set();
-    
-    lines.forEach(line => {
-      const match = line.match(/^app\/([^(]+)\(/);
-      if (match) {
-        filesWithErrors.add(match[1]);
-      }
-    });
-    
-    return Array.from(filesWithErrors);
+    const content = fs.readFileSync(filePath, 'utf8');
+    // Check for common syntax error patterns
+    return content.includes('<<<<<<<') || 
+           content.includes('=======') || 
+           content.includes('>>>>>>>') ||
+           content.includes('error TS') ||
+           content.includes('Unexpected token') ||
+           content.includes('Declaration or statement expected') ||
+           content.includes('Expression expected') ||
+           content.includes('Property assignment expected') ||
+           content.includes('JSX expressions must have one parent element') ||
+           content.includes('Expected corresponding JSX closing tag');
   } catch (error) {
-    console.error('Error running type check:', error.message);
-    return [];
+    return true; // If we can't read the file, consider it broken
   }
 }
 
-// Fix files with errors
-const filesWithErrors = getFilesWithErrors();
-console.log(`Found ${filesWithErrors.length} files with errors`);
+// Get all .tsx files in the app directory
+const appDir = '/workspace/app';
+const allTsxFiles = getAllTsxFiles(appDir);
+
+console.log(`Found ${allTsxFiles.length} .tsx files`);
 
 let fixedCount = 0;
+let skippedCount = 0;
 
-filesWithErrors.forEach(filePath => {
-  const fullPath = path.join('/workspace', filePath);
-  const pageName = getPageName(filePath);
-  const title = getTitle(filePath);
-  const description = getDescription(filePath);
-  
-  try {
-    const content = createBasicPage(pageName, title, description);
-    fs.writeFileSync(fullPath, content);
-    console.log(`Fixed: ${filePath}`);
-    fixedCount++;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+// Fix each file that has syntax errors
+allTsxFiles.forEach(filePath => {
+  if (hasSyntaxErrors(filePath)) {
+    const pageName = getPageName(filePath);
+    const title = getTitle(filePath);
+    const description = getDescription(filePath);
+    
+    try {
+      const content = createBasicPage(pageName, title, description);
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath.replace('/workspace/', '')}`);
+      fixedCount++;
+    } catch (error) {
+      console.error(`Error fixing ${filePath}:`, error.message);
+    }
+  } else {
+    console.log(`Skipped (no errors): ${filePath.replace('/workspace/', '')}`);
+    skippedCount++;
   }
 });
 
 console.log(`\nFinished fixing files:`);
 console.log(`- Fixed: ${fixedCount}`);
-console.log(`- Total with errors: ${filesWithErrors.length}`);
+console.log(`- Skipped: ${skippedCount}`);
+console.log(`- Total: ${allTsxFiles.length}`);
