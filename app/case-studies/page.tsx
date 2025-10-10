@@ -31,10 +31,30 @@ const CaseStudiesPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            </p>
-          </div>
-        </section>
-
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Case Studies
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover how we've helped businesses transform with cutting-edge AI and IT solutions
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {caseStudies.map((study, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+                  <div className="aspect-video bg-gray-700 rounded-lg mb-4 flex items-center justify-center">
+                    <span className="text-gray-400">Case Study Image</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{study.title}</h3>
+                  <p className="text-gray-300 mb-4">Client: {study.client}</p>
+                  <p className="text-sm text-gray-400 mb-4">Industry: {study.industry}</p>
+                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
+                    View Details
+                  </button>
+                </div>
               ))}
             </div>
           </div>
