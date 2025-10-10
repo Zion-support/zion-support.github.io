@@ -84,7 +84,7 @@ const itServices = [
       name: 'IT Infrastructure Design & Implementation',;
       description: 'Complete IT infrastructure design, deployment, and optimization for modern businesses',;
       category: 'infrastructure',;
-      icon: Server,;
+      icon: Server,
       price: 'Starting at $5,000',;
       features: [,
         'Network architecture design',;
@@ -117,7 +117,7 @@ const itServices = [
       name: 'Cloud Migration & Optimization',;
       description: 'Seamless migration to cloud platforms with optimization for cost and performance',;
       category: 'cloud',;
-      icon: Cloud,;
+      icon: Cloud,
       price: 'Starting at $3,000',;
       features: [,
         'Cloud readiness assessment',;
@@ -150,7 +150,7 @@ const itServices = [
       name: 'Cybersecurity Solutions',;
       description: 'Comprehensive security assessment, implementation, and ongoing protection',;
       category: 'security',;
-      icon: Shield,;
+      icon: Shield,
       price: 'Starting at $2,500',;
       features: [,
         'Security risk assessment',;
@@ -183,7 +183,7 @@ const itServices = [
       name: 'Network Design & Optimization',;
       description: 'High-performance network infrastructure design and optimization for reliability',;
       category: 'networking',;
-      icon: Network,;
+      icon: Network,
       price: 'Starting at $2,000',;
       features: [,
         'Network architecture design',;
@@ -216,7 +216,7 @@ const itServices = [
       name: 'Database Management & Optimization',;
       description: 'Database design, implementation, optimization, and ongoing management',;
       category: 'database',;
-      icon: Database,;
+      icon: Database,
       price: 'Starting at $1,500',;
       features: [,
         'Database design and architecture',;
@@ -249,7 +249,7 @@ const itServices = [
       name: 'Managed IT Support Services',;
       description: 'Comprehensive IT support and management for ongoing operations',;
       category: 'support',;
-      icon: Headphones,;
+      icon: Headphones,
       price: 'Starting at $99/user/month',;
       features: [,
         '24/7 technical support',;
@@ -282,7 +282,7 @@ const itServices = [
       name: 'Custom Software Development',;
       description: 'Tailored software solutions built to meet specific business requirements',;
       category: 'development',;
-      icon: Code,;
+      icon: Code,
       price: 'Starting at $5,000',;
       features: [,
         'Requirements analysis',;
@@ -315,7 +315,7 @@ const itServices = [
       name: 'Strategic IT Consulting',;
       description: 'Technology strategy and roadmap development for digital transformation',;
       category: 'consulting',;
-      icon: Briefcase,;
+      icon: Briefcase,
       price: 'Starting at $200/hour',;
       features: [,
         'IT strategy development',;
@@ -348,7 +348,7 @@ const itServices = [
       name: 'Disaster Recovery & Business Continuity',;
       description: 'Comprehensive disaster recovery planning and implementation',;
       category: 'recovery',;
-      icon: RefreshCw,;
+      icon: RefreshCw,
       price: 'Starting at $3,500',;
       features: [,
         'Business impact analysis',;
@@ -381,7 +381,7 @@ const itServices = [
       name: 'IT Compliance & Auditing',;
       description: 'Compliance assessment and implementation for various industry standards',;
       category: 'compliance',;
-      icon: CheckSquare,;
+      icon: CheckSquare,
       price: 'Starting at $2,000',;
       features: [,
         'Compliance gap analysis',;
@@ -410,9 +410,7 @@ const itServices = [
   }
     }
   ];
-const categories = [
-    { id: 'all', name: 'All IT Services', icon: Grid3X3 },;
-    { id: 'infrastructure', name: 'Infrastructure', icon: Server },;
+const categories = [{ id: 'all', name: 'All IT Services', icon: Grid3X3  }, { id: 'infrastructure', name: 'Infrastructure', icon: Server },;
     { id: 'cloud', name: 'Cloud Services', icon: Cloud },;
     { id: 'security', name: 'Cybersecurity', icon: Shield },;
     { id: 'networking', name: 'Networking', icon: Network },;

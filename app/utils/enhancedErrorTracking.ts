@@ -12,10 +12,10 @@ export interface ErrorContext {
   metadata?: Record<string>}
 }
 export interface TrackedError {
-    message: string,;
+    message: string,
   stack?: string;
-  context: ErrorContext,;
-  timestamp: string,;
+  context: ErrorContext,
+  timestamp: string,
   userAgent: string,
   }
 export interface ErrorContext {}
@@ -26,9 +26,9 @@ export interface ErrorContext {}
   metadata?: Record<string>}</strin>
 }
 export interface TrackedError {}
-  message: string;
+  message: string,
   stack?: string;
-  context: ErrorContext;
+  context: ErrorContext,
   timestamp: string
   userAgent: string
   url: string,}
@@ -36,7 +36,7 @@ export interface TrackedError {}
 class EnhancedErrorTracker {}
   private errors: TrackedError[] = []
   private maxErrors = 100,
-  private sessionId: string,;
+  private sessionId: string,
   constructor() {
     ,;
     this.sessionId = this.generateSessionId(),;
@@ -141,7 +141,7 @@ class EnhancedErrorTracker {}
   }
         fatal: false)).gtag('event', 'exception', {)}
         description: error.message,;
-        fatal: false,;
+        fatal: false,
         component: error.context.component}
       });
     }

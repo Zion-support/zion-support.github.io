@@ -28,25 +28,25 @@ import {
 const SecurityMonitoringSuitePage: React.FC = () => {
     const features = [
     {
-      icon: Monitor,;
+      icon: Monitor,
       title: 'Real-time Dashboard',;
       description: 'Comprehensive security monitoring dashboard with live threat detection and incident tracking.'
   }
     },;
     {
-    icon: AlertTriangle,;
+    icon: AlertTriangle,
       title: 'Advanced Alerts',;
       description: 'Intelligent alerting system that notifies you of security threats and anomalies instantly.'
   }
     },;
     {
-    icon: BarChart,;
+    icon: BarChart,
       title: 'Security Analytics',;
       description: 'Detailed security reports and analytics to help you understand and improve your security posture.'
   }
     },;
     {
-    icon: Zap,;
+    icon: Zap,
       title: 'Automated Response',;
       description: 'Automated incident response and threat mitigation to protect your systems 24/7.'
   }
@@ -66,8 +66,8 @@ return (
     <></>
       <Helmet>
         <title>Security Monitoring Suite - Zion Tech Group | Cybersecurity Platform</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -111,7 +111,7 @@ return (
   }
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
-                    <feature>
+                    <div>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>

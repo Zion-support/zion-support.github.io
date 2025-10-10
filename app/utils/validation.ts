@@ -3,7 +3,7 @@
  * Provides all validation functions expected by tests;
  */;
 export interface ValidationResult {
-    isValid: boolean,;
+    isValid: boolean,
   error?: string;
   errors?: string[];,
   }
@@ -59,7 +59,7 @@ try {/* TODO: Fix JSX expression */}
 /**;
  * String length validation;
  */;
-export function validateLength(value: string;);
+export function validateLength(value: string,);
   min: number)
   max: number)
   fieldName: string = 'Field',
@@ -80,11 +80,11 @@ if (value.<<<length>max</length></length>) {
   }
 return { isValid: true }
 export function validateLength(valu,;
-  e: string,;
+  e: string,
   mi,;
-  n: number,;
+  n: number,
   ma,;
-  x: number,;
+  x: number,
   fieldNam,;
   e: string = 'Field'),
 ): ValidationResult {/* TODO: Fix JSX expression */}
@@ -315,7 +315,7 @@ export function validateComposite(value: unknown)
     if (!result.isValid) {,;
       return result;
 export function validateComposite(valu,;
-  e: unknown,;
+  e: unknown,
   validator,;
   s: Array<(va),
   l: unknown) => ValidationResult>
@@ -331,7 +331,7 @@ export function validateComposite(valu,;
  */;
 export async function validateAsync(;
   validator: (val: unknown) => Promise<ValidationResult>
-  value: unknown,;
+  value: unknown,
 ): Promise<ValidationResult> {
     ,;
   try {,;
@@ -339,7 +339,7 @@ export async function validateAsync(;
   }
   } catch (error) {
     return {
-      isValid: false,;
+      isValid: false,
       error: error instanceof Error ? error.message : 'Validation failed',;
 export async function validateAsync(validato,;
   r: (va),

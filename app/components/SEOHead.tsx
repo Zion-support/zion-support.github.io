@@ -56,31 +56,31 @@ return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta>
-      <meta>
-      <meta>
-      <meta>
-      <meta>
+      <meta />
+      <meta />
+      <meta />
+      <meta />
+      <meta />
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 {/* Open Graph Meta Tags */}
-      <meta>
-      <meta>
-      <meta>
-      <meta>
-      <meta>
-      <meta>
-      <meta>
+      <meta />
+      <meta />
+      <meta />
+      <meta />
+      <meta />
+      <meta />
+      <meta />
       {/* Twitter Card Meta Tags */}
-      <meta>
-      <meta>
-      <meta>
-      <meta>
+      <meta />
+      <meta />
+      <meta />
+      <meta />
       {/* Additional SEO Meta Tags */}
-      <meta>
-      <meta>
-      <meta>
-      <meta>
+      <meta />
+      <meta />
+      <meta />
+      <meta />
 
       {/* Structured Data */}
       <script>

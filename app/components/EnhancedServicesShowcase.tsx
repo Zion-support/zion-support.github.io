@@ -5,7 +5,7 @@ const EnhancedServicesShowcase: React.FC = () => {
     {
       title: 'AI Solutions',;
       description: 'Transform your business with cutting-edge artificial intelligence',;
-      icon: Brain,;
+      icon: Brain,
       color: 'text-purple-400',;
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],;
       stats: '300% ROI'
@@ -14,7 +14,7 @@ const EnhancedServicesShowcase: React.FC = () => {
     {
     title: 'IT Infrastructure',;
       description: 'Build and maintain robust technology foundations',;
-      icon: Cloud,;
+      icon: Cloud,
       color: 'text-blue-400',;
       features: ['Cloud Migration', 'Server Management', 'Network Security', 'Data Backup'],;
       stats: '99.9% Uptime'
@@ -23,7 +23,7 @@ const EnhancedServicesShowcase: React.FC = () => {
     {
     title: 'Cybersecurity',;
       description: 'Protect your business with enterprise-grade security',;
-      icon: Shield,;
+      icon: Shield,
       color: 'text-green-400',;
       features: ['Threat Detection', 'Security Audits', 'Compliance', 'Incident Response'],;
       stats: 'Zero Breaches'
@@ -32,7 +32,7 @@ const EnhancedServicesShowcase: React.FC = () => {
     {
     title: 'Automation',;
       description: 'Streamline processes with intelligent automation',;
-      icon: Zap,;
+      icon: Zap,
       color: 'text-yellow-400',;
       features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],;
       stats: '95% Efficiency'

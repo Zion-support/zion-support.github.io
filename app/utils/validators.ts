@@ -4,7 +4,7 @@
  * Provides common validation functions for forms and data;
  */;
 export interface ValidationResult {
-    isValid: boolean,;
+    isValid: boolean,
   errors: string[],
   error?: string
   }
@@ -219,7 +219,7 @@ export function sanitizeHtml(html: string): string {
  * Validate object against schema;
  */;
 export function validateObject<T extends Record<string, unknown>>(;
-  obj: T,;
+  obj: T,
   schema: Record<keyof T, (value: unknown) => boolean>;
 ): ValidationResult {
     const errors: string[] = []
@@ -241,7 +241,7 @@ export function validateObject<T extends Record<string, unknown>>(;
  * Validate form data;
  */;
 export interface FormField {
-    value: string,;
+    value: string,
   validators: Array<{,;
     validate: (value: string) => boolean,
     message: string,
@@ -272,19 +272,19 @@ export function validateForm(fields: Record<string, FormField>);
  */;
 export const validators = {
     required: (message = 'This field is required') => ({,;
-    validate: isRequired,;
+    validate: isRequired,
     message
   }
   }),;
   email: (message = 'Please enter a valid email address') => ({
     ,;
-    validate: isValidEmail,;
+    validate: isValidEmail,
     message
   }
   }),;
   phone: (message = 'Please enter a valid phone number') => ({
     ,;
-    validate: isValidPhone,;
+    validate: isValidPhone,
     message
   }
   }),;
@@ -299,7 +299,7 @@ export const validators = {
   }
   }),;
   password: (message = 'Password must be at least 8 characters with uppercase, lowercase, and number') => ({
-    validate: isStrongPassword,;
+    validate: isStrongPassword,
     message
   }
   });
@@ -340,7 +340,7 @@ return sanitized || null;
  * Validation result interface;
  */;
 export interface ValidationResult {
-    isValid: boolean,;
+    isValid: boolean,
   error?: string
   }
 }
@@ -767,7 +767,7 @@ export function validateComposite(value: string, validators: Array<(val: string)
  */;
 export async function validateAsync(;
   validator: (val: unknown) => Promise<ValidationResult>
-  value: unknown,;
+  value: unknown,
 ): Promise<ValidationResult> {,;
   try {,;
  * Validate required field with detailed result;

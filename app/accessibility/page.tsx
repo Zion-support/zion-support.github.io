@@ -5,46 +5,40 @@ import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, Arr
 const AccessibilityPage: React.FC = () => {
     const features = [
     {
-      icon: Eye,;
-      title: 'Visual Accessibility',;
-      description: 'Comprehensive visual accessibility features including high contrast modes, text scaling, and screen reader compatibility.',;
+      icon: Eye,
+      title: 'Visual Accessibility',
+      description: 'Comprehensive visual accessibility features including high contrast modes, text scaling, and screen reader compatibility.',
       benefits: ['High contrast mode', 'Text scaling', 'Screen reader support', 'Color blind friendly']
-  }
-    },;
+    },
     {
-    icon: MousePointer,;
-      title: 'Motor Accessibility',;
-      description: 'Keyboard navigation and alternative input methods for users with motor impairments.',;
+      icon: MousePointer,
+      title: 'Motor Accessibility',
+      description: 'Keyboard navigation and alternative input methods for users with motor impairments.',
       benefits: ['Keyboard navigation', 'Voice commands', 'Switch control', 'Customizable controls']
-  }
-    },;
+    },
     {
-    icon: Volume2,;
-      title: 'Audio Accessibility',;
-      description: 'Audio alternatives and visual indicators for users with hearing impairments.',;
+      icon: Volume2,
+      title: 'Audio Accessibility',
+      description: 'Audio alternatives and visual indicators for users with hearing impairments.',
       benefits: ['Audio descriptions', 'Visual alerts', 'Captions', 'Sign language support']
-  }
-    },;
+    },
     {
-    icon: Shield,;
-      title: 'Security & Privacy',;
-      description: 'Secure accessibility features that protect user data while providing inclusive experiences.',;
+      icon: Shield,
+      title: 'Security & Privacy',
+      description: 'Secure accessibility features that protect user data while providing inclusive experiences.',
       benefits: ['Data protection', 'Secure forms', 'Privacy controls', 'Encrypted communications']
-  }
-    },;
+    },
     {
-    icon: Users,;
-      title: 'Inclusive Design',;
-      description: 'Design principles that ensure our solutions work for users of all abilities and backgrounds.',;
+      icon: Users,
+      title: 'Inclusive Design',
+      description: 'Design principles that ensure our solutions work for users of all abilities and backgrounds.',
       benefits: ['Universal design', 'Cultural sensitivity', 'Language support', 'Age-friendly interfaces']
-  }
-    },;
+    },
     {
-    icon: Globe,;
-      title: 'Global Standards',;
-      description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',;
+      icon: Globe,
+      title: 'Global Standards',
+      description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',
       benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
-  }
     }
   ];
 const standards = [
@@ -77,8 +71,8 @@ return (
     <></>
       <Helmet>
         <title>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -126,7 +120,7 @@ return (
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300 group",
                 ></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
-                    <feature>
+                    <div>
                   </div>
                   <h3>
 

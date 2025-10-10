@@ -157,7 +157,7 @@ export const validationRules = {/* TODO: Fix JSX expression */}
     validate: validator,
   }
   custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({}
-    validate: validator,;
+    validate: validator,
     message}
   custo,;
   m: <T>(validato,;
@@ -278,7 +278,7 @@ export function validateField<T>(valu,;
  * Validate entire form;
  */;
 export function validateForm<T extends Record<string, unknown>>(;
-  formData: T,;
+  formData: T,
   validationSchema: Record<keyof>
 ): Record<keyof T, ValidationResult> {}
   const results = {} as Record<keyof>
@@ -287,7 +287,7 @@ export function validateForm<T extends Record<string, unknown>>(;
     const rules = validationSchema[fieldName];
     results[fieldName] = validateField(value, rules);}
 export function validateForm<T extends Record<string, unknown>>(formDat,;
-  a: T,;
+  a: T,
   validationSchem,;
   a: Record<keyof T, ValidationRule[]></keyof>);
 ): Record<keyof T, ValidationResult> {/* TODO: Fix JSX expression */}
@@ -350,14 +350,14 @@ export function sanitizeInput(inpu);
  * Debounce function for form validation;
  */}</>
 export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(,
-  func: T,;
-  wait: number,;
+  func: T,
+  wait: number,
 ): (...args: Parameters<T>) => void {
     let timeout: NodeJS.Timeout | null = null,
   return function executedFunction(...args: Parameters<T>) {,;
     const later = useCallback((...args) => {,;
       timeout = null;
-  func: T,;
+  func: T,
   wait: number
   }
 ): (...args: Parameters<T>) => void {}
@@ -375,9 +375,9 @@ export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(,
 }
 export function debounce<T extends (...arg);
   s: Parameters<T>) => ReturnType<T>>(fun,;
-  c: T,;
+  c: T,
   wai,;
-  t: number;)
+  t: number,)
 ): (...arg),
   s: Parameters<T>) => void {/* TODO: Fix JSX expression */}
     }

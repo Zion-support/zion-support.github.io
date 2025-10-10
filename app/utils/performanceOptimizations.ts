@@ -2,13 +2,13 @@
 // Performance optimization utilities;
 // Debounce utility for performance;
 export const debounce = <T extends (...args: any[]) => any>(,
-  func: T,;
-  wait: number,;
+  func: T,
+  wait: number,
 ): ((...args: Parameters<T>) => void) => {
     let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {,;
     clearTimeout(timeout),;
-  func: T,;
+  func: T,
   wait: number
   }
 ): ((...args: Parameters<T>) => void) => {}
@@ -20,15 +20,15 @@ export const debounce = <T extends (...args: any[]) => any>(,
 }
 // Throttle utility for performance;
 export const throttle = <T extends (...args: any[]) => any>(,
-  func: T,;
-  limit: number,;
+  func: T,
+  limit: number,
 ): ((...args: Parameters<T>) => void) => {
-    let inThrottle: boolean,;
+    let inThrottle: boolean,
   return (...args: Parameters<T>) => {
     if (!inThrottle) {,;
       func(...args),;
       inThrottle = true;
-  func: T,;
+  func: T,
   limit: number
   }
 ): ((...args: Parameters<T>) => void) => {}
@@ -78,9 +78,9 @@ export const useIntersectionObserver = (;
 // Debounce utility for performance;
 export const debounce = <T extends (...arg);
   s: any[]) => any>(fun,;
-  c: T,;
+  c: T,
   wai,;
-  t: number;)
+  t: number,)
 ): ((...arg),
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
   }
@@ -88,9 +88,9 @@ export const debounce = <T extends (...arg);
 // Throttle utility for performance;
 export const throttle = <T extends (...arg);
   s: any[]) => any>(fun,;
-  c: T,;
+  c: T,
   limi,;
-  t: number;)
+  t: number,)
 ): ((...arg),
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
     }

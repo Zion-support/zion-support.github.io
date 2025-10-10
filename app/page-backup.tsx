@@ -386,7 +386,7 @@ const HomePage: React.FC = memo(() => {
                     >
                       <div className="p-8">
                         <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                          <feature.icon className="w-8 h-8 text-white" />
+                          <div.icon className="w-8 h-8 text-white" />
                         </div>
                         <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                         <p className="text-gray-300 mb-6 leading-relaxed">{feature.description}</p>

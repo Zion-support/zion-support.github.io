@@ -2,18 +2,11 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
   lcp?: number;
   fid?: number;
   cls?: number;
   fcp?: number;
   ttfb?: number;
-=======
-  loadTime: number;
-  memoryUsage: number;
-  connectionSpeed: string;
-  renderTime: number;
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -76,18 +69,17 @@ const PerformanceMonitor: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-<<<<<<< HEAD
   if (!isVisible || Object.keys(metrics).length === 0) {
     return null;
   }
 
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
+  const getScoreColor = (value: number, thresholds: { good: number, poor: number }) => {
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.poor) return 'text-yellow-400';
     return 'text-red-400';
   };
 
-  const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
+  const getScoreText = (value: number, thresholds: { good: number, poor: number }) => {
     if (value <= thresholds.good) return 'Good';
     if (value <= thresholds.poor) return 'Needs Improvement';
     return 'Poor';
@@ -150,25 +142,6 @@ const PerformanceMonitor: React.FC = () => {
             </span>
           </div>
         )}
-=======
-  if (!isVisible) return null;
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-sm z-50">
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
-      {metrics ? (
-        <div className="space-y-1">
-          <div>Load Time: {metrics.loadTime}ms</div>
-          <div>Memory: {metrics.memoryUsage}MB</div>
-          <div>Connection: {metrics.connectionSpeed}</div>
-          <div>Render: {metrics.renderTime}ms</div>
-        </div>
-      ) : (
-        <div>Loading metrics...</div>
-      )}
-      <div className="text-xs text-gray-400 mt-2">
-        Press Ctrl+Shift+P to toggle
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
       </div>
     </div>
   );

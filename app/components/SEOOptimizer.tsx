@@ -1,15 +1,10 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-=======
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
 interface SEOOptimizerProps {
-  title: string;
-  description: string;
+  title: string,
+  description: string,
   keywords?: string[];
   canonicalUrl?: string;
   structuredData?: object;
@@ -27,22 +22,21 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   return (
     <Helmet>
       <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywordsString} />
-      <meta name="robots" content="index, follow" />
+      <meta name="description" content={description} / />
+      <meta name="keywords" content={keywordsString} / />
+      <meta name="robots" content="index, follow" / />
       <link rel="canonical" href={canonicalUrl} />
       
       {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:title" content={title} / />
+      <meta property="og:description" content={description} / />
+      <meta property="og:type" content="website" / />
+      <meta property="og:url" content={canonicalUrl} / />
       
       {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-<<<<<<< HEAD
+      <meta name="twitter:card" content="summary_large_image" / />
+      <meta name="twitter:title" content={title} / />
+      <meta name="twitter:description" content={description} / />
       
       {/* Structured Data */}
       {structuredData && (
@@ -50,10 +44,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           {JSON.stringify(structuredData)}
         </script>
       )}
-=======
-      <meta name="twitter:image" content={ogImage} />
-      <link rel="canonical" href={canonicalUrl} />
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
     </Helmet>
   );
 };

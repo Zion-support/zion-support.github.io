@@ -28,25 +28,25 @@ import {
 const PenetrationTestingPage: React.FC = () => {
     const features = [
     {
-      icon: Search,;
+      icon: Search,
       title: 'Comprehensive Vulnerability Assessment',;
       description: 'Thorough testing of your systems to identify security weaknesses and potential attack vectors.'
   }
     },;
     {
-    icon: Target,;
+    icon: Target,
       title: 'Simulated Attack Scenarios',;
       description: 'Real-world attack simulations to test your defenses and response capabilities.'
   }
     },;
     {
-    icon: BarChart,;
+    icon: BarChart,
       title: 'Detailed Security Reports',;
       description: 'Comprehensive reports with prioritized recommendations and remediation guidance.'
   }
     },;
     {
-    icon: Zap,;
+    icon: Zap,
       title: 'Expert Security Analysis',;
       description: 'Professional security experts conduct thorough testing using industry-standard methodologies.'
   }
@@ -66,8 +66,8 @@ return (
     <></>
       <Helmet>
         <title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -111,7 +111,7 @@ return (
   }
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
-                    <feature>
+                    <div>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>

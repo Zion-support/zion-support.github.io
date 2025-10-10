@@ -6,8 +6,8 @@ const CustomSoftwarePage: React.FC = () => {
     <>
       <Helmet>
         <title>Custom Software Development - Zion Tech Group</title>
-        <meta name="description" content="Tailored custom software solutions designed specifically for your business needs including web applications, mobile apps, and enterprise software." />
-        <meta name="keywords" content="custom software development, tailored solutions, web applications, mobile apps, enterprise software, bespoke development" />
+        <meta name="description" content="Tailored custom software solutions designed specifically for your business needs including web applications, mobile apps, and enterprise software." / />
+        <meta name="keywords" content="custom software development, tailored solutions, web applications, mobile apps, enterprise software, bespoke development" / />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

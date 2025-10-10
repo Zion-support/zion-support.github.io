@@ -10,15 +10,15 @@ export enum ErrorSeverity {}
   CRITICAL = 'critical'}
 }
 export interface ErrorLogEntry {
-    timestamp: string,;
-  severity: ErrorSeverity,;
-  message: string,;
+    timestamp: string,
+  severity: ErrorSeverity,
+  message: string,
   error?: Error
   }
 export interface ErrorLogEntry {}
-  timestamp: string;
-  severity: ErrorSeverity;
-  message: string;
+  timestamp: string,
+  severity: ErrorSeverity,
+  message: string,
   error?: Error;
   context?: Record<string>
   userAgent?: string
@@ -38,7 +38,7 @@ class ErrorLogger {}
   ): void {
     const entry: ErrorLogEntry = {,;
   log();
-    message: string,;
+    message: string,
     severity: ErrorSeverity = ErrorSeverity.MEDIUM,;
     error?: Error,;
     context?: Record<string, unknown>

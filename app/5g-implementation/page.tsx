@@ -9,49 +9,44 @@ const FiveGImplementationPage: React.FC = () => {
       title: '5G Network Design',
       description: 'Complete 5G network design and implementation with optimal coverage and performance.',
       benefits: ['Network planning', 'Coverage optimization', 'Performance tuning']
-  },
+    },
     {
-    icon: Zap,
+      icon: Zap,
       title: 'Ultra-Low Latency',
       description: 'Ultra-low latency 5G networks for real-time applications and mission-critical operations.',
       benefits: ['< 1 ms latency', 'Real-time apps', 'Mission critical']
-  }
-    },;
+    },
     {
-    icon: Clock,
+      icon: Clock,
       title: '24/7 Network Monitoring',
       description: 'Continuous monitoring of 5G network performance with real-time analytics and alerts.',
       benefits: ['Network monitoring', 'Performance analytics', 'Proactive maintenance']
-  }
-    },;
+    },
     {
-    icon: Users,
+      icon: Users,
       title: 'Scalable Infrastructure',
       description: 'Scalable 5G infrastructure that grows with your business needs and user demands.',
       benefits: ['Auto-scaling', 'Capacity planning', 'Future-proof design']
-  }
-    },;
+    },
     {
-    icon: Shield,
+      icon: Shield,
       title: 'Enhanced Security',
       description: 'Advanced encryption and security protocols for enterprise-grade protection',
       benefits: ['End-to-end encryption', 'Security protocols', 'Threat detection']
-  }
-    },;
+    },
     {
-    icon: BarChart,
+      icon: BarChart,
       title: 'Performance Analytics',
       description: 'Advanced analytics and reporting for 5G network performance and optimization.',
       benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']
-  }
     }
   ];
 return (
     <></>
       <Helmet>
         <title>5G Network Implementation - Zion Tech Group | Zion Tech Group - AI & IT Solutions</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -96,7 +91,7 @@ return (
   }
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
-                    <feature>
+                    <div>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>

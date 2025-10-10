@@ -49,8 +49,8 @@ const FAQPage: React.FC = () => {
     <React.Fragment>
       <Helmet>
         <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
-        <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
-        <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />
+        <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." / />
+        <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" / />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">

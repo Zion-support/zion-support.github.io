@@ -6,9 +6,9 @@
 interface ErrorContext {
     userId?: string;
   sessionId?: string;
-  url: string,;
-  userAgent: string,;
-  timestamp: string,;
+  url: string,
+  userAgent: string,
+  timestamp: string,
   component?: string;
   action?: string;
   props?: Record<string, unknown>
@@ -21,8 +21,8 @@ interface ErrorReport {
 interface ErrorContext {}
   userId?: string;
   sessionId?: string;
-  url: string,;
-    userAgent: string;
+  url: string,
+    userAgent: string,
   timestamp: string
   component?: string
   action?: string,
@@ -31,9 +31,9 @@ interface ErrorContext {}
 interface ErrorReport {}
   id: string
   type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom',
-  message: string,;
+  message: string,
   stack?: string;
-  context: ErrorContext,;
+  context: ErrorContext,
   severity: 'low' | 'medium' | 'high' | 'critical';
   category:;
     | 'syntax';
@@ -44,35 +44,35 @@ interface ErrorReport {}
     | 'unknown',;
   tags: string[],;
   metadata: Record<string>
-  resolved: boolean,;
+  resolved: boolean,
   resolvedAt?: string;
   resolvedBy?: string;}
 }
 interface ErrorHandlerConfig {
-    enableConsoleLogging: boolean,;
-  enableRemoteReporting: boolean,;
-  enableErrorRecovery: boolean,;
-  enableErrorCategorization: boolean,;
-  enableErrorAggregation: boolean,;
-  enablePerformanceImpact: boolean,;
-  maxErrorsPerMinute: number,;
-  errorRetentionDays: number,;
+    enableConsoleLogging: boolean,
+  enableRemoteReporting: boolean,
+  enableErrorRecovery: boolean,
+  enableErrorCategorization: boolean,
+  enableErrorAggregation: boolean,
+  enablePerformanceImpact: boolean,
+  maxErrorsPerMinute: number,
+  errorRetentionDays: number,
   remoteEndpoint?: string
   }
   apiKey?: string;}
 }
 class EnhancedErrorHandler {
-    private config: ErrorHandlerConfig,;
+    private config: ErrorHandlerConfig,
   private errors: ErrorReport[] = [],
   }
 interface ErrorHandlerConfig {}
-  enableConsoleLogging: boolean;
-  enableRemoteReporting: boolean;
-  enableErrorRecovery: boolean;
-  enableErrorCategorization: boolean;
-  enableErrorAggregation: boolean;
-  enablePerformanceImpact: boolean;
-  maxErrorsPerMinute: number;
+  enableConsoleLogging: boolean,
+  enableRemoteReporting: boolean,
+  enableErrorRecovery: boolean,
+  enableErrorCategorization: boolean,
+  enableErrorAggregation: boolean,
+  enablePerformanceImpact: boolean,
+  maxErrorsPerMinute: number,
   errorRetentionDays: number
   remoteEndpoint?: string
   apiKey?: string,}
@@ -87,25 +87,25 @@ class EnhancedErrorHandler {}
   private isInitialized: boolean = false,}
   constructor(config: Partial<ErrorHandlerConfig> = {}) {
     this.config = {
-      enableConsoleLogging: true,;
-      enableRemoteReporting: false,;
-      enableErrorRecovery: true,;
-      enableErrorCategorization: true,;
-      enableErrorAggregation: true,;
-      enablePerformanceImpact: true,;
-      maxErrorsPerMinute: 10,;
+      enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
       errorRetentionDays: 30,
   }
   constructor(config: Partial<ErrorHandlerConfig> = {}) {}
     this.config = {}
-      enableConsoleLogging: true,;
-      enableRemoteReporting: false,;
-      enableErrorRecovery: true,;
-      enableErrorCategorization: true,;
-      enableErrorAggregation: true,;
-      enablePerformanceImpact: true,;
-      maxErrorsPerMinute: 10,;
-      errorRetentionDays: 30,;
+      enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
       ...config}
     }
     this.initialize();
@@ -401,7 +401,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    */;
   private handleError(errorData: {)}
 // type: ErrorReport['type'],
-// message: string,;
+// message: string,
 // stack?: string;
 // filename?: string;
 // lineno?: number;
@@ -440,7 +440,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    */;
   private createErrorReport(errorData: {)}
 // type: ErrorReport['type'],
-// message: string,;
+// message: string,
 // stack?: string;
 // filename?: string;
 // lineno?: number;
@@ -502,14 +502,14 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         statusText: errorData.statusText,;
         duration: errorData.duration}
       },;
-      resolved: false,;
+      resolved: false,
     }
   private createErrorReport(errorDat,;
   a: {/* TODO: Fix JSX expression */});
   }): ErrorReport {/* TODO: Fix JSX expression */}
       },;
       resolve,;
-  d: false,;
+  d: false,
     }
   }
   /**;

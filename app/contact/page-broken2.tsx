@@ -76,28 +76,28 @@ const services = [
   ];
 const contactInfo = [
     {
-    icon: Phone,;
+    icon: Phone,
       title: 'Phone',;
       details: '+1 (302) 464-0950',;
       description: 'Mon-Fri 9AM-6PM EST'
   }
     },;
     {
-    icon: Mail,;
+    icon: Mail,
       title: 'Email',;
       details: 'kleber@ziontechgroup.com',;
       description: 'We respond within 24 hours'
   }
     },;
     {
-    icon: MapPin,;
+    icon: MapPin,
       title: 'Address',;
       details: '123 Tech Street, Suite 100\nWilmington, DE 19801',;
       description: 'Visit our office'
   }
     },;
     {
-    icon: Clock,;
+    icon: Clock,
       title: 'Business Hours',;
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',;
       description: 'Eastern Time'
@@ -108,8 +108,8 @@ return (
     <></>
       <Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div>
         <div className="container mx-auto px-4"></div>

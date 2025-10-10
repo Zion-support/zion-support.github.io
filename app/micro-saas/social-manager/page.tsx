@@ -6,7 +6,7 @@ const SocialMediaManagerPage: React.FC = () => {
     <></>,
       <Helmet>
         <title>Social Media Manager | Zion Tech Group - AI Social Media Automation</title>
-        <meta>
+        <meta />
         <link>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>

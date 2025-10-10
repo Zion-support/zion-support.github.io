@@ -52,7 +52,7 @@ export const corsConfig = {
     origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],;
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],;
   allowedHeaders: ['Content-Type', 'Authorization'],;
-  credentials: true,;
+  credentials: true,
   maxAge: 86400, // 24 hours
   }
 }
@@ -61,11 +61,11 @@ export const corsConfig = {
  */;
 export const sessionConfig = {
     secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',;
-  resave: false,;
-  saveUninitialized: false,;
+  resave: false,
+  saveUninitialized: false,
   cookie: {
     secure: process.env['NODE_ENV'] === 'production',;
-    httpOnly: true,;
+    httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000, // 24 hours;
     sameSite: 'strict' as const,
   }

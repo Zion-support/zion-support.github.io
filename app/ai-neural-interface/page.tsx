@@ -121,12 +121,12 @@ const AINeuralInterface: React.FC = () => {
     <>
       <Helmet>
         <title>AI Neural Interface - Advanced Brain-Computer Interface | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered neural interface technology for medical rehabilitation, prosthetic control, and cognitive enhancement. Advanced brain-computer interface solutions." />
-        <meta name="keywords" content="neural interface, brain-computer interface, BCI, neural signal processing, prosthetic control, medical AI, cognitive enhancement" />
-        <meta property="og:title" content="AI Neural Interface - Advanced Brain-Computer Interface" />
-        <meta property="og:description" content="Revolutionary AI-powered neural interface technology for medical rehabilitation, prosthetic control, and cognitive enhancement." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-neural-interface" />
+        <meta name="description" content="Revolutionary AI-powered neural interface technology for medical rehabilitation, prosthetic control, and cognitive enhancement. Advanced brain-computer interface solutions." / />
+        <meta name="keywords" content="neural interface, brain-computer interface, BCI, neural signal processing, prosthetic control, medical AI, cognitive enhancement" / />
+        <meta property="og:title" content="AI Neural Interface - Advanced Brain-Computer Interface" / />
+        <meta property="og:description" content="Revolutionary AI-powered neural interface technology for medical rehabilitation, prosthetic control, and cognitive enhancement." / />
+        <meta property="og:type" content="website" / />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-neural-interface" / />
         <link rel="canonical" href="https://ziontechgroup.com/ai-neural-interface" />
       </Helmet>
 
@@ -207,7 +207,7 @@ const AINeuralInterface: React.FC = () => {
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
-                    <feature.icon className="w-8 h-8 text-white" />
+                    <div.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3>
                   <p className="text-gray-300 mb-6">{feature.description}</p>

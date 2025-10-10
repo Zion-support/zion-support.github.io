@@ -7,42 +7,42 @@ import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi
 const EdgeComputingPage: React.FC = () => {
     const features = [
     {
-      icon: Cpu,;
+      icon: Cpu,
       title: 'Edge Processing',;
       description: 'Process data locally at the edge for ultra-low latency and real-time responsiveness.',;
       benefits: ['Sub-millisecond latency', 'Real-time processing', 'Local data processing', 'Reduced bandwidth usage']
   }
     },;
     {
-    icon: Globe,;
+    icon: Globe,
       title: 'Global Distribution',;
       description: 'Deploy edge nodes worldwide for optimal performance and coverage.',;
       benefits: ['Global edge network', 'Geographic distribution', 'CDN integration', 'Multi-region support']
   }
     },;
     {
-    icon: Shield,;
+    icon: Shield,
       title: 'Edge Security',;
       description: 'Advanced security measures designed specifically for edge computing environments.',;
       benefits: ['Zero-trust architecture', 'Encrypted communications', 'Secure boot', 'Threat detection']
   }
     },;
     {
-    icon: Database,;
+    icon: Database,
       title: 'Edge Storage',;
       description: 'Distributed storage solutions optimized for edge computing workloads.',;
       benefits: ['Local data storage', 'Distributed databases', 'Data synchronization', 'Backup strategies']
   }
     },;
     {
-    icon: Wifi,;
+    icon: Wifi,
       title: 'IoT Integration',;
       description: 'Seamless integration with IoT devices and sensors for comprehensive edge solutions.',;
       benefits: ['Device management', 'Protocol support', 'Data collection', 'Real-time monitoring']
   }
     },;
     {
-    icon: Server,;
+    icon: Server,
       title: 'Edge Infrastructure',;
       description: 'Robust infrastructure designed for edge computing requirements and scalability.',;
       benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
@@ -125,8 +125,8 @@ return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
       <Helmet>
         <title>Edge Computing Solutions | Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
       <Navigation>
       {/* Hero Section */}
@@ -170,7 +170,7 @@ return (
   }
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
-                  <feature>
+                  <div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>

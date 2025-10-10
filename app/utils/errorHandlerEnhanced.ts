@@ -4,9 +4,9 @@ export class AppError extends Error {
     // Enhanced Error Handler
   }
 export class AppError extends Error {}
-  statusCode: number,;
-  isOperational: boolean,;
-  timestamp: string,;
+  statusCode: number,
+  isOperational: boolean,
+  timestamp: string,
   constructor(message: string, statusCode = 500, isOperational = true) {}
     super(message);
     this.statusCode = statusCode;

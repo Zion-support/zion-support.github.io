@@ -6,8 +6,8 @@ const AiHrSolutionsPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI HR Solutions - Zion Tech Group</title>
-        <meta name="description" content="Transform your HR operations with AI-powered solutions for recruitment, employee management, performance analytics, and workforce optimization." />
-        <meta name="keywords" content="AI HR solutions, HR automation, recruitment AI, employee management, performance analytics, workforce optimization" />
+        <meta name="description" content="Transform your HR operations with AI-powered solutions for recruitment, employee management, performance analytics, and workforce optimization." / />
+        <meta name="keywords" content="AI HR solutions, HR automation, recruitment AI, employee management, performance analytics, workforce optimization" / />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

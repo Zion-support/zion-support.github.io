@@ -26,13 +26,13 @@ export enum LogLevel {/* TODO: Fix JSX expression */}
  */;
 export interface LogEntry {
     /** Unique identifier for the log entry */;
-  id: string,;
+  id: string,
   /** Log level */;
-  level: LogLevel,;
+  level: LogLevel,
   /** Log message */;
-  message: string,;
+  message: string,
   /** Timestamp when the log was created */,;
-  timestamp: Date,;
+  timestamp: Date,
   /** Optional data associated with the log */,;
   data?: Record<string>
   /** Source of the log (component, module, etc.) */;
@@ -53,19 +53,19 @@ export interface LogEntry {/* TODO: Fix JSX expression */}
  */;
 export interface LoggerConfig {
     /** Minimum log level to output */;
-  minLevel: LogLevel,;
+  minLevel: LogLevel,
   /** Enable console logging */;
-  enableConsole: boolean,;
+  enableConsole: boolean,
   /** Enable remote logging */;
-  enableRemote: boolean,;
+  enableRemote: boolean,
   /** Remote logging endpoint */;
   remoteEndpoint?: string;
   /** Enable structured logging */;
-  enableStructured: boolean,;
+  enableStructured: boolean,
   /** Maximum number of logs to store in memory */;
-  maxLogs: number,;
+  maxLogs: number,
   /** Enable performance tracking */;
-  enablePerformance: boolean,;
+  enablePerformance: boolean,
   /** Environment name */,;
   environment: string,
   }
@@ -76,10 +76,10 @@ export interface LoggerConfig {/* TODO: Fix JSX expression */}
  */;
 const defaultConfig: LoggerConfig = {
     minLevel: LogLevel.INFO,
-  enableConsole: true,;
-  enableRemote: false,;
-  enableStructured: true,;
-  maxLogs: 1000,;
+  enableConsole: true,
+  enableRemote: false,
+  enableStructured: true,
+  maxLogs: 1000,
   enablePerformance: true,
   }
   environment: process.env['NODE_ENV'] || 'development'}
@@ -100,8 +100,8 @@ const,;
  * ``;
  */;
 export class EnhancedLogger {
-    private static instance: EnhancedLogger,;
-  private config: LoggerConfig,;
+    private static instance: EnhancedLogger,
+  private config: LoggerConfig,
   private logs: LogEntry[] = [],;
   private performanceMarks: Map<string, number> = new Map()
   }
@@ -251,7 +251,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * ```;
    */;
   public error(messag,;
-  e: string,;
+  e: string,
     data?: Record<string, unknown>,;
     error?: Error,;
     source?: string;);
@@ -284,7 +284,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   }
       }
   public fatal(messag,;
-  e: string,;
+  e: string,
     data?: Record<string, unknown>,;
     error?: Error,;
     source?: string;);
@@ -404,9 +404,9 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     if (this.config.enableRemote && this.config.remoteEndpoint) {
     this.logToRemote(logEntry);
   private log(leve,;
-  l: LogLevel,;
+  l: LogLevel,
     messag,;
-  e: string,;
+  e: string,
     data?: Record<string, unknown>,;
     source?: string,;
     stack?: string;)
@@ -452,7 +452,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     if (this.config.enableStructured) {
     const structuredLog = {
         timestamp: entry.timestamp,
-        level: levelName,;
+        level: levelName,
         message: entry.message
         source: entry.source,
         data: entry.data
@@ -660,7 +660,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @returns Object containing log statistics;
    */;
   public getStatistics(): {
-    total: number,;
+    total: number,
     byLevel: Record<string>
     bySource: Record<string, number>
   }

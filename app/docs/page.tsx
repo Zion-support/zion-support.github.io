@@ -131,8 +131,8 @@ const DocsPage: React.FC = () => {
     <>
       <Helmet>
         <title>Documentation - Zion Tech Group</title>
-        <meta name="description" content="Complete documentation for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive guides and API references." />
-        <meta name="keywords" content="documentation, API docs, guides, tutorials, developer resources, AI services, IT services" />
+        <meta name="description" content="Complete documentation for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive guides and API references." / />
+        <meta name="keywords" content="documentation, API docs, guides, tutorials, developer resources, AI services, IT services" / />
         <link rel="canonical" href="https://ziontechgroup.com/docs" />
       </Helmet>
 

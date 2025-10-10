@@ -47,8 +47,8 @@ const AIApiManagerPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>AI API Manager | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI-powered API management platform by Zion Tech Group. Centralized control, analytics, and security for all your APIs." />
-        <meta name="keywords" content="API manager, API platform, API analytics, API security, centralized management, Zion Tech Group" />
+        <meta name="description" content="Comprehensive AI-powered API management platform by Zion Tech Group. Centralized control, analytics, and security for all your APIs." / />
+        <meta name="keywords" content="API manager, API platform, API analytics, API security, centralized management, Zion Tech Group" / />
 
       </Helmet>
       <Navigation />

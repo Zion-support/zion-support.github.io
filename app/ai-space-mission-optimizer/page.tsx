@@ -121,12 +121,12 @@ const AISpaceMissionOptimizer: React.FC = () => {
     <>
       <Helmet>
         <title>AI Space Mission Optimizer - Advanced Space Mission Planning | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered space mission optimization for trajectory planning, payload optimization, and risk assessment. Advanced space mission planning solutions." />
-        <meta name="keywords" content="space mission optimization, trajectory planning, satellite management, space exploration, mission planning, space AI, aerospace technology" />
-        <meta property="og:title" content="AI Space Mission Optimizer - Advanced Space Mission Planning" />
-        <meta property="og:description" content="Revolutionary AI-powered space mission optimization for trajectory planning, payload optimization, and risk assessment." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-space-mission-optimizer" />
+        <meta name="description" content="Revolutionary AI-powered space mission optimization for trajectory planning, payload optimization, and risk assessment. Advanced space mission planning solutions." / />
+        <meta name="keywords" content="space mission optimization, trajectory planning, satellite management, space exploration, mission planning, space AI, aerospace technology" / />
+        <meta property="og:title" content="AI Space Mission Optimizer - Advanced Space Mission Planning" / />
+        <meta property="og:description" content="Revolutionary AI-powered space mission optimization for trajectory planning, payload optimization, and risk assessment." / />
+        <meta property="og:type" content="website" / />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-space-mission-optimizer" / />
         <link rel="canonical" href="https://ziontechgroup.com/ai-space-mission-optimizer" />
       </Helmet>
 
@@ -207,7 +207,7 @@ const AISpaceMissionOptimizer: React.FC = () => {
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
-                    <feature.icon className="w-8 h-8 text-white" />
+                    <div.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3>
                   <p className="text-gray-300 mb-6">{feature.description}</p>

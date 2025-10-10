@@ -36,25 +36,25 @@ const SmartCityInfrastructurePage: React.FC = () => {
 const PagePage: React.FC = () => {
   const features = [
     {
-      icon: Brain,;
+      icon: Brain,
       title: 'AI-Powered Solutions',;
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
   }
     },;
     {
-    icon: Zap,;
+    icon: Zap,
       title: 'High Performance',;
       description: 'Lightning-fast processing and real-time analytics for optimal results'
   }
     },;
     {
-    icon: Shield,;
+    icon: Shield,
       title: 'Enterprise Security',;
       description: 'Bank-level security with encryption and compliance standards'
   }
     },;
     {
-    icon: Globe,;
+    icon: Globe,
       title: 'Global Reach',;
       description: 'Worldwide deployment and support for international businesses'
   }
@@ -153,8 +153,8 @@ export default PagePage;
     <>
       <Helmet>
         <title>Smart City Infrastructure - Zion Tech Group</title>
-        <meta name="description" content="Advanced smart city infrastructure solutions including IoT networks, data analytics, and digital transformation for modern cities." />
-        <meta name="keywords" content="smart city, infrastructure, IoT, data analytics, digital transformation, urban planning" />
+        <meta name="description" content="Advanced smart city infrastructure solutions including IoT networks, data analytics, and digital transformation for modern cities." / />
+        <meta name="keywords" content="smart city, infrastructure, IoT, data analytics, digital transformation, urban planning" / />
       </Helmet>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -201,7 +201,7 @@ export default PagePage;
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                    <feature.icon className="h-6 w-6 text-white" />
+                    <div.icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>

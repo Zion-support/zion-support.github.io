@@ -176,8 +176,8 @@ const ApiPage: React.FC = () => {
     <>
       <Helmet>
         <title>API Reference - Zion Tech Group</title>
-        <meta name="description" content="Complete API reference for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive API documentation." />
-        <meta name="keywords" content="API, documentation, AI API, IT services API, micro SaaS API, developer tools" />
+        <meta name="description" content="Complete API reference for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive API documentation." / />
+        <meta name="keywords" content="API, documentation, AI API, IT services API, micro SaaS API, developer tools" / />
         <link rel="canonical" href="https://ziontechgroup.com/api" />
       </Helmet>
 

@@ -27,25 +27,25 @@ import {
 const DataAnalyticsPage: React.FC = () => {
     const features = [
     {
-      icon: BarChart,;
+      icon: BarChart,
       title: 'Advanced Data Visualization',;
       description: 'Transform complex data into clear, actionable insights with interactive dashboards and reports.'
   }
     },;
     {
-    icon: Brain,;
+    icon: Brain,
       title: 'AI-Powered Analytics',;
       description: 'Leverage machine learning and artificial intelligence to uncover hidden patterns and trends.'
   }
     },;
     {
-    icon: Database,;
+    icon: Database,
       title: 'Data Integration',;
       description: 'Connect and analyze data from multiple sources to get a complete picture of your business.'
   }
     },;
     {
-    icon: TrendingUp,;
+    icon: TrendingUp,
       title: 'Predictive Analytics',;
       description: 'Forecast future trends and make data-driven decisions with predictive modeling.'
   }
@@ -65,8 +65,8 @@ return (
     <></>
       <Helmet>
         <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -110,7 +110,7 @@ return (
   }
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
-                    <feature>
+                    <div>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>

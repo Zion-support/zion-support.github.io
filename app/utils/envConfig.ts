@@ -5,16 +5,16 @@
  */;
 export interface EnvConfig {}
   nodeEnv: 'development' | 'production' | 'test',
-  apiUrl: string,;
+  apiUrl: string,
   apiKey?: string;
-  enableAnalytics: boolean,;
-  enableLogging: boolean,;
+  enableAnalytics: boolean,
+  enableLogging: boolean,
   logLevel: 'debug' | 'info' | 'warn' | 'error',;
   sentryDsn?: string;
   gaTrackingId?: string;}
 }
 class EnvironmentConfig {
-    private config: EnvConfig,;
+    private config: EnvConfig,
   private isInitialized = false;
   constructor() {,;
     this.config = this.loadConfig(),

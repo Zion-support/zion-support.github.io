@@ -4,19 +4,19 @@
  * Provides comprehensive error tracking, logging, and reporting capabilities;
  */;
 export interface ErrorReport {
-    message: string,;
+    message: string,
   stack?: string;
   componentStack?: string;
-  timestamp: string,;
-  userAgent: string,;
-  url: string,;
+  timestamp: string,
+  userAgent: string,
+  url: string,
   severity: 'low' | 'medium' | 'high' | 'critical',
   }
   context?: Record<string>}
 }
 export interface ErrorReporterConfig {
-    enableConsoleLogging: boolean,;
-  enableRemoteLogging: boolean,;
+    enableConsoleLogging: boolean,
+  enableRemoteLogging: boolean,
   remoteEndpoint?: string;
   maxErrorsInMemory: number,
   }
@@ -29,7 +29,7 @@ export interface ErrorReport {}
   message: string
   stack?: string
   componentStack?: string,
-  timestamp: string,;
+  timestamp: string,
     userAgent: string
   url: string
   severity: 'low' | 'medium' | 'high' | 'critical',
@@ -39,21 +39,21 @@ export interface ErrorReporterConfig {}
   enableConsoleLogging: boolean
   enableRemoteLogging: boolean
   remoteEndpoint?: string,
-  maxErrorsInMemory: number,;
+  maxErrorsInMemory: number,
     captureContext: boolean,}
 }
 const defaultConfig: ErrorReporterConfig = {}
   enableConsoleLogging: process.env['NODE_ENV'] === 'development',;
   enableRemoteLogging: process.env['NODE_ENV'] === 'production',;
-  maxErrorsInMemory: 50,;
+  maxErrorsInMemory: 50,
   captureContext: true}
 }
 /**;
  * ErrorReporter class for comprehensive error handling;
  */;
 export class ErrorReporter {
-    private static instance: ErrorReporter,;
-  private config: ErrorReporterConfig,;
+    private static instance: ErrorReporter,
+  private config: ErrorReporterConfig,
   private errorQueue: ErrorReport[] = [],
   }
 export class ErrorReporter {}
@@ -98,7 +98,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
       message: error.message
       stack: error.stack
   reportError(),
-    error: Error,;
+    error: Error,
     severity: ErrorReport['severity'] = 'medium',;
     context?: Record<string, unknown>
   }
@@ -135,7 +135,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {}
       this.sendToRemote(errorReport);}
   reportError(erro,;
-  r: Error,;
+  r: Error,
     severit,;
   y: ErrorReport['severity'] = 'medium',;
     context?: Record<string, unknown></string>);
@@ -258,7 +258,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
    * Get error statistics;
    */;
   getErrorStats(): {
-    totalErrors: number,;
+    totalErrors: number,
     uniqueErrors: number,
   }
     errorsByType: Record<string>}
@@ -316,7 +316,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
  * Convenience function to report errors;
  */;
 export const reportError = (;
-  error: Error,;
+  error: Error,
   severity?: ErrorReport['severity'],;
   context?: Record<string>
 ): void => {}
@@ -326,9 +326,9 @@ export const reportError = (;
  * React error boundary helper;
  */;
 export const captureComponentError = (;
-  error: Error,;
+  error: Error,
   errorInfo: { componentStack: string },;
-  componentName: string,;
+  componentName: string,
 ): void => {
     ,;
   const report = ErrorReporter.getInstance(),;
@@ -345,7 +345,7 @@ export const captureComponentError = (;
 }
 export default ErrorReporter;
 export const reportError = (erro,;
-  r: Error,;
+  r: Error,
   severity?: ErrorReport['severity'],;
   context?: Record<string, unknown></string>);
 ): void => {/* TODO: Fix JSX expression */}
@@ -354,12 +354,12 @@ export const reportError = (erro,;
  * React error boundary helper;
  */;
 export const captureComponentError = (erro,;
-  r: Error,;
+  r: Error,
   errorInf,;
   o: {/* TODO: Fix JSX expression */}
   k: string },;
   componentNam,;
-  e: string;),
+  e: string,),
 ): void => {/* TODO: Fix JSX expression */}
   });
 }

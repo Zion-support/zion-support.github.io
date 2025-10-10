@@ -121,12 +121,12 @@ const AIClimatePredictionEngine: React.FC = () => {
     <>
       <Helmet>
         <title>AI Climate Prediction Engine - Advanced Climate Forecasting | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, extreme weather prediction, and climate risk assessment." />
-        <meta name="keywords" content="climate prediction, weather forecasting, climate modeling, extreme weather, climate risk, environmental AI, climate data" />
-        <meta property="og:title" content="AI Climate Prediction Engine - Advanced Climate Forecasting" />
-        <meta property="og:description" content="Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, extreme weather prediction, and climate risk assessment." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-climate-prediction-engine" />
+        <meta name="description" content="Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, extreme weather prediction, and climate risk assessment." / />
+        <meta name="keywords" content="climate prediction, weather forecasting, climate modeling, extreme weather, climate risk, environmental AI, climate data" / />
+        <meta property="og:title" content="AI Climate Prediction Engine - Advanced Climate Forecasting" / />
+        <meta property="og:description" content="Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, extreme weather prediction, and climate risk assessment." / />
+        <meta property="og:type" content="website" / />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-climate-prediction-engine" / />
         <link rel="canonical" href="https://ziontechgroup.com/ai-climate-prediction-engine" />
       </Helmet>
 
@@ -207,7 +207,7 @@ const AIClimatePredictionEngine: React.FC = () => {
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-green-500/20 hover:border-green-500/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/10"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
-                    <feature.icon className="w-8 h-8 text-white" />
+                    <div.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3>
                   <p className="text-gray-300 mb-6">{feature.description}</p>

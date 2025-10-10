@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useAnalytics } from './EnhancedAnalytics';
 
 interface AccessibilitySettings {
-    highContrast: boolean;
+    highContrast: boolean,
   reducedMotion: boolean
   fontSize: 'small' | 'medium' | 'large'
   screenReader: boolean,

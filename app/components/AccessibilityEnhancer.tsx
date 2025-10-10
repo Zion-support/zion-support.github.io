@@ -17,32 +17,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableFocusManagement = true
 }) => {
   useEffect(() => {
-<<<<<<< HEAD
-    // Keyboard navigation enhancements
-    if (enableKeyboardNavigation && typeof window !== 'undefined') {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        // Skip to main content
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
-          if (skipLink) {
-            skipLink.focus();
-            event.preventDefault();
-          }
-        }
+    if (typeof window === 'undefined') return;
 
-        // Close dropdowns with Escape key
-        if (event.key === 'Escape') {
-          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
-          openDropdowns.forEach(dropdown => {
-            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
-          });
-        }
-      };
-
-      document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
-    }
-=======
     // Add skip links
     const addSkipLinks = () => {
       if (document.querySelector('.skip-links')) return;
@@ -62,6 +38,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
       }
+      
+      // Close dropdowns with Escape key
+      if (event.key === 'Escape') {
+        const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
+        openDropdowns.forEach(dropdown => {
+          (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
+        });
+      }
     };
 
     const handleMouseDown = () => {
@@ -73,39 +57,39 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const style = document.createElement('style');
       style.textContent = `
         .skip-links {
-          position: absolute;
+          position: absolute,
           top: -40px;
-          left: 6px;
-          z-index: 1000;
+          left: 6px,
+          z-index: 1000,
         }
         .skip-link {
-          position: absolute;
+          position: absolute,
           top: -40px;
-          left: 6px;
+          left: 6px,
           background: #000;
           color: #fff;
-          padding: 8px;
-          text-decoration: none;
-          border-radius: 4px;
-          z-index: 1000;
+          padding: 8px,
+          text-decoration: none,
+          border-radius: 4px,
+          z-index: 1000,
         }
         .skip-link:focus {
-          top: 6px;
+          top: 6px,
         }
         .keyboard-navigation *:focus {
           outline: 2px solid #06b6d4 !important;
           outline-offset: 2px !important;
         }
         .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
+          position: absolute,
+          width: 1px,
+          height: 1px,
+          padding: 0,
           margin: -1px;
-          overflow: hidden;
+          overflow: hidden,
           clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
+          white-space: nowrap,
+          border: 0,
         }
         @media (prefers-reduced-motion: reduce) {
           * {
@@ -171,7 +155,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       observer.disconnect();
     };
   }, []);
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
 
     // Focus management
     if (enableFocusManagement && typeof window !== 'undefined') {

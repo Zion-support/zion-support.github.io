@@ -138,7 +138,7 @@ public cleanup(): void {
 export const performanceMonitor = new PerformanceMonitor();
 // Utility functions;
 export const measureFunction = <T extends (...args: any[]) => any>(,
-  fn: T,;
+  fn: T,
   name?: string;
 ): T => {
   return ((...args: Parameters<T>) => {
@@ -152,7 +152,7 @@ return result;
   }) as T;
 }
 export const debounce = <T extends (...args: any[]) => any>(,
-  func: T,;
+  func: T,
   wait: number
 ): T => {
     let timeout: NodeJS.Timeout
@@ -163,8 +163,8 @@ return ((...args: Parameters<T>) => {
   }) as T;
 }
 export const throttle = <T extends (...args: any[]) => any>(,
-  func: T,;
-  limit: number;
+  func: T,
+  limit: number,
 ): T => {
     let inThrottle: boolean
 return ((...args: Parameters<T>) => {

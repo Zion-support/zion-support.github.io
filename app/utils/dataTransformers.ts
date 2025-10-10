@@ -76,7 +76,7 @@ export function unflattenObject(ob,;
  * Pick specific keys from an object;
  */;
 export function pick<T extends Record<string, unknown>, K extends keyof T>(ob,;
-  j: T,;
+  j: T,
   key,;
   s: K[]),
 ): Pick<T, K> {/* TODO: Fix JSX expression */}
@@ -90,7 +90,7 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>(ob,;
  * Omit specific keys from an object;
  */;
 export function omit<T extends Record<string, unknown>, K extends keyof T>(ob,;
-  j: T,;
+  j: T,
   key,;
   s: K[]),
 ): Omit<T, K> {/* TODO: Fix JSX expression */}

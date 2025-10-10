@@ -35,8 +35,8 @@ const AiClimateSolutionsProPage: React.FC = () => {
     <React.Fragment>
       <Helmet>
         <title>AI Climate Solutions Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional climate solutions powered by advanced AI technology." />
-        <meta name="keywords" content="AI climate solutions, artificial intelligence, climate technology, AI solutions, environmental AI" />
+        <meta name="description" content="Professional climate solutions powered by advanced AI technology." / />
+        <meta name="keywords" content="AI climate solutions, artificial intelligence, climate technology, AI solutions, environmental AI" / />
       </Helmet>
       <Navigation />
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -76,7 +76,7 @@ const AiClimateSolutionsProPage: React.FC = () => {
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
-                    <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
+                    <div.icon className="h-8 w-8 text-blue-600 mr-3" />
                     <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
                   </div>
                   <p className="text-gray-600 mb-4">{feature.description}</p>

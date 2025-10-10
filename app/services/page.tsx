@@ -214,7 +214,7 @@ const ServicesPage: React.FC = () => {
     <>
       <Helmet>
         <title>Our Services - Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive range of AI, IT, and Micro SaaS services designed to transform your business." />
+        <meta name="description" content="Discover our comprehensive range of AI, IT, and Micro SaaS services designed to transform your business." / />
       </Helmet>
       
       <Navigation />

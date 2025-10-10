@@ -10,13 +10,13 @@ interface RequestConfig {}
   cacheTTL?: number;
 }
 interface APIResponse<T = any> {}
-  data: T,;
-  status: number,;
-  statusText: string,;
+  data: T,
+  status: number,
+  statusText: string,
   headers: Record<string></strin>
 }
 class APIClient {}
-  private baseURL: string,;
+  private baseURL: string,
   private defaultHeaders: Record<string>
 constructor(baseURL: string = '', defaultHeaders: Record<string, string> = {}) {}
     this.baseURL = baseURL;
@@ -26,7 +26,7 @@ constructor(baseURL: string = '', defaultHeaders: Record<string, string> = {}) {
     }
   }
 private async makeRequest<T>(;
-    endpoint: string,;
+    endpoint: string,
     config: RequestConfig = {}
   ): Promise<APIResponse<T>> {}
     const {}
@@ -114,7 +114,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
    * GET request;
    */;
   async get<T = unknown>(ur,;
-  l: string,;
+  l: string,
     confi,;
   g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {});
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
@@ -124,7 +124,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
    * POST request;
    */;
   async post<T = unknown>(ur,;
-  l: string,;
+  l: string,
     data?: unknown,;
     confi,;
   g: Omit<RequestConfig, 'url' | 'method'> = {});
@@ -135,7 +135,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
    * PUT request;
    */;
   async put<T = unknown>(ur,;
-  l: string,;
+  l: string,
     data?: unknown,;
     confi,;
   g: Omit<RequestConfig, 'url' | 'method'> = {});
@@ -146,7 +146,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
    * DELETE request;
    */;
   async delete<T = unknown>(ur,;
-  l: string,;
+  l: string,
     confi,;
   g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {});
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
@@ -156,7 +156,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
    * PATCH request;
    */;
   async patch<T = unknown>(ur,;
-  l: string,;
+  l: string,
     data?: unknown,;
     confi,;
   g: Omit<RequestConfig, 'url' | 'method'> = {});
@@ -170,7 +170,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   g: RequestConfig): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
       headers = {},;
       cacheOption,;
-  s: cacheConfig,;
+  s: cacheConfig,
       skipCache = false,;
       retries = this.config.retries,;
       timeout = this.config.timeout,;
@@ -206,7 +206,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
         }
         const contentType = response.headers.get('content-type');
         let,;
-  data: T,;
+  data: T,
         if (contentType?.includes('application/json')) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}
         }

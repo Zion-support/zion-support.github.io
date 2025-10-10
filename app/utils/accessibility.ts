@@ -1,6 +1,6 @@
 // Accessibility utilities for the application;
 export interface AccessibilityConfig {
-    enableHighContrast: boolean;
+    enableHighContrast: boolean,
   enableScreenReader: boolean
   enableKeyboardNavigation: boolean
   fontSize: 'small' | 'medium' | 'large',
@@ -8,9 +8,9 @@ export interface AccessibilityConfig {
   }
 }
 export const defaultAccessibilityConfig: AccessibilityConfig = {
-    enableHighContrast: false,;
-  enableScreenReader: true,;
-  enableKeyboardNavigation: true,;
+    enableHighContrast: false,
+  enableScreenReader: true,
+  enableKeyboardNavigation: true,
   fontSize: 'medium',;
   colorScheme: 'auto',
   }

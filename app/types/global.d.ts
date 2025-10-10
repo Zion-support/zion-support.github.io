@@ -35,7 +35,7 @@ export interface ApiResponse<T = any> {
 }
 // Form types;
 export interface ContactFormData {
-    name: string;
+    name: string,
   email: string
   company?: string
   message: string,
@@ -49,8 +49,8 @@ export interface NewsletterFormData {
 }
 // Service types;
 export interface Service {
-    id: string;
-  title: string;
+    id: string,
+  title: string,
   description: string
   icon: string
   features: string[],
@@ -58,11 +58,11 @@ export interface Service {
   }
 }
 export interface BlogPost {
-    id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  slug: string;
+    id: string,
+  title: string,
+  excerpt: string,
+  content: string,
+  slug: string,
   publishedAt: string
   author: string
   tags: string[],

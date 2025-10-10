@@ -15,11 +15,11 @@ export interface PerformanceMetrics {
   }
 }
 export interface ErrorReport {
-    message: string,;
+    message: string,
   stack?: string;
   component?: string;
-  timestamp: number,;
-  userAgent: string,;
+  timestamp: number,
+  userAgent: string,
   url: string,
   }
 }
@@ -188,7 +188,7 @@ class MonitoringService {}
   }
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {}
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory;
       if (memory) {
     // Keep HEAD version
   }

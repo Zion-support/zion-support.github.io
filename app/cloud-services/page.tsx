@@ -94,14 +94,14 @@ const CloudServicesPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Cloud Services - Zion Tech Group | Cloud Solutions & Migration</title>
-        <meta name="description" content="Expert cloud services including migration, infrastructure, security, and database solutions. Transform your business with our cloud expertise." />
-        <meta name="keywords" content="cloud services, cloud migration, AWS, Azure, GCP, cloud infrastructure, database solutions, cloud security" />
-        <meta property="og:title" content="Cloud Services - Zion Tech Group" />
-        <meta property="og:description" content="Expert cloud solutions and migration services" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Cloud Services - Zion Tech Group" />
-        <meta name="twitter:description" content="Expert cloud solutions and migration services" />
+        <meta name="description" content="Expert cloud services including migration, infrastructure, security, and database solutions. Transform your business with our cloud expertise." / />
+        <meta name="keywords" content="cloud services, cloud migration, AWS, Azure, GCP, cloud infrastructure, database solutions, cloud security" / />
+        <meta property="og:title" content="Cloud Services - Zion Tech Group" / />
+        <meta property="og:description" content="Expert cloud solutions and migration services" / />
+        <meta property="og:type" content="website" / />
+        <meta name="twitter:card" content="summary_large_image" / />
+        <meta name="twitter:title" content="Cloud Services - Zion Tech Group" / />
+        <meta name="twitter:description" content="Expert cloud solutions and migration services" / />
       </Helmet>
 
       {/* Hero Section */}

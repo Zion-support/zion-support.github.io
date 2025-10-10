@@ -4,11 +4,11 @@
  * Provides comprehensive SEO enhancements and monitoring;
  */;
 interface SEOConfig {
-    siteName: string,;
-  siteUrl: string,;
-  defaultTitle: string,;
-  defaultDescription: string,;
-  defaultImage: string,;
+    siteName: string,
+  siteUrl: string,
+  defaultTitle: string,
+  defaultDescription: string,
+  defaultImage: string,
   twitterHandle?: string;
   facebookAppId?: string;
   googleAnalyticsId?: string
@@ -16,23 +16,23 @@ interface SEOConfig {
   googleTagManagerId?: string;}
 }
 interface PageSEOData {
-    title: string,;
+    title: string,
   description: string,
   }
 interface SEOConfig {}
-  siteName: string;
-  siteUrl: string;
-  defaultTitle: string;
-  defaultDescription: string;
-  defaultImage: string;
+  siteName: string,
+  siteUrl: string,
+  defaultTitle: string,
+  defaultDescription: string,
+  defaultImage: string,
   twitterHandle?: string;
   facebookAppId?: string
   googleAnalyticsId?: string
   googleTagManagerId?: string,}
 }
 interface PageSEOData {}
-  title: string;
-  description: string;
+  title: string,
+  description: string,
   keywords: string[];
   image?: string;
   url?: string;
@@ -46,7 +46,7 @@ interface PageSEOData {}
   nofollow?: boolean;}
 }
 class SEOOptimizer {
-    private config: SEOConfig,;
+    private config: SEOConfig,
   private currentPageData: PageSEOData | null = null,
   constructor(config: SEOConfig) {,
   }
@@ -389,7 +389,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   private trackSEOMetric(metric: string, value: number): void {}
     if (typeof window !== 'undefined' && (window as any).gtag) {}
       (window as any).gtag('event', 'seo_metric', {)}
-        metric_name: metric,;
+        metric_name: metric,
         metric_value: Math.round(value),;
         event_category: 'seo'}
       });
@@ -402,13 +402,13 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   /**;
    * Generate sitemap data;
    */;
-  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string, priority: number }> {
+  generateSitemapData(): Array<{ url: string, lastmod: string, changefreq: string, priority: number }> {
     // This would typically come from your CMS or routing system;
     return [;
       {
         url: this.config.siteUrl
   }
-  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string, priority: number }> {}
+  generateSitemapData(): Array<{ url: string, lastmod: string, changefreq: string, priority: number }> {}
     // This would typically come from your CMS or routing system;
     return [;
       {}

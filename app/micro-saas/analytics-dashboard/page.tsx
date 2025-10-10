@@ -4,37 +4,37 @@ import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, Check
 const AIAnalyticsDashboardPage: React.FC = () => {
     const features = [
     {
-      icon: BarChart,;
+      icon: BarChart,
       title: 'Real-time Analytics',;
       description: 'Live data visualization with instant updates and interactive charts.'
   }
     },;
     {
-    icon: TrendingUp,;
+    icon: TrendingUp,
       title: 'Predictive Insights',;
       description: 'AI-powered forecasting and trend analysis for better decision making.'
   }
     },;
     {
-    icon: Users,;
+    icon: Users,
       title: 'User Behavior Tracking',;
       description: 'Comprehensive user analytics and engagement metrics tracking.'
   }
     },;
     {
-    icon: DollarSign,;
+    icon: DollarSign,
       title: 'Revenue Analytics',;
       description: 'Detailed financial metrics and revenue optimization insights.'
   }
     },;
     {
-    icon: Zap,;
+    icon: Zap,
       title: 'Custom Dashboards',;
       description: 'Build personalized dashboards tailored to your business needs.'
   }
     },;
     {
-    icon: Target,;
+    icon: Target,
       title: 'Goal Tracking',;
       description: 'Monitor KPIs and business objectives with automated alerts.'
   }
@@ -48,9 +48,7 @@ const benefits = [
     'Multi-platform data integration',;
     'Mobile-responsive design';
   ];
-const metrics = [
-    { label: 'Data Sources', value: '50+', icon: BarChart },;
-    { label: 'Update Frequency', value: 'Real-time', icon: Clock },;
+const metrics = [{ label: 'Data Sources', value: '50+', icon: BarChart  }, { label: 'Update Frequency', value: 'Real-time', icon: Clock },;
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },;
     { label: 'User Satisfaction', value: '4.9/5', icon: Star }
   ];
@@ -58,8 +56,8 @@ return (
     <></>
       <Helmet>
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
         <link>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -106,7 +104,7 @@ return (
   }
                 <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"></div>
-                    <feature>
+                    <div>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>

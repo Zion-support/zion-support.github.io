@@ -94,8 +94,8 @@ const CommunityPage: React.FC = () => {
     <>
       <Helmet>
         <title>Community - Zion Tech Group</title>
-        <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts. Learn, share, and grow together." />
-        <meta name="keywords" content="community, developers, tech community, networking, events, forums, AI community" />
+        <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts. Learn, share, and grow together." / />
+        <meta name="keywords" content="community, developers, tech community, networking, events, forums, AI community" / />
         <link rel="canonical" href="https://ziontechgroup.com/community" />
       </Helmet>
 

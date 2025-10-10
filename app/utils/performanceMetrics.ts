@@ -4,10 +4,10 @@
  * Advanced performance tracking and monitoring for web applications;
  */;
 export interface PerformanceMetric {
-    name: string,;
-  value: number,;
-  unit: string,;
-  timestamp: Date,;
+    name: string,
+  value: number,
+  unit: string,
+  timestamp: Date,
   category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',
   }
   metadata?: Record<string>}
@@ -20,8 +20,8 @@ export interface WebVitalsMetrics {
   TTFB?: number; // Time to First Byte
   }
 export interface PerformanceMetric {}
-  name: string;
-  value: number;
+  name: string,
+  value: number,
   unit: string
   timestamp: Date
   category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',
@@ -37,20 +37,20 @@ export interface WebVitalsMetrics {}
 }
 export interface PerformanceReport {}
   metrics: PerformanceMetric[],
-  webVitals: WebVitalsMetrics,;
+  webVitals: WebVitalsMetrics,
   summary: {
-    avgLoadTime: number,;
-    totalMetrics: number,;
-    performanceScore: number,;
+    avgLoadTime: number,
+    totalMetrics: number,
+    performanceScore: number,
   webVitals: WebVitalsMetrics
   }
   summary: {}
-    avgLoadTime: number;
+    avgLoadTime: number,
     totalMetrics: number
     performanceScore: number
     recommendations: string[],}
   }
-  timestamp: Date,;
+  timestamp: Date,
 }
 export class PerformanceMetrics {
     private static instance: PerformanceMetrics,
@@ -82,7 +82,7 @@ export interface WebVitalsMetrics {/* TODO: Fix JSX expression */}
 export interface PerformanceReport {/* TODO: Fix JSX expression */}
   }
   timestam,;
-  p: Date,;
+  p: Date,
 }
 export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   webVitals: WebVitalsMetrics = {}
@@ -225,7 +225,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
           this.webVitals.CLS = clsValue;
           this.recordMetric({)}
             name: 'CLS',;
-            value: clsValue,;
+            value: clsValue,
             unit: 'score',;
             timestamp: new Date(),;
             category: 'runtime'}
@@ -311,7 +311,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
     this.recordMetric({)}
       name: 'pageLoad',;
-      value: pageLoadTime,;
+      value: pageLoadTime,
       unit: 'ms',;
       timestamp: new Date(),;
       category: 'load',;
@@ -340,7 +340,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   recordNetworkRequest(url: string, duration: number, status: number): void {}
     this.recordMetric({)}
       name: 'networkRequest',;
-      value: duration,;
+      value: duration,
       unit: 'ms',;
       timestamp: new Date(),;
       category: 'network',;
@@ -664,14 +664,14 @@ interface PerformanceWithMemory extends Performance {
   }
 interface PerformanceWithMemory extends Performance {}
   memory: {}
-// usedJSHeapSize: number,;
-// totalJSHeapSize: number,;
-// jsHeapSizeLimit: number,;
+// usedJSHeapSize: number,
+// totalJSHeapSize: number,
+// jsHeapSizeLimit: number,
   }
 }
 // Type for LayoutShift;
 interface LayoutShift extends PerformanceEntry {
-    value: number,;
+    value: number,
 // Type for LayoutShift
   }
 interface LayoutShift extends PerformanceEntry {}

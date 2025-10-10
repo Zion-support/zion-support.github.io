@@ -166,8 +166,8 @@ const TutorialsPage: React.FC = () => {
     <>
       <Helmet>
         <title>Tutorials & Learning Resources - Zion Tech Group</title>
-        <meta name="description" content="Learn how to use Zion Tech Group's AI, IT, and Micro SaaS services with our comprehensive tutorials and learning resources." />
-        <meta name="keywords" content="tutorials, learning, AI tutorials, IT tutorials, SaaS tutorials, developer resources" />
+        <meta name="description" content="Learn how to use Zion Tech Group's AI, IT, and Micro SaaS services with our comprehensive tutorials and learning resources." / />
+        <meta name="keywords" content="tutorials, learning, AI tutorials, IT tutorials, SaaS tutorials, developer resources" / />
         <link rel="canonical" href="https://ziontechgroup.com/tutorials" />
       </Helmet>
 

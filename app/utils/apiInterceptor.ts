@@ -104,8 +104,8 @@ class APIInterceptor {
   }
 // Get interceptor counts;
   getInterceptorCounts(): {
-    request: number,;
-    response: number,;
+    request: number,
+    response: number,
     error: number,
   }
   } {
@@ -210,7 +210,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
    * GET request;
    */;
   async get<T = unknown>(ur,;
-  l: string,;
+  l: string,
     confi,;
   g: Partial<RequestConfig> = {});
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
@@ -220,7 +220,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
    * POST request;
    */;
   async post<T = unknown>(ur,;
-  l: string,;
+  l: string,
     body?: unknown,;
     confi,;
   g: Partial<RequestConfig> = {});
@@ -231,7 +231,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
    * PUT request;
    */;
   async put<T = unknown>(ur,;
-  l: string,;
+  l: string,
     body?: unknown,;
     confi,;
   g: Partial<RequestConfig> = {});
@@ -242,7 +242,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
    * DELETE request;
    */;
   async delete<T = unknown>(ur,;
-  l: string,;
+  l: string,
     confi,;
   g: Partial<RequestConfig> = {});
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
@@ -252,7 +252,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
    * PATCH request;
    */;
   async patch<T = unknown>(ur,;
-  l: string,;
+  l: string,
     body?: unknown,;
     confi,;
   g: Partial<RequestConfig> = {});

@@ -7,42 +7,42 @@ import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, 
 const EnterprisePage: React.FC = () => {
     const features = [
     {
-      icon: Shield,;
+      icon: Shield,
       title: 'Enterprise Security',;
       description: 'Comprehensive security solutions designed for large-scale enterprise environments.',;
       benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control']
   }
     },;
     {
-    icon: Cloud,;
+    icon: Cloud,
       title: 'Cloud Infrastructure',;
       description: 'Scalable cloud solutions that grow with your business needs.',;
       benefits: ['Auto-scaling', 'High availability', 'Disaster recovery', 'Cost optimization']
   }
     },;
     {
-    icon: Brain,;
+    icon: Brain,
       title: 'AI Integration',;
       description: 'Enterprise-grade AI solutions for automation and intelligent decision making.',;
       benefits: ['Machine learning', 'Predictive analytics', 'Process automation', 'Intelligent insights']
   }
     },;
     {
-    icon: Database,;
+    icon: Database,
       title: 'Data Management',;
       description: 'Advanced data management and analytics for enterprise-scale operations.',;
       benefits: ['Big data processing', 'Real-time analytics', 'Data governance', 'Business intelligence']
   }
     },;
     {
-    icon: Users,;
+    icon: Users,
       title: 'User Management',;
       description: 'Comprehensive user and access management for large organizations.',;
       benefits: ['Single sign-on', 'Role-based access', 'User provisioning', 'Audit trails']
   }
     },;
     {
-    icon: Settings,;
+    icon: Settings,
       title: 'System Integration',;
       description: 'Seamless integration with existing enterprise systems and workflows.',;
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
@@ -53,28 +53,28 @@ const solutions = [
     {
     title: 'Enterprise Resource Planning',;
       description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',;
-      icon: Building,;
+      icon: Building,
       benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management']
   }
     },;
     {
     title: 'Customer Relationship Management',;
       description: 'Advanced CRM systems for managing customer relationships and sales processes.',;
-      icon: Users,;
+      icon: Users,
       benefits: ['Lead management', 'Sales automation', 'Customer analytics', 'Marketing automation']
   }
     },;
     {
     title: 'Business Intelligence',;
       description: 'Powerful BI solutions for data-driven decision making and strategic planning.',;
-      icon: BarChart,;
+      icon: BarChart,
       benefits: ['Data visualization', 'Predictive analytics', 'Reporting', 'Performance monitoring']
   }
     },;
     {
     title: 'Workflow Automation',;
       description: 'Automate complex business processes to improve efficiency and reduce errors.',;
-      icon: Zap,;
+      icon: Zap,
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
   }
     }
@@ -89,9 +89,7 @@ const benefits = [
     'Integrate with existing systems',;
     'Provide 24/7 support and monitoring';
   ];
-const stats = [
-    { number: '500+', label: 'Enterprise Clients', icon: Building },;
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },;
+const stats = [{ number: '500+', label: 'Enterprise Clients', icon: Building  }, { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },;
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },;
     { number: '24/7', label: 'Support Available', icon: Clock }
   ];
@@ -157,7 +155,7 @@ return (
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-                  <feature>
+                  <div>
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>

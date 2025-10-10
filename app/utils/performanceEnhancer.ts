@@ -6,12 +6,12 @@
 import React from 'react';
 // Debounce function for performance optimization;
 export const debounce = <T extends (...args: unknown[]) => unknown>(,
-  func: T,;
-  wait: number,;
+  func: T,
+  wait: number,
 ): ((...args: Parameters<T>) => void) => {
     let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {,;
-  func: T,;
+  func: T,
   wait: number
   }
 ): ((...args: Parameters<T>) => void) => {}
@@ -23,17 +23,17 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(,
 }
 // Throttle function for performance optimization;
 export const throttle = <T extends (...args: unknown[]) => unknown>(,
-  func: T,;
-  limit: number,;
+  func: T,
+  limit: number,
 ): ((...args: Parameters<T>) => void) => {
-    let inThrottle: boolean,;
+    let inThrottle: boolean,
   return (...args: Parameters<T>) => {
     if (!inThrottle) {,;
-  func: T,;
+  func: T,
   limit: number
   }
 ): ((...args: Parameters<T>) => void) => {}
-  let inThrottle: boolean,;
+  let inThrottle: boolean,
   return (...args: Parameters<T>) => {}
     if (!inThrottle) {}
       func(...args);
@@ -44,7 +44,7 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(,
 }
 // Performance monitoring utilities;
 export class PerformanceMonitor {
-    private static instance: PerformanceMonitor,;
+    private static instance: PerformanceMonitor,
   private metrics: Map<string, number> = new Map();
   private observers: PerformanceObserver[] = [],
   static getInstance(): PerformanceMonitor {,;
@@ -52,7 +52,7 @@ export class PerformanceMonitor {
 // Performance monitoring utilities
   }
 export class PerformanceMonitor {}
-  private static instance: PerformanceMonitor,;
+  private static instance: PerformanceMonitor,
   private metrics: Map<string, number> = new Map();
   private observers: PerformanceObserver[] = [],
   static getInstance(): PerformanceMonitor {}
@@ -83,9 +83,9 @@ export class PerformanceMonitor {}
       if (memory) {}
 export const debounce = <T extends (...arg);
   s: unknown[]) => unknown>(fun,;
-  c: T,;
+  c: T,
   wai,;
-  t: number;)
+  t: number,)
 ): ((...arg),
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
   }
@@ -93,9 +93,9 @@ export const debounce = <T extends (...arg);
 // Throttle function for performance optimization;
 export const throttle = <T extends (...arg);
   s: unknown[]) => unknown>(fun,;
-  c: T,;
+  c: T,
   limi,;
-  t: number;)
+  t: number,)
 ): ((...arg),
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
     }
@@ -320,7 +320,7 @@ export const optimizeScrollPerformance = () => {}
     let clsEntries: PerformanceEntry[] = [],
     interface LayoutShiftEntry extends PerformanceEntry {}
       hadRecentInput?: boolean;
-      value: number,;
+      value: number,
     }
     const observer = new PerformanceObserver((list) => {}
       for (const entry of list.getEntries()) {}
@@ -347,7 +347,7 @@ observer.observe({ entryTypes: ['largest-contentful-paint'] });
   }
   const trackFID = () => {}
     interface FirstInputEntry extends PerformanceEntry {}
-      processingStart: number,;
+      processingStart: number,
     }
     const observer = new PerformanceObserver((list) => {}
       for (const entry of list.getEntries()) {}
@@ -420,7 +420,7 @@ export const getMemoryUsage = (;
   }
     return null;}
   }
-  const memory = (performance as unknown as { memory: {// usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number} }).memory;
+  const memory = (performance as unknown as { memory: {// usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number} }).memory;
   return {
     used: memory.usedJSHeapSize
     total: memory.totalJSHeapSize
@@ -454,7 +454,7 @@ export const getMemoryUsage = () => {}
   if (typeof window === 'undefined' || !('memory' in performance)) {}
     return null;
   }
-  const memory = (performance as unknown as { memory: {// usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number} }).memory;
+  const memory = (performance as unknown as { memory: {// usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number} }).memory;
   return {}
     used: memory.usedJSHeapSize,;
     total: memory.totalJSHeapSize,;

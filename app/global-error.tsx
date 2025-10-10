@@ -35,8 +35,8 @@ const GlobalErrorPage: React.FC = () => {
     <React.Fragment>
       <Helmet>
         <title>Global Error - Zion Tech Group</title>
-        <meta name="description" content="Global error page." />
-        <meta name="keywords" content="global error, AI solutions, IT services, business transformation" />
+        <meta name="description" content="Global error page." / />
+        <meta name="keywords" content="global error, AI solutions, IT services, business transformation" / />
       </Helmet>
       <Navigation />
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -76,7 +76,7 @@ const GlobalErrorPage: React.FC = () => {
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
-                    <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
+                    <div.icon className="h-8 w-8 text-blue-600 mr-3" />
                     <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
                   </div>
                   <p className="text-gray-600 mb-4">{feature.description}</p>

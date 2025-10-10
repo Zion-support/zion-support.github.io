@@ -74,7 +74,7 @@ const services = [
   ];
 const incidents = [
     {
-    id: 1,;
+    id: 1,
       title: 'API Response Time Degradation',;
       status: 'resolved',;
       severity: 'minor',;
@@ -85,7 +85,7 @@ const incidents = [
   }
     },;
     {
-    id: 2,;
+    id: 2,
       title: 'Database Connection Issues',;
       status: 'resolved',;
       severity: 'major',;

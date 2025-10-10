@@ -168,7 +168,7 @@ if (tagName === 'a') {
 
         const href = (target as HTMLAnchorElement).href;
         trackEvent('engagement', 'link_click', {
-          link_url: href,;
+          link_url: href,
           link_text: target.textContent?.trim()
   }
         });
@@ -194,7 +194,7 @@ if (tagName === 'a') {
 const trackEvent = (;
     if (typeof window !== 'undefined' && 'gtag' in window) {
     (window as any).gtag('event', action, {
-        event_category: category,;
+        event_category: category,
         event_label: typeof value === 'object' ? JSON.stringify(value) : value,;) => {
   return (
     $3

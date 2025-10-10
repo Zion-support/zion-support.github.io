@@ -27,7 +27,7 @@ const PagePage: React.FC = () => {
   }
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
-                  <feature>
+                  <div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -127,8 +127,8 @@ const SpecializedServicesPage: React.FC = () => {
     <>
       <Helmet>
         <title>Specialized Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced specialized services for modern businesses including AI solutions, automation, and digital transformation." />
-        <meta name="keywords" content="specialized services, AI solutions, automation, digital transformation, business optimization" />
+        <meta name="description" content="Advanced specialized services for modern businesses including AI solutions, automation, and digital transformation." / />
+        <meta name="keywords" content="specialized services, AI solutions, automation, digital transformation, business optimization" / />
       </Helmet>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -167,7 +167,7 @@ const SpecializedServicesPage: React.FC = () => {
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                    <feature.icon className="h-6 w-6 text-white" />
+                    <div.icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>

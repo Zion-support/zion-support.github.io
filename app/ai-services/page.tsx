@@ -1053,7 +1053,7 @@ const AiServicesPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI services including chatbots, content generation, analytics, computer vision, and workflow automation." />
+        <meta name="description" content="Comprehensive AI services including chatbots, content generation, analytics, computer vision, and workflow automation." / />
       </Helmet>
       
       <Navigation />

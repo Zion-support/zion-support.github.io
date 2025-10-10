@@ -121,12 +121,12 @@ const AISmartContractAuditor: React.FC = () => {
     <>
       <Helmet>
         <title>AI Smart Contract Auditor - Automated Security Analysis | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered smart contract auditing with automated security analysis, vulnerability detection, and risk assessment. Secure your blockchain projects with our cutting-edge technology." />
-        <meta name="keywords" content="smart contract audit, blockchain security, AI auditing, DeFi security, smart contract analysis, vulnerability detection" />
-        <meta property="og:title" content="AI Smart Contract Auditor - Automated Security Analysis" />
-        <meta property="og:description" content="Advanced AI-powered smart contract auditing with automated security analysis, vulnerability detection, and risk assessment." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-smart-contract-auditor" />
+        <meta name="description" content="Advanced AI-powered smart contract auditing with automated security analysis, vulnerability detection, and risk assessment. Secure your blockchain projects with our cutting-edge technology." / />
+        <meta name="keywords" content="smart contract audit, blockchain security, AI auditing, DeFi security, smart contract analysis, vulnerability detection" / />
+        <meta property="og:title" content="AI Smart Contract Auditor - Automated Security Analysis" / />
+        <meta property="og:description" content="Advanced AI-powered smart contract auditing with automated security analysis, vulnerability detection, and risk assessment." / />
+        <meta property="og:type" content="website" / />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-smart-contract-auditor" / />
         <link rel="canonical" href="https://ziontechgroup.com/ai-smart-contract-auditor" />
       </Helmet>
 
@@ -207,7 +207,7 @@ const AISmartContractAuditor: React.FC = () => {
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
-                    <feature.icon className="w-8 h-8 text-white" />
+                    <div.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3>
                   <p className="text-gray-300 mb-6">{feature.description}</p>

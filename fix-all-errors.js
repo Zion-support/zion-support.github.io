@@ -1,146 +1,122 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
+import path from 'path';
 import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
 
-// Fix common syntax errors in a file
-function fixFile(filePath) {
-  if (!fs.existsSync(filePath)) {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Function to fix merge conflicts
+function fixMergeConflicts(content) {
+  // Remove merge conflict markers and choose the first version
+  return content
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1')
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1');
+}
+
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  // Fix object property syntax errors (remove extra semicolons)
+  content = content.replace(/(\w+):\s*(\w+),;/g, '$1: $2,');
+  content = content.replace(/(\w+):\s*(\w+);/g, '$1: $2,');
+  
+  // Fix array syntax errors
+  content = content.replace(/\[\s*{\s*([^}]+)\s*}\s*,;\s*{/g, '[{ $1 }, {');
+  content = content.replace(/\[\s*{\s*([^}]+)\s*}\s*,;\s*]/g, '[{ $1 }]');
+  
+  // Fix JSX syntax errors
+  content = content.replace(/<meta([^>]*)>/g, '<meta$1 />');
+  content = content.replace(/<Helmet([^>]*)>/g, '<Helmet$1>');
+  
+  // Fix missing closing tags
+  content = content.replace(/<feature([^>]*)>/g, '<div$1>');
+  content = content.replace(/<\/feature>/g, '</div>');
+  
+  // Fix malformed return statements
+  content = content.replace(/return\s*\(\s*<>\s*<\/>\s*\)/g, 'return (\n    <>\n      <Helmet>\n        <title>Page Title</title>\n      </Helmet>\n      <div>Content</div>\n    </>\n  )');
+  
+  return content;
+}
+
+// Function to process a file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    let fixedContent = content;
+    
+    // Fix merge conflicts
+    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> ')) {
+      fixedContent = fixMergeConflicts(fixedContent);
+    }
+    
+    // Fix syntax errors
+    fixedContent = fixSyntaxErrors(fixedContent);
+    
+    // Only write if content changed
+    if (fixedContent !== content) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
-
-  let content = fs.readFileSync(filePath, 'utf8');
-  let modified = false;
-
-  // Fix malformed object literals in arrays
-  const objectInArrayPattern = /\[\s*\{\}\s*(\w+):/g;
-  if (objectInArrayPattern.test(content)) {
-    content = content.replace(objectInArrayPattern, '[\n    {\n      $1:');
-    modified = true;
-  }
-
-  // Fix malformed object literals
-  const objectPattern = /\{\}\s*(\w+):/g;
-  if (objectPattern.test(content)) {
-    content = content.replace(objectPattern, '{\n      $1:');
-    modified = true;
-  }
-
-  // Fix missing opening braces in function declarations
-  const funcPattern = /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\}/g;
-  if (funcPattern.test(content)) {
-    content = content.replace(funcPattern, 'const $1: React.FC = () => {');
-    modified = true;
-  }
-
-  // Fix missing opening braces in memo functions
-  const memoPattern = /const\s+(\w+):\s*React\.FC\s*=\s*memo\(\(\)\s*=>\s*\{\}/g;
-  if (memoPattern.test(content)) {
-    content = content.replace(memoPattern, 'const $1: React.FC = memo(() => {');
-    modified = true;
-  }
-
-  // Fix missing closing braces in function declarations
-  const missingClosePattern = /(\w+):\s*([^}]+)\s*$/gm;
-  content = content.replace(missingClosePattern, (match, key, value) => {
-    if (!match.includes('}') && !match.includes(',') && !match.includes(';') && !match.includes(')')) {
-      return `${key}: ${value},`;
-    }
-    return match;
-  });
-
-  // Fix missing commas in object properties
-  const missingCommaPattern = /(\w+):\s*([^}]+)\s*\n\s*(\w+):/g;
-  if (missingCommaPattern.test(content)) {
-    content = content.replace(missingCommaPattern, '$1: $2,\n      $3:');
-    modified = true;
-  }
-
-  // Fix missing closing braces in arrays
-  const arrayClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\]/g;
-  if (arrayClosePattern.test(content)) {
-    content = content.replace(arrayClosePattern, '$1: $2\n    }');
-    modified = true;
-  }
-
-  // Fix JSX syntax errors - missing opening parenthesis
-  const jsxPattern = /(\w+)\.map\(\([^)]+\)\s*=>\s*\(\}/g;
-  if (jsxPattern.test(content)) {
-    content = content.replace(jsxPattern, '$1.map(($2) => (');
-    modified = true;
-  }
-
-  // Fix JSX syntax errors - missing opening parenthesis in map
-  const mapPattern = /\.map\(\([^)]+\)\s*=>\s*\(\}/g;
-  if (mapPattern.test(content)) {
-    content = content.replace(mapPattern, '.map(($1) => (');
-    modified = true;
-  }
-
-  // Fix missing closing braces for functions
-  const functionClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\);/g;
-  if (functionClosePattern.test(content)) {
-    content = content.replace(functionClosePattern, '$1: $2\n    });');
-    modified = true;
-  }
-
-  // Fix missing closing braces for memo functions
-  const memoClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\);/g;
-  if (memoClosePattern.test(content)) {
-    content = content.replace(memoClosePattern, '$1: $2\n  });');
-    modified = true;
-  }
-
-  if (modified) {
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-    return true;
-  }
-
-  return false;
 }
 
-// Get all TypeScript files with errors
-function getFilesWithErrors() {
-  try {
-    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' });
-    const files = new Set();
-    output.split('\n').forEach(line => {
-      const match = line.match(/^([^(]+)\((\d+),(\d+)\):/);
-      if (match) {
-        files.add(match[1]);
+// Function to find all TypeScript/JSX files
+function findTsxFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath);
       }
-    });
-    return Array.from(files);
-  } catch (error) {
-    return [];
-  }
-}
-
-// Main function
-function main() {
-  console.log('🔧 Fixing all syntax errors...');
-  
-  const files = getFilesWithErrors();
-  console.log(`Found ${files.length} files with errors`);
-
-  let fixedCount = 0;
-  files.forEach(file => {
-    if (fixFile(file)) {
-      fixedCount++;
     }
-  });
-
-  console.log(`✅ Fixed ${fixedCount} files`);
+  }
   
-  // Run type check again
-  console.log('\n🔍 Running type check...');
-  try {
-    execSync('pnpm run type-check', { stdio: 'inherit' });
-    console.log('✅ All TypeScript errors fixed!');
-  } catch (error) {
-    console.log('⚠️  Some errors remain, continuing...');
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+console.log('Starting error fixing process...');
+
+const appDir = path.join(__dirname, 'app');
+const files = findTsxFiles(appDir);
+
+let fixedCount = 0;
+let totalFiles = files.length;
+
+console.log(`Found ${totalFiles} TypeScript/JSX files to process...`);
+
+for (const file of files) {
+  if (processFile(file)) {
+    fixedCount++;
   }
 }
 
-main();
+console.log(`\nFixed ${fixedCount} out of ${totalFiles} files.`);
+
+// Run linting to check for remaining errors
+console.log('\nRunning linting to check for remaining errors...');
+try {
+  execSync('npm run lint', { stdio: 'inherit' });
+  console.log('✅ Linting passed!');
+} catch (error) {
+  console.log('⚠️  Some linting errors remain, but many have been fixed.');
+}
+
+console.log('\nError fixing process completed!');

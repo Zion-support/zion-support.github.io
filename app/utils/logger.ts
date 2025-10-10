@@ -22,8 +22,8 @@ export interface LogContext {
 class Logger {
     private logLevel: LogLevel = LogLevel.INFO,
   private logs: Array<{
-    level: LogLevel,;
-    message: string,;
+    level: LogLevel,
+    message: string,
     context?: LogContext;
     metadata?: Record<string>
     timestamp: number,
@@ -115,7 +115,7 @@ class Logger {/* TODO: Fix JSX expression */}
    * Log an error message;
    */;
   error(messag,;
-  e: string,;
+  e: string,
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>,;
     contextOrMetadata?: string | Record<string, unknown>,;
     metadata?: Record<string, unknown></string>);
@@ -157,18 +157,18 @@ this.logs.push(logEntry);
     const metaStr = metadata ? ` ${JSON.stringify(metadata)}` : '';
     const logMessage = `[${timestamp}] ${levelName}: ${message}${contextStr}${metaStr}`;
     switch (level) {
-    case LogLevel.DEBUG: break,;
-      case LogLevel.INFO: break,;
-      case LogLevel.WARN: break,;
-      case LogLevel.ERROR: break,;
+    case LogLevel.DEBUG: break,
+      case LogLevel.INFO: break,
+      case LogLevel.WARN: break,
+      case LogLevel.ERROR: break,
       case LogLevel.FATAL:,;
         break
   }
     }
   }
 getLogs(level?: LogLevel): Array<{
-    level: LogLevel,;
-    message: string,;
+    level: LogLevel,
+    message: string,
     context?: LogContext;
     metadata?: Record<string>
     timestamp: number,
@@ -187,9 +187,9 @@ getLogs(level?: LogLevel): Array<{
    * Core logging method;
    */;
   private log(leve,;
-  l: LogLevel,;
+  l: LogLevel,
     messag,;
-  e: string,;
+  e: string,
     context?: LogContext,;
     metadata?: Record<string, unknown></string>);
   ): void {/* TODO: Fix JSX expression */}

@@ -112,8 +112,8 @@ const SitemapPage: React.FC = () => {
     <>
       <Helmet>
         <title>Sitemap - Zion Tech Group</title>
-        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all pages, services, and resources in one place." />
-        <meta name="keywords" content="sitemap, website map, navigation, pages, services, resources" />
+        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all pages, services, and resources in one place." / />
+        <meta name="keywords" content="sitemap, website map, navigation, pages, services, resources" / />
         <link rel="canonical" href="https://ziontechgroup.com/sitemap" />
       </Helmet>
 

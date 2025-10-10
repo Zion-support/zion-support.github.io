@@ -15,29 +15,29 @@ export enum ErrorCategory {
   }
 }
 export interface ErrorMetadata {
-    category: ErrorCategory,;
-  severity: ErrorSeverity,;
+    category: ErrorCategory,
+  severity: ErrorSeverity,
   userId?: string;
   sessionId?: string;
   context?: Record<string>
   tags?: string[];
-  timestamp: number,;
+  timestamp: number,
   stackTrace?: string;
   userAgent?: string;,;
   url?: string
   }
 }
 export interface TrackedError {
-    id: string,;
-  message: string,;
-  metadata: ErrorMetadata,;
-  occurrences: number,;
-  firstSeen: number,;
+    id: string,
+  message: string,
+  metadata: ErrorMetadata,
+  occurrences: number,
+  firstSeen: number,
   lastSeen: number,
   }
 }
 class ErrorTrackingService {
-    private static instance: ErrorTrackingService,;
+    private static instance: ErrorTrackingService,
   private errors: Map<string, TrackedError> = new Map();
   private errorListeners: Array<(error: TrackedError) => void> = []
   private maxStoredErrors = 1000,
@@ -82,7 +82,7 @@ trackError(error: Error),;
     const errorId = this.generateErrorId(error.message);
     const now = Date.now();
     const trackedError: TrackedError = {
-      id: errorId,;
+      id: errorId,
       message: error.message;
       metadata: {
         category: metadata.category;
@@ -91,15 +91,15 @@ trackError(error: Error),;
         sessionId: metadata.sessionId
         context: metadata.context
         tags: metadata.tags,
-        timestamp: now,;
+        timestamp: now,
         stackTrace: error.stack
         userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
         url: typeof window !== 'undefined' ? window.location.href : undefined
   }
       },;
-      occurrences: 1,;
-      firstSeen: now,;
-      lastSeen: now,;
+      occurrences: 1,
+      firstSeen: now,
+      lastSeen: now,
     }
 // Check if error already exists;
     const existingError = this.errors.get(errorId);
@@ -165,7 +165,7 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
    * Track an error with metadata;
    */;
   trackError(erro,;
-  r: Error,;
+  r: Error,
     metadat,;
   a: Partial<ErrorMetadata> & {/* TODO: Fix JSX expression */}
   y: ErrorSeverity });
@@ -273,7 +273,7 @@ clearErrors(): void {
   }
   }
 getErrorStats(): {
-    total: number,;
+    total: number,
     byCategory: Record<ErrorCategory>
     bySeverity: Record<ErrorSeverity, number>
   }

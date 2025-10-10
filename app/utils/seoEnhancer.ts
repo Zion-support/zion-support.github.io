@@ -8,8 +8,8 @@ export const generateMetaTags = (data: {
     // Generate meta tags
   }
 export const generateMetaTags = (data: {}
-// title: string,;
-// description: string,;
+// title: string,
+// description: string,
 // keywords?: string;
 // canonical?: string;
 // ogTitle?: string;
@@ -20,9 +20,7 @@ export const generateMetaTags = (data: {}
 // twitterDescription?: string;
 // twitterImage?: string;
 }) => {}
-  const tags = [
-    { name: 'title', content: data.title },;
-    { name: 'description', content: data.description },;
+  const tags = [{ name: 'title', content: data.title  }, { name: 'description', content: data.description },;
     { name: 'keywords', content: data.keywords || '' },;
     { name: 'robots', content: 'index, follow' },;
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },;
@@ -86,26 +84,26 @@ export const generateMetaTags = (dat,;
 }
 // SEO Config interface;
 interface SEOConfig {
-    title: string,;
-  description: string,;
+    title: string,
+  description: string,
 // SEO Config interface
   }
 interface SEOConfig {}
   title: string
   description: string
   keywords: string[],
-  canonicalUrl: string,;
-  ogImage: string,;
-  ogType: string,;
-  twitterCard: string,;
-  twitterSite: string,;
-  twitterCreator: string,;
+  canonicalUrl: string,
+  ogImage: string,
+  ogType: string,
+  twitterCard: string,
+  twitterSite: string,
+  twitterCreator: string,
   structuredData: Record<string>
-  robots: string,;
-  language: string,;
-  locale: string,;
-  siteName: string,;
-  author: string,;
+  robots: string,
+  language: string,
+  locale: string,
+  siteName: string,
+  author: string,
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
@@ -155,7 +153,7 @@ export const generateStructuredData = (;) => {
 }
 // SEO Enhancer class;
 export class SEOEnhancer {
-    private static instance: SEOEnhancer,;
+    private static instance: SEOEnhancer,
 // SEO Enhancer class
   }
 export class SEOEnhancer {}
@@ -464,7 +462,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
     meta.content = content;
   }
   // Generate sitemap;
-  generateSitemap(pages: Array<{ url: string; lastmod: string; changefreq: string, priority: string }>);
+  generateSitemap(pages: Array<{ url: string, lastmod: string, changefreq: string, priority: string }>);
   ) {
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,;
@@ -473,7 +471,7 @@ ${pages;
   // Generate sitemap;
   generateSitemap()
   }
-    pages: Array<{ url: string; lastmod: string; changefreq: string, priority: string }>;
+    pages: Array<{ url: string, lastmod: string, changefreq: string, priority: string }>;
   ) {}
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
 <urlset>
@@ -720,7 +718,7 @@ ${disallowRules}
 Sitemap: ${sitemapUrl}`;
 }
 // SEO validation;
-export const validateSEOData = (data: {// title: string; description: string, url: string}) => {}
+export const validateSEOData = (data: {// title: string, description: string, url: string}) => {}
   if (data.type === 'Article') {/* TODO: Fix JSX expression */}
       },;
       publishe,;
@@ -767,7 +765,7 @@ export const validateSEOData = (;
   )
   }
 // SEO validation;}
-export const validateSEOData = (data: {// title: string; description: string, url: string}) => {}
+export const validateSEOData = (data: {// title: string, description: string, url: string}) => {}
   const issues: string[] = []
   // Check title length,
   if (data.title.length < 30) {}

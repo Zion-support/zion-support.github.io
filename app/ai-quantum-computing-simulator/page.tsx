@@ -121,12 +121,12 @@ const AIQuantumComputingSimulator: React.FC = () => {
     <>
       <Helmet>
         <title>AI Quantum Computing Simulator - Advanced Quantum Simulation | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, quantum circuit optimization, and 3D visualization. Perfect for research and development." />
-        <meta name="keywords" content="quantum computing simulator, quantum circuits, quantum algorithms, quantum machine learning, quantum simulation, quantum development" />
-        <meta property="og:title" content="AI Quantum Computing Simulator - Advanced Quantum Simulation" />
-        <meta property="og:description" content="Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, quantum circuit optimization, and 3D visualization." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-quantum-computing-simulator" />
+        <meta name="description" content="Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, quantum circuit optimization, and 3D visualization. Perfect for research and development." / />
+        <meta name="keywords" content="quantum computing simulator, quantum circuits, quantum algorithms, quantum machine learning, quantum simulation, quantum development" / />
+        <meta property="og:title" content="AI Quantum Computing Simulator - Advanced Quantum Simulation" / />
+        <meta property="og:description" content="Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, quantum circuit optimization, and 3D visualization." / />
+        <meta property="og:type" content="website" / />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-quantum-computing-simulator" / />
         <link rel="canonical" href="https://ziontechgroup.com/ai-quantum-computing-simulator" />
       </Helmet>
 
@@ -207,7 +207,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">
-                    <feature.icon className="w-8 h-8 text-white" />
+                    <div.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3>
                   <p className="text-gray-300 mb-6">{feature.description}</p>

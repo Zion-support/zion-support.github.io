@@ -6,8 +6,8 @@ const AiVoiceSolutionsPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Voice Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI voice solutions including speech recognition, text-to-speech, voice assistants, and conversational AI for enhanced customer experiences." />
-        <meta name="keywords" content="AI voice solutions, speech recognition, text-to-speech, voice assistants, conversational AI, voice technology" />
+        <meta name="description" content="Advanced AI voice solutions including speech recognition, text-to-speech, voice assistants, and conversational AI for enhanced customer experiences." / />
+        <meta name="keywords" content="AI voice solutions, speech recognition, text-to-speech, voice assistants, conversational AI, voice technology" / />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

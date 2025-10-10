@@ -7,9 +7,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
-const technologies = [
-    { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },;
-    { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },;
+const technologies = [{ name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks'  }, { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },;
     { name: 'Python/Django', icon: Globe, description: 'Backend development' },;
     { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },;
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },;
