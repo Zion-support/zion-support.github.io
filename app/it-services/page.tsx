@@ -1,9 +1,8 @@
 'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Cloud, 
+import React, {useState}from 'react';
+import {Helmet}}from 'react-helmet-async';
+import {Link}}from 'react-router-dom';
+import {Cloud,}
   Shield, 
   Settings, 
   Database, 
@@ -22,12 +21,11 @@ import {
   ShoppingCart,
   Monitor,
   Headphones,
-  BarChart
-} from 'lucide-react';
+  BarChart;}from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ItServicesPage: React.FC = () => {
+const ItServicesPage: React.FC = () => {,
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const services = [
@@ -37,7 +35,7 @@ const ItServicesPage: React.FC = () => {
       description: 'Complete cloud solutions including AWS, Azure, and GCP with seamless migration services',
       price: '$2,500/month',
       marketPrice: '$4000-15000/month',
-      features: [
+      features: [,
         'Cloud architecture design',
         'Multi-cloud strategies',
         'Cost optimization',
@@ -45,7 +43,7 @@ const ItServicesPage: React.FC = () => {
         'Auto-scaling solutions',
         'Security compliance'
       ],
-      benefits: [
+      benefits: [,
         '99.9% uptime guarantee',
         'Cost reduction up to 40%',
         'Scalable infrastructure',
@@ -53,15 +51,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud',
       popular: true,
-      icon: Cloud
-    },
-    {
-      id: 'cybersecurity',
+      icon: Cloud;,},
+    {id: 'cybersecurity',
       name: 'Cybersecurity Solutions',
       description: 'Comprehensive security services including threat detection, compliance, and incident response',
       price: '$1,800/month',
       marketPrice: '$3000-12000/month',
-      features: [
+      features: [,
         'Threat detection & response',
         'Vulnerability assessments',
         'Penetration testing',
@@ -69,7 +65,7 @@ const ItServicesPage: React.FC = () => {
         'Compliance management',
         'Employee training'
       ],
-      benefits: [
+      benefits: [,
         '24/7 security monitoring',
         'Reduced security incidents',
         'Compliance assurance',
@@ -77,15 +73,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Security',
       popular: true,
-      icon: Shield
-    },
-    {
-      id: 'devops',
+      icon: Shield;,},
+    {id: 'devops',
       name: 'DevOps & CI/CD',
       description: 'Modern development operations with automated deployment, monitoring, and infrastructure as code',
       price: '$2,200/month',
       marketPrice: '$3500-10000/month',
-      features: [
+      features: [,
         'CI/CD pipeline setup',
         'Infrastructure as Code',
         'Container orchestration',
@@ -93,7 +87,7 @@ const ItServicesPage: React.FC = () => {
         'Automated testing',
         'Deployment automation'
       ],
-      benefits: [
+      benefits: [,
         'Faster deployments',
         'Reduced downtime',
         'Improved code quality',
@@ -101,15 +95,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'DevOps',
       popular: false,
-      icon: Settings
-    },
-    {
-      id: 'database-management',
+      icon: Settings;,},
+    {id: 'database-management',
       name: 'Database Management',
       description: 'Expert database design, optimization, and management for all major database systems',
       price: '$1,200/month',
       marketPrice: '$2000-8000/month',
-      features: [
+      features: [,
         'Database design & optimization',
         'Performance tuning',
         'Backup & recovery',
@@ -117,7 +109,7 @@ const ItServicesPage: React.FC = () => {
         'Security hardening',
         'Monitoring & maintenance'
       ],
-      benefits: [
+      benefits: [,
         'Improved performance',
         'Data security',
         'Automated backups',
@@ -125,15 +117,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Database',
       popular: false,
-      icon: Database
-    },
-    {
-      id: 'mobile-development',
+      icon: Database;,},
+    {id: 'mobile-development',
       name: 'Mobile Development',
       description: 'Native and cross-platform mobile applications for iOS and Android',
       price: '$8,000/project',
       marketPrice: '$15000-50000/project',
-      features: [
+      features: [,
         'iOS & Android apps',
         'Cross-platform development',
         'App store optimization',
@@ -141,7 +131,7 @@ const ItServicesPage: React.FC = () => {
         'Offline functionality',
         'Performance optimization'
       ],
-      benefits: [
+      benefits: [,
         'Native performance',
         'Cross-platform compatibility',
         'App store success',
@@ -149,15 +139,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Development',
       popular: false,
-      icon: Smartphone
-    },
-    {
-      id: 'web-development',
+      icon: Smartphone;,},
+    {id: 'web-development',
       name: 'Web Development',
       description: 'Modern, responsive web applications built with cutting-edge technologies',
       price: '$5,000/project',
       marketPrice: '$10000-30000/project',
-      features: [
+      features: [,
         'React/Next.js development',
         'Responsive design',
         'SEO optimization',
@@ -165,7 +153,7 @@ const ItServicesPage: React.FC = () => {
         'Security implementation',
         'Content management'
       ],
-      benefits: [
+      benefits: [,
         'Modern technology stack',
         'SEO optimized',
         'Mobile responsive',
@@ -173,15 +161,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Development',
       popular: false,
-      icon: Globe
-    },
-    {
-      id: 'network-infrastructure',
+      icon: Globe;,},
+    {id: 'network-infrastructure',
       name: 'Network Infrastructure',
       description: 'Complete network design, implementation, and management for enterprise environments',
       price: '$1,500/month',
       marketPrice: '$2500-8000/month',
-      features: [
+      features: [,
         'Network architecture design',
         'Wireless network deployment',
         'Network security implementation',
@@ -189,7 +175,7 @@ const ItServicesPage: React.FC = () => {
         'Disaster recovery planning',
         '24/7 network support'
       ],
-      benefits: [
+      benefits: [,
         'Improved network performance',
         'Enhanced security',
         'Reduced downtime',
@@ -197,15 +183,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Networking',
       popular: false,
-      icon: Wifi
-    },
-    {
-      id: 'data-center-services',
+      icon: Wifi;,},
+    {id: 'data-center-services',
       name: 'Data Center Services',
       description: 'Comprehensive data center management including colocation, cloud, and hybrid solutions',
       price: '$3,000/month',
       marketPrice: '$5000-20000/month',
-      features: [
+      features: [,
         'Data center design and setup',
         'Server and storage management',
         'Power and cooling optimization',
@@ -213,7 +197,7 @@ const ItServicesPage: React.FC = () => {
         'Compliance and security',
         '24/7 monitoring and support'
       ],
-      benefits: [
+      benefits: [,
         '99.99% uptime guarantee',
         'Cost optimization',
         'Scalable infrastructure',
@@ -221,15 +205,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Data Center',
       popular: false,
-      icon: Server
-    },
-    {
-      id: 'it-consulting',
+      icon: Server;,},
+    {id: 'it-consulting',
       name: 'IT Consulting',
       description: 'Strategic IT consulting and digital transformation services for enterprise organizations',
       price: '$200/hour',
       marketPrice: '$300-800/hour',
-      features: [
+      features: [,
         'IT strategy development',
         'Technology assessment',
         'Digital transformation planning',
@@ -237,7 +219,7 @@ const ItServicesPage: React.FC = () => {
         'Process optimization',
         'Change management'
       ],
-      benefits: [
+      benefits: [,
         'Strategic guidance',
         'Cost optimization',
         'Technology alignment',
@@ -245,15 +227,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Consulting',
       popular: true,
-      icon: Users
-    },
-    {
-      id: 'managed-services',
+      icon: Users;,},
+    {id: 'managed-services',
       name: 'Managed IT Services',
       description: 'Comprehensive managed IT services including monitoring, maintenance, and support',
       price: '$1,000/month',
       marketPrice: '$2000-6000/month',
-      features: [
+      features: [,
         '24/7 system monitoring',
         'Proactive maintenance',
         'Help desk support',
@@ -261,7 +241,7 @@ const ItServicesPage: React.FC = () => {
         'Backup and recovery',
         'Software updates'
       ],
-      benefits: [
+      benefits: [,
         'Reduced IT costs',
         'Improved reliability',
         'Expert support',
@@ -269,15 +249,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Managed Services',
       popular: true,
-      icon: Settings
-    },
-    {
-      id: 'api-development',
+      icon: Settings;,},
+    {id: 'api-development',
       name: 'API Development & Integration',
       description: 'Custom API development and integration services for seamless system connectivity',
       price: '$2,000/project',
       marketPrice: '$5000-15000/project',
-      features: [
+      features: [,
         'RESTful API development',
         'GraphQL implementation',
         'API documentation',
@@ -285,7 +263,7 @@ const ItServicesPage: React.FC = () => {
         'API security and authentication',
         'Performance optimization'
       ],
-      benefits: [
+      benefits: [,
         'Improved system integration',
         'Enhanced functionality',
         'Better performance',
@@ -293,15 +271,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'API Development',
       popular: false,
-      icon: Code
-    },
-    {
-      id: 'ecommerce-solutions',
+      icon: Code;,},
+    {id: 'ecommerce-solutions',
       name: 'E-commerce Solutions',
       description: 'Complete e-commerce platform development and optimization services',
       price: '$10,000/project',
       marketPrice: '$20000-100000/project',
-      features: [
+      features: [,
         'Custom e-commerce development',
         'Payment gateway integration',
         'Inventory management',
@@ -309,7 +285,7 @@ const ItServicesPage: React.FC = () => {
         'Mobile commerce optimization',
         'SEO and marketing tools'
       ],
-      benefits: [
+      benefits: [,
         'Increased online sales',
         'Better user experience',
         'Mobile optimization',
@@ -317,15 +293,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'E-commerce',
       popular: true,
-      icon: ShoppingCart
-    },
-    {
-      id: 'enterprise-software',
+      icon: ShoppingCart;,},
+    {id: 'enterprise-software',
       name: 'Enterprise Software Development',
       description: 'Custom enterprise software solutions tailored to specific business requirements',
       price: '$15,000/project',
       marketPrice: '$30000-200000/project',
-      features: [
+      features: [,
         'Custom software development',
         'Legacy system modernization',
         'Integration with existing systems',
@@ -333,7 +307,7 @@ const ItServicesPage: React.FC = () => {
         'Testing and quality assurance',
         'Training and documentation'
       ],
-      benefits: [
+      benefits: [,
         'Tailored solutions',
         'Improved efficiency',
         'Better user experience',
@@ -341,15 +315,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Software Development',
       popular: false,
-      icon: Monitor
-    },
-    {
-      id: 'it-support',
+      icon: Monitor;,},
+    {id: 'it-support',
       name: 'IT Support & Help Desk',
       description: 'Comprehensive IT support services including help desk, troubleshooting, and maintenance',
       price: '$800/month',
       marketPrice: '$1500-4000/month',
-      features: [
+      features: [,
         '24/7 help desk support',
         'Remote troubleshooting',
         'Hardware and software support',
@@ -357,7 +329,7 @@ const ItServicesPage: React.FC = () => {
         'System maintenance',
         'Incident management'
       ],
-      benefits: [
+      benefits: [,
         'Reduced downtime',
         'Improved productivity',
         'Expert support',
@@ -365,15 +337,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Support',
       popular: true,
-      icon: Headphones
-    },
-    {
-      id: 'cloud-security',
+      icon: Headphones;,},
+    {id: 'cloud-security',
       name: 'Cloud Security Services',
       description: 'Specialized cloud security services including compliance, monitoring, and threat protection',
       price: '$2,200/month',
       marketPrice: '$4000-12000/month',
-      features: [
+      features: [,
         'Cloud security assessment',
         'Identity and access management',
         'Data encryption and protection',
@@ -381,7 +351,7 @@ const ItServicesPage: React.FC = () => {
         'Threat detection and response',
         'Security training and awareness'
       ],
-      benefits: [
+      benefits: [,
         'Enhanced cloud security',
         'Compliance assurance',
         'Threat protection',
@@ -389,15 +359,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud Security',
       popular: false,
-      icon: Shield
-    },
-    {
-      id: 'data-analytics',
+      icon: Shield;,},
+    {id: 'data-analytics',
       name: 'Data Analytics & BI',
       description: 'Advanced data analytics and business intelligence solutions for data-driven decisions',
       price: '$1,800/month',
       marketPrice: '$3000-10000/month',
-      features: [
+      features: [,
         'Data warehouse design',
         'ETL process development',
         'Dashboard and reporting',
@@ -405,7 +373,7 @@ const ItServicesPage: React.FC = () => {
         'Data visualization',
         'Machine learning integration'
       ],
-      benefits: [
+      benefits: [,
         'Data-driven insights',
         'Better decision making',
         'Competitive advantage',
@@ -413,15 +381,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Data Analytics',
       popular: true,
-      icon: BarChart
-    },
-    {
-      id: 'disaster-recovery',
+      icon: BarChart;,},
+    {id: 'disaster-recovery',
       name: 'Disaster Recovery & Business Continuity',
       description: 'Comprehensive disaster recovery and business continuity planning and implementation',
       price: '$1,600/month',
       marketPrice: '$3000-8000/month',
-      features: [
+      features: [,
         'Disaster recovery planning',
         'Backup and recovery solutions',
         'Business continuity testing',
@@ -429,7 +395,7 @@ const ItServicesPage: React.FC = () => {
         'Cloud-based recovery',
         'Regular testing and updates'
       ],
-      benefits: [
+      benefits: [,
         'Minimized downtime',
         'Data protection',
         'Business continuity',
@@ -437,15 +403,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Disaster Recovery',
       popular: false,
-      icon: Shield
-    },
-    {
-      id: 'it-audit',
+      icon: Shield;,},
+    {id: 'it-audit',
       name: 'IT Audit & Compliance',
       description: 'Comprehensive IT audit and compliance services for regulatory requirements',
       price: '$1,400/month',
       marketPrice: '$2500-6000/month',
-      features: [
+      features: [,
         'IT security audits',
         'Compliance assessments',
         'Risk analysis and mitigation',
@@ -453,7 +417,7 @@ const ItServicesPage: React.FC = () => {
         'Training and awareness',
         'Ongoing monitoring'
       ],
-      benefits: [
+      benefits: [,
         'Regulatory compliance',
         'Risk mitigation',
         'Improved security posture',
@@ -461,15 +425,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Compliance',
       popular: false,
-      icon: CheckCircle
-    },
-    {
-      id: 'cloud-native-development',
+      icon: CheckCircle;,},
+    {id: 'cloud-native-development',
       name: 'Cloud-Native Development',
       description: 'Modern cloud-native application development with microservices and containerization',
       price: '$3,500/month',
       marketPrice: '$6000-20000/month',
-      features: [
+      features: [,
         'Microservices architecture design',
         'Container orchestration (Kubernetes)',
         'Serverless application development',
@@ -479,7 +441,7 @@ const ItServicesPage: React.FC = () => {
         'CI/CD pipeline setup',
         'Auto-scaling implementation'
       ],
-      benefits: [
+      benefits: [,
         'Scalable and resilient applications',
         'Faster deployment cycles',
         'Cost-effective scaling',
@@ -487,15 +449,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud Development',
       popular: true,
-      icon: Cloud
-    },
-    {
-      id: 'ai-integration-services',
+      icon: Cloud;,},
+    {id: 'ai-integration-services',
       name: 'AI Integration Services',
       description: 'AI model integration and deployment services for existing business systems',
       price: '$2,800/month',
       marketPrice: '$5000-15000/month',
-      features: [
+      features: [,
         'AI model integration',
         'API development for AI services',
         'Data pipeline setup',
@@ -505,7 +465,7 @@ const ItServicesPage: React.FC = () => {
         'Custom AI solution development',
         'Training and support'
       ],
-      benefits: [
+      benefits: [,
         'Leverage AI capabilities',
         'Seamless integration',
         'Improved business processes',
@@ -513,15 +473,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'AI Integration',
       popular: true,
-      icon: Brain
-    },
-    {
-      id: 'blockchain-development',
+      icon: Brain;,},
+    {id: 'blockchain-development',
       name: 'Blockchain Development',
       description: 'Blockchain application development and smart contract implementation',
       price: '$4,500/month',
       marketPrice: '$8000-25000/month',
-      features: [
+      features: [,
         'Smart contract development',
         'Blockchain platform integration',
         'DeFi application development',
@@ -531,7 +489,7 @@ const ItServicesPage: React.FC = () => {
         'Token development',
         'Web3 integration'
       ],
-      benefits: [
+      benefits: [,
         'Decentralized applications',
         'Enhanced security',
         'Transparent transactions',
@@ -539,15 +497,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Blockchain',
       popular: false,
-      icon: Link
-    },
-    {
-      id: 'iot-development',
+      icon: Link;,},
+    {id: 'iot-development',
       name: 'IoT Development & Integration',
       description: 'Internet of Things solution development and device integration services',
       price: '$2,200/month',
       marketPrice: '$4000-12000/month',
-      features: [
+      features: [,
         'IoT device development',
         'Sensor integration',
         'Data collection and processing',
@@ -557,7 +513,7 @@ const ItServicesPage: React.FC = () => {
         'Edge computing implementation',
         'IoT security implementation'
       ],
-      benefits: [
+      benefits: [,
         'Connected device solutions',
         'Real-time data insights',
         'Automated processes',
@@ -565,15 +521,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'IoT Development',
       popular: true,
-      icon: Wifi
-    },
-    {
-      id: 'mobile-app-development',
+      icon: Wifi;,},
+    {id: 'mobile-app-development',
       name: 'Mobile App Development',
       description: 'Native and cross-platform mobile application development for iOS and Android',
       price: '$8,000/project',
       marketPrice: '$15000-50000/project',
-      features: [
+      features: [,
         'iOS and Android development',
         'Cross-platform solutions (React Native, Flutter)',
         'App store optimization',
@@ -583,7 +537,7 @@ const ItServicesPage: React.FC = () => {
         'Security implementation',
         'App maintenance and updates'
       ],
-      benefits: [
+      benefits: [,
         'Native performance',
         'Cross-platform compatibility',
         'App store success',
@@ -591,15 +545,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Mobile Development',
       popular: true,
-      icon: Smartphone
-    },
-    {
-      id: 'e-commerce-development',
+      icon: Smartphone;,},
+    {id: 'e-commerce-development',
       name: 'E-commerce Development',
       description: 'Complete e-commerce platform development with payment integration and inventory management',
       price: '$12,000/project',
       marketPrice: '$25000-100000/project',
-      features: [
+      features: [,
         'Custom e-commerce development',
         'Payment gateway integration',
         'Inventory management system',
@@ -609,7 +561,7 @@ const ItServicesPage: React.FC = () => {
         'Mobile commerce optimization',
         'SEO and marketing tools'
       ],
-      benefits: [
+      benefits: [,
         'Increased online sales',
         'Better user experience',
         'Mobile optimization',
@@ -617,15 +569,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'E-commerce',
       popular: true,
-      icon: ShoppingCart
-    },
-    {
-      id: 'api-development-advanced',
+      icon: ShoppingCart;,},
+    {id: 'api-development-advanced',
       name: 'Advanced API Development',
       description: 'Enterprise-grade API development with microservices architecture and advanced security',
       price: '$3,200/month',
       marketPrice: '$6000-18000/month',
-      features: [
+      features: [,
         'RESTful and GraphQL APIs',
         'Microservices architecture',
         'API gateway implementation',
@@ -635,7 +585,7 @@ const ItServicesPage: React.FC = () => {
         'Performance optimization',
         'Monitoring and analytics'
       ],
-      benefits: [
+      benefits: [,
         'Scalable API architecture',
         'Enhanced security',
         'Better performance',
@@ -643,15 +593,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'API Development',
       popular: true,
-      icon: Code
-    },
-    {
-      id: 'data-engineering',
+      icon: Code;,},
+    {id: 'data-engineering',
       name: 'Data Engineering Services',
       description: 'Data pipeline development and data infrastructure setup for analytics and AI',
       price: '$2,600/month',
       marketPrice: '$5000-15000/month',
-      features: [
+      features: [,
         'Data pipeline development',
         'ETL/ELT process implementation',
         'Data warehouse design',
@@ -661,7 +609,7 @@ const ItServicesPage: React.FC = () => {
         'Cloud data platform setup',
         'Data governance implementation'
       ],
-      benefits: [
+      benefits: [,
         'Efficient data processing',
         'Better data quality',
         'Scalable data infrastructure',
@@ -669,15 +617,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Data Engineering',
       popular: true,
-      icon: Database
-    },
-    {
-      id: 'cybersecurity-advanced',
+      icon: Database;,},
+    {id: 'cybersecurity-advanced',
       name: 'Advanced Cybersecurity',
       description: 'Comprehensive cybersecurity services including threat hunting and incident response',
       price: '$3,800/month',
       marketPrice: '$7000-25000/month',
-      features: [
+      features: [,
         'Threat hunting and detection',
         'Incident response planning',
         'Security architecture design',
@@ -687,7 +633,7 @@ const ItServicesPage: React.FC = () => {
         'Compliance management',
         'Security training programs'
       ],
-      benefits: [
+      benefits: [,
         'Proactive threat protection',
         'Reduced security risks',
         'Compliance assurance',
@@ -695,15 +641,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cybersecurity',
       popular: true,
-      icon: Shield
-    },
-    {
-      id: 'cloud-migration-advanced',
+      icon: Shield;,},
+    {id: 'cloud-migration-advanced',
       name: 'Advanced Cloud Migration',
       description: 'Complex cloud migration services with zero-downtime and data integrity assurance',
       price: '$4,200/month',
       marketPrice: '$8000-30000/month',
-      features: [
+      features: [,
         'Zero-downtime migration',
         'Data integrity verification',
         'Application modernization',
@@ -713,7 +657,7 @@ const ItServicesPage: React.FC = () => {
         'Performance optimization',
         'Training and documentation'
       ],
-      benefits: [
+      benefits: [,
         'Seamless cloud transition',
         'Improved performance',
         'Cost optimization',
@@ -721,15 +665,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud Migration',
       popular: true,
-      icon: Cloud
-    },
-    {
-      id: 'devops-advanced',
+      icon: Cloud;,},
+    {id: 'devops-advanced',
       name: 'Advanced DevOps & SRE',
       description: 'Site Reliability Engineering and advanced DevOps practices for high-availability systems',
       price: '$3,600/month',
       marketPrice: '$7000-20000/month',
-      features: [
+      features: [,
         'Site Reliability Engineering',
         'Infrastructure as Code',
         'Advanced monitoring and alerting',
@@ -739,7 +681,7 @@ const ItServicesPage: React.FC = () => {
         'Security automation',
         'Team training and mentoring'
       ],
-      benefits: [
+      benefits: [,
         'High system availability',
         'Faster incident response',
         'Improved system reliability',
@@ -747,15 +689,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'DevOps',
       popular: true,
-      icon: Settings
-    },
-    {
-      id: 'machine-learning-ops',
+      icon: Settings;,},
+    {id: 'machine-learning-ops',
       name: 'MLOps & AI Operations',
       description: 'Machine Learning Operations and AI model deployment and monitoring services',
       price: '$2,900/month',
       marketPrice: '$5500-18000/month',
-      features: [
+      features: [,
         'ML model deployment',
         'Model versioning and management',
         'A/B testing for ML models',
@@ -765,7 +705,7 @@ const ItServicesPage: React.FC = () => {
         'ML pipeline development',
         'Performance optimization'
       ],
-      benefits: [
+      benefits: [,
         'Reliable ML operations',
         'Automated model management',
         'Better model performance',
@@ -773,15 +713,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'MLOps',
       popular: true,
-      icon: Cpu
-    },
-    {
-      id: 'enterprise-integration',
+      icon: Cpu;,},
+    {id: 'enterprise-integration',
       name: 'Enterprise Integration',
       description: 'Complex enterprise system integration with legacy and modern systems',
       price: '$3,400/month',
       marketPrice: '$6500-20000/month',
-      features: [
+      features: [,
         'Legacy system integration',
         'Enterprise Service Bus (ESB)',
         'API management platform',
@@ -791,7 +729,7 @@ const ItServicesPage: React.FC = () => {
         'Error handling and recovery',
         'Documentation and training'
       ],
-      benefits: [
+      benefits: [,
         'Seamless system connectivity',
         'Improved data flow',
         'Reduced manual processes',
@@ -799,15 +737,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Integration',
       popular: true,
-      icon: Link
-    },
-    {
-      id: 'performance-optimization',
+      icon: Link;,},
+    {id: 'performance-optimization',
       name: 'Performance Optimization',
       description: 'Application and infrastructure performance optimization for better user experience',
       price: '$1,800/month',
       marketPrice: '$3500-10000/month',
-      features: [
+      features: [,
         'Application performance analysis',
         'Database optimization',
         'Code optimization',
@@ -817,7 +753,7 @@ const ItServicesPage: React.FC = () => {
         'Performance monitoring',
         'Capacity planning'
       ],
-      benefits: [
+      benefits: [,
         'Faster application response',
         'Better user experience',
         'Reduced infrastructure costs',
@@ -825,15 +761,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Performance',
       popular: true,
-      icon: Zap
-    },
-    {
-      id: 'disaster-recovery-advanced',
+      icon: Zap;,},
+    {id: 'disaster-recovery-advanced',
       name: 'Advanced Disaster Recovery',
       description: 'Comprehensive disaster recovery and business continuity solutions',
       price: '$2,400/month',
       marketPrice: '$4500-15000/month',
-      features: [
+      features: [,
         'Disaster recovery planning',
         'Backup and recovery automation',
         'Business continuity testing',
@@ -843,7 +777,7 @@ const ItServicesPage: React.FC = () => {
         'Recovery testing automation',
         'Documentation and training'
       ],
-      benefits: [
+      benefits: [,
         'Minimized business downtime',
         'Data protection assurance',
         'Rapid recovery capabilities',
@@ -851,15 +785,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Disaster Recovery',
       popular: false,
-      icon: Shield
-    },
-    {
-      id: 'compliance-automation',
+      icon: Shield;,},
+    {id: 'compliance-automation',
       name: 'Compliance Automation',
       description: 'Automated compliance monitoring and reporting for various regulatory frameworks',
       price: '$2,100/month',
       marketPrice: '$4000-12000/month',
-      features: [
+      features: [,
         'Automated compliance monitoring',
         'Regulatory reporting automation',
         'Policy management systems',
@@ -869,7 +801,7 @@ const ItServicesPage: React.FC = () => {
         'Alert and notification systems',
         'Integration with existing systems'
       ],
-      benefits: [
+      benefits: [,
         'Reduced compliance costs',
         'Automated reporting',
         'Better risk management',
@@ -877,15 +809,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Compliance',
       popular: true,
-      icon: CheckCircle
-    },
-    {
-      id: 'cloud-cost-optimization',
+      icon: CheckCircle;,},
+    {id: 'cloud-cost-optimization',
       name: 'Cloud Cost Optimization',
       description: 'Cloud cost analysis and optimization services to reduce infrastructure spending',
       price: '$1,600/month',
       marketPrice: '$3000-8000/month',
-      features: [
+      features: [,
         'Cloud cost analysis',
         'Resource optimization recommendations',
         'Reserved instance planning',
@@ -895,7 +825,7 @@ const ItServicesPage: React.FC = () => {
         'Cost allocation and reporting',
         'Optimization automation'
       ],
-      benefits: [
+      benefits: [,
         'Reduce cloud costs by 30-50%',
         'Better resource utilization',
         'Automated cost management',
@@ -903,15 +833,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud Optimization',
       popular: true,
-      icon: TrendingUp
-    },
-    {
-      id: 'security-automation',
+      icon: TrendingUp;,},
+    {id: 'security-automation',
       name: 'Security Automation',
       description: 'Automated security monitoring, incident response, and threat detection',
       price: '$2,700/month',
       marketPrice: '$5000-15000/month',
-      features: [
+      features: [,
         'Automated threat detection',
         'Incident response automation',
         'Security orchestration',
@@ -921,7 +849,7 @@ const ItServicesPage: React.FC = () => {
         'Threat intelligence integration',
         'Custom security workflows'
       ],
-      benefits: [
+      benefits: [,
         'Faster threat response',
         'Reduced security incidents',
         'Automated compliance',
@@ -929,15 +857,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Security Automation',
       popular: true,
-      icon: Shield
-    },
-    {
-      id: 'data-visualization',
+      icon: Shield;,},
+    {id: 'data-visualization',
       name: 'Data Visualization & BI',
       description: 'Advanced data visualization and business intelligence dashboard development',
       price: '$1,900/month',
       marketPrice: '$3500-10000/month',
-      features: [
+      features: [,
         'Interactive dashboard development',
         'Real-time data visualization',
         'Custom chart and graph creation',
@@ -947,7 +873,7 @@ const ItServicesPage: React.FC = () => {
         'Data integration',
         'User training and support'
       ],
-      benefits: [
+      benefits: [,
         'Better data insights',
         'Improved decision making',
         'Self-service analytics',
@@ -955,15 +881,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Data Visualization',
       popular: true,
-      icon: BarChart
-    },
-    {
-      id: 'workflow-automation',
+      icon: BarChart;,},
+    {id: 'workflow-automation',
       name: 'Workflow Automation',
       description: 'Business process automation and workflow optimization services',
       price: '$2,300/month',
       marketPrice: '$4500-12000/month',
-      features: [
+      features: [,
         'Process analysis and optimization',
         'Workflow automation design',
         'RPA (Robotic Process Automation)',
@@ -973,7 +897,7 @@ const ItServicesPage: React.FC = () => {
         'Change management',
         'Training and documentation'
       ],
-      benefits: [
+      benefits: [,
         'Reduced manual work',
         'Improved process efficiency',
         'Better accuracy',
@@ -981,15 +905,13 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Automation',
       popular: true,
-      icon: Settings
-    },
-    {
-      id: 'cloud-native-security',
+      icon: Settings;,},
+    {id: 'cloud-native-security',
       name: 'Cloud-Native Security',
       description: 'Specialized security services for cloud-native applications and infrastructure',
       price: '$3,100/month',
       marketPrice: '$6000-18000/month',
-      features: [
+      features: [,
         'Container security',
         'Kubernetes security',
         'Serverless security',
@@ -999,7 +921,7 @@ const ItServicesPage: React.FC = () => {
         'Data protection',
         'Compliance automation'
       ],
-      benefits: [
+      benefits: [,
         'Enhanced cloud security',
         'Automated security management',
         'Better compliance',
@@ -1007,52 +929,48 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud Security',
       popular: true,
-      icon: Shield
-    }
-  ];
+      icon: Shield;,}];
   const categories = [
-    { id: 'all', name: 'All Services', count: services.length },
-    { id: 'Cloud', name: 'Cloud', count: services.filter(s => s.category === 'Cloud').length },
-    { id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length },
-    { id: 'DevOps', name: 'DevOps', count: services.filter(s => s.category === 'DevOps').length },
-    { id: 'Database', name: 'Database', count: services.filter(s => s.category === 'Database').length },
-    { id: 'Development', name: 'Development', count: services.filter(s => s.category === 'Development').length },
-    { id: 'Networking', name: 'Networking', count: services.filter(s => s.category === 'Networking').length },
-    { id: 'Data Center', name: 'Data Center', count: services.filter(s => s.category === 'Data Center').length },
-    { id: 'Consulting', name: 'Consulting', count: services.filter(s => s.category === 'Consulting').length },
-    { id: 'Managed Services', name: 'Managed Services', count: services.filter(s => s.category === 'Managed Services').length },
-    { id: 'API Development', name: 'API Development', count: services.filter(s => s.category === 'API Development').length },
-    { id: 'E-commerce', name: 'E-commerce', count: services.filter(s => s.category === 'E-commerce').length },
-    { id: 'Software Development', name: 'Software Development', count: services.filter(s => s.category === 'Software Development').length },
-    { id: 'Support', name: 'Support', count: services.filter(s => s.category === 'Support').length },
-    { id: 'Cloud Security', name: 'Cloud Security', count: services.filter(s => s.category === 'Cloud Security').length },
-    { id: 'Data Analytics', name: 'Data Analytics', count: services.filter(s => s.category === 'Data Analytics').length },
-    { id: 'Disaster Recovery', name: 'Disaster Recovery', count: services.filter(s => s.category === 'Disaster Recovery').length },
-    { id: 'Compliance', name: 'Compliance', count: services.filter(s => s.category === 'Compliance').length },
-    { id: 'Cloud Development', name: 'Cloud Development', count: services.filter(s => s.category === 'Cloud Development').length },
-    { id: 'AI Integration', name: 'AI Integration', count: services.filter(s => s.category === 'AI Integration').length },
-    { id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length },
-    { id: 'IoT Development', name: 'IoT Development', count: services.filter(s => s.category === 'IoT Development').length },
-    { id: 'Mobile Development', name: 'Mobile Development', count: services.filter(s => s.category === 'Mobile Development').length },
-    { id: 'Data Engineering', name: 'Data Engineering', count: services.filter(s => s.category === 'Data Engineering').length },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: services.filter(s => s.category === 'Cybersecurity').length },
-    { id: 'Cloud Migration', name: 'Cloud Migration', count: services.filter(s => s.category === 'Cloud Migration').length },
-    { id: 'MLOps', name: 'MLOps', count: services.filter(s => s.category === 'MLOps').length },
-    { id: 'Integration', name: 'Integration', count: services.filter(s => s.category === 'Integration').length },
-    { id: 'Performance', name: 'Performance', count: services.filter(s => s.category === 'Performance').length },
-    { id: 'Cloud Optimization', name: 'Cloud Optimization', count: services.filter(s => s.category === 'Cloud Optimization').length },
-    { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
-    { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
-    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
-  ]
+    {id: 'all', name: 'All Services', count: services.length ,},
+    {id: 'Cloud', name: 'Cloud', count: services.filter(s => s.category === 'Cloud').length ,},
+    {id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length ,},
+    {id: 'DevOps', name: 'DevOps', count: services.filter(s => s.category === 'DevOps').length ,},
+    {id: 'Database', name: 'Database', count: services.filter(s => s.category === 'Database').length ,},
+    {id: 'Development', name: 'Development', count: services.filter(s => s.category === 'Development').length ,},
+    {id: 'Networking', name: 'Networking', count: services.filter(s => s.category === 'Networking').length ,},
+    {id: 'Data Center', name: 'Data Center', count: services.filter(s => s.category === 'Data Center').length ,},
+    {id: 'Consulting', name: 'Consulting', count: services.filter(s => s.category === 'Consulting').length ,},
+    {id: 'Managed Services', name: 'Managed Services', count: services.filter(s => s.category === 'Managed Services').length ,},
+    {id: 'API Development', name: 'API Development', count: services.filter(s => s.category === 'API Development').length ,},
+    {id: 'E-commerce', name: 'E-commerce', count: services.filter(s => s.category === 'E-commerce').length ,},
+    {id: 'Software Development', name: 'Software Development', count: services.filter(s => s.category === 'Software Development').length ,},
+    {id: 'Support', name: 'Support', count: services.filter(s => s.category === 'Support').length ,},
+    {id: 'Cloud Security', name: 'Cloud Security', count: services.filter(s => s.category === 'Cloud Security').length ,},
+    {id: 'Data Analytics', name: 'Data Analytics', count: services.filter(s => s.category === 'Data Analytics').length ,},
+    {id: 'Disaster Recovery', name: 'Disaster Recovery', count: services.filter(s => s.category === 'Disaster Recovery').length ,},
+    {id: 'Compliance', name: 'Compliance', count: services.filter(s => s.category === 'Compliance').length ,},
+    {id: 'Cloud Development', name: 'Cloud Development', count: services.filter(s => s.category === 'Cloud Development').length ,},
+    {id: 'AI Integration', name: 'AI Integration', count: services.filter(s => s.category === 'AI Integration').length ,},
+    {id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length ,},
+    {id: 'IoT Development', name: 'IoT Development', count: services.filter(s => s.category === 'IoT Development').length ,},
+    {id: 'Mobile Development', name: 'Mobile Development', count: services.filter(s => s.category === 'Mobile Development').length ,},
+    {id: 'Data Engineering', name: 'Data Engineering', count: services.filter(s => s.category === 'Data Engineering').length ,},
+    {id: 'Cybersecurity', name: 'Cybersecurity', count: services.filter(s => s.category === 'Cybersecurity').length ,},
+    {id: 'Cloud Migration', name: 'Cloud Migration', count: services.filter(s => s.category === 'Cloud Migration').length ,},
+    {id: 'MLOps', name: 'MLOps', count: services.filter(s => s.category === 'MLOps').length ,},
+    {id: 'Integration', name: 'Integration', count: services.filter(s => s.category === 'Integration').length ,},
+    {id: 'Performance', name: 'Performance', count: services.filter(s => s.category === 'Performance').length ,},
+    {id: 'Cloud Optimization', name: 'Cloud Optimization', count: services.filter(s => s.category === 'Cloud Optimization').length ,},
+    {id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length ,},
+    {id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length ,},
+    {id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length ,}]
 
-  const filteredServices = services.filter(service => 
-    selectedCategory === 'all' || service.category === selectedCategory
+  const filteredServices = services.filter(service =>)
+    selectedCategory === 'all' || service.category === selectedCategory;
   );
 
-  return (
-    <>
-      <Helmet>
+  return(<>)
+      <Helmet />
         <title>IT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, DevOps, database management, and web development." />
       </Helmet>
@@ -1061,41 +979,32 @@ const ItServicesPage: React.FC = () => {
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            {/* Header */}
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                IT Services
+          <div className="max-w-6xl mx-auto">{/* Header */</div>} <div className="text-center mb-16">
+              <h1 className="text-4xl md: text-5xl font-bold text-white mb-6">,</h1>
+                IT Services;
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Complete IT solutions to modernize your infrastructure and drive business growth. 
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Complete IT solutions to modernize your infrastructure and drive business growth.</p>
                 From cloud migration to cybersecurity, we have the expertise you need.
               </p>
             </div>
 
-            {/* Category Filter */}
-            <div className="mb-12">
-              <div className="flex flex-wrap justify-center gap-4">
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      selectedCategory === category.id
+            {/* Category Filter */} <div className="mb-12">
+              <div className="flex flex-wrap justify-center gap-4">{categories.map((category) => (</div>
+                  <button;
+                    key={category.id}onClick={() =>setSelectedCategory(category.id)</button>}className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      selectedCategory === category.id;
                         ? 'bg-cyan-500 text-white'
-                        : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                    }`}
+                        : 'bg-slate-800 text-gray-300 hover: bg-slate-700',}`}
                   >
-                    {category.name} ({category.count})
+                    {category.name}({category.count})
                   </button>
                 ))}
               </div>
             </div>
 
-            {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {/* Services Grid */} <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,</div>
               {filteredServices.map((service) => (
-                <div key={service.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
+                <div key={service.id}className="bg-slate-800/50 rounded-lg p-6 hover: bg-slate-800/70 transition-all duration-300">,</div>
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
@@ -1106,74 +1015,70 @@ const ItServicesPage: React.FC = () => {
                     {service.popular && (
                       <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center">
                         <Star className="w-4 h-4 mr-1" />
-                        Popular
+                        Popular;
                       </span>
-                    )}
-                  </div>
+                    )} </div>
                   
-                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <p className="text-gray-300 mb-4">{service.description</p>}</p>
                   
                   <div className="flex items-center justify-between mb-4">
                     <div>
-                      <span className="text-2xl font-bold text-purple-400">{service.price}</span>
-                      <span className="text-gray-400 text-sm ml-2 line-through">{service.marketPrice}</span>
+                      <span className="text-2xl font-bold text-purple-400">{service.price</span>}</span>
+                      <span className="text-gray-400 text-sm ml-2 line-through">{service.marketPrice</span>}</span>
                     </div>
-                    <span className="text-gray-400 text-sm">{service.category}</span>
+                    <span className="text-gray-400 text-sm">{service.category</span>}</span>
                   </div>
 
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <ul className="space-y-2">
                       {service.features.slice(0, 3).map((feature, index) => (
-                        <li key={index} className="flex items-start space-x-2">
+                        <li key={index}className="flex items-start space-x-2">
                           <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-gray-300">{feature}</span>
+                          <span className="text-sm text-gray-300">{feature</span>}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <Link
+                    <Link;
                       to="/contact"
-                      className="flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                      className="flex items-center text-purple-400 hover: text-purple-300 transition-colors",
                     >
-                      Learn More
+                      Learn More;
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
-                    <Link
+                    <Link;
                       to="/contact"
-                      className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
+                      className="bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300",
                     >
-                      Get Quote
+                      Get Quote;
                     </Link>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* CTA Section */}
-            <div className="text-center">
+            {/* CTA Section */} <div className="text-center">
               <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
-                  Ready to Modernize Your IT Infrastructure?
+                <h2 className="text-2xl font-bold text-white mb-4">Ready to Modernize Your IT Infrastructure?</h2>
                 </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Let our IT experts help you choose the right solutions for your business needs. 
+                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Let our IT experts help you choose the right solutions for your business needs.</p>
                   Get a free consultation and see how we can transform your technology infrastructure.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
+                  <Link;
                     to="/contact"
-                    className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                    className="bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300",
                   >
-                    Get Free Consultation
+                    Get Free Consultation;
                   </Link>
-                  <a
-                    href="tel:+13024640950"
-                    className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                  <a;
+                    href="tel: +13024640950",
+                    className="border-2 border-purple-400 text-purple-400 hover: bg-purple-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300",
                   >
-                    Call: (302) 464-0950
+                    Call: (302) 464-0950;,
                   </a>
                 </div>
               </div>

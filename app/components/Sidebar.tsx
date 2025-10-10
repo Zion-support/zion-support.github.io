@@ -1,8 +1,7 @@
 'use client';
-import React, { Suspense, lazy } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import {
-    X,
+import React, {Suspense, lazy}from 'react';
+import {Link, useLocation}}from 'react-router-dom';
+import {X,}
   Menu,
   Home,
   Users,
@@ -21,21 +20,16 @@ import {
 
   MapPin,
 
-  Clock
-  }
-} from 'lucide-react'
-const Sidebar: React.FC = () => {
+  Clock;}} from 'lucide-react'
+const Sidebar: React.FC = () => {,
     const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['ai-services', 'micro-saas', 'it-services']));
   const location = useLocation();
 useEffect(() => {
     const handleResize = (;
       if (window.innerWidth >= 1024) {) => {
-  return (
-    $3
-  )
-  }
-        setIsOpen(false);}
+  return($3;)
+  )}setIsOpen(false);}
       }
     }
 window.addEventListener('resize', handleResize);
@@ -44,137 +38,102 @@ window.addEventListener('resize', handleResize);
 const toggleSection = (;
 
     const newExpanded = new Set(expandedSections);
-    if (newExpanded.has(section)) {
-    ) => {
-  return (
-    $3
-  )
-  }
-      newExpanded.delete(section);}
-    } else {
-    newExpanded.add(section)
-  }
-    }
+    if (newExpanded.has(section)) {) => {
+  return($3;)
+  )}newExpanded.delete(section);}
+    } else {newExpanded.add(section)}}}
     setExpandedSections(newExpanded);
   }
 const navigationSections = [
-    {
-    title: 'Main',
-      items: [
-  }
-        { name: 'Home', path: '/', icon: Home },
-        { name: 'About', path: '/about', icon: Users },
-        { name: 'Services', path: '/services', icon: Settings },
-        { name: 'Contact', path: '/contact', icon: Phone },
-        { name: 'Blog', path: '/blog', icon: BarChart },
-        { name: 'Case Studies', path: '/case-studies', icon: BarChart },
+    {title: 'Main',
+      items: [,}{ name: 'Home', path: '/', icon: Home ,},
+        {name: 'About', path: '/about', icon: Users ,},
+        {name: 'Services', path: '/services', icon: Settings ,},
+        {name: 'Contact', path: '/contact', icon: Phone ,},
+        {name: 'Blog', path: '/blog', icon: BarChart ,},
+        {name: 'Case Studies', path: '/case-studies', icon: BarChart ,},
       ]
     },
-    {
-    title: 'AI Services',
+    {title: 'AI Services',
       key: 'ai-services',
-      items: [
-  }
-        { name: 'AI Services Overview', path: '/ai-services', icon: Brain },
-        { name: 'Business Intelligence', path: '/ai-services/business-intelligence', icon: BarChart },
-        { name: 'Document Processing', path: '/ai-services/document-processing', icon: Settings },
-        { name: 'Customer Experience', path: '/ai-services/customer-experience', icon: Users },
-        { name: 'Marketing Automation', path: '/ai-services/marketing-automation', icon: Settings },
-        { name: 'Predictive Maintenance', path: '/ai-services/predictive-maintenance', icon: Settings },
-        { name: 'Supply Chain', path: '/ai-services/supply-chain', icon: Settings },
-        { name: 'Fraud Detection', path: '/ai-services/fraud-detection', icon: Shield },
-        { name: 'Content Generation', path: '/ai-services/content-generation', icon: Settings },
-        { name: 'HR Analytics', path: '/ai-services/hr-analytics', icon: BarChart },
-        { name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings },
-        { name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield },
-        { name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings },
+      items: [,}{ name: 'AI Services Overview', path: '/ai-services', icon: Brain ,},
+        {name: 'Business Intelligence', path: '/ai-services/business-intelligence', icon: BarChart ,},
+        {name: 'Document Processing', path: '/ai-services/document-processing', icon: Settings ,},
+        {name: 'Customer Experience', path: '/ai-services/customer-experience', icon: Users ,},
+        {name: 'Marketing Automation', path: '/ai-services/marketing-automation', icon: Settings ,},
+        {name: 'Predictive Maintenance', path: '/ai-services/predictive-maintenance', icon: Settings ,},
+        {name: 'Supply Chain', path: '/ai-services/supply-chain', icon: Settings ,},
+        {name: 'Fraud Detection', path: '/ai-services/fraud-detection', icon: Shield ,},
+        {name: 'Content Generation', path: '/ai-services/content-generation', icon: Settings ,},
+        {name: 'HR Analytics', path: '/ai-services/hr-analytics', icon: BarChart ,},
+        {name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings ,},
+        {name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield ,},
+        {name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings ,},
       ]
     },
-    {
-    title: 'Micro SaaS',
+    {title: 'Micro SaaS',
       key: 'micro-saas',
-      items: [
-  }
-        { name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings },
-        { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart },
-        { name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users },
-        { name: 'Social Manager', path: '/micro-saas/social-manager', icon: Settings },
-        { name: 'Email Marketing', path: '/micro-saas/email-marketing', icon: Mail },
-        { name: 'Inventory Management', path: '/micro-saas/inventory-management', icon: Settings },
-        { name: 'Lead Scoring', path: '/micro-saas/lead-scoring', icon: BarChart },
-        { name: 'Document Processor', path: '/micro-saas/document-processor', icon: Settings },
-        { name: 'SEO Optimizer', path: '/micro-saas/seo-optimizer', icon: Settings },
-        { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', icon: Clock },
-        { name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart },
-        { name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart },
-        { name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings },
+      items: [,}{ name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings ,},
+        {name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart ,},
+        {name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users ,},
+        {name: 'Social Manager', path: '/micro-saas/social-manager', icon: Settings ,},
+        {name: 'Email Marketing', path: '/micro-saas/email-marketing', icon: Mail ,},
+        {name: 'Inventory Management', path: '/micro-saas/inventory-management', icon: Settings ,},
+        {name: 'Lead Scoring', path: '/micro-saas/lead-scoring', icon: BarChart ,},
+        {name: 'Document Processor', path: '/micro-saas/document-processor', icon: Settings ,},
+        {name: 'SEO Optimizer', path: '/micro-saas/seo-optimizer', icon: Settings ,},
+        {name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', icon: Clock ,},
+        {name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart ,},
+        {name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart ,},
+        {name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings ,},
       ]
     },
-    {
-    title: 'IT Services',
+    {title: 'IT Services',
       key: 'it-services',
-      items: [
-  }
-        { name: 'IT Services Overview', path: '/it-services', icon: Code },
-        { name: 'IT Consulting', path: '/it-consulting', icon: Users },
-        { name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings },
-        { name: 'IT Support', path: '/it-support', icon: Users },
-        { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: Cloud },
-        { name: 'Cloud Migration', path: '/cloud-migration', icon: Cloud },
-        { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },
-        { name: 'Database Management', path: '/database-management', icon: Settings },
-        { name: 'Managed IT', path: '/managed-it', icon: Settings },
+      items: [,}{ name: 'IT Services Overview', path: '/it-services', icon: Code ,},
+        {name: 'IT Consulting', path: '/it-consulting', icon: Users ,},
+        {name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings ,},
+        {name: 'IT Support', path: '/it-support', icon: Users ,},
+        {name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: Cloud ,},
+        {name: 'Cloud Migration', path: '/cloud-migration', icon: Cloud ,},
+        {name: 'Cybersecurity', path: '/cybersecurity', icon: Shield ,},
+        {name: 'Database Management', path: '/database-management', icon: Settings ,},
+        {name: 'Managed IT', path: '/managed-it', icon: Settings ,},
       ]
     },
-    {
-    title: 'Company',
-      items: [
-  }
-        { name: 'Team', path: '/team', icon: Users },
-        { name: 'Careers', path: '/careers', icon: Users },
-        { name: 'Consultation', path: '/consultation', icon: Phone },
-        { name: 'Pricing', path: '/pricing', icon: BarChart },
+    {title: 'Company',
+      items: [,}{ name: 'Team', path: '/team', icon: Users ,},
+        {name: 'Careers', path: '/careers', icon: Users ,},
+        {name: 'Consultation', path: '/consultation', icon: Phone ,},
+        {name: 'Pricing', path: '/pricing', icon: BarChart ,},
       ]
     },
-    {
-    title: 'Resources',
-      items: [
-  }
-        { name: 'Documentation', path: '/docs', icon: Settings },
-        { name: 'API Docs', path: '/api-docs', icon: Code },
-        { name: 'Support', path: '/support', icon: Users },
-        { name: 'Status', path: '/status', icon: Settings },
+    {title: 'Resources',
+      items: [,}{ name: 'Documentation', path: '/docs', icon: Settings ,},
+        {name: 'API Docs', path: '/api-docs', icon: Code ,},
+        {name: 'Support', path: '/support', icon: Users ,},
+        {name: 'Status', path: '/status', icon: Settings ,},
       ]
     }
   ]
-const contactInfo = {
-    phone: '(302) 464-0950',
+const contactInfo = {phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
-    hours: 'Mon-Fri 9AM-6PM EST'
-  }
-  }
-return (
-    <>
-
-      {/* Mobile Menu Button */}
-      <button;
-        onClick={() => setIsOpen(true)}
-
-        className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
+    hours: 'Mon-Fri 9AM-6PM EST',}}
+return(<>)
+      {/* Mobile Menu Button */} <button;
+        onClick={() =>setIsOpen(true)</button>}className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all",
         aria-label="Open sidebar"
       >,
         <Menu>
       </button>
 
-      {/* Sidebar Overlay */}
-      {
+      {/* Sidebar Overlay */}{
     isOpen && (;
         <div;
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden",
   }
-          onClick={() => setIsOpen(false)}
-        />
+          onClick={() =>setIsOpen(false)</div>}/>
       )}
 {/* Sidebar */}</div>
       <aside>
@@ -190,8 +149,7 @@ return (
               </div>
             </Link>
             <button;
-              onClick={() => setIsOpen(false)}
-              className="lg: hidden text-gray-400 hover:text-white transition-colors"
+              onClick={() =>setIsOpen(false)</button>}className="lg: hidden text-gray-400 hover:text-white transition-colors",
               aria-label="Close sidebar"
             >,
               <X>

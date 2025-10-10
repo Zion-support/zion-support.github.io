@@ -16,8 +16,7 @@ const benefits = [
     'Proven track record of success'
   ]
 </h1>
-            <p>
-              Transform your business with our advanced page solutions.;
+            <p>Transform your business with our advanced page solutions.;</p>
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             </div>
@@ -26,7 +25,7 @@ const benefits = [
       </section>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="text-gray-300">{feature.description</p>}</p>
               </div>
             ))}
           </div>
@@ -37,8 +36,7 @@ const benefits = [
           </div>
         </div>
       </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4">
+      {/* CTA Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -47,21 +45,19 @@ const benefits = [
           </div>
         </section>
         <div className="max-w-4xl mx-auto text-center"></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-            <h2>
-              Ready to Get Started?
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
+            <h2>Ready to Get Started?</h2>
             </h2>
-            <p>
-              Contact our experts to discuss your page needs and get a customized solution.
+            <p>Contact our experts to discuss your page needs and get a customized solution.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
               <button>
                 <Phone>
-                Call Now
+                Call Now;
               </button>
               <button>
                 <Mail>
-                Email Us
+                Email Us;
               </button>
             </div>
           </div>

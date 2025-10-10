@@ -1,46 +1,36 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-const PagePage: React.FC = () => {
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+const PagePage: React.FC = () => {,
     const features = [
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-  },
-    {
-    ]
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
+      description: 'Lightning-fast processing and real-time analytics for optimal results',},
+    {]
+return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
+      <Helmet />
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      </Helmet>
-  }
-
-      {/* Hero Section */}
-            <h2>
-              Why Choose Our Page?
+      </Helmet>}{/* Hero Section */}
+            <h2>Why Choose Our Page?</h2>
             </h2>
-            <p>
-              Our page solutions deliver unmatched performance, security, and scalability.
+            <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
             </p>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="text-gray-300">{feature.description</p>}</p>
               </div>
             ))}
 
           </div>
         </div>
       </section>
-            <h2>
-              Key Benefits
+            <h2>Key Benefits;</h2>
             </h2>
-            <p>
-              Experience the power of our page solutions for your business.
+            <p>Experience the power of our page solutions for your business.</p>
             </p>
               </div>
             ))}
@@ -48,8 +38,7 @@ return (
         </div>
       </section>
 
-      {/* CTA Section */}
-          </div>
+      {/* CTA Section */} </div>
         </div>
       </section>
     </div>

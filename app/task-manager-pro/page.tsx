@@ -1,30 +1,22 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-const PagePage: React.FC = () => {
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+const PagePage: React.FC = () => {,
     const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-  },
-    {
-    icon: Zap,
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',},
+    {icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-  },
-    {
-    icon: Shield,
+      description: 'Lightning-fast processing and real-time analytics for optimal results',},
+    {icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-  },
-    {
-    icon: Globe,
+      description: 'Bank-level security with encryption and compliance standards',},
+    {icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-  }
-    }
+      description: 'Worldwide deployment and support for international businesses',}}
   ]
 const benefits = [
     'Advanced AI technology integration',
@@ -40,15 +32,13 @@ const benefits = [
 
     'Proven track record of success'
   ]
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
+return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
+      <Helmet />
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-      {/* Hero Section */}
-      <section className="py-20 px-4">
+      {/* Hero Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -59,39 +49,33 @@ return (
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
             <h1>
-              <span>
-                Page
+              <span>Page;</span>
               </span>
               <br>
               <span className="text-white">Solutions</span>
             </h1>
-            <p>
-              Transform your business with our advanced page solutions.;
+            <p>Transform your business with our advanced page solutions.;</p>
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button>
-                Get Started
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+              <button>Get Started;</button>
                 <ArrowRight>
               </button>
-              <button>
-                Learn More,
+              <button>Learn More,</button>
               </button>
             </div>
           </div>
         </div>
       </section>
             </h2>
-            <p>
-              Our page solutions deliver unmatched performance, security, and scalability.
+            <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
             </p>
           </div>
           </div>
         </div>
       </section>
             </h2>
-            <p>
-              Experience the power of our page solutions for your business.
+            <p>Experience the power of our page solutions for your business.</p>
             </p>
           </div>
           </div>
@@ -99,17 +83,16 @@ return (
       </section>
               Ready to Get Started?
             </h2>
-            <p>
-              Contact our experts to discuss your page needs and get a customized solution.
+            <p>Contact our experts to discuss your page needs and get a customized solution.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
               <button>
                 <Phone>
-                Call Now
+                Call Now;
               </button>
               <button>
                 <Mail>
-                Email Us
+                Email Us;
               </button>
             </div>
           </div>
