@@ -1,20 +1,13 @@
 'use client';
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart } from 'lucide-react';
-
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-=======
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart, Rocket, AlertTriangle, Image } from 'lucide-react';
 import Sidebar from './Sidebar';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
->>>>>>> cursor/website-audit-and-update-with-deployment-3540
+  const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
@@ -29,7 +22,6 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-<<<<<<< HEAD
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -44,6 +36,10 @@ const Navigation: React.FC = () => {
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen);
   }, [isOpen]);
+
+  const toggleSidebar = useCallback(() => {
+    setSidebarOpen(!sidebarOpen);
+  }, [sidebarOpen]);
 
   const toggleServices = useCallback(() => {
     setServicesOpen(!servicesOpen);
@@ -195,7 +191,188 @@ const Navigation: React.FC = () => {
     { name: 'Zion AI Fraud Detector', href: '/zion-ai-fraud-detector', icon: Shield, description: 'Fraud detection' },
     { name: 'Zion AI Customer Service Pro', href: '/zion-ai-customer-service-pro', icon: MessageSquare, description: 'Advanced customer service' },
     { name: 'Zion AI Marketing Automation', href: '/zion-ai-marketing-automation', icon: Target, description: 'Marketing AI' },
-    { name: 'Zion AI Document AI', href: '/zion-ai-document-ai', icon: FileText, description: 'Document processing' }
+    { name: 'Zion AI Document AI', href: '/zion-ai-document-ai', icon: FileText, description: 'Document processing' },
+    // New Advanced Micro SAAS Services
+    { name: 'Zion AI Sales Predictor', href: '/zion-ai-sales-predictor', icon: TrendingUp, description: 'AI-powered sales forecasting' },
+    { name: 'Zion AI Social Media Manager', href: '/zion-ai-social-media-manager', icon: Globe, description: 'Automated social media management' },
+    { name: 'Zion AI Website Optimizer', href: '/zion-ai-website-optimizer', icon: Monitor, description: 'Website performance optimization' },
+    { name: 'Zion AI Email Security Pro', href: '/zion-ai-email-security-pro', icon: Shield, description: 'Advanced email threat protection' },
+    { name: 'Zion AI Inventory Optimizer', href: '/zion-ai-inventory-optimizer', icon: Package, description: 'Smart inventory management' },
+    { name: 'Zion AI Customer Lifetime Value', href: '/zion-ai-customer-lifetime-value', icon: Users, description: 'Customer value prediction' },
+    { name: 'Zion AI Price Optimizer', href: '/zion-ai-price-optimizer', icon: DollarSign, description: 'Dynamic pricing optimization' },
+    { name: 'Zion AI Content Scheduler', href: '/zion-ai-content-scheduler', icon: Calendar, description: 'Intelligent content scheduling' },
+    { name: 'Zion AI A/B Testing Pro', href: '/zion-ai-ab-testing-pro', icon: Target, description: 'Advanced A/B testing platform' },
+    { name: 'Zion AI Lead Scoring Pro', href: '/zion-ai-lead-scoring-pro', icon: Target, description: 'Intelligent lead qualification' },
+    { name: 'Zion AI Chat Analytics', href: '/zion-ai-chat-analytics', icon: MessageCircle, description: 'Conversation insights & analytics' },
+    { name: 'Zion AI Website Builder', href: '/zion-ai-website-builder', icon: Code, description: 'AI-powered website creation' },
+    { name: 'Zion AI Email Designer', href: '/zion-ai-email-designer', icon: Mail, description: 'Automated email design' },
+    { name: 'Zion AI Video Analytics', href: '/zion-ai-video-analytics', icon: Eye, description: 'Video performance insights' },
+    { name: 'Zion AI Competitor Monitor', href: '/zion-ai-competitor-monitor', icon: Eye, description: 'Competitive intelligence' },
+    { name: 'Zion AI Customer Journey', href: '/zion-ai-customer-journey', icon: Users, description: 'Customer journey mapping' },
+    { name: 'Zion AI Revenue Optimizer', href: '/zion-ai-revenue-optimizer', icon: DollarSign, description: 'Revenue growth optimization' },
+    { name: 'Zion AI Task Automation', href: '/zion-ai-task-automation', icon: Settings, description: 'Intelligent task automation' },
+    { name: 'Zion AI Data Migration', href: '/zion-ai-data-migration', icon: Database, description: 'Automated data migration' },
+    { name: 'Zion AI API Gateway', href: '/zion-ai-api-gateway', icon: LinkIcon, description: 'Smart API management' },
+    { name: 'Zion AI Backup Pro', href: '/zion-ai-backup-pro', icon: Cloud, description: 'Intelligent backup solutions' },
+    { name: 'Zion AI Performance Tracker', href: '/zion-ai-performance-tracker', icon: BarChart, description: 'Business performance monitoring' },
+    { name: 'Zion AI Compliance Checker', href: '/zion-ai-compliance-checker', icon: CheckSquare, description: 'Automated compliance monitoring' },
+    { name: 'Zion AI Resource Planner', href: '/zion-ai-resource-planner', icon: Calendar, description: 'Resource allocation optimization' },
+    { name: 'Zion AI Quality Assurance', href: '/zion-ai-quality-assurance', icon: CheckCircle, description: 'Automated quality testing' },
+    { name: 'Zion AI Integration Hub', href: '/zion-ai-integration-hub', icon: LinkIcon, description: 'Seamless system integration' },
+    { name: 'Zion AI Analytics Dashboard', href: '/zion-ai-analytics-dashboard', icon: BarChart, description: 'Real-time business analytics' },
+    { name: 'Zion AI Customer Support Pro', href: '/zion-ai-customer-support-pro', icon: MessageSquare, description: 'Advanced support automation' },
+    { name: 'Zion AI Marketing ROI', href: '/zion-ai-marketing-roi', icon: Target, description: 'Marketing ROI optimization' },
+    { name: 'Zion AI Workflow Designer', href: '/zion-ai-workflow-designer', icon: Workflow, description: 'Visual workflow creation' },
+    { name: 'Zion AI Data Warehouse', href: '/zion-ai-data-warehouse', icon: Database, description: 'Intelligent data storage' },
+    { name: 'Zion AI Mobile App Builder', href: '/zion-ai-mobile-app-builder', icon: Smartphone, description: 'AI-powered mobile app creation' },
+    { name: 'Zion AI E-commerce Optimizer', href: '/zion-ai-ecommerce-optimizer', icon: ShoppingCart, description: 'E-commerce performance boost' },
+    { name: 'Zion AI Security Scanner', href: '/zion-ai-security-scanner', icon: Shield, description: 'Automated security scanning' },
+    { name: 'Zion AI Content Moderation Pro', href: '/zion-ai-content-moderation-pro', icon: Shield, description: 'Advanced content filtering' },
+    { name: 'Zion AI Voice Analytics', href: '/zion-ai-voice-analytics', icon: Mic, description: 'Voice interaction insights' },
+    { name: 'Zion AI Predictive Analytics Pro', href: '/zion-ai-predictive-analytics-pro', icon: BarChart, description: 'Advanced forecasting' },
+    { name: 'Zion AI Customer Retention', href: '/zion-ai-customer-retention', icon: Users, description: 'Customer retention optimization' },
+    { name: 'Zion AI Business Intelligence', href: '/zion-ai-business-intelligence', icon: BarChart, description: 'Comprehensive BI platform' },
+    { name: 'Zion AI Process Mining', href: '/zion-ai-process-mining', icon: Workflow, description: 'Process optimization insights' },
+    { name: 'Zion AI Digital Twin', href: '/zion-ai-digital-twin', icon: Cpu, description: 'Digital twin creation' },
+    { name: 'Zion AI Edge Computing', href: '/zion-ai-edge-computing', icon: Server, description: 'Edge AI processing' },
+    { name: 'Zion AI Quantum Analytics', href: '/zion-ai-quantum-analytics', icon: Cpu, description: 'Quantum-enhanced analytics' },
+    { name: 'Zion AI Blockchain Manager', href: '/zion-ai-blockchain-manager', icon: LinkIcon, description: 'Blockchain integration' },
+    { name: 'Zion AI IoT Manager', href: '/zion-ai-iot-manager', icon: Wifi, description: 'IoT device management' },
+    { name: 'Zion AI AR/VR Builder', href: '/zion-ai-ar-vr-builder', icon: Monitor, description: 'Immersive experience creation' },
+    { name: 'Zion AI Machine Learning Ops', href: '/zion-ai-ml-ops', icon: Cpu, description: 'ML model deployment' },
+    { name: 'Zion AI Data Pipeline', href: '/zion-ai-data-pipeline', icon: Database, description: 'Automated data processing' },
+    { name: 'Zion AI Cloud Cost Optimizer', href: '/zion-ai-cloud-cost-optimizer', icon: Cloud, description: 'Cloud cost reduction' },
+    { name: 'Zion AI Disaster Recovery', href: '/zion-ai-disaster-recovery', icon: Shield, description: 'Automated disaster recovery' },
+    { name: 'Zion AI Network Monitor', href: '/zion-ai-network-monitor', icon: Wifi, description: 'Network performance monitoring' },
+    { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer', icon: Database, description: 'Database performance tuning' },
+    { name: 'Zion AI Load Balancer', href: '/zion-ai-load-balancer', icon: Server, description: 'Intelligent traffic distribution' },
+    { name: 'Zion AI Cache Manager', href: '/zion-ai-cache-manager', icon: Cpu, description: 'Smart caching solutions' },
+    { name: 'Zion AI CDN Optimizer', href: '/zion-ai-cdn-optimizer', icon: Globe, description: 'Content delivery optimization' },
+    { name: 'Zion AI SSL Manager', href: '/zion-ai-ssl-manager', icon: Lock, description: 'Certificate management' },
+    { name: 'Zion AI DNS Manager', href: '/zion-ai-dns-manager', icon: Globe, description: 'DNS optimization' },
+    { name: 'Zion AI Firewall Manager', href: '/zion-ai-firewall-manager', icon: Shield, description: 'Advanced firewall management' },
+    { name: 'Zion AI VPN Manager', href: '/zion-ai-vpn-manager', icon: Lock, description: 'VPN configuration' },
+    { name: 'Zion AI Backup Scheduler', href: '/zion-ai-backup-scheduler', icon: Cloud, description: 'Automated backup scheduling' },
+    { name: 'Zion AI Log Analyzer', href: '/zion-ai-log-analyzer', icon: FileText, description: 'Intelligent log analysis' },
+    { name: 'Zion AI Incident Manager', href: '/zion-ai-incident-manager', icon: AlertTriangle, description: 'Automated incident response' },
+    { name: 'Zion AI Capacity Planner', href: '/zion-ai-capacity-planner', icon: Server, description: 'Resource capacity planning' },
+    { name: 'Zion AI Cost Analyzer', href: '/zion-ai-cost-analyzer', icon: DollarSign, description: 'Cost analysis & optimization' },
+    { name: 'Zion AI Performance Profiler', href: '/zion-ai-performance-profiler', icon: BarChart, description: 'Application performance profiling' },
+    { name: 'Zion AI Memory Optimizer', href: '/zion-ai-memory-optimizer', icon: Cpu, description: 'Memory usage optimization' },
+    { name: 'Zion AI CPU Optimizer', href: '/zion-ai-cpu-optimizer', icon: Cpu, description: 'CPU performance tuning' },
+    { name: 'Zion AI Storage Optimizer', href: '/zion-ai-storage-optimizer', icon: Database, description: 'Storage efficiency optimization' },
+    { name: 'Zion AI Network Optimizer', href: '/zion-ai-network-optimizer', icon: Wifi, description: 'Network performance tuning' },
+    { name: 'Zion AI Security Auditor', href: '/zion-ai-security-auditor', icon: Shield, description: 'Automated security auditing' },
+    { name: 'Zion AI Compliance Tracker', href: '/zion-ai-compliance-tracker', icon: CheckSquare, description: 'Regulatory compliance tracking' },
+    { name: 'Zion AI Risk Assessor', href: '/zion-ai-risk-assessor', icon: AlertTriangle, description: 'Risk assessment & mitigation' },
+    { name: 'Zion AI Threat Hunter', href: '/zion-ai-threat-hunter', icon: Shield, description: 'Advanced threat detection' },
+    { name: 'Zion AI Vulnerability Scanner', href: '/zion-ai-vulnerability-scanner', icon: Shield, description: 'Automated vulnerability assessment' },
+    { name: 'Zion AI Penetration Tester', href: '/zion-ai-penetration-tester', icon: Shield, description: 'Automated penetration testing' },
+    { name: 'Zion AI Security Monitor', href: '/zion-ai-security-monitor', icon: Shield, description: 'Real-time security monitoring' },
+    { name: 'Zion AI Access Manager', href: '/zion-ai-access-manager', icon: Lock, description: 'Identity & access management' },
+    { name: 'Zion AI Privilege Manager', href: '/zion-ai-privilege-manager', icon: Lock, description: 'Privileged access management' },
+    { name: 'Zion AI Password Manager', href: '/zion-ai-password-manager', icon: Lock, description: 'Enterprise password management' },
+    { name: 'Zion AI Multi-Factor Auth', href: '/zion-ai-mfa', icon: Lock, description: 'Multi-factor authentication' },
+    { name: 'Zion AI Single Sign-On', href: '/zion-ai-sso', icon: Lock, description: 'Single sign-on solution' },
+    { name: 'Zion AI Directory Sync', href: '/zion-ai-directory-sync', icon: Users, description: 'Directory synchronization' },
+    { name: 'Zion AI User Provisioning', href: '/zion-ai-user-provisioning', icon: Users, description: 'Automated user provisioning' },
+    { name: 'Zion AI Role Manager', href: '/zion-ai-role-manager', icon: Users, description: 'Role-based access control' },
+    { name: 'Zion AI Permission Manager', href: '/zion-ai-permission-manager', icon: Lock, description: 'Granular permission management' },
+    { name: 'Zion AI Audit Logger', href: '/zion-ai-audit-logger', icon: FileText, description: 'Comprehensive audit logging' },
+    { name: 'Zion AI Session Manager', href: '/zion-ai-session-manager', icon: Lock, description: 'Session management & monitoring' },
+    { name: 'Zion AI Token Manager', href: '/zion-ai-token-manager', icon: Lock, description: 'API token management' },
+    { name: 'Zion AI Certificate Manager', href: '/zion-ai-certificate-manager', icon: Lock, description: 'Digital certificate management' },
+    { name: 'Zion AI Key Manager', href: '/zion-ai-key-manager', icon: Lock, description: 'Encryption key management' },
+    { name: 'Zion AI Crypto Manager', href: '/zion-ai-crypto-manager', icon: Lock, description: 'Cryptographic operations' },
+    { name: 'Zion AI Hash Manager', href: '/zion-ai-hash-manager', icon: Lock, description: 'Hash function management' },
+    { name: 'Zion AI Encryption Manager', href: '/zion-ai-encryption-manager', icon: Lock, description: 'Data encryption management' },
+    { name: 'Zion AI Decryption Manager', href: '/zion-ai-decryption-manager', icon: Lock, description: 'Data decryption services' },
+    { name: 'Zion AI Signature Manager', href: '/zion-ai-signature-manager', icon: Lock, description: 'Digital signature management' },
+    { name: 'Zion AI Verification Manager', href: '/zion-ai-verification-manager', icon: CheckCircle, description: 'Digital verification services' },
+    { name: 'Zion AI Blockchain Verifier', href: '/zion-ai-blockchain-verifier', icon: LinkIcon, description: 'Blockchain transaction verification' },
+    { name: 'Zion AI Smart Contract Manager', href: '/zion-ai-smart-contract-manager', icon: LinkIcon, description: 'Smart contract deployment' },
+    { name: 'Zion AI DeFi Manager', href: '/zion-ai-defi-manager', icon: DollarSign, description: 'DeFi protocol management' },
+    { name: 'Zion AI NFT Manager', href: '/zion-ai-nft-manager', icon: Image, description: 'NFT creation & management' },
+    { name: 'Zion AI Crypto Wallet', href: '/zion-ai-crypto-wallet', icon: Lock, description: 'Secure cryptocurrency wallet' },
+    { name: 'Zion AI Trading Bot', href: '/zion-ai-trading-bot', icon: TrendingUp, description: 'Automated trading strategies' },
+    { name: 'Zion AI Portfolio Manager', href: '/zion-ai-portfolio-manager', icon: BarChart, description: 'Investment portfolio optimization' },
+    { name: 'Zion AI Risk Manager', href: '/zion-ai-risk-manager', icon: AlertTriangle, description: 'Financial risk assessment' },
+    { name: 'Zion AI Compliance Manager Pro', href: '/zion-ai-compliance-manager-pro', icon: CheckSquare, description: 'Advanced compliance management' },
+    { name: 'Zion AI Regulatory Tracker', href: '/zion-ai-regulatory-tracker', icon: FileText, description: 'Regulatory change tracking' },
+    { name: 'Zion AI Policy Manager', href: '/zion-ai-policy-manager', icon: FileText, description: 'Policy management & enforcement' },
+    { name: 'Zion AI Governance Manager', href: '/zion-ai-governance-manager', icon: Users, description: 'Corporate governance tools' },
+    { name: 'Zion AI Ethics Monitor', href: '/zion-ai-ethics-monitor', icon: Heart, description: 'AI ethics compliance monitoring' },
+    { name: 'Zion AI Bias Detector', href: '/zion-ai-bias-detector', icon: Target, description: 'AI bias detection & mitigation' },
+    { name: 'Zion AI Fairness Monitor', href: '/zion-ai-fairness-monitor', icon: Users, description: 'AI fairness assessment' },
+    { name: 'Zion AI Transparency Manager', href: '/zion-ai-transparency-manager', icon: Eye, description: 'AI decision transparency' },
+    { name: 'Zion AI Explainability Engine', href: '/zion-ai-explainability-engine', icon: FileText, description: 'AI model explainability' },
+    { name: 'Zion AI Interpretability Tool', href: '/zion-ai-interpretability-tool', icon: BarChart, description: 'Model interpretation tools' },
+    { name: 'Zion AI Debugging Assistant', href: '/zion-ai-debugging-assistant', icon: Code, description: 'AI model debugging' },
+    { name: 'Zion AI Testing Framework', href: '/zion-ai-testing-framework', icon: CheckCircle, description: 'AI model testing suite' },
+    { name: 'Zion AI Validation Tool', href: '/zion-ai-validation-tool', icon: CheckSquare, description: 'Model validation & verification' },
+    { name: 'Zion AI Benchmarking Tool', href: '/zion-ai-benchmarking-tool', icon: BarChart, description: 'Performance benchmarking' },
+    { name: 'Zion AI Profiling Tool', href: '/zion-ai-profiling-tool', icon: BarChart, description: 'Model performance profiling' },
+    { name: 'Zion AI Optimization Engine', href: '/zion-ai-optimization-engine', icon: Zap, description: 'Model optimization' },
+    { name: 'Zion AI Hyperparameter Tuner', href: '/zion-ai-hyperparameter-tuner', icon: Settings, description: 'Automated hyperparameter tuning' },
+    { name: 'Zion AI Feature Engineer', href: '/zion-ai-feature-engineer', icon: Code, description: 'Automated feature engineering' },
+    { name: 'Zion AI Data Preprocessor', href: '/zion-ai-data-preprocessor', icon: Database, description: 'Intelligent data preprocessing' },
+    { name: 'Zion AI Feature Selector', href: '/zion-ai-feature-selector', icon: Target, description: 'Automated feature selection' },
+    { name: 'Zion AI Model Selector', href: '/zion-ai-model-selector', icon: Cpu, description: 'Optimal model selection' },
+    { name: 'Zion AI Ensemble Builder', href: '/zion-ai-ensemble-builder', icon: Cpu, description: 'Ensemble model creation' },
+    { name: 'Zion AI Stacking Manager', href: '/zion-ai-stacking-manager', icon: Cpu, description: 'Model stacking optimization' },
+    { name: 'Zion AI Boosting Manager', href: '/zion-ai-boosting-manager', icon: Zap, description: 'Boosting algorithm management' },
+    { name: 'Zion AI Bagging Manager', href: '/zion-ai-bagging-manager', icon: Package, description: 'Bagging algorithm management' },
+    { name: 'Zion AI Cross-Validation', href: '/zion-ai-cross-validation', icon: CheckSquare, description: 'Advanced cross-validation' },
+    { name: 'Zion AI Holdout Manager', href: '/zion-ai-holdout-manager', icon: CheckSquare, description: 'Holdout validation management' },
+    { name: 'Zion AI K-Fold Manager', href: '/zion-ai-k-fold-manager', icon: CheckSquare, description: 'K-fold validation management' },
+    { name: 'Zion AI Stratified Manager', href: '/zion-ai-stratified-manager', icon: CheckSquare, description: 'Stratified sampling management' },
+    { name: 'Zion AI Bootstrap Manager', href: '/zion-ai-bootstrap-manager', icon: CheckSquare, description: 'Bootstrap sampling management' },
+    { name: 'Zion AI Monte Carlo', href: '/zion-ai-monte-carlo', icon: Cpu, description: 'Monte Carlo simulation' },
+    { name: 'Zion AI Bayesian Optimizer', href: '/zion-ai-bayesian-optimizer', icon: Cpu, description: 'Bayesian optimization' },
+    { name: 'Zion AI Gaussian Process', href: '/zion-ai-gaussian-process', icon: Cpu, description: 'Gaussian process modeling' },
+    { name: 'Zion AI Random Forest', href: '/zion-ai-random-forest', icon: Cpu, description: 'Random forest optimization' },
+    { name: 'Zion AI SVM Manager', href: '/zion-ai-svm-manager', icon: Cpu, description: 'Support vector machine management' },
+    { name: 'Zion AI Neural Network', href: '/zion-ai-neural-network', icon: Brain, description: 'Neural network optimization' },
+    { name: 'Zion AI Deep Learning', href: '/zion-ai-deep-learning', icon: Brain, description: 'Deep learning model management' },
+    { name: 'Zion AI CNN Manager', href: '/zion-ai-cnn-manager', icon: Eye, description: 'Convolutional neural network management' },
+    { name: 'Zion AI RNN Manager', href: '/zion-ai-rnn-manager', icon: Brain, description: 'Recurrent neural network management' },
+    { name: 'Zion AI LSTM Manager', href: '/zion-ai-lstm-manager', icon: Brain, description: 'LSTM network management' },
+    { name: 'Zion AI GRU Manager', href: '/zion-ai-gru-manager', icon: Brain, description: 'GRU network management' },
+    { name: 'Zion AI Transformer', href: '/zion-ai-transformer', icon: Brain, description: 'Transformer model management' },
+    { name: 'Zion AI BERT Manager', href: '/zion-ai-bert-manager', icon: Brain, description: 'BERT model management' },
+    { name: 'Zion AI GPT Manager', href: '/zion-ai-gpt-manager', icon: Brain, description: 'GPT model management' },
+    { name: 'Zion AI T5 Manager', href: '/zion-ai-t5-manager', icon: Brain, description: 'T5 model management' },
+    { name: 'Zion AI RoBERTa Manager', href: '/zion-ai-roberta-manager', icon: Brain, description: 'RoBERTa model management' },
+    { name: 'Zion AI DistilBERT Manager', href: '/zion-ai-distilbert-manager', icon: Brain, description: 'DistilBERT model management' },
+    { name: 'Zion AI ALBERT Manager', href: '/zion-ai-albert-manager', icon: Brain, description: 'ALBERT model management' },
+    { name: 'Zion AI XLNet Manager', href: '/zion-ai-xlnet-manager', icon: Brain, description: 'XLNet model management' },
+    { name: 'Zion AI ELECTRA Manager', href: '/zion-ai-electra-manager', icon: Brain, description: 'ELECTRA model management' },
+    { name: 'Zion AI DeBERTa Manager', href: '/zion-ai-deberta-manager', icon: Brain, description: 'DeBERTa model management' },
+    { name: 'Zion AI Longformer Manager', href: '/zion-ai-longformer-manager', icon: Brain, description: 'Longformer model management' },
+    { name: 'Zion AI BigBird Manager', href: '/zion-ai-bigbird-manager', icon: Brain, description: 'BigBird model management' },
+    { name: 'Zion AI Reformer Manager', href: '/zion-ai-reformer-manager', icon: Brain, description: 'Reformer model management' },
+    { name: 'Zion AI Performer Manager', href: '/zion-ai-performer-manager', icon: Brain, description: 'Performer model management' },
+    { name: 'Zion AI Linformer Manager', href: '/zion-ai-linformer-manager', icon: Brain, description: 'Linformer model management' },
+    { name: 'Zion AI Sparse Manager', href: '/zion-ai-sparse-manager', icon: Brain, description: 'Sparse attention management' },
+    { name: 'Zion AI Flash Manager', href: '/zion-ai-flash-manager', icon: Zap, description: 'Flash attention management' },
+    { name: 'Zion AI Multi-Head Manager', href: '/zion-ai-multihead-manager', icon: Brain, description: 'Multi-head attention management' },
+    { name: 'Zion AI Self-Attention Manager', href: '/zion-ai-self-attention-manager', icon: Brain, description: 'Self-attention mechanism management' },
+    { name: 'Zion AI Cross-Attention Manager', href: '/zion-ai-cross-attention-manager', icon: Brain, description: 'Cross-attention mechanism management' },
+    { name: 'Zion AI Positional Encoding', href: '/zion-ai-positional-encoding', icon: Brain, description: 'Positional encoding management' },
+    { name: 'Zion AI Embedding Manager', href: '/zion-ai-embedding-manager', icon: Brain, description: 'Word embedding management' },
+    { name: 'Zion AI Tokenization Manager', href: '/zion-ai-tokenization-manager', icon: FileText, description: 'Text tokenization management' },
+    { name: 'Zion AI Preprocessing Manager', href: '/zion-ai-preprocessing-manager', icon: Database, description: 'Text preprocessing management' },
+    { name: 'Zion AI Normalization Manager', href: '/zion-ai-normalization-manager', icon: Database, description: 'Text normalization management' },
+    { name: 'Zion AI Stemming Manager', href: '/zion-ai-stemming-manager', icon: FileText, description: 'Text stemming management' },
+    { name: 'Zion AI Lemmatization Manager', href: '/zion-ai-lemmatization-manager', icon: FileText, description: 'Text lemmatization management' },
+    { name: 'Zion AI Stop Words Manager', href: '/zion-ai-stopwords-manager', icon: FileText, description: 'Stop words management' },
+    { name: 'Zion AI N-gram Manager', href: '/zion-ai-ngram-manager', icon: FileText, description: 'N-gram analysis management' },
+    { name: 'Zion AI TF-IDF Manager', href: '/zion-ai-tfidf-manager', icon: BarChart, description: 'TF-IDF analysis management' },
+    { name: 'Zion AI Word2Vec Manager', href: '/zion-ai-word2vec-manager', icon: Brain, description: 'Word2Vec model management' },
+    { name: 'Zion AI GloVe Manager', href: '/zion-ai-glove-manager', icon: Brain, description: 'GloVe model management' },
+    { name: 'Zion AI FastText Manager', href: '/zion-ai-fasttext-manager', icon: Brain, description: 'FastText model management' },
+    { name: 'Zion AI ELMo Manager', href: '/zion-ai-elmo-manager', icon: Brain, description: 'ELMo model management' },
+    { name: 'Zion AI ULMFiT Manager', href: '/zion-ai-ulmfit-manager', icon: Brain, description: 'ULMFiT model management' }
   ];
 
   const emergingTech = [
@@ -215,14 +392,6 @@ const Navigation: React.FC = () => {
     { name: 'IoT Integration', href: '/iot-integration', icon: Wifi, description: 'Internet of Things' },
     { name: 'Machine Learning', href: '/machine-learning', icon: Brain, description: 'Advanced ML algorithms' }
   ];
-=======
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
-  const toggleServices = () => setServicesOpen(!servicesOpen);
-  const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen);
-  const toggleItServices = () => setItServicesOpen(!itServicesOpen);
-  const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen);
->>>>>>> cursor/website-audit-and-update-with-deployment-3540
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -232,7 +401,6 @@ const Navigation: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-<<<<<<< HEAD
             <Link to="/" className="flex items-center space-x-3 group">
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">
                 <Brain className="w-6 h-6 text-white" />
@@ -240,17 +408,11 @@ const Navigation: React.FC = () => {
               <div className="flex flex-col">
                 <span className="text-2xl font-bold text-white neon-text-enhanced group-hover:glow">Zion Tech Group</span>
                 <span className="text-xs text-cyan-400 font-medium tracking-wider">AI & IT SOLUTIONS</span>
-=======
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
->>>>>>> cursor/website-audit-and-update-with-deployment-3540
               </div>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-<<<<<<< HEAD
           <div className="hidden lg:flex items-center space-x-8">
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Home
@@ -302,96 +464,6 @@ const Navigation: React.FC = () => {
                   </div>
                 </div>
               )}
-=======
-          <div className="hidden lg:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              <Link to="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Home
-              </Link>
-              
-              {/* Services Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={toggleServices}
-                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
-                >
-                  Services
-                  <ChevronDown className="ml-1 h-4 w-4" />
-                </button>
-                
-                {servicesOpen && (
-                  <div className="absolute left-0 mt-2 w-64 bg-slate-800 rounded-md shadow-lg py-1 z-50">
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">AI Services</div>
-                    <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
-                      <Brain className="w-4 h-4 inline mr-2" />
-                      AI Solutions
-                    </Link>
-                    <Link to="/ai-marketing" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
-                      <TrendingUp className="w-4 h-4 inline mr-2" />
-                      AI Marketing
-                    </Link>
-                    <Link to="/ai-customer-support" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
-                      <Users className="w-4 h-4 inline mr-2" />
-                      AI Customer Support
-                    </Link>
-                    <Link to="/ai-data-analytics" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
-                      <BarChart className="w-4 h-4 inline mr-2" />
-                      AI Data Analytics
-                    </Link>
-                    
-                    <div className="border-t border-gray-700 my-1"></div>
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">IT Services</div>
-                    <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
-                      <Cloud className="w-4 h-4 inline mr-2" />
-                      IT Solutions
-                    </Link>
-                    <Link to="/cloud-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
-                      <Cloud className="w-4 h-4 inline mr-2" />
-                      Cloud Services
-                    </Link>
-                    <Link to="/cybersecurity" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
-                      <Shield className="w-4 h-4 inline mr-2" />
-                      Cybersecurity
-                    </Link>
-                    <Link to="/devops" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
-                      <Settings className="w-4 h-4 inline mr-2" />
-                      DevOps & CI/CD
-                    </Link>
-                    
-                    <div className="border-t border-gray-700 my-1"></div>
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Micro SaaS</div>
-                    <Link to="/micro-saas" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
-                      <Zap className="w-4 h-4 inline mr-2" />
-                      Micro SaaS Solutions
-                    </Link>
-                  </div>
-                )}
-              </div>
-
-              <Link to="/about" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                About
-              </Link>
-              
-              <Link to="/case-studies" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Case Studies
-              </Link>
-              
-              <Link to="/blog" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Blog
-              </Link>
-              
-              <Link to="/pricing" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Pricing
-              </Link>
-              
-              <Link to="/contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Contact
-              </Link>
-              
-              <Link to="/consultation" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 transform hover:scale-105">
-                Free Consultation
-              </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-3540
             </div>
 
             {/* IT Services Dropdown */}
@@ -551,7 +623,6 @@ const Navigation: React.FC = () => {
             </Link>
           </div>
 
-<<<<<<< HEAD
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
@@ -569,11 +640,7 @@ const Navigation: React.FC = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
-=======
-          {/* Mobile menu button */}
           <div className="lg:hidden flex items-center space-x-2">
->>>>>>> cursor/website-audit-and-update-with-deployment-3540
             <button
               onClick={toggleSidebar}
               className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
@@ -583,157 +650,6 @@ const Navigation: React.FC = () => {
             </button>
           </div>
         </div>
-
-<<<<<<< HEAD
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
-            <div className="pt-4 space-y-4">
-              <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Home
-              </Link>
-              
-              {/* Mobile AI Services */}
-              <div>
-                <button
-                  onClick={toggleAiServices}
-                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-                  <span className="flex items-center space-x-2">
-                    <Brain className="w-4 h-4" />
-                    <span>AI Services</span>
-                  </span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {aiServicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {aiServices.slice(0, 8).map((service) => (
-                      <Link
-                        key={service.name}
-                        to={service.href}
-                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                        onClick={closeAllMenus}
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                    <Link
-                      to="/ai-services"
-                      className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                      onClick={closeAllMenus}
-                    >
-                      View All AI Services →
-                    </Link>
-                  </div>
-                )}
-              </div>
-
-              {/* Mobile IT Services */}
-              <div>
-                <button
-                  onClick={toggleItServices}
-                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-                  <span className="flex items-center space-x-2">
-                    <Cloud className="w-4 h-4" />
-                    <span>IT Services</span>
-                  </span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {itServicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {itServices.map((service) => (
-                      <Link
-                        key={service.name}
-                        to={service.href}
-                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                        onClick={closeAllMenus}
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Mobile Micro SAAS */}
-              <div>
-                <button
-                  onClick={toggleMicroSaas}
-                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-                  <span className="flex items-center space-x-2">
-                    <Cpu className="w-4 h-4" />
-                    <span>Micro SAAS</span>
-                  </span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {microSaasOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {microSaasServices.slice(0, 8).map((service) => (
-                      <Link
-                        key={service.name}
-                        to={service.href}
-                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                        onClick={closeAllMenus}
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                    <Link
-                      to="/micro-saas"
-                      className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                      onClick={closeAllMenus}
-                    >
-                      View All Micro SAAS →
-                    </Link>
-                  </div>
-                )}
-              </div>
-
-              <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                About
-              </Link>
-              <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Services
-              </Link>
-              <Link to="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Pricing
-              </Link>
-              <Link to="/case-studies" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Case Studies
-              </Link>
-              <Link to="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Blog
-              </Link>
-              <Link to="/tutorials" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Tutorials
-              </Link>
-              <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Contact
-              </Link>
-
-              {/* Mobile Contact Info */}
-              <div className="pt-4 border-t border-cyan-500/20 space-y-2">
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium">
-                  <Phone className="w-4 h-4" />
-                  <span>(302) 464-0950</span>
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium">
-                  <Mail className="w-4 h-4" />
-                  <span>kleber@ziontechgroup.com</span>
-                </a>
-                <div className="flex items-center space-x-2 text-gray-400">
-                  <MapPin className="w-4 h-4" />
-                  <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3540
       </div>
       
       {/* Sidebar */}
