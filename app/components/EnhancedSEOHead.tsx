@@ -3,12 +3,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const EnhancedSEOHead: React.FC = () => {
-  return (;
-const EnhancedSEOHead: React.FC = () => {
-return (
+  return (
     <Helmet>
-);
-}
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
