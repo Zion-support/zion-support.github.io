@@ -7,7 +7,11 @@ import Footer from '../components/Footer';
 
 const DemoPage: React.FC = () => {
   const [selectedDemo, setSelectedDemo] = useState('ai-chatbot');
-  const [formData, setFormData] = useState()
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
