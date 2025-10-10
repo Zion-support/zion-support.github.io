@@ -1,39 +1,20 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Users, Shield } from 'lucide-react';
-
-const ConsultationPage: React.FC = () => {
-  const services = [
-    {
-      title: 'AI Strategy Consultation',
-      description: 'Develop a comprehensive AI strategy tailored to your business needs.',
-      features: ['AI readiness assessment', 'Technology roadmap', 'ROI analysis', 'Implementation planning'],
-      price: 'Starting at $2,500',
-      duration: '2-4 weeks'
-    },
-    {
-      title: 'Cloud Migration Planning',
-      description: 'Plan and execute a seamless migration to the cloud.',
-      features: ['Infrastructure assessment', 'Migration strategy', 'Security planning', 'Cost optimization'],
-      price: 'Starting at $5,000',
-      duration: '4-8 weeks'
-    },
-    {
-      title: 'Cybersecurity Audit',
-      description: 'Comprehensive security assessment and recommendations.',
-      features: ['Vulnerability assessment', 'Compliance review', 'Security policies', 'Training recommendations'],
-      price: 'Starting at $3,500',
-      duration: '2-3 weeks'
-=======
 import { Link } from 'react-router-dom';
 import { Phone, Mail, Calendar, CheckCircle, ArrowRight, Star, Shield, Users } from 'lucide-react';
 
 const ConsultationPage: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    consultationType: '',
+    message: ''
+  });
+
   const consultationTypes = [
     {
       title: 'AI Strategy Consultation',
@@ -49,252 +30,289 @@ const ConsultationPage: React.FC = () => {
     },
     {
       title: 'Cloud Migration Planning',
-      description: 'Comprehensive cloud strategy and migration planning for your infrastructure.',
+      description: 'Plan and execute a seamless migration to the cloud with minimal disruption.',
       duration: '4-8 hours',
-      price: 'Starting at $400/hour',
+      price: 'Starting at $750/hour',
       features: [
-        'Current infrastructure analysis',
-        'Cloud platform selection',
+        'Infrastructure assessment',
         'Migration strategy development',
-        'Cost optimization recommendations'
+        'Security and compliance planning',
+        'Cost optimization analysis'
       ]
     },
     {
       title: 'Cybersecurity Audit',
-      description: 'Complete security assessment and recommendations for your digital infrastructure.',
-      duration: '6-12 hours',
+      description: 'Comprehensive security assessment to protect your digital assets.',
+      duration: '3-6 hours',
       price: 'Starting at $600/hour',
       features: [
-        'Security vulnerability assessment',
+        'Vulnerability assessment',
         'Compliance review',
         'Security policy development',
-        'Incident response planning'
+        'Staff training recommendations'
       ]
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
     }
   ];
 
-  const process = [
-    {
-      step: '1',
-<<<<<<< HEAD
-      title: 'Initial Consultation',
-      description: 'We discuss your business goals and challenges to understand your needs.',
-      icon: Users
-    },
-    {
-      step: '2',
-      title: 'Assessment & Analysis',
-      description: 'We analyze your current systems and identify opportunities for improvement.',
-      icon: Shield
-    },
-    {
-      step: '3',
-      title: 'Strategy Development',
-      description: 'We create a customized strategy and implementation plan for your business.',
-      icon: CheckCircle
-    },
-    {
-      step: '4',
-      title: 'Implementation Support',
-      description: 'We provide ongoing support to ensure successful implementation.',
-      icon: ArrowRight
-=======
-      title: 'Initial Assessment',
-      description: 'We analyze your current technology landscape and business objectives.'
-    },
-    {
-      step: '2',
-      title: 'Strategy Development',
-      description: 'Create a customized strategy based on your specific needs and goals.'
-    },
-    {
-      step: '3',
-      title: 'Implementation Plan',
-      description: 'Develop a detailed roadmap with timelines and milestones.'
-    },
-    {
-      step: '4',
-      title: 'Ongoing Support',
-      description: 'Provide continuous guidance and support throughout implementation.'
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
-    }
+  const benefits = [
+    'Expert guidance from certified professionals',
+    'Customized solutions for your business',
+    'Proven methodologies and best practices',
+    'Ongoing support and follow-up',
+    'Cost-effective implementation strategies',
+    'Risk mitigation and compliance assurance'
   ];
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log('Form submitted:', formData);
+  };
 
   return (
     <>
       <Helmet>
-        <title>Consultation Services | Zion Tech Group</title>
-        <meta name="description" content="Expert consultation services for AI strategy, cloud migration, and cybersecurity. Get personalized guidance for your technology needs." />
-        <meta name="keywords" content="AI consultation, cloud migration, cybersecurity audit, technology consulting, IT strategy" />
+        <title>Free Consultation | Zion Tech Group - Expert AI & IT Consulting</title>
+        <meta name="description" content="Get a free consultation with our AI and IT experts. Discover how our solutions can transform your business operations and drive growth." />
+        <meta name="keywords" content="free consultation, AI consulting, IT consulting, business transformation, technology strategy" />
       </Helmet>
 
-<<<<<<< HEAD
-      <Navigation />
-      
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Expert Consultation Services
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+        {/* Hero Section */}
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/20 via-transparent to-transparent"></div>
+          
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Free Expert Consultation
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Get personalized guidance and strategic insights to transform your business with cutting-edge technology.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  
-                  <ul className="space-y-3 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="border-t border-white/10 pt-6">
-                    <div className="flex justify-between items-center mb-4">
-                      <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                      <span className="text-gray-400 flex items-center">
-                        <Clock className="w-4 h-4 mr-2" />
-                        {service.duration}
-                      </span>
-                    </div>
-                    <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                      Get Started
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-<<<<<<< HEAD
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8">Our Consultation Process</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {process.map((step, index) => (
-                  <div key={index} className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <step.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-2xl font-bold text-cyan-400 mb-2">{step.step}</div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                    <p className="text-gray-300 text-sm">{step.description}</p>
-                  </div>
-                ))}
-=======
-            {/* Process Section */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-white mb-4">
-                  Our Consultation Process
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  A structured approach to delivering the best consultation experience.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {process.map((step, index) => (
-                  <div key={index} className="text-center">
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl font-bold text-white">{step.step}</span>
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                    <p className="text-gray-300">{step.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Contact Information */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-                <p className="text-gray-300 mb-8">
-                  Contact our experts to discuss your specific needs and schedule a consultation.
-                </p>
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
-              </div>
-            </div>
-
-<<<<<<< HEAD
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
-              <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Schedule a free consultation to discuss your technology needs and discover how we can help.
+                Get personalized advice from our AI and IT experts. Discover how our solutions 
+                can transform your business and drive measurable results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                  Schedule Free Consultation
-                </button>
-                <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300">
-                  Download Our Guide
-                </button>
-=======
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Phone className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-                  <p className="text-gray-300 mb-2">(302) 464-0950</p>
-                  <p className="text-sm text-gray-400">Mon-Fri: 9AM-6PM EST</p>
-                </div>
-
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Mail className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-                  <p className="text-gray-300 mb-2">kleber@ziontechgroup.com</p>
-                  <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
-                </div>
-
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Calendar className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Schedule Online</h3>
-                  <p className="text-gray-300 mb-2">Book a consultation</p>
-                  <p className="text-sm text-gray-400">Available 24/7</p>
-                </div>
-              </div>
-
-              <div className="text-center mt-8">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
                 >
-                  Schedule Your Consultation
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  Schedule Now
+                  <Calendar className="w-5 h-5 ml-2" />
                 </Link>
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
+                <a
+                  href="tel:+13024640950"
+                  className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call (302) 464-0950
+                </a>
               </div>
             </div>
           </div>
-        </section>
-      </div>
-<<<<<<< HEAD
+        </div>
 
-      <Footer />
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
+        {/* Consultation Types */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Consultation Services
+            </h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Choose the consultation type that best fits your needs and schedule
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {consultationTypes.map((consultation, index) => (
+              <div
+                key={index}
+                className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
+              >
+                <h3 className="text-xl font-bold text-white mb-4">{consultation.title}</h3>
+                <p className="text-gray-300 mb-6">{consultation.description}</p>
+                
+                <div className="space-y-2 mb-6">
+                  {consultation.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+
+                <div className="border-t border-white/10 pt-6">
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="text-cyan-400 font-semibold">{consultation.price}</span>
+                    <span className="text-gray-400 text-sm">{consultation.duration}</span>
+                  </div>
+                  <button className="w-full py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors font-medium">
+                    Book This Consultation
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Benefits Section */}
+        <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-t border-white/10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Why Choose Our Consultation?
+              </h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Our expert consultants bring years of experience and proven methodologies to help you succeed
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="flex items-start space-x-3 p-4 bg-white/5 rounded-xl"
+                >
+                  <Star className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Contact Form */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Request Your Free Consultation
+              </h2>
+              <p className="text-gray-300">
+                Fill out the form below and we'll get back to you within 24 hours
+              </p>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    placeholder="Your full name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    placeholder="your@email.com"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    placeholder="Your company name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    placeholder="(555) 123-4567"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="consultationType" className="block text-sm font-medium text-gray-300 mb-2">
+                  Consultation Type
+                </label>
+                <select
+                  id="consultationType"
+                  name="consultationType"
+                  value={formData.consultationType}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                >
+                  <option value="">Select consultation type</option>
+                  <option value="ai-strategy">AI Strategy Consultation</option>
+                  <option value="cloud-migration">Cloud Migration Planning</option>
+                  <option value="cybersecurity">Cybersecurity Audit</option>
+                  <option value="general">General IT Consultation</option>
+                </select>
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  rows={4}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  placeholder="Tell us about your project and how we can help..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center"
+              >
+                Request Free Consultation
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
 
-<<<<<<< HEAD
 export default ConsultationPage;
-=======
-export default ConsultationPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-3150

@@ -17,32 +17,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableFocusManagement = true
 }) => {
   useEffect(() => {
-<<<<<<< HEAD
-    // Keyboard navigation enhancements
-    if (enableKeyboardNavigation && typeof window !== 'undefined') {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        // Skip to main content
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
-          if (skipLink) {
-            skipLink.focus();
-            event.preventDefault();
-          }
-        }
-
-        // Close dropdowns with Escape key
-        if (event.key === 'Escape') {
-          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
-          openDropdowns.forEach(dropdown => {
-            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
-          });
-        }
-      };
-
-      document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
-    }
-=======
     // Add skip links
     const addSkipLinks = () => {
       if (document.querySelector('.skip-links')) return;
@@ -61,6 +35,23 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
+      }
+      
+      // Skip to main content
+      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
+        const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
+        if (skipLink) {
+          skipLink.focus();
+          event.preventDefault();
+        }
+      }
+
+      // Close dropdowns with Escape key
+      if (event.key === 'Escape') {
+        const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
+        openDropdowns.forEach(dropdown => {
+          (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
+        });
       }
     };
 
@@ -149,31 +140,33 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     };
 
     // Initialize accessibility features
-    addSkipLinks();
-    addAccessibilityStyles();
-    addAriaLabels();
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-
-    // Re-run aria labels when content changes
-    const observer = new MutationObserver(() => {
+    if (typeof window !== 'undefined') {
+      addSkipLinks();
+      addAccessibilityStyles();
       addAriaLabels();
-    });
+      document.addEventListener('keydown', handleKeyDown);
+      document.addEventListener('mousedown', handleMouseDown);
 
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
+      // Re-run aria labels when content changes
+      const observer = new MutationObserver(() => {
+        addAriaLabels();
+      });
 
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-      observer.disconnect();
-    };
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+        document.removeEventListener('mousedown', handleMouseDown);
+        observer.disconnect();
+      };
+    }
   }, []);
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
 
-    // Focus management
+  // Focus management
+  useEffect(() => {
     if (enableFocusManagement && typeof window !== 'undefined') {
       const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
       
@@ -208,8 +201,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const modals = document.querySelectorAll('[role="dialog"], [aria-modal="true"]');
       modals.forEach(modal => trapFocus(modal as HTMLElement));
     }
+  }, [enableFocusManagement]);
 
-    // Screen reader support
+  // Screen reader support
+  useEffect(() => {
     if (enableScreenReaderSupport && typeof window !== 'undefined') {
       // Add live region for dynamic content updates
       const liveRegion = document.createElement('div');
@@ -247,8 +242,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         history.replaceState = originalReplaceState;
       };
     }
+  }, [enableScreenReaderSupport]);
 
-    // High contrast mode support
+  // High contrast mode support
+  useEffect(() => {
     if (enableHighContrast && typeof window !== 'undefined') {
       const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
       
@@ -265,7 +262,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
       return () => prefersHighContrast.removeEventListener('change', updateHighContrast);
     }
-  }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement]);
+  }, [enableHighContrast]);
 
   return <React.Fragment>{children}</React.Fragment>;
 };
