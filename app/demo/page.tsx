@@ -1,356 +1,354 @@
 'use client';
-import React, { useState } from 'react';
-import { Play, Calendar, Phone, Mail, CheckCircle, ArrowRight, Star, Users, Clock, Shield } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+
+import React from 'react';
+import { 
+  Play,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Clock,
+  Users,
+  Zap,
+  Brain,
+  Cloud,
+  Code
+} from 'lucide-react';
 
 const DemoPage: React.FC = () => {
-  const [selectedDemo, setSelectedDemo] = useState('ai-services');
-
   const demos = [
     {
-      id: 'ai-services',
-      title: 'AI Services Demo',
-      description: 'Experience our AI-powered solutions including content generation, analytics, and automation',
-      duration: '30 minutes',
+      title: "AI Workflow Automation",
+      description: "See how our AI can automate complex business processes",
+      duration: "5 min",
+      category: "AI Services",
+      icon: Brain,
+      color: "from-purple-500 to-pink-600",
       features: [
-        'AI Content Generation',
-        'Predictive Analytics',
-        'Workflow Automation',
-        'Natural Language Processing'
-      ],
-      icon: '🤖'
+        "Visual workflow builder",
+        "AI-powered decision making",
+        "Real-time monitoring",
+        "Exception handling"
+      ]
     },
     {
-      id: 'it-services',
-      title: 'IT Services Demo',
-      description: 'See our comprehensive IT solutions including cloud migration, security, and infrastructure',
-      duration: '45 minutes',
-      features: [
-        'Cloud Migration Tools',
-        'Security Monitoring',
-        'Infrastructure Management',
-        'DevOps Automation'
-      ],
-      icon: '☁️'
-    },
-    {
-      id: 'micro-saas',
-      title: 'Micro SAAS Demo',
-      description: 'Explore our micro SAAS tools for project management, content creation, and business automation',
-      duration: '25 minutes',
-      features: [
-        'Project Management',
-        'Content Creation',
-        'Email Marketing',
-        'Financial Analytics'
-      ],
-      icon: '💻'
-    },
-    {
-      id: 'custom',
-      title: 'Custom Demo',
-      description: 'Get a personalized demo tailored to your specific business needs and requirements',
-      duration: '60 minutes',
-      features: [
-        'Customized Solution',
-        'Industry-Specific Features',
-        'Integration Examples',
-        'ROI Analysis'
-      ],
-      icon: '🎯'
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: Play,
-      title: 'Live Demonstration',
-      description: 'See our solutions in action with real-time demonstrations'
-    },
-    {
+      title: "AI Customer Support",
+      description: "Experience our intelligent customer support system",
+      duration: "3 min",
+      category: "AI Services",
       icon: Users,
-      title: 'Expert Guidance',
-      description: 'Get insights from our technical experts and solution architects'
+      color: "from-cyan-500 to-blue-600",
+      features: [
+        "Natural language processing",
+        "Multi-language support",
+        "Sentiment analysis",
+        "Escalation management"
+      ]
     },
     {
-      icon: CheckCircle,
-      title: 'Q&A Session',
-      description: 'Ask questions and get detailed answers about our solutions'
+      title: "AI Data Analytics",
+      description: "Explore our advanced analytics dashboard",
+      duration: "4 min",
+      category: "AI Services",
+      icon: Zap,
+      color: "from-green-500 to-emerald-600",
+      features: [
+        "Real-time dashboards",
+        "Predictive insights",
+        "Custom reports",
+        "Data visualization"
+      ]
     },
     {
-      icon: Star,
-      title: 'Customized Experience',
-      description: 'Tailored demo based on your specific business needs'
+      title: "Cloud Migration",
+      description: "Learn about our cloud migration process",
+      duration: "6 min",
+      category: "IT Services",
+      icon: Cloud,
+      color: "from-orange-500 to-red-600",
+      features: [
+        "Zero-downtime migration",
+        "Security assessment",
+        "Performance optimization",
+        "24/7 support"
+      ]
     }
   ];
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Solutions',
-      role: 'CTO',
-      content: 'The demo was incredibly insightful. We could see exactly how the AI solutions would integrate with our existing systems.',
+      name: "Sarah Chen",
+      role: "CTO, TechCorp",
+      content: "The demo showed us exactly how AI could transform our operations. The ROI was clear from day one.",
       rating: 5
     },
     {
-      name: 'Michael Chen',
-      company: 'InnovateLab',
-      role: 'CEO',
-      content: 'The custom demo helped us understand the ROI potential. The team was knowledgeable and answered all our questions.',
+      name: "Michael Rodriguez",
+      role: "VP Engineering, DataFlow",
+      content: "The AI analytics demo was incredible. We could see the potential immediately.",
       rating: 5
     },
     {
-      name: 'Emily Rodriguez',
-      company: 'Global Dynamics',
-      role: 'Operations Director',
-      content: 'The micro SAAS demo showed us tools we never knew we needed. The implementation process was clearly explained.',
+      name: "Jennifer Walsh",
+      role: "Operations Director, GreenTech",
+      content: "The workflow automation demo saved us hours of explanation. Our team was sold instantly.",
       rating: 5
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      <main className="container mx-auto px-4 py-16 pt-24">
-        {/* Hero Section */}
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
-            Book a Demo
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Interactive Demos
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            See our AI and IT solutions in action. Schedule a personalized demo to discover how we can transform your business.
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Experience our AI and IT solutions firsthand. See how they can transform your business.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
-              <Play className="w-5 h-5 text-cyan-400" />
-              <span className="text-white font-medium">Live Demo</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
-              <Users className="w-5 h-5 text-purple-400" />
-              <span className="text-white font-medium">Expert Guidance</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-              <CheckCircle className="w-5 h-5 text-green-400" />
-              <span className="text-white font-medium">Q&A Session</span>
-            </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
+              <Play className="w-5 h-5 mr-2" />
+              Start Free Demo
+            </button>
+            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+              Schedule Live Demo
+            </button>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Demo Types */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Choose Your Demo</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {demos.map((demo) => (
-              <div
-                key={demo.id}
-                onClick={() => setSelectedDemo(demo.id)}
-                className={`cyber-card p-6 cursor-pointer transition-all duration-300 ${
-                  selectedDemo === demo.id ? 'ring-2 ring-cyan-400 bg-cyan-500/10' : 'hover:bg-slate-700/50'
-                }`}
-              >
-                <div className="text-center">
-                  <div className="text-4xl mb-4">{demo.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-2">{demo.title}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{demo.description}</p>
-                  <div className="flex items-center justify-center text-cyan-400 text-sm mb-4">
-                    <Clock className="w-4 h-4 mr-1" />
-                    {demo.duration}
+      {/* Demo Categories */}
+      <section className="py-16 bg-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Choose Your Demo
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Select from our interactive demos to see our solutions in action.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {demos.map((demo, index) => (
+              <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
+                <div className="flex items-start space-x-6">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${demo.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
+                    <demo.icon className="w-8 h-8 text-white" />
                   </div>
-                  <ul className="space-y-1 text-xs text-gray-400">
-                    {demo.features.map((feature, index) => (
-                      <li key={index} className="flex items-center">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-3 mb-3">
+                      <h3 className="text-xl font-bold text-white">{demo.title}</h3>
+                      <span className="bg-cyan-500/20 text-cyan-400 text-xs font-medium px-2 py-1 rounded">
+                        {demo.category}
+                      </span>
+                    </div>
+                    
+                    <p className="text-gray-300 mb-4">{demo.description}</p>
+                    
+                    <div className="flex items-center space-x-4 mb-6">
+                      <div className="flex items-center space-x-2 text-sm text-gray-400">
+                        <Clock className="w-4 h-4" />
+                        <span>{demo.duration}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-2 mb-6">
+                      {demo.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center space-x-3">
+                          <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                          <span className="text-gray-300 text-sm">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <button className={`w-full bg-gradient-to-r ${demo.color} text-white font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition-all duration-300 flex items-center justify-center`}>
+                      <Play className="w-4 h-4 mr-2" />
+                      Start Demo
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Demo Benefits */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">What to Expect</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-white" />
+      {/* Live Demo Section */}
+      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Schedule a Live Demo
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Get a personalized demonstration with our experts. See how our solutions can address your specific needs.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-6">What to Expect</h3>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+                    1
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3>
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Needs Assessment</h4>
+                    <p className="text-gray-300">We'll discuss your specific requirements and challenges.</p>
+                  </div>
                 </div>
-              ))}
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+                    2
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Custom Demo</h4>
+                    <p className="text-gray-300">We'll show you exactly how our solutions address your needs.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+                    3
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Q&A Session</h4>
+                    <p className="text-gray-300">Ask questions and get detailed answers from our experts.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+                    4
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Next Steps</h4>
+                    <p className="text-gray-300">We'll provide a customized proposal and implementation plan.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="cyber-card p-8">
+              <h3 className="text-2xl font-bold text-white mb-6">Schedule Your Demo</h3>
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-gray-300 text-sm font-medium mb-2">First Name</label>
+                    <input
+                      type="text"
+                      className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                      placeholder="John"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-gray-300 text-sm font-medium mb-2">Last Name</label>
+                    <input
+                      type="text"
+                      className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                      placeholder="Doe"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label className="block text-gray-300 text-sm font-medium mb-2">Email</label>
+                  <input
+                    type="email"
+                    className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                    placeholder="john@company.com"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-gray-300 text-sm font-medium mb-2">Company</label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                    placeholder="Your Company"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-gray-300 text-sm font-medium mb-2">Demo Interest</label>
+                  <select className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
+                    <option>AI Workflow Automation</option>
+                    <option>AI Customer Support</option>
+                    <option>AI Data Analytics</option>
+                    <option>Cloud Migration</option>
+                    <option>Custom Solution</option>
+                  </select>
+                </div>
+                
+                <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                  Schedule Demo
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </button>
+              </form>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Testimonials */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">What Our Clients Say</h2>
+      {/* Testimonials */}
+      <section className="py-16 bg-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See what our clients have to say about our demos and solutions.
+            </p>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="cyber-card p-6">
-                <div className="flex justify-center mb-4">
-                  {[...Array(5)].map((_, i) => (
+              <div key={index} className="cyber-card p-8">
+                <div className="flex items-center space-x-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-300 italic mb-4">"{testimonial.content}"</p>
-                <div className="text-center">
-                  <h4 className="text-white font-bold">{testimonial.name}</h4>
-                  <p className="text-cyan-400 text-sm">{testimonial.role}</p>
-                  <p className="text-gray-400 text-sm">{testimonial.company}</p>
+                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                <div>
+                  <div className="text-white font-semibold">{testimonial.name}</div>
+                  <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                 </div>
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Booking Form */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Schedule Your Demo</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Demo Information</h3>
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Selected Demo</label>
-                    <div className="bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white">
-                      {demos.find(d => d.id === selectedDemo)?.title}
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Duration</label>
-                    <div className="bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white">
-                      {demos.find(d => d.id === selectedDemo)?.duration}
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Company Name</label>
-                    <input
-                      type="text"
-                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
-                      placeholder="Your company name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
-                    <input
-                      type="text"
-                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                    <input
-                      type="email"
-                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
-                      placeholder="your.email@company.com"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
-                    <input
-                      type="tel"
-                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
-                      placeholder="+1 (555) 123-4567"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Preferred Time</h3>
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Date</label>
-                    <input
-                      type="date"
-                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Time</label>
-                    <select className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400">
-                      <option>9:00 AM - 10:00 AM</option>
-                      <option>10:00 AM - 11:00 AM</option>
-                      <option>11:00 AM - 12:00 PM</option>
-                      <option>1:00 PM - 2:00 PM</option>
-                      <option>2:00 PM - 3:00 PM</option>
-                      <option>3:00 PM - 4:00 PM</option>
-                      <option>4:00 PM - 5:00 PM</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Time Zone</label>
-                    <select className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400">
-                      <option>Eastern Time (ET)</option>
-                      <option>Central Time (CT)</option>
-                      <option>Mountain Time (MT)</option>
-                      <option>Pacific Time (PT)</option>
-                      <option>GMT</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Additional Notes</label>
-                    <textarea
-                      rows={4}
-                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
-                      placeholder="Tell us about your specific needs or questions..."
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="mt-8 text-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-bold hover:from-cyan-600 hover:to-purple-700 transition-all inline-flex items-center">
-                <Calendar className="w-5 h-5 mr-2" />
-                Schedule Demo
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-            </div>
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to See It in Action?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Experience the power of our AI and IT solutions. Start your free demo today.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+              Start Free Demo
+            </button>
+            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+              Contact Sales
+            </button>
           </div>
-        </section>
-
-        {/* Contact Information */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Need Help Scheduling?</h2>
-            <p className="text-gray-300 mb-6">
-              If you need assistance scheduling your demo or have questions about our solutions, our team is here to help.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-                <p className="text-gray-300 mb-2">+1 (302) 464-0950</p>
-                <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
-              </div>
-              <div className="text-center">
-                <Mail className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
-                <p className="text-gray-300 mb-2">demo@ziontechgroup.com</p>
-                <p className="text-sm text-gray-400">Response within 24 hours</p>
-              </div>
-              <div className="text-center">
-                <Calendar className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-lg font-semibold text-white mb-2">Book Online</h3>
-                <p className="text-gray-300 mb-2">Instant scheduling</p>
-                <p className="text-sm text-gray-400">Available 24/7</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <Footer />
+        </div>
+      </section>
     </div>
   );
 };
