@@ -1,10 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-constconst EnhancedSkipLink: React.FC;
-
-export default EnhancedSkipLink
-=======
 const SkipLink: React.FC = () => {
   return (
     <a 
@@ -17,4 +12,3 @@ const SkipLink: React.FC = () => {
 };
 
 export default SkipLink;
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
