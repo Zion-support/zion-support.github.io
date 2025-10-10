@@ -3,8 +3,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, ExternalLink } from 'lucide-react'
+import Footer from '../components/Footer';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const PartnersPage: React.FC = () => {
   const partners = [
     {
@@ -43,9 +44,8 @@ const PartnersPage: React.FC = () => {
       description: 'Partner for IT service management and workflow automation',
       category: 'IT Management'
     }
-  ]
-
-  const benefits = [
+  ];
+const benefits = [
     {
       title: 'Certified Expertise',
       description: 'Our team holds certifications from leading technology partners',
@@ -66,16 +66,15 @@ const PartnersPage: React.FC = () => {
       description: 'Leverage partner pricing and volume discounts for your projects',
       icon: CheckCircle
     }
-  ]
-
-  const categories = ['All', 'Cloud & AI', 'Hardware & AI', 'Business Software', 'IT Management']
+  ];
+const categories = ['All', 'Cloud & AI', 'Hardware & AI', 'Business Software', 'IT Management']
 
   return (
     <>
       <Helmet>
         <title>Partners | Zion Tech Group</title>
-        <meta name="description" content="Learn about our technology partnerships and how they benefit our clients with certified expertise and priority support." />
-        <meta name="keywords" content="partners, technology partnerships, Microsoft, AWS, Google Cloud, NVIDIA, certified expertise" />
+        <meta name="description" content="Learn about our technology partnerships and how they benefit our clients with certified expertise and priority support."   />
+        <meta name="keywords" content="partners, technology partnerships, Microsoft, AWS, Google Cloud, NVIDIA, certified expertise"   />
       </Helmet>
 
       <Navigation />
@@ -159,6 +158,6 @@ const PartnersPage: React.FC = () => {
       <Footer />
     </>
   )
-}
+};
 
 export default PartnersPage

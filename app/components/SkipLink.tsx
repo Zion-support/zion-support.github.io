@@ -9,6 +9,6 @@ const SkipLink: React.FC = () => {
       Skip to main content
     </a>
   )
-}
+};
 
 export default SkipLink

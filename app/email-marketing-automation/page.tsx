@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
 import {
     Mail,
   Target,
@@ -24,6 +24,7 @@ import {
   }
 } from 'lucide-react'
 const EmailMarketingAutomationPage: React.FC = () => {
+  
 const features = [
     {
       icon: Mail,
@@ -54,13 +55,13 @@ const benefits = [
     'Improve customer retention',
     'Generate more qualified leads',
     'Save time and resources'
-  ]
+  ];
 return (
     <>
       <Helmet>
         <title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
-        <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+        <meta name="description" content="Advanced AI solutions"   />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions"   />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -152,5 +153,6 @@ return (
       </div>
     </>
   )
-}
+};
+
 export default EmailMarketingAutomationPage

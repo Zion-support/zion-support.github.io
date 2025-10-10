@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { Home, Users, DollarSign, BarChart, Shield, Zap } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const PropertyManagementAIPage: React.FC = () => {
+  
   const features = [
     { icon: Home, title: 'Property Portfolio Management', description: 'Comprehensive management of multiple properties with AI insights.' },
     { icon: Users, title: 'Tenant Management', description: 'Automated tenant screening, communication, and relationship management.' },
@@ -10,13 +12,13 @@ const PropertyManagementAIPage: React.FC = () => {
     { icon: BarChart, title: 'Financial Analytics', description: 'Advanced financial reporting and property performance analytics.' },
     { icon: Shield, title: 'Maintenance Tracking', description: 'Predictive maintenance and automated work order management.' },
     { icon: Zap, title: 'Automation', description: 'Automated rent collection, lease renewals, and property operations.' }
-  ]
-  return (
+  ];
+return (
     <React.Fragment>
       <Helmet>
         <title>Property Management AI | Zion Tech Group - Intelligent Real Estate Management</title>
-        <meta name="description" content="Transform your property management with AI-powered tools. Optimize rent, manage tenants, and maximize property value." />
-        <meta name="keywords" content="property management AI, real estate software, tenant management, rent optimization, property analytics" />
+        <meta name="description" content="Transform your property management with AI-powered tools. Optimize rent, manage tenants, and maximize property value."   />
+        <meta name="keywords" content="property management AI, real estate software, tenant management, rent optimization, property analytics"   />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
@@ -41,5 +43,6 @@ const PropertyManagementAIPage: React.FC = () => {
       </div>
     </React.Fragment>
   )
-}
+};
+
 export default PropertyManagementAIPage

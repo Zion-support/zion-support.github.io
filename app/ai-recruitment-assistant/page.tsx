@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { Users, Search, Brain, Target, CheckCircle, ArrowRight, Zap, Shield, BarChart } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const AIRecruitmentAssistantPage: React.FC = () => {
+  
   const features = [
     {
       icon: Search,
@@ -34,13 +36,13 @@ const AIRecruitmentAssistantPage: React.FC = () => {
       title: 'Automated Screening',
       description: 'AI-powered initial screening questions and assessments to filter candidates effectively.'
     }
-  ]
-  return (
+  ];
+return (
     <React.Fragment>
       <Helmet>
         <title>AI Recruitment Assistant | Zion Tech Group - Intelligent Hiring Solutions</title>
-        <meta name="description" content="Streamline your hiring process with AI-powered recruitment tools. Find, screen, and hire the best candidates faster with our intelligent recruitment assistant." />
-        <meta name="keywords" content="AI recruitment, hiring automation, candidate matching, resume screening, recruitment analytics, HR technology" />
+        <meta name="description" content="Streamline your hiring process with AI-powered recruitment tools. Find, screen, and hire the best candidates faster with our intelligent recruitment assistant."   />
+        <meta name="keywords" content="AI recruitment, hiring automation, candidate matching, resume screening, recruitment analytics, HR technology"   />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
@@ -71,6 +73,7 @@ const AIRecruitmentAssistantPage: React.FC = () => {
       </div>
     </React.Fragment>
   )
-}
+};
+
 export default AIRecruitmentAssistantPage
   </h1>

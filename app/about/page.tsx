@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
 import {
   Users,
   Award,
@@ -31,7 +31,7 @@ const AboutPage: React.FC = () => {
     <>
       <Helmet>
         <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions. Discover our mission, values, and team." />
+        <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions. Discover our mission, values, and team."   />
       </Helmet>
       
       <Navigation />
@@ -219,6 +219,6 @@ const AboutPage: React.FC = () => {
       <Footer />
     </>
   )
-}
+};
 
 export default AboutPage

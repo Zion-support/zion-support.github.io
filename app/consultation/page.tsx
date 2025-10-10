@@ -3,8 +3,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Users, Shield } from 'lucide-react'
+import Footer from '../components/Footer';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const ConsultationPage: React.FC = () => {
   const services = [
     {
@@ -28,9 +29,8 @@ const ConsultationPage: React.FC = () => {
       price: 'Starting at $3,500',
       duration: '2-3 weeks'
     }
-  ]
-
-  const process = [
+  ];
+const process = [
     {
       step: '1',
       title: 'Initial Consultation',
@@ -55,14 +55,13 @@ const ConsultationPage: React.FC = () => {
       description: 'We provide ongoing support to ensure successful implementation.',
       icon: ArrowRight
     }
-  ]
-
-  return (
+  ];
+return (
     <>
       <Helmet>
         <title>Consultation Services | Zion Tech Group</title>
-        <meta name="description" content="Expert consultation services for AI strategy, cloud migration, and cybersecurity. Get personalized guidance for your technology needs." />
-        <meta name="keywords" content="AI consultation, cloud migration, cybersecurity audit, technology consulting, IT strategy" />
+        <meta name="description" content="Expert consultation services for AI strategy, cloud migration, and cybersecurity. Get personalized guidance for your technology needs."   />
+        <meta name="keywords" content="AI consultation, cloud migration, cybersecurity audit, technology consulting, IT strategy"   />
       </Helmet>
 
       <Navigation />
@@ -147,6 +146,6 @@ const ConsultationPage: React.FC = () => {
       <Footer />
     </>
   )
-}
+};
 
 export default ConsultationPage

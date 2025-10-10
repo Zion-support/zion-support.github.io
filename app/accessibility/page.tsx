@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const AccessibilityPage: React.FC = () => {
+  
 const features = [
     {
       icon: Eye,
@@ -40,7 +42,7 @@ const features = [
       description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',
       benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
     }
-  ]
+  ];;
 const standards = [
     {
       name: 'WCAG 2.1 AA',
@@ -62,14 +64,13 @@ const standards = [
       description: 'European accessibility standard for ICT products and services',
       status: 'Fully Compliant'
     }
-  ]
-
-  return (
+  ];
+return (
     <>
       <Helmet>
         <title>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences</title>
-        <meta name="description" content="Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities and comply with international standards." />
-        <meta name="keywords" content="accessibility, inclusive design, WCAG compliance, screen reader, keyboard navigation, digital accessibility" />
+        <meta name="description" content="Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities and comply with international standards."   />
+        <meta name="keywords" content="accessibility, inclusive design, WCAG compliance, screen reader, keyboard navigation, digital accessibility"   />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -187,5 +188,6 @@ const standards = [
       </div>
     </>
   )
-}
+};
+
 export default AccessibilityPage

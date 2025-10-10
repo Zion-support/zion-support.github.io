@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const CookiesPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024'
   const cookieTypes = [
@@ -53,9 +54,8 @@ const CookiesPage: React.FC = () => {
       ],
       required: false
     }
-  ]
-
-  const purposes = [
+  ];
+const purposes = [
     {
       title: 'Website Functionality',
       description: 'Ensure the website works correctly and securely',
@@ -76,14 +76,13 @@ const CookiesPage: React.FC = () => {
       description: 'Deliver relevant content and advertisements',
       icon: Eye
     }
-  ]
-
-  return (
+  ];
+return (
     <>
       <Helmet>
         <title>Cookie Policy - Zion Tech Group</title>
-        <meta name="description" content="Cookie Policy for Zion Tech Group. Learn about the cookies we use and how to manage your cookie preferences." />
-        <meta name="keywords" content="cookie policy, cookies, tracking, privacy, data collection" />
+        <meta name="description" content="Cookie Policy for Zion Tech Group. Learn about the cookies we use and how to manage your cookie preferences."   />
+        <meta name="keywords" content="cookie policy, cookies, tracking, privacy, data collection"   />
         <link rel="canonical" href="https://ziontechgroup.com/cookies" />
       </Helmet>
 
@@ -377,6 +376,6 @@ const CookiesPage: React.FC = () => {
       </div>
     </>
   )
-}
+};
 
 export default CookiesPage

@@ -13,8 +13,8 @@ export const useAnalytics = () => {
   if (!context) {
     console.warn('useAnalytics must be used within an AnalyticsProvider')
     return null
-  }
-  return context
+  };
+return context
 }
 
 interface AnalyticsProviderProps {
@@ -78,13 +78,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     track,
     page,
     identify
-  }
-
-  return (
+  };
+return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   )
-}
+};
 
 export default AnalyticsProvider

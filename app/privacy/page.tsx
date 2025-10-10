@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const PrivacyPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024'
   const dataTypes = [
@@ -35,9 +36,8 @@ const PrivacyPage: React.FC = () => {
         'System configuration information'
       ]
     }
-  ]
-
-  const purposes = [
+  ];
+const purposes = [
     {
       title: 'Service Delivery',
       description: 'To provide and maintain our AI and IT services',
@@ -58,9 +58,8 @@ const PrivacyPage: React.FC = () => {
       description: 'To analyze usage patterns and improve our services',
       icon: Eye
     }
-  ]
-
-  const rights = [
+  ];
+const rights = [
     {
       title: 'Access',
       description: 'Request access to your personal data',
@@ -91,20 +90,18 @@ const PrivacyPage: React.FC = () => {
       description: 'Object to certain types of processing',
       icon: Shield
     }
-  ]
-
-  const contactInfo = {
+  ];
+const contactInfo = {
     email: 'privacy@ziontechgroup.com',
     phone: '+1 (302) 464-0950',
     address: '364 E Main St STE 1008, Middletown, DE 19709'
-  }
-
-  return (
+  };
+return (
     <>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group</title>
-        <meta name="description" content="Privacy Policy for Zion Tech Group. Learn how we collect, use, and protect your personal information and data." />
-        <meta name="keywords" content="privacy policy, data protection, GDPR, personal information, data security" />
+        <meta name="description" content="Privacy Policy for Zion Tech Group. Learn how we collect, use, and protect your personal information and data."   />
+        <meta name="keywords" content="privacy policy, data protection, GDPR, personal information, data security"   />
         <link rel="canonical" href="https://ziontechgroup.com/privacy" />
       </Helmet>
 
@@ -373,6 +370,6 @@ const PrivacyPage: React.FC = () => {
       </div>
     </>
   )
-}
+};
 
 export default PrivacyPage

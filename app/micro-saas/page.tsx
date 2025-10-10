@@ -3,8 +3,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react'
+import Footer from '../components/Footer';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const MicroSaasPage: React.FC = () => {
   const microSaasTools = [
     {
@@ -35,9 +36,8 @@ const MicroSaasPage: React.FC = () => {
       price: '$19/month',
       icon: Clock
     }
-  ]
-
-  const features = [
+  ];
+const features = [
     {
       title: 'Rapid Deployment',
       description: 'Get your micro SaaS solution up and running in days, not months.',
@@ -58,14 +58,13 @@ const MicroSaasPage: React.FC = () => {
       description: 'Enterprise-grade security and compliance built-in from day one.',
       icon: Shield
     }
-  ]
-
-  return (
+  ];
+return (
     <>
       <Helmet>
         <title>Micro SaaS Solutions | Zion Tech Group</title>
-        <meta name="description" content="Discover our micro SaaS solutions designed to solve specific business problems with AI-powered tools and rapid deployment." />
-        <meta name="keywords" content="micro SaaS, AI tools, business automation, SaaS solutions, productivity tools" />
+        <meta name="description" content="Discover our micro SaaS solutions designed to solve specific business problems with AI-powered tools and rapid deployment."   />
+        <meta name="keywords" content="micro SaaS, AI tools, business automation, SaaS solutions, productivity tools"   />
       </Helmet>
 
       <Navigation />
@@ -146,6 +145,6 @@ const MicroSaasPage: React.FC = () => {
       <Footer />
     </>
   )
-}
+};
 
 export default MicroSaasPage

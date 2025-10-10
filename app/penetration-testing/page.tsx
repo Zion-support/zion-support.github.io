@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
 import {
     Shield,
   Search,
@@ -26,6 +26,7 @@ import {
   }
 } from 'lucide-react'
 const PenetrationTestingPage: React.FC = () => {
+  
 const features = [
     {
       icon: Search,
@@ -56,13 +57,13 @@ const benefits = [
     'Validate security controls effectiveness',
     'Expert analysis and reporting',
     'Ongoing security improvement guidance'
-  ]
+  ];
 return (
     <>
       <Helmet>
         <title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
-        <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+        <meta name="description" content="Advanced AI solutions"   />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions"   />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -154,5 +155,6 @@ return (
       </div>
     </>
   )
-}
+};
+
 export default PenetrationTestingPage

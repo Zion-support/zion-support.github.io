@@ -1,7 +1,8 @@
 'use client'
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async'
-import { Search, Calendar, User, Clock, ArrowRight } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const BlogPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const blogPosts = [
@@ -45,9 +46,8 @@ const BlogPage: React.FC = () => {
       category: 'Development',
       image: '/images/blog/micro-saas.jpg'
     }
-  ]
-
-  const categories = ['All', 'AI & Technology', 'Cloud Computing', 'Security', 'Development']
+  ];
+const categories = ['All', 'AI & Technology', 'Cloud Computing', 'Security', 'Development']
 
   const filteredPosts = blogPosts.filter(post => 
     post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -58,8 +58,8 @@ const BlogPage: React.FC = () => {
     <>
       <Helmet>
         <title>Blog - Zion Tech Group | AI & IT Insights</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends from Zion Tech Group experts." />
-        <meta name="keywords" content="AI blog, technology insights, cloud computing, cybersecurity, micro SaaS, tech trends" />
+        <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends from Zion Tech Group experts."   />
+        <meta name="keywords" content="AI blog, technology insights, cloud computing, cybersecurity, micro SaaS, tech trends"   />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -151,6 +151,6 @@ const BlogPage: React.FC = () => {
       </div>
     </>
   )
-}
+};
 
 export default BlogPage

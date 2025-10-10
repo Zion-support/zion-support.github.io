@@ -11,8 +11,8 @@ export function dynamic<T extends ComponentType<unknown>>(</T></<<<T>importFunc<
   options: DynamicOptions = {}
 ): ComponentType<unknown>{
     const LazyComponent = lazy(importFunc)</unknown>
-  }
-  return (props: unknown) => (}<Suspense fallback={options.loading ? options.loading() : <div>Loading...</Suspense>}>;
+  };
+return (props: unknown) => (}<Suspense fallback={options.loading ? options.loading() : <div>Loading...</Suspense>}>;
 ): ComponentType<unknown> {}
   const LazyComponent = lazy(importFunc)
   return (props: unknown) => (}
@@ -32,7 +32,8 @@ export function dynamic<T extends ComponentType<unknown>>(importFun)
       <LazyComponent {...props} /></LazyComponent>
     </Suspense>
   )
-}
+};
+
 export default dynamic
   </unknown>
   </T>

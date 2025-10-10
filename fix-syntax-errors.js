@@ -8,33 +8,31 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// More specific patterns to fix
+// Common patterns to fix
 const fixes = [
-  // Fix malformed import statements
+  // Fix missing semicolons in imports
   {
-    pattern: /import { \s*const \s*}\s*from\s*'lucide-react';\s*\$\d+\s*(\w+):\s*React\.FC/g,
-    replacement: "import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';\n\nconst $1: React.FC"
+    pattern: /import Footer from '\.\.\/components\/Footer'(\s*import)/g,
+    replacement: "import Footer from '../components/Footer';$1"
+  },
+  {
+    pattern: /import { [^}]+ } from 'lucide-react'(\s*const)/g,
+    replacement: "import { $1 } from 'lucide-react';$2"
   },
   
-  // Fix missing semicolons in Helmet imports
+  // Fix missing semicolons in array declarations
   {
-    pattern: /import { Helmet } from 'react-helmet-async'(\s*import)/g,
-    replacement: "import { Helmet } from 'react-helmet-async';$1"
+    pattern: /(\s+)\]\s*const/g,
+    replacement: "$1];\nconst"
   },
   
-  // Fix malformed function declarations
+  // Fix malformed JSX - self-closing tags
   {
-    pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{(\s*const\s+features)/g,
-    replacement: "const $1: React.FC = () => {\n  $2"
+    pattern: /<div([^>]*)\s*\/><\/div>/g,
+    replacement: "<div$1></div>"
   },
   
   // Fix malformed JSX - missing closing tags
-  {
-    pattern: /<meta([^>]*)\s*\/>/g,
-    replacement: "<meta$1 />"
-  },
-  
-  // Fix malformed JSX - missing closing tags for sections
   {
     pattern: /<section([^>]*)><\/section>/g,
     replacement: "<section$1></section>"
@@ -46,28 +44,10 @@ const fixes = [
     replacement: "<div$1></div>"
   },
   
-  // Fix missing semicolons in array declarations
+  // Fix missing semicolons in object properties
   {
-    pattern: /(\s+)\]\s*const/g,
-    replacement: "$1];\nconst"
-  },
-  
-  // Fix missing semicolons in object declarations
-  {
-    pattern: /(\s+)\}\s*const/g,
-    replacement: "$1};\nconst"
-  },
-  
-  // Fix malformed return statements
-  {
-    pattern: /return\s*\(\s*<>\s*<\/>\s*\)\s*;\s*}/g,
-    replacement: "return (\n    <>\n      <>\n      </>\n    </>\n  );\n};"
-  },
-  
-  // Fix missing semicolons in function declarations
-  {
-    pattern: /}\s*export default/g,
-    replacement: "};\n\nexport default"
+    pattern: /(\s+benefits: \[[^\]]+\])\s*}\s*\]/g,
+    replacement: "$1\n    }\n  ];"
   },
   
   // Fix malformed JSX fragments
@@ -92,6 +72,18 @@ const fixes = [
   {
     pattern: /<p([^>]*)>([^<]+)<\/p>/g,
     replacement: "<p$1>$2</p>"
+  },
+  
+  // Fix malformed return statements
+  {
+    pattern: /return\s*\(\s*<>\s*<\/>\s*\)\s*;\s*}/g,
+    replacement: "return (\n    <>\n      <>\n      </>\n    </>\n  );\n};"
+  },
+  
+  // Fix missing semicolons in function declarations
+  {
+    pattern: /}\s*export default/g,
+    replacement: "};\n\nexport default"
   }
 ];
 
@@ -144,7 +136,7 @@ function findTsxFiles(dir) {
 }
 
 function main() {
-  console.log('Starting remaining syntax error fixes...');
+  console.log('Starting syntax error fixes...');
   
   const appDir = path.join(__dirname, 'app');
   const files = findTsxFiles(appDir);
@@ -164,7 +156,7 @@ function main() {
   // Run linter to check remaining errors
   console.log('\nRunning linter to check remaining errors...');
   try {
-    execSync('npm run lint 2>&1 | head -30', { stdio: 'inherit' });
+    execSync('npm run lint 2>&1 | head -20', { stdio: 'inherit' });
   } catch (error) {
     console.log('Linter found remaining errors (this is expected)');
   }

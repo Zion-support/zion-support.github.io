@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
 import {
     Zap,
   Settings,
@@ -25,6 +25,7 @@ import {
   }
 } from 'lucide-react'
 const ProcessAutomationPage: React.FC = () => {
+  
 const features = [
     {
       icon: Zap,
@@ -55,13 +56,13 @@ const benefits = [
     'Enhance employee productivity',
     '24/7 automated operations',
     'Custom automation solutions'
-  ]
+  ];
 return (
     <>
       <Helmet>
         <title>Process Automation Services - Zion Tech Group | Workflow Automation</title>
-        <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+        <meta name="description" content="Advanced AI solutions"   />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions"   />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -153,5 +154,6 @@ return (
       </div>
     </>
   )
-}
+};
+
 export default ProcessAutomationPage

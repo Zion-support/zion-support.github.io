@@ -1010,9 +1010,8 @@ const AiServicesPage: React.FC = () => {
       popular: true,
       icon: FileText
     }
-  ]
-
-  const categories = [
+  ];
+const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'Customer Service', name: 'Customer Service', count: services.filter(s => s.category === 'Customer Service').length },
     { id: 'Content', name: 'Content', count: services.filter(s => s.category === 'Content').length },
@@ -1041,16 +1040,15 @@ const AiServicesPage: React.FC = () => {
     { id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length },
     { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },
     { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length }
-  ]
-
-  const filteredServices = services.filter(service => 
+  ];
+const filteredServices = services.filter(service => 
     selectedCategory === 'all' || service.category === selectedCategory
   )
   return (
     <>
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI services including chatbots, content generation, analytics, computer vision, and workflow automation." />
+        <meta name="description" content="Comprehensive AI services including chatbots, content generation, analytics, computer vision, and workflow automation."   />
       </Helmet>
       
       <Navigation />
@@ -1181,6 +1179,6 @@ const AiServicesPage: React.FC = () => {
       <Footer />
     </>
   )
-}
+};
 
 export default AiServicesPage

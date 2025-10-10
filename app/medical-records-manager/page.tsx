@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { Shield, FileText, Users, Lock, BarChart, CheckCircle, ArrowRight, Zap, Brain } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const MedicalRecordsManagerPage: React.FC = () => {
+  
   const features = [
     {
       icon: FileText,
@@ -34,13 +36,13 @@ const MedicalRecordsManagerPage: React.FC = () => {
       title: 'Advanced Security',
       description: 'End-to-end encryption, secure backups, and multi-factor authentication to protect sensitive medical data.'
     }
-  ]
-  return (
+  ];
+return (
     <React.Fragment>
       <Helmet>
         <title>Medical Records Manager | Zion Tech Group - Secure Healthcare Data Management</title>
-        <meta name="description" content="Secure, HIPAA-compliant medical records management system with AI-powered insights. Streamline healthcare data management and improve patient care." />
-        <meta name="keywords" content="medical records management, HIPAA compliance, healthcare data, patient records, medical software, healthcare analytics" />
+        <meta name="description" content="Secure, HIPAA-compliant medical records management system with AI-powered insights. Streamline healthcare data management and improve patient care."   />
+        <meta name="keywords" content="medical records management, HIPAA compliance, healthcare data, patient records, medical software, healthcare analytics"   />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
@@ -71,6 +73,7 @@ const MedicalRecordsManagerPage: React.FC = () => {
       </div>
     </React.Fragment>
   )
-}
+};
+
 export default MedicalRecordsManagerPage
   </h1>

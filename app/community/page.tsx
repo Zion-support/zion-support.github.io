@@ -1,7 +1,8 @@
 'use client'
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async'
-import { Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const CommunityPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview')
   const communityStats = [
@@ -9,9 +10,8 @@ const CommunityPage: React.FC = () => {
     { icon: MessageCircle, value: '50+', label: 'Discussions Daily' },
     { icon: Calendar, value: '12', label: 'Events Monthly' },
     { icon: Star, value: '4.9', label: 'Average Rating' }
-  ]
-
-  const events = [
+  ];
+const events = [
     {
       title: 'AI Development Workshop',
       date: '2024-02-15',
@@ -36,9 +36,8 @@ const CommunityPage: React.FC = () => {
       attendees: 200,
       description: 'Expert panel on scaling SaaS businesses'
     }
-  ]
-
-  const forums = [
+  ];
+const forums = [
     {
       name: 'AI Services',
       description: 'Discuss AI development, machine learning, and automation',
@@ -63,9 +62,8 @@ const CommunityPage: React.FC = () => {
       posts: 2100,
       members: 3000
     }
-  ]
-
-  const benefits = [
+  ];
+const benefits = [
     {
       icon: Users,
       title: 'Network with Peers',
@@ -86,14 +84,13 @@ const CommunityPage: React.FC = () => {
       title: 'Recognition',
       description: 'Showcase your projects and get community recognition'
     }
-  ]
-
-  return (
+  ];
+return (
     <>
       <Helmet>
         <title>Community - Zion Tech Group</title>
-        <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts. Learn, share, and grow together." />
-        <meta name="keywords" content="community, developers, tech community, networking, events, forums, AI community" />
+        <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts. Learn, share, and grow together."   />
+        <meta name="keywords" content="community, developers, tech community, networking, events, forums, AI community"   />
         <link rel="canonical" href="https://ziontechgroup.com/community" />
       </Helmet>
 
@@ -394,6 +391,6 @@ const CommunityPage: React.FC = () => {
       </div>
     </>
   )
-}
+};
 
 export default CommunityPage

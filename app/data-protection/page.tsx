@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const PagePage: React.FC = () => {
+  
     const features = [
     {
       icon: Brain,
@@ -20,13 +22,13 @@ const PagePage: React.FC = () => {
       description: 'Bank-level security with encryption and compliance standards'
   },
     {
-    ]
+    ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+        <meta name="description" content="Advanced AI solutions"   />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions"   />
       </Helmet>
   }
       {/* Hero Section */}
@@ -102,5 +104,6 @@ return (
       </section>
     </div>
   )
-}
+};
+
 export default PagePage

@@ -2,9 +2,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'
-import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react'
+import Footer from '../components/Footer';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const FinancialITPage: React.FC = () => {
+  
     const features = [
     {
       icon: DollarSign,
@@ -39,7 +41,8 @@ const FinancialITPage: React.FC = () => {
     {
     icon: BarChart,
       title: 'Financial Analytics',
-      description: 'Comprehensive analytics and reporting for financial operations and compliance.',      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      description: 'Comprehensive analytics and reporting for financial operations and compliance.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   }];
 
@@ -71,19 +74,19 @@ const benefits = [
     'Regulatory Compliance',
     'Fraud Prevention',
     'Advanced Analytics'
-  ]
+  ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div>
       <Helmet>
         <title>Financial IT Solutions | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+        <meta name="description" content="Advanced AI solutions"   />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions"   />
       </Helmet>
       <Navigation>
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden"></section>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.3)_0%,transparent_50%)] animate-pulse" ></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} ></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1>
             Financial Services
@@ -200,5 +203,6 @@ return (
       <Footer>
     </div>
   )
-}
+};
+
 export default FinancialITPage

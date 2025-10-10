@@ -1,7 +1,8 @@
 'use client'
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async'
-import { Search, Phone, Mail, MessageCircle, Clock, CheckCircle } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const SupportPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const faqs = [
@@ -21,9 +22,8 @@ const SupportPage: React.FC = () => {
       question: 'What technologies do you work with?',
       answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern development stacks.'
     }
-  ]
-
-  const supportChannels = [
+  ];
+const supportChannels = [
     {
       title: 'Email Support',
       description: 'Get help via email within 24 hours',
@@ -45,9 +45,8 @@ const SupportPage: React.FC = () => {
       contact: 'Available on website',
       availability: 'Mon-Fri 9AM-6PM EST'
     }
-  ]
-
-  const filteredFaqs = faqs.filter(faq =>
+  ];
+const filteredFaqs = faqs.filter(faq =>
     faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
   )
@@ -55,8 +54,8 @@ const SupportPage: React.FC = () => {
     <>
       <Helmet>
         <title>Support | Zion Tech Group</title>
-        <meta name="description" content="Get help and support for your AI and IT solutions. Find answers to common questions and contact our support team." />
-        <meta name="keywords" content="support, help, FAQ, technical support, customer service" />
+        <meta name="description" content="Get help and support for your AI and IT solutions. Find answers to common questions and contact our support team."   />
+        <meta name="keywords" content="support, help, FAQ, technical support, customer service"   />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -132,6 +131,6 @@ const SupportPage: React.FC = () => {
       </div>
     </>
   )
-}
+};
 
 export default SupportPage

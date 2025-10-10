@@ -1,10 +1,11 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Wifi, Cpu, Database } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 const SmartCityInfrastructurePage: React.FC = () => {
+  
 
 const features = [
     {
@@ -32,6 +33,7 @@ const features = [
     icon: Globe,
       title: 'Global Reach',
 const PagePage: React.FC = () => {
+  
   const features = [
     {
       icon: Brain,
@@ -57,9 +59,8 @@ const PagePage: React.FC = () => {
       description: 'Worldwide deployment and support for international smart city projects'
 
     }
-  ]
-
-  const smartCityServices = [
+  ];
+const smartCityServices = [
     {
       icon: Building,
       title: 'Smart Buildings',
@@ -128,7 +129,8 @@ const PagePage: React.FC = () => {
       </section>
     </div>
   )
-}
+};
+
 export default PagePage
   const benefits = [
     'Advanced AI technology integration',
@@ -139,14 +141,13 @@ export default PagePage
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-
-  return (
+  ];
+return (
     <>
       <Helmet>
         <title>Smart City Infrastructure - Zion Tech Group</title>
-        <meta name="description" content="Advanced smart city infrastructure solutions including IoT networks, data analytics, and digital transformation for modern cities." />
-        <meta name="keywords" content="smart city, infrastructure, IoT, data analytics, digital transformation, urban planning" />
+        <meta name="description" content="Advanced smart city infrastructure solutions including IoT networks, data analytics, and digital transformation for modern cities."   />
+        <meta name="keywords" content="smart city, infrastructure, IoT, data analytics, digital transformation, urban planning"   />
       </Helmet>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -289,5 +290,6 @@ export default PagePage
       <Footer />
     </>
   )
-}
+};
+
 export default SmartCityInfrastructurePage

@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
 import {
   Brain,
   Cloud,
@@ -192,16 +192,14 @@ const ServicesPage: React.FC = () => {
       marketPrice: '$200-600/month',
       benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization']
     }
-  ]
-
-  const categories = [
+  ];;
+const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'ai', name: 'AI Services', count: services.filter(s => s.category === 'ai').length },
     { id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length },
     { id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length }
-  ]
-
-  const filteredServices = services.filter(service => {
+  ];
+const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase())
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
@@ -212,7 +210,7 @@ const ServicesPage: React.FC = () => {
     <>
       <Helmet>
         <title>Our Services - Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive range of AI, IT, and Micro SaaS services designed to transform your business." />
+        <meta name="description" content="Discover our comprehensive range of AI, IT, and Micro SaaS services designed to transform your business."   />
       </Helmet>
       
       <Navigation />
@@ -360,6 +358,6 @@ const ServicesPage: React.FC = () => {
       <Footer />
     </>
   )
-}
+};
 
 export default ServicesPage

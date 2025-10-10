@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
 import {
     BarChart,
   TrendingUp,
@@ -25,6 +25,7 @@ import {
   }
 } from 'lucide-react'
 const DataAnalyticsPage: React.FC = () => {
+  
 const features = [
     {
       icon: BarChart,
@@ -55,13 +56,13 @@ const benefits = [
     'Comply with data regulations',
     'Real-time insights and reporting',
     'Custom analytics solutions'
-  ]
+  ];
 return (
     <>
       <Helmet>
         <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
-        <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+        <meta name="description" content="Advanced AI solutions"   />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions"   />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -153,5 +154,6 @@ return (
       </div>
     </>
   )
-}
+};
+
 export default DataAnalyticsPage

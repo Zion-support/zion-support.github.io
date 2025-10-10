@@ -8,7 +8,7 @@ interface OptimizedLoadingSpinnerProps {
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
   fullScreen?: boolean
   }
-}
+};
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(,
   ({
     size = 'md',
@@ -64,7 +64,7 @@ const renderSpinner = useMemo(() => {
                   key={i}
                   className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
                   style={{ animationDelay: `${i * 0.1}s` }}
-                /></div>
+                ></div>
               ))}</div>
           );
 case 'pulse':;
@@ -74,7 +74,7 @@ case 'pulse':;
               className={`${baseClasses} rounded-full animate-pulse`}
               role='status';
               aria-label='Loading';
-            /></div>
+            ></div>
           );
 case 'skeleton':;
           return (</div>
@@ -82,15 +82,15 @@ case 'skeleton':;
               <div;
 
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
-              /></div>
+              ></div>
               <div;
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
                 style={{ width: '75%' }}
-              /></div>
+              ></div>
               <div
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
                 style={{ width: '50%' }}
-              /></div>
+              ></div>
           )
 case 'bars':
           return (
@@ -106,7 +106,7 @@ case 'bars':
                     height: `${12 + i * 4}px`,
                     animationDelay: `${i * 0.1}s`,
                   }}
-                /></div>
+                ></div>
               ))}</div>
           )
 case 'spinner':
@@ -117,7 +117,7 @@ case 'spinner':
               className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
               role='status'
               aria-label='Loading'
-            /></div>
+            ></div>
           )
       }
     }, [size, variant, color, sizeClasses, colorClasses])

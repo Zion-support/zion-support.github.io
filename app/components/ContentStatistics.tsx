@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react'
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
     clients: 0,
@@ -14,9 +15,8 @@ const ContentStatistics: React.FC = () => {
     projects: 1000,
     satisfaction: 99,
     years: 10
-  }
-
-  const statistics = [
+  };
+const statistics = [
     {
       icon: Users,
       value: counters.clients,
@@ -45,9 +45,8 @@ const ContentStatistics: React.FC = () => {
       suffix: '+',
       color: 'text-yellow-400'
     }
-  ]
-
-  const achievements = [
+  ];
+const achievements = [
     {
       icon: Brain,
       title: 'AI Innovation',
@@ -84,8 +83,8 @@ const ContentStatistics: React.FC = () => {
               ...prev,
               [key]: Math.min(current + increment, target)
             }
-          }
-          return prev
+          };
+return prev
         })
       }, 16)
     })
@@ -138,6 +137,6 @@ const ContentStatistics: React.FC = () => {
       </div>
     </div>
   )
-}
+};
 
 export default ContentStatistics

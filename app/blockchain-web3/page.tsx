@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const BlockchainWeb3Page: React.FC = () => {
+  
     const features = [
     {
       icon: Zap,
@@ -29,7 +31,7 @@ const BlockchainWeb3Page: React.FC = () => {
       benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']
   }
     }
-  ]
+  ];
 return (
     <>
       <Helmet>
@@ -77,5 +79,6 @@ return (
       </div>
     </>
   )
-}
+};
+
 export default BlockchainWeb3Page

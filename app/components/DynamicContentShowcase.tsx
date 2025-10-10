@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react'
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const features = [
@@ -24,9 +25,8 @@ const DynamicContentShowcase: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale effortlessly across multiple regions with automatic load balancing'
     }
-  ]
-
-  const benefits = [
+  ];
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -35,9 +35,8 @@ const DynamicContentShowcase: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-
-  const testimonials = [
+  ];
+const testimonials = [
     {
       name: 'Sarah Johnson',
       company: 'TechCorp Inc.',
@@ -128,6 +127,6 @@ const DynamicContentShowcase: React.FC = () => {
       </div>
     </div>
   )
-}
+};
 
 export default DynamicContentShowcase

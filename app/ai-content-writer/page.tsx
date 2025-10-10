@@ -2,9 +2,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, PenTool, Zap, Users, BarChart3 } from 'lucide-react'
+import Footer from '../components/Footer';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const AIContentWriterPage: React.FC = () => {
+  
   const features = [
     {
       title: 'AI-Powered Writing',
@@ -21,28 +23,27 @@ const AIContentWriterPage: React.FC = () => {
       description: 'Create content in various formats including blogs, social media, emails, and marketing copy.',
       benefits: ['Blog posts', 'Social media', 'Email campaigns', 'Marketing copy']
     }
-  ]
-  const benefits = [
+  ];;
+const benefits = [
     '10x faster content creation',
     'Improved SEO performance',
     'Consistent brand voice',
     'Multi-language support',
     'Content analytics',
     'Team collaboration'
-  ]
-
-  const stats = [
+  ];
+const stats = [
     { icon: <PenTool className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Articles Created' },
     { icon: <Zap className="w-8 h-8 text-green-500" />, value: '90%', label: 'Time Saved' },
     { icon: <Users className="w-8 h-8 text-purple-500" />, value: '500+', label: 'Happy Users' },
     { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '300%', label: 'Engagement Boost' }
-  ]
-  return (
+  ];
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>AI Content Writer | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered content writing tool by Zion Tech Group. Generate high-quality, SEO-optimized content at scale." />
-        <meta name="keywords" content="AI content writer, content generation, SEO writing, content marketing, AI writing tool, Zion Tech Group" />
+        <meta name="description" content="Advanced AI-powered content writing tool by Zion Tech Group. Generate high-quality, SEO-optimized content at scale."   />
+        <meta name="keywords" content="AI content writer, content generation, SEO writing, content marketing, AI writing tool, Zion Tech Group"   />
       </Helmet>
       <Navigation />
       {/* Hero Section */}
@@ -165,6 +166,6 @@ const AIContentWriterPage: React.FC = () => {
       <Footer />
     </div>
   )
-}
+};
 
 export default AIContentWriterPage

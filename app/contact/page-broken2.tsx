@@ -2,7 +2,7 @@
 import React from 'react'
 'use client'
 import React, { useState, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
 import {
     Phone,
   Mail,
@@ -62,7 +62,7 @@ try {
     setIsSubmitting(false)
   }
     }
-  }
+  };
 const services = [
     'AI Solutions',
     'Cloud Computing',
@@ -73,7 +73,7 @@ const services = [
     'DevOps',
     'Consulting',
     'Other'
-  ]
+  ];
 const contactInfo = [
     {
     icon: Phone,
@@ -100,13 +100,13 @@ const contactInfo = [
       description: 'Eastern Time'
   }
     }
-  ]
+  ];
 return (
     <>
       <Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
-        <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+        <meta name="description" content="Advanced AI solutions"   />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions"   />
       </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div>
         <div className="container mx-auto px-4"></div>
@@ -297,5 +297,6 @@ return (
       </div>
 </div>
   )
-}
+};
+
 export default ContactPage

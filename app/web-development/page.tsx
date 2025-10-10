@@ -14,7 +14,7 @@ const technologies = [
     { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-  ]
+  ];
 const process = [
     {
     step: '01',
@@ -41,7 +41,7 @@ const process = [
       icon: Shield,
   }
     }
-  ]
+  ];
 return(<>
 
       <SEOOptimizer
@@ -93,18 +93,16 @@ const WebDevelopmentPage: React.FC = () => {
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
       color: 'text-gray-400'
     }
-  ]
-
-  const technologies = [
+  ];
+const technologies = [
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
     { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
     { name: 'Python/Django', icon: Globe, description: 'Backend development' },
     { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-  ]
-
-  const process = [
+  ];
+const process = [
     {
       step: '01',
       title: 'Discovery & Planning',
@@ -129,9 +127,8 @@ const WebDevelopmentPage: React.FC = () => {
       description: 'Thorough testing and deployment with ongoing support',
       icon: Shield
     }
-  ]
-
-  return (
+  ];
+return (
     <>
       <SEOOptimizer
         title="Web Development Services - Zion Tech Group"
@@ -460,11 +457,12 @@ const WebDevelopmentPage: React.FC = () => {
         <Footer>
       </div>,
     </>);
-}
+};
+
 export default WebDevelopmentPage
       </div>
     </>
   )
-}
+};
 
 export default WebDevelopmentPage

@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { Map, ArrowRight, ExternalLink, Calendar, Users, Code, Shield, Cloud, Brain, Zap } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const SitemapPage: React.FC = () => {
   const lastUpdated = new Date().toISOString().split('T')[0]
   
@@ -103,15 +104,14 @@ const SitemapPage: React.FC = () => {
         { name: 'Sitemap', url: '/sitemap', description: 'Complete site map' }
       ]
     }
-  ]
-
-  const totalPages = pageCategories.reduce((total, category) => total + category.pages.length, 0)
+  ];
+const totalPages = pageCategories.reduce((total, category) => total + category.pages.length, 0)
   return (
     <>
       <Helmet>
         <title>Sitemap - Zion Tech Group</title>
-        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all pages, services, and resources in one place." />
-        <meta name="keywords" content="sitemap, website map, navigation, pages, services, resources" />
+        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all pages, services, and resources in one place."   />
+        <meta name="keywords" content="sitemap, website map, navigation, pages, services, resources"   />
         <link rel="canonical" href="https://ziontechgroup.com/sitemap" />
       </Helmet>
 
@@ -251,6 +251,6 @@ const SitemapPage: React.FC = () => {
       </div>
     </>
   )
-}
+};
 
 export default SitemapPage

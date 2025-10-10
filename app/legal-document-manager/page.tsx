@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { FileText, Search, Shield, Zap, BarChart, CheckCircle } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const LegalDocumentManagerPage: React.FC = () => {
+  
   const features = [
     { icon: FileText, title: 'Document Management', description: 'Organized storage and management of legal documents with smart categorization.' },
     { icon: Search, title: 'AI Document Search', description: 'Powerful AI-powered search across all legal documents and contracts.' },
@@ -10,13 +12,13 @@ const LegalDocumentManagerPage: React.FC = () => {
     { icon: Zap, title: 'Contract Analysis', description: 'AI-powered contract analysis and risk assessment.' },
     { icon: BarChart, title: 'Legal Analytics', description: 'Comprehensive analytics on legal matters and case outcomes.' },
     { icon: CheckCircle, title: 'Version Control', description: 'Complete version control and audit trail for all legal documents.' }
-  ]
-  return (
+  ];
+return (
     <React.Fragment>
       <Helmet>
         <title>Legal Document Manager | Zion Tech Group - Intelligent Legal Document Management</title>
-        <meta name="description" content="Streamline legal document management with AI-powered tools. Organize, search, and analyze legal documents efficiently." />
-        <meta name="keywords" content="legal document management, contract analysis, legal software, compliance tracking, legal AI" />
+        <meta name="description" content="Streamline legal document management with AI-powered tools. Organize, search, and analyze legal documents efficiently."   />
+        <meta name="keywords" content="legal document management, contract analysis, legal software, compliance tracking, legal AI"   />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
@@ -41,5 +43,6 @@ const LegalDocumentManagerPage: React.FC = () => {
       </div>
     </React.Fragment>
   )
-}
+};
+
 export default LegalDocumentManagerPage

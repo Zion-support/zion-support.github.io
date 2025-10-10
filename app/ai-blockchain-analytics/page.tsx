@@ -2,9 +2,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import Footer from '../components/Footer';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const AiBlockchainAnalyticsPage: React.FC = () => {
+  
   const features = [
     {
       icon: Brain,
@@ -30,13 +32,13 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
+  ];
   return (
     <React.Fragment>
       <Helmet>
 <title>AI Blockchain Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced blockchain analytics powered by AI for comprehensive insights." />
-        <meta name="keywords" content="AI blockchain analytics, artificial intelligence, blockchain technology, AI solutions, crypto analytics" />
+        <meta name="description" content="Advanced blockchain analytics powered by AI for comprehensive insights."   />
+        <meta name="keywords" content="AI blockchain analytics, artificial intelligence, blockchain technology, AI solutions, crypto analytics"   />
       </Helmet>
       <Navigation />
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -168,7 +170,8 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
       <Footer />
     </div>
   )
-}
+};
+
 export default PagePage
   </button>
   </button>

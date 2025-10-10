@@ -8,9 +8,8 @@ const Breadcrumb: React.FC = () => {
   // Don't show breadcrumb on home page
   if (location.pathname === '/') {
     return null
-  }
-
-  const pathSegments = location.pathname.split('/').filter(segment => segment !== '')
+  };
+const pathSegments = location.pathname.split('/').filter(segment => segment !== '')
   const breadcrumbItems = [
     { name: 'Home', path: '/', icon: Home }
   ]
@@ -47,6 +46,6 @@ const Breadcrumb: React.FC = () => {
       </div>
     </nav>
   )
-}
+};
 
 export default Breadcrumb

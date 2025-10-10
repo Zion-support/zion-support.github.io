@@ -10,8 +10,8 @@ export const useAnalytics = () => {
     const context = useContext(AnalyticsContext)
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')
-  }
-  return context
+  };
+return context
 }
 
 interface AnalyticsProviderProps {
@@ -47,9 +47,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     if (process.env.NODE_ENV === 'development') {
     console.log('Analytics Event:', eventName, parameters)
   }
-  }
-
-  const trackPageView = (pageName: string, pagePath: string) => {
+  };
+const trackPageView = (pageName: string, pagePath: string) => {
     if (typeof window === 'undefined') return,
 
     // Google Analytics
@@ -65,14 +64,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     if (process.env.NODE_ENV === 'development') {
     console.log('Page View:', pageName, pagePath)
   }
-  }
-
-  const value: AnalyticsContextType = {
+  };
+const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
-  }
-
-  return (
+  };
+return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>

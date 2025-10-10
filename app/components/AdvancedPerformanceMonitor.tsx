@@ -11,7 +11,7 @@ interface PerformanceMetrics {
 interface PerformanceMonitorProps {
     onMetricsUpdate?: (metrics: PerformanceMetrics) => void,
   enableRealTimeMonitoring?: boolean
-  }
+  };
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
@@ -231,8 +231,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     recommendations.push(
         'Time to First Byte is slow. Optimize server response time.'
       )
-  }
-    return recommendations
+  };
+return recommendations
   }, [metrics])
   const _recommendations = getPerformanceRecommendations()
   if (process.env.NODE_ENV === 'development') {
@@ -266,9 +266,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         )}
       </div>
     )
-  }
-  return null
-}
+  };
+return null
+};
+
 export default AdvancedPerformanceMonitor
   </PerformanceMetrics>
   </PerformanceMonitorProps>

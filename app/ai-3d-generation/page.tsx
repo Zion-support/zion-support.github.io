@@ -2,9 +2,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import Footer from '../components/Footer';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const Ai3dGenerationPage: React.FC = () => {
+  
   const features = [
     {
       icon: Brain,
@@ -30,20 +32,20 @@ const Ai3dGenerationPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
-  const benefits = [
+  ];;
+const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
-  return (
+  ];
+return (
     <>
       <Helmet>
         <title>AI 3D Generation - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered 3D generation solutions for businesses" />
-        <meta name="keywords" content="AI, 3D generation, artificial intelligence, business solutions" />
+        <meta name="description" content="Advanced AI-powered 3D generation solutions for businesses"   />
+        <meta name="keywords" content="AI, 3D generation, artificial intelligence, business solutions"   />
       </Helmet>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
@@ -154,5 +156,6 @@ const Ai3dGenerationPage: React.FC = () => {
       <Footer />
     </>
   )
-}
+};
+
 export default Ai3dGenerationPage

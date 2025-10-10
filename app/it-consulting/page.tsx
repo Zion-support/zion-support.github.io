@@ -400,7 +400,7 @@ const itServices = [
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
   }
     }
-  ]
+  ];
 const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
@@ -413,7 +413,7 @@ const categories = [
     { id: 'consulting', name: 'Consulting', icon: Briefcase },
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
-  ]
+  ];
 const filteredServices = itServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -616,5 +616,6 @@ return (
       </section>
     </div>
   )
-}
+};
+
 export default ITConsultingPage

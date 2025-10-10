@@ -68,8 +68,8 @@ export const Image: React.FC<ImageProps> = ({
       position: 'absolute',
       top: 0,
       left: 0,
-  }
-  const imageStyle: React.CSSProperties = {}
+  };
+const imageStyle: React.CSSProperties = {}
     ...style,
     ...(fill && {}
       position: 'absolute',
@@ -116,8 +116,8 @@ const,
         <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
       </div>
     ),
-  }
-  return(<img;
+  };
+return(<img;
   return (<img />
       src={src}
       alt={alt}
@@ -139,10 +139,12 @@ export default Image</img>
       {...props})
     />);
   );
-}
+};
+
 export default Image;
     />);
   )
-}
+};
+
 export default Image
 "`

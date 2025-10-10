@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { Code, Database, Zap, Shield, Globe, Cpu, BarChart, Users, Settings, ArrowRight, CheckCircle, Star, ExternalLink } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const ApiPage: React.FC = () => {
   const apiEndpoints = [
     {
@@ -142,9 +143,8 @@ const ApiPage: React.FC = () => {
         }
       ]
     }
-  ]
-
-  const authenticationMethods = [
+  ];
+const authenticationMethods = [
     {
       name: 'API Key',
       description: 'Simple API key authentication',
@@ -163,20 +163,18 @@ const ApiPage: React.FC = () => {
       example: 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
       security: 'High'
     }
-  ]
-
-  const rateLimits = [
+  ];
+const rateLimits = [
     { tier: 'Free', requests: '1,000/month', burst: '10/minute' },
     { tier: 'Pro', requests: '50,000/month', burst: '100/minute' },
     { tier: 'Enterprise', requests: 'Unlimited', burst: '1,000/minute' }
-  ]
-
-  return (
+  ];
+return (
     <>
       <Helmet>
         <title>API Reference - Zion Tech Group</title>
-        <meta name="description" content="Complete API reference for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive API documentation." />
-        <meta name="keywords" content="API, documentation, AI API, IT services API, micro SaaS API, developer tools" />
+        <meta name="description" content="Complete API reference for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive API documentation."   />
+        <meta name="keywords" content="API, documentation, AI API, IT services API, micro SaaS API, developer tools"   />
         <link rel="canonical" href="https://ziontechgroup.com/api" />
       </Helmet>
 
@@ -441,6 +439,6 @@ const ApiPage: React.FC = () => {
       </div>
     </>
   )
-}
+};
 
 export default ApiPage

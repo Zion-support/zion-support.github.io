@@ -1,7 +1,8 @@
 'use client'
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom'
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react'
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear()
   const aiServices = [
@@ -37,9 +38,8 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Automated Reporting', url: '/ai-automated-reporting', description: 'Smart reporting' },
     { name: 'AI Voice Assistant Platform', url: '/ai-voice-assistant', description: 'Enterprise voice AI' },
     { name: 'AI Content Generation Pro', url: '/ai-content-generation-pro', description: 'Advanced content creation' }
-  ]
-
-  const itServices = [
+  ];
+const itServices = [
     { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, GCP' },
     { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Automation pipelines' },
     { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', description: 'Security solutions' },
@@ -72,9 +72,8 @@ const Footer: React.FC = memo(() => {
     { name: 'Data Visualization & BI', url: '/data-visualization', description: 'Advanced dashboards' },
     { name: 'Workflow Automation', url: '/workflow-automation', description: 'Process automation' },
     { name: 'Cloud-Native Security', url: '/cloud-native-security', description: 'Container security' }
-  ]
-
-  const microSaasServices = [
+  ];
+const microSaasServices = [
     { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', description: 'Business intelligence' },
     { name: 'Zion Chat AI', url: '/zion-chat-ai', description: 'AI customer support' },
     { name: 'Zion Security Shield', url: '/zion-security-shield', description: 'Cybersecurity monitoring' },
@@ -107,9 +106,8 @@ const Footer: React.FC = memo(() => {
     { name: 'Zion AI Customer Service Pro', url: '/zion-ai-customer-service-pro', description: 'Advanced customer service' },
     { name: 'Zion AI Marketing Automation', url: '/zion-ai-marketing-automation', description: 'Marketing AI' },
     { name: 'Zion AI Document AI', url: '/zion-ai-document-ai', description: 'Document processing' }
-  ]
-
-  const companyLinks = [
+  ];
+const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Case Studies', url: '/case-studies' },
@@ -118,9 +116,8 @@ const Footer: React.FC = memo(() => {
     { name: 'Partners', url: '/partners' },
     { name: 'Support', url: '/support' },
     { name: 'Status', url: '/status' }
-  ]
-
-  const resourcesLinks = [
+  ];
+const resourcesLinks = [
     { name: 'Pricing', url: '/pricing' },
     { name: 'FAQ', url: '/faq' },
     { name: 'Documentation', url: '/docs' },
@@ -129,18 +126,16 @@ const Footer: React.FC = memo(() => {
     { name: 'Community', url: '/community' },
     { name: 'Demo', url: '/demo' },
     { name: 'Compliance', url: '/compliance' }
-  ]
-
-  const enterpriseLinks = [
+  ];
+const enterpriseLinks = [
     { name: 'Enterprise Solutions', url: '/enterprise' },
     { name: 'Digital Transformation', url: '/digital-transformation' },
     { name: 'Business Intelligence', url: '/business-intelligence' },
     { name: 'Edge Computing', url: '/edge-computing' },
     { name: 'Consultation', url: '/consultation' },
     { name: 'Custom Development', url: '/custom-software' }
-  ]
-
-  return (
+  ];
+return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>

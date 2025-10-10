@@ -289,9 +289,8 @@ export class TestRunner {
     for (const test of suite.tests) {
           if (suite.beforeEach) {
             suite.beforeEach()
-  }
-          
-          const result = await this.runSingleTest(test)
+  };
+const result = await this.runSingleTest(test)
           results.push(result)
           if (suite.afterEach) {
     suite.afterEach()
@@ -300,9 +299,8 @@ export class TestRunner {
       }
     } finally {
     this.isRunning = false
-  }
-
-    return results
+  };
+return results
   }
 
   // Run a single test
@@ -358,16 +356,15 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
       {children}
     </BrowserRouter>
   )
-}
-
+};
 const customRender = (
   ui: ReactElement,
   options?: Omit<RenderOptions, 'wrapper'>
 ) => {
   if (typeof window !== 'undefined') {
     return render(ui, { wrapper: AllTheProviders, ...options })
-  }
-  return render(ui, { wrapper: AllTheProviders, ...options })
+  };
+return render(ui, { wrapper: AllTheProviders, ...options })
 }
 if ('memory' in performance) {}
 
@@ -380,8 +377,8 @@ if ('memory' in performance) {}
       }
       unmount()
     const metrics = {/* TODO: Fix JSX expression */}
-    }
-    const passed = renderTime < this.config.performanceThreshold
+    };
+const passed = renderTime < this.config.performanceThreshold
     this.testResults.push({/* TODO: Fix JSX expression */}
   e: ${testName}`,
       statu,
@@ -1381,8 +1378,8 @@ if ('memory' in performance) {}
       branches: 80,
       functions: 90,
       lines: 85}
-    }
-    const passed = coverage.statements >= this.config.coverageThreshold
+    };
+const passed = coverage.statements >= this.config.coverageThreshold
     this.testResults.push({)}
       name: 'Coverage',
       status: passed ? 'passed' : 'failed',
@@ -1410,8 +1407,8 @@ if ('memory' in performance) {}
       functions: 90,
   }
       lines: 85}
-    }
-    const passed = coverage.statements >= this.config.coverageThreshold
+    };
+const passed = coverage.statements >= this.config.coverageThreshold
     this.testResults.push({
     )
       name: 'Coverage'),
@@ -1556,8 +1553,8 @@ if ('memory' in performance) {}
   // Coverage test;
   async runCoverageTest(): Promise<{/* TODO: Fix JSX expression */}
   e: CoverageMetrics }> {/* TODO: Fix JSX expression */}
-    }
-    const passed = coverage.statements >= this.config.coverageThreshold
+    };
+const passed = coverage.statements >= this.config.coverageThreshold
     this.testResults.push({/* TODO: Fix JSX expression */}`
   r: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%`)
     })
@@ -1573,13 +1570,13 @@ if ('memory' in performance) {}
   d: boolean, error?: string }> = []
     for (const test of tests) {/* TODO: Fix JSX expression */}
   r: 'Unknown test type' }
-      }
-    const,
+      };
+const,
   results: unknown[] = [],
       results.push({/* TODO: Fix JSX expression */})
   e: test.type })
-    }
-    const passed = results.every(result => result.passed)
+    };
+const passed = results.every(result => result.passed)
     return { passed, results }
   }
   // Get test results;
@@ -1719,8 +1716,8 @@ export const testUtils = {}
         description: `This is a mock ${type} item`)
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()})
-    }
-    return mockData
+    };
+return mockData
   },
   // Wait for element to appear
   waitForElement: (selector: string, timeout: number = 5000) => {
@@ -1734,8 +1731,8 @@ export const testUtils = {}
       if (element) {}
         resolve(element)
         return;}
-      }
-      const observer = new MutationObserver(() => {}
+      };
+const observer = new MutationObserver(() => {}
         const element = document.querySelector(selector)
         if (element) {}
           observer.disconnect()
@@ -1833,8 +1830,8 @@ export const createMock = <T extends Record<string, any>>(overrides: Partial<T> 
     get(target, prop) {
       if (prop in overrides) {
         return overrides[prop as keyof T]
-  }
-      return jest.fn()
+  };
+return jest.fn()
     }
   })
 }

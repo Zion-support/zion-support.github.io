@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const BusinessIntelligencePage: React.FC = () => {
+  
   const features = [
     {
 icon: Brain,
@@ -24,8 +26,8 @@ icon: Brain,
       title: 'Global Analytics',
       description: 'Worldwide business intelligence deployment and support'
     }
-  ]
-  const benefits = [
+  ];
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -34,13 +36,13 @@ icon: Brain,
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-  return (
+  ];
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Business Intelligence | Zion Tech Group</title>
-        <meta name="description" content="Professional Business Intelligence services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<meta name="keywords" content="business intelligence, AI solutions, IT services, Zion Tech Group, data analytics" />
+        <meta name="description" content="Professional Business Intelligence services by Zion Tech Group. Advanced AI and IT solutions for your business."   />
+<meta name="keywords" content="business intelligence, AI solutions, IT services, Zion Tech Group, data analytics"   />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -121,7 +123,8 @@ icon: Brain,
       </section>
     </div>
   )
-}
+};
+
 export default BusinessIntelligencePage
   </button>
   </button>

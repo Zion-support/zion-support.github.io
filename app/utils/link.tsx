@@ -51,8 +51,8 @@ export const Link: React.FC<LinkProps> = ({
     }
   }</LinkProps>
   return (<a
-  }
-  return(<a
+  };
+return(<a
 import React from 'react'
 interface LinkProps {/* TODO: Fix JSX expression */}
 }
@@ -63,8 +63,8 @@ export const,
     // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
     }
-  }
-  return (<a />
+  };
+return (<a />
       href={href}
       className={className}
       target={target}
@@ -80,11 +80,13 @@ export const,
       {children})
     </a>);
   );
-}
+};
+
 export default Link;
     >;
       {children}
     </a>)
   )
-}
+};
+
 export default Link

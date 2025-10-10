@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom'
-import { ArrowRight, ExternalLink, Building, Users, TrendingUp } from 'lucide-react'
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
@@ -29,14 +30,13 @@ const CaseStudiesPage: React.FC = () => {
       description: 'Implemented comprehensive cybersecurity solutions to protect sensitive patient data.',
       results: ['100% compliance achieved', 'Zero security breaches', 'Reduced risk by 80%']
     }
-  ]
-
-  return (
+  ];
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Case Studies | Zion Tech Group</title>
-        <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions." />
-        <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation" />
+        <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions."   />
+        <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation"   />
       </Helmet>
 
       <section className="relative py-20 px-4 overflow-hidden">
@@ -129,6 +129,6 @@ const CaseStudiesPage: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 
 export default CaseStudiesPage

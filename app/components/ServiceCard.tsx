@@ -9,7 +9,7 @@ interface ServiceCardProps {
   popular?: boolean
   onSelect?: () => void,
   className?: string
-  }
+  };
 const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
@@ -59,6 +59,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       )}
     </div>
   )
-}
+};
+
 export default ServiceCard
   </ServiceCardProps>

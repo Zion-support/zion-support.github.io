@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
 import {
     Cloud,
   Settings,
@@ -26,6 +26,7 @@ import {
   }
 } from 'lucide-react'
 const CloudInfrastructureManagerPage: React.FC = () => {
+  
 const features = [
     {
       icon: Cloud,
@@ -56,13 +57,13 @@ const benefits = [
     'Easy deployment and configuration',
     'Multi-cloud support',
     'Expert technical support'
-  ]
+  ];
 return (
     <>
       <Helmet>
         <title>Cloud Infrastructure Manager - Zion Tech Group | Cloud Management Platform</title>
-        <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+        <meta name="description" content="Advanced AI solutions"   />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions"   />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -154,5 +155,6 @@ return (
       </div>
     </>
   )
-}
+};
+
 export default CloudInfrastructureManagerPage

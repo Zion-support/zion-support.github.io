@@ -51,7 +51,7 @@ const toggleSection = (
   }
     }
     setExpandedSections(newExpanded)
-  }
+  };
 const navigationSections = [
     {
     title: 'Main',
@@ -141,14 +141,14 @@ const navigationSections = [
         { name: 'Status', path: '/status', icon: Settings },
       ]
     }
-  ]
+  ];
 const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
     hours: 'Mon-Fri 9AM-6PM EST'
   }
-  }
+  };
 return (
     <>
 

@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const FiveGImplementationPage: React.FC = () => {
+  
   const features = [
     {
       icon: Wifi,
@@ -40,13 +42,13 @@ const FiveGImplementationPage: React.FC = () => {
       description: 'Advanced analytics and reporting for 5G network performance and optimization.',
       benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']
     }
-  ]
+  ];
   return (
     <>
       <Helmet>
         <title>5G Network Implementation - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
-        <meta name="keywords" content="5G implementation, network design, ultra-low latency, IoT connectivity, wireless infrastructure" />
+        <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems."   />
+        <meta name="keywords" content="5G implementation, network design, ultra-low latency, IoT connectivity, wireless infrastructure"   />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -131,5 +133,6 @@ const FiveGImplementationPage: React.FC = () => {
       </div>
     </>
   )
-}
+};
+
 export default FiveGImplementationPage

@@ -3,7 +3,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom'
-import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react'
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const PricingPage: React.FC = () => {
   const plans = [
     {
@@ -53,14 +54,13 @@ const PricingPage: React.FC = () => {
       ],
       popular: false
     }
-  ]
-
-  return (
+  ];
+return (
     <>
       <Helmet>
         <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
-        <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
-        <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
+        <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today."   />
+        <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing"   />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -133,6 +133,6 @@ const PricingPage: React.FC = () => {
       </div>
     </>
   )
-}
+};
 
 export default PricingPage

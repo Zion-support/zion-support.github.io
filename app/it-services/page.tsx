@@ -1007,9 +1007,8 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Shield
     }
-  ]
-
-  const categories = [
+  ];
+const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'Cloud', name: 'Cloud', count: services.filter(s => s.category === 'Cloud').length },
     { id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length },
@@ -1043,16 +1042,15 @@ const ItServicesPage: React.FC = () => {
     { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
     { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
     { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
-  ]
-
-  const filteredServices = services.filter(service => 
+  ];
+const filteredServices = services.filter(service => 
     selectedCategory === 'all' || service.category === selectedCategory
   )
   return (
     <>
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, DevOps, database management, and web development." />
+        <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, DevOps, database management, and web development."   />
       </Helmet>
       
       <Navigation />
@@ -1183,6 +1181,6 @@ const ItServicesPage: React.FC = () => {
       <Footer />
     </>
   )
-}
+};
 
 export default ItServicesPage

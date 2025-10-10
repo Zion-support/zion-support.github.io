@@ -1,7 +1,8 @@
 'use client'
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async'
-import { Search, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, ArrowRight, CheckCircle, ExternalLink, Download, FileText, Settings, Database } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -12,9 +13,8 @@ const DocsPage: React.FC = () => {
     { id: 'it-services', name: 'IT Services', icon: Cloud },
     { id: 'api', name: 'API Reference', icon: Code },
     { id: 'security', name: 'Security', icon: Shield }
-  ]
-
-  const documentation = [
+  ];
+const documentation = [
     {
       id: 1,
       title: 'Getting Started Guide',
@@ -105,16 +105,14 @@ const DocsPage: React.FC = () => {
         'Support Resources'
       ]
     }
-  ]
-
-  const quickLinks = [
+  ];
+const quickLinks = [
     { title: 'API Reference', url: '/api', icon: Code },
     { title: 'Tutorials', url: '/tutorials', icon: BookOpen },
     { title: 'Community', url: '/community', icon: Users },
     { title: 'Support', url: '/support', icon: Shield }
-  ]
-
-  const filteredDocs = selectedCategory === 'all' 
+  ];
+const filteredDocs = selectedCategory === 'all' 
     ? documentation 
     : documentation.filter(doc => doc.category === selectedCategory)
   const searchResults = searchQuery 
@@ -127,8 +125,8 @@ const DocsPage: React.FC = () => {
     <>
       <Helmet>
         <title>Documentation - Zion Tech Group</title>
-        <meta name="description" content="Complete documentation for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive guides and API references." />
-        <meta name="keywords" content="documentation, API docs, guides, tutorials, developer resources, AI services, IT services" />
+        <meta name="description" content="Complete documentation for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive guides and API references."   />
+        <meta name="keywords" content="documentation, API docs, guides, tutorials, developer resources, AI services, IT services"   />
         <link rel="canonical" href="https://ziontechgroup.com/docs" />
       </Helmet>
 
@@ -344,6 +342,6 @@ const DocsPage: React.FC = () => {
       </div>
     </>
   )
-}
+};
 
 export default DocsPage

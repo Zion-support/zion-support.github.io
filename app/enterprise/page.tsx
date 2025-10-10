@@ -3,8 +3,10 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react'
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const EnterprisePage: React.FC = () => {
+  
     const features = [
     {
       icon: Shield,
@@ -39,7 +41,8 @@ const EnterprisePage: React.FC = () => {
     {
     icon: Settings,
       title: 'System Integration',
-      description: 'Seamless integration with existing enterprise systems and workflows.',      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      description: 'Seamless integration with existing enterprise systems and workflows.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   }];
 
@@ -78,21 +81,21 @@ const benefits = [
     'Scale with business growth',
     'Integrate with existing systems',
     'Provide 24/7 support and monitoring'
-  ]
+  ];
 const stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
     { number: '24/7', label: 'Support Available', icon: Clock }
-  ]
+  ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer>
       <Navigation>
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden"></section>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" ></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} ></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1>
             Enterprise</h1>
@@ -208,5 +211,6 @@ return (
       <Footer>
     </div>
   )
-}
+};
+
 export default EnterprisePage

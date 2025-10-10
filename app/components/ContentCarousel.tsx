@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const slides = [
@@ -28,13 +29,11 @@ const ContentCarousel: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses',
       features: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support']
     }
-  ]
-
-  const nextSlide = () => {
+  ];
+const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
-  }
-
-  const prevSlide = () => {
+  };
+const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   }
 
@@ -112,6 +111,6 @@ const ContentCarousel: React.FC = () => {
       </div>
     </div>
   )
-}
+};
 
 export default ContentCarousel

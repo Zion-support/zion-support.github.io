@@ -1,6 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { Settings, ArrowRight } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const MicroSaaSPage: React.FC = () => {
     const serviceName = 'document-processor'
   const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
@@ -47,5 +48,6 @@ return (
       </div>
     </>
   )
-}
+};
+
 export default MicroSaaSPage

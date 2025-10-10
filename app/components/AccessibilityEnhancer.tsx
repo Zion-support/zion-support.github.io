@@ -7,8 +7,7 @@ interface AccessibilityEnhancerProps {
   enableScreenReaderSupport?: boolean
   enableHighContrast?: boolean
   enableFocusManagement?: boolean
-}
-
+};
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
   enableKeyboardNavigation = true,
@@ -106,9 +105,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       history.replaceState = function(...args) {
         originalReplaceState.apply(history, args);
         announcePageChange('Page updated');
-      }
-
-      return () => {
+      };
+return () => {
         document.body.removeChild(liveRegion);
         history.pushState = originalPushState;
         history.replaceState = originalReplaceState;
@@ -132,6 +130,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement])
   return <React.Fragment>{children}</React.Fragment>
-}
+};
 
 export default AccessibilityEnhancer

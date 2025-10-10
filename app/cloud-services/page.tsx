@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const CloudServicesPage: React.FC = () => {
   const services = [
     {
@@ -29,8 +30,8 @@ const CloudServicesPage: React.FC = () => {
       features: ['Identity management', 'Data encryption', 'Compliance auditing', 'Threat detection']
 
     }
-  ]
-  const benefits = [
+  ];
+const benefits = [
 
     'Reduced infrastructure costs by up to 40%',
     'Improved scalability and flexibility',
@@ -40,9 +41,8 @@ const CloudServicesPage: React.FC = () => {
     'Disaster recovery and backup solutions',
     'Global availability and performance',
     'Expert cloud architecture guidance'
-  ]
-
-  const pricing = [
+  ];
+const pricing = [
     {
       name: 'Starter',
       price: '$2,999',
@@ -86,20 +86,20 @@ const CloudServicesPage: React.FC = () => {
       ]
     }
 
-  ]
-  return (
+  ];
+return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Cloud Services - Zion Tech Group | Cloud Solutions & Migration</title>
-        <meta name="description" content="Expert cloud services including migration, infrastructure, security, and database solutions. Transform your business with our cloud expertise." />
-        <meta name="keywords" content="cloud services, cloud migration, AWS, Azure, GCP, cloud infrastructure, database solutions, cloud security" />
-        <meta property="og:title" content="Cloud Services - Zion Tech Group" />
-        <meta property="og:description" content="Expert cloud solutions and migration services" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Cloud Services - Zion Tech Group" />
-        <meta name="twitter:description" content="Expert cloud solutions and migration services" />
+        <meta name="description" content="Expert cloud services including migration, infrastructure, security, and database solutions. Transform your business with our cloud expertise."   />
+        <meta name="keywords" content="cloud services, cloud migration, AWS, Azure, GCP, cloud infrastructure, database solutions, cloud security"   />
+        <meta property="og:title" content="Cloud Services - Zion Tech Group"   />
+        <meta property="og:description" content="Expert cloud solutions and migration services"   />
+        <meta property="og:type" content="website"   />
+        <meta name="twitter:card" content="summary_large_image"   />
+        <meta name="twitter:title" content="Cloud Services - Zion Tech Group"   />
+        <meta name="twitter:description" content="Expert cloud solutions and migration services"   />
       </Helmet>
 
       {/* Hero Section */}
@@ -268,7 +268,8 @@ const CloudServicesPage: React.FC = () => {
     </div>
 
   )
-}
+};
+
 export default CloudServicesPage
   </button>
   </button>

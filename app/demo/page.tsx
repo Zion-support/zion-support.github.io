@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
 import { Play, ArrowRight, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
@@ -24,14 +24,13 @@ const DemoPage: React.FC = () => {
       duration: '4 min',
       features: ['Blog posts', 'Social media content', 'Product descriptions']
     }
-  ]
-
-  return (
+  ];
+return (
     <>
       <Helmet>
         <title>Demo - Zion Tech Group | See Our AI Solutions in Action</title>
-        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
-        <meta name="keywords" content="demo, AI demo, technology demo, interactive demo, AI solutions demo" />
+        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business."   />
+        <meta name="keywords" content="demo, AI demo, technology demo, interactive demo, AI solutions demo"   />
       </Helmet>
       
       <Navigation />
@@ -106,6 +105,6 @@ const DemoPage: React.FC = () => {
       <Footer />
     </>
   )
-}
+};
 
 export default DemoPage

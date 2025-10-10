@@ -15,8 +15,7 @@ interface EnhancedAccessibilityProps {
   enableScreenReaderSupport?: boolean
   enableHighContrast?: boolean,
   enableFocusManagement?: boolean
-  }
-
+  };
 const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   children,
   enableKeyboardNavigation = true,
@@ -82,9 +81,8 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   } else {
     root.classList.remove('screen-reader-optimized')
   }
-  }
-
-  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
+  };
+const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
     const updatedSettings = { ...settings, ...newSettings }
     setSettings(updatedSettings)
     applyAccessibilitySettings(updatedSettings)
@@ -128,9 +126,8 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       if (target && target.classList) {
         target.classList.add('focus-visible')
       }
-    }
-
-    const handleFocusOut = (event: FocusEvent) => {
+    };
+const handleFocusOut = (event: FocusEvent) => {
       const target = event.target as HTMLElement
       // Remove focus styling
       if (target && target.classList) {
@@ -176,6 +173,6 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       {children}
     </div>
   )
-}
+};
 
 export default EnhancedAccessibility

@@ -1,6 +1,7 @@
 'use client';
 import React from 'react'
 const PagePage: React.FC = () => {
+  
 const features = [
     {
       icon: Brain,
@@ -94,5 +95,6 @@ const benefits = [
       </section>
     </div>
   )
-}
+};
+
 export default PagePage

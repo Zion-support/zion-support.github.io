@@ -1,7 +1,8 @@
 'use client'
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async'
-import { Play, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, Clock, Star, ArrowRight, CheckCircle, ExternalLink, Download } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const TutorialsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const categories = [
@@ -11,9 +12,8 @@ const TutorialsPage: React.FC = () => {
     { id: 'saas', name: 'Micro SaaS', icon: Zap },
     { id: 'security', name: 'Security', icon: Shield },
     { id: 'integration', name: 'Integration', icon: Code }
-  ]
-
-  const tutorials = [
+  ];
+const tutorials = [
     {
       id: 1,
       title: 'Getting Started with AI Chat API',
@@ -152,9 +152,8 @@ const TutorialsPage: React.FC = () => {
         ]
       }
     }
-  ]
-
-  const filteredTutorials = selectedCategory === 'all' 
+  ];
+const filteredTutorials = selectedCategory === 'all' 
     ? tutorials 
     : tutorials.filter(tutorial => tutorial.category === selectedCategory)
   const featuredTutorials = tutorials.filter(tutorial => tutorial.rating >= 4.8).slice(0, 3)
@@ -162,8 +161,8 @@ const TutorialsPage: React.FC = () => {
     <>
       <Helmet>
         <title>Tutorials & Learning Resources - Zion Tech Group</title>
-        <meta name="description" content="Learn how to use Zion Tech Group's AI, IT, and Micro SaaS services with our comprehensive tutorials and learning resources." />
-        <meta name="keywords" content="tutorials, learning, AI tutorials, IT tutorials, SaaS tutorials, developer resources" />
+        <meta name="description" content="Learn how to use Zion Tech Group's AI, IT, and Micro SaaS services with our comprehensive tutorials and learning resources."   />
+        <meta name="keywords" content="tutorials, learning, AI tutorials, IT tutorials, SaaS tutorials, developer resources"   />
         <link rel="canonical" href="https://ziontechgroup.com/tutorials" />
       </Helmet>
 
@@ -539,6 +538,6 @@ const TutorialsPage: React.FC = () => {
       </div>
     </>
   )
-}
+};
 
 export default TutorialsPage

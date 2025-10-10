@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
@@ -49,7 +49,7 @@ const ContactPage: React.FC = () => {
     <>
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, and inquiries." />
+        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, and inquiries."   />
       </Helmet>
       
       <Navigation />
@@ -272,6 +272,6 @@ const ContactPage: React.FC = () => {
       <Footer />
     </>
   )
-}
+};
 
 export default ContactPage

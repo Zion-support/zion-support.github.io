@@ -7,8 +7,7 @@ interface PerformanceOptimizerProps {
   enableLazyLoading?: boolean
   enablePreloading?: boolean,
   enableCodeSplitting?: boolean
-  }
-
+  };
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
   children, 
   enableImageOptimization = true,
@@ -202,6 +201,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting])
   return null
-}
+};
 
 export default PerformanceOptimizer

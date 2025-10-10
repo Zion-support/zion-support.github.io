@@ -5,8 +5,8 @@ const CybersecuritySolutionsPage: React.FC = () => {
     <>
       <Helmet>
         <title>Cybersecurity Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cybersecurity solutions including threat detection, vulnerability assessment, security monitoring, and compliance management." />
-        <meta name="keywords" content="cybersecurity solutions, threat detection, vulnerability assessment, security monitoring, compliance management, data protection" />
+        <meta name="description" content="Comprehensive cybersecurity solutions including threat detection, vulnerability assessment, security monitoring, and compliance management."   />
+        <meta name="keywords" content="cybersecurity solutions, threat detection, vulnerability assessment, security monitoring, compliance management, data protection"   />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -110,6 +110,6 @@ const CybersecuritySolutionsPage: React.FC = () => {
       </div>
     </>
   )
-}
+};
 
 export default CybersecuritySolutionsPage

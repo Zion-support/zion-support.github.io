@@ -2,9 +2,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import Footer from '../components/Footer';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const LoadingPage: React.FC = () => {
+  
   const features = [
     {
       icon: Brain,
@@ -30,13 +32,13 @@ const LoadingPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
+  ];
   return (
     <React.Fragment>
       <Helmet>
         <title>Loading - Zion Tech Group</title>
-        <meta name="description" content="Loading page." />
-        <meta name="keywords" content="loading, AI solutions, IT services, business transformation" />
+        <meta name="description" content="Loading page."   />
+        <meta name="keywords" content="loading, AI solutions, IT services, business transformation"   />
       </Helmet>
       <Navigation />
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -111,7 +113,8 @@ const LoadingPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )
-}
+};
+
 export default LoadingPage
   </button>
   </h2>

@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { BookOpen, Users, BarChart, Zap, Shield, CheckCircle } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const OnlineLearningPlatformPage: React.FC = () => {
+  
   const features = [
     { icon: BookOpen, title: 'Course Management', description: 'Create, organize, and manage educational content with AI-powered course recommendations.' },
     { icon: Users, title: 'Student Analytics', description: 'Track student progress and engagement with detailed analytics and insights.' },
@@ -10,13 +12,13 @@ const OnlineLearningPlatformPage: React.FC = () => {
     { icon: Zap, title: 'AI Tutoring', description: 'Personalized AI tutoring and adaptive learning experiences.' },
     { icon: Shield, title: 'Secure Platform', description: 'Secure, scalable platform with role-based access and data protection.' },
     { icon: CheckCircle, title: 'Certification', description: 'Automated certification and credential management system.' }
-  ]
-  return (
+  ];
+return (
     <React.Fragment>
       <Helmet>
         <title>Online Learning Platform | Zion Tech Group - AI-Powered Education Platform</title>
-        <meta name="description" content="Create engaging online learning experiences with AI-powered education platform. Course management, student analytics, and personalized learning." />
-        <meta name="keywords" content="online learning platform, e-learning, education technology, course management, student analytics, AI tutoring" />
+        <meta name="description" content="Create engaging online learning experiences with AI-powered education platform. Course management, student analytics, and personalized learning."   />
+        <meta name="keywords" content="online learning platform, e-learning, education technology, course management, student analytics, AI tutoring"   />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
@@ -41,5 +43,6 @@ const OnlineLearningPlatformPage: React.FC = () => {
       </div>
     </React.Fragment>
   )
-}
+};
+
 export default OnlineLearningPlatformPage

@@ -7,8 +7,7 @@ interface PerformanceOptimizerProps {
   enableLazyLoading?: boolean
   enablePreloading?: boolean
   enableCodeSplitting?: boolean
-}
-
+};
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
   enableImageOptimization = true,
@@ -94,9 +93,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           }
         })
       })
-    }
-
-    const timer = setTimeout(optimizeCodeSplitting, 1000)
+    };
+const timer = setTimeout(optimizeCodeSplitting, 1000)
     return () => clearTimeout(timer)
   }, [enableCodeSplitting])
   // Performance monitoring
@@ -129,6 +127,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     return () => window.removeEventListener('load', measurePerformance)
   }, [])
   return <>{children}</>
-}
+};
 
 export default PerformanceOptimizer

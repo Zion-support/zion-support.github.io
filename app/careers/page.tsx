@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom'
-import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, ArrowRight } from 'lucide-react'
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const CareersPage: React.FC = () => {
   const openPositions = [
     {
@@ -32,9 +33,8 @@ const CareersPage: React.FC = () => {
       description: 'Extract insights from complex datasets to drive business decisions.',
       requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills']
     }
-  ]
-
-  const benefits = [
+  ];
+const benefits = [
     'Competitive salary and equity',
     'Comprehensive health insurance',
     'Flexible work arrangements',
@@ -42,9 +42,8 @@ const CareersPage: React.FC = () => {
     'Top-tier equipment and tools',
     'Team building events',
     'Career growth opportunities'
-  ]
-
-  const values = [
+  ];
+const values = [
     {
       icon: Star,
       title: 'Innovation',
@@ -65,14 +64,13 @@ const CareersPage: React.FC = () => {
       title: 'Excellence',
       description: 'We strive for the highest quality in everything we do'
     }
-  ]
-
-  return (
+  ];
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
-        <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture." />
-        <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs" />
+        <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture."   />
+        <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs"   />
       </Helmet>
 
       <section className="relative py-20 px-4 overflow-hidden">
@@ -175,6 +173,6 @@ const CareersPage: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 
 export default CareersPage

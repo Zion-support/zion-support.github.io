@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const ARVRPlatformPage: React.FC = () => {
+  
   const features = [
     {
       icon: Brain,
@@ -24,8 +26,8 @@ const ARVRPlatformPage: React.FC = () => {
       title: 'Cross-Platform Support',
       description: 'Deploy across multiple devices and platforms for maximum reach and accessibility'
     }
-  ]
-  const benefits = [
+  ];
+const benefits = [
     'Advanced AR/VR technology integration',
     'Real-time 3D rendering and interaction',
     'Enterprise-grade security and compliance',
@@ -34,13 +36,13 @@ const ARVRPlatformPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-  return (
+  ];
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AR/VR Platform | Zion Tech Group</title>
-        <meta name="description" content="Professional AR/VR Platform services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<meta name="keywords" content="AR VR platform, AI solutions, IT services, Zion Tech Group, augmented reality, virtual reality" />
+        <meta name="description" content="Professional AR/VR Platform services by Zion Tech Group. Advanced AI and IT solutions for your business."   />
+<meta name="keywords" content="AR VR platform, AI solutions, IT services, Zion Tech Group, augmented reality, virtual reality"   />
       </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">
@@ -137,7 +139,8 @@ Experience the power of our AR/VR platform solutions for your business.
       </section>
     </div>
   )
-}
+};
+
 export default ARVRPlatformPage
   </button>
   </button>

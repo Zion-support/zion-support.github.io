@@ -1,6 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { Share2, ArrowRight } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const SocialMediaManagerPage: React.FC = () => {
     return (
     <>,
@@ -48,5 +49,6 @@ const SocialMediaManagerPage: React.FC = () => {
     </>,
   )
   }
-}
+};
+
 export default SocialMediaManagerPage

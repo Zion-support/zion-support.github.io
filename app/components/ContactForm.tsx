@@ -12,9 +12,8 @@ interface FormData {
 interface FormStatus {
   type: 'idle' | 'loading' | 'success' | 'error'
   message: string,
-}
-
-  const [formData, setFormData] = useState<FormData>({
+};
+const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     company: '',
@@ -35,9 +34,8 @@ const { name, value } = e.target
       ...prev,
       [name]: value
     }))
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  };
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus({ type: 'loading', message: 'Sending message...' })
 
@@ -64,9 +62,8 @@ const { name, value } = e.target
         message: 'Sorry, there was an error sending your message. Please try again.'
       })
     }
-  }
-
-  const services = [
+  };
+const services = [
     'AI Solutions',
     'Web Development',
     'Mobile App Development',
@@ -75,9 +72,8 @@ const { name, value } = e.target
     'Cybersecurity',
     'IT Consulting',
     'Other'
-  ]
-
-  return (
+  ];
+return (
     <div className="max-w-2xl mx-auto p-6">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Get In Touch</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
@@ -217,6 +213,6 @@ const { name, value } = e.target
         </div>
     </div>
   )
-}
+};
 
 export default ContactForm

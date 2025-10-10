@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const FuturisticHeroPage: React.FC = () => {
+  
 const features = [
     {
       icon: Brain,
@@ -33,7 +35,7 @@ const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
+  ];
 return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
             {benefits.map((benefit, index) => (
@@ -64,5 +66,6 @@ return (
               </button>
             </div>
   )
-}
+};
+
 export default FuturisticHeroPage

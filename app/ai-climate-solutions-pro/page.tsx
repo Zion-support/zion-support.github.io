@@ -2,9 +2,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import Footer from '../components/Footer';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const AiClimateSolutionsProPage: React.FC = () => {
+  
   const features = [
     {
       icon: Brain,
@@ -30,13 +32,13 @@ const AiClimateSolutionsProPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
+  ];
   return (
     <React.Fragment>
       <Helmet>
         <title>AI Climate Solutions Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional climate solutions powered by advanced AI technology." />
-        <meta name="keywords" content="AI climate solutions, artificial intelligence, climate technology, AI solutions, environmental AI" />
+        <meta name="description" content="Professional climate solutions powered by advanced AI technology."   />
+        <meta name="keywords" content="AI climate solutions, artificial intelligence, climate technology, AI solutions, environmental AI"   />
       </Helmet>
       <Navigation />
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -111,7 +113,8 @@ const AiClimateSolutionsProPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )
-}
+};
+
 export default AiClimateSolutionsProPage
   </button>
   </h2>

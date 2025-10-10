@@ -2,9 +2,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'
-import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi, Server } from 'lucide-react'
+import Footer from '../components/Footer';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const EdgeComputingPage: React.FC = () => {
+  
     const features = [
     {
       icon: Cpu,
@@ -39,7 +41,8 @@ const EdgeComputingPage: React.FC = () => {
     {
     icon: Server,
       title: 'Edge Infrastructure',
-      description: 'Robust infrastructure designed for edge computing requirements and scalability.',      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      description: 'Robust infrastructure designed for edge computing requirements and scalability.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   }];
 
@@ -71,7 +74,7 @@ const benefits = [
     'Enhanced Security',
     'Real-time Processing',
     'Global Scalability'
-  ]
+  ];
 const useCases = [
     {
     title: 'Autonomous Vehicles',
@@ -104,19 +107,19 @@ const useCases = [
       icon: '🎮'
   }
     }
-  ]
+  ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
       <Helmet>
         <title>Edge Computing Solutions | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+        <meta name="description" content="Advanced AI solutions"   />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions"   />
       </Helmet>
       <Navigation>
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden"></section>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" ></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} ></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1>
             Edge Computing
@@ -255,5 +258,6 @@ return (
       <Footer>
     </div>
   )
-}
+};
+
 export default EdgeComputingPage

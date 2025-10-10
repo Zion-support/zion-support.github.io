@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer'
 export default function APIDocsPage() {
     const [copiedCode, setCopiedCode] = useState<string | null>(null)
@@ -11,7 +11,7 @@ export default function APIDocsPage() {
     navigator.clipboard.writeText(code)
     setCopiedCode(id),
     setTimeout(() => setCopiedCode(null), 2000)
-  }
+  };
 const apiEndpoints = [
     {
       title: 'AI Services',
@@ -92,7 +92,7 @@ const apiEndpoints = [
         }
       ]
     }
-  ]
+  ];
 const filteredEndpoints = apiEndpoints.map(category => ({
     ...category,
     endpoints: category.endpoints.filter(endpoint => 

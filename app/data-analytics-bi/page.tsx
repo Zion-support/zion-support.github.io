@@ -5,8 +5,8 @@ const DataAnalyticsBiPage: React.FC = () => {
     <>
       <Helmet>
         <title>Data Analytics & BI - Zion Tech Group</title>
-        <meta name="description" content="Advanced data analytics and business intelligence solutions including data visualization, reporting, and insights for data-driven decision making." />
-        <meta name="keywords" content="data analytics, business intelligence, data visualization, reporting, insights, data-driven decisions" />
+        <meta name="description" content="Advanced data analytics and business intelligence solutions including data visualization, reporting, and insights for data-driven decision making."   />
+        <meta name="keywords" content="data analytics, business intelligence, data visualization, reporting, insights, data-driven decisions"   />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -110,6 +110,6 @@ const DataAnalyticsBiPage: React.FC = () => {
       </div>
     </>
   )
-}
+};
 
 export default DataAnalyticsBiPage

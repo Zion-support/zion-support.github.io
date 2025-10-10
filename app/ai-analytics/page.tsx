@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const AiAnalyticsPage: React.FC = () => {
+  
   const features = [
     {
       icon: Brain,
@@ -42,15 +43,15 @@ const AiAnalyticsPage: React.FC = () => {
       description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
-  ];
+  ];;
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
-  const useCases = [
+  ];
+const useCases = [
     {
       title: 'Business Intelligence',
       description: 'Transform raw data into actionable business insights',
@@ -81,13 +82,13 @@ const AiAnalyticsPage: React.FC = () => {
       description: 'Identify and mitigate business risks proactively',
       icon: '🛡️'
     }
-  ]
-  return (
+  ];
+return (
     <React.Fragment>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
-<meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />
-        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
+<meta name="description" content="Advanced AI-powered analytics solution for modern businesses."   />
+        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation"   />
       </Helmet>
       <Navigation />
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -162,7 +163,8 @@ const AiAnalyticsPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )
-}
+};
+
 export default AiAnalyticsPage
   </button>
   </h2>

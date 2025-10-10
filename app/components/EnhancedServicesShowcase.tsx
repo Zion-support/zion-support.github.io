@@ -1,5 +1,6 @@
 import React from 'react'
-import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react'
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const EnhancedServicesShowcase: React.FC = () => {
     const services = [
     {
@@ -35,7 +36,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       stats: '95% Efficiency'
   }
     }
-  ]
+  ];
 return (
     <section className="py-16"></section>
       <div className="container mx-auto px-4"></div>
@@ -83,5 +84,6 @@ return (
         </div>
     </section>
   )
-}
+};
+
 export default EnhancedServicesShowcase

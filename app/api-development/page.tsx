@@ -5,8 +5,8 @@ const ApiDevelopmentPage: React.FC = () => {
     <>
       <Helmet>
         <title>API Development - Zion Tech Group</title>
-        <meta name="description" content="Professional API development services including RESTful APIs, GraphQL, microservices, and API integration solutions for modern applications." />
-        <meta name="keywords" content="API development, RESTful APIs, GraphQL, microservices, API integration, web services" />
+        <meta name="description" content="Professional API development services including RESTful APIs, GraphQL, microservices, and API integration solutions for modern applications."   />
+        <meta name="keywords" content="API development, RESTful APIs, GraphQL, microservices, API integration, web services"   />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -110,6 +110,6 @@ const ApiDevelopmentPage: React.FC = () => {
       </div>
     </>
   )
-}
+};
 
 export default ApiDevelopmentPage

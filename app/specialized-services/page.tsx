@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, Database, Users, Settings, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+
 const PagePage: React.FC = () => {
+  
     const features = [
     {
             </div>
@@ -85,6 +87,7 @@ export default PagePage;
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 const SpecializedServicesPage: React.FC = () => {
+  
   const features = [
     {
       icon: Brain,
@@ -106,23 +109,21 @@ const SpecializedServicesPage: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale your operations worldwide with our robust infrastructure'
     }
-  ]
-
-  const benefits = [
+  ];
+const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce operational costs by 30%',
     'Improve decision-making with real-time insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with cutting-edge technology',
     'Ensure 99.9% uptime and reliability'
-  ]
-
-  return (
+  ];
+return (
     <>
       <Helmet>
         <title>Specialized Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced specialized services for modern businesses including AI solutions, automation, and digital transformation." />
-        <meta name="keywords" content="specialized services, AI solutions, automation, digital transformation, business optimization" />
+        <meta name="description" content="Advanced specialized services for modern businesses including AI solutions, automation, and digital transformation."   />
+        <meta name="keywords" content="specialized services, AI solutions, automation, digital transformation, business optimization"   />
       </Helmet>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -220,5 +221,6 @@ const SpecializedServicesPage: React.FC = () => {
       <Footer />
     </>
   )
-}
+};
+
 export default SpecializedServicesPage
