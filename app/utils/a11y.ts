@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 'use client';
 import { useCallback } from 'react';
-=======
-'use client'
-import { useCallback } from 'react'
->>>>>>> cursor/fix-errors-and-merge-to-main-6ca0
 
 /**
  * Accessibility (A11Y) Utilities
@@ -15,11 +10,7 @@ import { useCallback } from 'react'
  * Generate unique ID for aria-describedby and aria-labelledby
  */
 export function generateId(prefix = 'a11y'): string {
-<<<<<<< HEAD
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
-=======
-  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ca0
 }
 
 /**
@@ -45,22 +36,13 @@ export function announceToScreenReader(
   
   // Set message after a slight delay to ensure screen readers pick it up
   setTimeout(() => {
-<<<<<<< HEAD
     announcement.textContent = message;
   }, 100);
+  
   // Remove announcement after it's been read
   setTimeout(() => {
     document.body.removeChild(announcement);
   }, 3000);
-=======
-    announcement.textContent = message
-  }, 100)
-  
-  // Remove announcement after it's been read
-  setTimeout(() => {
-    document.body.removeChild(announcement)
-  }, 3000)
->>>>>>> cursor/fix-errors-and-merge-to-main-6ca0
 }
 
 /**
@@ -73,30 +55,19 @@ export function trapFocus(element: HTMLElement): () => void {
   
   const firstFocusable = focusableElements[0]
   const lastFocusable = focusableElements[focusableElements.length - 1]
-<<<<<<< HEAD
+  
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
     if (e.key !== 'Tab') return;
+    
     if (e.shiftKey) {
       // Shift + Tab
       if (document.activeElement === firstFocusable) {
         e.preventDefault();
         lastFocusable?.focus();
-=======
-  
-  const handleKeyDown = useCallback((e: KeyboardEvent) => {
-    if (e.key !== 'Tab') return
-    
-    if (e.shiftKey) {
-      // Shift + Tab
-      if (document.activeElement === firstFocusable) {
-        e.preventDefault()
-        lastFocusable?.focus()
->>>>>>> cursor/fix-errors-and-merge-to-main-6ca0
       }
     } else {
       // Tab
       if (document.activeElement === lastFocusable) {
-<<<<<<< HEAD
         e.preventDefault();
         firstFocusable?.focus();
       }
@@ -104,29 +75,14 @@ export function trapFocus(element: HTMLElement): () => void {
   }, [firstFocusable, lastFocusable]);
   
   element.addEventListener('keydown', handleKeyDown);
+  
   // Focus first element
   firstFocusable?.focus();
+  
   // Return cleanup function
   return () => {
     element.removeEventListener('keydown', handleKeyDown);
   };
-=======
-        e.preventDefault()
-        firstFocusable?.focus()
-      }
-    }
-  }, [firstFocusable, lastFocusable])
-  
-  element.addEventListener('keydown', handleKeyDown)
-  
-  // Focus first element
-  firstFocusable?.focus()
-  
-  // Return cleanup function
-  return () => {
-    element.removeEventListener('keydown', handleKeyDown)
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-6ca0
 }
 
 /**

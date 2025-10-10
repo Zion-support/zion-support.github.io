@@ -1,256 +1,205 @@
-'use client'
+'use client';
+
 /**
  * API Caching Utility
  * Provides caching, deduplication, and retry logic for API calls
  */
+
 interface ApiCacheConfig {
-  ttl?: number
-  maxRetries?: number
-  retryDelay?: number
-  deduplicate?: boolean;}
+  ttl?: number;
+  maxRetries?: number;
+  retryDelay?: number;
+  deduplicate?: boolean;
 }
+
 interface PendingRequest<T> {
-  promise: Promise<T>
-  timestamp: number;}
+  promise: Promise<T>;
+  timestamp: number;
 }
+
 /**
  * API Cache Manager with request deduplication
  */
 export class ApiCache {
-  private cache: CacheManager<unknown>
-  private pendingRequests: Map<string, PendingRequest<unknown>> = new Map()
-  private config: Required<ApiCacheConfig>;}
+  private cache: Map<string, { data: any; expiry: number }> = new Map();
+  private pendingRequests: Map<string, PendingRequest<unknown>> = new Map();
+  private config: Required<ApiCacheConfig>;
+
   constructor(config: ApiCacheConfig = {}) {
-    this.cache = new CacheManager({
-      maxSize: 500,
-      defaultTTL: config.ttl || 5 * 60 * 1000, // 5 minutes
-      storage: 'memory'}
-    })
     this.config = {
-      ttl: config.ttl || 5 * 60 * 1000,
+      ttl: config.ttl || 5 * 60 * 1000, // 5 minutes
       maxRetries: config.maxRetries || 3,
       retryDelay: config.retryDelay || 1000,
-      deduplicate: config.deduplicate ?? true}
-    }
-    // Auto-cleanup every 5 minutes
-    setInterval(() => {
-      this.cache.cleanup()
-      this.cleanupPendingRequests();}
-    }, 5 * 60 * 1000)
+      deduplicate: config.deduplicate !== false
+    };
   }
+
   /**
-   * Fetch with caching and deduplication
+   * Get cached data or fetch if not cached
    */
-  async fetch<T>(
-    url: string,
-    options: RequestInit = {},
-    cacheConfig?: Partial<ApiCacheConfig>
-  ): Promise<T> {
-    const cacheKey = this.getCacheKey(url, options);}
-    const mergedConfig = { ...this.config, ...cacheConfig }
+  async get<T>(key: string, fetcher: () => Promise<T>): Promise<T> {
+    // Check if request is already pending (deduplication)
+    if (this.config.deduplicate && this.pendingRequests.has(key)) {
+      return this.pendingRequests.get(key)!.promise as Promise<T>;
+    }
+
     // Check cache first
-    if (this.cache.has(cacheKey)) {
-      return this.cache.get(cacheKey) as T;}
+    const cached = this.getFromCache<T>(key);
+    if (cached !== null) {
+      return cached;
     }
-    // Check if there's a pending request
-    if (mergedConfig.deduplicate && this.pendingRequests.has(cacheKey)) {
-      const pending = this.pendingRequests.get(cacheKey)
-      if (pending && Date.now() - pending.timestamp < 30000) {
-        // Reuse pending request if less than 30 seconds old
-        return pending.promise as Promise<T>;}
-      }
+
+    // Create new request
+    const promise = this.fetchWithRetry(key, fetcher);
+    
+    if (this.config.deduplicate) {
+      this.pendingRequests.set(key, {
+        promise,
+        timestamp: Date.now()
+      });
     }
-    // Create new request with retry logic
-    const requestPromise = this.fetchWithRetry<T>(
-      url,
-      options,
-      mergedConfig.maxRetries,
-      mergedConfig.retryDelay
-    )
-    // Store pending request
-    if (mergedConfig.deduplicate) {
-      this.pendingRequests.set(cacheKey, {
-        promise: requestPromise,
-        timestamp: Date.now()}
-      })
-    }
+
     try {
-      const data = await requestPromise
-      // Cache successful response
-      this.cache.set(cacheKey, data, mergedConfig.ttl)
-      return data;}
+      const result = await promise;
+      return result;
     } finally {
-      // Clean up pending request
-      this.pendingRequests.delete(cacheKey);}
+      if (this.config.deduplicate) {
+        this.pendingRequests.delete(key);
+      }
     }
   }
+
   /**
-   * Fetch with retry logic
+   * Get data from cache
    */
-  private async fetchWithRetry<T>(
-    url: string,
-    options: RequestInit,
-    maxRetries: number,
-    retryDelay: number,
-    attempt = 1
-  ): Promise<T> {
-    try {
-      const response = await fetch(url, options)
-      if (!response.ok) {
-        // Retry on 5xx errors and 429 (rate limit)
-        if (
-          (response.status >= 500 || response.status === 429) &&
-          attempt < maxRetries
-        ) {
-          await this.delay(retryDelay * attempt); // Exponential backoff
-          return this.fetchWithRetry<T>(
-            url,
-            options,
-            maxRetries,
-            retryDelay,
-            attempt + 1
-          );}
+  private getFromCache<T>(key: string): T | null {
+    const cached = this.cache.get(key);
+    
+    if (!cached) {
+      return null;
+    }
+
+    // Check if expired
+    if (Date.now() > cached.expiry) {
+      this.cache.delete(key);
+      return null;
+    }
+
+    return cached.data as T;
+  }
+
+  /**
+   * Set data in cache
+   */
+  private setCache<T>(key: string, data: T, ttl?: number): void {
+    const expiry = Date.now() + (ttl || this.config.ttl);
+    this.cache.set(key, { data, expiry });
+  }
+
+  /**
+   * Fetch data with retry logic
+   */
+  private async fetchWithRetry<T>(key: string, fetcher: () => Promise<T>): Promise<T> {
+    let lastError: Error | null = null;
+
+    for (let attempt = 0; attempt <= this.config.maxRetries; attempt++) {
+      try {
+        const result = await fetcher();
+        
+        // Cache the successful result
+        this.setCache(key, result);
+        
+        return result;
+      } catch (error) {
+        lastError = error as Error;
+        
+        // Don't retry on the last attempt
+        if (attempt === this.config.maxRetries) {
+          break;
         }
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`)
+
+        // Wait before retrying
+        await this.delay(this.config.retryDelay * Math.pow(2, attempt));
       }
-      const data = await response.json()
-      return data as T
-    } catch (error) {
-      // Retry on network errors
-      if (attempt < maxRetries) {
-        await this.delay(retryDelay * attempt)
-        return this.fetchWithRetry<T>(
-          url,
-          options,
-          maxRetries,
-          retryDelay,
-          attempt + 1
-        );}
-      }
-      throw error
     }
+
+    throw lastError || new Error('Failed to fetch data');
   }
+
   /**
-   * Invalidate cache entries matching a pattern
+   * Delay utility
    */
-  invalidate(pattern: string | RegExp): number {
-    return this.cache.invalidate(pattern);}
+  private delay(ms: number): Promise<void> {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
+
   /**
-   * Clear entire cache
+   * Clear cache
    */
   clear(): void {
-    this.cache.clear()
-    this.pendingRequests.clear();}
+    this.cache.clear();
+    this.pendingRequests.clear();
   }
+
+  /**
+   * Remove specific key from cache
+   */
+  delete(key: string): boolean {
+    return this.cache.delete(key);
+  }
+
+  /**
+   * Check if key exists in cache
+   */
+  has(key: string): boolean {
+    const cached = this.cache.get(key);
+    if (!cached) return false;
+    
+    // Check if expired
+    if (Date.now() > cached.expiry) {
+      this.cache.delete(key);
+      return false;
+    }
+    
+    return true;
+  }
+
   /**
    * Get cache statistics
    */
-  getStats() {
+  getStats(): {
+    size: number;
+    pendingRequests: number;
+    hitRate: number;
+  } {
+    const totalRequests = this.cache.size + this.pendingRequests.size;
+    const hitRate = totalRequests > 0 ? this.cache.size / totalRequests : 0;
+
     return {
-      ...this.cache.stats(),
-      pendingRequests: this.pendingRequests.size}
-    }
+      size: this.cache.size,
+      pendingRequests: this.pendingRequests.size,
+      hitRate
+    };
   }
+
   /**
-   * Prefetch data
+   * Clean expired entries
    */
-  async prefetch<T>(
-    url: string,
-    options: RequestInit = {},
-    cacheConfig?: Partial<ApiCacheConfig>
-  ): Promise<void> {
-    try {
-      await this.fetch<T>(url, options, cacheConfig);}
-    } catch (error) {
-      // Silent fail for prefetch}
-      }
-  }
-  /**
-   * Generate cache key from URL and options
-   */
-  private getCacheKey(url: string, options: RequestInit): string {
-    const method = options.method || 'GET'
-    const body = options.body ? JSON.stringify(options.body) : '';`}
-    return `${method}:${url}:${body}`
-  }
-  /**
-   * Delay helper
-   */
-  private delay(ms: number): Promise<void> {
-    return new Promise((resolve) => setTimeout(resolve, ms));}
-  }
-  /**
-   * Clean up old pending requests
-   */
-  private cleanupPendingRequests(): void {
-    const now = Date.now()
-    const timeout = 60000; // 1 minute
-    for (const [key, pending] of this.pendingRequests.entries()) {
-      if (now - pending.timestamp > timeout) {
-        this.pendingRequests.delete(key);}
+  cleanExpired(): void {
+    const now = Date.now();
+    const expiredKeys: string[] = [];
+
+    for (const [key, cached] of this.cache.entries()) {
+      if (now > cached.expiry) {
+        expiredKeys.push(key);
       }
     }
+
+    expiredKeys.forEach(key => this.cache.delete(key));
   }
 }
-/**
- * Default API cache instance
- */
-export const defaultApiCache = new ApiCache({
-  ttl: 5 * 60 * 1000, // 5 minutes
-  maxRetries: 3,
-  retryDelay: 1000,
-  deduplicate: true}
-})
-/**
- * Cached fetch helper
- */
-export async function cachedFetch<T>(
-  url: string,
-  options?: RequestInit,
-  cacheConfig?: Partial<ApiCacheConfig>
-): Promise<T> {
-  return defaultApiCache.fetch<T>(url, options, cacheConfig);}
-}
-/**
- * Create a cached API client
- */
-export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {}) {
-  const cache = new ApiCache()
-  return {
-    get: <T>(path: string, options?: RequestInit) =>`}
-      cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'GET' }),
-    post: <T>(path: string, body: unknown, options?: RequestInit) =>
-      cache.fetch<T>(`${baseUrl}${path}`, {
-        ...defaultOptions,
-        ...options,
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',}
-          ...(defaultOptions.headers || {}),
-          ...(options?.headers || {})
-        },
-        body: JSON.stringify(body)
-      }),
-    put: <T>(path: string, body: unknown, options?: RequestInit) =>
-      cache.fetch<T>(`${baseUrl}${path}`, {
-        ...defaultOptions,
-        ...options,
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',}
-          ...(defaultOptions.headers || {}),
-          ...(options?.headers || {})
-        },
-        body: JSON.stringify(body)
-      }),
-    delete: <T>(path: string, options?: RequestInit) =>
-      cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'DELETE' }),
-    invalidate: (pattern: string | RegExp) => cache.invalidate(pattern),
-    clear: () => cache.clear(),
-    stats: () => cache.getStats(),
-    prefetch: <T>(path: string, options?: RequestInit) =>
-      cache.prefetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options })
-  }
-}
-export default ApiCache
+
+// Create singleton instance
+export const apiCache = new ApiCache();
+
+export default ApiCache;

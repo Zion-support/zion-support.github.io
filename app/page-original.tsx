@@ -31,8 +31,8 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
-))
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton'
+));
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 const HomePage: React.FC = React.memo((props) => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
@@ -1617,6 +1617,7 @@ const HomePage: React.FC = React.memo((props) => {
       {/* Footer */}
       <Footer />
     </div>
-  )
-}
+    </>
+  );
+};
 export default HomePage

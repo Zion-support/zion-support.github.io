@@ -1,228 +1,312 @@
-'use client'
+'use client';
+
 /**
  * Enhanced Analytics Utility
  * Provides comprehensive analytics tracking with event batching and offline support
  */
+
 export interface AnalyticsEvent {
-  category: string
-  action: string
-  label?: string
-  value?: number
-  metadata?: Record<string, unknown>;}
+  category: string;
+  action: string;
+  label?: string;
+  value?: number;
+  metadata?: Record<string, unknown>;
 }
+
 export interface UserProperties {
-  userId?: string
-  sessionId?: string
-  userType?: string
-  [key: string]: unknown;}
+  userId?: string;
+  sessionId?: string;
+  userType?: string;
+  [key: string]: unknown;
 }
+
 class EnhancedAnalytics {
-  private queue: AnalyticsEvent[] = [];}
-  private userProperties: UserProperties = {}
-  private sessionId: string
-  private isInitialized = false
-  private batchSize = 10
+  private queue: AnalyticsEvent[] = [];
+  private userProperties: UserProperties = {};
+  private sessionId: string;
+  private isInitialized = false;
+  private batchSize = 10;
   private flushInterval = 30000; // 30 seconds
-  private offlineQueue: AnalyticsEvent[] = []
+  private offlineQueue: AnalyticsEvent[] = [];
+
   constructor() {
-    this.sessionId = this.generateSessionId()
-    this.setupOfflineHandling()
-    this.setupPeriodicFlush();}
+    this.sessionId = this.generateSessionId();
+    this.setupOfflineHandling();
+    this.setupPeriodicFlush();
   }
-  private generateSessionId(): string {}
-    return `session-${Date.now()}-${Math.random().toString(36).substring(7)}`
+
+  /**
+   * Initialize analytics
+   */
+  initialize(): void {
+    if (this.isInitialized) return;
+    
+    this.isInitialized = true;
+    this.loadOfflineQueue();
+    this.flush();
   }
-  private setupOfflineHandling(): void {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('online', () => {
-        this.flushOfflineQueue();}
-      })
-      window.addEventListener('beforeunload', () => {
-        this.flush();}
-      })
-    }
-  }
-  private setupPeriodicFlush(): void {
-    if (typeof window !== 'undefined') {
-      setInterval(() => {
-        this.flush();}
-      }, this.flushInterval)
-    }
-  }
-  public initialize(config?: { userId?: string; userType?: string }): void {
-    if (this.isInitialized) return
-    this.isInitialized = true
-    this.userProperties = {
-      ...this.userProperties,
-      sessionId: this.sessionId,
-      ...config}
-    }
-    // Track initialization
-    this.trackEvent({
-      category: 'System',
-      action: 'Analytics Initialized',
-      metadata: {
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent}
-      }
-    })
-  }
-  public setUserProperties(properties: UserProperties): void {
-    this.userProperties = {
-      ...this.userProperties,
-      ...properties}
-    }
-  }
-  public trackEvent(event: AnalyticsEvent): void {
-    const enrichedEvent: AnalyticsEvent = {
+
+  /**
+   * Track an event
+   */
+  track(event: AnalyticsEvent): void {
+    const enrichedEvent = {
       ...event,
-      metadata: {
-        ...event.metadata,
-        sessionId: this.sessionId,
-        timestamp: new Date().toISOString(),
-        url: typeof window !== 'undefined' ? window.location.href : ''}
-      }
-    }
-    // Add to queue
-    this.queue.push(enrichedEvent)
-    // Send to gtag if available
-    this.sendToGtag(enrichedEvent)
-    // Check if we should flush
+      timestamp: Date.now(),
+      sessionId: this.sessionId,
+      userProperties: this.userProperties
+    };
+
+    this.queue.push(enrichedEvent);
+
+    // Flush if batch size reached
     if (this.queue.length >= this.batchSize) {
-      this.flush();}
+      this.flush();
     }
   }
-  private sendToGtag(event: AnalyticsEvent): void {
-    if (
-      typeof window !== 'undefined' &&
-      (
-        window as {
-          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
-        }
-      ).gtag
-    ) {
-      (
-        window as unknown as {
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
-        }
-      ).gtag('event', event.action, {
-        event_category: event.category,
-        event_label: event.label,
-        value: event.value,
-        ...event.metadata}
-      })
-    }
+
+  /**
+   * Set user properties
+   */
+  setUserProperties(properties: UserProperties): void {
+    this.userProperties = { ...this.userProperties, ...properties };
   }
-  public trackPageView(pagePath: string, pageTitle?: string): void {
-    this.trackEvent({
-      category: 'Navigation',
-      action: 'Page View',
-      label: pagePath,
+
+  /**
+   * Track page view
+   */
+  trackPageView(page: string, title?: string): void {
+    this.track({
+      category: 'Page',
+      action: 'view',
+      label: page,
       metadata: {
-        pageTitle: pageTitle || document.title,
-        referrer: document.referrer}
+        title: title || document.title,
+        url: window.location.href,
+        referrer: document.referrer
       }
-    })
+    });
   }
-  public trackUserInteraction(action: string, label?: string, value?: number): void {
-    this.trackEvent({
-      category: 'User Interaction',
+
+  /**
+   * Track user interaction
+   */
+  trackInteraction(element: string, action: string, value?: string): void {
+    this.track({
+      category: 'Interaction',
       action,
-      label,
-      value}
-    })
+      label: element,
+      metadata: {
+        value,
+        elementType: this.getElementType(element)
+      }
+    });
   }
-  public trackError(error: Error, context?: Record<string, unknown>): void {
-    this.trackEvent({
+
+  /**
+   * Track conversion
+   */
+  trackConversion(conversionId: string, value?: number): void {
+    this.track({
+      category: 'Conversion',
+      action: 'conversion',
+      label: conversionId,
+      value,
+      metadata: {
+        conversionId,
+        timestamp: Date.now()
+      }
+    });
+  }
+
+  /**
+   * Track error
+   */
+  trackError(error: Error, context?: string): void {
+    this.track({
       category: 'Error',
-      action: 'Error Occurred',
+      action: 'error',
       label: error.message,
       metadata: {
-        stack: error.stack,
-        ...context}
+        errorName: error.name,
+        errorStack: error.stack,
+        context,
+        url: window.location.href,
+        userAgent: navigator.userAgent
       }
-    })
+    });
   }
-  public trackPerformance(metric: string, value: number, rating?: string): void {
-    this.trackEvent({
+
+  /**
+   * Track performance metric
+   */
+  trackPerformance(metric: string, value: number, unit?: string): void {
+    this.track({
       category: 'Performance',
-      action: metric,
-      value: Math.round(value),
+      action: 'metric',
+      label: metric,
+      value,
       metadata: {
-        rating}
+        unit: unit || 'ms',
+        timestamp: Date.now()
       }
-    })
+    });
   }
-  public trackConversion(conversionType: string, value?: number): void {
-    this.trackEvent({
-      category: 'Conversion',
-      action: conversionType,
-      value,
-      metadata: {`}
-        conversionId: `conv-${Date.now()}
-      }
-    })
+
+  /**
+   * Track custom event
+   */
+  trackCustom(eventName: string, properties?: Record<string, unknown>): void {
+    this.track({
+      category: 'Custom',
+      action: eventName,
+      metadata: properties
+    });
   }
-  public trackCustomEvent(
-    category: string,
-    action: string,
-    label?: string,
-    value?: number,
-    metadata?: Record<string, unknown>
-  ): void {
-    this.trackEvent({
-      category,
-      action,
-      label,
-      value,
-      metadata}
-    })
-  }
-  private flush(): void {
-    if (this.queue.length === 0) return
-    // Check if online
-    if (typeof navigator !== 'undefined' && !navigator.onLine) {
-      this.offlineQueue.push(...this.queue)
-      this.queue = []
-      return;}
+
+  /**
+   * Flush queued events
+   */
+  flush(): void {
+    if (this.queue.length === 0) return;
+
+    const events = [...this.queue];
+    this.queue = [];
+
+    if (navigator.onLine) {
+      this.sendEvents(events);
+    } else {
+      this.offlineQueue.push(...events);
     }
-    // In a real implementation, send to analytics backend
-    if (process.env['NODE_ENV'] === 'development') {}
+  }
+
+  /**
+   * Send events to analytics service
+   */
+  private async sendEvents(events: AnalyticsEvent[]): Promise<void> {
+    try {
+      // Replace with your analytics service endpoint
+      const response = await fetch('/api/analytics', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          events,
+          sessionId: this.sessionId,
+          userProperties: this.userProperties
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`Analytics request failed: ${response.status}`);
       }
-    // Clear queue
-    this.queue = []
+    } catch (error) {
+      console.error('Failed to send analytics events:', error);
+      // Re-queue events for retry
+      this.queue.unshift(...events);
+    }
   }
+
+  /**
+   * Setup offline handling
+   */
+  private setupOfflineHandling(): void {
+    window.addEventListener('online', () => {
+      this.flushOfflineQueue();
+    });
+
+    window.addEventListener('beforeunload', () => {
+      this.flush();
+    });
+  }
+
+  /**
+   * Setup periodic flush
+   */
+  private setupPeriodicFlush(): void {
+    setInterval(() => {
+      this.flush();
+    }, this.flushInterval);
+  }
+
+  /**
+   * Flush offline queue
+   */
   private flushOfflineQueue(): void {
-    if (this.offlineQueue.length === 0) return
-    // Merge offline queue into main queue
-    this.queue.push(...this.offlineQueue)
-    this.offlineQueue = []
-    // Flush
-    this.flush();}
+    if (this.offlineQueue.length > 0) {
+      this.queue.unshift(...this.offlineQueue);
+      this.offlineQueue = [];
+      this.flush();
+    }
   }
-  public getQueueSize(): number {
-    return this.queue.length;}
+
+  /**
+   * Load offline queue from storage
+   */
+  private loadOfflineQueue(): void {
+    try {
+      const stored = localStorage.getItem('analytics-offline-queue');
+      if (stored) {
+        this.offlineQueue = JSON.parse(stored);
+      }
+    } catch (error) {
+      console.warn('Failed to load offline analytics queue:', error);
+    }
   }
-  public getSessionId(): string {
-    return this.sessionId;}
+
+  /**
+   * Save offline queue to storage
+   */
+  private saveOfflineQueue(): void {
+    try {
+      localStorage.setItem('analytics-offline-queue', JSON.stringify(this.offlineQueue));
+    } catch (error) {
+      console.warn('Failed to save offline analytics queue:', error);
+    }
   }
-  public getUserProperties(): UserProperties {}
-    return { ...this.userProperties }
+
+  /**
+   * Generate session ID
+   */
+  private generateSessionId(): string {
+    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
-  public getAnalyticsSummary(): {
-    queueSize: number
-    offlineQueueSize: number
-    sessionId: string
-    userProperties: UserProperties;}
+
+  /**
+   * Get element type for tracking
+   */
+  private getElementType(element: string): string {
+    const el = document.querySelector(element);
+    if (!el) return 'unknown';
+    
+    return el.tagName.toLowerCase();
+  }
+
+  /**
+   * Get analytics summary
+   */
+  getSummary(): {
+    queuedEvents: number;
+    offlineEvents: number;
+    sessionId: string;
+    userProperties: UserProperties;
   } {
     return {
-      queueSize: this.queue.length,
-      offlineQueueSize: this.offlineQueue.length,
+      queuedEvents: this.queue.length,
+      offlineEvents: this.offlineQueue.length,
       sessionId: this.sessionId,
-      userProperties: this.getUserProperties()}
-    }
+      userProperties: this.userProperties
+    };
   }
 }
-// Export singleton instance
-export const analytics = new EnhancedAnalytics()
-export default analytics
+
+// Create singleton instance
+export const analytics = new EnhancedAnalytics();
+
+// Auto-initialize in browser
+if (typeof window !== 'undefined') {
+  analytics.initialize();
+}
+
+export default analytics;

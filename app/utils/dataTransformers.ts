@@ -1,353 +1,446 @@
-'use client'
+'use client';
+
 /**
  * Data Transformation Utilities
  * Provides utilities for transforming and formatting data
  */
+
 /**
  * Deep clone an object
  */
 export function deepClone<T>(obj: T): T {
   if (obj === null || typeof obj !== 'object') {
-    return obj;}
+    return obj;
   }
+  
   if (obj instanceof Date) {
-    return new Date(obj.getTime()) as unknown as T;}
+    return new Date(obj.getTime()) as unknown as T;
   }
+  
   if (obj instanceof Array) {
-    return obj.map(item => deepClone(item)) as unknown as T;}
+    return obj.map(item => deepClone(item)) as unknown as T;
   }
-  if (obj instanceof Object) {}
-    const clonedObj = {} as T
+  
+  if (obj instanceof Object) {
+    const clonedObj = {} as T;
     for (const key in obj) {
       if (Object.prototype.hasOwnProperty.call(obj, key)) {
-        clonedObj[key] = deepClone(obj[key]);}
+        clonedObj[key] = deepClone(obj[key]);
       }
     }
-    return clonedObj
+    return clonedObj;
   }
-  return obj
+  
+  return obj;
 }
+
 /**
- * Deep merge two objects
+ * Merge two objects deeply
  */
-export function deepMerge<T extends Record<string, unknown>>(target: T, source: Partial<T>): T {}
-  const output = { ...target }
+export function deepMerge<T extends Record<string, any>>(target: T, source: Partial<T>): T {
+  const result = { ...target };
+  
   for (const key in source) {
-    if (Object.prototype.hasOwnProperty.call(source, key)) {
-      const sourceValue = source[key]
-      const targetValue = output[key]
-      if (
-        sourceValue &&
-        typeof sourceValue === 'object' &&
-        !Array.isArray(sourceValue) &&
-        targetValue &&
-        typeof targetValue === 'object' &&
-        !Array.isArray(targetValue)
-      ) {
-        output[key] = deepMerge(
-          targetValue as Record<string, unknown>,
-          sourceValue as Record<string, unknown>
-        ) as T[Extract<keyof T, string>];}
+    if (source.hasOwnProperty(key)) {
+      if (source[key] && typeof source[key] === 'object' && !Array.isArray(source[key])) {
+        result[key] = deepMerge(result[key] || {}, source[key]);
       } else {
-        output[key] = sourceValue as T[Extract<keyof T, string>];}
+        result[key] = source[key] as T[Extract<keyof T, string>];
       }
     }
   }
-  return output
+  
+  return result;
 }
+
 /**
- * Flatten a nested object
+ * Transform object keys
  */
-export function flattenObject(
-  obj: Record<string, unknown>,
-  prefix = '',
-  separator = '.'
-): Record<string, unknown> {}
-  const flattened: Record<string, unknown> = {}
+export function transformKeys<T extends Record<string, any>>(
+  obj: T,
+  transformer: (key: string) => string
+): Record<string, any> {
+  const result: Record<string, any> = {};
+  
   for (const key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      const value = obj[key];}
-      const newKey = prefix ? `${prefix}${separator}${key}` : key
-      if (value && typeof value === 'object' && !Array.isArray(value)) {
-        Object.assign(
-          flattened,
-          flattenObject(value as Record<string, unknown>, newKey, separator)
-        );}
+    if (obj.hasOwnProperty(key)) {
+      const newKey = transformer(key);
+      result[newKey] = obj[key];
+    }
+  }
+  
+  return result;
+}
+
+/**
+ * Convert object to camelCase
+ */
+export function toCamelCase<T extends Record<string, any>>(obj: T): Record<string, any> {
+  return transformKeys(obj, key => 
+    key.replace(/_([a-z])/g, (_, letter) => letter.toUpperCase())
+  );
+}
+
+/**
+ * Convert object to snake_case
+ */
+export function toSnakeCase<T extends Record<string, any>>(obj: T): Record<string, any> {
+  return transformKeys(obj, key => 
+    key.replace(/[A-Z]/g, letter => `_${letter.toLowerCase()}`)
+  );
+}
+
+/**
+ * Convert object to kebab-case
+ */
+export function toKebabCase<T extends Record<string, any>>(obj: T): Record<string, any> {
+  return transformKeys(obj, key => 
+    key.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`)
+  );
+}
+
+/**
+ * Flatten nested object
+ */
+export function flattenObject(obj: Record<string, any>, prefix = ''): Record<string, any> {
+  const result: Record<string, any> = {};
+  
+  for (const key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      const newKey = prefix ? `${prefix}.${key}` : key;
+      
+      if (obj[key] && typeof obj[key] === 'object' && !Array.isArray(obj[key])) {
+        Object.assign(result, flattenObject(obj[key], newKey));
       } else {
-        flattened[newKey] = value;}
+        result[newKey] = obj[key];
       }
     }
   }
-  return flattened
+  
+  return result;
 }
+
 /**
- * Unflatten a flattened object
+ * Unflatten object
  */
-export function unflattenObject(
-  obj: Record<string, unknown>,
-  separator = '.'
-): Record<string, unknown> {}
-  const result: Record<string, unknown> = {}
+export function unflattenObject(obj: Record<string, any>): Record<string, any> {
+  const result: Record<string, any> = {};
+  
   for (const key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      const keys = key.split(separator)
-      let current = result
-      for (let i = 0; i < keys.length; i++) {
-        const k = keys[i]
-        if (i === keys.length - 1) {
-          current[k] = obj[key];}
-        } else {}
-          current[k] = current[k] || {}
-          current = current[k] as Record<string, unknown>
+    if (obj.hasOwnProperty(key)) {
+      const keys = key.split('.');
+      let current = result;
+      
+      for (let i = 0; i < keys.length - 1; i++) {
+        if (!current[keys[i]]) {
+          current[keys[i]] = {};
         }
+        current = current[keys[i]];
       }
+      
+      current[keys[keys.length - 1]] = obj[key];
     }
   }
-  return result
+  
+  return result;
 }
+
 /**
- * Pick specific keys from an object
+ * Pick specific keys from object
  */
-export function pick<T extends Record<string, unknown>, K extends keyof T>(
+export function pick<T extends Record<string, any>, K extends keyof T>(
   obj: T,
   keys: K[]
-): Pick<T, K> {}
-  const result = {} as Pick<T, K>
+): Pick<T, K> {
+  const result = {} as Pick<T, K>;
+  
   keys.forEach(key => {
     if (key in obj) {
-      result[key] = obj[key];}
+      result[key] = obj[key];
     }
-  })
-  return result
+  });
+  
+  return result;
 }
+
 /**
- * Omit specific keys from an object
+ * Omit specific keys from object
  */
-export function omit<T extends Record<string, unknown>, K extends keyof T>(
+export function omit<T extends Record<string, any>, K extends keyof T>(
   obj: T,
   keys: K[]
-): Omit<T, K> {}
-  const result = { ...obj }
+): Omit<T, K> {
+  const result = { ...obj };
+  
   keys.forEach(key => {
-    delete result[key];}
-  })
-  return result as Omit<T, K>
+    delete result[key];
+  });
+  
+  return result;
 }
+
 /**
- * Group array items by a key
+ * Filter object by predicate
  */
-export function groupBy<T>(
-  array: T[],
-  key: keyof T | ((item: T) => string | number)
-): Record<string, T[]> {
-  return array.reduce(
-    (result, item) => {
-      const groupKey = typeof key === 'function' ? String(key(item)) : String(item[key])
-      (result[groupKey] = result[groupKey] || []).push(item)
-      return result;}
-    },
-    {} as Record<string, T[]>
-  )
-}
-/**
- * Get unique items from an array
- */
-export function unique<T>(array: T[], key?: keyof T): T[] {
-  if (!key) {
-    return Array.from(new Set(array));}
-  }
-  const seen = new Set()
-  return array.filter(item => {
-    const value = item[key]
-    if (seen.has(value)) {
-      return false;}
+export function filterObject<T extends Record<string, any>>(
+  obj: T,
+  predicate: (value: any, key: string) => boolean
+): Partial<T> {
+  const result: Partial<T> = {};
+  
+  for (const key in obj) {
+    if (obj.hasOwnProperty(key) && predicate(obj[key], key)) {
+      result[key] = obj[key];
     }
-    seen.add(value)
-    return true
-  })
+  }
+  
+  return result;
 }
+
 /**
- * Sort array by multiple keys
+ * Map object values
  */
-export function sortBy<T>(
+export function mapObject<T extends Record<string, any>, U>(
+  obj: T,
+  mapper: (value: any, key: string) => U
+): Record<string, U> {
+  const result: Record<string, U> = {};
+  
+  for (const key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      result[key] = mapper(obj[key], key);
+    }
+  }
+  
+  return result;
+}
+
+/**
+ * Group array by key
+ */
+export function groupBy<T extends Record<string, any>, K extends keyof T>(
   array: T[],
-  keys: Array<keyof T | ((item: T) => unknown)>,
-  orders: Array<'asc' | 'desc'> = []
+  key: K
+): Record<string, T[]> {
+  return array.reduce((groups, item) => {
+    const group = String(item[key]);
+    if (!groups[group]) {
+      groups[group] = [];
+    }
+    groups[group].push(item);
+    return groups;
+  }, {} as Record<string, T[]>);
+}
+
+/**
+ * Sort array by key
+ */
+export function sortBy<T extends Record<string, any>, K extends keyof T>(
+  array: T[],
+  key: K,
+  direction: 'asc' | 'desc' = 'asc'
 ): T[] {
   return [...array].sort((a, b) => {
-    for (let i = 0; i < keys.length; i++) {
-      const key = keys[i]
-      const order = orders[i] || 'asc'
-      const aVal = typeof key === 'function' ? key(a) : a[key]
-      const bVal = typeof key === 'function' ? key(b) : b[key]
-      // Handle comparison with type safety
-      if (aVal == null || bVal == null) {
-        if (aVal == null && bVal == null) continue
-        return aVal == null ? 1 : -1;}
-      }
-      // Convert to comparable values
-      const aComp =
-        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
-          ? aVal
-          : String(aVal)
-      const bComp =
-        typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean'
-          ? bVal
-          : String(bVal)
-      if (aComp < bComp) return order === 'asc' ? -1 : 1
-      if (aComp > bComp) return order === 'asc' ? 1 : -1
-    }
-    return 0
-  })
+    const aVal = a[key];
+    const bVal = b[key];
+    
+    if (aVal < bVal) return direction === 'asc' ? -1 : 1;
+    if (aVal > bVal) return direction === 'asc' ? 1 : -1;
+    return 0;
+  });
 }
+
+/**
+ * Remove duplicates from array
+ */
+export function unique<T>(array: T[]): T[] {
+  return [...new Set(array)];
+}
+
+/**
+ * Remove duplicates by key
+ */
+export function uniqueBy<T extends Record<string, any>, K extends keyof T>(
+  array: T[],
+  key: K
+): T[] {
+  const seen = new Set();
+  return array.filter(item => {
+    const value = item[key];
+    if (seen.has(value)) {
+      return false;
+    }
+    seen.add(value);
+    return true;
+  });
+}
+
 /**
  * Chunk array into smaller arrays
  */
 export function chunk<T>(array: T[], size: number): T[][] {
-  const chunks: T[][] = []
+  const chunks: T[][] = [];
+  
   for (let i = 0; i < array.length; i += size) {
-    chunks.push(array.slice(i, i + size));}
+    chunks.push(array.slice(i, i + size));
   }
-  return chunks
+  
+  return chunks;
 }
+
 /**
- * Zip multiple arrays together
+ * Format number with commas
  */
-export function zip<T>(...arrays: T[][]): T[][] {
-  const length = Math.max(...arrays.map(arr => arr.length))
-  const result: T[][] = []
-  for (let i = 0; i < length; i++) {
-    result.push(arrays.map(arr => arr[i]));}
-  }
-  return result
+export function formatNumber(num: number): string {
+  return num.toLocaleString();
 }
-/**
- * Format bytes to human readable string
- */
-export function formatBytes(bytes: number, decimals = 2): string {
-  if (bytes === 0) return '0 Bytes'
-  const k = 1024
-  const dm = decimals < 0 ? 0 : decimals
-  const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB']
-  const i = Math.floor(Math.log(bytes) / Math.log(k));`}
-  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`
-}
-/**
- * Format number with separators
- */
-export function formatNumber(num: number, locale = 'en-US'): string {
-  return new Intl.NumberFormat(locale).format(num);}
-}
+
 /**
  * Format currency
  */
-export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US'): string {
-  return new Intl.NumberFormat(locale, {
+export function formatCurrency(amount: number, currency = 'USD'): string {
+  return new Intl.NumberFormat('en-US', {
     style: 'currency',
-    currency}
-  }).format(amount)
+    currency
+  }).format(amount);
 }
+
 /**
  * Format date
  */
-export function formatDate(
-  date: Date | string | number,
-  options: Intl.DateTimeFormatOptions = {},
-  locale = 'en-US'
-): string {
-  const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date
-  return new Intl.DateTimeFormat(locale, options).format(d);}
+export function formatDate(date: Date | string, format = 'short'): string {
+  const d = typeof date === 'string' ? new Date(date) : date;
+  
+  const options: Intl.DateTimeFormatOptions = {
+    short: { year: 'numeric', month: 'short', day: 'numeric' },
+    long: { year: 'numeric', month: 'long', day: 'numeric' },
+    time: { hour: '2-digit', minute: '2-digit' },
+    datetime: { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }
+  };
+  
+  return d.toLocaleDateString('en-US', options[format as keyof typeof options] || options.short);
 }
+
 /**
- * Format relative time
+ * Truncate text
  */
-export function formatRelativeTime(date: Date | string | number): string {
-  const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date
-  const now = new Date()
-  const diff = now.getTime() - d.getTime()
-  const seconds = Math.floor(diff / 1000)
-  const minutes = Math.floor(seconds / 60)
-  const hours = Math.floor(minutes / 60)
-  const days = Math.floor(hours / 24)
-  const weeks = Math.floor(days / 7)
-  const months = Math.floor(days / 30)
-  const years = Math.floor(days / 365)
-  if (seconds < 60) return 'just now';`}
-  if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`
-  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`
-  if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`
-  if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`
-  if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`
-  return `${years} year${years > 1 ? 's' : ''} ago`
+export function truncate(text: string, length: number, suffix = '...'): string {
+  if (text.length <= length) return text;
+  return text.slice(0, length) + suffix;
 }
-/**
- * Truncate string
- */
-export function truncate(str: string, length: number, suffix = '...'): string {
-  if (str.length <= length) return str
-  return str.substring(0, length - suffix.length) + suffix;}
-}
+
 /**
  * Capitalize first letter
  */
-export function capitalize(str: string): string {
-  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();}
+export function capitalize(text: string): string {
+  return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
 }
+
 /**
  * Convert to title case
  */
-export function titleCase(str: string): string {
-  return str
+export function titleCase(text: string): string {
+  return text.replace(/\w\S*/g, (txt) => 
+    txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
+  );
+}
+
+/**
+ * Convert to slug
+ */
+export function slugify(text: string): string {
+  return text
     .toLowerCase()
-    .split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');}
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
 }
+
 /**
- * Convert to kebab case
+ * Generate random string
  */
-export function kebabCase(str: string): string {
-  return str
-    .replace(/([a-z])([A-Z])/g, '$1-$2')
-    .replace(/[\s_]+/g, '-')
-    .toLowerCase();}
+export function randomString(length: number): string {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let result = '';
+  
+  for (let i = 0; i < length; i++) {
+    result += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  
+  return result;
 }
+
 /**
- * Convert to camel case
+ * Generate UUID v4
  */
-export function camelCase(str: string): string {
-  return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (_, chr) => chr.toUpperCase());}
+export function generateUUID(): string {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+    const r = Math.random() * 16 | 0;
+    const v = c === 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
 }
+
 /**
- * Convert to snake case
+ * Debounce function
  */
-export function snakeCase(str: string): string {
-  return str
-    .replace(/([a-z])([A-Z])/g, '$1_$2')
-    .replace(/[\s-]+/g, '_')
-    .toLowerCase();}
+export function debounce<T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+  let timeout: NodeJS.Timeout;
+  
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
 }
+
+/**
+ * Throttle function
+ */
+export function throttle<T extends (...args: any[]) => any>(
+  func: T,
+  limit: number
+): (...args: Parameters<T>) => void {
+  let inThrottle: boolean;
+  
+  return (...args: Parameters<T>) => {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  };
+}
+
 export default {
   deepClone,
   deepMerge,
+  transformKeys,
+  toCamelCase,
+  toSnakeCase,
+  toKebabCase,
   flattenObject,
   unflattenObject,
   pick,
   omit,
+  filterObject,
+  mapObject,
   groupBy,
-  unique,
   sortBy,
+  unique,
+  uniqueBy,
   chunk,
-  zip,
-  formatBytes,
   formatNumber,
   formatCurrency,
   formatDate,
-  formatRelativeTime,
   truncate,
   capitalize,
   titleCase,
-  kebabCase,
-  camelCase,
-  snakeCase}
-}
+  slugify,
+  randomString,
+  generateUUID,
+  debounce,
+  throttle
+};
