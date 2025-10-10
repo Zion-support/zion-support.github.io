@@ -1,378 +1,350 @@
-<<<<<<< HEAD
-'use client'import React from 'react'
-import { Helmet  } from 'react-helmet-async'import { Play, ArrowRight, CheckCircle  } from 'lucide-react'const DemoPage: React.FC  = () => {
-=======
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Play, 
-  Pause, 
-  RotateCcw, 
-  Settings, 
-  Download, 
-  Share2, 
-  Maximize2,
-  ChevronRight,
-  CheckCircle,
-  Star,
-  Users,
-  Zap
-} from 'lucide-react';
+import { Play, ArrowRight, CheckCircle, Phone, Mail, Calendar, Clock, Users, Star } from 'lucide-react';
 
 const DemoPage: React.FC = () => {
-  const [selectedDemo, setSelectedDemo] = useState('ai-chatbot');
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [selectedDemo, setSelectedDemo] = useState('ai-solutions');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    demo: 'ai-solutions',
+    message: ''
+  });
 
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
   const demos = [
     {
-      id: 'ai-chatbot',
-      title: 'AI Chatbot Demo',
-      description: 'Experience our intelligent chatbot that can handle customer inquiries 24/7',
-      category: 'AI Solutions',
-      duration: '5 min',
+      id: 'ai-solutions',
+      title: 'AI Solutions Demo',
+      description: 'Experience our AI-powered solutions including machine learning, natural language processing, and computer vision.',
+      duration: '30 minutes',
       features: [
-        'Natural language processing',
-        'Multi-language support',
-        'Context awareness',
-        'Integration capabilities'
-      ],
-      thumbnail: '/demos/chatbot.jpg'
-    },
-    {
-      id: 'data-analytics',
-      title: 'Data Analytics Dashboard',
-      description: 'Explore our powerful analytics platform with real-time insights and visualizations',
-      category: 'Analytics',
-      duration: '8 min',
-      features: [
+        'Custom AI model training',
         'Real-time data processing',
-        'Interactive visualizations',
-        'Custom reporting',
-        'Predictive analytics'
+        'Predictive analytics',
+        'Natural language understanding',
+        'Computer vision applications'
       ],
-      thumbnail: '/demos/analytics.jpg'
+      image: '/images/demos/ai-solutions.jpg'
     },
     {
-      id: 'cloud-infrastructure',
-      title: 'Cloud Infrastructure',
-      description: 'See how we manage and scale cloud resources for optimal performance',
-      category: 'Cloud',
-      duration: '6 min',
+      id: 'it-services',
+      title: 'IT Services Demo',
+      description: 'See our comprehensive IT services including cloud infrastructure, cybersecurity, and system integration.',
+      duration: '45 minutes',
       features: [
-        'Auto-scaling capabilities',
-        'Load balancing',
-        'Security monitoring',
-        'Cost optimization'
+        'Cloud infrastructure management',
+        'Cybersecurity monitoring',
+        'System integration',
+        'Performance optimization',
+        '24/7 support dashboard'
       ],
-      thumbnail: '/demos/cloud.jpg'
+      image: '/images/demos/it-services.jpg'
     },
     {
-      id: 'cybersecurity',
-      title: 'Cybersecurity Suite',
-      description: 'Witness our advanced security solutions in action with threat detection',
-      category: 'Security',
-      duration: '7 min',
+      id: 'micro-saas',
+      title: 'Micro SaaS Demo',
+      description: 'Explore our micro SaaS solutions designed to solve specific business challenges with minimal complexity.',
+      duration: '20 minutes',
       features: [
-        'Threat detection',
-        'Incident response',
-        'Compliance monitoring',
-        'Security analytics'
+        'Analytics dashboard',
+        'Content generation tools',
+        'Email marketing automation',
+        'Project management',
+        'Customer support tools'
       ],
-      thumbnail: '/demos/security.jpg'
-    }
-<<<<<<< HEAD
-  ]return (
-    <React.Fragment>
-=======
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Solutions',
-      role: 'CTO',
-      content: 'The AI chatbot demo was incredible. It handled complex queries with ease and the integration was seamless.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      company: 'DataFlow Inc.',
-      role: 'Data Director',
-      content: 'The analytics dashboard provided insights we never had before. The real-time capabilities are game-changing.',
-      rating: 5
-    },
-    {
-      name: 'Lisa Wang',
-      company: 'SecureNet Corp',
-      role: 'Security Manager',
-      content: 'The cybersecurity demo showed us exactly how our threats would be detected and handled. Very impressive.',
-      rating: 5
+      image: '/images/demos/micro-saas.jpg'
     }
   ];
 
-  const selectedDemoData = demos.find(demo => demo.id === selectedDemo);
+  const benefits = [
+    {
+      icon: CheckCircle,
+      title: 'Personalized Experience',
+      description: 'Tailored demo based on your specific business needs and challenges'
+    },
+    {
+      icon: Users,
+      title: 'Expert Guidance',
+      description: 'Learn from our experienced team of AI and IT specialists'
+    },
+    {
+      icon: Clock,
+      title: 'No Commitment',
+      description: 'Free demo with no obligation to purchase our services'
+    },
+    {
+      icon: Star,
+      title: 'Proven Results',
+      description: 'See real examples of how we\'ve helped similar businesses'
+    }
+  ];
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log('Demo request submitted:', formData);
+    alert('Demo request submitted! We\'ll contact you within 24 hours.');
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
       <Helmet>
-        <title>Interactive Demos | Zion Tech Group</title>
-        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business operations." />
-        <meta name="keywords" content="demos, AI demos, interactive demos, technology showcase, solution demonstrations" />
+        <title>Request Demo | Zion Tech Group - See Our Solutions in Action</title>
+        <meta name="description" content="Request a personalized demo of our AI and IT solutions. See how we can transform your business with cutting-edge technology." />
+        <meta name="keywords" content="demo, AI demo, IT demo, personalized demo, business transformation, technology solutions" />
       </Helmet>
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              See Our <span className="text-cyan-400">Solutions</span> in Action
-  </
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Experience our AI and IT solutions through interactive demos. See how our technology can transform your business.
-            </p>
-          </div>
-        </section>
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {demos.map((demo, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
-                  <div className="flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-lg mb-4">
-                    <Play className="w-8 h-8 text-cyan-400" />
-=======
 
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            See Our <span className="text-cyan-400">Solutions</span> in Action
+            See Our Solutions <span className="text-cyan-400">in Action</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Experience our AI and IT solutions through interactive demos. See how our technology can transform your business operations.
+            Experience our AI and IT solutions firsthand with a personalized demo. 
+            See how we can transform your business with cutting-edge technology.
           </p>
         </div>
       </section>
 
-      {/* Demo Selection */}
+      {/* Demo Options */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Choose a Demo</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Choose Your Demo
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Select the type of demo that best fits your interests and business needs.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {demos.map((demo) => (
               <div
                 key={demo.id}
                 onClick={() => setSelectedDemo(demo.id)}
-                className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border cursor-pointer transition-all duration-300 ${
+                className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border cursor-pointer transition-all duration-300 hover:scale-105 ${
                   selectedDemo === demo.id
                     ? 'border-cyan-500 shadow-2xl shadow-cyan-500/20'
                     : 'border-slate-700 hover:border-slate-600'
                 }`}
               >
-                <div className="text-center mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Play className="w-8 h-8 text-slate-900" />
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
+                <div className="text-center mb-6">
+                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Play className="w-10 h-10 text-slate-900" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{demo.title}</h3>
-                  <span className="bg-slate-700 text-cyan-400 text-sm font-medium px-3 py-1 rounded-full">
-                    {demo.category}
-                  </span>
+                  <h3 className="text-2xl font-bold text-white mb-2">{demo.title}</h3>
+                  <p className="text-gray-300 mb-4">{demo.description}</p>
+                  <div className="flex items-center justify-center text-sm text-gray-400">
+                    <Clock className="w-4 h-4 mr-2" />
+                    {demo.duration}
+                  </div>
                 </div>
-                <p className="text-gray-300 mb-4 text-center text-sm">{demo.description}</p>
-                <div className="flex items-center justify-between text-sm text-gray-400">
-                  <span>{demo.duration}</span>
-                  <span className="flex items-center">
-                    <Star className="w-4 h-4 mr-1 text-yellow-400" />
-                    4.9
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Demo Player */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          {selectedDemoData && (
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
-              <div className="flex items-center justify-between mb-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{selectedDemoData.title}</h3>
-                  <p className="text-gray-300">{selectedDemoData.description}</p>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <button className="bg-slate-700 hover:bg-slate-600 text-white p-2 rounded-lg transition-colors">
-                    <Share2 className="w-5 h-5" />
-                  </button>
-                  <button className="bg-slate-700 hover:bg-slate-600 text-white p-2 rounded-lg transition-colors">
-                    <Download className="w-5 h-5" />
-                  </button>
-                  <button className="bg-slate-700 hover:bg-slate-600 text-white p-2 rounded-lg transition-colors">
-                    <Maximize2 className="w-5 h-5" />
-                  </button>
-                </div>
-              </div>
-
-              {/* Demo Video Placeholder */}
-              <div className="relative bg-slate-900 rounded-xl overflow-hidden mb-6">
-                <div className="aspect-video bg-gradient-to-br from-cyan-500 to-purple-500 flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      {isPlaying ? (
-                        <Pause className="w-8 h-8" />
-                      ) : (
-                        <Play className="w-8 h-8" />
-                      )}
+                
+                <div className="space-y-3">
+                  <h4 className="text-lg font-semibold text-white mb-3">What you'll see:</h4>
+                  {demo.features.map((feature, index) => (
+                    <div key={index} className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300 text-sm">{feature}</span>
                     </div>
-                    <p className="text-lg font-semibold">Demo Video</p>
-                    <p className="text-sm opacity-80">Click to play</p>
-                  </div>
-                </div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="bg-black/50 rounded-lg p-3">
-                    <div className="flex items-center justify-between text-white text-sm">
-                      <span>0:00 / {selectedDemoData.duration}</span>
-                      <div className="flex items-center space-x-2">
-                        <button className="hover:bg-white/20 p-1 rounded">
-                          <RotateCcw className="w-4 h-4" />
-                        </button>
-                        <button className="hover:bg-white/20 p-1 rounded">
-                          <Settings className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Demo Features */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="text-lg font-bold text-white mb-4">Key Features</h4>
-                  <ul className="space-y-2">
-                    {selectedDemoData.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-<<<<<<< HEAD
-                  <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
-                    <Play className="w-4 h-4 mr-2" />
-                    Watch Demo
-  </
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-                </div>
-                <div>
-                  <h4 className="text-lg font-bold text-white mb-4">Demo Controls</h4>
-                  <div className="space-y-3">
-                    <button
-                      onClick={() => setIsPlaying(!isPlaying)}
-                      className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
-                    >
-                      {isPlaying ? (
-                        <>
-                          <Pause className="w-5 h-5 mr-2" />
-                          Pause Demo
-                        </>
-                      ) : (
-                        <>
-                          <Play className="w-5 h-5 mr-2" />
-                          Play Demo
-                        </>
-                      )}
-                    </button>
-                    <button className="w-full bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
-                      <RotateCcw className="w-5 h-5 mr-2" />
-                      Restart Demo
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">What Our Clients Say</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mr-3">
-                    <Users className="w-5 h-5 text-slate-900" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                  </div>
-                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Benefits */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Why Request a Demo?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Get a personalized experience tailored to your business needs.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-slate-900" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Demo Request Form */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-8 border border-slate-700">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Request Your Demo
+              </h2>
+              <p className="text-xl text-gray-300">
+                Fill out the form below and we'll schedule your personalized demo.
+              </p>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
+                    placeholder="Enter your email"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                    Company Name
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
+                    placeholder="Enter your company name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="demo" className="block text-sm font-medium text-gray-300 mb-2">
+                  Demo Type *
+                </label>
+                <select
+                  id="demo"
+                  name="demo"
+                  value={formData.demo}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
+                >
+                  {demos.map((demo) => (
+                    <option key={demo.id} value={demo.id} className="bg-slate-800">
+                      {demo.title}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                  Additional Information
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  rows={4}
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
+                  placeholder="Tell us about your specific needs or questions"
+                />
+              </div>
+
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center space-x-2"
+                >
+                  <Calendar className="w-5 h-5" />
+                  <span>Schedule Demo</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Info */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-12 border border-slate-700">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to See More?
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Need Immediate Assistance?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Schedule a personalized demo with our experts and see how our solutions 
-              can specifically address your business needs.
+              Contact our team directly for immediate support or to discuss your specific needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Schedule a Demo
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Contact Sales
-              </button>
-            </div>
-          </div>
-<<<<<<< HEAD
-        </section>
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
-              <h2 className="text-2xl font-semibold text-white mb-4">Ready to See More?</h2>
-              <p className="text-gray-300 mb-6">
-                Schedule a personalized demo with our experts to see how our solutions can address your specific business needs.
-              </p>
-              <a 
-                href="/contact" 
-                className="inline-flex items-center px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors">
-                Schedule Demo
-                <ArrowRight className="w-4 h-4 ml-2" />
+              <a
+                href="tel:+13024640950"
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center space-x-2"
+              >
+                <Phone className="w-5 h-5" />
+                <span>Call (302) 464-0950</span>
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center space-x-2"
+              >
+                <Mail className="w-5 h-5" />
+                <span>Send Email</span>
               </a>
             </div>
           </div>
-        </section>
-      </div>
-    </React.Fragment>
-  )}
-export default DemoPage
-  </button>
-  </h1>
-=======
         </div>
       </section>
     </div>
@@ -380,4 +352,3 @@ export default DemoPage
 };
 
 export default DemoPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-e765

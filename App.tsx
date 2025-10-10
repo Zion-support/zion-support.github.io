@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-'use client'
-import React, { Suspense } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
-import './app/styles/futuristic.css'
-import Navigation from './app/components/Navigation'
-import Footer from './app/components/Footer'
-import HomePage from './app/page'
-import { PageLoader } from './app/components/LoadingStates'
-import ErrorBoundary from './app/components/ErrorBoundary'
-import SEOHead from './app/components/EnhancedSEOHead'
-import SkipLink from './app/components/EnhancedSkipLink'
-import Breadcrumb from './app/components/Breadcrumb'
-import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer'
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
-import EnhancedAccessibility from './app/components/EnhancedAccessibility'
-import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor'
-import { AnalyticsProvider } from './app/components/EnhancedAnalytics'
-import PerformanceMonitor from './app/components/PerformanceMonitor'
-import ServiceWorker from './app/components/ServiceWorker'
-import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary'
-=======
 'use client';
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -42,8 +19,6 @@ import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import ServiceWorker from './app/components/ServiceWorker';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
-// Structured data for SEO - moved to SEOHead component
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'))
 const ContactPage = React.lazy(() => import('./app/contact/page'))

@@ -131,19 +131,11 @@ const Footer: React.FC = React.memo(() => {
             </ul>
           </div>
 
-<<<<<<< HEAD
           {/* Micro SaaS */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Zap className="w-5 h-5 mr-2" />
               Micro SaaS
-=======
-          {/* Micro SAAS */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Code className="w-5 h-5 mr-2" />
-              Micro SAAS
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
             </h3>
             <ul className="space-y-2">
               {microSaasServices.map((service, index) => (
@@ -164,7 +156,6 @@ const Footer: React.FC = React.memo(() => {
               </li>
             </ul>
           </div>
-<<<<<<< HEAD
         </div>
 
         {/* Quick Links */}
@@ -199,8 +190,6 @@ const Footer: React.FC = React.memo(() => {
               </ul>
             </div>
           </div>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
         </div>
 
         {/* Bottom Section */}
@@ -209,18 +198,6 @@ const Footer: React.FC = React.memo(() => {
             <p className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
             </p>
-<<<<<<< HEAD
-            <div className="flex space-x-6">
-              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Privacy Policy
-              </a>
-              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Terms of Service
-              </a>
-              <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy
-              </a>
-=======
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
                 Privacy Policy
@@ -231,21 +208,14 @@ const Footer: React.FC = React.memo(() => {
               <Link to="/cookies" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
                 Cookie Policy
               </Link>
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
             </div>
           </div>
         </div>
       </div>
     </footer>
-<<<<<<< HEAD
-  )
-})
-Footer.displayName = 'Footer'export default Footer
-=======
   );
 });
 
 Footer.displayName = 'Footer';
 
 export default Footer;
->>>>>>> cursor/analyze-improve-and-deploy-application-e765

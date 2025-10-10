@@ -1,770 +1,600 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
 import { 
-  Brain, 
-  MessageSquare, 
-  Eye, 
-  Zap, 
-  BarChart, 
-  Box, 
-  Mic, 
-  Shield, 
-  TrendingUp, 
-  Target, 
-  FileText, 
-  Search, 
-  Phone,
   CheckCircle, 
   ArrowRight, 
   Star, 
   Clock, 
+  Zap, 
+  Shield, 
+  Brain, 
+  Cloud, 
+  Code, 
+  BarChart, 
+  Users, 
+  Settings, 
+  Target, 
   Globe, 
   Database, 
-  Users, 
-  Settings,
-  Cpu,
-  Bot,
-  Sparkles,
-  Layers,
-  Workflow,
-  BarChart3,
-  Smartphone,
-  Cloud,
-  Lock,
-  Code,
-  Palette,
-  Headphones,
+  Smartphone, 
+  Lock, 
+  TrendingUp, 
+  Calendar, 
+  CheckSquare, 
+  FileText,
   Mail,
-  MapPin
+  Phone,
+  MapPin,
+  Filter,
+  Search,
+  Eye,
+  MessageSquare,
+  Cpu,
+  Layers,
+  Bot,
+  Sparkles
 } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-const AIServicesPagePage: React.FC = () => {
-  const features = [
-=======
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Calendar, CheckSquare, FileText, Mail, Phone, MapPin } from 'lucide-react';
 
 const AiServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const aiServices = [
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
+    // AI Development & Implementation
     {
       id: 1,
-      title: 'AI Analytics',
-      description: 'Advanced data insights powered by artificial intelligence',
-      category: 'Analytics',
-      icon: BarChart,
+      title: 'AI Strategy & Consulting',
+      description: 'Comprehensive AI strategy development and implementation consulting for enterprise transformation',
+      category: 'Consulting',
+      price: '$299/hour',
+      duration: '2-12 weeks',
       features: [
-        'Predictive analytics',
-        'Real-time data processing',
-        'Custom dashboards',
-        'Machine learning models',
-        'Automated reporting',
-        'Data visualization'
+        'AI readiness assessment and gap analysis',
+        'Custom AI strategy development and roadmap',
+        'Technology stack recommendations and selection',
+        'ROI analysis and business case development',
+        'Change management and training programs',
+        'AI governance and ethics framework',
+        'Implementation planning and project management',
+        'Ongoing support and optimization',
+        'Compliance and regulatory guidance',
+        'Performance monitoring and analytics'
       ],
-      price: 'Starting at $1,500/month',
-      popular: true
+      icon: Brain,
+      popular: true,
+      rating: 4.9,
+      clients: '200+',
+      link: 'https://ziontechgroup.com/ai-strategy-consulting'
     },
     {
       id: 2,
-      title: 'AI Automation',
-      description: 'Streamline workflows with intelligent automation',
-      category: 'Automation',
-      icon: Zap,
+      title: 'Custom AI Model Development',
+      description: 'Bespoke AI model development tailored to your specific business requirements and data',
+      category: 'Development',
+      price: '$15,000 - $150,000',
+      duration: '4-16 weeks',
       features: [
-        'Process automation',
-        'Workflow optimization',
-        'Task scheduling',
-        'Error reduction',
-        'Cost savings',
-        'Scalable solutions'
+        'Custom machine learning model development',
+        'Deep learning and neural network solutions',
+        'Natural language processing (NLP) models',
+        'Computer vision and image recognition',
+        'Predictive analytics and forecasting models',
+        'Recommendation systems and personalization',
+        'Model training and optimization',
+        'API development and integration',
+        'Model deployment and scaling',
+        'Performance monitoring and maintenance'
       ],
-      price: 'Starting at $999/month',
-      popular: false
+      icon: Cpu,
+      popular: true,
+      rating: 4.8,
+      clients: '150+',
+      link: 'https://ziontechgroup.com/custom-ai-models'
     },
     {
       id: 3,
-      title: 'AI Chatbot',
-      description: 'Intelligent customer service and support solutions',
-      category: 'Customer Service',
-      icon: MessageCircle,
+      title: 'AI Chatbot & Virtual Assistant',
+      description: 'Intelligent conversational AI solutions for customer service, sales, and internal operations',
+      category: 'Conversational AI',
+      price: '$5,000 - $50,000',
+      duration: '2-8 weeks',
       features: [
-        'Natural language processing',
-        '24/7 customer support',
-        'Multi-language support',
-        'Integration capabilities',
-        'Analytics and insights',
-        'Custom training'
+        'GPT-4 powered conversational AI',
+        'Multi-channel deployment (web, mobile, voice)',
+        'Natural language understanding and processing',
+        'Intent recognition and entity extraction',
+        'Context-aware conversations and memory',
+        'Integration with CRM and business systems',
+        'Multi-language support (50+ languages)',
+        'Analytics and conversation insights',
+        'Custom training and knowledge base',
+        '24/7 monitoring and support'
       ],
-      price: 'Starting at $799/month',
-      popular: true
+      icon: Bot,
+      popular: true,
+      rating: 4.9,
+      clients: '300+',
+      link: 'https://ziontechgroup.com/ai-chatbot'
     },
     {
       id: 4,
-      title: 'AI CRM',
-      description: 'Customer relationship management enhanced with AI',
-      category: 'CRM',
-      icon: Users,
+      title: 'Computer Vision Solutions',
+      description: 'Advanced computer vision and image recognition solutions for various industries',
+      category: 'Computer Vision',
+      price: '$10,000 - $100,000',
+      duration: '3-12 weeks',
       features: [
-        'Lead scoring',
-        'Customer segmentation',
-        'Predictive analytics',
-        'Automated follow-ups',
-        'Sales forecasting',
-        'Personalization'
+        'Object detection and recognition',
+        'Facial recognition and biometric systems',
+        'Medical image analysis and diagnosis',
+        'Quality control and defect detection',
+        'Autonomous vehicle vision systems',
+        'Augmented reality applications',
+        'Document processing and OCR',
+        'Real-time video analysis',
+        'Edge computing deployment',
+        'Custom model training and optimization'
       ],
-      price: 'Starting at $1,299/month',
-      popular: false
+      icon: Eye,
+      popular: false,
+      rating: 4.7,
+      clients: '120+',
+      link: 'https://ziontechgroup.com/computer-vision'
     },
     {
       id: 5,
-      title: 'AI Cybersecurity',
-      description: 'Advanced threat detection and security solutions',
-      category: 'Security',
-      icon: Shield,
+      title: 'Predictive Analytics Platform',
+      description: 'Advanced predictive analytics and forecasting solutions for business intelligence',
+      category: 'Analytics',
+      price: '$25,000 - $200,000',
+      duration: '6-20 weeks',
       features: [
-        'Threat detection',
-        'Anomaly detection',
-        'Automated response',
-        'Risk assessment',
-        'Compliance monitoring',
-        'Incident analysis'
+        'Advanced forecasting and prediction models',
+        'Time series analysis and trend detection',
+        'Customer behavior prediction and segmentation',
+        'Risk assessment and fraud detection',
+        'Demand forecasting and inventory optimization',
+        'Financial modeling and market analysis',
+        'Real-time data processing and streaming',
+        'Interactive dashboards and visualization',
+        'API integration and data connectors',
+        'Machine learning model management'
       ],
-      price: 'Starting at $1,799/month',
-      popular: false
+      icon: TrendingUp,
+      popular: true,
+      rating: 4.8,
+      clients: '180+',
+      link: 'https://ziontechgroup.com/predictive-analytics'
     },
     {
       id: 6,
-      title: 'AI Data Analytics',
-      description: 'Transform raw data into actionable business insights',
-      category: 'Analytics',
-      icon: Database,
+      title: 'AI-Powered Automation',
+      description: 'Intelligent process automation and workflow optimization using AI technologies',
+      category: 'Automation',
+      price: '$15,000 - $100,000',
+      duration: '4-16 weeks',
       features: [
-        'Data mining',
-        'Pattern recognition',
-        'Trend analysis',
-        'Business intelligence',
-        'Data visualization',
-        'Custom algorithms'
+        'Intelligent document processing and extraction',
+        'Automated decision making and routing',
+        'Process mining and optimization',
+        'RPA integration with AI capabilities',
+        'Workflow automation and orchestration',
+        'Exception handling and error recovery',
+        'Integration with existing business systems',
+        'Performance monitoring and analytics',
+        'Custom automation rules and triggers',
+        'Scalable cloud deployment'
       ],
-<<<<<<< HEAD
-      price: 'Starting at $349/month',
-      marketPrice: '$600-2500/month',
-      benefits: ['Process efficiency', 'Error reduction', 'Cost savings', 'Scalable automation']
+      icon: Zap,
+      popular: false,
+      rating: 4.6,
+      clients: '140+',
+      link: 'https://ziontechgroup.com/ai-automation'
     },
     {
       id: 7,
-      title: 'AI Cybersecurity',
-      description: 'Advanced threat detection and security monitoring using AI algorithms.',
-      icon: Shield,
-      category: 'Security',
+      title: 'Natural Language Processing',
+      description: 'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding',
+      category: 'NLP',
+      price: '$8,000 - $75,000',
+      duration: '3-10 weeks',
       features: [
-        'Threat detection',
-        'Behavioral analysis',
-        'Incident response',
-        'Vulnerability assessment',
-        'Compliance monitoring'
+        'Text classification and categorization',
+        'Sentiment analysis and emotion detection',
+        'Named entity recognition and extraction',
+        'Language translation and localization',
+        'Text summarization and generation',
+        'Question answering systems',
+        'Document analysis and processing',
+        'Multi-language support and processing',
+        'Custom model training and fine-tuning',
+        'API development and integration'
       ],
-      price: 'Starting at $499/month',
-      marketPrice: '$800-4000/month',
-      benefits: ['Proactive security', 'Reduced false positives', 'Faster incident response', 'Compliance assurance']
+      icon: MessageSquare,
+      popular: false,
+      rating: 4.7,
+      clients: '160+',
+      link: 'https://ziontechgroup.com/nlp-solutions'
     },
     {
       id: 8,
-      title: 'AI Mobile Applications',
-      description: 'Custom mobile apps with integrated AI features for iOS and Android.',
-      icon: Smartphone,
-      category: 'Mobile',
+      title: 'AI Data Analytics Platform',
+      description: 'Comprehensive AI-powered data analytics and business intelligence platform',
+      category: 'Analytics',
+      price: '$20,000 - $150,000',
+      duration: '5-18 weeks',
       features: [
-        'AI-powered features',
-        'Cross-platform development',
-        'Offline AI capabilities',
-        'Real-time processing',
-        'Custom integrations'
+        'Advanced data visualization and dashboards',
+        'AI-powered insights and recommendations',
+        'Real-time data processing and analysis',
+        'Custom analytics models and algorithms',
+        'Data integration and ETL processes',
+        'Interactive reporting and exploration',
+        'Machine learning model integration',
+        'Cloud and on-premises deployment',
+        'API access and custom integrations',
+        'Advanced security and compliance'
       ],
-      price: 'Starting at $8,000/project',
-      marketPrice: '$15000-50000/project',
-      benefits: ['Enhanced user experience', 'Intelligent features', 'Competitive advantage', 'Future-proof solutions']
+      icon: BarChart,
+      popular: true,
+      rating: 4.9,
+      clients: '220+',
+      link: 'https://ziontechgroup.com/ai-analytics'
     },
     {
       id: 9,
-      title: 'AI Cloud Infrastructure',
-      description: 'Scalable AI infrastructure and model deployment on cloud platforms.',
-      icon: Cloud,
-      category: 'Infrastructure',
+      title: 'AI Content Generation',
+      description: 'AI-powered content creation and generation solutions for marketing and communications',
+      category: 'Content AI',
+      price: '$5,000 - $40,000',
+      duration: '2-6 weeks',
       features: [
-        'Model deployment',
-        'Auto-scaling',
-        'GPU optimization',
-        'Data pipeline management',
-        'Monitoring and logging'
+        'Automated content writing and generation',
+        'Multi-format content creation (text, images, video)',
+        'Brand voice training and customization',
+        'SEO optimization and keyword integration',
+        'Content personalization and targeting',
+        'Multi-language content generation',
+        'Content quality assessment and scoring',
+        'Workflow automation and scheduling',
+        'Team collaboration and approval processes',
+        'Analytics and performance tracking'
       ],
-      price: 'Starting at $699/month',
-      marketPrice: '$1200-5000/month',
-      benefits: ['Scalable infrastructure', 'Cost optimization', 'High availability', 'Easy deployment']
+      icon: FileText,
+      popular: false,
+      rating: 4.8,
+      clients: '190+',
+      link: 'https://ziontechgroup.com/ai-content'
     },
     {
       id: 10,
-      title: 'AI Design Assistant',
-      description: 'AI-powered design tools for graphics, UI/UX, and creative content generation.',
-      icon: Palette,
-      category: 'Design',
-      features: [
-        'Automated design generation',
-        'Brand consistency',
-        'A/B testing optimization',
-        'Color and layout suggestions',
-        'Template customization'
-      ],
-      price: 'Starting at $199/month',
-      marketPrice: '$300-1200/month',
-      benefits: ['Faster design process', 'Consistent branding', 'Creative inspiration', 'Cost-effective solutions']
-    }
-  ];
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ];
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions</title>
-        <meta name="description" content="Comprehensive AI services including chatbots, content generation, data analytics, computer vision, and more. Transform your business with cutting-edge AI technology." />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, chatbots, content generation, data analytics, computer vision, AI automation" />
-      </Helmet>
-      <Navigation />
-      
-      <main className="pt-20">
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered services for modern businesses." />
-        <meta name="keywords" content="AI services, artificial intelligence, automation, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Services;
-  </
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Transform your business with cutting-edge artificial intelligence solutions. 
-              From chatbots to computer vision, we deliver AI that drives real results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started;
-  </
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo;
-  </
-            </div>
-          </div>
-        </section>
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features;
-  </
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results;
-  </
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Search and Filter Section */}
-        <section className="py-10 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search AI services..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                />
-              </div>
-              <div className="relative">
-                <Settings className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="pl-10 pr-8 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent appearance-none"
-                >
-                  {categories.map(category => (
-                    <option key={category} value={category} className="bg-slate-800">
-                      {category === 'all' ? 'All Categories' : category}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* Services Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service) => (
-                <div key={service.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <div className="mb-4">
-                    <span className="text-sm text-gray-400">Category: </span>
-                    <span className="text-sm text-purple-400 font-medium">{service.category}</span>
-                  </div>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center justify-between">
-                      <span className="text-purple-400 font-semibold">Our Price:</span>
-                      <span className="text-white font-bold">{service.price}</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-400 text-sm">Market Price:</span>
-                      <span className="text-gray-300 text-sm line-through">{service.marketPrice}</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <Link 
-                      to="/contact"
-                      className="flex items-center text-white hover:text-purple-400 transition-colors"
-                    >
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </Link>
-                    <Link 
-                      to="/contact"
-                      className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
-                    >
-                      Get Quote
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our AI Services?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency;
-  </
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <TrendingUp className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Increase Efficiency by 60%</h3>
-                <p className="text-gray-300">Our AI solutions automate repetitive tasks and optimize workflows, delivering measurable efficiency gains.</p>
-              </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <DollarSign className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Reduce Costs by 40%</h3>
-                <p className="text-gray-300">Automation and AI-driven optimization significantly reduce operational costs and resource requirements.</p>
-              </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Brain className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Enhanced Decision Making</h3>
-                <p className="text-gray-300">AI-powered insights and predictive analytics enable data-driven decision making at scale.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our AI experts to discuss your requirements and get a customized solution that drives real results.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-  </
-                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More;
-  </
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </React.Fragment>
-  )}
-export default AIServicesPagePage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
-
-const AIServicesPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'Machine Learning & Deep Learning',
-      description: 'Advanced ML algorithms and neural networks for complex pattern recognition and predictive modeling.',
-      benefits: ['Custom model development', 'Deep learning frameworks', 'Predictive analytics', 'Automated model training', 'Real-time inference', 'Model optimization', 'A/B testing for models', 'Continuous learning systems']
-    },
-    {
-      icon: BarChart,
-      title: 'AI-Powered Business Intelligence',
-      description: 'Intelligent analytics platform that transforms raw data into actionable business insights.',
-      benefits: ['Automated data analysis', 'Predictive forecasting', 'Anomaly detection', 'Custom dashboards', 'Natural language queries', 'Automated reporting', 'Data visualization', 'ROI optimization']
-    },
-    {
-      icon: MessageSquare,
-      title: 'Natural Language Processing',
-      description: 'Advanced NLP solutions for text understanding, generation, and human-AI interaction.',
-      benefits: ['Sentiment analysis', 'Text classification', 'Language translation', 'Chatbot development', 'Document processing', 'Content generation', 'Voice recognition', 'Conversational AI']
-    },
-    {
-      icon: Eye,
-      title: 'Computer Vision & Image Processing',
-      description: 'AI-powered visual recognition and image analysis for various business applications.',
-      benefits: ['Object detection', 'Facial recognition', 'OCR and document scanning', 'Quality inspection', 'Medical imaging', 'Autonomous vehicles', 'Augmented reality', 'Video analytics']
-    },
-    {
-      icon: Zap,
-      title: 'AI Automation & RPA',
-      description: 'Intelligent process automation that mimics human actions to streamline business operations.',
-      benefits: ['Workflow automation', 'Document processing', 'Data extraction', 'Email automation', 'Calendar management', 'Invoice processing', 'Customer onboarding', 'Compliance monitoring']
-    },
-    {
-      icon: Shield,
       title: 'AI Security & Fraud Detection',
-      description: 'Advanced AI security solutions for threat detection, fraud prevention, and risk management.',
-      benefits: ['Real-time threat detection', 'Fraud pattern recognition', 'Behavioral analysis', 'Risk assessment', 'Security monitoring', 'Compliance automation', 'Incident response', 'Threat intelligence']
-    }
-  ]
-  const services = [
-    {
-      icon: Zap,
-      title: 'AI Strategy & Consulting',
-      description: 'Strategic AI consulting to identify opportunities and plan your AI transformation journey.',
-      price: 'Starting at $5,000/month',
-      features: ['AI readiness assessment', 'Technology roadmap', 'ROI analysis', 'Vendor evaluation', 'Implementation planning']
-    },
-    {
+      description: 'Advanced AI-powered security solutions and fraud detection systems',
+      category: 'Security',
+      price: '$30,000 - $250,000',
+      duration: '6-24 weeks',
+      features: [
+        'Real-time fraud detection and prevention',
+        'Anomaly detection and behavioral analysis',
+        'Threat intelligence and risk assessment',
+        'Cybersecurity monitoring and response',
+        'Identity verification and authentication',
+        'Transaction monitoring and analysis',
+        'Compliance and regulatory reporting',
+        'Machine learning model training',
+        'Integration with security systems',
+        '24/7 monitoring and support'
+      ],
       icon: Shield,
-      title: 'AI Solution Development',
-      description: 'End-to-end AI solution development with our expert team of AI engineers and data scientists.',
-      price: 'Starting at $15,000/project',
-      features: ['Custom AI model development', 'Data pipeline creation', 'API development', 'Integration services', 'Testing and validation']
+      popular: true,
+      rating: 4.9,
+      clients: '110+',
+      link: 'https://ziontechgroup.com/ai-security'
     },
     {
+      id: 11,
+      title: 'AI Healthcare Solutions',
+      description: 'HIPAA-compliant AI solutions for healthcare, medical imaging, and patient care',
+      category: 'Healthcare',
+      price: '$50,000 - $500,000',
+      duration: '8-32 weeks',
+      features: [
+        'Medical image analysis and diagnosis',
+        'Drug discovery and development',
+        'Patient monitoring and care management',
+        'Clinical decision support systems',
+        'Electronic health record integration',
+        'Telemedicine and remote care solutions',
+        'HIPAA compliance and security',
+        'FDA approval support and guidance',
+        'Clinical trial optimization',
+        'Healthcare analytics and insights'
+      ],
+      icon: Database,
+      popular: false,
+      rating: 4.8,
+      clients: '80+',
+      link: 'https://ziontechgroup.com/ai-healthcare'
+    },
+    {
+      id: 12,
+      title: 'AI Financial Services',
+      description: 'Advanced AI solutions for financial services, trading, and risk management',
+      category: 'Finance',
+      price: '$40,000 - $300,000',
+      duration: '6-20 weeks',
+      features: [
+        'Algorithmic trading and investment strategies',
+        'Risk assessment and portfolio management',
+        'Credit scoring and loan approval',
+        'Fraud detection and prevention',
+        'Regulatory compliance and reporting',
+        'Market analysis and forecasting',
+        'Customer service and support',
+        'Real-time transaction monitoring',
+        'Integration with financial systems',
+        'Advanced security and encryption'
+      ],
       icon: TrendingUp,
-      title: 'AI Model Optimization',
-      description: 'Optimize your existing AI systems for better performance, accuracy, and efficiency.',
-      price: 'Starting at $3,000/month',
-      features: ['Performance analysis', 'Model fine-tuning', 'Hyperparameter optimization', 'A/B testing', 'Continuous monitoring']
+      popular: false,
+      rating: 4.7,
+      clients: '90+',
+      link: 'https://ziontechgroup.com/ai-finance'
     },
     {
+      id: 13,
+      title: 'AI E-commerce Solutions',
+      description: 'Intelligent e-commerce solutions with personalization and optimization',
+      category: 'E-commerce',
+      price: '$15,000 - $120,000',
+      duration: '4-14 weeks',
+      features: [
+        'Product recommendation engines',
+        'Dynamic pricing optimization',
+        'Customer behavior analysis',
+        'Inventory management and forecasting',
+        'Search and discovery optimization',
+        'Personalized marketing campaigns',
+        'Chatbot and customer support',
+        'Visual search and image recognition',
+        'Multi-channel integration',
+        'Advanced analytics and reporting'
+      ],
+      icon: Globe,
+      popular: true,
+      rating: 4.8,
+      clients: '170+',
+      link: 'https://ziontechgroup.com/ai-ecommerce'
+    },
+    {
+      id: 14,
+      title: 'AI Supply Chain Optimization',
+      description: 'Intelligent supply chain management and optimization solutions',
+      category: 'Supply Chain',
+      price: '$25,000 - $200,000',
+      duration: '6-18 weeks',
+      features: [
+        'Demand forecasting and planning',
+        'Inventory optimization and management',
+        'Route optimization and logistics',
+        'Supplier risk assessment',
+        'Quality control and monitoring',
+        'Cost optimization and analysis',
+        'Real-time tracking and visibility',
+        'Integration with ERP systems',
+        'Predictive maintenance',
+        'Sustainability and carbon footprint'
+      ],
+      icon: Layers,
+      popular: false,
+      rating: 4.6,
+      clients: '130+',
+      link: 'https://ziontechgroup.com/ai-supply-chain'
+    },
+    {
+      id: 15,
+      title: 'AI Marketing Automation',
+      description: 'Advanced AI-powered marketing automation and personalization platform',
+      category: 'Marketing',
+      price: '$10,000 - $80,000',
+      duration: '3-12 weeks',
+      features: [
+        'Customer segmentation and targeting',
+        'Personalized content and campaigns',
+        'Predictive customer analytics',
+        'Marketing attribution and ROI analysis',
+        'Cross-channel campaign orchestration',
+        'A/B testing and optimization',
+        'Lead scoring and qualification',
+        'Email and social media automation',
+        'Integration with marketing tools',
+        'Advanced reporting and analytics'
+      ],
       icon: Target,
-      title: 'AI Training & Education',
-      description: 'Comprehensive training programs to upskill your team in AI technologies and best practices.',
-      price: 'Starting at $2,500/session',
-      features: ['Custom training programs', 'Hands-on workshops', 'Certification courses', 'Ongoing support', 'Team mentoring']
-    },
-    {
-      icon: Brain,
-      title: 'AI Data Services',
-      description: 'Complete data preparation, cleaning, and annotation services for AI model training.',
-      price: 'Starting at $1,500/month',
-      features: ['Data collection', 'Data cleaning', 'Data annotation', 'Quality assurance', 'Data governance']
-    },
-    {
-      icon: BarChart,
-      title: 'AI Analytics & Insights',
-      description: 'Advanced AI-powered analytics to extract meaningful insights from your business data.',
-      price: 'Starting at $4,000/month',
-      features: ['Predictive analytics', 'Anomaly detection', 'Trend analysis', 'Custom dashboards', 'Automated reporting']
-    },
-    {
-      icon: MessageSquare,
-      title: 'AI Chatbot Development',
-      description: 'Intelligent chatbot solutions for customer service, sales, and internal operations.',
-      price: 'Starting at $8,000/project',
-      features: ['Natural language processing', 'Multi-channel support', 'Integration capabilities', 'Analytics dashboard', 'Continuous learning']
-    },
-    {
-      icon: Eye,
-      title: 'Computer Vision Solutions',
-      description: 'Custom computer vision applications for image recognition, quality control, and automation.',
-      price: 'Starting at $12,000/project',
-      features: ['Object detection', 'Image classification', 'OCR solutions', 'Quality inspection', 'Real-time processing']
-    }
-  ];
-
-  const benefits = [
-    'Increased operational efficiency',
-    'Better decision making with data insights',
-    'Automated repetitive tasks',
-    'Enhanced customer experience',
-    'Cost reduction through automation',
-    'Scalable AI solutions',
-    '24/7 AI-powered support',
-    'Continuous learning and improvement'
-  ]
-  const stats = [
-    { icon: Brain, value: '95%', label: 'Accuracy Rate' },
-    { icon: Zap, value: '10x', label: 'Faster Processing' },
-    { icon: Shield, value: '99.9%', label: 'Uptime' },
-    { icon: TrendingUp, value: '300%', label: 'Efficiency Gain' }
-  ]return (
-=======
-      price: 'Starting at $1,199/month',
-      popular: false
+      popular: true,
+      rating: 4.9,
+      clients: '250+',
+      link: 'https://ziontechgroup.com/ai-marketing'
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'All Services' },
-    { id: 'Analytics', name: 'Analytics' },
-    { id: 'Automation', name: 'Automation' },
-    { id: 'Customer Service', name: 'Customer Service' },
-    { id: 'CRM', name: 'CRM' },
-    { id: 'Security', name: 'Security' }
+    { id: 'all', name: 'All AI Services' },
+    { id: 'Consulting', name: 'AI Consulting' },
+    { id: 'Development', name: 'AI Development' },
+    { id: 'Conversational AI', name: 'Conversational AI' },
+    { id: 'Computer Vision', name: 'Computer Vision' },
+    { id: 'Analytics', name: 'AI Analytics' },
+    { id: 'Automation', name: 'AI Automation' },
+    { id: 'NLP', name: 'Natural Language Processing' },
+    { id: 'Content AI', name: 'Content AI' },
+    { id: 'Security', name: 'AI Security' },
+    { id: 'Healthcare', name: 'Healthcare AI' },
+    { id: 'Finance', name: 'Financial AI' },
+    { id: 'E-commerce', name: 'E-commerce AI' },
+    { id: 'Supply Chain', name: 'Supply Chain AI' },
+    { id: 'Marketing', name: 'Marketing AI' }
   ];
 
   const benefits = [
-    'Cutting-edge AI technology',
-    'Customized solutions for your business',
-    'Expert AI engineers and data scientists',
-    'Scalable and flexible implementations',
-    '24/7 support and maintenance',
-    'Proven ROI and business impact'
+    {
+      icon: Brain,
+      title: 'Expert AI Team',
+      description: 'Certified AI engineers and data scientists with 10+ years of experience'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with SOC2, GDPR, and HIPAA compliance'
+    },
+    {
+      icon: Zap,
+      title: 'Rapid Deployment',
+      description: 'Fast implementation with proven methodologies and best practices'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Proven ROI',
+      description: 'Average 300% ROI with measurable business impact and results'
+    }
   ];
 
   const filteredServices = selectedCategory === 'all' 
-    ? aiServices 
-    : aiServices.filter(service => service.category === selectedCategory);
+    ? aiServices.filter(service => 
+        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    : aiServices.filter(service => 
+        service.category === selectedCategory && (
+          service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          service.description.toLowerCase().includes(searchTerm.toLowerCase())
+        )
+      );
 
   return (
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Services | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI services including analytics, automation, chatbots, CRM, cybersecurity, and data analytics solutions." />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation, analytics, chatbot, CRM" />
+        <title>AI Services | Zion Tech Group - Advanced AI Solutions & Consulting</title>
+        <meta name="description" content="Comprehensive AI services including custom AI development, machine learning, computer vision, NLP, and AI consulting. Transform your business with cutting-edge artificial intelligence solutions." />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI consulting, computer vision, NLP, AI development, AI solutions" />
       </Helmet>
-<<<<<<< HEAD
-      <Navigation />
-=======
 
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            AI <span className="text-cyan-400">Services</span>
+            Advanced <span className="text-cyan-400">AI Services</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Harness the power of artificial intelligence to transform your business operations, 
-            enhance customer experiences, and drive unprecedented growth.
+            Transform your business with cutting-edge artificial intelligence solutions. 
+            From strategy to implementation, we deliver AI that drives real results.
           </p>
-        </div>
-      </section>
-<<<<<<< HEAD
-      {/* Stats Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  <stat.icon className="w-8 h-8 text-blue-400" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300">{stat.label}</div>
-              </div>
-            ))}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center space-x-2"
+            >
+              <Phone className="w-5 h-5" />
+              <span>Call: (302) 464-0950</span>
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center space-x-2"
+            >
+              <Mail className="w-5 h-5" />
+              <span>Email Us</span>
+            </a>
           </div>
         </div>
       </section>
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our AI Capabilities
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive AI solutions designed to solve complex business challenges
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
-=======
 
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our AI Services?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <div key={index} className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-slate-900" />
                 </div>
-              ))}
-            </div>
-            <div className="space-y-4">
-              {benefits.slice(3).map((benefit, index) => (
-                <div key={index} className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Services Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Our AI Services</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              End-to-end AI solutions tailored to your business needs
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 group hover:scale-105">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
-                <ul className="space-y-2 text-sm text-gray-300">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <button className="w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Learn More
-                </button>
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our AI Services?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our proven AI solutions
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-lg p-4">
-                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-=======
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Our AI Services</h2>
-          
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-cyan-500 text-white'
-                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                }`}
-              >
-                {category.name}
-              </button>
-            ))}
-          </div>
 
-          {/* Services Grid */}
+      {/* Search and Filter Section */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700">
+            <div className="flex flex-col md:flex-row gap-4 mb-6">
+              <div className="flex-1">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search AI services..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-300 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
+                  />
+                </div>
+              </div>
+              <div className="md:w-64">
+                <div className="relative">
+                  <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors appearance-none"
+                  >
+                    {categories.map((category) => (
+                      <option key={category.id} value={category.id} className="bg-slate-800">
+                        {category.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-2 justify-center">
+              {categories.slice(1).map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-cyan-500 text-white'
+                      : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
+                  }`}
+                >
+                  {category.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-3xl font-bold text-white">
+              {selectedCategory === 'all' ? 'All AI Services' : categories.find(c => c.id === selectedCategory)?.name}
+            </h2>
+            <span className="text-gray-300">
+              {filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''} found
+            </span>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service) => (
-              <div key={service.id} className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
+              <div key={service.id} className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 relative ${
                 service.popular
                   ? 'border-cyan-500 shadow-2xl shadow-cyan-500/20'
                   : 'border-slate-700 hover:border-slate-600'
@@ -784,31 +614,67 @@ const AIServicesPage: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
+                  <div className="flex items-center justify-center space-x-4 text-sm text-gray-400 mb-4">
+                    <div className="flex items-center">
+                      <Star className="w-4 h-4 mr-1 text-yellow-400" />
+                      {service.rating}
+                    </div>
+                    <div className="flex items-center">
+                      <Users className="w-4 h-4 mr-1" />
+                      {service.clients}
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {service.duration}
+                    </div>
+                  </div>
                   <div className="text-2xl font-bold text-cyan-400 mb-6">{service.price}</div>
                 </div>
 
                 <ul className="space-y-3 mb-8">
-                  {service.features.map((feature, index) => (
+                  {service.features.slice(0, 5).map((feature, index) => (
                     <li key={index} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
+                  {service.features.length > 5 && (
+                    <li className="text-gray-400 text-sm">
+                      +{service.features.length - 5} more features
+                    </li>
+                  )}
                 </ul>
 
-                <button className={`w-full py-4 px-6 rounded-lg font-bold text-lg transition-all duration-300 ${
-                  service.popular
-                    ? 'bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white'
-                    : 'bg-slate-700 hover:bg-slate-600 text-white border border-slate-600'
-                }`}>
-                  Learn More
-                </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
+                <div className="space-y-3">
+                  <a
+                    href={service.link}
+                    className={`w-full py-4 px-6 rounded-lg font-bold text-lg transition-all duration-300 text-center block ${
+                      service.popular
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white'
+                        : 'bg-slate-700 hover:bg-slate-600 text-white border border-slate-600'
+                    }`}
+                  >
+                    Get Quote
+                  </a>
+                  <a
+                    href="/contact"
+                    className="w-full py-2 px-6 rounded-lg font-medium text-cyan-400 border border-cyan-400 hover:bg-cyan-400 hover:text-white transition-all duration-300 text-center block"
+                  >
+                    Learn More
+                  </a>
+                </div>
               </div>
             ))}
           </div>
+
+          {filteredServices.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
+            </div>
+          )}
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -817,37 +683,38 @@ const AIServicesPage: React.FC = () => {
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let our AI experts help you implement cutting-edge artificial intelligence 
-              solutions that drive real business results.
+              Let's discuss how our AI services can help you achieve your business goals. 
+              Contact us today for a free consultation and custom AI strategy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Get Started
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Schedule Demo
-              </button>
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center space-x-2"
+              >
+                <span>Get Free Consultation</span>
+                <ArrowRight className="w-5 h-5" />
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center space-x-2"
+              >
+                <Phone className="w-5 h-5" />
+                <span>(302) 464-0950</span>
+              </a>
+            </div>
+            <div className="mt-8 text-center">
+              <p className="text-gray-300 text-sm mb-2">
+                📍 364 E Main St STE 1008, Middletown, DE 19709
+              </p>
+              <p className="text-gray-300 text-sm">
+                ⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available
+              </p>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <Footer />
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default AIServicesPage;
-      </div>
-      <Footer />
-    </>
-  );
-};
-
-export default AIServicesPage;
-=======
 export default AiServicesPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
