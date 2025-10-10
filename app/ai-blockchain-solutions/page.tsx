@@ -49,98 +49,13 @@ const AIBlockchainSolutionsPage: React.FC = () => {
     {
       title: 'DeFi Platforms',
       description: 'AI-enhanced decentralized finance platforms with intelligent trading and risk management.',
-      icon: '🏦'
-    },
-    {
-      title: 'NFT Marketplaces',
-      description: 'Intelligent NFT platforms with AI-powered curation and valuation systems.',
-      icon: '🎨'
-    },
-    {
-      title: 'Supply Chain',
-      description: 'Blockchain-based supply chain solutions with AI-powered tracking and optimization.',
-      icon: '📦'
-    },
-    {
-      title: 'Identity Management',
-      description: 'Decentralized identity solutions with AI-enhanced security and privacy.',
-      icon: '🆔'
-    },
-    {
-      title: 'Healthcare Records',
-      description: 'Secure healthcare data management with AI-powered analytics and insights.',
-      icon: '🏥'
-    },
-    {
-      title: 'Financial Services',
-      description: 'AI-powered financial services built on blockchain technology.',
-      icon: '💳'
     }
   ];
 
   const benefits = [
-    'Increase transaction speed by 80%',
-    'Reduce costs by 70%',
-    'Improve security by 95%',
-    'Enable new business models',
-    'Enhance transparency and trust',
-    'Automate complex processes',
-    'Scale globally without intermediaries',
-    'Enable programmable money and assets'
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>AI Blockchain Solutions - Zion Tech Group</title>
-        <meta name="description" content="Build the future with our AI Blockchain Solutions. Smart contracts, DeFi platforms, and decentralized applications powered by artificial intelligence." />
-        <meta name="keywords" content="AI blockchain, smart contracts, DeFi, NFT, decentralized applications, blockchain AI, Web3" />
-      </Helmet>
-
-      <Navigation />
-
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full mb-8">
-              <Lock className="w-10 h-10 text-white" />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Blockchain Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Build the future with our AI Blockchain Solutions. Smart contracts, DeFi platforms, 
-              and decentralized applications powered by artificial intelligence.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-amber-500 to-orange-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-orange-600 transition-all duration-300 flex items-center justify-center">
-                Start Building
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
-              <button className="border border-amber-400 text-amber-300 px-8 py-4 rounded-lg font-semibold hover:bg-amber-500 hover:text-white transition-all duration-300">
-                View Demo
-              </button>
-            </div>
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced AI Blockchain Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Our AI Blockchain Solutions combine cutting-edge technology with blockchain innovation
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg mb-4">
-                    <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -229,9 +144,6 @@ const AIBlockchainSolutionsPage: React.FC = () => {
         </section>
       </main>
 
-      <Footer />
-    </>
-  );
 };
 
 export default AIBlockchainSolutionsPage;

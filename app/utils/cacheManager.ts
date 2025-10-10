@@ -23,27 +23,27 @@ export interface CacheConfig {}
 }
 
 export interface CacheEntry<T> {}
-  value: T;
-  timestamp: number;
-  ttl: number;
+  value: T,
+  timestamp: number,
+  ttl: number,
 }
 
 export interface CacheStats {}
-  hits: number;
-  misses: number;
-  hitRate: number;
-  count: number;
-  entries: number;
+  hits: number,
+  misses: number,
+  hitRate: number,
+  count: number,
+  entries: number,
 }
 
 export class CacheManager<T = unknown> {}
   private cache: Map<string, CacheEntry<T>> = new Map();
   private stats: CacheStats = {
-    hits: 0;
-    misses: 0;
-    hitRate: 0;
-    count: 0;
-    entries: 0;
+    hits: 0,
+    misses: 0,
+    hitRate: 0,
+    count: 0,
+    entries: 0,
   };
   private config: Required<CacheConfig>;
 ,

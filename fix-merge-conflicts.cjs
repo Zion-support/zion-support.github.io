@@ -4,81 +4,62 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-// Function to find all files with merge conflicts
-function findFilesWithConflicts(dir) {
-  const files = [];
-  
-  function searchDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        searchDirectory(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js'))) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> origin/main')) {
-            files.push(fullPath);
-          }
-        } catch (error) {
-          // Skip files that can't be read
-        }
-      }
-    }
-  }
-  
-  searchDirectory(dir);
-  return files;
-}
-
-// Function to fix merge conflicts by keeping the HEAD version
-function fixMergeConflicts(filePath) {
+// Function to resolve merge conflicts by keeping HEAD version
+function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
+    // Check if file has merge conflicts
+    if (!content.includes('<<<<<<< HEAD')) {
+      return false;
+    }
+    
+    console.log(`Fixing merge conflicts in: ${filePath}`);
+    
     // Remove merge conflict markers and keep HEAD version
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======([\s\S]*?)>>>>>>> origin\/main\n?/g, '$1');
+    content = content.replace(/<<<<<<< HEAD\n/g, '');
+    content = content.replace(/=======.*?\n>>>>>>> [^\n]+\n/g, '');
+    content = content.replace(/=======.*?\n>>>>>>> [^\n]+/g, '');
     
     // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD\n?/g, '');
-    content = content.replace(/=======\n?/g, '');
-    content = content.replace(/>>>>>>> origin\/main\n?/g, '');
+    content = content.replace(/<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]+/gs, '');
+    content = content.replace(/<<<<<<< HEAD.*?>>>>>>> [^\n]+/gs, '');
     
     // Write the cleaned content back
     fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Fixed merge conflicts in: ${filePath}`);
     
     return true;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
+// Find all files with merge conflicts
+function findFilesWithConflicts() {
+  try {
+    const result = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" | grep -v node_modules | xargs grep -l "<<<<<<< HEAD"', { 
+      encoding: 'utf8',
+      cwd: process.cwd()
+    });
+    return result.trim().split('\n').filter(line => line.trim());
+  } catch (error) {
+    return [];
+  }
+}
+
 // Main execution
-console.log('Searching for files with merge conflicts...');
-const conflictedFiles = findFilesWithConflicts('/workspace');
+console.log('Starting merge conflict resolution...');
 
-console.log(`Found ${conflictedFiles.length} files with merge conflicts:`);
-conflictedFiles.forEach(file => console.log(`  - ${file}`));
+const filesWithConflicts = findFilesWithConflicts();
+console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
 
-console.log('\nFixing merge conflicts...');
 let fixedCount = 0;
-conflictedFiles.forEach(file => {
-  if (fixMergeConflicts(file)) {
+filesWithConflicts.forEach(file => {
+  if (resolveMergeConflicts(file)) {
     fixedCount++;
   }
 });
 
-console.log(`\nFixed ${fixedCount} out of ${conflictedFiles.length} files.`);
-
-// Run type check to see remaining errors
-console.log('\nRunning type check to see remaining errors...');
-try {
-  execSync('cd /workspace && pnpm run type-check', { stdio: 'inherit' });
-} catch (error) {
-  console.log('Type check completed with errors (this is expected).');
-}
+console.log(`Fixed merge conflicts in ${fixedCount} files`);
+console.log('Merge conflict resolution complete!');

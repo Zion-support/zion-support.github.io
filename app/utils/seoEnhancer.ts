@@ -7,8 +7,8 @@
 export const generateMetaTags = (data: {
 // Generate meta tags
 export const generateMetaTags = (data: {}
-// title: string;
-// description: string;
+// title: string,
+// description: string,
 // keywords?: string;
 // canonical?: string;
 // ogTitle?: string;
@@ -85,25 +85,25 @@ export const generateMetaTags = (dat,
 };
 // SEO Config interface;
 interface SEOConfig {
-  title: string;
-  description: string;
+  title: string,
+  description: string,
 // SEO Config interface
 interface SEOConfig {}
   title: string
   description: string
   keywords: string[]
-  canonicalUrl: string;
-  ogImage: string;
-  ogType: string;
-  twitterCard: string;
-  twitterSite: string;
-  twitterCreator: string;
+  canonicalUrl: string,
+  ogImage: string,
+  ogType: string,
+  twitterCard: string,
+  twitterSite: string,
+  twitterCreator: string,
   structuredData: Record<string, unknown>
-  robots: string;
-  language: string;
-  locale: string;
-  siteName: string;
-  author: string;
+  robots: string,
+  language: string,
+  locale: string,
+  siteName: string,
+  author: string,
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
@@ -136,8 +136,8 @@ export const generateStructuredData = (data: {
 // Generate structured data
 export const generateStructuredData = (data: {}
 // type: 'Organization' | 'WebSite' | 'Article' | 'Service';
-// name: string;
-// description: string;
+// name: string,
+// description: string,
 // url?: string;
 // logo?: string;
 // sameAs?: string[];,
@@ -158,7 +158,7 @@ export const generateStructuredData = (data: {}
 }
 // SEO Enhancer class;
 export class SEOEnhancer {
-  private static instance: SEOEnhancer;
+  private static instance: SEOEnhancer,
 // SEO Enhancer class
 export class SEOEnhancer {}
   private static instance: SEOEnhancer
@@ -520,8 +520,8 @@ export const generateAdvancedStructuredData = (data: {
 // Generate structured data with type-specific properties
 export const generateAdvancedStructuredData = (data: {}
 // type: 'Organization' | 'WebSite' | 'Article' | 'Service';
-// name: string;
-// description: string;
+// name: string,
+// description: string,
 // url?: string;
 // logo?: string;
 // sameAs?: string[];,

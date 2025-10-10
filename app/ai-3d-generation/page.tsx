@@ -16,39 +16,44 @@ const AI3DGenerationPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Lightning Fast Processing',
-      description: 'Generate 3D models in seconds with our optimized AI processing pipeline.',
-      benefits: ['Sub-second generation', 'Batch processing', 'GPU acceleration', 'Cloud processing']
+description: 'Create 3D models in seconds instead of hours with our optimized AI processing.',
+
+      benefits: ['Sub-second generation', 'Batch processing', 'GPU acceleration', 'Cloud scaling']
     },
     {
       icon: Eye,
-      title: 'Photorealistic Rendering',
-      description: 'Create stunning, photorealistic 3D models with advanced rendering techniques.',
-      benefits: ['Ray tracing', 'Global illumination', 'Material physics', 'Lighting simulation']
+      title: 'Photorealistic Quality',
+      description: 'Generate stunning, photorealistic 3D models with advanced neural rendering.',
+      benefits: ['High-resolution output', 'Realistic materials', 'Advanced lighting', 'Detail preservation']
     },
     {
       icon: Palette,
-      title: 'Custom Materials & Textures',
-      description: 'Apply custom materials and textures to your 3D models with AI assistance.',
-      benefits: ['Smart material mapping', 'Texture generation', 'Color optimization', 'Surface details']
+      title: 'Style Transfer',
+      description: 'Apply any artistic style to your 3D models with AI-powered style transfer.',
+      benefits: ['Multiple art styles', 'Custom style training', 'Real-time preview', 'Batch application']
+
     },
     {
       icon: Download,
-      title: 'Multiple Export Formats',
-      description: 'Export your 3D models in various industry-standard formats.',
-      benefits: ['OBJ, FBX, GLTF', 'STL for 3D printing', 'USD for pipelines', 'Custom formats']
+      title: 'Universal Export',
+      description: 'Export your 3D models in all major formats for any platform or engine.',
+      benefits: ['OBJ, FBX, GLTF', 'Game engine ready', 'VR/AR compatible', 'Web optimized']
+
     },
     {
       icon: Sparkles,
-      title: 'Creative AI Assistance',
-      description: 'Get AI-powered suggestions and improvements for your 3D creations.',
-      benefits: ['Style suggestions', 'Optimization tips', 'Quality improvements', 'Creative variations']
+      title: 'Smart Optimization',
+      description: 'Automatically optimize models for performance without losing visual quality.',
+      benefits: ['LOD generation', 'Texture compression', 'Polygon reduction', 'Performance tuning']
+
     }
   ];
 
   const useCases = [
     {
       title: 'Game Development',
-      description: 'Create 3D assets, characters, and environments for games',
+description: 'Create game assets, characters, and environments instantly',
+
       icon: '🎮'
     },
     {
@@ -75,43 +80,58 @@ const AI3DGenerationPage: React.FC = () => {
       title: 'Marketing & Advertising',
       description: 'Create compelling 3D visuals for marketing campaigns',
       icon: '📢'
+},
+    {
+      title: 'VR/AR',
+      description: 'Create immersive experiences and virtual environments',
+      icon: '🥽'
+
     }
   ];
 
-  const benefits = [
-    'Reduce 3D content creation time by 90%',
-    'Lower production costs by 80%',
-    'Create unlimited unique 3D assets',
-    'Accelerate game and app development',
-    'Enable rapid prototyping',
-    'Improve visual quality and consistency',
-    'Scale content production instantly',
-    'Reduce dependency on 3D artists'
-  ];
-
-  return (
-    <>
       <Helmet>
         <title>AI 3D Generation - Zion Tech Group</title>
-        <meta name="description" content="Transform your ideas into stunning 3D models with our AI-powered 3D generation technology. Create photorealistic models, textures, and animations in seconds." />
-        <meta name="keywords" content="AI 3D generation, 3D modeling, artificial intelligence, 3D assets, game development, architecture visualization" />
+<meta name="description" content="Transform text into stunning 3D models with our AI-powered 3D generation technology. Create game assets, architectural models, and more in seconds." />
+
       </Helmet>
 
       <Navigation />
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="relative max-w-7xl mx-auto text-center"></div>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            AI 3D</h1>
+            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Generation
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Transform your ideas into stunning 3D models with our advanced AI technology. 
+            Generate high-quality 3D assets from simple text descriptions in seconds.
 
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-8">
-              <Cube className="w-10 h-10 text-white" />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI-Powered 3D Generation
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your ideas into stunning 3D models with our advanced AI technology. 
-              Create photorealistic models, textures, and animations in seconds.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+              Try AI 3D Generator
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              View Examples
+
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Powerful 3D Generation Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center">
@@ -125,72 +145,35 @@ const AI3DGenerationPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful AI Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Our AI technology combines cutting-edge machine learning with 3D graphics expertise
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg mb-4">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
+{/* Applications Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From game development to architecture, our AI 3D generation technology 
+
+              has applications across multiple industries.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4">
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Applications & Use Cases
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                From game development to architecture, our AI 3D generation serves diverse industries
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
-                  <div className="text-4xl mb-4">{useCase.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300">{useCase.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our AI 3D Generation?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Experience the future of 3D content creation with our revolutionary AI technology
-              </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (

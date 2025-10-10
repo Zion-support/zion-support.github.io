@@ -4,8 +4,8 @@
  * Provides comprehensive analytics tracking with event batching and offline support;
  */
 export interface AnalyticsEvent {
-  category: string;
-  action: string;
+  category: string,
+  action: string,
   label?: string;
   value?: number;
   metadata?: Record<string, unknown>;}
@@ -30,7 +30,7 @@ export interface UserProperties {}
 class EnhancedAnalytics {}
   private queue: AnalyticsEvent[] = [];}
   private userProperties: UserProperties = {}
-  private sessionId: string;
+  private sessionId: string,
   private isInitialized = false;
   private batchSize = 10;
   private flushInterval = 30000; // 30 seconds;
@@ -186,7 +186,7 @@ export interface UserProperties {/* TODO: Fix JSX expression */}
 class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   userProperties: UserProperties = {};
   private,
-  sessionId: string;
+  sessionId: string,
   private isInitialized = false;
   private batchSize = 10;
   private flushInterval = 30000; // 30 seconds;
@@ -390,9 +390,9 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     return { ...this.userProperties }
   }
   public getAnalyticsSummary(): {
-    queueSize: number;
-    offlineQueueSize: number;
-    sessionId: string;
+    queueSize: number,
+    offlineQueueSize: number,
+    sessionId: string,
     userProperties: UserProperties;}
   } {
     return {

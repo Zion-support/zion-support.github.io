@@ -8,40 +8,6 @@ import { Palette, Brain, FileText, ArrowRight, CheckCircle, Star, Users, Shield,
 const AIContentStudioPage: React.FC = () => {
   const features = [
     {
-      icon: Palette,
-      title: 'AI Design Studio',
-      description: 'Create stunning visual content with AI-powered design tools and templates.',
-      benefits: ['AI design generation', 'Custom templates', 'Brand consistency', 'High-quality output']
-    },
-    {
-      icon: Brain,
-      title: 'Content Intelligence',
-      description: 'AI-powered content analysis and optimization for better performance and engagement.',
-      benefits: ['Performance analysis', 'Engagement prediction', 'Content optimization', 'Trend analysis']
-    },
-    {
-      icon: FileText,
-      title: 'Multi-Format Content',
-      description: 'Generate content in multiple formats including text, images, videos, and audio.',
-      benefits: ['Multi-format support', 'Cross-platform compatibility', 'Automated conversion', 'Quality optimization']
-    },
-    {
-      icon: Zap,
-      title: 'Real-time Collaboration',
-      description: 'Collaborate with team members in real-time with AI-powered suggestions and feedback.',
-      benefits: ['Real-time editing', 'Team collaboration', 'AI suggestions', 'Version control']
-    },
-    {
-      icon: Target,
-      title: 'Audience Targeting',
-      description: 'Create content tailored to specific audiences with AI-powered personalization.',
-      benefits: ['Audience analysis', 'Personalization', 'A/B testing', 'Performance tracking']
-    },
-    {
-      icon: BarChart,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics and insights to optimize content performance.',
-      benefits: ['Performance metrics', 'Engagement analytics', 'ROI tracking', 'Custom reports']
     }
   ];
 
@@ -58,57 +24,6 @@ const AIContentStudioPage: React.FC = () => {
 
   const useCases = [
     {
-      title: 'Marketing Campaigns',
-      description: 'Create compelling marketing campaigns with AI-powered content generation',
-      icon: '📢'
-    },
-    {
-      title: 'Social Media',
-      description: 'Generate engaging social media content across all platforms',
-      icon: '📱'
-    },
-    {
-      title: 'E-commerce',
-      description: 'Create product descriptions, ads, and promotional content',
-      icon: '🛒'
-    },
-    {
-      title: 'Blog & Articles',
-      description: 'Generate high-quality blog posts and articles with AI assistance',
-      icon: '📝'
-    },
-    {
-      title: 'Video Content',
-      description: 'Create engaging video content with AI-powered editing and production',
-      icon: '🎬'
-    },
-    {
-      title: 'Educational Content',
-      description: 'Generate educational materials, courses, and training content',
-      icon: '📚'
-    }
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>AI Content Studio - Zion Tech Group</title>
-        <meta name="description" content="Create stunning content with our AI Content Studio. Advanced design tools, content generation, and collaboration features for better content creation." />
-        <meta name="keywords" content="AI content studio, content creation, design tools, content generation, marketing automation, content AI" />
-      </Helmet>
-
-      <Navigation />
-
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full mb-8">
-              <Palette className="w-10 h-10 text-white" />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Content Studio
-            </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Create stunning content with our AI Content Studio. Advanced design tools, 
               content generation, and collaboration features for better content creation.
@@ -125,33 +40,6 @@ const AIContentStudioPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Content Studio Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Our AI Content Studio combines cutting-edge technology with creative expertise
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-rose-500 to-pink-500 rounded-lg mb-4">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-rose-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               ))}
             </div>

@@ -4,20 +4,20 @@
  * Provides comprehensive error tracking, logging, and reporting capabilities;
  */
 export interface ErrorReport {
-  message: string;
+  message: string,
   stack?: string;
   componentStack?: string;
-  timestamp: string;
-  userAgent: string;
-  url: string;
+  timestamp: string,
+  userAgent: string,
+  url: string,
   severity: 'low' | 'medium' | 'high' | 'critical',
   context?: Record<string, unknown>;}
 }
 export interface ErrorReporterConfig {
-  enableConsoleLogging: boolean;
-  enableRemoteLogging: boolean;
+  enableConsoleLogging: boolean,
+  enableRemoteLogging: boolean,
   remoteEndpoint?: string;
-  maxErrorsInMemory: number;
+  maxErrorsInMemory: number,
   captureContext: boolean;}
 }
 const defaultConfig: ErrorReporterConfig = {,
@@ -41,15 +41,15 @@ export interface ErrorReporterConfig {}
 const defaultConfig: ErrorReporterConfig = {}
   enableConsoleLogging: process.env['NODE_ENV'] === 'development',
   enableRemoteLogging: process.env['NODE_ENV'] === 'production',
-  maxErrorsInMemory: 50;
+  maxErrorsInMemory: 50,
   captureContext: true}
 }
 /**
  * ErrorReporter class for comprehensive error handling;
  */
 export class ErrorReporter {
-  private static instance: ErrorReporter;
-  private config: ErrorReporterConfig;
+  private static instance: ErrorReporter,
+  private config: ErrorReporterConfig,
   private errorQueue: ErrorReport[] = [],
 export class ErrorReporter {}
   private static instance: ErrorReporter
@@ -247,8 +247,8 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
    * Get error statistics;
    */
   getErrorStats(): {
-    totalErrors: number;
-    uniqueErrors: number;
+    totalErrors: number,
+    uniqueErrors: number,
     errorsByType: Record<string, number>;}
   } {
     return {
@@ -302,7 +302,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
  * Convenience function to report errors;
  */
 export const reportError = (
-  error: Error;
+  error: Error,
   severity?: ErrorReport['severity'],
   context?: Record<string, unknown>
 ): void => {}
@@ -312,9 +312,9 @@ export const reportError = (
  * React error boundary helper;
  */
 export const captureComponentError = (
-  error: Error;
+  error: Error,
   errorInfo: { componentStack: string },
-  componentName: string;
+  componentName: string,
 ): void => {,
   const report = ErrorReporter.getInstance(),
   report.reportError(error, 'high', {)

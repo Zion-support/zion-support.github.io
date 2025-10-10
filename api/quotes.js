@@ -1,8 +1,5 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
 
@@ -10,9 +7,6 @@ export default async function handler(req, res) {
     const { name, email, phone, details, country, service } = req.body || {};
 
     if (!name || !email || !phone || !details) {
-      res.statusCode = 400;
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Name, email, phone, and details are required' }));
       return;
     }
 
@@ -49,9 +43,6 @@ export default async function handler(req, res) {
     console.error('Quote submission error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      error: 'Failed to submit quote request',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
-    }));
+    res.end(JSON.stringify({ error: 'Internal server error' }));
   }
 }

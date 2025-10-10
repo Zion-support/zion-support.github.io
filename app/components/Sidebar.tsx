@@ -156,18 +156,18 @@ const Sidebar: React.FC = () => {
         />
       )}
 
-      {/* Sidebar */}
+      {/* Sidebar */}</div>
       <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } lg:translate-x-0 lg:static lg:z-auto`}>
         <div className="flex flex-col h-full">
-          {/* Header */}
+          {/* Header */}</div>
           <div className="flex items-center justify-between p-6 border-b border-slate-700/50">
             <Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
                 <Brain className="w-6 h-6 text-white" />
               </div>
-              <div>
+              <div></div>
                 <h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</h2>
                 <p className="text-xs text-cyan-400">AI & IT Solutions</p>
               </div>
@@ -200,7 +200,7 @@ const Sidebar: React.FC = () => {
                   
                   {(!section.key || expandedSections.has(section.key)) && (
                     <div className="ml-4 space-y-1">
-                      {section.items.map((item, itemIndex) => (
+                      {section.items.map((item, itemIndex) => (</div>
                         <Link
                           key={itemIndex}
                           to={item.path}
@@ -242,9 +242,7 @@ const Sidebar: React.FC = () => {
                 <Clock className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                 <span className="text-xs">{contactInfo.hours}</span>
               </div>
-            </div>
           </div>
-        </div>
       </aside>
     </>
   );

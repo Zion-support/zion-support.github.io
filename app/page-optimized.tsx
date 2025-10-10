@@ -150,4 +150,3 @@ const PageOptimizedPage: React.FC = () => {
   );
 };
 
-export default PageOptimizedPage;

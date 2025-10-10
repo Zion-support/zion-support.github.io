@@ -2,20 +2,19 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 interface FormData {
-  name: string;
-  email: string;
-  company: string;
-  phone: string;
-  service: string;
-  message: string;
+  name: string,
+  email: string,
+  company: string,
+  phone: string,
+  service: string,
+  message: string,
 }
 
 interface FormStatus {
   type: 'idle' | 'loading' | 'success' | 'error';
-  message: string;
+  message: string,
 }
 
-const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -79,21 +78,6 @@ const ContactForm: React.FC = () => {
     'Other'
   ];
 
-  return (
-    <div className="max-w-2xl mx-auto">
-      <div className="bg-white rounded-2xl shadow-2xl p-8">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
-          <p className="text-gray-600">
-            Ready to transform your business? Let's discuss your project.
-          </p>
-        </div>
-
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                Full Name *
               </label>
               <input
                 type="text"
@@ -122,7 +106,6 @@ const ContactForm: React.FC = () => {
                 placeholder="your.email@company.com"
               />
             </div>
-          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -167,43 +150,6 @@ const ContactForm: React.FC = () => {
               onChange={handleChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
             >
-              <option value="">Select a service</option>
-              {services.map((service) => (
-                <option key={service} value={service}>
-                  {service}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-              Message *
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              rows={5}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
-              placeholder="Tell us about your project and how we can help..."
-            />
-          </div>
-
-          {status.message && (
-            <div className={`p-4 rounded-lg flex items-center space-x-3 ${
-              status.type === 'success' 
-                ? 'bg-green-50 text-green-800 border border-green-200' 
-                : status.type === 'error'
-                ? 'bg-red-50 text-red-800 border border-red-200'
-                : 'bg-blue-50 text-blue-800 border border-blue-200'
-            }`}>
-              {status.type === 'success' ? (
-                <CheckCircle className="h-5 w-5 text-green-500" />
-              ) : status.type === 'error' ? (
-                <AlertCircle className="h-5 w-5 text-red-500" />
               ) : (
                 <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
               )}
@@ -263,7 +209,6 @@ const ContactForm: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 };
