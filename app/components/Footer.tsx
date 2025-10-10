@@ -16,12 +16,12 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Content Generation', href: '/ai-content-generation' },
         { name: 'AI Healthcare Solutions', href: '/ai-healthcare' },
         { name: 'AI Fintech Platform', href: '/ai-fintech' },
-        { name: 'AI Computer Vision', href: '/ai-computer-vision' },
-        { name: 'AI Machine Learning', href: '/ai-ml-platform' },
-        { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
-        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
-        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
-        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' }
+        { name: 'AI Quantum Neural Networks', href: '/ai-quantum-neural-networks' },
+        { name: 'AI Space Colonization AI', href: '/ai-space-colonization-ai' },
+        { name: 'AI Quantum Internet Protocol', href: '/ai-quantum-internet-protocol' },
+        { name: 'AI Molecular Biology AI', href: '/ai-molecular-biology-ai' },
+        { name: 'AI Holographic Computing', href: '/ai-holographic-computing' },
+        { name: 'AI Climate Modeling AI', href: '/ai-climate-modeling-ai' }
       ]
     },
     {
@@ -33,13 +33,13 @@ const Footer: React.FC = memo(() => {
         { name: 'IT Infrastructure Design', href: '/it-infrastructure' },
         { name: '24/7 IT Support', href: '/it-support' },
         { name: 'Custom Development', href: '/custom-development' },
-        { name: 'DevOps & CI/CD', href: '/devops-cicd' },
-        { name: 'Database Management', href: '/database-management' },
-        { name: 'Network Design', href: '/network-design' },
-        { name: 'AI Infrastructure Monitoring', href: '/ai-infrastructure-monitoring' },
-        { name: 'Blockchain Integration', href: '/blockchain-integration-services' },
-        { name: 'AI API Management', href: '/ai-api-management' },
-        { name: 'Smart Contract Security', href: '/smart-contract-security-audit' }
+        { name: 'AI IT Operations (AIOps)', href: '/ai-ops' },
+        { name: 'Quantum Computing Infrastructure', href: '/quantum-infrastructure' },
+        { name: 'Space Technology IT', href: '/space-technology-it' },
+        { name: 'Biotechnology IT Solutions', href: '/biotechnology-it' },
+        { name: 'Climate Technology IT', href: '/climate-technology-it' },
+        { name: 'AI-Powered Threat Hunting', href: '/ai-threat-hunting' },
+        { name: 'Zero Trust Security Architecture', href: '/zero-trust-architecture' }
       ]
     },
     {
@@ -52,12 +52,12 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Email Marketing Suite', href: '/ai-email-marketing' },
         { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot' },
         { name: 'AI Content Studio', href: '/ai-content-studio' },
-        { name: 'AI Financial Advisor', href: '/ai-financial-advisor' },
-        { name: 'AI Workflow Automation', href: '/ai-workflow-automation' },
-        { name: 'AI Smart Calendar', href: '/ai-smart-calendar' },
-        { name: 'AI Content Writer', href: '/ai-content-writer' },
-        { name: 'AI Video Generator', href: '/ai-video-generator' },
-        { name: 'AI CRM Assistant', href: '/ai-crm-assistant' }
+        { name: 'AI Quantum Analytics Pro', href: '/ai-quantum-analytics' },
+        { name: 'AI Space Mission Planner', href: '/ai-space-mission-planner' },
+        { name: 'AI Neural Interface Pro', href: '/ai-neural-interface' },
+        { name: 'AI Holographic Designer', href: '/ai-holographic-designer' },
+        { name: 'AI Quantum Security Vault', href: '/ai-quantum-security-vault' },
+        { name: 'AI Climate Predictor Pro', href: '/ai-climate-predictor' }
       ]
     },
     {
@@ -65,15 +65,17 @@ const Footer: React.FC = memo(() => {
       icon: Zap,
       services: [
         { name: 'Quantum Computing Solutions', href: '/ai-quantum-computing' },
-        { name: 'Autonomous Systems', href: '/autonomous-systems' },
-        { name: 'Blockchain & Web3', href: '/blockchain-web3' },
-        { name: 'IoT & Edge Computing', href: '/iot-edge-computing' },
-        { name: 'AR/VR Solutions', href: '/ar-vr-solutions' },
-        { name: 'Smart Cities', href: '/smart-cities' },
+        { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+        { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace' },
+        { name: 'AI Energy Management', href: '/ai-energy' },
+        { name: 'AI Music Composition', href: '/ai-music-composition' },
+        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
+        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
+        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
+        { name: 'AI Fashion Design Studio', href: '/ai-fashion-design' },
         { name: 'Digital Transformation', href: '/digital-transformation' },
-        { name: 'Innovation Labs', href: '/innovation-labs' },
-        { name: 'Business Intelligence', href: '/business-intelligence' },
-        { name: 'Robotics Solutions', href: '/robotics' }
+        { name: 'Innovation Labs', href: '/innovation-labs' }
       ]
     }
   ];

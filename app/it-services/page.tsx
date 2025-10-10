@@ -427,6 +427,244 @@ export default function ITServicesPage() {
           popular: true
         }
       ]
+    },
+    {
+      category: 'Advanced AI-Powered IT Solutions',
+      icon: Brain,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      services: [
+        {
+          name: 'AI-Powered IT Operations (AIOps)',
+          description: 'Intelligent IT operations with AI-driven automation, predictive analytics, and self-healing systems',
+          features: ['Predictive Analytics', 'Automated Incident Response', 'Self-Healing Systems', 'Intelligent Alerting', 'Performance Optimization', 'Root Cause Analysis', 'Capacity Planning', 'Cost Optimization'],
+          pricing: 'Starting at $8,000/month',
+          trial: 'Free AIOps assessment',
+          timeline: '4-8 weeks',
+          link: 'https://ziontechgroup.com/ai-ops',
+          popular: true
+        },
+        {
+          name: 'AI Network Security Suite',
+          description: 'Advanced AI-powered network security with behavioral analysis and threat prediction',
+          features: ['Behavioral Analysis', 'Threat Prediction', 'Automated Response', 'Network Segmentation', 'Zero Trust Implementation', 'Real-time Monitoring', 'Incident Response', 'Compliance Management'],
+          pricing: 'Starting at $12,000/month',
+          trial: 'Free security assessment',
+          timeline: '6-10 weeks',
+          link: 'https://ziontechgroup.com/ai-network-security',
+          popular: true
+        },
+        {
+          name: 'AI Cloud Cost Optimization',
+          description: 'Intelligent cloud cost management with AI-powered resource optimization and cost prediction',
+          features: ['Cost Prediction', 'Resource Optimization', 'Auto-scaling', 'Waste Detection', 'Budget Management', 'Performance Monitoring', 'Cost Analytics', 'Automated Recommendations'],
+          pricing: 'Starting at $5,000/month',
+          trial: 'Free cost analysis',
+          timeline: '2-4 weeks',
+          link: 'https://ziontechgroup.com/ai-cloud-optimization',
+          popular: true
+        },
+        {
+          name: 'AI Data Center Management',
+          description: 'Intelligent data center operations with predictive maintenance and energy optimization',
+          features: ['Predictive Maintenance', 'Energy Optimization', 'Capacity Planning', 'Environmental Monitoring', 'Asset Management', 'Performance Analytics', 'Automated Cooling', 'Power Management'],
+          pricing: 'Starting at $10,000/month',
+          trial: 'Free data center audit',
+          timeline: '4-6 weeks',
+          link: 'https://ziontechgroup.com/ai-data-center',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'Quantum Computing IT Solutions',
+      icon: Cpu,
+      color: 'text-violet-400',
+      bgColor: 'bg-violet-500/10',
+      services: [
+        {
+          name: 'Quantum Computing Infrastructure',
+          description: 'Quantum computing infrastructure setup and management for enterprise applications',
+          features: ['Quantum Hardware Setup', 'Quantum Software Integration', 'Quantum Algorithm Development', 'Hybrid Classical-Quantum Computing', 'Quantum Error Correction', 'Performance Monitoring', 'Security Implementation', 'Training & Support'],
+          pricing: 'Starting at $50,000',
+          trial: 'Free quantum consultation',
+          timeline: '12-24 weeks',
+          link: 'https://ziontechgroup.com/quantum-infrastructure',
+          popular: false
+        },
+        {
+          name: 'Quantum-Safe Security Implementation',
+          description: 'Future-proof security solutions designed to protect against quantum computing threats',
+          features: ['Post-Quantum Cryptography', 'Quantum Key Distribution', 'Quantum-Safe Algorithms', 'Migration Planning', 'Security Assessment', 'Compliance Support', 'Implementation', 'Ongoing Support'],
+          pricing: 'Starting at $25,000',
+          trial: 'Free security audit',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/quantum-safe-security',
+          popular: true
+        },
+        {
+          name: 'Quantum Cloud Services',
+          description: 'Quantum computing as a service with cloud-based quantum processing and development tools',
+          features: ['Quantum Cloud Access', 'Quantum Development Tools', 'Quantum Simulators', 'API Integration', 'Scalable Quantum Computing', 'Expert Support', 'Training Programs', 'Documentation'],
+          pricing: 'Starting at $5,000/month',
+          trial: 'Free quantum trial',
+          timeline: '2-4 weeks',
+          link: 'https://ziontechgroup.com/quantum-cloud',
+          popular: true
+        }
+      ]
+    },
+    {
+      category: 'Space Technology IT Solutions',
+      icon: Rocket,
+      color: 'text-indigo-400',
+      bgColor: 'bg-indigo-500/10',
+      services: [
+        {
+          name: 'Satellite Ground Station IT',
+          description: 'Complete IT infrastructure for satellite ground stations and space mission control',
+          features: ['Ground Station Setup', 'Mission Control Systems', 'Data Processing', 'Communication Systems', 'Tracking Systems', 'Security Implementation', 'Monitoring', 'Maintenance'],
+          pricing: 'Starting at $100,000',
+          trial: 'Free space tech consultation',
+          timeline: '16-32 weeks',
+          link: 'https://ziontechgroup.com/satellite-ground-station',
+          popular: false
+        },
+        {
+          name: 'Space Mission IT Support',
+          description: 'Comprehensive IT support for space missions with real-time monitoring and data management',
+          features: ['Mission Planning IT', 'Real-time Monitoring', 'Data Management', 'Communication Systems', 'Safety Systems', 'Performance Analytics', 'Emergency Response', 'Documentation'],
+          pricing: 'Starting at $75,000',
+          trial: 'Free mission assessment',
+          timeline: '12-24 weeks',
+          link: 'https://ziontechgroup.com/space-mission-it',
+          popular: false
+        },
+        {
+          name: 'Space Debris Tracking IT',
+          description: 'IT infrastructure for space debris tracking and collision avoidance systems',
+          features: ['Debris Tracking Systems', 'Collision Avoidance', 'Orbital Prediction', 'Risk Assessment', 'Alert Systems', 'Data Analytics', 'Integration', 'Maintenance'],
+          pricing: 'Starting at $40,000',
+          trial: 'Free debris tracking demo',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/space-debris-tracking',
+          popular: true
+        }
+      ]
+    },
+    {
+      category: 'Biotechnology IT Solutions',
+      icon: Stethoscope,
+      color: 'text-red-400',
+      bgColor: 'bg-red-500/10',
+      services: [
+        {
+          name: 'Biotech Lab IT Infrastructure',
+          description: 'Specialized IT infrastructure for biotechnology laboratories and research facilities',
+          features: ['Lab Information Systems', 'Data Management', 'Equipment Integration', 'Compliance Systems', 'Security Implementation', 'Backup Systems', 'Monitoring', 'Support'],
+          pricing: 'Starting at $30,000',
+          trial: 'Free lab assessment',
+          timeline: '8-12 weeks',
+          link: 'https://ziontechgroup.com/biotech-lab-it',
+          popular: true
+        },
+        {
+          name: 'Genomic Data Processing IT',
+          description: 'High-performance computing infrastructure for genomic data processing and analysis',
+          features: ['High-Performance Computing', 'Genomic Data Storage', 'Analysis Software', 'Cloud Integration', 'Security', 'Scalability', 'Performance Optimization', 'Support'],
+          pricing: 'Starting at $20,000',
+          trial: 'Free genomic assessment',
+          timeline: '6-10 weeks',
+          link: 'https://ziontechgroup.com/genomic-data-processing',
+          popular: true
+        },
+        {
+          name: 'Drug Discovery IT Platform',
+          description: 'IT platform for drug discovery with computational modeling and data analysis',
+          features: ['Computational Modeling', 'Data Analysis', 'Simulation Software', 'Database Management', 'Security', 'Integration', 'Performance Monitoring', 'Support'],
+          pricing: 'Starting at $35,000',
+          trial: 'Free drug discovery demo',
+          timeline: '10-16 weeks',
+          link: 'https://ziontechgroup.com/drug-discovery-it',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'Climate Technology IT Solutions',
+      icon: Globe,
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
+      services: [
+        {
+          name: 'Climate Monitoring IT Systems',
+          description: 'IT infrastructure for climate monitoring and environmental data collection',
+          features: ['Environmental Sensors', 'Data Collection', 'Real-time Monitoring', 'Data Analysis', 'Alert Systems', 'Reporting', 'Integration', 'Maintenance'],
+          pricing: 'Starting at $25,000',
+          trial: 'Free climate assessment',
+          timeline: '6-12 weeks',
+          link: 'https://ziontechgroup.com/climate-monitoring-it',
+          popular: true
+        },
+        {
+          name: 'Carbon Footprint IT Platform',
+          description: 'IT platform for carbon footprint tracking and sustainability management',
+          features: ['Carbon Tracking', 'Sustainability Metrics', 'Reporting', 'Analytics', 'Integration', 'Compliance', 'Monitoring', 'Support'],
+          pricing: 'Starting at $15,000',
+          trial: 'Free carbon assessment',
+          timeline: '4-8 weeks',
+          link: 'https://ziontechgroup.com/carbon-footprint-it',
+          popular: true
+        },
+        {
+          name: 'Renewable Energy IT Management',
+          description: 'IT systems for renewable energy management and grid integration',
+          features: ['Energy Management', 'Grid Integration', 'Performance Monitoring', 'Data Analytics', 'Predictive Maintenance', 'Security', 'Integration', 'Support'],
+          pricing: 'Starting at $40,000',
+          trial: 'Free energy assessment',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/renewable-energy-it',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'Advanced Cybersecurity Solutions',
+      icon: Shield,
+      color: 'text-red-400',
+      bgColor: 'bg-red-500/10',
+      services: [
+        {
+          name: 'AI-Powered Threat Hunting',
+          description: 'Advanced threat hunting with AI-powered detection and response capabilities',
+          features: ['AI Threat Detection', 'Behavioral Analysis', 'Threat Hunting', 'Incident Response', 'Forensics', 'Threat Intelligence', 'Automation', 'Training'],
+          pricing: 'Starting at $15,000/month',
+          trial: 'Free threat assessment',
+          timeline: '4-8 weeks',
+          link: 'https://ziontechgroup.com/ai-threat-hunting',
+          popular: true
+        },
+        {
+          name: 'Zero Trust Security Architecture',
+          description: 'Complete zero trust security implementation with identity verification and micro-segmentation',
+          features: ['Identity Verification', 'Micro-segmentation', 'Device Management', 'Access Control', 'Continuous Monitoring', 'Policy Enforcement', 'Compliance', 'Training'],
+          pricing: 'Starting at $20,000',
+          trial: 'Free security audit',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/zero-trust-architecture',
+          popular: true
+        },
+        {
+          name: 'Quantum-Safe Cryptography',
+          description: 'Implementation of quantum-safe cryptographic solutions for future-proof security',
+          features: ['Post-Quantum Algorithms', 'Quantum Key Distribution', 'Migration Planning', 'Security Assessment', 'Implementation', 'Testing', 'Compliance', 'Support'],
+          pricing: 'Starting at $30,000',
+          trial: 'Free crypto assessment',
+          timeline: '12-20 weeks',
+          link: 'https://ziontechgroup.com/quantum-safe-crypto',
+          popular: false
+        }
+      ]
     }
   ];
 

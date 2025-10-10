@@ -730,13 +730,433 @@ const AIServicesPage: React.FC = () => {
         'Adaptive memory patterns',
         'Cognitive enhancement'
       ]
+    },
+    {
+      id: 16,
+      name: 'AI Quantum Neural Networks',
+      description: 'Revolutionary quantum neural networks with exponential computational power and quantum advantage',
+      icon: Brain,
+      features: [
+        'Quantum Neural Architecture',
+        'Exponential Speedup',
+        'Quantum Feature Maps',
+        'Quantum Optimization',
+        'Hybrid Classical-Quantum',
+        'Quantum Error Correction',
+        'Quantum Learning Algorithms',
+        'Quantum Data Processing'
+      ],
+      category: 'Quantum AI',
+      popular: true,
+      rating: 4.9,
+      users: '120+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $3,999/mo',
+      capabilities: [
+        'Exponential computational speedup',
+        'Quantum advantage in ML',
+        'Advanced quantum algorithms',
+        'Hybrid quantum-classical computing'
+      ]
+    },
+    {
+      id: 17,
+      name: 'AI Space Colonization AI',
+      description: 'Advanced AI for space colonization with habitat design, resource management, and mission planning',
+      icon: Rocket,
+      features: [
+        'Habitat Design AI',
+        'Resource Management',
+        'Mission Planning',
+        'Life Support Systems',
+        'Population Management',
+        'Sustainability Analysis',
+        'Risk Assessment',
+        'Long-term Planning'
+      ],
+      category: 'Space AI',
+      popular: false,
+      rating: 4.8,
+      users: '80+',
+      color: 'from-indigo-500 to-blue-600',
+      pricing: 'Starting at $4,999/mo',
+      capabilities: [
+        'Comprehensive colonization planning',
+        'Advanced resource optimization',
+        'Sustainable habitat design',
+        'Long-term mission planning'
+      ]
+    },
+    {
+      id: 18,
+      name: 'AI Quantum Internet Protocol',
+      description: 'Revolutionary quantum internet with ultra-secure communication and quantum entanglement networking',
+      icon: Globe,
+      features: [
+        'Quantum Communication',
+        'Quantum Entanglement',
+        'Ultra-secure Networking',
+        'Quantum Teleportation',
+        'Quantum Repeaters',
+        'Global Quantum Network',
+        'Quantum Security',
+        'Quantum Routers'
+      ],
+      category: 'Quantum Networking',
+      popular: true,
+      rating: 4.9,
+      users: '100+',
+      color: 'from-emerald-500 to-teal-600',
+      pricing: 'Starting at $3,499/mo',
+      capabilities: [
+        'Ultra-secure quantum communication',
+        'Quantum entanglement networking',
+        'Global quantum internet',
+        'Unbreakable quantum security'
+      ]
+    },
+    {
+      id: 19,
+      name: 'AI Molecular Biology AI',
+      description: 'Advanced AI for molecular biology with automated experiments, genetic analysis, and drug discovery',
+      icon: Stethoscope,
+      features: [
+        'Automated Lab Experiments',
+        'Genetic Analysis',
+        'Protein Folding Prediction',
+        'Drug Discovery',
+        'Molecular Modeling',
+        'Laboratory Automation',
+        'Research Collaboration',
+        'Data Analysis'
+      ],
+      category: 'Biotechnology AI',
+      popular: true,
+      rating: 4.8,
+      users: '200+',
+      color: 'from-red-500 to-pink-600',
+      pricing: 'Starting at $2,999/mo',
+      capabilities: [
+        'Automated lab experiments',
+        'Advanced genetic analysis',
+        'Protein structure prediction',
+        'Accelerated drug discovery'
+      ]
+    },
+    {
+      id: 20,
+      name: 'AI Quantum Sensing AI',
+      description: 'Advanced quantum sensing with ultra-precise measurements and environmental monitoring',
+      icon: Settings,
+      features: [
+        'Quantum Sensors',
+        'Ultra-precise Measurements',
+        'Environmental Monitoring',
+        'Gravitational Wave Detection',
+        'Magnetic Field Sensing',
+        'Quantum Metrology',
+        'Sensor Networks',
+        'Data Analysis'
+      ],
+      category: 'Quantum Sensing',
+      popular: false,
+      rating: 4.7,
+      users: '150+',
+      color: 'from-amber-500 to-orange-600',
+      pricing: 'Starting at $1,799/mo',
+      capabilities: [
+        'Ultra-precise quantum measurements',
+        'Real-time environmental monitoring',
+        'Advanced sensor networks',
+        'Quantum-enhanced sensitivity'
+      ]
+    },
+    {
+      id: 21,
+      name: 'AI Holographic Computing',
+      description: 'Revolutionary holographic computing with 3D data processing and immersive interfaces',
+      icon: Globe,
+      features: [
+        '3D Data Processing',
+        'Holographic Interfaces',
+        'Immersive Computing',
+        'Spatial Computing',
+        'Mixed Reality',
+        'Virtual Collaboration',
+        '3D Visualization',
+        'Holographic Storage'
+      ],
+      category: 'Holographic AI',
+      popular: true,
+      rating: 4.8,
+      users: '300+',
+      color: 'from-purple-500 to-pink-600',
+      pricing: 'Starting at $2,499/mo',
+      capabilities: [
+        '3D holographic processing',
+        'Immersive computing experience',
+        'Spatial data manipulation',
+        'Next-gen interfaces'
+      ]
+    },
+    {
+      id: 22,
+      name: 'AI Quantum Error Correction',
+      description: 'Advanced quantum error correction with AI-powered fault tolerance and circuit optimization',
+      icon: Settings,
+      features: [
+        'Quantum Error Correction',
+        'Fault Tolerance',
+        'Circuit Optimization',
+        'Noise Mitigation',
+        'Error Detection',
+        'Error Recovery',
+        'Performance Monitoring',
+        'Adaptive Correction'
+      ],
+      category: 'Quantum Computing',
+      popular: false,
+      rating: 4.8,
+      users: '180+',
+      color: 'from-slate-500 to-gray-600',
+      pricing: 'Starting at $1,999/mo',
+      capabilities: [
+        '99.9% error correction',
+        'Fault-tolerant quantum computing',
+        'Advanced noise mitigation',
+        'Real-time error detection'
+      ]
+    },
+    {
+      id: 23,
+      name: 'AI Space Weather AI',
+      description: 'AI-powered space weather monitoring with solar activity prediction and satellite protection',
+      icon: Globe,
+      features: [
+        'Solar Activity Monitoring',
+        'Space Weather Prediction',
+        'Satellite Protection',
+        'Radiation Monitoring',
+        'Magnetic Field Analysis',
+        'Solar Wind Tracking',
+        'Aurora Prediction',
+        'Alert Systems'
+      ],
+      category: 'Space Weather AI',
+      popular: true,
+      rating: 4.7,
+      users: '250+',
+      color: 'from-yellow-500 to-orange-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        'Real-time space weather',
+        '95% prediction accuracy',
+        'Satellite protection',
+        'Advanced solar monitoring'
+      ]
+    },
+    {
+      id: 24,
+      name: 'AI Quantum Machine Learning Pro',
+      description: 'Revolutionary quantum machine learning with quantum algorithms and hybrid computing',
+      icon: Brain,
+      features: [
+        'Quantum Algorithms',
+        'Hybrid Computing',
+        'Quantum Neural Networks',
+        'Quantum Optimization',
+        'Quantum Feature Maps',
+        'Quantum Kernels',
+        'Quantum Data Processing',
+        'Performance Analytics'
+      ],
+      category: 'Quantum ML',
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      color: 'from-indigo-500 to-purple-600',
+      pricing: 'Starting at $2,799/mo',
+      capabilities: [
+        'Quantum advantage in ML',
+        'Hybrid classical-quantum computing',
+        'Advanced quantum algorithms',
+        'Exponential speedup potential'
+      ]
+    },
+    {
+      id: 25,
+      name: 'AI Neural Interface AI',
+      description: 'Advanced brain-computer interface with AI-powered neural signal processing and cognitive enhancement',
+      icon: Brain,
+      features: [
+        'Neural Signal Processing',
+        'Cognitive Enhancement',
+        'Brain-Computer Interface',
+        'Mental State Analysis',
+        'Neural Pattern Recognition',
+        'Cognitive Training',
+        'Real-time Feedback',
+        'Privacy Protection'
+      ],
+      category: 'Neurotechnology AI',
+      popular: true,
+      rating: 4.7,
+      users: '220+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $2,499/mo',
+      capabilities: [
+        '95% neural signal accuracy',
+        'Real-time cognitive feedback',
+        'Enhanced mental performance',
+        'Secure neural data processing'
+      ]
+    },
+    {
+      id: 26,
+      name: 'AI Quantum Cryptography AI',
+      description: 'Advanced quantum cryptography with unbreakable encryption and quantum key distribution',
+      icon: Shield,
+      features: [
+        'Quantum Key Distribution',
+        'Unbreakable Encryption',
+        'Quantum Random Number Generation',
+        'Post-Quantum Cryptography',
+        'Quantum Authentication',
+        'Secure Communication',
+        'Quantum Digital Signatures',
+        'Compliance Management'
+      ],
+      category: 'Quantum Security',
+      popular: true,
+      rating: 4.9,
+      users: '200+',
+      color: 'from-red-500 to-orange-600',
+      pricing: 'Starting at $2,199/mo',
+      capabilities: [
+        'Unbreakable quantum encryption',
+        'Quantum key distribution',
+        'Future-proof security',
+        'Real-time quantum authentication'
+      ]
+    },
+    {
+      id: 27,
+      name: 'AI Space Debris AI',
+      description: 'AI-powered space debris tracking and collision avoidance with real-time monitoring',
+      icon: Globe,
+      features: [
+        'Debris Tracking',
+        'Collision Avoidance',
+        'Orbital Prediction',
+        'Risk Assessment',
+        'Real-time Monitoring',
+        'Alert Systems',
+        'Trajectory Analysis',
+        'Mitigation Planning'
+      ],
+      category: 'Space Management AI',
+      popular: true,
+      rating: 4.6,
+      users: '180+',
+      color: 'from-slate-500 to-gray-600',
+      pricing: 'Starting at $1,499/mo',
+      capabilities: [
+        'Real-time debris tracking',
+        '99.9% collision avoidance',
+        'Advanced orbital predictions',
+        'Automated risk mitigation'
+      ]
+    },
+    {
+      id: 28,
+      name: 'AI Quantum Financial AI',
+      description: 'Revolutionary quantum-powered financial analysis with ultra-fast predictions and risk assessment',
+      icon: BarChart,
+      features: [
+        'Quantum Market Analysis',
+        'Ultra-fast Predictions',
+        'Risk Assessment',
+        'Portfolio Optimization',
+        'Cryptocurrency Analysis',
+        'Real-time Trading Signals',
+        'Quantum Computing Integration',
+        'Advanced Analytics'
+      ],
+      category: 'Quantum Finance',
+      popular: true,
+      rating: 4.9,
+      users: '180+',
+      color: 'from-emerald-500 to-green-600',
+      pricing: 'Starting at $3,999/mo',
+      capabilities: [
+        '300% faster calculations',
+        '99.9% prediction accuracy',
+        'Quantum advantage',
+        'Real-time risk modeling'
+      ]
+    },
+    {
+      id: 29,
+      name: 'AI Autonomous Systems AI',
+      description: 'AI-powered autonomous vehicle and drone management with real-time decision making',
+      icon: Settings,
+      features: [
+        'Autonomous Vehicle AI',
+        'Drone Fleet Management',
+        'Real-time Decision Making',
+        'Path Optimization',
+        'Collision Avoidance',
+        'Weather Adaptation',
+        'Fleet Coordination',
+        'Safety Monitoring'
+      ],
+      category: 'Autonomous AI',
+      popular: true,
+      rating: 4.8,
+      users: '350+',
+      color: 'from-blue-500 to-cyan-600',
+      pricing: 'Starting at $1,999/mo',
+      capabilities: [
+        '99.9% safety record',
+        'Real-time autonomous decisions',
+        'Fleet optimization',
+        'Weather-adaptive navigation'
+      ]
+    },
+    {
+      id: 30,
+      name: 'AI Climate Modeling AI',
+      description: 'Advanced climate modeling with AI-powered weather forecasting and environmental impact analysis',
+      icon: Globe,
+      features: [
+        'Climate Modeling',
+        'Weather Forecasting',
+        'Environmental Impact Analysis',
+        'Disaster Prediction',
+        'Carbon Footprint Tracking',
+        'Sustainability Planning',
+        'Real-time Alerts',
+        'Global Coverage'
+      ],
+      category: 'Climate AI',
+      popular: true,
+      rating: 4.8,
+      users: '400+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        '95% weather accuracy',
+        'Long-term climate predictions',
+        'Real-time environmental monitoring',
+        'Disaster early warning'
+      ]
     }
   ];
 
 <<<<<<< HEAD
   const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI'];
 =======
-  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Finance', 'Climate Tech', 'Space Tech', 'Pharmaceutical AI', 'Cognitive AI'];
+  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Finance', 'Climate Tech', 'Space Tech', 'Pharmaceutical AI', 'Cognitive AI', 'Quantum AI', 'Space AI', 'Quantum Networking', 'Biotechnology AI', 'Quantum Sensing', 'Holographic AI', 'Quantum Computing', 'Space Weather AI', 'Quantum ML', 'Neurotechnology AI', 'Quantum Security', 'Space Management AI', 'Autonomous AI', 'Climate AI'];
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
 
   if (!isLoaded) {
