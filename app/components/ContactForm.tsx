@@ -60,7 +60,10 @@ const ContactForm: React.FC = () => {
         service: '',
         message: ''
       });
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1d1a
     } catch (error) {
       setStatus({
         type: 'error',
