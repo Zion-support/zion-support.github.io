@@ -8,6 +8,8 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import PerformanceEnhancer from './components/PerformanceEnhancer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import SEOOptimizer from './components/SEOOptimizer';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -1226,10 +1228,10 @@ const HomePage: React.FC = () => {
 
   return (
     <EnhancedErrorBoundary>
-      <EnhancedSEO
+      <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'artificial intelligence', 'business intelligence', 'data analytics', 'cybersecurity', 'cloud migration', 'DevOps', 'IT consulting']}
+        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'artificial intelligence', 'business intelligence', 'data analytics', 'cybersecurity', 'cloud migration', 'DevOps', 'IT consulting', 'micro SAAS', 'AI tools', 'business automation']}
         canonicalUrl="https://ziontechgroup.com"
         ogImage="https://ziontechgroup.com/og-image.jpg"
         structuredData={{
@@ -1252,6 +1254,17 @@ const HomePage: React.FC = () => {
             "addressRegion": "DE",
             "postalCode": "19709",
             "addressCountry": "US"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/ziontechgroup",
+            "https://twitter.com/ziontechgroup"
+          ],
+          "offers": {
+            "@type": "AggregateOffer",
+            "offerCount": "50+",
+            "lowPrice": "19",
+            "highPrice": "5000",
+            "priceCurrency": "USD"
           }
         }}
         preload={[
@@ -1274,45 +1287,49 @@ const HomePage: React.FC = () => {
           'https://www.google-analytics.com',
           'https://www.googletagmanager.com'
         ]}
-      >
-        <PerformanceEnhancer
-          enableWebVitals={true}
-          enableResourceTiming={true}
-          enableMemoryMonitoring={true}
-          enableNetworkMonitoring={true}
-          enableUserTiming={true}
-          enableLongTaskMonitoring={true}
-          enableLayoutShiftMonitoring={true}
-          enableAnalytics={true}
-          enableErrorReporting={true}
-          performanceBudget={{
-            lcp: 2500,
-            fid: 100,
-            cls: 0.1,
-            fcp: 1800,
-            ttfb: 600
-          }}
-        />
-        <AccessibilityEnhancer
-          enableKeyboardNavigation={true}
-          enableScreenReaderSupport={true}
-          enableHighContrast={true}
-          enableFocusManagement={true}
-          enableAriaLabels={true}
-          enableSkipLinks={true}
-          enableColorContrast={true}
-          enableTextScaling={true}
-          enableMotionReduction={true}
-          enableVoiceNavigation={true}
-          enableAnalytics={true}
-          enableErrorReporting={true}
-        />
+      />
+      <PerformanceMonitor
+        enableWebVitals={true}
+        enableResourceTiming={true}
+        enableMemoryMonitoring={true}
+        enableNetworkMonitoring={true}
+        enableUserTiming={true}
+        enableLongTaskMonitoring={true}
+        enableLayoutShiftMonitoring={true}
+        enableAnalytics={true}
+        enableErrorReporting={true}
+        performanceBudget={{
+          lcp: 2500,
+          fid: 100,
+          cls: 0.1,
+          fcp: 1800,
+          ttfb: 600
+        }}
+      />
+      <AccessibilityEnhancer
+        enableKeyboardNavigation={true}
+        enableScreenReaderSupport={true}
+        enableHighContrast={true}
+        enableFocusManagement={true}
+        enableAriaLabels={true}
+        enableSkipLinks={true}
+        enableColorContrast={true}
+        enableTextScaling={true}
+        enableMotionReduction={true}
+        enableVoiceNavigation={true}
+        enableAnalytics={true}
+        enableErrorReporting={true}
+      />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <Navigation />
           
           {/* Hero Section */}
-          <section className="relative pt-20 pb-16 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
+          <section 
+            className="relative pt-20 pb-16 overflow-hidden"
+            id="main-content"
+            aria-label="Hero section"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>
             <div className="container mx-auto px-4 relative z-10">
               <div className="text-center max-w-4xl mx-auto">
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -1330,6 +1347,7 @@ const HomePage: React.FC = () => {
                     href="/contact"
                     className="cyber-button px-8 py-4 text-lg font-semibold"
                     onClick={handlePhoneClick}
+                    aria-label="Get started with Zion Tech Group solutions"
                   >
                     Get Started Today
                   </a>
@@ -1337,8 +1355,9 @@ const HomePage: React.FC = () => {
                     href="tel:+13024640950"
                     className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors text-lg font-medium"
                     onClick={handlePhoneClick}
+                    aria-label="Call Zion Tech Group at +1 302 464 0950"
                   >
-                    <Phone className="w-5 h-5" />
+                    <Phone className="w-5 h-5" aria-hidden="true" />
                     <span>+1 302 464 0950</span>
                   </a>
                 </div>
@@ -1347,10 +1366,16 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* Micro SAAS Services Section */}
-          <section className="py-20 bg-slate-800/50">
+          <section 
+            className="py-20 bg-slate-800/50"
+            aria-labelledby="micro-saas-heading"
+          >
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <h2 
+                  id="micro-saas-heading"
+                  className="text-4xl md:text-5xl font-bold text-white mb-6"
+                >
                   Micro SAAS Solutions
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1359,11 +1384,17 @@ const HomePage: React.FC = () => {
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 md:gap-6">
+              <div 
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 md:gap-6"
+                role="grid"
+                aria-label="Micro SAAS solutions grid"
+              >
                 {microSAASServices.map((service, index) => (
                   <div
                     key={index}
                     className="bg-slate-900/80 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-4 md:p-6 hover:border-cyan-400/40 transition-all duration-300 group h-full flex flex-col"
+                    role="gridcell"
+                    aria-label={`${service.title} - ${service.description}`}
                   >
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-3xl">{service.icon}</div>
@@ -1405,6 +1436,7 @@ const HomePage: React.FC = () => {
                     <a
                       href={service.link}
                       className="block w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white text-center py-2 md:py-3 rounded-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 font-medium text-sm md:text-base mt-auto"
+                      aria-label={`Learn more about ${service.title}`}
                     >
                       Learn More
                     </a>
