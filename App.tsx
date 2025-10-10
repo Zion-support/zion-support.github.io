@@ -36,6 +36,11 @@ const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 
+// New innovative AI services
+const AIQuantumOptimizationPage = React.lazy(() => import('./app/ai-quantum-optimization/page'));
+const AINeuralInterfacePage = React.lazy(() => import('./app/ai-neural-interface/page'));
+const AISpaceOptimizationPage = React.lazy(() => import('./app/ai-space-optimization/page'));
+
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
@@ -76,6 +81,11 @@ const App: React.FC = () => {
                             <Route path="/demo" element={<DemoPage />} />
                             <Route path="/consultation" element={<ConsultationPage />} />
                             <Route path="/micro-saas" element={<MicroSaasPage />} />
+                            
+                            {/* New innovative AI services */}
+                            <Route path="/ai-quantum-optimization" element={<AIQuantumOptimizationPage />} />
+                            <Route path="/ai-neural-interface" element={<AINeuralInterfacePage />} />
+                            <Route path="/ai-space-optimization" element={<AISpaceOptimizationPage />} />
                           </Routes>
                         </Suspense>
                       </main>

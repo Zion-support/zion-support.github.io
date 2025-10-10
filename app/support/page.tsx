@@ -1,13 +1,19 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const SupportPage: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All' },
+    { id: 'general', name: 'General' },
+    { id: 'technical', name: 'Technical' },
+    { id: 'billing', name: 'Billing' },
+    { id: 'implementation', name: 'Implementation' }
+  ];
 
   const faqs = [
     {
@@ -27,11 +33,28 @@ const SupportPage: React.FC = () => {
     },
     {
       question: 'Do you offer training for our team?',
-      answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions.'
+      answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions.',
+      category: 'general'
     },
     {
       question: 'What if we need custom modifications?',
-      answer: 'Our team can develop custom features and modifications to meet your specific business requirements.'
+      answer: 'Our team can develop custom features and modifications to meet your specific business requirements.',
+      category: 'technical'
+    },
+    {
+      question: 'What are your pricing models?',
+      answer: 'We offer flexible pricing including monthly subscriptions, project-based pricing, and enterprise solutions. Contact us for a custom quote.',
+      category: 'billing'
+    },
+    {
+      question: 'Do you provide 24/7 support?',
+      answer: 'Yes, we offer 24/7 emergency support for critical issues and regular business hours support for general inquiries.',
+      category: 'support'
+    },
+    {
+      question: 'How secure are your AI solutions?',
+      answer: 'We implement enterprise-grade security including encryption, access controls, and compliance with industry standards like HIPAA and SOC 2.',
+      category: 'technical'
     }
   ];
 
@@ -48,11 +71,12 @@ const SupportPage: React.FC = () => {
       title: 'Email Support',
       description: 'Get detailed responses to your questions',
       contact: 'support@ziontechgroup.com',
-      hours: '24/7'
+      availability: '24/7'
     },
     {
       icon: MessageCircle,
       title: 'Live Chat',
+      description: 'Chat with our support team',
       contact: 'Available on website',
       availability: '24/7'
     }
@@ -125,6 +149,8 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Contact Channels Section */}
+        <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

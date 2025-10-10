@@ -638,34 +638,73 @@ const HomePage: React.FC = () => {
               </article>
             </div>
           </div>
-          {/* Emerging Technologies Grid */}
+          {/* Revolutionary AI Technologies Grid */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Emerging Technologies
+              Revolutionary AI Technologies
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Robotics</h3>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚛️</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Quantum Optimization</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Intelligent robotic solutions for manufacturing, healthcare, and service industries.
+                  Revolutionary quantum-powered optimization for complex business problems with exponential speedup.
                 </p>
                 <div className="text-center">
-                  <div className="text-lg font-bold text-cyan-400 mb-2">Custom Pricing</div>
-                  <a href="/robotics" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
+                  <div className="text-lg font-bold text-purple-400 mb-2">Starting at $2,999/month</div>
+                  <a href="/ai-quantum-optimization" className="text-purple-400 hover:text-purple-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🧠</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Neural Interface</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Direct brain-computer interface technology for accessibility, medical diagnostics, and enhanced learning.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-cyan-400 mb-2">Starting at $15,999/month</div>
+                  <a href="/ai-neural-interface" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🚀</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Space Optimization</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Advanced space technology solutions for satellite operations, mission planning, and space resource management.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-blue-400 mb-2">Starting at $25,999/month</div>
+                  <a href="/ai-space-optimization" className="text-blue-400 hover:text-blue-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Robotics & Automation</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Intelligent robotic solutions for manufacturing, healthcare, and service industries with AI integration.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-green-400 mb-2">Custom Pricing</div>
+                  <a href="/robotics" className="text-green-400 hover:text-green-300 font-medium text-sm">
                     Learn More →
                   </a>
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌐</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">IoT & Edge</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">IoT & Edge Computing</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Connected devices and edge computing solutions for smart cities and industrial automation.
                 </p>
                 <div className="text-center">
-                  <div className="text-lg font-bold text-green-400 mb-2">Starting at $499/month</div>
-                  <a href="/iot-edge-computing" className="text-green-400 hover:text-green-300 font-medium text-sm">
+                  <div className="text-lg font-bold text-orange-400 mb-2">Starting at $499/month</div>
+                  <a href="/iot-edge-computing" className="text-orange-400 hover:text-orange-300 font-medium text-sm">
                     Learn More →
                   </a>
                 </div>
@@ -679,19 +718,6 @@ const HomePage: React.FC = () => {
                 <div className="text-center">
                   <div className="text-lg font-bold text-yellow-400 mb-2">Starting at $699/month</div>
                   <a href="/blockchain-web3" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🧠</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Business Intelligence</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Data-driven insights and predictive analytics to optimize business performance and decision-making.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-pink-400 mb-2">Starting at $399/month</div>
-                  <a href="/business-intelligence" className="text-pink-400 hover:text-pink-300 font-medium text-sm">
                     Learn More →
                   </a>
                 </div>
