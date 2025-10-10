@@ -19,15 +19,13 @@ export const Link: React.FC<LinkProps> = ({}
   href,  href: string,
   children: React.ReactNode
   className?: string
-  target?: string
-  rel?: string
+  target?: string  rel?: string
   onClick?: () => void
   'aria-label'?: string,}
 }
 export const Link: React.FC<LinkProps> = ({
     ,
-  href  children,
-  className,
+  href  children,  className,
   target,
   rel,
   onClick,
@@ -78,7 +76,8 @@ export const,
       {children})
     </a>);
   );
-}
+};
+
 export default Link;
     >;
       {children}

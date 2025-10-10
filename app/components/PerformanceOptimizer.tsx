@@ -195,5 +195,4 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting])
   return null
 }
-
 export default PerformanceOptimizer

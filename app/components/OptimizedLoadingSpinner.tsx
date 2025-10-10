@@ -9,8 +9,7 @@ interface OptimizedLoadingSpinnerProps {
   fullScreen?: boolean
   }
 }
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(,  ({
-    size = 'md',
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(,  ({    size = 'md',
     variant = 'spinner',
     text = 'Loading...',
     className = '',

@@ -120,9 +120,6 @@ export class AccessibilityEnhancer {
       const nextIndex = currentIndex < this.focusableElements.length - 1 ? currentIndex + 1 : 0;
       this.focusableElements[nextIndex]?.focus();
     }
-
-    event.preventDefault();
-
   }
 
   /**

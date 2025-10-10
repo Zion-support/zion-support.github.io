@@ -138,8 +138,7 @@ const overallStatus = services.every(service => service.status === 'operational'
 return (
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Real-time status of all our services. We're committed to providing reliable,
-            high-performance AI and IT solutions.</p>
-          <div className="flex items-center justify-center gap-4 mb-8"></div>
+            high-performance AI and IT solutions.</p>          <div className="flex items-center justify-center gap-4 mb-8"></div>
             <div className="flex items-center gap-2"></div>
 
               {getStatusIcon(overallStatus)}
@@ -163,8 +162,7 @@ return (
 
       {/* Services Status */}
       <section className="py-16 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>          <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Status</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        <div className="max-w-7xl mx-auto"></div>          <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Status</h2>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
             {
     services.map((service, index) => (
   }
@@ -201,8 +199,7 @@ return (
 
       {/* Recent Incidents */}
       <section className="py-16 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>          <h2 className="text-3xl font-bold text-white mb-12 text-center">Recent Incidents</h2>
-          <div className="space-y-6"></div>
+        <div className="max-w-7xl mx-auto"></div>          <h2 className="text-3xl font-bold text-white mb-12 text-center">Recent Incidents</h2>          <div className="space-y-6"></div>
             {
     incidents.map((incident) => (
   }
@@ -235,42 +232,43 @@ return (
       </section>
       {/* Performance Metrics */}
       <section className="py-16 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>          <h2 className="text-3xl font-bold text-white mb-12 text-center">Performance Metrics</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+        <div className="max-w-7xl mx-auto"></div>          <h2 className="text-3xl font-bold text-white mb-12 text-center">Performance Metrics</h2>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                <TrendingUp>
-              </div>
+                <TrendingUp />
               <div className="text-3xl font-bold text-white mb-2">99.9%</div>
               <div className="text-gray-400">Overall Uptime</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                <Zap>              </div>
-              <div className="text-3xl font-bold text-white mb-2">45ms</div>
+                <Zap>              </div>              <div className="text-3xl font-bold text-white mb-2">45ms</div>
               <div className="text-gray-400">Avg Response Time</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                <Users>              </div>
-              <div className="text-3xl font-bold text-white mb-2">50K+</div>
+                <Users>              </div>              <div className="text-3xl font-bold text-white mb-2">50K+</div>
               <div className="text-gray-400">Active Users</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>
               <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                <Activity>              </div>
-              <div className="text-3xl font-bold text-white mb-2">1.2M</div>
+                <Activity>              </div>              <div className="text-3xl font-bold text-white mb-2">1.2M</div>
               <div className="text-gray-400">Requests Today</div>
             </div>
           </div>
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-4xl font-bold text-white mb-4">Need More Information?</h2>
-          <p>            Subscribe to status updates or contact our support team for more details.
-          </p>
+          <p>            Subscribe to status updates or contact our support team for more details.          </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Subscribe to Updates
             </button>

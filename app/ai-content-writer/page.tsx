@@ -6,8 +6,7 @@ import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, PenTool, Zap, Users, BarChart3 } from 'lucide-react'const AIContentWriterPage: React.FC = () => {
 const features = [
 ];
-};
-    {
+};    {
       title: 'AI-Powered Writing',
       description: 'Generate high-quality content using advanced AI algorithms that understand context, tone, and audience.',
       benefits: ['Context-aware writing', 'Multiple tones', 'Audience targeting', 'Quality optimization']
@@ -21,8 +20,8 @@ const features = [
       title: 'Multi-Format Support',
       description: 'Create content in various formats including blogs, social media, emails, and marketing copy.',
       benefits: ['Blog posts', 'Social media', 'Email campaigns', 'Marketing copy']
-    }
-  ]
+    },
+  ];
   const benefits = [
     '10x faster content creation',
     'Improved SEO performance',
@@ -30,8 +29,7 @@ const features = [
     'Multi-language support',
     'Content analytics',
     'Team collaboration'
-  ]
-
+  ];
   const stats = [
     { icon: <PenTool className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Articles Created' },
     { icon: <Zap className="w-8 h-8 text-green-500" />, value: '90%', label: 'Time Saved' },

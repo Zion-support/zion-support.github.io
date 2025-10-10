@@ -38,8 +38,7 @@ const EnhancedServicesShowcase: React.FC = () => {
 return (    <section className="py-16"></section>
       <div className="container mx-auto px-4"></div>
         <div className="text-center mb-16"></div>
-          <h2 className="text-4xl font-bold text-white mb-4">Our Core Services</h2>
-          <p>
+          <h2 className="text-4xl font-bold text-white mb-4">Our Core Services</h2>          <p>
             Comprehensive AI and IT solutions designed to transform your business and drive innovation
           </p>
         </div>

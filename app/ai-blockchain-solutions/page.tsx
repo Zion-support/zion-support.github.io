@@ -30,8 +30,7 @@ const AiBlockchainSolutionsPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]  return (
-    <React.Fragment>
+  ]  return (    <React.Fragment>
       <Helmet>
         <title>AI Blockchain Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive blockchain solutions enhanced with AI technology." />
@@ -102,8 +101,7 @@ const AiBlockchainSolutionsPage: React.FC = () => {
               Start Your Free Trial,
   </
           </div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">            {features.map((feature, index) => (              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
@@ -129,7 +127,6 @@ export default AiBlockchainSolutionsPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits Section */}      <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -168,9 +165,9 @@ export default AiBlockchainSolutionsPage;
       </section>
       <Footer />
     </div>
+<<<<<<< HEAD
   )
-}
-export default PagePage
+}export default PagePage
   </button>
   </button>
   </p>
@@ -181,3 +178,7 @@ export default PagePage
   </button>
   </h1>
   </main>
+=======
+}
+export default PagePage;
+>>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

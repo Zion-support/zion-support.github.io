@@ -41,8 +41,7 @@ const features = [    {
     }
   ]const standards = [
 [
-        {
-      name: 'WCAG 2.1 AA',
+        {      name: 'WCAG 2.1 AA',
       description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
       status: 'Fully Compliant'
     },

@@ -7,13 +7,42 @@ const ContentCarousel: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']    },
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']    },    {
+      id: 2,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud solutions that grow with your business needs.',
+      features: [
+        'Auto-scaling capabilities',
+        '99.9% uptime guarantee',
+        'Advanced security',
+        'Cost optimization'
+      ],
+      icon: Cloud,
+      color: 'from-green-500 to-blue-600'
+    },
     {
+      id: 3,
+      title: 'AI Automation',
+      description: 'Automate complex business processes with intelligent AI systems.',
+      features: [
+        'Process automation',
+        'Workflow optimization',
+        'Smart decision making',
+        'Performance monitoring'
+      ],
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results',
-      features: ['Real-time Processing', 'Scalable Architecture', 'Optimized Performance', 'Low Latency']    },
-    {
+      features: ['Real-time Processing', 'Scalable Architecture', 'Optimized Performance', 'Low Latency']    },    {
+      id: 4,
+      title: 'Cybersecurity Solutions',
+      description: 'Protect your business with comprehensive AI-powered security solutions.',
+      features: [
+        'Threat detection',
+        'Real-time monitoring',
+        'Automated response',
+        'Compliance management'
+      ],
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards',
@@ -22,9 +51,16 @@ const ContentCarousel: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
-      features: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support']
-    }
-  ]
+      features: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support']    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [slides.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
@@ -98,12 +134,36 @@ const ContentCarousel: React.FC = () => {
               className={`w-3 h-3 rounded-full transition-colors duration-200 ${
                 index === currentSlide ? 'bg-white' : 'bg-white/30'
               }`}
-            />
-          ))}
+            />          ))}
         </div>
+        
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
+      </div>
+      
+      <div className="flex justify-center space-x-2 mt-6">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-colors ${
+              index === currentSlide ? 'bg-cyan-500' : 'bg-gray-300'
+            }`}
+          />
+        ))}
       </div>
     </div>
   )
 }
-
 export default ContentCarousel

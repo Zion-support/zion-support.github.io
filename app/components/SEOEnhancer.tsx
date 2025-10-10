@@ -24,8 +24,7 @@ const SEOEnhancer: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-  ]
-
+  ];
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -134,5 +133,4 @@ const SEOEnhancer: React.FC = () => {
     </div>
   )
 }
-
 export default SEOEnhancer

@@ -3,8 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
-import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react'
-},
+import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react'},
     {
     icon: Clock,
       title: '24/7 Monitoring',
@@ -17,7 +16,6 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
 return (
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Our IoT platform provides everything you need to build, deploy, and scale
               Internet of Things solutions for any industry or use case.</p>          </div>
-
                   ))}
                 </ul>
 </div>
@@ -27,11 +25,17 @@ return (
         </div>
       </section>
       {/* Use Cases Section */}
-      <section className="py-20 px-4"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2>              IoT Use Cases
-            </h2>
+            <h2>              IoT Use Cases            </h2>
             <p>
               Our IoT platform supports a wide range of industries and applications,
               from smart manufacturing to connected cities.
@@ -50,21 +54,25 @@ return (
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-20 px-4"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2>              Why Choose Our IoT Platform?
-            </h2>
+            <h2>              Why Choose Our IoT Platform?            </h2>
             <p>
               Experience the benefits of a comprehensive IoT platform designed for scale,
               security, and performance.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>            {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>            {benefits.map((benefit, index) => (                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
-                  <CheckCircle>
-                </div>
+                  <CheckCircle />
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
             ))}
@@ -74,8 +82,7 @@ return (
       {/* CTA Section */}
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Start building your IoT platform today. Get started with a free consultation;
             and discover how we can help you succeed.</p>            </button>
-            <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Schedule Demo
-            </button>
+            <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Schedule Demo            </button>
           </div>
         </div>
       </section>

@@ -57,6 +57,5 @@ interface ServiceCardProps {
       )}
     </div>
   )
-}
-export default ServiceCard
+}export default ServiceCard
   </ServiceCardProps>

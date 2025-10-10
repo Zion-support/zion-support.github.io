@@ -41,7 +41,6 @@ const EnterprisePage: React.FC = () => {
       description: 'Seamless integration with existing enterprise systems and workflows.',      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   }];
-
 const solutions = [
     {
     title: 'Enterprise Resource Planning',
@@ -66,8 +65,7 @@ const solutions = [
       description: 'Automate complex business processes to improve efficiency and reduce errors.',
       icon: Zap,      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  }];
-const benefits = [
+  }];const benefits = [
 ];
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',
@@ -75,8 +73,7 @@ const benefits = [
     'Streamline business processes',
     'Enable data-driven decisions',
     'Scale with business growth',
-    'Integrate with existing systems',
-    'Provide 24/7 support and monitoring'
+    'Integrate with existing systems',    'Provide 24/7 support and monitoring'
   ]
 const stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
@@ -88,8 +85,7 @@ return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer>
       <Navigation>
-      {/* Hero Section */}      <section className="relative py-20 px-4 overflow-hidden"></section>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+      {/* Hero Section */}      <section className="relative py-20 px-4 overflow-hidden"></section>        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1>
@@ -99,8 +95,7 @@ return (
             </span>
           </h1>
           <p>
-            Comprehensive enterprise-grade solutions designed for large-scale business operations.
-            Transform your organization with cutting-edge technology and expert implementation.
+            Comprehensive enterprise-grade solutions designed for large-scale business operations.            Transform your organization with cutting-edge technology and expert implementation.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button>
@@ -113,16 +108,14 @@ return (
         </div>
       </section>
       {/* Stats Section */};
-      <section className="py-20 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>
+      <section className="py-20 px-4"></section>        <div className="max-w-7xl mx-auto"></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
             {
     stats.map((stat, index) => (
   }
               <div key={index} className="text-center"></div>
                 <div className="flex justify-center mb-4"></div>
-                  <stat>                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <stat>                </div>                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
             ))}
@@ -130,8 +123,7 @@ return (
           </div>
         </div>
       </section>
-      {/* Features Section */}      <section className="py-20 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>
+      {/* Features Section */}      <section className="py-20 px-4"></section>        <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>
               Enterprise-Grade Features
@@ -162,8 +154,7 @@ return (
         </div>
       </section>
             <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Solutions</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">End-to-end enterprise solutions that address every aspect of your business operations.</p>          </div>
-                    </li>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">End-to-end enterprise solutions that address every aspect of your business operations.</p>          </div>                    </li>
 
                   ))}
                 </ul>
@@ -173,8 +164,7 @@ return (
           </div>
         </div>
       </section>
-      {/* Benefits Section */}      <section className="py-20 px-4"></section>
-                </button>
+      {/* Benefits Section */}      <section className="py-20 px-4"></section>                </button>
               </div>
             </div>
           </div>
@@ -182,8 +172,7 @@ return (
       </section>
       {/* CTA Section */}      <section className="py-20 px-4"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Enterprise?</h2>
-          <p>
+          <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Enterprise?</h2>          <p>
             Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>

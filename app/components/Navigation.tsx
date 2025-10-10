@@ -182,7 +182,6 @@ const Navigation: React.FC = () => {
     { name: 'Zion AI Marketing Automation', href: '/zion-ai-marketing-automation', icon: Target, description: 'Marketing AI' },
     { name: 'Zion AI Document AI', href: '/zion-ai-document-ai', icon: FileText, description: 'Document processing' }
   ]
-
   const emergingTech = [
     { name: '5G Implementation', href: '/5g-implementation', icon: Zap, description: 'Next-gen connectivity' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box, description: '3D content creation' },
@@ -416,9 +415,6 @@ const Navigation: React.FC = () => {
             <Link to="/tutorials" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Tutorials
             </Link>
-            <Link to="/demo" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Demo
-            </Link>
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Contact            </Link>
           </div>
@@ -562,9 +558,6 @@ const Navigation: React.FC = () => {
               </Link>
               <Link to="/tutorials" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Tutorials
-              </Link>
-              <Link to="/demo" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Demo
               </Link>
               <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Contact              </Link>

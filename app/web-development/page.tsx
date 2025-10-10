@@ -92,8 +92,7 @@ const WebDevelopmentPage: React.FC = () => {
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
       color: 'text-gray-400'
     }
-  ]
-
+  ];
   const technologies = [
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
     { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
@@ -101,8 +100,7 @@ const WebDevelopmentPage: React.FC = () => {
     { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-  ]
-
+  ];
   const process = [
     {
       step: '01',
@@ -158,7 +156,14 @@ const WebDevelopmentPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation>
         <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
-          <section className="text-center mb-16"></section>
+          <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>
               From frontend to backend, we deliver solutions that drive business growth.</p>
         <main className="container mx-auto px-4 py-16 pt-24"></main>
@@ -168,8 +173,7 @@ const WebDevelopmentPage: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">Web Development Services</h1>            </h1>,
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
               Build modern, scalable, and high-performance web applications with our expert development team.
-              From frontend to backend, we deliver solutions that drive business growth.;
-            </p>
+              From frontend to backend, we deliver solutions that drive business growth.;            </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a;
 
@@ -240,20 +244,25 @@ const WebDevelopmentPage: React.FC = () => {
                   </div>
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
 
-          <section className="mb-20"></section>
+          <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{
     webServices.map((service, index) => (</div>
   }
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>
                   <div className="flex items-center mb-6"></div>
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div>
-                      <service>
-                    </div>
+                      <service />
                     <div />
                       <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}<div className={`font-semibold ${service.color}`}>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
             <h2 className="text-4xl font-bold text-white mb-4">Our Web Development Services;)</h2>)
-)
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">),
+)            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">),
               {
     webServices.map((service, index) => (</div>
   }
@@ -274,8 +283,7 @@ const WebDevelopmentPage: React.FC = () => {
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>
                   <div className="flex items-center mb-6"></div>
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div>
-                      <service>
-                    </div>
+                      <service />
                     <div />
                       <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3><div className={`font-semibold ${service.color}`}>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                   <div className="mb-6"></div>
@@ -386,13 +394,19 @@ const WebDevelopmentPage: React.FC = () => {
           </section>
 
           {/* CTA Section */}
-          <section className="text-center"></section>
+          <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
             <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Build Your Next Web Application?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>                <a;
-
             <div className="cyber-card p-12 max-w-4xl mx-auto"></section>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
               </p>
@@ -458,5 +472,4 @@ export default WebDevelopmentPage
     </>
   )
 }
-
 export default WebDevelopmentPage

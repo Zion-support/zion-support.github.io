@@ -31,17 +31,17 @@ export const useRouter = () => {}
     push,
     replace,
     back,
-    forward,
-    refresh}
+    forward,    refresh}
   }
 }
 export const usePathname = useCallback((...args) => {}
-  return window.location.pathname;}
+  return window.location.pathname}
 }
 export const useSearchParams = useCallback((...args) => {}
   const params = new URLSearchParams(window.location.search)
   return params;}
-}
+};
+
 export default { useRouter, usePathname, useSearchParams }
 export const useRouter = () => {/* TODO: Fix JSX expression */}
   }, [])

@@ -23,7 +23,7 @@ const BlockchainPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide blockchain deployment and support for international businesses'
     }
-  ]
+  ];
   const benefits = [
     'Advanced blockchain technology integration',
     'Real-time transaction processing',
@@ -59,25 +59,7 @@ const BlockchainPage: React.FC = () => {
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">
-            Why Choose Our Blockchain Solutions?
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3">
-                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-{/* Key Benefits */}        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <p className="text-gray-300">{feature.description}</p>          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Our Blockchain Services?
@@ -123,8 +105,7 @@ const BlockchainPage: React.FC = () => {
           <section key={category} className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">                  {category} Services
-  </
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">                  {category} Services  </
                 <p className="text-xl text-gray-600">
                   Professional {category.toLowerCase()} solutions powered by blockchain technology
   </
@@ -259,8 +240,7 @@ const BlockchainPage: React.FC = () => {
       </div>
     </div>
   )
-}
-export default BlockchainPage
+}export default BlockchainPage
   </a>
   </a>
   </p>

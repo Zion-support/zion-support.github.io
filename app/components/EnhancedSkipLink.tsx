@@ -19,5 +19,4 @@ const EnhancedSkipLink: React.FC = () => {
     </a>
   )
 }
-
 export default EnhancedSkipLink

@@ -111,5 +111,4 @@ const CybersecuritySolutionsPage: React.FC = () => {
     </>
   )
 }
-
 export default CybersecuritySolutionsPage

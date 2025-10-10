@@ -29,8 +29,7 @@ const LoadingPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]  return (
-    <React.Fragment>
+  ]  return (    <React.Fragment>
       <Helmet>
         <title>Loading - Zion Tech Group</title>
         <meta name="description" content="Loading page." />
@@ -109,8 +108,7 @@ const LoadingPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )
-}
-export default LoadingPage
+}export default LoadingPage
   </button>
   </h2>
   </button>

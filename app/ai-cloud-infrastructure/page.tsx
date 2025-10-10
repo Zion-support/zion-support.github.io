@@ -3,8 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-const AiCloudInfrastructurePage: React.FC = () => {
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'const AiCloudInfrastructurePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -29,7 +28,7 @@ const AiCloudInfrastructurePage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+    },
   ]
   return (
     <React.Fragment>
@@ -87,6 +86,8 @@ const AiCloudInfrastructurePage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
                 </div>
               ))}
             </div>
@@ -109,11 +110,13 @@ const AiCloudInfrastructurePage: React.FC = () => {
       </main>
       <Footer />
     </React.Fragment>
+<<<<<<< HEAD
   )
-}
-export default AiCloudInfrastructurePage
+}export default AiCloudInfrastructurePage
   </button>
   </h2>
   </button>
   </button>
   </h1>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

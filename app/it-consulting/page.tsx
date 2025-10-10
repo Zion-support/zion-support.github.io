@@ -92,15 +92,13 @@ const itServices = [    // IT Infrastructure Services
         'Backup and disaster recovery setup',
         'Security infrastructure deployment',
         'Monitoring and management tools',
-        'Documentation and training',
-        'Ongoing support and maintenance'
+        'Documentation and training',        'Ongoing support and maintenance'
       ],
       benefits: [,
         'Scalable and reliable infrastructure',
         'Improved system performance',
         'Enhanced security posture',
-        'Reduced downtime and outages',
-        'Future-proof technology stack'
+        'Reduced downtime and outages',        'Future-proof technology stack'
       ],
       targetAudience: 'Small to large businesses, Startups, Enterprises',
       setupTime: '2-8 weeks',
@@ -124,15 +122,13 @@ const itServices = [    // IT Infrastructure Services
         'Cloud security implementation',
         'Cost optimization analysis',
         'Performance tuning',
-        'Disaster recovery setup',
-        'Training and documentation'
+        'Disaster recovery setup',        'Training and documentation'
       ],
       benefits: [,
         'Reduce IT costs by 30-50%',
         'Improve scalability and flexibility',
         'Enhanced security and compliance',
-        'Better disaster recovery capabilities',
-        'Access to latest technologies'
+        'Better disaster recovery capabilities',        'Access to latest technologies'
       ],
       targetAudience: 'Businesses looking to modernize IT infrastructure',
       setupTime: '1-6 weeks',
@@ -156,15 +152,13 @@ const itServices = [    // IT Infrastructure Services
         'Firewall and endpoint protection',
         'Email security implementation',
         'Security awareness training',
-        'Compliance auditing',
-        'Incident response planning'
+        'Compliance auditing',        'Incident response planning'
       ],
       benefits: [,
         'Protect against cyber threats',
         'Ensure regulatory compliance',
         'Reduce security risks by 90%',
-        'Improve incident response time',
-        'Maintain customer trust'
+        'Improve incident response time',        'Maintain customer trust'
       ],
       targetAudience: 'All businesses handling sensitive data',
       setupTime: '1-4 weeks',
@@ -188,15 +182,13 @@ const itServices = [    // IT Infrastructure Services
         'Wireless network deployment',
         'Network monitoring implementation',
         'Traffic analysis and optimization',
-        'Redundancy and failover setup',
-        'Performance tuning'
+        'Redundancy and failover setup',        'Performance tuning'
       ],
       benefits: [,
         'Improve network performance by 200%',
         'Reduce network downtime',
         'Optimize bandwidth usage',
-        'Enhance user experience',
-        'Future-proof network design'
+        'Enhance user experience',        'Future-proof network design'
       ],
       targetAudience: 'Businesses with complex networking needs',
       setupTime: '1-3 weeks',
@@ -220,15 +212,13 @@ const itServices = [    // IT Infrastructure Services
         'Security implementation',
         'Monitoring and alerting',
         'Query optimization',
-        'Capacity planning',
-        'Maintenance and updates'
+        'Capacity planning',        'Maintenance and updates'
       ],
       benefits: [,
         'Improve database performance by 150%',
         'Ensure data integrity and security',
         'Reduce maintenance overhead',
-        'Optimize storage usage',
-        'Minimize downtime'
+        'Optimize storage usage',        'Minimize downtime'
       ],
       targetAudience: 'Businesses with critical data requirements',
       setupTime: '1-2 weeks',
@@ -252,15 +242,13 @@ const itServices = [    // IT Infrastructure Services
         'Software updates and patches',
         'Hardware support and replacement',
         'User training and onboarding',
-        'IT asset management',
-        'Help desk services'
+        'IT asset management',        'Help desk services'
       ],
       benefits: [,
         'Reduce IT downtime by 80%',
         'Lower IT support costs',
         'Improve user productivity',
-        'Proactive issue resolution',
-        'Focus on core business activities'
+        'Proactive issue resolution',        'Focus on core business activities'
       ],
       targetAudience: 'Small to medium businesses without dedicated IT staff',
       setupTime: '1 week',
@@ -284,15 +272,13 @@ const itServices = [    // IT Infrastructure Services
         'API development and integration',
         'Database design and implementation',
         'Testing and quality assurance',
-        'Deployment and maintenance',
-        'User training and documentation'
+        'Deployment and maintenance',        'User training and documentation'
       ],
       benefits: [,
         'Streamline business processes',
         'Improve operational efficiency',
         'Gain competitive advantage',
-        'Reduce manual work',
-        'Scale with business growth'
+        'Reduce manual work',        'Scale with business growth'
       ],
       targetAudience: 'Businesses needing custom software solutions',
       setupTime: '4-16 weeks',
@@ -316,15 +302,13 @@ const itServices = [    // IT Infrastructure Services
         'Vendor evaluation and selection',
         'Cost-benefit analysis',
         'Risk assessment and mitigation',
-        'Change management planning',
-        'Implementation guidance'
+        'Change management planning',        'Implementation guidance'
       ],
       benefits: [,
         'Align IT with business goals',
         'Optimize technology investments',
         'Reduce implementation risks',
-        'Accelerate digital transformation',
-        'Improve ROI on technology'
+        'Accelerate digital transformation',        'Improve ROI on technology'
       ],
       targetAudience: 'Businesses planning technology initiatives',
       setupTime: '1-4 weeks',
@@ -348,15 +332,13 @@ const itServices = [    // IT Infrastructure Services
         'Disaster recovery testing',
         'Business continuity planning',
         'Cloud-based recovery solutions',
-        'Documentation and procedures',
-        'Regular testing and updates'
+        'Documentation and procedures',        'Regular testing and updates'
       ],
       benefits: [,
         'Minimize business disruption',
         'Ensure rapid recovery',
         'Protect critical data',
-        'Maintain customer service',
-        'Comply with regulations'
+        'Maintain customer service',        'Comply with regulations'
       ],
       targetAudience: 'Businesses requiring high availability',
       setupTime: '2-6 weeks',
@@ -380,15 +362,13 @@ const itServices = [    // IT Infrastructure Services
         'Audit preparation and support',
         'Training and awareness programs',
         'Ongoing compliance monitoring',
-        'Documentation and reporting',
-        'Remediation planning'
+        'Documentation and reporting',        'Remediation planning'
       ],
       benefits: [,
         'Ensure regulatory compliance',
         'Reduce audit findings',
         'Improve security posture',
-        'Avoid penalties and fines',
-        'Build customer trust'
+        'Avoid penalties and fines',        'Build customer trust'
       ],
       targetAudience: 'Healthcare, Finance, Government, Education sectors',
       setupTime: '2-8 weeks',
@@ -422,7 +402,14 @@ const filteredServices = itServices.filter(service => {
   })
 return (    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}</div>
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8 cyber-grid"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>
         <div className="relative z-10 max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>
@@ -445,8 +432,7 @@ return (    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pu
         </div>
       </section>
       {/* Search and Filter Section */};
-      <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
+      <section className="py-12 px-4 sm:px-6 lg:px-8"></section>        <div className="max-w-7xl mx-auto"></div>
           <div className="flex flex-col lg:flex-row gap-6 mb-8"></div>
             {/* Search */}</div>
             <div className="flex-1"></div>
@@ -504,8 +490,7 @@ return (    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pu
           </div>
         </div>
       </section>
-      {/* Services Grid */}      <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
+      {/* Services Grid */}      <section className="py-12 px-4 sm:px-6 lg:px-8"></section>        <div className="max-w-7xl mx-auto"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {
     filteredServices.map((service) => (</div>
@@ -513,8 +498,7 @@ return (    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pu
               <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse"></div>
                 <div className="flex items-start justify-between mb-4"></div>
                   <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors"></div>
-                    <service>                  </div>
-                  <div className="text-right"></div>
+                    <service>                  </div>                  <div className="text-right"></div>
                     <div className="text-2xl font-bold text-white">{service.price}</div>
                     <div className="text-sm text-gray-400">starting price</div>
                   </div>
@@ -568,8 +552,7 @@ return (    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pu
                   </div>
                 )}
 <div className="space-y-3"></div>
-                  <a>                    Get Free Consultation
-                  </a>
+                  <a>                    Get Free Consultation                  </a>
                   <a>
                     <Phone>
                     Call for Quote
@@ -581,7 +564,14 @@ return (    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pu
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 cyber-scan-effect"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <h2>
             Ready to Optimize Your IT Infrastructure?,          </h2>

@@ -21,15 +21,13 @@ icon: Shield,
     {
       icon: Globe,
       title: 'Multi-Cloud Support',
-      description: 'Support for migration to AWS, Azure, GCP, and other cloud platforms'
-    }
-  ]
+      description: 'Support for migration to AWS, Azure, GCP, and other cloud platforms'    }
+  ];
   const benefits = [
 'Advanced cloud migration technology',
     'Real-time migration monitoring',
     'Enterprise-grade security and compliance',
-    'Scalable and flexible migration solutions',    '24/7 technical support',
-    'Easy integration with existing systems',
+    'Scalable and flexible migration solutions',    '24/7 technical support',    'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]  return (
@@ -37,12 +35,10 @@ icon: Shield,
       <Helmet>
         <title>Cloud Migration Services | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Migration Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<meta name="keywords" content="cloud migration, cloud services, IT services, Zion Tech Group, cloud computing" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">            Cloud Migration Services
-  </
+          <h1 className="text-5xl font-bold text-white mb-6">            Cloud Migration Services  </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud migration services. 
             Powered by cutting-edge AI technology and industry expertise.
@@ -86,8 +82,6 @@ icon: Shield,
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Mail className="mr-2 h-5 w-5" />
-              Email Us,
-  </
           </div>
         </div>
       </section>
@@ -133,8 +127,7 @@ icon: Shield,
       </section>
     </div>
   )
-}
-export default CloudMigrationServicesPage
+}export default CloudMigrationServicesPage
   </button>
   </button>
   </h2>

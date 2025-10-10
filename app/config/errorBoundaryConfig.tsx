@@ -84,8 +84,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
             <path>
           </svg>
         </div>
-        <h2 className="text-4xl font-bold text-white mb-4">Oops! Something went wrong</h2>
-        <p>
+        <h2 className="text-4xl font-bold text-white mb-4">Oops! Something went wrong</h2>        <p>
 
           {error.message || 'An unexpected error occurred'}
         </p>
@@ -96,8 +95,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
         )}
         <div className="mt-6 flex gap-4"></div>
           <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Try Again          </button>
-          <button
-            onClick={() => (window.location.href = '/')}
+          <button            onClick={() => (window.location.href = '/')}
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-300 transition-colors"
           >
             Go Home
@@ -121,8 +119,7 @@ function NetworkErrorFallback({ resetError }: { error: Error, resetError: () => 
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">Connection Issue</h2>
         <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Unable to connect to the server. Please check your internet connection and try again.</p>
         <div className="mt-6"></div>
-          <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Retry Connection;          </button>
-        </div>
+          <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Retry Connection;          </button>        </div>
       </div>
     </div>
   )}
@@ -134,8 +131,7 @@ function NotFoundFallback(): JSX.Element {
       <div className="max-w-md w-full text-center"></div>
         <h1 className="text-6xl font-bold text-gray-900">404</h1>
         <h2 className="mt-4 text-2xl font-bold text-gray-900">Page Not Found</h2>
-        <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">The page you're looking for doesn't exist or has been moved.</p>
-        <div className="mt-6 flex gap-4 justify-center"></div>
+        <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">The page you're looking for doesn't exist or has been moved.</p>        <div className="mt-6 flex gap-4 justify-center"></div>
           <button
   }
             onClick={() => (window.location.href = '/')}

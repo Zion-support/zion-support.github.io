@@ -24,8 +24,7 @@ icon: Brain,
       description: 'Worldwide business intelligence deployment and support'
     }
   ]
-  const benefits = [    'Advanced AI technology integration',
-    'Real-time processing and analytics',
+  const benefits = [    'Advanced AI technology integration',    'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible business intelligence solutions',
     '24/7 technical support',
@@ -37,12 +36,10 @@ icon: Brain,
       <Helmet>
         <title>Business Intelligence | Zion Tech Group</title>
         <meta name="description" content="Professional Business Intelligence services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<meta name="keywords" content="business intelligence, AI solutions, IT services, Zion Tech Group, data analytics" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">            Business Intelligence
-  </
+          <h1 className="text-5xl font-bold text-white mb-6">            Business Intelligence  </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced business intelligence solutions. 
             Powered by cutting-edge AI technology and industry expertise.
@@ -51,7 +48,6 @@ icon: Brain,
             Our business intelligence solutions deliver unmatched performance, security, and scalability.
           </p>
         </div>
-<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
@@ -73,8 +69,7 @@ icon: Brain,
           </div>
         </div>
 {/* Benefits Section */}      <section className="py-16 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="max-w-7xl mx-auto">          <div className="text-center mb-12">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Key Benefits,
   </
@@ -114,8 +109,7 @@ icon: Brain,
       </section>
     </div>
   )
-}
-export default BusinessIntelligencePage
+}export default BusinessIntelligencePage
   </button>
   </button>
   </h2>

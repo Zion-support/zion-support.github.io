@@ -139,12 +139,18 @@ return (
     <>
       <Helmet>
         <title>IoT Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+        <meta name="description" content="Advanced AI solutions" />        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50"></div>
         {/* Hero Section */}</div>
-        <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-800 text-white py-20"></section>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
           <div className="absolute inset-0 bg-black opacity-30"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-green-600/50 to-teal-800/50"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
@@ -165,40 +171,42 @@ return (
           </div>
         </section>
         {/* Key Benefits */}
-        <section className="py-16 bg-white"></section>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
               <h2>
                 Why Choose Our IoT Services?,
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">End-to-end IoT solutions with proven expertise in connectivity, security, and analytics</p>
-            </div>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">End-to-end IoT solutions with proven expertise in connectivity, security, and analytics</p>            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               <div className="text-center"></div>
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Wifi>
-                </div>
+                  <Wifi />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Connectivity Experts</h3>
                 <p className="text-gray-600">Multi-protocol IoT connectivity solutions</p>
               </div>
               <div className="text-center"></div>
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Shield>
-                </div>
+                  <Shield />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Security First</h3>
                 <p className="text-gray-600">Comprehensive IoT security and data protection</p>
               </div>
               <div className="text-center"></div>
                 <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Zap>
-                </div>
+                  <Zap />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Edge Computing</h3>
                 <p className="text-gray-600">Low-latency processing at the edge</p>
               </div>
               <div className="text-center"></div>
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Target>
-                </div>
+                  <Target />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Custom Solutions</h3>
                 <p className="text-gray-600">Tailored IoT solutions for your specific needs</p>
               </div>
@@ -209,11 +217,17 @@ return (
         {
     categories.map(category => (
   }
-          <section key={category} className="py-16 bg-gray-50"></section>
+          <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
               <div className="text-center mb-12"></div>
-                <h2 className="text-4xl font-bold text-white mb-4">{category} Solutions</h2>
-                <p>
+                <h2 className="text-4xl font-bold text-white mb-4">{category} Solutions</h2>                <p>
                   Specialized {category.toLowerCase()} solutions powered by IoT technology
                 </p>
               </div>
@@ -280,8 +294,7 @@ return (
 
                         </ul>
                       </div>
-                      <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Get IoT Quote
-                      </button>
+                      <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Get IoT Quote                      </button>
                     </div>
 
                   ))}
@@ -290,7 +303,14 @@ return (
           </section>
         ))}
 {/* IoT Capabilities Showcase */}
-        <section className="py-16 bg-white"></section>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
               <h2>
@@ -335,7 +355,14 @@ return (
           </div>
         </section>
         {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600 text-white"></section>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
             <h2>
               Ready to Connect Your World?

@@ -1007,8 +1007,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Content Generation',
       popular: true,
-      icon: FileText    }
-  ]
+      icon: FileText    }  ]
 
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },

@@ -9,21 +9,8 @@ const CloudMigrationPage: React.FC = () => {
       description: 'Safe and secure migration of your applications and data to the cloud'
     },
     {
-icon: Zap,
-      title: 'Zero Downtime Migration',
-      description: 'Seamless migration with minimal to zero downtime for your business'
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Migration',
-      description: 'Intelligent migration planning and execution powered by AI technology'
-    },
-    {
-      icon: Globe,
-      title: 'Multi-Cloud Support',
-      description: 'Support for migration to AWS, Azure, GCP, and other cloud platforms'
     }
-  ]
+  ];
   const benefits = [
     'Advanced cloud migration technology',
     'Real-time migration monitoring',    'Enterprise-grade security and compliance',
@@ -41,8 +28,10 @@ icon: Zap,
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">            Cloud Migration
-  </
+<<<<<<< HEAD
+          <h1 className="text-5xl font-bold text-white mb-6">            Cloud Migration  </
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud migration solutions. 
             Powered by cutting-edge AI technology and industry expertise.
@@ -54,8 +43,7 @@ icon: Zap,
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
       {/* Features Section */}      <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="max-w-7xl mx-auto">          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Cloud Migration?
             </h2>
@@ -115,8 +103,7 @@ icon: Zap,
       </div>
     </div>
   )
-}
-export default CloudMigrationPage
+}export default CloudMigrationPage
   </button>
   </button>
   </h2>

@@ -127,8 +127,7 @@ return (
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Contact Us
                 </button>
-                <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Learn More                </button>
-              </div>
+                <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Learn More                </button>              </div>
             </div>
           </div>
         </section>
@@ -137,4 +136,4 @@ return (
   )
 }
 export default AiAnalyticsDashboardPage=======
->>>>>>> cursor/website-audit-and-update-with-deployment-9351
+>>>>>>> cursor/website-audit-and-update-with-deployment-9351>>>>>>> 55f9bfb92d821ca12ee8dd7824e7a6cd258dc747

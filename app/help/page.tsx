@@ -6,23 +6,20 @@ return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+        <meta name="description" content="Advanced AI solutions" />        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
 
       {/* Hero Section */}
             <h2>
               Why Choose Our Page?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Our page solutions deliver unmatched performance, security, and scalability.</p>              </div>
-            ))}
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Our page solutions deliver unmatched performance, security, and scalability.</p>              </div>            ))}
 
           </div>
         </div>
       </section>
             <h2 className="text-4xl font-bold text-white mb-4">Key Benefits</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Experience the power of our page solutions for your business.</p>              </div>
-            ))}
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Experience the power of our page solutions for your business.</p>              </div>            ))}
           </div>
         </div>
       </section>

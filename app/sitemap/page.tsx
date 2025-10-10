@@ -250,5 +250,4 @@ const SitemapPage: React.FC = () => {
     </>
   )
 }
-
 export default SitemapPage

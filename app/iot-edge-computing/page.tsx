@@ -30,8 +30,7 @@ const features = [
     'Scalable and flexible solutions',
     '24/7 technical support',
     'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
+    'Cost-effective pricing plans',    'Proven track record of success'
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -39,8 +38,7 @@ return (
         <meta name="description" content="Advanced AI solutions" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-      {/* Hero Section */}      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
-          </div>
+      {/* Hero Section */}      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>          </div>
         </div>
       </section>
       {/* Features Section */}            </p>
@@ -52,8 +50,7 @@ return (
         </div>
       </section>
       {/* Benefits Section */};
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
-              </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>              </div>
             ))}
 
           </div>

@@ -17,15 +17,13 @@ interface SEOHeadProps {
   canonical,
   ogImage = '/og-image.jpg',
   ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData
+  twitterCard = 'summary_large_image',  structuredData
   }
 }) => {}
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
 const defaultStructuredData = {
-    "@context": "https: //schema.org",    "@type": "Organization",
-    "name": "Zion Tech Group",
+    "@context": "https: //schema.org",    "@type": "Organization",    "name": "Zion Tech Group",
     "url": "https: //ziontechgroup.com",
     "logo": "https: //ziontechgroup.com/logo.png",
     "description": "Advanced AI and IT Solutions company providing cutting-edge technology services",
@@ -54,8 +52,7 @@ return (
       <title>{fullTitle}</title>
       <meta name="description" content="Advanced AI solutions" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="Advanced AI solutions" />        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta>
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
@@ -76,8 +73,7 @@ return (
       <meta name="description" content="Advanced AI solutions" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      {/* Structured Data */}
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />      {/* Structured Data */}
       <script>
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>

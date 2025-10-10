@@ -7,8 +7,7 @@ import {
   Mail,
   MapPin,
   Clock,
-  Send,
-  CheckCircle
+  Send,  CheckCircle
   }
 } from 'lucide-react'
 const ContactPage: React.FC = () => {
@@ -26,8 +25,7 @@ const [isSubmitting, setIsSubmitting] = useState(false)
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
 
-    const { name, value } = e.target    setFormData(prev => ({
-    ...prev,
+    const { name, value } = e.target    setFormData(prev => ({    ...prev,
       [name]: value
   }
     }))
@@ -66,8 +64,7 @@ try {
     'Data Analytics',
     'Cybersecurity',
     'DevOps',
-    'Consulting',
-    'Other'
+    'Consulting',    'Other'
   ]
 const contactInfo = [
     {
@@ -100,8 +97,7 @@ return (
     <>
       <Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
-        <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+        <meta name="description" content="Advanced AI solutions" />        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div>
         <div className="container mx-auto px-4"></div>
@@ -110,12 +106,11 @@ return (
             <h1>
               Get in;
               <span>
-                {' '}Touch;
+                {' '}Touch
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Ready to transform your business? Let's discuss your project and explore;
-              how our AI and IT solutions can help you achieve your goals.</p>
-          </div>
+              how our AI and IT solutions can help you achieve your goals.</p>          </div>
         </section>
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
             {/* Contact Form */}
@@ -144,8 +139,7 @@ return (
                     </label>
                     <div className="relative"></div>
                       <User>
-                      <input>
-                    </div>
+                      <input />
                   </div>
                   <div />
                     <label>
@@ -153,8 +147,7 @@ return (
                     </label>
                     <div className="relative"></div>
                       <Mail>
-                      <input>
-                    </div>
+                      <input />
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
@@ -164,8 +157,7 @@ return (
                     </label>
                     <div className="relative"></div>
                       <Building>
-                      <input>
-                    </div>
+                      <input />
                   </div>
                   <div />
                     <label>
@@ -173,8 +165,7 @@ return (
                     </label>
                     <div className="relative"></div>
                       <Phone>
-                      <input>
-                    </div>
+                      <input />
                   </div>
                 </div>
                 <div />
@@ -199,12 +190,11 @@ return (
                 </div>
                 <div />
                   <label>
-                    Message *;
+                    Message *
                   </label>
                   <div className="relative"></div>
                     <MessageCircle>
-                    <textarea>
-                  </div>
+                    <textarea />
                 </div>
                 <button>
                   {
@@ -228,8 +218,7 @@ return (
               <div />
                 <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We're here to help! Reach out to us through any of these channels
-                  and we'll get back to you as soon as possible.</p>
-              </div>
+                  and we'll get back to you as soon as possible.</p>              </div>
               {/* Contact Information */}
               <div className="space-y-8"></div>
                 <div />
@@ -241,8 +230,7 @@ return (
                 <div className="space-y-6"></div>
                   <div className="flex items-center"></div>
                     <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <Phone>
-                    </div>
+                      <Phone />
                     <div />
 <h3>
 
@@ -259,8 +247,7 @@ return (
                   </div>
                   <div className="flex items-center"></div>
                     <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <Mail>
-                    </div>
+                      <Mail />
                     <div />
                       <h3 className="text-lg font-semibold text-white">Email</h3>
                       <p className="text-gray-300">info@ziontechgroup.com</p>
@@ -268,8 +255,7 @@ return (
                   </div>
                   <div className="flex items-center"></div>
                     <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <MapPin>
-                    </div>
+                      <MapPin />
                     <div />
                       <h3 className="text-lg font-semibold text-white">Address</h3>
                       <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
@@ -277,8 +263,7 @@ return (
                   </div>
                   <div className="flex items-center"></div>
                     <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <Clock>
-                    </div>
+                      <Clock />
                     <div />
                       <h3 className="text-lg font-semibold text-white">Business Hours</h3>
                       <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>

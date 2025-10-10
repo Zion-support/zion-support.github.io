@@ -11,8 +11,7 @@ const TutorialsPage: React.FC = () => {
     { id: 'saas', name: 'Micro SaaS', icon: Zap },
     { id: 'security', name: 'Security', icon: Shield },
     { id: 'integration', name: 'Integration', icon: Code }
-  ]
-
+  ];
   const tutorials = [
     {
       id: 1,
@@ -540,5 +539,4 @@ const TutorialsPage: React.FC = () => {
     </>
   )
 }
-
 export default TutorialsPage

@@ -41,7 +41,6 @@ const EdgeComputingPage: React.FC = () => {
       description: 'Robust infrastructure designed for edge computing requirements and scalability.',      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   }];
-
 const services = [
     {
     icon: '⚡',
@@ -68,8 +67,7 @@ const services = [
     'Reduced Bandwidth Costs',
     'Improved Reliability',
     'Enhanced Security',
-    'Real-time Processing',
-    'Global Scalability'
+    'Real-time Processing',    'Global Scalability'
   ]
 const useCases = [
     {
@@ -108,12 +106,18 @@ return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
       <Helmet>
         <title>Edge Computing Solutions | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+        <meta name="description" content="Advanced AI solutions" />        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <Navigation>
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
@@ -123,8 +127,7 @@ return (
               Solutions
             </span>
           </h1>
-          <p>            Bring computing power closer to your data and users with our advanced edge computing solutions.
-            Ultra-low latency, real-time processing, and global edge infrastructure.
+          <p>            Bring computing power closer to your data and users with our advanced edge computing solutions.            Ultra-low latency, real-time processing, and global edge infrastructure.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button>
@@ -137,7 +140,14 @@ return (
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-20 px-4"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Features</h2>
@@ -150,8 +160,7 @@ return (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                   <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                </div>                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul>
                   {
@@ -171,7 +180,14 @@ return (
         </div>
       </section>
       {/* Services Section */}
-      <section className="py-20 px-4"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Services</h2>
@@ -192,7 +208,14 @@ return (
         </div>
       </section>
       {/* Use Cases Section */}
-      <section className="py-20 px-4"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Use Cases</h2>
@@ -213,7 +236,14 @@ return (
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-20 px-4"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Edge Computing?</h2>
@@ -225,15 +255,21 @@ return (
             {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
-                  <CheckCircle>                </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  <CheckCircle>                </div>                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
             ))}
           </div>
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
           <p>

@@ -71,6 +71,5 @@ const MedicalRecordsManagerPage: React.FC = () => {
       </div>
     </React.Fragment>
   )
-}
-export default MedicalRecordsManagerPage
+}export default MedicalRecordsManagerPage
   </h1>

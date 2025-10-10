@@ -29,8 +29,7 @@ const ErrorPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]  return (
-    <React.Fragment>
+  ]  return (    <React.Fragment>
       <Helmet>
         <title>Error - Zion Tech Group</title>
         <meta name="description" content="Error page." />
@@ -109,8 +108,7 @@ const ErrorPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )
-}
-export default ErrorPage
+}export default ErrorPage
   </button>
   </h2>
   </button>

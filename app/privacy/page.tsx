@@ -3,39 +3,19 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async'
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react'
 const PrivacyPage: React.FC = () => {
-  const lastUpdated = 'January 1, 2024'
-  const dataTypes = [
+  const lastUpdated = 'January 1, 2024'  const dataTypes = [
     {      category: 'Personal Information',
       icon: User,
-      items: [
-        'Name and contact information',
-        'Email address and phone number',
-        'Company and job title',
-        'Account credentials'
-      ]
     },
         {
       category: 'Usage Data',
       icon: Database,
-      items: [
-        'Website usage patterns',
-        'Service interaction data',
-        'Device and browser information',
-        'IP address and location data'
-      ]
     },
         {
       category: 'Technical Data',
       icon: Server,
-      items: [
-        'Log files and error reports',
-        'Performance metrics',
-        'Security event data',
-        'System configuration information'
-      ]
     }
-  ]
-
+  ];
   const purposes = [
     {
       title: 'Service Delivery',
@@ -53,52 +33,11 @@ const PrivacyPage: React.FC = () => {
     {
       title: 'Improvement',
       description: 'To analyze usage patterns and improve our services',
-      icon: Eye
-    }
-  ]
-
-  const rights = [
-    {      title: 'Access',
-      description: 'Request access to your personal data',
-      icon: Eye
-    },
-        {
-      title: 'Rectification',
-      description: 'Correct inaccurate or incomplete data',
-      icon: FileText
-    },
-        {
-      title: 'Erasure',
-      description: 'Request deletion of your personal data',
-      icon: AlertTriangle
-    },
-        {
-      title: 'Portability',
-      description: 'Receive your data in a structured format',
-      icon: Database
-    },
-    {
-      title: 'Restriction',
-      description: 'Limit how we process your data',
-      icon: Lock
-    },
-    {
-      title: 'Objection',
-      description: 'Object to certain types of processing',
-      icon: Shield
-    }
-  ]
-
-  const contactInfo = {
-    email: 'privacy@ziontechgroup.com',
-    phone: '+1 (302) 464-0950',
-    address: '364 E Main St STE 1008, Middletown, DE 19709'
-  }
-
-  return (
+      icon: Eye  return (
     <>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Privacy Policy for Zion Tech Group. Learn how we collect, use, and protect your personal information and data." />
         <meta name="keywords" content="privacy policy, data protection, GDPR, personal information, data security" />
         <link rel="canonical" href="https://ziontechgroup.com/privacy" />
@@ -372,3 +311,5 @@ const PrivacyPage: React.FC = () => {
 }
 
 export default PrivacyPage
+=======
+>>>>>>> 55f9bfb92d821ca12ee8dd7824e7a6cd258dc747

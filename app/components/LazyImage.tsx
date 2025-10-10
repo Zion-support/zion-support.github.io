@@ -11,16 +11,21 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Scalable and flexible solutions',
     '24/7 technical support',
     'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
+    'Cost-effective pricing plans',    'Proven track record of success'
   ]
 {/* Hero Section */}
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
             <h1>
-              <span>                LazyImage
-              </span>
+              <span>                LazyImage              </span>
               <br>
               <span className="text-white">Solutions</span>
             </h1>
@@ -42,7 +47,14 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>
@@ -52,8 +64,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               Experience the power of our lazyimage solutions for your business.,
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>            {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>            {benefits.map((benefit, index) => (                <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle>
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
@@ -62,11 +73,17 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-            <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p>
+            <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>            <p>
               Contact our experts to discuss your lazyimage needs and get a customized solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>

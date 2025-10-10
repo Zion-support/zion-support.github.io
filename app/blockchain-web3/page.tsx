@@ -27,8 +27,7 @@ const BlockchainWeb3Page: React.FC = () => {
       description: 'Access blockchain services from anywhere in the world with global connectivity.',
       benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']
   }
-    }
-  ]
+    ]
 return (
     <>      <Helmet>
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
@@ -50,8 +49,7 @@ return (
                 <div className="flex items-start space-x-4 mb-6"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0"></div>
                     <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div />
+                  </div>                  <div />
                     <h3 className="text-2xl font-bold text-white mb-2">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                   </div>

@@ -7,14 +7,12 @@ import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, 
     projects: 0,
     satisfaction: 0,
     years: 0
-  })
-  const targetCounters = {
+  })  const targetCounters = {
     clients: 500,
     projects: 1000,
     satisfaction: 99,
     years: 10
-  }
-  const statistics = [
+  }  const statistics = [
 [
     {
       icon: Users,
@@ -44,7 +42,7 @@ import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, 
       suffix: '+',
       color: 'text-yellow-400'
     }
-  ]
+  ];
 
   const achievements = [
     {
@@ -54,8 +52,7 @@ import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, 
         {
       icon: Shield,
       title: 'Security Excellence',
-      description: 'Bank-level security for all our solutions'
-    },
+      description: 'Bank-level security for all our solutions'    },
         {
       icon: Globe,
       title: 'Global Reach',
@@ -66,21 +63,20 @@ import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, 
       title: 'Performance',
       description: '99.9% uptime and lightning-fast response'
     }
-  ]
+  ];
 
   useEffect(() => {
     const timers = Object.keys(targetCounters).map(key => {
-      const target = targetCounters[key as keyof typeof targetCounters]
+      const target = targetCounters[key as keyof typeof targetCounters];
       const duration = 2000; // 2 seconds
       const increment = target / (duration / 16); // 60fps
-            return setInterval(() => {
-        setCounters(prev => {
-          const current = prev[key as keyof typeof prev]
+            return setInterval(() => {        setCounters(prev => {
+          const current = prev[key as keyof typeof prev];
           if (current < target) {
             return {
               ...prev,
               [key]: Math.min(current + increment, target)
-            }
+            };
           }
           return prev
         })
@@ -115,22 +111,36 @@ import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, 
               <div className="text-gray-300">{stat.label}</div>            </div>
           ))};
         </div>
-
-        {/* Achievements */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Achievements Section */}
+      <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16">
+        <h3 className="text-2xl font-bold text-white mb-8 text-center">Our Achievements</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {achievements.map((achievement, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-              <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
-                <achievement.icon className="h-6 w-6 text-white" />
+            <div key={index} className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <achievement.icon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">{achievement.title}</h3>
-              <p className="text-gray-300 text-sm">{achievement.description}</p>
+              <h4 className="text-xl font-bold text-white mb-2">{achievement.title}</h4>
+              <p className="text-gray-300">{achievement.description}</p>
             </div>
           ))}
         </div>
       </div>
+
+      {/* CTA Section */}
+      <div className="text-center">
+        <h3 className="text-2xl font-bold text-white mb-4">
+          Ready to Join Our Success Story?
+        </h3>
+        <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+          Let us help you achieve similar results with our proven AI and IT solutions.
+        </p>
+        <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+          Get Started Today
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </button>
+      </div>
     </div>
   )
 }
-
 export default ContentStatistics

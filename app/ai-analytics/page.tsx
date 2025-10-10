@@ -13,44 +13,13 @@ const AiAnalyticsPage: React.FC = () => {
     },
     {
       icon: BarChart,
-      title: 'Real-Time Dashboards',
-      description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
-      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'Optimize your business performance with AI-driven recommendations and insights.',
-      benefits: ['Performance tracking', 'Optimization suggestions', 'ROI analysis', 'Growth strategies']
-    },
-    {
-      icon: Zap,
-      title: 'Fast Processing',
-      description: 'Process large datasets in seconds with our optimized AI analytics engine.',
-      benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
-    },
-    {
-      icon: BarChart,
-      title: 'Visual Analytics',
-      description: 'Transform complex data into intuitive visualizations and interactive charts.',
-      benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export capabilities']
-    },
-    {
-      icon: Shield,
-      title: 'Data Security',
-      description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
-    }
-  ];
-  const benefits = [    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
+      title: 'Real-Time Dashboards',    'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]  const useCases = [
 [
-        {
-      title: 'Business Intelligence',
+        {      title: 'Business Intelligence',
       description: 'Transform raw data into actionable business insights',
       icon: '📊'
     },
@@ -82,7 +51,6 @@ const AiAnalyticsPage: React.FC = () => {
     <React .Fragment>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
-<meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />
         <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
       </Helmet>
       <Navigation />
@@ -155,8 +123,7 @@ const AiAnalyticsPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )
-}
-export default AiAnalyticsPage
+}export default AiAnalyticsPage
   </button>
   </h2>
   </button>

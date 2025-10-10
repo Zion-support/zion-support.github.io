@@ -52,8 +52,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: Database, description: 'Data-driven insights' },
     { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions' },
     { name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology' }
-  ]
-
+  ];
   const itServices = [
     { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
     { name: 'API Management', href: '/ai-api-management', icon: Code, description: 'API development & management' },
@@ -61,8 +60,7 @@ const Navigation: React.FC = () => {
     { name: 'Data Management', href: '/ai-data-analytics', icon: Database, description: 'Data processing & storage' },
     { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
     { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' }
-  ]
-
+  ];
   const microSaasServices = [
     { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText, description: 'Automated content creation' },
     { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, description: 'Smart email management' },
@@ -70,8 +68,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: FileText, description: 'Automated invoicing' },
     { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Prospect identification' },
     { name: 'AI Project Manager', href: '/ai-project-manager', icon: Calendar, description: 'Project coordination' }
-  ]
-
+  ];
   const emergingTech = [
     { name: '5G Implementation', href: '/5g-implementation', icon: Zap, description: 'Next-gen connectivity' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box, description: '3D content creation' },
@@ -508,5 +505,4 @@ const Navigation: React.FC = () => {
     </nav>
   )
 }
-
 export default Navigation

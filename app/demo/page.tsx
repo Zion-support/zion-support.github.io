@@ -105,5 +105,4 @@ import Footer from '../components/Footer'const DemoPage: React.FC = () => {
     </>
   )
 }
-
 export default DemoPage

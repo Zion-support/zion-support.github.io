@@ -10,7 +10,14 @@ const PagePage: React.FC = () => {
       </section>
   }
       {/* Features Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>
@@ -24,8 +31,7 @@ const PagePage: React.FC = () => {
             {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
-                  <feature.icon className="w-8 h-8 text-white" />                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <feature.icon className="w-8 h-8 text-white" />                </div>                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
@@ -33,7 +39,14 @@ const PagePage: React.FC = () => {
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>              Key Benefits
@@ -42,8 +55,7 @@ const PagePage: React.FC = () => {
               Experience the power of our page solutions for your business.,
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>            {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>            {benefits.map((benefit, index) => (                <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle>
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
@@ -52,12 +64,18 @@ const PagePage: React.FC = () => {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p>              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
+            <p>              Contact our experts to discuss your page needs and get a customized solution.            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button>
                 <Phone>
@@ -72,8 +90,7 @@ const PagePage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  );};
 
 export default PagePage;
 
@@ -101,8 +118,7 @@ const SpecializedServicesPage: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale your operations worldwide with our robust infrastructure'
     }
-  ]
-
+  ];
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce operational costs by 30%',

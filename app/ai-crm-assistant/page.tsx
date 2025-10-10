@@ -29,12 +29,11 @@ const AiCrmAssistantPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+    },
   ]
   return (
     <React.Fragment>
       <Helmet>
-<title>AI CRM Assistant - Zion Tech Group</title>
         <meta name="description" content="Intelligent CRM assistant powered by AI technology." />
         <meta name="keywords" content="AI CRM assistant, artificial intelligence, customer relationship management, AI solutions, intelligent CRM" />
       </Helmet>
@@ -106,7 +105,6 @@ const AiCrmAssistantPage: React.FC = () => {
               Start Your Free Trial,
   </
           </div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -167,9 +165,9 @@ const AiCrmAssistantPage: React.FC = () => {
       </section>
       <Footer />
     </React.Fragment>
+<<<<<<< HEAD
   )
-}
-export default AiCrmAssistantPage
+}export default AiCrmAssistantPage
   </button>
   </button>
   </p>
@@ -180,3 +178,5 @@ export default AiCrmAssistantPage
   </button>
   </h1>
   </main>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

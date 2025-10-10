@@ -87,8 +87,7 @@ return (
                       {feature.benefits.map((benefit, idx) => (
   }
                         <li>
-                          <CheckCircle>
-                          {benefit}
+                          <CheckCircle>                          {benefit}
                         </li>
                       ))}
                     </ul>
@@ -114,7 +113,30 @@ return (
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
                     <CheckCircle>
                   </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
+                  <p className="text-lg text-white font-medium">{benefit}</p>              </h2>
+              <p className="text-xl text-gray-300">
+                Discover how chatbots can transform your business
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {useCase.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4">
+                    {useCase.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {useCase.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+>>>>>>> 55f9bfb92d821ca12ee8dd7824e7a6cd258dc747
                 </div>
               ))}
             </div>
@@ -139,4 +161,4 @@ return (
       <Footer />
   )
 }
-export default AiChatbotBuilderPage
+export default AiChatbotBuilderPage>>>>>>> 55f9bfb92d821ca12ee8dd7824e7a6cd258dc747

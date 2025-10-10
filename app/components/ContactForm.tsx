@@ -207,5 +207,4 @@ const { name, value } = e.target    setFormData(prev => ({
         </div>
     </div>
   )}
-
 export default ContactForm

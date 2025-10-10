@@ -12,8 +12,7 @@ const DocsPage: React.FC = () => {
     { id: 'it-services', name: 'IT Services', icon: Cloud },
     { id: 'api', name: 'API Reference', icon: Code },
     { id: 'security', name: 'Security', icon: Shield }
-  ]
-
+  ];
   const documentation = [
     {
       id: 1,
@@ -104,8 +103,7 @@ const DocsPage: React.FC = () => {
         'Support Resources'
       ]
     }
-  ]
-
+  ];
   const quickLinks = [
     { title: 'API Reference', url: '/api', icon: Code },
     { title: 'Tutorials', url: '/tutorials', icon: BookOpen },
@@ -342,5 +340,4 @@ const DocsPage: React.FC = () => {
     </>
   )
 }
-
 export default DocsPage

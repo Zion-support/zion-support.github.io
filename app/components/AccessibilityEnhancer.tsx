@@ -111,5 +111,4 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement])
   return <React.Fragment>{children}</React.Fragment>
 }
-
 export default AccessibilityEnhancer

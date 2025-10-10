@@ -24,13 +24,13 @@ import { CheckCircle, ArrowRight, Zap, Shield, Star, Users } from 'lucide-react'
       description: '24/7 support from our team of AI and IT specialists.',
       icon: Users
     }
-  ]
+  ];
 
   const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
+  ];
 
   return (
     <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">      <div className="max-w-7xl mx-auto">
@@ -74,13 +74,20 @@ import { CheckCircle, ArrowRight, Zap, Shield, Star, Users } from 'lucide-react'
               <div className="text-purple-100 mb-6">Uptime</div>
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold flex items-center mx-auto">
                 Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />              </button>
-            </div>
+                <ArrowRight className="w-5 h-5 ml-2" />              </button>            </div>
+            <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+            <p className="text-gray-300 text-sm">{feature.description}</p>
           </div>
-        </div>
+        ))}
+      </div>
+
+      <div className="text-center">
+        <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center">
+          Get Started Now
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </button>
       </div>
     </div>
   )
 }
-
 export default ContentPromotionBanner

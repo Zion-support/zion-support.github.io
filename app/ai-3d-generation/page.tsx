@@ -30,8 +30,7 @@ const Ai3dGenerationPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
-  const benefits = [    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
+  const benefits = [    'Increase efficiency by up to 50%',    'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
@@ -39,35 +38,30 @@ const Ai3dGenerationPage: React.FC = () => {
   return (
     <>      <Helmet>
         <title>AI 3D Generation - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered 3D generation solutions for businesses" />
-        <meta name="keywords" content="AI, 3D generation, artificial intelligence, business solutions" />
+        <meta name="description" content="Advanced AI-powered 3D generation solutions for businesses" />        <meta name="keywords" content="AI, 3D generation, artificial intelligence, business solutions" />
       </Helmet>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />          <div className="relative max-w-7xl mx-auto text-center">            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               AI 3D Generation
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Advanced AI-powered 3D generation solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 flex items-center gap-2">
-                Get Started
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 flex items-center gap-2">                Get Started
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="border border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
-                View Demo
+              <button className="border border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">                View Demo
               </button>
             </div>
           </div>
         </section>
 
-        {/* Features Section */}        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
+        {/* Features Section */}        <section className="py-20 px-4">          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
                 Key Features
@@ -89,8 +83,7 @@ const Ai3dGenerationPage: React.FC = () => {
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                          {benefit}                        </li>
-                      ))}
+                          {benefit}                        </li>                      ))}
                     </ul>
                   )}
                 </div>
@@ -98,8 +91,7 @@ const Ai3dGenerationPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Benefits Section */};
-        <section className="py-20 px-4">
+        {/* Benefits Section */};        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -108,8 +100,7 @@ const Ai3dGenerationPage: React.FC = () => {
               <p className="text-xl text-gray-300">
                 Proven results that drive business growth and efficiency
               </p>
-            </div>            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+            </div>            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">              {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <CheckCircle className="w-8 h-8 text-white" />
@@ -128,14 +119,12 @@ const Ai3dGenerationPage: React.FC = () => {
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
+                Contact our experts to discuss your requirements and get started today.              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">
                   Contact Us
                 </button>
-                <button className="border border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
-                  Learn More
+                <button className="border border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">                  Learn More
                 </button>
               </div>
             </div>

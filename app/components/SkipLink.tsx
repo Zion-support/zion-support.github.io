@@ -9,5 +9,4 @@ import React from 'react'const SkipLink: React.FC = () => {
     </a>
   )
 }
-
 export default SkipLink

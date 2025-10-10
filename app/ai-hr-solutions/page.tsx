@@ -111,5 +111,4 @@ const AiHrSolutionsPage: React.FC = () => {
     </>
   )
 }
-
 export default AiHrSolutionsPage

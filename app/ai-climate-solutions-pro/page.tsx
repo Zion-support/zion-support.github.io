@@ -3,8 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-const AiClimateSolutionsProPage: React.FC = () => {
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'const AiClimateSolutionsProPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -30,8 +29,7 @@ const AiClimateSolutionsProPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]  return (
-    <React.Fragment>
+  ]  return (    <React.Fragment>
       <Helmet>
         <title>AI Climate Solutions Pro - Zion Tech Group</title>
         <meta name="description" content="Professional climate solutions powered by advanced AI technology." />
@@ -108,10 +106,11 @@ const AiClimateSolutionsProPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )
-}
-export default AiClimateSolutionsProPage
+}export default AiClimateSolutionsProPage
   </button>
   </h2>
   </button>
   </button>
   </h1>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

@@ -3,8 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async'
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react'
 const TermsPage: React.FC = () => {
-  const lastUpdated = 'January 1, 2024'
-  const sections = [
+  const lastUpdated = 'January 1, 2024'  const sections = [
     {      title: 'Acceptance of Terms',
       icon: CheckCircle,
       content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.'
@@ -35,25 +34,11 @@ const TermsPage: React.FC = () => {
     },
     {
       title: 'Limitation of Liability',      icon: AlertTriangle,
-      content: 'In no event shall Zion Tech Group be liable for any indirect, incidental, special, consequential, or punitive damages.'
-    },
-        {
-      title: 'Governing Law',
-      icon: Scale,
-      content: 'These terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States.'
-    }
-  ]
-
-  const contactInfo = {
-    email: 'legal@ziontechgroup.com',
-    phone: '+1 (302) 464-0950',
-    address: '364 E Main St STE 1008, Middletown, DE 19709'
-  }
-
-  return (
+      content: 'In no event shall Zion Tech Group be liable for any indirect, incidental, special, consequential, or punitive damages.'  return (
     <>
       <Helmet>
         <title>Terms of Service - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Terms of Service for Zion Tech Group. Learn about our terms, conditions, and policies for using our AI and IT services." />
         <meta name="keywords" content="terms of service, legal, terms and conditions, privacy policy, user agreement" />
         <link rel="canonical" href="https://ziontechgroup.com/terms" />
@@ -223,3 +208,5 @@ const TermsPage: React.FC = () => {
 }
 
 export default TermsPage
+=======
+>>>>>>> 55f9bfb92d821ca12ee8dd7824e7a6cd258dc747

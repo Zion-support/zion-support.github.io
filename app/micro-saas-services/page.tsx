@@ -56,16 +56,14 @@ export interface MicroSaasService {
       'Real-time collaboration with AI insights',
       'Automated progress tracking and reporting',
       'Predictive analytics for project success',
-      'Integration with 50+ popular tools',
-      'Custom AI models for your industry'
+      'Integration with 50+ popular tools',      'Custom AI models for your industry'
     ],
     benefits: [,
       '40% increase in project delivery speed',
       '70% reduction in project delays',
       '85% accuracy in timeline predictions',
       '30% cost reduction through optimization',
-      '50% improvement in team productivity',
-      '90% reduction in manual reporting time'
+      '50% improvement in team productivity',      '90% reduction in manual reporting time'
     ],
     link: '/ai-project-manager',
     popular: true,
@@ -79,22 +77,19 @@ export interface MicroSaasService {
       'Natural Language Processing for task descriptions',
       'Computer Vision for progress analysis',
       'Predictive Analytics dashboard',
-      'Automated risk assessment',
-      'Smart resource optimization'
+      'Automated risk assessment',      'Smart resource optimization'
     ],
     useCases: [,
       'Software development projects',
       'Marketing campaign management',
       'Construction project oversight',
       'Event planning and execution',
-      'Product launch coordination',
-      'Research and development projects'
+      'Product launch coordination',      'Research and development projects'
     ],
     integrations: [,
       'Jira', 'Asana', 'Trello', 'Monday.com', 'Slack', 'Microsoft Teams',
       'GitHub', 'GitLab', 'Bitbucket', 'Figma', 'Adobe Creative Suite',
-      'Salesforce', 'HubSpot', 'Zapier', 'Webhook integrations'
-    ],
+      'Salesforce', 'HubSpot', 'Zapier', 'Webhook integrations'    ],
     apiAvailable: true,
     mobileApp: true,
     whiteLabel: true,
@@ -128,16 +123,14 @@ export interface MicroSaasService {
       'Team collaboration with AI insights',
       'Productivity analytics and reporting',
       'Time tracking and optimization',
-      'Cross-platform synchronization',
-      'Voice-to-task conversion'
+      'Cross-platform synchronization',      'Voice-to-task conversion'
     ],
     benefits: [,
       '60% increase in task completion rate',
       '45% reduction in missed deadlines',
       '35% improvement in focus time',
       '50% better work-life balance',
-      '40% increase in goal achievement',
-      '25% reduction in stress levels'
+      '40% increase in goal achievement',      '25% reduction in stress levels'
     ],
     link: '/ai-task-manager',
     popular: true,
@@ -152,21 +145,18 @@ export interface MicroSaasService {
       'Machine Learning for priority scoring',
       'Predictive Analytics for deadline estimation',
       'Behavioral pattern analysis',
-      'Smart notification system',
-      'Automated workflow optimization'
+      'Smart notification system',      'Automated workflow optimization'
     ],
     useCases: [,
       'Personal productivity management',
       'Team task coordination',
       'Project milestone tracking',
       'Habit formation and tracking',
-      'Goal setting and achievement',
-      'Time management optimization'
+      'Goal setting and achievement',      'Time management optimization'
     ],
     integrations: [,
       'Google Calendar', 'Outlook', 'Apple Calendar', 'Slack', 'Microsoft Teams',
-      'Notion', 'Evernote', 'Todoist', 'Any.do', 'TickTick', 'Zapier'
-    ],
+      'Notion', 'Evernote', 'Todoist', 'Any.do', 'TickTick', 'Zapier'    ],
     apiAvailable: true,
     mobileApp: true,
     whiteLabel: false,
@@ -201,16 +191,14 @@ export interface MicroSaasService {
       'Multi-language content creation',
       'Content templates and frameworks',
       'Plagiarism detection and originality scoring',
-      'Social media content scheduling',
-      'Content performance analytics'
+      'Social media content scheduling',      'Content performance analytics'
     ],
     benefits: [,
       '80% reduction in content creation time',
       '300% increase in content output',
       '65% improvement in SEO rankings',
       '90% consistency in brand voice',
-      '50% increase in engagement rates',
-      '40% cost savings on content creation'
+      '50% increase in engagement rates',      '40% cost savings on content creation'
     ],
     link: '/ai-content-writer',
     popular: true,
@@ -224,21 +212,18 @@ export interface MicroSaasService {
       'Sentiment Analysis',
       'SEO Optimization',
       'Brand Voice Cloning',
-      'Content Personalization',
-      'Multi-language Translation'
+      'Content Personalization',      'Multi-language Translation'
     ],
     useCases: [,
       'Blog post creation',
       'Social media content',
       'Email marketing campaigns',
       'Product descriptions',
-      'Ad copy creation',
-      'Website content'
+      'Ad copy creation',      'Website content'
     ],
     integrations: [,
       'WordPress', 'HubSpot', 'Mailchimp', 'Hootsuite', 'Buffer',
-      'Google Docs', 'Notion', 'Slack', 'Zapier', 'Webhook APIs'
-    ],
+      'Google Docs', 'Notion', 'Slack', 'Zapier', 'Webhook APIs'    ],
     apiAvailable: true,
     mobileApp: true,
     whiteLabel: true,
@@ -272,16 +257,14 @@ export interface MicroSaasService {
       'Automated engagement and responses',
       'Hashtag research and optimization',
       'Competitor analysis and monitoring',
-      'Social listening and sentiment analysis',
-      'ROI tracking and reporting'
+      'Social listening and sentiment analysis',      'ROI tracking and reporting'
     ],
     benefits: [,
       '70% increase in social media engagement',
       '50% reduction in social media management time',
       '85% improvement in content performance',
       '60% increase in follower growth',
-      '40% boost in website traffic from social',
-      '90% automation of routine tasks'
+      '40% boost in website traffic from social',      '90% automation of routine tasks'
     ],
     link: '/ai-social-media-manager',
     popular: true,
@@ -296,22 +279,19 @@ export interface MicroSaasService {
       'Natural Language Processing for content',
       'Sentiment Analysis for engagement',
       'Predictive Analytics for optimal timing',
-      'Automated A/B testing',
-      'Real-time trend analysis'
+      'Automated A/B testing',      'Real-time trend analysis'
     ],
     useCases: [,
       'Brand social media management',
       'Influencer marketing campaigns',
       'Customer service automation',
       'Content calendar optimization',
-      'Social media advertising',
-      'Community management'
+      'Social media advertising',      'Community management'
     ],
     integrations: [,
       'Facebook', 'Instagram', 'Twitter', 'LinkedIn', 'TikTok', 'YouTube',
       'Pinterest', 'Snapchat', 'Hootsuite', 'Buffer', 'Sprout Social',
-      'HubSpot', 'Salesforce', 'Zapier'
-    ],
+      'HubSpot', 'Salesforce', 'Zapier'    ],
     apiAvailable: true,
     mobileApp: true,
     whiteLabel: true,
@@ -346,16 +326,14 @@ export interface MicroSaasService {
       'Smart pipeline management and forecasting',
       'Customer sentiment analysis and insights',
       'Automated data entry and enrichment',
-      'Advanced reporting and analytics',
-      'Integration with 100+ business tools'
+      'Advanced reporting and analytics',      'Integration with 100+ business tools'
     ],
     benefits: [,
       '45% increase in lead conversion rates',
       '60% reduction in sales cycle time',
       '80% improvement in lead qualification accuracy',
       '50% increase in customer retention',
-      '35% boost in sales team productivity',
-      '90% automation of routine sales tasks'
+      '35% boost in sales team productivity',      '90% automation of routine sales tasks'
     ],
     link: '/ai-crm',
     popular: true,
@@ -369,22 +347,19 @@ export interface MicroSaasService {
       'Natural Language Processing for communication',
       'Predictive Analytics for sales forecasting',
       'Behavioral pattern recognition',
-      'Automated decision making',
-      'Real-time data processing'
+      'Automated decision making',      'Real-time data processing'
     ],
     useCases: [,
       'Sales pipeline management',
       'Lead generation and qualification',
       'Customer relationship management',
       'Sales forecasting and planning',
-      'Customer service automation',
-      'Marketing campaign optimization'
+      'Customer service automation',      'Marketing campaign optimization'
     ],
     integrations: [,
       'Salesforce', 'HubSpot', 'Pipedrive', 'Zoho CRM', 'Microsoft Dynamics',
       'Mailchimp', 'Constant Contact', 'Zapier', 'Webhook APIs',
-      'Google Workspace', 'Microsoft 365', 'Slack', 'Teams'
-    ],
+      'Google Workspace', 'Microsoft 365', 'Slack', 'Teams'    ],
     apiAvailable: true,
     mobileApp: true,
     whiteLabel: true,
@@ -418,16 +393,14 @@ export interface MicroSaasService {
       'Automated financial reporting',
       'Investment recommendation engine',
       'Market trend analysis and forecasting',
-      'Portfolio optimization algorithms',
-      'Regulatory compliance monitoring'
+      'Portfolio optimization algorithms',      'Regulatory compliance monitoring'
     ],
     benefits: [,
       '70% improvement in financial decision accuracy',
       '50% reduction in analysis time',
       '85% better risk prediction accuracy',
       '40% increase in investment returns',
-      '60% reduction in compliance costs',
-      '90% automation of financial reporting'
+      '60% reduction in compliance costs',      '90% automation of financial reporting'
     ],
     link: '/ai-financial-analyzer',
     popular: true,
@@ -442,22 +415,19 @@ export interface MicroSaasService {
       'Time Series Analysis for forecasting',
       'Risk Assessment algorithms',
       'Natural Language Processing for news analysis',
-      'Computer Vision for document processing',
-      'Real-time data processing'
+      'Computer Vision for document processing',      'Real-time data processing'
     ],
     useCases: [,
       'Investment portfolio management',
       'Risk assessment and mitigation',
       'Financial planning and forecasting',
       'Compliance and regulatory reporting',
-      'Market analysis and research',
-      'Trading strategy optimization'
+      'Market analysis and research',      'Trading strategy optimization'
     ],
     integrations: [,
       'Bloomberg', 'Reuters', 'Yahoo Finance', 'Alpha Vantage', 'Quandl',
       'QuickBooks', 'Xero', 'Sage', 'SAP', 'Oracle', 'Salesforce',
-      'Excel', 'Google Sheets', 'Tableau', 'Power BI'
-    ],
+      'Excel', 'Google Sheets', 'Tableau', 'Power BI'    ],
     apiAvailable: true,
     mobileApp: true,
     whiteLabel: true,
@@ -493,15 +463,13 @@ export interface MicroSaasService {
       'Knowledge base integration and learning',
       'Omnichannel support (web, mobile, social)',
       'Advanced analytics and reporting',
-      'Custom branding and white-label options'
-    ],
+      'Custom branding and white-label options'    ],
     benefits: [,
       '70% reduction in support costs',
       '85% improvement in response time',
       '90% customer satisfaction rate',
       '60% reduction in human agent workload',
-      '50% increase in first-contact resolution',
-      '24/7 availability and consistency'
+      '50% increase in first-contact resolution',      '24/7 availability and consistency'
     ],
     link: '/ai-customer-support-bot',
     popular: true,
@@ -515,22 +483,19 @@ export interface MicroSaasService {
       'Sentiment Analysis',
       'Intent Recognition',
       'Conversation Management',
-      'Knowledge Graph Integration',
-      'Multi-modal Processing'
+      'Knowledge Graph Integration',      'Multi-modal Processing'
     ],
     useCases: [,
       'E-commerce customer support',
       'SaaS product support',
       'Technical support automation',
       'FAQ automation',
-      'Lead qualification',
-      'Appointment scheduling'
+      'Lead qualification',      'Appointment scheduling'
     ],
     integrations: [,
       'Zendesk', 'Freshdesk', 'Intercom', 'Help Scout', 'LiveChat',
       'Slack', 'Microsoft Teams', 'WhatsApp', 'Facebook Messenger',
-      'Salesforce', 'HubSpot', 'Zapier', 'Webhook APIs'
-    ],
+      'Salesforce', 'HubSpot', 'Zapier', 'Webhook APIs'    ],
     apiAvailable: true,
     mobileApp: true,
     whiteLabel: true,
@@ -565,16 +530,14 @@ export interface MicroSaasService {
       'Security vulnerability assessment',
       'Code style and best practices enforcement',
       'Automated test generation',
-      'Documentation generation',
-      'Integration with popular IDEs and CI/CD'
+      'Documentation generation',      'Integration with popular IDEs and CI/CD'
     ],
     benefits: [,
       '60% reduction in code review time',
       '80% improvement in code quality',
       '70% reduction in production bugs',
       '50% increase in development speed',
-      '90% automation of routine reviews',
-      '40% improvement in team productivity'
+      '90% automation of routine reviews',      '40% improvement in team productivity'
     ],
     link: '/ai-code-generation',
     popular: true,
@@ -588,22 +551,19 @@ export interface MicroSaasService {
       'Machine Learning for pattern recognition',
       'Natural Language Processing for comments',
       'Security vulnerability detection',
-      'Performance profiling',
-      'Automated refactoring suggestions'
+      'Performance profiling',      'Automated refactoring suggestions'
     ],
     useCases: [,
       'Code quality assurance',
       'Security vulnerability detection',
       'Performance optimization',
       'Team code review automation',
-      'Onboarding new developers',
-      'Maintaining coding standards'
+      'Onboarding new developers',      'Maintaining coding standards'
     ],
     integrations: [,
       'GitHub', 'GitLab', 'Bitbucket', 'Azure DevOps', 'Jenkins',
       'VS Code', 'IntelliJ', 'Sublime Text', 'Atom', 'Vim',
-      'Slack', 'Microsoft Teams', 'Jira', 'Trello', 'Asana'
-    ],
+      'Slack', 'Microsoft Teams', 'Jira', 'Trello', 'Asana'    ],
     apiAvailable: true,
     mobileApp: false,
     whiteLabel: true,
@@ -638,16 +598,14 @@ export interface MicroSaasService {
       'Telemedicine and virtual consultations',
       'Medical record management',
       'Appointment scheduling and reminders',
-      'Health insights and recommendations',
-      'HIPAA compliant data protection'
+      'Health insights and recommendations',      'HIPAA compliant data protection'
     ],
     benefits: [,
       '60% reduction in unnecessary doctor visits',
       '80% improvement in medication adherence',
       '70% faster symptom assessment',
       '50% reduction in healthcare costs',
-      '90% improvement in patient engagement',
-      '40% increase in preventive care'
+      '90% improvement in patient engagement',      '40% increase in preventive care'
     ],
     link: '/ai-healthcare',
     popular: true,
@@ -661,22 +619,19 @@ export interface MicroSaasService {
       'Machine Learning for diagnosis assistance',
       'Computer Vision for medical imaging',
       'Predictive Analytics for health trends',
-      'Real-time monitoring',
-      'Privacy-preserving AI'
+      'Real-time monitoring',      'Privacy-preserving AI'
     ],
     useCases: [,
       'Primary care assistance',
       'Chronic disease management',
       'Mental health support',
       'Telemedicine consultations',
-      'Health monitoring',
-      'Medication management'
+      'Health monitoring',      'Medication management'
     ],
     integrations: [,
       'Epic', 'Cerner', 'Allscripts', 'NextGen', 'athenahealth',
       'Apple Health', 'Google Fit', 'Fitbit', 'Garmin', 'Samsung Health',
-      'Zoom', 'Microsoft Teams', 'WebRTC', 'Twilio'
-    ],
+      'Zoom', 'Microsoft Teams', 'WebRTC', 'Twilio'    ],
     apiAvailable: true,
     mobileApp: true,
     whiteLabel: true,
@@ -711,16 +666,14 @@ export interface MicroSaasService {
       'Customer behavior analysis and segmentation',
       'Personalized shopping experiences',
       'Automated marketing campaigns',
-      'A/B testing and optimization',
-      'Revenue analytics and reporting'
+      'A/B testing and optimization',      'Revenue analytics and reporting'
     ],
     benefits: [,
       '35% increase in conversion rates',
       '25% boost in average order value',
       '40% reduction in inventory costs',
       '60% improvement in customer retention',
-      '50% increase in revenue per visitor',
-      '80% automation of marketing tasks'
+      '50% increase in revenue per visitor',      '80% automation of marketing tasks'
     ],
     link: '/ai-ecommerce-solutions',
     popular: true,
@@ -734,22 +687,19 @@ export interface MicroSaasService {
       'Price Optimization algorithms',
       'Demand Forecasting',
       'Customer Segmentation',
-      'Behavioral Analytics',
-      'Real-time Personalization'
+      'Behavioral Analytics',      'Real-time Personalization'
     ],
     useCases: [,
       'Online retail optimization',
       'Marketplace management',
       'Subscription box services',
       'B2 B e-commerce',
-      'Mobile commerce',
-      'Cross-platform selling'
+      'Mobile commerce',      'Cross-platform selling'
     ],
     integrations: [,
       'Shopify', 'WooCommerce', 'Magento', 'BigCommerce', 'Amazon',
       'eBay', 'Etsy', 'Facebook Shop', 'Instagram Shopping',
-      'Google Shopping', 'PayPal', 'Stripe', 'Square'
-    ],
+      'Google Shopping', 'PayPal', 'Stripe', 'Square'    ],
     apiAvailable: true,
     mobileApp: true,
     whiteLabel: true,
@@ -784,16 +734,14 @@ export interface MicroSaasService {
       'Adaptive learning based on performance',
       'Multi-language support and translation',
       'Progress tracking and analytics',
-      'Interactive content creation tools',
-      'Virtual classroom and collaboration features'
+      'Interactive content creation tools',      'Virtual classroom and collaboration features'
     ],
     benefits: [,
       '50% improvement in learning outcomes',
       '40% reduction in learning time',
       '70% increase in student engagement',
       '60% reduction in teacher workload',
-      '85% improvement in assessment accuracy',
-      '90% personalization of learning experience'
+      '85% improvement in assessment accuracy',      '90% personalization of learning experience'
     ],
     link: '/ai-education',
     popular: true,
@@ -807,22 +755,19 @@ export interface MicroSaasService {
       'Natural Language Processing for content',
       'Computer Vision for assessment',
       'Predictive Analytics for performance',
-      'Personalization Engine',
-      'Real-time feedback systems'
+      'Personalization Engine',      'Real-time feedback systems'
     ],
     useCases: [,
       'K-12 education',
       'Higher education',
       'Corporate training',
       'Language learning',
-      'Professional certification',
-      'Skills development'
+      'Professional certification',      'Skills development'
     ],
     integrations: [,
       'Google Classroom', 'Microsoft Teams', 'Canvas', 'Blackboard', 'Moodle',
       'Zoom', 'WebEx', 'Slack', 'Discord', 'YouTube', 'Vimeo',
-      'Google Drive', 'OneDrive', 'Dropbox', 'Box'
-    ],
+      'Google Drive', 'OneDrive', 'Dropbox', 'Box'    ],
     apiAvailable: true,
     mobileApp: true,
     whiteLabel: true,
@@ -855,8 +800,7 @@ export const serviceCategories = [
   'E-commerce',
   'Education',
   'AI & ML',
-  'Analytics',
-  'Automation'
+  'Analytics',  'Automation'
 ]
 // Pricing tiers for comparison
 export const pricingTiers = {
@@ -880,8 +824,7 @@ export const pricingTiers = {
 }
 // Contact information
 export const contactInfo = {
-    phone: '+1 302 464 0950',  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008, Middletown, DE 19709',
+    phone: '+1 302 464 0950',  email: 'kleber@ziontechgroup.com',  address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',
   hours: '24/7 Support Available',
   }

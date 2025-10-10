@@ -45,8 +45,7 @@ const BlogPage: React.FC = () => {
       category: 'Development',
       image: '/images/blog/micro-saas.jpg'
     }
-  ]
-
+  ];
   const categories = ['All', 'AI & Technology', 'Cloud Computing', 'Security', 'Development']
 
   const filteredPosts = blogPosts.filter(post => 
@@ -148,5 +147,4 @@ const BlogPage: React.FC = () => {
     </>
   )
 }
-
 export default BlogPage

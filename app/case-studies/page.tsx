@@ -119,7 +119,6 @@ const CaseStudiesPage: React.FC = () => {
               </div>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -150,7 +149,7 @@ const CaseStudiesPage: React.FC = () => {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   )
 }
-
 export default CaseStudiesPage

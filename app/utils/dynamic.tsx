@@ -32,8 +32,7 @@ export function dynamic<T extends ComponentType<unknown>>(importFun)
       <LazyComponent {...props} /></LazyComponent>
     </Suspense>
   )
-}
-export default dynamic
+}export default dynamic
   </unknown>
   </T>
   </Suspense>

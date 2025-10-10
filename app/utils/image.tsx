@@ -33,8 +33,7 @@ export const Image: React.FC<ImageProps>= ({}
 export const Image: React.FC<ImageProps> = ({}  src,
 export const Image: React.FC<ImageProps> = ({
     ,
-  src
-  alt,
+  src  alt,
   width,
   height,
   className,
@@ -67,8 +66,7 @@ export const Image: React.FC<ImageProps> = ({
       left: 0,
   }
   const imageStyle: React.CSSProperties = {}    ...style,
-    ...(fill && {};
-      position: 'absolute',
+    ...(fill && {};      position: 'absolute',
       top: 0,
       left: 0,
       width: '100%',
@@ -95,8 +93,7 @@ export const,
   }, [onLoad])
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
   }, [onError])
-const,
-  imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
+const,  imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
     })
   }
   if (hasError) {/* TODO: Fix JSX expression */}
@@ -106,8 +103,7 @@ const,
         <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
       </div>),
     ),
-        {...props};
-      ></div>
+        {...props};      ></div>
         <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
       </div>
     ),

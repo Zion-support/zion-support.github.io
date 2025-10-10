@@ -100,5 +100,4 @@ const ContentNewsletterSignup: React.FC = () => {
     </div>
   )
 }
-
 export default ContentNewsletterSignup

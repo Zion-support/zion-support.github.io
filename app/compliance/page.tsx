@@ -24,7 +24,7 @@ const CompliancePage: React.FC = () => {
       title: 'Audit Readiness',
       description: 'Stay audit-ready with continuous compliance monitoring and reporting'
     }
-  ]
+  ];
   const benefits = [
     'Advanced compliance technology integration',
     'Real-time compliance monitoring',
@@ -98,8 +98,7 @@ const CompliancePage: React.FC = () => {
       </div>
     </div>
   )
-}
-export default CompliancePage
+}export default CompliancePage
   </button>
   </button>
   </h1>
