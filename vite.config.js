@@ -12,12 +12,12 @@ export default defineConfig({
     visualizer({
       filename: 'dist/stats.html',
       open: true,
-      gzipSize: true,)
+      gzipSize: true,
       brotliSize: true,
     }),
   ],
   root: '.',
-  build: {,
+  build: {
     outDir: 'dist',
     sourcemap: false,
     chunkSizeWarningLimit: 1000,
@@ -29,12 +29,12 @@ export default defineConfig({
     // Optimize build performance
     emptyOutDir: true,
     copyPublicDir: true,
-    rollupOptions: {,
+    rollupOptions: {
       maxParallelFileOps: 2,
-      treeshake: {,
+      treeshake: {
         moduleSideEffects: false,
       },
-      output: {,
+      output: {
         manualChunks: (id) => {
           // React and React DOM
           if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
@@ -66,20 +66,20 @@ export default defineConfig({
       },
     },
   },
-  server: {,
+  server: {
     port: 3000,
     host: true,
     open: true,
     // Enable HMR
-    hmr: {,
+    hmr: {
       overlay: true,
     },
   },
-  preview: {,
+  preview: {
     port: 4173,
     open: true,
   },
-  optimizeDeps: {,
+  optimizeDeps: {
     include: [
       'react',
       'react-dom', 
@@ -92,20 +92,20 @@ export default defineConfig({
     // Exclude problematic dependencies
     exclude: ['@vite/client', '@vite/env'],
   },
-  css: {,
+  css: {
     devSourcemap: true,
   },
-  esbuild: {,
+  esbuild: {
     drop: ['console', 'debugger'],
     target: 'es2015',
   },
   // Define global constants
-  define: {,
+  define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __VERSION__: JSON.stringify(process.env.npm_package_version),
   },
   // Resolve configuration
-  resolve: {,
+  resolve: {
     alias: {
       '@': '/src',
       '@app': '/app',

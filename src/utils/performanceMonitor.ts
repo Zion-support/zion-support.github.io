@@ -15,7 +15,7 @@ interface PerformanceMetrics {
 }
 
 class PerformanceMonitor {
-  private _metrics: PerformanceMetrics = {,
+  private _metrics: PerformanceMetrics = {
     customMetrics: {}
   };
   private observers: PerformanceObserver[] = [];
@@ -134,7 +134,7 @@ class PerformanceMonitor {
     if (typeof gtag !== 'undefined') {
       gtag('event', 'performance_metrics', {
         event_category: 'performance',
-        event_label: 'web_vitals',)
+        event_label: 'web_vitals',
         value: Math.round(this._metrics.lcp || 0),
         custom_parameter_1: this._metrics.fcp,
         custom_parameter_2: this._metrics.cls,
@@ -175,5 +175,5 @@ export const getPerformanceMetrics = () => {
 export const addCustomMetric = (name: string, value: number) => {
   performanceMonitor.addCustomMetric(name, value);
 };
-</string>
-export default performanceMonitor;</string>
+
+export default performanceMonitor;

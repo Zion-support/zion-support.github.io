@@ -216,12 +216,11 @@ const Navigation: React.FC = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Home</Link>
-            </Link>
             
             {/* AI Services Dropdown */}
             <div className="relative group">
               <button
-                onClick={toggleAiServices})
+                onClick={toggleAiServices}
                 className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
                 <Brain className="w-4 h-4" />
                 <span>AI Services</span>
@@ -233,7 +232,8 @@ const Navigation: React.FC = () => {
                     <h3 className="text-lg font-bold text-cyan-400 neon-text-enhanced">AI Services</h3>
                     <p className="text-sm text-gray-400">Advanced artificial intelligence solutions</p>
                   </div>
-                  <div className="grid grid-cols-1 gap-3 max-h-96 overflow-y-auto custom-scrollbar">{aiServices.map((service) => (</div>
+                  <div className="grid grid-cols-1 gap-3 max-h-96 overflow-y-auto custom-scrollbar">
+                    {aiServices.map((service) => (
                       <Link
                         key={service.name}
                         to={service.href}
@@ -256,12 +256,13 @@ const Navigation: React.FC = () => {
                       to="/ai-services"
                       className="flex items-center justify-center w-full py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
                       onClick={closeAllMenus}
-                    >View All AI Services</Link>
+                    >
+                      View All AI Services
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </div>
                 </div>
-              )};
+              )}
             </div>
 
             {/* IT Services Dropdown */}
@@ -279,7 +280,8 @@ const Navigation: React.FC = () => {
                     <h3 className="text-lg font-bold text-purple-400 neon-text-enhanced">IT Services</h3>
                     <p className="text-sm text-gray-400">Complete technology infrastructure solutions</p>
                   </div>
-                  <div className="grid grid-cols-1 gap-3 max-h-96 overflow-y-auto custom-scrollbar">{itServices.map((service) => (</div>
+                  <div className="grid grid-cols-1 gap-3 max-h-96 overflow-y-auto custom-scrollbar">
+                    {itServices.map((service) => (
                       <Link
                         key={service.name}
                         to={service.href}
@@ -302,12 +304,13 @@ const Navigation: React.FC = () => {
                       to="/it-services"
                       className="flex items-center justify-center w-full py-2 px-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-medium hover:from-purple-600 hover:to-pink-700 transition-all duration-300"
                       onClick={closeAllMenus}
-                    >View All IT Services</Link>
+                    >
+                      View All IT Services
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </div>
                 </div>
-              )};
+              )}
             </div>
 
             {/* Micro SAAS Dropdown */}
@@ -325,7 +328,8 @@ const Navigation: React.FC = () => {
                     <h3 className="text-lg font-bold text-green-400 neon-text-enhanced">Micro SAAS Solutions</h3>
                     <p className="text-sm text-gray-400">Ready-to-use business tools with AI and automation</p>
                   </div>
-                  <div className="grid grid-cols-1 gap-3 max-h-96 overflow-y-auto custom-scrollbar">{microSaasServices.map((service) => (</div>
+                  <div className="grid grid-cols-1 gap-3 max-h-96 overflow-y-auto custom-scrollbar">
+                    {microSaasServices.map((service) => (
                       <Link
                         key={service.name}
                         to={service.href}
@@ -348,12 +352,13 @@ const Navigation: React.FC = () => {
                       to="/micro-saas"
                       className="flex items-center justify-center w-full py-2 px-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg font-medium hover:from-green-600 hover:to-emerald-700 transition-all duration-300"
                       onClick={closeAllMenus}
-                    >View All Micro SAAS</Link>
+                    >
+                      View All Micro SAAS
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </div>
                 </div>
-              )};
+              )}
             </div>
 
             {/* Emerging Technologies Dropdown */}
@@ -371,7 +376,8 @@ const Navigation: React.FC = () => {
                     <h3 className="text-lg font-bold text-orange-400 neon-text-enhanced">Emerging Technologies</h3>
                     <p className="text-sm text-gray-400">Cutting-edge technology solutions for the future</p>
                   </div>
-                  <div className="grid grid-cols-1 gap-3 max-h-80 overflow-y-auto custom-scrollbar">{emergingTech.map((service) => (</div>
+                  <div className="grid grid-cols-1 gap-3 max-h-80 overflow-y-auto custom-scrollbar">
+                    {emergingTech.map((service) => (
                       <Link
                         key={service.name}
                         to={service.href}
@@ -394,19 +400,12 @@ const Navigation: React.FC = () => {
             </div>
 
             <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">About</Link>
-            </Link>
             <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Services</Link>
-            </Link>
             <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Pricing</Link>
-            </Link>
             <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Case Studies</Link>
-            </Link>
             <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Blog</Link>
-            </Link>
             <Link to="/tutorials" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Tutorials</Link>
-            </Link>
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Contact</Link>
-            </Link>
           </div>
 
           {/* Contact Info */}
@@ -431,7 +430,7 @@ const Navigation: React.FC = () => {
               onClick={toggleMenu}
               className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}</Menu>
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
@@ -441,7 +440,6 @@ const Navigation: React.FC = () => {
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>Home</Link>
-              </Link>
               
               {/* Mobile AI Services */}
               <div>
@@ -455,21 +453,20 @@ const Navigation: React.FC = () => {
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {aiServicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">{aiServices.slice(0, 8).map((service) => (</div>
+                  <div className="mt-2 ml-4 space-y-2">
+                    {aiServices.slice(0, 8).map((service) => (
                       <Link
                         key={service.name}
                         to={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
                       >{service.name}</Link>
-                      </Link>
                     ))}
                     <Link
                       to="/ai-services"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                       onClick={closeAllMenus}
                       >View All AI Services →</Link>
-                    </Link>
                   </div>
                 )};
               </div>
@@ -486,14 +483,14 @@ const Navigation: React.FC = () => {
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {itServicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">{itServices.map((service) => (</div>
+                  <div className="mt-2 ml-4 space-y-2">
+                    {itServices.map((service) => (
                       <Link
                         key={service.name}
                         to={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
                       >{service.name}</Link>
-                      </Link>
                     ))}
                   </div>
                 )};
@@ -511,21 +508,20 @@ const Navigation: React.FC = () => {
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {microSaasOpen && (
-                  <div className="mt-2 ml-4 space-y-2">{microSaasServices.slice(0, 8).map((service) => (</div>
+                  <div className="mt-2 ml-4 space-y-2">
+                    {microSaasServices.slice(0, 8).map((service) => (
                       <Link
                         key={service.name}
                         to={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
                       >{service.name}</Link>
-                      </Link>
                     ))}
                     <Link
                       to="/micro-saas"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                       onClick={closeAllMenus}
                       >View All Micro SAAS →</Link>
-                    </Link>
                   </div>
                 )};
               </div>
