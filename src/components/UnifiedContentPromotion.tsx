@@ -139,7 +139,7 @@ export default function UnifiedContentPromotion({
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text">
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 cyber-text neon-pulse">
               {currentSlideData.title}
             </h1>
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
@@ -193,7 +193,7 @@ export default function UnifiedContentPromotion({
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
               </div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2 neon-text">{stat.number}</div>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2 neon-glow-cyan">{stat.number}</div>
               <div className="text-gray-400 font-medium">{stat.label}</div>
             </div>
           ))}
@@ -202,7 +202,7 @@ export default function UnifiedContentPromotion({
         {/* Featured Services */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 neon-text">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 cyber-text neon-pulse">
               Featured AI Solutions
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -212,7 +212,7 @@ export default function UnifiedContentPromotion({
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {featuredServices.map((service, index) => (
-              <div key={index} className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
+              <div key={index} className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 holographic">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 
                 <div className="relative z-10">
@@ -225,7 +225,7 @@ export default function UnifiedContentPromotion({
                     </span>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors neon-glow-cyan">
                     {service.title}
                   </h3>
                   
@@ -243,7 +243,7 @@ export default function UnifiedContentPromotion({
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <div className="text-2xl font-bold text-white">{service.price}</div>
+                    <div className="text-2xl font-bold text-white neon-glow-purple">{service.price}</div>
                     <Link
                       to={service.link}
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold text-sm group-hover:translate-x-1 transition-all"
