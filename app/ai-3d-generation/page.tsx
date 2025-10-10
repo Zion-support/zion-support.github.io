@@ -1,98 +1,12 @@
-'use client';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera } from 'lucide-react';
-=======
-import React, { lazy } from 'react';
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
->>>>>>> origin/main
+'use client',
 
-<<<<<<< HEAD
-const AI3DGenerationPage: React.FC = () => {,
-  const features = [,
-    'Generate high-quality 3D models from text descriptions',
-    'Create photorealistic textures and materials',
-    'Automated animation and rigging',
-    'LOD (Level of Detail) optimization',
-    'VR/AR integration ready',
-    'Real-time rendering capabilities',
-    'Batch processing for multiple models',
-    'Custom style transfer and adaptation',
-    'Physics simulation integration',
-    'Export to all major 3D formats'
-  ];
-
-  const benefits = [
-    'Reduce 3 D content creation time by 90%',
-    'Lower production costs by 80%',
-    'Create unlimited unique 3 D assets',
-    'Accelerate game and app development',
-    'Enable rapid prototyping',
-    'Improve visual quality and consistency',
-    'Scale content production instantly',
-    'Reduce dependency on 3D artists'
-  ];
-
-  const applications = [
-=======
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Cube, Zap, Eye, Palette, Download, ArrowRight, Sparkles } from 'lucide-react';
-
-const AI3DGenerationPage: React.FC = () => {
-  const features = [
-    {
-      icon: Cube,
-      title: 'AI-Powered 3D Modeling',
-      description: 'Generate complex 3D models from text descriptions using advanced AI algorithms.',
-      benefits: ['Text-to-3D conversion', 'Real-time generation', 'High-quality output', 'Multiple formats']
-    },
-    {
-      icon: Zap,
-      title: 'Lightning Fast Processing',
-      description: 'Generate 3D models in seconds with our optimized AI processing pipeline.',
-      benefits: ['Sub-second generation', 'Batch processing', 'GPU acceleration', 'Cloud processing']
-    },
-    {
-      icon: Eye,
-      title: 'Photorealistic Rendering',
-      description: 'Create stunning, photorealistic 3D models with advanced rendering techniques.',
-      benefits: ['Ray tracing', 'Global illumination', 'Material physics', 'Lighting simulation']
-    },
-    {
-      icon: Palette,
-      title: 'Custom Materials & Textures',
-      description: 'Apply custom materials and textures to your 3D models with AI assistance.',
-      benefits: ['Smart material mapping', 'Texture generation', 'Color optimization', 'Surface details']
-    },
-    {
-      icon: Download,
-      title: 'Multiple Export Formats',
-      description: 'Export your 3D models in various industry-standard formats.',
-      benefits: ['OBJ, FBX, GLTF', 'STL for 3D printing', 'USD for pipelines', 'Custom formats']
-    },
-    {
-      icon: Sparkles,
-      title: 'Creative AI Assistance',
-      description: 'Get AI-powered suggestions and improvements for your 3D creations.',
-      benefits: ['Style suggestions', 'Optimization tips', 'Quality improvements', 'Creative variations']
-    }
-  ];
-
-  const useCases = [
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
     {
       title: 'Game Development',
       description: 'Create 3D assets, characters, and environments for games',
       icon: '🎮'
     },
-=======
 const AI3DGenerationPage: React.FC = () => {
-  const services = [
+const services = [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     {
       title: 'Architecture Visualization',
@@ -110,72 +24,25 @@ const AI3DGenerationPage: React.FC = () => {
       icon: '🖨️'
     },
     {
-<<<<<<< HEAD
-      title: 'Entertainment & Media',
-      description: 'Produce 3 D content for films and animations',
-      icon: '🎬',
-      examples: ['Character designs', 'Set pieces', 'Props and objects', 'Special effects']
-    }
-<<<<<<< HEAD
-import { CheckCircle, Star, Phone, Mail, Cube, Zap, Shield, Clock, Palette, Camera, Layers } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const AI3DGenerationPage: React.FC = () => {
-  const features = [
-    'AI-powered 3D model creation',
-    'Texture synthesis and mapping',
-    'Animation generation',
-    'LOD optimization',
-    'VR/AR integration',
-    'Real-time rendering',
-    'Custom model training',
-    'Batch processing'
-  ];
-
-<<<<<<< HEAD
-  const benefits = [
-    'Accelerate 3D content creation by 80%',
-    'Reduce production costs by 60%',
-    'Improve visual quality and consistency',
-    'Enable rapid prototyping',
-    'Support multiple file formats',
-    'Integrate with popular 3D software'
-  ];
-
-  const useCases = [
-    'Game development',
-    'Architectural visualization',
-    'Product design',
-    'Virtual reality experiences',
-    'Augmented reality apps',
-    '3D printing',
-    'Marketing materials',
-    'Educational content'
-  ];
-
-=======
-  ]
->>>>>>> origin/main
-  const pricing = [
+const pricing = [
     {
       name: 'Creator',
       price: '$199/month',
       description: 'Perfect for individual creators',
-      features: [,
+      features: [
         'Up to 100 3D models/month',
         'Basic texture generation',
         'Standard quality output',
         'Email support',
         'Basic export formats'
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: 'Studio',
       price: '$499/month',
       description: 'Ideal for small studios',
-      features: [,
+      features: [
         'Up to 500 3D models/month',
         'Advanced texture generation',
         'High quality output',
@@ -184,13 +51,13 @@ const AI3DGenerationPage: React.FC = () => {
         'Animation support',
         'Batch processing'
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise',
       price: '$1,299/month',
       description: 'For large organizations',
-      features: [,
+      features: [
         'Unlimited 3D models',
         'Premium texture generation',
         'Ultra-high quality output',
@@ -200,91 +67,60 @@ const AI3DGenerationPage: React.FC = () => {
         'White-label solution',
         'SLA guarantee'
       ],
-      popular: false;
+      popular: false,
     }
-  ];
+  ],
 
-  const technologies = [
+const technologies = [
     'NeRF (Neural Radiance Fields)', '3 D GANs', 'Point Cloud Processing',
     'Mesh Generation', 'Texture Synthesis', 'Blender API Integration',
     'Unity Integration', 'Unreal Engine Support', 'Custom 3 D Models',
     'Deep Learning', 'Computer Vision', 'Generative AI'
-  ];
+  ],
 
-  const workflow = [
+const workflow = [
     {
-      step: 1;
+      step: 1,
       title: 'Describe Your Vision',
       description: 'Input text description or upload reference images',
       icon: '✍️',
     },
     {
-      step: 2;
+      step: 2,
       title: 'AI Processing',
       description: 'Our AI generates 3D model with textures and materials',
       icon: '🤖',
     },
     {
-      step: 3;
+      step: 3,
       title: 'Review & Refine',
       description: 'Review the generated model and make adjustments',
       icon: '👁️',
     },
     {
-      step: 4;
+      step: 4,
       title: 'Export & Use',
       description: 'Download in your preferred format and integrate',
       icon: '📤',
     }
   ]
-<<<<<<< HEAD
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-=======
-      title: 'VR/AR Content',
-      description: 'Generate immersive 3D content for virtual experiences',
-      icon: '🥽'
-    },
-    {
-      title: 'Marketing & Advertising',
-      description: 'Create stunning 3D visuals for campaigns and presentations',
-      icon: '📢'
-    }
-  ];
-
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
       {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="pt-24 pb-16 px-4">
-<<<<<<< HEAD
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <Cube className="w-4 h-4 mr-2" >Revolutionary 3D Technology<h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">AI 3D Model Generation<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create stunning 3D models, characters, and environments from simple text descriptions.</p>
-=======
-        <div className="max-w-7xl mx-auto text-center"></section>
-          <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
-            <Cube className="w-4 h-4 mr-2" >Revolutionary 3D Technology<h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">AI 3D Model Generation</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create stunning 3D models, characters, and environments from simple text descriptions.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             Transform your ideas into photorealistic 3D assets in minutes, not months.</p>
-=======
             <Cube className="w-4 h-4 mr-2" />
-            Revolutionary 3D Technology;
+            Revolutionary 3D Technology,
           </div>
           <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
-            AI 3D Model Generation;
+            AI 3D Model Generation,
           </h1>,
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
             Create stunning 3D models, characters, and environments from simple text descriptions.
             Transform your ideas into photorealistic 3D assets in minutes, not months.
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </p>
-=======
             <Cube className="w-4 h-4 mr-2" />
             Revolutionary 3D Technology
           </div>
@@ -294,24 +130,13 @@ const AI3DGenerationPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-33bd
 
           {/* Stats */}
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-<<<<<<< HEAD
-              <div className="text-3xl font-bold text-cyan-400 mb-2">90%<div className="text-gray-300">Time Saved</div>
-=======
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"></div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
-              <div className="text-3xl font-bold text-cyan-400 mb-2">90%</div><div className="text-gray-300">Time Saved</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
-  const features = [
+const features = [
     'AI-Powered Generation',
     'Real-time Rendering',
     'Cloud Computing',
     'GPU Acceleration',
     'Machine Learning'
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
@@ -377,7 +202,6 @@ const AI3DGenerationPage: React.FC = () => {
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
               <div className="text-3xl font-bold text-purple-400 mb-2">5min</div><div className="text-gray-300">Generation Time</div>
-=======
               <div className="text-3xl font-bold text-cyan-400 mb-2">90%</div>
               <div className="text-gray-300">Time Saved</div>
             </div>
@@ -390,63 +214,18 @@ const AI3DGenerationPage: React.FC = () => {
               <div className="text-gray-300">Generation Time</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-33bd
             </div>
-<<<<<<< HEAD
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <div className="text-3xl font-bold text-orange-400 mb-2">24/7<div className="text-gray-300">Support</div>
-=======
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
-              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div><div className="text-gray-300">Support</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
               <div className="text-gray-300">Support</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-33bd
             </div>
           </div>
 
-<<<<<<< HEAD
-=======
-              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>,
-              <div className="text-gray-300">Support</div>,
-            </div>,
-          </div>,
-,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           {/* Contact Info */}
-<<<<<<< HEAD
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md: flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-              <div className="flex items-center space-x-2">
-=======
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div>
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8"></div>
-              <div className="flex items-center space-x-2"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Phone className="w-5 h-5" />
                 <span className="text-white font-medium"></span><span className="sr-only">Screen reader: </span>+1 302 464 0950</span>
               </div>
-<<<<<<< HEAD
-              <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5" />,
-                <span className="text-white font-medium"><span className="sr-only">Screen reader: </span>kleber@ziontechgroup.com</span>,
-              </div>,
-              <div className="flex items-center space-x-2">,
-                <MapPin className="w-5 h-5" />,
-                <span className="text-white font-medium"><span className="sr-only">Screen reader: </span>Middletown, DE</span>
-=======
-              <div className="flex items-center space-x-2"></div>
-                <Mail className="w-5 h-5" />
-                <span className="text-white font-medium"></span><span className="sr-only">Screen reader: </span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-2"></div>
-                <MapPin className="w-5 h-5" />
-                <span className="text-white font-medium"></span><span className="sr-only">Screen reader: </span>Middletown, DE</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
             </div>
-=======
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -552,61 +331,11 @@ const AI3DGenerationPage: React.FC = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-      </section>,
-    </div>,
-=======
-          {/* Features Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Key Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
-                  <div className="text-2xl mb-3">⚡</div>
-                  <h3 className="text-lg font-semibold text-white">{feature}</h3>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* CTA Section */}
-          <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Create Amazing 3D Content?</h2>
-            <p className="text-xl text-blue-100 mb-8">Let our AI-powered tools bring your ideas to life</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2"
-              >
-                <Phone className="w-5 h-5" />
-                Call (302) 464-0950
-              </a>
-              <a
-                href="mailto:info@ziontechgroup.com"
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 flex items-center justify-center gap-2"
-              >
-                <Mail className="w-5 h-5" />
-                Email Us
-              </a>
-            </div>
-          </section>
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-=======
       </section>
 
       <Footer />
     </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-14e4
-  );
-};
+  ),
+},
 
-<<<<<<< HEAD
-export default AI3DGenerationPage;
-=======
-export default AI3DGenerationPage;
->>>>>>> origin/main

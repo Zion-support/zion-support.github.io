@@ -1,2 +1,2 @@
-'use client';
-export default AIImageRecognitionPage;
+'use client',
+export default AIImageRecognitionPage,

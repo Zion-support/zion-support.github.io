@@ -1,2 +1,2 @@
-'use client';
-export default AIDesignStudioPage;
+'use client',
+export default AIDesignStudioPage,

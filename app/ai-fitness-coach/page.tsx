@@ -1,2 +1,2 @@
-'use client';
-export default AIFitnessCoachPage;
+'use client',
+export default AIFitnessCoachPage,

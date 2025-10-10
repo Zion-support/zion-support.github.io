@@ -1,2 +1,2 @@
-'use client';
-export default AIPredictiveAnalyticsPage;
+'use client',
+export default AIPredictiveAnalyticsPage,

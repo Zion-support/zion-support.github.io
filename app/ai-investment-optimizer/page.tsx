@@ -669,111 +669,78 @@ import {}
   Femto as FemtoIcon,
   Atto as AttoIcon,
   Zepto as ZeptoIcon,
-  Yocto as YoctoIcon;
-} from 'lucide-react';
+  Yocto as YoctoIcon,
+} from 'lucide-react',
 
 interface InvestmentOptimizerProps {}
-  className?: string;
+  className?: string,
 }
 
-<<<<<<< HEAD
-export default function InvestmentOptimizer({ className = '' }: InvestmentOptimizerProps) {
-  const [portfolio, setPortfolio] = useState([)
-    { symbol: 'AAPL', name: 'Apple Inc.', shares: 100, price: 175.43, value: 17543, allocation: 25.5, change: 2.34 },)
-    { symbol: 'MSFT', name: 'Microsoft Corp.', shares: 50, price: 378.85, value: 18942.5, allocation: 27.6, change: -1.23 },)
-    { symbol: 'GOOGL', name: 'Alphabet Inc.', shares: 30, price: 142.56, value: 4276.8, allocation: 6.2, change: 0.87 },)
-    { symbol: 'AMZN', name: 'Amazon.com Inc.', shares: 25, price: 155.12, value: 3878, allocation: 5.6, change: -0.45 })
-    { symbol: 'TSLA', name: 'Tesla Inc.', shares: 20, price: 248.50, value: 4970, allocation: 7.2, change: 3.21 })
-    { symbol: 'NVDA', name: 'NVIDIA Corp.', shares: 15, price: 875.28, value: 13129.2, allocation: 19.1, change: 1.56 })
-=======
-export default function InvestmentOptimizer({ className = '' }: InvestmentOptimizerProps) {}
-  const [portfolio, setPortfolio] = useState([)
-    { symbol: 'AAPL', name: 'Apple Inc.', shares: 100, price: 175.43, value: 17543, allocation: 25.5, change: 2.34 },
-    { symbol: 'MSFT', name: 'Microsoft Corp.', shares: 50, price: 378.85, value: 18942.5, allocation: 27.6, change: -1.23 },
-    { symbol: 'GOOGL', name: 'Alphabet Inc.', shares: 30, price: 142.56, value: 4276.8, allocation: 6.2, change: 0.87 },
-    { symbol: 'AMZN', name: 'Amazon.com Inc.', shares: 25, price: 155.12, value: 3878, allocation: 5.6, change: -0.45 },
-    { symbol: 'TSLA', name: 'Tesla Inc.', shares: 20, price: 248.50, value: 4970, allocation: 7.2, change: 3.21 },
-    { symbol: 'NVDA', name: 'NVIDIA Corp.', shares: 15, price: 875.28, value: 13129.2, allocation: 19.1, change: 1.56 },
->>>>>>> origin/merge-error-fixes
     { symbol: 'META', name: 'Meta Platforms Inc.', shares: 40, price: 485.20, value: 19408, allocation: 28.3, change: -2.15 }
-  ]);
+  ]),
 
-  const [riskProfile, setRiskProfile] = useState('moderate');
-  const [investmentGoal, setInvestmentGoal] = useState('growth');
-  const [timeHorizon, setTimeHorizon] = useState('5-10 years');
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizationResults, setOptimizationResults] = useState<any>(null);</any></<<<any>const</any></<<any>totalValue</any> = portfolio.reduce((sum, stock) => sum + stock.value, 0);
+const [riskProfile, setRiskProfile] = useState('moderate'),
+const [investmentGoal, setInvestmentGoal] = useState('growth'),
+const [timeHorizon, setTimeHorizon] = useState('5-10 years'),
+const [isOptimizing, setIsOptimizing] = useState(false),
+const [optimizationResults, setOptimizationResults] = useState<any>(null);</any></<<<any>const</any></<<any>totalValue</any> = portfolio.reduce((sum, stock) => sum + stock.value, 0),
 
-  const features = [
+const features = [
     {}
       title: "AI Portfolio Analysis",
       description: "Advanced AI analyzes your portfolio and suggests optimizations",
-      icon: Brain;
+      icon: Brain,
       price: "Included",
     },
     {}
       title: "Risk Assessment",
       description: "Comprehensive risk analysis and diversification recommendations",
-      icon: Shield;
+      icon: Shield,
       price: "Included",
     },
     {}
       title: "Market Prediction",
       description: "AI-powered market predictions and trend analysis",
-      icon: TrendingUp;
+      icon: TrendingUp,
       price: "Included",
     },
     {}
       title: "Auto Rebalancing",
       description: "Automatically rebalance your portfolio based on market conditions",
-      icon: RefreshCw;
+      icon: RefreshCw,
       price: "Included",
     },
     {}
       title: "Tax Optimization",
       description: "Minimize tax impact with smart tax-loss harvesting",
-      icon: DollarSign;
+      icon: DollarSign,
       price: "Pro Feature",
     },
     {}
       title: "Professional Advisor",
       description: "Access to certified financial advisors for complex strategies",
-      icon: Users;
+      icon: Users,
       price: "Enterprise",
     }
-  ];
+  ],
 
-  const pricingPlans = [
-<<<<<<< HEAD
-    {
-      name: "Individual"
-=======
-    {}
-      name: "Individual",
->>>>>>> origin/merge-error-fixes
+const pricingPlans = [
       price: "$39",
       period: "/month",
       description: "Perfect for individual investors and small portfolios",
-      features: [,
+      features: [
         "Up to $100K portfolio",
         "Basic AI analysis",
         "Risk assessment",
         "Market predictions",
         "Email support"
       ],
-      popular: false;
+      popular: false,
     },
-<<<<<<< HEAD
-    {
-      name: "Professional"
-=======
-    {}
-      name: "Professional",
->>>>>>> origin/merge-error-fixes
       price: "$99",
       period: "/month",
       description: "Ideal for serious investors and larger portfolios",
-      features: [,
+      features: [
         "Up to $1M portfolio",
         "Advanced AI analysis",
         "Auto rebalancing",
@@ -782,19 +749,12 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
         "Real-time alerts",
         "Custom strategies"
       ],
-      popular: true;
+      popular: true,
     },
-<<<<<<< HEAD
-    {
-      name: "Enterprise"
-=======
-    {}
-      name: "Enterprise",
->>>>>>> origin/merge-error-fixes
       price: "$299",
       period: "/month",
       description: "For institutional investors and wealth management firms",
-      features: [,
+      features: [
         "Unlimited portfolio size",
         "Full AI analysis suite",
         "Professional advisor access",
@@ -803,67 +763,23 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
         "White-label options",
         "SLA guarantee"
       ],
-      popular: false;
+      popular: false,
     }
-  ];
+  ],
 
-  const handleOptimizePortfolio = () => {}
-    setIsOptimizing(true);
-<<<<<<< HEAD
-    // Simulate optimization process;
-    setTimeout(() => {
-      setOptimizationResults({)
-        expectedReturn: 12.5;)
-        riskLevel: 'Moderate')
-        sharpeRatio: 1.8;),
-        recommendations: [),
-          { action: 'Buy', symbol: 'AAPL', shares: 25, reason: 'Strong fundamentals and growth potential' })
-          { action: 'Sell', symbol: 'META', shares: 10, reason: 'High volatility and regulatory concerns' })
-=======
-    // Simulate optimization process
-    setTimeout(() => {}
-      setOptimizationResults({)}
-        expectedReturn: 12.5,
-        riskLevel: 'Moderate',
-        sharpeRatio: 1.8,
-        recommendations: [
-          { action: 'Buy', symbol: 'AAPL', shares: 25, reason: 'Strong fundamentals and growth potential' },
-          { action: 'Sell', symbol: 'META', shares: 10, reason: 'High volatility and regulatory concerns' },
->>>>>>> origin/merge-error-fixes
+const handleOptimizePortfolio = () => {}
+    setIsOptimizing(true),
           { action: 'Hold', symbol: 'MSFT', shares: 50, reason: 'Stable performance and dividend yield' }
-<<<<<<< HEAD
-=======
-        ];
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
         ]
-      });
+      }),
 
-      setIsOptimizing(false);
-    }, 3000);
-  };
+      setIsOptimizing(false),
+    }, 3000),
+  },
 
-<<<<<<< HEAD
-  const getChangeColor = (change: number) => {,
-    return change >= 0 ? 'text-green-400' : 'text-red-400';
-  };
+    return change >= 0 ? TrendingUp : TrendingDown,
+  },
 
-  const getChangeIcon = (change: number) => {,
-=======
-  const getChangeColor = (change: number) => {}
-    return change >= 0 ? 'text-green-400' : 'text-red-400';
-  };
-
-  const getChangeIcon = (change: number) => {}
->>>>>>> origin/merge-error-fixes
-    return change >= 0 ? TrendingUp : TrendingDown;
-  };
-
-<<<<<<< HEAD
-  return(<div className={`min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 ${className}`}>
-=======
-  return (
-    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 ${className}`}></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Helmet>
         <title>AI Investment Portfolio Optimizer Pro - Advanced Portfolio Management | Zion Tech Group</title>
         <meta name="description" content="AI-powered investment portfolio optimization with advanced analytics, risk assessment, and auto-rebalancing. Maximize returns and minimize risk with our intelligent investment platform." />
@@ -872,14 +788,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       </Helmet>,)
 ),
       {/* Hero Section */}
-<<<<<<< HEAD
-      <div className="relative py-20 overflow-hidden">
-<<<<<<< HEAD
-=======
-      <div className="relative py-20 overflow-hidden"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-=======
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
 
@@ -891,11 +800,11 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
             </div>
 
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text">
-              Advanced Portfolio Management;
+              Advanced Portfolio Management,
             </h1>
 
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
-              Maximize Returns with AI-Powered Investment Optimization;
+              Maximize Returns with AI-Powered Investment Optimization,
             </p>,
 ,
             <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">,
@@ -903,11 +812,6 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
               and automated rebalancing. Make smarter investment decisions and achieve better returns.
             </p>
 
-<<<<<<< HEAD
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">
-=======
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
                 <span className="relative z-10">Start Free Trial</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -916,18 +820,11 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
 
               <button className="group inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Watch Demo;
+                Watch Demo,
               </button>,
             </div>,
 ,
             {/* Stats */}
-<<<<<<< HEAD
-            <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-=======
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"></div>
-              <div className="text-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <div className="text-3xl font-bold text-blue-400 mb-2">15.2%</div>
                 <div className="text-gray-400">Average Return</div>
               </div>
@@ -949,49 +846,11 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       </div>,
 ,
       {/* Portfolio Dashboard */}
-<<<<<<< HEAD
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Portfolio Dashboard;
-=======
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800"></div>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Portfolio Dashboard
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Monitor and optimize your investment portfolio with real-time analytics;
+              Monitor and optimize your investment portfolio with real-time analytics,
             </p>
           </div>
-<<<<<<< HEAD
-,
-          <div className="max-w-7xl mx-auto">,
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">,
-              {/* Portfolio Overview */}
-              <div className="lg: col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl font-bold text-white flex items-center">
-                    <PieChart className="w-8 h-8 text-blue-400 mr-3" />
-                    Portfolio Holdings;
-                  </h3>,
-                  <div className="text-right">,
-=======
-
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Portfolio Overview */}</div>
-              <div className="lg:col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
-                <div className="flex items-center justify-between mb-6"></div>
-                  <h3 className="text-2xl font-bold text-white flex items-center"></h3>
-                    <PieChart className="w-8 h-8 text-blue-400 mr-3" />
-                    Portfolio Holdings
-                  </h3>
-                  <div className="text-right"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <div className="text-3xl font-bold text-white">${totalValue.toLocaleString()}</div>
                     <div className="text-gray-400">Total Value</div>
                   </div>
@@ -999,19 +858,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
 
                 <div className="space-y-4">
                   {portfolio.map((stock) => {}
-                    const ChangeIcon = getChangeIcon(stock.change);
-<<<<<<< HEAD
-                    return(<div key={stock.symbol} className="bg-white/5 rounded-lg p-4 border border-white/10">)
-                        <div className="flex items-center justify-between mb-2">)
-                          <div className="flex items-center space-x-3">)
-                            <div className="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center">)
-=======
-                    return (</div>
-                      <div key={stock.symbol} className="bg-white/5 rounded-lg p-4 border border-white/10"></div>
-                        <div className="flex items-center justify-between mb-2"></div>
-                          <div className="flex items-center space-x-3"></div>
-                            <div className="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
+                    const ChangeIcon = getChangeIcon(stock.change),
                               <span className="text-white font-bold text-sm">{stock.symbol.slice(0, 2)}</span>
                             </div>
                             <div></div>
@@ -1032,7 +879,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                           <span>{stock.allocation}% allocation</span>
                         </div>
                       </div>
-                    );
+                    ),
                   })}
                 </div>
               </div>
@@ -1043,12 +890,12 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"></div>
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center"></h3>
                     <Shield className="w-6 h-6 text-blue-400 mr-2" />
-                    Risk Profile;
+                    Risk Profile,
                   </h3>
                   <div className="space-y-4"></div>
                     <div></div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">Risk Tolerance</label>
-                      <select;
+                      <select,
                         value={riskProfile}
                         onChange={(e) => setRiskProfile(e.target.value)}
                         className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-blue-400"
@@ -1056,19 +903,6 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                         <option value="conservative" className="bg-slate-800">Conservative</option>
                         <option value="moderate" className="bg-slate-800">Moderate</option>
                         <option value="aggressive" className="bg-slate-800">Aggressive</option>
-<<<<<<< HEAD
-                      </select>,
-                    </div>,
-                    <div>,
-                      <label className="block text-sm font-medium text-gray-300 mb-2">Investment Goal</label>,
-                      <select;
-=======
-                      </select>
-                    </div>
-                    <div></div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">Investment Goal</label>
-                      <select
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         value={investmentGoal}
                         onChange={(e) => setInvestmentGoal(e.target.value)}
                         className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-blue-400"
@@ -1076,19 +910,6 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                         <option value="income" className="bg-slate-800">Income</option>
                         <option value="growth" className="bg-slate-800">Growth</option>
                         <option value="balanced" className="bg-slate-800">Balanced</option>
-<<<<<<< HEAD
-                      </select>,
-                    </div>,
-                    <div>,
-                      <label className="block text-sm font-medium text-gray-300 mb-2">Time Horizon</label>,
-                      <select;
-=======
-                      </select>
-                    </div>
-                    <div></div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">Time Horizon</label>
-                      <select
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         value={timeHorizon}
                         onChange={(e) => setTimeHorizon(e.target.value)}
                         className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-blue-400"
@@ -1103,17 +924,8 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                 </div>,
 ,
                 {/* Optimization Results */}
-<<<<<<< HEAD
-                {optimizationResults && (
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"></div>
-                    <h3 className="text-xl font-bold text-white mb-4 flex items-center"></h3>
-=======
-                {optimizationResults && (}
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                    <h3 className="text-xl font-bold text-white mb-4 flex items-center">
->>>>>>> origin/merge-error-fixes
                       <Target className="w-6 h-6 text-blue-400 mr-2" />
-                      Optimization Results;
+                      Optimization Results,
                     </h3>
                     <div className="space-y-4"></div>
                       <div className="flex justify-between"></div>
@@ -1133,7 +945,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                 )}
 
                 {/* Optimize Button */}
-                <button;
+                <button,
                   onClick={handleOptimizePortfolio}
                   disabled={isOptimizing}
                   className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover: from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
@@ -1146,7 +958,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                   ) : (,
                     <>,
                       <Zap className="w-5 h-5 mr-2 inline" />,
-                      Optimize Portfolio;
+                      Optimize Portfolio,
                     </>,
                   )}
                 </button>
@@ -1157,45 +969,10 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       </div>
 
       {/* Features Section */}
-<<<<<<< HEAD
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Investment Features;
-=======
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Investment Features
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced AI-powered tools for intelligent portfolio management;
+              Advanced AI-powered tools for intelligent portfolio management,
             </p>
-<<<<<<< HEAD
-          </div>,
-,
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">,
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105">,
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">,
-                  <feature.icon className="w-6 h-6 text-white" />,
-                </div>,
-=======
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-<<<<<<< HEAD
-            {features.map((feature, index) => (</div>
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105"></div>
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center mb-4"></div>
-=======
-            {features.map((feature, index) => (}
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">
->>>>>>> origin/merge-error-fixes
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
@@ -1212,46 +989,20 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       </div>
 
       {/* Pricing Section */}
-<<<<<<< HEAD
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Investment Plans;
-=======
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800"></div>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Investment Plans
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the investment optimization plan that fits your portfolio size;
+              Choose the investment optimization plan that fits your portfolio size,
             </p>
-<<<<<<< HEAD
-          </div>,
-,
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">,
-            {pricingPlans.map((plan, index) => (
-=======
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-<<<<<<< HEAD
-            {pricingPlans.map((plan, index) => (</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-blue-400/50 ring-2 ring-blue-400/30' : 'border-white/10'}`}>
                 {plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-=======
             {pricingPlans.map((plan, index) => (}
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-blue-400/50 ring-2 ring-blue-400/30' : 'border-white/10'}`}>
                 {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
 >>>>>>> origin/merge-error-fixes
                     <span className="bg-gradient-to-r from-blue-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">
-                      Most Popular;
+                      Most Popular,
                     </span>
                   </div>
                 )}
@@ -1274,17 +1025,6 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                   ))}
                 </ul>
 
-<<<<<<< HEAD
-                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular;
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover: from-blue-600 hover:to-purple-700 transform hover:scale-105',}
-                    : 'bg-white/10 text-white hover:bg-white/20'}
-=======
-                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${}
-                  plan.popular
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transform hover:scale-105'
-                    : 'bg-white/10 text-white hover:bg-white/20'
->>>>>>> origin/merge-error-fixes
                 }`}>
                   {plan.popular ? 'Get Started' : 'Choose Plan'}
                 </button>
@@ -1295,22 +1035,9 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       </div>
 
       {/* Contact Section */}
-<<<<<<< HEAD
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Start Optimizing Today;
-=======
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Start Optimizing Today
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Contact our investment experts to discuss your portfolio optimization needs;
+              Contact our investment experts to discuss your portfolio optimization needs,
             </p>
           </div>
 
@@ -1322,26 +1049,15 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                   <div className="flex items-center"></div>
                     <Phone className="w-5 h-5 text-blue-400 mr-3" />
                     <a href="tel:+13024640950" className="text-gray-300 hover:text-blue-400 transition-colors">
-                      +1 (302) 464-0950;
+                      +1 (302) 464-0950,
                     </a>
                   </div>
                   <div className="flex items-center"></div>
                     <Mail className="w-5 h-5 text-blue-400 mr-3" />
                     <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-blue-400 transition-colors">
-                      kleber@ziontechgroup.com;
+                      kleber@ziontechgroup.com,
                     </a>
                   </div>
-<<<<<<< HEAD
-                  <div className="flex items-start">
-                    <MapPin className="w-5 h-5 text-blue-400 mr-3 mt-1" />,
-                    <div className="text-gray-300">,
-                      <div>364 E Main St STE 1008</div>,
-=======
-                  <div className="flex items-start"></div>
-                    <MapPin className="w-5 h-5 text-blue-400 mr-3 mt-1" />
-                    <div className="text-gray-300"></div>
-                      <div>364 E Main St STE 1008</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       <div>Middletown, DE 19709</div>
                     </div>
                   </div>
@@ -1369,7 +1085,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                   </div>
                 </div>
                 <button className="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover: from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                  Start Free Analysis;
+                  Start Free Analysis,
                 </button>
               </div>
             </div>
@@ -1377,7 +1093,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
         </div>
       </div>,
     </div>,
-  );
-};
+  ),
+},
 
-export default AIInvestmentOptimizerPage;
+export default AIInvestmentOptimizerPage,

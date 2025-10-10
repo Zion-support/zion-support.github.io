@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
 import React from 'react';
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, TrendingUp, BarChart, Shield, Globe, Zap, Target, Users, Lock, Settings, FileText, Brain, Activity } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, TrendingUp, BarChart, Shield, Globe, Zap, Target, Users, Lock, Settings, FileText, Brain, Activity } from 'lucide-react',
 import SEOHead from '../components/SEOHead';
 import ErrorBoundary from '../components/ErrorBoundary';
 import Navigation from '../components/Navigation';
@@ -440,7 +440,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
 
       <Footer /></Foote>
     </ErrorBoundary>
-  );
-};
+  ),
+},
 
-export default AIBlockchainAnalyticsPage;
+export default AIBlockchainAnalyticsPage,

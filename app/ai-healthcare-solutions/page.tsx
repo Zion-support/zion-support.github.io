@@ -1,2 +1,2 @@
-'use client';
-export default AIHealthcareSolutionsPage;
+'use client',
+export default AIHealthcareSolutionsPage,

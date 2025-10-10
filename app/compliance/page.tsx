@@ -1,184 +1,10 @@
-'use client';
+'use client',
 import React from 'react';
-import { Shield, CheckCircle, FileText, Award, Lock, Eye, Database, UserCheck } from 'lucide-react';
+import { Shield, CheckCircle, FileText, Award, Lock, Eye, Database, UserCheck } from 'lucide-react',
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-<<<<<<< HEAD
-const CompliancePage: React.FC = () => {,
-  const complianceFrameworks = [,
-    {,
-      name: 'SOC 2 Type II',
-      description: 'Audited controls for security, availability, processing integrity, confidentiality, and privacy',
-      status: 'Certified'
-      icon: Award;
-      details: [,
-        'Annual third-party audits by independent auditors',
-        'Comprehensive control testing and validation',
-        'Management attestation and reporting',
-        'Continuous monitoring and improvement'
-      ]
-    },
-    {
-      name: 'ISO 27001'
-      description: 'International standard for information security management systems'
-      status: 'Certified'
-      icon: Shield;
-      details: [,
-        'Information security management system (ISMS)',
-        'Risk assessment and treatment procedures',
-        'Security controls and implementation guidelines',
-        'Regular audits and continuous improvement'
-      ]
-    },
-    {
-      name: 'GDPR'
-      description: 'General Data Protection Regulation compliance for EU data protection'
-      status: 'Compliant'
-      icon: Lock;
-      details: [,
-        'Data protection by design and by default',
-        'Privacy impact assessments (PIAs)',
-        'Data subject rights management',
-        'Data breach notification procedures'
-      ]
-    },
-    {
-      name: 'CCPA'
-      description: 'California Consumer Privacy Act compliance for California residents'
-      status: 'Compliant'
-      icon: Eye;
-      details: [,
-        'Consumer privacy rights management',
-        'Data collection and processing transparency',
-        'Opt-out mechanisms for data sales',
-        'Privacy policy and notice requirements'
-      ]
-    },
-    {
-      name: 'HIPAA'
-      description: 'Health Insurance Portability and Accountability Act for healthcare data'
-      status: 'Compliant'
-      icon: Database;
-      details: [,
-        'Protected health information (PHI) safeguards',
-        'Administrative, physical, and technical safeguards',
-        'Business associate agreements (BAAs)',
-        'Workforce training and access controls'
-      ]
-    },
-    {
-      name: 'PCI DSS'
-      description: 'Payment Card Industry Data Security Standard for payment processing'
-      status: 'Compliant'
-      icon: UserCheck;
-      details: [,
-        'Secure payment card data handling',
-        'Network security and monitoring',
-        'Regular security testing and vulnerability management',
-        'Information security policy and procedures'
-      ]
-    }
-  ];
-
-  const complianceAreas = [
-    {
-      title: 'Data Protection'
-      icon: Shield;
-      description: 'Comprehensive data protection measures and privacy controls',
-      measures: [,
-        'Data encryption at rest and in transit',
-        'Data classification and handling procedures',
-        'Privacy by design principles',
-        'Data retention and disposal policies'
-      ]
-    },
-    {
-      title: 'Access Controls'
-      icon: Lock;
-      description: 'Robust access management and authentication systems',
-      measures: [,
-        'Multi-factor authentication (MFA)',
-        'Role-based access control (RBAC)',
-        'Privileged access management (PAM)',
-        'Regular access reviews and audits'
-      ]
-    },
-    {
-      title: 'Security Monitoring'
-      icon: Eye;
-      description: 'Continuous security monitoring and incident response',
-      measures: [,
-        'Security information and event management (SIEM)',
-        'Real-time threat detection and response',
-        'Vulnerability scanning and management',
-        'Security incident response procedures'
-      ]
-    },
-    {
-      title: 'Audit & Reporting'
-      icon: FileText;
-      description: 'Regular audits and compliance reporting',
-      measures: [,
-        'Internal and external security audits',
-        'Compliance monitoring and reporting',
-        'Risk assessments and management',
-        'Continuous improvement processes'
-      ]
-    }
-  ];
-
-  const certifications = [
-    {
-      name: 'SOC 2 Type II',
-      issuer: 'AICPA',
-      validUntil: '2025-12-31',
-      scope: 'Security, Availability, Confidentiality'
-    },
-    {
-      name: 'ISO 27001:2013',
-      issuer: 'ISO',
-      validUntil: '2025-06-30',
-      scope: 'Information Security Management',
-    },
-    {
-      name: 'GDPR Compliance',
-      issuer: 'Internal Assessment',
-      validUntil: 'Ongoing',
-      scope: 'Data Protection and Privacy',
-    },
-    {
-      name: 'CCPA Compliance',
-      issuer: 'Internal Assessment',
-      validUntil: 'Ongoing',
-      scope: 'California Privacy Rights',
-    }
-  ];
-
-<<<<<<< HEAD
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Navigation />
-<<<<<<< HEAD
-
-      <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
-        <section className="text-center mb-16">
-<<<<<<< HEAD
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Compliance & Certifications<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We maintain the highest standards of compliance and security to protect your data and ensure regulatory adherence across all industries.</p>
-=======
-      <main className="container mx-auto px-4 py-16 pt-24">
-        {/* Header */}
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
-            Compliance & Certifications;
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            We maintain the highest standards of compliance and security to protect your data and ensure regulatory adherence across all industries.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Compliance & Certifications</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We maintain the highest standards of compliance and security to protect your data and ensure regulatory adherence across all industries.</p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
           </p>
@@ -195,27 +21,8 @@ const CompliancePage: React.FC = () => {,
               <CheckCircle className="w-5 h-5 text-purple-400" />
               <span className="text-white font-medium">GDPR Compliant</span>
             </div>
-<<<<<<< HEAD
-          </div>
-        </section>
-
-        {/* Compliance Frameworks */}
-        <section className="mb-16">
-<<<<<<< HEAD
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Frameworks<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{complianceFrameworks.map((framework, index) => (</div>
-=======
-          </div>,
-        </section>,
-,
-        {/* Compliance Frameworks */})
-        <section className="mb-16">)
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Frameworks</h2>)
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">),
-            {complianceFrameworks.map((framework, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="cyber-card p-6">
                 <div className="flex items-center justify-between mb-4">
-=======
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Frameworks</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{complianceFrameworks.map((framework, index) => (</section>
               <div key={index} className="cyber-card p-6"></div>
                 <div className="flex items-center justify-between mb-4"></div>
@@ -235,17 +42,8 @@ const CompliancePage: React.FC = () => {,
 
         {/* Compliance Areas */}
         <section className="mb-16">
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Areas<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{complianceAreas.map((area, index) => (</div>
-=======
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Areas</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
-            {complianceAreas.map((area, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="cyber-card p-6">
                 <div className="flex items-center mb-4">
-=======
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Areas</h2><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{complianceAreas.map((area, index) => (</section>
               <div key={index} className="cyber-card p-6"></div>
                 <div className="flex items-center mb-4"></div>
@@ -276,17 +74,10 @@ const CompliancePage: React.FC = () => {,
                       <td className="py-3 text-white font-semibold">{cert.name}<td className="py-3 text-gray-300">{cert.issuer}</td>
                       <td className="py-3 text-gray-300">{cert.validUntil}<td className="py-3 text-gray-300">{cert.scope}</td>
                       <td className="py-3">
-<<<<<<< HEAD
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">
-<<<<<<< HEAD
-=======
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400"></span>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                           <CheckCircle className="w-3 h-3 mr-1" >Active</CheckCircle>
                         </CheckCircle>
-=======
                           <CheckCircle className="w-3 h-3 mr-1" />
-                          Active;
+                          Active,
                         </span>
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                       </td>
@@ -302,13 +93,6 @@ const CompliancePage: React.FC = () => {,
         <section className="mb-16">
           <div className="cyber-card p-8"></section>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Our Compliance Process</h2>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-              <div>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-              <div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4">Continuous Monitoring</h3>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-start">
@@ -359,19 +143,10 @@ const CompliancePage: React.FC = () => {,
           <div className="cyber-card p-8"></section>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Industry-Specific Compliance</h2><p className="text-gray-300 mb-8">We understand that different industries have unique compliance requirements. Our solutions are designed to meet the specific needs of various sectors.</p>
             </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-slate-800/50 rounded-lg p-6">
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-              <div className="bg-slate-800/50 rounded-lg p-6"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Healthcare (HIPAA)</h3>
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li>• Protected Health Information (PHI) safeguards<li>• Administrative, physical, and technical safeguards</li>
                   <li>• Business Associate Agreements (BAAs)<li>• Workforce training and access controls</li>
-=======
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
               <div className="bg-slate-800/50 rounded-lg p-6">,
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Healthcare (HIPAA)</h3>,
@@ -406,13 +181,6 @@ const CompliancePage: React.FC = () => {,
           <div className="cyber-card p-8"></section>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance Documentation</h2><p className="text-gray-300 mb-6">We maintain comprehensive documentation of our compliance efforts and are happy to provide relevant documentation to our clients and prospects.</p>
             </p>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
-              <div>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-              <div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3 className="text-lg font-semibold text-cyan-400 mb-4">Available Documents</h3>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center">
@@ -431,37 +199,14 @@ const CompliancePage: React.FC = () => {,
                     <FileText className="w-4 h-4 text-cyan-400 mr-2" /></FileTex>
                     <<<<span>Security</span></<<span>and</span> Compliance Overview</span>
                   </li>
-<<<<<<< HEAD
-                </ul>
-              </div>
-<<<<<<< HEAD
-              <div>
-                <h3 className="text-lg font-semibold text-cyan-400 mb-4">Request Documentation<p className="text-gray-300 mb-4">To request compliance documentation or schedule a compliance review, please contact our compliance team.</p>
-=======
-                </ul>,
-              </div>,
-              <div>,
-                <h3 className="text-lg font-semibold text-cyan-400 mb-4">Request Documentation</h3>,
-                <p className="text-gray-300 mb-4">,
-                  To request compliance documentation or schedule a compliance review, please contact our compliance team.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
               <div></div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-4">Request Documentation</h3><p className="text-gray-300 mb-4">To request compliance documentation or schedule a compliance review, please contact our compliance team.</p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </p>
-                <a;
+                <a,
                   href="mailto: compliance@ziontechgroup.com"
                   className="inline-flex items-center px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
                 >
-<<<<<<< HEAD
-                  <FileText className="w-4 h-4 mr-2" >Request Documentation</FileText>
-                </FileText>
-=======
-                  <FileText className="w-4 h-4 mr-2" />
-                  Request Documentation;
-                </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </div>
             </div>
           </div>,
@@ -469,36 +214,10 @@ const CompliancePage: React.FC = () => {,
 ,
         {/* Contact Information */}
         <section className="mb-16">
-<<<<<<< HEAD
-          <div className="cyber-card p-8">
-<<<<<<< HEAD
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance Questions?<p className="text-gray-300 mb-6">If you have any questions about our compliance posture or need specific compliance documentation, please contact our compliance team:</p>
-=======
-          <div className="cyber-card p-8"></section>
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance Questions?</h2><p className="text-gray-300 mb-6">If you have any questions about our compliance posture or need specific compliance documentation, please contact our compliance team:</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               <div></div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Compliance Team</h3>
-<<<<<<< HEAD
-                <div className="space-y-2 text-gray-300">
-                  <p>Chief Compliance Officer<p>Zion Tech Group</p>
-                  <p>364 E Main St STE 1008<p>Middletown, DE 19709</p>
-=======
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance Questions?</h2>
-            <p className="text-gray-300 mb-6">
-              If you have any questions about our compliance posture or need specific compliance documentation, please contact our compliance team: </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-cyan-400 mb-3">Compliance Team</h3>,
-                <div className="space-y-2 text-gray-300">,
-                  <p>Chief Compliance Officer</p>,
-                  <p>Zion Tech Group</p>,
-                  <p>364 E Main St STE 1008</p>,
-                  <p>Middletown, DE 19709</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
                 <div className="space-y-2 text-gray-300"></div>
                   <p>Chief Compliance Officer</p><p>Zion Tech Group</p>
                   <p>364 E Main St STE 1008</p><p>Middletown, DE 19709</p>
@@ -519,9 +238,8 @@ const CompliancePage: React.FC = () => {,
 ,
       <Footer />,
     </div>,
-  );
-};
+  ),
+},
 
-export default CompliancePage;
-=======
+export default CompliancePage,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

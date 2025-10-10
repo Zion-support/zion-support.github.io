@@ -1,105 +1,24 @@
-'use client';
+'use client',
 /**
- * Environment Variables Validator;
- * Ensures all required environment variables are present and valid;
+ * Environment Variables Validator,
+ * Ensures all required environment variables are present and valid,
  */
-<<<<<<< HEAD
-export interface EnvConfig {}
-  NODE_ENV: 'development' | 'production' | 'test';
-  NEXT_PUBLIC_API_URL?: string;
-  NEXT_PUBLIC_GA_ID?: string;
-  NEXT_PUBLIC_SITE_URL?: string;
-}
-<<<<<<< HEAD
-class EnvValidator {
-  private errors: string[] = [],
-  private warnings: string[] = [],
-  /**,
-   * Validate all environment variables;
-   */,
-  validate(): { isValid: boolean; errors: string[]; warnings: string[] } {
-=======
-class EnvValidator {}
-  private errors: string[] = []
-  private warnings: string[] = []
-  /**
-   * Validate all environment variables
-   */
-  validate(): { isValid: boolean; errors: string[]; warnings: string[] } {}
->>>>>>> origin/merge-error-fixes
     this.errors = []
     this.warnings = []
-    // Validate NODE_ENV;
+    // Validate NODE_ENV,
     this.validateNodeEnv()
-    // Validate optional but recommended variables;
+    // Validate optional but recommended variables,
     this.validateOptionalVars()
-<<<<<<< HEAD
-    return {
-      isValid: this.errors.length === 0;
-      errors: this.errors;
-      warnings: this.warnings;
-=======
-    return {}
-      isValid: this.errors.length === 0,
-      errors: this.errors,
-      warnings: this.warnings
->>>>>>> origin/merge-error-fixes
-=======
 export interface EnvConfig {/* TODO: Fix JSX expression */}
 }
 class EnvValidator {/* TODO: Fix JSX expression */}
   s: string[] } {/* TODO: Fix JSX expression */}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    };
+    },
   }
   /**
-   * Get validated environment configuration;
+   * Get validated environment configuration,
    */
-<<<<<<< HEAD
-  getConfig(): EnvConfig {}
-    const validation = this.validate()
-    if (!validation.isValid) {}
-      throw new Error()
-        `Environment validation failed:\n${validation.errors.join('\n')}`
-      )
-    }
-    if (validation.warnings.length > 0) {}
-      }`
-      )
-    }
-    return {}
-      NODE_ENV: this.getNodeEnv(),
-      NEXT_PUBLIC_API_URL: process.env['NEXT_PUBLIC_API_URL'],
-      NEXT_PUBLIC_GA_ID: process.env['NEXT_PUBLIC_GA_ID'],
-      NEXT_PUBLIC_SITE_URL: process.env['NEXT_PUBLIC_SITE_URL'],
-    };
-  }
-  private validateNodeEnv(): void {}
-    const nodeEnv = process.env['NODE_ENV']
-    const validEnvs = ['development', 'production', 'test']
-    if (!nodeEnv) {}
-      this.errors.push('NODE_ENV is not set');
-      return;
-    }
-    if (!validEnvs.includes(nodeEnv)) {}
-      this.errors.push()
-        `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`
-      );
-    }
-  }
-  private validateOptionalVars(): void {}
-    const nodeEnv = this.getNodeEnv()
-<<<<<<< HEAD
-    // In production, these should be set;
-    if (nodeEnv === 'production') {
-      if (!process.env['NEXT_PUBLIC_SITE_URL']) {
-        this.warnings.push(
-=======
-    // In production, these should be set
-    if (nodeEnv === 'production') {}
-      if (!process.env['NEXT_PUBLIC_SITE_URL']) {}
-        this.warnings.push()
->>>>>>> origin/merge-error-fixes
           'NEXT_PUBLIC_SITE_URL is not set (recommended for production)'
         )
       }
@@ -113,7 +32,6 @@ class EnvValidator {/* TODO: Fix JSX expression */}
   private getNodeEnv(): 'development' | 'production' | 'test' {}
     const env = process.env['NODE_ENV'] || 'development'
     return env as 'development' | 'production' | 'test'
-=======
   getConfig(): EnvConfig {/* TODO: Fix JSX expression */}
   failed:
 ${validation.errors.join('
@@ -125,7 +43,7 @@ ${validation.errors.join('
       )
     }
     return {/* TODO: Fix JSX expression */}
-    };
+    },
   }
 
   private validateNodeEnv(): void {/* TODO: Fix JSX expression */}
@@ -135,7 +53,7 @@ ${validation.errors.join('
     if (!validEnvs.includes(nodeEnv)) {
       this.errors.push(
         `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`
-      );
+      ),
 
     }
   }
@@ -149,21 +67,12 @@ ${validation.errors.join('
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 }
-// Export singleton instance;
+// Export singleton instance,
 export const envValidator = new EnvValidator()
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Export convenience function;
-export function validateEnv(): EnvConfig {
-=======
-// Export convenience function
-export function validateEnv(): EnvConfig {}
->>>>>>> origin/merge-error-fixes
   return envValidator.getConfig()
 }
-export default envValidator;
-=======
-// Export convenience function;
+export default envValidator,
+// Export convenience function,
 export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */}
 }
 export default envValidator;`

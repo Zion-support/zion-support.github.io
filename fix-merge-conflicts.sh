@@ -1,17 +1,16 @@
 #!/bin/bash
 
-# Find all files with merge conflicts
-files_with_conflicts=$(grep -r "<<<<<<< HEAD" /workspace/app/ /workspace/src/ | cut -d: -f1 | sort -u)
+echo "Fixing merge conflicts in app directory..."
 
-for file in "${files[@]}"; do
-  if [ -f "$file" ]; then
-    echo "Fixing conflicts in $file..."
-    # Use git merge-file with ours strategy or manually remove conflict markers
-    # Remove conflict markers and keep the incoming version (after =======)
-    perl -i -0777 -pe 's/\n(.*?)\n
-    # Also handle nested conflicts
-    perl -i -0777 -pe 's/\n.*?\n
+# Find all files with merge conflicts in app directory
+find /workspace/app -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | while read file; do
+  if grep -q "<<<<<<< HEAD" "$file"; then
+    echo "Fixing merge conflicts in: $file"
+    # Remove merge conflict markers
+    sed -i '/^<<<<<<< HEAD/,/^>>>>>>> /d' "$file"
+    # Remove any remaining ======= lines
+    sed -i '/^=======$/d' "$file"
   fi
 done
 
-echo "All merge conflicts have been resolved!"
+echo "Merge conflicts fixed in app directory"

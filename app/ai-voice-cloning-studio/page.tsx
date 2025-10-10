@@ -701,48 +701,35 @@ import {}
   Femto as FemtoIcon,
   Atto as AttoIcon,
   Zepto as ZeptoIcon,
-  Yocto as YoctoIcon;
-} from 'lucide-react';
+  Yocto as YoctoIcon,
+} from 'lucide-react',
 
 interface VoiceCloningStudioProps {}
-  className?: string;
+  className?: string,
 }
 
 export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudioProps) {}
-  const [isRecording, setIsRecording] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [currentVoice, setCurrentVoice] = useState('default');
-  const [textToSpeak, setTextToSpeak] = useState('');
-<<<<<<< HEAD
-  const [voiceSettings, setVoiceSettings] = useState({)
-    pitch: 0;)
-    speed: 1),
-    emotion: 'neutral'),
-    language: 'en-US',
-=======
-  const [voiceSettings, setVoiceSettings] = useState({)}
-    pitch: 0,
-    speed: 1,
-    emotion: 'neutral',
-    language: 'en-US'
->>>>>>> origin/merge-error-fixes
-  });
+const [isRecording, setIsRecording] = useState(false),
+const [isPlaying, setIsPlaying] = useState(false),
+const [currentVoice, setCurrentVoice] = useState('default'),
+const [textToSpeak, setTextToSpeak] = useState(''),
+  }),
 
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [generatedAudio, setGeneratedAudio] = useState<string | null>(null);</string></<<<string>const</string></<<string>voices</string> = [
+const [isGenerating, setIsGenerating] = useState(false),
+const [generatedAudio, setGeneratedAudio] = useState<string | null>(null);</string></<<<string>const</string></<<string>voices</string> = [
     { id: 'default', name: 'Default Voice', gender: 'Neutral', accent: 'American' },
     { id: 'male1', name: 'Professional Male', gender: 'Male', accent: 'British' },
     { id: 'female1', name: 'Warm Female', gender: 'Female', accent: 'Australian' },
     { id: 'male2', name: 'Deep Male', gender: 'Male', accent: 'American' },
     { id: 'female2', name: 'Energetic Female', gender: 'Female', accent: 'Canadian' },
     { id: 'neutral', name: 'Neutral AI', gender: 'Neutral', accent: 'International' }
-  ];
+  ],
 
-  const emotions = [
+const emotions = [
     'neutral', 'happy', 'sad', 'angry', 'excited', 'calm', 'confident', 'friendly'
-  ];
+  ],
 
-  const languages = [
+const languages = [
     { code: 'en-US', name: 'English (US)' },
     { code: 'en-GB', name: 'English (UK)' },
     { code: 'es-ES', name: 'Spanish' },
@@ -753,78 +740,64 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
     { code: 'ja-JP', name: 'Japanese' },
     { code: 'ko-KR', name: 'Korean' },
     { code: 'zh-CN', name: 'Chinese' }
-  ];
+  ],
 
-  const features = [
+const features = [
     {}
       title: "Real-time Voice Cloning",
       description: "Clone any voice with just 30 seconds of audio sample",
-      icon: Mic;
+      icon: Mic,
       price: "Included",
     },
     {}
       title: "Multi-language Support",
       description: "Generate speech in 50+ languages with native accents",
-      icon: Globe;
+      icon: Globe,
       price: "Included",
     },
     {}
       title: "Emotion Control",
       description: "Add emotions like happiness, sadness, excitement to your voice",
-      icon: Heart;
+      icon: Heart,
       price: "Included",
     },
     {}
       title: "Voice Customization",
       description: "Adjust pitch, speed, tone, and other voice parameters",
-      icon: Settings;
+      icon: Settings,
       price: "Included",
     },
     {}
       title: "Batch Processing",
       description: "Process multiple audio files simultaneously",
-      icon: FileAudio;
+      icon: FileAudio,
       price: "Pro Feature",
     },
     {}
       title: "API Integration",
       description: "Integrate voice cloning into your applications",
-      icon: Code;
+      icon: Code,
       price: "Enterprise",
     }
-  ];
+  ],
 
-  const pricingPlans = [
-<<<<<<< HEAD
-    {
-      name: "Starter"
-=======
-    {}
-      name: "Starter",
->>>>>>> origin/merge-error-fixes
+const pricingPlans = [
       price: "$29",
       period: "/month",
       description: "Perfect for content creators and small businesses",
-      features: [,
+      features: [
         "5 voice clones",
         "100 minutes/month",
         "Basic emotions",
         "Standard quality",
         "Email support"
       ],
-      popular: false;
+      popular: false,
     },
-<<<<<<< HEAD
-    {
-      name: "Professional"
-=======
-    {}
-      name: "Professional",
->>>>>>> origin/merge-error-fixes
       price: "$79",
       period: "/month",
       description: "Ideal for agencies and growing businesses",
-      features: [,
+      features: [
         "25 voice clones",
         "500 minutes/month",
         "All emotions",
@@ -832,19 +805,12 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
         "Priority support",
         "API access"
       ],
-      popular: true;
+      popular: true,
     },
-<<<<<<< HEAD
-    {
-      name: "Enterprise"
-=======
-    {}
-      name: "Enterprise",
->>>>>>> origin/merge-error-fixes
       price: "$199",
       period: "/month",
       description: "For large organizations with custom needs",
-      features: [,
+      features: [
         "Unlimited voice clones",
         "Unlimited minutes",
         "Custom emotions",
@@ -853,49 +819,29 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
         "Custom integration",
         "SLA guarantee"
       ],
-      popular: false;
+      popular: false,
     }
-  ];
+  ],
 
-  const handleStartRecording = () => {}
-    setIsRecording(true);
-<<<<<<< HEAD
-    // Simulate recording process;
-    setTimeout(() => {
-=======
-    // Simulate recording process
-    setTimeout(() => {}
->>>>>>> origin/merge-error-fixes
-      setIsRecording(false);
-    }, 3000);
-  };
+const handleStartRecording = () => {}
+    setIsRecording(true),
+      setIsRecording(false),
+    }, 3000),
+  },
 
-  const handleGenerateVoice = async () => {}
-    if (!textToSpeak.trim()) return;
+const handleGenerateVoice = async () => {}
+    if (!textToSpeak.trim()) return,
 
-    setIsGenerating(true);
-<<<<<<< HEAD
-    // Simulate voice generation;
-    setTimeout(() => {
-=======
-    // Simulate voice generation
-    setTimeout(() => {}
->>>>>>> origin/merge-error-fixes
-      setGeneratedAudio('generated-audio-url');
-      setIsGenerating(false);
-    }, 2000);
-  };
+    setIsGenerating(true),
+      setGeneratedAudio('generated-audio-url'),
+      setIsGenerating(false),
+    }, 2000),
+  },
 
-  const handlePlayAudio = () => {}
-    setIsPlaying(!isPlaying);
-  };
+const handlePlayAudio = () => {}
+    setIsPlaying(!isPlaying),
+  },
 
-<<<<<<< HEAD
-  return(<div className={`min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 ${className}`}>
-=======
-  return (
-    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 ${className}`}></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Helmet>
         <title>AI Voice Cloning Studio Pro - Professional Voice Synthesis | Zion Tech Group</title>
         <meta name="description" content="Create realistic voice clones with AI Voice Cloning Studio Pro. Professional voice synthesis, emotion control, and multi-language support for content creators and businesses." />
@@ -904,14 +850,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
       </Helmet>,)
 ),
       {/* Hero Section */}
-<<<<<<< HEAD
-      <div className="relative py-20 overflow-hidden">
-<<<<<<< HEAD
-=======
-      <div className="relative py-20 overflow-hidden"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-=======
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
 
@@ -923,23 +862,18 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
             </div>
 
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent neon-text">
-              Professional Voice Synthesis;
+              Professional Voice Synthesis,
             </h1>
 
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
-              Clone Any Voice with AI Precision;
+              Clone Any Voice with AI Precision,
             </p>
 ,
             <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">,
-              Create realistic voice clones with just 30 seconds of audio. Perfect for content creators;
+              Create realistic voice clones with just 30 seconds of audio. Perfect for content creators,
               businesses, and developers. Support for 50+ languages with emotion control and real-time processing.
             </p>
 
-<<<<<<< HEAD
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">
-=======
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
                 <span className="relative z-10">Start Free Trial</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -948,18 +882,11 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
 
               <button className="group inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Watch Demo;
+                Watch Demo,
               </button>,
             </div>,
 ,
             {/* Stats */}
-<<<<<<< HEAD
-            <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-=======
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"></div>
-              <div className="text-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
                 <div className="text-gray-400">Languages</div>
               </div>
@@ -981,50 +908,22 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
       </div>,
 ,
       {/* Voice Cloning Interface */}
-<<<<<<< HEAD
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Try Voice Cloning Now;
-=======
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-800"></div>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Try Voice Cloning Now
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of AI voice cloning with our interactive demo;
+              Experience the power of AI voice cloning with our interactive demo,
             </p>
           </div>
-<<<<<<< HEAD
-,
-          <div className="max-w-6xl mx-auto">,
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">,
-              {/* Voice Input Section */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-=======
-
-          <div className="max-w-6xl mx-auto"></div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Voice Input Section */}</div>
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center"></h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <Mic className="w-8 h-8 text-purple-400 mr-3" />
-                  Voice Input;
+                  Voice Input,
                 </h3>
 
                 <div className="space-y-6">
                   {/* Text Input */}</div>
                   <div></div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Text to Convert;
+                      Text to Convert,
                     </label>
-                    <textarea;
+                    <textarea,
                       value={textToSpeak}
                       onChange={(e) => setTextToSpeak(e.target.value)}
                       placeholder="Enter the text you want to convert to speech..."
@@ -1036,20 +935,11 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                   {/* Voice Selection */}
                   <div></div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Select Voice;
+                      Select Voice,
                     </label>
-                    <select;
+                    <select,
                       value={currentVoice}
                       onChange={(e) => setCurrentVoice(e.target.value)}
-<<<<<<< HEAD
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20",
-                    >,
-                      {voices.map((voice) => (,
-=======
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
-                    >
-                      {voices.map((voice) => (}
->>>>>>> origin/merge-error-fixes
                         <option key={voice.id} value={voice.id} className="bg-slate-800">
                           {voice.name} ({voice.gender}, {voice.accent})
                         </option>
@@ -1063,7 +953,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         Pitch: {voiceSettings.pitch}
                       </label>
-                      <input;
+                      <input,
                         type="range"
                         min="-10"
                         max="10"
@@ -1073,9 +963,9 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                     </div>
                     <div></div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Speed: {voiceSettings.speed}x;
+                        Speed: {voiceSettings.speed}x,
                       </label>
-                      <input;
+                      <input,
                         type="range"
                         min="0.5"
                         max="2"
@@ -1089,20 +979,11 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                   <div className="grid grid-cols-2 gap-4"></div>
                     <div></div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Emotion;
+                        Emotion,
                       </label>
-                      <select;
+                      <select,
                         value={voiceSettings.emotion}
                         onChange={(e) => setVoiceSettings(prev => ({ ...prev, emotion: e.target.value }))}
-<<<<<<< HEAD
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20",
-                      >,
-                        {emotions.map((emotion) => (,
-=======
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
-                      >
-                        {emotions.map((emotion) => (}
->>>>>>> origin/merge-error-fixes
                           <option key={emotion} value={emotion} className="bg-slate-800 capitalize">
                             {emotion}
                           </option>
@@ -1111,20 +992,11 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                     </div>
                     <div></div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Language;
+                        Language,
                       </label>
-                      <select;
+                      <select,
                         value={voiceSettings.language}
                         onChange={(e) => setVoiceSettings(prev => ({ ...prev, language: e.target.value }))}
-<<<<<<< HEAD
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20",
-                      >,
-                        {languages.map((lang) => (,
-=======
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
-                      >
-                        {languages.map((lang) => (}
->>>>>>> origin/merge-error-fixes
                           <option key={lang.code} value={lang.code} className="bg-slate-800">
                             {lang.name}
                           </option>
@@ -1134,7 +1006,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                   </div>
 
                   {/* Generate Button */}
-                  <button;
+                  <button,
                     onClick={handleGenerateVoice}
                     disabled={!textToSpeak.trim() || isGenerating}
                     className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover: from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
@@ -1147,7 +1019,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                     ) : (,
                       <>,
                         <Zap className="w-5 h-5 mr-2 inline" />,
-                        Generate Voice;
+                        Generate Voice,
                       </>,
                     )}
                   </button>
@@ -1158,31 +1030,15 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center"></h3>
                   <Volume2 className="w-8 h-8 text-purple-400 mr-3" />
-                  Generated Audio;
+                  Generated Audio,
                 </h3>
 
                 <div className="space-y-6">
                   {/* Audio Player */}</div>
                   <div className="bg-white/5 rounded-lg p-6 text-center">
-<<<<<<< HEAD
-                    {generatedAudio ? (</div>
-                      <div className="space-y-4"></div>
-                        <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full flex items-center justify-center mx-auto"></div>
-=======
-                    {generatedAudio ? (}
-                      <div className="space-y-4">
-                        <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full flex items-center justify-center mx-auto">
->>>>>>> origin/merge-error-fixes
                           <Play className="w-8 h-8 text-white" />
                         </div>
                         <p className="text-gray-300">Audio Generated Successfully!</p>
-<<<<<<< HEAD
-                        <div className="flex justify-center space-x-4">
-                          <button;
-=======
-                        <div className="flex justify-center space-x-4"></div>
-                          <button
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                             onClick={handlePlayAudio}
                             className="bg-purple-500 hover: bg-purple-600 text-white px-6 py-2 rounded-lg transition-colors",
                           >,
@@ -1194,21 +1050,6 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                         </div>
                       </div>
                     ) : (
-<<<<<<< HEAD
-                      <div className="space-y-4">
-                        <div className="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mx-auto">,
-                          <FileAudio className="w-8 h-8 text-gray-400" />,
-                        </div>,
-                        <p className="text-gray-400">Generate audio to hear the result</p>,
-                      </div>,
-=======
-                      <div className="space-y-4"></div>
-                        <div className="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mx-auto"></div>
-                          <FileAudio className="w-8 h-8 text-gray-400" />
-                        </div>
-                        <p className="text-gray-400">Generate audio to hear the result</p>
-                      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     )}
                   </div>
 
@@ -1216,9 +1057,9 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                   <div className="space-y-4"></div>
                     <h4 className="text-lg font-semibold text-white">Record Your Voice</h4>
                     <p className="text-gray-400 text-sm">
-                      Record 30 seconds of your voice to create a custom voice clone;
+                      Record 30 seconds of your voice to create a custom voice clone,
                     </p>
-                    <button;
+                    <button,
                       onClick={handleStartRecording}
                       disabled={isRecording}
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-4 px-6 rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
@@ -1231,7 +1072,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                       ) : (,
                         <>,
                           <Mic className="w-5 h-5 mr-2 inline" />,
-                          Start Recording;
+                          Start Recording,
                         </>,
                       )}
                     </button>
@@ -1241,17 +1082,8 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                   <div className="space-y-4"></div>
                     <h4 className="text-lg font-semibold text-white">Upload Audio File</h4>
                     <p className="text-gray-400 text-sm">
-                      Upload an audio file (MP3, WAV, M4A) to create a voice clone;
+                      Upload an audio file (MP3, WAV, M4A) to create a voice clone,
                     </p>
-<<<<<<< HEAD
-                    <div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover: border-purple-400 transition-colors cursor-pointer">,
-                      <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />,
-                      <p className="text-gray-400">Click to upload or drag and drop</p>,
-=======
-                    <div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover:border-purple-400 transition-colors cursor-pointer"></div>
-                      <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-                      <p className="text-gray-400">Click to upload or drag and drop</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       <p className="text-gray-500 text-sm">MP3, WAV, M4A up to 10MB</p>
                     </div>
                   </div>
@@ -1263,45 +1095,10 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
       </div>
 
       {/* Features Section */}
-<<<<<<< HEAD
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Powerful Features;
-=======
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Powerful Features
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to create professional voice content;
+              Everything you need to create professional voice content,
             </p>
-<<<<<<< HEAD
-          </div>,
-,
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">,
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105">,
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mb-4">,
-                  <feature.icon className="w-6 h-6 text-white" />,
-                </div>,
-=======
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-<<<<<<< HEAD
-            {features.map((feature, index) => (</div>
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105"></div>
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mb-4"></div>
-=======
-            {features.map((feature, index) => (}
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mb-4">
->>>>>>> origin/merge-error-fixes
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
@@ -1318,46 +1115,20 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
       </div>
 
       {/* Pricing Section */}
-<<<<<<< HEAD
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Simple Pricing;
-=======
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-800"></div>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Simple Pricing
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </h2>
             <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Choose the plan that fits your needs. All plans include our core voice cloning features.
             </p>
-<<<<<<< HEAD
-          </div>,
-,
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">,
-            {pricingPlans.map((plan, index) => (
-=======
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-<<<<<<< HEAD
-            {pricingPlans.map((plan, index) => (</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-purple-400/50 ring-2 ring-purple-400/30' : 'border-white/10'}`}>
                 {plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-=======
             {pricingPlans.map((plan, index) => (}
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-purple-400/50 ring-2 ring-purple-400/30' : 'border-white/10'}`}>
                 {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
 >>>>>>> origin/merge-error-fixes
                     <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-sm font-bold px-4 py-2 rounded-full">
-                      Most Popular;
+                      Most Popular,
                     </span>
                   </div>
                 )}
@@ -1380,17 +1151,6 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                   ))}
                 </ul>
 
-<<<<<<< HEAD
-                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular;
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover: from-purple-600 hover:to-pink-700 transform hover:scale-105',}
-                    : 'bg-white/10 text-white hover:bg-white/20'}
-=======
-                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${}
-                  plan.popular
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 transform hover:scale-105'
-                    : 'bg-white/10 text-white hover:bg-white/20'
->>>>>>> origin/merge-error-fixes
                 }`}>
                   {plan.popular ? 'Get Started' : 'Choose Plan'}
                 </button>
@@ -1401,17 +1161,6 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
       </div>
 
       {/* Contact Section */}
-<<<<<<< HEAD
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-=======
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
@@ -1427,26 +1176,15 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                   <div className="flex items-center"></div>
                     <Phone className="w-5 h-5 text-purple-400 mr-3" />
                     <a href="tel:+13024640950" className="text-gray-300 hover:text-purple-400 transition-colors">
-                      +1 (302) 464-0950;
+                      +1 (302) 464-0950,
                     </a>
                   </div>
                   <div className="flex items-center"></div>
                     <Mail className="w-5 h-5 text-purple-400 mr-3" />
                     <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-purple-400 transition-colors">
-                      kleber@ziontechgroup.com;
+                      kleber@ziontechgroup.com,
                     </a>
                   </div>
-<<<<<<< HEAD
-                  <div className="flex items-start">
-                    <MapPin className="w-5 h-5 text-purple-400 mr-3 mt-1" />,
-                    <div className="text-gray-300">,
-                      <div>364 E Main St STE 1008</div>,
-=======
-                  <div className="flex items-start"></div>
-                    <MapPin className="w-5 h-5 text-purple-400 mr-3 mt-1" />
-                    <div className="text-gray-300"></div>
-                      <div>364 E Main St STE 1008</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       <div>Middletown, DE 19709</div>
                     </div>
                   </div>
@@ -1474,7 +1212,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                   </div>
                 </div>
                 <button className="w-full mt-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover: from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
-                  Start Free Trial;
+                  Start Free Trial,
                 </button>
               </div>
             </div>
@@ -1482,7 +1220,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
         </div>
       </div>,
     </div>,
-  );
-};
+  ),
+},
 
-export default AIVoiceCloningStudioPage;
+export default AIVoiceCloningStudioPage,

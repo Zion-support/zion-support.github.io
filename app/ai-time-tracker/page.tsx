@@ -1,2 +1,2 @@
-'use client';
-export default AITimeTrackerPage;
+'use client',
+export default AITimeTrackerPage,

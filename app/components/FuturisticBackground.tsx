@@ -1,2 +1,2 @@
-'use client';
-export default FuturisticBackground;
+'use client',
+export default FuturisticBackground,

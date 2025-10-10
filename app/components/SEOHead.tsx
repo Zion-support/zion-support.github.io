@@ -2,13 +2,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  structuredData?: object;
+  title?: string,
+  description?: string,
+  keywords?: string,
+  image?: string,
+  url?: string,
+  type?: string,
+  structuredData?: object,
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -20,7 +20,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   type = "website",
   structuredData
 }) => {
-  const defaultStructuredData = {
+const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -59,9 +59,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "Cloud Computing",
       "Automation"
     ]
-  };
+  },
 
-  const finalStructuredData = structuredData || defaultStructuredData;
+const finalStructuredData = structuredData || defaultStructuredData,
 
   return (
     <Helmet>
@@ -112,7 +112,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         {JSON.stringify(finalStructuredData)}
       </script>
     </Helmet>
-  );
-};
+  ),
+},
 
-export default SEOHead;
+export default SEOHead,

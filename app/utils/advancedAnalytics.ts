@@ -1,112 +1,13 @@
-<<<<<<< HEAD
-'use client'
-
-<<<<<<< HEAD
-interface UserEvent {
-  id: string;
-  type: string;
-  name: string;
-  value?: number;
-  timestamp: string;
-  sessionId: string;
-  userId?: string;
-  url: string;
-  metadata?: Record<string, unknown>
-}
-
-interface UserSession {
-  id: string;
-  startTime: string;
-  endTime?: string;
-  duration?: number;
-  pageViews: number;
-=======
-interface UserEvent {}
-  id: string
-  type: string
-  name: string
-  value?: number
-  timestamp: string,
-    sessionId: string
-  userId?: string
-  url: string
-  metadata?: Record<string, unknown></strin>
-}
-
-interface UserSession {}
-  id: string
-  startTime: string
-  endTime?: string
-  duration?: number
-  pageViews: number
->>>>>>> origin/merge-error-fixes
   events: UserEvent[]
-  referrer?: string;
-  userAgent: string;
+  referrer?: string,
+  userAgent: string,
   device: 'desktop' | 'mobile' | 'tablet'
-  browser: string;
-  os: string;
+  browser: string,
+  os: string,
   country?: string;,
-  city?: string;
+  city?: string,
 }
 
-<<<<<<< HEAD
-interface AnalyticsConfig {
-  enableTracking: boolean;
-  enableHeatmaps: boolean;
-  enableSessionRecording: boolean;
-  enableA_BTesting: boolean;
-  enableConversionTracking: boolean;
-  enablePerformanceTracking: boolean;
-  enableErrorTracking: boolean;
-  enableUserJourneyTracking: boolean;
-}
-
-class AdvancedAnalytics {
-  private static instance: AdvancedAnalytics;
-  private config: AnalyticsConfig;
-  private currentSession: UserSession;
-  private eventQueue: UserEvent[] = []
-
-  constructor() {
-    this.config = {
-      enableTracking: true;
-      enableHeatmaps: true;
-      enableSessionRecording: false;
-      enableA_BTesting: true;
-      enableConversionTracking: true;
-      enablePerformanceTracking: true;
-      enableErrorTracking: true;
-      enableUserJourneyTracking: true;
-=======
-interface AnalyticsConfig {}
-  enableTracking: boolean
-  enableHeatmaps: boolean
-  enableSessionRecording: boolean
-  enableA_BTesting: boolean
-  enableConversionTracking: boolean
-  enablePerformanceTracking: boolean
-  enableErrorTracking: boolean
-  enableUserJourneyTracking: boolean
-}
-
-class AdvancedAnalytics {}
-  private static instance: AdvancedAnalytics
-  private config: AnalyticsConfig
-  private currentSession: UserSession
-  private eventQueue: UserEvent[] = []
-
-  constructor() {}
-    this.config = {}
-      enableTracking: true,
-      enableHeatmaps: true,
-      enableSessionRecording: false,
-      enableA_BTesting: true,
-      enableConversionTracking: true,
-      enablePerformanceTracking: true,
-      enableErrorTracking: true,
-      enableUserJourneyTracking: true
->>>>>>> origin/merge-error-fixes
     }
     this.currentSession = this.createNewSession()
     this.initializeTracking()
@@ -115,11 +16,10 @@ class AdvancedAnalytics {}
   static getInstance(): AdvancedAnalytics {}
     if (!AdvancedAnalytics.instance) {}
       AdvancedAnalytics.instance = new AdvancedAnalytics()
-=======
-'use client';
+'use client',
 /**
- * Advanced Analytics System for Zion Tech Group Website;
- * Provides comprehensive user behavior tracking and insights;
+ * Advanced Analytics System for Zion Tech Group Website,
+ * Provides comprehensive user behavior tracking and insights,
  */
 interface UserEvent {/* TODO: Fix JSX expression */}
 }
@@ -128,140 +28,63 @@ interface UserSession {/* TODO: Fix JSX expression */}
 interface AnalyticsConfig {/* TODO: Fix JSX expression */}
 }
 class AdvancedAnalytics {/* TODO: Fix JSX expression */}
-    };
-    this.currentSession = this.createNewSession();
-    this.initializeTracking();
+    },
+    this.currentSession = this.createNewSession(),
+    this.initializeTracking(),
   }
   static getInstance(): AdvancedAnalytics {/* TODO: Fix JSX expression */}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
-    return AdvancedAnalytics.instance;
+    return AdvancedAnalytics.instance,
   }
 
   /**
-   * Initialize comprehensive analytics tracking;
+   * Initialize comprehensive analytics tracking,
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private initializeTracking(): void {
-    if (typeof window === 'undefined' || !this.config.enableTracking) return;
-    // Track page views;
-=======
-  private initializeTracking(): void {}
-    if (typeof window === 'undefined' || !this.config.enableTracking) return
-
-    // Track page views
->>>>>>> origin/merge-error-fixes
     this.trackPageView()
 
-    // Track clicks;
+    // Track clicks,
     this.trackClicks()
 
-    // Track scrolls;
+    // Track scrolls,
     this.trackScrolls()
 
-    // Track form submissions;
+    // Track form submissions,
     this.trackFormSubmissions()
 
-    // Track downloads;
+    // Track downloads,
     this.trackDownloads()
 
-<<<<<<< HEAD
-    // Track performance;
-    if (this.config.enablePerformanceTracking) {
-      this.trackPerformance()
-    }
-
-    // Track user journey;
-    if (this.config.enableUserJourneyTracking) {
-=======
-    // Track performance
-    if (this.config.enablePerformanceTracking) {}
-      this.trackPerformance()
-    }
-
-    // Track user journey
-    if (this.config.enableUserJourneyTracking) {}
->>>>>>> origin/merge-error-fixes
       this.trackUserJourney()
     }
 
-    // Setup network monitoring;
+    // Setup network monitoring,
     this.setupNetworkMonitoring()
-=======
   private initializeTracking(): void {/* TODO: Fix JSX expression */}
     }
-    // Track user journey;
+    // Track user journey,
     if (this.config.enableUserJourneyTracking) {/* TODO: Fix JSX expression */}
     }
-    // Setup network monitoring;
-    this.setupNetworkMonitoring();
+    // Setup network monitoring,
+    this.setupNetworkMonitoring(),
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   /**
-   * Create new user session;
+   * Create new user session,
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private createNewSession(): UserSession {
-    return {
-      id: this.generateSessionId()
-      startTime: new Date().toISOString()
-      pageViews: 0;
-      events: []
-      userAgent: navigator.userAgent;
-      device: this.detectDevice()
-=======
-  private createNewSession(): UserSession {}
-    return {}
-      id: this.generateSessionId(),
-      startTime: new Date().toISOString(),
-      pageViews: 0,
-      events: [],
-      userAgent: navigator.userAgent,
-      device: this.detectDevice(),
->>>>>>> origin/merge-error-fixes
       browser: this.detectBrowser(),
       os: this.detectOS(),
-      referrer: document.referrer;
+      referrer: document.referrer,
     }
-=======
   private createNewSession(): UserSession {/* TODO: Fix JSX expression */}
-    };
+    },
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   /**
-   * Track page views;
+   * Track page views,
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  trackPageView(url?: string, title?: string): void {
-    const event: UserEvent = {
-      id: this.generateEventId()
-      type: 'page_view'
-      name: 'Page View'
-      timestamp: new Date().toISOString()
-      sessionId: this.currentSession.id;
-      url: url || window.location.href;
-      metadata: {,
-        title: title || document.title;
-        referrer: document.referrer;
-=======
-  trackPageView(url?: string, title?: string): void {}
-    const event: UserEvent = {}
-      id: this.generateEventId(),
-      type: 'page_view',
-      name: 'Page View',
-      timestamp: new Date().toISOString(),
-      sessionId: this.currentSession.id,
-      url: url || window.location.href,
-      metadata: {}
-        title: title || document.title,
-        referrer: document.referrer
->>>>>>> origin/merge-error-fixes
-=======
   trackPageView(url?: string, title?: string): void {/* TODO: Fix JSX expression */}
         }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
@@ -273,371 +96,168 @@ class AdvancedAnalytics {/* TODO: Fix JSX expression */}
   }
 
   /**
-<<<<<<< HEAD
-   * Track custom events;
-   */
-<<<<<<< HEAD
-  trackEvent(name: string, value?: number, metadata?: Record<string, unknown>): void {
-    const event: UserEvent = {,
-=======
-  trackEvent(name: string, value?: number, metadata?: Record<string, unknown>): void {}
-    const event: UserEvent = {}
->>>>>>> origin/merge-error-fixes
       id: this.generateEventId(),
       type: 'custom_event',
       name,
       value,
       timestamp: new Date().toISOString()
-      sessionId: this.currentSession.id;
-      url: window.location.href;
-      metadata;
+      sessionId: this.currentSession.id,
+      url: window.location.href,
+      metadata,
     }
 
     this.addEvent(event)
   }
 
   /**
-   * Track clicks;
+   * Track clicks,
    */
-<<<<<<< HEAD
-  private trackClicks(): void {
-    document.addEventListener('click', (event) => {
-      const target = event.target as HTMLElement;
-      const element = target.closest('a, button, [role="button"]')
-
-      if (element) {
-        this.trackEvent('click', undefined, {)
-=======
-  private trackClicks(): void {}
-    document.addEventListener('click', (event) => {}
-      const target = event.target as HTMLElement
-      const element = target.closest('a, button, [role="button"]')
-
-      if (element) {}
-        this.trackEvent('click', undefined, {)}
->>>>>>> origin/merge-error-fixes
           element: element.tagName.toLowerCase(),
           text: element.textContent?.trim(),
-          href: (element as HTMLAnchorElement).href;
-          className: element.className;
+          href: (element as HTMLAnchorElement).href,
+          className: element.className,
         })
       }
     })
-=======
-   * Track clicks;
+   * Track clicks,
    */
   private trackClicks(): void {/* TODO: Fix JSX expression */}
           }
         }
-      };
-      this.trackEvent(clickEvent);
-    });
+      },
+      this.trackEvent(clickEvent),
+    }),
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   /**
-   * Track scrolls;
+   * Track scrolls,
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private trackScrolls(): void {
-    let scrollTimeout: NodeJS.Timeout;
-    window.addEventListener('scroll', () => {
-      clearTimeout(scrollTimeout)
-      scrollTimeout = setTimeout(() => {
-        const scrollPercent = Math.round(
-          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-        )
-
-        this.trackEvent('scroll', scrollPercent, {)
-          scrollY: window.scrollY),
-          scrollPercent;
-=======
-  private trackScrolls(): void {}
-    let scrollTimeout: NodeJS.Timeout
-
-    window.addEventListener('scroll', () => {}
-      clearTimeout(scrollTimeout)
-      scrollTimeout = setTimeout(() => {}
-        const scrollPercent = Math.round()
-          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
-        )
-
-        this.trackEvent('scroll', scrollPercent, {)}
-          scrollY: window.scrollY,
-          scrollPercent
->>>>>>> origin/merge-error-fixes
         })
       }, 150)
     })
-=======
   private trackScrolls(): void {/* TODO: Fix JSX expression */}
           }
-        };
-        this.trackEvent(scrollEvent);
-      }, 100);
-    });
+        },
+        this.trackEvent(scrollEvent),
+      }, 100),
+    }),
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   /**
-   * Track form submissions;
+   * Track form submissions,
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private trackFormSubmissions(): void {
-    document.addEventListener('submit', (event) => {
-      const form = event.target as HTMLFormElement;
-      this.trackEvent('form_submit', undefined, {)
-        formId: form.id;)
-        formAction: form.action),
-        formMethod: form.method),
-        fieldCount: form.elements.length;
-=======
-  private trackFormSubmissions(): void {}
-    document.addEventListener('submit', (event) => {}
-      const form = event.target as HTMLFormElement
-      this.trackEvent('form_submit', undefined, {)}
-        formId: form.id,
-        formAction: form.action,
-        formMethod: form.method,
-        fieldCount: form.elements.length
->>>>>>> origin/merge-error-fixes
       })
     })
-=======
   private trackFormSubmissions(): void {/* TODO: Fix JSX expression */}
         }
-      };
-      this.trackEvent(submitEvent);
-    });
+      },
+      this.trackEvent(submitEvent),
+    }),
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   /**
-   * Track downloads;
+   * Track downloads,
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private trackDownloads(): void {
-    document.addEventListener('click', (event) => {
-      const target = event.target as HTMLElement;
-      const link = target.closest('a[href]') as HTMLAnchorElement;
-      if (link && this.isDownloadLink(link.href)) {
-        this.trackEvent('download', undefined, {)
-=======
-  private trackDownloads(): void {}
-    document.addEventListener('click', (event) => {}
-      const target = event.target as HTMLElement
-      const link = target.closest('a[href]') as HTMLAnchorElement
-
-      if (link && this.isDownloadLink(link.href)) {}
-        this.trackEvent('download', undefined, {)}
->>>>>>> origin/merge-error-fixes
           fileName: link.href.split('/').pop(),
           fileType: link.href.split('.').pop(),
-          href: link.href;
+          href: link.href,
         })
-=======
   private trackDownloads(): void {/* TODO: Fix JSX expression */}
           }
-        };
-        this.trackEvent(downloadEvent);
+        },
+        this.trackEvent(downloadEvent),
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     })
   }
 
   /**
-   * Track performance metrics;
+   * Track performance metrics,
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private trackPerformance(): void {
-    if (typeof window.performance === 'undefined') return;
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paint = performance.getEntriesByType('paint')
-
-        this.trackEvent('performance', undefined, {)
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart),
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart),
-          firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime;
-          firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
-=======
-  private trackPerformance(): void {}
-    if (typeof window.performance === 'undefined') return
-
-    window.addEventListener('load', () => {}
-      setTimeout(() => {}
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-        const paint = performance.getEntriesByType('paint')
-
-        this.trackEvent('performance', undefined, {)}
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
-          firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
->>>>>>> origin/merge-error-fixes
         })
       }, 0)
     })
-=======
   private trackPerformance(): void {/* TODO: Fix JSX expression */}
               }
-            };
-            this.trackEvent(paintEvent);
+            },
+            this.trackEvent(paintEvent),
           }
         }
       }).observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] });
-      // Track navigation timing;
+  s: ['paint'] }),
+      // Track navigation timing,
       window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
           }
-        };
-        this.trackEvent(performanceEvent);
-      });
+        },
+        this.trackEvent(performanceEvent),
+      }),
     }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   /**
-   * Track user journey;
+   * Track user journey,
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private trackUserJourney(): void {
-    // Track page visibility changes;
-    document.addEventListener('visibilitychange', () => {
-      this.trackEvent('visibility_change', undefined, {)
-        hidden: document.hidden),
-        visibilityState: document.visibilityState;
-      })
-    })
-
-    // Track focus changes;
-    window.addEventListener('focus', () => {
-=======
-  private trackUserJourney(): void {}
-    // Track page visibility changes
-    document.addEventListener('visibilitychange', () => {}
-      this.trackEvent('visibility_change', undefined, {)}
-        hidden: document.hidden,
-        visibilityState: document.visibilityState
-      })
-    })
-
-    // Track focus changes
-    window.addEventListener('focus', () => {}
->>>>>>> origin/merge-error-fixes
       this.trackEvent('window_focus')
     })
 
     window.addEventListener('blur', () => {}
       this.trackEvent('window_blur')
     })
-=======
   private trackUserJourney(): void {/* TODO: Fix JSX expression */}
       }
-    });
+    }),
     observer.observe(document.body, {/* TODO: Fix JSX expression */})
-    });
+    }),
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   /**
-   * Setup network monitoring;
+   * Setup network monitoring,
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private setupNetworkMonitoring(): void {
-    if ('connection' in navigator) {
-      const connection = (navigator as any).connection;
-      this.trackEvent('connection_info', undefined, {)
-        effectiveType: connection.effectiveType),
-        downlink: connection.downlink),
-        rtt: connection.rtt;
-=======
-  private setupNetworkMonitoring(): void {}
-    if ('connection' in navigator) {}
-      const connection = (navigator as any).connection
-      this.trackEvent('connection_info', undefined, {)}
-        effectiveType: connection.effectiveType,
-        downlink: connection.downlink,
-        rtt: connection.rtt
->>>>>>> origin/merge-error-fixes
       })
-=======
   private setupNetworkMonitoring(): void {/* TODO: Fix JSX expression */}
-    });
+    }),
     window.addEventListener('offline', () => {/* TODO: Fix JSX expression */}
-    });
+    }),
   }
   /**
-   * Track custom event;
+   * Track custom event,
    */
   trackEvent(even,)
   t: UserEvent): void {/* TODO: Fix JSX expression */}
     }
-    // Send to analytics service;
+    // Send to analytics service,
     if (this.isOnline) {/* TODO: Fix JSX expression */}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 
   /**
-<<<<<<< HEAD
-   * Add event to queue and session;
-   */
-<<<<<<< HEAD
-  private addEvent(event: UserEvent): void {
-    this.eventQueue.push(event),
-    this.currentSession.events.push(event),
-,
-    // Send to analytics service (implement based on your needs),
-    this.sendToAnalytics(event),
-=======
-  private addEvent(event: UserEvent): void {}
-    this.eventQueue.push(event)
-    this.currentSession.events.push(event)
-
-    // Send to analytics service (implement based on your needs)
-    this.sendToAnalytics(event)
->>>>>>> origin/merge-error-fixes
-=======
-   * Send event to analytics service;
+   * Send event to analytics service,
    */
   private async sendEvent(even,)
   t: UserEvent): Promise<void> {/* TODO: Fix JSX expression */}
         },
         bod,
   y: JSON.stringify(event)
-      });
+      }),
     } catch (error) {/* TODO: Fix JSX expression */}
       }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   /**
-<<<<<<< HEAD
-   * Send event to analytics service;
-   */
-<<<<<<< HEAD
-  private sendToAnalytics(event: UserEvent): void {,
-    // Implement your analytics service integration here;
-=======
-  private sendToAnalytics(event: UserEvent): void {}
-    // Implement your analytics service integration here
->>>>>>> origin/merge-error-fixes
-=======
-   * Flush event queue when back online;
+   * Flush event queue when back online,
    */
   private async flushEventQueue(): Promise<void> {/* TODO: Fix JSX expression */}
     }
   }
   /**
-   * Get element information for tracking;
+   * Get element information for tracking,
    */
   private getElementInfo(elemen,)
   t: HTMLElement): {/* TODO: Fix JSX expression */}
@@ -645,110 +265,110 @@ class AdvancedAnalytics {/* TODO: Fix JSX expression */}
     } else if (tagName === 'a' || element.closest('a')) {/* TODO: Fix JSX expression */}
     } else if (tagName === 'input' || tagName === 'select' || tagName === 'textarea') {/* TODO: Fix JSX expression */}
     }
-    // Create label;
-    let label = id || className || text?.substring(0, 50) || tagName;
+    // Create label,
+    let label = id || className || text?.substring(0, 50) || tagName,
     return {/* TODO: Fix JSX expression */}
-    };
+    },
   }
   /**
-   * Check if link is a download;
+   * Check if link is a download,
    */
   private isDownloadLink(lin,)
   k: HTMLAnchorElement): boolean {/* TODO: Fix JSX expression */}
   }
   /**
-   * Detect device type;
+   * Detect device type,
    */
   private detectDevice(): 'desktop' | 'mobile' | 'tablet' {/* TODO: Fix JSX expression */}
   }
   /**
-   * Detect browser;
+   * Detect browser,
    */
   private detectBrowser(): string {/* TODO: Fix JSX expression */}
   }
   /**
-   * Detect operating system;
+   * Detect operating system,
    */
   private detectOS(): string {/* TODO: Fix JSX expression */}
   }
   /**
-   * Generate session ID;
+   * Generate session ID,
    */
   private generateSessionId(): string {/* TODO: Fix JSX expression */}
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
   }
   /**
-   * Generate event ID;
+   * Generate event ID,
    */
   private generateEventId(): string {/* TODO: Fix JSX expression */}`
-    return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
   }
   /**
-   * Get user ID from storage or generate one;
+   * Get user ID from storage or generate one,
    */
   private getUserId(): string | undefined {/* TODO: Fix JSX expression */}`
-      userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      localStorage.setItem('analytics_user_id', userId);
+      userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      localStorage.setItem('analytics_user_id', userId),
     }
-    return userId;
+    return userId,
   }
   /**
-   * Get analytics summary;
+   * Get analytics summary,
    */
   getAnalyticsSummary(): {/* TODO: Fix JSX expression */}
-  s: number }>;
+  s: number }>,
     conversionRat,
-  e: number;
+  e: number,
   } {/* TODO: Fix JSX expression */}
       },
       {} as Record<string, number></string>
-    );
+    ),
     const eventsByCategory = events.reduce()
       (acc, event) => {/* TODO: Fix JSX expression */}
       },
       {} as Record<string, number></string>
-    );
-    const pageViews = events.filter(e => e.type === 'page_view');
-    const topPages = pageViews;
+    ),
+    const pageViews = events.filter(e => e.type === 'page_view'),
+    const topPages = pageViews,
       .reduce()
         (acc, event) => {/* TODO: Fix JSX expression */}
           } else {/* TODO: Fix JSX expression */}
-  s: 1 });
+  s: 1 }),
           }
-          return acc;
+          return acc,
         },
         [] as Array<{/* TODO: Fix JSX expression */}
   s: number }>
       )
-      .sort((a, b) => b.views - a.views);
-    const conversions = events.filter(e => e.category === 'conversion').length;
-    const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0;
+      .sort((a, b) => b.views - a.views),
+    const conversions = events.filter(e => e.category === 'conversion').length,
+    const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0,
     return {/* TODO: Fix JSX expression */}
-    };
+    },
   }
   /**
-   * Send session data to analytics service;
+   * Send session data to analytics service,
    */
   private async sendSessionData(sessio,)
   n: UserSession): Promise<void> {/* TODO: Fix JSX expression */}
         },
         bod,
   y: JSON.stringify(session)
-      });
+      }),
     } catch (error) {/* TODO: Fix JSX expression */}
       }
   }
   /**
-   * End current session;
+   * End current session,
    */
   endSession(): void {/* TODO: Fix JSX expression */}
     }
-    // Create new session;
-    this.currentSession = this.createNewSession();
+    // Create new session,
+    this.currentSession = this.createNewSession(),
   }
 }
-// Export singleton instance;
-export const advancedAnalytics = AdvancedAnalytics.getInstance();
-export default advancedAnalytics;
+// Export singleton instance,
+export const advancedAnalytics = AdvancedAnalytics.getInstance(),
+export default advancedAnalytics,
 `
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

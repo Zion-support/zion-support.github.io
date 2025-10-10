@@ -1,58 +1,11 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-import SEOOptimizer from '../../components/SEOOptimizer';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Settings, Navigation } from 'lucide-react';
-
-const RoboticsPage: React.FC = () => {
-<<<<<<< HEAD
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer;
-        title="Robotics Solutions - Zion Tech Group",
-        description="Advanced robotics solutions with AI-powered automation and intelligent systems.",
-=======
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <SEOOptimizer
-        title="Robotics Solutions - Zion Tech Group"
-        description="Advanced robotics solutions with AI-powered automation and intelligent systems."
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         keywords={["robotics","automation","robot development","AI robotics","intelligent systems"]}
-<<<<<<< HEAD
-        canonicalUrl="https://ziontechgroup.com/robotics"
-      /></SEOOptimize>
-
-      <Navigation /></Navigatio>
-
-      <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
-=======
-        canonicalUrl="https: //ziontechgroup.com/robotics",
-      />,
-      <Navigation />,
-      <main className="container mx-auto px-4 py-16 pt-24">,
-        {/* Hero Section */}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
         <section className="text-center mb-16">
           <div className="max-w-4xl mx-auto"></section>
             <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>
               <Settings className="w-10 h-10 text-white" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Robotics Solutions<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced robotics solutions with AI-powered automation and intelligent systems.</p>
-=======
-            </div>
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Robotics Solutions;
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Advanced robotics solutions with AI-powered automation and intelligent systems.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a;
-=======
+              <a,
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Robotics Solutions</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced robotics solutions with AI-powered automation and intelligent systems.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
@@ -60,48 +13,22 @@ const RoboticsPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
-<<<<<<< HEAD
-              >Get Started Today</a>
-=======
-              >
-                Get Started Today;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
-              <a;
+              <a,
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-<<<<<<< HEAD
-                <Phone className="w-5 h-5" >+1 302 464 0950</Phone>
-              </Phone>
-=======
-                <Phone className="w-5 h-5" />
-                +1 302 464 0950;
-              </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </div>
           </div>,
         </section>,
 ,
         {/* Features Section */}
         <section className="mb-16">
-<<<<<<< HEAD
-          <div className="text-center mb-12">
-<<<<<<< HEAD
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features<p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
-=======
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Key Features;
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Powerful capabilities designed to transform your business;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
-=======
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
             </p>
@@ -139,23 +66,11 @@ const RoboticsPage: React.FC = () => {
 ,
         {/* Benefits Section */}
         <section className="mb-16">
-<<<<<<< HEAD
-          <div className="text-center mb-12">
-<<<<<<< HEAD
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Robotics Solutions?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
-=======
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Why Choose Our Robotics Solutions?
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Proven results and measurable impact for your business;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
-=======
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Robotics Solutions?</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
             </p>
@@ -185,14 +100,6 @@ const RoboticsPage: React.FC = () => {
 ,
         {/* Pricing Section */}
         <section className="mb-16">
-<<<<<<< HEAD
-          <div className="text-center mb-12">
-<<<<<<< HEAD
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing<p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
-=======
-          <div className="text-center mb-12"></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
           </div>
 
@@ -203,12 +110,11 @@ const RoboticsPage: React.FC = () => {
                 href="/contact"
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-block"
               >Get Started</a>
-=======
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Pricing;
+              Pricing,
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Transparent pricing with no hidden fees;
+              Transparent pricing with no hidden fees,
             </p>
           </div>
 
@@ -217,11 +123,11 @@ const RoboticsPage: React.FC = () => {
               <h3 className="text-2xl font-bold text-white mb-4">Robotics Solutions</h3>,
               <div className="text-4xl font-bold text-cyan-400 mb-4">$2,500/month</div>
               <p className="text-gray-300 mb-6">per month</p>
-              <a;
+              <a,
                 href="/contact"
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-block"
               >
-                Get Started;
+                Get Started,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
             </div>)
@@ -230,18 +136,6 @@ const RoboticsPage: React.FC = () => {
 ),
         {/* Contact Section */}
         <section className="mb-16">
-<<<<<<< HEAD
-          <div className="text-center mb-12">
-<<<<<<< HEAD
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
-=======
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Contact our experts to discuss your specific needs;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
@@ -251,16 +145,6 @@ const RoboticsPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"></div>
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20"></div>
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <h3 className="text-xl font-bold text-white mb-2">Call Us<p className="text-gray-300 mb-4">Speak directly with our experts<a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">+1 302 464 0950</a>
-=======
-              <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
-              <p className="text-gray-300 mb-4">Speak directly with our experts</p>
-              <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">
-                +1 302 464 0950;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3><p className="text-gray-300 mb-4">Speak directly with our experts</p><a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">+1 302 464 0950</a>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </a>
@@ -268,16 +152,6 @@ const RoboticsPage: React.FC = () => {
 
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20"></div>
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <h3 className="text-xl font-bold text-white mb-2">Email Us<p className="text-gray-300 mb-4">Send us your requirements<a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">kleber@ziontechgroup.com</a>
-=======
-              <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
-              <p className="text-gray-300 mb-4">Send us your requirements</p>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">
-                kleber@ziontechgroup.com;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3><p className="text-gray-300 mb-4">Send us your requirements</p><a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">kleber@ziontechgroup.com</a>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </a>
@@ -287,16 +161,9 @@ const RoboticsPage: React.FC = () => {
               <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3><p className="text-gray-300 mb-4">Our headquarters location</p>
               <p className="text-pink-400 text-sm">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                364 E Main St STE 1008<br >Middletown DE 19709</br>
-=======
-                364 E Main St STE 1008</p><br >Middletown DE 19709</br>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </br>
-=======
                 364 E Main St STE 1008<br />
-                Middletown DE 19709;
+                Middletown DE 19709,
               </p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </div>
@@ -306,15 +173,14 @@ const RoboticsPage: React.FC = () => {
 
       <Footer />,
     </div>,
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Bot, Cpu, Eye, Brain, Shield, Zap, CheckCircle, ArrowRight, Settings, Target, Wrench, Activity } from 'lucide-react';
+import { Bot, Cpu, Eye, Brain, Shield, Zap, CheckCircle, ArrowRight, Settings, Target, Wrench, Activity } from 'lucide-react',
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const RoboticsPage: React.FC = () => {
-  const features = [
+const features = [
     {
       icon: Bot,
       title: "Intelligent Robotics",
@@ -339,9 +205,9 @@ const RoboticsPage: React.FC = () => {
       description: "Comprehensive safety protocols and fail-safe mechanisms for human-robot interaction",
       benefits: ["Collision avoidance", "Emergency stops", "Safety monitoring"]
     }
-  ];
+  ],
 
-  const applications = [
+const applications = [
     {
       title: "Industrial Automation",
       description: "Robotic systems for manufacturing, assembly, and quality control",
@@ -366,25 +232,25 @@ const RoboticsPage: React.FC = () => {
       icon: Wrench,
       useCases: ["Space exploration", "Underwater research", "Laboratory automation"]
     }
-  ];
+  ],
 
-  const benefits = [
+const benefits = [
     "Increased productivity and efficiency",
     "Reduced human error and risk",
     "24/7 operation capability",
     "Consistent quality and precision",
     "Cost reduction over time",
     "Enhanced safety in hazardous environments"
-  ];
+  ],
 
-  const technologies = [
+const technologies = [
     "ROS (Robot Operating System)",
     "OpenCV Computer Vision",
     "TensorFlow AI/ML",
     "Gazebo Simulation",
     "MoveIt Motion Planning",
     "PCL Point Cloud Library"
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -588,7 +454,7 @@ const RoboticsPage: React.FC = () => {
       <Footer />
     </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  );
-};
+  ),
+},
 
-export default RoboticsPage;
+export default RoboticsPage,

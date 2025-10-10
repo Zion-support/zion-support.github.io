@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
 import React from 'react';
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Building, Zap, Globe, Users, Shield, Code, BarChart, Brain, Cloud, Settings, Target, Rocket, Palette, Video, Music, Gamepad2, ShoppingCart, CreditCard, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, ChefHat, Rocket as RocketIcon, Sprout, Scale } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Building, Zap, Globe, Users, Shield, Code, BarChart, Brain, Cloud, Settings, Target, Rocket, Palette, Video, Music, Gamepad2, ShoppingCart, CreditCard, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, ChefHat, Rocket as RocketIcon, Sprout, Scale } from 'lucide-react',
 import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -10,7 +10,7 @@ import PerformanceMonitor from '../components/PerformanceMonitor';
 import Navigation from '../components/Navigation';
 
 const RoboticsIntegrationPage: React.FC = () => {
-  const features = [
+const features = [
     {
       icon: Settings,
       title: "Automated Integration",
@@ -41,9 +41,9 @@ const RoboticsIntegrationPage: React.FC = () => {
       title: "Custom Development",
       description: "Tailored solutions and custom programming for specific business needs"
     }
-  ];
+  ],
 
-  const solutions = [
+const solutions = [
     {
       title: "Manufacturing Automation",
       description: "Increase production efficiency by 60% with intelligent robotic systems",
@@ -68,9 +68,9 @@ const RoboticsIntegrationPage: React.FC = () => {
       icon: Users,
       benefits: ["24/7 service", "Cost reduction", "Enhanced customer experience"]
     }
-  ];
+  ],
 
-  const robotTypes = [
+const robotTypes = [
     {
       name: "Industrial Robots",
       description: "Heavy-duty robots for manufacturing and assembly operations",
@@ -107,9 +107,9 @@ const RoboticsIntegrationPage: React.FC = () => {
       icon: Sprout,
       applications: ["Planting", "Harvesting", "Monitoring", "Pest control"]
     }
-  ];
+  ],
 
-  const pricingPlans = [
+const pricingPlans = [
     {
       name: "Basic Integration",
       price: "$5,000/mo",
@@ -156,9 +156,9 @@ const RoboticsIntegrationPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ],
 
-  const testimonials = [
+const testimonials = [
     {
       name: "Robert Kim",
       role: "Manufacturing Director",
@@ -180,7 +180,7 @@ const RoboticsIntegrationPage: React.FC = () => {
       avatar: "MJ",
       content: "Our warehouse automation with mobile robots has increased efficiency by 50% and reduced labor costs by 30%. The system is incredibly reliable and easy to maintain."
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -443,9 +443,9 @@ const RoboticsIntegrationPage: React.FC = () => {
 
       <Footer /></Foote>
     </div>
-  );
-};
+  ),
+},
 
-RoboticsIntegrationPage.displayName = 'RoboticsIntegrationPage';
+RoboticsIntegrationPage.displayName = 'RoboticsIntegrationPage',
 
-export default RoboticsIntegrationPage;
+export default RoboticsIntegrationPage,

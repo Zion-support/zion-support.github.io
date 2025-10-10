@@ -1,34 +1,29 @@
 import React from 'react';
-import { Loader2, Zap } from 'lucide-react';
+import { Loader2, Zap } from 'lucide-react',
 
 interface LoadingProps {
-  size?: 'sm' | 'md' | 'lg';
-  text?: string;
-  fullScreen?: boolean;
+  size?: 'sm' | 'md' | 'lg',
+  text?: string,
+  fullScreen?: boolean,
 }
 
-<<<<<<< HEAD
-const Loading: React.FC<LoadingProps>= ({
-=======
-const Loading: React.FC<LoadingProps> = ({,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   size = 'md',
   text = 'Loading...',
-  fullScreen = false;
+  fullScreen = false,
 }) => {
-  const sizeClasses = {
+const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
-  };
+  },
 
-  const textSizeClasses = {
+const textSizeClasses = {
     sm: 'text-sm',
     md: 'text-base',
     lg: 'text-lg',
-  };
+  },
 </LoadingProps>
-  const content = (</LoadingProps>
+const content = (</LoadingProps>
     <div className="flex flex-col items-center justify-center space-y-4"></div>
       <div className="relative"></div>
         <div className={`${sizeClasses[size]} animate-spin`}></div>
@@ -43,22 +38,13 @@ const Loading: React.FC<LoadingProps> = ({,
         </p>
       )}
     </div>
-  );
+  ),
 
   if (fullScreen) {
-<<<<<<< HEAD
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">{content}</div>
-      </div>
-=======
-    return(<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">)
-        {content})
-      </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-    );
+    ),
   }
 
-  return content;
-};
+  return content,
+},
 
-export default Loading;
+export default Loading,

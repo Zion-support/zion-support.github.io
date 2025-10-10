@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
 import React from 'react';
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Rocket, Satellite, Globe, Zap, Target, Users, Shield, Lock, Settings, FileText, Brain, Activity, Orbit } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Rocket, Satellite, Globe, Zap, Target, Users, Shield, Lock, Settings, FileText, Brain, Activity, Orbit } from 'lucide-react',
 import SEOHead from '../components/SEOHead';
 import ErrorBoundary from '../components/ErrorBoundary';
 import Navigation from '../components/Navigation';
@@ -442,7 +442,7 @@ const AISpaceTechnologyPage: React.FC = () => {
 
       <Footer /></Foote>
     </ErrorBoundary>
-  );
-};
+  ),
+},
 
-export default AISpaceTechnologyPage;
+export default AISpaceTechnologyPage,

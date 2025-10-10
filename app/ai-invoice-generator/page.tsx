@@ -1,2 +1,2 @@
-'use client';
-export default AIInvoiceGeneratorPage;
+'use client',
+export default AIInvoiceGeneratorPage,

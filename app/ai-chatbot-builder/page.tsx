@@ -1,2 +1,2 @@
-'use client';
-export default AIChatbotBuilderPage;
+'use client',
+export default AIChatbotBuilderPage,

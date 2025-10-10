@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
 import React from 'react';
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Cpu, Zap, Target, BarChart, Shield, Users, Globe, Lock, Settings, FileText, Brain, Atom, Microscope } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Cpu, Zap, Target, BarChart, Shield, Users, Globe, Lock, Settings, FileText, Brain, Atom, Microscope } from 'lucide-react',
 import SEOHead from '../components/SEOHead';
 import ErrorBoundary from '../components/ErrorBoundary';
 import Navigation from '../components/Navigation';
@@ -439,7 +439,7 @@ const AIQuantumOptimizationPage: React.FC = () => {
 
       <Footer /></Foote>
     </ErrorBoundary>
-  );
-};
+  ),
+},
 
-export default AIQuantumOptimizationPage;
+export default AIQuantumOptimizationPage,

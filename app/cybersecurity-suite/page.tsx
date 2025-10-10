@@ -1,2 +1,2 @@
-'use client';
-export default CybersecuritySuitePage;
+'use client',
+export default CybersecuritySuitePage,

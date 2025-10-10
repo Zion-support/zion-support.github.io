@@ -1,2 +1,2 @@
-'use client';
-export default AIFinancialAdvisorPage;
+'use client',
+export default AIFinancialAdvisorPage,

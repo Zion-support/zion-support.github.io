@@ -1,2 +1,2 @@
-'use client';
-export default ARVRSolutionsPage;
+'use client',
+export default ARVRSolutionsPage,

@@ -1,2 +1,2 @@
-'use client';
-export default SLAPage;
+'use client',
+export default SLAPage,

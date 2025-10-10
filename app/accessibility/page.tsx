@@ -1,11 +1,11 @@
-'use client';
+'use client',
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap } from 'lucide-react';
+import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap } from 'lucide-react',
 
 const AccessibilityPage: React.FC = () => {
-  const features = [
+const features = [
     {
       icon: Eye,
       title: 'Visual Accessibility',
@@ -42,9 +42,9 @@ const AccessibilityPage: React.FC = () => {
       description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',
       benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
     }
-  ];
+  ],
 
-  const standards = [
+const standards = [
     {
       name: 'WCAG 2.1 AA',
       description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
@@ -65,7 +65,7 @@ const AccessibilityPage: React.FC = () => {
       description: 'European accessibility standard for ICT products and services',
       status: 'Fully Compliant'
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -183,7 +183,7 @@ const AccessibilityPage: React.FC = () => {
 
       <Footer /></Foote>
     </div>
-  );
-};
+  ),
+},
 
-export default AccessibilityPage;
+export default AccessibilityPage,

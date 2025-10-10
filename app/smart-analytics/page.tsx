@@ -1,2 +1,2 @@
-'use client';
-export default SmartAnalyticsPage;
+'use client',
+export default SmartAnalyticsPage,

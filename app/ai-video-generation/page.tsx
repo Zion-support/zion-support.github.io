@@ -1,2 +1,2 @@
-'use client';
-export default AIVideoGenerationPage;
+'use client',
+export default AIVideoGenerationPage,

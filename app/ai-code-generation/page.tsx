@@ -1,2 +1,2 @@
-'use client';
-export default AICodeGenerationPage;
+'use client',
+export default AICodeGenerationPage,

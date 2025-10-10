@@ -1,39 +1,18 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import Navigation from './Navigation';
-
-<<<<<<< HEAD
-const Header: React.FC = () => {
-  return (
-    <>
-      <Navigation >{/* Spacer to prevent content from going under fixed header */}</Navigation>
-      </Navigation><div className="h-16 lg:h-20" />
-    </>
-=======
-const Header: React.FC = () => {,
-  return(<>,)
-      <Navigation />),
-      {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-16 lg: h-20" />,
-    </>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Mail, ChevronDown, Brain, Cloud, Shield, Code, Users, Briefcase, BookOpen, MessageSquare } from 'lucide-react';
+import React, { useState, useEffect } from 'react',
+import { Link, useLocation } from 'react-router-dom',
+import { Menu, X, Phone, Mail, ChevronDown, Brain, Cloud, Shield, Code, Users, Briefcase, BookOpen, MessageSquare } from 'lucide-react',
 
 const Header: React.FC = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const location = useLocation();
+const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
+const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+const location = useLocation(),
 
   useEffect(() => {
-    setMobileMenuOpen(false);
-    setActiveDropdown(null);
-  }, [location]);
+    setMobileMenuOpen(false),
+    setActiveDropdown(null),
+  }, [location]),
 
-  const navigation = {
+const navigation = {
     'Services': [
       { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Artificial Intelligence Solutions' },
       { name: 'IT Services', href: '/it-services', icon: Code, description: 'Information Technology Services' },
@@ -63,9 +42,9 @@ const Header: React.FC = () => {
       { name: 'Case Studies', href: '/case-studies', icon: BookOpen, description: 'Success Stories' },
       { name: 'Contact', href: '/contact', icon: MessageSquare, description: 'Get In Touch' }
     ]
-  };
+  },
 
-  const isActive = (path: string) => location.pathname === path;
+const isActive = (path: string) => location.pathname === path,
 
   return (
     <header className="bg-slate-900/95 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50">
@@ -217,7 +196,7 @@ const Header: React.FC = () => {
       </div>
     </header>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  );
-};
+  ),
+},
 
-export default Header;
+export default Header,

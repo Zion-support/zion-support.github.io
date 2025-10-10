@@ -1,2 +1,2 @@
-'use client';
-export default DatabaseManagementPage;
+'use client',
+export default DatabaseManagementPage,

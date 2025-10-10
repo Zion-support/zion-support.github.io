@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
 import React from 'react';
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Building, Zap, Globe, Users, Shield, Code, BarChart, Brain, Cloud, Settings, Target, Rocket, Palette, Video, Music, Gamepad2, ShoppingCart, CreditCard, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, ChefHat, Rocket as RocketIcon, Sprout, Scale } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Building, Zap, Globe, Users, Shield, Code, BarChart, Brain, Cloud, Settings, Target, Rocket, Palette, Video, Music, Gamepad2, ShoppingCart, CreditCard, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, ChefHat, Rocket as RocketIcon, Sprout, Scale } from 'lucide-react',
 import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -10,7 +10,7 @@ import PerformanceMonitor from '../components/PerformanceMonitor';
 import Navigation from '../components/Navigation';
 
 const AIEdgeComputingPage: React.FC = () => {
-  const features = [
+const features = [
     {
       icon: Zap,
       title: "Ultra-Low Latency",
@@ -41,9 +41,9 @@ const AIEdgeComputingPage: React.FC = () => {
       title: "Hybrid Architecture",
       description: "Seamlessly integrate edge computing with cloud services for optimal performance"
     }
-  ];
+  ],
 
-  const useCases = [
+const useCases = [
     {
       title: "Autonomous Vehicles",
       description: "Enable real-time decision making for self-driving cars with instant processing",
@@ -68,9 +68,9 @@ const AIEdgeComputingPage: React.FC = () => {
       icon: Heart,
       benefits: ["Life-critical speed", "Privacy compliance", "Continuous monitoring"]
     }
-  ];
+  ],
 
-  const edgeDevices = [
+const edgeDevices = [
     {
       name: "Edge Servers",
       description: "High-performance computing nodes for complex AI workloads",
@@ -107,9 +107,9 @@ const AIEdgeComputingPage: React.FC = () => {
       icon: Settings,
       specs: ["PLC integration", "Real-time control", "Predictive algorithms", "Safety systems"]
     }
-  ];
+  ],
 
-  const pricingPlans = [
+const pricingPlans = [
     {
       name: "Edge Starter",
       price: "$2,999/mo",
@@ -156,9 +156,9 @@ const AIEdgeComputingPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ],
 
-  const testimonials = [
+const testimonials = [
     {
       name: "David Chen",
       role: "CTO",
@@ -180,7 +180,7 @@ const AIEdgeComputingPage: React.FC = () => {
       avatar: "JW",
       content: "Edge computing enables us to monitor patients in real-time and respond to critical situations immediately. It's literally saving lives with faster response times."
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -443,9 +443,9 @@ const AIEdgeComputingPage: React.FC = () => {
 
       <Footer /></Foote>
     </div>
-  );
-};
+  ),
+},
 
-AIEdgeComputingPage.displayName = 'AIEdgeComputingPage';
+AIEdgeComputingPage.displayName = 'AIEdgeComputingPage',
 
-export default AIEdgeComputingPage;
+export default AIEdgeComputingPage,

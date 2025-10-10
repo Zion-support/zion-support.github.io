@@ -1,426 +1,185 @@
-'use client';
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
+'use client',
+import React, { useEffect, useState } from 'react',
 
-<<<<<<< HEAD
-interface PerformanceOptimizerProps {
-  enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enableCodeSplitting?: boolean;
-  enablePrefetching?: boolean;
-}
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableImageOptimization = true,
-  enableLazyLoading = true,
-  enableCodeSplitting = true,
-  enablePrefetching = true
-}) => {
-  useEffect(() => {
-    // Image optimization
-    if (enableImageOptimization) {
-      const images = document.querySelectorAll('img');
-      images.forEach((img) => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
-        if (!img.decoding) {
-          img.decoding = 'async';
-        }
-      });
-    }
-
-    // Preload critical resources
-    if (enablePrefetching) {
-      const preloadLink = document.createElement('link');
-      preloadLink.rel = 'preload';
-      preloadLink.href = '/fonts/orbitron.woff2';
-      preloadLink.as = 'font';
-      preloadLink.type = 'font/woff2';
-      preloadLink.crossOrigin = 'anonymous';
-      document.head.appendChild(preloadLink);
-    }
-
-    // Service Worker registration for caching
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js').catch(() => {
-        // Service worker registration failed, but that's okay
-      });
-    }
-  }, [enableImageOptimization, enablePrefetching]);
-
-  return null;
-};
-
-export default PerformanceOptimizer;
-=======
-import React, { useEffect, useState, useCallback } from 'react';
-
-<<<<<<< HEAD
 interface PerformanceMetrics {
-  lcp: number;,
-    fid: number;
-  cls: number;,
-    fcp: number;
-  ttfb: number;
+  lcp: number,
+  fid: number,
+  cls: number,
+  fcp: number,
+  ttfb: number,
 }
 
-interface OptimizationStatus {
-  preloaded: number;,
-    codeSplit: boolean;
-  serviceWorker: boolean;,
-    optimized: boolean;
-}
-
-export const PerformanceOptimizer: React.FC = () => {,
-  const [optimizationStatus, setOptimizationStatus] = useState<OptimizationStatus>({
-    preloaded: 0;
-    codeSplit: false;
-    serviceWorker: false;
-    optimized: false;
-  const collectWebVitals = useCallback(() => {
-=======
-interface PerformanceMetrics {}
-  lcp: number;
-  fid: number;
-  cls: number;
-  fcp: number;
-  ttfb: number;
-}
-
-interface OptimizationStatus {}
-  preloaded: number;
-  codeSplit: boolean;
-  serviceWorker: boolean;
-  optimized: boolean;
-}
-
-export const PerformanceOptimizer: React.FC = () => {}
-  const [optimizationStatus, setOptimizationStatus] = useState<OptimizationStatus>({}
-    preloaded: 0,
-    codeSplit: false,
-    serviceWorker: false,
-    optimized: false
-
-  const collectWebVitals = useCallback(() => {}
->>>>>>> origin/merge-error-fixes
-    if (typeof window === 'undefined') return;
-
-<<<<<<< HEAD
-    // Collect Core Web Vitals
-<<<<<<< HEAD
-    const vitals: PerformanceMetrics = {,
+const PerformanceOptimizer: React.FC = () => {
+const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: 0,
-=======
-    const vitals: PerformanceMetrics = {}
+    fid: 0,
+    cls: 0,
+    fcp: 0,
+    ttfb: 0,
+  }),
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return,
+
+    // Collect Core Web Vitals
+    const vitals: PerformanceMetrics = {
       lcp: 0,
->>>>>>> origin/merge-error-fixes
       fid: 0,
       cls: 0,
       fcp: 0,
       ttfb: 0,
-=======
-    // Collect Core Web Vitals;
-    const vitals: PerformanceMetrics = {
-      lcp: 0;
-      fid: 0;
-      cls: 0;
-      fcp: 0;
-      ttfb: 0;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-    };
+    },
 
-<<<<<<< HEAD
-    // LCP - Largest Contentful Paint;
-    const lcpObserver = new PerformanceObserver((list) => {
-=======
     // LCP - Largest Contentful Paint
-    const lcpObserver = new PerformanceObserver((list) => {}
->>>>>>> origin/merge-error-fixes
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      vitals.lcp = lastEntry.startTime;
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries(),
+      const lastEntry = entries[entries.length - 1],
+      vitals.lcp = lastEntry.startTime,
+      setMetrics(prev => ({ ...prev, lcp: vitals.lcp })),
+    }),
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }),
 
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-<<<<<<< HEAD
-    // FID - First Input Delay;
-    const fidObserver = new PerformanceObserver((list) => {
-=======
     // FID - First Input Delay
-    const fidObserver = new PerformanceObserver((list) => {}
->>>>>>> origin/merge-error-fixes
-      const entries = list.getEntries();
-      entries.forEach((entry) => {}
-        vitals.fid = entry.processingStart - entry.startTime;
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries(),
+      entries.forEach((entry: any) => {
+        vitals.fid = entry.processingStart - entry.startTime,
+        setMetrics(prev => ({ ...prev, fid: vitals.fid })),
+      }),
+    }),
+    fidObserver.observe({ entryTypes: ['first-input'] }),
 
-
-    fidObserver.observe({ entryTypes: ['first-input'] });
-
-<<<<<<< HEAD
-    // CLS - Cumulative Layout Shift;
-    const clsObserver = new PerformanceObserver((list) => {
-=======
     // CLS - Cumulative Layout Shift
-    const clsObserver = new PerformanceObserver((list) => {}
->>>>>>> origin/merge-error-fixes
-      let clsValue = 0;
-      for (const entry of list.getEntries()) {}
-        if (!(entry as any).hadRecentInput) {}
-          clsValue += (entry as any).value;
+    let clsValue = 0,
+    const clsObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries(),
+      entries.forEach((entry: any) => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value,
+          vitals.cls = clsValue,
+          setMetrics(prev => ({ ...prev, cls: vitals.cls })),
         }
-      }
-      vitals.cls = clsValue;
+      }),
+    }),
+    clsObserver.observe({ entryTypes: ['layout-shift'] }),
 
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-<<<<<<< HEAD
-    // FCP - First Contentful Paint;
-    const fcpObserver = new PerformanceObserver((list) => {
-=======
     // FCP - First Contentful Paint
-    const fcpObserver = new PerformanceObserver((list) => {}
->>>>>>> origin/merge-error-fixes
-      const entries = list.getEntries();
-      entries.forEach((entry) => {}
-        vitals.fcp = entry.startTime;
+    const fcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries(),
+      entries.forEach((entry: any) => {
+        if (entry.name === 'first-contentful-paint') {
+          vitals.fcp = entry.startTime,
+          setMetrics(prev => ({ ...prev, fcp: vitals.fcp })),
+        }
+      }),
+    }),
+    fcpObserver.observe({ entryTypes: ['paint'] }),
 
-
-    fcpObserver.observe({ entryTypes: ['paint'] });
-
-<<<<<<< HEAD
-    // TTFB - Time to First Byte;
-    const ttfbObserver = new PerformanceObserver((list) => {
-=======
     // TTFB - Time to First Byte
-    const ttfbObserver = new PerformanceObserver((list) => {}
->>>>>>> origin/merge-error-fixes
-      const entries = list.getEntries();
-      entries.forEach((entry) => {}
-        vitals.ttfb = entry.responseStart - entry.requestStart;
-
-
-    ttfbObserver.observe({ entryTypes: ['navigation'] });
-
-    setOptimizationStatus(prev => ({ ...prev, preloaded: 1 }));
-=======
-
-interface PerformanceOptimizerProps {/* TODO: Fix JSX expression */}
-}
-
-const,
-  PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-  });
-
-  useEffect(() => {/* TODO: Fix JSX expression */}
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+    if (navigationEntry) {
+      vitals.ttfb = navigationEntry.responseStart - navigationEntry.requestStart,
+      setMetrics(prev => ({ ...prev, ttfb: vitals.ttfb })),
     }
-    if (enableLazyLoading) {/* TODO: Fix JSX expression */}
-    }
-    if (enablePreloading) {/* TODO: Fix JSX expression */}
-    }
-    if (enableCodeSplitting) {/* TODO: Fix JSX expression */}
-    }
-    if (enableResourceHints) {/* TODO: Fix JSX expression */}
-    }
-    if (enableServiceWorker) {/* TODO: Fix JSX expression */}
-    }
-  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker]);
 
-  const optimizeImages = () => {/* TODO: Fix JSX expression */}
-      }
-      
-      // Add decoding="async" for better performance;
-      img.setAttribute('decoding', 'async');
-      "
-      // Add fetchpriority="high" for above-the-fold images;
-      if (img.getBoundingClientRect().top <= window.innerHeight) {/* TODO: Fix JSX expression */}
-      }
-      
-      // Add proper alt text if missing;
-      if (!img.getAttribute('alt')) {/* TODO: Fix JSX expression */}
-      }
-    });
-    
-    setOptimizationStatus(prev => ({/* TODO: Fix JSX expression */})
-  d: optimized }));
-  };
+    // Cleanup observers
+    return () => {
+      lcpObserver.disconnect(),
+      fidObserver.disconnect(),
+      clsObserver.disconnect(),
+      fcpObserver.disconnect(),
+    },
+  }, []),
 
-  const setupLazyLoading = () => {/* TODO: Fix JSX expression */}
+  // Performance optimizations
+  useEffect(() => {
+    // Preload critical resources
+    const preloadCriticalResources = () => {
+      const criticalResources = [
+        '/fonts/inter-var.woff2',
+        '/images/hero-bg.webp',
+        '/images/logo.svg'
+      ],
+
+      criticalResources.forEach(resource => {
+        const link = document.createElement('link'),
+        link.rel = 'preload',
+        link.href = resource,
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image',
+        if (resource.endsWith('.woff2')) {
+          link.crossOrigin = 'anonymous',
+        }
+        document.head.appendChild(link),
+      }),
+    },
+
+    // Optimize images
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img[data-src]'),
+      images.forEach(img => {
+        const imageElement = img as HTMLImageElement,
+        if (imageElement.dataset.src) {
+          imageElement.src = imageElement.dataset.src,
+          imageElement.removeAttribute('data-src'),
+        }
+      }),
+    },
+
+    // Lazy load non-critical resources
+    const lazyLoadResources = () => {
+      const lazyElements = document.querySelectorAll('[data-lazy]'),
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const element = entry.target as HTMLElement,
+            const src = element.dataset.lazy,
+            if (src) {
+              if (element.tagName === 'IMG') {
+                (element as HTMLImageElement).src = src,
+              } else {
+                element.style.backgroundImage = `url(${src})`,
+              }
+              element.removeAttribute('data-lazy'),
+              observer.unobserve(element),
             }
           }
-        });
-      }, {/* TODO: Fix JSX expression */}
-      });
-      
-      const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach((img) => observer.observe(img));
-      
-      setOptimizationStatus(prev => ({/* TODO: Fix JSX expression */})
-  d: lazyImages.length }));
-    }
-  };
+        }),
+      }),
 
-  const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
-      },
-      {/* TODO: Fix JSX expression */}
-      }
-    ];
+      lazyElements.forEach(element => observer.observe(element)),
+    },
 
-    criticalResources.forEach((resource) => {/* TODO: Fix JSX expression */}
-      }
-      document.head.appendChild(link);
+    // Execute optimizations
+    preloadCriticalResources(),
+    optimizeImages(),
+    lazyLoadResources(),
 
-    });
-    fidObserver.observe({ entryTypes: ['first-input'] });
-
-
-    setOptimizationStatus(prev => ({/* TODO: Fix JSX expression */})
-  d: criticalResources.length }));
-  };
-
-  const setupCodeSplitting = () => {/* TODO: Fix JSX expression */}
-  t: true }));
-  };
-
-  const addResourceHints = () => {/* TODO: Fix JSX expression */}
-  s://fonts.googleapis.com' },
-      {/* TODO: Fix JSX expression */}
-  s://fonts.gstatic.com' },
-      {/* TODO: Fix JSX expression */}
-  s://www.googletagmanager.com' },
-      {/* TODO: Fix JSX expression */}
-  s://www.google-analytics.com' },
-      {/* TODO: Fix JSX expression */}
-  s://fonts.googleapis.com' },
-      {/* TODO: Fix JSX expression */}
-  n: 'anonymous' }
-    ];
-
-    hints.forEach((hint) => {/* TODO: Fix JSX expression */}
-      }
-      document.head.appendChild(link);
-    });
-
-    setOptimizationStatus(prev => ({/* TODO: Fix JSX expression */})
-  s: hints.length }));
-  };
-
-  const registerServiceWorker = async () => {/* TODO: Fix JSX expression */}
-  r: true }));
-        } catch (error) {/* TODO: Fix JSX expression */}
-        }
-    }
-  };
-
-  // Performance monitoring;
-  useEffect(() => {/* TODO: Fix JSX expression */}
-              });
-            }
+    // Report metrics to analytics
+    const reportMetrics = () => {
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: 'Core Web Vitals',
+          value: Math.round(vitals.lcp + vitals.fid + vitals.cls),
+          custom_map: {
+            lcp: vitals.lcp,
+            fid: vitals.fid,
+            cls: vitals.cls,
+            fcp: vitals.fcp,
+            ttfb: vitals.ttfb
           }
-        }
-      });
-      
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
+        }),
+      }
+    },
 
-    }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  }, []);
+    // Report after 5 seconds to allow metrics to stabilize
+    const timeoutId = setTimeout(reportMetrics, 5000),
 
-  const preloadCriticalResources = useCallback(() => {}
-    if (typeof window === 'undefined') return;
+    return () => clearTimeout(timeoutId),
+  }, [metrics]),
 
-    const criticalResources = [
-      '/fonts/inter.woff2',
-      '/css/critical.css',
-      '/js/critical.js'
-    ];
+  // Don't render anything - this is a performance optimization component
+  return null,
+},
 
-<<<<<<< HEAD
-    criticalResources.forEach(resource => {)
-<<<<<<< HEAD
-    const link = document.createElement('link');
-=======
-=======
-    criticalResources.forEach(resource => {)}
->>>>>>> origin/merge-error-fixes
-      const link = document.createElement('link');
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'script';
-      document.head.appendChild(link);
-
-    setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }));
-  }, []);
-
-<<<<<<< HEAD
-  const setupCodeSplitting = () => {
-    // This would be handled by Next.js dynamic imports;
-=======
-  const setupCodeSplitting = () => {}
-    // This would be handled by Next.js dynamic imports
->>>>>>> origin/merge-error-fixes
-    setOptimizationStatus(prev => ({ ...prev, codeSplit: true }));
-  };
-
-  const addResourceHints = () => {}
-    const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
-      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com' }
-    ];
-
-<<<<<<< HEAD
-    hints.forEach(hint => {)
-<<<<<<< HEAD
-    const link = document.createElement('link');
-=======
-=======
-    hints.forEach(hint => {)}
->>>>>>> origin/merge-error-fixes
-      const link = document.createElement('link');
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-      link.rel = hint.rel;
-      link.href = hint.href;
-      document.head.appendChild(link);
-
-  };
-
-  const registerServiceWorker = async () => {}
-    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {}
-      try {}
-        const registration = await navigator.serviceWorker.register('/sw.js');
-        setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
-      } catch (error) {}
-        }
-    }
-  };
-
-  useEffect(() => {}
-    if (typeof window !== 'undefined') {}
-      collectWebVitals();
-      preloadCriticalResources();
-      setupCodeSplitting();
-      addResourceHints();
-      registerServiceWorker();
-
-      setOptimizationStatus(prev => ({ ...prev, optimized: true }));
-    }
-  }, [collectWebVitals, preloadCriticalResources]);
-
-  // This component doesn't render anything visible;
-  return null;
-};
-<<<<<<< HEAD
-</OptimizationStatus>
-export default PerformanceOptimizer;</OptimizationStatus>
->>>>>>> origin/main
-=======
-
-export default PerformanceOptimizer;"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+export default PerformanceOptimizer,

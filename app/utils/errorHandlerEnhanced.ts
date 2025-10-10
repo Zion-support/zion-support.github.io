@@ -1,60 +1,32 @@
-'use client';
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Enhanced Error Handler;
-export class AppError extends Error {
-=======
-// Enhanced Error Handler
-export class AppError extends Error {}
->>>>>>> origin/merge-error-fixes
-  statusCode: number;
-  isOperational: boolean;
-  timestamp: string;
+'use client',
+  statusCode: number,
+  isOperational: boolean,
+  timestamp: string,
   constructor(message: string, statusCode = 500, isOperational = true) {}
     super(message)
-    this.statusCode = statusCode;
-    this.isOperational = isOperational;
+    this.statusCode = statusCode,
+    this.isOperational = isOperational,
     this.timestamp = new Date().toISOString()
     Error.captureStackTrace(this, this.constructor)
   }
 }
 export const errorHandler = (error: AppError | Error) => {}
-  const isDevelopment = process.env.NODE_ENV === 'development'
-  const appError = error instanceof AppError ? error : new AppError(error.message);
+const isDevelopment = process.env.NODE_ENV === 'development'
+const appError = error instanceof AppError ? error : new AppError(error.message),
 
-<<<<<<< HEAD
-  .toISOString()
-    statusCode: appError.statusCode || 500;
-  return {,
-=======
-  .toISOString(),
-    statusCode: appError.statusCode || 500
-
-  return {}
->>>>>>> origin/merge-error-fixes
     message: appError.isOperational ? appError.message : 'An unexpected error occurred',
-    statusCode: appError.statusCode || 500;
-  };
-};
-<<<<<<< HEAD
-export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {,
-  Promise.resolve(fn(req, res, next)).catch((error: unknown) => {,
-    if (next && typeof next === 'function') {,
-=======
-export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {}
-  Promise.resolve(fn(req, res, next)).catch((error: unknown) => {}
-    if (next && typeof next === 'function') {}
->>>>>>> origin/merge-error-fixes
-      next(error);
-=======
-// Enhanced Error Handler;
+    statusCode: appError.statusCode || 500,
+  },
+},
+      next(error),
+// Enhanced Error Handler,
 export class AppError extends Error {/* TODO: Fix JSX expression */}
   }
 }
 
 export const errorHandler = (error: AppError | Error) => {
-  const isDevelopment = process.env.NODE_ENV === 'development'
-  const appError = error instanceof AppError ? error : new AppError(error.message);
+const isDevelopment = process.env.NODE_ENV === 'development'
+const appError = error instanceof AppError ? error : new AppError(error.message),
   
   console.error({
     message: appError.message,
@@ -62,10 +34,10 @@ export const errorHandler = (error: AppError | Error) => {
     timestamp: new Date().toISOString(),
     statusCode: appError.statusCode || 500
 
-  });
+  }),
   return {/* TODO: Fix JSX expression */}
-  };
-};
+  },
+},
 export const asyncHandler = (f,
   n: (re,
   q: unknown, re,
@@ -77,5 +49,5 @@ export const asyncHandler = (f,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
-};
+},
 

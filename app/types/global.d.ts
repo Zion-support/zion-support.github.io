@@ -1,10 +1,10 @@
-// Global type definitions for the application;
+// Global type definitions for the application,
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (...args: any[]) => void,
     dataLayer?: any[];,
-    fbq?: (...args: any[]) => void;
+    fbq?: (...args: any[]) => void,
   }
 }
 
-export {};
+export {},

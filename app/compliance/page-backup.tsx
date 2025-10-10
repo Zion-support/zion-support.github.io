@@ -1,2 +1,2 @@
-'use client';
-export default CompliancePage;
+'use client',
+export default CompliancePage,

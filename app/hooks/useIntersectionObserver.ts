@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react',
 
 interface UseIntersectionObserverProps {
-  threshold?: number;
-  root?: Element | null;
-  rootMargin?: string;
-  freezeOnceVisible?: boolean;
+  threshold?: number,
+  root?: Element | null,
+  rootMargin?: string,
+  freezeOnceVisible?: boolean,
 }
 
 export const useIntersectionObserver = ({
@@ -13,24 +13,24 @@ export const useIntersectionObserver = ({
   rootMargin = '0%',
   freezeOnceVisible = false,
 }: UseIntersectionObserverProps = {}) => {
-  const [entry, setEntry] = useState<IntersectionObserverEntry>();</IntersectionObserverEntry></<<<IntersectionObserverEntry>const</IntersectionObserverEntry></IntersectionObserverEntry> [node, setNode] = useState<Element | null>(null);</Element></<<<Element>const</Element></<<Element>frozen</Element> = entry?.isIntersecting && freezeOnceVisible;
+const [entry, setEntry] = useState<IntersectionObserverEntry>();</IntersectionObserverEntry></<<<IntersectionObserverEntry>const</IntersectionObserverEntry></IntersectionObserverEntry> [node, setNode] = useState<Element | null>(null);</Element></<<<Element>const</Element></<<Element>frozen</Element> = entry?.isIntersecting && freezeOnceVisible,
 
-  const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
-    setEntry(entry);
-  };
+const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
+    setEntry(entry),
+  },
 
   useEffect(() => {
-    const hasIOSupport = !!window.IntersectionObserver;
+    const hasIOSupport = !!window.IntersectionObserver,
 
-    if (!hasIOSupport || frozen || !node) return;
+    if (!hasIOSupport || frozen || !node) return,
 
-    const observerParams = { threshold, root, rootMargin };
-    const observer = new IntersectionObserver(updateEntry, observerParams);
+    const observerParams = { threshold, root, rootMargin },
+    const observer = new IntersectionObserver(updateEntry, observerParams),
 
-    observer.observe(node);
+    observer.observe(node),
 
-    return () => observer.disconnect();
-  }, [node, threshold, root, rootMargin, frozen]);
+    return () => observer.disconnect(),
+  }, [node, threshold, root, rootMargin, frozen]),
 
-  return [setNode, entry] as const;
-};
+  return [setNode, entry] as const,
+},

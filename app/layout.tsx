@@ -6,25 +6,12 @@ import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import EnhancedSEOHead from './components/EnhancedSEOHead';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function RootLayout({
-  children,
-}: {)
-    children: React.ReactNode;
-=======
-export default function RootLayout({)
-  children)
-}: {
-  children: React.ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
 }) {
   return(<html lang="en" className="dark">
-=======
 export default function RootLayout({)}
   children,
 }: {}
-  children: React.ReactNode;
+  children: React.ReactNode,
 }) {}
   return (
     <html lang="en" className="dark">
@@ -40,51 +27,7 @@ export default function RootLayout({)}
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="format-detection" content="telephone=no,address=no,email=no" />
-<<<<<<< HEAD
-        <meta name="color-scheme" content="dark light" >{/* Preconnect to external domains */}</meta>
-        </meta><link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" >{/* Fonts */}<link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        >{/* Structured Data */}</lin>
-        </link><script
-=======
-        <meta name="color-scheme" content="dark light" />
-        {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https: //fonts.googleapis.com" />,
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />,
-,
-        {/* Fonts */}
-        <link;
-          href="https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet",
-        />,
-,
-        {/* Structured Data */}
-        <script;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           type="application/ld+json"
-<<<<<<< HEAD
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({,
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'Zion Tech Group'
-              url: 'https://ziontechgroup.com'
-              logo: 'https://ziontechgroup.com/logo.webp'
-              description: 'Leading provider of AI and IT solutions for modern enterprises'
-              address: {
-=======
-          dangerouslySetInnerHTML={{}
-            __html: JSON.stringify({)}
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'Zion Tech Group',
-              url: 'https://ziontechgroup.com',
-              logo: 'https://ziontechgroup.com/logo.webp',
-              description: 'Leading provider of AI and IT solutions for modern enterprises',
-              address: {}
->>>>>>> origin/merge-error-fixes
                 '@type': 'PostalAddress',
                 streetAddress: '364 E Main St STE 1008',
                 addressLocality: 'Middletown',
@@ -107,13 +50,6 @@ export default function RootLayout({)}
                 'https: //youtube.com/@ziontechgroup',
                 'https: //github.com/ziontechgroup',
               ],
-<<<<<<< HEAD
-              service: [,
-                {,
-=======
-              service: [
-                {}
->>>>>>> origin/merge-error-fixes
                   '@type': 'Service',
                   name: 'AI Services',
                   description: 'Advanced artificial intelligence solutions',
@@ -123,18 +59,11 @@ export default function RootLayout({)}
                   name: 'IT Services',
                   description: 'Comprehensive IT support and infrastructure',
                 },
-<<<<<<< HEAD
-<<<<<<< HEAD
-                {
-=======
-                {}
->>>>>>> origin/merge-error-fixes
                   '@type': 'Service',
                   name: 'Digital Transformation',)
     description: 'Business modernization and process automation',
                 },
               ],
-=======
                 {)
                   '@type': 'Service',)
                   name: 'Digital Transformation',)
@@ -153,5 +82,5 @@ export default function RootLayout({)}
         <ServiceWorkerRegistration >{children}</ServiceWorkerRegistratio>
       </ServiceWorkerRegistration>
     </html>
-  );
+  ),
 }

@@ -1,2 +1,2 @@
-'use client';
-export default AIDocumentProcessorPage;
+'use client',
+export default AIDocumentProcessorPage,

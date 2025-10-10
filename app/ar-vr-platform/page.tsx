@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
 import React from 'react';
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Eye, Zap, Globe, Users, Shield, Code, BarChart, Brain, Cloud, Settings, Target, Rocket, Palette, Video, Music, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, ChefHat, Rocket as RocketIcon, Sprout, Scale } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Eye, Zap, Globe, Users, Shield, Code, BarChart, Brain, Cloud, Settings, Target, Rocket, Palette, Video, Music, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, ChefHat, Rocket as RocketIcon, Sprout, Scale } from 'lucide-react',
 import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -10,7 +10,7 @@ import PerformanceMonitor from '../components/PerformanceMonitor';
 import Navigation from '../components/Navigation';
 
 const ARVRPlatformPage: React.FC = () => {
-  const features = [
+const features = [
     {
       icon: Eye,
       title: "Immersive 3 D Experiences",
@@ -41,9 +41,9 @@ const ARVRPlatformPage: React.FC = () => {
       title: "Developer Tools",
       description: "Comprehensive SDK and API for custom development and integration"
     }
-  ];
+  ],
 
-  const useCases = [
+const useCases = [
     {
       title: "Virtual Training",
       description: "Immersive training simulations for healthcare, aviation, and manufacturing",
@@ -68,9 +68,9 @@ const ARVRPlatformPage: React.FC = () => {
       icon: Building,
       benefits: ["Client engagement", "Design validation", "Cost reduction"]
     }
-  ];
+  ],
 
-  const pricingPlans = [
+const pricingPlans = [
     {
       name: "Starter",
       price: "$299/mo",
@@ -116,9 +116,9 @@ const ARVRPlatformPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ],
 
-  const testimonials = [
+const testimonials = [
     {
       name: "Dr. Sarah Chen",
       role: "Chief Medical Officer",
@@ -140,7 +140,7 @@ const ARVRPlatformPage: React.FC = () => {
       avatar: "EW",
       content: "Our clients can now walk through their future homes before construction begins. This has increased our project approval rate by 95% and reduced design revisions by 60%."
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -368,9 +368,9 @@ const ARVRPlatformPage: React.FC = () => {
 
       <Footer /></Foote>
     </div>
-  );
-};
+  ),
+},
 
-ARVRPlatformPage.displayName = 'ARVRPlatformPage';
+ARVRPlatformPage.displayName = 'ARVRPlatformPage',
 
-export default ARVRPlatformPage;
+export default ARVRPlatformPage,

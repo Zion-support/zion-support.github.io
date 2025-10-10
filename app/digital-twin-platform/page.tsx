@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
 import React from 'react';
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Building, Zap, Globe, Users, Shield, Code, BarChart, Brain, Cloud, Settings, Target, Rocket, Palette, Video, Music, Gamepad2, ShoppingCart, CreditCard, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, ChefHat, Rocket as RocketIcon, Sprout, Scale } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Building, Zap, Globe, Users, Shield, Code, BarChart, Brain, Cloud, Settings, Target, Rocket, Palette, Video, Music, Gamepad2, ShoppingCart, CreditCard, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, ChefHat, Rocket as RocketIcon, Sprout, Scale } from 'lucide-react',
 import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -10,7 +10,7 @@ import PerformanceMonitor from '../components/PerformanceMonitor';
 import Navigation from '../components/Navigation';
 
 const DigitalTwinPlatformPage: React.FC = () => {
-  const features = [
+const features = [
     {
       icon: Building,
       title: "Real-time Monitoring",
@@ -41,9 +41,9 @@ const DigitalTwinPlatformPage: React.FC = () => {
       title: "Advanced Visualization",
       description: "Interactive 3 D models with real-time data overlays and analytics"
     }
-  ];
+  ],
 
-  const useCases = [
+const useCases = [
     {
       title: "Manufacturing",
       description: "Optimize production lines, predict equipment failures, and improve efficiency",
@@ -68,9 +68,9 @@ const DigitalTwinPlatformPage: React.FC = () => {
       icon: Heart,
       benefits: ["Improved patient care", "Operational efficiency", "Resource optimization"]
     }
-  ];
+  ],
 
-  const industries = [
+const industries = [
     {
       name: "Manufacturing",
       description: "Optimize production processes and predict equipment failures",
@@ -107,9 +107,9 @@ const DigitalTwinPlatformPage: React.FC = () => {
       icon: ShoppingCart,
       examples: ["Store optimization", "Inventory management", "Customer analytics"]
     }
-  ];
+  ],
 
-  const pricingPlans = [
+const pricingPlans = [
     {
       name: "Starter",
       price: "$999/mo",
@@ -157,9 +157,9 @@ const DigitalTwinPlatformPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ],
 
-  const testimonials = [
+const testimonials = [
     {
       name: "Dr. Maria Rodriguez",
       role: "CTO",
@@ -181,7 +181,7 @@ const DigitalTwinPlatformPage: React.FC = () => {
       avatar: "ST",
       content: "Our hospital's digital twin allows us to optimize patient flow, predict equipment maintenance needs, and improve overall operational efficiency. Patient satisfaction has increased by 40%."
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -444,9 +444,9 @@ const DigitalTwinPlatformPage: React.FC = () => {
 
       <Footer /></Foote>
     </div>
-  );
-};
+  ),
+},
 
-DigitalTwinPlatformPage.displayName = 'DigitalTwinPlatformPage';
+DigitalTwinPlatformPage.displayName = 'DigitalTwinPlatformPage',
 
-export default DigitalTwinPlatformPage;
+export default DigitalTwinPlatformPage,

@@ -1,2 +1,2 @@
-'use client';
-export default AIMusicCompositionPage;
+'use client',
+export default AIMusicCompositionPage,

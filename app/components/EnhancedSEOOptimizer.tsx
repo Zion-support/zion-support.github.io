@@ -1,30 +1,19 @@
-'use client';
-import React, { useEffect } from 'react';
+'use client',
+import React, { useEffect } from 'react',
 import { logger } from '../utils/productionLogger';
 
 interface SEOOptimizerProps {}
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  structuredData?: Record<string, unknown>;</string></<<<strin>noIndex</strin></strin>?: boolean;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-<<<<<<< HEAD
-}</string>
-</string>
-const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps>= ({
-=======
-}
-
-<<<<<<< HEAD
-const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
+  title?: string,
+  description?: string,
+  keywords?: string[],
+  canonicalUrl?: string,
+  ogImage?: string,
+  structuredData?: Record<string, unknown>;</string></<<<strin>noIndex</strin></strin>?: boolean,
+  author?: string,
+  publishedTime?: string,
+  modifiedTime?: string,
+  section?: string,
+  tags?: string[],
 const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
 >>>>>>> origin/merge-error-fixes
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -39,166 +28,103 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
   modifiedTime,
   section = 'Technology',
   tags = []
-<<<<<<< HEAD
-}) => {
-  useEffect(() => {
-    try {
-      // Update page title;
-=======
-}) => {}
-  useEffect(() => {}
-    try {}
-      // Update page title
->>>>>>> origin/merge-error-fixes
-      document.title = title;
+      document.title = title,
 
-      // Update meta description;
-      updateMetaTag('description', description);
-      updateMetaTag('keywords', keywords.join(', '));
+      // Update meta description,
+      updateMetaTag('description', description),
+      updateMetaTag('keywords', keywords.join(', ')),
 
-      // Update author;
-      updateMetaTag('author', author);
+      // Update author,
+      updateMetaTag('author', author),
 
-      // Update robots;
-      updateMetaTag('robots', noIndex ? 'noindex,nofollow' : 'index,follow');
+      // Update robots,
+      updateMetaTag('robots', noIndex ? 'noindex,nofollow' : 'index,follow'),
 
-      // Update Open Graph tags;
-      updateMetaTag('og:title', title, 'property');
-      updateMetaTag('og:description', description, 'property');
-      updateMetaTag('og:image', ogImage, 'property');
-      updateMetaTag('og:url', canonicalUrl, 'property');
-      updateMetaTag('og:type', 'website', 'property');
-      updateMetaTag('og:site_name', 'Zion Tech Group', 'property');
-      updateMetaTag('og:locale', 'en_US', 'property');
+      // Update Open Graph tags,
+      updateMetaTag('og:title', title, 'property'),
+      updateMetaTag('og:description', description, 'property'),
+      updateMetaTag('og:image', ogImage, 'property'),
+      updateMetaTag('og:url', canonicalUrl, 'property'),
+      updateMetaTag('og:type', 'website', 'property'),
+      updateMetaTag('og:site_name', 'Zion Tech Group', 'property'),
+      updateMetaTag('og:locale', 'en_US', 'property'),
 
-<<<<<<< HEAD
-      // Add article-specific meta tags;
-      if (publishedTime) {
-=======
-      // Add article-specific meta tags
-      if (publishedTime) {}
->>>>>>> origin/merge-error-fixes
-        updateMetaTag('article:published_time', publishedTime, 'property');
+        updateMetaTag('article:published_time', publishedTime, 'property'),
       }
       if (modifiedTime) {}
-        updateMetaTag('article:modified_time', modifiedTime, 'property');
+        updateMetaTag('article:modified_time', modifiedTime, 'property'),
       }
       if (section) {}
-        updateMetaTag('article:section', section, 'property');
+        updateMetaTag('article:section', section, 'property'),
       }
-<<<<<<< HEAD
-      if (tags.length > 0) {
-        tags.forEach(tag => {)
-<<<<<<< HEAD
-    updateMetaTag('article:tag', tag, 'property');
-=======
-=======
-      if (tags.length > 0) {}
-        tags.forEach(tag => {)}
->>>>>>> origin/merge-error-fixes
-          updateMetaTag('article:tag', tag, 'property');
+          updateMetaTag('article:tag', tag, 'property'),
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
 
       }
 
-      // Update Twitter tags;
-      updateMetaTag('twitter:card', 'summary_large_image', 'name');
-      updateMetaTag('twitter:title', title, 'name');
-      updateMetaTag('twitter:description', description, 'name');
-      updateMetaTag('twitter:image', ogImage, 'name');
-      updateMetaTag('twitter:site', '@ziontechgroup', 'name');
-      updateMetaTag('twitter:creator', '@ziontechgroup', 'name');
+      // Update Twitter tags,
+      updateMetaTag('twitter:card', 'summary_large_image', 'name'),
+      updateMetaTag('twitter:title', title, 'name'),
+      updateMetaTag('twitter:description', description, 'name'),
+      updateMetaTag('twitter:image', ogImage, 'name'),
+      updateMetaTag('twitter:site', '@ziontechgroup', 'name'),
+      updateMetaTag('twitter:creator', '@ziontechgroup', 'name'),
 
-      // Update canonical URL;
-      updateCanonicalUrl(canonicalUrl);
+      // Update canonical URL,
+      updateCanonicalUrl(canonicalUrl),
 
-<<<<<<< HEAD
-      // Add structured data;
-      if (structuredData) {
-=======
-      // Add structured data
-      if (structuredData) {}
->>>>>>> origin/merge-error-fixes
-        addStructuredData(structuredData);
+        addStructuredData(structuredData),
       }
 
-      // Add default structured data;
-      addDefaultStructuredData();
+      // Add default structured data,
+      addDefaultStructuredData(),
 
-      // Add breadcrumb structured data;
-      addBreadcrumbStructuredData();
+      // Add breadcrumb structured data,
+      addBreadcrumbStructuredData(),
 
-      // Add FAQ structured data;
-      addFAQStructuredData();
+      // Add FAQ structured data,
+      addFAQStructuredData(),
 
-      // Add organization structured data;
-      addOrganizationStructuredData();
+      // Add organization structured data,
+      addOrganizationStructuredData(),
 
-      // Add WebSite structured data;
-      addWebSiteStructuredData();
+      // Add WebSite structured data,
+      addWebSiteStructuredData(),
 
-      logger.info('SEO optimization completed', { title, canonicalUrl }, 'EnhancedSEOOptimizer');
+      logger.info('SEO optimization completed', { title, canonicalUrl }, 'EnhancedSEOOptimizer'),
     } catch (error) {}
-      logger.error('SEO optimization failed', { error: (error as Error).message }, 'EnhancedSEOOptimizer');
+      logger.error('SEO optimization failed', { error: (error as Error).message }, 'EnhancedSEOOptimizer'),
     }
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData, noIndex, author, publishedTime, modifiedTime, section, tags]);
+  }, [title, description, keywords, canonicalUrl, ogImage, structuredData, noIndex, author, publishedTime, modifiedTime, section, tags]),
 
-<<<<<<< HEAD
-  const updateMetaTag = (name: string, content: string, attribute: string = 'name'): void => {,
-=======
-  const updateMetaTag = (name: string, content: string, attribute: string = 'name'): void => {}
->>>>>>> origin/merge-error-fixes
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`),
     if (!meta) {}
-      meta = document.createElement('meta');
-      meta.setAttribute(attribute, name);
-      document.head.appendChild(meta);
+      meta = document.createElement('meta'),
+      meta.setAttribute(attribute, name),
+      document.head.appendChild(meta),
     }
-    meta.setAttribute('content', content);
-  };
+    meta.setAttribute('content', content),
+  },
 
-  const updateCanonicalUrl = (url: string): void => {}
-    let canonical = document.querySelector('link[rel="canonical"]');
-<<<<<<< HEAD
-    if (!canonical) {,
-=======
-    if (!canonical) {}
->>>>>>> origin/merge-error-fixes
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
+const updateCanonicalUrl = (url: string): void => {}
+    let canonical = document.querySelector('link[rel="canonical"]'),
+      canonical = document.createElement('link'),
+      canonical.setAttribute('rel', 'canonical'),
+      document.head.appendChild(canonical),
     }
-    canonical.setAttribute('href', url);
-<<<<<<< HEAD
-  };</SEOOptimizerProps>
-</SEOOptimizerProps>
-  const addStructuredData = (data: Record<string, unknown>): void => {
-=======
-  };
-
-  const addStructuredData = (data: Record<string, unknown>): void => {}
->>>>>>> origin/merge-error-fixes
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    script.id = 'structured-data';
-    // Remove existing structured data;
-    const existing = document.getElementById('structured-data');
+    canonical.setAttribute('href', url),
+    const script = document.createElement('script'),
+    script.type = 'application/ld+json',
+    script.textContent = JSON.stringify(data),
+    script.id = 'structured-data',
+    // Remove existing structured data,
+    const existing = document.getElementById('structured-data'),
     if (existing) {}
-      existing.remove();
+      existing.remove(),
     }
-    document.head.appendChild(script);
-  };
+    document.head.appendChild(script),
+  },
 
-<<<<<<< HEAD
-  const addDefaultStructuredData = (): void => {
-    const defaultData = {
-      '@context': 'https: //schema.org',
-=======
-  const addDefaultStructuredData = (): void => {}
-    const defaultData = {}
-      '@context': 'https://schema.org',
->>>>>>> origin/merge-error-fixes
       '@type': 'TechCompany',
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
@@ -207,7 +133,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
       foundingDate: '2020',
       numberOfEmployees: '50-100',
       industry: 'Technology',
-      services: [,
+      services: [
         'AI Solutions',
         'Quantum Computing',
         'Autonomous Systems',
@@ -223,86 +149,39 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
         areaServed: 'US',
         availableLanguage: 'en',
       },
-<<<<<<< HEAD
-      address: {
-        '@type': 'PostalAddress'
-=======
-      address: {}
-        '@type': 'PostalAddress',
->>>>>>> origin/merge-error-fixes
         streetAddress: '364 E Main St STE 1008',
         addressLocality: 'Middletown',
         addressRegion: 'DE',
         postalCode: '19709',
         addressCountry: 'US',
       },
-      sameAs: [,
+      sameAs: [
         'https://twitter.com/ziontechgroup',
         'https://linkedin.com/company/ziontechgroup',
       ],
-    };
+    },
 
-    addStructuredData(defaultData);
-  };
+    addStructuredData(defaultData),
+  },
 
-<<<<<<< HEAD
-  const addBreadcrumbStructuredData = (): void => {
-    const breadcrumbData = {
-      '@context': 'https: //schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem'
-          position: 1;
-=======
-  const addBreadcrumbStructuredData = (): void => {}
-    const breadcrumbData = {}
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {}
-          '@type': 'ListItem',
-          position: 1,
->>>>>>> origin/merge-error-fixes
           name: 'Home',
           item: 'https://ziontechgroup.com',
         }
       ]
-    };
+    },
 
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(breadcrumbData);
-    script.id = 'breadcrumb-structured-data';
-    // Remove existing breadcrumb data;
-    const existing = document.getElementById('breadcrumb-structured-data');
+    const script = document.createElement('script'),
+    script.type = 'application/ld+json',
+    script.textContent = JSON.stringify(breadcrumbData),
+    script.id = 'breadcrumb-structured-data',
+    // Remove existing breadcrumb data,
+    const existing = document.getElementById('breadcrumb-structured-data'),
     if (existing) {}
-      existing.remove();
+      existing.remove(),
     }
-    document.head.appendChild(script);
-  };
+    document.head.appendChild(script),
+  },
 
-<<<<<<< HEAD
-  const addFAQStructuredData = (): void => {
-    const faqData = {
-      '@context': 'https: //schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        {,
-          '@type': 'Question',
-          name: 'What AI services does Zion Tech Group offer?',
-          acceptedAnswer: {,
-=======
-  const addFAQStructuredData = (): void => {}
-    const faqData = {}
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        {}
-          '@type': 'Question',
-          name: 'What AI services does Zion Tech Group offer?',
-          acceptedAnswer: {}
->>>>>>> origin/merge-error-fixes
             '@type': 'Answer',
             text: 'Zion Tech Group offers comprehensive AI services including machine learning, natural language processing, computer vision, AI automation, AI marketing, AI healthcare solutions, and AI-powered business intelligence.'
           }
@@ -310,11 +189,6 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
         {}
           '@type': 'Question',
           name: 'What is the pricing for AI services?',
-<<<<<<< HEAD
-          acceptedAnswer: {,
-=======
-          acceptedAnswer: {}
->>>>>>> origin/merge-error-fixes
             '@type': 'Answer',
             text: 'Our AI services start at $1,500/month for basic AI solutions, with custom pricing available for enterprise implementations. We also offer micro SAAS solutions starting at $15/month.'
           }
@@ -322,11 +196,6 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
         {}
           '@type': 'Question',
           name: 'Do you provide 24/7 support?',
-<<<<<<< HEAD
-          acceptedAnswer: {,
-=======
-          acceptedAnswer: {}
->>>>>>> origin/merge-error-fixes
             '@type': 'Answer',
             text: 'Yes, we provide 24/7 expert support with guaranteed response times. Our team is available round-the-clock to assist with any technical issues or questions.'
           }
@@ -334,137 +203,86 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
         {}
           '@type': 'Question',
           name: 'What technologies do you specialize in?',
-<<<<<<< HEAD
-          acceptedAnswer: {,
-=======
-          acceptedAnswer: {}
->>>>>>> origin/merge-error-fixes
             '@type': 'Answer',
             text: 'We specialize in AI/ML, quantum computing, autonomous systems, cloud services, blockchain, IoT, cybersecurity, and digital transformation technologies.'
           }
         }
       ]
-    };
+    },
 
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(faqData);
-    script.id = 'faq-structured-data';
-    // Remove existing FAQ data;
-    const existing = document.getElementById('faq-structured-data');
+    const script = document.createElement('script'),
+    script.type = 'application/ld+json',
+    script.textContent = JSON.stringify(faqData),
+    script.id = 'faq-structured-data',
+    // Remove existing FAQ data,
+    const existing = document.getElementById('faq-structured-data'),
     if (existing) {}
-      existing.remove();
+      existing.remove(),
     }
-    document.head.appendChild(script);
-  };
+    document.head.appendChild(script),
+  },
 
-<<<<<<< HEAD
-  const addOrganizationStructuredData = (): void => {
-    const organizationData = {
-      '@context': 'https: //schema.org',
-=======
-  const addOrganizationStructuredData = (): void => {}
-    const organizationData = {}
-      '@context': 'https://schema.org',
->>>>>>> origin/merge-error-fixes
       '@type': 'Organization',
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
       logo: 'https://ziontechgroup.com/logo.webp',
       description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-<<<<<<< HEAD
-      foundingDate: '2020'
-      numberOfEmployees: '50-100'
-      industry: 'Technology'
-      contactPoint: {
-=======
-      foundingDate: '2020',
-      numberOfEmployees: '50-100',
-      industry: 'Technology',
-      contactPoint: {}
->>>>>>> origin/merge-error-fixes
         '@type': 'ContactPoint',
         telephone: '+1-302-464-0950',
         contactType: 'Customer Service',
         areaServed: 'US',
         availableLanguage: 'en',
       },
-<<<<<<< HEAD
-      address: {
-        '@type': 'PostalAddress'
-=======
-      address: {}
-        '@type': 'PostalAddress',
->>>>>>> origin/merge-error-fixes
         streetAddress: '364 E Main St STE 1008',
         addressLocality: 'Middletown',
         addressRegion: 'DE',
         postalCode: '19709',
         addressCountry: 'US',
       },
-      sameAs: [,
+      sameAs: [
         'https://twitter.com/ziontechgroup',
         'https://linkedin.com/company/ziontechgroup',
       ],
-    };
+    },
 
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(organizationData);
-    script.id = 'organization-structured-data';
-    // Remove existing organization data;
-    const existing = document.getElementById('organization-structured-data');
+    const script = document.createElement('script'),
+    script.type = 'application/ld+json',
+    script.textContent = JSON.stringify(organizationData),
+    script.id = 'organization-structured-data',
+    // Remove existing organization data,
+    const existing = document.getElementById('organization-structured-data'),
     if (existing) {}
-      existing.remove();
+      existing.remove(),
     }
-    document.head.appendChild(script);
-  };
+    document.head.appendChild(script),
+  },
 
-<<<<<<< HEAD
-  const addWebSiteStructuredData = (): void => {
-    const websiteData = {
-      '@context': 'https: //schema.org',
-=======
-  const addWebSiteStructuredData = (): void => {}
-    const websiteData = {}
-      '@context': 'https://schema.org',
->>>>>>> origin/merge-error-fixes
       '@type': 'WebSite',
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
       description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-<<<<<<< HEAD
-      publisher: {,
-=======
-      publisher: {}
->>>>>>> origin/merge-error-fixes
         '@type': 'Organization',
         name: 'Zion Tech Group',
         url: 'https://ziontechgroup.com',
       },
-<<<<<<< HEAD
-      potentialAction: {,
-=======
-      potentialAction: {}
->>>>>>> origin/merge-error-fixes
         '@type': 'SearchAction',
         target: 'https://ziontechgroup.com/search?q={search_term_string}',
         'query-input': 'required name=search_term_string'
       }
-    };
+    },
 
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(websiteData);
-    script.id = 'website-structured-data';
-    // Remove existing website data;
-    const existing = document.getElementById('website-structured-data');
+    const script = document.createElement('script'),
+    script.type = 'application/ld+json',
+    script.textContent = JSON.stringify(websiteData),
+    script.id = 'website-structured-data',
+    // Remove existing website data,
+    const existing = document.getElementById('website-structured-data'),
     if (existing) {}
-      existing.remove();
+      existing.remove(),
     }
-    document.head.appendChild(script);
-  };
+    document.head.appendChild(script),
+  },
 
-  return null;
-};
+  return null,
+},
 </<<<string>export</string></<<string>default</string> EnhancedSEOOptimizer;</string>

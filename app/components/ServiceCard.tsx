@@ -1,52 +1,14 @@
-import React, { memo } from 'react';
+import React, { memo } from 'react',
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react',
 
-<<<<<<< HEAD
-interface ServiceCardProps {}
-  icon: React.ComponentType<{ className?: string }>;
-  title: string;,
-    description: string;
-  features: string[];
-  price?: string;
-  popular?: boolean;,
-  href?: string;
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-const ServiceCard: React.FC<ServiceCardProps>= memo(({,
-    icon: Icon,
-=======
-const ServiceCard: React.FC<ServiceCardProps> = memo(({)}
-  icon: Icon,
->>>>>>> origin/merge-error-fixes
   title,
   description,
   features,
   price,
-<<<<<<< HEAD
-  popular = false,)
-    href = '/contact'
-}) => {</ServiceCardProps>
-  return (<div className={`quantum-card p-8 space-y-6 relative ${popular ? 'border-2 border-cyan-400' : ''}`}>{popular && (</div>
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
-          <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
-=======
-  popular = false,
-  href = '/contact'
-}) => {}
-  return (
-    <div className={`quantum-card p-8 space-y-6 relative ${popular ? 'border-2 border-cyan-400' : ''}`}>
-      {popular && (}
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-            Most Popular
->>>>>>> origin/merge-error-fixes
           </span>
         </div>
-=======
-const ServiceCard: React.FC<ServiceCardProps> = memo(({,
+const ServiceCard: React.FC<ServiceCardProps> = memo(({
   icon: Icon;)
   title,)
   description,)
@@ -72,20 +34,11 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({,
         {price && <div className="text-cyan-400 font-bold text-xl">{price}</div>}
       </div>
 
-<<<<<<< HEAD
-      <div className="space-y-3">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      <div className="space-y-3"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <h4 className="text-white font-semibold">Key Features:<ul className="space-y-2">{features.map((feature, index) => (</ul>
-=======
         <h4 className="text-white font-semibold">Key Features: </h4>,
         <ul className="space-y-2">,
           {features.map((feature, index) => (
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
         <h4 className="text-white font-semibold">Key Features:</h4>
         <ul className="space-y-2">
           {features.map((feature, index) => (}
@@ -97,7 +50,7 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({,
         </ul>
       </div>
 
-      <Link;
+      <Link,
         to={href}
         className="w-full cyber-button inline-flex items-center justify-center px-6 py-3 text-center font-semibold rounded-lg transition-all duration-300 group"
       >
@@ -105,17 +58,16 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({,
         <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />
       </Link>
     </div>
-=======
 interface ServiceCardProps {/* TODO: Fix JSX expression */}
 }
 
 const,
   ServiceCard: React.FC<ServiceCardProps> = memo(({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  };
+  },
 
-  const bgColorClasses = {/* TODO: Fix JSX expression */}
-  };
+const bgColorClasses = {/* TODO: Fix JSX expression */}
+  },
 
   return (<article></article>
       className="quantum-card p-4,"
@@ -158,7 +110,7 @@ const,
             </li>
           ))}
           {/* TODO: Fix JSX expression */}
-              +{features.length - 3} more features;
+              +{features.length - 3} more features,
             </li>
           )}
         </ul>
@@ -208,12 +160,6 @@ const,
       </a>
     </article>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  );
+  ),
 ,
-ServiceCard.displayName = 'ServiceCard';
-<<<<<<< HEAD
-export default ServiceCard;
-=======
-
-export default ServiceCard;"`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+ServiceCard.displayName = 'ServiceCard',

@@ -1,2 +1,2 @@
-'use client';
-export default AIFashionDesignPage;
+'use client',
+export default AIFashionDesignPage,

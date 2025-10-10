@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
 import React from 'react';
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Building, Zap, Globe, Users, Shield, Code, BarChart, Brain, Cloud, Settings, Target, Rocket, Palette, Video, Music, Gamepad2, ShoppingCart, CreditCard, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, ChefHat, Rocket as RocketIcon, Sprout, Scale } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Building, Zap, Globe, Users, Shield, Code, BarChart, Brain, Cloud, Settings, Target, Rocket, Palette, Video, Music, Gamepad2, ShoppingCart, CreditCard, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, ChefHat, Rocket as RocketIcon, Sprout, Scale } from 'lucide-react',
 import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -10,7 +10,7 @@ import PerformanceMonitor from '../components/PerformanceMonitor';
 import Navigation from '../components/Navigation';
 
 const SmartCityInfrastructurePage: React.FC = () => {
-  const features = [
+const features = [
     {
       icon: Building,
       title: "Smart Buildings",
@@ -41,9 +41,9 @@ const SmartCityInfrastructurePage: React.FC = () => {
       title: "Citizen Services",
       description: "Digital platforms for government services, healthcare, and community engagement"
     }
-  ];
+  ],
 
-  const solutions = [
+const solutions = [
     {
       title: "Traffic Management",
       description: "Reduce congestion by 40% with AI-powered traffic optimization and real-time monitoring",
@@ -68,9 +68,9 @@ const SmartCityInfrastructurePage: React.FC = () => {
       icon: Truck,
       benefits: ["35% cost reduction", "Smart routing", "Recycling optimization"]
     }
-  ];
+  ],
 
-  const technologies = [
+const technologies = [
     {
       name: "IoT Sensors",
       description: "Deploy thousands of connected sensors for real-time data collection",
@@ -101,9 +101,9 @@ const SmartCityInfrastructurePage: React.FC = () => {
       description: "Virtual replicas of city infrastructure for simulation and planning",
       icon: Building
     }
-  ];
+  ],
 
-  const pricingPlans = [
+const pricingPlans = [
     {
       name: "Smart District",
       price: "$50,000/mo",
@@ -152,9 +152,9 @@ const SmartCityInfrastructurePage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ],
 
-  const testimonials = [
+const testimonials = [
     {
       name: "Mayor Jennifer Chen",
       role: "City Mayor",
@@ -176,7 +176,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
       avatar: "SW",
       content: "Our smart security systems have reduced crime by 30% and improved emergency response times by 50%. Citizens feel safer and more connected to their city."
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -434,9 +434,9 @@ const SmartCityInfrastructurePage: React.FC = () => {
 
       <Footer /></Foote>
     </div>
-  );
-};
+  ),
+},
 
-SmartCityInfrastructurePage.displayName = 'SmartCityInfrastructurePage';
+SmartCityInfrastructurePage.displayName = 'SmartCityInfrastructurePage',
 
-export default SmartCityInfrastructurePage;
+export default SmartCityInfrastructurePage,

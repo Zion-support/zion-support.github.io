@@ -1,2 +1,2 @@
-'use client';
-export default AISchedulerPage;
+'use client',
+export default AISchedulerPage,

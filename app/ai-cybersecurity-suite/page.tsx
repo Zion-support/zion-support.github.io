@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
 import React from 'react';
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Shield, Lock, Eye, AlertTriangle, Users, Globe, Zap, Settings, FileText, Brain, Target, Activity } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Shield, Lock, Eye, AlertTriangle, Users, Globe, Zap, Settings, FileText, Brain, Target, Activity } from 'lucide-react',
 import SEOHead from '../components/SEOHead';
 import ErrorBoundary from '../components/ErrorBoundary';
 import Navigation from '../components/Navigation';
@@ -442,7 +442,7 @@ const AICybersecuritySuitePage: React.FC = () => {
 
       <Footer /></Foote>
     </ErrorBoundary>
-  );
-};
+  ),
+},
 
-export default AICybersecuritySuitePage;
+export default AICybersecuritySuitePage,

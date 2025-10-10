@@ -1,42 +1,42 @@
-'use client';
-import React, { Suspense, lazy, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+'use client',
+import React, { Suspense, lazy, useEffect } from 'react',
+import { BrowserRouter, Routes, Route } from 'react-router-dom',
 import { HelmetProvider } from 'react-helmet-async';
 
 // Lazy load pages for better performance
-const HomePage = lazy(() => import('./page'));
-const AboutPage = lazy(() => import('./about/page'));
-const ContactPage = lazy(() => import('./contact/page'));
-const ServicesPage = lazy(() => import('./services/page'));
-const PricingPage = lazy(() => import('./pricing/page'));
-const CaseStudiesPage = lazy(() => import('./case-studies/page'));
-const BlogPage = lazy(() => import('./blog/page'));
-const TeamPage = lazy(() => import('./team/page'));
-const CareersPage = lazy(() => import('./careers/page'));
+const HomePage = lazy(() => import('./page')),
+const AboutPage = lazy(() => import('./about/page')),
+const ContactPage = lazy(() => import('./contact/page')),
+const ServicesPage = lazy(() => import('./services/page')),
+const PricingPage = lazy(() => import('./pricing/page')),
+const CaseStudiesPage = lazy(() => import('./case-studies/page')),
+const BlogPage = lazy(() => import('./blog/page')),
+const TeamPage = lazy(() => import('./team/page')),
+const CareersPage = lazy(() => import('./careers/page')),
 
 // AI Services
-const AiServicesPage = lazy(() => import('./ai-services/page'));
-const AiMarketingPage = lazy(() => import('./ai-marketing/page'));
-const AiAutomationPage = lazy(() => import('./ai-automation/page'));
-const AiHealthcarePage = lazy(() => import('./ai-healthcare/page'));
-const AiFintechPage = lazy(() => import('./ai-fintech/page'));
-const AiContentGenerationPage = lazy(() => import('./ai-content-generation/page'));
-const AiDataAnalyticsPage = lazy(() => import('./ai-data-analytics/page'));
-const AiCybersecurityPage = lazy(() => import('./ai-cybersecurity/page'));
-const AiWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page'));
-const AiCustomerSupportPage = lazy(() => import('./ai-customer-support/page'));
-const AiSalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
-const AiDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'));
+const AiServicesPage = lazy(() => import('./ai-services/page')),
+const AiMarketingPage = lazy(() => import('./ai-marketing/page')),
+const AiAutomationPage = lazy(() => import('./ai-automation/page')),
+const AiHealthcarePage = lazy(() => import('./ai-healthcare/page')),
+const AiFintechPage = lazy(() => import('./ai-fintech/page')),
+const AiContentGenerationPage = lazy(() => import('./ai-content-generation/page')),
+const AiDataAnalyticsPage = lazy(() => import('./ai-data-analytics/page')),
+const AiCybersecurityPage = lazy(() => import('./ai-cybersecurity/page')),
+const AiWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page')),
+const AiCustomerSupportPage = lazy(() => import('./ai-customer-support/page')),
+const AiSalesAutomationPage = lazy(() => import('./ai-sales-automation/page')),
+const AiDataVisualizationPage = lazy(() => import('./ai-data-visualization/page')),
 
 // IT Services
-const ItServicesPage = lazy(() => import('./it-services/page'));
-const ItInfrastructurePage = lazy(() => import('./it-infrastructure/page'));
-const CloudServicesPage = lazy(() => import('./cloud-services/page'));
-const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
-const DevOpsPage = lazy(() => import('./devops/page'));
-const DatabasePage = lazy(() => import('./database/page'));
-const MobileDevelopmentPage = lazy(() => import('./mobile-development/page'));
-const WebDevelopmentPage = lazy(() => import('./web-development/page'));
+const ItServicesPage = lazy(() => import('./it-services/page')),
+const ItInfrastructurePage = lazy(() => import('./it-infrastructure/page')),
+const CloudServicesPage = lazy(() => import('./cloud-services/page')),
+const CybersecurityPage = lazy(() => import('./cybersecurity/page')),
+const DevOpsPage = lazy(() => import('./devops/page')),
+const DatabasePage = lazy(() => import('./database/page')),
+const MobileDevelopmentPage = lazy(() => import('./mobile-development/page')),
+const WebDevelopmentPage = lazy(() => import('./web-development/page')),
 
 // Loading component
 const LoadingSpinner: React.FC = React.memo(() => (
@@ -46,7 +46,7 @@ const LoadingSpinner: React.FC = React.memo(() => (
       <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
     </div>
   </div>
-));
+)),
 
 // Main App component
 const App: React.FC = () => {
@@ -54,15 +54,15 @@ const App: React.FC = () => {
     // Preload critical resources
     const preloadCriticalResources = () => {
       // Preload critical CSS
-      const criticalCSS = document.createElement('link');
-      criticalCSS.rel = 'preload';
-      criticalCSS.href = '/styles/critical.css';
-      criticalCSS.as = 'style';
-      document.head.appendChild(criticalCSS);
-    };
+      const criticalCSS = document.createElement('link'),
+      criticalCSS.rel = 'preload',
+      criticalCSS.href = '/styles/critical.css',
+      criticalCSS.as = 'style',
+      document.head.appendChild(criticalCSS),
+    },
 
-    preloadCriticalResources();
-  }, []);
+    preloadCriticalResources(),
+  }, []),
 
   return (
     <HelmetProvider>
@@ -109,7 +109,7 @@ const App: React.FC = () => {
         </div>
       </BrowserRouter>
     </HelmetProvider>
-  );
-};
+  ),
+},
 
-export default App;
+export default App,

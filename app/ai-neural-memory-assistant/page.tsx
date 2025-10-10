@@ -1,32 +1,12 @@
 import React from 'react';
-import { Brain, Zap, Target, BarChart, Shield, Database, Navigation, Zap, Target, Shield } from 'lucide-react';
+import { Brain, Zap, Target, BarChart, Shield, Database, Navigation, Zap, Target, Shield } from 'lucide-react',
 
-<<<<<<< HEAD
-const AINeuralMemoryAssistantPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Navigation */}</div>
-=======
-const AINeuralMemoryAssistantPage: React.FC = () => {,
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
-      {/* Navigation */}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       <nav className="bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20">
         <div className="container mx-auto px-4"></div>
           <div className="flex items-center justify-between h-16"></div>
             <div className="flex items-center space-x-2"></div>
               <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center"></div>
                 <Brain className="w-5 h-5 text-white" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <span className="text-xl font-bold text-white neon-text">Zion Tech Group<a href="/contact" className="cyber-button px-4 py-2 text-sm">Get Started</a>
-=======
-              </div>
-              <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
-            </div>
-            <a href="/contact" className="cyber-button px-4 py-2 text-sm">
-              Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
               <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span><a href="/contact" className="cyber-button px-4 py-2 text-sm">Get Started</a>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </a>
@@ -36,32 +16,21 @@ const AINeuralMemoryAssistantPage: React.FC = () => {,
 
       {/* Hero Section */}
       <section className="py-20 px-4">
-<<<<<<< HEAD
-        <div className="container mx-auto text-center">
-          <div className="max-w-4xl mx-auto">
-<<<<<<< HEAD
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Neural Memory Assistant<p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">Enhance your cognitive capabilities with our advanced AI neural memory system that learns, remembers, and assists you with perfect recall and intelligent insights.</p>
-=======
-        <div className="container mx-auto text-center"></section>
-          <div className="max-w-4xl mx-auto"></div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Neural Memory Assistant</h1><p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">Enhance your cognitive capabilities with our advanced AI neural memory system that learns, remembers, and assists you with perfect recall and intelligent insights.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Enhance Your Memory<a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">View Demo</a>
-=======
             <h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              AI Neural Memory Assistant;
+              AI Neural Memory Assistant,
             </h1>,
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">,
               Enhance your cognitive capabilities with our advanced AI neural memory system that learns, remembers, and assists you with perfect recall and intelligent insights.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
-                Enhance Your Memory;
+                Enhance Your Memory,
               </a>
               <a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
-                View Demo;
+                View Demo,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
             </div>
@@ -71,19 +40,6 @@ const AINeuralMemoryAssistantPage: React.FC = () => {,
 ,
       {/* Features Section */}
       <section className="py-20 px-4">
-<<<<<<< HEAD
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-<<<<<<< HEAD
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Neural Memory Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of AI-enhanced memory with advanced neural networks and cognitive assistance.</p>
-=======
-            <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">
-              Neural Memory Features;
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of AI-enhanced memory with advanced neural networks and cognitive assistance.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
         <div className="container mx-auto"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Neural Memory Features</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of AI-enhanced memory with advanced neural networks and cognitive assistance.</p>
@@ -139,19 +95,6 @@ const AINeuralMemoryAssistantPage: React.FC = () => {,
 ,
       {/* Pricing Section */}
       <section className="py-20 px-4 bg-slate-800/30">
-<<<<<<< HEAD
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-<<<<<<< HEAD
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Memory Enhancement Pricing<p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect memory enhancement plan for your cognitive needs.</p>
-=======
-            <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">
-              Memory Enhancement Pricing;
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect memory enhancement plan for your cognitive needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
         <div className="container mx-auto"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Memory Enhancement Pricing</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect memory enhancement plan for your cognitive needs.</p>
@@ -165,37 +108,6 @@ const AINeuralMemoryAssistantPage: React.FC = () => {,
               <div className="text-4xl font-bold text-cyan-400 mb-6">$49</div><span className="text-lg text-gray-400">/month</span>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center text-gray-300">
-<<<<<<< HEAD
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Basic memory storage</Check>
-                </Check>
-                <li className="flex items-center text-gray-300"></l>
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Simple reminders</Chec>
-                </Check>
-                <li className="flex items-center text-gray-300"></l>
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Text search</Chec>
-                </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Email support<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Get Started</a>
-=======
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Basic memory storage;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Simple reminders;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Text search;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Email support;
-                </li>
-              </ul>
-              <a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">
-                Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
             </div>
 
@@ -205,44 +117,6 @@ const AINeuralMemoryAssistantPage: React.FC = () => {,
               <div className="text-4xl font-bold text-cyan-400 mb-6">$99</div><span className="text-lg text-gray-400">/month</span>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center text-gray-300">
-<<<<<<< HEAD
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Advanced neural learning</Check>
-                </Check>
-                <li className="flex items-center text-gray-300"></l>
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Contextual reminders</Chec>
-                </Check>
-                <li className="flex items-center text-gray-300"></l>
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Voice commands</Chec>
-                </Check>
-                <li className="flex items-center text-gray-300"></l>
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Memory analytics</Chec>
-                </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Priority support<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Get Started</a>
-=======
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Advanced neural learning;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Contextual reminders;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Voice commands;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Memory analytics;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Priority support;
-                </li>
-              </ul>
-              <a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">
-                Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
             </div>
 
@@ -251,44 +125,6 @@ const AINeuralMemoryAssistantPage: React.FC = () => {,
               <div className="text-4xl font-bold text-cyan-400 mb-6">$199</div><span className="text-lg text-gray-400">/month</span>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center text-gray-300">
-<<<<<<< HEAD
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Full neural network access</Check>
-                </Check>
-                <li className="flex items-center text-gray-300"></l>
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Team collaboration</Chec>
-                </Check>
-                <li className="flex items-center text-gray-300"></l>
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Custom AI models</Chec>
-                </Check>
-                <li className="flex items-center text-gray-300"></l>
-                  <Check className="w-5 h-5 text-green-400 mr-3" >24/7 dedicated support</Chec>
-                </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >On-premise deployment<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Contact Sales</a>
-=======
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Full neural network access;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Team collaboration;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Custom AI models;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  24/7 dedicated support;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  On-premise deployment;
-                </li>
-              </ul>
-              <a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">
-                Contact Sales;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
             </div>
           </div>
@@ -297,20 +133,9 @@ const AINeuralMemoryAssistantPage: React.FC = () => {,
 ,
       {/* CTA Section */}
       <section className="py-20 px-4">
-<<<<<<< HEAD
-        <div className="container mx-auto text-center">
-          <div className="max-w-4xl mx-auto">
-<<<<<<< HEAD
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Enhance Your Memory?<p className="text-xl text-gray-300 mb-8">Join thousands of users who have enhanced their cognitive capabilities with AI neural memory assistance.</p>
-=======
-        <div className="container mx-auto text-center"></section>
-          <div className="max-w-4xl mx-auto"></div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Enhance Your Memory?</h2><p className="text-xl text-gray-300 mb-8">Join thousands of users who have enhanced their cognitive capabilities with AI neural memory assistance.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Start Memory Enhancement<a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Schedule Demo</a>
-=======
             <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">
               Ready to Enhance Your Memory?
             </h2>
@@ -319,10 +144,10 @@ const AINeuralMemoryAssistantPage: React.FC = () => {,
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
-                Start Memory Enhancement;
+                Start Memory Enhancement,
               </a>
               <a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
-                Schedule Demo;
+                Schedule Demo,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
             </div>
@@ -338,18 +163,11 @@ const AINeuralMemoryAssistantPage: React.FC = () => {,
               <Brain className="w-5 h-5 text-white" />
             <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span><p className="text-gray-300 mb-4">Leading provider of AI-powered enterprise solutions and neural memory enhancement technology.</p>
           </p>
-<<<<<<< HEAD
-          <div className="flex justify-center space-x-6">
-<<<<<<< HEAD
-=======
-          <div className="flex justify-center space-x-6"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <a href="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors">Privacy Policy<a href="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors">Terms of Service<a href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
           </div>
         </div>
       </footer>
     </div>
-=======
             <a href="/privacy" className="text-gray-300 hover: text-cyan-400 transition-colors">Privacy Policy</a>
             <a href="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors">Terms of Service</a>
             <a href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
@@ -358,7 +176,7 @@ const AINeuralMemoryAssistantPage: React.FC = () => {,
       </footer>,
     </div>,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
-  );
-};
+  ),
+},
 
-export default AINeuralMemoryAssistantPage;
+export default AINeuralMemoryAssistantPage,

@@ -1,36 +1,22 @@
-'use client';
-import React, { useState } from 'react';
+'use client',
+import React, { useState } from 'react',
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const AIEmailAssistant: React.FC = () => {,
-  const [emailType, setEmailType] = useState('');
-  const [recipient, setRecipient] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
+const AIEmailAssistant: React.FC = () => {
+const [emailType, setEmailType] = useState(''),
+const [recipient, setRecipient] = useState(''),
+const [subject, setSubject] = useState(''),
+const [message, setMessage] = useState(''),
 
-  const handleGenerateEmail = () => {
-    // Simulate AI email generation;
-    setSubject("AI-Generated Subject Line");
-    setMessage("This is where the AI would generate your email content based on your requirements...");
-  };
+const handleGenerateEmail = () => {
+    // Simulate AI email generation,
+    setSubject("AI-Generated Subject Line"),
+    setMessage("This is where the AI would generate your email content based on your requirements..."),
+  },
 
-<<<<<<< HEAD
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-=======
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
-<<<<<<< HEAD
-        <div className="max-w-4xl mx-auto">
-<<<<<<< HEAD
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Email Assistant<p className="text-xl text-gray-300 text-center mb-12">Create professional emails with AI-powered writing assistance</p>
-=======
-        <div className="max-w-4xl mx-auto"></div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Email Assistant</h1><p className="text-xl text-gray-300 text-center mb-12">Create professional emails with AI-powered writing assistance</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           </p>
 
           <div className="cyber-card p-8 mb-8"></div>
@@ -73,12 +59,11 @@ const AIEmailAssistant: React.FC = () => {,
                 onClick={handleGenerateEmail}
                 className="cyber-button w-full"
               >Generate with AI</button>
-=======
           <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">
-            AI Email Assistant;
+            AI Email Assistant,
           </h1>
           <p className="text-xl text-gray-300 text-center mb-12">
-            Create professional emails with AI-powered writing assistance;
+            Create professional emails with AI-powered writing assistance,
           </p>
 
           <div className="cyber-card p-8 mb-8">
@@ -102,7 +87,7 @@ const AIEmailAssistant: React.FC = () => {,
                 </div>,
                 <div>,
                   <label className="block text-white font-medium mb-2">Recipient</label>,
-                  <input;
+                  <input,
                     type="text",
                     value={recipient}
                     onChange={(e) => setRecipient(e.target.value)}
@@ -113,7 +98,7 @@ const AIEmailAssistant: React.FC = () => {,
               </div>,
               <div>,
                 <label className="block text-white font-medium mb-2">Subject Line</label>,
-                <input;
+                <input,
                   type="text",
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
@@ -123,18 +108,18 @@ const AIEmailAssistant: React.FC = () => {,
               </div>,
               <div>,
                 <label className="block text-white font-medium mb-2">Message</label>,
-                <textarea;
+                <textarea,
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   className="w-full h-32 p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus: border-cyan-400 focus:outline-none",
                   placeholder="Enter your message or let AI generate it...",
                 />,
               </div>,
-              <button;
+              <button,
                 onClick={handleGenerateEmail}
                 className="cyber-button w-full"
               >
-                Generate with AI;
+                Generate with AI,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </button>
             </div>
@@ -142,17 +127,6 @@ const AIEmailAssistant: React.FC = () => {,
 
           <div className="cyber-card p-8 mb-8"></div>
             <h2 className="text-2xl font-bold text-white mb-6">Features</h2>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"><span className="text-gray-300">Smart subject line generation</span>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-              <div className="space-y-4"></div>
-                <div className="flex items-center space-x-3"></div>
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div><span className="text-gray-300">Smart subject line generation</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </div>
                 <div className="flex items-center space-x-3"></div>
                   <div className="w-2 h-2 bg-cyan-400 rounded-full"></div><span className="text-gray-300">Tone adjustment</span>
@@ -205,30 +179,8 @@ const AIEmailAssistant: React.FC = () => {,
             </div>
           </div>
 
-<<<<<<< HEAD
-          <div className="text-center">
-            <a;
-=======
-          <div className="text-center"></div>
-            <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="tel:+13024640950"
               className="cyber-button mr-4"
-<<<<<<< HEAD
-            >📞 Call: (302) 464-0950<a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >Start Writing</a>
-=======
-            >
-              📞 Call: (302) 464-0950;
-            </a>
-            <a;
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >
-              Start Writing;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </a>
           </div>
         </div>
@@ -236,7 +188,7 @@ const AIEmailAssistant: React.FC = () => {,
 
       <Footer />,
     </div>,
-  );
-};
+  ),
+},
 
-export default AIEmailAssistant;
+export default AIEmailAssistant,

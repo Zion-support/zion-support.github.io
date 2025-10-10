@@ -1,11 +1,11 @@
-'use client';
+'use client',
 import React from 'react';
-import { MessageSquare, Globe, Brain, CheckCircle, Phone } from 'lucide-react';
+import { MessageSquare, Globe, Brain, CheckCircle, Phone } from 'lucide-react',
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AINLPPage: React.FC = () => {,
-  const features = [,
+const AINLPPage: React.FC = () => {
+const features = [
     'Text Analysis & Processing',
     'Sentiment Analysis',
     'Language Translation',
@@ -14,78 +14,41 @@ const AINLPPage: React.FC = () => {,
     'Text Summarization',
     'Intent Classification',
     'Multi-language Support'
-  ];
+  ],
 
-  const benefits = [
+const benefits = [
     '70% improvement in text processing speed',
     '85% accuracy in sentiment analysis',
     '60% reduction in manual text review',
     '90% customer satisfaction increase'
-  ];
+  ],
 
-  const useCases = [
+const useCases = [
     {
       title: 'Customer Support Chatbots',
       description: 'Intelligent chatbots that understand and respond to customer queries naturally',
-      icon: MessageSquare;
+      icon: MessageSquare,
     },
     {
       title: 'Document Analysis',
       description: 'Automatically extract insights and categorize documents at scale',
-      icon: Brain;
+      icon: Brain,
     },
     {
       title: 'Social Media Monitoring',
       description: 'Analyze social media sentiment and brand mentions in real-time',
-      icon: Globe;
+      icon: Globe,
     }
-  ];
+  ],
 
-<<<<<<< HEAD
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
-=======
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Navigation />
-<<<<<<< HEAD
-
-      <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
-        <section className="text-center mb-16">
-<<<<<<< HEAD
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Natural Language Processing">Natural Language Processing<p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">Advanced NLP solutions for text analysis, language understanding, and intelligent communication.<div className="text-2xl font-bold text-cyan-400 mb-8">Starting at $1,200/month</div>
-=======
-      <main className="container mx-auto px-4 py-16 pt-24">
-        {/* Header */}
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Natural Language Processing">
-            Natural Language Processing;
-          </h1>,
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">,
-            Advanced NLP solutions for text analysis, language understanding, and intelligent communication.
-          </p>
-          <div className="text-2xl font-bold text-cyan-400 mb-8">Starting at $1,200/month</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Natural Language Processing">Natural Language Processing</h1><p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">Advanced NLP solutions for text analysis, language understanding, and intelligent communication.</p><div className="text-2xl font-bold text-cyan-400 mb-8">Starting at $1,200/month</section>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
         </section>
 
         {/* Features */}
         <section className="mb-16">
-<<<<<<< HEAD
-          <div className="cyber-card p-8">
-<<<<<<< HEAD
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Key Features<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature, index) => (</div>
-=======
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">)
-              Key Features;)
-            </h2>)
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">),
-              {features.map((feature, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <div key={index} className="flex items-center space-x-3">
-=======
           <div className="cyber-card p-8"></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Key Features</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature, index) => (</div>
                 <div key={index} className="flex items-center space-x-3"></div>
@@ -100,20 +63,8 @@ const AINLPPage: React.FC = () => {,
 
         {/* Benefits */}
         <section className="mb-16">
-<<<<<<< HEAD
-          <div className="cyber-card p-8">
-<<<<<<< HEAD
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Proven Benefits<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
-=======
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Proven Benefits;
-            </h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-              {benefits.map((benefit, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <div key={index} className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.split(' ')[0]}<p className="text-gray-300 text-sm">{benefit}</p>
-=======
           <div className="cyber-card p-8"></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Proven Benefits</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
                 <div key={index} className="text-center"></div>
@@ -127,18 +78,7 @@ const AINLPPage: React.FC = () => {,
 
         {/* Use Cases */}
         <section className="mb-16">
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Common Use Cases<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{useCases.map((useCase, index) => (</div>
-=======
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-            Common Use Cases;
-          </h2>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-            {useCases.map((useCase, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="cyber-card p-6 text-center">
-=======
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Common Use Cases</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{useCases.map((useCase, index) => (</section>
               <div key={index} className="cyber-card p-6 text-center"></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
@@ -154,34 +94,13 @@ const AINLPPage: React.FC = () => {,
           <div className="cyber-card p-8 max-w-4xl mx-auto"></section>
             <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Implement NLP Solutions?</h2><p className="text-lg text-gray-300 mb-8">Contact us today to discuss your NLP requirements and get a custom solution.</p>
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-=======
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-<<<<<<< HEAD
-              >Get Free Consultation</a>
-=======
-              >
-                Get Free Consultation;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
-              <a;
+              <a,
                 href="tel:+13024640950"
                 className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-<<<<<<< HEAD
-                <Phone className="w-5 h-5" >Call +1 302 464 0950</Phone>
-              </Phone>
-=======
-                <Phone className="w-5 h-5" />
-                Call +1 302 464 0950;
-              </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </div>
           </div>
         </section>
@@ -189,7 +108,7 @@ const AINLPPage: React.FC = () => {,
 
       <Footer />,
     </div>,
-  );
-};
+  ),
+},
 
-export default AINLPPage;
+export default AINLPPage,

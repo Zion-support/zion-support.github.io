@@ -1,32 +1,12 @@
 import React from 'react';
-import { Brain, Zap, Target, BarChart, Shield, Cpu, Navigation, Zap, Target, Shield, DollarSign } from 'lucide-react';
+import { Brain, Zap, Target, BarChart, Shield, Cpu, Navigation, Zap, Target, Shield, DollarSign } from 'lucide-react',
 
-<<<<<<< HEAD
-const AIQuantumFinancialOraclePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Navigation */}</div>
-=======
-const AIQuantumFinancialOraclePage: React.FC = () => {,
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
-      {/* Navigation */}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       <nav className="bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20">
         <div className="container mx-auto px-4"></div>
           <div className="flex items-center justify-between h-16"></div>
             <div className="flex items-center space-x-2"></div>
               <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center"></div>
                 <Brain className="w-5 h-5 text-white" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <span className="text-xl font-bold text-white neon-text">Zion Tech Group<a href="/contact" className="cyber-button px-4 py-2 text-sm">Get Started</a>
-=======
-              </div>
-              <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
-            </div>
-            <a href="/contact" className="cyber-button px-4 py-2 text-sm">
-              Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
               <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span><a href="/contact" className="cyber-button px-4 py-2 text-sm">Get Started</a>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </a>
@@ -36,32 +16,21 @@ const AIQuantumFinancialOraclePage: React.FC = () => {,
 
       {/* Hero Section */}
       <section className="py-20 px-4">
-<<<<<<< HEAD
-        <div className="container mx-auto text-center">
-          <div className="max-w-4xl mx-auto">
-<<<<<<< HEAD
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Quantum Financial Oracle<p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">Predict financial markets with unprecedented accuracy using quantum computing and advanced AI algorithms. Make informed investment decisions with quantum-powered financial intelligence.</p>
-=======
-        <div className="container mx-auto text-center"></section>
-          <div className="max-w-4xl mx-auto"></div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Quantum Financial Oracle</h1><p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">Predict financial markets with unprecedented accuracy using quantum computing and advanced AI algorithms. Make informed investment decisions with quantum-powered financial intelligence.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Start Quantum Predictions<a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">View Demo</a>
-=======
             <h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              AI Quantum Financial Oracle;
+              AI Quantum Financial Oracle,
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Predict financial markets with unprecedented accuracy using quantum computing and advanced AI algorithms. Make informed investment decisions with quantum-powered financial intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
-                Start Quantum Predictions;
+                Start Quantum Predictions,
               </a>
               <a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
-                View Demo;
+                View Demo,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
             </div>
@@ -71,19 +40,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {,
 ,
       {/* Features Section */}
       <section className="py-20 px-4">
-<<<<<<< HEAD
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-<<<<<<< HEAD
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Quantum Financial Intelligence<p className="text-xl text-gray-300 max-w-3xl mx-auto">Harness the power of quantum computing to predict market movements and optimize your financial strategy.</p>
-=======
-            <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">
-              Quantum Financial Intelligence;
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Harness the power of quantum computing to predict market movements and optimize your financial strategy.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
         <div className="container mx-auto"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Quantum Financial Intelligence</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Harness the power of quantum computing to predict market movements and optimize your financial strategy.</p>
@@ -139,19 +95,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {,
 ,
       {/* Pricing Section */}
       <section className="py-20 px-4 bg-slate-800/30">
-<<<<<<< HEAD
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-<<<<<<< HEAD
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Quantum Financial Pricing<p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect quantum financial oracle plan for your investment needs.</p>
-=======
-            <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">
-              Quantum Financial Pricing;
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect quantum financial oracle plan for your investment needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
         <div className="container mx-auto"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Quantum Financial Pricing</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect quantum financial oracle plan for your investment needs.</p>
@@ -165,37 +108,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {,
               <div className="text-4xl font-bold text-cyan-400 mb-6">$499</div><span className="text-lg text-gray-400">/month</span>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center text-gray-300">
-<<<<<<< HEAD
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Basic market predictions</Check>
-                </Check>
-                <li className="flex items-center text-gray-300"></l>
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Portfolio tracking</Chec>
-                </Check>
-                <li className="flex items-center text-gray-300"></l>
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Email alerts</Chec>
-                </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Email support<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Get Started</a>
-=======
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Basic market predictions;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Portfolio tracking;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Email alerts;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Email support;
-                </li>
-              </ul>
-              <a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">
-                Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
             </div>
 
@@ -205,95 +117,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {,
               <div className="text-4xl font-bold text-cyan-400 mb-6">$999</div><span className="text-lg text-gray-400">/month</span>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center text-gray-300">
-<<<<<<< HEAD
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Advanced quantum predictions</Check>
-                </Check>
-                <li className="flex items-center text-gray-300"></l>
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Real-time portfolio optimization</Chec>
-                </Check>
-                <li className="flex items-center text-gray-300"></l>
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Risk management tools</Chec>
-                </Check>
-                <li className="flex items-center text-gray-300"></l>
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Priority support</Chec>
-                </Check>
-                <li className="flex items-center text-gray-300"></l>
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Custom strategies</Check><a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Get Started</a>
-              </a>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-gray-600 rounded-lg p-8"></div>
-              <h3 className="text-2xl font-bold text-white mb-4">Quantum Enterprise</h3>
-              <div className="text-4xl font-bold text-cyan-400 mb-6">$2,499</div><span className="text-lg text-gray-400">/month</span>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Full quantum computing access</Check>
-                </Check>
-                <li className="flex items-center text-gray-300"></l>
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Institutional-grade analysis</Chec>
-                </Check>
-                <li className="flex items-center text-gray-300"></l>
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Custom AI models</Chec>
-                </Check>
-                <li className="flex items-center text-gray-300"></l>
-                  <Check className="w-5 h-5 text-green-400 mr-3" >24/7 dedicated support</Chec>
-                </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >White-label solutions<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Contact Sales</a>
-=======
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Advanced quantum predictions;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Real-time portfolio optimization;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Risk management tools;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Priority support;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Custom strategies;
-                </li>
-              </ul>
-              <a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">
-                Get Started;
-              </a>
-            </div>
-,
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-gray-600 rounded-lg p-8">,
-              <h3 className="text-2xl font-bold text-white mb-4">Quantum Enterprise</h3>,
-              <div className="text-4xl font-bold text-cyan-400 mb-6">$2,499<span className="text-lg text-gray-400">/month</span></div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Full quantum computing access;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Institutional-grade analysis;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Custom AI models;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  24/7 dedicated support;
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  White-label solutions;
-                </li>
-              </ul>
-              <a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">
-                Contact Sales;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
             </div>
           </div>
@@ -302,20 +125,9 @@ const AIQuantumFinancialOraclePage: React.FC = () => {,
 
       {/* CTA Section */}
       <section className="py-20 px-4">
-<<<<<<< HEAD
-        <div className="container mx-auto text-center">
-          <div className="max-w-4xl mx-auto">
-<<<<<<< HEAD
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Predict the Future of Finance?<p className="text-xl text-gray-300 mb-8">Join institutional investors and financial professionals using quantum AI for superior market intelligence.</p>
-=======
-        <div className="container mx-auto text-center"></section>
-          <div className="max-w-4xl mx-auto"></div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Predict the Future of Finance?</h2><p className="text-xl text-gray-300 mb-8">Join institutional investors and financial professionals using quantum AI for superior market intelligence.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Start Quantum Trading<a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Schedule Demo</a>
-=======
             <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">
               Ready to Predict the Future of Finance?
             </h2>
@@ -324,10 +136,10 @@ const AIQuantumFinancialOraclePage: React.FC = () => {,
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
-                Start Quantum Trading;
+                Start Quantum Trading,
               </a>
               <a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
-                Schedule Demo;
+                Schedule Demo,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
             </div>
@@ -343,18 +155,11 @@ const AIQuantumFinancialOraclePage: React.FC = () => {,
               <Brain className="w-5 h-5 text-white" />
             <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span><p className="text-gray-300 mb-4">Leading provider of AI-powered enterprise solutions and quantum financial intelligence.</p>
           </p>
-<<<<<<< HEAD
-          <div className="flex justify-center space-x-6">
-<<<<<<< HEAD
-=======
-          <div className="flex justify-center space-x-6"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <a href="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors">Privacy Policy<a href="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors">Terms of Service<a href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
           </div>
         </div>
       </footer>
     </div>
-=======
             <a href="/privacy" className="text-gray-300 hover: text-cyan-400 transition-colors">Privacy Policy</a>
             <a href="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors">Terms of Service</a>
             <a href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
@@ -363,7 +168,7 @@ const AIQuantumFinancialOraclePage: React.FC = () => {,
       </footer>,
     </div>,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
-  );
-};
+  ),
+},
 
-export default AIQuantumFinancialOraclePage;
+export default AIQuantumFinancialOraclePage,

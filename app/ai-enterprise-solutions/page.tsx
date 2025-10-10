@@ -1,2 +1,2 @@
-'use client';
-export default AIEnterpriseSolutionsPage;
+'use client',
+export default AIEnterpriseSolutionsPage,

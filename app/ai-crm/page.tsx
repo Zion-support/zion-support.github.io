@@ -1,2 +1,2 @@
-'use client';
-export default AICRMPage;
+'use client',
+export default AICRMPage,
