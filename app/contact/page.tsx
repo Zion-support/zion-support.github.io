@@ -11,26 +11,6 @@ const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
     company: '',
     phone: '',
     service: '',
-<<<<<<< HEAD
-    message: ''
-  });
-=======
-<<<<<<< HEAD
-    message: '';)
-});
-const [isSubmitting, setIsSubmitting] = useState(false);
-const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value;)
-}););)
-}, []);
-const handleSubmit = useCallback(async (e: React.FormEvent) => {
-=======
-    message: '']
-    });;
->>>>>>> main
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -38,15 +18,6 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
       ...prev,
-<<<<<<< HEAD
-      [e.target.name]: e.target.value
-    }));
-  }, []);
-=======
-      [e.target.name]: e.target.value]
-    });)]
-    }, []);
->>>>>>> main
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
@@ -63,42 +34,6 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {
         company: '',
         phone: '',
         service: '',
-<<<<<<< HEAD
-        message: ''
-      });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
-  }, []);
-
-  return (
-    <>
-      <Helmet>
-=======
-<<<<<<< HEAD
-        message: '';)
-});;)
-} catch (error) {
-      setSubmitStatus('error');)
-} finally {
-      setIsSubmitting(false););
-=======
-        message: '']
-    });]
-    } catch (error) {
-      setSubmitStatus('error')]
-    } finally {
-      setIsSubmitting(false)]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  }, []);
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
->>>>>>> main
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get a free consultation, quote, or support. Call +1-302-464-0950 or email kleber@ziontechgroup.com" />
         <meta name="keywords" content="contact us, AI consulting, IT support, free consultation, get quote, technical support" />
@@ -327,12 +262,3 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {
 
       <Footer />
     </div>
-<<<<<<< HEAD
-  );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-export default ContactPage;
-}
