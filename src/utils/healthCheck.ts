@@ -3,21 +3,6 @@
  * Application Health Check Utility
  * Monitors application health and provides diagnostic information
  */
-<<<<<<< HEAD
-=======
-import React from 'react'
-import { logger } from './logger'
-import { performanceMonitor } from './performanceMonitor'
-
-// Core Web Vitals thresholds
-const coreWebVitals = {
-  lcp: { good: 2500, needsImprovement: 4000 },
-  fid: { good: 100, needsImprovement: 300 },
-  cls: { good: 0.1, needsImprovement: 0.25 },
-  fcp: { good: 1800, needsImprovement: 3000 },
-  ttfb: { good: 800, needsImprovement: 1800 }
-}
->>>>>>> origin/temp-pr-28049
 export interface HealthStatus {
   status: 'healthy' | 'degraded' | 'unhealthy';
   timestamp: number;
@@ -368,66 +353,12 @@ $4};
       const report = performanceMonitor.getReport()
       const { poor, needsImprovement, good } = report.summary
       let status: 'pass' | 'warn' | 'fail' = 'pass'
-<<<<<<< HEAD
-      let message = `Performance: ${good} good, ${needsImprovement} needs improvement, ${poor} poor`
-      if (poor > 0) {
-        status = 'warn'
-      }
-      if (poor > 2) {
-        status = 'fail'
-        message = `Critical performance issues: ${poor} poor metrics`
-=======
-      let message = 'Performance metrics available'
-      
-      // Check if any critical metrics are missing or poor
-      const criticalMetrics = ['lcp', 'fid', 'cls', 'fcp', 'ttfb']
-      const missingMetrics: string[] = []
-      const poor: string[] = []
-      const needsImprovement: string[] = []
-      const good: string[] = []
-      const vitals = Object.keys(coreWebVitals)
-      
-      criticalMetrics.forEach(metric => {
-        const metrics = performanceMonitor.getMetrics()
-        const value = metrics[metric as keyof typeof metrics]
-        if (value === undefined) {
-          missingMetrics.push(metric)
-        } else {
-          const thresholds = coreWebVitals[metric as keyof typeof coreWebVitals]
-          if (value <= thresholds.good) {
-            good.push(metric)
-          } else if (value <= thresholds.needsImprovement) {
-            needsImprovement.push(metric)
-          } else {
-            poor.push(metric)
-          }
-        }
-      })
-      
-      if (missingMetrics.length > 2) {
-        status = 'warn'
-        message = `Missing critical metrics: ${missingMetrics.join(', ')}`
-      }
-      
-      if (missingMetrics.length > 3) {
-        status = 'fail'
-        message = `Critical performance data unavailable: ${missingMetrics.join(', ')}`
->>>>>>> origin/temp-pr-28049
       }
       return {
         name: 'performance',
         status,
         message,
         details: {
-<<<<<<< HEAD
-          metrics: report.metrics,
-          summary: report.summary
-=======
-          vitals,
-          poor,
-          needsImprovement,
-          good
->>>>>>> origin/temp-pr-28049
         }
       }
     } catch (error) {
@@ -826,31 +757,3 @@ export const registerHealthCheck = (name: string, checkFn: HealthCheckFunction) 
 export const getUptime = () => healthCheck.getUptime()
 export const getFormattedUptime = () => healthCheck.getFormattedUptime()
 export default healthCheck
-<<<<<<< HEAD
-   * Clear cached status;
-   */
-
-  clearCache(): void {// TODO: Add content;}
-
-}
-    this.cachedStatus = undefined;
-    this.lastCheckTime = 0;
-  }
-}
-// Export singleton instance;
-export const healthCheck = new HealthCheckService()
-// Export convenience functions;
-export const runHealthChecks = () => healthCheck.runChecks()
-export const getHealthStatus = () => healthCheck.getStatus()
-export const registerHealthCheck = (nam,
-  e: string, checkF)
-  n: HealthCheckFunction) =>
-//   healthCheck.register(name, checkFn)
-export const getUptime = () => healthCheck.getUptime()
-export const getFormattedUptime = () => healthCheck.getFormattedUptime()
-export default healthCheck;"`
-
-
-
-=======
->>>>>>> origin/temp-pr-28049

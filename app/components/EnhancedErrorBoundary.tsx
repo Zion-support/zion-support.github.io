@@ -114,16 +114,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     window.open(`mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
   };
 
-<<<<<<< HEAD
-=======
-  // In production, you might want to send this to an error reporting service
-  if (process.env.NODE_ENV === 'production') {
-    // Example: send to error reporting service
-    // errorReportingService.captureException(error, { extra: errorInfo });
-  }
-  }
-
->>>>>>> origin/resolve-merge-conflicts-1759965566
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {

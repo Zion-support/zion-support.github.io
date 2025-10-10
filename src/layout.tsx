@@ -146,11 +146,6 @@ $4]
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Zion Tech Group" />
-<<<<<<< HEAD:app/layout.tsx
-        
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-39c9:src/layout.tsx
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://ziontechgroup.com" />
@@ -159,7 +154,6 @@ $4]
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
         <meta name="twitter:site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />
-=======
         {/* Enhanced Twitter Card tags */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:title' content='Zion Tech Group - AI & Technology Solutions' />
@@ -167,7 +161,6 @@ $4]
         <meta name='twitter:image' content='https://ziontechgroup.com/og-image.jpg' />
         <meta name='twitter:site' content='@ziontechgroup' />
         <meta name='twitter:creator' content='@ziontechgroup' />
->>>>>>> cursor/website-audit-and-update-with-deployment-26dd
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

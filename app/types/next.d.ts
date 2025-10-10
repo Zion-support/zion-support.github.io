@@ -1,18 +1,8 @@
-<<<<<<< HEAD
-// Type definitions for Next.js compatibility in Vite;
-=======
-// Type definitions for Next.js compatibility in Vite
->>>>>>> origin/resolve-merge-conflicts
 export interface Metadata {
   title?: string;
   description?: string;
   keywords?: string[];
   authors?: Array<{ name: string; url?: string }> | string[];
-<<<<<<< HEAD
-export interface Metadata {/* TODO: Fix JSX expression */}
-  e: string; url?: string }> | string[];
-=======
->>>>>>> origin/resolve-merge-conflicts
   creator?: string;
   publisher?: string;
   formatDetection?: {
@@ -38,18 +28,6 @@ export interface Metadata {/* TODO: Fix JSX expression */}
     }>;
     locale?: string;
     type?: string;
-<<<<<<< HEAD
-  };
-  twitter?: {
-    card?: string;
-    title?: string;
-    description?: string;
-    images?: string[];
-    authors?: Array<{/* TODO: Fix JSX expression */}
-  e: string; url?: string }> | string[];
-=======
-    authors?: Array<{ name: string; url?: string }> | string[];
->>>>>>> origin/resolve-merge-conflicts
     publishedTime?: string;
   };
   twitter?: {
@@ -75,27 +53,6 @@ export interface Metadata {/* TODO: Fix JSX expression */}
     google?: string;
     yandex?: string;
     yahoo?: string;
-<<<<<<< HEAD
-    other?: Record<string, string>;</strin>
-  };
-}
-
-export interface Viewport {
-  width?: string;
-  height?: string;
-  initialScale?: number;
-  maximumScale?: number;
-  userScalable?: boolean;
-  viewportFit?: string;
-}
-
-export interface GenerateMetadataParams {
-  params: Record<string, string>;
-  searchParams: Record<string, string | string[] | undefined>;
-  verification?: {/* TODO: Fix JSX expression */}
-=======
-    other?: Record<string, string>;
->>>>>>> origin/resolve-merge-conflicts
   };
 }
 

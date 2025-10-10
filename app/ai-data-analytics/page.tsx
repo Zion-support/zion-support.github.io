@@ -1,17 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { CheckCircle, Database, Brain, BarChart3, Target } from 'lucide-react';
-const AIDataAnalyticsPage: React.FC = () => {,
-  const analyticsServices = [,
-    {,
-=======
-import { Helmet } from 'react-helmet-async';
-
-
-const AIDataAnalyticsPage: React.FC = () => {
-  const analyticsServices = [
-    {
->>>>>>> origin/resolve-merge-conflicts-1759965566
       title: 'Real-Time Business Intelligence Platform',
       description: 'Advanced AI-powered analytics platform providing real-time insights, predictive modeling, and automated reporting for data-driven decision making.',
       icon: 'bar-chart',

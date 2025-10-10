@@ -25,15 +25,6 @@ export default function Error({)}
 }: {
   error: Error & { digest?: string };
   reset: () => void;
-<<<<<<< HEAD
-}) {}
-  useEffect(() => {}
-    // Log the error to an error reporting service
-=======
-}) {
-  useEffect(() => {
-    // eslint-disable-next-line no-console
->>>>>>> origin/resolve-merge-conflicts
     console.error(error);
   }, [error]);
 

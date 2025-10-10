@@ -10,17 +10,6 @@ import { CheckCircle, TrendingUp, Brain, BarChart } from 'lucide-react';
 const Navigation = lazy(() => import('../components/Navigation'));
 const Footer = lazy(() => import('../components/Footer'));
 
-<<<<<<< HEAD
-const AIAnalyticsPage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
-=======
-const AIAnalyticsPage: React.FC = React.memo((props) => {
->>>>>>> origin/temp-pr-28049
   const features = [
     {
       icon: Brain;
@@ -50,19 +39,6 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
     {
       icon: Brain,
       title: 'AI-Powered Insights',
-<<<<<<< HEAD
-      description: 'Advanced machine learning algorithms provide predictive analytics and recommendations',
-      benefits: ['Predictive modeling', 'Pattern recognition', 'Smart recommendations']
-=======
-      description: 'Get intelligent insights and recommendations powered by advanced machine learning algorithms.',
-      benefits: ['Predictive analytics', 'Anomaly detection', 'Trend analysis', 'Smart recommendations']
-    },
-    {
-      icon: BarChart,
-      title: 'Real-Time Dashboards',
-      description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
-      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
->>>>>>> origin/temp-pr-28049
     },
     {
       icon: Target,

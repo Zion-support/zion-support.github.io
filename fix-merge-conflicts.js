@@ -2,30 +2,6 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-<<<<<<< HEAD
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Remove merge conflict markers and keep the HEAD version
-    
-    // Clean up any remaining conflict markers
-#!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-
-// Function to recursively find all files with merge conflicts
-function findFilesWithConflicts(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-    // Check if file has merge conflict markers
-    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`Fixing merge conflicts in: ${filePath}`);
       
       // Split by conflict markers and keep HEAD version
@@ -44,7 +20,6 @@ function findFilesWithConflicts(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']
         } else if (line.startsWith('')) {
           keepCurrent = false;
           continue;
-        } else if (line.startsWith('>>>>>>>')) {
           inConflict = false;
           keepCurrent = false;
           continue;
@@ -97,15 +72,12 @@ function findSourceFiles(dir) {
     
       keepContent = true;
       continue;
-=======
 // Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     // Check if file has merge conflicts
-    if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false; // No conflicts to fix
->>>>>>> origin/resolve-merge-conflicts
     }
     console.log(`Fixing merge conflicts in: ${filePath}`);
     // Remove merge conflict markers and keep HEAD version
@@ -135,7 +107,6 @@ function findFilesWithConflicts(dir) {
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
             files.push(fullPath);
           }
         } catch (error) {
@@ -187,48 +158,6 @@ for (const file of apiFiles) {
   } catch (error) {
     console.error(`Error fixing ${file}:`, error.message);
   }
-<<<<<<< HEAD
-});
-
-console.log('\n🎉 All fixes completed!');
-        // Skip node_modules and other build directories
-        if (!['node_modules', '.next', 'dist', 'build', '.git'].includes(item)) {
-          traverse(fullPath);
-        }
-      } else if (item.match(/\.(ts|tsx|js|jsx)$/)) {
-        files.push(fullPath);
-      }
-    }
-  }
-  
-  traverse(dir);
-  return files;
-}
-
-// Main execution
-console.log('Starting merge conflict resolution...');
-
-const srcDir = path.join(__dirname, 'src');
-const files = findSourceFiles(srcDir);
-
-let fixedCount = 0;
-let totalConflicts = 0;
-
-for (const file of files) {
-  if (resolveMergeConflicts(file)) {
-    fixedCount++;
-    totalConflicts++;
-  }
-}
-
-console.log(`\nMerge conflict resolution complete!`);
-console.log(`Files processed: ${files.length}`);
-console.log(`Files with conflicts fixed: ${fixedCount}`);
-
-// Also check for any remaining conflict markers
-console.log('\nChecking for remaining conflict markers...');
-try {
-  const result = execSync('grep -r "\\|\\|>>>>>>>" src/ || true', { encoding: 'utf8' });
   if (result.trim()) {
     console.log('Warning: Some conflict markers may still remain:');
     console.log(result);
@@ -240,7 +169,5 @@ try {
 }
 
 console.log('\nDone!');
-=======
 }
 console.log('Merge conflict fixing completed!');
->>>>>>> origin/resolve-merge-conflicts

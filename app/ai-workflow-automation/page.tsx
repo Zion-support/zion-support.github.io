@@ -1,14 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, Star, Zap, Workflow, Clock, Users, Shield, BarChart } from 'lucide-react';
-=======
-import { Helmet } from 'react-helmet-async';
-
->>>>>>> origin/resolve-merge-conflicts-1759965566
 
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [

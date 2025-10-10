@@ -133,20 +133,6 @@ const existingPages = [
   '/about'
 ];
 
-<<<<<<< HEAD
-console.log('=== MISSING PAGES ANALYSIS ===');
-console.log(`Total referenced)`
-  links: ${referencedLinks.length}`);`
-console.log(`Total existing)`
-  pages: ${existingPages.length}`);`
-console.log(`Missing)`
-  pages: ${missingPages.length}`);
-console.log('\n=== MISSING PAGES ===');
-missingPages.forEach(page => console.log(page));
-=======
-// Find missing pages
-const missingPages = navigationLinks.filter(link => !existingPages.includes(link));
->>>>>>> origin/resolve-merge-conflicts
 
 console.log('Missing pages from navigation:');
 missingPages.forEach(page => console.log(`- ${page}`));
@@ -164,22 +150,3 @@ const brokenLinks = missingPages.filter(page => {
   return criticalPages.includes(page);
 });
 
-<<<<<<< HEAD
-console.log('\n=== MISSING PAGES BY CATEGORY ===');
-Object.entries(missingByCategory).forEach(([category, pages]) => {/* TODO: Fix JSX expression */}`
-    console.log(`\n${category}:`);`
-    pages.forEach(page => console.log(`  - ${page}`));
-  }
-});
-
-// Write missing pages to file;
-fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({/* TODO: Fix JSX expression */})
-}, null, 2));
-
-console.log('\n=== ANALYSIS COMPLETE ===');
-console.log('Missing pages list saved)
-  to: /workspace/missing-pages.json');`
-=======
-console.log('\nCritical missing pages (broken links):');
-brokenLinks.forEach(page => console.log(`- ${page}`));
->>>>>>> origin/resolve-merge-conflicts
