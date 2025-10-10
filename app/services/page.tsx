@@ -613,8 +613,8 @@ const ServicesPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Our Services;
-  </
+              Our Services
+            </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Comprehensive AI and IT solutions designed to transform your business 
               and drive growth.
@@ -680,16 +680,16 @@ const ServicesPage: React.FC = () => {
                 {selectedCategory === 'All' ? 'All Services' : `${selectedCategory}`}
               </h2>
               <span className="text-gray-300">
-                {filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''} found;
-  </
+                {filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''} found
+              </span>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {currentServices.map((service, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group relative">
                   {service.popular && (
                     <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Popular;
-  </
+                      Popular
+                    </div>
                   )}
                   <div className="flex items-start mb-6">
                     <div className="bg-cyan-500/20 p-3 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition-colors flex-shrink-0">
@@ -716,8 +716,8 @@ const ServicesPage: React.FC = () => {
                       ))}
                       {service.features.length > 4 && (
                         <li className="text-gray-400 text-sm">
-                          +{service.features.length - 4} more features;
-  </
+                          +{service.features.length - 4} more features
+                        </li>
                       )}
                     </ul>
                   </div>
@@ -731,8 +731,8 @@ const ServicesPage: React.FC = () => {
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </button>
                     <button className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300">
-                      Learn More;
-  </
+                      Learn More
+                    </button>
                   </div>
                 </div>
               ))}
@@ -744,8 +744,8 @@ const ServicesPage: React.FC = () => {
                   onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                   disabled={currentPage === 1}
                   className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300">
-                  Previous;
-  </
+                  Previous
+                </button>
                 <div className="flex space-x-2">
                   {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
                     <button
@@ -765,8 +765,8 @@ const ServicesPage: React.FC = () => {
                   onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                   disabled={currentPage === totalPages}
                   className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300">
-                  Next;
-  </
+                  Next
+                </button>
               </div>
             )}
           </div>
@@ -782,11 +782,11 @@ const ServicesPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Free Consultation;
-  </
+                Get Free Consultation
+              </button>
               <button className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300">
-                View Portfolio;
-  </
+                View Portfolio
+              </button>
             </div>
           </div>
         </section>
@@ -795,12 +795,3 @@ const ServicesPage: React.FC = () => {
   );
 };
 export default ServicesPage;
-  </button>
-  </button>
-  </button>
-  </button>
-  </button>
-  </li>
-  </span>
-  </h1>
-  </div>

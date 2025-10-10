@@ -68,12 +68,12 @@ const ContentPromotionBanner: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
               <Zap className="w-5 h-5" />
-              Get Started Today;
-  </
+              Get Started Today
+            </button>
             <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
               <ArrowRight className="w-5 h-5" />
-              Learn More;
-  </
+              Learn More
+            </button>
           </div>
         </div>
         {/* Stats Section */}
