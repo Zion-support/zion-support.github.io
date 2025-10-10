@@ -79,10 +79,10 @@ export default defineConfig({
         wrap_func_args: true,
       }
     },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: false,
+    chunkSizeWarningLimit: 1000,
+    reportCompressedSize: true,
     cssCodeSplit: true,
-    assetsInlineLimit: 2048,
+    assetsInlineLimit: 4096,
     rollupOptions: {
       output: {
         manualChunks: (id) => {

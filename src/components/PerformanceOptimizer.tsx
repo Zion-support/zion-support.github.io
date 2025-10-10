@@ -1,111 +1,251 @@
-import React, { useEffect, memo } from 'react';
+import React, { useEffect, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ children }) => {
-  useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalImages = [
-        '/images/hero-bg.jpg',
-        '/images/logo.png',
-        '/images/og-image.jpg'
-      ];
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+  const location = useLocation();
 
-      criticalImages.forEach(src => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'image';
-        link.href = src;
-        document.head.appendChild(link);
+  // Preload critical resources
+  const preloadCriticalResources = useCallback(() => {
+    // Preload critical CSS
+    const criticalCSS = document.createElement('link');
+    criticalCSS.rel = 'preload';
+    criticalCSS.href = '/src/styles/futuristic.css';
+    criticalCSS.as = 'style';
+    criticalCSS.onload = () => {
+      criticalCSS.rel = 'stylesheet';
+    };
+    document.head.appendChild(criticalCSS);
+
+    // Preload critical fonts
+    const fontPreload = document.createElement('link');
+    fontPreload.rel = 'preload';
+    fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap';
+    fontPreload.as = 'style';
+    fontPreload.crossOrigin = 'anonymous';
+    document.head.appendChild(fontPreload);
+
+    // Preload critical images
+    const criticalImages = [
+      '/og-image.jpg',
+      '/logo.png',
+      '/hero-bg.jpg'
+    ];
+
+    criticalImages.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
+  // Optimize images on scroll
+  const optimizeImagesOnScroll = useCallback(() => {
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.classList.remove('lazy');
+          imageObserver.unobserve(img);
+        }
       });
+    }, {
+      rootMargin: '50px 0px',
+      threshold: 0.01
+    });
+
+    images.forEach(img => imageObserver.observe(img));
+  }, []);
+
+  // Debounce scroll events
+  const debounce = useCallback((func: Function, wait: number) => {
+    let timeout: NodeJS.Timeout;
+    return function executedFunction(...args: any[]) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }, []);
+
+  // Optimize scroll performance
+  const optimizeScrollPerformance = useCallback(() => {
+    let ticking = false;
+    
+    const updateScrollPosition = () => {
+      // Update scroll-dependent elements
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      
+      // Update progress bar if exists
+      const progressBar = document.querySelector('.scroll-progress');
+      if (progressBar) {
+        const progress = (scrollY / (documentHeight - windowHeight)) * 100;
+        (progressBar as HTMLElement).style.width = `${Math.min(progress, 100)}%`;
+      }
+      
+      ticking = false;
     };
 
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        // Add loading="lazy" to non-critical images
-        if (!img.hasAttribute('loading')) {
-          img.setAttribute('loading', 'lazy');
-        }
-        
-        // Add decoding="async" for better performance
-        if (!img.hasAttribute('decoding')) {
-          img.setAttribute('decoding', 'async');
-        }
-      });
-    };
-
-    // Enable service worker for caching
-    const enableServiceWorker = () => {
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-          .then(registration => {
-            console.log('Service Worker registered:', registration);
-          })
-          .catch(error => {
-            console.log('Service Worker registration failed:', error);
-          });
+    const requestTick = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateScrollPosition);
+        ticking = true;
       }
     };
 
-    // Optimize scroll performance
-    const optimizeScroll = () => {
-      let ticking = false;
-      
-      const updateScroll = () => {
-        // Throttle scroll events
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            ticking = false;
-          });
-          ticking = true;
-        }
-      };
+    const debouncedScroll = debounce(requestTick, 16); // ~60fps
+    window.addEventListener('scroll', debouncedScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', debouncedScroll);
+    };
+  }, [debounce]);
 
-      window.addEventListener('scroll', updateScroll, { passive: true });
+  // Optimize resize performance
+  const optimizeResizePerformance = useCallback(() => {
+    const handleResize = debounce(() => {
+      // Update responsive elements
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }, 250);
+
+    window.addEventListener('resize', handleResize, { passive: true });
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [debounce]);
+
+  // Prefetch next page resources
+  const prefetchNextPage = useCallback(() => {
+    const links = document.querySelectorAll('a[href^="/"]');
+    const prefetchedPages = new Set();
+
+    const prefetchPage = (url: string) => {
+      if (prefetchedPages.has(url)) return;
       
-      return () => {
-        window.removeEventListener('scroll', updateScroll);
-      };
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = url;
+      document.head.appendChild(link);
+      prefetchedPages.add(url);
     };
 
-    // Initialize optimizations
-    preloadCriticalResources();
-    optimizeImages();
-    enableServiceWorker();
-    const cleanupScroll = optimizeScroll();
+    const handleLinkHover = (e: Event) => {
+      const target = e.target as HTMLAnchorElement;
+      if (target.href && target.href.startsWith(window.location.origin)) {
+        const path = new URL(target.href).pathname;
+        prefetchPage(path);
+      }
+    };
 
-    // Cleanup on unmount
+    links.forEach(link => {
+      link.addEventListener('mouseenter', handleLinkHover, { passive: true });
+    });
+
+    return () => {
+      links.forEach(link => {
+        link.removeEventListener('mouseenter', handleLinkHover);
+      });
+    };
+  }, []);
+
+  // Optimize animations
+  const optimizeAnimations = useCallback(() => {
+    // Reduce motion for users who prefer it
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (prefersReducedMotion) {
+      document.documentElement.style.setProperty('--animation-duration', '0.01ms');
+      document.documentElement.style.setProperty('--animation-iteration-count', '1');
+    }
+
+    // Pause animations when tab is not visible
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        document.body.style.animationPlayState = 'paused';
+      } else {
+        document.body.style.animationPlayState = 'running';
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []);
+
+  // Memory optimization
+  const optimizeMemory = useCallback(() => {
+    // Clean up unused event listeners periodically
+    const cleanup = () => {
+      // Remove orphaned event listeners
+      const elements = document.querySelectorAll('[data-cleanup]');
+      elements.forEach(element => {
+        if (!document.contains(element)) {
+          element.remove();
+        }
+      });
+    };
+
+    const interval = setInterval(cleanup, 30000); // Every 30 seconds
+    
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  // Initialize performance optimizations
+  useEffect(() => {
+    preloadCriticalResources();
+    optimizeImagesOnScroll();
+    const cleanupScroll = optimizeScrollPerformance();
+    const cleanupResize = optimizeResizePerformance();
+    const cleanupPrefetch = prefetchNextPage();
+    const cleanupAnimations = optimizeAnimations();
+    const cleanupMemory = optimizeMemory();
+
     return () => {
       cleanupScroll();
+      cleanupResize();
+      cleanupPrefetch();
+      cleanupAnimations();
+      cleanupMemory();
     };
-  }, []);
+  }, [
+    preloadCriticalResources,
+    optimizeImagesOnScroll,
+    optimizeScrollPerformance,
+    optimizeResizePerformance,
+    prefetchNextPage,
+    optimizeAnimations,
+    optimizeMemory
+  ]);
 
-  // Add performance monitoring
+  // Re-optimize on route change
   useEffect(() => {
-    // Monitor Core Web Vitals
-    const monitorWebVitals = () => {
-      if ('web-vitals' in window) {
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS(console.log);
-          getFID(console.log);
-          getFCP(console.log);
-          getLCP(console.log);
-          getTTFB(console.log);
-        });
-      }
-    };
+    // Re-run image optimization on route change
+    setTimeout(optimizeImagesOnScroll, 100);
+  }, [location.pathname, optimizeImagesOnScroll]);
 
-    monitorWebVitals();
-  }, []);
-
-  return <>{children}</>;
-});
-
-PerformanceOptimizer.displayName = 'PerformanceOptimizer';
+  return (
+    <>
+      {children}
+      {/* Scroll Progress Bar */}
+      <div className="fixed top-0 left-0 w-full h-1 bg-slate-800 z-50">
+        <div className="scroll-progress h-full bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 transition-all duration-150 ease-out" style={{ width: '0%' }} />
+      </div>
+    </>
+  );
+};
 
 export default PerformanceOptimizer;
