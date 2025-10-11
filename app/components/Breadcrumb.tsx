@@ -1,17 +1,36 @@
+'use client';
+import React from 'react';
+import Link from 'next/link';
+import { ChevronRight, Home } from 'lucide-react';
 
-const Breadcrumb: React.FC = () => {
-          </li>
-          {pathnames.map((name, index) => {
-            const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
-            const isLast = index === pathnames.length - 1;
-            return (
-              <li key={name} className="flex items-center">
-                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
-                {isLast ? (
-        </ol>
-      </div>
-    </nav>
-  )
+interface BreadcrumbProps {
+  items?: Array<{
+    label: string;
+    href?: string;
+  }>;
 }
 
-export default Breadcrumb
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ items = [] }) => {
+  return (
+    <nav className="flex items-center space-x-2 text-sm text-gray-400 mb-8" aria-label="Breadcrumb">
+      <Link href="/" className="flex items-center hover:text-cyan-400 transition-colors">
+        <Home className="w-4 h-4 mr-1" />
+        Home
+      </Link>
+      {items.map((item, index) => (
+        <React.Fragment key={index}>
+          <ChevronRight className="w-4 h-4" />
+          {item.href ? (
+            <Link href={item.href} className="hover:text-cyan-400 transition-colors">
+              {item.label}
+            </Link>
+          ) : (
+            <span className="text-white">{item.label}</span>
+          )}
+        </React.Fragment>
+      ))}
+    </nav>
+  );
+};
+
+export default Breadcrumb;
