@@ -46,16 +46,35 @@ const Navigation: React.FC = () => {
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
-              <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <div className="py-2">
                   <Link href="/services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
                     All Services
                   </Link>
+                  <div className="border-t border-gray-700 my-2"></div>
+                  <div className="px-4 py-2 text-cyan-400 text-sm font-semibold">AI Services</div>
                   <Link href="/ai-services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
-                    AI Services
+                    AI Services Overview
                   </Link>
+                  <Link href="/ai-customer-support" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    AI Customer Support
+                  </Link>
+                  <Link href="/ai-data-analytics" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    AI Data Analytics
+                  </Link>
+                  <Link href="/ai-workflow-automation" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    AI Workflow Automation
+                  </Link>
+                  <Link href="/ai-content-generator" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    AI Content Generator
+                  </Link>
+                  <div className="border-t border-gray-700 my-2"></div>
+                  <div className="px-4 py-2 text-cyan-400 text-sm font-semibold">IT Services</div>
                   <Link href="/it-services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
-                    IT Services
+                    IT Services Overview
+                  </Link>
+                  <Link href="/cloud-migration" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    Cloud Migration
                   </Link>
                   <Link href="/cybersecurity" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
                     Cybersecurity

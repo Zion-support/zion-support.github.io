@@ -10,37 +10,49 @@ const HomePage: React.FC = () => {
       icon: Brain,
       title: 'AI Solutions',
       description: 'Advanced artificial intelligence solutions for business automation and optimization.',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+      price: 'From $199/month',
+      link: '/ai-services'
     },
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions for modern businesses.',
-      features: ['AWS Integration', 'Azure Services', 'Google Cloud', 'Hybrid Solutions']
+      features: ['AWS Integration', 'Azure Services', 'Google Cloud', 'Hybrid Solutions'],
+      price: 'From $299/month',
+      link: '/cloud-infrastructure'
     },
     {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets.',
-      features: ['Threat Detection', 'Data Protection', 'Compliance', 'Incident Response']
+      features: ['Threat Detection', 'Data Protection', 'Compliance', 'Incident Response'],
+      price: 'From $399/month',
+      link: '/cybersecurity'
     },
     {
       icon: Code,
       title: 'Custom Development',
       description: 'Tailored software solutions built to meet your specific requirements.',
-      features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
+      features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'],
+      price: 'From $2,999/project',
+      link: '/web-development'
     },
     {
       icon: BarChart,
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights and business intelligence.',
-      features: ['Data Visualization', 'Business Intelligence', 'Real-time Analytics', 'Reporting']
+      features: ['Data Visualization', 'Business Intelligence', 'Real-time Analytics', 'Reporting'],
+      price: 'From $149/month',
+      link: '/data-analytics'
     },
     {
       icon: Zap,
-      title: 'Automation',
-      description: 'Streamline your operations with intelligent automation solutions.',
-      features: ['Process Automation', 'Workflow Optimization', 'RPA Solutions', 'Integration']
+      title: 'Micro SAAS',
+      description: 'Ready-to-use business tools and applications for immediate deployment.',
+      features: ['AI Content Generator', 'Customer Support Bot', 'Workflow Automation', 'Analytics Dashboard'],
+      price: 'From $29/month',
+      link: '/micro-saas'
     }
   ]
 
@@ -80,23 +92,50 @@ const HomePage: React.FC = () => {
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
+            <div className="inline-block mb-4">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                🚀 Now Available: AI-Powered Solutions
+              </span>
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Your Business with
-              <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              <span className="block neon-text">
                 AI & IT Solutions
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Leading provider of cutting-edge artificial intelligence and information technology solutions 
-              that drive innovation and accelerate digital transformation.
+              that drive innovation and accelerate digital transformation. From micro SAAS to enterprise solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <button className="cyber-button">
+                <Rocket className="w-5 h-5" />
                 Get Started
               </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              <button className="cyber-button-secondary">
+                <Calendar className="w-5 h-5" />
                 Schedule Demo
               </button>
+            </div>
+            
+            {/* Trust Indicators */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-cyan-400 mb-1">500+</div>
+                <div className="text-gray-400 text-sm">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-green-400 mb-1">99.9%</div>
+                <div className="text-gray-400 text-sm">Uptime Guarantee</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-blue-400 mb-1">24/7</div>
+                <div className="text-gray-400 text-sm">Support Available</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-purple-400 mb-1">50+</div>
+                <div className="text-gray-400 text-sm">Expert Team</div>
+              </div>
             </div>
           </div>
         </div>
@@ -116,15 +155,16 @@ const HomePage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
+              <div key={index} className="cyber-card hover:bg-white/20 transition-all duration-300 group">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white">{service.title}</h3>
                 </div>
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                <ul className="space-y-2">
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <div className="text-cyan-400 font-semibold mb-4">{service.price}</div>
+                <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
@@ -132,6 +172,13 @@ const HomePage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
+                <a 
+                  href={service.link}
+                  className="cyber-button-secondary w-full text-center justify-center"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4" />
+                </a>
               </div>
             ))}
           </div>

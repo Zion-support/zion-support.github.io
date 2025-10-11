@@ -2,150 +2,149 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { Workflow, Zap, Brain, Target, Clock, Shield, CheckCircle, Star, ArrowRight, Users, BarChart, Settings } from 'lucide-react'
+import { PenTool, Brain, Zap, Target, CheckCircle, Star, ArrowRight, Users, BarChart, Clock, FileText, Image, Video, Mic } from 'lucide-react'
 
-const AiWorkflowAutomationPage: React.FC = () => {
+const AiContentGeneratorPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'Intelligent Process Discovery',
-      description: 'AI automatically maps your business processes and identifies automation opportunities',
-      details: ['Process Mining', 'Bottleneck Detection', 'Optimization Suggestions', 'ROI Analysis']
+      title: 'AI-Powered Writing',
+      description: 'Advanced AI that creates high-quality content in any style or tone',
+      details: ['Natural Language Generation', 'Style Adaptation', 'Tone Matching', 'Brand Voice']
     },
     {
-      icon: Workflow,
-      title: 'Visual Workflow Builder',
-      description: 'Drag-and-drop interface to create complex workflows without coding',
-      details: ['No-Code Design', 'Pre-built Templates', 'Conditional Logic', 'Error Handling']
+      icon: FileText,
+      title: 'Multiple Content Types',
+      description: 'Generate blogs, articles, social media posts, emails, and more',
+      details: ['Blog Posts', 'Social Media', 'Email Campaigns', 'Product Descriptions']
     },
     {
-      icon: Zap,
-      title: 'Smart Automation',
-      description: 'AI-powered automation that learns and adapts to your business needs',
-      details: ['Machine Learning', 'Adaptive Workflows', 'Self-Optimization', 'Predictive Actions']
+      icon: Image,
+      title: 'Visual Content',
+      description: 'Create stunning images and graphics to accompany your content',
+      details: ['AI Image Generation', 'Custom Graphics', 'Brand Templates', 'Stock Photos']
+    },
+    {
+      icon: Video,
+      title: 'Video Scripts',
+      description: 'Generate engaging video scripts and storyboards',
+      details: ['YouTube Scripts', 'Tutorial Videos', 'Marketing Videos', 'Storyboards']
     },
     {
       icon: Target,
-      title: 'Multi-System Integration',
-      description: 'Connect and automate across all your business applications',
-      details: ['500+ Integrations', 'API Management', 'Data Synchronization', 'Real-time Updates']
+      title: 'SEO Optimization',
+      description: 'Automatically optimize content for search engines',
+      details: ['Keyword Integration', 'Meta Descriptions', 'Title Optimization', 'SEO Scoring']
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with compliance and audit trails',
-      details: ['End-to-End Encryption', 'Role-Based Access', 'Audit Logs', 'Compliance Ready']
-    },
-    {
-      icon: Clock,
-      title: '24/7 Operation',
-      description: 'Automated processes that run continuously without human intervention',
-      details: ['Always-On Processing', 'Scheduled Tasks', 'Event Triggers', 'Monitoring Alerts']
+      icon: Zap,
+      title: 'Bulk Generation',
+      description: 'Create hundreds of pieces of content in minutes',
+      details: ['Batch Processing', 'Template System', 'Auto-scheduling', 'Content Calendar']
     }
   ]
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$149',
+      price: '$29',
       period: '/month',
-      description: 'Perfect for small teams',
+      description: 'Perfect for individuals and small businesses',
       features: [
-        'Up to 10 workflows',
-        '1,000 automation runs/month',
-        'Basic integrations',
-        'Email support',
+        '1,000 words/month',
+        'Basic AI models',
+        '5 content types',
         'Standard templates',
+        'Email support',
         '1 user'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$399',
+      price: '$79',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for content creators and agencies',
       features: [
-        'Up to 50 workflows',
-        '10,000 automation runs/month',
-        'Advanced integrations',
-        'Priority support',
+        '10,000 words/month',
+        'Advanced AI models',
+        'All content types',
         'Custom templates',
-        '5 users',
+        'Priority support',
+        '3 users',
         'API access'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$999',
+      price: '$199',
       period: '/month',
-      description: 'For large organizations',
+      description: 'For large teams and organizations',
       features: [
-        'Unlimited workflows',
-        'Unlimited automation runs',
-        'All integrations',
+        'Unlimited words',
+        'Premium AI models',
+        'All features included',
+        'White-label solution',
         'Dedicated support',
-        'Custom development',
         'Unlimited users',
-        'On-premise deployment',
-        'SLA guarantee'
+        'Custom integrations'
       ],
       popular: false
     }
   ]
 
   const stats = [
-    { value: '75%', label: 'Time Savings', icon: <Clock className="w-8 h-8 text-green-400" /> },
-    { value: '90%', label: 'Error Reduction', icon: <Shield className="w-8 h-8 text-blue-400" /> },
-    { value: '60%', label: 'Cost Reduction', icon: <BarChart className="w-8 h-8 text-purple-400" /> },
-    { value: '99.9%', label: 'Reliability', icon: <Zap className="w-8 h-8 text-cyan-400" /> }
+    { value: '10x', label: 'Faster Content Creation', icon: <Clock className="w-8 h-8 text-green-400" /> },
+    { value: '95%', label: 'Content Quality Score', icon: <Star className="w-8 h-8 text-blue-400" /> },
+    { value: '80%', label: 'Time Savings', icon: <Zap className="w-8 h-8 text-purple-400" /> },
+    { value: '50+', label: 'Content Types', icon: <FileText className="w-8 h-8 text-cyan-400" /> }
   ]
 
-  const automationTypes = [
+  const contentTypes = [
     {
-      title: 'Sales Automation',
-      description: 'Automate lead scoring, follow-ups, and pipeline management',
-      icon: <Target className="w-8 h-8 text-green-400" />
+      title: 'Blog Posts',
+      description: 'Long-form articles optimized for SEO and engagement',
+      icon: <FileText className="w-8 h-8 text-green-400" />
     },
     {
-      title: 'HR Automation',
-      description: 'Streamline recruitment, onboarding, and employee management',
+      title: 'Social Media',
+      description: 'Captions, posts, and stories for all platforms',
       icon: <Users className="w-8 h-8 text-blue-400" />
     },
     {
-      title: 'Finance Automation',
-      description: 'Automate invoicing, expense management, and financial reporting',
-      icon: <BarChart className="w-8 h-8 text-yellow-400" />
+      title: 'Email Marketing',
+      description: 'Newsletters, campaigns, and automated sequences',
+      icon: <Target className="w-8 h-8 text-yellow-400" />
     },
     {
-      title: 'IT Automation',
-      description: 'Automate system monitoring, backups, and maintenance tasks',
-      icon: <Settings className="w-8 h-8 text-purple-400" />
+      title: 'Product Descriptions',
+      description: 'Compelling product copy that converts',
+      icon: <BarChart className="w-8 h-8 text-purple-400" />
     }
   ]
 
   const testimonials = [
     {
-      name: 'Maria Santos',
-      role: 'Operations Director, TechFlow',
-      content: 'AI Workflow Automation reduced our manual processes by 80% and increased efficiency by 300%.',
+      name: 'Sarah Johnson',
+      role: 'Content Manager, TechBlog',
+      content: 'AI Content Generator increased our content output by 500% while maintaining quality.',
       rating: 5,
-      company: 'TechFlow'
+      company: 'TechBlog'
     },
     {
-      name: 'John Thompson',
-      role: 'CEO, DataSync Corp',
-      content: 'The automation platform is incredibly powerful. We automated 15 processes in the first month.',
+      name: 'Mike Chen',
+      role: 'Marketing Director, E-commerce Plus',
+      content: 'The SEO optimization feature improved our organic traffic by 200% in 3 months.',
       rating: 5,
-      company: 'DataSync Corp'
+      company: 'E-commerce Plus'
     },
     {
-      name: 'Sarah Lee',
-      role: 'VP Operations, InnovateNow',
-      content: 'ROI was achieved in 2 months. The time savings alone paid for the platform.',
+      name: 'Lisa Rodriguez',
+      role: 'Founder, Creative Agency',
+      content: 'We can now serve 3x more clients with the same team. Game-changing tool!',
       rating: 5,
-      company: 'InnovateNow'
+      company: 'Creative Agency'
     }
   ]
 
@@ -158,18 +157,18 @@ const AiWorkflowAutomationPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI-Powered <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Workflow Automation</span>
+              AI <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Content Generator</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Automate your business processes with intelligent AI workflows. 
-              Reduce manual work by 75% and increase productivity by 300%.
+              Create high-quality content 10x faster with AI. Generate blogs, social media posts, 
+              emails, and more with just a few clicks.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
               <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Watch Demo
+                Try Demo
               </button>
             </div>
           </div>
@@ -202,10 +201,10 @@ const AiWorkflowAutomationPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Automation Features
+              Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to automate and optimize your business processes.
+              Everything you need to create professional content at scale.
             </p>
           </div>
           
@@ -233,20 +232,20 @@ const AiWorkflowAutomationPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Automation Types Section */}
+      {/* Content Types Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Automation Types
+              Content Types
             </h2>
             <p className="text-xl text-gray-300">
-              Automate processes across all departments of your organization.
+              Generate any type of content your business needs.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {automationTypes.map((type, index) => (
+            {contentTypes.map((type, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all duration-300">
                 <div className="flex justify-center mb-4">
                   {type.icon}
@@ -264,10 +263,10 @@ const AiWorkflowAutomationPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Flexible Pricing Plans
+              Simple Pricing
             </h2>
             <p className="text-xl text-gray-300">
-              Choose the plan that fits your automation needs.
+              Choose the plan that fits your content needs.
             </p>
           </div>
           
@@ -317,10 +316,10 @@ const AiWorkflowAutomationPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Success Stories
+              What Our Users Say
             </h2>
             <p className="text-xl text-gray-300">
-              See how companies are transforming their operations with AI automation.
+              Join thousands of content creators using our AI platform.
             </p>
           </div>
           
@@ -348,10 +347,10 @@ const AiWorkflowAutomationPage: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Automate Your Business?
+            Ready to Create Amazing Content?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Start your free trial today and see how AI automation can transform your operations.
+            Start your free trial today and experience the power of AI content generation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
@@ -370,4 +369,4 @@ const AiWorkflowAutomationPage: React.FC = () => {
   )
 }
 
-export default AiWorkflowAutomationPage
+export default AiContentGeneratorPage
