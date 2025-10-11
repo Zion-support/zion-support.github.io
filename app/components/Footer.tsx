@@ -19,13 +19,13 @@ export default function Footer() {
               Advanced AI and IT solutions for modern businesses. We help companies leverage cutting-edge technology to achieve their goals.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://github.com/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://twitter.com/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
             </div>
@@ -95,11 +95,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-gray-400" />
-                <span className="text-gray-400 text-sm">+1 (555) 123-4567</span>
+                <span className="text-gray-400 text-sm">+1 (302) 464-0950</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-gray-400" />
-                <span className="text-gray-400 text-sm">San Francisco, CA</span>
+                <span className="text-gray-400 text-sm">364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
             </div>
           </div>
