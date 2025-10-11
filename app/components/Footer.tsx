@@ -104,15 +104,15 @@ import { Brain, Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">info@ziontechgroup.com</span>
+                <span className="text-gray-300 text-sm">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
+                <span className="text-gray-300 text-sm">+1 302 464 0950</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">San Francisco, CA</span>
+                <span className="text-gray-300 text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
             <Link 
