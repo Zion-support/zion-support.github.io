@@ -1,32 +1,43 @@
-// Service Worker for Zion Tech Group
 const CACHE_NAME = 'zion-tech-group-v1'
 const urlsToCache = [
   '/',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/manifest.json'
+  '/ai-services',
+  '/it-services',
+  '/cloud-services',
+  '/micro-saas-services',
+  '/digital-transformation',
+  '/5g-implementation',
+  '/about',
+  '/contact',
+  '/services',
   '/manifest.json',
-  '/favicon.ico'
+  '/favicon.ico',
+  '/icon-192x192.png',
+  '/icon-512x512.png'
 ]
+
+// Install event
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(urlsToCache))
       .then((cache) => {
         console.log('Opened cache')
-        return cache.addAll(urlsToCache)})
-  )})
+        return cache.addAll(urlsToCache)
+      })
+  )
+})
+
+// Fetch event
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
-        if (response) {
-          return response}
-        return fetch(event.request)}
-    )
         // Return cached version or fetch from network
-        return response || fetch(event.request)})
-  )})
+        return response || fetch(event.request)
+      })
+  )
+})
+
 // Activate event
 self.addEventListener('activate', (event) => {
   event.waitUntil(
@@ -35,7 +46,10 @@ self.addEventListener('activate', (event) => {
         cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME) {
             console.log('Deleting old cache:', cacheName)
-            return caches.delete(cacheName)}
+            return caches.delete(cacheName)
+          }
         })
-      )})
-  )})
+      )
+    })
+  )
+})

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
+import DarkModeToggle from './DarkModeToggle'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -54,7 +55,7 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
+    <nav className="bg-white dark:bg-gray-900 shadow-lg fixed w-full top-0 z-50 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           <div className="flex-shrink-0">
@@ -62,7 +63,7 @@ export default function Navigation() {
               <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-2">
                 <span className="text-white font-bold text-sm">Z</span>
               </div>
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+              <span className="text-xl font-bold text-gray-900 dark:text-white">Zion Tech Group</span>
             </Link>
           </div>
 
@@ -124,13 +125,17 @@ export default function Navigation() {
             </div>
           </div>
 
-          <div className="lg:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-gray-900 hover:text-purple-600 p-2"
-            >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
+          <div className="flex items-center gap-2">
+            <DarkModeToggle />
+            <div className="lg:hidden">
+              <button
+                onClick={toggleMenu}
+                className="text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 p-2"
+                aria-label="Toggle navigation menu"
+              >
+                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+            </div>
           </div>
         </div>
 

@@ -1,9 +1,9 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
+import SEOHead from './components/SEOHead'
 
 export default function HomePage() {
   const features = [
@@ -40,16 +40,19 @@ export default function HomePage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
-      </Helmet>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
+      <SEOHead
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses. Transform your business with cutting-edge technology."
+        keywords="AI, artificial intelligence, IT services, cloud computing, cybersecurity, digital transformation, machine learning, automation, Zion Tech Group"
+        url="https://ziontechgroup.com"
+        type="website"
+      />
       
       <Navigation />
       
       <main>
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 dark:from-gray-900 dark:via-purple-900 dark:to-slate-900">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -80,19 +83,19 @@ export default function HomePage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Why Choose Zion Tech Group?</h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
                 We deliver innovative technology solutions that drive growth and efficiency for businesses worldwide.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+                <div key={index} className="bg-white dark:bg-gray-800 rounded-lg p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
                   <div className="flex items-center mb-4">
                     {feature.icon}
-                    <h3 className="text-xl font-semibold text-gray-900 ml-3">{feature.title}</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white ml-3">{feature.title}</h3>
                   </div>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
                 </div>
               ))}
             </div>
