@@ -30,7 +30,7 @@ import Footer from '../components/Footer';
 const ItServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const services = const services = const services = [
+    const services = [
     {
       id: 'cloud-infrastructure',
       name: 'Cloud Infrastructure & Migration',
@@ -1007,10 +1007,10 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud Security',
       popular: true,
-      icon: Shield;
-    };
+        icon: Shield
+    }
   ];
-  const categories = const categories = const categories = [
+  const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'Cloud', name: 'Cloud', count: services.filter(s => s.category === 'Cloud').length },
     { id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length },
@@ -1042,23 +1042,123 @@ const ItServicesPage: React.FC = () => {
     { id: 'Performance', name: 'Performance', count: services.filter(s => s.category === 'Performance').length },
     { id: 'Cloud Optimization', name: 'Cloud Optimization', count: services.filter(s => s.category === 'Cloud Optimization').length },
     { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
-    { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },;
-    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length };
+      { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
+      { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
   ];
-  const filteredServices = const filteredServices = const filteredServices = services.filter();
-  );
+  const filteredServices = services.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    return matchesCategory;
+  });
 
-  return() {categories.map((category) => ()
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      selectedCategory === category.id
-                        ? 'bg-cyan-500 text-white'
-                        : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                    }`}
+  return (
+    <>
+      <Helmet>
+        <title>IT Services - Cloud, Security & Infrastructure | Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services including cloud migration, cybersecurity, DevOps, and infrastructure management for modern businesses." />
+        <meta name="keywords" content="IT services, cloud migration, cybersecurity, DevOps, infrastructure management" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-16">
+        <div className="container mx-auto px-4">
+          <section className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              IT Services
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive IT solutions designed to modernize your infrastructure and secure your digital assets.
+            </p>
+          </section>
+
+          <div className="mb-12">
+            <div className="flex flex-wrap gap-4 justify-center">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  }`}
+                >
+                  {category.name} ({category.count})
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-xl font-bold text-white">{service.name}</h3>
+                    {service.popular && (
+                      <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-semibold rounded-full">
+                        Popular
+                      </span>
+                    )}
+                  </div>
+                  
+                  <p className="text-cyan-400 font-semibold text-lg">{service.price}</p>
+                  
+                  <p className="text-gray-300 leading-relaxed">
+                    {service.description}
+                  </p>
+                  
+                  <div className="space-y-2">
+                    <h4 className="text-sm font-semibold text-white">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.slice(0, 4).map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <a
+                    href="/contact"
+                    className="w-full block text-center py-3 px-6 bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white rounded-lg font-semibold transition-all duration-300"
                   >
-                    {category.name} ({category.count})
-                  </button>
-                ))}
+                    Get Started
+                    <ArrowRight className="w-4 h-4 inline ml-2" />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <section className="mt-16 text-center">
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+              <h2 className="text-2xl font-bold text-white mb-6">Ready to Modernize Your IT Infrastructure?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Contact our IT experts for a free consultation and discover how our solutions can transform your technology stack.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+                >
+                  Get Free Consultation
+                </a>
+                <a
+                  href="tel:+13024640950"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                >
+                  Call: (302) 464-0950
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </>
+  );
               </div>
             </div>
 
